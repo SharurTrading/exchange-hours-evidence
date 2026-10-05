@@ -97,8 +97,14 @@ record, so a citation can be checked at the date it was written, too.
   files plus their `INDEX.md`/`SHA256SUMS.txt` entries — is the reviewable
   audit log of what entered the record, and `main` is protected so direct
   pushes are not accepted.
-- **Captures are immutable after recording.** A stored artifact is never
-  edited, renamed or re-normalized; its sha256 is its identity.
+- **Captures are immutable after recording.** A captured artifact is never
+  edited, renamed or re-normalized; its sha256 is its identity. (Working
+  notes are held to the same rule with one exception, applied once: the
+  `ledger-reshape/rows-*.json` filenames were shortened to ASCII names within
+  every filesystem's limits — Linux refuses path components over 255 bytes,
+  and one name exceeded it, breaking clones and CI checkouts. The files'
+  bytes were untouched, and the old names are recorded in the renaming
+  commit.)
 - **Corrections are new artifacts.** A re-retrieval that supersedes an
   earlier capture is added under its own digest beside a note; the earlier
   artifact stays. Silent mutation is detectable from the digests and
