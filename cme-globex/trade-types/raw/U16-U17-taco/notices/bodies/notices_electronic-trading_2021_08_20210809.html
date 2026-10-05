@@ -1,0 +1,338 @@
+Title: 20210809 - CME Group
+
+URL Source: https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html
+
+Markdown Content:
+For the latest roadmap of CME Group technology initiatives:
+
+[See the Development Launch Schedule.](https://www.cmegroup.com/globex/develop-to-cme-globex/development-launches.html)
+
+## Critical System Updates
+
+### Update Update - IP Address Change for CME CF Rates and Indexes MDP - This Week
+
+† Denotes update to the article
+
+Effective close of business this **Friday, †August 13,** CME Group will change source IPs for CME CF Rates and Indexes MDP as follows:
+
+| **IP Address Change for CME CF Rates and Indexes MDP** |
+| --- |
+|  |
+| CHANNEL NAME | CHANNEL ID | HOST | CURRENT SOURCE IP ADDRESSES | NEW SOURCE IP ADDRESSES |
+| CME CF Rates and Indexes MDP | 213 | Primary | 69.50.115.69 69.50.115.70 | 205.209.220.21 205.209.220.22 |
+|  |
+| Backup | 69.50.119.45 69.50.119.46 | 205.209.213.24 205.209.213.25 |
+
+A new Streamlined config.xml file will be available for customer download **Saturday, †August 14.** See additional information on[SFTP - MDP Configuration](https://www.cmegroup.com/confluence/display/EPICSANDBOX/SBE+Streamlined+-+FTP+and+SFTP+Site+Information).
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html#top)
+
+### CME Globex Performance Enhancements - August 22
+
+The CME Globex Performance Enhancements will continue **Sunday, August 22**. Below is the updated timelines. CME Group is implementing infrastructure and hardware upgrades to futures and options markets on the CME Globex platform. In internal testing, these enhancements improved performance on CME Globex more than 20% for both iLink 2 and iLink 3 order entry and MDP 3.0.
+
+| LAUNCH DATE | MARKET SEGMENT ID | MARKET SEGMENT DESCRIPTION |
+| --- | --- | --- |
+| August 22 | 58 | CBOT Interest Rate Options |
+| 60 | CME Globex Commodity Options CBOT Globex Commodity Options MGEX Globex Options |
+| 74 | BMD Globex Futures BMD Globex Options |
+| 80 | DME Globex Futures NYMEX Globex Crude & Crude Refined Futures |
+| 84 | CBOT Interest Rate Futures |
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html#top)
+
+### iLink 3 FIXP Messaging Enhancements- September 26
+
+Effective **Sunday, September 26** (trade date Monday, September 27), CME Group will implement enhancements to [iLink 3 FIXP](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+Binary+Order+Entry+-+Session+Layer) messages to be a more consistent customer experience. With this change, any error conditions for Negotiate and Establish with invalid UUID and/or NextSeqNo will lead to the FIXP session being terminated. Currently, we reject FIXP messages in some scenarios and terminate sessions in other scenarios.
+
+These enhancements will be reflected on the FIXP messages as follows:
+
+| **iLink 3 FIXP Messaging Enhancements** |
+| --- |
+| **Request from Client System to CME Globex** | **Response from CME Globex to Client System** |
+| FIXP Message | Error Conditions | **Current** | **New** |
+| [Negotiate](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Negotiate) | Missing UUID | [Negotiation Reject](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Negotiation+Reject) | [Terminate](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Terminate) |
+| UUID is not greater than the UUID used in the last successful Negotiate/Establish message | Negotiation Reject | Terminate |
+| [Establish](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Establish) | Missing UUID | [Establishment Reject](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Establishment+Reject) | Terminate |
+| UUID does not match with the UUID used in the previous Negotiate message | Establishment Reject | Terminate |
+| Missing NextSeqNo | Establishment Reject | Terminate |
+
+These changes are currently available in New Release for customer testing.
+
+| **ILINK 3 FIXP MESSAGING ENHANCEMENTS TIMELINE** |
+| --- |
+| MARKET SEGMENT ID | MARKET SEGMENT DESCRIPTION | PRODUCTION LAUNCH |
+| 76 | NYMEX Metals, Softs and Alternative Markets Futures; COMEX Futures | Sunday, September 26, 2021 |
+| 12 50 60 70 | Order Entry Service Gateway CME Interest Rate Options CME, CBOT and MGEX Commodity Options CME, CBOT and MGEX Commodity Futures | Sunday, October 3, 2021 |
+| 52 54 56 58 64 68 72 74 78 80 82 84 88 | CME FX Futures and Options II CME Equity Options - S&P Option NYMEX Emissions Options; NYMEX Energy, Metals, Softs and Alternative Market Options; COMEX Options; DME Options CBOT Interest Rate Options CME Equity Futures – E-mini S&P CME Equity Futures II; CBOT Equity Futures CBOT and CME Equity Options; excluding S&P BMD Futures and Options; NYMEX SEF NYMEX Emissions and Non-Crude Energy Futures DME Futures; NYMEX Crude and Crude Refined Energy Futures CME Interest Rate Futures CBOT Interest Rate Futures CME FX Futures and Options | Sunday, October 17, 2021 |
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html#top)
+
+### Bursa Malaysia Derivatives (BMD) Night Trading Session - December 2021
+
+In December 2021 and pending final regulatory approval, Bursa Malaysia Derivatives (BMD) will add a night trading session for all active products on CME Globex. Due to the time difference between Malaysian time and Central time, the night trading session activities will begin the business day prior to actual trade date in Malaysian time.The new night trading session will be open for trading Monday - Thursday.
+
+There will be no Friday night trading session. There is no impact to the current Monday - Friday day trading sessions.
+
+| New Night Trading Session |
+| --- |
+| Product | **NEW** **Monday - Thursday Night Trading Session** |
+| Night Session Trading Hours | 21:00:00 hours to 23:30:00 hours (Malaysia time) |
+
+**Example of Monday-Thursday Trading Schedule**
+
+*   Trades executed during Monday night trading session will have a Tuesday trade date
+*   Trades executed during Tuesday night trading session will have a Wednesday trade date
+*   Trades executed during Wednesday night trading session will have a Thursday trade date
+*   Trades executed during Thursday night trading session will have a Friday trade date
+*   **Friday night trading session is not supported**
+
+**Example of a Night Trading Session**
+
+ This example shows the night trading session market phases using a Monday, August 9, 2021 night trading session, with trades executed for a Tuesday, August 10, 2021 trade date.
+
+| Monday Night Trading Session with a Tuesday Trade Date |
+| --- |
+| **Night Session Trading Market State** | **Malaysian Time (MYT)** |
+| Pre-Open | 20:45:00 |
+| No-cancel | 20:59:30 |
+| Open | 21:00:00 |
+| Pause | 23:30:00 |
+
+| **Products for Night Trading Session** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group |
+| Crude Palm Oil Futures | FCPO | BC |
+| FTSE Kuala Lumpur Composite Index Futures | FKLI | BE |
+| Gold Futures | FGLD | BG |
+| USD RBD Palm Olein futures | FPOL | BL |
+| MINI FTSE BURSE MALAYSIA MID 70 IDX | FM70 | BS |
+| Crude Palm Oil Options | OCPO | BP (UDS: BZ) |
+| FTSE Kuala Lumpur Composite Index Options | OKLI | BO (UDS: BU) |
+| FUPO BMD CRUDE PALM OIL | FUPO | BA |
+| Option on USD RBD Palm Olein Futures | OPOL | B8 |
+| CRUDE PALM KERNEL OIL FUTURES | FPKO | BK |
+| BMD Tin Futures | FTIN | BN |
+| East Malaysia Crude Palm Oil Futures | FEPO | BR |
+| 3 Month Kuala Lumpur Interbank Offered Rate Futures | FKB3 | BT |
+
+This change will be available for customer testing in New Release, **Monday, August 16.**
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html#top)
+
+## Product Launches
+
+### Micro Treasury Yield Futures- This Week
+
+Effective this **Sunday, August 15** (trade date Monday, August 16), pending completion of all regulatory review periods, Micro Treasury Yield Futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| **Micro Treasury Yield Futures** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| Micro 2-Year Yield Futures | 2YY | 2Y | 344 |
+| Micro 5-Year Yield Futures | 5YY | 5Y | 344 |
+| Micro 10-Year Yield Futures | 10Y | 4Y | 344 |
+| Micro 30-Year Yield Futures | 30Y | 6Y | 344 |
+
+These futures are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html#top)
+
+### Three-Month Bloomberg Short-Term Bank Yield Index (BSBY) Futures- August 22
+
+Effective **Sunday, August 22** (trade date Monday, August 23), pending completion of all regulatory review periods, Three-Month Bloomberg Short-Term Bank Yield Index (BSBY) Futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| **Three-Month Bloomberg Short-Term Bank Yield Index (BSBY) Futures** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| Three-Month Bloomberg Short-Term Bank Yield Index (BSBY) Futures | BSB | BW | 312 |
+| 3 Mo SOFR vs BSBY Inter-commodity Spread | SR3 |
+| BSBY vs Eurodollar Inter-commodity Spread | BSB |
+| Three-Month BSBY Calendar Spreads | BSB |
+| Three-Month BSBY Butterfly | BSB |
+| Three-Month BSBY Double Butterfly | BSB |
+| Three-Month BSBY Condor | BSB |
+| Three-Month BSBY Bundle | BSB |
+| Three-Month BSBY Balanced Strip | BSB |
+
+These Three-Month Bloomberg Short-Term Bank Yield Index (BSBY) Futures are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html#top)
+
+### Bursa Malaysia Derivatives (BMD) East Malaysia Crude Palm Oil Futures- September 12
+
+Effective**Sunday, September 12** (trade date Monday, September 13),and pending final regulatory approval, Bursa Malaysia Derivatives (BMD)’s East Malaysia Crude Palm Oil futures contract and spreads will be made available for trading on CME Globex.
+
+| Bursa Malaysia Derivatives (BMD) East Malaysia Crude Palm Oil Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| East Malaysia Crude Palm Oil Futures | FEPO | BR | 430 |
+
+This change will be available for customer testing in New Release on **Monday, August 16**.
+
+These contracts are listed with, and subject to, the rules and regulations of BMD.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html#top)
+
+### Fixed Price Ratio Inter-Commodity Futures Spread- October 3
+
+Effective **Sunday, October 3**(trade date Monday, October 4), a new exchange-defined Fixed Price Ratio Inter-Commodity futures spreads will be made available for trading on CME Globex. The new spread will utilize a new strategy type (AE).
+
+The AE spread is the simultaneous purchase(sale) of two energy contracts of different leg quantity ratios where the spread will trade at a fixed price ratio of 1:1. The AE spread will allow customers to trade two energy contracts of varying leg ratios in a single package.
+
+Please review the [client impact assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Fixed+Price+Ratio+Inter-Commodity+Futures+Spread+on+CME+Globex)for detailed spread construction and pricing examples.
+
+The contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+The spread will be available for customer testing in New Release on **Monday, August 23.**
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html#top)
+
+## Product Changes
+
+### Change to E-mini NASDAQ Biotechnology Futures- This Week
+
+Effective this **Sunday, August 15** (trade date Monday, August 16), the minimum price increment (tag 969-MinPriceIncrement) and unit of measure quantity (1147- UnitOfMeasureQty) for E-mini NASDAQ Biotechnology futures will be modified as follows:
+
+| Change to E-mini NASDAQ Biotechnology Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | CURRENT TAG 969 - MINPRICEINCREMENT | NEW TAG 969 - MINPRICEINCREMENT | CURRENT TAG 1147 - UNITOFMEASUREQTY | NEW TAG 1147 - UNITOFMEASUREQTY |
+| E-mini NASDAQ Biotechnology Futures | BIO | BQ | 10.000000000 | 50.000000000 | 50.000000000 | 25.000000000 |
+| BTIC on E-mini NASDAQ Biotechnology Futures | BIT | TQ | Unchanged | Unchanged | 50.000000000 | 25.000000000 |
+
+This change is currently available for customer testing in New Release.
+
+This contract is listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html#top)
+
+### Changes to Minimum Price Increment for New Zealand Dollar/U.S. Dollar (NZD/USD) Futures- This Week
+
+Effective this**Sunday, August 15**(trade date August 16), pending the completion of all regulatory review periods, tag 969-MinimumPriceIncrement for New Zealand Dollar/U.S. Dollar (NZD/USD) futures will change as follows:
+
+| **Changes to Minimum Price Increment for New Zealand Dollar/U.S. Dollar (NZD/USD)Futures** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | CURRENT TAG 969-MINPRICEINCREMENT | NEW TAG 969-MINPRICEINCREMENT |
+| New Zealand Dollar/U.S. Dollar (NZD/USD) Futures | 6N | 6N | 1.000000000 | 0.500000000 |
+
+These changes are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html#top)
+
+### Listing Cycle Expansion for Dutch TTF Natural Gas Calendar Month Futures- This Week
+
+Effective this **Sunday, August 15**(trade date Monday, August 16), the listing cycle for the following Dutch TTF Natural Gas Calendar Month futures will be expanded on CME Globex.
+
+| **Listing Cycle Expansion for Dutch TTF Natural Gas Calendar Month Futures** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | **Current Listing Schedule** | **New Listing Schedule** |
+| Dutch TTF Natural Gas Calendar Month Futures | TTF | FD | Monthly contracts listed for the current year and the next 5 calendar years. List monthly contracts for a new calendar year following the termination of trading in the December contract of the current year. | Monthly contracts listed for the current year and the next 10 calendar years. List monthly contracts for a new calendar year following the termination of trading in the December contract of the current year. |
+
+These futures are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html#top)
+
+### Listing Cycle Expansion for North European Hot-Rolled Coil Steel (Argus) Futures- August 22
+
+Effective **Sunday, August 22** (trade date Monday, August 23), the listing cycle for the North European Hot-Rolled Coil Steel (Argus) futures will be expanded on CME Globex.
+
+| **Listing Cycle Expansion for North European Hot-Rolled Coil Steel (Argus) Futures** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | **Current Listing Schedule** | **New Listing Schedule** |
+| North European Hot-Rolled Coil Steel (Argus)Futures | EHR | MA | Monthly contracts listed for twelve (12) consecutive months. Add a new contract month after the nearby expiry. | Monthly contracts listed for eighteen (18) consecutive months. Add a new contract month after the nearby expiry. |
+
+These futures will be available for customer testing in New Release on **Monday, August 16.**
+
+These contracts are listed with, and subject to, the rules and regulations of COMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html#top)
+
+### Change to E-mini FTSE 100 and Developed European Index Futures Strategy Type- August 22
+
+Effective**Sunday, August 22**(trade date Monday, August 23), the CME Group will change the [tag 762-SecuritySubType](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Futures+Spread+and+Options+Spread+Types) in the[Security Definition (tag 35-MsgType=d) message](https://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Security+Definition) for the E-mini FTSE 100 and Developed European Index futures from**EQ**(Calendar Spread) to**RT**(Reduced Tick) on CME Globex. To support these changes, the existing SP (Calendar Spread) products will be removed on **Friday, August 14, 2021.**
+
+Please Note: To facilitate this change, customers are asked to cancel all Good ‘Till Cancel (GTC) and Good ‘Till Date (GTD) orders after the close on**August 13**. After 16:00 CT on**August 13**, all remaining GT orders for these spreads will be cancelled or deleted by the CME Global Command Center (GCC).
+
+| **Change to E-mini FTSE 100 and Developed European Index Futures Strategy Type** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | CURRENT TAG 762- SECURITYSUBTYPE | NEW TAG 762- SECURITYSUBTYPE |
+| E-mini FTSE 100 (GBP) Index Futures | FTI | FZ | EQ (Calendar Spread) with All Possible Combos | RT (Reduced Tick Spread) with all possible combos |
+| E-mini FTSE 100 (USD) Index Futures | FTU | FZ | EQ (Calendar Spread) with All Possible Combos | RT Futures - Reduced Tick (RT) with all possible combos |
+| E-mini FTSE Developed Europe Index Futures | DVE | DV | EQ (Calendar Spread) with All Possible Combos | RT Futures - Reduced Tick (RT) with all possible combos |
+
+This change is currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html#top)
+
+### New New - Listing Cycle Expansion for Cobalt Metal (Fastmarkets) Futures- September 12
+
+Effective **Sunday, September 12** (trade date Monday, September 13), the listing cycle for the following Cobalt Metal (Fastmarkets) futures will be expanded on CME Globex.
+
+| **Listing Cycle Expansion for Cobalt Metal (Fastmarkets) Futures** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Listing Schedule | New Listing Schedule |
+| Cobalt Metal (Fastmarkets) Futures | COB | CA | Monthly contracts listed for the current year and the next 2 calendar years. | Monthly contracts listed for the current year and the next 3 calendar years. |
+
+These changes will be available for customer testing in New Release on **Monday, August 30.**
+
+These contracts are listed with, and subject to, the rules and regulations of COMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html#top)
+
+### New New - Changes to Monthly and Weeklies Options on Brazilian Real/U.S. Dollar Futures- September 12
+
+Effective **Sunday, September 12**(trade date Monday, September 13), the following changes will be implemented for Options on Brazilian Real/U.S. Dollar (BRL/USD) futures:
+
+*   Reduce minimum price increment tag 969-MinPriceIncrement
+*   Reduce strike increment
+
+| Changes to Options on Brazilian Real/U.S. Dollar Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | **Current tag 969-MinPriceIncrement** | **New tag 969-MinPriceIncrement** | Current Strike Increment | New Strike Increment |
+| Monthly and Weeklies Options on Brazilian Real/U.S. Dollar (BRL/USD) Futures | BR (Monthly) 1R-5R (Weeklies) | OR | 0.500000000 | 0.100000000 | 0.00500 | 0.00100 |
+
+These changes will be available for customer testing in New Release on **Monday, August 30.**
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html#top)
+
+### TACO and BTIC Amended Trading Schedule- September 26
+
+Effective **Sunday, September 26** (trade date Monday, September 27), and pending all relevant CFTC regulatory review periods, the Basis Trade at Cash Open (“TACO”) and Basis Trade at Index Close (“BTIC”) will open for Monday’s trade date on the previous Friday afternoon.
+
+With this change and for the first time, CME Globex will support trading for a trade date over a weekend. The trade date for these products will not roll over on the weekend. This change will impact iLink 2 and iLink 3 order entry, MDP 3 market data, and CME STP and CME STP FIX.
+
+Please review the[Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/TACO+and+BTIC+Friday+Trading+Schedule)for information on functionality and messaging impacts.
+
+This change is currently available for customer testing in New Release.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html#top)
+
+## Events and Announcements
+
+### CME SPAN 2 Margin Methodology- Q4 2021
+
+CME Group is targeting the initial launch of SPAN 2 Margin Methodology in Q4 2021, starting with a subset of [energy products](https://www.cmegroup.com/clearing/files/phase-1-energy-products-10-9.xlsx). Any firm that currently uses the CME SPAN methodology and trades impacted products will need to implement one of the following services for computing CME SPAN 2 margin requirements:
+
+*   CME Core – a CME Group hosted web application for Margin Calculation “CME CORE”
+*   Margin API – a CME Group hosted margin calculation API
+*   Deployable Margin Software – a CME Group java margin calculation library
+
+Please Note: A limited number of existing pre-trade execution margin calculation processes may continue to be supported.
+
+Firms using CME SPAN for pre-trade risk management can contact the [Post Trade Services team](mailto:PostTradeServices@cmegroup.com) for more information:
+
+| US | UK | APAC |
+| --- | --- | --- |
+| +1 312 580 5353 | +44 20 3379 3500 | +65 6593 5599 |
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/08/20210809.html#top)

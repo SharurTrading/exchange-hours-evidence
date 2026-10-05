@@ -1,0 +1,114 @@
+{
+  "gate": "U6-energy-tas-mran-chain",
+  "role": "adversarial verifier",
+  "verdict": "matches=false (core conclusions survive; four load-bearing evidence failures must be corrected before anything merges)",
+  "verified_at": "2026-09-12",
+  "verifier_bytes": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U6-verify/ (SHA256SUMS.txt)",
+
+  "hash_and_provenance_checks": {
+    "index_md_vs_disk": "PASS - every sha256 in raw/U6-energy-tas-mran-chain/INDEX.md (both passes, 62 entries incl. derived .txt renders) recomputed and matched.",
+    "live_refetch_cftc_pdfs": "PASS - rul100710nymexandcomex001.pdf 089a1416..., rul102110nymexandcomex001.pdf f694b26f..., rul033111nymexandcomex001.pdf afb98d31..., rul083109nymexandcomex001.pdf a5693b21... re-fetched from cftc.gov 2026-09-12; byte-identical.",
+    "live_refetch_wayback": "PASS - energy-hours id_ replays 20111101150158 cf16aafb..., 20130116234125 957338c8..., 20150322035720 416d47c4... re-fetched; byte-identical.",
+    "live_refetch_cme_via_reader": "PASS - ContractSpecs productId 2912 e254b920... and notice 20161219 b4b4cea6... re-fetched 2026-09-12; byte-identical to the saved renders.",
+    "contractspecs_10037_live": "PASS - MCL still names ProductCode.TAS = MCT and still carries NO TAS line in its Globex hours cell."
+  },
+
+  "verbatim_re_derivation": {
+    "RA1005-4 (rul100710)": "PASS. Header 'Advisory Date October 11, 2010 / Advisory Number NYMEX & COMEX RA1005-4 / Effective Date October 25, 2010'. Every quoted 'Globex Pre-Open Time Period' value confirmed (CLT/BZT/BBT/HOT/NGT/NNT/RBT 1:30 p.m.-4:45 p.m. (ET) Monday-Thursday; 7FT 11:00 a.m.; GCT 12:30 p.m.; SIT 12:25 p.m.). Rows carry NO Friday/Sunday leg, as the researcher implied. Redline of 524.A.2 confirmed.",
+    "RA1006-4 (rul102110)": "PASS and stronger than quoted. 'Advisory Date October 22, 2010'; 'Effective Date October 25, 2010 (Matched Order Changes Only)' / 'Effective Date November 1, 2010 (TAS Changes)'; 'This Advisory Notice supersedes ... RA 1005-4 from October 12.'; 'It is being issued to provide additional compliance guidance and a revised effective date'; 'The prohibition will become effective on Sunday, October 31 for trade date November 1, 2010.'; the 'provided solely for informational purposes' / security-status-message paragraph; every per-root No-Activity value incl. the Friday-Sunday leg '2:30p.m. (ET) Friday-5:15p.m. (ET) Sunday'; and the copper pit line '8:10 a.m. until 1:00 p.m. Eastern Time (\"ET\")'.",
+    "RA1101-4 / RA1102-4": "PASS. Advisory dates Jan 5 / Jan 7 2011, both Effective Jan 23 2011; 'On November 1, 2010, Rule 524 was amended'; tables unchanged incl. HGT 1:00 p.m. ET.",
+    "RA1104-4 (rul033111)": "PASS. Letter 2011-03-31, 'Advisory Date April 4, 2011', 'Effective Date April 10, 2011', supersedes RA1102-4. '(all times are in Eastern Time)' confirmed adjacent to all five bullets; per-root table confirmed root-by-root: CLT/HOT/RBT 5:46-5:16, NGT 5:47-5:17, BZT/BBT/NNT/7FT/KTT/CJT/TTT/YOT/XCT/RET 5:45-5:15, GCT 5:48, SIT 5:49, HGT 5:50. Cover letter 'stagger and more evenly distribute order flow' confirmed.",
+    "RA1106-4 / RA1107-4 / RA1108-4 / RA1203-4R / RA1303-4": "PASS - no per-product TAS clock table in any of them. (RA1203-4R does contain an unrelated block-trade analysis definition, 'Regular Trading Hours (\"RTH\") (defined as 8:00 a.m. - 2:30 p.m. Eastern Time (\"ET\")', scoped to CLOB liquidity analysis for the OUTRIGHT roots - not a TAS session and not an RTH publication.)",
+    "RA0907-4 (rul083109)": "PASS on content. 524.A.2 floor text and HHT membership confirmed.",
+    "energy-hours archived captures": "PASS on the quoted rows, and the U-4 trap is independently confirmed from the table's own <th>: the six columns are 'Pre-Open Electronic Trading (Sunday) / Electronic Trading (Sunday) / Pre-Open Electronic Trading (Weekday) / Electronic Trading (Weekday) / Open Outcry / CME ClearPort'. The '09:00-14:30 ET (08:00-13:30 CT)' column IS the Open Outcry column. 2010-03-27 capture confirmed to carry zero TAS rows.",
+    "Globex Notice 2016-12-19": "PASS - exact verbatim, session language ('the trading hours ... cease daily at 11:30 a.m. Eastern time (ET). Currently, the trading session closes daily at 12:00 p.m. ET.'), unconditional, day-level, 'Sunday, January 8' = 2017-01-08 (a Sunday).",
+    "7F spec pages": "PASS - 2016-09-25 '2:30 PM Eastern Time'; 2017-03-30 and 2017-11-29 '11:30 Standard Time (EST)'; 2019-11-16 and 2021-05-15 carry the shared TAS string and zero 'cease daily' hits.",
+    "Globex Notice 2022-07-18": "PASS - 'Micro Crude Oil TAS | MCT | CT | 382' under 'iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group', and the effective day is conditional ('pending completion of all regulatory review periods').",
+    "RA2302-5": "PASS on the two quoted sentences.",
+    "trading-hours-by-product dead end": "PASS - id=425 returns groupCode 'CL', id=2912 returns groupCode 'OP'; no TAS group addressable.",
+    "CDX for ContractSpecs productId 2912": "PASS - re-run returns []; positive control productId 425 returns rows.",
+    "tas-tam-eligibility workbook": "PASS - Sheet 2 'Energy TAS' lists 7FT, MCT, HHT, BBT, BZT, NNT by contract month only; no hours anywhere."
+  },
+
+  "discrepancies": [
+    {
+      "id": "D1",
+      "severity": "load-bearing - FALSE corroboration claim that conceals a source conflict on a modelled root",
+      "claim": "state 'CME trading_hours/energy-hours.html (archived) - THIRD independent zone settlement' and conclusion pillar (3): 'Its ET column matches RA1104-4 to the minute'.",
+      "bytes": "wayback-energy-hours-20111101150158.html. Full TAS row set: Crude Oil TAS 17:16/17:46 ET; Brent Crude Oil TAS 17:15/17:45; Brent Crude Oil Last Day TAS 17:16/17:46; REBCO TAS 17:16/17:46; Natural Gas TAS 17:17/17:47; Heating Oil TAS 17:16/17:46; RBOB Gasoline TAS 17:16/17:46.",
+      "finding": "Two of seven rows do NOT match RA1104-4. RA1104-4 puts BZT (Brent Crude Oil Last Day Financial) and RET (REBCO) at 5:45 p.m. / 5:15 p.m. ET - explicitly inside 'all other TAS-eligible products' - while CME's own hours page seven months later prints 17:46 / 17:16 ET for both. The researcher quoted only the five agreeing rows, so the selective quote hides a two-primary conflict on BZT, a root of the proposed globex_energy_tas. Impact: the ZONE pillar survives (the page's dual ET/CT columns settle the zone whatever the minute values), and the ERA-2 intersection is unchanged (NGT 16:47 CT remains narrowest under either source). But the conflict is unrecorded and must go beside the table under the sourced-conflict convention, and 'matches RA1104-4 to the minute' must be struck."
+    },
+    {
+      "id": "D2",
+      "severity": "load-bearing - claim of absence rested on a truncated query",
+      "claim": "dead_ends: 'last surviving capture 2015-03-22'; INDEX: 'CDX index of the archived page (61 rows, 2009-05-03 .. 2015-03-22)'.",
+      "bytes": "cdx-energy-hours.json was fetched with '&limit=60' and holds 60 data rows, not 61. CDX returns chronologically, so limit=60 truncates the TAIL - exactly the end the absence claim depends on.",
+      "finding": "Re-ran the query with no limit: 74 rows, last timestamp 20251221204624, with 14 captures after 2015-03-22. The conclusion nevertheless SURVIVES, and I established that independently rather than assuming it: 20150323104831 is byte-identical to the saved 20150322035720 (sha256 416d47c4...); 20150906034739, 20160326060958, 20160927004528, 20161117171010, 20161126145755 are 20-byte stubs; 20170910041937 and 20180121084056 are 301s; 20200421163409, 20210411021825 and 20251221204624 render CME's 'Page Not Found (404)' shell with zero occurrences of 'TAS'. So: the last surviving content capture is 2015-03-23 (not 03-22), the CDX row count and range in INDEX are both wrong, and the absence was asserted from evidence that could not support it."
+    },
+    {
+      "id": "D3",
+      "severity": "load-bearing - a chain edition the gate explicitly named was neither retrieved nor recorded as a dead end",
+      "claim": "The gate's U-6 instruction names the walk 'RA0907-4 (2009-08-31) -> RA1003-4 -> RA1005-4 (2010-10-07) -> ...'. RA1003-4 appears nowhere in the result's states, dead_ends or INDEX.",
+      "bytes": "RA1005-4's own header, rul100710nymexandcomex001.txt: 'This Advisory Notice supersedes NYMEX & COMEX Market Regulation Advisory Notice RA1003-4 from April 12, 2010'.",
+      "finding": "RA1003-4 is the Rule 524 edition in force through the first nine and a half months of the audit-floor year - precisely the interval the researcher proposes to fill by carry-back. I probed for it: cftc.gov ifdocs rul{033010,033110,040110,040210,040510,040610,040710,040810,040910,041210}{nymexandcomex001,nymexandcomex002} all 404; rul{041310,041410,042010}nymex001 exist but are unrelated filings (Submissions 10-101, 10-013, 10-099); cmegroup.com/rulebook/files/nymex-comex-ra1003-4.pdf returns CME's 404 page; web.archive CDX filtered on 'ra1003-4' over cmegroup.com returns []. It stays UNRETRIEVED and must be recorded as an open channel under AGENTS.md's '\"Unsourced\" means \"not worked up\", never \"no source exists\"'. Mitigating (and the researcher did not cite it): RA1005-4's own words - 'The revisions address 1) the time period during which TAS orders in TAS-eligible products may be entered on CME Globex' - indicate the prescribed pre-open time period was INTRODUCED by RA1005-4, so RA1003-4 most likely carried no clock table. That inference strengthens the carry-back recommendation but is not a substitute for saying the channel is open."
+    },
+    {
+      "id": "D4",
+      "severity": "load-bearing - artifact cited with no saved bytes, and its effective day is stated wrongly",
+      "claim": "encodable: 'Globex Notice 20150817 (DCM-wide 15-minutes-earlier closes, trade date 2015-09-20) moved the energy outright close 16:15 -> 16:00 CT and did not touch TAS'.",
+      "bytes": "No such file in raw/U6-energy-tas-mran-chain/ and no INDEX row. I retrieved it (saved as raw/U6-verify/n20150817.md, sha256 4e979598...).",
+      "finding": "The notice reads: 'Effective **Monday, September 21,** the daily CME Globex maintenance period will begin 15 minutes earlier Monday through Thursday from 16:00 until 16:45 Central Time (CT). Currently, the daily maintenance period occurs Monday through Thursday from 16:15 to 16:45 CT. With this change, the closing times for the following markets will now occur 15 minutes earlier Monday through Friday at 16:00 CT.' - list: CME Equity, CBOT Equity, COMEX, NYMEX, DME - then 'All other CME Globex markets trading hours remain unchanged.' The negative conclusion HOLDS (a move to a 16:00 CT close cannot reach a 13:30 CT TAS close). But the stated day is Monday 2015-09-21, not 'trade date 2015-09-20' (2015-09-20 was a Sunday), and a load-bearing negative was asserted from bytes the gate never saved."
+    },
+    {
+      "id": "D5",
+      "severity": "material - the U-0a group-identity argument cites a root no retrieved source supports, while the supporting root sits in the researcher's own directory",
+      "claim": "'placing MCT in the crude-oil TAS group that carries CLT'.",
+      "finding": "No saved artifact states CLT's Globex security group; the only CL row held (trading-hours-425.md) returns groupCode 'CL', the OUTRIGHT group. But cme-globex-notice-20161219.md line 579 - in the same raw directory - reads '| Brent Last Day Financial Futures TAS | BZT | CT | 1 | 0.25 |' under the identical 'iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group' header. BZT is a proposed globex_energy_tas root, so the published-group-identity argument for MCT IS sourced - by BZT, not CLT. Restate it that way and U-0a is on firmer ground than the result claims."
+    },
+    {
+      "id": "D6",
+      "severity": "minor - verbatim and date discipline",
+      "items": [
+        "The RA0907-4 quote resequences the Globex list (BBT printed after RBT; in the document BBT precedes CLT). Ellipses mark omission, not reordering.",
+        "'A uniform +1h across ten rows' undercounts: RA1005-4 carries 16 product rows and RA1006-4 carries 15, and the +1h holds across EVERY common row (11:00->12:00, 11:30->12:30, 10:50->11:50, 1:15->2:15, 12:30->1:30, 12:25->1:25, 1:30->2:30). The argument is stronger than stated; the undercount is the visible symptom of D7.",
+        "RA2302-5's effective day is itself conditional in the bytes - 'Effective on trade date July 31, 2023, and pending all relevant CFTC regulatory review periods' - and the state records it unqualified. Harmless: RA2302-5 sources no time.",
+        "INDEX stamps one capture instant, 2026-09-06T05:37:28Z, on every first-pass row, while the files' own mtimes span 15:14-15:34 local. That is a capture WINDOW, not an instant.",
+        "RA1005-4's advisory date is 'October 11, 2010' in its own header while RA1006-4 twice calls it 'from October 12'. The researcher's '2010-10-11/12' handles this correctly - keep the disagreement visible in the citation."
+      ]
+    },
+    {
+      "id": "D7",
+      "severity": "material - LAW-FOLLOW-UPS-ARE-ISSUES, neighbouring rows discovered and not named",
+      "finding": "Beyond the metals follow-up the result does raise, all five clock-bearing MRAN editions carry per-root No-Activity periods for four NYMEX cash-settled SOFTS TAS roots that appear in none of the result's quotes or follow-ups: KTT NYMEX Coffee (RA1006-4: 12:30 p.m. ET), CJT NYMEX Cocoa (11:50 a.m. ET), TTT NYMEX Cotton (2:15 p.m. ET), YOT NYMEX No. 11 Sugar (12:30 p.m. ET) - plus XKT/XCT (NYMEX Crude Oil B/C and MACI Index, 2:30 p.m. ET) and RET REBCO (2:30 p.m. ET). Each is a distinct sourced daily close with a 2010-10-22 knowledge boundary and the same 2011-04-10 pre-open carve-out ('all other TAS-eligible products ... continue to be 5:45 p.m. ET'), in exactly the unkeyed NYMEX softs family the shape queue's row-1 note flags. Separately, RA1323-4 (advisory 2013-11-01, effective 2013-11-18) is an untouched chain edition between RA1303-4 and RA2302-5 - I fetched it (raw/U6-verify/nymex-comex-ra1323-4.md): NEGATIVE, no TAS clock table, so it only needs adding to the exhausted list."
+    },
+    {
+      "id": "D8",
+      "severity": "minor - unflagged inference inside the encodable",
+      "finding": "Both globex_gasoil_tas eras give `extended` an OPEN of 17:00 CT. No retrieved source states a 7FT TAS open except the live ContractSpecs string for productId 2912 - the same string whose CLOSE (13:30 CT) the result rejects as boilerplate. Accepting its open while rejecting its close is correct under 'prefer the sourced intersection to omission', but the result does not say that is what it is doing; say so beside the table."
+    }
+  ],
+
+  "claims_that_survive_verification": [
+    "ZONE = America/Chicago for both keys. RA1104-4's '(all times are in Eastern Time)' printed beside 5:46/5:47 p.m., RA1006-4's uniform +1h reprint of RA1005-4's whole table under the same '(ET)' label, and the energy-hours page's dual ET/CT columns all agree; today's ContractSpecs for CL ('TAS: Sunday - Friday 5:00 p.m. - 1:30 p.m. CT') closes the chain. No cross-zone (U-8) problem.",
+    "RA1005-4's '(ET)' is a typographic error and its numerals are Chicago time. STRENGTHENED by two passages the researcher did not cite: RA1006-4 describes itself as issued 'to provide additional compliance guidance and a revised effective date' - not a schedule change - and RA1005-4 says its revisions 'address 1) the time period during which TAS orders ... may be entered on CME Globex', i.e. an order-entry window, not a session.",
+    "The handoff's '2010-10-25' is wrong for the TAS half: RA1006-4 gives 'Effective Date November 1, 2010 (TAS Changes)' and 'effective on Sunday, October 31 for trade date November 1, 2010', restated in RA1101-4, RA1102-4 and RA1104-4.",
+    "The recommendation NOT to open a 2010 revision row, and to carry the RA1006-4 grid back to the January-2010 floor, is defensible: what took effect 2010-10-31 is an order-entry prohibition, the No-Activity table is 'provided solely for informational purposes', and the redline corrects 'available for trading' to 'available for TAS trading'. This is a genuine judgment call the result flags as a residual - the parent should decide it explicitly, because the handoff's alternative reading (full globex_energy envelope before 2010-11-01) would create a dated cutover at 2010-10-31 that RA1006-4 does state a day for.",
+    "RA1104-4 is the only unconditional day-level cutover to the energy-TAS grid in the chain, keyed to the local opening day 2011-04-10 (Sunday) for trade date 2011-04-11, and it narrows an overnight order-entry start - so it keeps its artifact's own date under AGENTS.md, not the following Monday.",
+    "The ERA-2 order_entry intersection (Mon-Thu 16:47->17:00 CT, Sunday 16:17->17:00 CT) is correct under 'a knowledge boundary may only widen' and 'prefer the sourced intersection to omission', and is unaffected by D1.",
+    "The clock-bearing MRAN channel terminates at RA1104-4; RA1106-4 (eff. 2011-07-11) is the first edition with no table. Confirmed for RA1106-4, RA1107-4/RA1108-4, RA1203-4R, RA1303-4, RA1323-4 and RA2302-5.",
+    "globex_gasoil_tas is fully dated: 12:00 p.m. ET (11:00 CT) -> 11:30 a.m. ET (10:30 CT) on the opening day 2017-01-08 for trade date 2017-01-09, unconditional, in session language, corroborated on CME's own 7F spec page at 2017-03-30 and 2017-11-29. The handoff's 'current close 10:30 CT is undated relative to those' is indeed wrong: 11:30 a.m. ET IS 10:30 CT.",
+    "The live ContractSpecs string for productId 2912 ('TAS: ... 1:30 p.m. CT') must be recorded as a CONFLICT, not followed - the same page printed a demonstrably wrong generic TAS time ('2:30 PM Eastern Time') before the change too.",
+    "U-0b is CLOSED: ContractSpecs productId 2752 names ProductCode.TAS = HHT and states 'TAS: Sunday - Friday 6:00 p.m. - 2:30 p.m. (5:00 p.m. - 1:30 p.m. CT)'; RA0907-4 lists HHT in 2009. The caveat that HHT is absent from every 2010-2011 per-root table is correct and is catalog data, not a schedule fact.",
+    "U-0a only NARROWS: no CME document states MCT hours; MCL's spec names MCT and carries no TAS line (re-confirmed live); the 2022-07-18 notice's effective day is conditional and dates nothing.",
+    "The U-4 trap is real and now independently confirmed from the table's own column headers: the '09:00-14:30 ET (08:00-13:30 CT)' cell on archived TAS rows sits under 'Open Outcry'."
+  ],
+
+  "required_before_merge": [
+    "Strike 'matches RA1104-4 to the minute' and record the BZT/RET pre-open conflict (RA1104-4 5:45/5:15 p.m. ET vs energy-hours 2011-11-01 17:46/17:16 ET) beside the table.",
+    "Correct INDEX's energy-hours CDX row ('60 rows fetched under limit=60; 74 exist; last surviving CONTENT capture 2015-03-23, byte-identical to 2015-03-22; every later capture is a stub, 301 or CME 404 shell').",
+    "Record RA1003-4 (advisory 2010-04-12) as an OPEN channel with the routes already tried, not as silence.",
+    "Save the 2015-08-17 Globex Notice bytes with the gate's evidence and correct its day to Monday 2015-09-21.",
+    "Re-source the U-0a group-identity argument on BZT (notice 2016-12-19, group CT), not CLT.",
+    "Open GitHub issues for the NYMEX softs TAS rows (KTT, CJT, TTT, YOT) and for XKT/XCT/RET, alongside the metals follow-up already named."
+  ]
+}

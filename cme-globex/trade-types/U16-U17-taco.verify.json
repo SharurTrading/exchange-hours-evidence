@@ -1,0 +1,112 @@
+{
+  "gate": "U16-U17-taco",
+  "role": "adversarial verifier",
+  "verdict_ts": "2026-09-11T23:30:00Z",
+  "researcher_result": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/U16-U17-taco.json",
+  "matches": false,
+  "summary": "Every verbatim quote, every hash and every measurement in the result re-derives from the saved bytes; nine load-bearing artifacts were independently re-fetched and came back byte-identical. The substantive findings (era-1 grid, era-2 grid, the 2021-09-26/27 effective day, the ClearPort-vs-Globex resolution on ES, the 3,243-product Saturday census and the 'withhold the Saturday rows' conclusion) all survive. The result nevertheless fails on two CLAIMS OF ABSENCE that are false against the researcher's own evidence store, one of which (CME Clearing Advisory 21-234) is the single best document for this gate and answers a question the result hands back unanswered.",
+  "verified_confirmed": [
+    "INDEX.md sha256 for all 31 listed load-bearing files matches the files on disk (recomputed).",
+    "Globex Notice 2018-05-07 item 'Update Update - TACO on E-Mini S&P 500 Futures- This Week': every quoted line matches the bytes, including the nine-bullet era-1 grid, 'TACO on E-Mini S&P 500 Futures | ESQ | 3T | 318', and the clause 'pending all relevant CFTC regulatory review periods'. No stitching, no wrong times, zone label is 'Central Time (CT)' as quoted.",
+    "SER-8124R: DATE April 26, 2018; 'supersedes SER 8124 dated April 20'; 'Effective Sunday, May 13, 2018, for trade date Monday, May 14, 2018, and pending all relevant CFTC regulatory review periods'. Exhibit 1 is a two-column ClearPort/Globex table rendered as flowing text; the researcher quoted the CME Globex column and said so. 'Friday ... No day session. Trading shall resume on Sunday evening.' is the Globex cell (ClearPort's Friday cell is '11:00 a.m. - 5:00 p.m.'). Correct.",
+    "Clearing Advisory 20-061: HTML header Notice Date 26 February 2020 / Effective Date 23 March 2020; PDF 'Listing Date  Trade Date Monday, March 23, 2020'; Globex grid quoted exactly; footer 'Pending All Relevant CFTC Regulatory Review Periods' present. Its 'Termination of Trading  Business day before third Friday of the Contract Month' row was correctly not read as a close (LAW-SESSION-NOT-EXPIRY).",
+    "Globex Notice 2020-03-16: quote exact; 'TACO on E-mini Nasdaq-100 Futures | NQQ | NT | 318' and 'TACO on E-mini Russel 2000 Futures | RTQ | RE | 318' confirmed (CME's own 'Russel' misspelling preserved).",
+    "Globex Notices 2021-09-06 / 09-13 / 09-20: the TACO/BTIC item text is word-for-word as quoted in all three, including 'With this change and for the first time, CME Globex will support trading for a trade date over a weekend. The trade date for these products will not roll over on the weekend.'",
+    "Client-systems wiki: v13 captures (wayback 2020-07-01, 2021-06-11, 2021-06-21) carry 'last modified on Feb 26, 2020' and diff link selectedPageVersions=12&13; v14 captures (2021-10-26, 2022-05-28) carry 'last modified on Oct 11, 2021' and selectedPageVersions=13&14. Both grids extracted from the bytes match the result verbatim (the only elision is the leading 'Note: ' on the Friday next-business-date line).",
+    "Migrated Confluence page 457092968 re-fetched live 2026-09-11T23:21Z: version 2 of 2, 2025-01-13T19:46:14.571Z, author 'Space Sync for Confluence'; era-2 grid still the operator's live statement. sha256 b690cd5c… identical to the researcher's capture.",
+    "Live ContractSpecs re-fetched 2026-09-11: productId 133 sha256 556324d0…, 146 sha256 10c5a7ae…, 8314 sha256 90b2b39b… — all three BYTE-IDENTICAL to the researcher's captures. ES 'CME Globex:' TACO cell = 'Monday - Friday 11:00 a.m. - 5:00 p.m. ET'; ES 'CME ClearPort:' TACO cell = 'Monday - Thursday 11:00 a.m. - 5:00 p.m. ET and 6:00 p.m. - 9:30 a.m. ET'; NQ and RTY ClearPort cells both read 'Monday - Friday'. The result's resolution of the apparent live self-contradiction is correct.",
+    "Archived ContractSpecs 133: the 14 decoded captures show exactly two distinct Globex TACO cells, flipping once between 2021-07-03 and 2022-09-08, as claimed. The 14 replays cover all 8 distinct CDX digests among the 23 captures, so no third state is hidden in an unreplayed capture. Two replays (2021-07-03, 2022-09-08) redone independently from web.archive.org and matched the researcher's decoded files bit for bit.",
+    "CDX for ContractSpecs/List/productId/133* re-run: identical 23 rows, all statuscode 200.",
+    "Saturday census recomputed from thallB_p1..p17: 3,243 product rows, 3,243 distinct ids. Saturday 2026-09-05 signatures — 2,973 empty; 265 = (02:00 closed, 03:45 preopen, 04:00 open), all crypto plus 1OZ; 5 = (05:00 open, 17:00 closed) = ESQ/3T, NQQ/NT, RTQ/RE, NIT/N6, NKT/ND. No other signature exists. Exactly as claimed.",
+    "ESQ service windows: every row quoted in the result matches the bytes. Saturday pair invariant across the 2026-11-01 DST end; unchanged after the 12:15 early-close Friday 2026-11-27; still present after Friday 2026-12-25 whose event list is empty (and after 2027-01-01, likewise empty). Saturday has an 'open' with no preceding preopen, unlike every other open in the week — including holiday Mondays/Thursdays, which do get a preopen.",
+    "Control products: ES(133), ESX(10508), EST(7968), ES1(8689), GCD(8407) all have empty Saturday rows; EST closes Friday 15:00 CT and ES1 Friday 16:00 CT with nothing after, while NIT/NKT do carry the Friday forward-dated leg. Confirmed.",
+    "Taco-Friday-Scenario.png read directly: markers are Friday / 'Sunday Start' / Monday only, no Saturday element; Friday TACO fill carries 'tag 75-TradeDate=June 27 (Monday)'.",
+    "Globex Notice 2021-06-21: 'Please note: S&P 500 futures and options (250 multiplier) as well as all BTIC and TACO products will not be impacted.' Exact. Its own item is 'Effective this Sunday, June 27 (trade date Monday, June 28)'.",
+    "Globex Notice 2019-08-26: states no trading hours anywhere in the BTIC+/TACO+ item; ES1/ES2 (SK) and EQ1 (4T) codes confirmed. Correctly found irrelevant to ESQ/NQQ/RTQ.",
+    "Dead end 1 (partial): CDX for the 'TACO and BTIC Friday Trading Schedule' Client Impact Assessment is empty (re-run, both raw and encoded forms); an independent CDX prefix sweep of cmegroup.com/confluence/display/EPICSANDBOX* returns 2,333 rows whose only TACO|Friday|Basis matches are 'Basis Trade at Cash Open' and a 2015 natural-gas basis-swap page; live Confluence CQL title~\"Friday Trading Schedule\" returns size 0 and text~\"TACO\" and text~\"Saturday\" returns one unrelated RDW API page. All re-verified.",
+    "Dead end 3: migrated page 457092968 has exactly two versions, both by 'Space Sync for Confluence'. Confirmed live.",
+    "Dead end 4: /services/trading-hours-by-product?id=8528 for 2021-10-01→2021-12-31 returns props.hasEvents=false with 92 empty schedules. Confirmed live; the feed is forward-only.",
+    "Dead end 5: cdx-svc-all.json holds 691 rows — 670 id=316, one id=5224, one id=318, 18 with no id, none for 8528/8914/8915/8633/8634. Recomputed exactly.",
+    "Dead end 10: ContractSpecs productId 8528 returns TradingHours '-' and ProductCode '-'. Confirmed live.",
+    "The three post-launch notices (2021-09-27, 2021-10-04, 2021-10-11) contain zero occurrences of 'TACO'. Confirmed."
+  ],
+  "discrepancies": [
+    {
+      "id": "D1",
+      "severity": "load-bearing — false claim of absence, contradicted by the researcher's own captured bytes",
+      "claim": "dead_ends #2: 'No SER and no clearing advisory exists for the 2021-09-26 TACO/BTIC Friday schedule.'",
+      "finding": "CME Clearing Advisory 21-234 IS that document. HTML header: '# 21-234 / Notice Date 01 July 2021 / Effective Date 27 September 2021', subject 'Product Modification Summary: Expansion of the Basis Trade at Cash Open (“TACO”) Trading Session on CME Globex for the E-mini S&P 500 Futures, E-mini Nasdaq-100 Futures, Emini Russell 2000 Index Futures and Basis Trade at Index Close (“BTIC”) Trading Session on CME Globex for Yen Denominated Nikkei Stock Average Futures and USD Denominated Nikkei Stock Average Futures Contracts'. PDF body: 'Effective Monday, September 27, 2021, and pending all relevant CFTC regulatory review periods, Chicago Mercantile Exchange Inc. (“CME” or “Exchange”) will expand the Basis Trade at Cash Open (“TACO”) and Basis Trade at Index Close (“BTIC”) trading sessions on the CME Globex electronic trading platform (“CME Globex”) to allow Friday trading sessions, for the next available Trade Date.' The researcher CAPTURED IT: CAPTURES.log lines 56-57, 2026-09-06T05:41:40Z and 05:41:44Z, saved as raw/U16-U17-taco/Chadv21-234.txt (sha256 442f46cf9ed366eaf2c8e2461dc6a44d002f9bb6f6e919439ca7877d6d13f899) and Chadv21-234-pdf.txt (sha256 1959861d741b4dde946eef6842db6fdf25247a9cb47006964f8c01cb6402c0f1). It is also in the researcher's own notices-index sweep (notices/idx-2021-06-01_2021-11-01-p*.json). It appears nowhere in INDEX.md's load-bearing table and nowhere in the result JSON. Re-fetched live 2026-09-11T23:26:01Z; body byte-identical to the researcher's copy (only the text reader's Published Time header differs).",
+      "why_it_matters": [
+        "It tabulates the era-1 and era-2 Globex TACO grids SIDE BY SIDE in one dated document — Current 'TACO: Sunday - Friday 6:00 p.m. - 9:30 a.m. ET. Monday - Thursday 11:00 a.m. - 5:00 p.m. ET.' vs Expanded 'TACO: Sunday – Friday 6:00 p.m. - 9:30 a.m. ET. Monday - Friday 11:00 a.m. - 5:00 p.m. ET.' That removes the result's structural weakness, which the result does not acknowledge: as returned, the era-2 grid is sourced only by a wiki page whose own stamp (2021-10-11) is AFTER the effective day, plus the live feed. 21-234 states the expanded grid in the same document as the effective date, two and a half months before it.",
+        "It names the product codes the weekly notice does not: TACO ESQ (Rulebook ch. 358), NQQ (ch. 359), RTQ (ch. 393); BTIC NKT (ch. 352) and NIT (ch. 352B) ONLY. This directly answers the result's 'MUST STAY WITHHELD #4' and cross-gate item B, both of which rest on the premise that the 2021 notice 'names NO product codes' so the BTIC half cannot be scoped. CME scopes it: the BTIC half is the two Nikkei roots, exactly matching the live feed (NIT/NKT carry a Friday leg; EST and ES1 do not).",
+        "It gives the Nikkei BTIC before/after grid — 'BTIC: Sunday - Friday 6:00 p.m. ET - 3:00 p.m. Tokyo time (1:00 a.m./2:00 a.m. ET) Monday - Thursday 12:00 p.m. to 5:00 p.m. ET' → '... Monday – Friday 12:00p.m. to 5:00 p.m. ET' — which is U-18 material the gate's cross-gate item A/B asks about and which the result reports as unavailable.",
+        "It is a SECOND dated primary source naming the same effective day, which is materially stronger than one weekly notice and is the exact opposite of the U-19 situation (two documents, two different days). It carries the same 'pending all relevant CFTC regulatory review periods' clause, so the adjudication the result hands back is unchanged in substance."
+      ]
+    },
+    {
+      "id": "D2",
+      "severity": "load-bearing — false claim of absence, contradicted by the researcher's own saved bytes",
+      "claim": "dead_ends #6: 'The TACO marketing page /trading/equity-index/trade-at-cash-open.html contains NO hours prose in any of its 13 archived captures (2018-05-13 through 2022-08-13). ... do not send anyone back to it.'",
+      "finding": "All 13 saved captures under raw/U16-U17-taco/tacopage/ carry a TACO contract-specification block with a 'Trading Hours' row, and the row CHANGES across the U-17 boundary. 2018-05-13, 2018-06-22, 2019-09-23, 2020-08-11, 2020-10-25, 2021-01-28, 2021-04-17, 2021-07-27 and 2021-10-22 all read: 'Trading Hours  10:00 a.m. CT previous day to 8:30 AM CT   For each trade day, trading starts at 10:00 a.m. CT the previous day, except for a Monday trade date, which starts on Sunday at 5:00 p.m. CT.' The 2021-12-02, 2022-05-27 and the two 2022-08-13 captures delete the exception clause: 'For each trade day, trading starts at 10:00 a.m. CT the previous day.' I re-fetched the 2026-02-13 capture (wayback 20260213214836): the era-2 sentence is still there, so it is CME's current prose.",
+      "why_it_matters": [
+        "This is a third independent CME channel bracketing the U-17 change (last era-1 state 2021-10-22, first era-2 state 2021-12-02) and it is the only retrieved CME prose that states in words WHAT the change did to the trade date: Monday's trade date stops starting Sunday 17:00 CT and starts at 10:00 CT on the previous (Friday) day. That is precisely the 'hardest part of encoding TACO' the result identifies, and CME states it.",
+        "It corroborates era 1 as a single 10:00→08:30 CT span per trade date, which is what the result's Halt (not Maintenance) treatment of the 16:00–17:00 CT gap depends on.",
+        "It adds a fourth CME statement that the weekend is shut (nothing between 08:30 Friday and the previous-day 10:00 start), reinforcing the withhold-Saturday conclusion.",
+        "Scope over-claim: the CDX for that page holds 30 captures; only 13 were fetched and none after 2022-08-13. 'Do not send anyone back to it' is wrong twice over — the page has hours prose, and 17 captures were never opened."
+      ]
+    },
+    {
+      "id": "D3",
+      "severity": "precision — understates the researcher's own evidence",
+      "claim": "conclusion: 'CME Globex Notice ran the item \"TACO and BTIC Amended Trading Schedule\" on 2021-09-06, 2021-09-13 and 2021-09-20'; states entry: 'identical item ran 2021-09-06 and 2021-09-13'.",
+      "finding": "The researcher's own saved notice bodies show the item 'TACO and BTIC Amended Trading Schedule- September 26' in EVERY weekly Globex notice from 2021-06-28 through 2021-09-20 — 06-28, 07-05, 07-12, 07-19, 07-26, 08-02, 08-09, 08-16, 08-23, 08-30, 09-06, 09-13, 09-20 — always naming Sunday September 26 / trade date Monday September 27, never a different day. The 2021-06-28 issue is headed 'New New -' and adds 'This change will be available for customer testing in New Release on Monday, July 12.' The correct statement is three months of unchanged announcement with no slippage, which is much stronger than what the result reports.",
+      "why_it_matters": [
+        "It also fixes the far side of the U-17 bracket tighter than the result claims: wiki v13 still era-1 on 2021-06-21, first announcement 2021-06-28."
+      ]
+    },
+    {
+      "id": "D4",
+      "severity": "precision — the stated supporting fact is not in the cited documents",
+      "claim": "conclusion: 'No postponement item appeared in the 2021-09-27, 2021-10-04 or 2021-10-11 notices — CME did flag a postponement for iLink 3 FIXP in those same notices, so its absence here is meaningful.'",
+      "finding": "The word 'postponed' appears in none of those three notices. Their FIXP items read 'Effective this Sunday, October 3', 'On Sunday, October 3 ... continues to implement' and 'This Sunday, October 17'. The FIXP POSTPONEMENT ('The previously announced launch of iLink 3 FIXP messaging enhancements has been postponed to Sunday, October 3.') is in the 2021-09-06 / 09-13 / 09-20 notices — the same issues that carried the TACO item. The inference survives in that corrected form; the sentence as written does not."
+    },
+    {
+      "id": "D5",
+      "severity": "trivial",
+      "claim": "states entry: 'The same item ran 2020-02-24 and 2020-03-09'.",
+      "finding": "The 2020-03-05 notice body in the researcher's own store also carries the item (8 TACO occurrences, same as 02-24, 03-09 and 03-16)."
+    },
+    {
+      "id": "D6",
+      "severity": "interpretive — must be a decision, not a side effect",
+      "claim": "encodable/conclusion: the handoff's decision rule 'has to read: a feed event counts as session language only where no operator prose contradicts it.'",
+      "finding": "LAW-SESSION-NOT-EXPIRY's own text admits 'a venue feed's own close/halt event' as session language without that qualification. The withholding decision itself is right and is what the 'Prefer the sourced intersection to omission' convention requires (one feed channel against three — now four, with D2 — CME prose statements), and it is reinforced by the fact that the Saturday row is a full open+close PAIR rather than the close/halt event the law names. But narrowing a named law is a deliberate change that belongs in a GitHub issue under LAW-FOLLOW-UPS-ARE-ISSUES, not in a key's doc comment; the result proposes it as a rule rewrite and lists it only inside the prose."
+    },
+    {
+      "id": "D7",
+      "severity": "minor — observational",
+      "claim": "states entry for Taco-Friday-Scenario.png quotes 'Buy 500 e-mini June 25 (Friday)' and 'tag 75-TradeDate=June 27 (Monday)' without comment.",
+      "finding": "Those two labels are internally inconsistent — no year has June 25 on a Friday and June 27 on a Monday. CME's own diagram is sloppy. The structural point (Friday fill carries the following Monday's trade date; markers are Friday / Sunday Start / Monday with no Saturday) is unaffected, but the diagram must not be used to date anything, and the next reader should be told so."
+    },
+    {
+      "id": "D8",
+      "severity": "residual — stated in the conclusion but not carried into 'encodable'",
+      "claim": "The 'encodable' block states ERA 1 launching 2018-05-13 and ERA 2 keyed 2021-09-26 as settled, while the conclusion says both dates stand or fall on the unresolved 'pending all relevant CFTC regulatory review periods' adjudication.",
+      "finding": "The encodable block should repeat the condition; as written an implementer could take the two dates as cleared. One fact cuts against the result's 'boilerplate' framing and is worth recording beside the adjudication: CME does publish unconditional effective days in the same weekly channel — the 2021-06-21 halt-removal item reads 'Effective this Sunday, June 27 (trade date Monday, June 28), CME Group will eliminate...' with no pending clause — so the clause is applied selectively to product listings and eligibility changes (which are CFTC self-certified) and is not universal boilerplate that can simply be read past."
+    }
+  ],
+  "residual_caveats_if_the_discrepancies_are_repaired": [
+    "With 21-234 in hand the era-2 Globex grid is operator-stated on 2021-07-01 for an effective trade date of 2021-09-27, so the 'grid sourced only after the fact' risk disappears. The Friday PRE-OPEN time (09:30 CT) and the Friday close's 'closed' rather than 'paused' character remain sourced only by the wiki (stamp 2021-10-11) and the live feed; 21-234 states only the 11:00-17:00 ET executable window.",
+    "Nothing retrieved EXPLAINS the (05:00 open, 17:00 closed) Saturday rows. The case for withholding is negative (invariant under DST, unchanged after an early-close Friday, present after a Friday the market never opened, no pre-open, byte-identical across two differently-anchored families) plus four CME prose statements that the re-open is Sunday. That is the right call and must be recorded as an anomaly beside the table, not silently dropped.",
+    "The 2022-2026 window still rests on CME's own channels only (14 archived ContractSpecs captures, today's live specs, the live feed). A change made and reverted between two adjacent captures would be invisible. That residual risk is correctly stated in the result.",
+    "U-4 (regular vs extended) is untouched by this gate, as the result says.",
+    "The ES ContractSpecs ClearPort TACO cell still reads Monday-Thursday while NQ's and RTY's read Monday-Friday. Verified live today. Worth one sentence in the key's doc comment."
+  ],
+  "follow_ups_that_must_become_issues": [
+    "The identical (05:00 open, 17:00 closed) Saturday artifact on NIT (N6) and NKT (ND) must be withheld by whoever authors the Nikkei BTIC keys (U-18), on this evidence.",
+    "Clearing Advisory 21-234 is a U-18 source in its own right: it dates the Nikkei BTIC Monday-Thursday → Monday-Friday 12:00-17:00 ET expansion to trade date 2021-09-27 and names NKT/NIT with rulebook chapters 352 and 352B.",
+    "The 'pending all relevant CFTC regulatory review periods' adjudication, which now decides five TACO/BTIC dates (2018-05-13, 2020-03-23, 2021-09-26 via two documents) and the 2019 U-19 dates.",
+    "The ES ClearPort/Globex TACO cell divergence."
+  ],
+  "verifier_evidence": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U16-U17-taco-verify/ (see INDEX-adversarial-verify.md, sha256 121ac44df629954c129f36410ef76136e85a32bfa3f7651bddf87a5dae68d764)"
+}

@@ -1,0 +1,124 @@
+Title: Energy Trading at Marker ‒ Frequently Asked Questions
+
+URL Source: https://www.cmegroup.com/articles/2024/energy-trading-at-marker-frequently-asked-questions.html
+
+Published Time: 2024-06-05T00:00:00.000Z
+
+Markdown Content:
+## 1. What are the Singapore and London Trading at Marker (TAM)?
+
+The Singapore Trading at Marker (TAM) is based on the Singapore market close of 4:30 p.m. Singapore time (Singapore time is GMT + 8 hours).
+
+The Shanghai Trading at Marker (TAM) is based on the Shanghai market close of 3:00 p.m. China time.
+
+The London Trading at Marker (TAM) is based on the London market close of 4:30 p.m. London time.
+
+## 2. Which Energy products have TAM?
+
+Singapore markers are available for WTI Crude Oil futures and Brent Crude Oil Last Day Financial futures. London markers are available for WTI Crude Oil futures, RBOB Gasoline futures and NY Harbor ULSD futures. Shanghai markers are available for WTI Crude Oil futures.
+
+|  | **LONDON** | **SINGAPORE** | **SHANGHAI** |
+| --- | --- | --- | --- |
+|  | **Marker** | **TAM** | **Marker** | **TAM** | **Marker** | **TAM** |
+| WTI Crude Oil futures (CL) | CL2 | CLL | CL1 | CLS | CL3 | CLC |
+| Brent Crude Oil Last Day Financial futures (BZ) | BZ2 | BZL | BZ1 | BZS |  |  |
+| RBOB Gasoline futures (RB) | 2RB | RBL |  |  |  |  |
+| NY Harbor USLD futures (HO) | HO2 | HOL |  |  |  |  |
+
+## 3. What contract months of each product are available for TAM?
+
+Singapore Trading at Marker (TAM) is available in the first three contract months of WTI Crude Oil futures and Brent Crude Oil Last Day Financial futures and in intra-commodity spreads between the first and second, first and third, and second and third contract months in those products.
+
+London Trading at Marker (TAM) is available in the first three contract months of WTI Crude Oil futures, RBOB Gasoline futures and NY Harbor ULSD futures and in intra-commodity spreads between the first and second, first and third, and second and third contract months in those products.
+
+Shanghai Trading at Marker (TAM) is available in the first contract month of Light Sweet Crude Oil futures.
+
+This pricing mechanism provides valuable hedging tools linking the U.S., European and Asian markets more closely.
+
+## 4. What is TAM, and how does it differ from TAS?
+
+TAM is a pricing mechanism analogous to Trading at Settlement (TAS) wherein parties are permitted to trade at a differential that represents a not-yet-known price.
+
+In the same way TAS uses “0” to represent the unknown settlement price and trades ± 10 ticks, TAM uses “0” to represent the price at the time of the marker and trades at ± 10 ticks.
+
+TAM uses a marker price, whereas TAS trading uses the exchange-determined settlement price for the applicable contract month.
+
+Singapore and London TAM are conducted pursuant to NYMEX [Rule 524 (Trading at Settlement (TAS)](https://www.cmegroup.com/articles/2024/content/cmegroup/en/rulebook/rulebook-harmonization.html) and Trading at Marker (TAM) Transactions”).
+
+## 5. How are the markers calculated?
+
+For Singapore TAM in WTI Crude Oil futures, the marker price in the front month is the volume weighted average price (VWAP) of outright trades on CME Globex for the one-minute period from 4:29 – 4:30 p.m. Singapore time, rounded to the nearest tradable tick.
+
+The marker price in the second and third contract months is based on prices implied from the VWAPs of the one-month and two-month spreads that are traded on CME Globex during the one-minute period from 4:29 – 4:30 p.m. Singapore time.
+
+For Singapore TAM in NYMEX Brent Crude Oil Last Day Financial futures, the marker price is a weighted average of trades in the ICE Brent Crude futures minute marker from 4:29 – 4:30 p.m. Singapore time.
+
+For Shanghai TAM in WTI Crude Oil futures, the marker price in the front month is the volume weighted average price (VWAP) of outright trades on CME Globex for the five-minute period from 2:55 – 3:00 p.m. China time, rounded to the nearest tradable tick.
+
+For London TAM in WTI Crude Oil, New York Harbor ULSD and RBOB Gasoline futures, the marker price in the front month is the volume weighted average price (VWAP) of outright trades on CME Globex for the one-minute period from 4:29 – 4:30 p.m. London time, rounded to the nearest tradable tick.The marker price in the second and third contract months is based on prices implied from the VWAPs of the one-month and two-month spreads that are traded on CME Globex during the one-minute period from 4:29 – 4:30 p.m. London time.
+
+For London TAM in NYMEX Brent Crude Oil Last Day Financial futures the marker price is a weighted average of trades in the ICE Brent Crude Futures Minute Marker from 4:29 – 4:30 p.m. London time.
+
+| **PRODUCT DESCRIPTION** | **CODE** | **FRONT MONTH** | **SECOND, THIRD CONTRACT MONTHS** |
+| --- | --- | --- | --- |
+| Light Sweet Crude Oil futures Singapore Marker TAM | CLS | the volume weighted average price (VWAP) of outright trades on CME Globex for the one-minute period from 4:29 – 4:30 p.m. Singapore time, rounded to the nearest tradable tick. | based on prices implied from the VWAPs of the one-month and two-month spreads that are traded on CME Globex during the one-minute period from 4:29 – 4:30 p.m. Singapore time |
+| Brent Crude Oil Last Day Financial futures Singapore Market TAM | BZS | The weighted average of trades in the ICE Brent Crude futures minute marker from 4:29 – 4:30 p.m. Singapore time. | The weighted average of trades in the ICE Brent Crude futures minute marker from 4:29 – 4:30 p.m. Singapore time. |
+| Light Sweet Crude Oil futures London Marker TAM | CLL | The volume weighted average price (VWAP) of outright trades on CME Globex for the one-minute period from 4:29 – 4:30 p.m. London time, rounded to the nearest tradable tick. | Based on prices implied from the VWAPs of the one-month and two-month spreads that are traded on CME Globex during the one-minute period from 4:29 – 4:30 p.m. London time. |
+| Brent Crude Oil Last Day Financial futures London Marker TAM | BZL | The weighted average of trades in the ICE Brent Crude futures Minute Marker from 4:29 – 4:30 p.m. London time. | The weighted average of trades in the ICE Brent Crude Futures Minute Marker from 4:29 – 4:30 p.m. London time. |
+| NY Harbor ULSD futures London Marker TAM | HOL | The volume weighted average of trades in the ICE Brent Crude futures Minute Marker from 4:29 – 4:30 p.m. London time. | Based on prices implied from the VWAPs of the one-month and two-month spreads that are traded on CME Globex during the one-minute period from 4:29 – 4:30 p.m. London time. |
+| RBOB Gasoline futures London Marker TAM | RBL | The volume weighted average of trades in the ICE Brent Crude futures Minute Marker from 4:29 – 4:30 p.m. London time. | Based on prices implied from the VWAPs of the one-month and two-month spreads that are traded on CME Globex during the one-minute period from 4:29 – 4:30 p.m. London time. |
+| Light Sweet Crude Oil futures Shanghai Marker TAM | CLC | The volume weighted average price (VWAP) of outright trades on CME Globex for the one-minute period from 2:55 – 3:00 p.m. China time, rounded to the nearest tradable tick. | N/A |
+
+## 6. Is TAM block eligible?
+
+Unless otherwise specified in the TAM Table, a TAM-eligible product and contract month may be executed as a block trade pursuant to the requirements of [Rule 526 (Block Trades)](https://www.cmegroup.com/articles/2024/content/cmegroup/en/rulebook/rulebook-harmonization.html) or as an Exchange of Futures for Physical (EFP) or Exchange of Futures for Risk (EFR) transaction pursuant to the requirements of [Rule 538 (Exchange for Related Positions)](https://www.cmegroup.com/articles/2024/content/cmegroup/en/rulebook/rulebook-harmonization.html).
+
+Current Block Minimum Thresholds:
+
+| **PRODUCT DESCRIPTION** | **CODE** | **BLOCK THRESHOLD** | **REPORTING WINDOW** |
+| --- | --- | --- | --- |
+| Light Sweet Crude Oil futures Singapore Marker TAM | CLS | 50 | 5 |
+| Brent Crude Oil Last Day Financial futures Singapore Market TAM | BZS | 25 | 5 |
+| Light Sweet Crude Oil futures London Marker TAM | CLL | 50 | 5 |
+| Light Sweet Crude Oil futures Shanghai Marker TAM | CLC | 50 | 5 |
+| Brent Crude Oil Last Day Financial futures London Marker TAM | BZL | 25 | 5 |
+| NY Harbor ULSD futures London Marker TAM | HOL | 25 | 5 |
+| RBOB Gasoline futures London Marker TAM | RBL | 25 | 5 |
+
+## 7. When is TAM allowed?
+
+A TAM order may be entered on CME Globex at any time the applicable contract is available for TAM trading on CME Globex and during such TAM-eligible contract’s prescribed pre-open time period. The initiation of any TAM order on CME Globex outside these time periods is prohibited.
+
+CLS and BZS trading halts at the marker time, daily, at 4:30 p.m. Singapore time (2:30/3:30 a.m. Central time).
+
+CLC trading halts at the marker time, daily, at 3:00 p.m. China time (1:00/2:00 a.m. Central time).
+
+CLL, RBL, HOL and BZL trading halts at the marker time, daily, at 4:30 p.m. London time.
+
+## 8. Is TAM available during U.S. holidays?
+
+Singapore TAM trading is available on Singapore business days that are U.S. holidays.
+
+Shanghai TAM trading is available on China business days that are U.S. holidays.
+
+London TAM trading is available on UK business days that are U.S. holidays.
+
+## 9. Where can I find the marker prices?
+
+Daily energy marker prices are published every day [here](https://www.cmegroup.com/trading/energy/daily-energy-trading-at-marker-prices.html).
+
+## 10. What are the clearing fees, position limits, and reporting levels?
+
+TAM is a pricing mechanism for a transaction in the applicable underlying futures contract. Fees, positions limits, and reporting levels are based on what applies to the underlying futures contract.
+
+## 11. How can firms use TAM?
+
+As an example, the Asian desk of a trading firm can use the WTI Singapore TAM as a hedging instrument for commercialization of US crude oil cargoes:
+
+When comparing different source of supply, Asian refiners valorize crude oil based on their refinery yields and the price of each crude oil. The latter ones are usually composed of a floating reference to a benchmark and a fixed differential.
+
+The bulk of Asian supply comes from the Middle East whose benchmarks like DME Oman are set at 4:30 p.m. Singapore time while US crude oils are indexed on WTI prices.
+
+By proposing an indexation on WTI Singapore Marker, the seller align its term with the local market practice while using TAM for hedging.
+
+## 12. Supporting documents

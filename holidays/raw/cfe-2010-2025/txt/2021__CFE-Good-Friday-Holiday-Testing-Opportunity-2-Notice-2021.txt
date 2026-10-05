@@ -1,0 +1,128 @@
+CFE Good Friday Holiday Testing Opportunity
+Reference ID: C2021030801
+
+
+Overview
+To provide additional opportunities for testing holiday schedule system behavior, the CFE certification
+trading environment will be configured to observe a holiday trading session beginning Thursday, March
+11, 2021. This session is designed to mimic in the certification environment the modified trading hours
+associated with the 2021 Good Friday holiday, subject to regulatory review.
+
+After the normal CFE certification environment restart on the afternoon of March 11, 2021, the simulated
+holiday trading session will commence for the business date of March 15, 2021. All times referenced in
+this notice are Chicago time.
+
+
+Simulated Holiday Trading Schedule
+VX/VXT, VXM/VXMT and AMERIBOR Futures
+
+The CFE Certification schedule below will apply for the Friday, March 12, 2021 simulated Good Friday
+holiday trading session in VX/VXT, VXM/VXMT and AMERIBOR futures:
+
+   Type of Trading Hours         Friday, March 12, 2021             Monday, March 15, 2021
+         Extended        5:00 p.m. (Thursday) to 8:30 a.m.   5:00 p.m. (Sunday) to 8:30 a.m. and
+                            for VX/VXT, VXM/VXMT, and        3:30 p.m. to 4:00 p.m. for VX, VXM,
+                                     AMERIBOR                           and AMERIBOR
+
+                                                             5:00 p.m. (Sunday) to 8:30 a.m.for
+                                                                      VXT and VXMT
+         Regular                        None                     8:30 a.m. to 3:15 p.m. for
+                                                                 VX, VXM, and AMERIBOR
+
+                                                                 8:30 a.m. to 3:00 p.m. for
+                                                                      VXT and VXMT
+
+
+A holiday trading session includes extended trading hours on the calendar day of the holiday and any
+extended trading hours for the holiday on the previous calendar day. Holiday trading sessions are not
+separate Business Days and are part of the next Business Day.
+All Other Products
+
+Simulated trading in the certification environment will be closed for corporate bond index (IBHY, IBIG)
+futures and S&P 500 Variance (VA/VAO) futures on Friday, March 12, 2021. Simulated trading in these
+products will have normal trading hours on Monday, March15, 2021.
+
+
+Submission Time Frames for VX/VXT, VXM/VXMT, and AMERIBOR Futures for the
+Simulated Good Friday Holiday
+The chart below sets forth the applicable time frames for the submission of Quotes and Orders
+(including Cancel Orders and Cancel Replace/Modify Orders) in VX/VXT, VXM/VXMT, and AMERIBOR
+futures in connection with the simulated Good Friday holiday.
+
+
+      Calendar Day              Time Frame             State of CFE’s       What May be Submitted to
+                                                          System              CFE’s Trading System
+
+       Thursday,            4:00 p.m. to system          Suspended                     Nothing
+     March 11, 2021        restart (which occurs
+                            sometime between
+                                 4:05 p.m.
+                               to 4:45 p.m.)
+
+       Thursday            System restart (which         Suspended              Cancels for persisted
+     March 11, 2021          occurs sometime                                  Good-‘til-Canceled (GTC)
+                                 between                                      and Good-‘til-Date (GTD)
+                          4:05 p.m. to 4:45 p.m.)                          Orders from prior trading date(s)
+                               to 4:45 p.m.
+
+
+      Thursday            4:45 p.m. to 5:00 p.m.*          Queuing        Quotes and Orders (except Market,
+    March 11, 2021                                          Period        Immediate or Cancel (IOC), and Fill
+                                                                               or Kill (FOK) Orders)**
+
+
+
+
+        Friday           5:00 p.m. (Thursday, March    Extended Trading          Quotes and Orders
+    March 12, 2021          11, 2021) to 8:30 a.m.          Hours              (except Market Orders)
+
+
+
+       Sunday             8:30 a.m. (Friday, March       Suspended                     Nothing
+    March 14, 2021       12, 2021) to system restart
+                         (which occurs sometime
+                                 between
+                         10:00 a.m. to 10:15 a.m.)
+       Sunday               System restart (which         Suspended      Cancels for persisted Quotes
+    March 14, 2021            occurs sometime                               and Day, GTC, and GTD
+                           between 10:00 a.m. to                          Orders from holiday trading
+                           10:15 a.m.) to 4:00 p.m.                                  session
+
+
+
+       Sunday             4:00 p.m. to 5:00 p.m. CT*       Queuing      Quotes and Orders (except Market,
+    March 14, 2021                                          Period           IOC, and FOK Orders)**
+
+
+
+
+       Monday            5:00 p.m. (Sunday, March 14,     Extended      Quotes and Orders (except Market
+     March 15, 2021         2021) to 8:30 a.m. CT       Trading Hours               Orders)
+
+
+
+
+*The queuing period at the beginning of a business day or holiday trading session for non-TAS single leg
+contract expirations and non-TAS spreads commences at the referenced start time for the queuing period
+plus a randomized time period from zero to three seconds. The queuing period at the beginning of a
+business day or holiday trading session for TAS single leg contract expirations and TAS spreads commences
+at the referenced start time for the queuing period plus a randomized time period from three to six
+seconds.
+
+**Orders and Quotes permitted to be submitted to CFE’s trading system during these times are not
+executable until extended trading hours next commence.
+
+
+Additional Information
+Please refer to the following technical specifications for more details on the handling of Orders and Quotes
+during holiday trading sessions.
+
+    ➢ US Futures FIX Specification
+    ➢ US Futures BOE Specification
+
+We appreciate your business. Our trading community inspires and drives our mission of defining markets.
+
+CFE Trade Desk
+312.786.8700
+cfetradedesk@cboe.com
+

@@ -1,0 +1,446 @@
+Title: 20190826 - CME Group
+
+URL Source: https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html
+
+Markdown Content:
+For the latest roadmap of CME Group technology initiatives:
+
+[See the Development Launch Schedule.](https://www.cmegroup.com/globex/develop-to-cme-globex/development-launches.html)
+
+## Critical System Updates
+
+### HMAC Key Expiration- September 29
+
+Effective **Sunday, September 29** (trade date Monday, September 30), all [Hash Message Authentication Codes (HMAC) security keys](https://www.cmegroup.com/tools-information/webhelp/cme-customer-center/Content/ilink-secure.html?Highlight=hmac) for iLink and Drop Copy sessions with expiration dates prior to **Sunday, September 29, 2019**, will be expired and no longer valid for login. Moving forward, expiration of all HMAC security keys on their expiration date will be enforced.
+
+Request Center will continue to display a Red flag next to keys expiring within 4 weeks and email notifications will continue to be sent via a “Security Key Will Expire Soon” email.
+
+If you have any questions, please contact [Global Account Management](mailto:globalaccountmanagement@cmegroup.com) in the U.S. at +1 312 634 8700, in Europe at +44 203 379 3754 or in Asia at +65 6593 5505 for additional information.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+### Changes to User Defined Spreads Functionality: Resting Order Eliminations- Q3 2019
+
+Starting **Q3 2019**, CME Group will implement the following changes to User Defined Spreads (UDS) functionality on CME Globex:
+
+*   Performance changes
+*   Improved spread recognition logic
+*   Extended timing for UDS creation
+*   Effects of UDS creation in non-Open Market states
+*   Changes to tag 5979-RequestTime value
+*   Harmonization of SecurityID Source values
+
+**Please Note:**To facilitate this change, customers will be asked to cancel all Good ‘Till Cancel (GTC) and Good ‘Till Date (GTD) orders for User-Defined Spreads (UDS) only for the affected products by the close on**Friday before the production launch**.After 16:00 CT on specified Friday, any remaining GT orders on UDS will be canceled or deleted by the CME Global Command Center (GCC).
+
+Please review the [Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Changes+to+User+Defined+Spread+Functionality) for additional information and New Release launch schedule.
+
+| Changes to User Defined Spreads Functionality |
+| --- |
+| Market Segment ID | Market Segment Description | New Release Launch | Production Launch |
+| 50 52 54 56 58 60 64 68 70 72 74 76 78 80 82 84 88 | CME Interest Rate Options CME FX Futures and Options II CBOT and CME Equity Options NYMEX Emissions Options; NYMEX Energy, Metals, Softs and Alternative Markets Options; COMEX Options; DME Options CBOT Interest Rate Options CME, CBOT and MGEX Commodity Options CME, CBOT and MGEX Commodity Options CME Equity Futures II; CBOT Equity Futures CME, CBOT and MGEX Commodity Futures CBOT Commodity Futures II KRX Futures; BMD Futures and Options NYMEX Metals, Softs and Alternative Markets Futures; COMEX Futures NYMEX Emissions and Non-Crude Energy Futures DME Futures; NYMEX Crude and Crude Refined Energy Futures CME Interest Rate Futures CBOT Interest Rate Futures CME FX Futures and Options | Available | Q3 2019 |
+
+If you have any questions or concerns, please contact your [Global Account Manager](mailto:globalaccountmanagement@cmegroup.com) in the U.S. at +1 312 634 8700, in Europe at +44 203 379 3754 or in Asia at +65 6593 5505 for additional information.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+### iLink Mandatory Order Handling Flag: Tag 1031- November 17
+
+Effective **Sunday, November 17, 2019** (trade date Monday, November 18), in conjunction with the Futures Industry Association (FIA) Execution Code Schema initiative, CME Globex will require the current iLink FIX tag 1031-CustOrderHandlingInst on the following iLink messages.
+
+Tag 1031 **must**be submitted on the following messages:
+
+*   New Order (tag 35-MsgType=**D**)
+*   Order Cancel/Replace Request (tag 35-MsgType=**G**)
+*   Mass Quote (tag 35-MsgType=**i**)
+
+Please Note: Tag 1031 will continue to be an optional tag on the New Order Cross (tag 35-MsgType=**s**) message.
+
+Tag 1031 will be returned on the following iLink messages:
+
+*   Execution Report: Order Creation or Modify (tag 35-MsgType=**8**, OrdStatus=**0**or**5**)
+*   Execution Report - Fill Notice (tag 35-MsgType=**8**, tag 39-OrdStatus=**1**or **2**)
+*   Execution Report - Reject (tag 35-MsgType=**8**, tag 39-OrdStatus=**8**)
+*   Execution Report - Order Cancel-Replace Reject (tag 35-MsgType=**9**)
+*   Execution Report - Order Elimination (tag 35-MsgType=**8**, tag 39-OrdStatus=**C**, tag 150-ExecType=**F**)
+*   Quote Acknowledgment (tag 35-MsgType=**b**)
+*   Business Level Reject (tag 35-MsgType=**j**)
+*   Session Level Reject (tag 35=**3**)
+
+Tag 1031 must be populated by one of the following valid values:
+
+*   W - Desk
+*   Y - Electronic (Default)
+*   C - Vendor-provided Platform billed by Executing Broker
+*   G - Sponsored Access via Exchange API or FIX provided by Executing Broker
+*   H - Premium Algorithmic Trading Provider billed by Executing Broker
+*   D - Other, including Other-provided Screen
+
+Learn more on the FIA guidelines on how to identify the source of any order:
+
+*   [Press Release](https://fia.org/articles/fia-and-fia-tech-release-guidelines-simplified-execution-source-code)
+*   [Summary](https://fia.org/sites/default/files/FIA%20Revised%20Guidelines%20for%20Execution%20Source%20Code%20V1.4.2%20Summary%20-%20final.pdf)
+*   [White paper](https://fia.org/sites/default/files/FIA%20Revised%20Guidelines%20for%20Execution%20Source%20Code%20V1.4.2%20-%20final.pdf)
+
+If you have any questions on tag 1031 values, please contact your clearing firm to determine which value to use.
+
+With this launch, CME Globex will validate tag 1031 on iLink messages. Any iLink message submitted with an invalid tag 1031 value will be rejected. CME Globex will send a reject message including the following tag 58=<Reject Reason>.
+
+**Please Note:** To reduce customer impact, resting Good ‘Till Cancel (GTC) and Good ‘Till Date (GTD) orders with missing or invalid tag 1031 will not be canceled upon the production launch. Clients are encouraged to modify their resting GTC and GTD orders before the launch to add a valid tag 1031. This change will not impact the order’s priority. Effective with this launch, all Cancel/Replace messages, including those for resting GTC & GTD orders, must include a valid tag 1031.
+
+| Message Type | Reject Message Type | Reject Reason | Reject Code (tag 380-BusinessRejectReason) | Tag 58-Text |
+| --- | --- | --- | --- | --- |
+| New Order (tag 35-MsgType=**D**) Order Cancel/Replace Request (tag 35-MsgType=**G**) | Session Level Reject (tag 35-MsgType=**3**) | * Not present * Present, but contain a null value * Present, but contain an invalid value | N/A | * Required Field Missing 'Missing field: 'CustOrderHandlingInst (1031)' * Invalid FIX Field: 1031=<null> * tag CustOrderHandlingInst (1031) contains invalid value:<> |
+| Mass Quote (tag 35-MsgType=**i**) | * Business Level Reject (tag 35-MsgType=**j**) | * Not present * Present, but contain an invalid value | 5 0 | * Business Reject: Required Field Missing '1031 (CUST_ORDER_HANDLING_INST)' * tag CustOrderHandlingInst (1031)contains invalid value:<> |
+| * Session Level Reject (tag 35-MsgType=**3**) | * Present, but contain a null value | N/A | * Invalid FIX Field: 1031=<null> |
+
+To facilitate migration to the mandatory iLink tag 1031, customers can implement this change in advance of the effective date.
+
+Tag 1031 is currently available in New Release for customer testing.
+
+Certification is not required for iLink Mandatory Order Handling Flag.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+### Decommission of Select ITC Market Data- November 22
+
+Effective at the close of business **Friday, November 22**, select ITC market data functions will be decommissioned in favor of an architecture that will support price decimals beyond 7 digits. As the result of the launch of [SBE Settlements and Valuations](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Data+Insights+-+Settlements+and+Valuations) and [CME Reference Data API](https://www.cmegrorup.com/confluence/display/EPICSANDBOX/CME+Reference+Data+API), many ITC data functions will become redundant and will be decommissioned.
+
+There will be a 6-month parallel period from the Settlements and Valuations production launch and decommission of select ITC market data. There will be the following ITC market data impacts:
+
+*   NYMEX, COMEX and DME ITC channels will be eliminated
+*   Futures and options settlements
+*   Cleared volume and open interest
+*   Cumulative volume
+*   High/Low/Last prices
+*   Fixing prices
+*   Marker prices
+*   Close prices
+*   Net change
+*   Lead month indicator
+*   Contract specifications
+*   Index prices
+
+Real-time trading floor data, such as trades, will continue to be disseminated on ITC channels for CME, CBOT, and MGEX.
+
+Please review the [Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Decommission+of+ITC+Functions) for additional information and decommission schedules.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+### Original Client Order ID Change on Cancel Request- Q4 2019
+
+Effective **Q4 2019**, to better align with FIX Protocol standards, CME Globex will remove FIX tag 41-OrigClOrdID validation from the Order Cancel Request (tag 35-MsgType=**F**) message. With this change, tag 41-OrigClOrdID will no longer be required on Order Cancel Request messages. If the tag is present on the Request, CME Globex will return it on the Execution Report (tag35=**8**, 39=**4**).
+
+This change is currently available for customer testing in New Release.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+### CME Globex Market Segment Gateway Enhancements - January 26, 2020
+
+Starting **Sunday, January 26, 2020**(trade date Monday, January 27), CME Group will introduce the following Market Segment Gateway (MSGW) enhancements to further safeguard CME Globex infrastructure.
+
+With this enhancement, if a Market Segment Gateway (MSGW) iLink session sends a network packet with an incomplete message, that session will be subject to additional processing to ensure the stability of the platform. This processing results in at least 3 microseconds before the message(s) can be sent to the trading engine.
+
+iLink messages impacted by this enhancement will be flagged in the corresponding Acknowledgment sent from CME Globex.
+
+Customers are strongly encouraged to ensure all messages are contained within a single network packet by the following methods:
+
+*   Ensure any packet sent to CME group contains only complete messages
+*   Limit the number of quote entries in a mass quote message that fits within a single TCP packet
+*   Disable nagling, an algorithm that concatenates a number of small buffer messages to decrease the number of sent packets, on your order routing systems
+
+As a reminder, conduct that disrupts, delays, or overloads the systems or operations of the exchange may be deemed to violate Rule 575 (“Disruptive Practices Prohibited”) or other rules, including Rule 432.Q. (“General Offenses – to commit an act which is detrimental to the interest or welfare of the Exchange or to engage in any conduct which tends to impair the dignity or good name of the Exchange”). Rule 575 further provides that it is a violation to enter or cause to be entered an order where the intent at the time of order entry is to cancel the order before execution. It is also a violation of Rule 575 to intentionally or recklessly enter or cause to be entered an actionable or non-actionable message that may cause an adverse impact on the orderliness of the markets.
+
+Customers interested in finding out how MSGW enhancements would impact their iLink sessions should contact their [Global Account Manager](https://www.cmegroup.com/notices/electronic-trading/2019/08/globalaccountmanagement@cmegroup.com) in the U.S. at +1 312 634 8700, in Europe at +44 203 379 3754 or in Asia at +65 6593 5505 for additional information.
+
+In internal testing, iLink round trip times at the 75th percentile and above increased at least 10%.
+
+Please review the [Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/CME+Globex+Market+Segment+Gateway+Enhancements) for additional information on these Market Segment Gateway enhancements.
+
+Staring on **Monday, November 4**, the CME Globex MSGW Enhancements will be available for customer testing in New Release. In addition, the new FIX tags for this enhancement will be available for customer testing in CME AutoCert+ Test Suite - MSGW Protection Enhancements. Certification is not required for these MSGW enhancements.
+
+**Mock Trading Session:**
+
+CME Group will offer two customer mock trading sessions on**Saturday, December 14, 2019**and**Saturday, January 25, 2020**, to support customer experience with the MSGW enhancements in the CME Globex production environment. Customers are required to[register](https://go.cmegroup.com/l/502091/2019-02-11/f7j261)in advance in order to participate in this mock trading session. The mock trading session script will be announced in future CME Globex Notices.
+
+| MSGW Enhancements Timeline |
+| --- |
+|  |
+| Market Segment ID | Market Segment Description | Production Launch |
+| 50 76 | CME Interest Rate Options NYMEX Metals, Softs and Alternative Markets Futures; COMEX Futures | Sunday, January 26, 2020 |
+| 54 68 72 88 | CME and CBOT Equity Options CME Equity Futures II; CBOT Equity Futures CBOT Commodity Futures II CME FX Futures and Options | Sunday, February 9, 2020 |
+| 52 58 60 64 70 78 | CME FX Futures and Options II CBOT Interest Rate Options CME, CBOT and MGEX Commodity Options CME Equity Futures - E-mini S&P CME, CBOT and MGEX Commodity Futures NYMEX Emissions and Non-Crude Energy Futures | Sunday, February 23, 2020 |
+| 56 74 80 82 84 | NYMEX Emissions Options; NYMEX Energy, Metals, Softs and Alternative Markets Options; COMEX Options; DME Options BMD Futures and Options; NYMEX SEF DME Futures; NYMEX Crude and Crude Refined Energy Futures CME Interest Rate Futures CBOT Interest Rate Futures | Sunday, March 8, 2020 |
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+### Mandatory iLink3 Binary Order Entry Protocol for MSGW- Q2 2020
+
+CME Group is introducing iLink 3, a new order entry protocol for trading futures, options, and BrokerTec products on CME Globex. The iLink 3 protocol is currently available in New Release and with new production parallel channels for futures and options beginning in**March 2020**. All customers connected via Market Segment Gateway (MSGW) will need to migrate to the iLink 3 by**Q4 2020**.
+
+iLink 3 includes:
+
+*   [Simple Binary Encoding (SBE)](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+-+Simple+Binary+Encoding);delivers faster encoding/decoding
+*   [FIX Performance (FIXP) protocol](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+Binary+Order+Entry+-+Session+Layer); very simple, lightweight, point-to-point session layer
+*   More efficient iLink FIX messaging
+*   Standard message size, fixed positions, and fixed length fields
+*   Consistent encoding method for order entry and market data
+
+iLink 3 will **only support** iLink MSGW sessions. The [Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+Binary+Order+Entry) is available and provides detailed functionality and messaging information.
+
+A new iLink certification suite will be available in AutoCert+ in November **2019**; certification is required for all client systems on MSGWs.
+
+*   August 26, 2019 – iLink 3 available in New Release environment for core functionality for futures and options
+*   November 2019 – Complete iLink 3 functionality in New Release; Autocert+ certification for futures and options;
+*   March – April 2020 – Production launch of iLink 3
+*   Q4 2020 – Elimination of iLink 2 for MSGW
+
+Further information on the production launch deployment schedule, and mock trading sessions will be published in upcoming CME Globex Notices.
+
+Please contact your [Global Account Manager](mailto:globalaccountmanagement@cmegroup.com) in the U.S. at +1 312 634 8700, in Europe at +44 203 379 3754 or in Asia at +65 6593 5505 for additional information.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+## New Functionality
+
+### BrokerTec US Treasury Data on MDP- September 22
+
+Effective **Sunday, September 22** (trade date Monday, September 23), CME Group will launch a new Simple Binary Encoding (SBE) Market Data Platform (MDP) Channel named BrokerTec US Treasury Data.
+
+This new market data channel redistributes NEX Data’s comprehensive BrokerTec US Treasury price discovery solution. **Please note:** This market data channel is distinct from the CME Globex BrokerTec Market Data scheduled to launch with integration in Q4 2020.
+
+This channel will include:
+
+*   top 5 levels of the order book for active benchmark products (2 Year – 30 Year)
+*   trade indicators
+*   market statistics including calculated analytics such as Volume Weighted Average Yield (VWAY)
+
+BrokerTec US Treasury Data Supported Products:
+
+*   Active Benchmark Bills
+    *   1 Month Bills – 1 Year Bills
+
+*   Active Benchmark Notes and Bonds
+    *   2 Year Note – 30 Year Bond
+
+*   When Issued Bills, Notes & Bonds
+    *   1 Month Bills – 30 Year Bonds
+
+*   Once Old & Twice Old Off-the-Run Notes and Bonds
+    *   2 Year Notes – 30 Year Bonds
+
+Please review the [Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/BrokerTec+U.S.+Treasury+Market+Data) for product details, technical specifications and launch schedule.
+
+A market data license is required to gain access and interested customers should contact NEX Data Sales Team for licensing and cost at [Enquiries@nexdata.com](mailto:Enquiries@nexdata.com).
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+## Product Launches
+
+### BTIC+ and TACO+ Futures on E-mini S&P 500 Futures- September 8
+
+Effective **Sunday, September 8** (trade date Monday, September 9), pending completion of all regulatory review periods †BTIC+ and TACO+ futures on E-mini S&P 500 Futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| **BTIC+ and TACO+ Futures on E-mini S&P 500 Futures** |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| Nearby BTIC+ Futures on E-mini Standard & Poor’s 500 Stock Price Index Futures | ES1 | SK | 318 |
+| Deferred BTIC+ Futures on E-mini Standard & Poor’s 500 Stock Price Index Futures | ES2 | SK | 318 |
+| TACO+ Futures on E-mini Standard & Poor’s 500 Stock Price Index Futures | EQ1 | 4T | 318 |
+
+Example: After ES1M905 BTIC+ ceases trading on June 4, 2019, each open contract would be fulfilled by assignment of a June 2019 E-mini S&P 500 BTIC (ESTM9) traded and settled on June 5, 2019.
+
+*   ES1 would be fulfilled by assignment of the ES Future that is the “front month” future as of the assignment date.
+*   ES2 would be fulfilled by assignment of the second-nearest contract month of the ES future.
+*   EQ1 would be fulfilled by assignment of a “front month” ES future.”
+
+These futures are available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+### Dutch TTF and UK NBP Options- September 8
+
+Effective **Sunday, September 8** (trade date Monday, September 9), pending completion of all regulatory review periods, Dutch TTF and UK NBP options will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| Dutch TTF and UK NBP Options |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| Dutch TTF Natural Gas Calendar Month Option | TTO | Outrights (TTS); UDS (T4) | 387 |
+| UK NBP Natural Gas Calendar Month Option | UKO | Outrights (TTS); UDS (T4) | 387 |
+| Dutch TTF Natural Gas Futures-Style Margined Calendar Month Option | TFO | Outrights (TTS); UDS (T4) | 387 |
+| UK NBP Natural Gas Futures-Style Margined Calendar Month Option | UFO | Outrights (TTS); UDS (T4) | 387 |
+
+The Dutch TTF and UK NBP options are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+### Dakota Access Bakken (Net Energy) Monthly Index Futures- September 8
+
+Effective **Sunday, September 8** (trade date Monday, September 9), pending completion of all regulatory review periods, Dakota Access Bakken (Net Energy) Monthly Index futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| **Dakota Access Bakken (Net Energy) Monthly Index Futures** |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| Dakota Access Bakken (Net Energy) Monthly Index Futures | DAB | BB | 382 |
+
+The Dakota Access Bakken (Net Energy) Monthly Index futures is currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+### Platts USGC Marine Fuel Futures- September 8
+
+Effective **Sunday, September 8** (trade date Monday, September 9), pending completion of all regulatory review periods, Platts USGC Marine Fuel futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| **Platts USGC Marine Fuel Futures** |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| USGC Marine Fuel 0.5% Barges (Platts) (mt) Futures | UP5 | CP | 382 |
+| USGC Marine Fuel 0.5% Barges (Platts) (mt) BALMO Futures | UPB | CP | 382 |
+| USGC Marine Fuel 0.5% Barges (Platts) (mt) vs. European FOB Rdam Marine Fuel 0.5% Barges (Platts) Futures | UPM | CP | 382 |
+| USGC Marine Fuel 0.5% Barges (Platts) (mt) vs. European FOB Rdam Marine Fuel 0.5% Barges (Platts) BALMO Futures | BPU | CP | 382 |
+
+These Platts USGC Marine Fuel futures are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+## Product Changes
+
+### New New - Temporary Suspension of Swap Futures- September 3
+
+Starting **Friday, August 16** through **Sunday, September 1** (trade date Tuesday, September 3), the December 2019 contract months for the following Swap futures will be temporarily suspended from trading and clearing, to support the [reduction of the December 2019 coupon rate](https://www.cmegroup.com/content/dam/cmegroup/notices/ser/2019/08/SER-8437_.pdf).
+
+On **Sunday, September 1** (trade date Tuesday, September 3), the December 2019 contract month will be made available for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| Temporary Suspension of Swap Futures |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group |
+| 10-Year USD MAC Swap Futures | N1U | SN |
+| 10-Year Eris Swap Futures | LIY | E7 |
+
+These products currently have no open interest.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+### Changes to Aluminum MW U.S. Transaction Premium Platts (25MT) Futures- September 8
+
+Effective **Sunday, September 8** (trade date Monday, September 9), the following product settings will be modified for Aluminum MW U.S. Transaction Premium Platts (25MT) futures (tag 6937=**AUP**; MDP 3.0 tag 1151-SecurityGroup and iLink tag 55-Symbol=**ST**):
+
+*   **Non-Reviewable Range:**
+    *   **Current:**0.02000
+    *   **New:** 0.01000
+
+*   **Velocity Logic Wide:**
+    *   **Current:**0.06000
+    *   **New:** 0.03000
+
+*   **Velocity Logic Narrow:**
+    *   **Current:** 0.02000
+    *   **New:** 0.01000
+
+*   **Price Banding:**
+    *   **Current:** 0.02000
+    *   **New:** 0.01000
+
+*   **Protection Points:**
+    *   **Current:** 0.01000
+    *   **New:** 0.00500
+
+These settings for every CME Globex product are defined in the[CME Globex Product Reference](http://www.cmegroup.com/confluence/display/EPICSANDBOX/GCC+Product+Resources).
+
+These changes are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of COMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+### New New - Listing Cycle Delay for Live Cattle Futures and Options- September 8
+
+On **Thursday, August 22** (trade date Friday, August 23 ), the February 2021 contract for Live Cattle futures and options were temporarily suspended from trading on CME Globex.
+
+Effective **Sunday, September 8** (trade date Monday, September 9), and pending all CFTC regulatory review periods, the February 2021 Live Cattle futures and options contract will resume trading. Please see [Special Executive Report 8443R](https://www.cmegroup.com/notices/ser/2019/08/SER-8443R.html) for additional information.
+
+| **Listing Cycle Delay for Live Cattle Futures and Options** |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current First Trade Date | New First Trade Date | Market Data Channel |
+| Live Cattle Futures February 2021 | LE | LE | September 2, 2019 | September 9, 2018 | 316 |
+| Live Cattle Options February 2021 | LE | LO | September 2, 2019 | September 9, 2018 | 317 |
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+### New New - Listing Cycle Expansion for FX Serial Options- September 15
+
+Effective **Sunday, September 15** (trade date Monday, September 16), the listing cycle for the following FX Options will be expanded on CME Globex.
+
+| **Listing Cycle Expansion for FX Serial Options** |
+| --- |
+| Product | MDP 3.0: tag6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Listing Schedule | New Listing Schedule |
+| EUR/USD Monthly Options | EUU | XE | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and three (3) serial months | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and eight (8) serial months |
+| EUR/USD Monthly Volatility-Quoted Options | VXT | 3E | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and three (3) serial months | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and eight (8) serial months |
+| JPY/USD Monthly Options | JPU | QJ | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and three (3) serial months | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and eight (8) serial months |
+| JPY/USD Monthly Volatility-Quoted Options | VXJ | 3Y | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and three (3) serial months | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and eight (8) serial months |
+| GBP/USD Monthly Options | GBU | YB | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and three (3) serial months | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and eight (8) serial months |
+| GBP/USD Monthly Volatility-Quoted Options | VXB | B3 | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and three (3) serial months | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and eight (8) serial months |
+| CAD/USD Monthly Options | CAU | CD | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and three (3) serial months | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and eight (8) serial months |
+| CAD/USD Monthly Volatility-Quoted Options | VXC | 3C | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and three (3) serial months | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and eight (8) serial months |
+| AUD/USD Monthly Options | ADU | XA | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and three (3) serial months | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and eight (8) serial months |
+| AUD/USD Monthly Volatility-Quoted Options | VXA | 3A | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and three (3) serial months | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and eight (8) serial months |
+| CHF/USD Monthly Options | CHU | YS | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and three (3) serial months | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and eight (8) serial months |
+| CHF/USD Monthly Volatility-Quoted Options | VXS | 3S | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and three (3) serial months | Four months in the March quarterly cycle (Mar, Jun, Sep, Dec) and eight (8) serial months |
+
+These options will be available for customer testing in New Release on **Monday, September 2**.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+### Temporary Suspension of Three EUA Futures and Options - October 31
+
+The temporary suspension of the European Union Allowance (EUA) futures and options has been extended. Effective **Thursday, October 31** (trade date Friday, November 1), beginning with the November 2019 contract month, the European Union Allowance (EUA) futures and options will be made available for trading on CME Globex.
+
+| **Extending Suspension of Three EUA Futures and Options** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group |
+| In Delivery Month European Union Allowance (EUA) Futures | EAF | VX |
+| In Delivery Month European Union Allowance (EUA) Options | EAX | GY |
+| In Delivery Month European Union Allowance (EUA) Serial Options | 9G | GY |
+
+These products currently have no open interest.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+## Events and Announcements
+
+### Gemini Joins CME CF Cryptocurrency Indices- This Friday
+
+On **August 30, 2019**, at 10:30am CT,Gemini digital asset exchange data will be included in the CME CF Reference Rates and Real Time Indices for both Bitcoin and Ether. The CME CF Bitcoin Reference Rate (BRR), is used to settle CME Bitcoin Futures (BTC). CF Benchmarks, the leading cryptocurrency index provider, is the Administrator for the CME CF Cryptocurrency Indices.
+
+For more information, please visit the CME CF Cryptocurrency Indices [webpage](https://www.cmegroup.com/trading/cryptocurrency-indices.html).
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)
+
+### New New - Introducing CME SPAN 2
+
+As [recently announced](https://www.cmegroup.com/media-room/press-releases/2019/5/29/cme_group_to_launchnextgenerationofcmespanmarginmethodology.html), CME Group is launching a next generation margin model, CME SPAN 2. Testing will begin in Q1 2020, with migration scheduled for the second half of 2020. Both CME SPAN and CME SPAN 2 will be available in parallel during the testing phase.
+
+Firms using CME SPAN for pre-trade risk management can contact the [Post Trade Services team](mailto:PostTradeServices@cmegroup.com) for more information and to start planning your migration now.
+
+| US | UK | APAC |
+| --- | --- | --- |
+| +1 312 580 5353 | +44 20 3379 3500 | +65 6593 5599 |
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2019/08/20190826.html#top)

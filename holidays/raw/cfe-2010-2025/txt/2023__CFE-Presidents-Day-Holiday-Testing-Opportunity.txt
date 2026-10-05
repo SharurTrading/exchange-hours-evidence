@@ -1,0 +1,82 @@
+                           CFE Presidents’ Day Holiday Testing Opportunity
+
+
+
+
+CFE Presidents’ Day Holiday Testing Opportunity
+Notice Date: February 7, 2023
+
+
+Overview
+
+To provide additional opportunities for holiday testing, the Cboe Futures Exchange, LLC
+(CFE) certification environment will be configured to observe a holiday trading session
+beginning Sunday, February 12, 2023. The test is designed to mimic the modified
+trading hours associated with the 2023 Presidents’ Day holiday. After the start of the
+CFE certification trading environment on the morning of February 12, 2023, the
+simulated holiday trading session will commence for the business date of February 14,
+2023.
+
+Simulated Holiday Trading Schedule
+
+The following simulated holiday trading schedule will apply for CFE products. All
+extended trading hours (ETH) and regular trading hours (RTH) times referenced in this
+notice are Central Time.
+
+
+                       SUNDAY           MONDAY
+                                                                     TUESDAY
+                      FEBRUARY        FEBRUARY 13,
+                                                                 FEBRUARY 14, 2023
+                       12, 2023           2023
+
+
+
+                                     ETH       ETH       RTH           RTH           ETH
+     Product           ETH Start
+                                     Close     Start     Start        Close      Close
+
+
+
+    Volatility                       10:30     5:00       8:30        03:00      04:00
+                        5:00 PM
+      Index*                          AM        PM        AM           PM        PM
+    Corporate                                               8:30     03:00
+   Bond Index                                                   AM    PM
+
+
+
+                                    10:30       5:00        8:30     03:00   04:00
+   AMERIBOR              5:00 PM
+                                     AM          PM             AM    PM     PM
+
+
+
+   Trade Date                      Tuesday, February 14, 2023
+
+
+Volatility Index Futures: VX, VXT, VXM, VXMT
+Corporate Bond Index Futures: IBHY, IBHYT, IBIG, IBIGT
+AMERIBOR Futures: AMB1, AMT1, AMT3
+* Trade at Settlement (TAS) contracts do not trade during the Curb ETH period from
+3:00 PM to 4:00 PM.
+
+Additional Information
+
+For more information, please refer to:
+
+   •   CFE Holidays
+   •   Cboe Futures Exchange FIX Specification
+   •   Cboe Futures Exchange Binary Order Entry Specification
+   •   Cboe US Customer Web Portal Specification
+
+Please contact the CFE Trade Desk for support or with any questions. We appreciate
+your business. Our trading community inspires and drives our mission of defining
+markets.
+
+
+CFE Trade Desk
+Phone: +1.312.786.8700
+E-Mail: cfetradedesk@cboe.com
+www.cboe.com
+

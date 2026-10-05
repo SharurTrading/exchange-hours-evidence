@@ -1,0 +1,131 @@
+{
+  "gate": "U4-regular-vs-extended",
+  "role": "adversarial verifier",
+  "verified_on": "2026-09-12",
+  "matches": false,
+  "verdict_summary": "The central conclusion survives verification intact: every load-bearing quotation, hash, count and date re-derives from the saved bytes, and three independent re-fetches plus five archive re-fetches are byte-identical. `regular: &[]` for BTIC/TAS/TAM/TACO/TMAC is sound, the Pre-Open-as-order_entry classification is sound, and the `globex_spot_quoted` precedent is genuinely exceeded. matches=false is returned for two defects that are load-bearing on the gate's own stated scope rather than on its conclusion: (D1) a BTIC/TACO shape proposed in the handoff is left unclassified and one of its roots is positively misassigned against both the handoff's mapping and CME's own Rule-524 disclaimer; (D2) a claim of channel exhaustion in `dead_ends` is contradicted by the researcher's own saved bytes.",
+  "reproduction": {
+    "index_hash_rows_checked": 113,
+    "index_hash_rows_matching": 113,
+    "index_hash_rows_mismatched": 0,
+    "index_hash_rows_missing": 0,
+    "live_refetches_byte_identical": [
+      "https://www.cftc.gov/.../rul083109nymexandcomex001.pdf -> a5693b21c1e57d54b043968a5066afee3556d5758c047435fcfc59a10e2111f1",
+      "https://www.cftc.gov/.../rul022613nymexandcomex001.pdf -> 1a19fef85157f8a4558c5f23c98437cc7d930b48b13b955dbd9561d0c2ba9679",
+      "https://web.archive.org/web/20251020113006id_/https://www.cmegroup.com/rulebook/files/cme-group-Rule-524.pdf -> d7032a32734db371b1558000fb00a0903a2ccd00e7527aaaef3f7c30da4d2ce1",
+      "wayback id_ NYMEX ch5 20150306113807, 20160809000829; CME ch5 20150319015903, 20150905223702, 20161122210636 - all five match the saved PDFs"
+    ],
+    "confluence_versions_confirmed_live": {
+      "457223974 Trade at Settlement - TAS": "v2 2025-01-13T19:37:27.265Z",
+      "457224081 Trade Market at Close - TMAC": "v1 2024-12-21T17:06:00.229Z",
+      "457092968 Basis Trade at Cash Open": "v2 2025-01-13T19:46:14.571Z",
+      "457086960 Instrument Types Available on CME Globex": "v3 2025-02-11T20:49:05.891Z"
+    },
+    "independently_recomputed_from_bytes": {
+      "productslate_unique_ids": 3248,
+      "trade_type_records": 234,
+      "by_shape": {"BTIC": 173, "TAS": 45, "TAM": 8, "TACO": 4, "TMAC": 4},
+      "all_floor_dash_and_floorvol_zero": true,
+      "venues": {"Globex ClearPort ": 231, "ClearPort ": 3},
+      "floorTraded_anomaly_band": ["8914 NQQ", "8915 RTQ", "8916 HDG", "8917 BEF", "8918 BEB", "8919 TEF", "8927 T7C"],
+      "clearport_only_three": ["8028 IBB BTIC on Ibovespa (USD) Futures", "8538 DGT BTIC on Bloomberg Commodity Index Swaps", "8607 SET BTIC on S&P-GSCI Excess Return Index Swaps"],
+      "contractspecs_open_outcry_blocks": 1,
+      "open_outcry_block_carrying_a_trade_type_line": 0,
+      "props_voi_tradeDate": "04 Sep 2026 (PRELIMINARY), pageTotal 7"
+    },
+    "verbatim_quotes_checked_against_bytes": "All quotes in all 13 evidence states re-read from the bytes and found exact (modulo curly quotation marks, en-dashes and PDF line wraps): RA2302-5 s3 and the five s6 rule clauses; NYMEX 2015-03-06 524.A.1 pit clause, 524.B.1 TAM, 524.C MO 'open outcry trades'; absence of the pit clause in the 2016-08-09 and 2018-02-05 editions; CME 2012-05-12 / 2015-03-19 '524. [RESERVED]' and zero occurrences of 'Trading at Settlement'; CBOT 2014-11-16 '524.-525. [RESERVED]'; CME 2015-09-05 and CBOT 2015-09-15 TAS clause; CME 2016-11-22 524.B.1 BTIC; ContractSpecs 133/437/300 lines and 8849 'Open Outcry:' 'MON - FRI: 7:20 a.m. - 2:00 p.m.'; Daily Bulletin s11 legend, s12 BTIC PRODUCTS VOLUME REPORT rows, s61 TRADE AT MARKER PRODUCTS rows, s03/s62 ex-pit TAS columns, s00 index; 2015-03-20 #54@ RTH legend and 2021-03-08 #44@ BTIC rows; wiki TAS/TMAC/TACO/Instrument-Types paragraphs; trading-hours events for SB/3T/E2/GM and hasEvents:false for TG/CT/CI; RA0907-4 dates, 524.A.1/.2 and the Pit-Traded vs CME Globex Contracts tables; RA1303-4 dates and the TAS pre-open/session definition.",
+    "law_checks": {
+      "LAW-NO-FABRICATED-DATES": "Not engaged. The gate asserts no cutover, no revision row and no dated boundary; its one undated interval (the disappearance of the NYMEX/COMEX TAS pit clause) is stated as a bracket 2015-03-06..2016-08-09 and left unresolved, which is the correct handling.",
+      "carry-back / sourced-intersection": "Not engaged for the same reason. The pit-era question that could have engaged carry-back (NYMEX TAS 2009-2015) is adjudicated on CME's own eligibility-table split rather than by inventing a date, and the adjudication is labelled as one.",
+      "LAW-SESSION-NOT-EXPIRY": "Respected. Session language ('pre-open state', 'TAS trading session', 'trading stops and market close', 'Market Halt', closed@ events) is kept distinct from calculation windows and from Termination of Trading throughout. The three BTIC wiki pages I opened contain only VWAP settlement windows (14:59:30-15:00:00 CT) and none was mistaken for a close.",
+      "repo untouched": "git status in /Users/agedvagabond/Developer/exchange-hours-rs is clean; nothing was edited."
+    }
+  },
+  "discrepancies": [
+    {
+      "id": "D1",
+      "severity": "material - scope failure and a positive misassignment",
+      "claim": "per_shape TACO entry: 'globex_equity_index_taco (ESQ, NQQ, RTQ), and the TACO+ root EQ1 if keyed'; and the five-shape enumeration omits globex_equity_index_btic_plus_taco_plus entirely.",
+      "finding": "The handoff (line 130) maps ES1, ES2 and EQ1 to a separate new key, globex_equity_index_btic_plus_taco_plus, explicitly NOT to globex_equity_index or globex_equity_index_taco, and quotes CME's own FAQ: 'Unlike BTIC and TACO transactions, BTIC+ and TACO+ are not governed by Rule 524.' The gate's single strongest affirmative channel - the Rule 524 enumeration of execution routes - therefore does not reach ES1/ES2/EQ1 (or 6EP, the BTIC+ root the handoff puts on globex_fx) by CME's own statement. The result neither classifies that key nor records the channel gap, and its 'plus EQ1 if keyed' aside would route a BTIC+/TACO+ root onto a Rule-524 argument CME disclaims for it.",
+      "verified_against": "docs/plans/2026-09-05-cme-trade-type-handoff.md line 130; ProductSlate records 8689 ES1, 8690 ES2, 8691 EQ1, 10308 6EP.",
+      "does_it_overturn_regular_empty": "No. I checked all four in the saved slate: ES1/ES2/EQ1/6EP each read floor '-', floorVol '0', venues 'Globex ClearPort '. regular: &[] is still supportable for them - but on the slate, ContractSpecs-venue and Daily-Bulletin legs only, not on Rule 524. The result must say which channels reach BTIC+/TACO+ and which do not."
+    },
+    {
+      "id": "D2",
+      "severity": "material - a false statement of channel exhaustion, contradicted by the researcher's own saved bytes",
+      "claim": "dead_ends: 'There is no Client Systems Wiki text page for BTIC or TAM. A CQL title search returns only the attachment images \"Basis Trade Index Close_BTIC\" and \"Trade at Marker_TAM\".'",
+      "finding": "The researcher's own p2_wiki_q_c6d15a64c92e0c573fbdab3758f5dc1a.json records cql=title~\"BTIC\" with size 3, and all three results are type 'page', not attachments: 'Russell BTICS' (457321897), 'BTIC on E-mini IPOX 100 U.S. Index Futures' (457321672), 'FTSE BTICS' (457222061). No attachment appears in that file at all. I re-ran the query live on 2026-09-12 and got the identical three pages, then fetched all three.",
+      "material_effect": "The substantive claim survives - all three are BTIC daily-settlement-procedure pages (VWAP settlement windows such as 14:59:30-15:00:00 CT) and none carries pre-open or session language, so the per-group pre-open paragraph that exists for TAS and TMAC genuinely does not exist for BTIC or TAM. But the dead-end as written tells the next reader a channel is exhausted that the gate never opened, which is precisely what AGENTS.md's \"'Unsourced' means 'not worked up', never 'no source exists'\" forbids. Rewrite it to say what the three pages are and that they carry no session language."
+    },
+    {
+      "id": "D3",
+      "severity": "minor - prose over-generalizes what the JSON gets right",
+      "claim": "RA2302-5 s6 state: 'the identical two-clause structure is repeated verbatim for 524.B.1 (BTIC), 524.C.1 (TACO), 524.D.1 (TMAC) ... each naming Globex plus the block/EFP/EFR routes and no other.'",
+      "finding": "524.B.2 (BTIC) and 524.C.2 (TACO) name only Rule 526 block trades; neither names EFP/EFR. The CME 2015-09-05 TAS rule names no block route at all (two clauses only). The per_shape block in the saved JSON states each correctly ('Globex plus Rule 526 block trades only' for BTIC and TACO); only the summary prose over-generalizes. Also, 'and no other' is the researcher's inference from enumeration, not the rule's own words - correctly flagged elsewhere in the result but not here."
+    },
+    {
+      "id": "D4",
+      "severity": "minor - arithmetic in stated counts",
+      "findings": [
+        "'Across 27 captured contract-specification records, 16 hours blocks carry a TAS/BTIC/TACO/TMAC line' - I count 17 such blocks across those files, and one of the 27 files (p2_cs_431.txt) is an HTTP 429 body rather than a record, so 26 records. The load-bearing half ('none under Open Outcry:') is exactly right: the corpus contains exactly one 'Open Outcry:' block and it carries no trade-type line.",
+        "'Section 61 repeats those columns under seventeen per-complex EX-PIT BREAKDOWN headings' - p2_db_Section61 contains 10 occurrences of 'EX-PIT BREAKDOWN' and zero of 'EX-PIT & OTHER BREAKDOWN'.",
+        "dead_ends: 'two saved files are that error body' - INDEX.md itself lists one HTTP 429 (p2_cs_431.txt) and three HTTP 400s (p2_th_10251, p2_th_8610, p2_th_8652)."
+      ]
+    },
+    {
+      "id": "D5",
+      "severity": "minor - the conclusion contradicts the researcher's own verbatim",
+      "claim": "conclusion: 'TAM a price-less \"TRADE AT MARKER PRODUCTS\" page'.",
+      "finding": "The same result's own verbatim gives that page's columns as 'VOLUME BLOCK VOL MARKER PRICE', and the rows carry marker prices (BZL NOV26 95.17, CLL OCT26 90.61, HOL OCT26 4.5426, RBL OCT26 3.1884). The page is not price-less. The load-bearing form of the argument - that no trade-type instrument is a row inside the RTH/ETH apparatus - is unaffected, because a marker price is not an opening range / high / low / closing range / settlement row under that legend."
+    },
+    {
+      "id": "D6",
+      "severity": "minor-to-moderate - an unflagged holiday week in the session-service channel",
+      "finding": "Every trading-hours-service capture covers 2026-09-06..2026-09-12, whose Monday 2026-09-07 is US Labor Day. Consequences visible in the researcher's own bytes and unmentioned anywhere in the result: group SB (BTIC) and group E2 (TMAC) have NO events on Sunday 2026-09-06; group 3T (TACO) reads preopen@12:00 on Monday 2026-09-07 rather than 16:45, carries an extra closed@16:00 on Friday and an open@05:00 on Saturday; group GM (TAM) splits its Sunday preopen@16:00 and Monday open@17:00 across the holiday. The Tue-Fri preopen/open/closed cycle the result quotes is correct, but 'on each weekday' is not supported for Monday, and nothing about Sunday can be read out of this capture. LAW-HOLIDAY-SCOPE means none of it belongs in a template anyway - but a reader told this is a plain week could take the Monday 12:00 for a grid. The Sunday 16:00 pre-opens actually rest on the wiki (TMAC) and on the handoff's own GM record (TAM); the per_shape JSON states this correctly, while the prose encodable ('stated by the wiki's TMAC page and the service on group E2') blurs it."
+    },
+    {
+      "id": "D7",
+      "severity": "minor - premises used without a retrieved source",
+      "findings": [
+        "'the 2015-07-02 open-outcry futures closure' is used as a premise in the conclusion, in per_shape, and in INDEX.md, and is stated by no artifact in the gate's raw set. SER-7416 in a neighbouring gate confirms the closure occurred ('have eliminated the open outcry trading venue in connection with the closing of the Exchanges' outcry futures trading') but the captured text names no day. Non-load-bearing: the affirmative fact that CME and CBOT Rule 524 contains no pit clause in any edition is independently verified, and the date is decorative to it.",
+        "'HGF on TR' is cited in the TAM order_entry basis as a trading-hours-service observation. The gate's own attempt at it, p2_th_8652.txt, is an HTTP 400. The datum is carried from the handoff (line 101), which sources it - but the result presents it as this pass's evidence without saying so."
+      ]
+    },
+    {
+      "id": "D8",
+      "severity": "cosmetic - recorded URL and hash pointers drift from the artifacts",
+      "findings": [
+        "The ProductSlate state records 'pageSize=500' for all seven pages; the saved bytes show pages 1-3 were fetched with pageSize=2000 and pages 4-7 with pageSize=500. The server caps at 500, so the merged set is complete and its 3,248 unique ids reproduce exactly - only the record is wrong.",
+        "The RA0907-4 and RA1303-4 states quote the PDF's sha256 while their saved_as field points at the .txt (whose hashes are 5dca9bac... and 7a0492f1... respectively)."
+      ]
+    },
+    {
+      "id": "D9",
+      "severity": "cosmetic here, would be material if a date were keyed",
+      "claim": "'Advisory Date July 13, 2023; Effective Date July 31, 2023 (both stated in the notice's own header block)'.",
+      "finding": "True of the header, but the notice's own body qualifies it: 'Effective on trade date July 31, 2023, and pending all relevant CFTC regulatory review periods'. That is a conditional effective day, and the result does not record the condition. Harmless in this gate because it encodes no date; it must not be carried forward as an unconditional effective day into any row."
+    },
+    {
+      "id": "D10",
+      "severity": "cosmetic - misattributed authorship of an exclusion",
+      "claim": "'CME excludes BTIC and TACO products from that family by name'.",
+      "finding": "The by-name exclusion is this crate's own GlobexEquityIndex doc comment in futures_profile.rs ('Excludes full-size S&P 500 (SP), Nikkei 225 Dollar (NKD), and BTIC/TACO products'), not a CME statement. The substance of the cross-cutting warning - do not carry CME_REGULAR onto a BTIC/TACO/TMAC key - is correct and independently supported by Rule 524."
+    }
+  ],
+  "what_survived_unscathed": [
+    "regular: &[] for every BTIC, TAS, TAM, TACO and TMAC key in every era this crate models. Three affirmative channels (Rule 524's positive route enumeration; ProductSlate's 234 records with floor '-', floorVol '0' and no Floor venue component against SOFR options' floor 'S3O' / floorVol '449,759' / 'Globex Floor ClearPort ' in the same file; ContractSpecs' 'Open Outcry:' venue label used for SOFR options and never for a trade-type hours line) plus one contrastive (NYMEX Rule 524.C naming MO as 'open outcry trades' in the same rule that names none of the five). Every one reproduced from the bytes.",
+    "The supersession of the globex_spot_quoted precedent. I checked verification.md:422: that key does rest on 'four CME channels ... and not one splits the session into RTH and ETH' and is rated Primary, so the characterization is fair and the upgrade from silence to affirmative-plus-contrastive is real.",
+    "The globex_weather Daily-Bulletin leg. verification.md:421 does cite 'CME's Daily Bulletin section 24 ... through its own RTH/ETH convention', and the 2015-03-20 and 2021-03-08 editions do defeat the objection that the modern legend is dead boilerplate.",
+    "The pit-era correction to the earlier pass. The NYMEX/COMEX TAS pit clause is real, dated to 2009-09-14 by RA0907-4's own letter, still present in the 2015-03-06 rulebook and gone by 2016-08-09; the adjudication (CME lists the pit route by the underlying's name and the electronic route by the TAS root's own Globex commodity code) is exactly what the bytes show, is labelled as an adjudication rather than a bare fact, and correctly demands a module comment.",
+    "TAM is the cleanest of the five: NYMEX 524.B carries no pit clause even in the 2015-03-06 pit-era capture where 524.A still does and 524.C defines MO as open outcry. Affirmative, not inferred.",
+    "TACO's full grid, verbatim from wiki page 457092968 v2, including all three named Pre-Opens, and its agreement with ContractSpecs 133's CME Globex TACO line once ET is converted to CT.",
+    "Evidence discipline. All 113 INDEX.md rows hash-verify; the 429 and 400 bodies are labelled as non-artifacts; capture date is kept distinct from artifact date throughout."
+  ],
+  "required_before_this_gate_is_used": [
+    "Classify globex_equity_index_btic_plus_taco_plus (ES1, ES2, EQ1) explicitly, and state that Rule 524 is not a channel for it because CME's own BTIC+/TACO+ FAQ disclaims Rule 524 - the slate, ContractSpecs-venue and Daily-Bulletin legs still carry regular: &[]. Remove 'plus EQ1 if keyed' from the globex_equity_index_taco entry: the handoff maps EQ1 elsewhere.",
+    "Rewrite the BTIC/TAM wiki dead-end to name the three BTIC-titled pages that do exist (457321897 Russell BTICS, 457321672 BTIC on E-mini IPOX 100, 457222061 FTSE BTICS) and to say what they actually are - settlement-procedure pages carrying VWAP windows and no session language - rather than asserting the title search returns only attachments.",
+    "Mark the trading-hours-service capture as a US Labor Day week and withdraw any Monday or Sunday inference drawn from it.",
+    "Fix the stated counts (17 tagged hours blocks not 16; 26 records not 27; 10 EX-PIT headings not 17; one 429 plus three 400s not two error bodies) and the 'price-less' description of the TAM bulletin page.",
+    "Attach a source to the 2015-07-02 floor-closure date or drop it to 'after the CME/CBOT outcry futures closure', and mark 'HGF on TR' as carried from the handoff."
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "task": "cme-2010-2012.verify",
+  "target": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2010-2012.json",
+  "verified_on_utc": "2026-09-12",
+  "verdict": "PASS — nothing load-bearing fails. Every recorded instant is backed verbatim by the cited T1 CME Group document; no instant is inferred from another year; the archive holds nothing that the 'missing' list wrongly claims is absent. Eight minor defects listed below should be corrected before the data is carried into the crate.",
+  "matches": true,
+  "checks_run": {
+    "rehash_index": "All 36 files listed in raw/cme-2010-2012/INDEX.md re-hashed: 36/36 sha256 and byte-count match exactly. No file on disk missing from the index and no indexed file missing from disk.",
+    "independent_refetch": "12 documents re-fetched from the Internet Archive id_ raw replay, spanning all three years and every product-group section: 2010-new-years, 2010-presidents-day, 2010-good-friday, 2010-thanksgiving, 2011-new-years, 2011-good-friday, 2011-memorial-day, 2011-christmas, 2012-thanksgiving, 2012-christmas, 2013-new-years, plus 2012-good-friday from the CANONICAL url. All 12 byte-identical to the saved copies (sha256 table in raw/cme-2010-2012-verify/INDEX.md).",
+    "verbatim_sweep": "All 36 saved PDFs re-extracted with an independent `pdftotext -layout` run. Every quoted fragment in every one of the 608 family rows was matched against its own cited document after Unicode/whitespace normalisation: 850 fragments checked, 830 matched literally, the remaining 20 individually inspected and confirmed to be real printed text joined across two printed lines (see defect C). Zero fabricated text.",
+    "instant_backing": "Every clock token in every close_instant and open_instant field (608 rows) was checked against the cited document text: 0 tokens absent from the cited document.",
+    "deep_row_check": "Verbatim, status classification, instant and zone re-read against the saved bytes for 20 holiday dates / ~170 family rows spanning the whole range: 2009-12-31, 2010-01-01, 2010-02-12, 2010-02-15, 2010-04-01, 2010-04-02, 2010-10-08, 2010-10-11, 2010-11-11, 2010-11-24, 2010-11-25, 2010-11-26, 2010-12-23, 2010-12-24, 2010-12-31, 2011-04-21, 2011-04-22, 2011-12-23, 2011-12-26, 2011-12-27, 2011-12-30, 2012-01-02, 2012-01-03, 2012-07-03, 2012-07-04, 2012-07-05, 2012-11-21, 2012-11-22, 2012-11-23, 2012-12-24, 2012-12-25, 2012-12-26, 2012-12-31. Every status, instant and zone matches the operator's printed line, including CT-alone for equity/rates/FX/ag and 'CT / ET' kept as printed for the NYMEX-COMEX-DME lines.",
+    "cross_year_inference": "No instant is inferred from another year. Every row's document year equals the holiday year except the four New Year's Eve trade dates (2009-12-31, 2010-12-31, 2011-12-30, 2012-12-31), each correctly sourced from the following year's New Year's sheet. Year-specific detail is preserved rather than pattern-filled: Good Friday is an 0815/1015 CT early close in 2010 and 2012 but a full 'CME Globex is closed' in 2011; the Friday before Presidents'/Memorial/Independence/Labor Day is '1515 CT / 1615 ET - Early' for NYMEX-COMEX in 2010 and '1615 CT / 1715 ET - Regular' from 2011 (verified in all four 2011 sheets); the grain section header changes from 'Other CME Group Products' to 'CBOT, KCBT and MGEX Grain Products' at the 2012 Memorial Day sheet and to 'CBOT, KCBT, MGEX Grain & Agricultural Products' from the 2012 Labor Day sheet; dairy is printed as 'Domestic Dairy' (2010 Good Friday), 'International & Domestic Dairy' (2010 Columbus Day) and 'Dairy' elsewhere and each row quotes its own document's wording; CME's own typo 'CME Group Interest Products' in the 2010 Columbus Day sheet is reproduced rather than normalised; the 2012 July sheet records 1200/1215 CT grain closes with no 1230 CT mini-grain line because that document prints none, while the 2012 Christmas and Thanksgiving sheets record all three.",
+    "cdx_reenumeration": "Fresh CDX prefix search for cmegroup.com/tools-information/holiday-calendar* from=2009 to=2014 returns 608 rows / 248 distinct originals and is byte- and sha256-identical (0f8ee34cd0b2f86e6c74120c29156819f5a72567e1d92d287e1fa995e1be68df) to the enumeration the target task saved. Both claimed-empty prefixes re-run and confirmed empty: cmegroup.com/trading-hours* returns [] and cmegroup.com/content/dam/cmegroup/tools-information/holiday-calendar/* returns []. Full 2011 and 2012 URL sets enumerated and compared against the retrieved set.",
+    "missing_list_audit": "Nothing listed as missing is in fact held by the archive. Each testable claim verified: (a) 'Nikkei' occurs in exactly two of the 36 extractions — 2010-presidents-day.pdf and the 2010 consolidated globex-holiday-calendar.pdf — exactly as the note states; (b) 'Lumber' has zero occurrences in all six named 2010 sheets (martin-luther-king, presidents-day, memorial-day, 4th-of-july, labor-day, columbus-day) and first appears in the 2010 Thanksgiving and Christmas sheets, as claimed; (c) 2010-veterans-day.pdf contains no 'Dairy' string at all, matching the omitted dairy row for 2010-11-11, and 2010-columbus-day.pdf prints only 'International & Domestic Dairy' and 'Livestock, Domestic Dairy, TRAKRS and ETFs will remain closed until their regularly scheduled open on Monday' with no dairy instant, as claimed; (d) CME Group listed no cryptocurrency product in 2010-2012 and no holiday PDF prints one; (e) the 2012 Good Friday digest reasoning is correct — the query-string variant at 2012-04-17T00:42:47Z and the last canonical capture at 2012-05-05T16:16:49Z both carry archive digest NI6R4U2PX4ZHE7XW2VYEEQXW6AE7JNCJ and both replay to the identical 60600-byte file.",
+    "counts": "coverage's arithmetic checks out: 71 affected trade dates, 608 family rows, 34 documents actually cited (33 per-holiday sheets for 11 holidays x 3 years, plus 2013-new-years.pdf), 36 documents indexed (the two extra being the 2010 consolidated compendium and the second 2010 Christmas revision, both cited by no row and both explained in INDEX notes). Statuses: normal 258, early_close 103, modified 91, closed 86, late_open 70. Every row carries tier T1."
+  },
+  "defects": [
+    {
+      "id": "A",
+      "severity": "minor",
+      "load_bearing": false,
+      "where": "raw/cme-2010-2012/INDEX.md row for docs/2012-good-friday.pdf; missing[5] in cme-2010-2012.json",
+      "claim": "'the only wayback capture that replayed was of the query-string variant .../2012-good-friday.pdf? at 2012-04-17T00:42:47Z; its archive digest (NI6R4U2PX4ZHE7XW2VYEEQXW6AE7JNCJ) is identical to the last capture of the canonical URL (2012-05-05T16:16:49Z), which itself would not replay after five attempts'",
+      "finding": "The canonical capture replays now. https://web.archive.org/web/20120505161649id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2012-good-friday.pdf returned 60600 bytes, sha256 81440c44afb97ea4b3a44b86aa4cf21e2e4cb7ba5839fabd95b29d0c928b2ea8 — byte-identical to the saved docs/2012-good-friday.pdf. The digest-identity conclusion is therefore confirmed, but the INDEX cites the ?-variant capture time when the canonical capture is available and is the one that should be cited.",
+      "fix": "Re-cite docs/2012-good-friday.pdf as capture 2012-05-05T16:16:49Z of the canonical URL and drop the 'would not replay' clause from the missing list."
+    },
+    {
+      "id": "B",
+      "severity": "minor",
+      "load_bearing": false,
+      "where": "holidays[?date=2010-12-23].families[energy].verbatim / .document",
+      "claim": "verbatim ends '(the 12/23/2010 revision adds \"European Gasoil TAS Contracts will close at 1000 CT / 1100 ET\")' while the row's document field names only '2010-christmas.pdf @2010-12-14T06:12:38Z'",
+      "finding": "That quoted Gasoil line does not exist in the cited 12/13/2010 revision. It exists only in docs/2010-christmas-later.pdf (capture 2011-11-01T14:31:52Z, Last updated 12/23/2010), which is in INDEX but cited by no row. The prose parenthetical attributes it correctly, so nothing is fabricated and no recorded close/open instant is affected — the row's energy close stays 1615 CT / 1715 ET in both revisions — but a reader re-verifying from the document field alone will not find the quote.",
+      "fix": "Either cite both revisions on that row or move the Gasoil sentence into a row whose document is 2010-christmas-later.pdf."
+    },
+    {
+      "id": "C",
+      "severity": "minor",
+      "load_bearing": false,
+      "where": "20 verbatim strings across the range",
+      "claim": "n/a — a quoting convention",
+      "finding": "Twenty quotations join two separately printed lines inside one pair of curly quotes, using ' / ' or a bullet as the joiner. Because CME's own notation uses ' / ' to separate CT from ET, a reader can misparse e.g. '\"1700 CT - Halted CME interest rate products resume trading / 1730 CT - Halted CBOT financial products resume trading\"' as a single printed line. All 20 were individually located in the cited documents and are genuine text. Affected rows: interest_rates on 2010-01-18, 2010-02-15, 2010-05-31, 2010-07-05, 2010-09-06, 2010-11-11, 2011-01-17, 2011-02-21, 2011-05-30, 2011-07-04, 2011-09-05; grains and livestock on 2011-01-14; grains on 2010-11-11; fx on 2011-02-21; metals on 2010-12-23, 2011-11-25, 2011-12-23, 2012-12-24.",
+      "fix": "Quote each printed line separately, or use an explicit line-break marker that cannot be confused with CME's CT/ET separator."
+    },
+    {
+      "id": "D",
+      "severity": "minor",
+      "load_bearing": false,
+      "where": "92 close_instant / open_instant tokens, chiefly the following-session reopen on 'closed' and 'normal' rows",
+      "claim": "n/a — an evidence-completeness shortfall",
+      "finding": "92 clock tokens recorded in the instant fields are not quoted in that row's own verbatim, for example fx 2011-04-22 open_instant '1700 CT Sunday Apr 24' whose verbatim quotes only 'CME Globex is closed'. All 92 were confirmed present in the cited document, in that product group's own section (spot-checked directly for 2010-04-02 energy and grains, 2010-10-11 equity and interest rates, 2010-12-24 all groups, 2011-04-22 fx and energy, 2011-12-26 all groups, 2012-01-02 all groups, 2012-12-25 all groups). A reader working from the verbatim alone cannot re-verify them.",
+      "fix": "Extend each affected verbatim with the reopen line from the same section."
+    },
+    {
+      "id": "E",
+      "severity": "informational",
+      "load_bearing": false,
+      "where": "coverage enumeration note and missing list",
+      "claim": "the enumeration lists <year>floorholidaycard.pdf, CME_Clearport_<year>_Holiday_Calendar.pdf, <year>-holiday-calendars.zip and five named settlement-procedure PDFs as the non-Globex residue",
+      "finding": "The direction of error is the reverse of the one being tested — nothing listed as missing is actually held, but a few held items are not listed. The fresh CDX enumeration also returns, under the same prefix: 2012-4th-of-july.xls, 2012-labor-day.xls and 2012-memorial-day.xls (alternate-format copies of sheets already retrieved as PDF, mentioned nowhere); New_York_Floor_Holiday_Calendar_2011.pdf and _2012.pdf (open-outcry floor, same categorical exclusion as floorholidaycard but not named); and more settlement-times documents than the five named — Holiday-Settlement-Times-Good-Friday-2012.pdf, Holiday-Settlement-Times-Memorial-Day-2012.pdf, Holiday-Settlement-Times-NewYears2011.pdf, Holiday-Settlement-Times-Christmas2011.pdf, Thanksgiving_Settlement_Times_2011.pdf, Columbus-Day-Settlement-Proceduresx2011x.pdf, Veterans-Day-Settlement-Proceduresx2011x.pdf. All fall inside exclusions the task already states categorically (floor sessions; settlement instants under LAW-SESSION-NOT-EXPIRY), so no session evidence is lost.",
+      "fix": "State the settlement and floor exclusions as categories rather than as named-file lists, and note the .xls duplicates."
+    },
+    {
+      "id": "F",
+      "severity": "informational",
+      "load_bearing": false,
+      "where": "coverage text",
+      "claim": "'the 2010 and 2011 <year>-globex-holiday-calendar.pdf compendia, which merely reprint the per-holiday sheets at an earlier revision'",
+      "finding": "2011-globex-holiday-calendar.pdf has exactly one CDX capture and it is not a 200, so it is not retrievable and is not in INDEX. Only the 2010 compendium was actually read, and only it can support the 'merely reprint' comparison (which INDEX does make correctly, line for line, for 2010 Good Friday). The 2011 compendium's non-retrievability is not recorded in the missing list.",
+      "fix": "Record the 2011 compendium as an unretrievable archive entry, or drop it from the coverage sentence."
+    },
+    {
+      "id": "G",
+      "severity": "trivial",
+      "load_bearing": false,
+      "where": "missing[3]",
+      "claim": "'those five 2010 documents'",
+      "finding": "Six documents are named in the same sentence (Martin Luther King, Presidents' Day, Memorial Day, Independence Day, Labor Day, Columbus Day). All six verified to contain zero occurrences of 'Lumber'. Count typo only.",
+      "fix": "Change 'five' to 'six'."
+    },
+    {
+      "id": "H",
+      "severity": "interpretive",
+      "load_bearing": false,
+      "where": "holidays[?date=2010-02-15].families[nikkei_225_dollar]",
+      "claim": "status 'modified', open_instant '02:00 (USD) & 05:00 (JY) Monday morning; likewise Tuesday morning', no close_instant",
+      "finding": "The only nikkei_225_dollar row in the whole set, and the only 'modified' row with no close_instant. CME's words are 'USD & JY denominated Nikkei will open at their regularly scheduled times of 02:00 & 05:00', which is an exception to the group's Sunday 1700 CT open rather than a modification of the Nikkei's own schedule; the document says nothing about whether the Nikkei was exempt from the Monday 1030 CT halt. 'normal, with the group-open exception noted' is at least as defensible a classification. No unsourced instant is asserted either way, and the zero-coverage of nikkei_225_dollar on the other 70 dates is disclosed in the missing list.",
+      "fix": "Either re-label as 'normal' with the exception quoted, or state in the row why 'modified' was chosen and that the halt question is unsourced."
+    }
+  ],
+  "evidence_dir": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2010-2012-verify/",
+  "saved_json": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2010-2012.verify.json"
+}

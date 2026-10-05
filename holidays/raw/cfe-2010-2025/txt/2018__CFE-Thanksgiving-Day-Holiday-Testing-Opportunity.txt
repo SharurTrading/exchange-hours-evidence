@@ -1,0 +1,121 @@
+CFE Thanksgiving Day Holiday Testing Opportunity
+Reference ID: C2018102902
+
+
+Overview
+To provide additional opportunities for holiday testing, the Cboe Futures Exchange, LLC (CFE) Certification
+environment will be configured to observe a holiday trading session beginning Wednesday, November 7,
+2018. The test is designed to mimic the modified trading hours associated with the 2018 Thanksgiving
+Day holiday. After the start of the CFE Certification trading environment on the afternoon of November
+7, 2018, the simulated holiday trading session will commence for the business date of November 9, 2018.
+
+
+Simulated Thanksgiving Holiday Trading Schedule
+VX and XBT Futures
+The CFE Certification schedule below will apply for the Thursday, November 8, 2018 simulated holiday
+trading session in VX and XBT futures, including Trade at Settlement (TAS) transactions in VX futures (VXT):
+                                      Simulated
+ Type of Trading Hours               Thanksgiving                 Friday, November 9, 2018
+                             Thursday, November 8, 2018
+       Extended          5:00 p.m. (Wednesday) to 10:30 a.m.   5:00 p.m. (Thursday) to 8:30 a.m.
+                                 for VX, VXT, and XBT                for VX, VXT, and XBT
+        Regular                          None                       8:30 a.m. to 12:15 p.m.
+                                 for VX, VXT, and XBT                   for VX and XBT
+
+                                                                   8:30 a.m. to 12:13 p.m.
+                                                                           for VXT
+
+A holiday trading session includes extended trading hours on the calendar day of the holiday and any
+extended trading hours for the holiday on the previous calendar day. Holiday trading sessions are not
+separate Business Days and are part of the next Business Day. Trading in VX and XBT futures is suspended
+between sessions of extended trading hours on the calendar day of a holiday.
+
+All Other Products
+Simulated trading in the certification environment will be closed for all CFE products other than VX and
+XBT futures on Thursday, November 8, 2018.
+
+On Friday, November 9, 2018, all CFE products other than VX futures will open at their regularly
+scheduled opening times and close at 12:15 p.m.
+The queuing period for the Friday trading session for non-TAS single leg contract expirations and non-TAS
+spreads in CFE products other than VX and XBT futures will commence at 5:00 p.m. on Thursday,
+November 9, 2018 plus a randomized time period from zero to three seconds. The queuing period for the
+Friday trading session for any TAS single leg contract expirations and TAS spreads in CFE products other
+than VX and XBT futures will commence at 5:00 p.m. on Thursday, November 9, 2018 plus a randomized
+time period from three to six seconds.
+
+
+Submission Time Frames for VX and XBT Futures for Simulated Thanksgiving
+Holiday
+The chart below sets forth the applicable time frames for the submission of Orders (including Cancel
+Orders and Cancel Replace/Modify Orders) in VX and XBT futures, including VXT TAS transactions unless
+otherwise indicated, in connection with the simulated Thanksgiving holiday.
+
+       Calendar Day                  Time Frame               State of CFE’s    What May be Submitted to
+                                                                 Trading          CFE’s Trading System
+                                                                 System
+       Wednesday,             4:00 p.m. to system restart      Suspended                  Nothing
+     November 7, 2018           (which occurs sometime
+                              between 4:05 p.m. and 4:45
+                                         p.m.)
+       Wednesday,            System restart (which occurs      Suspended         Cancels for persisted Good-
+     November 7, 2018        sometime between 4:05 p.m.                        ‘til-Canceled (GTC) and Good-
+                              and 4:45 p.m.) to 4:45 p.m.                        ‘til-Date (GTD) orders from
+                                                                                       prior trading date
+       Wednesday               4:45 p.m. to 5:00 p.m.*          Queuing             Orders (except Market,
+     November 7, 2018                                            Period          Immediate or Cancel (IOC),
+                                                                               and Fill or Kill (FOK) orders)**
+                                                                                   TAS Orders for VXT**
+         Thursday                5:00 p.m. (Wednesday,          Extended       Orders (except Market Orders)
+     November 8, 2018         November 7, 2018) to 10:30      Trading Hours
+                                          a.m.                                       TAS Orders for VXT
+         Thursday             10:30 a.m. to system restart     Suspended                  Nothing
+     November 8, 2018           (which occurs sometime
+                               between 4:05 p.m. to 4:45
+                                         p.m.)
+         Thursday            System restart (which occurs      Suspended         Cancels for persisted Day,
+     November 8, 2018        sometime between 4:05 p.m.                          GTC, and GTD orders from
+                               to 4:45 p.m.) to 4:45 p.m.                         holiday trading session
+         Thursday                4:45 p.m. to 5:00 p.m.         Queuing         Orders (except Market, IOC,
+     November 8, 2018                                            Period             and FOK orders)**
+                                                                                   TAS orders for VXT**
+          Friday                5:00 p.m. (Thursday,            Extended       Orders (except Market orders)
+     November 9, 2018         November 8, 2018) to 8:30       Trading Hours
+                                                                                     TAS orders for VXT
+                                        a.m.
+          Friday               8:30 a.m. to 12:15 a.m.           Regular       Orders (except Market orders
+     November 9, 2018                                         Trading Hours           in XBT futures)
+                            8:30 a.m. to 12:13 p.m. for VXT
+                                                                                     TAS Orders for VXT
+*The queuing period at the beginning of a Business Day for VX and XBT non-TAS single leg contract
+expirations and non-TAS spreads commences at the referenced start time for the queuing period plus a
+randomized time period from zero to three seconds. The queuing period at the beginning of a Business
+Day for VX TAS single leg contract expirations and TAS spreads commences at the referenced start time
+for the queuing period plus a randomized time period from three to six seconds.
+
+**Orders permitted to be submitted to CFE’s trading system during these times are not executable until
+extended trading hours next commence.
+
+
+Session Disconnect from CFE Certification Environment on November 8, 2018
+At approximately 4:10 p.m. on November 8, 2018, a session disconnect from the CFE Certification
+Environment will occur during the simulated 10:30 a.m. to 4:45 p.m. suspended state.
+
+This disconnect will not cause any orders to cancel due to Cancel on Disconnect. As a general rule, Cancel
+on Disconnect is not in effect between the scheduled end of trading for a given futures product and the
+next system restart. Trading Privilege Holders may refer to the FIX and BOE specifications for further
+information on how to configure cancel on disconnect settings.
+
+         Cboe Futures Exchange FIX Specification
+         Cboe Futures Exchange Binary Order Entry Specification
+
+
+Additional Information
+Please contact the CFE Trade Desk for support or with any questions.
+
+We appreciate your business and remain committed to powering your potential with Cboe products,
+technologies, and solutions.
+
+CFE Trade Desk
+312.786.8700
+cfetradedesk@cboe.com
+

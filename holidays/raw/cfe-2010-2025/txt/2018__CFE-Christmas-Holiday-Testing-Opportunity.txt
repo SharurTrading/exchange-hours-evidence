@@ -1,0 +1,112 @@
+CFE Christmas Holiday Testing Opportunity
+Reference ID: C2018121000
+
+
+Overview
+To provide additional opportunities for holiday testing, the Cboe Futures Exchange, LLC (CFE) Certification
+environment will be configured to observe a holiday trading session beginning Monday, December 17,
+2018. The test is designed to mimic the modified trading hours associated with the 2018 Christmas
+holiday. After the start of the CFE Certification trading environment on the afternoon of December 16,
+2018, the CFE Trading Session will begin the half day simulated Christmas Eve trading session, followed by
+the simulated modified trading hours associated with the Christmas Holiday. All times referenced in this
+notice are Chicago time.
+
+
+Simulated Modified Trading Schedule for Monday, December 17, 2018
+Trading in all CFE products in the CFE Certification environment will close at 12:15 p.m. on Monday,
+December 17, 2018.
+
+The trading hours for all Trade at Settlement (TAS) transactions in VX futures (VXT) in the CFE Certification
+environment will end at 12:13 p.m. on Monday, December 17, 2018.
+
+
+Simulated Holiday Trading Schedule for Tuesday, December 18, 2018
+VX and XBT Futures
+
+The CFE Certification environment will reopen following the simulated Christmas holiday at 5:00 p.m. on
+Tuesday, December 18, 2018 with the start of extended trading hours for VX and XBT futures (including
+VXT TAS transactions).
+
+All Other Products
+
+Trading will be closed for all CFE products in the CFE Certification environment other than VX and XBT
+futures on Tuesday, December 18, 2018.
+
+On Wednesday, December 19, 2018, all CFE products in the CFE Certification environment other than VX
+and XBT futures will open at their regularly scheduled opening times.
+The queuing period for the Wednesday trading session in the CFE Certification environment for non-TAS
+single leg contract expirations and non-TAS spreads in CFE products other than VX and XBT futures will
+commence at 5:00 p.m. on Tuesday, December 19, 2018 plus a randomized time period from zero to three
+seconds. The queuing period for the Wednesday trading session in the CFE Certification environment for
+any TAS single leg contract expirations and TAS spreads in CFE products other than VX and XBT futures
+will commence at 5:00 p.m. on Tuesday, December 19, 2018 plus a randomized time period from three to
+six seconds.
+
+
+Submission Time Frames for VX and XBT Futures for the Simulated Christmas
+Holiday
+The chart below sets forth the applicable time frames for the submission of Orders (including Cancel
+Orders and Cancel Replace/Modify Orders) in VX and XBT futures, including VXT TAS transactions unless
+otherwise indicated, in connection with the simulated Christmas holiday.
+
+       Calendar Day                 Time Frame               State of CFE’s    What May be Submitted to
+                                                                Trading          CFE’s Trading System
+                                                                System
+        Monday              5:00 p.m. (Sunday, December        Extended       Orders (except Market Orders)
+    December 17, 2018           16, 2018) to 8:30 a.m.       Trading Hours
+                                                                                   TAS Orders for VXT
+        Monday                 8:30 a.m. to 12:15 p.m.          Regular       Orders (except Market Orders
+    December 17, 2018                                        Trading Hours           in XBT futures)
+                           8:30 a.m. to 12:13 p.m. for VXT
+                                                                                    TAS Orders for VXT
+        Monday               12:15 p.m. to system restart     Suspended                  Nothing
+    December 17, 2018         on Tuesday, December 18,
+                            2018 (which occurs sometime
+                              between 4:05 p.m. to 4:45
+                                        p.m.)
+        Tuesday             System restart (which occurs      Suspended         Cancels for persisted Good-
+    December 18, 2018       sometime between 4:05 p.m.                        ‘til-Canceled (GTC) and Good-
+                              to 4:45 p.m.) to 4:45 p.m.                        ‘til-Date (GTD) Orders from
+                                                                                      prior trading date
+        Tuesday                4:45 p.m.* to 5:00 p.m.         Queuing             Orders (except Market,
+    December 18, 2018                                           Period          Immediate or Cancel (IOC),
+                                                                              and Fill or Kill (FOK) Orders)**
+
+                                                                                  TAS Orders for VXT**
+        Tuesday                5:00 p.m. to 8:30 a.m.          Extended       Orders (except Market Orders)
+    December 18, 2018        (Wednesday, December 19,        Trading Hours
+                                       2018)                                        TAS Orders for VXT
+
+*The queuing period at the beginning of a Business Day for VX and XBT non-TAS single leg contract
+expirations and non-TAS spreads commences at the referenced start time for the queuing period plus a
+randomized time period from zero to three seconds. The queuing period at the beginning of a Business
+Day for VXT TAS single leg contract expirations and TAS spreads commences at the referenced start time
+for the queuing period plus a randomized time period from three to six seconds.
+**Orders permitted to be submitted to CFE’s trading system during these times are not executable until
+extended trading hours next commence.
+
+
+Session Disconnect from the CFE Certification Environment on December 18,
+2018
+At approximately 4:10 p.m. on December 18, 2018, a session disconnect will occur during the 12:15 p.m.
+(Monday, December 17, 2018) to 4:45 p.m. (Tuesday, December 18, 2018) suspended state.
+
+This disconnect will not cause any orders to cancel due to Cancel on Disconnect. As a general rule, Cancel
+on Disconnect is not in effect between the scheduled end of trading for a given futures product and the
+next system restart. Trading Privilege Holders may refer to the FIX and BOE specifications for further
+information on how to configure cancel on disconnect settings.
+
+         Cboe Futures Exchange FIX Specification
+         Cboe Futures Exchange Binary Order Entry Specification
+
+
+Additional Information
+Please contact the CFE Trade Desk for support or with any questions.
+
+We appreciate your business and remain committed to powering your potential with Cboe products,
+technologies, and solutions.
+
+CFE Trade Desk
+312.786.8700
+cfetradedesk@cboe.com
+

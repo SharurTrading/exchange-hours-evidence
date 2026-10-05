@@ -1,0 +1,166 @@
+{
+ "gate": "ag-crypto-tas-history",
+ "verifier_pass_ts": "2026-09-12 (adversarial verification pass; re-fetches saved under raw/ag-crypto-tas-history/verify-pass/)",
+ "matches": false,
+ "verdict_summary": "The three gate answers (U-13 grain TAS non-participation + launch, U-14 livestock TAS launch + 2016-02-29 revision, U-15 crypto TAS launch/era-1/era-2) survive verification. Every load-bearing verbatim quote, effective date, conditional-vs-unconditional classification, session-language classification and absence count re-derives from the saved bytes; all 52 pass-2 files hash-match SHA256SUMS.txt; six cited artifacts re-fetched byte-identical to their recorded sha256; SER-9740R re-fetched independently still contains zero 'TAS'. matches=false is returned for eight defects, two of which would put a false statement into a source comment and two of which would put an unsourced session, or a false 'unsourced' label, into a profile table. None overturns a gate conclusion.",
+ "independently_re_fetched": [
+  {
+   "artifact": "web.archive.org 20150905110358id_ corn_contract_specifications.html",
+   "sha256": "e9b9e69a5efa4f4039f50701dcf6dc4879b143704f706ace74f4305da200a5bd",
+   "result": "byte-identical to pass2/corn-legacy-20150905110358.html"
+  },
+  {
+   "artifact": "web.archive.org 20150905203207id_ live-cattle_contract_specifications.html",
+   "sha256": "83c49520a5c6b14be397f7b709feb77608a2fab0a8a5f495217d15575ba02072",
+   "result": "byte-identical to pass2/lc-legacy-20150905.html"
+  },
+  {
+   "artifact": "web.archive.org 2026id_ CME Submission 23-017 PDF",
+   "sha256": "fe3566941bf3fb981c55778159fab04460dfd45995a9624d7a8668cbfc0586f4",
+   "result": "byte-identical to filings2023/23-017.pdf"
+  },
+  {
+   "artifact": "live ContractSpecs productId 300 (Corn) via r.jina.ai",
+   "sha256": "6d3f699113c90fbe2e2d769ede8351466dae40ffa0165a0a55c096bd4182723c",
+   "result": "byte-identical to pass2/cs-300-live.txt; TAS line 13:15 against the outright's 13:20 inside one CME Globex cell"
+  },
+  {
+   "artifact": "live ContractSpecs productId 8478 (Bitcoin) via r.jina.ai",
+   "sha256": "a170b561e5c4233e68f946ff71d642b18c26a688ad8c651142c383ee4f8c5508",
+   "result": "byte-identical to pass2/cs-8478-live.txt; TAS line 24/7 except Sat 02:00-04:00 and Mon-Fri 15:00-15:05 CT, no 16:01-16:02 pause"
+  },
+  {
+   "artifact": "live SER-9740R via r.jina.ai",
+   "result": "re-fetched independently; 0 case-insensitive 'TAS'; effective clause and Table 1 as quoted"
+  },
+  {
+   "artifact": "web.archive.org 20150522230148id_ corn_contract_specifications.html",
+   "sha256": "fd5f67b3a740beeff5e98028cfa5ac7de244189d12ac90589cac850de8520ba3",
+   "result": "NOT what the researcher stored - see D1. The real capture exists and does support the claim"
+  },
+  {
+   "artifact": "Wayback CDX, ag TAS fact card PDF",
+   "result": "three distinct 200-status digests confirmed (YOU6E/5VD5F/GTCPA) - but with a five-year archive hole 2015-06-16 -> 2020-06-08; see D6"
+  },
+  {
+   "artifact": "Wayback CDX, tas-on-cryptocurrency-futures.html collapse=digest",
+   "result": "exactly 16 rows; last pre-cutover 20260209183250, first post-cutover 20260610025555 - bracketing claim exact"
+  },
+  {
+   "artifact": "Wayback CDX, corn spec page 2015 range",
+   "result": "20150522230148 is a real 200 capture (digest 6HB5XFH...), so the researcher's citation points at a page that exists; only their saved copy is wrong"
+  },
+  {
+   "artifact": "CME filings 26-113 / 26-115 / 26-117 / 26-120 in 2026/5 via r.jina.ai",
+   "result": "all return CME's 404 page - consistent with dead_ends #1"
+  },
+  {
+   "artifact": "CME Rulebook Chapter 5 (Rule 524) via r.jina.ai",
+   "sha256": "e0c83f7920ab07bfa9121dd2d6db87a4c117fb24e32ba04c1cb2dce717fabb39",
+   "result": "NEW channel, not in dead_ends. Rule 524.A.1 confirms a TAS pre-open exists but states no clock time; the TAS/BTIC/TACO/TMAC Table is an external XLS. Does not close residual B"
+  },
+  {
+   "artifact": "pass2/SHA256SUMS.txt",
+   "result": "shasum -c over all 52 pass-2 files: 0 failures"
+  }
+ ],
+ "re_derived_from_bytes_and_confirmed": [
+  "RA1503-3: 'Advisory Date May 11, 2015 ... Effective Date June 8, 2015' and 'Effective on Sunday, June 7, 2015, for trade date Monday, June 8, 2015, CME and CBOT will adopt new Rule 524' verbatim. Case-insensitive 'pending' count = 0. The document contains zero clock times (0 matches for H:MM, 'a.m.', 'p.m.'), so 'date source only' is exact. Unconditional day-level launch - LAW-NO-FABRICATED-DATES satisfied.",
+  "Fact-card PDF metadata from the bytes: CreationDate D:20150610160907-05'00' / D:20160303113040-06'00' (ModDate D:20160315131547-05'00') / D:20231002131415-05'00'. The researcher's three corrections to the handoff (which records 2015-06-11, 2016-03-04/03-16, 2023-10-03) are right. sha256 of all three cards match the values recorded in the state records.",
+  "Fact-card grids verbatim, column heading literally 'TAS Trading Hours' / 'TAS TRADING HOURS' (session language): ed.1 grains 'Sunday - Friday, 7:00 p.m. - 7:45 a.m. CT / Monday - Friday, 8:30 a.m. - 1:15 p.m. CT', livestock 'Monday, 9:05 a.m. - 1 p.m. / Tuesday - Friday, 8 a.m. - 1 p.m.'; ed.2 (2016-03-03) grains unchanged at 1:15, livestock 'Monday - Friday 8:30 a.m. - 1:00 p.m. CT'; ed.3 (2023-10-02) identical grids. The grain cell is byte-identical across all three editions.",
+  "SER-7395R (reader extraction of the live PDF): 0 occurrences of 'TAS' and 0 of ZCT/SBT/ZWT/KET/ZMT/ZLT across the whole 15-page document; 'Effective on Sunday, July 5, 2015, for trade date Monday, July 6, 2015, and pending all relevant CFTC regulatory review periods'; current 1:15 -> new 1:20 p.m. CT; Appendix 1 ends 'Black Sea Wheat Futures 33 BSW' exactly as the supersession note requires. The researcher correctly does NOT use this conditional date for anything.",
+  "Corn legacy spec pages at 2015-09-05, 2015-10-09, 2016-03-10, 2017-05-20 and 2019-07-17: each prints 'Trading Hours ... Sunday - Friday, 7:00 p.m. - 7:45 a.m. CT and Monday - Friday, 8:30 a.m. - 1:20 p.m. CT' AND, under the heading 'Trade At Marker Or Trade At Settlement Rules', 'Trading in all CBOT Grain TAS products will be 19:00-07:45 and 08:30-13:15 Chicago time.' Family scope, session language, local zone named. This is the decisive positive evidence for U-13 and it holds at all five captures. The adjacent 'Last Trade Date' sentence is expiry and is correctly not used.",
+  "2014-11-02 corn capture: a real CME page, outright 'Monday - Friday, 8:30 a.m. - 1:15 p.m. CT', case-sensitive 'TAS' count = 0 (the 9 case-insensitive hits are lowercase substrings inside inline JavaScript). Genuine pre-launch sourced absence.",
+  "Live Cattle legacy spec pages: era 1 at 2015-09-05 and 2015-11-27 - 'Trading in all CME Livestock TAS products will be 9:05-13:00 Chicago time on Mondays or on the Tuesdays that follow a Monday holiday, and Tuesday through Friday 8:00-13:00, Chicago time.'; era 2 at 2016-03-11 and 2017-12-11 - 'Trading in all CME Livestock TAS products will be 8:30 am -1:00 pm Chicago time Monday - Friday.' The 2016-02-29 change is witnessed on both sides on a channel that is neither the SER nor the fact card, exactly as claimed, and the 'Tuesdays that follow a Monday holiday' clause is in the bytes.",
+  "SER-7591: 'Effective Monday, February 29, 2016, and pending all relevant CFTC regulatory review periods'; Live Cattle / Feeder Cattle / Lean Hog TAS Futures each named with Globex codes LET/GFT/HET in the contract table; page-2 sentence verbatim 'Trading of Live Cattle TAS Futures, Feeder Cattle TAS Futures, and Lean Hog TAS Futures will be 8:30 am - 1:00pm (Central Time) Monday - Friday.'; underlying 'Mon - Fri: 8:30 am - 1:05 pm'. The 13:00-vs-13:05 divergence that makes this a separate key is real.",
+  "SER-8599R: effective Sunday 2020-05-31 for trade date Monday 2020-06-01; LET, GFT and HET each carry Current 6:00-8:30 a.m. and Reduced 8:00-8:30 a.m. CT. Correctly labelled an order-entry window.",
+  "Globex notice 20160530: strings 'LET', 'GFT', 'HET' and 'TAS' occur ZERO times in the whole notice while the Post-Close table enumerates LE/GF/HE futures, options and CSOs and states 'Monday through Friday, 2:30 - 4:00 p.m. Central Time'. The sourced absence is real: globex_livestock_tas must not inherit the PCP.",
+  "Globex notice 20200511 does misprint Lean Hog TAS as 'LET' and independently gives security group TH for all three livestock TAS books.",
+  "23-017: 'effective Sunday, February 5, 2023, for trade date Monday, February 6, 2023'; 'TAS trading and clearing hours shall be: CME Globex: Sunday - Friday 5:00 p.m. - 3:00 p.m. CPT'; case-insensitive 'pending' count = 0. Unconditional, session language, and the ClearPort line is separately a reporting window. The settlement instant ('calculated at 3:00 p.m. Central Prevailing Time') is stated in a different sentence, so LAW-SESSION-NOT-EXPIRY is satisfied by the hours row rather than by coincidence.",
+  "Crypto TAS product page captures: 2023-03-14 and 2024-04-18 list TBT/TBM only; 2025-04-20 adds TET/TEM; 2026-02-09 lists all eight; each with 'Sunday - Friday 6:00 p.m. - 4:00 p.m. ET' (= 17:00-15:00 CT). 2026-06-10 lists all eight with 'Globex 24/7 with the exception of the following maintenance windows: Saturday: 2:00 a.m. to 4:00 a.m. CT; Monday - Friday: 3:00 p.m. to 3:05 p.m. CT'. CME's own 'MTB' spelling for Micro Bitcoin is in the bytes and was transcribed faithfully.",
+  "BTC ContractSpecs series: 2021-07-10 and 2022-09-21 have no TAS key in ProductCode and no TAS hours line (pre-launch absence, positively witnessed); 2023-12-08, 2024-09-29, 2025-02-21 and 2025-10-28 each print 'TAS: Sunday - Friday 5:00 p.m. - 3:00 p.m. CT' inside the CME Globex cell alongside separately labelled outright and BTIC lines; live prints the era-2 line. The separate 'TAS: Trading terminates at 3:00 p.m. CT on the U.S. business day immediately preceding the last trade date' row is expiry and is correctly excluded.",
+  "2023 Bitcoin TAS FAQ: Q4 is headed 'What are the TAS on Bitcoin and Micro Bitcoin futures trading hours?' with GLOBEX HOURS 'Sunday - Friday 6:00 p.m. - 4:00 p.m. ET', and TERMINATION OF TRADING is a separate adjacent row. Live 'FAQ: TAS on Cryptocurrency Futures' (Published Time 2026-05-29) has zero 'trading hours' matches - the channel-exhaustion claim is true.",
+  "Client-systems wiki v40 (saved 2026-05-22T18:58:57Z, page id 1283194884): the '24/7 Crypto Trade at Settlement (TAS)' table is verbatim as quoted, including Monday-Friday 'Close: 3:00:00 p.m. to 3:01:00 p.m. CT ... Open: 3:05:00 p.m. to 4:01:00 p.m. CT Pause: 4:01:00 p.m. to 4:02:00 p.m. CT Open: 4:02:00 p.m. CT' and the Saturday window. Both scope notes verified: the 'Current Cryptocurrency Futures and Options Schedule' table covers only futures and options (Sunday startup 4:00-5:00 p.m.; Mon-Fri close 4:00-4:45, pre-open 4:45-5:00 p.m. CT) with no 'Current' TAS table, and the Day One Extended Maintenance table (introduced 'For the first day of 24/7 cryptocurrency futures and options trading (Friday, May 29, 2026)') has no TAS row. The page's opening line, 'Starting at 4 p.m. Central Time on Friday, May 29, 2026, CME Group will expand cryptocurrency futures and options to 24/7 trading', carries the day; the Product Scope exclusion list names only the twelve spot-quoted futures, so the TAS books are in scope. Calibration is clean: the same page's futures/options future table reproduces the crate's existing 2026-05-29 row to the minute.",
+  "26-114: 'effective Friday, May 29, 2026'; Table 2 expanded Globex '24/7 with the exception of the following maintenance windows: Saturday 2:00 a.m. to 4:00 a.m. CT. Monday-Friday 4:00p.m. to 4:02 p.m. CT'; zero case-insensitive occurrences of 'TAS', 'BTIC' and 'Trade at Settlement'. SER-9740 and SER-9740R likewise zero, across a ~70-row Table 1 reaching Friday weekly options on Micro XRP. The regulatory channel really is silent on the TAS books.",
+  "Globex notice 20260525: the crypto section carries no 'pending' although 8 occur elsewhere in the notice; 'Starting at 4:00 p.m. Central Time (CT) on this Friday, May 29' verbatim; scope phrase 'Cryptocurrency futures and options'; zero 'TAS' in the whole notice.",
+  "2025 member-listing notices verbatim (TET/TEM group CM, TSL/TMS group LT, TXP/TMX group XQ). Stronger than reported: notice 20251013's own headline reads 'Update TAS on SOL Futures and Micro SOL Futures Contracts - Postponed', which documents the slip the researcher only inferred from the re-announcements.",
+  "Product Slate: exactly six grain TAS (7891 ZCT, 7892 SBT, 7893 ZWT, 7894 KET, 7897 ZLT, 7898 ZMT), three livestock TAS (7900/7901/7902) and eight crypto TAS (10319/10320/11069/11070/11382/11383/11419/11420) - no ZR or ZO TAS strays.",
+  "CME trading-hours service: all seventeen TAS ids resolve with globex code and prodGroup - TA (SBT/ZLT/ZMT), TP (ZCT), TW (ZWT/KET), TH (LET/GFT/HET), CI, CM, LT, XQ - and every one returns 'hasEvents':false / eventCount 0 in the Thanksgiving-2026 window, while the control ids in the same call return full labelled event lists (ZC: paused@07:45, preopen@08:00, open@08:30, paused@13:20, closed@13:30, pcp@14:30, closed@16:00, preopen@16:45). The negative is measured, not assumed.",
+  "Repo precedents cited by the researcher all check out in the read-only tree: livestock.rs REVISIONS (2016,2,29,'CME SER-7591'), (2016,6,6,'CME Globex notice 20160530'), (2020,5,31,'CME SER-8599R') with the 06:00-08:30 queue carried back to 2016-02-29 on exactly the reasoning reused here; grains.rs (2015,7,5,&DATED_CURRENT,'CME SER-7395R'); cryptocurrency.rs (2017,12,17,&FIVE_DAY), (2026,5,29,&TRANSITION_2026_05_29), (2026,5,30,&CURRENT)."
+ ],
+ "discrepancies": [
+  {
+   "id": "D1",
+   "severity": "load-bearing evidence-record defect (claim survives, artifact does not)",
+   "claim": "State 'CME legacy ... contract-specification page for Corn' asserts inside its verbatim field '[2015-05-22, seventeen days before the TAS launch] zero occurrences of TAS', and the encodable repeats 'the corn spec page has zero TAS at 2014-11-02 and 2015-05-22'.",
+   "finding": "pass2/corn-legacy-20150522230148.html is not a CME page. Its title is '<title>Wayback Machine</title>' and it flattens to 3,718 characters of Internet Archive chrome with no 'Corn Futures', no 'Trading Hours' and no 'Product Code'. The zero-TAS count was computed over archive boilerplate. Its recorded sha256 does match the file, so this is a mis-read artifact rather than a fabricated one, and the file passes SHA256SUMS.txt - the hash discipline cannot catch this class of error on its own.",
+   "impact": "The citation as it stands is vacuous. I re-fetched the same URL and timestamp today: Wayback CDX shows 20150522230148 as a real 200 capture (digest 6HB5XFH6EGKXEU62EAUJXJ4SLMQ26J2Z) and the replay returns an 83,721-byte CME spec page (sha256 fd5f67b3a740beeff5e98028cfa5ac7de244189d12ac90589cac850de8520ba3, saved as verify-pass/v_corn20150522.html) with 0 case-sensitive 'TAS' and the pre-move outright 'Monday - Friday, 8:30 a.m. - 1:15 p.m. CT'. So the substantive claim is true on bytes I fetched, not on bytes the researcher held. Replace the stored artifact before the 2015-05-22 citation reaches a source comment."
+  },
+  {
+   "id": "D2",
+   "severity": "invented string inside a verbatim field",
+   "claim": "The wiki state's verbatim block reads 'Products Not In Scope | The following spot quoted futures products will remain on a 5 day trading schedule. [QBTC, ...]'.",
+   "finding": "The sentence and the twelve product codes are verbatim. The heading is not: the wiki's heading is 'Product Scope'. 'not in scope' occurs zero times in either saved version of the page.",
+   "impact": "Cosmetic for the conclusion - the exclusion list is real and the TAS books are not in it - but the gate's evidence discipline requires verbatim fields to be byte-exact, and this one would be copied into a source comment as a quotation."
+  },
+  {
+   "id": "D3",
+   "severity": "load-bearing encoding-specification defect - would publish an unsourced session",
+   "claim": "encodable: 'ROW 2 - 2026-05-29. 24/7 with maintenance Saturday 02:00-04:00 CT and Monday-Friday 15:00-15:05 CT'; residual A: the day-one question is 'a ONE-DAY question, therefore a LAW-HOLIDAY-SCOPE date exception rather than a template row'.",
+   "finding": "Two problems. (i) A single day-level row at 2026-05-29 carrying the steady-state 24/7 grid asserts that the crypto TAS book was open from Friday local midnight and reopened that Friday at 15:05 - and the researcher's own residual A says nothing retrieved states whether it reopened at 15:05, 16:02 or 16:30. It also rewrites the era-1 Thursday-17:00-to-Friday-15:00 leg as a Friday-midnight open, which is precisely the running session LAW-NO-FABRICATED-DATES says a day-level boundary must not split. (ii) LAW-HOLIDAY-SCOPE scopes date exceptions to holidays - an early final close, a late first open, or a closure - not to a migration's first day, which is a real, sourced, persistent change to the recurring week that arrives mid-day. The crate does not route the identical event to DayPolicy for the futures key: cryptocurrency.rs carries (2026,5,29,&TRANSITION_2026_05_29,'CME filing 26-114') then (2026,5,30,&CURRENT,'CME filing 26-114'), with the comment 'The permanent 24/7 normal week did not govern the morning of its first day ... Keeping this one-day bridge prevents the historical Thursday open from being rewritten as Friday midnight.'",
+   "impact": "Follow the futures precedent: a bridge row at 2026-05-29 that keeps the Thursday-17:00 leg and withholds the unsourced Friday-afternoon reopen, then the steady-state row at 2026-05-30. The era boundary itself is firm and the researcher is right about that; only the row shape is wrong."
+  },
+  {
+   "id": "D4",
+   "severity": "load-bearing encoding-specification defect - reports a sourced phase as absent",
+   "claim": "encodable, crypto TAS: no order_entry rules are specified, and the residual list names only the grain TAS Pre-Open (B) and the pre-2016 livestock TAS Pre-Open (C) as undated queues.",
+   "finding": "The crypto TAS Pre-Open is sourced by the same wiki table the era-2 executable grid comes from: 'Pre-open: 3:01:30 p.m. to 3:04:30 p.m. CT No cancel: 3:04:30 p.m. to 3:05:00 p.m. CT' on Monday through Friday, and 'Pre-open: 3:45:30 a.m. to 3:59:30 a.m. CT No cancel: 3:59:30 a.m. to 4:00:00 a.m. CT' on Saturday. cryptocurrency.rs encodes the analogous Saturday 03:45 phase for the futures key from the same channel. Dropping it silently leaves a reader to infer it is unsourced when it is stated in the operator's own table.",
+   "impact": "Either encode the era-2 queue windows or say explicitly beside the table that they were withheld and why. This is an order-entry gap, the lower-priority kind under the crate's executable-windows-first rule, but the defect is the false 'nothing sourced' impression, not the omission itself."
+  },
+  {
+   "id": "D5",
+   "severity": "source-classification gap",
+   "claim": "encodable, livestock ROW 3: 'key 2020-05-31 ... Source SER-8599R, which names LET/GFT/HET with both values.'",
+   "finding": "SER-8599R reads 'Effective Sunday, May 31, 2020 for trade date Monday, June 1, 2020, and pending all relevant regulatory CFTC review periods'. It is conditional. The researcher discharges the identical clause explicitly for SER-7591 (fact card created 2016-03-03, spec page 2016-03-11) but records no discharge for SER-8599R; the only warrant offered is that livestock.rs already keys 2020-05-31 to it.",
+   "impact": "That precedent is real and I confirmed it, so the row is defensible, but under LAW-NO-FABRICATED-DATES the discharge has to be recorded beside the row rather than assumed. No post-effective artifact for this row was retrieved on either pass."
+  },
+  {
+   "id": "D6",
+   "severity": "over-claim in dead_ends",
+   "claim": "dead_ends #5: 'The ag TAS fact card has exactly three editions in its entire archived life (CDX: three distinct 200-status digests ...). No fourth edition hides an intermediate grain or livestock state.'",
+   "finding": "The three-digest count is exact - I re-ran the CDX. But the archive has a five-year hole in this URL between 20150616064756 and 20200608032955, and we know an edition was created inside that hole (CreationDate 2016-03-03) and first captured only in 2020. The CDX therefore supports 'no fourth edition survives in the archive', not 'no fourth edition existed'.",
+   "impact": "None for the conclusion: the grain TAS window is independently observed at 2015-09-05, 2015-10-09, 2016-03-10, 2017-05-20, 2019-07-17 and then 2021-07-10 onward, and the livestock TAS window at 2016-03-11, 2017-12-11 and 2021-07-10 onward. Fix the wording so the next reader does not treat the CDX as proof of the operator's publishing history."
+  },
+  {
+   "id": "D7",
+   "severity": "minor - composite quotation",
+   "claim": "Several verbatim fields are reordered or elided composites.",
+   "finding": "The trading-hours-service block opens with ZCT although the response's first product is KET; the fact-card key-feature line is quoted as 'TAS order entry is not allowed prior to the beginning of each group's pre-open state' where the document continues ', just like other order types'; the 26-114 and SER-9740R Table 1 quotes are bracketed elisions. All substrings are in the bytes and no time, date, zone or product code is misstated.",
+   "impact": "No effect on any conclusion. A downstream reader copying a 'verbatim' field into a citation would not get a contiguous transcript."
+  },
+  {
+   "id": "D8",
+   "severity": "minor - internal inconsistency in the encoding spec",
+   "claim": "livestock ROW 1 is keyed 2015-06-08 ('no wrap, so the Monday trade date is the opening day') while ROW 3 is keyed 2020-05-31 (the Sunday effective day, 'matches how livestock.rs keys the same change').",
+   "finding": "Both cannot follow from one rule. The grid has no Sunday session in either era, so the two keyings are observationally identical and neither is wrong; but the handwritten HISTORICAL_CUTOVERS expectations need one stated convention.",
+   "impact": "Pick the livestock.rs convention for both and say so, or state the divergence beside the table."
+  }
+ ],
+ "residual_caveats": [
+  "Only the CORN legacy spec page carries the family sentence. sb-legacy-20150905.html, captured the same day, prints 'TAS: SBT' in Product Code and the outright 13:20 but no TAS hours sentence at all. The six-root grain family claim therefore rests on the corn page's own scope phrase ('all CBOT Grain TAS products') plus the fact card's single six-root cell - which is what the researcher says, and it must be said that way beside the table.",
+  "globex_grains_tas spans three Globex security groups (TA/TP/TW, confirmed from CME's own service). The family claim is textual, not structural; keep the researcher's instruction to state it beside the table.",
+  "The livestock era-1 fact-card hours cell carries no zone label ('Monday, 9:05 a.m. - 1 p.m. / Tuesday - Friday, 8 a.m. - 1 p.m.'); the CT reading comes from the live-cattle spec page's 'Chicago time'. Cite the spec page, not the fact card, for era 1's zone.",
+  "Observation gaps exist inside both ag eras - grain TAS 2019-07-17 to 2021-07-10, livestock TAS 2017-12-11 to 2021-07-10 - with the same state at both ends. Asserting no revision is the right treatment (it declines to invent a date), but 'no gap wide enough to hide a revision' is rhetoric, not a measurement.",
+  "CME Rulebook Chapter 5 / Rule 524 is a channel the dead_ends list does not mention. I opened it: 524.A.1 confirms a TAS-eligible contract has a 'prescribed pre-open time period' but states no clock time, and the TAS/BTIC/TACO/TMAC Table is served as an external XLS. It does not close residual B (the grain TAS Pre-Open onset) and should be added to the exhausted-channel list rather than left for the next reader to try.",
+  "The 16:01-16:02 CT crypto TAS pause is a live CME-vs-CME conflict, not a gap, and the researcher's treatment matches the ECBTC precedent: serve open 15:05->16:01 and 16:02->15:00, withhold the disputed minute by serving it closed. The encodable's own prose states this twice in a self-contradictory order ('open 15:05 -> 15:00 next day ... and withhold the disputed 16:01-16:02 minute by treating it as closed'); the operative instruction is the second clause and should be the only one written.",
+  "U-4 (regular vs extended) is untouched by this gate for all three keys and is the only residual touching an executable-window classification.",
+  "crypto-tas-page-20251220093441.html in the evidence directory is undecompressed gzip and unreadable as saved. It is cited in no state, so nothing rests on it.",
+  "The 2026/5 filing sweep was spot-checked, not re-run end to end: 26-113, 26-115, 26-117 and 26-120 all return CME's 404 page through the reader, consistent with the report. The decisive negative - zero 'TAS' in 26-114, SER-9740 and SER-9740R - was fully re-verified, and SER-9740R was re-fetched independently today."
+ ],
+ "gate_answers_upheld": {
+  "U-13": "UPHELD. Closed positively by CME's corn contract-specification page at five captures 2015-09-05 through 2019-07-17 printing the outright at 13:20 and, at family scope in session language, the TAS books at 13:15, and then by ContractSpecs at 2021-07-10, 2024-06-12, 2026-08-10 and live. The negative half (SER-7395R Appendix 1 complete, zero 'TAS') also re-derives. globex_grains_tas is one era from 2015-06-07 with no row at 2015-07-05.",
+  "U-14": "UPHELD. SER-7591 names LET/GFT/HET and gives the TAS hours in a dedicated page-2 sentence; the revision day is 2016-02-29; the conditional is discharged by the 2016-03-03 fact card and the 2016-03-11 spec page; era 1 and era 2 are each witnessed on the live-cattle spec page. Launch 2015-06-08 from RA1503-3, unconditional. The Post-Close sourced absence and the 'Tuesdays that follow a Monday holiday' date-exception rule both re-derive.",
+  "U-15": "UPHELD on the evidence, with the ROW 2 shape defect at D3. Era 1 (2023-02-05, Sunday-Friday 17:00-15:00 CT) is unconditional from Submission 23-017 and continuously corroborated on two independent CME channels with a positively witnessed pre-launch absence. Era 2 (2026-05-29, 24/7 less Saturday 02:00-04:00 and Monday-Friday 15:00-15:05 CT) rests on the client-systems wiki pre-dating the event plus the product page and ContractSpecs after it; the answer to 'find the companion filing' really is that none exists - 26-114, SER-9740, SER-9740R and ten weekly Globex notices contain zero 'TAS'."
+ },
+ "saved_artifacts": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/ag-crypto-tas-history/verify-pass/ (INDEX.md + SHA256SUMS.txt + 8 re-fetched files)"
+}

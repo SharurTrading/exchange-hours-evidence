@@ -1,0 +1,16 @@
+# Round-1 retrieval log (all times UTC, date -u)
+
+## 2026-09-12 07:47 — web.archive.org reachability re-test (verifier discrepancy B)
+GET https://web.archive.org/  -> http=200 time_total=1.038490s
+
+## 2026-09-12 07:47 — live re-fetch of the Exchange-Notice copy of the 2026 ICE calendar
+GET https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_Exchange_Notice_2026_Holiday_Calendar_20260609.pdf -> http=200 bytes=166331
+live sha256:    b9723d9afa1c20a0792b628de36c7d3726add58ea3d94972a1e7cefd3e50bf4e
+archive sha256: b9723d9afa1c20a0792b628de36c7d3726add58ea3d94972a1e7cefd3e50bf4e
+cmp: IDENTICAL (archive replay 20260728113521id_ == live bytes)
+
+## 2026-09-12 07:47 — CDX search for an archived CDE MLK / 26-01 notice (residual gap check)
+GET https://web.archive.org/cdx/search/cdx?url=assets.ctfassets.net/k3n74unfin40*&output=json&fl=timestamp,original,statuscode,mimetype,digest,length&filter=original:.*(MLK|Market_Notice_26-01).*&limit=60
+[["timestamp","original","statuscode","mimetype","digest","length"],
+["20250620163023","https://assets.ctfassets.net/k3n74unfin40/1CkT7Lv5cA2G7jN6b3TGxK/9b21090199763c2c81c5726f76ec4b87/Market_Notice_25-01__MLK.pdf","200","application/pdf","BHX6OZJVH4OMQO7JUTP7ENZ3WU4765YN","103780"]]
+

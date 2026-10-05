@@ -1,0 +1,552 @@
+Title: 20210705 - CME Group
+
+URL Source: https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html
+
+Markdown Content:
+For the latest roadmap of CME Group technology initiatives:
+
+[See the Development Launch Schedule.](https://www.cmegroup.com/globex/develop-to-cme-globex/development-launches.html)
+
+## Critical System Updates
+
+### Update Update - CME Globex Performance Enhancements - This Week
+
+† Denotes update to the article
+
+† The CME Globex Performance Enhancements will continue this **Sunday, July 11**. Below are the updated timelines. CME Group is implementing infrastructure and hardware upgrades to futures and options markets on the CME Globex platform. In internal testing, these enhancements improved performance on CME Globex more than 20% for both iLink 2 and iLink 3 order entry and MDP 3.0.
+
+| LAUNCH DATE | MARKET SEGMENT ID | MARKET SEGMENT DESCRIPTION |
+| --- | --- | --- |
+| †July 11 | 52 | CME Globex FX Futures II CME Globex FX Options II |
+| 56 | DME Globex Options NYMEX Globex Crude & Crude Refined Options NYMEX Globex Nat Gas & other Non-Crude Energy Options NYMEX Globex Metals, Softs & Alternative Markets Options COMEX Globex Options |
+| 68 | CME Globex Equity Futures excluding ES CBOT Globex Equity Index Futures |
+| 72 | CME Globex Equity Options excluding ES CBOT Globex Equity Index Options |
+| 78 | NYMEX Globex Emissions Futures NYMEX Globex Nat Gas & other Non-Crude Energy Futures |
+| †July 25 | 50 | CME Interest Rate Options |
+| 54 | CME Globex ES Equity Options CME Globex Equity Options - Micro E-mini |
+| 64 | CME Equity Futures |
+| 76 | NYMEX Globex Metals, Softs and Alternative Markets Futures COMEX Globex Futures |
+| 82 | CME Globex Interest Rate Futures CBOT Interest Rate Futures II |
+| 88 | CME Globex FX Futures CME Globex FX Options |
+| †August 22 | 58 | CBOT Interest Rate Options |
+| 60 | CME Globex Commodity Options CBOT Globex Commodity Options MGEX Globex Options |
+| 74 | BMD Globex Futures BMD Globex Options |
+| 80 | DME Globex Futures NYMEX Globex Crude & Crude Refined Futures |
+| 84 | CBOT Interest Rate Futures |
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### Petrol Index on Benchmark Administration Premium- July 25
+
+Effective **Sunday, July 25** (trade date Monday, July 26), CME Group will launch [Petroleum Index](https://www.cmegroup.com/market-data/cme-group-benchmark-administration.html#energy) on [Benchmark Administration Premium MDP](https://www.cmegroup.com/confluence/display/EPICSANDBOX/CME+Benchmark+Administration+Premium). The Petroleum Index is end-of-day index that represents a single price for a basket of underlying Energy futures listed on NYMEX. The index is listed in points and based on a starting value of 100 on launch date, with the value changing daily relative to the movement on the underlying components.
+
+The messages for this index will be sent on the Benchmark Administration Premium Simple Binary Encoding (SBE) Multicast channel ID 261 via SBE template MDIncrementalRefreshSettle401. The Petroleum Index will include the following new tag values:
+
+| **Petrol Index on Benchmark Administration Premium** |
+| --- |
+|  |
+| Tag | Fix Name | New Valid Values | **Description** |
+| 269 | MDEntryType | 3 = Index Value | Indicates the type of price |
+| 37500 | ClearingProductCode | CPX = Petroleum Index CVX = Indicative Petroleum Index | Clearing Product Code |
+| 167 | SecurityType | INDEX = Index Product | Identifies the type of instrument. |
+
+Additional product and instrument reference information can be obtained via [Reference Data API](https://www.cmegroup.com/trading/market-tech-and-data-services/cme-reference-data-api.html).
+
+The Petroleum Index will be available for customer testing in New Release on**Monday, July 19.**
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### CVOL Index on Benchmark Administration Premium- July 25
+
+Effective **Sunday, July 25** (trade date Monday, July 26), CME Group will launch the [CME Group Volatility Index (CVOL)](https://www.cmegroup.com/market-data/cme-group-benchmark-administration.html#volatility) on [Benchmark Administration Premium MDP](https://www.cmegroup.com/confluence/display/EPICSANDBOX/CME+Benchmark+Administration+Premium). Calculated daily, the CME Group Volatility Index (CVOL) delivers cross-asset class family of implied volatility indexes based on simple variance.
+
+The market data messages will be sent on the Benchmark Administration Premium Simple Binary Encoding (SBE) Multicast channel ID 261 via SBE template MDIncrementalRefreshSettle401. The CVOL Index will include the following new values:
+
+| **CVOL Index on Benchmark Administration Premium** |
+| --- |
+|  |
+| Tag | Fix Name | New Valid Values | **Description** |
+| 269 | MDEntryType | 3 = Index Value | Indicates the type of price. |
+| 37500 | ClearingProductCode | See tables below | Clearing Product Code. |
+| 167 | SecurityType | INDEX = Index Product | Identifies the type of instrument. |
+| 9732 | FormattedLastPx |  | Price in Clearing decimal format. For CVOL this field represents one of these values: * **Volatility Index value**(Var) - The main CVOL index value * **Up Variance**(Up Var) - Implied volatility of call options * **Down Variance** (Down Var) - Implied volatility of put options * **Skew**- Difference of Up Var and Down Var * **At the Money Vol**(ATM Vol) - Implied volatility of the theoretical at-the-money (ATM) Premium * **Convexity**- The degree of curvature of the volatility curve as indicated by the ratio of the Volatility Index value and the ATM Vol. |
+| 270 | MDEntryPx |  | Identifies the type of instrument. |
+
+Additional product and instrument information are defined in [Reference Data API](https://www.cmegroup.com/confluence/display/EPICSANDBOX/CME+Reference+Data+API+Version+2).
+
+The CVOL Indexes will be available for customer testing in New Release on**Monday, July 19.**
+
+**Clearing Product Code Mapping**
+
+**Foreign Exchange**
+
+| Contract | CVOL Symbol | Up Var Symbol | Down Var Symbol | Skew Symbol | ATM Vol Symbol | Convexity Symbol |
+| --- | --- | --- | --- | --- | --- | --- |
+| EUR/USD (EUU) | EUVL | EUUP | EUDN | EUSK | EUAM | EUCV |
+| GBP/USD (GBU) | GBVL | GBUP | GBDN | GBSK | GBAM | GBCV |
+| JPY/USD (JPU) | JPVL | JPUP | JPDN | JPSK | JPAM | JPCV |
+| AUD/USD (AUU) | ADVL | ADUP | ADDN | ADSK | ADAM | ADCV |
+| CAD/USD (CAU) | CAVL | CAUP | CADN | CASK | CAAM | CACV |
+| MXN/USD (MP) | MPVL | MPUP | MPDN | MPSK | MPAM | MPCV |
+| CHF/USD (CHU) | CHVL | CHUP | CHDN | CHSK | CHAM | CHCV |
+| FX G5 Volatility Index | FXVL | FXUP | FXDN | FXSK | FXAM | FXCV |
+
+**Interest Rates**
+
+| Contract | CVOL Symbol | Up Var Symbol | Down Var Symbol | Skew Symbol | ATM Vol Symbol | Convexity Symbol |
+| --- | --- | --- | --- | --- | --- | --- |
+| Eurodollar 90-day | GEVL | GEUP | GEDN | GESK | GEAM | GECV |
+| Eurodollar 1-year Midcurve 90-day | G1VL | G1UP | G1DN | G1SK | G1AM | G1CV |
+| Eurodollar 2-year Midcurve 90-day | G2VL | G2UP | G2DN | G2SK | G2AM | G2CV |
+| US 2-year TNote (OZT) - Price | TUVL | TUUP | TUDN | TUSK | TUAM | TUCV |
+| US 2-year TNote (OZT) - Yield | TUVY | TUUY | TUDY | TUSY | TUAY | TUCY |
+| US 5-year TNote (OZF) - Price | FVVL | FVUP | FVDN | FVSK | FVAM | FVCV |
+| US 5-year TNote (OZF) - Yield | FVVY | FVUY | FVDY | FVSY | FVAY | FVCY |
+| US 10-year TNote (OZN) - Price | TYVL | TYUP | TYDN | TYSK | TYAM | TYCV |
+| US 10-year TNote (OZN) - Yield | TYVY | TYUY | TYDY | TYSY | TYAY | TYCY |
+| US 30-year TBond (OZB) - Price | USVL | USUP | USDN | USSK | USAM | USCV |
+| US 30-year TBond (OZB) - Yield | USVY | USUY | USDY | USSY | USAY | USCY |
+| Treasury Curve Volatility Index - Price | TPVL | TPUP | TPDN | TPSK | TPAM | TPCV |
+| Treasury Curve Volatility Index - Yield | TVL | TUP | TDN | TSK | TAM | TCV |
+
+**Metals**
+
+| Contract | CVOL Symbol | Up Var Symbol | Down Var Symbol | Skew Symbol | ATM Vol Symbol | Convexity Symbol |
+| --- | --- | --- | --- | --- | --- | --- |
+| Silver (SO) | SIVL | SIUP | SIDN | SISK | SIAM | SICV |
+| Gold (OG) | GCVL | GCUP | GCDN | GCSK | GCAM | GCCV |
+| Copper (HXE) | HGVL | HGUP | HGDN | HGSK | HGAM | HGCV |
+| Metals Volatility Index | MVL | MUP | MDN | MSK | MAV | MCV |
+
+**Energies**
+
+| Contract | CVOL Symbol | Up Var Symbol | Down Var Symbol | Skew Symbol | ATM Vol Symbol | Convexity Symbol |
+| --- | --- | --- | --- | --- | --- | --- |
+| WTI Crude Oil (LO) | CLVL | CLUP | CLDN | CLSK | CLAM | CLCV |
+| Henry Hub Natural Gas (LN) | NGVL | NGUP | NGDN | NGSK | NGAM | NGCV |
+| RBOB Gasoline (OB) | RBVL | RBUP | RBDN | RBSK | RBAM | RBCV |
+| NY Harbor ULSD (OH) | HOVL | HOUP | HODN | HOSK | HOAM | HOCV |
+| Energy Volatility Index | EVL | EUV | EDN | ESK | EAM | ECV |
+
+**Agriculture**
+
+| Contract | CVOL Symbol | Up Var Symbol | Down Var Symbol | Skew Symbol | ATM Vol Symbol | Convexity Symbol |
+| --- | --- | --- | --- | --- | --- | --- |
+| Wheat (OZW) | WVL | WUP | WDN | WSK | WAM | WCV |
+| Corn (OZC) | CVL | CUV | CDN | CSK | CAM | CCV |
+| Soybean (OZS) | SVL | SUP | SDN | SSK | SAM | SCV |
+| Soybean Oil (OZL) | SOVL | SOUP | SODN | SOSK | SOAM | SOCV |
+| Soybean Meal (OZM) | SMVL | SMUP | SMDN | SMSK | SMAM | SMCV |
+| Lean Hogs (HE) | HEVL | HEUP | HEDN | HESK | HEAM | HECV |
+| Live Cattle (LE) | LEVL | LEUP | LEDN | LESK | LEAM | LECV |
+| Class III Milk (DC) | DCVL | DCUP | DCDN | DCSK | DCAM | DCCV |
+| Agriculture Volatility Index | AVL | AUV | ADN | ASK | AAM | ACV |
+
+**Cross-Asset**
+
+| Contract | CVOL Symbol | Up Var Symbol | Down Var Symbol | Skew Symbol | ATM Vol Symbol | Convexity Symbol |
+| --- | --- | --- | --- | --- | --- | --- |
+| Commodity Volatility Index | CMVL | CMUP | CMDN | CMSK | CMAM | CMCV |
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+## Product Launches
+
+### Financially Settled TTF Futures and Options- This Week
+
+Effective this **Sunday, July 11** (trade date Monday, July 12), pending completion of all regulatory review periods, Financially Settled TTF futures and options will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| Financially Settled TTF Futures and Options |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| Dutch TTF Natural Gas Financial Calendar Month Futures | TTG | FD | 386 |
+| Dutch TTF Natural Gas Financial Day-Ahead/Weekend (ICIS Heren) Calendar Month Futures | TTI | FD | 386 |
+| Dutch TTF Natural Gas Financial (USD/MMBtu) (ICIS Heren) M-1 Average Price Calendar Month Futures | TTB | FD | 386 |
+| Dutch TTF Natural Gas Futures-Style Margined Financial Calendar Month Option | TTL | Outs-T3, UDS-T4 | 386 |
+
+These Financially Settled TTF futures and options are currently available for customer testing in New Release**.**
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### Micro WTI Crude Oil Futures- This Week
+
+Effective this **Sunday, July 11** (trade date Monday, July 12), pending completion of all regulatory review periods, Micro WTI Crude Oil futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| Micro WTI Crude Oil Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel | ITC Code |
+| Micro WTI Crude Oil Futures | MCL | CL | 382 | n/a |
+
+These Micro WTI Crude Oil futures are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### Low Sulphur Gasoil (10 mt) Financial Futures- This Week
+
+Effective this **Sunday, July 11**(trade date Monday, July 12), pending completion of all regulatory review periods, Low Sulphur Gasoil (10 mt) Financial futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| **Low Sulphur Gasoil (10 mt) Financial Futures** |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| Low Sulphur Gasoil (10 mt) Financial Futures | MQA | RF | 382 |
+
+These Low Sulphur Gasoil (10 mt) Financial futures are currently available for customer testing in New Release**.**
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### New New - Listing Dutch TTF Natural Gas Calendar Month Futures Spreads- July 25
+
+Effective **Sunday, July 25** (trade date Monday, July 26), Dutch TTF Natural Gas Calendar Month futures intercommodity spreads will be listed for trading on CME Globex.
+
+| **Listing Dutch TTF Natural Gas Calendar Month Futures Spreads** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | **Tag 762- SecuritySubType** |
+| Dutch TTF Natural Gas Calendar Month Futures/Dutch TTF Natural Gas Financial Calendar Month Futures Inter-Commodity Spread | TTF-TTG | FD | IS |
+| Dutch TTF Natural Gas Calendar Month Futures/Dutch TTF Natural Gas Financial Day-Ahead/Weekend (ICIS Heren) Calendar Month Futures Inter-Commodity Spread | TTF-TTI | FD | IS |
+
+These spreads will be available for customer testing in New Release on **Monday, July 12.**
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### Adjusted Interest Rate Total Return Futures- July 25
+
+Effective **Sunday, July 25**(trade date Monday, July 26), pending completion of all regulatory review periods, the following Adjusted Interest Rate Total Return futures BTICs will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+The AIR TRF Funding Values for these instruments will be available in the[CME Reference Data API](https://www.cmegroup.com/confluence/display/EPICSANDBOX/CME+Reference+Data+API+Version+2#CMEReferenceDataAPIVersion2-InstrumentAttributes)and[CME Data Insights: Settlements and Valuations](https://www.cmegroup.com/confluence/display/EPICSANDBOX/CME+Data+Insights+-+Settlements+and+Valuations).
+
+| **Adjusted Interest Rate Total Return Futures** |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| Adjusted Interest Rate Russell 1000 Total Return Index Futures | ARR | N/A | 318 |
+| BTIC on Adjusted Interest Rate Russell 1000 Total Return Index Futures | ART | BV | 318 |
+| Adjusted Interest Rate Russell 2000 Total Return Index Futures | A2R | N/A | 318 |
+| BTIC on Adjusted Interest Rate Russell 2000 Total Return Index Futures | A2T | BV | 318 |
+| Adjusted Interest Rate Nasdaq-100 Total Return Index Futures | AQR | N/A | 318 |
+| BTIC on Adjusted Interest Rate Nasdaq-100 Total Return Index Futures | AQT | BV | 318 |
+| Adjusted Interest Rate Dow Jones Industrial Average Index Total Return Futures | ADR | N/A | 342 |
+| BTIC on Adjusted Interest Rate Dow Jones Industrial Average Index Total Return Futures | ADT | DH | 342 |
+
+These futures will be available for customer testing in New Release on **Monday, July 12**.
+
+These contracts are listed with, and subject to, the rules and regulations of CME and CBOT.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### Update Update - CBL Nature-Based Global Emissions Offset Futures- August 1
+
+† Denotes update to the article
+
+Effective **Sunday, August 1** (trade date Monday, August 2), pending completion of all regulatory review periods, CBL Nature-Based Global Emissions Offset futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| **CBL Nature-Based Global Emissions Offset Futures** |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | **Market Data Channel** |
+| CBL Nature-Based Global Emissions Offset Futures | NGO | VX | **†**380 |
+
+The CBL Nature-Based Global Emissions Offset futures will be available for customer testing in New Release on **Monday, July 26**.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### New New - Micro Treasury Yield Futures- August 15
+
+Effective **Sunday, August 15** (trade date Monday, August 16), pending completion of all regulatory review periods, Micro Treasury Yield Futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| **Micro Treasury Yield Futures** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| Micro 2-Year Yield Futures | 2YY | 2Y | 344 |
+| Micro 5-Year Yield Futures | 5YY | 5Y | 344 |
+| Micro 10-Year Yield Futures | 10Y | 4Y | 344 |
+| Micro 30-Year Yield Futures | 30Y | 6Y | 344 |
+
+These futures will be available for customer testing in New Release on **Monday, July 19.**
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+## Product Changes
+
+### Update Update - Amendments to Listing Schedule for Gulf Coast LNG Export Futures- This Week
+
+**†**Denotes update to the article
+
+**†**Effective **Sunday, July 11** (trade date Monday, July 12), the CME Group will convert the Gulf Coast LNG Export futures listing schedule from monthly to weekly expirations on CME Globex as follows:
+
+| **Listing Cycle Expansion for Gulf Coast LNG Export Futures** |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | **Current Listing Schedule** | **New Listing Schedule** |
+| Gulf Coast LNG Export Futures | LNG | LN | Monthly contracts listed for 24 consecutive months | Weekly contracts listed for 24 consecutive months |
+
+**†**For additional information, please refer to Special Executive Report[SER-8771R.](https://www.cmegroup.com/content/dam/cmegroup/notices/ser/2021/06/SER-8771R_.pdf)
+
+**†**Detailed information on these changes is available in the[Clearing House Notice](https://www.cmegroup.com/content/dam/cmegroup/notices/clearing/2021/06/Chadv21-204.pdf).
+
+These futures are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### Dynamic Circuit Breakers for CME FX Futures- This Week
+
+Effective this**Sunday, July 11**(trade date Monday, July 12), dynamic circuit breakers will be introduced to the following CME FX futures and all associated products:
+
+| Dynamic Circuit Breakers for CME FX Futures |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | DYNAMIC CIRCUIT BREAKER SETTINGS |
+| Euro FX Futures | 6E | 6E | 4% of dynamically calculated reference price |
+| Canadian Dollar Futures | 6C | 6C |
+| British Pound Futures | 6B | 6B |
+| Japanese Yen Futures | 6J | 6J |
+| Australian Dollar Futures | 6A | 6A |
+| New Zealand Dollar Futures | 6N | 6N |
+| Swiss Franc Futures | 6S | 6S |
+| Norwegian Krone Futures | NOK | NO |
+| Swedish Krona Futures | SEK | SE |
+
+These settings for all CME Globex products are defined in the[CME Globex Product Reference](http://www.cmegroup.com/confluence/display/EPICSANDBOX/GCC+Product+Resources).
+
+This change is currently available for customer testing in New Release.
+
+This contract is listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### Circuit Breakers for Metals Futures- This Week
+
+Effective this **Sunday, July 11** (trade date Monday, July 12),circuit breakers will be added to the following metals futures products:
+
+| Circuit Breakers for Metals Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | CIRCUIT BREAKER SETTINGS |
+| Shanghai Gold (USD) Futures | SGU | AG | 10% of dynamically calculated reference price |
+| Shanghai Gold (CNH) Futures | SGC | AG |
+| Gold/Silver Ratio Futures | GSR | GV |
+| Gold/Platinum Spread Futures | GPS | GP |
+| Aluminum Futures | ALI | AL |
+| U.S Midwest Domestic Hot-Rolled Coil Steel (CRU) Index Futures | HRC | HR |
+| U.S Midwest Domestic Hot-Rolled Coil Steel (CRU) Index Average Price Options | HRO | H1 |
+| Iron Ore 62% Fe, CFR China (TSI) Futures | TIO | IO |
+| Iron Ore 62% Fe, CFR China (TSI) Average Price Options | ICT | I5 |
+| Cobalt Metal (Fastmarkets) Futures | COB | CA |
+| Platinum/Palladium Spread Futures | PPS | PU |
+| U.S. Midwest Domestic Steel Premium (CRU) Futures | HDG | HD |
+
+The settings for all CME Globex products are defined in the[CME Globex Product Reference](http://www.cmegroup.com/confluence/display/EPICSANDBOX/GCC+Product+Resources).
+
+This change is currently available for customer testing in New Release.
+
+This contract is listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### Listing Cycle Expansion for TACO on E-mini Nasdaq-100 Futures and TACO on E-mini Russell 2000 Futures- July 18
+
+Effective **Sunday, July 18** (trade date Monday, July 19), the listing cycle for the following TACO on E-mini Nasdaq-100 futures and TACO on E-mini Russell 2000 futures will be expanded on CME Globex.
+
+| **Listing Cycle Expansion for TACO on E-mini Nasdaq-100 Futures and TACO on E-mini Russell 2000 Futures** |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | **Current Listing Schedule** | **New Listing Schedule** |
+| TACO on E-mini Nasdaq-100 Futures | NQQ | NT | 2 Quarterly Contracts | 5 Quarterly Contracts |
+| TACO on E-mini Russel 2000 Futures | RTQ | RE | 2 Quarterly Contracts | 5 Quarterly Contracts |
+
+These futures are currently available for customer testing in New Release on **Monday, July 12**.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### Amendment of Circuit Breakers for Short-Term Interest Rate Products- July 25
+
+Effective **Sunday, July 25** (trade date Monday, July 26), pending all relevant CFTC regulatory review periods, circuit breaker values will be modified for the following Short-Term Interest Rate (STIR) products:
+
+| AMENDMENT OF CIRCUIT BREAKERS FOR SHORT TERM INTEREST RATE PRODUCTS |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | CURRENT CIRCUIT BREAKER SETTINGS (FIXED) | NEW CIRCUIT BREAKER SETTING (DYNAMIC) |
+| Three-Month Eurodollar Futures | GE | ZE | | | RTH | ETH | | --- | --- | --- | | Level 1: | 3000 | 1000 | | Level 2: | 4000 | 2000 | | Level 3: | 5000 | 3000 | | Level 4: | 6000 | 4000 | | Level 5: | No Limit | No Limit | | 50 Basis Points |
+| One-Month Eurodollar Futures | GLB | EM |
+| One-Month SOFR Futures | SR1 | SS |
+| Three-Month SOFR Futures | SR3 | SS |
+| MPC SONIA Futures | MPC | S9 |
+| Quarterly IMM SONIA Futures | SON | S8 |
+| Mexican Funding TIIE (Monthly Contracts) Futures | TIE | MI | | | RTH | ETH | | --- | --- | --- | | Level 1: | 100 | 100 | | Level 2: | 200 | 200 | | Level 3: | 300 | 300 | | Level 4: | 400 | 400 | | Level 5: | No Limit | No Limit | | 100 Index Points |
+| 30-Day Federal Funds Futures | ZQ | ZQ | | | RTH | ETH | | --- | --- | --- | | Level 1: | 3000 | 1000 | | Level 2: | 4000 | 2000 | | Level 3: | 5000 | 3000 | | Level 4: | 6000 | 4000 | | Level 5: | No Limit | No Limit | | 50 Basis Points |
+
+This change will be available for customer testing in New Release on **Monday, July 12.**
+
+These contracts are listed with, and subject to, the rules and regulations of CME and CBOT.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### Extending Implied Functionality for Emissions Futures- August 1
+
+Effective this **Sunday, August 1** (trade date Monday, August 2), the implied functionality for the following Emissions futures and spreads will be expanded as follows:
+
+| **Extending Implied Functionality for Emissions Futures** |
+| --- |
+|  |
+| Product | ILINK: TAG 1151-SECURITY GROUP MDP 3.0: TAG 6937-ASSET | ILINK: TAG 55-SYMBOL MDP 3.0 TAG 1151 - SECURITY GROUP | **CURRENT IMPLICATION LISTING RULE** | **NEW IMPLICATION LISTING RULE** |
+| CBL California Carbon Allowance Vintage-Specific Futures 2021 | CC1 | VX | Nearest 36 consecutive contract months | Nearest 48 consecutive contract months |
+| CBL California Carbon Allowance Vintage-Specific Futures 2022 | CC2 |
+| CBL California Carbon Allowance Vintage-Specific Futures 2023 | CC3 |
+| CBL Global Emissions Offset Futures | GEO |
+| Regional Greenhouse Gas Initiative (RGGI) CO2 Allowance Futures | RGI |
+
+This change will be available for customer testing in New Release on **Monday, July 26**.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### New New - Changes to Minimum Price Increment for New Zealand Dollar/U.S. Dollar (NZD/USD) Futures- August 15
+
+Effective**Sunday, August 15**(trade date August 16), pending the completion of all regulatory review periods, tag 969-MinimumPriceIncrement for New Zealand Dollar/U.S. Dollar (NZD/USD) futures will change as follows:
+
+| **Changes to Minimum Price Increment for New Zealand Dollar/U.S. Dollar (NZD/USD)Futures** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | CURRENT TAG 969-MINPRICEINCREMENT | NEW TAG 969-MINPRICEINCREMENT |
+| New Zealand Dollar/U.S. Dollar (NZD/USD) Futures | 6N | 6N | 1.000000000 | 0.500000000 |
+
+These changes will be available for customer testing in New Release on**Monday, July 12**.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### New New - Listing Cycle Expansion for Dutch TTF Natural Gas Calendar Month Futures- August 15
+
+Effective **Sunday, August 15**(trade date Monday, August 16), the listing cycle for the following Dutch TTF Natural Gas Calendar Month futures will be expanded on CME Globex.
+
+| **Listing Cycle Expansion for Dutch TTF Natural Gas Calendar Month Futures** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | **Current Listing Schedule** | **New Listing Schedule** |
+| Dutch TTF Natural Gas Calendar Month Futures | TTF | FD | Monthly contracts listed for the current year and the next 5 calendar years. List monthly contracts for a new calendar year following the termination of trading in the December contract of the current year. | Monthly contracts listed for the current year and the next 10 calendar years. List monthly contracts for a new calendar year following the termination of trading in the December contract of the current year. |
+
+These futures will be available for customer testing in New Release on **Monday, August 2.**
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### Change to E-mini NASDAQ Biotechnology Futures- August 15
+
+Effective **Sunday, August 15** (trade date Monday, August 16), minimum price increment (tag 969-MinPriceIncrement) and unit of measure quantity (1147-UnitOfMeasureQty) for E-mini NASDAQ Biotechnology futures will change as follows:
+
+| Change to E-mini NASDAQ Biotechnology Futures |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | CURRENT TAG 969 - MINPRICEINCREMENT | NEW TAG 969 - MINPRICEINCREMENT | CURRENT TAG 1147 - UNITOFMEASUREQTY | NEW TAG 1147 - UNITOFMEASUREQTY |
+| E-mini NASDAQ Biotechnology Futures | BIO | BQ | 10.000000000 | 50.000000000 | 50.000000000 | 25.000000000 |
+
+This change will be available for customer testing in New Release on **Monday, August 2.**
+
+This contract is listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### New New - Change to E-mini FTSE 100 and Developed European Index Futures Strategy Type- August 22
+
+Effective**Sunday, August 22**(trade date Monday, August 23), the CME Group will change the [tag 762-SecuritySubType](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Futures+Spread+and+Options+Spread+Types) in the[Security Definition (tag 35-MsgType=d) message](https://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Security+Definition) for the E-mini FTSE 100 and Developed European Index futures from**EQ**(Calendar Spread) to**RT**(Reduced Tick) on CME Globex. To support these changes, the existing SP (Calendar Spread) products will be removed on **Friday, August 14, 2021.**
+
+Please Note: To facilitate this change, customers are asked to cancel all Good ‘Till Cancel (GTC) and Good ‘Till Date (GTD) orders after the close on**August 13**. After 16:00 CT on**August 13**, all remaining GT orders for these spreads will be cancelled or deleted by the CME Global Command Center (GCC).
+
+| **Change to E-mini FTSE 100 and Developed European Index Futures Strategy Type** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | CURRENT TAG 762- SECURITYSUBTYPE | NEW TAG 762- SECURITYSUBTYPE |
+| E-mini FTSE 100 (GBP) Index Futures | FTI | FZ | EQ (Calendar Spread) with All Possible Combos | RT (Reduced Tick Spread) with all possible combos |
+| E-mini FTSE 100 (USD) Index Futures | FTU | FZ | EQ (Calendar Spread) with All Possible Combos | RT Futures - Reduced Tick (RT) with all possible combos |
+| E-mini FTSE Developed Europe Index Futures | DVE | DV | EQ (Calendar Spread) with All Possible Combos | RT Futures - Reduced Tick (RT) with all possible combos |
+
+This change will be available for customer testing in New Release on **Monday, July 26.**
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### Update Update - TACO and BTIC Amended Trading Schedule- September 26
+
+† Denotes update to the article
+
+Effective **Sunday, September 26** (trade date Monday, September 27), and pending all relevant CFTC regulatory review periods, the Basis Trade at Cash Open (“TACO”) and Basis Trade at Index Close (“BTIC”) will open for Monday’s trade date on the previous Friday afternoon.
+
+With this change and for the first time, CME Globex will support trading for a trade date over a weekend. The trade date for these products will not roll over on the weekend. This change will impact iLink 2 and iLink 3 order entry, MDP 3 market data, and CME STP and CME STP FIX.
+
+Please review the**†**[Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/TACO+and+BTIC+Friday+Trading+Schedule)for information on functionality and messaging impacts.
+
+This change will be available for customer testing in New Release on**Monday, July 12.**
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+## Events and Announcements
+
+### Messaging Efficiency Program Q3 2021 Benchmarks - Now Available
+
+The[Q3 2021 CME Globex Messaging Efficiency Program Product Group Benchmarks](http://www.cmegroup.com/globex/files/revisedmepbenchmarks.pdf)are now available. No changes were made to Q3 2021 existing Product Group Benchmarks vs. Q2 2021 Product Group Benchmarks.
+
+The CME Globex Messaging Efficiency Program creates fair business guidelines by which customers are billed a surcharge for overly high message rates.
+
+CME Globex firms who exceed the benchmark ratios in applicable product groups and are signed-up accordingly, receive email notifications of any potential surcharges. CME Globex firms who have access to the Firm Administrator Dashboard have the ability to view their messaging statistics on a T+1 basis.
+
+Please contact your[Global Account Manager](mailto:gamaccountmanagers@cmegroup.com)with any questions.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### Messaging Efficiency Program Micro WTI Crude Oil - This Week
+
+Beginning this **Sunday, July 11, 2021**, the CL Product Group will be amended to also include the new Micro WTI Crude Oil futures & spreads.
+
+To allow for broad market participation and accommodate the launch of Micro WTI Crude Oil beginning this **Sunday, July 11** (trade date July 12), Micro WTI Crude Oil futures & spreads will be **excluded** from Messaging Efficiency Scoring calculations until further notice.
+
+Micro WTI Crude Oil Futures & Spreads will also be exempt from the Excessive Messaging Threshold (EMT) through **August 30, 2021**.
+
+Beginning Tuesday evening, **August 31** (trade date September 1), Micro WTI Crude Oil futures & spreads will **be subject to EMT thresholds.**
+
+CME recommends market participants to make any necessary technical adjustments to CL product group messaging in order to refrain from exceeding EMT Thresholds at either the Globex Firm ID or iLink Session ID levels.
+
+As a reminder, the Excessive Messaging Threshold (EMT) is separate from the regular Messaging Program and thresholds are as follows:
+
+*   Any Globex Firm ID which exceeds a Raw Message Count of 10 million for a Globex trade date and a Volume Ratio >500:1 in a specific product group may be subject to a **$10,000** surcharge as well as other escalations.
+*   Any iLink Session ID which exceeds a Raw Message Count of 1 million for a Globex trade date and a Volume Ratio >500:1 in a specific product group may be subject to a **$10,000** surcharge as well as other escalations.
+
+Please refer to the [CME Globex Messaging Efficiency Program](https://go.cmegroup.com/e/502091/saging-efficiency-program-html/xcsbwj/468740889?h=JX2AczxDql4ZNLrSIKY1HdW4xs8cLoDz4VYyc8uiE4c) or contact the following with any questions:
+
+*   [Global Command Center (GCC)](mailto:messagingprogramsupport@cmegroup.com) at 1.800.438.8616.
+*   [Global Account Management](mailto:globalaccountmanagement@cmegroup.com)
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)
+
+### CME SPAN 2 Margin Methodology- Q4 2021
+
+CME Group is targeting the initial launch of SPAN 2 Margin Methodology in Q4 2021, starting with a subset of [energy products](https://www.cmegroup.com/clearing/files/phase-1-energy-products-10-9.xlsx). Any firm that currently uses the CME SPAN methodology and trades impacted products will need to implement one of the following services for computing CME SPAN 2 margin requirements:
+
+*   CME Core – a CME Group hosted web application for Margin Calculation “CME CORE”
+*   Margin API – a CME Group hosted margin calculation API
+*   Deployable Margin Software – a CME Group java margin calculation library
+
+Please Note: A limited number of existing pre-trade execution margin calculation processes may continue to be supported.
+
+Firms using CME SPAN for pre-trade risk management can contact the [Post Trade Services team](mailto:PostTradeServices@cmegroup.com) for more information:
+
+| US | UK | APAC |
+| --- | --- | --- |
+| +1 312 580 5353 | +44 20 3379 3500 | +65 6593 5599 |
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/07/20210705.html#top)

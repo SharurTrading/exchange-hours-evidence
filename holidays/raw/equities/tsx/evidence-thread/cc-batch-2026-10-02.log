@@ -1,0 +1,22 @@
+{"message": "No Captures found for: tmx.com/en/news_events/news/news_releases/2014/"}
+OK CC-MAIN-2012-05 tmx.com%2Fen%2Fnews_events%2Fnews%2Fnews_releases%2F2011%2F* ->        0 rows
+FAIL CC-MAIN-2013-48 tmx.com%2Fen%2Fnews_events%2Fnews%2Fnews_releases%2F2013%2F*
+FAIL CC-MAIN-2014-10 tmx.com%2Fen%2Fnews_events%2Fnews%2Fnews_releases%2F2014%2F*
+OK CC-MAIN-2014-35 tmx.com%2Fen%2Fnews_events%2Fnews%2Fnews_releases%2F2014%2F* ->        0 rows
+OK CC-MAIN-2014-41 tmx.com%2Fen%2Fnews_events%2Fnews%2Fnews_releases%2F2014%2F* ->        0 rows
+FAIL CC-MAIN-2014-49 tmx.com%2Fen%2Fnews_events%2Fnews%2Fnews_releases%2F2013%2F*
+FAIL CC-MAIN-2014-49 tmx.com%2Fen%2Fnews_events%2Fnews%2Fnews_releases%2F2014%2F*
+FAIL CC-MAIN-2015-48 tsx.com%2F*
+FAIL CC-MAIN-2016-30 tsx.com%2F*
+OK CC-MAIN-2015-48 londonstockexchange.com%2Fproducts-and-services%2Ftrading-services%2Fbusiness* ->        0 rows
+OK CC-MAIN-2016-47 londonstockexchange.com%2Fproducts-and-services%2Ftrading-services%2Fbusiness* ->        0 rows
+OK CC-MAIN-2018-47 londonstockexchange.com%2Fproducts-and-services%2Ftrading-services%2Fbusiness* ->        0 rows
+OK CC-MAIN-2019-43 londonstockexchange.com%2Ftrade%2F* ->        0 rows
+OK CC-MAIN-2016-43 nzx.com&matchType=domain&filter=url:.*holiday.* ->        0 rows
+OK CC-MAIN-2017-13 nzx.com&matchType=domain&filter=url:.*holiday.* ->        0 rows
+OK CC-MAIN-2017-22 nzx.com&matchType=domain&filter=url:.*(holiday|calendar).* ->        0 rows
+OK CC-MAIN-2013-20 sgx.com&matchType=domain&filter=url:.*(trading_hours|calendar|holiday).* ->        0 rows
+OK CC-MAIN-2013-48 sgx.com&matchType=domain&filter=url:.*(trading_hours|calendar|holiday).* ->        0 rows
+OK CC-MAIN-2020-34 sgx.com&matchType=domain&filter=url:.*(trading_hours|calendar|holiday).* ->        0 rows
+FAIL CC-MAIN-2022-05 sgx.com&matchType=domain&filter=url:.*(trading_hours|calendar|holiday).*
+ALLDONE

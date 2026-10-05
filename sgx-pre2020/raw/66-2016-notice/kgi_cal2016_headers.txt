@@ -1,0 +1,23 @@
+HTTP/2 200 
+date: Sun, 06 Sep 2026 04:00:19 GMT
+content-type: application/pdf
+content-length: 811805
+last-modified: Sat, 30 Sep 2017 13:16:48 GMT
+etag: "c631d-55a67f428d000"
+accept-ranges: bytes
+server: cloudflare
+age: 24
+cache-control: max-age=14400
+cf-cache-status: HIT
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=8WSMbr%2FFBLzLUDhGUc6MxHdc%2BRF2NnOzjdjz0iaZfT4W1TNmSOdHZKF9cgK0l8zqoWjvM9tXUHfQOh3VappIVh0WgP4EnWOghWCYP6ZShIn2sGGODMT3e4chXhiN3GGz2dwT"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+content-security-policy: script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.gstatic.com https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.recaptcha.net https://www.google.com; frame-ancestors 'self'
+strict-transport-security: max-age=31536000; includeSubDomains
+cf-ray: a36a90e99fe85d4f-SYD
+alt-svc: h3=":443"; ma=86400
+

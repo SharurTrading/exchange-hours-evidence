@@ -1,0 +1,49 @@
+                                                  Market Notice
+
+
+To: ​    ​         Coinbase Derivatives Participants
+
+From: ​​           Derivatives Command Center
+
+Notice: ​          26-37
+
+Date: ​ ​          09/24/2026
+
+Subject: ​         CDE Q4 Quarterly Maintenance Window & FIA DR Testing - Details
+-------------------------------------------------------------------------------------------------------------------------------
+Summary
+This is a reminder that Coinbase Derivatives, LLC (CDE) will host its quarterly weekend
+extended maintenance and participate in the Futures Industry Association (FIA) Annual Disaster
+Recovery (DR) Test on Saturday, October 24, 2026. Maintenance will last nine (9) hours. Firms
+wanting to participate in the FIA Annual DR Test can register here. Please see the complete
+schedule and details below:
+
+Participants should review the schedule below to ensure readiness for the brief service
+transition. Please monitor https://status.cde.coinbase.com/ for updates.
+
+
+ Date & Time (CT)                Details
+
+ Oct-24, 5:00 AM                 24x7 Products Transition to CLOSE / Start of Maintenance
+                                    ●​ During CLOSE, all Order Entry messages (e.g., cancel) will not be
+                                       permitted
+                                    ●​ Working Day orders will be canceled (GTC/D will remain on book)
+                                    ●​ CDE gateways and systems will be down for maintenance starting
+                                       at 5:00 AM
+                                           ○​ Sequence numbers will be reset to zero
+                                           ○​ Internet and Data Center connections will be dropped
+
+ Oct-24, 9:00 AM                 Transition into DR
+                                    ●​ See Connectivity page for DR connection details
+                                    ●​ FIA Registration Link
+
+ Oct-24, 12:00 PM                Transition out of DR back to Production
+
+ Oct-24, 1:50 PM                 24x7 Products Transition to PRE-OPEN
+
+ Oct-24, 2:00 PM                 24x7 Products Transition to OPEN / End of Maintenance
+
+
+
+Any questions please contact Derivatives Command Center at derivatives@coinbase.com or +1 (312) 469-0985
+

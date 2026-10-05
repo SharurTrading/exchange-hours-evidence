@@ -1,0 +1,518 @@
+{
+ "channel": "portal-hours-page",
+ "states": [
+  {
+   "artifact": "Trading Hours* for SGX Derivatives Market (sgxweb_ch portal, Derivatives > Trading Hours & Calendar)",
+   "artifact_date": "NONE — no date, revision or \"last updated\" text anywhere on the page; SGX served it with Cache-Control: no-cache, no-store, must-revalidate and returned no Last-Modified header",
+   "capture_ts": "20170705000242",
+   "url": "http://sgx.com/wps/portal/sgxweb_ch/home/trading/derivatives/trading_hours_calendar",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/sgx-pre2020/raw/portal-hours-page/portal_ch_deriv_20170705000242.html",
+   "grids": [
+    {
+     "contract": "SGX Nikkei 225 Index Futures",
+     "t_session": "7.30 am to 2.25 pm",
+     "t1_session": "2.55 pm to 4.45 am",
+     "notes": "Code column: NK. Section \"FINANCIALS > Equity Index\". No \"(following day)\" qualifier is printed anywhere in this grid — the T+1 column carries bare clock times only."
+    },
+    {
+     "contract": "SGX Nikkei 225 Index Options",
+     "t_session": "7.30 am to 2.30 pm",
+     "t1_session": "2.55 pm to 4.45 am",
+     "notes": "Code NKO."
+    },
+    {
+     "contract": "SGX Mini Nikkei 225 Index Futures",
+     "t_session": "7.30 am to 2.25 pm",
+     "t1_session": "2.55 pm to 4.45 am",
+     "notes": "Code NS. Note the mini no longer has its own later close here (contrast the legacy wcm grid, which gave the mini 7.45 am - 3.25 pm / 4.15 pm)."
+    },
+    {
+     "contract": "SGX USD Nikkei 225 Index Futures",
+     "t_session": "7.30 am to 2.25 pm",
+     "t1_session": "2.55 pm to 4.45 am",
+     "notes": "Code NU."
+    },
+    {
+     "contract": "FTSE China A50 Index Futures",
+     "t_session": "9:00 am to 4:30 pm",
+     "t1_session": "5.00 pm to 4.45 am",
+     "notes": "Code CN. Printed with colon separators in the T column and full stops in the T+1 column — verbatim inconsistency, not normalised here. Named \"FTSE China A50\", no \"SGX\" prefix and no \"Xinhua\"."
+    },
+    {
+     "contract": "SGX MSCI Singapore Index Futures",
+     "t_session": "8.30am to 5.10 pm",
+     "t1_session": "5.40 pm to 4.45 am",
+     "notes": "Code SGP. \"8.30am\" is printed closed-up, verbatim."
+    },
+    {
+     "contract": "SGX MSCI Singapore Index Options",
+     "t_session": "8.30 am to 5.15 pm",
+     "t1_session": "5.40 pm to 4.45 am",
+     "notes": "Code SGPO."
+    },
+    {
+     "contract": "SGX Straits Times Index Futures",
+     "t_session": "8.30am to 5.10 pm",
+     "t1_session": "5.40 pm to 4.45 am",
+     "notes": "Code ST. Shares the Singapore grid here; in the legacy wcm grid it had a different open (7.55 am)."
+    },
+    {
+     "contract": "SGX MSCI Taiwan Index Futures",
+     "t_session": "8.45 am to 1.45 pm",
+     "t1_session": "2.15 pm to 4.45 am",
+     "notes": "Code TW."
+    },
+    {
+     "contract": "SGX MSCI Taiwan Index Options",
+     "t_session": "8.45 am to 1.50 pm",
+     "t1_session": "2.15 pm to 4.45 am",
+     "notes": "Code TWO."
+    },
+    {
+     "contract": "SGX Nikkei Stock Average Dividend Point Index Futures",
+     "t_session": "7.30 am to 5.55 pm",
+     "t1_session": "6.25 pm to 4.45 am",
+     "notes": "Code ND, section \"FINANCIALS > Dividend Index\". Included because it is the Nikkei-family dividend contract."
+    }
+   ],
+   "footnote": "* All trading hours shown are in Singapore Time (GMT +8) and exclude the pre-opening, pre-closing and respective non-cancel session states. Please refer to the full contract specifications for details on these session states.",
+   "contracts_listed": [
+    "SGX TSI Iron Ore CFR China (62% FE FINES) Index Futures",
+    "SGX Options on TSI Iron Ore CFR China (62% FE FINES) Index Futures",
+    "SGX Iron Ore (Lump Premium) Futures",
+    "SGX TSI Iron Ore CFR China (58% FE FINES) Futures",
+    "SGX MB IRON ORE CFR China (58% FE FINES) Futures",
+    "SGX FOB Australia Premium JM 25 Coking Coal Futures",
+    "SGX CFR China Premium JM 25 Coking Coal Futures",
+    "SGX Hot Rolled Coil Steel CFR ASEAN Futures",
+    "SGX Baltic Capesize Time Charter Average Futures",
+    "SGX Options on Baltic Capesize Time Charter Average Futures",
+    "SGX Capesize Time Charter Average (5TC) Futures",
+    "SGX Options on Capsize Time Charter Average (5TC) Futures",
+    "SGX Baltic Panamax Time Charter Average Futures",
+    "SGX Options on Baltic Panamax Time Charter Average Futures",
+    "SGX Baltic Supramax Time Charter Average Futures",
+    "SGX Options on Baltic Supramax Time Charter Average Futures",
+    "SGX Baltic Handysize Time Charter Average Futures",
+    "SGX Options on Baltic Handysize Time Charter Average Futures",
+    "SGX Baltic Capesize Voyage C5 Route Futures",
+    "SGX Panamax Route P2A Time Charter Futures",
+    "SGX Panamax Route P3A Time Charter Futures",
+    "SGX API 4 FOB Richards Bay Coal Futures",
+    "SGX API 5 FOB Newcastle Coal Futures",
+    "SGX Indonesian Sub-Bit FOB Coal Futures",
+    "SGX SICOM RSS3 Rubber Futures",
+    "SGX TSR20 Rubber Futures",
+    "SGX Fuel Oil 380 cst Futures",
+    "SGX PX CFR China Futures",
+    "SGX ICIS LLDPE CFR China Index Futures",
+    "SGX ICIS LLDPE CFR S.E.ASIA Index Futures",
+    "SGX ICIS PP Flat Yarn (RAFFIA) CFR China Index Futures",
+    "SGX ICIS PP Flat Yarn (RAFFIA) CFR S.E.Asia Index Futures",
+    "SGX Platts Singapore Fuel oil 180CST Index Futures",
+    "SGX Platts Singapore Fuel Oil 380CST INDEX",
+    "SGX Platts Naphtha CFR Japan Index Futures",
+    "SGX Singapore Visco Spread Futures",
+    "SGX Platts Gasoil FOB Singapore Index Futures",
+    "SGX Platts Benzene FOB Korea Futures",
+    "SGX Electricity Futures",
+    "SGX Sling Index Futures",
+    "Singapore Kilobar Gold Contract",
+    "SGX Nikkei Stock Average Dividend Point Index Futures",
+    "SGX AUD/JPY Futures",
+    "SGX AUD/USD Futures",
+    "SGX CNY/USD Futures",
+    "SGX EUR/CNH Futures",
+    "SGX INR/USD Futures",
+    "SGX INR/USD Options",
+    "SGX KRW/JPY Futures",
+    "SGX KRW/USD Futures",
+    "SGX USD/SGD Futures",
+    "SGX USD/CNH Futures",
+    "SGX USD/CNH Options",
+    "SGX SGD/CNH Futures",
+    "SGX TWD/USD Futures",
+    "SGX THB/USD Futures",
+    "SGX USD/JPY (Titan) Futures",
+    "SGX USD/JPY (Standard) Futures",
+    "SGX CNY/SGD Futures",
+    "SGX MSCI China Index Futures",
+    "SGX MSCI China Index Options",
+    "FTSE China A50 Index Futures",
+    "SGX MSCI Indonesia Index Futures",
+    "SGX Nifty 50 Index Futures",
+    "SGX Nifty 50 Index Options",
+    "SGX Nifty Bank Index Futures",
+    "SGX Nifty Midcap 50 Index Futures",
+    "SGX Nifty IT Index Futures",
+    "SGX Nifty CPSE Index Futures",
+    "SGX MSCI India Index Futures",
+    "SGX MSCI Malaysia Index Futures",
+    "SGX Nikkei 225 Index Futures",
+    "SGX Nikkei 225 Index Options",
+    "SGX Mini Nikkei 225 Index Futures",
+    "SGX USD Nikkei 225 Index Futures",
+    "SGX-PSE MSCI Philippines Futures",
+    "SGX MSCI Singapore Index Futures",
+    "SGX MSCI Singapore Index Options",
+    "SGX Straits Times Index Futures",
+    "SGX MSCI Thailand Index Futures",
+    "SGX MSCI Taiwan Index Futures",
+    "SGX MSCI Taiwan Index Options",
+    "SGX Eurodollar Futures",
+    "SGX Euroyen Tibor Futures",
+    "SGX Euroyen (TIBOR) Options",
+    "SGX Mini 10-Years Japanese Government Bond Futures",
+    "SGX Mini 10-Years Japanese Government Bond Options",
+    "SGX 10-Years Japanese Government Bond Futures"
+   ]
+  },
+  {
+   "artifact": "Trading Hours* for SGX Derivatives Market (sgxweb portal, Derivatives > Trading Hours & Calendar)",
+   "artifact_date": "NONE — no date, revision or \"last updated\" text on the page; no Last-Modified header (Cache-Control: no-cache, no-store, must-revalidate). The only dating hint is the sidebar's PDF link list, which stops at \"SGX Calendar 2017\" / \"2017 Full Year Trading Schedule\" and names no 2018 document.",
+   "capture_ts": "20170927124017",
+   "url": "http://www.sgx.com/wps/portal/sgxweb/home/trading/derivatives/trading_hours_calendar",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/sgx-pre2020/raw/portal-hours-page/portal_deriv_20170927124017.html",
+   "grids": [
+    {
+     "contract": "SGX Nikkei 225 Index Futures",
+     "t_session": "7.30 am to 2.25 pm",
+     "t1_session": "2.55 pm to 4.45 am",
+     "notes": "Code NK. BYTE-IDENTICAL grid to the 2017-07-05 sgxweb_ch capture — a mechanical diff of the extracted table produced zero differences. Captured six days after SGX's \"Change of Trading Hours\" newsletter of 21 Sep 2017, but the same content was already live on 2017-07-05, so the capture date does NOT date the change."
+    },
+    {
+     "contract": "SGX Nikkei 225 Index Options",
+     "t_session": "7.30 am to 2.30 pm",
+     "t1_session": "2.55 pm to 4.45 am",
+     "notes": "Code NKO."
+    },
+    {
+     "contract": "SGX Mini Nikkei 225 Index Futures",
+     "t_session": "7.30 am to 2.25 pm",
+     "t1_session": "2.55 pm to 4.45 am",
+     "notes": "Code NS."
+    },
+    {
+     "contract": "SGX USD Nikkei 225 Index Futures",
+     "t_session": "7.30 am to 2.25 pm",
+     "t1_session": "2.55 pm to 4.45 am",
+     "notes": "Code NU."
+    },
+    {
+     "contract": "FTSE China A50 Index Futures",
+     "t_session": "9:00 am to 4:30 pm",
+     "t1_session": "5.00 pm to 4.45 am",
+     "notes": "Code CN. Colon separators in T column verbatim."
+    },
+    {
+     "contract": "SGX MSCI Singapore Index Futures",
+     "t_session": "8.30am to 5.10 pm",
+     "t1_session": "5.40 pm to 4.45 am",
+     "notes": "Code SGP. \"8.30am\" closed-up, verbatim."
+    },
+    {
+     "contract": "SGX MSCI Singapore Index Options",
+     "t_session": "8.30 am to 5.15 pm",
+     "t1_session": "5.40 pm to 4.45 am",
+     "notes": "Code SGPO."
+    },
+    {
+     "contract": "SGX Straits Times Index Futures",
+     "t_session": "8.30am to 5.10 pm",
+     "t1_session": "5.40 pm to 4.45 am",
+     "notes": "Code ST."
+    },
+    {
+     "contract": "SGX MSCI Taiwan Index Futures",
+     "t_session": "8.45 am to 1.45 pm",
+     "t1_session": "2.15 pm to 4.45 am",
+     "notes": "Code TW."
+    },
+    {
+     "contract": "SGX MSCI Taiwan Index Options",
+     "t_session": "8.45 am to 1.50 pm",
+     "t1_session": "2.15 pm to 4.45 am",
+     "notes": "Code TWO."
+    },
+    {
+     "contract": "SGX Nikkei Stock Average Dividend Point Index Futures",
+     "t_session": "7.30 am to 5.55 pm",
+     "t1_session": "6.25 pm to 4.45 am",
+     "notes": "Code ND."
+    }
+   ],
+   "footnote": "* All trading hours shown are in Singapore Time (GMT +8) and exclude the pre-opening, pre-closing and respective non-cancel session states. Please refer to the full contract specifications for details on these session states.",
+   "contracts_listed": [
+    "SGX TSI Iron Ore CFR China (62% FE FINES) Index Futures",
+    "SGX Options on TSI Iron Ore CFR China (62% FE FINES) Index Futures",
+    "SGX Iron Ore (Lump Premium) Futures",
+    "SGX TSI Iron Ore CFR China (58% FE FINES) Futures",
+    "SGX MB IRON ORE CFR China (58% FE FINES) Futures",
+    "SGX FOB Australia Premium JM 25 Coking Coal Futures",
+    "SGX CFR China Premium JM 25 Coking Coal Futures",
+    "SGX Hot Rolled Coil Steel CFR ASEAN Futures",
+    "SGX Baltic Capesize Time Charter Average Futures",
+    "SGX Options on Baltic Capesize Time Charter Average Futures",
+    "SGX Capesize Time Charter Average (5TC) Futures",
+    "SGX Options on Capsize Time Charter Average (5TC) Futures",
+    "SGX Baltic Panamax Time Charter Average Futures",
+    "SGX Options on Baltic Panamax Time Charter Average Futures",
+    "SGX Baltic Supramax Time Charter Average Futures",
+    "SGX Options on Baltic Supramax Time Charter Average Futures",
+    "SGX Baltic Handysize Time Charter Average Futures",
+    "SGX Options on Baltic Handysize Time Charter Average Futures",
+    "SGX Baltic Capesize Voyage C5 Route Futures",
+    "SGX Panamax Route P2A Time Charter Futures",
+    "SGX Panamax Route P3A Time Charter Futures",
+    "SGX API 4 FOB Richards Bay Coal Futures",
+    "SGX API 5 FOB Newcastle Coal Futures",
+    "SGX Indonesian Sub-Bit FOB Coal Futures",
+    "SGX SICOM RSS3 Rubber Futures",
+    "SGX TSR20 Rubber Futures",
+    "SGX Fuel Oil 380 cst Futures",
+    "SGX PX CFR China Futures",
+    "SGX ICIS LLDPE CFR China Index Futures",
+    "SGX ICIS LLDPE CFR S.E.ASIA Index Futures",
+    "SGX ICIS PP Flat Yarn (RAFFIA) CFR China Index Futures",
+    "SGX ICIS PP Flat Yarn (RAFFIA) CFR S.E.Asia Index Futures",
+    "SGX Platts Singapore Fuel oil 180CST Index Futures",
+    "SGX Platts Singapore Fuel Oil 380CST INDEX",
+    "SGX Platts Naphtha CFR Japan Index Futures",
+    "SGX Singapore Visco Spread Futures",
+    "SGX Platts Gasoil FOB Singapore Index Futures",
+    "SGX Platts Benzene FOB Korea Futures",
+    "SGX Electricity Futures",
+    "SGX Sling Index Futures",
+    "Singapore Kilobar Gold Contract",
+    "SGX Nikkei Stock Average Dividend Point Index Futures",
+    "SGX AUD/JPY Futures",
+    "SGX AUD/USD Futures",
+    "SGX CNY/USD Futures",
+    "SGX EUR/CNH Futures",
+    "SGX INR/USD Futures",
+    "SGX INR/USD Options",
+    "SGX KRW/JPY Futures",
+    "SGX KRW/USD Futures",
+    "SGX USD/SGD Futures",
+    "SGX USD/CNH Futures",
+    "SGX USD/CNH Options",
+    "SGX SGD/CNH Futures",
+    "SGX TWD/USD Futures",
+    "SGX THB/USD Futures",
+    "SGX USD/JPY (Titan) Futures",
+    "SGX USD/JPY (Standard) Futures",
+    "SGX CNY/SGD Futures",
+    "SGX MSCI China Index Futures",
+    "SGX MSCI China Index Options",
+    "FTSE China A50 Index Futures",
+    "SGX MSCI Indonesia Index Futures",
+    "SGX Nifty 50 Index Futures",
+    "SGX Nifty 50 Index Options",
+    "SGX Nifty Bank Index Futures",
+    "SGX Nifty Midcap 50 Index Futures",
+    "SGX Nifty IT Index Futures",
+    "SGX Nifty CPSE Index Futures",
+    "SGX MSCI India Index Futures",
+    "SGX MSCI Malaysia Index Futures",
+    "SGX Nikkei 225 Index Futures",
+    "SGX Nikkei 225 Index Options",
+    "SGX Mini Nikkei 225 Index Futures",
+    "SGX USD Nikkei 225 Index Futures",
+    "SGX-PSE MSCI Philippines Futures",
+    "SGX MSCI Singapore Index Futures",
+    "SGX MSCI Singapore Index Options",
+    "SGX Straits Times Index Futures",
+    "SGX MSCI Thailand Index Futures",
+    "SGX MSCI Taiwan Index Futures",
+    "SGX MSCI Taiwan Index Options",
+    "SGX Eurodollar Futures",
+    "SGX Euroyen Tibor Futures",
+    "SGX Euroyen (TIBOR) Options",
+    "SGX Mini 10-Years Japanese Government Bond Futures",
+    "SGX Mini 10-Years Japanese Government Bond Options",
+    "SGX 10-Years Japanese Government Bond Futures"
+   ]
+  },
+  {
+   "artifact": "Trading Hours* for SGX Derivatives Market (legacy wcm/connect mp_en content fragment)",
+   "artifact_date": "NONE — no date printed. Origin ETag \"561385584\", no Last-Modified. Internal evidence that the content is stale relative to its capture: it still names \"S&P CNX Nifty Index Futures\" (renamed SGX Nifty 50 by 2017), \"FTSE Xinhua China A50\" (renamed FTSE China A50), \"MSCI Asia Apex 50\", \"MSCI Hong Kong+\" and \"CPO Futures\". No effective date is inferable.",
+   "capture_ts": "20180711020353",
+   "url": "http://www.sgx.com/wps/wcm/connect/mp_en/site/trading_on_sgx/derivatives_market/derivatives_trading_hours_and_calendar/Trading+Hours?%20noCache=1531274630984.837727.133108399",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/sgx-pre2020/raw/portal-hours-page/wcm_tradinghours_20180711020353.html",
+   "grids": [
+    {
+     "contract": "Nikkei 225 Index Futures",
+     "t_session": "7.45 am - 2.25 pm",
+     "t1_session": "3.15 pm - 2.00 am (following day)",
+     "notes": "Mutual Offset column: \"Available\". Column headers are \"SGX T Session\" / \"SGX T + 1 Session\" / \"Mutual Offset Trading on CME #\". No contract-code column on this page."
+    },
+    {
+     "contract": "Nikkei 225 Index Options",
+     "t_session": "7.45 am - 2.30 pm",
+     "t1_session": "3.15 pm - 2.00 am (following day)",
+     "notes": "Mutual Offset cell empty."
+    },
+    {
+     "contract": "Mini Nikkei 225",
+     "t_session": "7.45 am - 3.25 pm",
+     "t1_session": "4.15 pm - 2.00 am (following day)",
+     "notes": "The mini keeps its own later close/reopen here, unlike the 2017 granular grid."
+    },
+    {
+     "contract": "USD Nikkei 225",
+     "t_session": "7.45 am - 2.25 pm",
+     "t1_session": "3.15 pm - 2.00 am (following day)",
+     "notes": "Mutual Offset: \"Available\"."
+    },
+    {
+     "contract": "SGX Nikkei 225 Dividend Futures",
+     "t_session": "7.45 am – 5.55 pm",
+     "t1_session": "6.45 pm – 2.00am",
+     "notes": "En-dash separators and \"2.00am\" closed-up, verbatim; also the only T+1 cell in the grid lacking the \"(following day)\" qualifier."
+    },
+    {
+     "contract": "FTSE Xinhua China A50",
+     "t_session": "9.00 am - 3.25 pm",
+     "t1_session": "4.10 pm - 2.00 am (following day)",
+     "notes": "Old contract name. Cell content is split across nested elements in the source but the text is exactly as given."
+    },
+    {
+     "contract": "MSCI S'pore Index Futures",
+     "t_session": "8.30 am - 5.10 pm",
+     "t1_session": "6.15 pm - 2.00 am (following day)",
+     "notes": "Apostrophe form \"S'pore\" verbatim."
+    },
+    {
+     "contract": "MSCI S'pore Index Options",
+     "t_session": "8.30 am - 5.15 pm",
+     "t1_session": "6.15 pm - 2.00 am (following day)",
+     "notes": ""
+    },
+    {
+     "contract": "MSCI Taiwan Index Futures",
+     "t_session": "8.45 am - 1.45 pm",
+     "t1_session": "2.35 pm - 2.00 am (following day)",
+     "notes": "T+1 reopen 2.35 pm here vs 2.15 pm in the 2017 granular grid."
+    },
+    {
+     "contract": "MSCI Taiwan Index Options",
+     "t_session": "8.45 am - 1.50 pm",
+     "t1_session": "2.35 pm - 2.00 am (following day)",
+     "notes": ""
+    },
+    {
+     "contract": "Straits Times Index Futures",
+     "t_session": "7.55 am - 5.10 pm",
+     "t1_session": "6.15 pm - 2.00 am (following day)",
+     "notes": "Opens 7.55 am here vs 8.30am in the 2017 granular grid."
+    }
+   ],
+   "footnote": "* All trading hours shown are in Singapore Time (GMT +8) and exclude the pre-opening, pre-closing and respective non-cancel session states. Please refer to the full contract specifications for details on these session states.  # Please refer to the CME website for information on CME trading hours.",
+   "contracts_listed": [
+    "Eurodollar Futures",
+    "Eurodollar Options",
+    "Euroyen LIBOR Futures",
+    "Euroyen LIBOR Options",
+    "Euroyen TIBOR Futures",
+    "Euroyen TIBOR Options",
+    "3-Month Singapore Interest Rate Futures",
+    "5-Year Singapore Government Bond Futures",
+    "10-Year JGB Futures",
+    "10-Year Mini JGB Futures",
+    "SGX EURO STOXX 50 Index Futures",
+    "SGX EURO STOXX 50 Index Options",
+    "Nikkei 225 Index Futures",
+    "Nikkei 225 Index Options",
+    "Mini Nikkei 225",
+    "USD Nikkei 225",
+    "SGX Nikkei 225 Dividend Futures",
+    "MSCI S'pore Index Futures",
+    "MSCI S'pore Index Options",
+    "MSCI Taiwan Index Futures",
+    "MSCI Taiwan Index Options",
+    "MSCI Hong Kong+ Index Futures",
+    "Straits Times Index Futures",
+    "S&P CNX Nifty Index Futures",
+    "Robusta Coffee Futures",
+    "MSCI Asia Apex 50",
+    "FTSE Xinhua China A50",
+    "SGX Fuel Oil 380cst Futures",
+    "CPO Futures",
+    "SGX Robusta Coffee Futures",
+    "LME-SGX Copper Futures",
+    "LME-SGX Aluminium Futures",
+    "LME-SGX Zinc Futures"
+   ]
+  },
+  {
+   "artifact": "Trading Hours & Calendar (sgxweb portal, Derivatives) — GRID REMOVED",
+   "artifact_date": "NONE",
+   "capture_ts": "20181020041054",
+   "url": "http://sgx.com/wps/portal/sgxweb/home/trading/derivatives/trading_hours_calendar",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/sgx-pre2020/raw/portal-hours-page/portal_deriv_20181020041054.html",
+   "grids": [],
+   "footnote": "For information relating to trading hours, please refer to the SGX calendar 2018 or contract specifications of the applicable product.",
+   "contracts_listed": []
+  },
+  {
+   "artifact": "Trading Hours & Calendar (sgxweb portal, Derivatives) — GRID REMOVED",
+   "artifact_date": "NONE",
+   "capture_ts": "20181223111840",
+   "url": "http://www.sgx.com/wps/portal/sgxweb/home/trading/derivatives/trading_hours_calendar",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/sgx-pre2020/raw/portal-hours-page/portal_deriv_20181223111840.html",
+   "grids": [],
+   "footnote": "For information relating to trading hours, please refer to the SGX calendar 2018 or contract specifications of the applicable product.",
+   "contracts_listed": []
+  },
+  {
+   "artifact": "Trading Hours & Calendar (sgxweb portal, Derivatives, !ut/p/a0 portal-state URL) — GRID REMOVED",
+   "artifact_date": "NONE",
+   "capture_ts": "20181231134425",
+   "url": "http://sgx.com/wps/portal/sgxweb/home/trading/derivatives/trading_hours_calendar/!ut/p/a0/04_Sj9CPykssy0xPLMnMz0vMAfGjzOKNHB1NPAycDSwNLNwtDDxdw8J8Xdw8DE18jfQLsh0VASK_Nkg!/",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/sgx-pre2020/raw/portal-hours-page/portal_deriv_20181231134425.html",
+   "grids": [],
+   "footnote": "For information relating to trading hours, please refer to the SGX calendar 2018 or contract specifications of the applicable product.",
+   "contracts_listed": []
+  },
+  {
+   "artifact": "Trading Hours* for SGX Derivatives Market (sgxweb portal, COMMODITIES page) — context artifact, no equity-index rows",
+   "artifact_date": "NONE",
+   "capture_ts": "20170927133020",
+   "url": "http://www.sgx.com/wps/portal/sgxweb/home/trading/commodities/trading_hours_calender",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/sgx-pre2020/raw/portal-hours-page/portal_commod_20170927133020.html",
+   "grids": [
+    {
+     "contract": "SGX Fuel Oil 380cst Futures",
+     "t_session": "9.30 am - 6.30 pm",
+     "t1_session": "7.30 pm - 2.00 am (following day)",
+     "notes": "PROBATIVE ONLY. Captured 53 minutes after the derivatives page on the same day (20170927124017), yet still on the 2.00 am regime while the derivatives page shows 4.45 am — and the derivatives page shows this same contract as \"6.45pm to 4.45am\". Direct proof that SGX ran mutually contradictory hours pages simultaneously, so a capture date cannot date a state on this channel. Identical grid content also captured at 20170606094346 (saved as portal_commod_20170606094346.html)."
+    }
+   ],
+   "footnote": "* All trading hours shown are in Singapore Time (GMT +8) and exclude the pre-opening, pre-closing and respective non-cancel session states. Please refer to the full contract specifications for details on these session states.",
+   "contracts_listed": [
+    "SGX Fuel Oil 380cst Futures",
+    "SICOM RSS3 Rubber Futures",
+    "SICOM TSR20 Rubber Futures",
+    "SGX TSI Iron Ore CFR China (62% Fe Fines)Index Futures",
+    "SGX IHS McCloskey Indonesian Sub-Bit FOB Index Futures",
+    "SGX API 8 CFR China Coal Index Futures",
+    "SGX Baltic Capesize Time Charter Average Futures",
+    "SGX Baltic Panamax Time Charter Average Futures",
+    "SGX Supramax Time Charter Average Futures",
+    "SGX Handysize Time Charter Average Futures",
+    "SGX Options on TSI Iron Ore CFR China (62% Fe Fines) Index Futures",
+    "SGX Options on Baltic Capesize Time Charter Average Futures",
+    "SGX Options on Baltic Panamax Time Charter Average Futures",
+    "SGX Options on Baltic Supramax Time Charter Average Futures",
+    "SGX Options on Baltic Handysize Time Charter Average Futures",
+    "SGX Platts PX CFR China Futures",
+    "SGX ICIS LLDPE CFR China Index Futures",
+    "SGX ICIS LLDPE CFR S.E. Asia Index Futures",
+    "SGX ICIS PP CFR China Index Futures",
+    "SGX ICIS PP CFR S.E. Asia Index Futures"
+   ]
+  }
+ ],
+ "distinct_grid_states": "TWO distinct equity-index grid states exist on this channel inside 2016-01-01 -> 2020-06-30, and they are NOT in capture order.\n\nSTATE G1 — \"granular / T+1 to 4.45 am\". A code-and-contract grid organised COMMODITIES / FINANCIALS (Dividend Index, Foreign Exchange, Equity Index, Interest Rate), 88 contracts. Nikkei 225 futures 7.30 am to 2.25 pm / 2.55 pm to 4.45 am; FTSE China A50 9:00 am to 4:30 pm / 5.00 pm to 4.45 am; MSCI Singapore futures 8.30am to 5.10 pm / 5.40 pm to 4.45 am; MSCI Taiwan futures 8.45 am to 1.45 pm / 2.15 pm to 4.45 am. Capture range: FIRST 20170705000242 (sgxweb_ch mirror), LAST 20170927124017 (sgxweb English). The extracted tables of the two captures diff to zero differences, so it is one state seen twice, spanning 2017-07-05 -> 2017-09-27.\n\nSTATE G2 — \"legacy / T+1 to 2.00 am (following day)\". A flat CONTRACTS grid with a Mutual Offset (CME) column, 33 contracts, older contract names. Nikkei 225 Index Futures 7.45 am - 2.25 pm / 3.15 pm - 2.00 am (following day); FTSE Xinhua China A50 9.00 am - 3.25 pm / 4.10 pm - 2.00 am (following day); MSCI S'pore Index Futures 8.30 am - 5.10 pm / 6.15 pm - 2.00 am (following day); MSCI Taiwan Index Futures 8.45 am - 1.45 pm / 2.35 pm - 2.00 am (following day). Capture range: FIRST = LAST = 20180711020353. One capture only; the URL has no other content-bearing capture at any date (all post-2020 captures return the modern site's unsupported-browser shell).\n\nTHE BRACKETING ASKED FOR CANNOT BE DONE FROM THIS CHANNEL, and the reason is evidentiary, not a retrieval gap. G2 (the 2.00 am content) was captured 2018-07-11, a full year AFTER G1 (the 4.45 am content) was captured 2017-07-05. The two pages coexisted live on sgx.com on different content trees: the maintained WebSphere Portal page (wps/portal/sgxweb/...) and an unrefreshed Web Content Manager fragment (wps/wcm/connect/mp_en/...). This is corroborated inside a single day: on 2017-09-27 the derivatives page (12:40:17) shows the Fuel Oil 380cst contract as 4.45 am while the sibling commodities page (13:30:20) shows the same contract as 2.00 am. So a capture timestamp on this channel dates only the OBSERVATION, never the state, and the 02:00 -> 04:45 changeover must be left undated from portal evidence alone.\n\nTHE 05:15 T+1 CLOSE APPEARS NOWHERE ON THIS CHANNEL. The portal derivatives page had removed its grid entirely by capture 20181020041054 (replaced by \"For information relating to trading hours, please refer to the SGX calendar 2018 or contract specifications of the applicable product.\"), stayed grid-free through 20181223111840 and 20181231134425 (same digest), and 301'd away at 20190419132051. The 04:45 -> 05:15 move therefore has to come from another channel (calendar PDFs / api2.sgx.com / the 2019 site).\n\nThree of the five families named in the issue are covered by both states. The Singapore family is present as \"SGX MSCI Singapore Index Futures/Options\" (G1) and \"MSCI S'pore Index Futures/Options\" (G2) — never under an FTSE name in this window. The Taiwan family is present only as MSCI Taiwan, never FTSE Taiwan. NO NTR / Net Total Return (USD) contract is named on ANY capture in this channel — searched case-sensitively across all retrieved files; the NTR suite must be sourced elsewhere.\n\nOne further verbatim caution: G1 prints NO \"(following day)\" qualifier on any T+1 cell — the 4.45 am is a bare clock time — whereas G2 prints \"(following day)\" on every T+1 cell except the Nikkei 225 Dividend Futures row (\"6.45 pm – 2.00am\"). G1 also mixes colon and full-stop separators within one row (FTSE China A50: \"9:00 am to 4:30 pm\" / \"5.00 pm to 4.45 am\") and prints \"8.30am\" closed-up for the two Singapore futures rows. None of this has been normalised above.",
+ "dead_ends": "1. The URL named in the task brief (wps/wcm/connect/mp_en/.../Trading+Hours with the noCache query) has EXACTLY ONE capture in the whole archive window under any query variant. CDX prefix + collapse=digest over 2016-01-01..2020-06-30 returned one row; an all-time, no-collapse prefix query on \".../derivatives_trading_hours_and_calendar/Trading+Hours\" returned 7 rows: the 2018-07-11 one plus six 2021-2025 captures of a \"?presentationtemplate=design_lib/PT_Printer_Friendly\" variant. I fetched 20210925205725 and it contains no grid at all — just the modern site's \"Your current browser or operating system version is unsupported\" shell (saved as wcm_tradinghours_printerfriendly_20210925205725_OUTOFWINDOW.html). No further content there.\n\n2. The marketplace-portal derivatives hours URL (wps/portal/marketplace/mp-en/trading_on_sgx/derivatives_market/derivatives_trading_hours_and_calendar) has four captures 2015-2018 and EVERY ONE is a 302 with the same digest. I followed the 2016-01-28 redirect: Location is just /wps/portal/sgxweb — the site root, no hours content. This kills the most promising route to a 2016 capture.\n\n3. No capture of the derivatives hours page exists between 2013-08-20 and 2017-07-05, on any URL, under any host form. An all-time no-collapse CDX on the sgxweb derivatives URL returns 2013-08-20, then nothing until 2017-09-27. I fetched the 2013 capture anyway (portal_deriv_20130820090335_OUTOFWINDOW.html): it is out of window AND does not carry the standard grid — at that date the page held a holiday trading schedule (\"Closed\" / \"Holiday trading\" cells). It cannot serve as a pre-2016 baseline for the 2.00 am state.\n\n4. A domain-wide CDX sweep (url=sgx.com, matchType=domain, 2016..2020-06, filter on hours in the urlkey) returned an empty array — the domain-scope query appears to bail rather than scan. Saved as cdx_domain_tradinghours.json for the record. I replaced it with a /wps/ prefix sweep using the same filter and collapse=urlkey, which succeeded and IS the definitive in-window inventory: 14 URLs, saved as cdx_wps_hours_2016_2020.json. Every one of those 14 was accounted for — 3 derivatives-hours artifacts (2 of them the identical G1 state), 4 commodities, 3 securities, 1 home-level page with no sessions table, 1 marketplace 302, 2 unrelated 2019 securities-outage notifications (both HTTP 503).\n\n5. The wcm/connect content tree yields nothing further. Enumerating mp_en/site/trading_on_sgx (31 distinct URLs, all time) shows the only derivatives-hours content items are \"Trading Hours\", \"Trading and Clearing Calendar\", \"World Holidays\", \"Earlier Market Closing Schedule\" and \"2008 Trading Schedule\" — the last four captured only in 2009 or after 2021. Enumerating sgx_en/home/trading returned 8 URLs, none of them a derivatives hours grid.\n\n6. The sibling commodities hours page (wps/portal/sgxweb/home/trading/commodities/trading_hours_calender) has only 4 content captures ever and carries NO equity-index rows, so it cannot supply any of the five families. I kept it only because its 2017-09-27 capture is the same-day contradiction described above.\n\n7. No artifact on this channel self-dates. All three grid-bearing captures were checked for origin headers (saved as archive_headers.txt): the portal pages send Cache-Control: no-cache, no-store, must-revalidate and no Last-Modified; the wcm fragment sends only an ETag (\"561385584\"). None of the pages prints a revision date, an \"effective from\" line, or a \"last updated\" stamp. The only in-page dating hint at all is the 2017-09-27 sidebar's PDF list stopping at \"SGX Calendar 2017\" — suggestive, not probative, and deliberately not used to infer anything.\n\n8. Wayback flakiness: web.archive.org refused connections intermittently (curl exit 7) on roughly one call in four. Every fetch used a 3-5 attempt backoff loop and all of them eventually succeeded, so no artifact was lost to transport failure."
+}

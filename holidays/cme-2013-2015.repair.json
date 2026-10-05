@@ -1,0 +1,1375 @@
+{
+ "task": "cme-2013-2015",
+ "repaired_on_utc": "2026-09-17",
+ "verdict": "../cme-2013-2015.verify.json (round 2, matches: false, 12 discrepancies)",
+ "round_1_block": "holidays/cme-2013-2015.json",
+ "round_1_sha256": "7628c59977079601b3dd969c5d6c54da0459dc75ba768b4044c5b043eb3b76ad",
+ "round_1_bytes": 198587,
+ "round_2_block": "holidays/cme-2013-2015.r2.json",
+ "round_2_sha256": "ff6d953916a08c1e828e9d204b8f12557b4d3b66261112aed1a3a71984aec1a0",
+ "counts": {
+  "discrepancies_in_verdict": 12,
+  "repairs_recorded": 18,
+  "repair_ids": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14
+  ],
+  "instant_fields_re_emitted": 80,
+  "rows_corroborated_with_new_years_sheet": 10,
+  "missing_entries": 13
+ },
+ "repairs": [
+  {
+   "id": 1,
+   "where": "holidays 2013-07-03 family 'livestock+dairy+lumber'",
+   "field": "status/verbatim/close_instant/document",
+   "before": {
+    "status": "normal",
+    "close_instant": null,
+    "document": "D13J4",
+    "verbatim": "Wednesday, July 3 / Regular Close - Per each product schedule: // [not a quotation - list render] the quotation ends at the colon; a two-column bullet list follows it in D13J4, whose twelve bullets include 'Livestock', 'Lumber' and 'Dairy'. The word 'for' is not in the document on this line."
+   },
+   "after": {
+    "status": "early_close",
+    "document": "D13J4D",
+    "close_instant": "1200 CT (Dairy); 1200 CT (Lumber); 1202 CT (Lumber Options); 1215 CT (Livestock Futures & Options)",
+    "verbatim": "Wednesday, July 3 / 1200 CT - Early close for Dairy / 1200 CT - Early close for Lumber / 1202 CT - Early close for Lumber Options / 1215 CT - Early close for Livestock Futures & Options"
+   },
+   "evidence": {
+    "artifact": "cme-2013-2015-verify-r2/txt/2013-4th-of-july-done__20130717050333.txt",
+    "sha256": "4361e4fcdb4bfbc4b90f8d382a6730cbd51bcbc3ca7d3fa120bfb465ffc254b7",
+    "literals": [
+     "1200 CT – Early close for Dairy",
+     "1200 CT – Early close for Lumber",
+     "1202 CT – Early close for Lumber Options",
+     "1215 CT – Early close for Livestock Futures & Options",
+     "Last updated 7/2/2013"
+    ],
+    "lineage": "footer 'Last updated 7/2/2013' post-dates the cited revision's 6/4/2013 footer and the capture 2013-07-17T05:03:33Z post-dates 20130623205825"
+   }
+  },
+  {
+   "id": 2,
+   "where": "holidays 2013-07-03 family 'grains_oilseeds'",
+   "field": "verbatim",
+   "before": "Wednesday, July 3 / 1200 CT - Early CBOT & KCBT close / 1215 CT - Early MGEX Wheat close / 1230 CT - Early CBOT Mini-Sized grain close / 1230 CT - Early MGEX Indices close / Note: Modified grain pre-opening between 1230/1300 CT - 1600 CT / 1645 CT - Products will be in a pre-open until their respective opens on Friday, July 5",
+   "after": "Wednesday, July 3 / 1200 CT - Early CBOT & KCBT close / 1215 CT - Early MGEX Wheat & Apple Juice close / 1230 CT - Early CBOT Mini-Sized grain close / 1230 CT - Early MGEX Indices close / Note: Modified grain pre-opening between 1230/1300 CT - 1600 CT / 1645 CT - Products will be in a pre-open until their respective opens on Friday, July 5",
+   "evidence": {
+    "artifact": "cme-2013-2015-verify-r2/txt/2013-4th-of-july-done__20130717050333.txt",
+    "sha256": "4361e4fcdb4bfbc4b90f8d382a6730cbd51bcbc3ca7d3fa120bfb465ffc254b7",
+    "literal": "1215 CT – Early MGEX Wheat & Apple Juice close"
+   }
+  },
+  {
+   "id": 5,
+   "where": "coverage clause (1)",
+   "field": "coverage",
+   "before": "across all 45 files and every date in range the two rows carry identical values in every column",
+   "after": "the stale clause is dropped; the 57-of-58 statement is carried once by the rebuilt coverage prose",
+   "evidence": {
+    "artifact": "coverage"
+   }
+  },
+  {
+   "id": 7,
+   "where": "coverage clause",
+   "field": "coverage",
+   "before": "plus 28 CME .xls documents cited here for the first time, among them the 2014 and 2015 annual master workbooks and both 2013 multi-sheet bundles.",
+   "after": "plus 28 CME .xls documents cited here for the first time, among them the 2014 and 2015 annual master workbooks and the 2013 four-sheet Good Friday / Presidents Day bundle.",
+   "evidence": {
+    "artifact": "coverage",
+    "note": "only X13GFPD of the three 2013 .xls files is multi-sheet and cited"
+   }
+  },
+  {
+   "id": 3,
+   "where": "coverage clause",
+   "field": "coverage",
+   "before": "the round-1 clause, which enumerated only the .xls/.zip half",
+   "after": "the clause now records the 42 earlier PDF captures",
+   "evidence": {
+    "artifact": "raw/cme-2013-2015-repair-r2/INDEX.md + tools/out/wave5/reconciliation.json"
+   }
+  },
+  {
+   "id": 4,
+   "where": "holidays 2013-03-28 family 'livestock+dairy+lumber'",
+   "field": "close_instant",
+   "before": "1355 (zone not printed on this line; the document's other times are CT)",
+   "after": "1355 CT",
+   "evidence": {
+    "artifact": "cme-2013-2015-fix/txt/2013-good-friday-presidents-day__20130623203632.txt",
+    "sha256": "af491e5cc9db17b766c3ece37599427bedca2695c23561ee6c3378faac45b894",
+    "literals": [
+     "r002 | Date | Thursday, March 28",
+     "r003 |  | Regular Close | Early Thur. Close",
+     "r025 |   Dairy |  | 0000-00-00 13:55:00",
+     "r029 |   Livestock |  | 0000-00-00 13:55:00",
+     "r030 |   Lumber |  | 0000-00-00 13:55:00",
+     "r048 | All times are CT"
+    ]
+   }
+  },
+  {
+   "id": 8,
+   "where": "holidays 2014-11-11 other_statements[0]",
+   "field": "note",
+   "before": "The identical sheet appears in the annual master workbook X14ANN.",
+   "after": "The same statement appears in X14ANN sheet Veterans Day, with different punctuation and the older command-centre numbers: X14VET reads '  Tuesday,  November 11 ... uneffected and will run on a normal schedule. If you have any questions, please call the CME Global Command Center at  +1 800 438 8616, in Europe at + 44 800 898 013 or in Asia at + 65 6532 5010', where X14ANN reads ' Tuesday November 11 ... uneffected and will run on a normal schedule' with no comma after Tuesday, no period after schedule, and the older numbers '312.456.2391 / 44.207.623.4708 / 65.6223.1357'.",
+   "evidence": {
+    "artifact": "raw/cme-2013-2015-fix/txt/2014-veterans-day-holiday-schedule__20140326155155.txt and 2014-cme-group-holiday-schedule__20140826204712.txt"
+   }
+  },
+  {
+   "id": 9,
+   "where": "holidays 2013-10-14 (the nine-family row)",
+   "field": "verbatim",
+   "before": "Globex Columbus Day Holiday Schedule",
+   "after": "Globex® Columbus Day Holiday Schedule",
+   "evidence": {
+    "artifact": "raw/cme-2013-2015/txt/2013-10-14__*.txt",
+    "literal": "Globex® Columbus Day Holiday Schedule"
+   }
+  },
+  {
+   "id": 9,
+   "where": "holidays 2013-11-11 (the nine-family row)",
+   "field": "verbatim",
+   "before": "Globex Veterans Day Holiday Schedule",
+   "after": "Globex® Veterans Day Holiday Schedule",
+   "evidence": {
+    "artifact": "raw/cme-2013-2015/txt/2013-11-11__*.txt",
+    "literal": "Globex® Veterans Day Holiday Schedule"
+   }
+  },
+  {
+   "id": 10,
+   "where": "29 *_instant fields",
+   "field": "close_instant/open_instant",
+   "before": "three-digit printed clocks zero-padded to four",
+   "after": "80 fields re-emitted as CME printed them",
+   "evidence": {
+    "artifact": "the cited PDFs' own clock forms",
+    "fields": [
+     {
+      "date": "2013-01-02",
+      "family": "equity_index",
+      "field": "open_instant",
+      "before": "0500 CT",
+      "after": "500 CT"
+     },
+     {
+      "date": "2013-01-02",
+      "family": "interest_rates+fx",
+      "field": "open_instant",
+      "before": "0500 CT",
+      "after": "500 CT"
+     },
+     {
+      "date": "2013-01-02",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "0930 CT",
+      "after": "930 CT"
+     },
+     {
+      "date": "2013-01-02",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT",
+      "after": "905 CT"
+     },
+     {
+      "date": "2013-01-02",
+      "family": "dairy",
+      "field": "open_instant",
+      "before": "0905 CT",
+      "after": "905 CT"
+     },
+     {
+      "date": "2013-01-02",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT",
+      "after": "900 CT"
+     },
+     {
+      "date": "2013-01-21",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT Tue Jan 22",
+      "after": "905 CT Tue Jan 22"
+     },
+     {
+      "date": "2013-01-21",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT Tue Jan 22",
+      "after": "900 CT Tue Jan 22"
+     },
+     {
+      "date": "2013-02-18",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT Tue Feb 19",
+      "after": "905 CT Tue Feb 19"
+     },
+     {
+      "date": "2013-02-18",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT Tue Feb 19",
+      "after": "900 CT Tue Feb 19"
+     },
+     {
+      "date": "2013-05-27",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT Tue May 28",
+      "after": "905 CT Tue May 28"
+     },
+     {
+      "date": "2013-05-27",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT Tue May 28",
+      "after": "900 CT Tue May 28"
+     },
+     {
+      "date": "2013-07-04",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "0830 CT Fri Jul 5",
+      "after": "830 CT Fri Jul 5"
+     },
+     {
+      "date": "2013-07-04",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT Fri Jul 5",
+      "after": "905 CT Fri Jul 5"
+     },
+     {
+      "date": "2013-07-04",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT Fri Jul 5",
+      "after": "900 CT Fri Jul 5"
+     },
+     {
+      "date": "2013-07-05",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "0830 CT",
+      "after": "830 CT"
+     },
+     {
+      "date": "2013-09-02",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT Tue Sep 3",
+      "after": "905 CT Tue Sep 3"
+     },
+     {
+      "date": "2013-09-02",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT Tue Sep 3",
+      "after": "900 CT Tue Sep 3"
+     },
+     {
+      "date": "2013-11-28",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "0830 CT Fri Nov 29",
+      "after": "830 CT Fri Nov 29"
+     },
+     {
+      "date": "2013-11-28",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT Fri Nov 29",
+      "after": "905 CT Fri Nov 29"
+     },
+     {
+      "date": "2013-11-28",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT Fri Nov 29",
+      "after": "900 CT Fri Nov 29"
+     },
+     {
+      "date": "2013-11-29",
+      "family": "equity_index",
+      "field": "close_instant",
+      "before": "1215 CT (0815 CT for the Big Equities SP, MD, ND, SMP, ZD)",
+      "after": "1215 CT (815 CT for the Big Equities SP, MD, ND, SMP, ZD)"
+     },
+     {
+      "date": "2013-11-29",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "0830 CT",
+      "after": "830 CT"
+     },
+     {
+      "date": "2013-11-29",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT",
+      "after": "905 CT"
+     },
+     {
+      "date": "2013-11-29",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT",
+      "after": "900 CT"
+     },
+     {
+      "date": "2013-12-26",
+      "family": "equity_index",
+      "field": "open_instant",
+      "before": "0500 CT",
+      "after": "500 CT"
+     },
+     {
+      "date": "2013-12-26",
+      "family": "interest_rates+fx",
+      "field": "open_instant",
+      "before": "0500 CT",
+      "after": "500 CT"
+     },
+     {
+      "date": "2013-12-26",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "0830 CT",
+      "after": "830 CT"
+     },
+     {
+      "date": "2013-12-26",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT",
+      "after": "905 CT"
+     },
+     {
+      "date": "2013-12-26",
+      "family": "dairy",
+      "field": "open_instant",
+      "before": "0905 CT",
+      "after": "905 CT"
+     },
+     {
+      "date": "2013-12-26",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT",
+      "after": "900 CT"
+     },
+     {
+      "date": "2014-01-02",
+      "family": "equity_index",
+      "field": "open_instant",
+      "before": "0500 CT",
+      "after": "500 CT"
+     },
+     {
+      "date": "2014-01-02",
+      "family": "interest_rates+fx",
+      "field": "open_instant",
+      "before": "0500 CT",
+      "after": "500 CT"
+     },
+     {
+      "date": "2014-01-02",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "0830 CT",
+      "after": "830 CT"
+     },
+     {
+      "date": "2014-01-02",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT",
+      "after": "905 CT"
+     },
+     {
+      "date": "2014-01-02",
+      "family": "dairy",
+      "field": "open_instant",
+      "before": "0905 CT",
+      "after": "905 CT"
+     },
+     {
+      "date": "2014-01-02",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT",
+      "after": "900 CT"
+     },
+     {
+      "date": "2014-01-20",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT Tue Jan 21",
+      "after": "905 CT Tue Jan 21"
+     },
+     {
+      "date": "2014-01-20",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT Tue Jan 21",
+      "after": "900 CT Tue Jan 21"
+     },
+     {
+      "date": "2014-02-17",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT Tue Feb 18",
+      "after": "905 CT Tue Feb 18"
+     },
+     {
+      "date": "2014-02-17",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT Tue Feb 18",
+      "after": "900 CT Tue Feb 18"
+     },
+     {
+      "date": "2014-05-26",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT Tue May 27",
+      "after": "905 CT Tue May 27"
+     },
+     {
+      "date": "2014-05-26",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT Tue May 27",
+      "after": "900 CT Tue May 27"
+     },
+     {
+      "date": "2014-07-07",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "0830 CT / 0930 ET / 1330 UTC",
+      "after": "830 CT / 0930 ET / 1330 UTC"
+     },
+     {
+      "date": "2014-07-07",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT / 1005 ET / 1405 UTC",
+      "after": "905 CT / 1005 ET / 1405 UTC"
+     },
+     {
+      "date": "2014-07-07",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT / 1000 ET / 1400 UTC",
+      "after": "900 CT / 1000 ET / 1400 UTC"
+     },
+     {
+      "date": "2014-09-01",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT Tue Sep 2",
+      "after": "905 CT Tue Sep 2"
+     },
+     {
+      "date": "2014-09-01",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT Tue Sep 2",
+      "after": "900 CT Tue Sep 2"
+     },
+     {
+      "date": "2014-11-27",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "0830 CT Fri Nov 28",
+      "after": "830 CT Fri Nov 28"
+     },
+     {
+      "date": "2014-11-27",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0800 CT Fri Nov 28",
+      "after": "800 CT Fri Nov 28"
+     },
+     {
+      "date": "2014-11-27",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT Fri Nov 28",
+      "after": "900 CT Fri Nov 28"
+     },
+     {
+      "date": "2014-11-28",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "0830 CT / 0930 ET / 1430 UTC",
+      "after": "830 CT / 0930 ET / 1430 UTC"
+     },
+     {
+      "date": "2014-11-28",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0800 CT / 0900 ET / 1400 UTC",
+      "after": "800 CT / 0900 ET / 1400 UTC"
+     },
+     {
+      "date": "2014-11-28",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT / 1000 ET / 1500 UTC",
+      "after": "900 CT / 1000 ET / 1500 UTC"
+     },
+     {
+      "date": "2014-12-26",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "0830 CT / 0930 ET / 1430 UTC",
+      "after": "830 CT / 0930 ET / 1430 UTC"
+     },
+     {
+      "date": "2014-12-26",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0800 CT / 0900 ET / 1400 UTC",
+      "after": "800 CT / 0900 ET / 1400 UTC"
+     },
+     {
+      "date": "2014-12-26",
+      "family": "dairy",
+      "field": "open_instant",
+      "before": "0905 CT / 1005 ET / 1505 UTC",
+      "after": "905 CT / 1005 ET / 1505 UTC"
+     },
+     {
+      "date": "2014-12-26",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT / 1000 ET / 1500 UTC",
+      "after": "900 CT / 1000 ET / 1500 UTC"
+     },
+     {
+      "date": "2015-01-02",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "0830 CT / 0930 ET / 1430 UTC",
+      "after": "830 CT / 0930 ET / 1430 UTC"
+     },
+     {
+      "date": "2015-01-02",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0800 CT / 0900 ET / 1400 UTC",
+      "after": "800 CT / 0900 ET / 1400 UTC"
+     },
+     {
+      "date": "2015-01-02",
+      "family": "dairy",
+      "field": "open_instant",
+      "before": "0905 CT / 1005 ET / 1505 UTC",
+      "after": "905 CT / 1005 ET / 1505 UTC"
+     },
+     {
+      "date": "2015-01-02",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT / 1000 ET / 1500 UTC",
+      "after": "900 CT / 1000 ET / 1500 UTC"
+     },
+     {
+      "date": "2015-01-19",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT Tue Jan 20",
+      "after": "905 CT Tue Jan 20"
+     },
+     {
+      "date": "2015-01-19",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT Tue Jan 20",
+      "after": "900 CT Tue Jan 20"
+     },
+     {
+      "date": "2015-02-16",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT Tue Feb 17",
+      "after": "905 CT Tue Feb 17"
+     },
+     {
+      "date": "2015-02-16",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT Tue Feb 17",
+      "after": "900 CT Tue Feb 17"
+     },
+     {
+      "date": "2015-04-03",
+      "family": "equity_index",
+      "field": "close_instant",
+      "before": "0815 CT / 0915 ET / 1315 UTC",
+      "after": "815 CT / 0915 ET / 1315 UTC"
+     },
+     {
+      "date": "2015-05-25",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT Tue May 26",
+      "after": "905 CT Tue May 26"
+     },
+     {
+      "date": "2015-05-25",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT Tue May 26",
+      "after": "900 CT Tue May 26"
+     },
+     {
+      "date": "2015-07-06",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "0830 CT / 0930 ET / 1330 UTC",
+      "after": "830 CT / 0930 ET / 1330 UTC"
+     },
+     {
+      "date": "2015-07-06",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT / 1005 ET / 1405 UTC",
+      "after": "905 CT / 1005 ET / 1405 UTC"
+     },
+     {
+      "date": "2015-07-06",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT / 1000 ET / 1400 UTC",
+      "after": "900 CT / 1000 ET / 1400 UTC"
+     },
+     {
+      "date": "2015-09-07",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0905 CT Tue Sep 8",
+      "after": "905 CT Tue Sep 8"
+     },
+     {
+      "date": "2015-09-07",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT Tue Sep 8",
+      "after": "900 CT Tue Sep 8"
+     },
+     {
+      "date": "2015-11-26",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "0830 CT Fri Nov 27",
+      "after": "830 CT Fri Nov 27"
+     },
+     {
+      "date": "2015-11-26",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0800 CT Fri Nov 27",
+      "after": "800 CT Fri Nov 27"
+     },
+     {
+      "date": "2015-11-26",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT Fri Nov 27",
+      "after": "900 CT Fri Nov 27"
+     },
+     {
+      "date": "2015-11-27",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "0830 CT / 0930 ET / 1430 UTC",
+      "after": "830 CT / 0930 ET / 1430 UTC"
+     },
+     {
+      "date": "2015-11-27",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "0800 CT / 0900 ET / 1400 UTC",
+      "after": "800 CT / 0900 ET / 1400 UTC"
+     },
+     {
+      "date": "2015-11-27",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "0900 CT / 1000 ET / 1500 UTC",
+      "after": "900 CT / 1000 ET / 1500 UTC"
+     }
+    ]
+   }
+  },
+  {
+   "id": 12,
+   "where": "holidays 2013-01-01 and 2013-01-02, all rows",
+   "field": "other_statements",
+   "before": "10 rows carry no corroborating statement",
+   "after": "each row carries X13GFPD's New Years sheet",
+   "evidence": {
+    "artifact": "cme-2013-2015-fix/txt/2013-good-friday-presidents-day__20130623203632.txt",
+    "sha256": "af491e5cc9db17b766c3ece37599427bedca2695c23561ee6c3378faac45b894",
+    "rows_corroborated": 10,
+    "literals": [
+     "r000 | CME Group Globex New Year's Holiday Schedule: December 31, 2012 to January 2, 2013",
+     "r048 | All times are CT"
+    ]
+   }
+  },
+  {
+   "id": 14,
+   "where": "holidays 2015-07-06 grains_oilseeds",
+   "field": "status/open_instant",
+   "before": {
+    "status": "late_open",
+    "open_instant": "830 CT / 0930 ET / 1330 UTC"
+   },
+   "after": {
+    "status": "normal",
+    "open_instant": null
+   },
+   "evidence": {
+    "artifact": "cme-2013-2015-repair-r2/txt/2015-4th-of-july-holiday-schedule__20150905222733.txt",
+    "literal": "1900 CT / 2000 ET / 0000 UTC"
+   }
+  },
+  {
+   "id": 4,
+   "where": "missing[2]",
+   "field": "missing[2]",
+   "before": "Good Friday 2013, livestock/dairy/lumber early close - CME prints '1355 - Early Close for Lumber, Dairy & Livestock' with NO time zone on that line (every other time in the document is CT, and the 2014/2015 equivalents print '1355 CT / 1455 ET / 1855 UTC'). The zone is recorded as unstated rather than inferred from the later years.",
+   "after": "Good Friday 2013, livestock/dairy/lumber early close - closed in this round. The D13GF PDF prints '1355 - Early Close for Lumber, Dairy & Livestock' with no zone on that line, and the round-1 block recorded the zone as unstated rather than inferring it from the later years. X13GFPD - 2013-good-friday-presidents-day.xls, already cited on the 2013-03-28 grains row and on 2013-01-18 - settles it from 2013 itself: sheet 'Good Fri.' carries the column header 'Early Thur. Close' over rows 'Dairy' (r025), 'Livestock' (r029) and 'Lumber' (r030) all reading 13:55, and the sheet's own Notes row (r048) reads 'All times are CT'. The 2013-03-28 row now cites it as corroborating and records '1355 CT'. No inference from a later year is involved.",
+   "evidence": {
+    "artifact": "cme-2013-2015-fix/txt/2013-good-friday-presidents-day__20130623203632.txt"
+   }
+  },
+  {
+   "id": 3,
+   "where": "missing[10]",
+   "field": "missing[10]",
+   "before": "Superseded operator statements. CME revised these schedules in place at the same URL. Eleven family rows now carry an 'other_statements' entry with relation 'superseded' recording the earlier operator statement and the lineage that resolves it; in every one of the eleven the recorded (PDF-sourced) value is the later statement, so no recorded status or instant changed. Two generations account for all of them: CME's March 2015 draft generation (the 2015 annual master workbook captured 2015-03-20 and the per-holiday .xls twins captured 2015-03-26), superseded by the September/December 2015 revisions of the same URLs and by the PDFs; and the 2014 annual master workbook captured 2014-08-26, whose 'July 4', 'Christmas' and 'New Years' sheets embed revisions older than the per-holiday files published alongside them.",
+   "after": "Superseded operator statements. CME revised these schedules in place at the same URL. Eleven family rows carry an 'other_statements' entry with relation 'superseded' recording the earlier operator statement and the lineage that resolves it; in every one of the eleven the recorded value is the later statement. The .xls half of that history is two generations: CME's March 2015 draft generation (the 2015 annual master workbook captured 2015-03-20 and the per-holiday .xls twins captured 2015-03-26), superseded by the September/December 2015 revisions of the same URLs and by the PDFs; and the 2014 annual master workbook captured 2014-08-26, whose 'July 4', 'Christmas' and New Years sheets embed revisions older than the per-holiday files published alongside them. The PDF half is larger still and was not enumerated by round 1: the cited PDF URLs carry 73 distinct-digest status-200 captures in CME's archived responses for 2013-2015, of which 31 are cited and 42 are earlier revisions. All 42 were retrieved and reconciled in round 2 as .xls revisions were (see the coverage clause and raw/cme-2013-2015-repair-r2/); two of them state a session value the cited revision does not, and in both the cited capture is CME's later revision by its own 'Last updated' footer, so no recorded value moves. The three generations above therefore account for the .xls history and the 42 earlier PDF captures for the PDF history; what remains unread is the revision history of the non-cited document URLs in the same directory, which no row of this file cites.",
+   "evidence": {
+    "artifact": "raw/cme-2013-2015-repair-r2/retrieval.json"
+   }
+  },
+  {
+   "id": 6,
+   "where": "missing[]",
+   "field": "missing[]",
+   "before": "no entry names the unmodelled printed product lines",
+   "after": "missing[12] names them",
+   "evidence": {
+    "artifact": "the cited 2013-2015 PDFs and X13GFPD/X15ANN sheets"
+   }
+  },
+  {
+   "id": 1,
+   "where": "documents registry",
+   "field": "sha256/bytes/D13J4D",
+   "before": "34 documents carried no sha256",
+   "after": "every document carries the sha256 and byte count of the bytes this round re-hashed; D13J4D added",
+   "evidence": {
+    "artifact": "holidays/raw/",
+    "rehashed": [
+     {
+      "code": "D13COL",
+      "sha256": "9679853fc45be642403cf58cac17852bd267f228706a696128223f7093005d2d",
+      "bytes": 85678
+     },
+     {
+      "code": "D13GF",
+      "sha256": "c05e590c950581e19ac2e8ee5327ebcfb4fc111b231b506abefae44534ee9b68",
+      "bytes": 63251
+     },
+     {
+      "code": "D13J4",
+      "sha256": "52c62e72329866f12726363d762335c8dadfdd3407c3643f38d7ed74608e8eb7",
+      "bytes": 71527
+     },
+     {
+      "code": "D13LD",
+      "sha256": "8f22671fa723d33fe36d58bb29e80ebd15370d3bf9000a9b45d56a0cab0608ef",
+      "bytes": 81507
+     },
+     {
+      "code": "D13MD",
+      "sha256": "7cc47e352ff4874614fdb583cecd41b3ac3fcf95be6199ea5d489b8b34d2afe7",
+      "bytes": 70520
+     },
+     {
+      "code": "D13MLK",
+      "sha256": "43a646480cc7ffca137890901c0fc716ed04403e0dabc1ef07749d2b21b70c4c",
+      "bytes": 128212
+     },
+     {
+      "code": "D13NY",
+      "sha256": "e29c2c968cdf20883d55acd13bab50e9df02c547826bca9d2867f5bf9b2df3f7",
+      "bytes": 52390
+     },
+     {
+      "code": "D13PD",
+      "sha256": "e1242116eec5b7f3c5748e61adbf5bf7a809f48739ad456391f1d8b4bafceff6",
+      "bytes": 71660
+     },
+     {
+      "code": "D13TG",
+      "sha256": "1f7f6428990a5bd01065f31c4388bf5aeeb12d9219e5af6d16b1cec86bbc158b",
+      "bytes": 75026
+     },
+     {
+      "code": "D13VET",
+      "sha256": "7e5bd54859002a29f50ef3f1eec1f46f3fd3a7d51e9aed303f189a097719252b",
+      "bytes": 85574
+     },
+     {
+      "code": "D13XM",
+      "sha256": "1389ade6b120383d05e8d6e8ed9c38f1e2394dd250c86b19606548618285e848",
+      "bytes": 146485
+     },
+     {
+      "code": "D14COL",
+      "sha256": "b01b4d3e1b669f6e0bbeb0818f2516782805c6d38e41c6158ad5ad102593696b",
+      "bytes": 34304
+     },
+     {
+      "code": "D14GF",
+      "sha256": "4e8593e96eb42af2cde99f6ed906d4fe4a2ea8f976fc9f8d8f561f3049cc7f0e",
+      "bytes": 105279
+     },
+     {
+      "code": "D14J4",
+      "sha256": "34faa82435c6d8bb1088593c8945b6a5faaaa67b36c6a6422a24e4a25572ba77",
+      "bytes": 56112
+     },
+     {
+      "code": "D14LD",
+      "sha256": "dfd92a530d114a1f1c68dd52be4315fd307d8f8cfb344d71de78334b9c73e4d6",
+      "bytes": 60291
+     },
+     {
+      "code": "D14MD",
+      "sha256": "a8e020149657b4e4730c2a357015d096a9fd47e2054ca59a85d6e6548ccb6023",
+      "bytes": 60121
+     },
+     {
+      "code": "D14MLK",
+      "sha256": "5069a46a6acfb69bf05261abc23097fd675d159cf55e45361fb7e1e41dc0dcd4",
+      "bytes": 138368
+     },
+     {
+      "code": "D14NY",
+      "sha256": "ca6da5edc26537d341b5148781c43c8ef00e33e832c8e602b97c57d6508b8f28",
+      "bytes": 205983
+     },
+     {
+      "code": "D14PD",
+      "sha256": "b689b4f8e9f62ba6f8c32bba46d35923a4017d1edbc83cc9ffcc2a85baded4fb",
+      "bytes": 116612
+     },
+     {
+      "code": "D14TG",
+      "sha256": "a90ae1f39414337f1a8600f55bf3a0a587214d987074885a47cfea307bc8054a",
+      "bytes": 60428
+     },
+     {
+      "code": "D14VET",
+      "sha256": "53ea2a8b03d8b71640a2a054eb1d4cc5dd220d4ebc0fd21f7f2890e21a55c2b6",
+      "bytes": 97624
+     },
+     {
+      "code": "D14XM",
+      "sha256": "8125a18c9cad9b770be39b89c3193ee419240d409e39aa510d6eb3e8eba94e25",
+      "bytes": 54124
+     },
+     {
+      "code": "D15COL",
+      "sha256": "5551ad52c75003ccb5caee506b4135b51f82b8da64c08f9a1f3c4aef707d66eb",
+      "bytes": 34304
+     },
+     {
+      "code": "D15GF",
+      "sha256": "67873caa987c9eee8de38d02a5c18d8f7d46fd82a486bab34821f6e6f6363e0b",
+      "bytes": 54240
+     },
+     {
+      "code": "D15J4",
+      "sha256": "1013e6ebea1829591946c9aa513ec6e3f99c64d99be14814610e601bb5dcc0fb",
+      "bytes": 122744
+     },
+     {
+      "code": "D15LD",
+      "sha256": "4aab7fdb5e57420a243bbc26be6ecfa00a6317937afe3b772dfcdd8db1dd50fd",
+      "bytes": 107305
+     },
+     {
+      "code": "D15MD",
+      "sha256": "4ad4398fa092393fa77cd8ed9c58ecc0f1669a41fd38a9b4cab5b05790d2dfec",
+      "bytes": 139573
+     },
+     {
+      "code": "D15MLK",
+      "sha256": "67395dcb63d86b6e1f573a5aa37269a685dfe1b17d23edd7d95449899bce090a",
+      "bytes": 59439
+     },
+     {
+      "code": "D15NY",
+      "sha256": "196b4ec04bcfce2cfd9783262023afe9da73bcdef1b983c8c4b464b2e115bb8a",
+      "bytes": 59206
+     },
+     {
+      "code": "D15PD",
+      "sha256": "c81b04bcf43dbfd2b7c2f7aba559992cde8bb8eee59e7b310b643b636d290b94",
+      "bytes": 60496
+     },
+     {
+      "code": "D15TG",
+      "sha256": "ef96d05289667c635f435884a0a2407bcbec63149ff96e802b719100c85c887f",
+      "bytes": 60424
+     },
+     {
+      "code": "D15VET",
+      "sha256": "50300dd36faff3b7d52128ea48a04e4c27012a78985b6c390ea9883e1696f98e",
+      "bytes": 94646
+     },
+     {
+      "code": "D15XM",
+      "sha256": "7fde46210798f2cb4299903400b41ef6e2cb9aa287f8d3d360ba59d835b482ec",
+      "bytes": 54852
+     },
+     {
+      "code": "D16NY",
+      "sha256": "118196a469dd40ad6a40594da273f726f6cb3e503f9cc1b8fd2057cf2fa32c61",
+      "bytes": 64156
+     }
+    ],
+    "documents": 63
+   }
+  },
+  {
+   "id": 13,
+   "where": "47 *_instant fields",
+   "field": "close_instant/open_instant",
+   "before": "the round-1 clocks, stripped of CME's leading zero by item 10",
+   "after": "every clock re-emitted in the form the cited artifact prints",
+   "evidence": {
+    "artifact": "the cited artifact's own txt dump",
+    "ambiguous": [],
+    "fields": [
+     {
+      "date": "2013-01-02",
+      "family": "equity_index",
+      "field": "open_instant",
+      "before": "500 CT",
+      "after": "0500 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-new-years__20130414194146.txt"
+     },
+     {
+      "date": "2013-01-02",
+      "family": "interest_rates+fx",
+      "field": "open_instant",
+      "before": "500 CT",
+      "after": "0500 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-new-years__20130414194146.txt"
+     },
+     {
+      "date": "2013-01-02",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "930 CT",
+      "after": "0930 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-new-years__20130414194146.txt"
+     },
+     {
+      "date": "2013-01-02",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "905 CT",
+      "after": "0905 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-new-years__20130414194146.txt"
+     },
+     {
+      "date": "2013-01-02",
+      "family": "dairy",
+      "field": "open_instant",
+      "before": "905 CT",
+      "after": "0905 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-new-years__20130414194146.txt"
+     },
+     {
+      "date": "2013-01-02",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "900 CT",
+      "after": "0900 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-new-years__20130414194146.txt"
+     },
+     {
+      "date": "2013-01-21",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "905 CT Tue Jan 22",
+      "after": "0905 CT Tue Jan 22",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015-repair-r2/txt/2013-martin-luther-king__20121119001609.txt"
+     },
+     {
+      "date": "2013-01-21",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "900 CT Tue Jan 22",
+      "after": "0900 CT Tue Jan 22",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015-repair-r2/txt/2013-martin-luther-king__20121119001609.txt"
+     },
+     {
+      "date": "2013-02-18",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "905 CT Tue Feb 19",
+      "after": "0905 CT Tue Feb 19",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-presidents-day__20130309115337.txt"
+     },
+     {
+      "date": "2013-02-18",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "900 CT Tue Feb 19",
+      "after": "0900 CT Tue Feb 19",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-presidents-day__20130309115337.txt"
+     },
+     {
+      "date": "2013-05-27",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "905 CT Tue May 28",
+      "after": "0905 CT Tue May 28",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-memorial-day__20130623203604.txt"
+     },
+     {
+      "date": "2013-05-27",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "900 CT Tue May 28",
+      "after": "0900 CT Tue May 28",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-memorial-day__20130623203604.txt"
+     },
+     {
+      "date": "2013-07-04",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "830 CT Fri Jul 5",
+      "after": "0830 CT Fri Jul 5",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-4th-of-july__20130623205825.txt"
+     },
+     {
+      "date": "2013-07-04",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "905 CT Fri Jul 5",
+      "after": "0905 CT Fri Jul 5",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-4th-of-july__20130623205825.txt"
+     },
+     {
+      "date": "2013-07-04",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "900 CT Fri Jul 5",
+      "after": "0900 CT Fri Jul 5",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-4th-of-july__20130623205825.txt"
+     },
+     {
+      "date": "2013-07-05",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "830 CT",
+      "after": "0830 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-4th-of-july__20130623205825.txt"
+     },
+     {
+      "date": "2013-09-02",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "905 CT Tue Sep 3",
+      "after": "0905 CT Tue Sep 3",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-labor-day__20130902170841.txt"
+     },
+     {
+      "date": "2013-09-02",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "900 CT Tue Sep 3",
+      "after": "0900 CT Tue Sep 3",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-labor-day__20130902170841.txt"
+     },
+     {
+      "date": "2013-11-28",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "830 CT Fri Nov 29",
+      "after": "0830 CT Fri Nov 29",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-thanksgiving__20140214062836.txt"
+     },
+     {
+      "date": "2013-11-28",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "905 CT Fri Nov 29",
+      "after": "0905 CT Fri Nov 29",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-thanksgiving__20140214062836.txt"
+     },
+     {
+      "date": "2013-11-28",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "900 CT Fri Nov 29",
+      "after": "0900 CT Fri Nov 29",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-thanksgiving__20140214062836.txt"
+     },
+     {
+      "date": "2013-11-29",
+      "family": "equity_index",
+      "field": "close_instant",
+      "before": "1215 CT (815 CT for the Big Equities SP, MD, ND, SMP, ZD)",
+      "after": "1215 CT (0815 CT for the Big Equities SP, MD, ND, SMP, ZD)",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-thanksgiving__20140214062836.txt"
+     },
+     {
+      "date": "2013-11-29",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "830 CT",
+      "after": "0830 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-thanksgiving__20140214062836.txt"
+     },
+     {
+      "date": "2013-11-29",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "905 CT",
+      "after": "0905 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-thanksgiving__20140214062836.txt"
+     },
+     {
+      "date": "2013-11-29",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "900 CT",
+      "after": "0900 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-thanksgiving__20140214062836.txt"
+     },
+     {
+      "date": "2013-12-26",
+      "family": "equity_index",
+      "field": "open_instant",
+      "before": "500 CT",
+      "after": "0500 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-christmas__20140412062428.txt"
+     },
+     {
+      "date": "2013-12-26",
+      "family": "interest_rates+fx",
+      "field": "open_instant",
+      "before": "500 CT",
+      "after": "0500 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-christmas__20140412062428.txt"
+     },
+     {
+      "date": "2013-12-26",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "830 CT",
+      "after": "0830 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-christmas__20140412062428.txt"
+     },
+     {
+      "date": "2013-12-26",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "905 CT",
+      "after": "0905 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-christmas__20140412062428.txt"
+     },
+     {
+      "date": "2013-12-26",
+      "family": "dairy",
+      "field": "open_instant",
+      "before": "905 CT",
+      "after": "0905 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-christmas__20140412062428.txt"
+     },
+     {
+      "date": "2013-12-26",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "900 CT",
+      "after": "0900 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2013-christmas__20140412062428.txt"
+     },
+     {
+      "date": "2014-01-02",
+      "family": "equity_index",
+      "field": "open_instant",
+      "before": "500 CT",
+      "after": "0500 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2014-new-years__20131007205800.txt"
+     },
+     {
+      "date": "2014-01-02",
+      "family": "interest_rates+fx",
+      "field": "open_instant",
+      "before": "500 CT",
+      "after": "0500 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2014-new-years__20131007205800.txt"
+     },
+     {
+      "date": "2014-01-02",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "830 CT",
+      "after": "0830 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2014-new-years__20131007205800.txt"
+     },
+     {
+      "date": "2014-01-02",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "905 CT",
+      "after": "0905 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2014-new-years__20131007205800.txt"
+     },
+     {
+      "date": "2014-01-02",
+      "family": "dairy",
+      "field": "open_instant",
+      "before": "905 CT",
+      "after": "0905 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2014-new-years__20131007205800.txt"
+     },
+     {
+      "date": "2014-01-02",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "900 CT",
+      "after": "0900 CT",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015/txt/2014-new-years__20131007205800.txt"
+     },
+     {
+      "date": "2014-07-07",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "830 CT / 0930 ET / 1330 UTC",
+      "after": "0830 CT / 0930 ET / 1330 UTC",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015-repair-r2/txt/2014-4th-of-july-holiday-schedule__20140708015736.txt"
+     },
+     {
+      "date": "2014-11-27",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "830 CT Fri Nov 28",
+      "after": "0830 CT Fri Nov 28",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015-repair-r2/txt/2014-thanksgiving-holiday-schedule__20150121145456.txt"
+     },
+     {
+      "date": "2014-11-28",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "830 CT / 0930 ET / 1430 UTC",
+      "after": "0830 CT / 0930 ET / 1430 UTC",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015-repair-r2/txt/2014-thanksgiving-holiday-schedule__20150121145456.txt"
+     },
+     {
+      "date": "2014-12-26",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "830 CT / 0930 ET / 1430 UTC",
+      "after": "0830 CT / 0930 ET / 1430 UTC",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015-repair-r2/txt/2014-christmas-holiday-schedule__20150121141000.txt"
+     },
+     {
+      "date": "2015-01-02",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "830 CT / 0930 ET / 1430 UTC",
+      "after": "0830 CT / 0930 ET / 1430 UTC",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015-repair-r2/txt/2015-new-years-holiday-schedule__20150121141043.txt"
+     },
+     {
+      "date": "2015-04-03",
+      "family": "equity_index",
+      "field": "close_instant",
+      "before": "815 CT / 0915 ET / 1315 UTC",
+      "after": "0815 CT / 0915 ET / 1315 UTC",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015-repair-r2/txt/2015-good-friday-holiday-schedule__20150905223230.txt"
+     },
+     {
+      "date": "2015-05-25",
+      "family": "livestock",
+      "field": "open_instant",
+      "before": "905 CT Tue May 26",
+      "after": "0905 CT Tue May 26",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015-repair-r2/txt/2015-memorial-day-holiday-schedule__20150326113938.txt"
+     },
+     {
+      "date": "2015-05-25",
+      "family": "lumber",
+      "field": "open_instant",
+      "before": "900 CT Tue May 26",
+      "after": "0900 CT Tue May 26",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015-repair-r2/txt/2015-memorial-day-holiday-schedule__20150326113938.txt"
+     },
+     {
+      "date": "2015-11-26",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "830 CT Fri Nov 27",
+      "after": "0830 CT Fri Nov 27",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015-repair-r2/txt/2015-thanksgiving-holiday-schedule__20160205162519.txt"
+     },
+     {
+      "date": "2015-11-27",
+      "family": "grains_oilseeds",
+      "field": "open_instant",
+      "before": "830 CT / 0930 ET / 1430 UTC",
+      "after": "0830 CT / 0930 ET / 1430 UTC",
+      "dump": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015-repair-r2/txt/2015-thanksgiving-holiday-schedule__20160205162519.txt"
+     }
+    ]
+   }
+  },
+  {
+   "id": 11,
+   "where": "raw/cme-2013-2015/INDEX.md",
+   "field": "amendment block",
+   "before": "no amendment pointer",
+   "after": "a dated amendment block at the top",
+   "evidence": {
+    "artifact": "cme-2013-2015/INDEX.md"
+   }
+  }
+ ]
+}

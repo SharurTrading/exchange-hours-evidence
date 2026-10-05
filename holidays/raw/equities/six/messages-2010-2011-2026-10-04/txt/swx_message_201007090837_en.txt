@@ -1,0 +1,140 @@
+SIX Swiss Exchange message
+From
+Telephone
+E-mail
+                 Exchange Operations
+                 +41 58 854 24 75
+                 helpdesk.exc@six-group.com
+                                                                                            2010
+                                                                                             Nr. 56
+Pages            3
+Date             09.07.2010
+
+
+
+
+Change to procedure in the case of mistrades
+
+
+
+Dear Sir or Madam,
+We would like to inform you that SIX Swiss Exchange is changing its procedure for trade reversals in the
+case of on order book mistrades. This memorandum is intended to provide you with an overview of the
+key information and the timeframe for this changeover.
+
+1      Current procedure
+If Market Control at SIX Swiss Exchange declares a trade to be null and void in line with Directive 4:
+Market Control, it publishes a mistrade decision on the Newsboard before contacting the participants
+involved by telephone to instruct them to cancel the relevant trades via trade reversal by the end of the
+clearing day at the latest.
+
+2      New procedure
+In the case of the new procedure mistrade decisions will also be published on the Newsboard. However,
+Market Control will now carry out the trade reversals for the invalid trades itself. The participants involved
+will be informed via the FIX interface and also via e-mail.
+2.1 Details of the new regime
+Below you will find a detailed overview of the new procedure and the changes involved:
+    Newsboard
+    As mentioned above, mistrade decisions and other trade-relevant information will continue to be
+    published as messages on the Newsboard of the publicly accessible website of SIX Swiss Exchange.
+    The Newsboard will in future be accessible via the following link, and will contain messages for all
+    products and trading segments:
+    http://www.six-swiss-exchange.com/participants/trading/newsboard/prod/
+
+
+
+
+Message Nr. 56 | 2010                                                                                       1|3
+
+SIX Swiss Exchange Ltd     T +41 58 854 54 54
+Selnaustrasse 30           F +41 58 854 54 55
+P.O. Box 1758              www.six-swiss-exchange.com
+CH-8021 Zurich
+From now on, the messages will be broken down into the following categories:
+      Trading Information
+      Mistrade
+      Suspension
+      Emergency Information
+
+    News Message
+    News messages will continue to be disseminated to participants in the form of «News Alerts» via the
+    SWXess «Standard Trading Interface (STI)» and «Market Data Interface (MDI)». The «News Alert»
+    contains the header of the message and a direct link to the corresponding message on the
+    Newsboard.
+    Trade reversal
+    For all participants, trade reversals will be carried out by Market Control. This will generally be done at
+    the same time as the mistrade decision; at the latest by the end of the clearing day.
+    The participants involved will receive confirmation of the trade reversals in the form of a «Trade
+    Capture Report» sent via the SWXess «Standard Trading Interface (STI)». These reversal reports will
+    be labeled with the newly introduced system generated trade type code «MR» (Mistrade Reversal).
+    Please note that trade reversals must still be carried out by participants themselves in the case of on
+    exchange transactions, both on and off the order book, that have not been declared null and void by
+    SIX Swiss Exchange.
+    In exceptional cases, the Exchange may also contact participants by telephone under the new
+    procedure, instructing them to cancel mistrades themselves.
+    E-mail
+    As mentioned before in future the participants involved will be informed via e-mail of mistrades and
+    their reversal; the affected participants will therefore no longer be informed by telephone as was
+    previously the case.
+    For each trade reversal (transaction), SIX Swiss Exchange will send a separate e-mail containing the
+    following information:
+      Security                 Identification and trading currency of the security concerned
+      Transaction              Execution time (trade date and time)
+                               Designation of the type of business (purchase / sale)
+                               Quantity (nominal value for bonds or price per unit for other securities)
+                               Price
+                               Exchange Identification (Trade Id)
+      Participant              Identification of the participant (Member Id)
+                               Identification of the trader (Trader Id)
+
+    Each participant is authorized to define a separate e-mail address for each Party ID. The participants
+    are kindly requested to send an e-mail by the end of July to helpdesk.exc@six-group.com, specifying
+    one e-mail address for each member ID, or inform Market Control explicitly if they do not wish to be
+    notified via e-mail. Exchange Operations may be notified of a changed e-mail address at any time,
+    subject to a two-day notice period.
+    Please note that SIX Swiss Exchange cannot guarantee successful transmission of the e-mail
+    notification. For this reason, we recommend that participants ensure that «Trade Capture Reports»
+    disseminated via the SWXess «Standard Trading Interface (STI)» are correctly implemented and
+    processed in the members own applications.
+
+
+Message Nr. 56 | 2010                                                                                       2|3
+
+
+SIX Swiss Exchange Ltd    T +41 58 854 54 54
+Selnaustrasse 30          F +41 58 854 54 55
+P.O. Box1758              www.six-swiss-exchange.com
+CH-8021 Zurich
+SIX Swiss Exchange is planning to introduce the new mistrade regime as of September/October 2010.
+Prior to the introduction, participants will have a four-week period in which to test their internal
+applications and processes. We will send you further information on the introduction of the new regime in
+due course.
+All technical manuals and MSC messages are published in the Member Section:
+https://www.six-swiss-exchange.com/member_section/it/messages.html
+https://www.six-swiss-exchange.com/member_section/it/manuals.html
+Thank you for taking note of the above information. Should you have any questions, please contact SIX
+Swiss Exchange. If you require more information or support, please contact Exchange Operations.
+If you have any technical inquiries, please contact your local support center.
+Geneva                   +41 58 854 5642                  lsg@six-group.com
+London                   +44 20 7864 4364                 lsl@six-group.com
+Zurich                   +41 58 854 2400                  lsz@six-group.com
+Yours sincerely,
+
+SIX Swiss Exchange Ltd
+
+
+
+Christoph Landis                                          Adrian Isler
+Head of Operations                                        Head of Market Operations
+
+
+
+
+Message Nr. 56 | 2010                                                                                  3|3
+
+
+SIX Swiss Exchange Ltd       T +41 58 854 54 54
+Selnaustrasse 30             F +41 58 854 54 55
+P.O. Box1758                 www.six-swiss-exchange.com
+CH-8021 Zurich
+

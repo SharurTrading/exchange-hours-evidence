@@ -1,0 +1,1751 @@
+{
+ "task": "cfe-eurex-ice-cde-smfe-2026-2027",
+ "coverage": "Retrieved 2026-09-12 04:16–04:56 UTC (LAW-UTC-DATES). Evidence bytes + INDEX.md under /Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cfe-eurex-ice-cde-smfe-2026-2027/. COMPLETE at T1: (a) CFE — the whole 2026 CFE holiday schedule from Cboe's own “Hours & Holidays → U.S. Futures” page (heading “2026 Futures Holiday Schedule”) and its CSV export, with both the Regular and the Extended trading-hours columns verbatim, corroborated for the holiday set by CFE Regulatory Circular 26-004; (b) Eurex — all 2026 closures for FESX/FDAX/FDXM and FGBL/FGBM/FGBS/FGBX from the Eurex “Holiday regulations” page and the Trading Calendar 2026 PDF (7 closed days; Eurex publishes no early closes — 24 and 31 December are full trading closures, clearing open); (c) ICE Futures U.S. — the 2026 Trading Holiday Calendar (June 9, 2025) and the 2027 Trading Holiday Calendar (Exchange Notice of June 4, 2026), both covering all five operator-named product groups, plus the six 2026 per-holiday Exchange Notices that were still indexed (Good Friday, Memorial Day, Juneteenth, Independence Day [revised], Labor Day, Columbus Day/Canadian Thanksgiving), which give exact late-open and early-close instants in NY time for sugar/coffee/cocoa/cotton/FCOJ, U.S. Dollar Index, NYSE FANG+ and the other index families; (d) Coinbase Derivatives — seven 2026 per-holiday Market Notices (25-42, 26-05, 26-12, 26-23, 26-27.1 superseding 26-27, 26-29, 26-36), each giving CT open/close/roll instants per product tier. Timezones are recorded as the operator prints them: CFE in Central Time, ICE in NY time, CDE in CT, Eurex in CET (dates only). LAW-SESSION-NOT-EXPIRY was applied: ICE's 2026 Juneteenth equity-index companion notice is last-trade-day / final-settlement content only and keys nothing here, and ICE's “TAS trading will not be held” is a trade-type restriction, not a session boundary. NOT COMPLETE: CFE has published nothing for 2027; Eurex's 2027 calendar exists only on an expressly indicative basis; SMFE has no published 2026/2027 calendar because the DCM is dormant (renamed Kraken Derivatives Exchange Inc.); and the late-2026 ICE and CDE holiday notices had not been issued yet at retrieval. web.archive.org was unreachable from this machine throughout the session, so no archival backstop was available for the notices that have rotated off the operators' listings. Document ids in holidays[].document resolve via the `documents` map at the end of this JSON and via INDEX.md in the raw evidence directory, which carries each artifact's URL, UTC retrieval time and sha256.",
+ "holidays": [
+  {
+   "date": "2026-01-01",
+   "name": "New Year’s Day",
+   "families": [
+    {
+     "family": "CFE (Cboe Futures Exchange) — all CFE futures (VX/VXM, VXT/VXMT, VA, IBIG, IBHY, IEMD, XBTF, FBT/FET, PBT/PET, MGTN and options on futures)",
+     "status": "closed",
+     "verbatim": "New Year's Day,2026-01-01,None,5:00 PM (Thu) to 8:30 AM (Fri)  [Cboe prints CFE hours as “(all times are Central Time)”; the two columns are “Regular Trading Hours” and “Extended Trading Hours”]",
+     "document": "CBOE-HOURS-USFUT-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Eurex — “all derivatives” (covers FESX, FDAX, FDXM and FGBL, FGBM, FGBS, FGBX)",
+     "status": "closed",
+     "verbatim": "Eurex is closed for trading and clearing (exercise, settlement and cash) in all derivatives.",
+     "document": "EUREX-HOLREG-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“New Year’s Day” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "closed",
+     "verbatim": "“New Year’s Day” — Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "closed",
+     "verbatim": "“New Year’s Day” — Energy* and Environmental Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "closed",
+     "verbatim": "“New Year’s Day” — Daily Gold and Silver Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Stock, SOFR, MSCI Bond and Mortgage Index Contracts",
+     "status": "closed",
+     "verbatim": "“New Year’s Day” — Currency, Stock, SOFR, MSCI Bond and Mortgage Index Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy & Metal",
+     "status": "closed",
+     "verbatim": "Trade Date Thursday 1/1 — “Closed for holiday”. “In observance of New Year’s Day, the January 1, 2026 trading session will be closed for select Coinbase Derivatives, LLC products.” Friday 1/2: OPEN/START 1/1 17:00 CT, CLOSE/ROLL 1/2 16:00 CT  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-25-42",
+     "tier": "T1"
+    },
+    {
+     "family": "Equity",
+     "status": "closed",
+     "verbatim": "Trade Date Thursday 1/1 — “Closed for holiday”. Friday 1/2: OPEN/START 1/1 17:00 CT, CLOSE/ROLL 1/2 16:00 CT  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-25-42",
+     "tier": "T1"
+    },
+    {
+     "family": "Crypto (24x7)",
+     "status": "normal",
+     "verbatim": "Trade Date Thursday 1/1 — “See Friday”; Friday 1/2 OPEN/START 12/31 16:00 CT, CLOSE/ROLL 1/2 16:00 CT. “For 24x7 enabled firms, all crypto products will remain open throughout the holiday.”  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-25-42",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2026-01-19",
+   "name": "Martin Luther King Day / Martin Luther King, Jr. Day",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "normal",
+     "verbatim": "“Martin Luther King Day” — Canola Contracts: open",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "closed",
+     "verbatim": "“Martin Luther King Day” — Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "modified",
+     "verbatim": "“Martin Luther King Day” — Energy* and Environmental Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "modified",
+     "verbatim": "“Martin Luther King Day” — Daily Gold and Silver Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Stock, SOFR, MSCI Bond and Mortgage Index Contracts",
+     "status": "modified",
+     "verbatim": "“Martin Luther King Day” — Currency, Stock, SOFR, MSCI Bond and Mortgage Index Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "CFE (Cboe Futures Exchange) — all CFE futures (VX/VXM, VXT/VXMT, VA, IBIG, IBHY, IEMD, XBTF, FBT/FET, PBT/PET, MGTN and options on futures)",
+     "status": "early_close",
+     "verbatim": "Martin Luther King Jr. Day,2026-01-19,None,5:00 PM (Sun) to 10:30 AM (Mon) and 5:00 PM (Mon) to 8:30 AM (Tue)  [Cboe prints CFE hours as “(all times are Central Time)”; the two columns are “Regular Trading Hours” and “Extended Trading Hours”]",
+     "document": "CBOE-HOURS-USFUT-2026",
+     "tier": "T1",
+     "close_instant": "2026-01-19T10:30:00-06:00"
+    },
+    {
+     "family": "Coinbase Derivatives (CDE) — all product groups",
+     "status": "unknown",
+     "verbatim": "No CDE Market Notice for the 2026 MLK holiday appears in the operator’s Market Notices listing at coinbase.com/derivatives/market-notices (notice numbers 26-01, 26-02 and 26-04 are absent from the table; 26-03 is “Instrument REST API Endpoint” and 26-05 is Presidents’ Day). CDE publishes no standing annual holiday calendar (coinbase.com/derivatives/holiday-calendar returns 404).",
+     "document": "CDE-NOTICES-INDEX",
+     "tier": "T1 (absence of document)"
+    }
+   ]
+  },
+  {
+   "date": "2026-02-16",
+   "name": "Presidents Day / Louis Riel Day (Canada) / Presidents’ Day",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“Presidents Day / Louis Riel Day (Canada)” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "closed",
+     "verbatim": "“Presidents Day / Louis Riel Day (Canada)” — Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "modified",
+     "verbatim": "“Presidents Day / Louis Riel Day (Canada)” — Energy* and Environmental Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "modified",
+     "verbatim": "“Presidents Day / Louis Riel Day (Canada)” — Daily Gold and Silver Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Stock, SOFR, MSCI Bond and Mortgage Index Contracts",
+     "status": "modified",
+     "verbatim": "“Presidents Day / Louis Riel Day (Canada)” — Currency, Stock, SOFR, MSCI Bond and Mortgage Index Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "CFE (Cboe Futures Exchange) — all CFE futures (VX/VXM, VXT/VXMT, VA, IBIG, IBHY, IEMD, XBTF, FBT/FET, PBT/PET, MGTN and options on futures)",
+     "status": "early_close",
+     "verbatim": "Presidents' Day,2026-02-16,None,5:00 PM (Sun) to 10:30 AM (Mon) and 5:00 PM (Mon) to 8:30 AM (Tue)  [Cboe prints CFE hours as “(all times are Central Time)”; the two columns are “Regular Trading Hours” and “Extended Trading Hours”]",
+     "document": "CBOE-HOURS-USFUT-2026",
+     "tier": "T1",
+     "close_instant": "2026-02-16T10:30:00-06:00"
+    },
+    {
+     "family": "Energy, Metal & Equity",
+     "status": "closed",
+     "verbatim": "Trade Date Monday 2/16 — “Closed for holiday”. “For select Coinbase Derivatives products, the February 16, 2026 trading session will be closed in observance of Presidents’ Day.” Tuesday 2/17: OPEN/START 2/16 17:00 CT, ROLL 2/17 16:00 CT  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-26-05",
+     "tier": "T1"
+    },
+    {
+     "family": "Crypto (24x7)",
+     "status": "normal",
+     "verbatim": "Trade Date Monday 2/16 — “See Tuesday”; Tuesday 2/17 OPEN/START 2/13 17:00 CT, ROLL 2/17 16:00 CT. “For firms not 24x7-enabled, crypto product orders will be rejected from Friday, February 13th 16:00 CT to Monday, February 16th 16:00 CT.”  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-26-05",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2026-04-03",
+   "name": "Good Friday",
+   "families": [
+    {
+     "family": "CFE (Cboe Futures Exchange) — all CFE futures (VX/VXM, VXT/VXMT, VA, IBIG, IBHY, IEMD, XBTF, FBT/FET, PBT/PET, MGTN and options on futures)",
+     "status": "early_close",
+     "verbatim": "Good Friday,2026-04-03,None,5:00 PM (Thu) to 8:30 AM (Fri)  [Cboe prints CFE hours as “(all times are Central Time)”; the two columns are “Regular Trading Hours” and “Extended Trading Hours”]",
+     "document": "CBOE-HOURS-USFUT-2026",
+     "tier": "T1",
+     "close_instant": "2026-04-03T08:30:00-05:00"
+    },
+    {
+     "family": "Eurex — “all derivatives” (covers FESX, FDAX, FDXM and FGBL, FGBM, FGBS, FGBX)",
+     "status": "closed",
+     "verbatim": "Eurex is closed for trading and clearing (exercise, settlement and cash) in all derivatives.",
+     "document": "EUREX-HOLREG-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Sugar No. 11® and 16, Coffee “C”®, Coffee \"C\"® Metric, Cotton No. 2®, Cocoa, FCOJ and Canola",
+     "status": "closed",
+     "verbatim": "Fri, Apr 3 — TRADING HOURS: “Closed”; SETTLEMENT WINDOWS: “None”",
+     "document": "IFUS-NOTICE-2026-GOODFRIDAY",
+     "tier": "T1"
+    },
+    {
+     "family": "MSCI Stock and Bond Index, NYSE FANG+™, NYSE Stock Index and FTSE Stock Index",
+     "status": "modified",
+     "verbatim": "Fri, Apr 3 — “Late Open - 5:00 am / Early Close – 9:15 am, No TAS trading” (all times shown in NY time)",
+     "document": "IFUS-NOTICE-2026-GOODFRIDAY",
+     "tier": "T1",
+     "close_instant": "2026-04-03T09:15:00-04:00",
+     "open_instant": "2026-04-03T05:00:00-04:00"
+    },
+    {
+     "family": "U.S. Dollar Index®, Currency Pair, ICE Mortgage, SOFR Index and Digital Asset",
+     "status": "modified",
+     "verbatim": "Fri, Apr 3 — “Late Open - 5:00 am / Early Close - 11:15 am, No TAS Trading” (all times shown in NY time)",
+     "document": "IFUS-NOTICE-2026-GOODFRIDAY",
+     "tier": "T1",
+     "close_instant": "2026-04-03T11:15:00-04:00",
+     "open_instant": "2026-04-03T05:00:00-04:00"
+    },
+    {
+     "family": "Daily Gold and Silver",
+     "status": "closed",
+     "verbatim": "Fri, Apr 3 — “Closed”; SETTLEMENT WINDOWS “None”",
+     "document": "IFUS-NOTICE-2026-GOODFRIDAY",
+     "tier": "T1"
+    },
+    {
+     "family": "Financial Natural Gas, Power, Natural Gas Liquid(s), Oil and Environmental Contracts",
+     "status": "closed",
+     "verbatim": "Fri, Apr 3 — “Closed”; SETTLEMENT WINDOWS “None”",
+     "document": "IFUS-NOTICE-2026-GOODFRIDAY",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy, Metal & Equity",
+     "status": "closed",
+     "verbatim": "Trade Date Friday 4/03 — “Closed for holiday”. Monday 4/06: OPEN/START 4/05 17:00 CT, ROLL 4/06 16:00 CT  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-26-12",
+     "tier": "T1"
+    },
+    {
+     "family": "Crypto (24x7)",
+     "status": "normal",
+     "verbatim": "Trade Date Friday 4/03 — “See Monday”; Monday 4/06 OPEN/START 4/02 17:00 CT, ROLL 4/06 16:00 CT. “Please note, due to a Friday holiday, the weekly 1 hour maintenance window pushes up to Thursday, 16:00 to 17:00 CT.”  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-26-12",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2026-04-06",
+   "name": "Easter Monday / Easter Monday (day after Good Friday)",
+   "families": [
+    {
+     "family": "Eurex — “all derivatives” (covers FESX, FDAX, FDXM and FGBL, FGBM, FGBS, FGBX)",
+     "status": "closed",
+     "verbatim": "Eurex is closed for trading and clearing (exercise, settlement and cash) in all derivatives.",
+     "document": "EUREX-HOLREG-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Sugar No. 11, Coffee “C” and Cocoa",
+     "status": "late_open",
+     "verbatim": "Mon, Apr 6 — “Sugar No. 11, Coffee “C” and Cocoa - late open at 7:30 am. Regular Hours for all other contracts.”",
+     "document": "IFUS-NOTICE-2026-GOODFRIDAY",
+     "tier": "T1",
+     "open_instant": "2026-04-06T07:30:00-04:00"
+    },
+    {
+     "family": "Daily Gold and Silver",
+     "status": "closed",
+     "verbatim": "Mon, Apr 6 — “Closed”; SETTLEMENT WINDOWS “None”",
+     "document": "IFUS-NOTICE-2026-GOODFRIDAY",
+     "tier": "T1"
+    },
+    {
+     "family": "MSCI Stock and Bond Index, NYSE FANG+™, NYSE Stock Index and FTSE Stock Index; U.S. Dollar Index®, Currency Pair, ICE Mortgage, SOFR Index and Digital Asset; Financial Natural Gas, Power, Natural Gas Liquid(s), Oil and Environmental Contracts",
+     "status": "normal",
+     "verbatim": "Mon, Apr 6 — “Regular Hours” / “Regular Times”",
+     "document": "IFUS-NOTICE-2026-GOODFRIDAY",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2026-05-01",
+   "name": "Labour Day",
+   "families": [
+    {
+     "family": "Eurex — “all derivatives” (covers FESX, FDAX, FDXM and FGBL, FGBM, FGBS, FGBX)",
+     "status": "closed",
+     "verbatim": "Eurex is closed for trading and clearing (exercise, settlement and cash) in all derivatives.",
+     "document": "EUREX-HOLREG-2026",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2026-05-18",
+   "name": "Victoria Day (Canada)",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“Victoria Day (Canada)” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "normal",
+     "verbatim": "“Victoria Day (Canada)” — Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: open",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2026-05-25",
+   "name": "Memorial Day",
+   "families": [
+    {
+     "family": "CFE (Cboe Futures Exchange) — all CFE futures (VX/VXM, VXT/VXMT, VA, IBIG, IBHY, IEMD, XBTF, FBT/FET, PBT/PET, MGTN and options on futures)",
+     "status": "early_close",
+     "verbatim": "Memorial Day,2026-05-25,None,5:00 PM (Sun) to 10:30 AM (Mon) and 5:00 PM (Mon) to 8:30 AM (Tue)  [Cboe prints CFE hours as “(all times are Central Time)”; the two columns are “Regular Trading Hours” and “Extended Trading Hours”]",
+     "document": "CBOE-HOURS-USFUT-2026",
+     "tier": "T1",
+     "close_instant": "2026-05-25T10:30:00-05:00"
+    },
+    {
+     "family": "Sugar No. 11® and 16, Coffee “C”®, Coffee \"C\"® Metric, Cotton No. 2®, Cocoa and FCOJ",
+     "status": "closed",
+     "verbatim": "Mon, May 25 — “Closed”; SETTLEMENT WINDOWS “None”",
+     "document": "IFUS-NOTICE-2026-MEMORIAL",
+     "tier": "T1"
+    },
+    {
+     "family": "Canola Contracts",
+     "status": "normal",
+     "verbatim": "Mon, May 25 — “Regular Hours” / “Regular Times”",
+     "document": "IFUS-NOTICE-2026-MEMORIAL",
+     "tier": "T1"
+    },
+    {
+     "family": "U.S. Dollar Index®, Currency Pair and Digital Asset Contracts",
+     "status": "early_close",
+     "verbatim": "Mon, May 25 — “Early Close – 2:30 pm, TAS trading will not be held” (all times shown in NY time)",
+     "document": "IFUS-NOTICE-2026-MEMORIAL",
+     "tier": "T1",
+     "close_instant": "2026-05-25T14:30:00-04:00"
+    },
+    {
+     "family": "MSCI Stock Index Contracts",
+     "status": "early_close",
+     "verbatim": "Mon, May 25 — “Early Close – 1:00 pm, TAS trading will not be held”",
+     "document": "IFUS-NOTICE-2026-MEMORIAL",
+     "tier": "T1",
+     "close_instant": "2026-05-25T13:00:00-04:00"
+    },
+    {
+     "family": "NYSE Stock Index, FTSE Stock Index, MSCI Bond Index and ICE Mortgage, Bond Index and SOFR Index Contracts",
+     "status": "early_close",
+     "verbatim": "Mon, May 25 — “Early Close – 1:00 pm, TAS trading will not be held”",
+     "document": "IFUS-NOTICE-2026-MEMORIAL",
+     "tier": "T1",
+     "close_instant": "2026-05-25T13:00:00-04:00"
+    },
+    {
+     "family": "Daily Gold and Silver Futures Contracts",
+     "status": "closed",
+     "verbatim": "Mon, May 25 — “Closed”; SETTLEMENT WINDOWS “None”",
+     "document": "IFUS-NOTICE-2026-MEMORIAL",
+     "tier": "T1"
+    },
+    {
+     "family": "Financial Natural Gas, Power, Natural Gas Liquid(s), Oil and Environmental Contracts",
+     "status": "early_close",
+     "verbatim": "Mon, May 25 — “Early Close 1:30 pm, TAS trading will not be held”",
+     "document": "IFUS-NOTICE-2026-MEMORIAL",
+     "tier": "T1",
+     "close_instant": "2026-05-25T13:30:00-04:00"
+    },
+    {
+     "family": "Energy, Metal & Equity",
+     "status": "closed",
+     "verbatim": "Trade Date Monday 5/25 — “Closed for holiday”. Tuesday 5/26: OPEN/START 05/25 17:00 CT, ROLL 05/26 16:00 CT  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-26-23",
+     "tier": "T1"
+    },
+    {
+     "family": "Crypto (24x7)",
+     "status": "normal",
+     "verbatim": "Trade Date Monday 5/25 — “See Tuesday 5/26”; Tuesday 5/26 OPEN/START 05/22 17:00 CT, ROLL 05/26 16:00 CT  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-26-23",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2026-06-19",
+   "name": "Juneteenth / Juneteenth Holiday",
+   "families": [
+    {
+     "family": "Sugar No. 11® and 16, Coffee “C”®, Coffee \"C\"® Metric, Cotton No. 2®, Cocoa and FCOJ",
+     "status": "closed",
+     "verbatim": "Fri, June 19 — “Closed”; SETTLEMENT WINDOWS “None”",
+     "document": "IFUS-NOTICE-2026-JUNETEENTH",
+     "tier": "T1"
+    },
+    {
+     "family": "Canola Contracts",
+     "status": "normal",
+     "verbatim": "Fri, June 19 — “Regular Hours” / “Regular Times”",
+     "document": "IFUS-NOTICE-2026-JUNETEENTH",
+     "tier": "T1"
+    },
+    {
+     "family": "U.S. Dollar Index®, Currency Pair and Digital Asset Contracts",
+     "status": "early_close",
+     "verbatim": "Fri, June 19 — “Early Close – 2:30 pm, TAS trading will not be held” (all times shown in NY time)",
+     "document": "IFUS-NOTICE-2026-JUNETEENTH",
+     "tier": "T1",
+     "close_instant": "2026-06-19T14:30:00-04:00"
+    },
+    {
+     "family": "MSCI Index Contracts",
+     "status": "early_close",
+     "verbatim": "Fri, June 19 — “Early Close – 1:00 pm, TAS trading will not be held”",
+     "document": "IFUS-NOTICE-2026-JUNETEENTH",
+     "tier": "T1",
+     "close_instant": "2026-06-19T13:00:00-04:00"
+    },
+    {
+     "family": "NYSE Stock Index, FTSE Stock Index, MSCI Bond Index and ICE Mortgage, Bond Index and SOFR Index Contracts",
+     "status": "early_close",
+     "verbatim": "Fri, June 19 — “Early Close – 1:00 pm, TAS trading will not be held”",
+     "document": "IFUS-NOTICE-2026-JUNETEENTH",
+     "tier": "T1",
+     "close_instant": "2026-06-19T13:00:00-04:00"
+    },
+    {
+     "family": "Daily Gold and Silver Futures Contracts",
+     "status": "early_close",
+     "verbatim": "Fri, June 19 — “Early Close - 1:30 pm”; SETTLEMENT WINDOWS “Regular Times”",
+     "document": "IFUS-NOTICE-2026-JUNETEENTH",
+     "tier": "T1",
+     "close_instant": "2026-06-19T13:30:00-04:00"
+    },
+    {
+     "family": "Financial Natural Gas, Power, Natural Gas Liquid(s), Oil and Environmental Contracts",
+     "status": "early_close",
+     "verbatim": "Fri, June 19 — “Early Close 1:30 pm, TAS trading will not be held”",
+     "document": "IFUS-NOTICE-2026-JUNETEENTH",
+     "tier": "T1",
+     "close_instant": "2026-06-19T13:30:00-04:00"
+    },
+    {
+     "family": "23x5 Products: Energies, Copper & Platinum, Equities",
+     "status": "closed",
+     "verbatim": "Trade Date Friday 06/19 — OPEN/START “Closed for holiday”, CLOSE/ROLL “Closed for holiday”. Monday 06/22: OPEN/START 06/21 17:00 CT, CLOSE/ROLL 06/22 16:00 CT  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-26-27.1",
+     "tier": "T1"
+    },
+    {
+     "family": "24x7 Products: Crypto Futures, Crypto PSF, Gold & Silver",
+     "status": "normal",
+     "verbatim": "Trade Date Friday 06/19 — OPEN/START 06/18 16:00 CT, CLOSE/ROLL 06/19 16:00 CT. “Gold and Silver will no longer be closed for the Juneteenth holiday and will remain open alongside Coinbase Derivatives' 24x7 crypto products, with settlements on Friday.” “The weekly 1-hour maintenance window will run at its standard time on Friday, June 19th from 16:00 to 17:00 CT.”  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-26-27.1",
+     "tier": "T1"
+    },
+    {
+     "family": "24x5 Products: Equity Indexes PSF",
+     "status": "closed",
+     "verbatim": "Trade Date Friday 06/19 — “Closed for holiday”. “For Equity Index Perp Style Futures (24x5 — AIP, CHN, DEF, TEK), the Monday, June 22nd trade date will commence on Sunday, June 21st at 19:00 CT.”  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-26-27.1",
+     "tier": "T1"
+    },
+    {
+     "family": "CFE (Cboe Futures Exchange) — all CFE futures (VX/VXM, VXT/VXMT, VA, IBIG, IBHY, IEMD, XBTF, FBT/FET, PBT/PET, MGTN and options on futures)",
+     "status": "early_close",
+     "verbatim": "Juneteenth Holiday,2026-06-19,None,5:00 PM (Thu) to 10:30 AM (Fri)  [Cboe prints CFE hours as “(all times are Central Time)”; the two columns are “Regular Trading Hours” and “Extended Trading Hours”]",
+     "document": "CBOE-HOURS-USFUT-2026",
+     "tier": "T1",
+     "close_instant": "2026-06-19T10:30:00-05:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-01",
+   "name": "Canada Day (Canada)",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“Canada Day (Canada)” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "normal",
+     "verbatim": "“Canada Day (Canada)” — Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: open",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-03",
+   "name": "Independence Day (observed) / Independence Day Observed",
+   "families": [
+    {
+     "family": "Sugar No. 11® and 16, Coffee “C”®, Coffee \"C\"® Metric, Cotton No. 2®, Cocoa and FCOJ",
+     "status": "closed",
+     "verbatim": "Fri, July 3 — “Closed”; SETTLEMENT WINDOWS “None”",
+     "document": "IFUS-NOTICE-2026-INDEPENDENCE",
+     "tier": "T1"
+    },
+    {
+     "family": "Canola Contracts",
+     "status": "normal",
+     "verbatim": "Fri, July 3 — “Regular Hours” / “Regular Times”",
+     "document": "IFUS-NOTICE-2026-INDEPENDENCE",
+     "tier": "T1"
+    },
+    {
+     "family": "U.S. Dollar Index®, Currency Pair and Digital Asset Contracts",
+     "status": "early_close",
+     "verbatim": "Fri, July 3 — “Early Close – 2:30 pm, TAS trading will not be held” (all times shown in NY time)",
+     "document": "IFUS-NOTICE-2026-INDEPENDENCE",
+     "tier": "T1",
+     "close_instant": "2026-07-03T14:30:00-04:00"
+    },
+    {
+     "family": "MSCI Stock Index Contracts",
+     "status": "early_close",
+     "verbatim": "Fri, July 3 — “Early Close – 1:00 pm, TAS trading will not be held”",
+     "document": "IFUS-NOTICE-2026-INDEPENDENCE",
+     "tier": "T1",
+     "close_instant": "2026-07-03T13:00:00-04:00"
+    },
+    {
+     "family": "NYSE Stock Index, FTSE Stock Index, MSCI Bond Index and ICE Mortgage, Bond Index and SOFR Index Contracts",
+     "status": "early_close",
+     "verbatim": "Fri, July 3 — “Early Close – 1:00 pm, TAS trading will not be held”",
+     "document": "IFUS-NOTICE-2026-INDEPENDENCE",
+     "tier": "T1",
+     "close_instant": "2026-07-03T13:00:00-04:00"
+    },
+    {
+     "family": "Daily Gold and Silver Futures Contracts",
+     "status": "early_close",
+     "verbatim": "Fri, July 3 — “Early Close - 1:30 pm”; SETTLEMENT WINDOWS “Regular Times”",
+     "document": "IFUS-NOTICE-2026-INDEPENDENCE",
+     "tier": "T1",
+     "close_instant": "2026-07-03T13:30:00-04:00"
+    },
+    {
+     "family": "Financial Natural Gas, Power, Natural Gas Liquid(s), Oil and Environmental Contracts",
+     "status": "early_close",
+     "verbatim": "Fri, July 3 — “Early Close 1:30 pm, TAS trading will not be held”",
+     "document": "IFUS-NOTICE-2026-INDEPENDENCE",
+     "tier": "T1",
+     "close_instant": "2026-07-03T13:30:00-04:00"
+    },
+    {
+     "family": "23x5 Products: Energies, Copper & Plat., Equities",
+     "status": "closed",
+     "verbatim": "Trade Date Friday 7/03 — “Closed for holiday”. “In observance of Independence Day (observed), the Friday, July 3, 2026 trading session will be closed for select Coinbase Derivatives products.” Monday 7/06: OPEN/START 7/05 17:00 CT, ROLL 7/06 16:00 CT  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-26-29",
+     "tier": "T1"
+    },
+    {
+     "family": "24x7 Products: Crypto, Gold & Silver",
+     "status": "normal",
+     "verbatim": "Trade Date Friday 7/03 — “See Monday”; Monday 7/06 OPEN/START 7/02 17:00 CT, ROLL 7/06 16:00 CT. “Due to the Friday holiday, the weekly 1-hour maintenance window will be adjusted to Thursday, July 2nd from 16:00 to 17:00 CT.” Settlements: “24x7 products will not settle on Friday, July 3, 2026”  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-26-29",
+     "tier": "T1"
+    },
+    {
+     "family": "24x5 Products: Equity Indexes PSF",
+     "status": "closed",
+     "verbatim": "Trade Date Friday 7/03 — “Closed for holiday”; Monday 7/06 OPEN/START 7/05 19:00 CT, ROLL 7/06 16:00 CT  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-26-29",
+     "tier": "T1"
+    },
+    {
+     "family": "CFE (Cboe Futures Exchange) — all CFE futures (VX/VXM, VXT/VXMT, VA, IBIG, IBHY, IEMD, XBTF, FBT/FET, PBT/PET, MGTN and options on futures)",
+     "status": "early_close",
+     "verbatim": "Independence Day Observed,2026-07-03,None,5:00 PM (Thu) to 10:30 AM (Fri)  [Cboe prints CFE hours as “(all times are Central Time)”; the two columns are “Regular Trading Hours” and “Extended Trading Hours”]",
+     "document": "CBOE-HOURS-USFUT-2026",
+     "tier": "T1",
+     "close_instant": "2026-07-03T10:30:00-05:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-06",
+   "name": "Monday after Independence Day (observed)",
+   "families": [
+    {
+     "family": "Cotton No. 2®",
+     "status": "late_open",
+     "verbatim": "Mon, July 6 — “Late Open for Cotton: 8:00 am / Regular open times for all other contracts, and Regular close times for all contracts”",
+     "document": "IFUS-NOTICE-2026-INDEPENDENCE",
+     "tier": "T1",
+     "open_instant": "2026-07-06T08:00:00-04:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-03",
+   "name": "Terry Fox Day (Canada)",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“Terry Fox Day (Canada)” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "normal",
+     "verbatim": "“Terry Fox Day (Canada)” — Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: open",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-07",
+   "name": "Labor Day",
+   "families": [
+    {
+     "family": "CFE (Cboe Futures Exchange) — all CFE futures (VX/VXM, VXT/VXMT, VA, IBIG, IBHY, IEMD, XBTF, FBT/FET, PBT/PET, MGTN and options on futures)",
+     "status": "early_close",
+     "verbatim": "Labor Day,2026-09-07,None,5:00 PM (Sun) to 10:30 AM (Mon) and 5:00 PM (Mon) to 8:30 AM (Tue)  [Cboe prints CFE hours as “(all times are Central Time)”; the two columns are “Regular Trading Hours” and “Extended Trading Hours”]",
+     "document": "CBOE-HOURS-USFUT-2026",
+     "tier": "T1",
+     "close_instant": "2026-09-07T10:30:00-05:00"
+    },
+    {
+     "family": "Sugar No. 11® and 16, Coffee “C”®, Coffee \"C\"® Metric, Cotton No. 2®, Cocoa, FCOJ and Canola",
+     "status": "closed",
+     "verbatim": "Mon, Sep 7 — “Closed”; SETTLEMENT WINDOWS “None”",
+     "document": "IFUS-NOTICE-2026-LABORDAY",
+     "tier": "T1"
+    },
+    {
+     "family": "MSCI Stock Index",
+     "status": "early_close",
+     "verbatim": "Mon, Sep 7 — “Early Close – 1:00 pm, TAS trading will not be held” (all times shown in NY time)",
+     "document": "IFUS-NOTICE-2026-LABORDAY",
+     "tier": "T1",
+     "close_instant": "2026-09-07T13:00:00-04:00"
+    },
+    {
+     "family": "NYSE FANG+™ Index, NYSE Stock Index, FTSE Stock Index, MSCI Bond Index and ICE Mortgage, Bond Index and SOFR Index",
+     "status": "early_close",
+     "verbatim": "Mon, Sep 7 — “Early Close – 1:00 pm, TAS trading will not be held”",
+     "document": "IFUS-NOTICE-2026-LABORDAY",
+     "tier": "T1",
+     "close_instant": "2026-09-07T13:00:00-04:00"
+    },
+    {
+     "family": "U.S. Dollar Index®, Currency Pair and Digital Asset",
+     "status": "normal",
+     "verbatim": "Mon, Sep 7 — “Regular Hours, TAS trading will not be held” (TAS suspension is a trade-type restriction, not a session boundary)",
+     "document": "IFUS-NOTICE-2026-LABORDAY",
+     "tier": "T1"
+    },
+    {
+     "family": "Financial Natural Gas, Power, Natural Gas Liquid(s), Oil and Environmental Contracts",
+     "status": "early_close",
+     "verbatim": "Mon, Sep 7 — “Early Close - 1:30 pm, TAS trading will not be held”",
+     "document": "IFUS-NOTICE-2026-LABORDAY",
+     "tier": "T1",
+     "close_instant": "2026-09-07T13:30:00-04:00"
+    },
+    {
+     "family": "Daily Gold and Silver Futures",
+     "status": "early_close",
+     "verbatim": "Mon, Sep 7 — “Early Close - 1:30 pm”; SETTLEMENT WINDOWS “Regular Times”",
+     "document": "IFUS-NOTICE-2026-LABORDAY",
+     "tier": "T1",
+     "close_instant": "2026-09-07T13:30:00-04:00"
+    },
+    {
+     "family": "23x5 Products: Energies, Copper & Plat., Equities",
+     "status": "closed",
+     "verbatim": "Trade Date Monday 9/7 — “Closed for holiday”. “In observance of Labor Day, the Monday, September 7, 2026 trading session will be closed for select Coinbase Derivatives products.” Tuesday 9/8: OPEN/START 09/07 17:00 CT, ROLL 09/08 16:00 CT  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-26-36",
+     "tier": "T1"
+    },
+    {
+     "family": "24x7 Products: Crypto, Gold & Silver",
+     "status": "normal",
+     "verbatim": "Trade Date Monday 9/7 — “See Tuesday 9/8”; Tuesday 9/8 OPEN/START 09/04 17:00 CT, ROLL 09/08 16:00 CT. Settlements: “24x7 products will not settle on Monday, September 7, 2026”  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-26-36",
+     "tier": "T1"
+    },
+    {
+     "family": "24x5 Products: Equity Indexes PSF",
+     "status": "closed",
+     "verbatim": "Trade Date Monday 9/7 — “Closed for holiday”; Tuesday 9/8 OPEN/START 9/07 19:00 CT, ROLL 09/08 16:00 CT. “For Equity Index Perp Style Futures (AIP, CHN, DEF, TEK, US5), the Tuesday, September 8th trade date will commence on Monday, September 7th at 19:00 CT”  [CDE baseline, per docs.cdp.coinbase.com/derivatives/introduction/market-hours: 23x5 products trade Sunday 17:00 CT → Friday 16:00 CT with a daily 16:00–17:00 CT break; 24x7 products trade Friday 17:00 CT → Friday 16:00 CT]",
+     "document": "CDE-MN-26-36",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-30",
+   "name": "National Day for Truth and Reconciliation (Canada)",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“National Day for Truth and Reconciliation (Canada)” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "normal",
+     "verbatim": "“National Day for Truth and Reconciliation (Canada)” — Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: open",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-12",
+   "name": "Columbus Day / Canadian Thanksgiving Day",
+   "families": [
+    {
+     "family": "Canola futures and options contracts",
+     "status": "closed",
+     "verbatim": "“There will be no trading in Canola futures and options contracts on Monday, October 12, 2026, in commemoration of Canadian Thanksgiving Day.”",
+     "document": "IFUS-NOTICE-2026-COLUMBUS",
+     "tier": "T1"
+    },
+    {
+     "family": "all ICE Futures U.S. contracts other than Canola futures and options",
+     "status": "normal",
+     "verbatim": "“This Canadian holiday coincides with the U.S. Columbus Day holiday, and all ICE Futures U.S. contracts other than Canola futures and options will follow regular trading hours and daily settlement window times on this day.”",
+     "document": "IFUS-NOTICE-2026-COLUMBUS",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "name": "Veterans Day / Remembrance Day (Canada)",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“Veterans Day / Remembrance Day (Canada)” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "normal",
+     "verbatim": "“Veterans Day / Remembrance Day (Canada)” — Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: open",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "normal",
+     "verbatim": "“Veterans Day / Remembrance Day (Canada)” — Energy* and Environmental Contracts: open",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "normal",
+     "verbatim": "“Veterans Day / Remembrance Day (Canada)” — Daily Gold and Silver Contracts: open",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Stock, SOFR, MSCI Bond and Mortgage Index Contracts",
+     "status": "normal",
+     "verbatim": "“Veterans Day / Remembrance Day (Canada)” — Currency, Stock, SOFR, MSCI Bond and Mortgage Index Contracts: open",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-26",
+   "name": "Thanksgiving Day",
+   "families": [
+    {
+     "family": "CFE (Cboe Futures Exchange) — all CFE futures (VX/VXM, VXT/VXMT, VA, IBIG, IBHY, IEMD, XBTF, FBT/FET, PBT/PET, MGTN and options on futures)",
+     "status": "early_close",
+     "verbatim": "Thanksgiving Day,2026-11-26,None,5:00 PM (Wed) to 10:30 AM (Thu) and 5:00 PM (Thu) to 8:30 AM (Fri)  [Cboe prints CFE hours as “(all times are Central Time)”; the two columns are “Regular Trading Hours” and “Extended Trading Hours”]",
+     "document": "CBOE-HOURS-USFUT-2026",
+     "tier": "T1",
+     "close_instant": "2026-11-26T10:30:00-06:00"
+    },
+    {
+     "family": "Canola Contracts",
+     "status": "normal",
+     "verbatim": "“Thanksgiving Day” — Canola Contracts: open",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "closed",
+     "verbatim": "“Thanksgiving Day” — Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "modified",
+     "verbatim": "“Thanksgiving Day” — Energy* and Environmental Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "modified",
+     "verbatim": "“Thanksgiving Day” — Daily Gold and Silver Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Stock, SOFR, MSCI Bond and Mortgage Index Contracts",
+     "status": "modified",
+     "verbatim": "“Thanksgiving Day” — Currency, Stock, SOFR, MSCI Bond and Mortgage Index Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-27",
+   "name": "Thanksgiving Early Close",
+   "families": [
+    {
+     "family": "CFE (Cboe Futures Exchange) — all CFE futures (VX/VXM, VXT/VXMT, VA, IBIG, IBHY, IEMD, XBTF, FBT/FET, PBT/PET, MGTN and options on futures)",
+     "status": "early_close",
+     "verbatim": "Thanksgiving Early Close,2026-11-27,08:30:00 - 12:15:00,5:00 PM (Wed) to 10:30 AM (Thu) and 5:00 PM (Thu) to 8:30 AM (Fri)  [Cboe prints CFE hours as “(all times are Central Time)”; the two columns are “Regular Trading Hours” and “Extended Trading Hours”]",
+     "document": "CBOE-HOURS-USFUT-2026",
+     "tier": "T1",
+     "close_instant": "2026-11-27T12:15:00-06:00",
+     "open_instant": "2026-11-27T08:30:00-06:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-24",
+   "name": "Christmas Early Close / Christmas Eve",
+   "families": [
+    {
+     "family": "CFE (Cboe Futures Exchange) — all CFE futures (VX/VXM, VXT/VXMT, VA, IBIG, IBHY, IEMD, XBTF, FBT/FET, PBT/PET, MGTN and options on futures)",
+     "status": "early_close",
+     "verbatim": "Christmas Early Close,2026-12-24,08:30:00 - 12:15:00,5:00 PM (Wed) to 8:30 AM (Thu)  [Cboe prints CFE hours as “(all times are Central Time)”; the two columns are “Regular Trading Hours” and “Extended Trading Hours”]",
+     "document": "CBOE-HOURS-USFUT-2026",
+     "tier": "T1",
+     "close_instant": "2026-12-24T12:15:00-06:00",
+     "open_instant": "2026-12-24T08:30:00-06:00"
+    },
+    {
+     "family": "Eurex — “all derivatives” (covers FESX, FDAX, FDXM and FGBL, FGBM, FGBS, FGBX)",
+     "status": "closed",
+     "verbatim": "Eurex is closed for trading in all derivatives.  [PDF: “Eurex is closed for trading in all derivatives: 24 December, 31 December” — a full trading closure, not a half day; clearing stays open]",
+     "document": "EUREX-HOLREG-2026",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-25",
+   "name": "Christmas Day",
+   "families": [
+    {
+     "family": "CFE (Cboe Futures Exchange) — all CFE futures (VX/VXM, VXT/VXMT, VA, IBIG, IBHY, IEMD, XBTF, FBT/FET, PBT/PET, MGTN and options on futures)",
+     "status": "closed",
+     "verbatim": "Christmas Day,2026-12-25,None,None  [Cboe prints CFE hours as “(all times are Central Time)”; the two columns are “Regular Trading Hours” and “Extended Trading Hours”]",
+     "document": "CBOE-HOURS-USFUT-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Eurex — “all derivatives” (covers FESX, FDAX, FDXM and FGBL, FGBM, FGBS, FGBX)",
+     "status": "closed",
+     "verbatim": "Eurex is closed for trading and clearing (exercise, settlement and cash) in all derivatives.",
+     "document": "EUREX-HOLREG-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“Christmas Day” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "closed",
+     "verbatim": "“Christmas Day” — Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "closed",
+     "verbatim": "“Christmas Day” — Energy* and Environmental Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "closed",
+     "verbatim": "“Christmas Day” — Daily Gold and Silver Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Stock, SOFR, MSCI Bond and Mortgage Index Contracts",
+     "status": "closed",
+     "verbatim": "“Christmas Day” — Currency, Stock, SOFR, MSCI Bond and Mortgage Index Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-28",
+   "name": "Boxing Day",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“Boxing Day” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "normal",
+     "verbatim": "“Boxing Day” — Cocoa, Coffee “C”®, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: open",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "modified",
+     "verbatim": "“Boxing Day” — Energy* and Environmental Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "closed",
+     "verbatim": "“Boxing Day” — Daily Gold and Silver Contracts: closed",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Stock, SOFR, MSCI Bond and Mortgage Index Contracts",
+     "status": "modified",
+     "verbatim": "“Boxing Day” — Currency, Stock, SOFR, MSCI Bond and Mortgage Index Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2026",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-31",
+   "name": "New Year’s Eve",
+   "families": [
+    {
+     "family": "Eurex — “all derivatives” (covers FESX, FDAX, FDXM and FGBL, FGBM, FGBS, FGBX)",
+     "status": "closed",
+     "verbatim": "Eurex is closed for trading in all derivatives.  [PDF: “Eurex is closed for trading in all derivatives: 24 December, 31 December” — a full trading closure, not a half day; clearing stays open]",
+     "document": "EUREX-HOLREG-2026",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2027-01-01",
+   "name": "New Year’s Day",
+   "families": [
+    {
+     "family": "Eurex — “all derivatives” (covers FESX, FDAX, FDXM and FGBL, FGBM, FGBS, FGBX) — EXCH (global) calendar",
+     "status": "closed",
+     "verbatim": "01/01/2027,Friday,EXCH,New Year's Day,Global,T2 Holiday  [page caveat: “The following trading calendars are provided on a preliminary and indicative basis for the years 2027 to 2036 to support forward planning by our customers and are subject to change.”]  [page: “The EXCH calendar … is considered a global calendar, meaning that when the EXCH calendar observes a holiday, all other calendars are treated as closed on that day”]",
+     "document": "EUREX-IND-2027-2036",
+     "tier": "T1 (operator-published but expressly INDICATIVE/PRELIMINARY — not an unconditional dated future under LAW-NO-FABRICATED-DATES)"
+    },
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“New Year’s Day” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "closed",
+     "verbatim": "“New Year’s Day” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "closed",
+     "verbatim": "“New Year’s Day” — Energy* and Environmental Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "closed",
+     "verbatim": "“New Year’s Day” — Daily Gold and Silver Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts",
+     "status": "closed",
+     "verbatim": "“New Year’s Day” — Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2027-01-18",
+   "name": "Martin Luther King Day",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "normal",
+     "verbatim": "“Martin Luther King Day” — Canola Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "closed",
+     "verbatim": "“Martin Luther King Day” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "modified",
+     "verbatim": "“Martin Luther King Day” — Energy* and Environmental Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "modified",
+     "verbatim": "“Martin Luther King Day” — Daily Gold and Silver Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts",
+     "status": "modified",
+     "verbatim": "“Martin Luther King Day” — Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2027-02-15",
+   "name": "Presidents Day / Louis Riel Day (Canada)",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“Presidents Day / Louis Riel Day (Canada)” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "closed",
+     "verbatim": "“Presidents Day / Louis Riel Day (Canada)” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "modified",
+     "verbatim": "“Presidents Day / Louis Riel Day (Canada)” — Energy* and Environmental Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "modified",
+     "verbatim": "“Presidents Day / Louis Riel Day (Canada)” — Daily Gold and Silver Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts",
+     "status": "modified",
+     "verbatim": "“Presidents Day / Louis Riel Day (Canada)” — Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2027-03-26",
+   "name": "Good Friday",
+   "families": [
+    {
+     "family": "Eurex — “all derivatives” (covers FESX, FDAX, FDXM and FGBL, FGBM, FGBS, FGBX) — EXCH (global) calendar",
+     "status": "closed",
+     "verbatim": "03/26/2027,Friday,EXCH,Good Friday,Global,T2 Holiday  [page caveat: “The following trading calendars are provided on a preliminary and indicative basis for the years 2027 to 2036 to support forward planning by our customers and are subject to change.”]  [page: “The EXCH calendar … is considered a global calendar, meaning that when the EXCH calendar observes a holiday, all other calendars are treated as closed on that day”]",
+     "document": "EUREX-IND-2027-2036",
+     "tier": "T1 (operator-published but expressly INDICATIVE/PRELIMINARY — not an unconditional dated future under LAW-NO-FABRICATED-DATES)"
+    },
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“Good Friday” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "closed",
+     "verbatim": "“Good Friday” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "closed",
+     "verbatim": "“Good Friday” — Energy* and Environmental Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "closed",
+     "verbatim": "“Good Friday” — Daily Gold and Silver Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts",
+     "status": "modified",
+     "verbatim": "“Good Friday” — Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2027-03-29",
+   "name": "Easter Monday",
+   "families": [
+    {
+     "family": "Eurex — “all derivatives” (covers FESX, FDAX, FDXM and FGBL, FGBM, FGBS, FGBX) — EXCH (global) calendar",
+     "status": "closed",
+     "verbatim": "03/29/2027,Monday,EXCH,Easter Monday,Global,T2 Holiday  [page caveat: “The following trading calendars are provided on a preliminary and indicative basis for the years 2027 to 2036 to support forward planning by our customers and are subject to change.”]  [page: “The EXCH calendar … is considered a global calendar, meaning that when the EXCH calendar observes a holiday, all other calendars are treated as closed on that day”]",
+     "document": "EUREX-IND-2027-2036",
+     "tier": "T1 (operator-published but expressly INDICATIVE/PRELIMINARY — not an unconditional dated future under LAW-NO-FABRICATED-DATES)"
+    }
+   ]
+  },
+  {
+   "date": "2027-05-24",
+   "name": "Victoria Day (Canada)",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“Victoria Day (Canada)” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "normal",
+     "verbatim": "“Victoria Day (Canada)” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2027-05-31",
+   "name": "Memorial Day",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "normal",
+     "verbatim": "“Memorial Day” — Canola Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "closed",
+     "verbatim": "“Memorial Day” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "modified",
+     "verbatim": "“Memorial Day” — Energy* and Environmental Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "closed",
+     "verbatim": "“Memorial Day” — Daily Gold and Silver Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts",
+     "status": "modified",
+     "verbatim": "“Memorial Day” — Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2027-06-18",
+   "name": "Juneteenth",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "normal",
+     "verbatim": "“Juneteenth” — Canola Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "closed",
+     "verbatim": "“Juneteenth” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "modified",
+     "verbatim": "“Juneteenth” — Energy* and Environmental Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "modified",
+     "verbatim": "“Juneteenth” — Daily Gold and Silver Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts",
+     "status": "modified",
+     "verbatim": "“Juneteenth” — Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2027-07-01",
+   "name": "Canada Day (Canada)",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“Canada Day (Canada)” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "normal",
+     "verbatim": "“Canada Day (Canada)” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2027-07-05",
+   "name": "Independence Day (observed)",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "normal",
+     "verbatim": "“Independence Day (observed)” — Canola Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "closed",
+     "verbatim": "“Independence Day (observed)” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "modified",
+     "verbatim": "“Independence Day (observed)” — Energy* and Environmental Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "modified",
+     "verbatim": "“Independence Day (observed)” — Daily Gold and Silver Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts",
+     "status": "modified",
+     "verbatim": "“Independence Day (observed)” — Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2027-08-02",
+   "name": "Terry Fox Day (Canada)",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“Terry Fox Day (Canada)” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "normal",
+     "verbatim": "“Terry Fox Day (Canada)” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2027-09-06",
+   "name": "Labor Day / Labour Day (Canada)",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“Labor Day / Labour Day (Canada)” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "closed",
+     "verbatim": "“Labor Day / Labour Day (Canada)” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "modified",
+     "verbatim": "“Labor Day / Labour Day (Canada)” — Energy* and Environmental Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "modified",
+     "verbatim": "“Labor Day / Labour Day (Canada)” — Daily Gold and Silver Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts",
+     "status": "modified",
+     "verbatim": "“Labor Day / Labour Day (Canada)” — Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2027-09-30",
+   "name": "National Day for Truth and Reconciliation (Canada)",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“National Day for Truth and Reconciliation (Canada)” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "normal",
+     "verbatim": "“National Day for Truth and Reconciliation (Canada)” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2027-10-11",
+   "name": "Columbus Day / Thanksgiving Day (Canada)",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“Columbus Day / Thanksgiving Day (Canada)” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "normal",
+     "verbatim": "“Columbus Day / Thanksgiving Day (Canada)” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "normal",
+     "verbatim": "“Columbus Day / Thanksgiving Day (Canada)” — Energy* and Environmental Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "normal",
+     "verbatim": "“Columbus Day / Thanksgiving Day (Canada)” — Daily Gold and Silver Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts",
+     "status": "normal",
+     "verbatim": "“Columbus Day / Thanksgiving Day (Canada)” — Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2027-11-11",
+   "name": "Veterans Day / Remembrance Day (Canada)",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“Veterans Day / Remembrance Day (Canada)” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "normal",
+     "verbatim": "“Veterans Day / Remembrance Day (Canada)” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "normal",
+     "verbatim": "“Veterans Day / Remembrance Day (Canada)” — Energy* and Environmental Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "normal",
+     "verbatim": "“Veterans Day / Remembrance Day (Canada)” — Daily Gold and Silver Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts",
+     "status": "normal",
+     "verbatim": "“Veterans Day / Remembrance Day (Canada)” — Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2027-11-25",
+   "name": "Thanksgiving Day",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "normal",
+     "verbatim": "“Thanksgiving Day” — Canola Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "closed",
+     "verbatim": "“Thanksgiving Day” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "modified",
+     "verbatim": "“Thanksgiving Day” — Energy* and Environmental Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "modified",
+     "verbatim": "“Thanksgiving Day” — Daily Gold and Silver Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts",
+     "status": "modified",
+     "verbatim": "“Thanksgiving Day” — Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2027-12-24",
+   "name": "Christmas Day (observed) / Christmas Eve",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“Christmas Day (observed)” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "closed",
+     "verbatim": "“Christmas Day (observed)” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "closed",
+     "verbatim": "“Christmas Day (observed)” — Energy* and Environmental Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "closed",
+     "verbatim": "“Christmas Day (observed)” — Daily Gold and Silver Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts",
+     "status": "closed",
+     "verbatim": "“Christmas Day (observed)” — Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Eurex — “all derivatives” (covers FESX, FDAX, FDXM and FGBL, FGBM, FGBS, FGBX) — TRAD/TRA1 calendars",
+     "status": "closed",
+     "verbatim": "12/24/2027,Friday,TRAD,Christmas Eve (Clearing open),Local,Trading Holiday  [page caveat: “The following trading calendars are provided on a preliminary and indicative basis for the years 2027 to 2036 to support forward planning by our customers and are subject to change.”]",
+     "document": "EUREX-IND-2027-2036",
+     "tier": "T1 (operator-published but expressly INDICATIVE/PRELIMINARY — not an unconditional dated future under LAW-NO-FABRICATED-DATES)"
+    }
+   ]
+  },
+  {
+   "date": "2027-12-27",
+   "name": "Boxing Day (observed)",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“Boxing Day (observed)” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "normal",
+     "verbatim": "“Boxing Day (observed)” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "modified",
+     "verbatim": "“Boxing Day (observed)” — Energy* and Environmental Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "closed",
+     "verbatim": "“Boxing Day (observed)” — Daily Gold and Silver Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts",
+     "status": "modified",
+     "verbatim": "“Boxing Day (observed)” — Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts: open1  [footnote 1: “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices that can be found at https://www.ice.com/futures-us/notices.”]",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2027-12-31",
+   "name": "New Year’s Eve",
+   "families": [
+    {
+     "family": "Eurex — “all derivatives” (covers FESX, FDAX, FDXM and FGBL, FGBM, FGBS, FGBX) — TRAD/TRA1 calendars",
+     "status": "closed",
+     "verbatim": "12/31/2027,Friday,TRAD,New Year's Eve (Clearing open),Local,Trading Holiday  [page caveat: “The following trading calendars are provided on a preliminary and indicative basis for the years 2027 to 2036 to support forward planning by our customers and are subject to change.”]",
+     "document": "EUREX-IND-2027-2036",
+     "tier": "T1 (operator-published but expressly INDICATIVE/PRELIMINARY — not an unconditional dated future under LAW-NO-FABRICATED-DATES)"
+    }
+   ]
+  },
+  {
+   "date": "2028-01-03",
+   "name": "New Year’s Day (observed)",
+   "families": [
+    {
+     "family": "Canola Contracts",
+     "status": "closed",
+     "verbatim": "“New Year’s Day (observed)” — Canola Contracts: closed",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts",
+     "status": "normal",
+     "verbatim": "“New Year’s Day (observed)” — Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Energy* and Environmental Contracts (*Energy Includes Financial Natural Gas, Oil, Power and NGL contracts.)",
+     "status": "normal",
+     "verbatim": "“New Year’s Day (observed)” — Energy* and Environmental Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Daily Gold and Silver Contracts",
+     "status": "normal",
+     "verbatim": "“New Year’s Day (observed)” — Daily Gold and Silver Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    },
+    {
+     "family": "Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts",
+     "status": "normal",
+     "verbatim": "“New Year’s Day (observed)” — Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts: open",
+     "document": "IFUS-CAL-2027",
+     "tier": "T1"
+    }
+   ]
+  }
+ ],
+ "missing": [
+  "CFE 2027 holiday schedule — NOT PUBLISHED as of 2026-09-12. cboe.com/about/hours/us-futures carries only “2026 Futures Holiday Schedule”; the CSV endpoint cboe.com/us/futures/holidays/csv/ ignores a ?year= parameter and returns the same 2026 rows; the CFE regulatory-circular index for 2026 lists no 2027 holiday circular. Closed by: the Cboe 2027 futures holiday schedule when Cboe publishes it (watch cboe.com/about/hours/us-futures and cboe.com/us/futures/regulation/circulars).",
+  "CFE — interpretive step, not a source gap: on New Year’s Day, MLK, Presidents’ Day, Good Friday, Memorial Day, Juneteenth, Independence Day Observed, Labor Day and Thanksgiving the table prints “Regular Trading Hours: None” together with a non-empty Extended Trading Hours string (e.g. MLK “5:00 PM (Sun) to 10:30 AM (Mon) and 5:00 PM (Mon) to 8:30 AM (Tue)”). These are recorded as an early close of the overnight session at the stated instant on the holiday date, except 2026-01-01 (recorded closed: no session is listed as running into 1 January) and 2026-12-25 (“None / None”, a full closure). The verbatim rows are kept so the reader can re-derive the reading; a CFE session-state feed (T2) or a CFE notice restating the holiday session in prose would settle it definitively.",
+  "Eurex 2027 — published ONLY on an expressly indicative basis and therefore NOT an unconditional dated future under LAW-NO-FABRICATED-DATES. eurex.com/ex-en/trade/trading-calendar/indicative-trading-calendars: “The following trading calendars are provided on a preliminary and indicative basis for the years 2027 to 2036 … and are subject to change.” The firm “Holiday regulations” page has a 2026 section only, and the calendar landing page offers only a 2026 PDF. The 2027 rows in this report are carried with that caveat and must not be encoded as firm rows. Closed by: the Eurex “Trading Calendar 2027” PDF and the 2027 section of the Holiday regulations page (Eurex issued the 2026 PDF on 2026-07-02, so expect the 2027 one around mid-2026+1).",
+  "Eurex 2026 — additional German closures for FDAX/FDXM unresolved. The Trading Calendar 2026 PDF states: “Eurex is closed for trading and exercise in German equity and equity index derivatives as well as ETF and ETC derivatives which are based on Xetra® listings: to be announced.” DAX/Mini-DAX futures are German equity index derivatives, so this line could add closures beyond the seven all-derivatives days. The day-by-day Holiday regulations page lists no German-specific closure anywhere in 2026, and German Unity Day 2026-10-03 falls on a Saturday, so the practical exposure is probably nil — but the operator has not said so. Closed by: a Eurex announcement resolving the “to be announced” line, or the 2026 Xetra trading calendar read as the operator's own statement.",
+  "ICE Futures U.S. 2026 — no per-holiday Exchange Notice retrieved for Martin Luther King Day (2026-01-19) or Presidents Day (2026-02-16). The 2026 calendar marks Energy/Environmental, Daily Gold and Silver and the Currency/Stock/SOFR/MSCI Bond/Mortgage Index groups “open1” on both days, footnoted “Trading Hours for these contracts will be announced in advance of the respective holiday via Exchange Notices”, so the days trade on non-regular hours whose instants are unrecorded here. The ice.com/futures-us/notices listing only reaches back to February 2026 and web.archive.org was unreachable, so the notices could not be recovered. Closed by: those two 2026 Exchange Notices (ice.com/publicdocs/futures_us/exchange_notices/…), or ICE Trade Support.",
+  "ICE Futures U.S. 2026 — late-year instants not yet issued at retrieval: Thanksgiving Day 2026-11-26 (“open1” for energy, metals and the financial/index groups; closed for the softs), the day after Thanksgiving 2026-11-27, Christmas Eve 2026-12-24 and Boxing Day 2026-12-28 (“open1”). Note that 2026-11-27 and 2026-12-24 are not holidays on the calendar at all, so their customary early closes exist only in the per-holiday notices. Closed by: the 2026 Thanksgiving and Christmas/New Year IFUS Exchange Notices, expected Sep–Nov 2026.",
+  "ICE Futures U.S. 2027 — every day the 2027 calendar marks “open1” (MLK Jan 18, Presidents Day Feb 15, Good Friday Mar 26 for the financial/index group, Memorial Day May 31, Juneteenth Jun 18, Independence Day observed Jul 5, Labor Day Sep 6, Thanksgiving Nov 25, Boxing Day observed Dec 27) carries no instant by construction: ICE announces those hours “in advance of the respective holiday via Exchange Notices”. The 2027 statuses in this report are the calendar's open/closed/modified only. Closed by: the 2027 per-holiday Exchange Notices as they are issued.",
+  "ICE Futures U.S. — Daily Gold and Silver may close on further days not on the calendar: “Daily Gold and Silver contracts will likely be closed on other trading days that are LBMA Holidays. Details of such closures will be announced in advance of the respective holiday via Exchange Notices.” No such 2026/2027 dates are recorded here. Closed by: the individual LBMA-holiday Exchange Notices (two 2026 examples are visible in the notices index: the 2026-05-04 and 2026-08-31 delayed-open / no-Daily-Gold-and-Silver notices, not retrieved in this task).",
+  "Coinbase Derivatives 2026 — no Market Notice for Martin Luther King Day (2026-01-19) is listed on coinbase.com/derivatives/market-notices (notice numbers 26-01, 26-02 and 26-04 are absent from the table), and CDE publishes no standing annual holiday calendar — coinbase.com/derivatives/holiday-calendar returns 404. Whether CDE's 23x5 energy/metal/equity products were closed on 2026-01-19 is therefore unsourced. Closed by: CDE Market Notice 26-01/26-02/26-04 if they exist, or derivatives@coinbase.com.",
+  "Coinbase Derivatives 2026 — Thanksgiving (2026-11-26) and Christmas (2026-12-25) notices had not been issued as of 2026-09-12 (the 2025 equivalents, 25-37 and 25-41, were issued in November/December 2025). No 2027 CDE holiday document of any kind exists yet. Closed by: the CDE Market Notices listing as those notices appear.",
+  "Coinbase Derivatives — moving target on which products are 24x7. Gold (GOL) and Silver (SLR) moved from the 23x5 tier to the 24x7 tier on trade date 2026-06-15 (Notice 26-19.1, restated in 26-27.1), which is why the same venue shows Daily-Gold/Silver-style closures before that date and open-through-holiday after it. Notices 26-25 (“Removal of Weekly 1-Hour Friday Maintenance Window”) and 26-33/26-33.1/26-33.2 (“24x7 Transition … Final Friday Maintenance Windows”, effective from 2026-09-11) further change the baseline grid and were NOT retrieved in this task — they belong to the CDE regular-schedule work, not the holiday table, but they will change how the late-2026 holiday notices read. Closed by: retrieving 26-19.1, 26-25 and 26-33.x.",
+  "SMFE (Small Exchange) — NO 2026 or 2027 holiday calendar is published, because the DCM is dormant. CFTC press release 9272-26 (2026-07-24): the Division of Market Oversight “issued a no-action letter to Kraken Derivatives Exchange Inc., formerly Small Exchange Inc., a designated contract market, which addresses certain procedures related to dormancy”, extending CFTC Letter No. 25-46. smallexchange.com still serves a home page (last published 2025-11-15, contact dcm@kraken.com) but every subpage — /reference/info-hub, /documents, /reference/regulation, /futures-markets, /regulation-page — returns 403 AccessDenied, and nothing on the site links a trading-hours or holiday page. This is a T3 (regulator) basis for a negative, not an operator statement. Closed by: an operator statement from Kraken Derivatives Exchange when it relists products (the CFTC relief runs to an October 2026 deadline); until then SMFE should be treated as dormant under LAW-SERVICE-TIERS rather than as a served identity with a missing table.",
+  "Tooling limitation affecting every venue above: web.archive.org was unreachable from this machine for the entire session (curl: (7) Failed to connect to web.archive.org port 443), so no CDX prefix search or id_ replay could be used to recover notices that have rotated off the operators' own listings (this is what blocks the ICE MLK and Presidents Day 2026 notices in particular). Re-run those retrievals from a host with archive.org reachable."
+ ],
+ "saved_json": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cfe-eurex-ice-cde-smfe-2026-2027.json",
+ "documents": {
+  "CBOE-HOURS-USFUT-2026": "CBOE-HOURS-USFUT-2026 (cboe.com/about/hours/us-futures, “2026 Futures Holiday Schedule”) + CBOE-CFE-CSV-2026 (cboe.com/us/futures/holidays/csv/, `# Generated: 2026:09:11 16:16:09`)",
+  "EUREX-HOLREG-2026": "EUREX-HOLREG-2026 (eurex.com/ex-en/trade/trading-calendar/holiday-regulations, § 2026) corroborated by EUREX-TC-2026 (Trading Calendar 2026 PDF, p.2 “Overview of holidays by countries”)",
+  "IFUS-CAL-2026": "IFUS-CAL-2026 (ice.com/publicdocs/futures/IFUS_Trading_Hours_Holiday_Calendar.pdf, “ICE Futures U.S. — June 9, 2025 — 2026 Trading Holiday Calendar”)",
+  "CDE-MN-25-42": "CDE-MN-25-42 (assets.ctfassets.net … Market_Notice_25-42_New_Years_Day.pdf, Notice 25-42, Date 11/25/2025, “Coinbase Derivatives 2026 New Year’s Day”)",
+  "CDE-NOTICES-INDEX": "CDE-NOTICES-INDEX (coinbase.com/derivatives/market-notices, retrieved 2026-09-12 04:24 UTC)",
+  "CDE-MN-26-05": "CDE-MN-26-05 (Market_Notice_26-05_Presidents-_Day_Holiday.pdf, Notice 26-05, Date 02/02/2026)",
+  "IFUS-NOTICE-2026-GOODFRIDAY": "IFUS-NOTICE-2026-GOODFRIDAY (ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_2026_GoodFridayHoliday_20260202.pdf, February 2, 2026)",
+  "CDE-MN-26-12": "CDE-MN-26-12 (CDE_Market_Notice_26-12_Good_Friday_Holiday.pdf, Notice 26-12, Date 03/19/2026)",
+  "IFUS-NOTICE-2026-MEMORIAL": "IFUS-NOTICE-2026-MEMORIAL (ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_2026_Memorial_DayHoliday_20260310.pdf, MARCH 10, 2026)",
+  "CDE-MN-26-23": "CDE-MN-26-23 (CDE_Market_Notice_26-23_2026_Memorial_Day.pdf, Notice 26-23, Date 05/15/2026)",
+  "IFUS-NOTICE-2026-JUNETEENTH": "IFUS-NOTICE-2026-JUNETEENTH (ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_2026_JuneteenthHoliday_20260320.pdf, March 20, 2026)",
+  "CDE-MN-26-27.1": "CDE-MN-26-27.1 (CDE_Market_Notice_26-27.1_Amendment_to_26.27_2026_Juneteenth_Schedule_for_Gold_Silver_24x7.pdf, Notice 26-27.1, Date 06/15/2026 — supersedes Notice 26-27 of 06/10/2026)",
+  "IFUS-NOTICE-2026-INDEPENDENCE": "IFUS-NOTICE-2026-INDEPENDENCE (ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US__IndDayHoliday_.pdf, JUNE 26, 2026, “**Revised (MSCI Index, Stock Index, ICE Mortgage, and SOFR)”)",
+  "CDE-MN-26-29": "CDE-MN-26-29 (CDE_Market_Notice_26-29__2026_Independence_Day_Schedule.pdf, Notice 26-29, Date 06/24/2026)",
+  "IFUS-NOTICE-2026-LABORDAY": "IFUS-NOTICE-2026-LABORDAY (ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_2026_LaborDayHoliday_20260708.pdf, JULY 8, 2026)",
+  "CDE-MN-26-36": "CDE-MN-26-36 (Market_Notice_26-36__2026_Labor_Day.pdf, Notice 26-36, Date 08/25/2026)",
+  "IFUS-NOTICE-2026-COLUMBUS": "IFUS-NOTICE-2026-COLUMBUS (ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_2026_Columbus_Day_Thanksgiving_Canada_8.28.26.pdf, August 28, 2026)",
+  "EUREX-IND-2027-2036": "EUREX-IND-2027-2036 (eurex.com indicative-trading-calendars.csv + its page text)",
+  "IFUS-CAL-2027": "IFUS-CAL-2027 (ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_Exchange_Notice-2027_Holiday_Calendar_20260604.pdf, “ICE Futures U.S. — June 4, 2026 — 2027 Trading Holiday Calendar”)"
+ }
+}

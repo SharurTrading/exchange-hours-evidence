@@ -1,0 +1,555 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Exchange Services - Trading and Currency Holiday Calendar</title><link type="text/css" href="/exchanges/resources/styles/ssecom-default.css?20120907" rel="stylesheet"/><link type="text/css" href="/exchanges/resources/styles/ssecom-dojocalendar.css" rel="stylesheet"/><link type="text/css" href="/exchanges/resources/styles/Tooltip.css" rel="stylesheet"/><link type="text/css" href="/exchanges/javascript/dojo-1.1.2a/release/dojo/dijit/themes/dijit.css" rel="stylesheet"/><link rel="apple-touch-icon" href="/exchanges/resources/images/icons/touch-icon-six-red.png"/><link rel="icon" type="image/png" href="/etc/designs/ihcc/images/icons/favicon.png"/><link rel="shortcut icon" type="image/png" href="/etc/designs/ihcc/images/icons/favicon.png"/><script type="text/javascript" language="javascript">
+          
+          function hasData(text) {
+          return text.value != null && text.value.length > 0;
+          }
+
+          
+          </script><script type="text/javascript" language="javascript">
+          function navAction(state, id) {
+          if (state == "expanded") {
+          
+          dojo.style('t_' + id + '_collapsed', 'display', 'block');
+          dojo.style('t_' + id + '_expanded', 'display', 'none');
+          } else if (state == "collapsed") {
+          
+          dojo.style('t_' + id + '_collapsed', 'display', 'none');
+          dojo.style('t_' + id + '_expanded', 'display', 'block');
+          }
+          }
+        </script><script type="text/javascript" language="javascript">
+          function doHover(obj) {
+          obj.className += "-hover";
+          }
+
+          function undoHover(obj) {
+          obj.className = obj.className.replace(/\b-hover\b/,'');
+          }
+        </script><script type="text/javascript" language="javascript">
+        var quicklinkTitle = 'Trading and Currency Holiday Calendar';
+      </script><script type="text/javascript" language="javascript">
+        djConfig = {
+          usePlainJson: true,
+          isDebug: false,
+          parseOnLoad: true,
+          locale:
+        'en-us'
+        };
+      </script><script language="JavaScript" type="text/javascript">
+        var dojoURL = window.location.protocol + "//" + window.location.host + "/exchanges/javascript/dojo-1.1.2a/release/dojo/dojo/dojo.js";
+        document.write(unescape('%3Cscript language="JavaScript" type="text/javascript" src="' + dojoURL + '"%3E;%3C/script%3E'));
+      </script><script type="text/javascript" src="/exchanges/javascript/dojo-1.1.2a/release/dojo/dojo/swxDojo.js">;</script><script type="text/javascript" src="/exchanges/javascript/common/logger.js">;</script><script type="text/javascript" src="/exchanges/javascript/fqs/QuotePlayer.js">;</script><script type="text/javascript" src="/exchanges/javascript/common/md5.js">;</script><script type="text/javascript" src="/exchanges/resources/scripts/tableConfiguration.js">;</script><script type="text/javascript" src="/exchanges/resources/scripts/metaNavigation.js">;</script><script type="text/javascript" src="/exchanges/resources/scripts/topNavigation.js">;</script><script type="text/javascript" src="/exchanges/resources/scripts/htmlCoordinates.js">;</script><script type="text/javascript" src="/exchanges/resources/scripts/fqs2/tickerMoviePlayer.js">;</script><script type="text/javascript" src="/exchanges/resources/scripts/fqs2/movieUpdater.js">;</script><script type="text/javascript" src="/exchanges/resources/scripts/chartConfig.js">;</script><script type="text/javascript" src="/exchanges/javascript/charts/chart_main.js">;</script><script type="text/javascript" src="/exchanges/javascript/charts/chart_dataUpdater.js">;</script><script type="text/javascript" src="/exchanges/javascript/charts/chart_drawer.js">;</script><script type="text/javascript" src="/exchanges/javascript/charts/chart_graphDrawer.js">;</script><script type="text/javascript" src="/exchanges/javascript/charts/chart_axisDrawer.js">;</script><script type="text/javascript" src="/exchanges/javascript/charts/chart_valuesHelper.js">;</script><script type="text/javascript" src="/exchanges/javascript/charts/chart_valuesHelper_Advanced.js">;</script><script type="text/javascript" src="/exchanges/javascript/charts/chart_functions_Advanced.js">;</script><script type="text/javascript" src="/exchanges/javascript/charts/chart_slider_Advanced.js">;</script><script type="text/javascript" src="/exchanges/javascript/charts/chart_addonDrawer_Advanced.js">;</script><script type="text/javascript" src="/exchanges/javascript/charts/chart_eventDrawer_Advanced.js">;</script><script type="text/javascript" src="/exchanges/javascript/charts/chart_indicators_Advanced.js">;</script><script type="text/javascript" src="/exchanges/javascript/charts/chart_config_Advanced.js">;</script><script type="text/javascript" src="/exchanges/javascript/charts/chart_JSON_converter.js">;</script><script type="text/javascript" language="javascript">
+        dojo.require("dojo.parser");
+        dojo.require("dojox.grid.Grid");
+        dojo.require("dojox.grid._data.model");
+        dojo.require("dijit.form.Button");
+        dojo.require("dijit.Menu");
+        dojo.require("dijit.Tooltip");
+      </script><script type="text/javascript" src="/exchanges/resources/scripts/quickLinks.js">;</script><script type="text/javascript" src="/exchanges/javascript/common/sidebar-clock.js">;</script><script type="text/javascript" language="javascript">
+          balancerIdDefinition = "BALANCERID=b.mplplitfpy011838";
+        </script><script type="text/javascript" language="javascript">
+            var quickLinks = new QuickLinks("quicklinksTable",
+            "quicklinks-ipo",
+            [ quicklinkTitle, window.location.href ],
+            {
+            add_link_text:
+            "Add this page",
+
+            add_img_tooltip:
+            "Add this page",
+
+            rem_img_tooltip:
+            "Remove this page"
+            },
+            []);
+          
+            dojo.addOnLoad(function() { quickLinks.displayQuickLinks() } );
+            
+              dojo.addOnLoad(function() { setInterval ( "setJSDateTime()", 1000 ) });
+            </script><script type="text/javascript" language="javascript">
+      DELAYED_15_IMG_SRC = "/exchanges/resources/images/icons_inv/delay_15.png";
+      DELAYED_0_IMG_SRC = "/exchanges/resources/images/icons_inv/delay_0.png";
+      
+          DELAYED_15_TXT_STR = "15 minutes delayed";
+          DELAYED_0_TXT_STR = "Real time";
+          CHART_MONTH_LABELS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        
+      // Shows alternative index chart
+      function showBox(setName, key) {
+      // Get the list of indices in this set
+      var setList = pageIndexList[setName];
+      var index = 0;
+      for (var i=0; i < setList.length; i++) {
+
+      // For the required index, switch on visibility and load it
+      if (setList[i] == key) {
+      index = i;
+      dojo.style(setName + "Box" + key, "visibility", "");
+      dojo.addClass(dojo.byId("chartBox"+key), "chartBox-active");
+      dojo.eval("smallchart"+setList[i] +".getAjaxValues(\"id\", smallchart"+setList[i]+".id, undefined, true)");
+      } else {
+
+      // For the others, switch off visibilty
+      dojo.style(setName + "Box" + setList[i], "visibility", "hidden");
+      dojo.removeClass(dojo.byId("chartBox"+setList[i]), "chartBox-active");
+      }
+      }
+      return index;
+      }
+    </script><script language="JavaScript" type="text/javascript" src="/exchanges/javascript/common/util.js">;
+    </script><script language="JavaScript" type="text/javascript" src="/exchanges/javascript/common/error.js">;
+    </script><script language="JavaScript" type="text/javascript" src="/exchanges/javascript/common/dataManager.js">;
+    </script><script language="JavaScript" type="text/javascript" src="/exchanges/resources/scripts/tradingCalendar.js">;
+    </script></head><body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" style="overflow-y: scroll" onload=""><table border="0" cellspacing="0" cellpadding="0" height="100%" width="100%"><tr valign="top" height="100%"><td align="center" base-dir="http://mplplitfpy01:1838/ssecom"><table border="0" cellpadding="0" cellspacing="0" height="100%"><tr><td valign="top"><table border="0" cellpadding="0" cellspacing="0" width="12" height="100%" id="left-bg"><tr><td height="130" width="12">&nbsp;</td></tr><tr><td height="208" background="/exchanges/resources/images/layout/shadow_left_blue.png">&nbsp;</td></tr><tr><td height="100%" valign="top" background="/exchanges/resources/images/layout/shadow_left_white.gif">&nbsp;</td></tr></table></td><td style="vertical-align:top;"><table border="0" cellpadding="0" cellspacing="0" height="100%" id="sublayout-default-content-table" style="width: 992px"><tr><td height="130" style="vertical-align:top;" id="area-head"><table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" style="position: relative"><tr><td><div class="six_brand"><a href="/exchanges/index_en.html" title="SIX Home"><img src="/exchanges/resources/images/layout/six_logo.gif" border="0"/></a></div><div class="six_corp_nav"><ul><li class="first"><a href="/exchange-services">The Swiss Stock Exchange</a></li><li><a href="/banking-services">Banking Services</a></li><li><a href="/financial-information">Financial Information</a></li><li><a href="/innovation">Innovation</a></li><li><a href="/careers">Careers</a></li><li class="last"><a href="/">SIX</a></li></ul></div></td></tr><tr><td height="100%" width="100%">&nbsp;</td><td style="vertical-align: bottom;"><table border="0" cellpadding="0" cellspacing="0" height="65" width="100%"><tr style="vertical-align: bottom;"><td width="100%">&nbsp;</td><td class="meta-nav-border"><image src="/exchanges/resources/images/trans.gif" width="1"/></td><td nowrap="nowrap" onclick="
+                                  window.location.href='/exchanges/contact_form_en.html';
+                                " onmouseover="
+                                  this.className='meta-nav meta-nav-inactiv-over';
+                                " onmouseout="
+                                  this.className='meta-nav meta-nav-inactiv';
+                                " class="meta-nav meta-nav-inactiv"><span>Contact<a href="/exchanges/contact_form_en.html" style="display:none">Contact</a></span></td><td class="meta-nav-border"><image src="/exchanges/resources/images/trans.gif" width="1"/></td><td class="meta-nav meta-nav-button" style="white-space: nowrap" id="meta-nav-lang-button">English<span class="meta-nav-arrow" name="meta-nav-button-arrow"><image src="/exchanges/resources/images/layout/trans.gif" width="5" height="9"/></span></td><td class="meta-nav-border" width="18"><image src="/exchanges/resources/images/trans.gif" width="18" height="37"/></td></tr></table></td></tr></table></td></tr><tr><td valign="top" style="border-bottom:#9A9B9C solid 1px; background-color:#FFFFFF;"><table border="0" id="sublayout-default-content-table2" cellpadding="0" cellspacing="0" height="100%" width="100%"><tr><td id="area-mainnav" colspan="3"><div id="topnav"><div id="topnav-1st-lev"><ul class="clearfix"><li id="topnav-1st-lev-item-1" class=" first"><a href="/exchanges/index_en.html"><span>Home</span></a></li><li id="topnav-1st-lev-item-2" onmouseover="topNavigation2.showFlyout();"><a href="/exchanges/news/overview_en.html"><span>News</span></a></li><li id="topnav-1st-lev-item-3" onmouseover="topNavigation3.showFlyout();" class=" active"><a href="/exchanges/shares/overview_en.html"><span>Market Data</span></a></li><li id="topnav-1st-lev-item-4" onmouseover="topNavigation4.showFlyout();"><a href="/exchanges/participants_en.html"><span>Participants</span></a></li><li id="topnav-1st-lev-item-5" onmouseover="topNavigation5.showFlyout();"><a href="/exchanges/issuers_en.html"><span>Issuers</span></a></li><li id="topnav-1st-lev-item-6" onmouseover="topNavigation6.showFlyout();"><a href="/exchanges/services/mymarketpulse/login_en.html"><span>Investors</span></a></li><li id="topnav-1st-lev-item-7" onmouseover="topNavigation7.showFlyout();"><a href="/exchanges/education_en.html"><span>Education</span></a></li><li id="topnav-1st-lev-item-8" onmouseover="topNavigation8.showFlyout();"><a href="/exchanges/profile/profil_en.html"><span>Profile</span></a></li><li class="search-form"><form name="search" method="get" action="https://www.six-group.com/en/services/search.html" accept-charset="UTF-8"><input type="hidden" value="relevance" name="sortBy"/><input id="topSearchInputField" type="text" value="Search for..." name="as_q" onfocus="if (this.value=='Search for...') {this.value='';this.style.color='#000000';};" onblur="if (this.value=='') {this.value='Search for...';this.style.color='#C3C3C4';};"/><img src="/exchanges/resources/images/layout/search_arrow.gif" id="searcharrow" name="srcharrow" onmouseover="showSearchDropdown();return false;" onmouseout="hideSearchDropdown();return false;"/></form><img src="/exchanges/resources/images/layout/button_search.gif" id="search-button" onmouseover="this.src='/exchanges/resources/images/layout/button_search_a.gif';" onmouseout="this.src='/exchanges/resources/images/layout/button_search.gif';" onclick="submitSearchForm('Search for...');"/><script type="text/javascript" language="javascript">
+        timeout = setTimeout("toggleSearchDropdown();", 0);;
+        dropDownCurrent = 0;
+        dropDownNext = 0;
+
+        function showSearchDropdown() {
+          dropDownNext = 1;
+          clearTimeout(timeout);
+          timeout = setTimeout("toggleSearchDropdown();", 150);
+        }
+
+        function hideSearchDropdown() {
+          dropDownNext = 0;
+          clearTimeout(timeout);
+          timeout = setTimeout("toggleSearchDropdown();", 300);
+        }
+
+        function toggleSearchDropdown() {
+          if (dropDownNext == 1 && dropDownCurrent == 0 ) {
+            posX = findPosX(document.getElementById('searcharrow'));
+            document.getElementById('searchDropdown').style.left=posX-145;
+            document.getElementById('searchDropdown').style.visibility='visible';
+            document['srcharrow'].src='/exchanges/resources/images/layout/search_arrow_a.gif';
+            dropDownCurrent = 1;
+          }
+          if (dropDownNext==0 && dropDownCurrent == 1 && document['srcharrow'].src.indexOf('search_arrow_a')>0) {
+            document.getElementById('searchDropdown').style.visibility='hidden';
+            document['srcharrow'].src="/exchanges/resources/images/layout/search_arrow.gif";
+            dropDownCurrent = 0;
+          }
+        }
+
+        function findPosX(obj) {
+           var curleft = 0;
+           if(obj.offsetParent) {
+              while(obj.offsetParent) {
+                 curleft += obj.offsetLeft
+                 obj = obj.offsetParent;
+              }
+           }
+           else if(obj.x)
+             curleft = obj.x;
+           return curleft;
+        }
+
+        function submitSearchForm(helpTxt) {
+          dojo.query('input#topSearchInputField').forEach(
+              function(scriptTag) {
+                if (scriptTag.value == helpTxt) {
+                   scriptTag.value='';
+                };
+              }
+          );
+          document.search.submit();
+        }
+      </script></li></ul></div><div id="topnav-flyout-border-suppression-2" class="topnav-flyout-border-suppression"><img src="/exchanges/resources/images/trans.gif" height="1" width="1"/></div><div id="topnav-flyout-2" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-2-item-1" class="topnav-flyout-list"><a href="/exchanges/news/sse_messages/2020_en.html">Exchange Messages</a></li><li id="topnav-flyout-2-item-2" class="topnav-flyout-list"><a href="/exchanges/news/media_releases/2020_en.html">Media Releases</a></li><li id="topnav-flyout-2-item-3" class="topnav-flyout-list"><a href="/exchanges/news/business_updates_en.html">Business Updates</a></li><li id="topnav-flyout-2-item-4" class="topnav-flyout-list"><a href="/exchanges/news/events_en.html">Events</a></li><li id="topnav-flyout-2-item-5" class="topnav-flyout-list"><a href="/exchanges/news/newsboard_en.html">Newsboard</a></li><li id="topnav-flyout-2-item-6" class="topnav-flyout-list"><a href="/exchanges/news/published_notifications_en.html">Published Notifications</a></li><li id="topnav-flyout-2-item-7" class="topnav-flyout-list"><a href="/exchanges/news/rssfeeds_en.html">RSS Newsfeeds</a></li></ul><script language="JavaScript" type="text/javascript">
+                    var topNavTab2 = document.getElementById('topnav-1st-lev-item-2');
+                    var topNavFlyout2 = document.getElementById('topnav-flyout-2');
+                    var topNavFlyoutBorderSuppression2 = document.getElementById('topnav-flyout-border-suppression-2');
+                    var topNavigation2 = new TopNavigation(topNavTab2, topNavFlyout2, topNavFlyoutBorderSuppression2, false, false);
+
+                    
+
+                    
+                    dojo.addOnLoad(function() {
+
+
+                      
+                      dojo.connect(topNavTab2, 'onmouseout', function(event) {
+                        if ( topNavigation2.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation2.hideFlyout();
+                        }
+                      });
+                      
+                      dojo.connect(topNavFlyout2, 'onmouseout', function(event) {
+                        if ( topNavigation2.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation2.hideFlyout();
+                        }
+                      });
+                    });
+                  </script></div><div id="topnav-flyout-border-suppression-3" class="topnav-flyout-border-suppression"><img src="/exchanges/resources/images/trans.gif" height="1" width="1"/></div><div id="topnav-flyout-3" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-3-item-1" class="topnav-flyout-list"><a href="/exchanges/shares/overview_en.html">Shares</a></li><li id="topnav-flyout-3-item-2" class="topnav-flyout-list"><a href="/exchanges/bonds/overview_en.html">Bonds</a></li><li id="topnav-flyout-3-item-3" class="topnav-flyout-list"><a href="/exchanges/funds/overview_en.html">ETFs &amp; Funds</a></li><li id="topnav-flyout-3-item-4" class="topnav-flyout-list"><a href="/exchanges/exchange_traded_products/overview_en.html">ETPs</a></li><li id="topnav-flyout-3-item-5" class="topnav-flyout-list"><a href="/exchanges/indices/overview_en.html">Indices</a></li><li id="topnav-flyout-3-item-6" class="topnav-flyout-list"><a href="/exchanges/statistics/overview_en.html">Statistics</a></li><li id="topnav-flyout-3-item-7" class="topnav-flyout-list"><a href="/exchanges/market_data/data_services_en.html">Data Services</a></li></ul><script language="JavaScript" type="text/javascript">
+                    var topNavTab3 = document.getElementById('topnav-1st-lev-item-3');
+                    var topNavFlyout3 = document.getElementById('topnav-flyout-3');
+                    var topNavFlyoutBorderSuppression3 = document.getElementById('topnav-flyout-border-suppression-3');
+                    var topNavigation3 = new TopNavigation(topNavTab3, topNavFlyout3, topNavFlyoutBorderSuppression3, true, false);
+
+                    
+                      var topNavigationActive = topNavigation3;
+                    
+
+                    
+                    dojo.addOnLoad(function() {
+
+
+                      
+                      dojo.connect(topNavTab3, 'onmouseout', function(event) {
+                        if ( topNavigation3.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation3.hideFlyout();
+                        }
+                      });
+                      
+                      dojo.connect(topNavFlyout3, 'onmouseout', function(event) {
+                        if ( topNavigation3.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation3.hideFlyout();
+                        }
+                      });
+                    });
+                  </script></div><div id="topnav-flyout-border-suppression-4" class="topnav-flyout-border-suppression"><img src="/exchanges/resources/images/trans.gif" height="1" width="1"/></div><div id="topnav-flyout-4" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-4-item-1" class="topnav-flyout-list"><a href="/exchanges/participants/participation_en.html">Participation</a></li><li id="topnav-flyout-4-item-2" class="topnav-flyout-list"><a href="/exchanges/participants/trading_en.html">Trading</a></li><li id="topnav-flyout-4-item-3" class="topnav-flyout-list"><a href="/exchanges/participants/reporting_en.html">Reporting</a></li><li id="topnav-flyout-4-item-4" class="topnav-flyout-list"><a href="/exchanges/participants/clearing_en.html">Clearing &amp; Settlement</a></li><li id="topnav-flyout-4-item-5" class="topnav-flyout-list"><a href="/exchanges/participants/regulation_en.html">Regulation</a></li><li id="topnav-flyout-4-item-6" class="topnav-flyout-list"><a href="/exchanges/participants/contact_support/member_services_en.html">Contact &amp; Support</a></li></ul><script language="JavaScript" type="text/javascript">
+                    var topNavTab4 = document.getElementById('topnav-1st-lev-item-4');
+                    var topNavFlyout4 = document.getElementById('topnav-flyout-4');
+                    var topNavFlyoutBorderSuppression4 = document.getElementById('topnav-flyout-border-suppression-4');
+                    var topNavigation4 = new TopNavigation(topNavTab4, topNavFlyout4, topNavFlyoutBorderSuppression4, false, false);
+
+                    
+
+                    
+                    dojo.addOnLoad(function() {
+
+
+                      
+                      dojo.connect(topNavTab4, 'onmouseout', function(event) {
+                        if ( topNavigation4.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation4.hideFlyout();
+                        }
+                      });
+                      
+                      dojo.connect(topNavFlyout4, 'onmouseout', function(event) {
+                        if ( topNavigation4.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation4.hideFlyout();
+                        }
+                      });
+                    });
+                  </script></div><div id="topnav-flyout-border-suppression-5" class="topnav-flyout-border-suppression"><img src="/exchanges/resources/images/trans.gif" height="1" width="1"/></div><div id="topnav-flyout-5" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-5-item-1" class="topnav-flyout-list"><a href="/exchanges/issuers/marketplace_en.html">Swiss Financial Marketplace</a></li><li id="topnav-flyout-5-item-2" class="topnav-flyout-list"><a href="/exchanges/issuers/equities_en.html">Equities</a></li><li id="topnav-flyout-5-item-3" class="topnav-flyout-list"><a href="/exchanges/issuers/bonds_en.html">Bonds</a></li><li id="topnav-flyout-5-item-4" class="topnav-flyout-list"><a href="/exchanges/issuers/products_en.html">Products</a></li><li id="topnav-flyout-5-item-5" class="topnav-flyout-list"><a href="/exchanges/issuers/services_en.html">Services</a></li><li id="topnav-flyout-5-item-6" class="topnav-flyout-list"><a href="/exchanges/issuers/issuers_contact_en.html">Contact &amp; Support</a></li></ul><script language="JavaScript" type="text/javascript">
+                    var topNavTab5 = document.getElementById('topnav-1st-lev-item-5');
+                    var topNavFlyout5 = document.getElementById('topnav-flyout-5');
+                    var topNavFlyoutBorderSuppression5 = document.getElementById('topnav-flyout-border-suppression-5');
+                    var topNavigation5 = new TopNavigation(topNavTab5, topNavFlyout5, topNavFlyoutBorderSuppression5, false, false);
+
+                    
+
+                    
+                    dojo.addOnLoad(function() {
+
+
+                      
+                      dojo.connect(topNavTab5, 'onmouseout', function(event) {
+                        if ( topNavigation5.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation5.hideFlyout();
+                        }
+                      });
+                      
+                      dojo.connect(topNavFlyout5, 'onmouseout', function(event) {
+                        if ( topNavigation5.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation5.hideFlyout();
+                        }
+                      });
+                    });
+                  </script></div><div id="topnav-flyout-border-suppression-6" class="topnav-flyout-border-suppression"><img src="/exchanges/resources/images/trans.gif" height="1" width="1"/></div><div id="topnav-flyout-6" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-6-item-1" class="topnav-flyout-list"><a href="/exchanges/services/mymarketpulse/login_en.html">myMarketpulse</a></li><li id="topnav-flyout-6-item-2" class="topnav-flyout-list"><a href="/exchanges/services/tools_en.html">Tools</a></li><li id="topnav-flyout-6-item-3" class="topnav-flyout-list"><a href="/exchanges/knowhow/overview_en.html">Know-how</a></li></ul><script language="JavaScript" type="text/javascript">
+                    var topNavTab6 = document.getElementById('topnav-1st-lev-item-6');
+                    var topNavFlyout6 = document.getElementById('topnav-flyout-6');
+                    var topNavFlyoutBorderSuppression6 = document.getElementById('topnav-flyout-border-suppression-6');
+                    var topNavigation6 = new TopNavigation(topNavTab6, topNavFlyout6, topNavFlyoutBorderSuppression6, false, false);
+
+                    
+
+                    
+                    dojo.addOnLoad(function() {
+
+
+                      
+                      dojo.connect(topNavTab6, 'onmouseout', function(event) {
+                        if ( topNavigation6.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation6.hideFlyout();
+                        }
+                      });
+                      
+                      dojo.connect(topNavFlyout6, 'onmouseout', function(event) {
+                        if ( topNavigation6.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation6.hideFlyout();
+                        }
+                      });
+                    });
+                  </script></div><div id="topnav-flyout-border-suppression-8" class="topnav-flyout-border-suppression"><img src="/exchanges/resources/images/trans.gif" height="1" width="1"/></div><div id="topnav-flyout-8" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-8-item-1" class="topnav-flyout-list"><a href="/exchanges/profile/management_en.html">Management</a></li><li id="topnav-flyout-8-item-2" class="topnav-flyout-list"><a href="/exchanges/profile/network/network_en.html">Network</a></li><li id="topnav-flyout-8-item-3" class="topnav-flyout-list"><a href="/exchanges/profile/banner_advertisement_en.html">Banner Advertisement</a></li></ul><script language="JavaScript" type="text/javascript">
+                    var topNavTab8 = document.getElementById('topnav-1st-lev-item-8');
+                    var topNavFlyout8 = document.getElementById('topnav-flyout-8');
+                    var topNavFlyoutBorderSuppression8 = document.getElementById('topnav-flyout-border-suppression-8');
+                    var topNavigation8 = new TopNavigation(topNavTab8, topNavFlyout8, topNavFlyoutBorderSuppression8, false, false);
+
+                    
+
+                    
+                    dojo.addOnLoad(function() {
+
+
+                      
+                      dojo.connect(topNavTab8, 'onmouseout', function(event) {
+                        if ( topNavigation8.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation8.hideFlyout();
+                        }
+                      });
+                      
+                      dojo.connect(topNavFlyout8, 'onmouseout', function(event) {
+                        if ( topNavigation8.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation8.hideFlyout();
+                        }
+                      });
+                    });
+                  </script></div><div id="topnav-2nd"><ul class="clearfix"><li id="topnav-2nd-lev-item-1" class="active"><a href="/exchanges/shares/overview_en.html">Shares</a></li><li id="topnav-2nd-lev-item-2"><a href="/exchanges/bonds/overview_en.html">Bonds</a></li><li id="topnav-2nd-lev-item-3"><a href="/exchanges/funds/overview_en.html">ETFs &amp; Funds</a></li><li id="topnav-2nd-lev-item-4"><a href="/exchanges/exchange_traded_products/overview_en.html">ETPs</a></li><li id="topnav-2nd-lev-item-5"><a href="/exchanges/indices/overview_en.html">Indices</a></li><li id="topnav-2nd-lev-item-6"><a href="/exchanges/statistics/overview_en.html">Statistics</a></li><li id="topnav-2nd-lev-item-7"><a href="/exchanges/market_data/data_services_en.html">Data Services</a></li></ul></div></div></td></tr><tr><td colspan="10"><div class="alert_info alert-cookies" data-six-cookie="accept"><div class="row"><div class="column_9"><h3 class="title">Cookie notification</h3><p>Our website uses cookies. This enables us to optimize your user experience. By continuing
+                              to use our website, you agree to this. To find out more, please see our
+                              <a href="/exchanges/privacy_statement_en.html">Privacy Policy</a>.
+                            </p></div><div class="column_3"><a class="buttonlink pull-right" href="#accept-cookies">I agree</a></div></div></div></td></tr><tr><td id="area-mainsep1">&nbsp;</td><td id="area-mainsep2"><img src="/exchanges/resources/images/trans.gif" height="36" width="1" border="0"/></td><td id="area-mainsep3"><noscript>
+                          Javascript required to display<br/>
+                          page correctly !
+                        </noscript><div class="sidebar-js-date"><img src="/exchanges/resources/images/trans.gif" width="2px"/><span id="js-date-part1">&nbsp;</span><span id="js-date-seconds">&nbsp;</span><span id="js-date-cet">&nbsp;</span></div><script type="text/javascript" language="javascript">
+      js_date_lang = 0;
+    </script></td></tr><tr><td valign="top" id="area-sidenav" height="100%"><table border="0" cellpadding="0" cellspacing="0" width="164" height="100%"><tr><td class="navigation-left"><div id="t_1_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('expanded','1_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon1_0_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon1_0_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/exchanges/resources/images/dojo/nav_arrow_down.gif" border="0"');
+                
+                  document.write('id="navicon1_0_0_a"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/exchanges/shares/explorer_en.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/exchanges/resources/images/dojo/nav_arrow_down.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/exchanges/shares/explorer_en.html" onmouseover="document.getElementById('navicon1_0_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon1_0_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down.gif';">Quotes</a></td></tr></table><div id="t_1_1_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21" onclick="
+              navAction('expanded','1_1_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon1_1_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon1_1_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/exchanges/resources/images/dojo/nav_arrow_down.gif" border="0"');
+                
+                  document.write('id="navicon1_1_0_a"');
+                
+              document.write('style="margin-top:2px; margin-left:11px"/>');
+            </script><noscript><a href="/exchanges/shares/explorer/swiss_blue_chips/closings_en.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/exchanges/resources/images/dojo/nav_arrow_down.gif" border="0" style="margin-top:2px; margin-left:11px"/></a></noscript></td><td width="143"><a href="/exchanges/shares/explorer/swiss_blue_chips/closings_en.html" onmouseover="document.getElementById('navicon1_1_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon1_1_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down.gif';">Closing Prices</a></td></tr></table><div id="t_1_1_1__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/exchanges/shares/explorer/swiss_blue_chips/closings_en.html">Swiss Blue Chip Shares</a></td></tr></table></div><div id="t_1_1_1__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/exchanges/shares/explorer/swiss_blue_chips/closings_en.html">Swiss Blue Chip Shares</a></td></tr></table></div><div id="t_1_1_2__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/exchanges/shares/explorer/swiss_mid_and_small_caps/closings_en.html">Swiss Mid &amp; Small Caps Shares</a></td></tr></table></div><div id="t_1_1_2__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/exchanges/shares/explorer/swiss_mid_and_small_caps/closings_en.html">Swiss Mid &amp; Small Caps Shares</a></td></tr></table></div><div id="t_1_1_3__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/exchanges/shares/explorer/foreign/closings_en.html">Foreign Shares</a></td></tr></table></div><div id="t_1_1_3__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/exchanges/shares/explorer/foreign/closings_en.html">Foreign Shares</a></td></tr></table></div><div id="t_1_1_4__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/exchanges/shares/explorer/sponsored_shares/closings_en.html">Sponsored Foreign Shares</a></td></tr></table></div><div id="t_1_1_4__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/exchanges/shares/explorer/sponsored_shares/closings_en.html">Sponsored Foreign Shares</a></td></tr></table></div></div><div id="t_1_1_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21" onclick="
+              navAction('collapsed','1_1_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon1_1_0_').src='/exchanges/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon1_1_0_').src='/exchanges/resources/images/dojo/nav_arrow_right.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/exchanges/resources/images/dojo/nav_arrow_right.gif" border="0"');
+                
+                  document.write('id="navicon1_1_0_"');
+                
+              document.write('style="margin-top:2px; margin-left:11px"/>');
+            </script><noscript><a href="/exchanges/shares/explorer/swiss_blue_chips/closings_en.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/exchanges/resources/images/dojo/nav_arrow_right.gif" border="0" style="margin-top:2px; margin-left:11px"/></a></noscript></td><td width="143"><a href="/exchanges/shares/explorer/swiss_blue_chips/closings_en.html" onmouseover="document.getElementById('navicon1_1_0_').src='/exchanges/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon1_1_0_').src='/exchanges/resources/images/dojo/nav_arrow_right.gif';">Closing Prices</a></td></tr></table></div><div id="t_1_2_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/explorer/download/download_en.html">Historical Prices</a></td></tr></table></div><div id="t_1_2_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/explorer/download/download_en.html">Historical Prices</a></td></tr></table></div></div><div id="t_1_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('collapsed','1_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon1_0_0_').src='/exchanges/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon1_0_0_').src='/exchanges/resources/images/dojo/nav_arrow_right.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/exchanges/resources/images/dojo/nav_arrow_right.gif" border="0"');
+                
+                  document.write('id="navicon1_0_0_"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/exchanges/shares/explorer_en.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/exchanges/resources/images/dojo/nav_arrow_right.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/exchanges/shares/explorer_en.html" onmouseover="document.getElementById('navicon1_0_0_').src='/exchanges/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon1_0_0_').src='/exchanges/resources/images/dojo/nav_arrow_right.gif';">Quotes</a></td></tr></table></div><div id="t_2_0_0__expanded"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('expanded','2_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon2_0_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon2_0_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/exchanges/resources/images/dojo/nav_arrow_down.gif" border="0"');
+                
+                  document.write('id="navicon2_0_0_a"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/exchanges/shares/trading_en.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/exchanges/resources/images/dojo/nav_arrow_down.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/exchanges/shares/trading_en.html" style="font-weight:bold;" onmouseover="document.getElementById('navicon2_0_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon2_0_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down.gif';">Trading</a></td></tr></table><div id="t_2_1_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/trading/market_activity_en.html">Market Activity</a></td></tr></table></div><div id="t_2_1_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/trading/market_activity_en.html">Market Activity</a></td></tr></table></div><div id="t_2_2_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/trading/mistrades_en.html">Mistrades</a></td></tr></table></div><div id="t_2_2_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/trading/mistrades_en.html">Mistrades</a></td></tr></table></div><div id="t_2_3_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/market_data/shares/trading/stop_trading_range_en.html">Stop Trading Range</a></td></tr></table></div><div id="t_2_3_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/market_data/shares/trading/stop_trading_range_en.html">Stop Trading Range</a></td></tr></table></div><div id="t_2_4_0__expanded"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6-active" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/trading/trading_calendar/trading_and_settlement_calendar_en.html">Trading and Currency Holiday Calendar</a></td></tr></table></div><div id="t_2_4_0__collapsed" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6-active" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/trading/trading_calendar/trading_and_settlement_calendar_en.html">Trading and Currency Holiday Calendar</a></td></tr></table></div><div id="t_2_5_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/trading/trading_hours_en.html">Trading Hours</a></td></tr></table></div><div id="t_2_5_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/trading/trading_hours_en.html">Trading Hours</a></td></tr></table></div><div id="t_2_6_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/trading/turnover_en.html">Volume and Turnover</a></td></tr></table></div><div id="t_2_6_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/trading/turnover_en.html">Volume and Turnover</a></td></tr></table></div></div><div id="t_2_0_0__collapsed" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('collapsed','2_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon2_0_0_').src='/exchanges/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon2_0_0_').src='/exchanges/resources/images/dojo/nav_arrow_right.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/exchanges/resources/images/dojo/nav_arrow_right.gif" border="0"');
+                
+                  document.write('id="navicon2_0_0_"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/exchanges/shares/trading_en.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/exchanges/resources/images/dojo/nav_arrow_right.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/exchanges/shares/trading_en.html" style="font-weight:bold;" onmouseover="document.getElementById('navicon2_0_0_').src='/exchanges/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon2_0_0_').src='/exchanges/resources/images/dojo/nav_arrow_right.gif';">Trading</a></td></tr></table></div><div id="t_3_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('expanded','3_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon3_0_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon3_0_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/exchanges/resources/images/dojo/nav_arrow_down.gif" border="0"');
+                
+                  document.write('id="navicon3_0_0_a"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/exchanges/shares/companies_en.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/exchanges/resources/images/dojo/nav_arrow_down.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/exchanges/shares/companies_en.html" onmouseover="document.getElementById('navicon3_0_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon3_0_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down.gif';">Company</a></td></tr></table><div id="t_3_1_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/companies/issuer_list_en.html">List of Companies</a></td></tr></table></div><div id="t_3_1_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/companies/issuer_list_en.html">List of Companies</a></td></tr></table></div><div id="t_3_2_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/companies/sustainability_reporting_en.html">Sustainability reporting</a></td></tr></table></div><div id="t_3_2_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/companies/sustainability_reporting_en.html">Sustainability reporting</a></td></tr></table></div><div id="t_3_3_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/companies/ipo/2020/overview_en.html">IPO History</a></td></tr></table></div><div id="t_3_3_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/companies/ipo/2020/overview_en.html">IPO History</a></td></tr></table></div><div id="t_3_4_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/companies/official_notices/search_en.html">Official Notices</a></td></tr></table></div><div id="t_3_4_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/companies/official_notices/search_en.html">Official Notices</a></td></tr></table></div></div><div id="t_3_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('collapsed','3_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon3_0_0_').src='/exchanges/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon3_0_0_').src='/exchanges/resources/images/dojo/nav_arrow_right.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/exchanges/resources/images/dojo/nav_arrow_right.gif" border="0"');
+                
+                  document.write('id="navicon3_0_0_"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/exchanges/shares/companies_en.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/exchanges/resources/images/dojo/nav_arrow_right.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/exchanges/shares/companies_en.html" onmouseover="document.getElementById('navicon3_0_0_').src='/exchanges/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon3_0_0_').src='/exchanges/resources/images/dojo/nav_arrow_right.gif';">Company</a></td></tr></table></div><div id="t_4_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('expanded','4_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon4_0_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon4_0_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/exchanges/resources/images/dojo/nav_arrow_down.gif" border="0"');
+                
+                  document.write('id="navicon4_0_0_a"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/exchanges/shares/sfs_en.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/exchanges/resources/images/dojo/nav_arrow_down.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/exchanges/shares/sfs_en.html" onmouseover="document.getElementById('navicon4_0_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon4_0_0_a').src='/exchanges/resources/images/dojo/nav_arrow_down.gif';">Sponsored Foreign Shares</a></td></tr></table><div id="t_4_1_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/sfs/newadmissions/2019_en.html">New Admissions</a></td></tr></table></div><div id="t_4_1_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/sfs/newadmissions/2019_en.html">New Admissions</a></td></tr></table></div><div id="t_4_2_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/sfs/sponsor_list_en.html">Sponsors</a></td></tr></table></div><div id="t_4_2_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/sfs/sponsor_list_en.html">Sponsors</a></td></tr></table></div><div id="t_4_3_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/sfs/investor_protection_en.html">Investor Protection</a></td></tr></table></div><div id="t_4_3_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/exchanges/shares/sfs/investor_protection_en.html">Investor Protection</a></td></tr></table></div></div><div id="t_4_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('collapsed','4_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon4_0_0_').src='/exchanges/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon4_0_0_').src='/exchanges/resources/images/dojo/nav_arrow_right.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/exchanges/resources/images/dojo/nav_arrow_right.gif" border="0"');
+                
+                  document.write('id="navicon4_0_0_"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/exchanges/shares/sfs_en.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/exchanges/resources/images/dojo/nav_arrow_right.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/exchanges/shares/sfs_en.html" onmouseover="document.getElementById('navicon4_0_0_').src='/exchanges/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon4_0_0_').src='/exchanges/resources/images/dojo/nav_arrow_right.gif';">Sponsored Foreign Shares</a></td></tr></table></div><div id="t_5_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/exchanges/shares/events_en.html">Events</a></td></tr></table></div><div id="t_5_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/exchanges/shares/events_en.html">Events</a></td></tr></table></div></td></tr><tr><td>&nbsp;</td></tr><tr height="100%"><td>&nbsp;</td></tr></table></td><td width="596" valign="top" height="100%" id="area-main" class="
+                        main
+                        "><table border="0" cellpadding="0" cellspacing="0" width="596" height="100%"><tr><td valign="top" style="background-color:#FFFFFF;" height="400"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><h1>Trading and Currency Holiday Calendar</h1></td></tr></table><div xmlns:nml="http://eservices.swx.com/markup/1.0" xmlns:mail="http://swx.eservices/cocoon/mail/2002" id="tradCalNav">&nbsp;</div><img border="0" hspace="0" vspace="0" src="/exchanges/resources/images/trans.png" height="12px"/><p style="visibility: hidden;" class="hiddenOnStart">The <a href="/exchanges/download/participants/regulation/trading_guides/trading_calendar_2020.pdf" target="_blank" id="lnkTradCal">trading calendar&nbsp;2020<span class="file-extension">[pdf]</span></a> shows on which days there is no trading on <nobr xmlns:nml="http://eservices.swx.com/markup/1.0">SIX Swiss Exchange</nobr>.</p><p style="visibility: hidden;" class="hiddenOnStart">
+          The <nobr xmlns:nml="http://eservices.swx.com/markup/1.0">SIX Swiss Exchange</nobr>&nbsp;<a href="../trading_calendar/calendar/2020/grid_en.pdf" target="_blank" id="lnkCalPDF">Currency Holiday Calendar 2020<span class="file-extension">[pdf]</span></a>
+          shows the days on which <b>national banks are closed for a public holiday</b>.
+          The Currency Holiday Calendar provides this information for all currencies in which products are traded on <nobr xmlns:nml="http://eservices.swx.com/markup/1.0">SIX Swiss Exchange</nobr>.
+          There is no settlement on these days.
+          <br/>
+          Any weekdays not included in the Currency Holiday Calendar
+          are considered normal trading days with settlement in the relevant currency.
+          <br/><br/>
+          For the settlement holiday calendar (showing the settlement holidays at each CSD) please refer to the website of
+          <a href="/securities-services/en/home/clearing/member-information/market-information.html" target="_blank">SIX Securities Services</a></p><div xmlns:nml="http://eservices.swx.com/markup/1.0" xmlns:mail="http://swx.eservices/cocoon/mail/2002" id="tradingCalendar">&nbsp;</div><script type="text/javascript">
+        var tradCal;
+        dojo.addOnLoad(function() {
+          tradCal = new ssx.TradingCalendar("en",
+                                            "background-color: #cdf",
+                                            "2020,2021",
+                                            "tradingCalendar",
+                                            "tradCalNav");
+        });
+      ;
+    </script><img border="0" hspace="0" vspace="0" src="/exchanges/resources/images/trans.png" height="12px"/><div><table border="0" cellspacing="0" cellpadding="0" class="table-grid" id="legend" style="visibility: hidden;" width="100%" name="legend"><tr><td class="tc-no-border" width="3%" style="background-color: #cdf" align="left" valign="top">
+            &nbsp;
+          </td><td class="tc-no-border" width="27%" align="left" valign="top">&nbsp;<nobr xmlns:nml="http://eservices.swx.com/markup/1.0">SIX Swiss Exchange</nobr> Market holiday</td><td class="tc-no-border" width="3%" align="center" valign="top"><img border="0" src="/exchanges/resources/images/icons/chf.gif" title=""/></td><td class="tc-no-border" width="67%" align="left" valign="top">Currency holiday</td></tr></table><br/></div><br/></td></tr><tr><td valign="bottom" style="background-color:#FFFFFF;position:relative;height:24px;padding-bottom: 6px;"><div class="page_tools" style="width:596px;"><div><ul style="padding:0px;margin:0px;list-style: none; list-style-image: none; "><li><a href="#" class="icon print" onclick="window.print();return false;">Print</a></li><li><a class="icon email" href="mailto:?subject=Site%20recommendation%3A%20www.six-group.com/exchanges/shares/trading/trading_calendar/trading_and_settlement_calendar_en.html&amp;body=I%20spotted%20this%20interesting%20page%20on%20www.six-group.com%2fexchanges%20and%20thought%20you%20should%20read%20it.%0A%0ATo%20see%20the%20page%20visit%3A%20%0Ahttp%3a%2f%2fwww.six-swiss-exchange.com/exchanges/shares/trading/trading_calendar/trading_and_settlement_calendar_en.html%0d%0a%0ASIX%20Swiss%20Exchange%20is%20the%20reference%20market%20for%20more%20than%2040%2c000%20Swiss%20securities%2c%20connecting%20investors%2c%20issuers%20and%20participants%20from%20all%20over%20the%20world.%20The%20state-of-the-art%20technology%20of%20SIX%20ensures%20ideal%20trading%20conditions%20in%20the%20segments%20of%20equities%2c%20bonds%2c%20Exchange-Traded%20Funds%20(ETFs)%20and%20Exchange%20Traded%20Products%20(ETPs).%0A%0ABased%20on%20its%20Swiss%20roots%20and%20stable%20ownership%20structure%2c%20SIX%20Swiss%20Exchange%20stands%20for%20reliability%2c%20quality%20and%20innovation.">Send</a></li></ul></div><div class="social" style="float: right;"><ul style="padding:0px;margin:0px;list-style: none; list-style-image: none; "><li style="font-size:12px;margin-right:8px;">Connect:</li><li><a class="icon2 linkedin" href="https://www.linkedin.com/showcase/six-exchange-services" target="_blank">&nbsp;</a></li><li><a class="icon2 twitter" href="https://www.six-group.com/twitter" target="_blank">&nbsp;</a></li><li><a class="icon2 youtube" href="https://www.six-group.com/youtube" target="_blank">&nbsp;</a></li></ul></div></div></td></tr></table></td><td valign="top" id="area-sidebar" style="background-color:#FFFFFF;"><div><noscript>
+      Javascript required to display<br/>
+      page correctly !
+    </noscript><table border="0" cellpadding="0" cellspacing="0" style="margin-bottom:20px" width="100%"><tr><td class="sidebar-permalinks"><a class="sidebar-permalink-external" href="https://www.six-exchange-regulation.com" target="_blank"><image src="/exchanges/resources/images/trans.gif" width="14" height="1" border="0"/>SIX Exchange Regulation</a></td></tr><tr><td class="sidebar-permalinks"><a class="sidebar-permalink-external" href="https://www.six-structured-products.com" target="_blank"><image src="/exchanges/resources/images/trans.gif" width="14" height="1" border="0"/>SIX Structured Products</a></td></tr><tr><td style="border-top:#9a9b9c solid 1px;"><image src="/exchanges/resources/images/trans.gif" width="14" height="1" border="0"/></td></tr></table><table width="100%" cellpadding="0" cellspacing="0" border="0" class="dijitTitlePane mpulse-sidebar" style="padding-bottom:6px;"><tr><td class="sidebar-icon-item"><a class="sidebar-icon-item" href="/exchanges/news/rssfeeds_en.html" style="background: url(/exchanges/resources/images/icons_inv/rss.png) left center no-repeat;">RSS Newsfeeds</a></td></tr></table><div dojoType="swx.widget.TitlePane" id="sbHpLoginPane" saveState="true" duration="500" class="mpulse-sidebar" style="visibility:hidden" title="Login"><table width="100%" cellpadding="0" cellspacing="0"><tr><td class="sidebar-item"><b>Issuers Services</b><a class="sidebar-item" href="https://ibt.six-group.com/issuers/services/connexor/ibt2/login_en.html" target="_blank">IBT<img src="/exchanges/resources/images/trans.gif" width="3" height="1" border="0"/><img src="/exchanges/resources/images/icons_inv/new_window.png" border="0" width="11" height="9"/></a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="https://listing.six-exchange-regulation.com/admission/listing/ibl/login_en.html" target="_blank">IBL<img src="/exchanges/resources/images/trans.gif" width="3" height="1" border="0"/><img src="/exchanges/resources/images/icons_inv/new_window.png" border="0" width="11" height="9"/></a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="https://ibc.six-swiss-exchange.com/" target="_blank">Connexor Reporting<img src="/exchanges/resources/images/trans.gif" width="3" height="1" border="0"/><img src="/exchanges/resources/images/icons_inv/new_window.png" border="0" width="11" height="9"/></a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="https://disclosure.six-exchange-regulation.com/obligations/management_transaction/ddeal/login_en.html" target="_blank">Management Transactions / Disclosure of Shareholdings<img src="/exchanges/resources/images/trans.gif" width="3" height="1" border="0"/><img src="/exchanges/resources/images/icons_inv/new_window.png" border="0" width="11" height="9"/></a></td></tr><tr><td>&nbsp;</td></tr><tr><td class="sidebar-item"><b>Participants Services</b><a class="sidebar-item" href="https://secure.six-swiss-exchange.com/member_section/login.html" target="_blank">Member Section<img src="/exchanges/resources/images/trans.gif" width="3" height="1" border="0"/><img src="/exchanges/resources/images/icons_inv/new_window.png" border="0" width="11" height="9"/></a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="https://secure.six-swiss-exchange.com/member_section/reporting/obe-module-web/" target="_blank">Trade/Transaction Reporting<img src="/exchanges/resources/images/trans.gif" width="3" height="1" border="0"/><img src="/exchanges/resources/images/icons_inv/new_window.png" border="0" width="11" height="9"/></a></td></tr><tr><td>&nbsp;</td></tr><tr><td class="sidebar-item"><b>Data Services</b><a class="sidebar-item" href="/exchanges/indices/data_centre/login_en.html" target="_blank">Indices Data Center<img src="/exchanges/resources/images/trans.gif" width="3" height="1" border="0"/><img src="/exchanges/resources/images/icons_inv/new_window.png" border="0" width="11" height="9"/></a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="http://www.exfeed.com/" target="_blank">Client Area<img src="/exchanges/resources/images/trans.gif" width="3" height="1" border="0"/><img src="/exchanges/resources/images/icons_inv/new_window.png" border="0" width="11" height="9"/></a></td></tr><tr><td>&nbsp;</td></tr></table></div><script type="text/javascript" language="javascript">
+      dojo.addOnLoad(function() {
+      dojo.style("sbHpLoginPane", "visibility", "visible");
+      });
+    </script><script type="text/javascript" language="javascript">
+      dojo.addOnLoad(function() {
+        dojo.style("sbSearchPane", "visibility", "visible");
+      });
+    </script><div dojoType="swx.widget.TitlePane" id="sbSearchPane" duration="500" class="mpulse-sidebar" style="visibility:hidden" saveState="true" title="Product search"><table width="100%" cellpadding="0" cellspacing="0"><tr><td width="100%" style="padding-left:10px; vertical-align:top;"><form name="sidebarSearchForm" method="get" action="/exchanges/search/quotes_en.html" style="padding:0px; margin:0px; height:18px;"><input type="text" value="Company, valor, symbol, ISIN..." name="security" style="width:155px; height:18px; border:0px; padding-top:3px; padding-left:4px;                     background: url(/exchanges/resources/images/layout/search_bg.gif) no-repeat;                     color:#C3C3C4; font-face:Arial; font-size:11px; vertical-align:top;" onfocus="if (this.value=='Company, valor, symbol, ISIN...') {this.value='';this.style.color='#000000';};" onblur="if (this.value=='') {this.value='Company, valor, symbol, ISIN...';this.style.color='#C3C3C4';};"/><img src="/exchanges/resources/images/layout/button_search_small.png" onmouseover="this.src='/exchanges/resources/images/layout/button_search_a_small.png';" onmouseout="this.src='/exchanges/resources/images/layout/button_search_small.png';" onclick="document.sidebarSearchForm.submit();" style="margin-bottom:2px; cursor:pointer;" title="Search"/></form></td></tr></table></div><br/></div></td></tr></table></td></tr><tr><td height="80" valign="top" bgcolor="#F3F3F3" id="area-foot" style="border-top:#FFFFFF solid 1px;"><div class="footer" style="padding-top:9px; padding-left:12px;">Relevant web sites:
+          &nbsp;
+          <span><a class="footer" href="https://www.six-exchange-regulation.com/en/home.html" target="_blank">SIX Exchange Regulation<img src="/exchanges/resources/images/icons_inv/new_window.png" border="0" style="margin-left:3px; margin-right:3px;"/></a></span><span><a class="footer" href="https://www.six-structured-products.com" target="_blank">Structured Products<img src="/exchanges/resources/images/icons_inv/new_window.png" border="0" style="margin-left:3px; margin-right:3px;"/></a></span><span><a class="footer" href="http://www.swissfunddata.ch" target="_blank">Swiss Fund Data<img src="/exchanges/resources/images/icons_inv/new_window.png" border="0" style="margin-left:3px; margin-right:3px;"/></a></span></div><div class="footer" style="padding-top:9px; padding-left:12px;"><span class="first"><a class="footer" href="/exchanges/sitemap_en.html">Sitemap</a></span><span><a class="footer" href="/exchanges/disclaimer_en.html">Disclaimer</a></span><span><a class="footer" href="/exchanges/privacy_statement_en.html">Privacy Statement</a></span><span><a class="footer" href="/exchanges/technical_details_en.html">Technical details</a></span></div><div class="footer" style="padding-top:9px; padding-left:12px;">
+          &copy; SIX Swiss Exchange
+          Ltd</div></td></tr></table></td><td><table border="0" cellpadding="0" cellspacing="0" width="6" height="100%" id="right-bg"><tr><td height="130">&nbsp;</td></tr><tr><td height="208" background="/exchanges/resources/images/layout/right_top_bg.png">&nbsp;</td></tr><tr><td valign="top" width="6" background="/exchanges/resources/images/layout/right_bg.png" height="100%">&nbsp;</td></tr></table></td><script>
+          function calcSky() {
+            var skyHeight=document.getElementById('skyscraper').contentWindow.document.body.scrollHeight;
+            document.getElementById('skyscraper').height=skyHeight;
+            var skyWidth=document.getElementById('skyscraper').contentWindow.document.body.scrollWidth;
+            document.getElementById('skyscraper').width=skyWidth;
+          }
+        </script><td valign="top" style="padding-top:130px;"><script type="text/javascript" src="https://imagesrv.adition.com/js/adition.js"></script><script type="text/javascript" src="https://adfarm1.adition.com/js?wp_id=3751587"></script></td></tr></table><div id="meta-nav-lang-dropdown" style="display:none; position:absolute; z-index:1;"><table border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" cellpadding="0" cellspacing="0" style="background:#333333; width:105px;"><tr><td class="meta-nav-dropdown meta-nav-dropdown-inactive" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="window.location.href='/exchanges/shares/trading/trading_calendar/trading_and_settlement_calendar_de.html';">Deutsch</td></tr><tr><td class="meta-nav-dropdown meta-nav-dropdown-active">English</td></tr><tr><td class="meta-nav-dropdown meta-nav-dropdown-inactive" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="window.location.href='/exchanges/shares/trading/trading_calendar/trading_and_settlement_calendar_fr.html';">Fran&ccedil;ais</td></tr><tr><td class="meta-nav-dropdown meta-nav-dropdown-active">&nbsp;</td></tr></table></td><td width="5" background="/exchanges/resources/images/layout/shadow_right.gif" style="filter:Alpha(opacity=30);opacity:.3;"><img src="/exchanges/resources/images/trans.gif" height="1" width="5"/></td></tr><tr><td background="/exchanges/resources/images/layout/shadow_bottom.gif" style="filter:Alpha(opacity=20);opacity:.2;"><img src="/exchanges/resources/images/trans.gif" height="5" width="1"/></td><td background="/exchanges/resources/images/layout/shadow_bottomright.gif" style="filter:Alpha(opacity=20);opacity:.2;"><img src="/exchanges/resources/images/trans.gif" height="5" width="1"/></td></tr></table><script type="text/javascript" language="javascript">
+
+      
+          var metaNavLangButton, metaNavLangDropdown, metaNavLanguage;
+          dojo.addOnLoad(function() {
+
+            
+            metaNavLangButton = dojo.byId('meta-nav-lang-button');
+            metaNavLangDropdown = dojo.byId('meta-nav-lang-dropdown');
+            metaNavLangDropdown['width'] = 105; 
+            metaNavLanguage = new metaNavSelector(metaNavLangButton, metaNavLangDropdown);
+            metaNavLanguage.init();
+
+          
+          
+            dojo.connect(metaNavLangButton, 'mouseenter', function(){
+              metaNavLangButton.className='meta-nav meta-nav-button-over';
+              metaNavLangButton.getElementsByTagName('span')[0].className = 'meta-nav-arrow meta-nav-arrow-over';
+              var buttonBox = metaNavLangButton.getBoundingClientRect();
+              var posX = buttonBox.right - metaNavLangDropdown.width;
+              metaNavLanguage.dropdownPosX = posX;
+              dojo.style(metaNavLangDropdown, 'left', posX);
+              dojo.style(metaNavLangDropdown, 'display', 'block');
+            });
+
+            
+            dojo.connect(metaNavLangButton, 'mouseleave', function(event) {
+              if ( metaNavLanguage.mouseOutOfButtonAndDropdown(event) ) {
+                metaNavLanguage.hideDropdown();
+              }
+            });
+
+            
+            dojo.connect(metaNavLangDropdown, 'mouseleave', function(event) {
+              if ( metaNavLanguage.mouseOutOfButtonAndDropdown(event) ) {
+                metaNavLanguage.hideDropdown();
+              }
+            });
+          });
+        </script></div></td></tr></table><div id="searchDropdown" style="visibility:hidden;position:absolute;top:144px;left:900px" onmouseover="showSearchDropdown();return false;" onmouseout="hideSearchDropdown();return false;"><table border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" cellpadding="0" cellspacing="0" style="background:#333333;width:162px;"><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/en/services/search.html';">Text</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/exchanges/search/quotes_en.html';">Products</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/exchanges/shares/explorer_en.html';">Shares</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/exchanges/bonds/explorer_en.html';">Bonds</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/exchanges/funds/explorer_en.html';">ETFs &amp; funds</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/exchanges/exchange_traded_products/explorer_en.html';">Exchange Traded Products</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/exchanges/news/notifications/management_transactions_en.html';">Management Transactions</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/exchanges/news/notifications/major_shareholders_en.html';">Significant Shareholders</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/exchanges/news/official_notices/search_en.html';">Official Notices</td></tr><tr><td class="searchDD" style="cursor:cursor;">&nbsp;</td></tr></table></td><td width="5" background="/exchanges/resources/images/layout/shadow_right.gif" style="filter:Alpha(opacity=30);opacity:.3;"><img src="/exchanges/resources/images/trans.gif" height="1" width="5"/></td></tr><tr><td background="/exchanges/resources/images/layout/shadow_bottom.gif" style="filter:Alpha(opacity=20);opacity:.2;"><img src="/exchanges/resources/images/trans.gif" height="5" width="1"/></td><td background="/exchanges/resources/images/layout/shadow_bottomright.gif" style="filter:Alpha(opacity=20);opacity:.2;"><img src="/exchanges/resources/images/trans.gif" height="5" width="1"/></td></tr></table></div><script type="text/javascript" language="javascript">
+        var isHttps = "https:" == document.location.protocol;
+      </script><script type="text/javascript" language="javascript">
+          try {
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-1241259-1', 'six-swiss-exchange.com');
+            ga('create', 'UA-6528849-1', 'auto', {'name': 'SIX'});
+            ga('require', 'displayfeatures');
+            ga('require', 'linkid', 'linkid.js');
+            ga('set', 'anonymizeIp', true);
+            ga('send', 'pageview');
+            ga('SIX.send', 'pageview');
+
+            window.onload = function() {
+              var a = document.getElementsByTagName('a');
+              for (i = 0; i < a.length; i++) {
+                if (a[i].hostname === location.hostname) {
+                  if (a[i].href.match(/^https?:\/\/.+\.(txt|csv|xls|xlsx|xlsb|doc|docx|pdf|zip|gz|swf|flv|rdf|cer|ics)$/i)) {
+                    a[i].setAttribute('target', '_blank');
+                    a[i].onclick = function() {
+                      ga('send', 'event', 'Downloads', 'Click', this.getAttribute('href'));
+                    };
+                  }
+                }
+              }
+            }
+          } catch(err) {}
+      </script><script type="text/javascript" language="javascript">
+
+          ;(function(){
+
+          var banner = dojo.query('[data-six-cookie="accept"]')[0];
+
+          // read the accept cookie
+          var cookieAccept = dojo.cookie('SIX_Cookie');
+
+          if (!cookieAccept)  {
+            // show the cookie info banner
+            banner.style.display = 'block';
+
+            // listen for accept button
+            var btn = dojo.query('[href$="#accept-cookies"]', banner)[0];
+
+            dojo.connect(btn, 'click', function(e) {
+              // if accepted hide the cookie banner
+            banner.style.display = 'none';
+              // and set the cookie
+              dojo.cookie('SIX_Cookie', true, {
+                expires: 90, // days
+                path: '/'
+              });
+              e.preventDefault();
+            });
+
+          } else {
+            banner.style.display = 'none';
+          }
+
+        })();
+
+        dojo.attr(dojo.query('.footer[href*=privacy_statement]')[0],"target","_blank");
+      </script></body></html>

@@ -1,0 +1,108 @@
+{
+  "gate": "U1-btic-equity-conflict",
+  "verifier_pass": "adversarial re-derivation from bytes + independent re-fetch",
+  "verify_date": "2026-09-12",
+  "verdict": "matches=false",
+  "ruling_status": "The ADJUDICATION and the ENCODABLE grid SURVIVE intact and are materially STRENGTHENED by this pass. One load-bearing claim of absence is FALSE as written.",
+
+  "what_was_re_derived_and_confirmed": [
+    "INDEX.md integrity: all 84 indexed artifacts re-hashed on disk - 84/84 match their stated sha256 AND byte count. 0 mismatches, 0 missing. Only CAPTURE-START.txt and INDEX.md itself are unindexed.",
+    "CFTC re-fetch, byte-identical sha256 (4/4): ptc102915cmedcm001.pdf f207101167091f35406dceb4fd0c7bf2e4d9290b169ef3f57ba74a3fd0077938; ptc102915cbotdcm001.pdf 97ad25d6...; ptc030918cmedcm001.pdf b51df55f...; rules12302535976.pdf 73048173...",
+    "Web-archive re-fetch, byte-identical sha256 (3/3): es-spec-20151115083010 cf2178f1..., es-spec-20180419185207 31dff598..., es-spec-20190130110517 436f1da4...",
+    "Live ContractSpecs re-fetch six days later via the same reader: 7968, 7969, 8027, 7948, 166, 8026, 133 ALL byte-identical to the stored captures. cmegroup.com direct still returns no response (curl code 000 / IP-level block) - the 403 caveat is real.",
+    "CME Submission 15-438 and CBOT 15-437 verbatim: 'effective on Sunday, November 15, 2015 for trade date Monday, November 16, 2015'. Grepped both for pending/subject-to-regulatory: ZERO hits - the date is unconditional, as claimed. Neither states any hours; the only clock in either is 'The price of a BTIC transaction shall be determined by the Exchange at 3:45 p.m.' - correctly classified as a price-determination procedure, not a session boundary.",
+    "CME Submission 18-070 (2 of 2) verbatim exact: header 'Hours of BTIC trading on CME Globex:' / 'Sunday-Friday 5:00 p.m.— 3:00 p.m. Central Time/(CT) (6:00 p.m. – 4:00 p.m. Eastern Time/(ET))', effective Sunday 2018-03-25 for trade date Monday 2018-03-26, no conditional language. Code table re-read with pdftotext -layout: XYT XPT XET XFT XVT XIT XBT XKT XUT XRT BIT confirmed.",
+    "2015-11-15 ES spec capture verbatim exact, including that the '15-minute trading halt Monday - Friday 4:15 p.m. - 4:30 p.m.' clause sits in the CME Globex OUTRIGHT sentence and the adjacent 'For the BTIC, trading hours will be ... 6:00 p.m. - 4:00 p.m.' sentence carries no halt.",
+    "2018-04-19 / 2019-01-30 captures verbatim exact, including 'BTIC trading terminates at 4:00 p.m. Eastern Time (ET) on the Thursday before the 3rd Friday of contract month' as a SEPARATE Termination-of-Trading row, correctly NOT read as a close (LAW-SESSION-NOT-EXPIRY honoured).",
+    "2015 New Product Summaries (ES/NQ and YM) verbatim exact under 'Trading Hours', including the Globex 18:00-16:00 ET vs CPC 18:00-17:00 ET split and the footer 'Pending All Relevant CFTC Regulatory Review Periods'. The conditionality reading is correct.",
+    "Globex Notice 2021-06-21 verbatim exact (three consecutive paragraphs, stitched in the researcher's quote but not altered), incl. 'Please note: S&P 500 futures and options (250 multiplier) as well as all BTIC and TACO products will not be impacted.'",
+    "SER-8788 section 5 verbatim exact, conditional twice over ('- (Effective June 28, 2021 - pending CFTC review)' in its own header and 'Subject to regulatory review' in its body), names no product code, no BTIC mention anywhere.",
+    "CBOT 25-546 (2025-12-30) verbatim exact: eleven BTIC roots 'that are traded on Globex'; 'Hours / 8:30AM - 3:00PM (CT) (\"RTH\")'. The researcher's refusal to encode this as a `regular` phase is correct - it is a market-maker quoting obligation inside an incentive program.",
+    "Affected-product list, VERIFIED THROUGH A SECOND INDEPENDENT CHANNEL: the PDF itself was retrieved from web.archive.org (capture 20260310213155) and parsed with pdftotext, bypassing the text reader. Its tag-1151 group set is exactly {7S BM BQ C9 EO ES EW IX MC ME MP MS NE NQ NW OL QN QZ R4 RA RC RG RL RV RX RY S4 SC SD SG SU XB XF XG XL XM XN XO XP XR XU XY YM}. No BTIC security group (SB NB DB R3 IT PB R1 R2 RT) appears, and the strings BTIC/TACO/TMAC appear nowhere in the file. The absence claim is CONFIRMED.",
+    "Session service re-fetched live today (2026-09-12) for the 2026-09-13..19 week AND for a third week the researcher did not probe (2026-10-25..31, London off DST, US still on DST). Every BTIC group returns Sunday preopen@16:00 open@17:00, Mon-Fri closed@15:00, Mon-Thu preopen@16:45 open@17:00, in all three weeks. ES/IX return the same shape at closed@16:00. America/Chicago anchoring confirmed with an extra week of evidence.",
+    "product-slate re-parsed: 285 rows; 7949=RVT/R3, 7970=YMT/DB, 7596=EMT/PB, 7946=R1T/R1, 7947=RGT/R2, 8315=RLT/RT, 7968=EST/SB, 7969=NQT/NB, 8027=IPT/IT. ContractSpecs for 7949 and 7970 do return the literal '-'.",
+    "8027-vs-7969 cell identity re-tested programmatically (see discrepancy 2 for the one nuance).",
+    "cs-166-wb-20210710.json re-hashed: 671a8d251b449b54ea080599f7a642b0705474a9b33a35db6c168cc8387a5a95 - matches, gzip, 2664 bytes uncompressed, content as quoted, no halt clause on the outright Globex line twelve days after the 2021-06-28 removal.",
+    "CDX prefix search re-run independently for productIds 7968, 7969, 8027, 7948, 7949, 8026: all return the literal []. productId 166 returns exactly the one row 20210710091114. Those specific absence claims hold."
+  ],
+
+  "independent_corroboration_the_researcher_did_not_have": {
+    "server_rendered_ES_spec_page_sweep": "CDX collapse=digest over cmegroup.com/trading/equity-index/us-index/e-mini-sandp500_contract_specifications.html returns 160 distinct-digest captures 2009-01 -> 2026-01. NINE additional captures were replayed and parsed beyond the researcher's four: 2016-09-25, 2017-08-06, 2017-12-19, 2018-10-25, 2019-07-20, 2019-09-23, 2020-10-30, 2021-03-18 (and 2021-05-27, already a JS shell). Every one prints the BTIC window at 6:00 p.m. - 4:00 p.m. ET and attaches the 4:15-4:30 p.m. halt to the CME Globex OUTRIGHT line only. The 'no revision, halt never on the BTIC line' finding survives a sweep four times wider than the one it was based on.",
+    "modern_ContractSpecs_channel_for_productId_133": "NINE archived captures of /CmeWS/mvc/ContractSpecs/List/productId/133 were replayed (2021-07-03, 2022-09-08, 2022-12-01, 2023-07-31, 2023-09-12, 2023-12-07, 2024-07-07, 2025-03-12, 2026-04-05). ALL print venue 'CME Globex:' ... 'BTIC: Sunday - Friday 6:00 p.m. - 4:00 p.m. ET', and NONE carries a 4:15-4:30 halt on the outright line. Combined with the server-rendered chain 2015-11-15 -> 2021-03-18 and the live capture, the equity BTIC Globex window is now continuously datable across the whole life of the family with no era change anywhere."
+  },
+
+  "discrepancies": [
+    {
+      "id": "D1",
+      "severity": "load-bearing - false claim of absence",
+      "claim": "dead_ends item 1: 'NEITHER modern channel has any archived history for any product in this gate ... The single exception in this gate is productId 166, one capture at timestamp 20210710091114'; and the matching states entry 'the gate's request to date when each channel said what is answerable only for the server-rendered spec pages and the CFTC filings, not for either modern channel'.",
+      "finding": "FALSE as written. The researcher's CDX sweep covered only productIds 7968, 7969, 8027, 7948, 7949, 8026 and 166. productId 133 - the ES underlying record the ruling itself leans on as one of its seven venue-labelled statements - was never swept. It has 23 archived captures (11 distinct digests) of /CmeWS/mvc/ContractSpecs/List/productId/133, running 2021-07-03 through 2026-04-05. Nine were replayed and read this pass; every one carries the venue-labelled 'CME Globex: ... BTIC: Sunday - Friday 6:00 p.m. - 4:00 p.m. ET' line. (8314, 170, 7945, 7596, 7946, 7947, 8315 were also swept independently and are genuinely empty.)",
+      "why_it_matters": "AGENTS.md legislates this exact failure: \"'Unsourced' means 'not worked up', never 'no source exists'\" - do not write that nothing survives unless the channel has actually been searched. Under LAW-FOLLOW-UPS-ARE-ISSUES a channel recorded as exhausted is a tracked claim the next reader will believe, and this one would steer a future session away from a channel holding eleven distinct dated states of the very line the gate adjudicates. The error cuts IN FAVOUR of the ruling, not against it - but it is still a false statement about the evidence base.",
+      "correct_statement": "The BTIC *product* records (7968, 7969, 8027, 7949, 7970) and the session-event service have no archived history and cannot be ordered in time. The *underlying* records the ruling relies on do: productId 133 is archived 2021-07-03 -> 2026-04-05 (23 captures, 11 distinct digests) and productId 166 once at 2021-07-10. The modern channel therefore CAN be dated for the 2021-2026 era, and when dated it says 16:00 ET throughout."
+    },
+    {
+      "id": "D2",
+      "severity": "minor - overstated wording, substance holds",
+      "claim": "'after HTML-entity and whitespace normalisation 8027's whole cell is byte-identical to 7969's CME ClearPort: row', 'Verified programmatically this pass'.",
+      "finding": "Identical only if ALL whitespace is deleted. Under entity-unescape + <br/>-to-space + whitespace-COLLAPSE the two strings differ by one character: 7969 reads '...4:00 p.m. CT). Monday - Thursday...' (space after the period, from '&nbsp;<br />') while 8027 reads '...4:00 p.m. CT).Monday - Thursday...' with no space. Wording and every time are identical, so the inference is sound; 'byte-identical' is not."
+    },
+    {
+      "id": "D3",
+      "severity": "minor - a correction proposed for the handoff that is not a correction",
+      "claim": "STILL OPEN / conclusion item 3: 'the handoff's \"productId 7948 (RSV)\" citation for RVT is an underlying-page citation with the wrong productId attached', and the follow-up 'RVT's productId (7949, not 7948) must be carried into the handoff table or opened as an issue'.",
+      "finding": "The handoff row reads: 'ContractSpecs productId 7948 (RSV) prints \"BTIC: Sunday - Friday 6:00p.m. - 5:00 p.m. ET\"'. It labels 7948 as RSV correctly and never asserts 7948 = RVT. There is no productId error in the handoff to correct. The genuinely new fact - RVT is productId 7949, security group R3, and has no ContractSpecs record at all - is worth recording, but not as a correction of an error."
+    },
+    {
+      "id": "D4",
+      "severity": "minor - unnoticed counter-datum to the *explanation*, not to the ruling",
+      "claim": "Conclusion item 1: every 17:00 ET reading is 'the ClearPort BTIC window with its label dropped'; CME publishes 'a CME ClearPort (\"CPC\") BTIC window of 18:00-17:00 ET'.",
+      "finding": "True at launch (the 2015 NPS prints CPC at 18:00-17:00 ET) and true of 7969's ClearPort row today. But the researcher's own cs-133-live.txt - quoted in the same result for its Globex line - carries a ClearPort row that reads 'BTIC: Sunday - Friday 6:00 p.m. - 4:00 p.m. ET. BTICs for the following trading day can be submitted after 7:00 p.m. ET', i.e. CME's current ES record puts the CLEARPORT BTIC line at 16:00 ET too, and has since at least the 2022-09-08 archived capture. The 17:00 figure on 7969 and 8027 is the GENERIC ClearPort envelope, not a BTIC-specific ClearPort window. The ruling is unaffected (it concerns the Globex window) but the 'two BTIC windows' framing should be stated as 'the generic ClearPort envelope' rather than 'the ClearPort BTIC window'."
+    },
+    {
+      "id": "D5",
+      "severity": "minor - arithmetic in the cited document",
+      "claim": "18-070 gives 'a table of eleven sector BTIC codes'; the encodable ROOTS list encodes those eleven.",
+      "finding": "The filing's own body says it permits BTIC on 'twelve (12) equity index futures contracts' while its table enumerates eleven product rows (plus a non-product heading row 'E-mini S&P Select Sector Index Futures including:'). Re-checked with pdftotext -layout - the extraction is not dropping a row. Encoding the eleven enumerated codes is right; the document's own 12-vs-11 discrepancy should be recorded beside the row so a later reader does not read it as a missing root."
+    },
+    {
+      "id": "D6",
+      "severity": "minor - characterisation",
+      "claim": "CBOT 25-546 '(b) restates the 2015-11-16 start date retrospectively and unconditionally.'",
+      "finding": "'Start date is November 16, 2015' is the term of the BTIC Market Maker PROGRAM, not a listing date for the eleven products it scopes - several of which (EWFT, EGT, RGT, RVT, SMT) did not exist in 2015. It corroborates the family clock only by coincidence of dates. Not load-bearing: the launch day comes from 15-438 / 15-437, which do state it unconditionally."
+    },
+    {
+      "id": "D7",
+      "severity": "cosmetic",
+      "claim": "CDX sweep of the trading-hours service: 'the distinct id= values ... are 316,133,425,300,58,437,22,8478,5201,10191 (669 captures), 316 (1), 5224 (1), 318 (1), plus 18 captures with no id parameter.'",
+      "finding": "Re-parsed: 690 captures, earliest 20220823173514, latest 20260831004234 - all correct. But the row counted as 'id=316' is actually one URL-ENCODED copy of the same ten-id homepage list ('316%2C133%2C425%2C...'); the true singletons are 5224 and 318. The conclusion (no BTIC productId in any archived capture) is unaffected."
+    },
+    {
+      "id": "D8",
+      "severity": "scope note, correctly self-declared but worth restating",
+      "claim": "'WHAT MAY BE WRITTEN NOW' presents a complete grid.",
+      "finding": "The grid cannot actually be written until U-4 resolves: AGENTS.md's 'Regular vs extended' convention requires every executable rule to carry a class, and the result deliberately (and correctly) declines to classify the 17:00->15:00 CT window, since CBOT 25-546's '8:30AM - 3:00PM (CT) (\"RTH\")' is a quoting obligation. The researcher says this under STILL OPEN; the 'encodable' heading is nonetheless stronger than the evidence supports on its own."
+    }
+  ],
+
+  "checks_that_found_nothing_wrong": [
+    "Every verbatim quote in the result was matched against the saved bytes. No silently stitched line changes a meaning; no wrong time; no wrong zone label. The 2018/2019 quote is a composite of two captures but both carry the quoted lines identically, and the 2021 notice quote is three consecutive paragraphs of one section.",
+    "Issue date vs effective date vs capture date are kept distinct throughout, and capture_ts is separated from artifact_date in every states entry. The one place a capture is used to date a state (the 2015-11-15 page) is handled correctly - note the page's own wording there is future tense ('For the BTIC, trading hours WILL BE'), because 08:30 UTC on 2015-11-15 is ~14 hours before the launch session opened; the identical text recurs post-launch on 2016-02-01 and in the present tense from 2017, so nothing rests on the future-tense capture alone.",
+    "Conditional vs unconditional is graded correctly in every case: NPS footer conditional -> cannot key the day; SER-8788 conditional twice -> cannot key the 2021 day; 15-438/15-437 and 18-070 unconditional -> can.",
+    "LAW-SESSION-NOT-EXPIRY: the Termination-of-Trading rows on the 2018/2019 pages and on productIds 166/133 are identified as expiry and not used. The 3:45 p.m. BTIC price determination in 15-438 is identified as a pricing procedure. The 25-546 RTH window is identified as a quoting obligation. All three calls are correct.",
+    "LAW-NO-FABRICATED-DATES: no date is asserted without an unconditional day-level primary. No revision row is invented for 2021. The key's start is keyed to trade date 2015-11-16 with a Sunday 2015-11-15 opening day, which is also the right side of the 'day-level revision rows are keyed to the local opening day' rule for a wrapping session.",
+    "Carry-back: declining to carry the grid below 2015-11-16 and encoding a pre-launch closure is exactly what the January-2010-floor bullet prescribes for a launch-dated family ('which for a launch-dated venue is its pre-launch closure').",
+    "Sourced intersection: serving 16:00 ET against the isolated 17:00 ET RSV cell, and recording the conflict beside the table rather than declaring the cell wrong, matches the 'Prefer the sourced intersection to omission' convention and its ECBTC worked example.",
+    "Maintenance vs Closed: the 15:00->17:00 CT inter-trade-date gap is 2h <= 4h within one ISO week -> Maintenance, correct; Friday 15:00 -> Sunday is Closed, correct. The service's tradingDate fields confirm the gap is inter-trade-date, not same-trade-date.",
+    "Cross-zone (U-8): September (CDT) vs December (CST) already spans the US DST change and both read 15:00 CT; I added a 2026-10-25 week and it also reads 15:00 CT. America/Chicago anchoring is right and U-8 genuinely does not reach this shape.",
+    "Product-neutral family selection: treating IPT/RVT/EMT and the 18-070 sector roots as caller catalog data joining an already-running family clock matches 'Adding or revising a product-family key' item 2. The unlocated IPT/RVT listing certifications are correctly not a blocker.",
+    "LAW-PUBLIC-SOURCES: every cited artifact is publicly reachable without authentication. No paywalled or member-portal material is relied on.",
+    "The channel caveat (r.jina.ai in front of cmegroup.com because of the IP-level block) is disclosed, and the four CFTC filings plus the archive replays - which carry the whole ruling - are caveat-free. I re-confirmed the block today."
+  ],
+
+  "residual_caveats_if_the_result_is_used": [
+    "Re-state dead_ends item 1 per D1 before it reaches any ledger or handoff row; as written it would retire a channel that holds eleven distinct dated states of the adjudicated line.",
+    "The Sunday 16:00 / Mon-Thu 16:45 CT Pre-Open onsets still rest on the live session service alone, with no archived history and no CME prose. They are order-entry-class, correctly labelled as such, and they are carried back to 2015-11-16 under the carry-back convention with no cutover asserted - which is permissible, but the row should say so.",
+    "The sector BTIC roots from 18-070 (XYT..BIT) were never probed in the session service; they rest on the filing's prose alone. That is sufficient, but it is a one-channel sourcing for those eleven roots.",
+    "U-4 (regular vs extended) genuinely remains open for this shape; the key cannot be written without it (D8)."
+  ]
+}

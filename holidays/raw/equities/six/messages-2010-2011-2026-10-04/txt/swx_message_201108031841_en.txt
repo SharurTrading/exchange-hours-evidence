@@ -1,0 +1,144 @@
+SIX Swiss Exchange Message no. 43/2011
+
+Subject           Launch of SWXess Maintenance Release 1.2
+Category          SWXess Trading Platform
+Authorised by     Adrian Isler; Head Market Operations
+                  Daniel Risold; Head Business Engineering
+Pages             3
+Date              03.08.2011                                                                                Information
+
+
+Within the framework of continuing improvements, SIX Swiss Exchange will carry out an additional,
+substantial upgrade to the SWXess trading platform. A second partition of the On Book Matcher (OBM)
+will be launched with the SWXess Maintenance Release 1.2 (SMR 1.2).
+Trading participants will thus profit from the substantially increased transaction capacity of the SWXess
+trading platform and at the same time, from a uniformly lower latency in equities trading.
+This message will inform you about the most important adjustments SMR 1.2 entails.
+
+Trading segments allocation
+Trading in the SIX Swiss Exchange segments will initially be allocated on the two OBM partitions as
+follows:
+OBM Partition 1 – Equities                                      OBM Partition 2 – Non-Equities
+«order driven»                                                  «quote driven»
+  •     Blue Chip Shares                                         •   Exchange Traded Funds (ETFs)
+  •     Mid-/Small-Cap Shares                                    •   Exchange Traded Structured Funds (ETSFs)
+  •     Secondary Listing Shares                                 •   Exchange Traded Products (ETPs)
+  •     Investment Funds                                         •   Bonds of the Swiss Confederation
+  •     Separate Trading Lines                                   •   Other CHF Bonds
+  •     Rights                                                   •   Floating Rate Notes
+                                                                 •   Convertible and Warrant Bonds
+                                                                 •   Delisted Bonds
+                                                                 •   International Bonds
+                                                                 •   Credit- and Bond Linked Notes
+                                                                 •   Structured Products of Scoach Switzerland Ltd.
+
+The allocation of the order-driven trading segments to the new "Equities" partition requires a migration at
+SIX Swiss Exchange of the securities concerned. Any open orders in the equities segments will not be
+deleted from the order books as a result of migration of the instruments. Please note that SIX Swiss
+Exchange may re-allocate the trading segments to the OBM partitions at any time if the market situation
+so requires.
+We confirm that there will be no changes in the area of trading as a result of the introduction of the
+additional partition. The trading segment market identifier codes (XSWX, XVTX, XQMH) will remain
+basically unchanged and counterparty anonymity for Swiss Blue Chip shares will continue.
+You will find all information on the applicable trading parameters in the annex of Directive 3: Trading as
+well as in the Trading Guides on the SIX Swiss Exchange Internet site.
+
+
+
+
+                                                                                                                          1|3
+
+SIX Swiss Exchange AG              T +41 58 399 5454
+Selnaustrasse 30                   F +41 58 499 5455
+Postfach 1758                      www.six-swiss-exchange.com
+CH-8021 Zürich
+SIX Swiss Exchange                                                                                     03.08.2011
+SIX Swiss Exchange Message no. 43/2011
+
+
+
+
+Harmonizing trading in rights and separate trading lines
+Trading in rights and separate trading lines will be harmonized as a result of the trading segment
+partitioning. Now rights and separate trading lines in Blue Chip Shares will be traded in the same way as
+in Mid-/Small Cap shares with market code XSWX and disclosed counterparty.
+                                  Market code             Counterparty             Market code   Counterparty
+Trading segment                                            anonymity                              anonymity
+                                  (previously)            (previously)                 (new)        (new)
+
+Rights XVTX                          XVTX                      YES                     XSWX          NO
+Separate Trading Lines XVTX          XVTX                      YES                     XSWX          NO
+
+As a result of the change of the market identifier code, all good-till-date orders in the securities concerned
+will be deleted from the order books on 30 September 2011 (last trading day with the XVTX market
+identifier code) after the close of trading. We leave it to participants to re-enter any orders in the order
+books prior to the commencement of trading on 3 October 2011 (first day of trading with the new XSWX
+market identifier code).
+For SIX Exfeed market data recipients, the market identifier code (MIC) of these instruments will also be
+adjusted as a result of this changeover.
+
+Changes to the Rule Book and Directives
+In conjunction with the launch of SMR 1.2, the rules will change as follows:
+       •   Directive 3: Trading
+               o   Annex A – Blue Chip Shares Art. 8 Separate trading lines
+                   The counterparty will be disclosed
+               o   Annex C – Rights Art. 7 Clearing and Settlement
+                   The counterparty will be disclosed
+The directive will be adapted accordingly and will enter into effect on the date of the SMR 1.2 launch.
+
+The updated Directive 3: Trading will soon be available on our Internet site www.six-swiss-exchange.com.
+
+Interface modifications
+Basically, SWXess Maintenance Release 1.2 does not entail any functional changes. In certain areas,
+however, the introduction of the additional OBM partition will result in changed configuration.
+You will find more information on the technical changes of the SWXess interface in the specifications and
+MSC publications in the SIX Swiss Exchange Member Section.
+
+Launch plan
+SIX Swiss Exchange plans the following launch for SMR 1.2:
+Date                                     Environment
+15 August 2011                           First day of trading with SMR 1.2 in member test
+3 October 2011                           First day of trading with SMR 1.2 in production
+
+Prior to the production launch of SMR 1.2, participants will have the opportunity to test their internal
+applications and processes over a period of 7 weeks in the member testing environment.
+
+
+
+
+                                                                                                                2|3
+SIX Swiss Exchange                                                                                            03.08.2011
+SIX Swiss Exchange Message no. 43/2011
+
+
+
+
+Additional information on the launch as well as all technical documents and MSC messages are
+published in the Member Section:
+Document                                 Link
+MSC communications                       https://www.six-swiss-exchange.com/member_section/it/messages.html
+Manuals                                  https://www.six-swiss-exchange.com/member_section/it/manuals.html
+
+
+
+
+We are pleased to offer you added value with the expansion of capacity on the SWXess platform.
+
+
+If you have any questions, please do not hesitate to contact Member Services:
+
+Telephone:           +41 58 399 2473
+E-mail               member.services@six-group.com
+
+
+If you have any technical questions, please do not hesitate to contact your local Support Center:
+
+                     Zurich                           London                               Geneva
+Telephone:           +41 58 399 2400                  +44 207 7864 4364                    +41 58 399 5642
+E-mail               lsz@six-group.com                lsl@six-group.com                    lsg@six-group.com
+
+
+
+
+                                                                                                                    3|3
+

@@ -1,0 +1,542 @@
+{
+ "channel": "intermediate-2019-state",
+ "states": [
+  {
+   "artifact": "SGX Derivatives Market Trading Calendar 2019 (title page: \"SGX Derivatives Market / Trading Calendar 2019\"; hours table titled \"Trading Hours of SGX Futures and Options Contracts\")",
+   "artifact_date": "2019-01-15 (document text: \"All dates and information are accurate as of 15 January 2019.\"). PDF CreationDate 2019-01-22, ModDate 2019-01-23. HTTP last-modified: Wed, 23 Jan 2019 01:30:19 GMT.",
+   "capture_ts": "LIVE (retrieved 2026-09-06 from api2.sgx.com; NOT present in the Wayback Machine)",
+   "url": "https://api2.sgx.com/sites/default/files/2019-01/2019%20DT%20Calendar.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/sgx-pre2020/raw/intermediate-2019-state/live_2019-DT-Calendar_api2.pdf (text: live_2019-DT-Calendar_api2.txt; verbatim rows: grids_calendars.txt)",
+   "grids": [
+    {
+     "contract": "SGX Nikkei 225 Index Futures",
+     "t_session": "7.30am to 2.25pm",
+     "t1_session": "2.55pm to 4.45am",
+     "notes": "Column headers read \"T SESSION #ˆ\" and \"T+1 SESSION # ˆ\". sha256 of the PDF 4ea3ba47bd3e46aa948eb41e9eb310482b4b3ae1877bc942b7585bd9d5877797 — byte-identical to the prior sweep's artifacts/cal2019.pdf, so that file's provenance is now established. This resolves the FINDINGS.md item \"a calendar in api2 folder 2019-01 (SGX date field 2019-01-23) shows T+1 close 04:45 — RECONCILE BEFORE USE\": it is real, it is SGX-hosted, and it is live."
+    },
+    {
+     "contract": "SGX Nikkei 225 Index Options",
+     "t_session": "7.30am to 2.30pm",
+     "t1_session": "2.55pm to 4.45am",
+     "notes": "Options T close is 5 minutes later than futures, as in every edition."
+    },
+    {
+     "contract": "SGX Mini Nikkei 225 Index Futures",
+     "t_session": "7.30am to 2.25pm",
+     "t1_session": "2.55pm to 4.45am",
+     "notes": "Code NS."
+    },
+    {
+     "contract": "SGX USD Nikkei 225 Index Futures",
+     "t_session": "7.30am to 2.25pm",
+     "t1_session": "2.55pm to 4.45am",
+     "notes": "Code NU."
+    },
+    {
+     "contract": "SGX Nikkei Stock Average Dividend Point Index Futures",
+     "t_session": "7.30am to 2.25pm",
+     "t1_session": "2.55pm to 4.45am",
+     "notes": "Code ND. Tracks the Nikkei grid exactly."
+    },
+    {
+     "contract": "SGX FTSE China A50 Index Futures",
+     "t_session": "9.00am to 4.30pm",
+     "t1_session": "5.00pm to 4.45am",
+     "notes": "Code CN. T close 4.30pm here vs 3.25pm on the 2018-07-11 portal page; T+1 open 5.00pm vs 4.15pm there."
+    },
+    {
+     "contract": "SGX MSCI Singapore Free Index Futures",
+     "t_session": "8.30am to 5.10pm",
+     "t1_session": "5.40pm to 4.45am",
+     "notes": "Code SGP. Renamed \"SGX MSCI Singapore Index Futures\" by the 2020 edition; same code, same product."
+    },
+    {
+     "contract": "SGX MSCI Singapore Free Index Options",
+     "t_session": "8.30am to 5.15pm",
+     "t1_session": "5.40pm to 4.45am",
+     "notes": "Code SGPO."
+    },
+    {
+     "contract": "SGX MSCI Taiwan Index Futures",
+     "t_session": "8.45am to 1.45pm",
+     "t1_session": "2.15pm to 4.45am",
+     "notes": "Code TW. T+1 open 2.15pm here vs 2.35pm on the 2018-07-11 portal page. No SGX FTSE Taiwan contract exists in this edition."
+    },
+    {
+     "contract": "SGX MSCI Taiwan Index Options",
+     "t_session": "8.45am to 1.50pm",
+     "t1_session": "2.15pm to 4.45am",
+     "notes": "Code TWO."
+    },
+    {
+     "contract": "SGX MSCI Singapore Free NTR (USD) Index Futures",
+     "t_session": "7.25am to 6.30pm",
+     "t1_session": "7.00pm to 4.45am",
+     "notes": "Code NSG. The whole NTR (USD) suite shares this grid."
+    },
+    {
+     "contract": "SGX MSCI Taiwan NTR (USD) Index Futures",
+     "t_session": "7.25am to 6.30pm",
+     "t1_session": "7.00pm to 4.45am",
+     "notes": "Code NTW."
+    },
+    {
+     "contract": "SGX MSCI Philippines NTR (USD) Index Futures",
+     "t_session": "7.25am to 6.30pm",
+     "t1_session": "7.00pm to 4.45pm",
+     "notes": "SOURCE ANOMALY, quoted exactly as printed: \"4.45pm\", not \"4.45am\". Three NTR (USD) rows in this edition carry it. The same contract prints \"Opening: 7:00 pm - 4:45 am\" on SGX's own product API on 2019-06-11, and the 2018 (Apr) edition contains no \"4.45pm\" anywhere. Reads as a typo introduced in the 2019 edition — reported, not corrected."
+    },
+    {
+     "contract": "SGX MSCI Malaysia NTR (USD) Index Futures",
+     "t_session": "7.25am to 6.30pm",
+     "t1_session": "7.00pm to 4.45pm",
+     "notes": "Same \"4.45pm\" anomaly as the Philippines NTR row."
+    },
+    {
+     "contract": "SGX MSCI Thailand NTR (USD) Index Futures",
+     "t_session": "7.25am to 6.30pm",
+     "t1_session": "7.00pm to 4.45pm",
+     "notes": "Same \"4.45pm\" anomaly."
+    }
+   ],
+   "footnote": "# Timings exclude pre-opening and pre-closing routines, the respective non-cancel periods as well as the respective order-cancellation session states where applicable. For detailed timings, visit https://www2.sgx.com/derivatives/trading.\n^ NLT registration for all products commence at 7.10am.\n* Trade registration hours for SGX FlexC FX Futures. After the close of T session, there will be a 30-minute grace period for participants to continue registering T session trades.",
+   "contracts_listed": [
+    "SGX FTSE China A50 Index Futures",
+    "SGX MSCI Australia NTR (USD) Index Futures",
+    "SGX MSCI China Free NTR (USD) Index Futures",
+    "SGX MSCI China Free Price Return (USD) Index Futures",
+    "SGX MSCI China Free Price Return (USD) Index Options",
+    "SGX MSCI Emerging Market Asia Ex-China NTR (USD) Index Futures",
+    "SGX MSCI Emerging Market Asia Ex-Korea NTR (USD) Index Futures",
+    "SGX MSCI Emerging Market Ex-China NTR (USD) Index Futures",
+    "SGX MSCI Emerging Market Ex-Korea NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets (USD) Index Futures",
+    "SGX MSCI Emerging Markets Asia NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets EMEA NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets LatAm NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets NTR (USD) Index Futures",
+    "SGX MSCI India Index Futures",
+    "SGX MSCI India NTR (USD) Index Futures",
+    "SGX MSCI Indonesia Index Futures",
+    "SGX MSCI Indonesia NTR (USD) Index Futures",
+    "SGX MSCI Japan Index Futures",
+    "SGX MSCI Japan NTR (JPY) Index Futures",
+    "SGX MSCI Japan NTR (USD) Index Futures",
+    "SGX MSCI Malaysia Index Futures",
+    "SGX MSCI Malaysia NTR (USD) Index Futures",
+    "SGX-PSE MSCI Philippines Index Futures",
+    "SGX MSCI Philippines NTR (USD) Index Futures",
+    "SGX MSCI Singapore Free Index Futures",
+    "SGX MSCI Singapore Free Index Options",
+    "SGX MSCI Singapore Free NTR (USD) Index Futures",
+    "SGX MSCI Taiwan Index Futures",
+    "SGX MSCI Taiwan Index Options",
+    "SGX MSCI Taiwan NTR (USD) Index Futures",
+    "SGX MSCI Thailand Index Futures",
+    "SGX MSCI Thailand NTR (USD) Index Futures",
+    "SGX Nifty 50 Index Futures",
+    "SGX Nifty 50 Options",
+    "SGX Nifty Bank Index Futures",
+    "SGX Nikkei 225 Index Futures",
+    "SGX Nikkei 225 Index Options",
+    "SGX Mini Nikkei 225 Index Futures",
+    "SGX USD Nikkei 225 Index Futures",
+    "SGX Nikkei Stock Average Dividend Point Index Futures",
+    "SGX Straits Times Index Futures",
+    "(SCOPE NOTE — this list is the artifact's complete EQUITY INDEX set. The same hours table also names roughly 150 further contracts in FX, interest rates, single stocks, iron ore, coking coal, freight, rubber, petrochemicals, energy and electricity, all sharing the 4.45am T+1 close. They are transcribed in the saved grids_calendars.txt / live_2019-DT-Calendar_api2.txt rather than repeated here.)"
+   ]
+  },
+  {
+   "artifact": "api2.sgx.com content-api GraphQL response `derivatives_products_list` — the payload backing every www2.sgx.com/derivatives/products/* page",
+   "artifact_date": "NONE — the response carries no publication or as-of date. Only the Wayback capture instant dates it.",
+   "capture_ts": "20190204200905",
+   "url": "https://api2.sgx.com/content-api?queryId=9756cc24703868bca7da492a8e1aebd1268eaf70%3Aderivatives_products_list&variables=%7B%22limit%22%3A10000%2C%22lang%22%3A%22EN%22%7D",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/sgx-pre2020/raw/intermediate-2019-state/contentapi_derivatives_products_list_20190204200905.json (extract: grids_20190204.txt)",
+   "grids": [
+    {
+     "contract": "SGX Nikkei 225 Index Futures",
+     "t_session": "Opening : 7.30 am - 2.25 pm",
+     "t1_session": "Opening : 2.55 pm - 4.45 am",
+     "notes": "Full printed breakdown: T Session — \"Pre -Opening : 7.15 am - 7.28 am / Non -Cancel : 7.28 am - 7.30 am / Opening : 7.30 am - 2.25 pm / Pre-Closing : 2.25 pm - 2.29 pm / Non-Cancel : 2. 29 pm - 2.30 pm\" (the stray space in \"2. 29 pm\" is in the source). T+1 Session — \"Pre -Opening : 2.45 pm - 2.53 pm / Non -Cancel : 2.53 pm - 2.55 pm / Opening : 2.55 pm - 4.45 am / Pre - Closing : NA / Non - Cancel : NA\"."
+    },
+    {
+     "contract": "SGX FTSE China A50 Index Futures",
+     "t_session": "Opening: 9.00 am - 4.30 pm",
+     "t1_session": "Opening: 5.00 pm - 4.45 am",
+     "notes": "T Session — \"Pre - Opening: 8.45 am - 8.58 am / Non - Cancel: 8.58 am - 9.00 am / Opening: 9.00 am - 4.30 pm / Pre - Closing: 4.30 pm - 4.34 pm / Non - Cancel: 4.34 pm - 4.35 pm\". T + 1 Session — \"Pre - Opening: 4.50 pm - 4.58 pm / Non - Cancel: 4.58 pm - 5.00 pm / Opening: 5.00 pm - 4.45 am / Pre - Closing: NA / Non - Cancel: NA\"."
+    },
+    {
+     "contract": "SGX MSCI Singapore Free Index Futures",
+     "t_session": "Opening: 8:30 am - 5:10 pm",
+     "t1_session": "Opening: 5:40 pm - 4:45 am",
+     "notes": "T Session — \"Pre - Opening: 8:15 am - 8:28 am / Non - Cancel: 8:28 am - 8:30 am / Opening: 8:30 am - 5:10 pm / Pre - Closing: 5:10 pm - 5:14 pm / Non - Cancel: 5:14 pm - 5:15 pm\". T+1 Session — \"Pre - Opening: 5:30 pm - 5:38 pm / Non - Cancel: 5:38 pm - 5:40 pm / Opening: 5:40 pm - 4:45 am\" (no Pre-Closing/Non-Cancel lines at all for T+1 on this contract). Agrees with the January 2019 calendar."
+    },
+    {
+     "contract": "SGX MSCI Taiwan Index Futures",
+     "t_session": "Opening: 8.45 am - 1.45 pm",
+     "t1_session": "Opening: 2.15 pm - 4.45 am",
+     "notes": "T Session — \"Pre - Opening: 8.30 am - 8.43 am / Non - Cancel: 8.43 am - 8.45 am / Opening: 8.45 am - 1.45 pm / Pre - Closing: 1.45 pm - 1.49 pm / Non - Cancel: 1.49 pm - 1.50 pm\". T+1 Session — \"Pre - Opening: 2.05 pm - 2.13 pm / Non - Cancel: 2.13 pm - 2.15 pm / Opening: 2.15 pm - 4.45 am\"."
+    },
+    {
+     "contract": "SGX MSCI Singapore Free NTR (USD) Index Futures",
+     "t_session": "Opening: 7.25 am - 6.30 pm",
+     "t1_session": "Opening: 7.00 pm - 4.45 am",
+     "notes": "T-session — \"Pre - Opening: 7.10 am - 7.23 am / Non - Cancel: 7.23 am - 7.25 am / Opening: 7.25 am - 6.30 pm / Pre - Closing: 6.30 pm - 6.34 pm / Non - Cancel: 6.34 pm - 6.35 pm\". T + 1 Session — \"Pre - Opening: 6.50 pm - 6.58 pm / Non - Cancel: 6.58 pm - 7.00 pm / Opening: 7.00 pm - 4.45 am / Pre - Closing: NA / Non - Cancel: NA\"."
+    },
+    {
+     "contract": "SGX MSCI Taiwan NTR (USD) Index Futures",
+     "t_session": "Opening: 7.25 am - 6.30 pm",
+     "t1_session": "Opening: 7.00 pm - 4.45 am",
+     "notes": "Identical breakdown to the Singapore Free NTR row. Every NTR (USD) contract in this capture carries this grid."
+    }
+   ],
+   "footnote": "NONE. This artifact carries no footnote at all — and it does not need one, because unlike the calendars it prints the session states themselves (Pre-Opening / Non-Cancel / Opening / Pre-Closing / Non-Cancel) rather than a single figure qualified by an exclusion note. The calendars' \"Timings exclude pre-opening and pre-closing routines…\" footnote points at exactly this surface (\"For detailed timings, visit https://www2.sgx.com/derivatives/trading\"), and the two agree: each calendar cell equals this artifact's \"Opening:\" line.",
+   "contracts_listed": [
+    "SGX FTSE China A50 Index Futures",
+    "SGX MSCI Australia NTR (USD) Index Futures",
+    "SGX MSCI China Free NTR (USD) Index Futures",
+    "SGX MSCI China Free Price Return (USD) Index Futures",
+    "SGX MSCI China Free Price Return (USD) Index Options",
+    "SGX MSCI Emerging Markets (USD) Index Futures",
+    "SGX MSCI Emerging Markets NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets Asia NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets ex-China NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets ex-Korea NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets Asia ex-China NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets Asia ex-Korea NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets EMEA NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets LatAm NTR (USD) Index Futures",
+    "SGX MSCI India Index Futures",
+    "SGX MSCI India NTR (USD) Index Futures",
+    "SGX MSCI Indonesia Index Futures",
+    "SGX MSCI Indonesia NTR (USD) Index Futures",
+    "SGX MSCI Japan Index Futures",
+    "SGX MSCI Japan NTR (JPY) Index Futures",
+    "SGX MSCI Japan NTR (USD) Index Futures",
+    "SGX MSCI Malaysia Index Futures",
+    "SGX MSCI Malaysia NTR (USD) Index Futures",
+    "SGX-PSE MSCI Philippines Index Futures",
+    "SGX MSCI Philippines NTR (USD) Index Futures",
+    "SGX MSCI Singapore Free Index Futures",
+    "SGX MSCI Singapore Free Index Options",
+    "SGX MSCI Singapore Free NTR (USD) Index Futures",
+    "SGX MSCI Taiwan Index Futures",
+    "SGX MSCI Taiwan Index Options",
+    "SGX MSCI Taiwan NTR (USD) Index Futures",
+    "SGX MSCI Thailand Index Futures",
+    "SGX MSCI Thailand NTR (USD) Index Futures",
+    "SGX Nifty 50 Index Futures",
+    "SGX Nifty 50 Index Options",
+    "SGX Nifty Bank Index Futures",
+    "SGX Nikkei 225 Index Futures",
+    "SGX Nikkei 225 Index Options",
+    "SGX USD Nikkei 225 Index Futures",
+    "SGX Mini Nikkei 225 Index Futures",
+    "SGX Straits Times Index Futures",
+    "(SCOPE NOTE — the 41 names above are the artifact's complete EQUITY INDEX category. The response holds 42 underlying products / 226 contracts in total; the remaining 185 are FX, interest rate, equities, commodities, iron ore, freight and energy, all with the same 4.45 am T+1 close. Enumerated in full in the saved JSON.)"
+   ]
+  },
+  {
+   "artifact": "api2.sgx.com content-api GraphQL response `derivatives_products_list` (later CMS build — queryId 5adaa923…)",
+   "artifact_date": "NONE — no publication or as-of date in the payload.",
+   "capture_ts": "20190611051800",
+   "url": "https://api2.sgx.com/content-api?queryId=5adaa923edc3b334f3d4a62a324e055c4be65025%3Aderivatives_products_list&variables=%7B%22limit%22%3A10000%2C%22lang%22%3A%22EN%22%7D",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/sgx-pre2020/raw/intermediate-2019-state/contentapi_derivatives_products_list_20190611051800.json (extract: grids_20190611.txt)",
+   "grids": [
+    {
+     "contract": "SGX MSCI Singapore Free Index Futures",
+     "t_session": "Opening: 8:30 am - 5:20 pm",
+     "t1_session": "Opening: 5:50 pm - 4:45 am",
+     "notes": "THE DISTINGUISHING ROW — this is the only thing that differs from the 2019-02-04 capture. Full breakdown: T Session — \"Pre - Opening: 8:15 am - 8:28 am / Non - Cancel: 8:28 am - 8:30 am / Opening: 8:30 am - 5:20 pm / Pre - Closing: 5:20 pm - 5:24 pm / Non - Cancel: 5:24 pm - 5:25 pm\". T+1 Session — \"Pre - Opening: 5:40 pm - 5:48 pm / Non - Cancel: 5:48 pm - 5:50 pm / Opening: 5:50 pm - 4:45 am\". T close 5:10 pm → 5:20 pm and T+1 open 5:40 pm → 5:50 pm, while the 4:45 am close is unchanged. This is the SiMSCI grid the 2020 calendar carries, already in place while the close is still 4.45 am. No artifact in this channel dates the change."
+    },
+    {
+     "contract": "SGX MSCI Singapore Free Index Options",
+     "t_session": "Opening: 8:30 am - 5:25 pm",
+     "t1_session": "Opening: 5:50 pm - 4:45 am",
+     "notes": "Printed with an order-cancellation form rather than pre-open/non-cancel: \"T Session: Order Cancellation: 8:15 am - 8:30 am / Opening: 8:30 am - 5:25 pm\"; \"T+1 Session: Order Cancellation: 5:40 pm - 5:50 pm / Opening: 5:50 pm - 4:45 am\"."
+    },
+    {
+     "contract": "SGX Nikkei 225 Index Futures",
+     "t_session": "Opening : 7.30 am - 2.25 pm",
+     "t1_session": "Opening : 2.55 pm - 4.45 am",
+     "notes": "Byte-identical to the 2019-02-04 capture, including the \"2. 29 pm\" typo."
+    },
+    {
+     "contract": "SGX FTSE China A50 Index Futures",
+     "t_session": "Opening: 9.00 am - 4.30 pm",
+     "t1_session": "Opening: 5.00 pm - 4.45 am",
+     "notes": "Unchanged from 2019-02-04."
+    },
+    {
+     "contract": "SGX MSCI Taiwan Index Futures",
+     "t_session": "Opening: 8.45 am - 1.45 pm",
+     "t1_session": "Opening: 2.15 pm - 4.45 am",
+     "notes": "Unchanged from 2019-02-04. Taiwan Index Options: \"Order Cancellation:  8.30 am - 8.45 am / Opening: 8.45 am - 1.50 pm\"; T+1 \"Order Cancellation: 2.05 pm - 2.15 pm / Opening: 2.15 pm - 4.45 am\"."
+    },
+    {
+     "contract": "SGX MSCI Singapore Free NTR (USD) Index Futures",
+     "t_session": "Opening: 7.25 am - 6.30 pm",
+     "t1_session": "Opening: 7.00 pm - 4.45 am",
+     "notes": "Unchanged. Note this capture adds a SECOND, separately-named product \"SGX MSCI Singapore NTR (USD) Index Futures\" carrying the same grid (\"Opening : 7.25 am - 6.30 pm\" / \"Opening : 7.00 pm - 4.45 am\")."
+    },
+    {
+     "contract": "SGX MSCI Taiwan NTR (USD) Index Futures",
+     "t_session": "Opening: 7.25 am - 6.30 pm",
+     "t1_session": "Opening: 7.00 pm - 4.45 am",
+     "notes": "Unchanged."
+    },
+    {
+     "contract": "SGX Nikkei 225 Index Total Return Futures",
+     "t_session": "Opening: 7.30 am - 2.25 pm",
+     "t1_session": "Opening: 2.55 pm - 4.45 am",
+     "notes": "New in this capture (absent 2019-02-04). Tracks the Nikkei grid."
+    }
+   ],
+   "footnote": "NONE — same as the February capture: this surface prints the session states themselves, so it carries no exclusion footnote.",
+   "contracts_listed": [
+    "SGX FTSE China A50 Index Futures",
+    "SGX MSCI Australia NTR (USD) Index Futures",
+    "SGX MSCI China Free NTR (USD) Index Futures",
+    "SGX MSCI China Free Price Return (USD) Index Futures",
+    "SGX MSCI China Free Price Return (USD) Index Options",
+    "SGX MSCI Emerging Markets (USD) Index Futures",
+    "SGX MSCI Emerging Markets NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets Asia NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets ex-China NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets ex-Korea NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets Asia ex-China NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets Asia ex-Korea NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets EMEA NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets LatAm NTR (USD) Index Futures",
+    "SGX MSCI Hong Kong NTR (USD) Index Futures",
+    "SGX MSCI India Index Futures",
+    "SGX MSCI India NTR (USD) Index Futures",
+    "SGX MSCI Indonesia Index Futures",
+    "SGX MSCI Indonesia NTR (USD) Index Futures",
+    "SGX MSCI Japan Index Futures",
+    "SGX MSCI Japan NTR (JPY) Index Futures",
+    "SGX MSCI Japan NTR (USD) Index Futures",
+    "SGX MSCI Malaysia Index Futures",
+    "SGX MSCI Malaysia NTR (USD) Index Futures",
+    "SGX MSCI New Zealand NTR (USD) Index Futures",
+    "SGX MSCI Pacific ex Japan NTR (USD) Index Futures",
+    "SGX-PSE MSCI Philippines Index Futures",
+    "SGX MSCI Philippines NTR (USD) Index Futures",
+    "SGX MSCI Singapore Free Index Futures",
+    "SGX MSCI Singapore Free Index Options",
+    "SGX MSCI Singapore Free NTR (USD) Index Futures",
+    "SGX MSCI Singapore NTR (USD) Index Futures",
+    "SGX MSCI Taiwan Index Futures",
+    "SGX MSCI Taiwan Index Options",
+    "SGX MSCI Taiwan NTR (USD) Index Futures",
+    "SGX MSCI Thailand Index Futures",
+    "SGX MSCI Thailand NTR (USD) Index Futures",
+    "SGX Nifty 50 Index Futures",
+    "SGX Nifty 50 Index Options",
+    "SGX Nifty Bank Index Futures",
+    "SGX Nikkei 225 Index Futures",
+    "SGX Nikkei 225 Index Options",
+    "SGX USD Nikkei 225 Index Futures",
+    "SGX Mini Nikkei 225 Index Futures",
+    "SGX Nikkei 225 Index Total Return Futures",
+    "SGX Straits Times Index Futures",
+    "(SCOPE NOTE — the 46 names above are the artifact's complete EQUITY INDEX category. Total payload: 46 underlying products / 232 contracts; the other 186 span FX, rates, equities, commodities, iron ore, freight and energy. Full set in the saved JSON. No SGX FTSE Taiwan Index Futures exists yet.)"
+   ]
+  },
+  {
+   "artifact": "api2.sgx.com content-api `derivatives_products_list` — Wayback REVISIT record of the 2019-06-11 capture",
+   "artifact_date": "NONE.",
+   "capture_ts": "20190621080419",
+   "url": "https://api2.sgx.com/content-api?queryId=5adaa923edc3b334f3d4a62a324e055c4be65025%3Aderivatives_products_list&variables=%7B%22limit%22%3A10000%2C%22lang%22%3A%22EN%22%7D",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/sgx-pre2020/raw/intermediate-2019-state/contentapi_derivatives_products_list_20190621080419.json",
+   "grids": [
+    {
+     "contract": "(all — identical content)",
+     "t_session": "identical to the 20190611051800 capture",
+     "t1_session": "identical to the 20190611051800 capture",
+     "notes": "CDX statuscode is \"-\" (a revisit record). The replayed bytes hash to sha256 5fbc896e1a626f27d0c0c000d18a3250cad7a6cde8bd9536c6fb73823045e5fe — exactly the 2019-06-11 file. So this is NOT independent evidence of a new state; its only value is that it extends the witness of that state by ten days, to 2019-06-21 08:04:19."
+    }
+   ],
+   "footnote": "NONE.",
+   "contracts_listed": [
+    "(identical to the 20190611051800 capture — same 46 equity-index contracts, same 232 total)"
+   ]
+  },
+  {
+   "artifact": "api2.sgx.com content-api `page` response for /derivatives/products/chinaa50 — the single-product payload behind the SGX FTSE China A50 product page",
+   "artifact_date": "NONE. The payload carries three unlabelled unix \"date\" fields (1541591269, 1529317083, 1529317663) attached to article nodes, not to the hours block; they are not treated as dating the grid.",
+   "capture_ts": "20190116144725",
+   "url": "https://api2.sgx.com/content-api?queryId=e8c4b75927723d2bae18ec762abab178e0efcd9a%3Apage&variables=%7B%22path%22%3A%22%2Fderivatives%2Fproducts%2Fchinaa50%22%2C%22lang%22%3A%22EN%22%7D",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/sgx-pre2020/raw/intermediate-2019-state/contentapi_chinaa50_20190116144725.json",
+   "grids": [
+    {
+     "contract": "SGX FTSE China A50 Index Futures",
+     "t_session": "Opening: 9.00 am - 4.30 pm",
+     "t1_session": "Opening: 5.00 pm - 4.45 am",
+     "notes": "Verbatim in full: \"T Session:<br />\\nPre - Opening: 8.45 am - 8.58 am<br />\\nNon - Cancel: 8.58 am - 9.00 am<br />\\nOpening: 9.00 am - 4.30 pm<br />\\nPre - Closing: 4.30 pm - 4.34 pm<br />\\nNon - Cancel: 4.34 pm - 4.35 pm</p>\" then \"T + 1 Session:<br />\\nPre - Opening: 4.50 pm - 4.58 pm<br />\\nNon - Cancel: 4.58 pm - 5.00 pm<br />\\nOpening: 5.00 pm - 4.45 am<br />\\nPre - Closing: NA<br />\\nNon - Cancel: NA</p>\". This is the earliest 2019 capture in the channel and it is one day after the 2019 calendar's own \"accurate as of 15 January 2019\" date — the two agree exactly."
+    }
+   ],
+   "footnote": "NONE — per-contract session-state page, no exclusion footnote.",
+   "contracts_listed": [
+    "SGX FTSE China A50 Index Futures"
+   ]
+  },
+  {
+   "artifact": "SGX Derivatives Market Trading Calendar 2018 (Apr) — retrieved as the LOWER BOUND on the 04:45 state, not as a 2019 artifact",
+   "artifact_date": "2017-12-26 (document text: \"All dates and information are accurate as of 26 December 2017.\") — but the PDF's own CreationDate is 2018-04-11 17:26:16 and SGX served it from HTTP last-modified: Mon, 21 May 2018 10:17:04 GMT. The \"accurate as of\" line appears to be boilerplate carried over from the original edition; both dates are reported, neither is reconciled.",
+   "capture_ts": "LIVE (retrieved 2026-09-06 from api2.sgx.com)",
+   "url": "https://api2.sgx.com/sites/default/files/2018-05/SGX%20Derivatives%20Trading%20Calendar%202018%20%28Apr%29.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/sgx-pre2020/raw/intermediate-2019-state/boundary_2018-Apr-Calendar_api2.pdf (text: boundary_2018-Apr-Calendar_api2.txt)",
+   "grids": [
+    {
+     "contract": "SGX Nikkei 225 Index Futures",
+     "t_session": "7.30am to 2.25pm",
+     "t1_session": "2.55pm to 4.45am",
+     "notes": "CONFLICT, reported not resolved: this SGX document is authored 2018-04-11 and served from 2018-05-21, yet the SGX portal page captured three months LATER on 2018-07-11 prints \"7.45 am - 2.25 pm\" and \"3.15 pm - 2.00 am (following day)\" for the same contract. Two SGX artifacts overlapping in time disagree on both the T open and the T+1 close."
+    },
+    {
+     "contract": "SGX Nikkei 225 Index Options",
+     "t_session": "7.30am to 2.30pm",
+     "t1_session": "2.55pm to 4.45am",
+     "notes": "Identical to the 2019 edition."
+    },
+    {
+     "contract": "SGX FTSE China A50 Index Futures",
+     "t_session": "9.00am to 4.30pm",
+     "t1_session": "5.00pm to 4.45am",
+     "notes": "Identical to the 2019 edition. The 2018-07-11 portal page prints \"7.45 am - 3.25 pm\" / \"4.15 pm - 2.00 am\" instead."
+    },
+    {
+     "contract": "SGX MSCI Singapore Free Index Futures",
+     "t_session": "8.30am to 5.10pm",
+     "t1_session": "5.40pm to 4.45am",
+     "notes": "Identical to the 2019 edition. The 2018-07-11 portal page prints \"8.30 am - 5.10 pm\" / \"6.15 pm - 2.00 am\" — same T session, different T+1."
+    },
+    {
+     "contract": "SGX MSCI Singapore Free Index Options",
+     "t_session": "8.30am to 5.15pm",
+     "t1_session": "5.40pm to 4.45am",
+     "notes": "Identical to the 2019 edition."
+    },
+    {
+     "contract": "SGX MSCI Taiwan Index Futures",
+     "t_session": "8.45am to 1.45pm",
+     "t1_session": "2.15pm to 4.45am",
+     "notes": "Identical to the 2019 edition. The 2018-07-11 portal page prints \"8.45 am - 1.45 pm\" / \"2.35 pm - 2.00 am\"."
+    },
+    {
+     "contract": "SGX MSCI Taiwan Index Options",
+     "t_session": "8.45am to 1.50pm",
+     "t1_session": "2.15pm to 4.45am",
+     "notes": "Identical to the 2019 edition."
+    },
+    {
+     "contract": "SGX MSCI Singapore Free NTR (USD) Index Futures",
+     "t_session": "7.25am to 6.30pm",
+     "t1_session": "7.00pm to 4.45am",
+     "notes": "Identical to the 2019 edition. No \"4.45pm\" string appears anywhere in this edition, which is why the 2019 edition's three \"4.45pm\" NTR cells read as a new typo rather than a real grid."
+    },
+    {
+     "contract": "SGX MSCI Taiwan NTR (USD) Index Futures",
+     "t_session": "7.25am to 6.30pm",
+     "t1_session": "7.00pm to 4.45am",
+     "notes": "Identical to the 2019 edition."
+    }
+   ],
+   "footnote": "# Timings exclude pre-opening and pre-closing routines, the respective non-cancel periods as well as the respective order-cancellation session states where applicable. For detailed timings, visit sgx.com/derivativestradingcalendar",
+   "contracts_listed": [
+    "SGX FTSE China A50 Index Futures",
+    "SGX MSCI Australia NTR (USD) Index Futures",
+    "SGX MSCI China Free NTR (USD) Index Futures",
+    "SGX MSCI China Index Futures",
+    "SGX MSCI China Index Options",
+    "SGX MSCI Emerging Market Asia Ex-China NTR (USD) Index Futures",
+    "SGX MSCI Emerging Market Asia Ex-Korea NTR (USD) Index Futures",
+    "SGX MSCI Emerging Market Ex-China NTR (USD) Index Futures",
+    "SGX MSCI Emerging Market Ex-Korea NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets (USD) Index Futures",
+    "SGX MSCI Emerging Markets Asia NTR (USD) Index Futures",
+    "SGX MSCI Emerging Markets NTR (USD) Index Futures",
+    "SGX MSCI India Index Futures",
+    "SGX MSCI India NTR (USD) Index Futures",
+    "SGX MSCI Indonesia Index Futures",
+    "SGX MSCI Indonesia NTR (USD) Index Futures",
+    "SGX MSCI Japan Index Futures",
+    "SGX MSCI Japan NTR (USD) Index Futures",
+    "SGX MSCI Malaysia Index Futures",
+    "SGX MSCI Singapore Free Index Futures",
+    "SGX MSCI Singapore Free Index Options",
+    "SGX MSCI Singapore Free NTR (USD) Index Futures",
+    "SGX MSCI Taiwan Index Futures",
+    "SGX MSCI Taiwan Index Options",
+    "SGX MSCI Taiwan NTR (USD) Index Futures",
+    "SGX MSCI Thailand Index Futures",
+    "SGX-PSE MSCI Philippines Futures",
+    "SGX Nifty 50 Index Futures",
+    "SGX Nifty 50 Index Options",
+    "SGX Nifty Bank Index Futures",
+    "SGX Nifty CPSE Index Futures",
+    "SGX Nifty IT Index Futures",
+    "SGX Nifty Midcap 50 Index Futures",
+    "SGX Nikkei 225 Index Futures",
+    "SGX Nikkei 225 Index Options",
+    "SGX Mini Nikkei 225 Index Futures",
+    "SGX USD Nikkei 225 Index Futures",
+    "SGX Nikkei Stock Average Dividend Point Index Futures",
+    "SGX Straits Times Index Futures",
+    "(SCOPE NOTE — equity-index set as printed in this edition's hours table. Naming differs from 2019: the A50 sibling is \"SGX MSCI China Index Futures/Options\" here and \"SGX MSCI China Free Price Return (USD) Index Futures/Options\" in 2019; the Nifty CPSE / IT / Midcap 50 contracts are present here and gone by 2019; \"SGX-PSE MSCI Philippines Futures\" gains \"Index\" in 2019. The table also names roughly 150 non-equity-index contracts, transcribed in the saved text file.)"
+   ]
+  },
+  {
+   "artifact": "api2.sgx.com content-api `derivatives_products_list` — UPPER BOUND artifact, first SGX-hosted capture showing 05:15",
+   "artifact_date": "NONE.",
+   "capture_ts": "20200109051211",
+   "url": "https://api2.sgx.com/content-api?queryId=ef44c5f861fc84577240761863bf1f842f189d9f%3Aderivatives_products_list&variables=%7B%22limit%22%3A10000%2C%22lang%22%3A%22EN%22%7D",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/sgx-pre2020/raw/intermediate-2019-state/contentapi_derivatives_products_list_20200109051211.json (extract: grids_20200109.txt)",
+   "grids": [
+    {
+     "contract": "SGX Nikkei 225 Index Futures",
+     "t_session": "Opening : 7.30 am - 2.25 pm",
+     "t1_session": "Opening : 2.55 pm - 5.15 am",
+     "notes": "Included only to bound the 04:45 state. Diffed against the 2019-06-11 capture, the ONLY changes across all five modelled families are the six T+1 close times, 4.45 am → 5.15 am. Every T session, every pre-open, every non-cancel window is byte-identical."
+    },
+    {
+     "contract": "SGX FTSE China A50 Index Futures",
+     "t_session": "Opening: 9.00 am - 4.30 pm",
+     "t1_session": "Opening: 5.00 pm - 5.15 am",
+     "notes": "T session unchanged from the 04:45 era."
+    },
+    {
+     "contract": "SGX MSCI Singapore Free Index Futures",
+     "t_session": "Opening: 8:30 am - 5:20 pm",
+     "t1_session": "Opening: 5:50 pm - 5:15 am",
+     "notes": "Carries the State-B SiMSCI grid (5:20 pm / 5:50 pm), confirming that SiMSCI change preceded the close change rather than accompanying it."
+    },
+    {
+     "contract": "SGX MSCI Taiwan Index Futures",
+     "t_session": "Opening: 8.45 am - 1.45 pm",
+     "t1_session": "Opening: 2.15 pm - 5.15 am",
+     "notes": "T session unchanged."
+    },
+    {
+     "contract": "SGX MSCI Singapore Free NTR (USD) Index Futures",
+     "t_session": "Opening: 7.25 am - 6.30 pm",
+     "t1_session": "Opening: 7.00 pm - 5.15 am",
+     "notes": "T session unchanged."
+    },
+    {
+     "contract": "SGX MSCI Taiwan NTR (USD) Index Futures",
+     "t_session": "Opening: 7.25 am - 6.30 pm",
+     "t1_session": "Opening: 7.00 pm - 5.15 am",
+     "notes": "T session unchanged."
+    }
+   ],
+   "footnote": "NONE.",
+   "contracts_listed": [
+    "(the 2019-06-11 equity-index set, plus SGX MSCI Pacific NTR (USD) Index Futures, SGX MSCI Vietnam Index Futures and SGX MSCI Vietnam NTR (USD) Index Futures — 49 equity-index contracts across 47 underlying products, 243 contracts in total. Still no SGX FTSE Taiwan Index Futures.)"
+   ]
+  }
+ ],
+ "distinct_grid_states": "TWO distinct 04:45 grids, plus the 05:15 successor that bounds them. They differ in ONE contract.\n\nSTATE A — 04:45 close, SiMSCI 5.10pm/5.40pm.\nNikkei 225 F 7.30am-2.25pm / 2.55pm-4.45am; FTSE China A50 F 9.00am-4.30pm / 5.00pm-4.45am; MSCI Singapore Free F 8.30am-5.10pm / 5.40pm-4.45am; MSCI Taiwan F 8.45am-1.45pm / 2.15pm-4.45am; MSCI Singapore Free NTR (USD) F 7.25am-6.30pm / 7.00pm-4.45am.\nWitnessed by four SGX artifacts spanning roughly fourteen months: the 2018 (Apr) Trading Calendar (PDF authored 2018-04-11, served from 2018-05-21, live today), the chinaa50 product-page payload (capture 2019-01-16 14:47:25), the 2019 Trading Calendar (document date 2019-01-15, live today), and the products-list payload (capture 2019-02-04 20:09:05). Capture range as evidence: 2018-04-11 (document authorship) / 2018-05-21 (first SGX service) through 2019-02-04.\n\nSTATE B — 04:45 close, SiMSCI 5.20pm/5.50pm. Identical to State A in every other family; the SiMSCI T close moves 5:10pm→5:20pm and the T+1 open 5:40pm→5:50pm, close untouched.\nWitnessed by one payload, captured twice: 2019-06-11 05:18:00 and the byte-identical revisit at 2019-06-21 08:04:19. Capture range: 2019-06-11 to 2019-06-21.\n\nSTATE C (bound only, out of remit) — 05:15 close, SiMSCI unchanged from State B. Capture 2020-01-09 05:12:11.\n\nSo the 04:45 state as a whole spans 2018-04-11/2018-05-21 through 2019-06-21 in SGX's own artifacts, and the 04:45→05:15 changeover falls in an unwitnessed window between 2019-06-21 08:04:19 and 2020-01-09 05:12:11. Nothing in this channel narrows it and no effective day is inferred.\n\nTwo cautions on the boundaries. First, State A's lower bound COLLIDES with the portal page: the 2018 (Apr) calendar prints 4.45am and Nikkei 7.30am from April 2018, while the portal capture of 2018-07-11 — three months later — prints 2.00am and 7.45am. Both are SGX-authored, they overlap in time, and they disagree; the 04:45 state therefore does not start cleanly after the 02:00 state, and any intersection served across mid-2018 has to face that conflict rather than assume a clean ordering. Second, the 2019 calendar prints \"7.00pm to 4.45pm\" (pm, not am) on three NTR (USD) rows — Philippines, Malaysia, Thailand. SGX's own product API prints \"4:45 am\" for those same three contracts four months later and the 2018 edition has no \"4.45pm\" at all, so it reads as a typo, but it is quoted as printed and not corrected.",
+ "dead_ends": "THE \"NO 2019 CALENDAR SURVIVES\" CLAIM IS HALF WRONG — and the half that is wrong is the load-bearing one. The repo's belief was tested with CDX over both hosts and the archive negative HOLDS: url=api2.sgx.com/sites/default/files/2019*&matchType=prefix returns [], and the 2019-01 folder prefix returns ~200 rows containing no \"2019 DT Calendar.pdf\". But the document is STILL LIVE at its original SGX URL and was retrieved today, sha256-identical to the prior sweep's unattributed artifacts/cal2019.pdf. The 2018 (Apr) edition is live too. So the pre-2020 calendars were never archived, and were never gone. FINDINGS.md's \"RECONCILE BEFORE USE\" flag on the api2 2019-01 calendar is now resolved in favour of the calendar.\n\nGenuine dead ends:\n\n1. Product pages as HTML — worthless. www2.sgx.com/derivatives/products/chinaa50 (2019-01-16), nikkei225futuresoptions?cc=NK (2019-09-22) and sgxsimsci?cc=SGP (2019-09-30) are all archived, all 200, and all empty React shells with no hours in the markup. Saved as prod_*.html purely to document that. The hours live in the content-api payload behind them, and for the two September 2019 pages that payload was NOT archived — which is precisely why the 04:45→05:15 window stays dark.\n\n2. www2.sgx.com/derivatives/trading — the page the 2019 calendar's own footnote cites for \"detailed timings\" — has NO capture before 2020-08-03. The obvious surface for witnessing the changeover does not exist in the archive for the relevant era.\n\n3. No content-api capture of any kind touching derivatives products between 2019-06-21 and 2020-01-09. The only captures in that window are alerts, menus, a securities equity page and a screener token.\n\n4. Six further 2019-calendar filename shapes probed live on api2 — 2019-02/, 2019-06/, 2019-11/, 2019-12/ \"2019 DT Calendar.pdf\", \"SGX Derivatives Trading Calendar 2019.pdf\", \"2019 DT Calendar_0.pdf\" — all 404. There is exactly one 2019 edition and no mid-year update.\n\n5. Year-end artifacts carry no grid. SGX-DT Trading Schedules for Year End 2019 and Appendix 1 tabulate T Session / T+1 Session as Open/Closed per contract, never as times. The Titan DTDC Factsheet (Dec 2019) mentions \"the end of day T+1 session closing at 5.15am\" in prose — post-change, so it corroborates State C's existence but adds nothing to the 04:45 era.\n\n6. CDX for the old wcm portal (sgx.com/wps/wcm/connect/mp_en/site/trading_on_sgx*) returned zero rows in this session under two prefix forms. That surface belongs to the portal-hours-page channel; I did not pursue it further.\n\nTooling note: web.archive.org was intermittently refusing connections and returning 504s throughout. Every fetch was retried with backoff until it returned. One query never came back — the exact-URL CDX for the 2019 calendar — but the 2019-01 folder-prefix query did return and answers the identical question, so the negative is established rather than assumed. Zero-byte .txt and \"[]\" .json files in the channel directory are successful queries that matched nothing, not failed fetches; INDEX.md says so explicitly.\n\nEverything is saved under /Users/agedvagabond/Developer/exchange-hours-research/sgx-pre2020/raw/intermediate-2019-state/ with a 115-line INDEX.md, the two live calendar PDFs plus extracted text, four content-api JSON payloads, three SPA shells, eight CDX enumerations, the extractor script, and verbatim grid extracts."
+}

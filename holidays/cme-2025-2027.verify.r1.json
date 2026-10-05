@@ -1,0 +1,127 @@
+{
+ "task": "cme-2025-2027.verify",
+ "verifies": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2025-2027.json",
+ "verified_on_utc": "2026-09-12",
+ "evidence_dir": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2025-2027.verify/",
+ "matches": false,
+ "summary": "Hashes, re-fetches, verbatim lines, instants and zone all verify clean: 72/72 INDEX.md sha256 re-hashed byte-exact, 9 cited documents independently re-fetched byte-identical, all 313 family rows / 621 product-date comparisons match the saved bytes exactly, every asserted instant literally appears in its own cited document (no instant inferred from another year), and the baselines match the reference-week bytes. Two load-bearing defects: (1) the 'missing' list falsely asserts no post-2024-12-20 archive capture exists for the 2025 holidays - the archive holds 44 captures of the Thanksgiving-2025 window from the 2026-01-29 crawl, and that later operator statement differs from the one recorded on 8 product-dates; (2) the 2025-07-03 Equity Index early close at 12:15 CT is classified 'modified' with no close_instant while the identical pattern elsewhere is 'early_close'.",
+ "checks_run": {
+  "rehash_index": {
+   "rows": 72,
+   "ok": 72,
+   "mismatch": 0,
+   "missing_files": 0,
+   "note": "every sha256 in raw/cme-2025-2027/INDEX.md recomputed and matched, including the self-hash of cme-2025-2027.json (4cd4706a8e989cd0d59abe1279e4a03f3aee9b0b80c99476d2fe49466584bd50)"
+  },
+  "refetch": {
+   "documents": 9,
+   "byte_identical": 9,
+   "detail": [
+    "D02 arc/thbp_2025-01-19_2025-01-21_20241220155340.json sha 4f2ab56a... MATCH",
+    "D09 arc/thbp_2025-11-26_2025-11-28_20241220155340.json sha 34f38de4... MATCH",
+    "D10 arc/thbp_2025-12-24_2025-12-26_20260129012159.json sha 322a2be9... MATCH",
+    "D14 arc/thbp_2026-04-01_2026-04-03_20260619114118.json sha 54bcc271... MATCH",
+    "D15 arc/thbp_2026-05-24_2026-05-26_20260619114105.json sha f7e30d20... MATCH",
+    "D26 arc/thbp_2026-12-24_2026-12-26_20260830142904.json sha bdc1fe83... MATCH",
+    "D44 live/thbp/thbp_2027-11-24_2027-11-26.json sha 6aa7c0fd... MATCH (live r.jina.ai)",
+    "D41 live/extra/extra_2027-07-04_2027-07-06.json sha 1a955035... MATCH (live, THBP-B id set)",
+    "live/normal/normalweek_main.json sha d3bd6e89... MATCH (the baseline reference week)"
+   ],
+   "mix": "2025/2026/2027, archive and live, both product id sets, plus the baseline"
+  },
+  "verbatim_and_instants": {
+   "family_rows": 313,
+   "product_date_comparisons": 621,
+   "mismatches": 0,
+   "checked": "event times, market event types, order, and per-event trading dates, parsed out of each row's verbatim and compared against the schedule for that product and eventDate in the exact document the row cites",
+   "instants": "all 313 rows: every close_instant / open_instant is formatted '<hh:mm> CT' and the time literally appears as an event time for that product on that date in its own cited document; every row's date lies inside its document's from/to window - no instant is carried from another year",
+   "zone": "'Trading hours are subject to change and are in U.S. Central Time unless otherwise stated.' is verbatim at line 89 of the saved live/trading-hours-live.md; the service publishes no ET column and the task asserts no ET value - correct, not a dropped ET pair",
+   "baselines": "the normal grids quoted in the coverage text were recomputed independently from live/normal/normalweek_main.json and normalweek_extra.json (week 2026-10-18..24) and match exactly for all 16 products",
+   "t1_validation": "confirmed real - the printed per-asset-class Holiday Hours table for Thanksgiving 2026 at lines 103-116 of live/trading-hours-live.md matches the D22/D23 service rows group for group, including the blank Grains/Dairy cells"
+  },
+  "enumeration": {
+   "holidays": 31,
+   "forward_list": "all 14 entries of CME's own holiday list in api/filters.json (2026-09-07 .. 2028-01-01) are present, and each window used matches CME's stated startPeriod/endPeriod",
+   "2025": "matches the archived 2025 Globex holiday table in html/trading-hours-20250830.html (New Year, MLK, Presidents, Good Friday, Memorial, Juneteenth, Independence, Labor, Thanksgiving, Christmas); Columbus Day and Veterans Day are correctly excluded from the Globex list"
+  },
+  "fresh_cdx": {
+   "scope": "cmegroup.com/services/trading-hours* and /services/trading-hours-by-product*, 2009-2027, 786 captures",
+   "missing_item_nikkei_and_extra_products": "CONFIRMED - no archived capture of the service ever used the THBP-B id set (168,167,320,323,19,27); only id sets seen are the ten-product THBP-A set (670), no-id filter queries (114) and two singletons (id=5224, id=318), so NKD/NIY/ZS/ZW/HE/DC are genuinely unavailable before the live window",
+   "missing_item_crypto_2026-06-17_2026-07-02": "CONFIRMED - windows 2026-06-17..19 and 2026-07-02..04 have 44 captures each, all from the 2026-01-29 crawl, none later",
+   "missing_item_2025_post_finalisation": "REFUTED for Thanksgiving 2025 - see discrepancy 1",
+   "most_recent_capture_rule": "D11,D12,D13,D14,D15,D17,D19 were each taken from a capture that is not the latest available, but all seven newer captures were re-fetched and are content-identical, so only D09 is affected"
+  }
+ },
+ "discrepancies": [
+  {
+   "id": 1,
+   "severity": "material",
+   "kind": "false 'missing' claim + superseded source",
+   "where": "missing[] entry 4 and the RESIDUAL RISK paragraph of coverage; holidays[2025-11-27].families rows for date 2025-11-28 (document D09)",
+   "claim_quoted": "A post-finalisation operator statement for the 2025 holidays from Presidents' Day 2025 through Thanksgiving 2025. Only the 2024-12-20 capture exists. Channels tried: CDX over the service endpoint (no 2025-window capture later than 2024-12-20 for any of those holidays)",
+   "finding": "False for Thanksgiving 2025. A fresh CDX enumeration returns 45 captures of the identical service window fromEventDate=2025-11-26&toEventDate=2025-11-28, of which 44 are from the 2026-01-29 crawl (timestamps 20260129012143 .. 20260129012309) - i.e. taken two months AFTER the holiday, so a post-finalisation operator statement. It was retrieved (raw/cme-2025-2027.verify/probe/thbp_2025-11-26_2025-11-28_20260129012309.json) and differs from D09 on 8 product-dates, all on 2025-11-28: ES, ZN, 6E, CL, GC and BTC each gain '07:00 preopen; 07:30 open' ahead of the early close; ZC gains '07:00 preopen' before its 08:30 open; LBR gains '07:00 preopen' alongside its 06:00 preopen. The early-close instants themselves (12:15 CT for ES/ZN, 13:45 CT for 6E/CL/GC/BTC, 12:05 CT for ZC/LE/LBR) are unchanged in both publications.",
+   "impact": "No recorded instant is wrong, but the Thanksgiving-2025 rows quote a superseded publication as their verbatim, the stated residual risk is factually incorrect, and the vintage choice is inconsistent within the task itself (D10, Christmas 2025, was taken from that same 2026-01-29 crawl).",
+   "fix": "Re-source D09 from capture 20260129012309, re-quote the 2025-11-28 verbatim lines, and narrow the residual-risk paragraph and missing[] entry 4 to the seven holidays where the 2024-12-20 capture really is the only one (New Year 2025, MLK, Presidents', Good Friday, Memorial, Juneteenth, Independence, Labor - each has exactly 1 capture, confirmed)."
+  },
+  {
+   "id": 2,
+   "severity": "material",
+   "kind": "status misclassification, instant dropped",
+   "where": "holidays[2025-07-04].families row \"Equity Index (ES) | date 2025-07-03\" (document D07)",
+   "recorded": "status=modified, close_instant absent, note [N9], verbatim 'eventDate 2025-07-03: 12:15 closed /TD 2025-07-03; 16:45 preopen /TD 2025-07-04; 17:00 open /TD 2025-07-04'",
+   "finding": "The cited bytes show ES closing at 12:15 CT on Thursday 2025-07-03 against a normal Thursday final close of 16:00 CT (ZN, 6E, CL, GC and BTC all close 16:00 that day). That is an early final close at a stated instant. The identical pattern on 2025-11-28 ('12:15 closed') is classified early_close with close_instant '12:15 CT'. The task's own working file FINAL_REVIEW.txt line 102 flags the deviation ('ES 12:15 closed |norm: 16:00 closed|'), so the classification was lost between the working file and the published rows.",
+   "impact": "This is the only Independence-Day-eve equity-index early close in the 2025 set; a consumer keyed on status/close_instant (which is how a holiday table is built under LAW-HOLIDAY-SCOPE: date, kind, instant) would drop it. Sole occurrence of this class across all 313 rows.",
+   "fix": "status=early_close, close_instant='12:15 CT', note 'EC 12:15 CT (evening leg runs normally: 16:45 preopen, 17:00 open)'."
+  },
+  {
+   "id": 3,
+   "severity": "minor",
+   "kind": "status vocabulary not self-consistent",
+   "where": "the 17 rows carrying note [N3] (all status=normal) and 2027-12-23 Cryptocurrency (status=normal, [N8])",
+   "finding": "N3 is defined as 'ordinary daily 16:00-17:00 CT pause, no early close; no final close on the date so the trade date rolls'. Those dates therefore differ from CME's normal grid twice over: no 16:00 final close event, and the pre-open starts 16:00 rather than 16:45, so the holiday has no trade date of its own (e.g. FX on 2025-01-20 carries trade date 2025-01-21 throughout). They are labelled 'normal'. The converse single deviation - final close present, no evening re-open ([N6]) - is labelled 'modified'. Likewise 2027-12-23 BTC is 'normal'/[N8] ('event list equals the normal grid') although its 16:01/16:02 re-open carries trade date 2027-12-27, not the next calendar day.",
+   "impact": "The underlying facts survive in the verbatim and in the note definitions, so nothing is unsourced; but a consumer reading status alone would record no holiday entry for FX and pre-24/7 crypto on Monday and Thursday holidays and lose the trade-date roll.",
+   "fix": "Either widen the status vocabulary (e.g. 'no_trade_date' / 'rolls') or label N3 rows 'modified' like the N6 rows."
+  },
+  {
+   "id": 4,
+   "severity": "minor",
+   "kind": "undefined note code",
+   "where": "coverage ('Note codes N1..N17 and EC are expanded in raw/cme-2025-2027/INDEX.md') and the 3 rows using [N17] (2025-01-01, 2025-12-25, 2026-01-01)",
+   "finding": "INDEX.md defines N1..N16 and EC only. N17 ('16:00 preopen; 17:00 open with the next business day's trade date and no day session') is used but never defined."
+  },
+  {
+   "id": 5,
+   "severity": "minor",
+   "kind": "re-verification friction in INDEX.md",
+   "where": "raw/cme-2025-2027/INDEX.md url column for the 27 archive artifacts",
+   "finding": "The archived URLs carry an '&isProtected&_t=<epoch>' suffix that INDEX.md omits; following an INDEX url literally returns a Wayback 404 (verified). The exact URLs exist only in arc/fetchlist.tsv, which is itself not listed in INDEX.md, together with roughly 110 other files on disk (every .raw reader original, html/*.gz, api/, cdx/ and js/ working files, DEVIATIONS*.json, NORMAL_PATTERNS.json, DEV_REVIEW.txt).",
+   "impact": "Bytes are all present and the hashes are honest; only the one-step re-fetch path is broken."
+  },
+  {
+   "id": 6,
+   "severity": "minor",
+   "kind": "unrecorded coverage gap",
+   "where": "Thanksgiving 2025 retrieval window",
+   "finding": "CME's own 2025 Globex holiday table states the Thanksgiving period as '27 - 29 November 2025', including Saturday 29 November, but the window retrieved stops at 2025-11-28 and no gap is recorded. The task itself flags special Saturday sessions after Friday holidays (2026-06-20, 2026-07-04, 2027-06-19), so the unchecked Saturday matters. Mitigation: this verification queried the live service for 2026-11-27..29 and 2027-11-26..28 and found no Saturday session after Thanksgiving in either year for any non-crypto group, so the residual risk is low; the 2025 Saturday is not in the archive and can no longer be checked."
+  },
+  {
+   "id": 7,
+   "severity": "minor",
+   "kind": "uncited quotation",
+   "where": "coverage, Good Friday 2026 paragraph",
+   "finding": "The quoted CME statement 'Due to the US Employment Situation Release on April 3, 2026, CME Group Equities, FX, Cryptocurrency and Interest Rate products will have unique Closes and Settlements for trade date April 3rd' is given no document id; the rows for that holiday cite only D14 (the T2 service). The quotation is verbatim at line 2498 of the indexed html/trading-hours-20250830.html, which is a T1 operator page - worth citing, since it is the only T1 corroboration of the 08:15/10:15 CT closes."
+  }
+ ],
+ "verified_clean": [
+  "72/72 INDEX.md sha256 hashes recomputed and matched; no file listed in the index is missing",
+  "9 cited documents re-fetched independently (6 Wayback id_ replays, 3 live r.jina.ai reads) and every one is byte-identical to the saved artifact",
+  "313 family rows / 621 product-date comparisons: verbatim event lists, event types, times and trade dates all match the cited saved bytes exactly, 0 mismatches",
+  "every close_instant and open_instant appears as a real event time for that product on that date in the document the row cites - no instant inferred from another year, no instant outside its document's window",
+  "the CT zone statement is verbatim in the saved page; no ET value is asserted because this channel prints none",
+  "the normal-grid baselines were recomputed from the saved reference-week bytes and match the coverage text for all 16 products",
+  "the T1 cross-check for Thanksgiving 2026 is genuine, row for row, against the printed per-asset-class table",
+  "holiday enumeration complete against CME's own forward holiday list and against the archived 2025 Globex holiday table",
+  "fresh CDX confirms the Nikkei/soybean/wheat/hog/milk gap and the 2026-06-17 / 2026-07-02 crypto gap exactly as the task states",
+  "seven documents taken from a non-latest capture (D11-D15, D17, D19) were re-fetched at their latest capture and are content-identical"
+ ]
+}

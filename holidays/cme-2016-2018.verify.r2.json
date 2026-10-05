@@ -1,0 +1,137 @@
+{
+ "task": "cme-2016-2018",
+ "verifier_round": 1,
+ "verified_on": "2026-09-12",
+ "matches": false,
+ "target": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.json",
+ "artifacts_checked": [
+  "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018/INDEX.md",
+  "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018/docs/ (89 files + docs/zip2016/ 20 files)",
+  "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018/cdx_holiday_calendar.json",
+  "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018-fix/ (written by this verifier)"
+ ],
+ "previous_verdict": "NONE. No file existed at /Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.verify.json before this round, so there was nothing to rename to cme-2016-2018.verify.r0.json and no prior discrepancy list to re-check item by item. This is a first-round verdict.",
+ "checks_that_passed": [
+  "HASHES. All 106 sha256 rows in raw/cme-2016-2018/INDEX.md (86 downloaded documents + 20 files extracted from 2016-holiday-calendars.zip) were recomputed. 106/106 match. 0 mismatches, 0 missing files.",
+  "BYTE RE-FETCH. Eight cited documents were re-fetched from the Internet Archive by id_ replay and byte-compared with the store: 2016-holiday-calendars.zip @2017-06-28, 2016-new-years-holiday-schedule.pdf @2016-01-08, 2017-thanksgiving @2017-10-25, 2017-christmas @2017-10-25, 2017-martin-luther-king @2017-06-28, 2018-new-years @2018-01-06, 2018-thanksgiving @2018-05-08, 2018-christmas @2018-05-08. All eight BYTE-IDENTICAL. (The Internet Archive returned its 'Temporarily Offline' 503 page for roughly the first 15 minutes of this verification; all fetches were retried until live.)",
+  "REVISION SELECTION WITHIN THE CHANNEL THE TASK USED. For every one of the 27 cited documents, the local bytes were reduced to a base32 SHA-1 and matched against the saved CDX. Every cited document is the LATEST capture-digest of its URL present in that enumeration, and each zip2016 copy is byte-identical to the last standalone capture of the same URL. The coverage claim that the 2016 bundle 'carries the final revisions' is true for the 2016 PDFs.",
+  "VERBATIM FIDELITY, xls-sourced. 196 family entries sourced from .xls sheets were decoded from the saved BIFF bytes (calendar-date header row + column header row + serial-time conversion) and every 'X = HH:MM' token in the verbatim was checked against that row's cells. 0 real mismatches (11 apparent hits were all sibling rows the verbatim quotes parenthetically -- Mini-Sized Grains and Oilseeds, MGEX Hard Red Spring Wheat, MGEX Indices, MGEX Apple Juice -- each of which was then confirmed by hand).",
+  "VERBATIM FIDELITY, pdf-sourced. 120 family entries sourced from PDFs were checked by extracting pdftotext -layout text and requiring each quoted fragment to appear. Only two real defects found (items 9 and 10 below); all other fragments match character for character, including CME's own inconsistent apostrophes ('New Years Observed' on the Equity block vs \"New Year's Observed\" on the Interest Rate & FX block of the 2016 New Year's PDF, both reproduced correctly).",
+  "NO INSTANT INFERRED FROM ANOTHER YEAR. Every one of the 363 family rows cites a document whose own year prefix equals the holiday's year (0 exceptions). Spot-read of the 2016-01-18, 2016-11-24 and 2016-12-26 PDFs confirms each instant is printed on the document for that date, not carried over.",
+  "ZONE ARITHMETIC. All 363 rows' close_instant/open_instant values satisfy ET = CT + 1 with matching minutes, as the sheets' own rule states; 0 exceptions. The 2016 PDFs print CT, ET and UTC themselves and are quoted as printed, including CME's own defects (the MLK PDF's '17100 ET' typo is on a line the task does not quote, so nothing was silently corrected).",
+  "STATUS CLASSIFICATION. Re-derived independently for 19 holiday groups spread across the range (2016-01-01, 2016-01-18, 2016-03-25, 2016-05-30, 2016-11-24, 2016-11-25, 2016-12-23, 2016-12-26, 2017-01-02, 2017-07-03, 2017-07-04, 2017-11-23, 2017-11-24, 2017-12-22, 2017-12-25, 2018-01-01, 2018-01-15, 2018-07-03, 2018-07-04, 2018-11-22, 2018-11-23, 2018-12-24, 2018-12-25). 'closed' where the row prints Globex Closed / Markets Closed or prints no session for that day; 'early_close' where a Halt or Early Close instant is printed; 'normal' where the row prints the regular close on a day its neighbours cut short. All agree with the saved values except the two Cryptocurrency rows in items 1 and 3 below.",
+  "HONEST GAPS CONFIRMED. The 2016 Thanksgiving PDF really does print 'Dairy products will remain closed until 1700 CT / 1800 ET / 2300 UTC Sunday, Nov 29' although Nov 27 was the 2016 Sunday, and the 2018 Thanksgiving sheet really does print 'regularly scheduled open on Sunday Nov 26 @ 17:00' although Nov 25 was the 2018 Sunday (CME copied the 2017 text, where Nov 26 WAS a Sunday). Both are quoted as printed and not resolved -- correct handling. The 2018-12-25 Bitcoin blank-cell observation and the 2018-01-01 disputed Monday grain leg are both real in the served bytes.",
+  "MISSING LIST vs FRESH CDX. A fresh, unfiltered CDX enumeration of cmegroup.com/tools-information/holiday-calendar/files/2018* was taken today (48 documents, 95 capture rows; saved to raw/cme-2016-2018-fix/cdx_2018_fresh.json). It agrees capture-for-capture and digest-for-digest with the task's saved cdx_holiday_calendar.json for every 2018 document. Independently confirmed: the 2018 Labor Day, Thanksgiving and Christmas per-file URLs really do have no capture after 2018-05-08. It also surfaced one document the task's enumeration could not contain -- see item 2.",
+  "CME TRADING-HOURS SERVICE (T2). Not applicable and correctly absent: the 'missing' list contains no 2019-or-later holiday, so there is no 2019+ entry for which the service's archived responses would need to be checked."
+ ],
+ "discrepancies": [
+  {
+   "n": 1,
+   "severity": "load-bearing",
+   "artifact": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.json -> holidays[2017-12-25].families['Cryptocurrency'], and missing[0]",
+   "claim": "Status 'unknown'; verbatim 'No Bitcoin/cryptocurrency row is printed on this sheet...'; missing[0] asserts the channels were exhausted ('a CDX prefix search of cmegroup.com/tools-information/holiday-calendar* for any later 2017 Christmas document (the next capture of that URL is a 404 on 2018-01-06)') and that only 'CME's own December 2017 Globex Bitcoin holiday notice or a Special Executive Report' would close it.",
+   "finding": "False. CME's own 2017 annual bundle -- https://www.cmegroup.com/tools-information/holiday-calendar/files/2017-holiday-calendars.zip, archived 2021-01-26T09:48:35Z -- contains 2017-christmas-holiday-schedule.xls 'Last Updated: Dec 5, 2017', i.e. a revision LATER than the served 'Last Updated: Sep 21, 2017' capture of 2017-10-25, and it DOES print a Bitcoin row. The task used exactly this channel for 2016 (2016-holiday-calendars.zip) and never tried it for 2017 or 2018. Bytes saved at raw/cme-2016-2018-fix/docs/zip2017/2017-christmas-holiday-schedule.xls, sha256 bfb291c9c08764ee2bcf0327690b98c58cbb4cf493723c7b1464eccb0d062d30, extracted from the bundle whose own sha256 is f0dd1b522fc8ff8838861129a9a3966f874339f9a7bd9dd65c132616c0e1c1b2.",
+   "corrected_value": {
+    "status": "closed",
+    "verbatim": "Row 'Bitcoin' -- Friday, December 22 'Close' = 16:00 ; Monday, December 25 = 'Globex Closed' ; Monday, December 25 'Pre-opening' = 16:00, 'Open' = 17:00 ; Tuesday, December 26 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+    "open_instant": "17:00 CT / 18:00 ET (Monday, December 25)",
+    "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+    "tier": "T1",
+    "also": "delete missing[0] entirely -- the gap is closed."
+   }
+  },
+  {
+   "n": 2,
+   "severity": "load-bearing",
+   "artifact": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.json -> missing[6] ('2018 Labor Day, Thanksgiving and Christmas')",
+   "claim": "'a comparable late-2018 revision would not be visible here. ... Channels tried: CDX for each file URL (no capture after 2018-05-08 until a 404 in 2022); cmegroup.com live pages via the public reader'.",
+   "finding": "False as to exhaustion. https://www.cmegroup.com/tools-information/holiday-calendar/files/2018-holiday-calendars.zip exists and is archived at 2026-08-30T10:02:25Z (sha256 aa0ac87005319be45d91d2a91fef907757dd8e5f0c6e3fb19875329940d9c5a2; saved at raw/cme-2016-2018-fix/docs/2018-holiday-calendars.zip). It carries CME's final 2018 Globex sheets. Six of the eleven 2018 documents the task serves are superseded by it: 4th-of-july, christmas, good-friday, labor-day, memorial-day and thanksgiving all differ in digest from the served 2018-05-08 / 2018-01-06 captures. (martin-luther-king and presidents-day are byte-identical; new-years is byte-identical to the copy inside the 2017 bundle.)",
+   "corrected_value": "Replace missing[6] with a statement that CME's own 2018 annual bundle was retrieved, that it is the final revision, and re-key the affected rows to it. Concretely: for 2018-09-03 (Labor Day) and 2018-11-22/2018-11-23 (Thanksgiving) no family row this task records changes -- only row renames, BMD Crude Palm Oil times, and a 'Pre-opening'/'Pre-opening**' header relabelling -- so those rows stand but their 'document' should become '2018-holiday-calendars.zip#<file> @2026-08-30'. For 2018-07-03 and 2018-12-25 the bundle changes a recorded family row: see items 3 and 4."
+  },
+  {
+   "n": 3,
+   "severity": "load-bearing",
+   "artifact": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.json -> holidays[2018-07-03].families['Cryptocurrency']",
+   "claim": "status 'normal'; close_instant '16:00 CT / 17:00 ET'; verbatim \"Row 'Bitcoin' -- Tuesday, July 3 'Regular Close' = 16:00 ; Tuesday, July 3 'Pre-opening' = 16:45, 'Open' = 17:00.\"",
+   "finding": "Superseded. The served capture (2018-4th-of-july-holiday-schedule.xls @2018-05-08) prints Bitcoin Tuesday, July 3 under the 'Regular Close' column at 16:00. CME's final revision, in 2018-holiday-calendars.zip, moves that cell to the 'Early Close' column at 12:15 -- matching every other CME-traded family on that sheet. Re-derived from raw/cme-2016-2018-fix/docs/zip2018/2018-4th-of-july-holiday-schedule.xls.",
+   "corrected_value": {
+    "status": "early_close",
+    "close_instant": "12:15 CT / 13:15 ET",
+    "open_instant": "17:00 CT / 18:00 ET",
+    "verbatim": "Row 'Bitcoin' -- Tuesday, July 3 'Early Close' = 12:15 ; Tuesday, July 3 'Pre-opening' = 16:45, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+    "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30"
+   }
+  },
+  {
+   "n": 4,
+   "severity": "load-bearing",
+   "artifact": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.json -> holidays[2017-12-25].families['Grains and Oilseeds']",
+   "claim": "open_instant '19:00 CT / 20:00 ET (Monday, December 25)'; verbatim \"... Monday, December 25 'Pre-opening' = 16:00, 'Open' = 19:00 ; Tuesday, December 26 'Pre-opening' = 08:00, 'Open' = 08:30 ...\"",
+   "finding": "Superseded, and inconsistent with how the same task handled the identical change one week later. The served 'Sep 21, 2017' revision prints the Monday-evening grain leg. CME's 'Dec 5, 2017' revision (2017-holiday-calendars.zip) REMOVES it and moves Tuesday, December 26 'Pre-opening' from 08:00 to 06:00. This is the same edit CME made to 2018-new-years-holiday-schedule.xls in its own Dec 5, 2017 revision -- which the task correctly served for 2018-01-01 while withholding the 19:00 leg as disputed. Serving the 19:00 leg for 2017-12-25 while withholding it for 2018-01-01 is self-contradictory; the operator's final statement removes it in both.",
+   "corrected_value": {
+    "open_instant": "08:30 CT / 09:30 ET (Tuesday, December 26)",
+    "verbatim": "Row 'Grains and Oilseeds' -- Friday, December 22 'Close' = 12:05 ; Monday, December 25 = 'Globex Closed' ; Tuesday, December 26 'Pre-opening' = 06:00, 'Open' = 08:30, 'Close' = 13:20, 'PCP' = 14:30-16:00. No Monday-evening grain open is printed in this revision. [sheet: All times are Central Time, ET +1]",
+    "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+    "note": "the same correction applies to the parenthetical Mini-Sized / MGEX Hard Red Spring Wheat / MGEX Indices values in that entry, which also lose their Monday leg and move to 06:00 Tuesday pre-open."
+   }
+  },
+  {
+   "n": 5,
+   "severity": "load-bearing",
+   "artifact": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018/INDEX.md",
+   "claim": "The INDEX table's only row for the 2016 New Year's PDF reads: docs/2016-new-years-holiday-schedule.pdf | http://www.cmegroup.com:80/.../2016-new-years-holiday-schedule.pdf | 2015-12-03T08:12:15Z... (capture 2014-12-12T03:40:39Z, sha256 7d032ee5457cc5c06acb512e54006fa0678761e12d2b60bf625d924741896755).",
+   "finding": "Every one of the ten 2016-01-01 family rows cites '2016-new-years-holiday-schedule.pdf @2016-01-08'. The bytes actually read are docs/2016-new-years-holiday-schedule--20160108.pdf, which is NOT in INDEX.md at all -- no URL row, no capture time, no sha256. A reader following the INDEX to re-verify the 2016-01-01 rows is handed the 2014-12-12 capture instead. docs/2016-new-years-holiday-schedule--20151203.xls is likewise undocumented, and the 'Enumeration' section omits dl4_list.txt (the list that fetched both). I verified the correct values directly.",
+   "corrected_value": "Add to raw/cme-2016-2018/INDEX.md:\n| `docs/2016-new-years-holiday-schedule--20160108.pdf` | http://www.cmegroup.com/tools-information/holiday-calendar/files/2016-new-years-holiday-schedule.pdf | 2016-01-08T20:30:07Z | `118196a469dd40ad6a40594da273f726f6cb3e503f9cc1b8fd2057cf2fa32c61` | Globex holiday schedule (PDF), 'Last updated 12/16/2015' -- the revision served for every 2016-01-01 row |\n| `docs/2016-new-years-holiday-schedule--20151203.xls` | http://www.cmegroup.com/tools-information/holiday-calendar/files/2016-new-years-holiday-schedule.xls | 2015-12-03T08:17:29Z | `ed036f1fb8a9724f3e2bdbe3681606dbe8169bc9e48911ca047537d24a66327e` | Globex holiday schedule (Excel) |\nand add `dl4_list.txt` to the Enumeration list."
+  },
+  {
+   "n": 6,
+   "severity": "moderate",
+   "artifact": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.json -> missing[3] ('2018-01-01 Grains and Oilseeds, Monday-evening leg')",
+   "claim": "'the two archived revisions of 2018-new-years-holiday-schedule.xls disagree'.",
+   "finding": "The archive holds FOUR distinct revisions of that URL, not two: 20170505072653 (PCRYYDCPXYJZ7SCQQZ5MMOJGXMZJHYDC), 20170628173831 + 20170709094000 (WUDNMDA4AIZZ2LMTRCLI7SRHJVGUVZKQ), 20171025111143 (ROLIU7IJE4TQYWTQXEESAWYMEDLCJRM3) and 20180106225726 (ERL5ECBOJQHSUAWLTNSV5DMRHQA2HEQX). Only the first and the last were retrieved; the two intermediate revisions -- exactly where the Monday-evening grain leg would have been dropped -- were never fetched. Confirmed both in the task's own saved cdx_holiday_calendar.json and in today's fresh CDX. Separately, item 4 shows CME made the identical edit on the 2017 Christmas sheet in its Dec 5, 2017 revision, so the residual risk is smaller than the note implies.",
+   "corrected_value": "Rewrite missing[3] as: 'the archive holds four distinct revisions of 2018-new-years-holiday-schedule.xls (2017-05-05, 2017-06-28/2017-07-09, 2017-10-25, 2018-01-06); the first and last were retrieved and disagree. The 2018-01-06 revision (Last Updated: Dec 5, 2017) is served. CME made the same edit -- dropping the Monday-evening grain leg and moving the next morning's pre-open to 06:00 -- in the Dec 5, 2017 revision of 2017-christmas-holiday-schedule.xls, so the removal is a deliberate CME change, not a transcription artifact. Retrieving the 2017-10-25 capture would date the change exactly.'"
+  },
+  {
+   "n": 7,
+   "severity": "moderate",
+   "artifact": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.json -> holidays[2018-12-25].families['Cryptocurrency'], and the dataset's date list",
+   "claim": "verbatim ends '(The Bitcoin row leaves the Globex Closed cell blank that the other rows carry; its Tuesday entries are the reopening.)'; and the dataset carries no 2018-12-26 entry.",
+   "finding": "Two things. (a) The caveat is true of the served 2018-05-08 revision but not of CME's final one: the bundle revision FILLS IN Bitcoin's Tuesday, December 25 'Globex Closed' cell, so the caveat should be deleted (status 'closed' was already right). (b) The same final revision adds to 'Equity Products' a Wednesday, December 26 'Pre-opening' = 15:15 and 'Open' = 15:30 that the served revision does not carry. Under LAW-HOLIDAY-SCOPE that is a bounded single-date phase change on a holiday-adjacent day, and the dataset enumerates no 2018-12-26 entry at all.",
+   "corrected_value": "Cryptocurrency verbatim: \"Row 'Bitcoin' -- Monday, December 24 'Close' = 12:15 ; Tuesday, December 25 = 'Globex Closed' ; Tuesday, December 25 'Pre-opening' = 16:00, 'Open' = 17:00 ; Wednesday, December 26 'Close' = 16:00. [sheet: All times are Central Time, ET +1]\", document '2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30'. Separately, either add a 2018-12-26 entry recording Equity Index / Nikkei 225 (dollar) 'Pre-opening' = 15:15, 'Open' = 15:30, 'Close' = 16:00 from that revision, or record in 'missing' why a printed Dec 26 phase is not enumerated."
+  },
+  {
+   "n": 8,
+   "severity": "moderate",
+   "artifact": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018/cdx_trading_hours.json",
+   "claim": "Present in the evidence store with a .json extension alongside cdx_holiday_calendar.json; not listed in INDEX.md's 'Enumeration' section and not cited by any row.",
+   "finding": "The file is not a CDX enumeration. Its 11,832 bytes are the Internet Archive's HTML error page: it begins '<html><head><meta charset=\"UTF-8\"><title>Internet Archive: Temporarily Offline</title>'. A failed fetch was saved as if it were data, and it records -- without saying so -- that a trading-hours-service enumeration was attempted and did not succeed.",
+   "corrected_value": "Delete raw/cme-2016-2018/cdx_trading_hours.json, or rename it cdx_trading_hours.FAILED.html and note in INDEX.md that the CME trading-hours-service CDX fetch returned the Internet Archive's 503 'Temporarily Offline' page and was not retried."
+  },
+  {
+   "n": 9,
+   "severity": "minor (verbatim fidelity)",
+   "artifact": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.json -> holidays[2016-05-30].families['Grains and Oilseeds']",
+   "claim": "verbatim \"... 'Monday, May 30 1900 CT / 2000 ET / 0000 UTC - Open for trade date Tuesday, May 31'\"; open_instant '1900 CT / 2000 ET / 0000 UTC (Monday, May 30)'.",
+   "finding": "The document does not print 'UTC' on that line. docs/zip2016/2016-memorial-day-holiday-schedule.pdf, line 28 of pdftotext -layout output, reads exactly: '1900 CT / 2000 ET / 0000 - Open for trade date Tuesday, May 31'. The unit was supplied by the researcher inside a claimed verbatim.",
+   "corrected_value": "verbatim: \"... 'Monday, May 30 1900 CT / 2000 ET / 0000 - Open for trade date Tuesday, May 31'\" (no UTC token); open_instant: '1900 CT / 2000 ET / 0000 (Monday, May 30; the document omits the UTC label printed on every other line)'."
+  },
+  {
+   "n": 10,
+   "severity": "minor (verbatim fidelity)",
+   "artifact": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.json -> holidays[2016-01-18].families['Grains and Oilseeds']",
+   "claim": "verbatim \"'Monday, Jan 18 1900 CT / 2000 ET / 0100 UTC - Open for trade date Tuesday, Jan 19'\".",
+   "finding": "docs/zip2016/2016-martin-luther-king-holiday-schedule.pdf prints 'Open for trade date Tuesday. Jan 19' -- a period after Tuesday, not a comma. Trivial, but it is silent normalisation inside a claimed verbatim, and the same document carries a second CME typo ('17100 ET') that the task correctly did not touch.",
+   "corrected_value": "verbatim: \"'Monday, Jan 18 1900 CT / 2000 ET / 0100 UTC - Open for trade date Tuesday. Jan 19'\" (CME prints a period after 'Tuesday')."
+  },
+  {
+   "n": 11,
+   "severity": "minor (coverage prose)",
+   "artifact": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.json -> coverage",
+   "claim": "\"CME prints Energy and Metals on one row ('Energy, Metals & DME Products' in 2016-2017, 'Energy, Metals, Softs & DME Products' from 2018)\"; and \"the sheet's stated zone rule 'All times are Central Time  ET +1  UTC +6'\".",
+   "finding": "Two prose inaccuracies; the per-row verbatims are correct in both cases. (a) The 2018 MLK sheet prints 'Energy, Metal, Softs & DME Products' -- singular 'Metal' -- and the JSON's own 2018-01-15 Energy verbatim quotes it that way; also the 'Softs' form already appears on the 2017 Thanksgiving and 2017 Christmas sheets, not only 'from 2018'. (b) The stated UTC offset is not a constant: the 2017 and 2018 Independence Day sheets print 'All times are Central Time   ET +1  UTC  +5', not +6. The ET+1 half -- the only half the data uses -- holds on every sheet checked.",
+   "corrected_value": "(a) '...('Energy, Metals & DME Products' in 2016 and early 2017, 'Energy, Metals, Softs & DME Products' from the late-2017 sheets, and 'Energy, Metal, Softs & DME Products' on the 2018 MLK sheet)'. (b) '...with the sheet's own stated zone rule, 'All times are Central Time  ET +1', whose printed UTC offset is +6 on winter sheets and +5 on the Independence Day sheets'."
+  }
+ ],
+ "summary": "matches=false. Retrieval integrity is excellent: 106/106 stored hashes reproduce, eight re-fetched documents are byte-identical, every verbatim the task quotes is faithful to the bytes it cites (two trivial transcription slips aside), no instant is inferred from another year, ET=CT+1 holds on all 363 rows, and a fresh CDX enumeration of 2018 reproduces the saved one capture-for-capture. The dataset fails on SOURCE SELECTION, not transcription: the task used CME's own annual holiday-calendar bundle to obtain the final 2016 revisions, then never tried the 2017 or 2018 bundles, both of which are archived and both of which carry later CME revisions than the per-file captures it served. That single omission (a) invents a gap that does not exist -- the 2017 Christmas sheet's final revision prints the Bitcoin row the task recorded as 'unknown'; (b) leaves a wrong Cryptocurrency status on 2018-07-03; (c) serves a withdrawn Monday-evening grain leg on 2017-12-25 while correctly withholding the identical leg on 2018-01-01; and (d) makes the 'channels tried' claims in missing[0] and missing[6] false. Items 1-5 are load-bearing and must be fixed; 6-8 are moderate; 9-11 are minor.",
+ "verifier_artifacts": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018-fix/ -- INDEX.md, cdx_2018_fresh.json, docs/2017-holiday-calendars.zip, docs/2018-holiday-calendars.zip and the 53 files extracted from them, each with sha256 and the archive capture time."
+}

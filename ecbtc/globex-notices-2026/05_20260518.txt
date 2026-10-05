@@ -1,0 +1,503 @@
+Title: CME Globex Notice: May 18, 2026 - CME Group
+
+URL Source: https://www.cmegroup.com/notices/electronic-trading/2026/05/20260518.html
+
+Markdown Content:
+For the latest roadmap of CME Group technology initiatives: See the [Development Launch Schedule](https://www.cmegroup.com/globex/develop-to-cme-globex/development-launches.html).
+
+Find the previous versions of CME Group notices on the Notice Search page:
+
+*   [CME Globex Notices](https://www.cmegroup.com/notices.html#filters=all-12)
+*   [EBS Market on CME Globex Notices](https://www.cmegroup.com/notices.html#filters=ebs)
+*   [BrokerTec Markets on CME Globex Notices](https://www.cmegroup.com/notices.html#filters=brokertec)
+
+## Critical Updates
+
+### User-Defined Spreads Lifecycle Modification - This Week
+
+To accommodate the extension of 24/7 trading schedules to[futures and options markets](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/Cryptocurrency+Futures+and+Options+Migration+to+24-7+Trading), effective this**Sunday, May 24**, the lifecycles for **all**User-Defined Spreads (UDS) on CME Globex will be modified as follows:
+
+*   All UDS on CME Globex following the Weekly with Extension and Daily with Extension lifecycles will be created with a Last Trade Datetime (LTD) of Saturday at 2:00 a.m. Central time (CT).
+
+    *   Currently, these UDS use the close on the nearest Friday as the LTD.
+
+*   All expiring UDS on CME Globex will be removed on Saturday during the [Extended Maintenance Window](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/1283194884/Cryptocurrency+Futures+and+Options+Migration+to+24-7+Trading#Future-Cryptocurrency-Futures-and-Options-Schedule) on Saturdays at 2:00 a.m. CT.
+
+    *   Currently these spreads are removed after the close on Friday night.
+
+With this change, clients will be able to trade UDS created during the week until Saturday morning instead of end of day Friday, for markets that support 24/7 trading schedules.
+
+**Please Note:** The UDS LTD cannot exceed the LTD of any of the legs. When the LTD of any leg occurs before the LTD of the UDS, the UDS' LTD will be set equal to the LTD of the nearest leg.
+
+The LTD is captured in the [MDP 3.0 Security Definition message](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457607559) in repeating group 864, 865=7 and 1145=LTD.
+
+These changes are currently available for customer testing in New Release. CME Group strongly recommends clients test this new LTD and UDS elimination timings to ensure no impacts.
+
+### New Production Network Connection Configuration File Updates - May 28
+
+Effective **Thursday, May 28**, the following Production configuration files will be updated to support 24/7 trading.
+
+| Production Network Connection Configuration File Updates |
+| --- |
+| Service | SFTP File Information |
+| New iLink Order Entry Service Gateway | [CME Globex FTP/SFTP](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457672149/MDP+3.0+-+FTP+and+SFTP+Site+Information) |
+| New Streamlined CME CF Rates and Indexes Channel (214) | [Streamlined FTP/SFTP](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457421265/SBE+Streamlined+-+FTP+and+SFTP+Site+Information) |
+| New Streamlined Block Trades Channel (235) |
+
+Details on accessing the network configuration files for the new Production configuration information is available in the 24/7 Cryptocurrency [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/1283194884/Cryptocurrency+Futures+and+Options+Migration+to+24-7+Trading).
+
+### Update Cryptocurrency Futures and Options Expansion to 24/7 Trading - May 29
+
+† Denotes update to the article
+
+Starting at 4:00 p.m. Central Time (CT) on**Friday, May 29,** CME Group will expand [Cryptocurrency futures and options](https://www.cmegroup.com/markets/cryptocurrencies.html) to 24/7 trading.
+
+Cryptocurrency futures and options will trade continuously on CME Globex with at least a two-hour weekly maintenance period over the weekend. All holiday or weekend trading from Friday evening through Sunday evening will have a trade date of the following business day, with clearing, settlement and regulatory reporting processed the following business day as well.
+
+A [Cryptocurrency Futures and Options Expansion to 24/7 Overview](https://www.cmegroup.com/markets/cryptocurrencies/files/client-facing-cryptocurrency-futures-and-options-expansion-to-24-7-trading.pdf) is now available for high-level information on the initiative. Please review the 24/7 cryptocurrency [†client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/1283194884/Cryptocurrency+Futures+and+Options+Migration+to+24-7+Trading) for full technical analysis and comprehensive details.
+
+### Update Event-Based Contracts Expansion to 24/7 Trading - May 29
+
+† Denotes update to the article
+
+Starting at 4 p.m. Central Time on **Friday**, **May 29**, CME Group will expand the[event contracts](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/Event+Contracts)MDP channel (id=329) to 24/7 trading. The[technology](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/Cryptocurrency+Futures+and+Options+Migration+to+24-7+Trading#24%2F7-Client-System-Impacts) and[timeline](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/Cryptocurrency+Futures+and+Options+Migration+to+24-7+Trading#CME-Globex-Maintenance-Windows-and-Market-Hours) align with the upcoming[Cryptocurrency futures and options migration to 24/7 trading](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/Cryptocurrency+Futures+and+Options+Migration+to+24-7+Trading).
+
+The event contracts on Bitcoin futures will trade continuously on CME Globex with at least a two-hour weekly maintenance period over the weekend.
+
+Please review the [†client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/Event-Based+Contracts+Expansion+to+24-7+Trading) for full technical analysis and comprehensive details.
+
+### iLink SBE Schema Version 8 Decommission - June 5
+
+On Sunday, February 22, CME Group completed the launch of iLink SBE Schema version 9 on all futures and options on futures market segments. CME Globex is now only sending version 9 messages for all futures and options on futures markets.
+
+Client systems can send iLink messages using version 8 or 9 until the end of day **Friday, June 5**, after which only version 9 messages will be accepted.
+
+### New Market Data Multicast Group - MDP 3.0 Channel ID 350 Eris Options - June 14
+
+Effective **Sunday, June 14** (trade date Monday, June 15), CME Group will launch a new market data multicast group to be used for Eris options.
+
+The new market data multicast group for Eris options will use MDP 3.0 Channel ID 350.
+
+Please use your CME Group login to review configuration details in the [New Market Data Multicast Group - MDP 3.0 Channel ID 350](https://www.cmegroup.com/solutions/market-access/globex/globex-resources.html#nmdmgmdp30c350) section of the [Configuration and Connectivity Details](https://www.cmegroup.com/solutions/market-access/globex/globex-resources.html) page.
+
+These changes are currently available in the config.xml file in New Release.
+
+### Globex Trade Date Behavior Change - June 19
+
+Effective **Friday,June 19**, CME Group is implementing the following change to align CME Globex and CME Clearing trade dates when the Globex trade date falls on a Friday U.S. holiday.
+
+All CME Globex futures and options trades executed on a Friday U.S. holiday will now reflect a Globex trade date to align with the next valid Clearing House trade date.
+
+Please review the [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/Globex+Trade+Date+Behavior+Change) for full technical details and launch schedule.
+
+### Important Updates to CME Globex Migration to Google Cloud - Starting June
+
+As we accelerate the transition of CME Globex to Google Cloud, we are providing substantive updates to our roadmap and technical requirements. Clients are strongly encouraged to complete a comprehensive review of these updates to ensure uninterrupted market access and readiness for the upcoming migrations.
+
+Detailed technical documentation has been updated in the [Client Systems Wiki](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/CME+Globex+on+Google+Cloud).
+
+#### AI on Google Cloud Testing Program
+
+Google is extending an exclusive invitation to CME Group clients to join a testing program in the Dallas region starting in **July 2026**. Participants in this program will have the opportunity to evaluate hardware accelerators for inference in low-latency trading. This will allow customers to experience Google's vertically integrated, purpose built AI stack alongside the Ultra Low Latency Solution and Globex. Google Cloud will feature TPU capacity within close proximity to the CME Globex matching engines in the Dallas region. Your participation will inform the optimal infrastructure deployment for the Chicago region. Reservations for hardware accelerators are available now for evaluation starting July 2026.
+
+Availability is limited and first-come, first-serve. Contact your Google Cloud account representative immediately or email [exchanges@google.com](mailto:exchanges@google.com) to reserve your spot and evaluate state of the art machine accelerators with the ULL Solution and Globex.
+
+#### The Livestock Migration - Dallas Region Q4 2026
+
+To provide clients with a real-world Production environment on Google Cloud prior to the Chicago region launch, Livestock futures and options will migrate to a new Production environment in the private zones of the Dallas region in **Q4 2026**. In the**second half of 2028**, Livestock futures and options will migrate to the Production-Chicago environment, in the private Google Cloud Chicago region.
+
+| The Livestock Migration - Dallas Region |
+| --- |
+| Key Events and Timing | Source Environment | Destination Environment | Primary Purpose |
+| **First Migration**Target: Q4 2026 | On-premise Production-Aurora environment | Production-Dallas environment in the private zones of the Google Cloud Dallas region | Enable real-world Production trading on Google Cloud infrastructure. |
+| **Second Migration**Target:H2 2028 | Production-Dallas environment in the private zones of the Google Cloud Dallas region | Production-Chicago environment in the private Google Cloud Chicago region | Migration to the long-term cloud platform. |
+
+**Note:**The Production-Dallas environment will be accessible via all current market access solutions and the new GLink ULL and GLink Premium solutions for Ultra Low Latency Google Compute Engine (ULL GCE) Instances.
+
+**Connectivity and Performance**
+
+As we move toward a cloud-native future, the way clients connect matters more than ever.
+
+GLink ULL-Dallas and the U4C Bare Metal instances will be the lowest-latency access method available for the environments hosted in the Dallas region.
+
+#### The Chicago Region Migration - Starting in 2027
+
+CME Globex Production markets will begin migrating to the new Google Cloud Chicago Region in **late 2027**.
+
+| The Chicago Region Migration |
+| --- |
+| Phase | Environment | Timeline |
+| Globex Migration to Google Cloud Chicago Region | Production-Chicago | **Late 2027-2028** |
+| Convenience Gateway and Drop Copy Migrations | Production-Chicago | **2029** |
+
+**Connectivity and Performance**
+
+*   Physical Co-location
+    *   CME Group is committed to continuing to offer physical co-location market access to the Chicago region.
+    *   Throughout the migration of markets to Google Cloud, our current GLink Aurora co-location offering will continue as the only physical co-location service.
+        *   GLink Aurora will continue to offer the most performant access to markets hosted in the Chicago region through the end of the market migrations in **2028**.
+
+    *   CME Group is currently evaluating the Customer Hardware Co-location (CHC) offering to ensure our infrastructure aligns with evolving market requirements and client demand. A definitive decision regarding the physical co-location site will be announced no later than the **end of 2028**.
+
+*   Cloud-Native Access
+    *   After the Globex migration to the Chicago region is complete, GLink ULL-Chicago and the U4C Bare Metal instances in the Chicago region will be competitive with physical co-location (GLink in Aurora and/or CHC) for clients who use traditional compute.
+
+We remain committed to performance transparency. CME Globex application timestamps will continue to provide meaningful latency insight.
+
+#### Sandbox Launch
+
+*   The Sandbox-Dallas environment opens in **June**. This is a critical early-access window for clients to validate their cloud journey and connectivity solutions.
+
+**Sandbox-Dallas Pilot and Incentive Programs**
+
+*   CME Group is offering a Pilot Program for clients who achieve specific technical milestones. The first 50 participants to complete each obligation by the deadline and submit proof will earn a stipend.Details on this program are available in the [CME Globex Sandbox-Dallas Pilot Program Agreement](https://www.cmegroup.com/globex/files/sandbox-dallas-pilot-program.pdf).
+*   Information on compute pricing for U4C Bare Metal and U4S Virtual Machine instances is available now from Google Cloud’s Field Sales Representatives (FSR). To support the migration and the testing of U4 machines specifically, Google Cloud customers may opt into a Google Cloud incentive program that provides up to $30,000 in credits for U4 compute usage. More information on this program is available from your FSR or contact [exchanges@google.com](mailto:exchanges@google.com).
+
+**Google Cloud ULL Solution Documentation**
+
+Google Cloud has released its[first wave of ULL solution documentation](https://docs.cloud.google.com/ull-solution/participants). It is available now to all clients.
+
+**Stay Informed**
+
+Ensure your team is subscribed to CME Globex Notices by[email](https://www.cmegroup.com/subscription-center.html?itm_source=globex&itm_medium=cmegroup&itm_campaign=google_cloud#category=Trading%20%26%20Technology)and[RSS feed](https://www.cmegroup.com/rss.html?itm_source=globex&itm_medium=cmegroup&itm_campaign=google_cloud)for ongoing updates.
+
+### New Market Data Channel 335 for Equity Index and Alternative Product Launch - Q2 2026
+
+To support the expansion of the Equity Index and Alternative Products asset class, CME Group will launch a new market data multicast group in **Q2 2026**.
+
+This new multicast group will utilize Channel ID 335.
+
+While the product launch is scheduled for 2026, we are providing these [network specifications](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/New+Market+Data+Channel+335+for+Equity+and+Alternative+Product+Launch) now to allow clients ample time to proactively manage firewall policies and network configurations.
+
+### iLink Mass Quote Protection Session Linking - Q2 2026
+
+In**Q2 2026**,CME Group will introduce the new Mass Quote Protection (MQP) Session Linking functionality for all CME Globex options on futures.
+
+This enhancement provides comprehensive risk mitigation by allowing firms to link multiple iLink sessions under the same CME Globex Firm ID (GFID). When an MQP event is triggered,[protection actions](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457606136/Mass+Quote+Protections)are automatically extended across all associated sessions within the linked group.
+
+Please review the[client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/Mass+Quote+Protection+Session+Linking)for full technical details, configuration rules, and launch schedule.
+
+The new MQP Session Linking is currently available for customer testing in New Release.
+
+Certification is not required to use the new MQP Session Linking functionality.
+
+### Update Single Stock Futures - 2026
+
+† Denotes update to the article
+
+In **2026**, pending completion of all regulatory review periods, Single Stock Futures (SSF) for a select group of publicly listed companies will be listed for trading on CME Globex, and CME Direct trading application, and submission for clearing via CME ClearPort.
+
+With this launch a new Market Segment Gateway and Drop Copy Gateway Service will be introduced.
+
+Please review the †[client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/Single+Stock+Futures) for full technical details and launch schedules.
+
+### Position Reporting Under CFTC Part 17
+
+On April 30, 2024, the Commodity Futures Trading Commission ("CFTC") approved final rules to amend its [Large Trading Reporting Regulations for Futures and Options](https://www.cftc.gov/PressRoom/PressReleases/8902-24). The amendments were made to modernize CFTC's Large Trader Reporting process and align it with other reporting structures outlined in CFTC regulations.
+
+Since October 2024, CME Group has offered methods to retrieve its instrument listing containing the Unique Instrument Code (UIC) and other instrument data elements in compliance with the amended rule.
+
+Starting March 10, 2025, CME Group began accepting test files in the new Position Message FIXML format via SFTP. For details regarding submitting the new FIXML Position Message, file management, field validations, and example scenarios, please refer to the information in the[CME Group Client Systems Wiki](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457216877/Position+Reporting+Under+CFTC+Part+17).
+
+The Market Regulation Department will be publishing further guidance regarding Large Trader Reporting in subsequent Special Executive Reports as solutions become available.
+
+CFTC's final rules became effective upon publication in the Federal Register on June 3, 2024. Subject to the conditions of the January 27, 2026, no-action letter, reporting firms must comply with these CFTC regulations by **July 26, 2027.**
+
+For questions about trade practice rules, please contact [MarketReg.Outreach@cmegroup.com](mailto:MarketReg.Outreach@cmegroup.com).
+
+## Product Launches
+
+### New Event Contracts on International Soccer - This Week
+
+Effective this**Thursday, May 21**, [event contracts on international soccer](https://www.cmegroup.com/globex/files/event-swaps-products.csv) will be listed for trading on CME Globex.
+
+These event contracts are currently available for customer testing in New Release.
+
+### Freight Route Futures - May 31
+
+Effective **Sunday, May 31** (trade date Monday, June 1), pending completion of all regulatory review periods, Freight Route futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| Freight Route Futures |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | iLink/MDP 3.0 Tag 1151 - Security Group | Included Spreads and Combos - Tag 762-SecuritySubType | MARKET DATA CHANNEL MDP 3.0 TAG 1180 - APPLID |
+| Freight Route West Coast Canada to China (TD28) (Baltic) Futures | USW | FT | SP - Standard Calendar Spread | 386 |
+
+These futures are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+### Bitcoin Volatility Index Futures and Related BTIC - May 31
+
+Effective **Sunday, May 31** (trade date Monday, June 1), pending completion of all regulatory review periods, Bitcoin Volatility Index futures and related Basis Trade at Index Close (BTIC) will be listed for trading on CME Globex and submission for clearing via CME ClearPort.
+
+| Bitcoin Volatility Index Futures and Related BTIC |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | iLink/MDP 3.0 Tag 1151 - Security Group | Included Spreads and Combos - Tag 762- SecuritySubType | MARKET DATA CHANNEL MDP 3.0 TAG 1180 - APPLID | MARKET DATA SETTLEMENTS & VALUATIONS CHANNEL |
+| Bitcoin Volatility Futures | BVI | CV | EQ - Equity Calendar Spread | 326 | - |
+| BTIC on Bitcoin Volatility Futures | BVB | CK | - | 326 | - |
+
+These contracts are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+### Nasdaq CME Crypto Index Futures - June 7
+
+Effective **Sunday, June 7** (trade date Monday, June 8), pending completion of all regulatory review periods, Nasdaq CME Crypto Index futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| Nasdaq CME Crypto Index Futures |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | iLink/MDP 3.0 Tag 1151 - Security Group | Included Spreads and Combos - Tag 762- SecuritySubType | MARKET DATA CHANNEL MDP 3.0 TAG 1180 - APPLID |
+| Nasdaq CME Crypto Index Futures | NCI | NC | EQ - Equity Calendar Spread | 326 |
+| BTIC on Nasdaq CME Crypto Index Futures | NCIB | N3 | - | 326 |
+| Nasdaq CME Crypto Index Futures Marker (Non-tradeable) | NCM | - | - | - |
+| Micro Nasdaq CME Crypto Index Futures | MCI | NC | EQ - Equity Calendar Spread | 326 |
+| BTIC on Micro Nasdaq CME Crypto Index Futures | MCIB | N3 | - | 326 |
+| Micro Nasdaq CME Crypto Index Futures Marker (Non-tradeable) | BCM | - | - | - |
+
+These futures are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+### New Listing European Rapeseed Oil Calendar Spreads - June 14
+
+Effective **Sunday, June 14** (trade date Monday, June 15), pending completion of regulatory review periods, European Rapeseed Oil calendar spreads will be listed for 15 consecutive months on CME Globex.
+
+| Listing European Rapeseed Oil Calendar Spreads |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink/MDP 3.0 tag 1151 - Security Group | MDP 3.0: tag 762- SecuritySubType |
+| European FOB Dutch Mill Rapeseed Oil (Argus) Futures | RSO | RH | SP - Standard Calendar Spread |
+
+These spreads will be available for customer testing in New Release on **Sunday, June 7**.
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+### Eris Options - June 14
+
+Effective **Sunday**, **June 14** (trade date Monday, June 15), pending completion of regulatory review periods, Eris options will be listed for trading on CME Globex and submission for clearing via CME ClearPort. Eris options will be disseminated via Channel ID 350 in the interest rate options asset class.
+
+| Eris Options |
+| --- |
+| Product | MDP 3.0: Tag 6937-Asset | iLink/MDP 3.0: Tag 1151-Security Group | Market Data Channel MDP 3.0 Tag 1180 - APPLID |
+| Options on 2-Year Eris SOFR Swap Futures | YIT | RO (UDS: 1R) | 350 |
+| Options on 5-Year Eris SOFR Swap Futures | YIW | RP (UDS: 1R) |
+| Options on 10-Year Eris SOFR Swap Futures | YIY | RQ (UDS: 1R) |
+| Test Options on 2-Year Eris SOFR Swap Futures | 0IT | #S |
+
+Please review the [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/Eris+Options) for full technical details and launch schedules.
+
+These options are currently available for customer testing in New Release.
+
+## Product Changes
+
+### Changes to CME CF Cryptocurrency Pricing Data: Real-Time Indices Publication Frequency - This Week
+
+On**Monday, May 18**, shortly after 10 a.m. London time, CME Group updated the publication frequency for certain real-time indices.
+
+The data is now published every 200 milliseconds, changing from the previous frequency of every second.
+
+| Changes to Real-Time Indices Publication Frequency |
+| --- |
+| Product | Code | Current Publication Frequency | New Publication Frequency | Streamlined Market Data Channel |
+| CME CF Bitcoin Real Time Index | BRTI | 1s | 200ms | 213, 214 |
+| CME CF Ether-Dollar Real Time Index | ETHUSD_RTI |
+| CME CF Solana-Dollar Real Time Index | SOLUSD_RTI |
+| CME CF XRP-Dollar Real Time Index | XRPUSD_RTI |
+
+Please note: All other real-time indices on this channel will keep their current publication frequency of one second.
+
+This change is currently available for testing in New Release. Certification is not required.
+
+### Listing Cycle Expansion for FX Calendar Spreads - This Week
+
+Effective this**Sunday, May 24** (trade date Monday, May 25), the listing cycle for [these FX calendar spreads](https://www.cmegroup.com/globex/files/listing-cycle-expansion-fx-calendar-spreads.pdf) will be expanded on CME Globex.
+
+These spreads are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+### New Change to Strike Price Listing for Bitcoin and Micro Bitcoin Options - May 31
+
+Effective **Sunday**, **May 31** (trade date Monday, June 1), the strike price listing rule will be changed for Bitcoin and Micro Bitcoin options on CME Globex and for submission for clearing via CME ClearPort.
+
+| Change to Strike Price Listing for Bitcoin and Micro Bitcoin Options |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink/MDP 3.0 Tag 1151 - Security Group | Current Strike Price Listing | New Strike Price Listing |
+| Options on Bitcoin Futures | BTC | B2 | Prelisted strikes at $250,000, $100,000, $50,000, $25,000, $10,000 bitcoin increment. Strikes listed for 200% above the at-the-money strike and 75% below the at-the-money strike at: • $50,000 bitcoin increment for underlying settlement above $500,000 • $25,000 bitcoin increment for underlying settlement at or below $500,000 • $5,000 bitcoin increment for underlying settlement at or below $250,000 • $2,500 bitcoin increment for underlying settlement at or below $75,000 • $500 bitcoin increment for underlying settlement at or below $25,000 When less than 210 days remain until expiration (DTE), additional strikes listed for 50% above the at-the-money strike and 25% below the at-the-money strike at: • $10,000 bitcoin increment for underlying settlement above $500,000 • $5,000 bitcoin increment for underlying settlement at or below $500,000 • $1,000 bitcoin increment for underlying settlement at or below $250,000 • $500 bitcoin increment for underlying settlement at or below $75,000 • $100 bitcoin increment for underlying settlement at or below $25,000 When less than 21 days remain until expiration (DTE), additional strikes listed for 15% above the at-the-money strike and 5% below the at-the-money strike at: • $500 bitcoin increment for underlying settlement above $250,000 • $100 bitcoin increment for underlying settlement at or below $75,000 | Prelisted strikes at $250,000, $100,000, $50,000, $25,000, $10,000 bitcoin increment. Strikes listed for **150%** above the at-the-money strike and **50%** below the at-the-money strike at: • $50,000 bitcoin increment for underlying settlement above $500,000 • $25,000 bitcoin increment for underlying settlement at or below $500,000 • $5,000 bitcoin increment for underlying settlement at or below $250,000 • $2,500 bitcoin increment for underlying settlement at or below **$100,000** • $500 bitcoin increment for underlying settlement at or below $25,000 When less than**240**days remain until expiration (DTE), additional strikes listed for **30%** above the at-the-money strike and **20%**below the at-the-money strike at: • $10,000 bitcoin increment for underlying settlement above $500,000 • $5,000 bitcoin increment for underlying settlement at or below $500,000 • $1,000 bitcoin increment for underlying settlement at or below $250,000 • $500 bitcoin increment for underlying settlement at or below**$100,000** • $100 bitcoin increment for underlying settlement at or below $25,000 When less than**10** days remain until expiration (DTE), additional strikes listed for **10%** above the at-the-money strike and 5% below the at-the-money strike at: • $500 bitcoin increment for underlying settlement above $250,000 • **$250** bitcoin increment for underlying settlement at or below **$100,000** |
+| Monday Weekly Options on Bitcoin Futures | P1A-P5A | B2 |
+| Tuesday Weekly Options on Bitcoin Futures | P1B-P5B | B2 |
+| Wednesday Weekly Options on Bitcoin Futures | P1C-P5C | B2 |
+| Thursday Weekly Options on Bitcoin Futures | P1D-P5D | B2 |
+| Friday Weekly Options on Bitcoin Futures | P1E-P4E | B2 |
+| Options on Micro Bitcoin Futures | WM | B1 |
+| Monday Weekly Options on Micro Bitcoin Futures | W1A-W5A | B1 |
+| Tuesday Weekly Options on Micro Bitcoin Futures | W1B-W5B | B1 |
+| Wednesday Weekly Options on Micro Bitcoin Futures | W1C-W5C | B1 |
+| Thursday Weekly Options on Micro Bitcoin Futures | W1D-W5D | B1 |
+| Friday Weekly Options on Micro Bitcoin Futures | W1E-W4E | B1 |
+
+These changes are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+### Update Energy Strip Implied Options Functionality - May 31
+
+† Denotes update to the article
+
+Effective **Sunday**, **May 31** (trade date Monday, June 1), CME Group will enable implied functionality for the following options listed for trading on CME Globex.
+
+Additional information on implied options functionality is available on the [Implied Optio ns site](http://www.cmegroup.com/confluence/display/EPICSANDBOX/Implied+Options).
+
+| Energy Strip Implied Options Functionality |
+| --- |
+| Product | MDP 3.0: tag 762 - SecuritySubType | New Release Date | Production Launch Date |
+| Energy Options | GD - Average Priced Strip Combination | March 4 | May 31 |
+
+Please view the †[complete list of options](https://www.cmegroup.com/globex/files/enable-implied-functionality-energy-options.pdf) eligible for the implied functionality.
+
+### Listing Cycle Expansion for Spot-Quoted Futures - May 31
+
+Effective **Sunday, May 31** (trade date Monday, June 1), the listing cycle for [these Spot-Quoted futures](https://www.cmegroup.com/globex/files/listing-cycle-expansion-spot-quoted-futures.pdf) will be expanded on CME Globex.
+
+These futures are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME and CBOT.
+
+### Early Listing of Eris Futures - June 11
+
+Effective **Thursday, June 11** (trade date Friday, June 12), pending completion of all regulatory review periods, the first trade date for the following Eris futures contracts will be amended on CME Globex and CME ClearPort.
+
+| Early Listing of Eris Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink/MDP 3.0 Tag 1151 - Security Group | Current First Trade Date | New First Trade Date |
+| 1-Year Eris SOFR Swap Futures | YIA | EB | One business day prior to IMM | Third business day prior to IMM |
+| 2-Year Eris SOFR Swap Futures | YIT | EB |
+| 3-Year Eris SOFR Swap Futures | YIC | EB |
+| 4-Year Eris SOFR Swap Futures | YID | EB |
+| 5-Year Eris SOFR Swap Futures | YIW | EB |
+| 7-Year Eris SOFR Swap Futures | YIB | EJ |
+| 10-Year Eris SOFR Swap Futures | YIY | EJ |
+| 12-Year Eris SOFR Swap Futures | YII | EJ |
+| 15-Year Eris SOFR Swap Futures | YIL | EK |
+| 20-Year Eris SOFR Swap Futures | YIO | EK |
+| 30-Year Eris SOFR Swap Futures | YIE | EK |
+
+This contract month is currently available for customer testing in New Release.
+
+This contract is listed with, and subject to, the rules and regulations of CBOT.
+
+### New Change to Strike Price Listing for Weekly Crude Oil Options - June 14
+
+Effective **Sunday**, **June 14** (trade date Monday, June 15), the strike price listing rule will be changed for Weekly Crude Oil options and will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| Change to Strike Price Listing for Weekly Crude Oil Options |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink/MDP 3.0 Tag 1151 - Security Group | Current Strike Price Listing | New Strike Price Listing |
+| Crude Oil Monday Weekly Option | ML1-ML5 | LO | Minimum 20 strikes above and below the at-the-money strike at $0.25 per barrel increment then 10 strikes above and below the highest and lowest $0.25 per barrel increment strikes at $0.50 per barrel increment on the nearest 0.50 interval then 10 strikes above and below the highest and lowest $0.50 per barrel increment strikes at $2.50 per barrel increment on the nearest 2.50 interval and plus dynamic strikes at $0.25 per barrel increment | Minimum 20 strikes above and below the at-the-money strike at $0.25 per barrel increment then 10 strikes above and below the highest and lowest $0.25 per barrel increment strikes at $0.50 per barrel increment then 10 strikes above and below the highest and lowest $0.50 per barrel increment strikes at $2.50 per barrel increment then 20 strikes above the highest $2.50 per barrel increment strikes at $5.00 per barrel increment plus dynamic strikes at $0.25 per barrel increment. |
+| Crude Oil Tuesday Weekly Option | NL1-NL5 | LO |
+| Crude Oil Wednesday Weekly Option | WL1-WL5 | LO |
+| Crude Oil Thursday Weekly Option | XL1-XL5 | LO |
+| Crude Oil Friday Weekly Option | LO1-LO5 | LO |
+
+These options will be available for customer testing in New Release on**Sunday, June 7**.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+### New Change to Minimum Price Increment for One-Month SOFR versus Fed Fund Intercommodity Spread - June 14
+
+Effective **Sunday**, **June 14** (trade date Monday, June 15), pending the completion of all regulatory review periods, the minimum price fluctuation in tag 969-MinimumPriceIncrement on [Market Data Platform (MDP 3.0) Security Definition](https://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Security+Definition) (tag 35-MsgType=**d**) will be changed for the following:
+
+| Change to Minimum Price Increment for One-Month SOFR versus Fed Fund Intercommodity Spread |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | ILINK/MDP 3.0 TAG 1151 - SECURITY GROUP | CURRENT TAG 969-MINPRICEINCREMENT | NEW TAG 969-MINPRICEINCREMENT |
+| ONE-MONTH SOFR VS FED FUND IES* | SR1 | SY | 1st spread: 0.25 Spreads 2-25: 0.50 | All spreads: 0.25 |
+
+This change will be available in New Release for customer testing on **Sunday, May 31**.
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+### Settlement Prices for FX Futures Markers - June 21
+
+Effective **Sunday, June 21** (trade date Monday, June 22), settlement prices for non-tradable FX future markers will be disseminated on CME Globex.
+
+FX markers provide informational reference points that participants can use to calculate internal valuations of corresponding futures positions. For more information and calculation methodology, please visit the[FX and interest rate marker](https://www.cmegroup.com/markets/fx-marker-prices.html) page.
+
+The settlements on non-tradable marker products will be published at approximately 4:00 p.m. New York time and 3:00 p.m. Tokyo time. The prices will be rounded to the tradable tick and published to the FX and interest rate marker page.
+
+| Settlement Prices for FX Future Markers |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink/MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| CNH/USD Futures 4:00 p.m. NY Marker | NY6H | 01 | 314 |
+| CNH/USD Futures 3:00 p.m. Tokyo Marker | TO6H |
+
+Markers are sent in the [MDP 3.0 Market Data Incremental Refresh](https://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Market+Data+Incremental+Refresh) (tag 35-MsgType=**X**) with the following attributes:
+
+*   Tag 279-MDUpdateAction will be set to 0 = New
+*   Tag 269-MDEntryType will be set to 6 = Settlement Price
+*   Tag 5796-Trading Reference will display the date for which the marker price was calculated
+
+These changes will be available for customer testing in New Release on **Sunday, June 7**.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+## Events and Announcements
+
+### CME Globex Connectivity Upgrades and Changes for Listed Derivative Markets - June 27
+
+In response to client feedback and to provide firms with additional time to prepare, CME Group extended the deadline for the previously announced network equipment upgrades.
+
+Starting **Saturday**, **June 27**, CME Group plans to replace End-of-Life network equipment that supports listed derivatives connectivity at [CME Globex Hubs](https://cmegroup.com/solutions/market-access/globex/connectivity-options.html#overview). Customers will be notified in advance if they are impacted by an equipment upgrade.
+
+CME Globex market data for listed derivatives now regularly exceeds 1Gbps, increasing the risk of packet loss, performance concerns, and quality of service degradations on 1Gbps connections.
+
+**Impact on 1Gbps Listed Derivatives Connections**
+
+*   Multicast Market Data: Effective **June 27**, 1Gbps services will no longer support MDP 3.0 multicast market data.
+*   Existing 1Gbps Customers with Market Data: Customers with 1Gbps service currently listening to multicast market data are encouraged to upgrade connections to 10Gbps as soon as possible.
+*   Existing 1Gbps Customers without Market Data: Unicast services such as iLink, Drop Copy, STP, MQ and others will continue to be supported on 1Gbps connections. Customers with 1Gbps connectivity who are not receiving Market Data will have their service migrated to the new equipment.
+*   New 1Gbps Connections: New connections for 1Gbps service do not support access to listed derivatives multicast market data.
+
+**Copper Handoffs**
+
+*   When the CME Globex Connectivity upgrades are rolled out in 2026, CME Group will no longer support copper handoffs.
+
+Additional details about the CME Globex Connectivity upgrades will be announced in future CME Globex Notices.
+
+Please contact your [Global Account Manager](mailto:gam@gmail.com) for additional information.
+
+### CME STP FIX on Google Cloud - Production Internet Connectivity Migration Deadline- July 31
+
+As part of a phased migration of CME Straight Through Processing APIs to Google Cloud, [Production internet connectivity](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/CME+STP+FIX+API+on+Google+Cloud#Production-Environment) options for CME STP FIX API are **now available** .
+
+Close of business **Friday, July 31**, all clients must complete migration and connect to CME STP FIX API Production using only the Google Cloud hostnames.
+
+CME STP FIX on Google Cloud is available in parallel to the current on-prem instance. When connecting in parallel to Google Cloud **and** on-prem instances, clients should ensure trades are not double-booked.
+
+A mandatory supplemental certification for message recovery is now available for CME STP FIX on Google Cloud.
+
+Please contact [Certification Support for Electronic Trading](mailto:cset@cmegroup.com) (CSET) with any questions in the U.S. at +1 312 930 2322, in Europe at +44 20 3379 3803 or in Asia at +65 6593 5593.
+
+### CME STP FIX on Google Cloud - Production Dedicated Connectivity Migration Deadline- July 31
+
+As part of a phased migration of CME Straight Through Processing APIs to Google Cloud, [Production dedicated connectivity](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/CME+STP+FIX+API+on+Google+Cloud#Production-Environment) options for CME STP FIX API are **now available** .
+
+Close of business **Friday, July 31**, all clients must complete migration and connect to CME STP FIX API Production using only the Google Cloud hostnames.
+
+CME STP FIX on Google Cloud is available in parallel to the current on-prem instance. When connecting in parallel to Google Cloud **and** on-prem instances, clients should ensure trades are not double-booked.
+
+A mandatory supplemental certification for message recovery is now available for CME STP FIX on Google Cloud.
+
+Please contact [Certification Support for Electronic Trading](mailto:cset@cmegroup.com) (CSET) with any questions in the U.S. at +1 312 930 2322, in Europe at +44 20 3379 3803 or in Asia at +65 6593 5593.
+
+### AI on Google Cloud Testing Program
+
+Google is extending an exclusive invitation to CME Group clients to join a testing program in the Dallas region starting in **July 2026**. Participants in this program will have the opportunity to evaluate hardware accelerators for inference in low-latency trading. This will allow customers to experience Google's vertically integrated, purpose built AI stack alongside the Ultra Low Latency Solution and Globex. Google Cloud will feature TPU capacity within close proximity to the CME Globex matching engines in the Dallas region. Your participation will inform the optimal infrastructure deployment for the Chicago region. Reservations for hardware accelerators are available now for evaluation starting July 2026.
+
+Availability is limited and first-come, first-serve. Contact your Google Cloud account representative immediately or email [exchanges@google.com](mailto:exchanges@google.com) to reserve your spot and evaluate state of the art machine accelerators with the ULL Solution and Globex.
+
+#### Stay Informed on Technology Changes
+
+Don't miss important updates about new features, products and technology changes. Subscribe using the method(s) that best fits your workflow:
+
+##### Receive email notices
+
+Stay informed, with notices delivered directly to your inbox.

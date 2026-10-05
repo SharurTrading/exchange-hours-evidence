@@ -1,0 +1,407 @@
+Title: CME Globex Notices: November 4, 2024 - CME Group
+
+URL Source: https://www.cmegroup.com/notices/electronic-trading/2024/11/20241104.html
+
+Markdown Content:
+For the latest roadmap of CME Group technology initiatives:
+
+[See the Development Launch Schedule.](https://www.cmegroup.com/globex/develop-to-cme-globex/development-launches.html)
+
+**Additional Resources:**
+
+*   [EBS Market on CME Globex Notices](https://www.cmegroup.com/notices.html#filters=ebs) provide the latest information on changes to EBS Market and eFix Market and are available at 2 a.m. CT Thursdays.
+*   [BrokerTec Markets on CME Globex Update](https://www.cmegroup.com/notices.html#filters=brokertec) provide the latest information BrokerTec markets and and are available bi-weekly at 9 a.m. CT Thursdays.
+
+## Critical Updates
+
+### Update CME Globex on Google Cloud
+
+† Denotes update to the article
+
+†New[technical content](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/205848601/CME+Globex+on+Google+Cloud) is now available for the planned Globex migration to Google Cloud, including:
+
+*   [Key Events and Dates](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/205848601/CME+Globex+on+Google+Cloud#%5BinlineExtension%5DKey-Events-and-Dates)
+
+*   [Dual Zones Overview](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/205848601/CME+Globex+on+Google+Cloud#%5BinlineExtension%5DDual-Zones-Solution), including zone swap and maintenance information
+
+CME Group and Google Cloud [recently announced](https://www.cmegroup.com/media-room/press-releases/2024/6/26/cme_group_and_googlecloudannouncenewchicagoareaprivatecloudregio.html) a new private Google Cloud Chicago region and co-location facility for CME Group listed derivative markets.
+
+Additional information will be published regularly on this site and announced via the CME Globex Notices.
+
+### Position Reporting Under CFTC Part 17
+
+On April 30, 2024, the Commodity Futures Trading Commission ("CFTC") approved final rules to amend its [Large Trading Reporting Regulations for Futures and Options](https://www.cftc.gov/PressRoom/PressReleases/8902-24). The amendments were made to modernize CFTC's Large Trader Reporting process and align it with other reporting structures outlined in CFTC regulations. CFTC's final rules remove the 80-character submission standard, replacing it with a FIXML standard. The required FIXML position message includes a large set of instrument characteristics as well as unique contract identifiers, Unique Contract Identifiers must be provided to Reporting Firms by the exchange where the positions are held.
+
+CME, CBOT, NYMEX, and COMEX (each an "Exchange" and together the "Exchanges") will be providing Reporting Firms files containing Unique Instrument Codes in compliance with Large Trader Reporting requirements. The Exchanges are offering two methods to download this instrument information, as described in the [CME Group Client Systems Wiki](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/259457031/Position+Reporting+Under+CFTC+Part+17).
+
+The Market Regulation Department will be publishing further guidance regarding Large Trader Reporting in subsequent Special Executive Reports as solutions become available.
+
+CFTC's final rules became effective upon publication in the Federal Register on June 3, 2024. Reporting Firms must comply with the CFTC's final rules regarding Large Trader Reporting Requirements two years after publication in the Federal Register.
+
+### iLink 3 Configuration File Update- November 17
+
+Effective **Sunday, November 17**, CME Group will update the descriptions for the following[Order Entry Service Gateway (OESGW)](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+Binary+Order+Entry#iLink3BinaryOrderEntry-OrderEntryServiceGateway(OESGW)-SFTPSiteInformation) on the Production config.xml for iLink 3. Customers can access this SFTP site via a CME Globex network direct connection. Details on accessing the configuration file are available via the [SFTP - MSGW Configuration](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/46139323/iLink+Architecture#SFTP---MSGW-Configuration) page on the CME Group Client System Wiki.
+
+| Market Segment ID | Current Description | New Description |
+| --- | --- | --- |
+| 6 | Globex OESGW for all CGWs | CME Globex Order Entry Service Gateway for all CGWs |
+| 12 | Order Entry Service Gateway | CME Globex Order EntryService Gateway for all MSGWs |
+
+These changes will be available in the iLink3 config.xml file in New Release on **Sunday, November 3**.
+
+### iLink 3 On-Demand Party Details Changes- November 17
+
+On **Sunday, November 17** (trade date Monday, November 18), CME Group will continue the implementation of the iLink 3 messaging changes to on-demand administrative information on Market Segment Gateway (MSGWs) and Convenience Gateways (CGWs) to return critical information currently only sent on the iLink messages from the customer to CME Globex.
+
+**Operator**
+
+Tag 1691-PartyDetaiID value on the Operator Party Detail Role (tag 1693-PartyDetailRole=**118**) on the Party Details Definition Request Acknowledgement (PDDRA, tag 35-MsgType=**CY**) will reflect the values from the Party Details Definition Request (PDDR, tag 35-MsgType=**CX**).
+
+| iLink 3 Party Details Definition Request Acknowledgment |
+| --- |
+| Tag 1693 - Party Detail Role | Submitted tag 1691-PartyDetailID | Current Return tag 1691-PartyDetailID Value Behavior | New Return tag 1691-PartyDetailID Value Behavior |
+| 118 (Operator) | ABCDE | Not Present | ABCDE |
+
+Drop Copy will reflect the Operator value from the iLink message in Drop Copy new tag 129-DeliverToSubID.
+
+| Drop Copy Message Tag | iLink 3 Source Message Tag |
+| --- | --- |
+| FIX Tag | FIX Name | Binary Tag | Binary Name | Description |
+| 129 | DeliverToSubID | 1691 1693 | PartyDetailID PartyDetailRole=**118** (Operator) | Represent the individual or team submitting the message |
+
+**Memo**
+
+Tag 5149-Memo value on the Party Details Definition Request Acknowledgement (PDDRA, tag 35-MsgType=**CY**) will reflect the party details from an [Order Mass Action Request](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/46472994/iLink+3+Order+Mass+Action+Request) and from an unsuccessful [Order Cancel Request](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/46473084/iLink+3+Order+Cancel+Request).
+
+There is no change to a successful Order Cancel Request.
+
+| iLink 3 Party Details Definition Request Acknowledgment |
+| --- |
+| Message from CME Globex to Client System | Submitted tag 5149-Memo from New Order | Submitted tag 5149-Memo from Cancel Request | Current Return tag 5149-Memo | New Return tag 5149-Memo |
+| PDDRA for a Mass Order Cancel | ABC123 | XYZ456 | Not Present | XYZ456 |
+| PDDRA for an unsuccessful Order Cancel | DEF789 | UVW001 | Not Present | UVW001 |
+
+**On-Demand Order-Cancel Replace**
+
+The Party Details Definition Request Acknowledgement (PDDRA, tag 35-MsgType=**CY**) will reflect the party details from the order cancel-replace request.
+
+| iLink 3 Party Details Definition Request Acknowledgment |
+| --- |
+| Message from CME Globex to Client System | Current Return tag | New Return tag |
+| PDDRA for an Order Cancel-Replace | Value from cancel-replace request, except if the following tags are NULL, they will reflect the values from the PDDR for the original resting order: * tag 1693-PartyDetailRole=**24** (customer account) * tag 5149-Memo | All values from cancel-replace request * No exceptions |
+
+More detailed information on Party Details is available in [iLink 3 Party Details Definition Messaging](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+Binary+Order+Entry+-+Business+Layer#iLink3BinaryOrderEntryBusinessLayer-PartyDetailsDefinitionMessaging).
+
+All of these changes are only applicable to the on-demand administrative information. There is no change to the Pre-Registered Party Detail Definition Request Acknowledgment messages sent from [Order Entry Service Gateway](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+Binary+Order+Entry+-+Session+Layer#iLink3BinaryOrderEntrySessionLayer-OrderEntryServiceGateway) to Client System.
+
+Both pre-registered and on-demand administrative information on[Drop Copy message payloads](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/46177528/Drop+Copy+for+iLink+3+Binary+Order+Entry#Administrative-Information-on-Drop-Copy-Message-Payloads) are impacted by these changes.
+
+**Production Launch Schedule**
+
+iLink 3 CGWs and MSGWs will be phased in as follows:
+
+| iLink 3 MSGW On-Demandarty Details Changes |
+| --- |
+| Market Segment ID | Description | Production Launch |
+| 52 | CME FX Options | November 17 |
+| 64 | CME Equity Futures - E-mini S&P |
+| 70 | CME, CBOT and MGEX Commodity Future |
+| 82 | CME and CBOT Interest Rate Future |
+| 88 | CME FX Futures and FX Link |
+| 54 | CME Equity Options - S&P Options | November 24 |
+| 56 | NYMEX Emissions Options; NYMEX Energy, Metals, Softs and Alternative Markets Options; COMEX Options; DME Options |
+| 58 | CBOT Interest Rate Options |
+| 60 | CME, CBOT and MGEX Commodity Options Bursa Malaysia Futures and Options |
+| 68 | CME Equity Futures II; CBOT Equity Futures |
+| 72 | CBOT and CME Equity Options; excluding S&P |
+| 74 | CME Crypto Futures and Options; Event Contracts |
+| 78 | NYMEX Emissions and Non-Crude Energy Futures |
+| 80 | DME Futures; NYMEX Crude and Crude Refined Energy Futures |
+| 84 | CBOT Interest Rate Futures |
+
+**Please Note:**During the iLink 3 CGWs phased launch, clients can see both current and new behavior until the launch is complete.
+
+The these changes are now available in the New Release.
+
+### MDP 3.0 SBE Schema Update- November 24
+
+To support future enhancements for futures and options markets, including CME FX Spot+, on CME Globex MDP 3.0 and CME Smart Stream on GCP SBE, the update to Globex MDP SBE core schema version 13 has began and will conclude **Sunday, January 12, 2025** (trade date Monday, January 13, 2025). The next scheduled schema update will occur on **Sunday, November 24, 2024**.
+
+Futures and options channels on CME Globex are currently utilizing core schema version 9. To ease customer development efforts, the new SBE schema files will support [template extension](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/46108407/MDP+3.0+-+Message+Schema#Template-Extension) for MDP 3.0 messages. For client systems that do not support template extension, the schema update is not backward compatible, and the MDP 3.0 messages sent from CME Globex cannot be decoded.
+
+In conjunction with the core schema futures and options update, the futures and options markets will leverage a new separate schema dedicated to [TCP recovery for UDP](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/46466060/MDP+3.0+-+TCP+Recovery) effective **Sunday, November 24, 2024.**
+
+Please review the [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/145489930/Futures+and+Options+SBE+Schema+Updates) for full technical details and launch schedule.
+
+### CME Globex UDP Market Data Configuration File Update- December 1
+
+Effective **Sunday, December 1** (trade date Monday, December 2), CME Group will update the label names for the following channels in the CME Globex UDP Market Data Configuration file (config.xml). Details on accessing the configuration file are available in the[CME Group Client Systems Wiki](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/46468701/MDP+3.0+-+Support+Services) .
+
+| Channel ID | Current Label | Future Label |
+| --- | --- | --- |
+| 310 | CME Globex Equity Futures | CME Globex Equity Futures - E-mini S&P 500 futures |
+| 311 | CME Globex Equity Options | CME Globex Equity Options - E-mini S&P 500 outrights |
+| 323 | CME Globex Equity Options - Micro SP 500 Option | CME Globex Equity Options - Micro E-mini S&P 500 and E-mini S&P 500 option spreads |
+
+**Example**:
+
+Current Label:
+
+<channel id="310" label="CME Globex Equity Futures">
+
+**Future Label:**
+
+<channel id="310" label="CME Globex Equity Futures - E-mini S&P 500 futures">
+
+These changes are now available in the config.xml file in New Release.
+
+### Update iLink 3 CGW Migration- Deadline December 31
+
+† Denotes update to the article
+
+iLink 3 for CGW has been live in production since January 28, 2024. All customers using the Convenience Gateways (CGW) for order entry must complete their migration to iLink 3 by**Tuesday, December 31**,including functional certification and session migration as outlined in the[client impact assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Mandatory+Migration+-+iLink+3+Binary+Order+Entry+Protocol+for+CGW).
+
+**†Starting Wednesday, January 1, 2025, a charge of $1,000 USD per iLink session per week is applied to each session that has not yet migrated to iLink 3. Effective Sunday, February 2, 2025, iLink 2 on CGW will be decommissioned and only iLink 3 CGW sessions will be supported.**
+
+#### Update on Order Routing and Front-End Audit Trail Requirements for iLink 3
+
+As part of the iLink 3 migration, the following rules for an audit trail certification apply:
+
+*   All customer systems using Audit Trail 2.x CSV or FIX formats will be required to certify for Audit Trail 3.x CSV or FIX formats.
+*   Any certified Audit Trail 3.x CSV or FIX system that is not adding new functionality will not be required to recertify their audit trail system.
+*   Any certified Audit Trail 3.x CSV or FIX system that is adding new functionality or changes its Administrative Information Registration (On Demand or Pre-Registered)will be required to recertify their audit trail system.
+*   A new iLink 3.x CGW Order Entry System can be associated to an existing certified Audit Trail 3.x CSV or FIX system. Please send an email request to[Audit Trail](mailto:audittrail@cmegroup.com).
+
+Only after your Order Entry is certified, please[complete the questionnaire](https://cmeg.co1.qualtrics.com/jfe/form/SV_djbAUiiUlRyj64u)so an audit trail profile can be created.Audit Trail Production sample requirements guidelines can be[found here](https://www.cmegroup.com/confluence/display/EPICSANDBOX/CME+Globex+Front+End+Audit+Trail+iLink+3+Migration+Requirements).
+
+More information regarding the iLink 3 audit trail test suite can be found at:
+
+*   [iLink 3 - Minimum Acceptable Audit Trail Elements - Data Definitions and Validation Rules](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+-+Minimum+Acceptable+Audit+Trail+Elements+-+Data+Definitions+and+Validation+Rules)
+*   [AutoCert+Audit Trail for iLink 3 User Help](https://www.cmegroup.com/tools-information/webhelp/autocert-audit-trail-ilink3/Content/GettingStarted.html)
+
+Please contact[Market Regulation Audit Trail Team](mailto:audittrail@cmegroup.com)if you have any questions.
+
+### Update CME FX Spot+- March 2025
+
+† Denotes update to the article
+
+Effective**March 2025**, CME Group will launch CME FX Spot Plus (CME FX Spot+), a new tradable spot FX instrument, leveraging CME FX Link liquidity to bring together OTC spot FX and FX futures.
+
+CME FX Spot+ will enable spot FX market participants to tap into CME FX futures liquidity through an open, transparent central limit order book while giving FX futures users broader access to OTC liquidity. This unique liquidity connection will be made possible by implied matching through CME FX Link, a liquid, tradable spread between OTC spot FX and FX futures.
+
+The FX Spot+ products will be available for the following currency pairs: EUR/USD, GBP/USD, AUD/USD, NZD/USD, USD/JPY, USD/CAD, USD/CHF, and USD/MXN.
+
+All of the CME FX Spot+ products will be available in the New Release environment for customer testing on **Monday, November 11, 2024**.
+
+More information on these new products and the associated messaging and functionality enhancements is available in the [CME FX Spot+ client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/132775953/CME+FX+Spot+Plus). A new [CME FX Spot+ Credit Overview](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/132251681/CME+FX+Link+and+FX+Spot+Plus+Credit+Overview) is also available with credit features and details for both FX Link and CME FX Spot+.
+
+† The Straight Through Processing (STP) [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/370507787/CME+STP+Impacts+for+CME+FX+Link+and+FX+Spot+Plus) for CME FX Link and FX Spot+ is available.
+
+**CME FX Spot+ Specification Update**
+
+The [CME FX Spot+ client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/132775953/CME+FX+Spot+Plus) has been updated to reflect the following updates:
+
+*   Updated the Implied Book Depth to 3-deep for CME FX Spot+ Implied Book publication. This change will be available for customer testing in New Release in February 2025.
+*   Updated MDP 3.0 Configuration File Update for New Release
+
+> On Sunday, November 3, the New Release config.xml for MDP 3.0 was updated to support the new CME FX Spot + products. The market data configuration information will be added to the New Release config file via an FTP ([https://www.cmegroup.com/ftp](https://www.cmegroup.com/ftp)) and SFTP ([sftpng.cmegroup.com](http://sftpng.cmegroup.com/)) site. CME Group recommends clients use SFTP over FTP to access configuration files.
+> 
+> 
+> The new market data channel for CME FXSpot+ will be added as follows:
+> 
+> 
+> 
+> | FTP:[https://www.cmegroup.com](https://www.cmegroup.com/ftp) SFTP: [sftpng.cmegroup.com](http://sftpng.cmegroup.com/) |
+> | --- |
+> | Channel ID | Channel Label | Directory Location |
+> | 330 | CME Globex FX Spot+ | /SBEFix/NRCert/Configuration |
+> 
+> 
+> For additional information on accessing the configuration file, please review the [MDP 3.0 - Support services](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/46468701/MDP+3.0+-+Support+Services) on CME Group Client System Wiki.
+
+### Update Decommission of MGEX Markets on CME Globex- June 2025
+
+† Denotes update to the article
+
+Effective **† Sunday, June 29, 2025** (trade date Monday, June 30), order routing and market data for Minneapolis Grain Exchange (MGEX) products, which includes Hard Red Spring Wheat, will no longer be available via CME Globex. Existing order routing customers to MGEX markets and customers wishing to pursue market access to MGEX should contact [futures@miaxglobal.com](mailto:futures@miaxglobal.com).
+
+For CME Group specific questions, contact [Global Account Management](mailto:gam@cmegroup.com).
+
+## Product Launches
+
+### Credit Futures Intercommodity Spreads- November 17
+
+Effective **Sunday, November 17** (trade date Monday, November 18), the following Credit Futures Intercommodity spreads will be listed on CME Globex.
+
+| Credit Futures Intercommodity Spreads |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Listing Rule | Tag 762- SecuritySubType |
+| Bloomberg HY Credit Futures vs. 5-Year T-Note Futures | HYV | ER | 3 same month spreads, and 2 nearby HYB month vs. deferred ZF month spread | IV (Implied Treasury Intercommodity Spread) |
+| Bloomberg IG Credit Futures vs. Bloomberg HY Credit Futures | IGHY | CE | All same months spreads | IV (Implied Treasury Intercommodity Spread) |
+
+These spreads are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+### Adding Offshore Chinese Renminbi to FX Link- November 24
+
+Effective **Sunday, November 24** (trade date Monday, November 25), the U.S. Dollar/Offshore Chinese Renminbi will be added to [CME FX Link](https://www.cmegroup.com/confluence/display/EPICSANDBOX/CME+FX+Link+Spread) on CME Globex.
+
+Buying the spread will result in buying Leg1 FX Futures and selling Leg2 FX Spot. Selling the spread will result in selling Leg1 FX Futures and buying Leg2 FX Spot.
+
+| Adding Offshore Chinese Renminbi to FX Link |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | ILINK: TAG 55-SYMBOL MDP 3.0 TAG 1151 - SECURITY GROUP | MDP3.0 TAG 762-SECURITYSUB TYPE |
+| US Dollar / Offshore Chinese Renminbi Spot FX (Non-Tradable) | USDCNH | 01 (Zero – 1) | n/a |
+| US Dollar / Offshore Chinese Renminbi Spot FX Basis Spread | USDCNH | RM | XF |
+
+The U.S. Dollar/Offshore Chinese Renminbi FX Link currency is available for customer testing in New Release.
+
+Customer certification is not required.
+
+### New CME Soybean Oilshare Index- November 24
+
+Effective **Sunday, November 24** (trade date Monday, November 25), CME Soybean Oilshare Index will be added on MDP Streamline on the Benchmark Premium Channel (Channel 261) and on the CME Group Website. The CME Soybean Oilshare Index is a measure of soybean oil's relative value compared to soybean meal and is measured as soybean oil's share of output relative to soybean meal when crushing soybeans.
+
+| CME Soybean Oilshare Index |
+| --- |
+| Index Name | BENCHMARK PREMIUM TAG 37500-CLEARING PRODUCT CODE | MARKET DATA CHANNEL MDP 3.0 TAG 1180 - ApplID |
+| CME Soybean Oilshare Index 1 | COSI1 | 261 |
+
+This index will be made available for customer testing in New Release on **Wednesday, November 13**.
+
+### Bursa Malaysia Derivatives (BMD) USD Used Cooking Oil FOB Straits (Platts) Futures - December 15
+
+Effective **Sunday, December 15** (trade date Monday, December 16), subject to receipt of regulatory approval prior to such date, the Bursa Malaysia Derivatives (BMD) USD Used Cooking Oil FOB Straits (Platts) futures and spreads will be made available for trading on CME Globex.
+
+| Bursa Malaysia Derivatives (BMD) USD Used Cooking Oil FOB STRAITS (PLATTS) Futures |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | ILINK: TAG 55-SYMBOL MDP 3.0 TAG 1151 - SECURITY GROUP | MARKET DATA CHANNEL |
+| USD Used Cooking Oil FOB Straits (Platts) Futures | FUCO | BY | 430 |
+
+These changes are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of BMD.
+
+### Update Listing Bitcoin Friday Futures Intercommodity Ratio Spreads- December 15
+
+† Denotes update to the article
+
+Effective **Sunday, December 15** (trade date Monday, December 16), the following Bitcoin Friday futures inter-commodity ratio spread will be listed on CME Globex:
+
+| Listing Bitcoin Friday Futures Inter-commodity Ratio Spreads |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Tag 762- SecuritySubType | Listing Rules | Implication Eligibility |
+| Bitcoin Friday Futures - Micro Bitcoin Futures Inter-commodity Ratio Spread | BFF-MBT | BF | AE (Fixed Price Ratio Inter-Commodity) | All combination | †No |
+
+These spreads will be available for customer testing in New Release on **Sunday, November 24**.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+### New Listing NYMEX Inter-commodity Spreads in Certain Crude Grades- December 15
+
+Effective Sunday, December 15 (trade date Monday, December 16), the following Crude Grade inter-commodity spreads will be listed for trading on CME Globex.
+
+| Listing WTI Trade Month Futures Spreads |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Tag 762- SecuritySubType |
+| WTI Houston (Argus) vs. WTI Trade Month Futures (HTT) / WTI Ex-Pipe (Argus) vs. WTI Trade Month Futures (XTT) | HTT | CC | IS (Inter-Commodity Futures) XS (Inter-Commodity Strip) |
+| WTI Ex-Pipe (Argus) vs. WTI Trade Month Futures (XTT) / WTI Midland (Argus) vs. WTI Trade Month Futures (WTT) | XTT |
+
+These spreads will be available for customer testing in New Release on Sunday, November 24.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+## Product Changes
+
+### Listing Cycle Expansion for Commodity Index Products- November 17
+
+Effective **Sunday, November 17** (trade date Monday, November 18), the listing cycle for the following Commodity Index products will be expanded on CME Globex.
+
+| Listing Cycle Expansion for Commodity Index Products |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Listing Schedule | New Listing Schedule |
+| Bloomberg Commodity Index Futures | AW | AW | 4 March Quarterly Months and 1 additional December | 5 March Quarterly Months and 1 additional December |
+| BTIC on Bloomberg Commodity Index Futures | AWT | B7 |
+| Options on Bloomberg Commodity Index Futures | AW | AI |
+| Bloomberg Roll Select Commodity Index Futures | DRS | RS |
+| BTIC on Bloomberg Roll Select Commodity Index Futures | DRT | LH |
+| S&P-GSCI ER Index Futures | GIE | GA |
+| BTIC on S&P-GSCI Excess Return Index Futures | GIT | GH |
+
+These changes will be available for customer testing in New Release on **Sunday, November 3**.
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT and CME.
+
+### Change to Non-Reviewable Range for Several Equity Products- November 17
+
+Effective **Sunday, November 17** (trade date Monday, November 18), the Non-Reviewable Ranges for the below Equity products will be changed as follows:
+
+| Change to Non-Reviewable Range for Several Equity Products |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Non-Reviewable Range | New Non-Reviewable Range |
+| TACO+ Futures on E-mini Standard and Poor's 500 Stock Price Index Futures | EQ1 | 4T | 1.5 index points | 2.5 index points |
+| E-mini S&P 500 Futures | ES | ES | 6 index points | 10 index points |
+| Nearby BTIC+ Futures on E-mini Standard and Poor's 500 Stock Price Index Futures | ES1 | SK | 1.5 index points | 2.5 index points |
+| Deferred BTIC+ Futures on E-mini Standard and Poor's 500 Stock Price Index Futures | ES2 | SK | 1.5 index points | 2.5 index points |
+| TACO on E-Mini S&P 500 Futures | ESQ | 3T | 1.5 index points | 2.5 index points |
+| BTIC on E-mini S&P 500 Futures | EST | SB | 1.5 index points | 2.5 index points |
+| Micro E-mini Russell 2000 Index Futures | M2K | RY | 4 index points | 8 index points |
+| Micro E-mini S&P 500 Index Futures | MES | MS | 6 index points | 10 index points |
+| Micro E-mini NASDAQ-100 Index Futures | MNQ | NQ | 24 index points | 30 index points |
+| Micro E-mini Dow Index Futures | MYM | YM | 60 index points | 90 index points |
+| E-mini NASDAQ-100 Futures | NQ | NQ | 24 index points | 30 index points |
+| TACO on E-mini Nasdaq-100 Futures | NQQ | NT | 3 index points | 7.5 index points |
+| BTIC on E-mini Nasdaq-100 Futures | NQT | NB | 3 index points | 7.5 index points |
+| BTIC on E-mini Russell 1000 Index Futures | R1T | R1 | 1 index points | 2 index points |
+| BTIC on E-mini Russell 2000 | RLT | RT | 1 index points | 2 index points |
+| E-mini Russell 1000 Index Futures | RS1 | RL | 4 index points | 8 index points |
+| TACO on E-mini Russell 2000 Futures | RTQ | RE | 1.5 index points | 2 index points |
+| E-mini Russell 2000 Index Futures | RTY | RY | 4 index points | 8 index points |
+| E-mini Dow Jones Industrial Average Index Futures | YM | YM | 60 index points | 90 index points |
+| BTIC on E-mini DJIA Futures | YMT | DB | 15 index points | 23 index points |
+
+The risk parameter settings for these and all CME Globex products are defined in the[CME Globex Product Reference Sheet](http://www.cmegroup.com/confluence/display/EPICSANDBOX/GCC+Product+Resources).
+
+These products are currently available for customer testing in New Release.
+
+### Listing Cycle Expansion for Lean Hog Options- November 24
+
+Effective **Sunday, November 24**(trade date Monday, November 25), the listing cycle for Lean Hog options will be expanded on CME Globex as follows.
+
+| Expand Contract Listing for Lean Hog Options |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Listing Cycle | New Listing Cycle |
+| Options on Lean Hog Futures | HE | 0H, 1H | 2 monthly contracts of: Feb listed in August Apr listed in October May listed in December Jun listed in December Jul listed in February Aug listed in April Oct listed in May Dec listed in June | 2 monthly contracts of: Feb listed in August Apr listed in October May listed in December Jun listed in December Jul listed in February Aug listed in April Oct listed in May Dec listed in June And the 2 nearest months of January, March, September, or November |
+
+This change will be available for customer testing in New Release on **Sunday, November 10**.
+
+This product is listed with, and subject to, the rules and regulations of CME.
+
+### Listing Cycle Expansion for Adjusted Interest Rate S&P 500 Total Return (EFFR) Futures- December 8
+
+Effective **Sunday, December 8** (trade date Monday, December 9), pending regulatory approval, the listing cycle for the following AIR S&P 500 (EFFR) TRFs and BTICs will be expanded on CME Globex.
+
+| Listing Cycle Expansion for Adjusted Interest Rate S&P 500 Total Return (EFFR) Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Listing Schedule | New Listing Schedule |
+| Adjusted Interest Rate S&P 500 Total Return (EFFR) Futures | ASR (not Globex eligible) | 0B | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 13 consecutive quarters, 1 nearest Jan contract, and 7 additional Dec quarterly contracts | Quarterly contracts (March, June, September, December) listed for 13 consecutive quarters, 3 non-Jan serials, 1 nearest Jan contract, and 7 additional Dec quarterly contracts |
+| BTIC on Adjusted Interest Rate S&P 500 Total Return (EFFR) Futures | AST | BV |
+
+These futures will be available for customer testing in New Release on **Sunday, November 24**.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+### Listing Cycle Expansion for New Crop Weekly Options on Corn and Soybean Futures- December 15
+
+Effective **Sunday, December 15** (trade date Monday December 16), the listing cycle for the following New Crop Weekly options on Corn and Soybean futures will be expanded on CME Globex.
+
+| Listing Cycle Expansion for New Crop Weekly Options on Corn and Soybean Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Listing Schedule | New Listing Schedule |
+| New Crop Weekly Options on Corn Futures | CN1-CN5 | OC | Weekly contracts listed for 3 consecutive weeks from Feb-Aug. No weekly contract listed the same week as the monthly option expiration. | Weekly contracts listed for three consecutive weeks. No options listed for the week a monthly Short Dated New Crop option expires. The underlying futures contract is the December futures contract that is nearest to the expiration of the option until the termination of trading of the current year's standard September options, at which point the underlying becomes the next year's December futures contract. |
+| New Crop Weekly Options on Soybean Futures | SN1-SN5 | SQ | Weekly contracts listed for 3 consecutive weeks from Feb-Aug. No weekly contract listed the same week as the monthly option expiration. | Weekly contracts listed for three consecutive weeks. No options listed for the week a monthly Short Dated New Crop option expires. The underlying futures contract is the November futures contract that is nearest to the expiration of the option until the termination of trading of the current year's standard September options, at which point the underlying becomes the next year's November futures contract. |
+
+These changes will be available for customer testing in New Release on **Sunday, November 24**.
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.

@@ -1,0 +1,141 @@
+{
+  "gate": "btic-non-equity-groups",
+  "role": "adversarial verifier",
+  "verifier_evidence_dir": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups-verify",
+  "verified_on": "2026-09-12 (fetches stamped 2026-09-11T23:44Z..23:47Z UTC)",
+  "matches": false,
+  "summary": "Every verbatim quote of a rule filing, ContractSpecs page and wiki table re-derives from the saved bytes; every feed capture re-parses to the quoted events; one live re-fetch is byte-identical; the dated eras, the 23-074 intersection resolution, the 2026-05-29 instant cutover, U-2/U-3/U-18 and the three ENCODABLE-NOW keys all hold. Returning false on three load-bearing defects: the era-2 grid stated for crypto BTIC London and APAC is contradicted by the same feed (both carried a Saturday 05:00-17:00 CT block before the cutover, which the researcher's Sunday-start capture window could not see); the 'present on every Saturday across the feed's entire retained year' basis for withholding the Nikkei weekend boundary was never measured (7 Saturdays in 4 windows, not a year); and the headline mis-scopes the gate, claiming 'all seven' where the result enumerates eight and handoff section 1.1 proposes ten non-equity BTIC keys, with globex_europe_index_btic and globex_ftse_china_50_btic absent and unmentioned.",
+  "discrepancies": [
+    {
+      "id": "D1",
+      "severity": "load-bearing",
+      "claim": "\"the five-day grid runs through Friday 2026-05-29\" / \"The same capture supplies the era-2 grids at event resolution and corrects the first pass: London and APAC ran a 30-minute roll (10:00->10:30 and 03:00->03:30 CT) while New York closed at 15:00 and did not reopen until 17:00.\"",
+      "finding": "The era-2 (pre-2026-05-29) grid for globex_cryptocurrency_btic_london and globex_cryptocurrency_btic_apac was NOT five-day. Both books carried a Saturday 05:00 open -> 17:00 close CT block with the following Monday's trade date, exactly like the Nikkei BTIC Saturday block the same result flags as unexplained.",
+      "evidence": "The researcher's own cutover captures (r2-svc-8970-BTB-cutover.json, r2-svc-10664-ABB-cutover.json) start on Sunday 2026-05-24 and therefore contain no era-2 Saturday at all - the only Saturdays in them (2026-05-30, 2026-06-06) are era-3. Independent probe of the era-2 window 2025-10-26..2025-11-07 (saved as raw/btic-non-equity-groups-verify/v-svc-8970-BTB-2025oct.json, v-svc-10664-ABB-2025oct.json): BTB 2025-11-01 [('05:00','open','2025-11-03'),('17:00','closed','2025-11-03')]; ABB 2025-11-01 identical. BNB in the same window (v-svc-10185-BNB-2025oct.json) has 2025-11-01 [] - so the five-day characterisation is correct for New York only.",
+      "impact": "A factual error about a sourced pre-cutover grid that the handoff would carry forward, and it materially widens the U-16 weekend anomaly: the unexplained Saturday 05:00-17:00 CT block is a cross-family CME BTIC pattern (Nikkei BTIC, crypto BTIC London, crypto BTIC APAC), not Nikkei-only. Mitigated only by both keys sitting in the result's NOT-ENCODABLE bucket, so nothing would have been written from it."
+    },
+    {
+      "id": "D2",
+      "severity": "load-bearing (evidential basis false; conclusion survives)",
+      "claim": "\"the Nikkei BTIC Saturday 05:00-17:00 CT block is present on every Saturday across the feed's entire retained year, so it is persistent family behaviour rather than a date exception\"",
+      "finding": "Not supported by the saved bytes. INDEX.md records exactly four distinct date windows ever requested for id=8634 (2025-09-11..27, 2026-09-13..19, 2026-10-25..11-07, 2027-01-10..16), containing seven Saturdays. The retained year holds roughly seventy. A universal was asserted from a 10% sample.",
+      "evidence": "grep 'id=8634' INDEX.md returns only those four windows (plus 429 retries and duplicate captures with identical sha256). No full-year or multi-month capture for id=8634 exists on disk.",
+      "impact": "The conclusion happens to hold - three further independent windows fetched here (v-svc-8634-NKT-2025-11-29/2026-02-07/2026-06-06) add nine more Saturdays, all carrying open@05:00 / closed@17:00 with a forward trade date, for 16 of 16 across 16 months. But the stated evidence for withholding the weekend boundary was a claim about a search that was not run, which is exactly what AGENTS.md's \"'Unsourced' means 'not worked up', never 'no source exists'\" convention forbids in the other direction."
+    },
+    {
+      "id": "D3",
+      "severity": "load-bearing (scope)",
+      "claim": "\"All seven non-equity BTIC keys proposed in handoff section 1.1 survive re-verification\"",
+      "finding": "Two errors in one sentence. (a) The result's own states and encodable section enumerate EIGHT keys, not seven (commodity_index, credit_index, crypto NY, crypto London, crypto APAC, topix, nikkei, fx_euro = 3 encodable + 5 blocked). (b) Handoff section 1.1 proposes TEN non-equity BTIC keys: globex_europe_index_btic (DVT/E3T) and globex_ftse_china_50_btic (FTC) are also there and are absent from the result entirely - not verified, not deferred, not named as out of scope.",
+      "evidence": "Handoff 2026-09-05-cme-trade-type-handoff.md section 1.1 rows: 'DVT, E3T | globex_europe_index_btic (new)' and 'FTC | globex_ftse_china_50_btic (new)'. Neither code, key name, nor productId (8005 / 7955 / 7956) appears anywhere in the result JSON.",
+      "impact": "The result cannot be read as covering the non-equity BTIC surface. A parent session that trusts the headline would believe DVT/E3T and FTC were re-verified. Both are U-8-blocked cross-zone shapes, so the omission is the same class of work the result did do for TOPIX/Nikkei/London/APAC."
+    },
+    {
+      "id": "D4",
+      "severity": "quote discipline",
+      "claim": "gsci-spec-20200923170402.html verbatim: '\"BTIC:&nbsp;Sunday - Friday 5:00 p.m. - 1:30 p.m. (6:00 p.m. - 2:30 p.m. ET)\" (Globex row), alongside \"BTIC:Sunday - Friday 5:00 p.m. - 4:00 p.m. ...\" (ClearPort row)'",
+      "finding": "Both quotes silently drop CME's own row labels. The bytes read 'Globex BTIC:&nbsp;Sunday - Friday 5:00 p.m. - 1:30 p.m. (6:00 p.m. - 2:30 p.m. ET)' and 'ClearPort BTIC:Sunday - Friday 5:00 p.m. - 4:00 p.m. (6:00 p.m. - 5:00 p.m. ET) with a 60-minute break...'. They are also not two table rows but two labelled lines inside one merged Trading Hours cell.",
+      "evidence": "gsci-spec-20200923170402.html, Trading Hours <td colspan=3>. Same structure in gsci-spec-20190718214010.html and gsci-spec-20210612112951.html.",
+      "impact": "None against the conclusion - the real bytes are STRONGER than the quote, because the GSCI page names the venue inside the BTIC line itself, which is the cleanest possible proof of the venue-confusion diagnosis for 23-074. But a verbatim block that is not verbatim is a discipline failure, and the deleted words were the load-bearing ones."
+    },
+    {
+      "id": "D5",
+      "severity": "precision",
+      "claim": "\"AWT's executable window is measurably 08:15-13:30 CT with 17:00 only the queue start\"",
+      "finding": "r2-svc-8539-AWT-sep.json contains no 17:00 event of any kind. The queue starts at 16:00 (Sunday preopen) and 16:45 (weekday preopen) and runs overnight to the 08:15 open.",
+      "evidence": "AWT/B7 events: 2026-09-13 preopen@16:00; 2026-09-14..17 open@08:15, closed@13:30, preopen@16:45; 2026-09-18 open@08:15, closed@13:30.",
+      "impact": "The substantive point against 23-074's AW row (its '5:00 pm' is not an executable open) stands; the mapping of 23-074's 5:00 pm onto a 17:00 queue start does not, because no 17:00 boundary exists on B7."
+    },
+    {
+      "id": "D6",
+      "severity": "precision",
+      "claim": "\"withhold the disputed 13:30-16:00 hour\" / \"disagree by an hour\" (repeated four times)",
+      "finding": "13:30 to 16:00 CT is two and a half hours, not one. The endpoints quoted are right; the characterisation understates the withheld executable span by 150%.",
+      "evidence": "23-074 Table 1 'Current' column: '5:00 pm - 4:00 pm CT'; served window closes 13:30 CT.",
+      "impact": "Under AGENTS.md's 'Executable windows are the priority' convention a reader is told how serious a withheld gap is; calling 2.5 executable hours 'an hour' mis-sizes it. (IQST's withheld 15:00-16:00 genuinely is one hour.)"
+    },
+    {
+      "id": "D7",
+      "severity": "precision",
+      "claim": "\"Same sentence on productIds 11459 (IQS/IQST) and 11461 (IQY/IQYT), captured the same minute.\"",
+      "finding": "Not the same sentence. 10677 (HYB) Globex line reads '...BTIC: Sunday - Friday 5:00 p.m. - 3:00 p.m. CT with a 60-minute break each day beginning at 4:00 p.m.'; 11459 and 11461 read '...BTIC:&nbsp;Sunday - Friday 5:00 p.m. - 3:00 p.m. with a 60-minute break each day beginning at 4:00 p.m.' - no 'CT' on the Globex BTIC line (CT appears only on their ClearPort line).",
+      "evidence": "r2-specs-10677-HYB.txt, r2-specs-11459-IQS.txt, r2-specs-11461-IQY.txt TradingHours.vandhr.",
+      "impact": "Substantively identical (15:00 CT) and the zone is unambiguous from the sibling line, so no encoding consequence. Recorded because a zone label is precisely the thing a verbatim must not normalise."
+    },
+    {
+      "id": "D8",
+      "severity": "dead-end mis-diagnosis",
+      "claim": "dead_ends (5): \"CBOT 26-087 lives at /rule-filings/2026/2/26-087.pdf. The zero-padded /2026/02/ path returns a 404 HTML shell... The first pass recorded this document as unreachable on exactly that mistake.\"",
+      "finding": "The first pass's failure was not the zero-padding. INDEX.md line 248 records a first-pass request to the CORRECT un-padded directory - .../rule-filings/2026/2/26-087_1.pdf at 2026-09-06T06:37:08Z, 10817 bytes - which is the 404 shell because the real filename carries no '_1' suffix. The zero-padded attempts came later (07:13). So the first pass reached the right directory and failed on the filename suffix.",
+      "evidence": "INDEX.md lines 248 and 320-322; on-disk rf-26-087.txt / _1 / _2 are all 'Title: 404: Page Not Found - CME Group'.",
+      "impact": "The recorded trap will send the next session looking for a padding bug when the actual trap is the '_N' exhibit-suffix convention (present on 18-431_1, 19-012_1, 22-220_1, 23-015_1, 24-080_1 and absent on 24-263, 24-328, 25-061, 26-087). The retrieval itself and the 2026-03-29 date are correct."
+    },
+    {
+      "id": "D9",
+      "severity": "non-disclosure (conclusion survives)",
+      "claim": "CME 18-007 / Chadv18-013 give globex_topix_btic an unconditional launch day of 2018-02-04.",
+      "finding": "Both documents carry the very conditionality boilerplate the handoff's U-5 uses to disqualify SER-8863's header date, and the result does not disclose it. 18-007's product summary: 'Futures shall trade on and according to the rules of Chicago Mercantile Exchange Inc., pending certification of contract terms and conditions with the US Commodity Futures Trading Commission and completion of all regulatory review periods.' Chadv18-013 closes with 'Pending All Relevant CFTC Regulatory Review Periods'.",
+      "evidence": "r2-rf-18-007.txt line 232; chadv18-013-pdf.txt final line.",
+      "impact": "The era survives: 18-007's operative cover-letter sentence is itself the self-certification and states the day without condition ('is self-certifying terms and conditions for Yen Denominated TOPIX Index Futures contract ... to be listed ... on Sunday, February 4, 2018, for trade date of Monday, February 5, 2018'), the day is eight years in the past, and Chadv18-013 plus the contemporaneous spec captures show the listing happened. But a gate whose brief is 'a conditional launch is not an unconditional effective day' had to name the clause and say why it does not bite here."
+    },
+    {
+      "id": "D10",
+      "severity": "unsourced count",
+      "claim": "\"globex_cryptocurrency_btic_new_york - BNB/MYB/ENB/EYB and the rest of the 19 roots on 9 groups\"",
+      "finding": "Neither 19 nor 9 is supported by any state in the result, and 19 contradicts the handoff, which puts the New York BTIC row at 15 roots ('BNB, MYB, ENB, EYB + 11 further roots (15 total, row 6)'). The result's own captures cover BNB/BI and ENB/RN only.",
+      "evidence": "Handoff section 1.1 row 6; result states cite ids 10185 (BNB/BI) and, from the first pass, ENB/RN. No root-count artifact is cited.",
+      "impact": "Caller-catalog data, so no schedule consequence - but it is a bare number presented as a finding where the handoff says something different, and LAW-PRIMARY-SOURCES does not exempt counts."
+    },
+    {
+      "id": "D11",
+      "severity": "overclaim",
+      "claim": "\"U-2 RESOLVED\"",
+      "finding": "U-2 asks for 'the current CME product slate row for ART ... plus a time-aligned schedule week, TO DATE THE ROUTE CHANGE'. The result establishes ART's current route (group BV) and its current grid; it does not date the route change, and the product-slate row was not obtained (the result's own dead_end (3) says the slate's globex filter is inoperative through the reader, which I confirmed: r2-slate-ART.txt and r2-slate-EMT.txt differ only in the reader's URL header line).",
+      "evidence": "r2-svc-10040-ART-sep.json (ART/BV, closed@15:00); diff r2-slate-ART.txt r2-slate-EMT.txt -> one differing line, the URL.",
+      "impact": "Adequate for the crate's actual question - ART routes to globex_equity_index_btic and a route date is catalog data - but 'RESOLVED' against U-2's stated deliverable is not accurate, and the undated route change should stay an open catalog note."
+    },
+    {
+      "id": "D12",
+      "severity": "uncited support (claims verified, not cited)",
+      "claim": "(a) \"6EB has no Globex security group and no schedule-service entry of its own\"; (b) \"IQBT/HYBT/IQLT/IQYT/DLBT/DHBT/DHYT on group CG\".",
+      "finding": "Both are true and both rest on first-pass bytes in the same raw directory that the result does not cite, so as written they read as assertions. (a) The first pass captured the complete product slate - 7 pages, pageSize 500, total 3248 - and '\"globex\":\"6EB\"' occurs zero times across all of it, while 6EP, GDT, AWT, HYBT, NKT, TPB and BNB each occur exactly once. That is a real exhaustive negative. (b) First-pass service captures show IQBT, IQLT, IQYT, DLBT, DHBT and DHYT all on prodGroup CG, and IQS/IQB/IQL/IQY/HYB/DLB (the outrights) on CE.",
+      "evidence": "slate-all-p1..p7.txt / slate2-p1..p7.txt; svc captures for ids 10875/10886/11462/11464/11452/11570 etc.",
+      "impact": "None against the conclusions. Recorded because a claim of absence that is actually exhaustive deserves its citation - AGENTS.md: 'the stated reason has to be true', and here the true reason is stronger than the one given."
+    }
+  ],
+  "confirmed": [
+    "18-431 (CFTC 40.6(a), 2018-11-14): effective sentence and both the CME Globex and CME ClearPort BTIC hours blocks are byte-exact, including the 'S&P GSCI ER Futures only' scope and the DRS/DRT, GD/GI/GDT, GIE/GA/GIT code table. No 'pending' conditionality anywhere in the document.",
+    "23-074 (2023-02-23): effective sentence, Table 1 column headers and all four rows (401, 415, 29, 29D) verbatim-exact.",
+    "Four CME statements inside the disputed 2018-12-02..2023-03-11 interval put the GLOBEX BTIC close at 13:30 CT: 18-431, gsci-spec-20190718214010, gsci-spec-20200923170402, drs-spec-20210616235730 - plus two the result does not cite (gsci-spec-20210612112951, drs-spec-20190717070123), six in total against one later table cell.",
+    "The venue diagnosis of the 23-074 conflict is correct: live productId 7294 (DRS) prints Globex BTIC 17:00->13:30 CT and ClearPort BTIC 17:00->16:00 CT with a 60-minute break on the same page, and 17:00-16:00 CT is exactly what 23-074 prints as 'Current CME Globex BTIC Trading Hours'.",
+    "The resolution of that conflict follows AGENTS.md: intersection of {17:00-13:30} and {17:00-16:00} is 17:00-13:30, so serving 13:30 for the family's whole life, asserting no 2023-03-12 row and withholding 13:30-16:00 satisfies both 'Prefer the sourced intersection to omission' and 'A knowledge boundary may only widen'.",
+    "ContractSpecs 33 (GD/GDT), 32 (GIE/GIT), 7294 (DRS/DRT), 10677 (HYB/HYBT), 11459, 11461, 8478 (BTC, three BTIC lines + BTIC code triple BNB/BTB/ABB), 58 (6E, both BTIC lines), 8491 (TPY/TPB), 10250 (TPD/TPT), 168 (NKD/NKT), 167 (NIY/NIT), 166 (EMD/EMT): every quoted string matches the saved bytes.",
+    "Independent re-fetch of productId 33 through the reader at 2026-09-11T23:44:31Z is byte-identical to the researcher's 23:16:03Z capture (sha256 3881dce066c2d4363acdab31f6004bbe8a211eb724fceb21a207cc078806158d).",
+    "Nikkei carries the midday clause and TOPIX does not, live: 168/167 read '... 3:30 p.m. Tokyo time (1:30 a.m./2:30 a.m. ET) and Monday - Friday Noon to 5:00 p.m. ET'; 8491/10250 stop at '(1:30 a.m./2:30 a.m. ET)'.",
+    "Feed captures re-parsed event-by-event and all match the quoted values: GDT/GT, GIT/GH, DRT/LH all 17:00->13:30 CT invariant across the September, 2026-10-25..11-07 and January windows; HYBT/CG 17:00->15:00 CT invariant across the same three; IQST on CE closing 16:00 against its own spec's 15:00; AWT/B7 preopen@16:00-16:45 with open@08:15 and closed@13:30; ART/BV and EMT/PB both on 17:00->15:00 CT; 6E/6E with no 09:40 or 10:30 event in any window.",
+    "The crypto cutover week is exactly as quoted on all three BTIC groups: last era-2 close 2026-05-29 at 15:00 (BNB) / 10:00 (BTB) / 03:00 (ABB) CT, then preopen@16:02 and open@16:30 CT with trade date Monday 2026-06-01, then the 24/7 grid. The wiki's 'Starting at 4 p.m. Central Time on Friday, May 29, 2026', its 'Friday, May 29, 2026, starting at 4:00 p.m. CT | Production Launch' row, its Day One table (close 16:00-16:02, no-cancel 16:29:30-16:30:00, open 16:30 CT) and its three per-session BTIC schedule tables are verbatim-exact, as are the BST note, the 'all clients trading cryptocurrency futures and options' preamble and the spot-quoted-only 'Products Not In Scope' table. Treating this as an exact-instant cutover for HISTORICAL_INSTANT_CUTOVERS rather than a day-level row is what LAW-NO-FABRICATED-DATES requires.",
+    "Zone anchors independently re-measured and correct: BTB closes 11:00 CT in 2026-10-26..30 and 10:00 CT in 2026-11-02..06 and 2027-01 (16:00 Europe/London); ABB closes 03:00 CT through 2026-10-30 and 02:00 CT from 2026-11-02 (fixed 08:00 UTC = 16:00 HK/SG); TPB closes 01:30 CT in CDT weeks and 00:30 CT in CST weeks (15:30 Asia/Tokyo); NKT the same with a Chicago-anchored 11:00-16:00 CT daytime leg; BNB fixed at 15:00/15:01/15:05 and 16:01/16:02 CT in every window. The single-zone/cross-zone split across the eight keys is right, and I additionally confirmed BNB is single-zone in ERA 2 as well (15:00 CT in both the 2025-10-27..30 CDT week and the 2025-11-03..07 CST week).",
+    "22-220, 24-080, 21-002, 24-328, 26-087, 25-061, 23-015, 18-007, 19-012, 21-294, 24-263: every effective-date sentence and every BTIC-code list quoted is byte-exact.",
+    "U-18(b) is genuinely resolved in the negative. 19-012 puts CME Globex at '12:00 noon ET to 5:00 p.m. ET' and CME ClearPort at '11:00 a.m. ET to 5:00 p.m. ET' on the same page, and 21-294's pre-change column repeats 'Monday - Thursday 12:00 p.m. to 5:00 p.m. ET'. There was never an 11:00->Noon Globex move.",
+    "U-18(a) is resolved. 24-263 is a 40.6(a) certification with no conditionality, it amends 'the Basis Trade at Index Close (\"BTIC\") trading hours ... of all Nikkei and TOPIX equity futures contracts', its Table 1 names NKT, NIT, TPB and TPT, and its Trading Hours blackline (not its adjacent Termination-of-Trading blackline) carries the 3:00 -> 3:30 p.m. Tokyo move. Keying the row to Sunday 2024-11-03 with the Tuesday trade date explained by the document's own footnote '*Monday, November 4, 2024, is a bank holiday in Japan' is the correct local-opening-day choice and splits no running session.",
+    "LAW-SESSION-NOT-EXPIRY was respected throughout. Every close served is taken from session language - a TRADING HOURS / 'Trading and Clearing BTIC Hours' row, a wiki Close/Pause/Open maintenance table, or a feed closed@ event - and the adjacent expiry rows were correctly left alone: 24-263's 'Amended BTIC Termination of Trading' blackline, the FX FAQ's 'Termination of Trading | 3:40 p.m. London time daily', and the ContractSpecs 'BTIC trading terminates...' cells are all present in the bytes and none of them was promoted to a close.",
+    "The 6EB interruption is correctly diagnosed as a venue confusion, not a contradiction: spec 58 Globex says 'a trading close from 3:40 p.m. - 4:30 p.m. London time (9:40 a.m. - 10:30 a.m. CT)' and ClearPort says 'a trading halt 9:40 a.m. to 11:30 a.m. CT'; the FAQ table repeats both, and its Globex cell spells the DST pair itself - '(9:40 a.m./10:40 a.m. CT)' to '(10:30 a.m./11:30 a.m. CT)'. Classifying the 50-minute gap as Maintenance is right under the modelling convention: the FAQ says trades after 4:30 p.m. London 'will be treated as trades for the next day's trade date', making it an inter-trade-date gap under four hours within one ISO week.",
+    "The credit-index intersection is right. 24-328's 'TRADING AND CLEARING HOURS' block is the contract's generic block (Globex close 16:00 CT), the live spec's BTIC line says 15:00 CT, HYBT/CG's feed says closed@15:00, so 17:00->15:00 CT is what both states support. The spec's trailing '60-minute break each day beginning at 4:00 p.m.' is indeed boilerplate inherited from the outright line - no 16:00-17:00 interior gap appears on CG in any of the three windows - and the instruction not to encode it is correct.",
+    "Retention is as described: id=8609 requested for 2025-08-01..2025-09-20 returns empty events arrays until 2025-09-11, which then carries closed@13:30 / preopen@16:45 / open@17:00; requests for 2018-11-26..2018-12-08 and 2023-03-05..2023-03-18 return the product row with every events array empty. A rolling 365-day window from the 2026-09-11 capture, not an archive.",
+    "Dead-end (3) confirmed: /services/product-slate ignores globex=<code> through the reader. r2-slate-ART.txt and r2-slate-EMT.txt differ only in the reader's URL header line, and slate-6EB.txt returns the unfiltered first page with total 3248.",
+    "Dead-end (4) confirmed: the 12-page client-facing 24/7 overview PDF, internally dated 'May 27, 2026', contains zero occurrences of 'BTIC'.",
+    "26-087 and 25-061 are genuinely new this pass and correctly read: IQST/IQYT/IQLT first session Sunday 2026-03-29 (trade date 2026-03-30) and DHYT first session Sunday 2025-03-16 (trade date 2025-03-17), both member listings on an existing family clock rather than revision rows - which is what AGENTS.md's 'Adding or revising a product-family key' step 2 says they are.",
+    "NIT (group N6) publishes a schedule identical to NKT (group ND) in the first pass's captures, and TPT shares group BJ with TPB, so the one-key-per-family decisions for globex_nikkei_btic and globex_topix_btic are supported.",
+    "The three ENCODABLE-NOW keys survive unqualified: globex_commodity_index_btic (era 1 sessionless below the January-2010 floor to 2018-12-01, era 2 from opening day 2018-12-02 at Sunday pre-open 16:00-17:00 / weekday 16:45-17:00 / open 17:00 / close 13:30 CT, no Friday reopen, withholding 13:30-16:00 and U-4); globex_credit_index_btic (era 1 sessionless to 2024-09-14, era 2 from 2024-09-15 with the same queue and a 15:00 CT close, no 16:00-17:00 gap, withholding IQST's extra hour and U-4); globex_cryptocurrency_btic_new_york (era 1 sessionless to 2022-07-23, era 2 from 2022-07-24 at 17:00->15:00 CT, era 3 from the stated instant 2026-05-29 16:30 CT, single-zone in era 2 and era 3, the era-3 boundary belonging in HISTORICAL_INSTANT_CUTOVERS)."
+  ],
+  "residual_caveats": [
+    "U-4 (regular vs extended) is untouched for all eight keys and the result says so.",
+    "U-8 remains a design decision, and the five cross-zone keys stay unwritable until it is settled. The result's framing of the trade-offs (6EB cheapest to withhold at 50 minutes, globex_nikkei_btic most expensive because a whole daytime leg sits in a different zone from its close) is sound.",
+    "The Saturday 05:00-17:00 CT BTIC block now needs an issue that covers Nikkei BTIC (both eras), crypto BTIC London and crypto BTIC APAC (era 2), not Nikkei alone - LAW-FOLLOW-UPS-ARE-ISSUES.",
+    "Era-2 grids for the three crypto BTIC keys, the credit key and the commodity-index key are carried back from 2025-2026 feed and spec observations to launch days in 2018-2024. That is the carry-back / intersection convention working as designed, but the residual risk belongs beside each table.",
+    "Several holiday-shaped irregularities appear in the captures and are correctly not template data, though the result mentions only two of them: NKT/NIT lose the Friday daytime leg on 2026-09-18 (Japanese holiday run 2026-09-21..23); TPB has no close on 2026-11-02 and no open on 2027-01-11 (Culture Day, Coming-of-Age Day); BNB's Monday 2026-05-25 pre-open is 16:00 rather than 16:45 (Memorial Day); NKT closes early at 12:00 on Friday 2026-06-19 (Juneteenth); BTB/NKT roll Friday 2027-01-15 to trade date 2027-01-19 (MLK Day). All are DayPolicy input under LAW-HOLIDAY-SCOPE.",
+    "19-012's effective day, Monday 2019-02-18, was US Presidents' Day. The result keys globex_nikkei_btic's era 1 there without noting it, where it did note the analogous Japanese bank holiday for 24-263. The key still opens that evening for the Tuesday trade date, so 2019-02-18 is the right local opening day.",
+    "24-263's Table 1 mislabels NKD as 'Yen Denominated' and NIY as 'USD Denominated', the reverse of 19-012. A CME document defect, immaterial here because the BTIC codes disambiguate."
+  ],
+  "no_repo_edits": "No file under /Users/agedvagabond/Developer/exchange-hours-rs was modified."
+}

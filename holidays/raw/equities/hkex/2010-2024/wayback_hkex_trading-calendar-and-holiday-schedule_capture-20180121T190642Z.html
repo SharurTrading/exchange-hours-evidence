@@ -1,0 +1,2010 @@
+
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" class="market-hkex">
+<head>
+    <title>Trading Calendar and Holiday Schedule</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="content-language" content="en">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="CODE_LANGUAGE" content="C#" />
+    <meta name="description" content="Trading Calendar and Holiday Schedule" />
+    <meta name="keywords" content="Trading Calendar and Holiday Schedule" />
+    <meta name="robots" content="" />
+    <meta property="og:title" content="Trading Calendar and Holiday Schedule" />
+    <meta property="og:url" content="/en/Services/Trading/Derivatives/Overview/Trading-Calendar-and-Holiday-Schedule" />
+    <meta property="og:image" content="http://www.hkex.com.hk/-/media/Market-System/hkexlogo.png" />
+    <meta name="vs_defaultClientScript" content="JavaScript" />
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+    <link rel="icon" href="/-/media/HKEX-Group-Site/Homepage/favicon.ico" />
+    
+    
+    <link rel="Stylesheet" type="text/css" href="/css/HKEX/HKEX MARKET/main.css" />
+    <link rel="Stylesheet" type="text/css" href="/css/HKEX/HKEX MARKET/market.css" />
+    <link rel="Stylesheet" type="text/css" href="/css/HKEX/HKEX MARKET/jquery.fancybox.css" />
+    <link rel="Stylesheet" type="text/css" href="/css/HKEX/HKEX MARKET/stickysort.css" />
+    <link rel="Stylesheet" type="text/css" href="/css/HKEX/HKEX MARKET/csm.css" />
+    
+    <script type="text/javascript">
+        function browserCheck() {
+            if (checkMode() != 'pageeditor' && checkMode() != 'preview') {
+                //DisplayLang();
+                var dest = '' + window.parent.location;
+
+                if (dest.toLowerCase().indexOf('/sc.hkex.com.hk/tunis/') == -1 && dest.toLowerCase().indexOf('sc_lang=zh-cn') != -1) {
+                    var RegExLangZhCn = new RegExp("sc_lang=zh-cn", "ig");
+
+                    dest = dest.toLowerCase().replace(RegExLangZhCn, "sc_lang=zh-hk");
+                    window.parent.location = dest;
+                }
+            }
+            if (!browserAllow()) {
+                alert('Your browser version is incompatible with our website. Please update your browser to Internet Explorer 9 or later.');
+            }
+        }
+    </script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-51785376-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body onload="javascript:browserCheck();">
+    <!-- Google Tag Manager 
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PWCRT3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function (w, d, s, l, i) {
+w[l] = w[l] || []; w[l].push({
+'gtm.start':
+new Date().getTime(), event: 'gtm.js'
+}); var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-PWCRT3');</script>
+ End Google Tag Manager -->
+
+<!-- START OF SmartSource Data Collector TAG v10.4.23 -->
+<!-- Copyright (c) 2017 Webtrends Inc.  All rights reserved. -->
+<script type="text/javascript" src="/Scripts/HKEX/HKEX Market/webtrends.load.js"></script>
+<noscript><img alt="dcsimg" id="dcsimg" width="1" height="1" src="//analytics.hkex.com.hk/dcs9ztdi8paw7rfb2yqvkb26s_5h1h/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=10.4.23&amp;dcssip=www.hkex.com.hk"/></noscript>
+<!-- END OF SmartSource Data Collector TAG v10.4.23 -->
+
+    <form method="post" action="/Services/Trading/Derivatives/Overview/Trading-Calendar-and-Holiday-Schedule?sc_lang=en" id="mainform">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTY2Njc0MDg5DxYEHg9fX0FudGlYc3JmVG9rZW4FIGU5YzBlZjk1NzVhZDRkZGRhM2U3MmU3MTVmNjY5YWRjHhJfX0FudGlYc3JmVXNlck5hbWUFEmV4dHJhbmV0XEFub255bW91cxYCZhBkZBYGAgEPZBYCAgIPZBYCZg9kFhxmDxYCHgRUZXh0BY4BPGEgaHJlZj0iLz9zY19sYW5nPWVuIiBjbGFzcz0idG9wYmFyX19sb2dvIiB0aXRsZT0iSEtFWCI+PGltZyBzcmM9Ii8tL21lZGlhL01hcmtldC1TeXN0ZW0vaGtleGxvZ28ucG5nIiBhbHQ9ImhrZXhsb2dvIiAvPjxzcGFuPkhLRVg8L3NwYW4+PC9hPmQCAQ8WAh8CBQlGb250IFNpemVkAgIPFgIfAgVUPGEgY2xhc3M9ImZvbnQtc2l6ZXNfX2xpbmsgZm9udC1zaXplcy0tc21hbGwiIGhyZWY9IiMiIHRpdGxlPSJTbWFsbCBGb250IFNpemUiPkE8L2E+ZAIDDxYCHwIFaTxhIGNsYXNzPSJmb250LXNpemVzX19saW5rIGZvbnQtc2l6ZXMtLW1lZGl1bSBmb250LXNpemVzLS1hY3RpdmUiIGhyZWY9IiMiIHRpdGxlPSJNZWRpdW0gRm9udCBTaXplIj5BPC9hPmQCBA8WAh8CBVQ8YSBjbGFzcz0iZm9udC1zaXplc19fbGluayBmb250LXNpemVzLS1sYXJnZSIgaHJlZj0iIyIgdGl0bGU9IkxhcmdlIEZvbnQgU2l6ZSI+QTwvYT5kAgUPFgIfAgVVPGEgaHJlZj0iIyIgY2xhc3M9InRvcGJhcl9fbGluayB0b3BiYXJfX2Fib3V0LWxpbmsiIHRpdGxlPSJBYm91dCBIS0VYIj5BYm91dCBIS0VYPC9hPmQCBg8WAh8CBfgQPGxpIGNsYXNzPSdwb3BvdmVyX19saXN0LWl0ZW0nPjxhIGNsYXNzPSdwb3BvdmVyX19saW5rIHRvcGJhcl9fcmVsYXRlZC1zaXRlcy1pY29uJyBocmVmPSJodHRwOi8vd3d3LmhrZXhncm91cC5jb20vYWJvdXQtaGtleC9jb21wYW55LWluZm9ybWF0aW9uL2Fib3V0LWhrZXg/c2NfbGFuZz1lbiIgVGl0bGU9IkNvcnBvcmF0ZSBJbmZvcm1hdGlvbiIgdGFyZ2V0PSJfYmxhbmsiPkNvcnBvcmF0ZSBJbmZvcm1hdGlvbjwvYT48L2xpPjxsaSBjbGFzcz0ncG9wb3Zlcl9fbGlzdC1pdGVtJz48YSBjbGFzcz0ncG9wb3Zlcl9fbGluayB0b3BiYXJfX3JlbGF0ZWQtc2l0ZXMtaWNvbicgaHJlZj0iaHR0cDovL3d3dy5oa2V4Z3JvdXAuY29tL2JyYW5kL2VuL2luZGV4Lmh0bSIgVGl0bGU9Ik91ciBCcmFuZCIgdGFyZ2V0PSJfYmxhbmsiPk91ciBCcmFuZDwvYT48L2xpPjxsaSBjbGFzcz0ncG9wb3Zlcl9fbGlzdC1pdGVtJz48YSBjbGFzcz0ncG9wb3Zlcl9fbGluayB0b3BiYXJfX3JlbGF0ZWQtc2l0ZXMtaWNvbicgaHJlZj0iaHR0cDovL3d3dy5oa2V4Z3JvdXAuY29tL0Fib3V0LUhLRVgvT3JnYW5pc2F0aW9uL0JvYXJkLWFuZC1Db21taXR0ZWVzP3NjX2xhbmc9ZW4iIFRpdGxlPSJPcmdhbmlzYXRpb24iIHRhcmdldD0iX2JsYW5rIj5PcmdhbmlzYXRpb248L2E+PC9saT48bGkgY2xhc3M9J3BvcG92ZXJfX2xpc3QtaXRlbSc+PGEgY2xhc3M9J3BvcG92ZXJfX2xpbmsgdG9wYmFyX19yZWxhdGVkLXNpdGVzLWljb24nIGhyZWY9Imh0dHA6Ly93d3cuaGtleGdyb3VwLmNvbS9JbnZlc3Rvci1SZWxhdGlvbnM/c2NfbGFuZz1lbiIgVGl0bGU9IkludmVzdG9yIFJlbGF0aW9ucyIgdGFyZ2V0PSJfYmxhbmsiPkludmVzdG9yIFJlbGF0aW9uczwvYT48L2xpPjxsaSBjbGFzcz0ncG9wb3Zlcl9fbGlzdC1pdGVtJz48YSBjbGFzcz0ncG9wb3Zlcl9fbGluayB0b3BiYXJfX3JlbGF0ZWQtc2l0ZXMtaWNvbicgaHJlZj0iaHR0cDovL3d3dy5oa2V4Z3JvdXAuY29tL0ludmVzdG9yLVJlbGF0aW9ucy9SZWd1bGF0b3J5LURpc2Nsb3N1cmUvUmVndWxhdG9yeS1SZXBvcnRzLzIwMTc/c2NfbGFuZz1lbiIgVGl0bGU9IkZpbmFuY2lhbCBTdGF0ZW1lbnRzIiB0YXJnZXQ9Il9ibGFuayI+RmluYW5jaWFsIFN0YXRlbWVudHM8L2E+PC9saT48bGkgY2xhc3M9J3BvcG92ZXJfX2xpc3QtaXRlbSc+PGEgY2xhc3M9J3BvcG92ZXJfX2xpbmsgdG9wYmFyX19yZWxhdGVkLXNpdGVzLWljb24nIGhyZWY9Imh0dHA6Ly93d3cuaGtleGdyb3VwLmNvbS9JbnZlc3Rvci1SZWxhdGlvbnM/c2NfbGFuZz1lbiIgVGl0bGU9IlJlYWwgVGltZSBTaGFyZSBQcmljZSIgdGFyZ2V0PSJfYmxhbmsiPlJlYWwgVGltZSBTaGFyZSBQcmljZTwvYT48L2xpPjxsaSBjbGFzcz0ncG9wb3Zlcl9fbGlzdC1pdGVtJz48YSBjbGFzcz0ncG9wb3Zlcl9fbGluayB0b3BiYXJfX3JlbGF0ZWQtc2l0ZXMtaWNvbicgaHJlZj0iaHR0cDovL3d3dy5oa2V4Z3JvdXAuY29tL0NvcnBvcmF0ZS1Hb3Zlcm5hbmNlP3NjX2xhbmc9ZW4iIFRpdGxlPSJDb3Jwb3JhdGUgR292ZXJuYW5jZSIgdGFyZ2V0PSJfYmxhbmsiPkNvcnBvcmF0ZSBHb3Zlcm5hbmNlPC9hPjwvbGk+PGxpIGNsYXNzPSdwb3BvdmVyX19saXN0LWl0ZW0nPjxhIGNsYXNzPSdwb3BvdmVyX19saW5rIHRvcGJhcl9fcmVsYXRlZC1zaXRlcy1pY29uJyBocmVmPSJodHRwOi8vd3d3LmhrZXhncm91cC5jb20vQ29ycG9yYXRlLVNvY2lhbC1SZXNwb25zaWJpbGl0eT9zY19sYW5nPWVuIiBUaXRsZT0iQ29ycG9yYXRlICBTb2NpYWwgUmVzcG9uc2liaWxpdHkiIHRhcmdldD0iX2JsYW5rIj5Db3Jwb3JhdGUgIFNvY2lhbCBSZXNwb25zaWJpbGl0eTwvYT48L2xpPjxsaSBjbGFzcz0ncG9wb3Zlcl9fbGlzdC1pdGVtJz48YSBjbGFzcz0ncG9wb3Zlcl9fbGluayAnIGhyZWY9Ii9HbG9iYWwvQWJvdXQvVmlzaXQtSEtFWD9zY19sYW5nPWVuIiBUaXRsZT0iVmlzaXQgSEtFWCI+VmlzaXQgSEtFWDwvYT48L2xpPjxsaSBjbGFzcz0ncG9wb3Zlcl9fbGlzdC1pdGVtJz48YSBjbGFzcz0ncG9wb3Zlcl9fbGluayB0b3BiYXJfX3JlbGF0ZWQtc2l0ZXMtaWNvbicgaHJlZj0iaHR0cDovL3d3dy5oa2V4Z3JvdXAuY29tL0Fib3V0LUhLRVgvQ2FyZWVycz9zY19sYW5nPWVuIiBUaXRsZT0iQ2FyZWVycyIgdGFyZ2V0PSJfYmxhbmsiPkNhcmVlcnM8L2E+PC9saT5kAgcPFgIfAgVvPGEgaHJlZj0iIyIgY2xhc3M9InRvcGJhcl9fbGluayB0b3BiYXJfX3JlbGF0ZWQtc2l0ZXMtbGluayIgdGl0bGU9IlJlbGF0ZWQgU2l0ZXM6ICBMTUUiPlJlbGF0ZWQgU2l0ZXM6ICBMTUU8L2E+ZAIIDxYCHwIF9wc8bGkgY2xhc3M9J3BvcG92ZXJfX2xpc3QtaXRlbSc+PGEgY2xhc3M9J3BvcG92ZXJfX2xpbmsgdG9wYmFyX19yZWxhdGVkLXNpdGVzLWljb24nIGhyZWY9Imh0dHBzOi8vd3d3LmxtZS5jb20vIiBUaXRsZT0iTE1FIiB0YXJnZXQ9Il9ibGFuayI+TE1FPC9hPjwvbGk+PGxpIGNsYXNzPSdwb3BvdmVyX19saXN0LWl0ZW0nPjxhIGNsYXNzPSdwb3BvdmVyX19saW5rIHRvcGJhcl9fcmVsYXRlZC1zaXRlcy1pY29uJyBocmVmPSJodHRwOi8vd3d3LmhrZXhncm91cC5jb20vIiBUaXRsZT0iSEtFWCBHcm91cCIgdGFyZ2V0PSJfYmxhbmsiPkhLRVggR3JvdXA8L2E+PC9saT48bGkgY2xhc3M9J3BvcG92ZXJfX2xpc3QtaXRlbSc+PGEgY2xhc3M9J3BvcG92ZXJfX2xpbmsgdG9wYmFyX19yZWxhdGVkLXNpdGVzLWljb24nIGhyZWY9Imh0dHA6Ly93d3cuaGtnZW0uY29tL3Jvb3QvZV9kZWZhdWx0LmFzcCIgVGl0bGU9IkdFTSIgdGFyZ2V0PSJfYmxhbmsiPkdFTTwvYT48L2xpPjxsaSBjbGFzcz0ncG9wb3Zlcl9fbGlzdC1pdGVtJz48YSBjbGFzcz0ncG9wb3Zlcl9fbGluayB0b3BiYXJfX3JlbGF0ZWQtc2l0ZXMtaWNvbicgaHJlZj0iaHR0cDovL3d3dy5oa2V4bmV3cy5oay8iIFRpdGxlPSJIS0VYbmV3cyIgdGFyZ2V0PSJfYmxhbmsiPkhLRVhuZXdzPC9hPjwvbGk+PGxpIGNsYXNzPSdwb3BvdmVyX19saXN0LWl0ZW0nPjxhIGNsYXNzPSdwb3BvdmVyX19saW5rIHRvcGJhcl9fcmVsYXRlZC1zaXRlcy1pY29uJyBocmVmPSJodHRwczovL3d3dy5jZXNjLmNvbS9lbi9pbmRleC5odG1sIiBUaXRsZT0iQ0VTQyIgdGFyZ2V0PSJfYmxhbmsiPkNFU0M8L2E+PC9saT48bGkgY2xhc3M9J3BvcG92ZXJfX2xpc3QtaXRlbSc+PGEgY2xhc3M9J3BvcG92ZXJfX2xpbmsgdG9wYmFyX19yZWxhdGVkLXNpdGVzLWljb24nIGhyZWY9Imh0dHA6Ly93d3cuY2hpbmFib25kY29ubmVjdC5jb20vZW4vaW5kZXguaHRtIiBUaXRsZT0iQm9uZCBDb25uZWN0IiB0YXJnZXQ9Il9ibGFuayI+Qm9uZCBDb25uZWN0PC9hPjwvbGk+ZAIJDxYCHwIFgwI8bGFiZWwgZm9yPSJpbnB1dFNlYXJjaCIgY2xhc3M9ImhpZGUiPlNlYXJjaCBXZWJzaXRlPC9sYWJlbD48aW5wdXQgY2xhc3M9InRvcGJhcl9fc2VhcmNoLWlucHV0IiB0eXBlPSJ0ZXh0IiBuYW1lPSJ0b3BiYXJTZWFyY2giIGlkPSJpbnB1dFNlYXJjaCIgb25rZXlwcmVzcz0iamF2YXNjcmlwdDpyZXR1cm4gR2xvYmFsU2VhcmNoKGV2ZW50LCdkZXNrdG9wJykiIHBsYWNlaG9sZGVyPSJTZWFyY2ggV2Vic2l0ZSIgdGl0bGU9IlNlYXJjaCBXZWJzaXRlIi8+ZAIKDxYCHwIFwgE8YSBocmVmPSJqYXZhc2NyaXB0OnJvdXRlKCcvU2VydmljZXMvVHJhZGluZy9EZXJpdmF0aXZlcy9PdmVydmlldy9UcmFkaW5nLUNhbGVuZGFyLWFuZC1Ib2xpZGF5LVNjaGVkdWxlP3NjX2xhbmc9emgtaGsnLCAnemgtSEsnKSIgY2xhc3M9InRvcGJhcl9fbGFuZ3VhZ2Utb25lIiB0aXRsZT0iVHJhZGl0aW9uYWwgQ2hpbmVzZSI+57mBPC9hPmQCCw8WAh8CBd8BPGEgZGF0YS1ocmVmPSIvR2xvYmFsL0Rpc2NsYWltZXItRm9yLUhhbldlYiIgaHJlZj0iL1NlcnZpY2VzL1RyYWRpbmcvRGVyaXZhdGl2ZXMvT3ZlcnZpZXcvVHJhZGluZy1DYWxlbmRhci1hbmQtSG9saWRheS1TY2hlZHVsZT9zY19sYW5nPXpoLWNuIiBjbGFzcz0ib3BlbkxpZ2h0Qm94QnlKUyB0b3BiYXJfX2xhbmd1YWdlLXR3byIgdGl0bGU9IlNpbXBsaWZpZWQgQ2hpbmVzZSI+566APC9hPmQCDA8WAh4FdGl0bGUFDE5vdGlmaWNhdGlvbmQCDQ8WAh8CBV48YSBocmVmPSIjc2tpcC10by1jb250ZW50IiBjbGFzcz0ic2tpcC10by1jb250ZW50IiB0aXRsZT0iU2tpcCB0byBDb250ZW50Ij5Ta2lwIHRvIENvbnRlbnQ8L2E+ZAIHD2QWAmYPZBYCZg9kFgICAQ9kFgICAQ9kFgICAQ9kFgICAQ8WAh4Fc3R5bGUFfmJhY2tncm91bmQtaW1hZ2U6IHVybCgvLS9tZWRpYS9NYXJrZXQtU3lzdGVtL1RvcEJhbm5lckRlZmF1bHQucG5nP2FzPTAmbXc9MTQ0MCZoYXNoPTlFNTY3NkFGQzc4NTM3MTY1MzgzMTg2NzM2NDY3QjhGMzNBN0I0QkMpOxYEAgEPFgIfAgX8ATxsaT48YSBocmVmPSIjIiB0aXRsZT0iU2VydmljZXMiPlNlcnZpY2VzPC9hPjwvbGk+PGxpPjxhIGhyZWY9IiMiIHRpdGxlPSJUcmFkaW5nIj5UcmFkaW5nPC9hPjwvbGk+PGxpPjxhIGhyZWY9IiMiIHRpdGxlPSJEZXJpdmF0aXZlcyI+RGVyaXZhdGl2ZXM8L2E+PC9saT48bGk+PGEgaHJlZj0iL1NlcnZpY2VzL1RyYWRpbmcvRGVyaXZhdGl2ZXMvT3ZlcnZpZXc/c2NfbGFuZz1lbiIgdGl0bGU9Ik92ZXJ2aWV3Ij5PdmVydmlldzwvYT48L2xpPmQCAw8WAh8CBSVUcmFkaW5nIENhbGVuZGFyIGFuZCBIb2xpZGF5IFNjaGVkdWxlZAIJD2QWAmYPZBYCZg9kFgICAw9kFgJmD2QWAmYPZBYCZg9kFgQCAQ8WAh8CBSVUcmFkaW5nIENhbGVuZGFyIGFuZCBIb2xpZGF5IFNjaGVkdWxlZAILDxYCHhFkYXRhLWxhc3QtdXBkYXRlZAUKMTUxMzA3MDI3NhYEAgEPFgIeB1Zpc2libGVnZAIDDxYCHwIFNDxwIGNsYXNzPSJsb2FkTW9yZV9fdGltZXRhZyI+VXBkYXRlZCAxMiBEZWMgMjAxNzwvcD5kZGkpM3wwpspBLpnG1Csikq37CUCL" />
+</div>
+
+
+<script src="/Scripts/HKEX/HKEX Market/scMainMarket.js" type="text/javascript"></script>
+<script src="/Scripts/HKEX/HKEX Market/vendor.js?v=1" type="text/javascript"></script>
+<script src="/Scripts/HKEX/HKEX Market/jquery.ba-throttle-debounce.min.js?v=1" type="text/javascript"></script>
+<script src="/Scripts/HKEX/HKEX Market/jquery.stickysort.js?v=1" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="87FF4304" />
+</div>
+        
+
+<script>
+    var $ = jQuery.noConflict();
+    (function ($) {
+        $(function () {
+            if (typeof (LabCI) === "undefined") LabCI = {};
+
+            // For returning the access token
+            LabCI.getToken = function () {
+                // ----- THIS IS A SAMPLE IMPLEMENTATION -----
+                //return "Base64-AES-Encrypted-Token";
+                return "evLtsLsBNAUVTPxtGqVeG4HzWFrTOTTFxWyamN%2bG4d1ZLeFnCBRxw0HMEfpvMyxe";
+            };
+
+            // For returning the current UI language
+            LabCI.getLang = function () {
+                // ----- THIS IS A SAMPLE IMPLEMENTATION -----
+                return "en";
+            };
+        });
+    })(jQuery);
+</script>
+<div class="noindex" id="hkex_market_header">
+<script type="text/javascript">
+    if (checkMode() != 'pageeditor') {
+        var msgEntKeyword = "Please enter the search keyword.";
+
+        function validateGlobalSearchKeyword(device) {
+            if (device == 'desktop') {
+                if ($("#inputSearch").val() == "") {
+                    alert(msgEntKeyword);
+                    return false;
+                } else {
+                    redirect($("#inputSearch").val());
+                }
+            } else {
+                if ($("#mobileSearchInput").val() == "") {
+                    alert(msgEntKeyword);
+                    return false;
+                } else {
+                    redirect($("#mobileSearchInput").val());
+                }
+            }
+        }
+
+        function redirect(keyword) {
+            var pageUrl = "/Global/HKEX-Market-Search-Result?sc_lang=en";
+            var filterUrl = "Market Data|Products|Services|Listing|News|FAQ|Global";
+
+            window.location = pageUrl + "&mode=basic&q=" + keyword + "&u=" + filterUrl;
+        }
+
+        function GlobalSearch(e,device) {
+            if (e.keyCode == 13 || e.which == 13) {
+                validateGlobalSearchKeyword(device);
+                return false;
+            } else {
+                return true;
+            }
+        }
+        function hideLanguageButton(lang) {
+        }
+    }
+
+
+    jQuery(document).ready(function () {
+        if (jQuery("div").hasClass("ticker")) {
+            var tickerResult = false;
+            jQuery(".ticker").each(function () {
+                if ($(this).css("display") == "none") {
+                    tickerResult = true;
+                }
+            });
+
+            if (tickerResult) {
+                jQuery(".market-hkex .topbar__ticker").css("background", "url('/Images/HKEX/HKEX MARKET/topbar_bell_hover.png') no-repeat left center");
+            }
+            else {
+                jQuery(".market-hkex .topbar__ticker").css("background", "url('/Images/HKEX/HKEX MARKET/topbar_bell.png') no-repeat left center");
+            }
+        }
+        else {
+            jQuery(".market-hkex .topbar__ticker").css("background", "url('/Images/HKEX/HKEX MARKET/topbar_bell.png') no-repeat left center");
+        }
+    });
+
+</script>
+
+<div class="mobile-search">
+    <div class="mobile-search__container">
+        <div class="mobile-search__form" action="#">
+            <label for="mobileSearchInput" class="lblSearch hide">Search Website</label>
+            <input id="mobileSearchInput" class="mobile-search__input" type="text" name="topbarSearch" onkeypress="javascript:return GlobalSearch(event,'mobile')" placeholder="Search Website" >
+            <img class="mobile-search__close" src="/images/HKEX/HKEX MARKET/combined-shape.png" alt="search close">
+        </div>
+    </div>
+</div>
+<header class="topbar">
+    <div class="topbar__mobile-menu">
+        <span class="topbar__icon-bar"></span>
+        <span class="topbar__icon-bar"></span>
+        <span class="topbar__icon-bar"></span>
+    </div>
+    <img class="topbar__mobile-search" src="/Images/HKEX/HKEX MARKET/search-icon-blue.png" alt="mobile search"/>
+
+    <div class="container topbar__container">        
+        <a href="/?sc_lang=en" class="topbar__logo" title="HKEX"><img src="/-/media/Market-System/hkexlogo.png" alt="hkexlogo" /><span>HKEX</span></a>        
+        <div class="lg-topbar__side topbar__side">
+            <ul class="topbar__nav">
+                <li class="topbar__font-sizes font-size-options">                    
+                    <span>Font Size</span>
+                    <a class="font-sizes__link font-sizes--small" href="#" title="Small Font Size">A</a>
+                    <a class="font-sizes__link font-sizes--medium font-sizes--active" href="#" title="Medium Font Size">A</a>
+                    <a class="font-sizes__link font-sizes--large" href="#" title="Large Font Size">A</a>
+                </li>
+                <li class="topbar__about" data-toggle="nav-popover">
+                    <a href="#" class="topbar__link topbar__about-link" title="About HKEX">About HKEX</a>
+                    
+                    <div class="popover topbar__about-popover" style="display:none;">
+                        <div class="popover__content">
+                            <ul class="popover__content-list">
+                                <li class='popover__list-item'><a class='popover__link topbar__related-sites-icon' href="http://www.hkexgroup.com/about-hkex/company-information/about-hkex?sc_lang=en" Title="Corporate Information" target="_blank">Corporate Information</a></li><li class='popover__list-item'><a class='popover__link topbar__related-sites-icon' href="http://www.hkexgroup.com/brand/en/index.htm" Title="Our Brand" target="_blank">Our Brand</a></li><li class='popover__list-item'><a class='popover__link topbar__related-sites-icon' href="http://www.hkexgroup.com/About-HKEX/Organisation/Board-and-Committees?sc_lang=en" Title="Organisation" target="_blank">Organisation</a></li><li class='popover__list-item'><a class='popover__link topbar__related-sites-icon' href="http://www.hkexgroup.com/Investor-Relations?sc_lang=en" Title="Investor Relations" target="_blank">Investor Relations</a></li><li class='popover__list-item'><a class='popover__link topbar__related-sites-icon' href="http://www.hkexgroup.com/Investor-Relations/Regulatory-Disclosure/Regulatory-Reports/2017?sc_lang=en" Title="Financial Statements" target="_blank">Financial Statements</a></li><li class='popover__list-item'><a class='popover__link topbar__related-sites-icon' href="http://www.hkexgroup.com/Investor-Relations?sc_lang=en" Title="Real Time Share Price" target="_blank">Real Time Share Price</a></li><li class='popover__list-item'><a class='popover__link topbar__related-sites-icon' href="http://www.hkexgroup.com/Corporate-Governance?sc_lang=en" Title="Corporate Governance" target="_blank">Corporate Governance</a></li><li class='popover__list-item'><a class='popover__link topbar__related-sites-icon' href="http://www.hkexgroup.com/Corporate-Social-Responsibility?sc_lang=en" Title="Corporate  Social Responsibility" target="_blank">Corporate  Social Responsibility</a></li><li class='popover__list-item'><a class='popover__link ' href="/Global/About/Visit-HKEX?sc_lang=en" Title="Visit HKEX">Visit HKEX</a></li><li class='popover__list-item'><a class='popover__link topbar__related-sites-icon' href="http://www.hkexgroup.com/About-HKEX/Careers?sc_lang=en" Title="Careers" target="_blank">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="topbar__related-sites" data-toggle="nav-popover">
+                    <a href="#" class="topbar__link topbar__related-sites-link" title="Related Sites:  LME">Related Sites:  LME</a>
+                   
+                    <div class="popover topbar__related-sites-popover">
+                        <div class="popover__content">
+                            <ul class="popover__content-list">
+                                <li class='popover__list-item'><a class='popover__link topbar__related-sites-icon' href="https://www.lme.com/" Title="LME" target="_blank">LME</a></li><li class='popover__list-item'><a class='popover__link topbar__related-sites-icon' href="http://www.hkexgroup.com/" Title="HKEX Group" target="_blank">HKEX Group</a></li><li class='popover__list-item'><a class='popover__link topbar__related-sites-icon' href="http://www.hkgem.com/root/e_default.asp" Title="GEM" target="_blank">GEM</a></li><li class='popover__list-item'><a class='popover__link topbar__related-sites-icon' href="http://www.hkexnews.hk/" Title="HKEXnews" target="_blank">HKEXnews</a></li><li class='popover__list-item'><a class='popover__link topbar__related-sites-icon' href="https://www.cesc.com/en/index.html" Title="CESC" target="_blank">CESC</a></li><li class='popover__list-item'><a class='popover__link topbar__related-sites-icon' href="http://www.chinabondconnect.com/en/index.htm" Title="Bond Connect" target="_blank">Bond Connect</a></li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+            
+            <label for="inputSearch" class="hide">Search Website</label><input class="topbar__search-input" type="text" name="topbarSearch" id="inputSearch" onkeypress="javascript:return GlobalSearch(event,'desktop')" placeholder="Search Website" title="Search Website"/>            
+            
+            <div class="topbar__ic-group">
+                
+                <a href="javascript:route('/Services/Trading/Derivatives/Overview/Trading-Calendar-and-Holiday-Schedule?sc_lang=zh-hk', 'zh-HK')" class="topbar__language-one" title="Traditional Chinese">繁</a>
+                <a data-href="/Global/Disclaimer-For-HanWeb" href="/Services/Trading/Derivatives/Overview/Trading-Calendar-and-Holiday-Schedule?sc_lang=zh-cn" class="openLightBoxByJS topbar__language-two" title="Simplified Chinese">简</a>
+                
+				<a href="javascript:void(0);" id="header_2_topbarBell" class="topbar__ticker" title="Notification"></a>
+            </div>
+        </div>
+        <a href="#skip-to-content" class="skip-to-content" title="Skip to Content">Skip to Content</a>
+    </div>
+</header>
+</div>
+
+        
+
+
+<div class="noindex" id="hkex_market_megamenu">
+    <nav class="main-menu">
+        <div class="container main-menu__wrapper">
+            <ul id="megamenu_0_MegaMenu" class="main-menu__list level1">
+                <li class="sticky-menu__non-fixed" title="HKEX">
+                    <a href="/?sc_lang=en" class="sticky-menu__logo" title="HKEX"></a>
+                </li>
+                <li class="main-menu__item"><a href="#" class="main-menu__link " target="_self" title="Market Data">Market Data</a><div class="mega-menu"><div class="container mega-menu__wrapper"><ul class="mega-nav__level2-list  mega-nav__col-3 level2"><li class="mega-nav__level2-item forMobileQuoteLookup  mega-nav__col-8"><div id="mobile_quotelookup"></div><script>$('.mega-menu .forMobileQuoteLookup #mobile_quotelookup').load('/lhkexw/ui/powersearchm.html');</script></li></ul><ul class="mega-nav__level2-list  mega-nav__col-3 level2"><li class="mega-nav__level2-item  mega-nav__col-8"><span class="mega-nav__level2-link mega-nav-link_haschild " href="#" target="_self" title="Securities Prices">Securities Prices</span><ul class="mega-nav__level3-list level3"><li class="mega-nav__item"><a class="" href="/Market-Data/Securities-Prices/Equities?sc_lang=en" target="_self" title="Equities">Equities</a></li><li class="mega-nav__item"><a class="" href="/Market-Data/Securities-Prices/Exchange-Traded-Products?sc_lang=en" target="_self" title="Exchange Traded Products">Exchange Traded Products</a></li><li class="mega-nav__item"><a class="" href="/Market-Data/Securities-Prices/Derivative-Warrants?sc_lang=en" target="_self" title="Derivative Warrants">Derivative Warrants</a></li><li class="mega-nav__item"><a class="" href="/Market-Data/Securities-Prices/Callable-Bull-Bear-Contracts?sc_lang=en" target="_self" title="Callable Bull / Bear Contracts">Callable Bull / Bear Contracts</a></li><li class="mega-nav__item"><a class="" href="/Market-Data/Securities-Prices/Real-Estate-Investment-Trusts?sc_lang=en" target="_self" title="Real Estate Investment Trusts">Real Estate Investment Trusts</a></li><li class="mega-nav__item"><a class="" href="/Market-Data/Securities-Prices/Debt-Securities?sc_lang=en" target="_self" title="Debt Securities">Debt Securities</a></li></ul></li></ul><ul class="mega-nav__level2-list  mega-nav__col-4 level2"><li class="mega-nav__level2-item  mega-nav__col-8"><span class="mega-nav__level2-link mega-nav-link_haschild " href="#" target="_self" title="Futures &amp; Options Prices">Futures &amp; Options Prices</span><ul class="mega-nav__level3-list level3"><li class="mega-nav__item"><a class="" href="/Market-Data/Futures-and-Options-Prices/Equity-Index/Hang-Seng-Index-Futures-and-Options?sc_lang=en" target="_self" title="Equity Index">Equity Index</a></li><li class="mega-nav__item"><a class="" href="/Market-Data/Futures-and-Options-Prices/Single-Stock/All?sc_lang=en" target="_self" title="Single Stock">Single Stock</a></li><li class="mega-nav__item"><a class="" href="/Market-Data/Futures-and-Options-Prices/Foreign-Exchange/CUS---USD_CNH-Futures-and-Options?sc_lang=en" target="_self" title="Foreign Exchange">Foreign Exchange</a></li><li class="mega-nav__item"><a class="" href="/Market-Data/Futures-and-Options-Prices/Interest-Rate/One-Month-HIBOR-Futures?sc_lang=en" target="_self" title="Interest Rate">Interest Rate</a></li><li class="mega-nav__item"><a class="" href="/Market-Data/Futures-and-Options-Prices/Commodities/London-Aluminium-Mini-Futures?sc_lang=en" target="_self" title="Commodities">Commodities</a></li></ul></li></ul><ul class="mega-nav__level2-list  mega-nav--last mega-nav__col-2 level2"><li class="mega-nav__level2-item  mega-nav--last"><span class="mega-nav__level2-link mega-nav-link_haschild " href="#" target="_self" title="Statistics">Statistics</span><ul class="mega-nav__level3-list level3"><li class="mega-nav__item"><a class="" href="/Market-Data/Statistics/Consolidated-Reports/HKEX-Monthly-Market-Highlights?sc_lang=en" target="_self" title="Consolidated Reports">Consolidated Reports</a></li><li class="mega-nav__item"><a class="" href="/Market-Data/Statistics/Securities-Market?sc_lang=en" target="_self" title="Securities Market">Securities Market</a></li><li class="mega-nav__item"><a class="" href="/Market-Data/Statistics/Derivatives-Market?sc_lang=en" target="_self" title="Derivatives Market">Derivatives Market</a></li><li class="mega-nav__item"><a class="" href="/Market-Data/Statistics/Participant/Stock-Exchange-Participants'-Market-Share-Report?sc_lang=en" target="_self" title="Participant">Participant</a></li><li class="mega-nav__item"><a class="" href="/Market-Data/Statistics/Clearing-and-Settlement-and-Depository?sc_lang=en" target="_self" title="Clearing, Settlement and Depository">Clearing, Settlement and Depository</a></li></ul></li></ul><ul class="mega-nav__level2-list mega-menu__highlights--ham level2"><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link " href="/Market-Data/HKEX-News?sc_lang=en" target="_blank" title="HKEXnews">HKEXnews</a></li><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link " href="/Market-Data/News-Alerts?sc_lang=en" target="_self" title="News Alerts">News Alerts</a></li><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link " href="/Services/Market-Data-Services?sc_lang=en" target="_blank" title="Market Data Services">Market Data Services</a></li></ul><ul class="mega-menu__highlights"><li class="mega-menu__highlights-item"><a href="/Market-Data/HKEX-News?sc_lang=en" target="_blank" title="HKEXnews"><img class="mega-menu__highlights-image" src="/-/media/Market-System/megamenu/BusinessDataTablet_150x100.jpg?mw=1400&hash=F15D5A97B252922E1EDC1A4213D890C0B1A452CF" alt="BusinessDataTablet_150x100" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link " href="/Market-Data/HKEX-News?sc_lang=en" target="_blank" title="HKEXnews">HKEXnews</a><div class="mega-menu__highlight-text"><div>View listed company announcements and more on the centralised platform for regulatory filings and disclosures</div></div></div></li><li class="mega-menu__highlights-item"><a href="/Market-Data/News-Alerts?sc_lang=en" target="_self" title="News Alerts"><img class="mega-menu__highlights-image" src="/-/media/Market-System/megamenu/MobileWithMail_150x100.jpg?mw=1400&hash=C09A6937C52867EFABAE9269C4A1F3BCF9F74124" alt="MobileWithMail_150x100" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link " href="/Market-Data/News-Alerts?sc_lang=en" target="_self" title="News Alerts">News Alerts</a><div class="mega-menu__highlight-text">Sign up to receive company announcements or website updates by email</div></div></li><li class="mega-menu__highlights-item"><a href="/Services/Market-Data-Services?sc_lang=en" target="_blank" title="Market Data Services"><img class="mega-menu__highlights-image" src="/-/media/Market-System/megamenu/MarketData.jpg?mw=1400&hash=EB37A90214D919024367AF10F442C17968BB4B96" alt="Mutual Market" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link " href="/Services/Market-Data-Services?sc_lang=en" target="_blank" title="Market Data Services">Market Data Services</a><div class="mega-menu__highlight-text">Vendors can sign up to purchase wholesale market data from HKEX&rsquo;s Market Data Services department</div></div></li></ul></div></div></li><li class="main-menu__item"><a href="#" class="main-menu__link " target="_self" title="Products">Products</a><div class="mega-menu"><div class="container mega-menu__wrapper"><ul class="mega-nav__level2-list  mega-nav__col-12 level2"><li class="mega-nav__level2-item  mega-nav__col-3"><span class="mega-nav__level2-link mega-nav-link_haschild " href="#" target="_self" title="Securities">Securities</span><ul class="mega-nav__level3-list level3"><li class="mega-nav__item"><a class="" href="/Products/Securities/Equities?sc_lang=en" target="_self" title="Equities">Equities</a></li><li class="mega-nav__item"><a class="" href="/Products/Securities/Exchange-Traded-Products/Overview?sc_lang=en" target="_self" title="Exchange Traded Products">Exchange Traded Products</a></li><li class="mega-nav__item"><a class="" href="/Products/Securities/Derivative-Warrants?sc_lang=en" target="_self" title="Derivative Warrants">Derivative Warrants</a></li><li class="mega-nav__item"><a class="" href="/Products/Securities/Callable-Bull-Bear-Contracts?sc_lang=en" target="_self" title="Callable Bull / Bear Contracts">Callable Bull / Bear Contracts</a></li><li class="mega-nav__item"><a class="" href="/Products/Securities/Real-Estate-Investment-Trusts?sc_lang=en" target="_self" title="Real Estate Investment Trusts">Real Estate Investment Trusts</a></li><li class="mega-nav__item"><a class="" href="/Products/Securities/Debt-Securities?sc_lang=en" target="_self" title="Debt Securities">Debt Securities</a></li></ul></li><li class="mega-nav__level2-item  mega-nav__col-offset-1 mega-nav__col-3"><span class="mega-nav__level2-link mega-nav-link_haschild " href="#" target="_self" title="Listed Derivatives">Listed Derivatives</span><ul class="mega-nav__level3-list level3"><li class="mega-nav__item"><a class="" href="/Products/Listed-Derivatives/Equity-Index/Hang-Seng-Index-(HSI)/Hang-Seng-Index-Futures?sc_lang=en" target="_self" title="Equity Index">Equity Index</a></li><li class="mega-nav__item"><a class="" href="/Products/Listed-Derivatives/Single-Stock/Stock-Futures?sc_lang=en" target="_self" title="Single Stock">Single Stock</a></li><li class="mega-nav__item"><a class="" href="/Products/Listed-Derivatives/Foreign-Exchange/USD-CNH-Futures?sc_lang=en" target="_self" title="Foreign Exchange">Foreign Exchange</a></li><li class="mega-nav__item"><a class="" href="/Products/Listed-Derivatives/Interest-Rate/Three-Months-HIBOR-Futures?sc_lang=en" target="_self" title="Interest Rate">Interest Rate</a></li><li class="mega-nav__item"><a class="" href="/Products/Listed-Derivatives/Commodities/London-Aluminium-Mini-Futures?sc_lang=en" target="_self" title="Commodities">Commodities</a></li></ul></li><li class="mega-nav__level2-item  mega-nav__col-offset-1 mega-nav--last mega-nav__col-3"><span class="mega-nav__level2-link mega-nav-link_haschild " href="#" target="_self" title="OTC Derivatives">OTC Derivatives</span><ul class="mega-nav__level3-list level3"><li class="mega-nav__item"><a class="" href="/Products/OTC-Derivatives/Eligible-OTC-Clear-Products?sc_lang=en" target="_self" title="Eligible OTC Clear Products">Eligible OTC Clear Products</a></li><li class="mega-nav__item"><a class="" href="/Products/OTC-Derivatives/Interest-Rate-Swaps?sc_lang=en" target="_self" title="Interest Rate Swaps">Interest Rate Swaps</a></li><li class="mega-nav__item"><a class="" href="/Products/OTC-Derivatives/Non-Deliverable-Forwards?sc_lang=en" target="_self" title="Non Deliverable Forwards">Non Deliverable Forwards</a></li><li class="mega-nav__item"><a class="" href="/Products/OTC-Derivatives/Cross-Currency-Swaps?sc_lang=en" target="_self" title="Cross Currency Swaps">Cross Currency Swaps</a></li></ul></li></ul><ul class="mega-nav__level2-list mega-menu__highlights--ham level2"><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link " href="/Products/Find-a-Partner?sc_lang=en" target="_self" title="Find a Partner">Find a Partner</a></li><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link " href="/Products/Listed-Derivatives/Commodities/USD-Gold-Futures?sc_lang=en" target="_self" title="USD/CNH Gold Futures">USD/CNH Gold Futures</a></li><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link " href="/Products/Listed-Derivatives/Foreign-Exchange/USD-CNH-Options?sc_lang=en" target="_self" title="RMB Currency Options">RMB Currency Options</a></li></ul><ul class="mega-menu__highlights"><li class="mega-menu__highlights-item"><a href="/Products/Find-a-Partner?sc_lang=en" target="_self" title="Find a Partner"><img class="mega-menu__highlights-image" src="/-/media/Market-System/megamenu/Business_persons_300x200/2businesspersons.jpg?mw=1400&hash=345695E9E305B96A3F95A9FC0E7769CED6C6CCD9" alt="2businesspersons" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link " href="/Products/Find-a-Partner?sc_lang=en" target="_self" title="Find a Partner">Find a Partner</a><div class="mega-menu__highlight-text">Search our directory to find brokers, clearing members, information vendors and more</div></div></li><li class="mega-menu__highlights-item"><a href="/Products/Listed-Derivatives/Commodities/USD-Gold-Futures?sc_lang=en" target="_self" title="USD/CNH Gold Futures"><img class="mega-menu__highlights-image" src="/-/media/Market-System/megamenu/Gold_futures.jpg?mw=1400&hash=B1D82A3480150F8A08513B63FE75E4E4AB7E659C" alt="Gold_futures" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link " href="/Products/Listed-Derivatives/Commodities/USD-Gold-Futures?sc_lang=en" target="_self" title="USD/CNH Gold Futures">USD/CNH Gold Futures</a><div class="mega-menu__highlight-text">The first pair of dual currency and physically-settled gold futures contracts in Hong Kong</div></div></li><li class="mega-menu__highlights-item"><a href="/Products/Listed-Derivatives/Foreign-Exchange/USD-CNH-Options?sc_lang=en" target="_self" title="RMB Currency Options"><img class="mega-menu__highlights-image" src="/-/media/Market-System/megamenu/RMB_Options_300x200.jpg?mw=1400&hash=BE370CBD894D7C11549471CB083701F7B0F0AA44" alt="MOF T-Bond Futures" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link " href="/Products/Listed-Derivatives/Foreign-Exchange/USD-CNH-Options?sc_lang=en" target="_self" title="RMB Currency Options">RMB Currency Options</a><div class="mega-menu__highlight-text">Your new option to manage RMB currency risks</div></div></li></ul></div></div></li><li class="main-menu__item"><a href="#" class="main-menu__link " target="_self" title="Services">Services</a><div class="mega-menu"><div class="container mega-menu__wrapper"><ul class="mega-nav__level2-list  mega-nav__col-12 level2"><li class="mega-nav__level2-item  mega-nav__col-5"><span class="mega-nav__level2-link mega-nav-link_haschild " href="#" target="_self" title="Trading">Trading</span><ul class="mega-nav__level3-list level3"><li class="mega-nav__level3-item  mega-nav__col-6"><span class="mega-nav__level3-link mega-nav-link_haschild " href="#" target="_self" title="Securities">Securities</span><ul class="mega-nav__level4-list level4"><li class="mega-nav__item"><a class="" href="/Services/Trading/Securities/Overview/Trading-Mechanism?sc_lang=en" target="_self" title="Overview">Overview</a></li><li class="mega-nav__item"><a class="" href="/Services/Trading/Securities/Infrastructure/Overview?sc_lang=en" target="_self" title="Infrastructure">Infrastructure</a></li></ul></li><li class="mega-nav__level3-item  mega-nav--last mega-nav__col-6"><span class="mega-nav__level3-link mega-nav-link_haschild " href="#" target="_self" title="Derivatives">Derivatives</span><ul class="mega-nav__level4-list level4"><li class="mega-nav__item"><a class="" href="/Services/Trading/Derivatives/Overview/Trading-Mechanism?sc_lang=en" target="_self" title="Overview">Overview</a></li><li class="mega-nav__item"><a class="" href="/Services/Trading/Derivatives/Infrastructure/HKATS?sc_lang=en" target="_self" title="Infrastructure">Infrastructure</a></li></ul></li></ul></li><li class="mega-nav__level2-item  mega-nav__col-offset-1 mega-nav__col-3"><span class="mega-nav__level2-link mega-nav-link_haschild " href="#" target="_self" title="Market Data Services">Market Data Services</span><ul class="mega-nav__level3-list level3"><li class="mega-nav__item"><a class="" href="/Services/Market-Data-Services/Real-Time-Data-Services/Overview?sc_lang=en" target="_self" title="Real Time Data Services">Real Time Data Services</a></li><li class="mega-nav__item"><a class="" href="/Services/Market-Data-Services/Historical-Data-Services?sc_lang=en" target="_self" title="Historical Data Services">Historical Data Services</a></li><li class="mega-nav__item"><a class="" href="/Services/Market-Data-Services/Infrastructure?sc_lang=en" target="_self" title="Infrastructure">Infrastructure</a></li></ul></li><li class="mega-nav__level2-item  mega-nav--last mega-nav__col-3"><span class="mega-nav__level2-link mega-nav-link_haschild " href="#" target="_self" title="Connectivity">Connectivity</span><ul class="mega-nav__level3-list level3"><li class="mega-nav__item"><a class="" href="/Services/Connectivity/Hosting-Services?sc_lang=en" target="_self" title="Hosting Services">Hosting Services</a></li><li class="mega-nav__item"><a class="" href="/Services/Connectivity/SDNet-2?sc_lang=en" target="_self" title="SDNet/2">SDNet/2</a></li></ul></li></ul><ul class="mega-nav__level2-list  mega-nav--last mega-nav__col-12 level2"><li class="mega-nav__level2-item  mega-nav__col-5"><span class="mega-nav__level2-link mega-nav-link_haschild " href="#" target="_self" title="Clearing">Clearing</span><ul class="mega-nav__level3-list level3"><li class="mega-nav__level3-item  mega-nav__col-4"><span class="mega-nav__level3-link mega-nav-link_haschild " href="#" target="_self" title="Securities">Securities</span><ul class="mega-nav__level4-list level4"><li class="mega-nav__item"><a class="" href="/Services/Clearing/Securities/Overview?sc_lang=en" target="_self" title="Overview">Overview</a></li><li class="mega-nav__item"><a class="" href="/Services/Clearing/Securities/Infrastructure?sc_lang=en" target="_self" title="Infrastructure">Infrastructure</a></li><li class="mega-nav__item"><a class="" href="/Services/Clearing/Securities/Risk-Management?sc_lang=en" target="_self" title="Risk Management">Risk Management</a></li><li class="mega-nav__item"><a class="" href="/Services/Clearing/Securities/PFMI?sc_lang=en" target="_self" title="PFMI">PFMI</a></li></ul></li><li class="mega-nav__level3-item  mega-nav__col-4"><span class="mega-nav__level3-link mega-nav-link_haschild " href="#" target="_self" title="Listed Derivatives">Listed Derivatives</span><ul class="mega-nav__level4-list level4"><li class="mega-nav__item"><a class="" href="/Services/Clearing/Listed-Derivatives/Overview?sc_lang=en" target="_self" title="Overview">Overview</a></li><li class="mega-nav__item"><a class="" href="/Services/Clearing/Listed-Derivatives/Infrastructure?sc_lang=en" target="_self" title="Infrastructure">Infrastructure</a></li><li class="mega-nav__item"><a class="" href="/Services/Clearing/Listed-Derivatives/Risk-Management?sc_lang=en" target="_self" title="Risk Management">Risk Management</a></li><li class="mega-nav__item"><a class="" href="/Services/Clearing/Listed-Derivatives/PFMI?sc_lang=en" target="_self" title="PFMI">PFMI</a></li></ul></li><li class="mega-nav__level3-item  mega-nav--last mega-nav__col-4"><span class="mega-nav__level3-link mega-nav-link_haschild " href="#" target="_self" title="OTC Clear">OTC Clear</span><ul class="mega-nav__level4-list level4"><li class="mega-nav__item"><a class="" href="/Services/Clearing/OTC-Clear/Overview/Clearing-Services?sc_lang=en" target="_self" title="Overview">Overview</a></li><li class="mega-nav__item"><a class="" href="/Services/Clearing/OTC-Clear/Infrastructure?sc_lang=en" target="_self" title="Infrastructure">Infrastructure</a></li><li class="mega-nav__item"><a class="" href="/Services/Clearing/OTC-Clear/Risk-Management?sc_lang=en" target="_self" title="Risk Management">Risk Management</a></li><li class="mega-nav__item"><a class="" href="/Services/Clearing/OTC-Clear/PFMI?sc_lang=en" target="_self" title="PFMI">PFMI</a></li></ul></li></ul></li><li class="mega-nav__level2-item  mega-nav__col-offset-1 mega-nav__col-3"><span class="mega-nav__level2-link mega-nav-link_haschild " href="#" target="_self" title="Settlement and Depository">Settlement and Depository</span><ul class="mega-nav__level3-list level3"><li class="mega-nav__item"><a class="" href="/Services/Settlement-and-Depository/Settlement?sc_lang=en" target="_self" title="Settlement - Securities">Settlement - Securities</a></li><li class="mega-nav__item"><a class="" href="/Services/Settlement-and-Depository/Depository?sc_lang=en" target="_self" title="Depository">Depository</a></li><li class="mega-nav__item"><a class="" href="/Services/Settlement-and-Depository/Common-Nominee-Services?sc_lang=en" target="_self" title="Common Nominee Services">Common Nominee Services</a></li><li class="mega-nav__item"><a class="" href="/Services/Settlement-and-Depository/Securities-Admission-into-CCASS?sc_lang=en" target="_self" title="Securities Admission into CCASS">Securities Admission into CCASS</a></li><li class="mega-nav__item"><a class="" href="/Services/Clearing/Securities/PFMI?sc_lang=en" target="_blank" title="PFMI">PFMI</a></li></ul></li><li class="mega-nav__level2-item  mega-nav--last mega-nav__col-3"><span class="mega-nav__level2-link mega-nav-link_haschild " href="#" target="_self" title="Rules, Forms &amp; Fees">Rules, Forms &amp; Fees</span><ul class="mega-nav__level3-list level3"><li class="mega-nav__item"><a class="" href="/Services/Rules-and-Forms-and-Fees/Rules/Overview?sc_lang=en" target="_self" title="Rules">Rules</a></li><li class="mega-nav__item"><a class="" href="/Services/Rules-and-Forms-and-Fees/Forms/Overview?sc_lang=en" target="_self" title="Forms">Forms</a></li><li class="mega-nav__item"><a class="" href="/Services/Rules-and-Forms-and-Fees/Fees/Overview?sc_lang=en" target="_self" title="Fees">Fees</a></li></ul></li></ul><ul class="mega-nav__level2-list mega-menu__highlights--ham level2"><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link " href="/Services/Circulars-and-Notices/Participant-and-Members-Circulars?sc_lang=en" target="_self" title="Circulars &amp; Notices">Circulars &amp; Notices</a></li><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link " href="/Services/Become-a-Participant?sc_lang=en" target="_self" title="Become a Participant">Become a Participant</a></li><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link " href="/Services/Market-Open-Ceremony?sc_lang=en" target="_self" title="Market Open/Closing Ceremonies">Market Open/Closing Ceremonies</a></li></ul><ul class="mega-menu__highlights"><li class="mega-menu__highlights-item"><a href="/Services/Circulars-and-Notices/Participant-and-Members-Circulars?sc_lang=en" target="_self" title="Circulars &amp; Notices"><img class="mega-menu__highlights-image" src="/-/media/Market-System/megamenu/Satellite_150x100.jpg?mw=1400&hash=E5D65B1B50646E026D328F45200FDE51F91E0DFC" alt="Circulars and Notices" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link " href="/Services/Circulars-and-Notices/Participant-and-Members-Circulars?sc_lang=en" target="_self" title="Circulars &amp; Notices">Circulars &amp; Notices</a><div class="mega-menu__highlight-text"><div>View important information issued by HKEX to Exchange and Clearing House Participants, Market Data vendors and Hosting Services members</div></div></div></li><li class="mega-menu__highlights-item"><a href="/Services/Become-a-Participant?sc_lang=en" target="_self" title="Become a Participant"><img class="mega-menu__highlights-image" src="/-/media/Market-System/megamenu/ShakingHands_150x100.jpg?mw=1400&hash=59FE30AC72571281FA7F334ECDE26A29EDE23F95" alt="ShakingHands_150x100" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link " href="/Services/Become-a-Participant?sc_lang=en" target="_self" title="Become a Participant">Become a Participant</a><div class="mega-menu__highlight-text">Connect to Hong Kong&rsquo;s financial market through HKEX</div></div></li><li class="mega-menu__highlights-item"><a href="/Services/Market-Open-Ceremony?sc_lang=en" target="_self" title="Market Open/Closing Ceremonies"><img class="mega-menu__highlights-image" src="/-/media/Market-System/megamenu/Market_Open_Ceremony.jpg?mw=1400&hash=6E107B4604443A3296F19CF290830B2C0A373092" alt="Market Open Ceremony" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link " href="/Services/Market-Open-Ceremony?sc_lang=en" target="_self" title="Market Open/Closing Ceremonies">Market Open/Closing Ceremonies</a><div class="mega-menu__highlight-text">Learn how your company can bang the gong to officially open trading on HKEX&rsquo;s markets</div></div></li></ul></div></div></li><li class="main-menu__item"><a href="#" class="main-menu__link " target="_self" title="Listing">Listing</a><div class="mega-menu"><div class="container mega-menu__wrapper"><ul class="mega-nav__level2-list  mega-nav__col-3 level2"><li class="mega-nav__level2-item  mega-nav__col-12"><a class="mega-nav__level2-link " href="/Listing/Why-List-in-Hong-Kong?sc_lang=en" target="_self" title="Why List in Hong Kong">Why List in Hong Kong</a></li></ul><ul class="mega-nav__level2-list  mega-nav__col-3 level2"><li class="mega-nav__level2-item  mega-nav__col-12"><a class="mega-nav__level2-link " href="/Listing/Getting-Started?sc_lang=en" target="_self" title="Getting Started">Getting Started</a></li></ul><ul class="mega-nav__level2-list  mega-nav__col-3 level2"><li class="mega-nav__level2-item  mega-nav__col-12"><a class="mega-nav__level2-link " href="/Listing/How-We-Regulate/Overview?sc_lang=en" target="_self" title="How We Regulate">How We Regulate</a></li></ul><ul class="mega-nav__level2-list  mega-nav--last mega-nav__col-3 level2"><li class="mega-nav__level2-item  mega-nav--last mega-nav__col-12"><a class="mega-nav__level2-link " href="/Listing/Rules-and-Guidance/Whats-New?sc_lang=en" target="_self" title="Rules and Guidance">Rules and Guidance</a></li></ul><ul class="mega-nav__level2-list mega-menu__highlights--ham level2"><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link " href="/-/media/HKEX-Market/Listing/Getting-Started/201710--Listing-in-HK_e.pdf" target="_blank" title="Listing in Hong Kong">Listing in Hong Kong</a></li><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link " href="/Listing/Rules-and-Guidance/Listing-Rules?sc_lang=en" target="_self" title="Listing Rules">Listing Rules</a></li><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link " href="/Listing/Rules-and-Guidance/Other-Resources/New-Applicants/Contact-Persons-in-HKEX-Listing-Department-for-Pre-IPO-Enquiry-and-IPO-Processing?sc_lang=en" target="_self" title="Contact Us">Contact Us</a></li></ul><ul class="mega-menu__highlights"><li class="mega-menu__highlights-item"><a href="/-/media/HKEX-Market/Listing/Getting-Started/201710--Listing-in-HK_e.pdf" target="_blank" title="Listing in Hong Kong"><img class="mega-menu__highlights-image" src="/-/media/Market-System/megamenu/Guide_to_listing_300x200.jpg?mw=1400&hash=DB950C67FCB1F17DA60C77886C22AC42F2B028A9" alt="Guide_To_Listing" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link " href="/-/media/HKEX-Market/Listing/Getting-Started/201710--Listing-in-HK_e.pdf" target="_blank" title="Listing in Hong Kong">Listing in Hong Kong</a><div class="mega-menu__highlight-text">Get started on the path to listing on HKEX&rsquo;s markets.</div></div></li><li class="mega-menu__highlights-item"><a href="/Listing/Rules-and-Guidance/Listing-Rules?sc_lang=en" target="_self" title="Listing Rules"><img class="mega-menu__highlights-image" src="/-/media/Market-System/megamenu/Book_150x100.jpg?mw=1400&hash=DF03ED4476C3428065B6B77AA7E27184D645C142" alt="Interactive_Listing_Rules" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link " href="/Listing/Rules-and-Guidance/Listing-Rules?sc_lang=en" target="_self" title="Listing Rules">Listing Rules</a><div class="mega-menu__highlight-text">The Listing Rules for the Main Board and GEM of the Stock Exchange of Hong Kong</div></div></li><li class="mega-menu__highlights-item"><a href="/Listing/Rules-and-Guidance/Other-Resources/New-Applicants/Contact-Persons-in-HKEX-Listing-Department-for-Pre-IPO-Enquiry-and-IPO-Processing?sc_lang=en" target="_self" title="Contact Us"><img class="mega-menu__highlights-image" src="/-/media/Market-System/megamenu/Office_telephone_150x100.jpg?mw=1400&hash=D2FE60B2A12D5C725FD0293BE21498ADBCA1812A" alt="Contact us" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link " href="/Listing/Rules-and-Guidance/Other-Resources/New-Applicants/Contact-Persons-in-HKEX-Listing-Department-for-Pre-IPO-Enquiry-and-IPO-Processing?sc_lang=en" target="_self" title="Contact Us">Contact Us</a><div class="mega-menu__highlight-text">Get in touch with our Listing Department</div></div></li></ul></div></div></li><li class="main-menu__item"><a href="#" class="main-menu__link " target="_self" title="News">News</a><div class="mega-menu"><div class="container mega-menu__wrapper"><ul class="mega-nav__level2-list  mega-nav__col-3 level2"><li class="mega-nav__level2-item  mega-nav__col-12"><a class="mega-nav__level2-link " href="/News/News-Release?sc_lang=en" target="_self" title="News Releases">News Releases</a></li></ul><ul class="mega-nav__level2-list  mega-nav__col-3 level2"><li class="mega-nav__level2-item  mega-nav__col-12"><a class="mega-nav__level2-link " href="/News/Market-Consultations/2016-to-Present?sc_lang=en" target="_self" title="Market Consultations">Market Consultations</a></li></ul><ul class="mega-nav__level2-list  mega-nav__col-3 level2"><li class="mega-nav__level2-item  mega-nav__col-12"><a class="mega-nav__level2-link " href="/News/Tender-Notices/Tender-Notices?sc_lang=en" target="_self" title="Tender Notices">Tender Notices</a></li></ul><ul class="mega-nav__level2-list  mega-nav--last mega-nav__col-3 level2"><li class="mega-nav__level2-item  mega-nav--last mega-nav__col-12"><a class="mega-nav__level2-link " href="/News/Research-Reports/HKEX-Surveys/HKEX-Surveys?sc_lang=en" target="_self" title="Research Reports">Research Reports</a></li></ul><ul class="mega-nav__level2-list mega-menu__highlights--ham level2"><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link topbar__related-sites-icon" href="http://www.hkexgroup.com/Media-Centre/Charles-Li-Direct/2017?sc_lang=en" target="_blank" title="Charles Li Direct">Charles Li Direct</a></li><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link " href="/Services/Circulars-and-Notices/Participant-and-Members-Circulars?sc_lang=en" target="_self" title="Circulars &amp; Notices">Circulars &amp; Notices</a></li><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link " href="/News/HKEX-Calendar?sc_lang=en" target="_self" title="HKEX Calendar">HKEX Calendar</a></li></ul><ul class="mega-menu__highlights"><li class="mega-menu__highlights-item"><a href="http://www.hkexgroup.com/Media-Centre/Charles-Li-Direct/2017?sc_lang=en" target="_blank" title="Charles Li Direct"><img class="mega-menu__highlights-image" src="/-/media/HKEX-Market/News/Highlight/Charles-Li-Direct/CharlesLi-Direct_en.jpg?mw=1400&hash=247FBAC492D287AA7F30851714F91E506BCD7729" alt="CEblog_Highlight_150x100" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link topbar__related-sites-icon" href="http://www.hkexgroup.com/Media-Centre/Charles-Li-Direct/2017?sc_lang=en" target="_blank" title="Charles Li Direct">Charles Li Direct</a><div class="mega-menu__highlight-text"><div>Market insights from HKEX Chief Executive Charles Li</div></div></div></li><li class="mega-menu__highlights-item"><a href="/Services/Circulars-and-Notices/Participant-and-Members-Circulars?sc_lang=en" target="_self" title="Circulars &amp; Notices"><img class="mega-menu__highlights-image" src="/-/media/Market-System/megamenu/Satellite_150x100.jpg?mw=1400&hash=E5D65B1B50646E026D328F45200FDE51F91E0DFC" alt="Satellite_150x100" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link " href="/Services/Circulars-and-Notices/Participant-and-Members-Circulars?sc_lang=en" target="_self" title="Circulars &amp; Notices">Circulars &amp; Notices</a><div class="mega-menu__highlight-text"><div>View important information issued by HKEX to Exchange and Clearing House Participants, Market Data vendors and Hosting Services members</div></div></div></li><li class="mega-menu__highlights-item"><a href="/News/HKEX-Calendar?sc_lang=en" target="_self" title="HKEX Calendar"><img class="mega-menu__highlights-image" src="/-/media/Market-System/megamenu/Touch_digital_whiteboard_150x100.jpg?mw=1400&hash=3CC97E5E34FFC965DB4F5F919B842D82A920F28B" alt="Touch_digital_whiteboard_150x100" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link " href="/News/HKEX-Calendar?sc_lang=en" target="_self" title="HKEX Calendar">HKEX Calendar</a><div class="mega-menu__highlight-text">Download or subscribe to our calendar containing trading and clearing information, public holidays and more</div></div></li></ul></div></div></li><li class="main-menu__item"><a href="#" class="main-menu__link " target="_self" title="Mutual Market">Mutual Market</a><div class="mega-menu"><div class="container mega-menu__wrapper"><ul class="mega-nav__level2-list  mega-nav__col-12 mega-nav--last level2"><li class="mega-nav__level2-item  mega-nav__col-2"><a class="mega-nav__level2-link " href="/Mutual-Market/Stock-Connect?sc_lang=en" target="_self" title="Stock Connect">Stock Connect</a></li><li class="mega-nav__level2-item  mega-nav__col-offset-1 mega-nav__col-2"><a class="mega-nav__level2-link topbar__related-sites-icon" href="http://www.chinabondconnect.com" target="_blank" title="Bond Connect">Bond Connect</a></li></ul><ul class="mega-nav__level2-list mega-menu__highlights--ham level2"><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link " href="/Mutual-Market/Stock-Connect/Statistics/Historic-Daily?sc_lang=en" target="_self" title="Daily Statistics">Daily Statistics</a></li><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link " href="/Mutual-Market/Stock-Connect/Statistics/Hong-Kong-and-Mainland-Market-Highlights?sc_lang=en" target="_self" title="Market Highlights">Market Highlights</a></li><li class="mega-nav__level2-item  mega-nav__highlights--ham"><a class="mega-nav__level2-link " href="/Mutual-Market/Stock-Connect/Eligible-Stocks/View-All-Eligible-Securities?sc_lang=en" target="_self" title="Eligible Securities">Eligible Securities</a></li></ul><ul class="mega-menu__highlights"><li class="mega-menu__highlights-item"><a href="/Mutual-Market/Stock-Connect/Statistics/Historic-Daily?sc_lang=en" target="_self" title="Daily Statistics"><img class="mega-menu__highlights-image" src="/-/media/Market-System/megamenu/Stock-Market_display_150x100.jpg?mw=1400&hash=8DF3E03D908CF70633138EDE90F25335025A94FE" alt="Daily Statistics" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link " href="/Mutual-Market/Stock-Connect/Statistics/Historic-Daily?sc_lang=en" target="_self" title="Daily Statistics">Daily Statistics</a><div class="mega-menu__highlight-text"><div>Statistics on Shanghai and Shenzhen Connect updated daily</div></div></div></li><li class="mega-menu__highlights-item"><a href="/Mutual-Market/Stock-Connect/Statistics/Hong-Kong-and-Mainland-Market-Highlights?sc_lang=en" target="_self" title="Market Highlights"><img class="mega-menu__highlights-image" src="/-/media/Market-System/megamenu/Arrow_150x100.jpg?mw=1400&hash=9B871BDA28B3C9587EF588D7F81F5E54993540BD" alt="Market Highlights" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link " href="/Mutual-Market/Stock-Connect/Statistics/Hong-Kong-and-Mainland-Market-Highlights?sc_lang=en" target="_self" title="Market Highlights">Market Highlights</a><div class="mega-menu__highlight-text">View the market capitalization, number of listed companies and more in the Hong Kong, Shanghai and Shenzhen markets</div></div></li><li class="mega-menu__highlights-item"><a href="/Mutual-Market/Stock-Connect/Eligible-Stocks/View-All-Eligible-Securities?sc_lang=en" target="_self" title="Eligible Securities"><img class="mega-menu__highlights-image" src="/-/media/Market-System/megamenu/Checklist_150x100.jpg?mw=1400&hash=7C4FD9182601FAD7EB28E0A9D2BCA6CEDDA85816" alt="Market Highlights" /></a><div class="mega-menu__highlights-content"><a class="mega-menu__highlight-link " href="/Mutual-Market/Stock-Connect/Eligible-Stocks/View-All-Eligible-Securities?sc_lang=en" target="_self" title="Eligible Securities">Eligible Securities</a><div class="mega-menu__highlight-text"><div>A list of securities eligible for trading under Shanghai and Shenzhen Stock Connect</div></div></div></li></ul></div></div></li>
+				<li class="sticky-menu__search sticky-menu__non-fixed">
+                    <a id="megamenu_0_menuSearch" title="Search" class="sticky-menu__search-icon">Search</a>
+				</li>
+            </ul>
+            <div class="m-topbar">
+                <div class="m-topbar__side">
+                    <div class="m-topbar__language">                        
+                    <a href="javascript:route('/Services/Trading/Derivatives/Overview/Trading-Calendar-and-Holiday-Schedule?sc_lang=zh-hk', 'zh-HK')" class="m-topbar__language-one" title="Traditional Chinese">繁</a>
+                    <a data-href="/Global/Disclaimer-For-HanWeb" href="/Services/Trading/Derivatives/Overview/Trading-Calendar-and-Holiday-Schedule?sc_lang=zh-cn" class="openLightBoxByJS m-topbar__language-two" title="Simplified Chinese">简</a>
+                    </div>
+                    <ul class="m-topbar__nav">
+                        <li class="m-topbar__font-sizes font-size-options">
+                            <span>Font Size</span>
+                            <a id="megamenu_0_menuSmallFont" title="Small Font Size" class="m-topbar__link font-sizes--small" href="../../../../layouts/HKEX/HKEX%20MARKET/#">a</a>
+                            <a id="megamenu_0_menuMediumFont" title="Medium Font Size" class="m-topbar__link font-sizes--medium font-sizes--active" href="../../../../layouts/HKEX/HKEX%20MARKET/#">a</a>
+                            <a id="megamenu_0_menuLargeFont" title="Large Font Size" class="m-topbar__link font-sizes--large" href="../../../../layouts/HKEX/HKEX%20MARKET/#">a</a>
+                        </li>
+                        <li data-toggle="nav-popover" class="m-topbar__about">
+                            <a id="megamenu_0_menuAbout" title="About HKEX" class="m-topbar__link m-topbar__about-link" href="../../../../layouts/HKEX/HKEX%20MARKET/#">About HKEX</a>
+                        </li>
+                        <li data-toggle="nav-popover" class="m-topbar__related-sites">
+                            <a id="megamenu_0_menuRelated" title="Related Sites:  LME" class="m-topbar__link m-topbar__related-sites-link" href="../../../../layouts/HKEX/HKEX%20MARKET/#">Related Sites:  LME</a>
+                        </li>
+                        <li>
+							<a id="megamenu_0_menuNotification" title="Notification" class="topbar__ticker m-topbar__ticker" href="javascript:void(0);"><span>Notification</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sticky-menu__search-container sticky-menu__non-fixed">
+				<a id="megamenu_0_menuSearchCancelLink" title="Cancel" class="sticky-menu__search-cancel">Cancel</a>
+                <label for="megaMenuSearch" class="hide">Search Website</label><input type="text" class="sticky-menu__search-box" id="megaMenuSearch" title="Search" placeholder="Search Website" />
+			</div>
+        </div>
+    </nav>
+</div>
+
+        
+
+<div class="noindex">
+    <div class="banner__breadcrumb-tablet-mobile">
+        <ul>
+            <li><a href="#" target="_parent">Services</a></li><li><a href="#" target="_parent">Trading</a></li><li><a href="#" target="_parent">Derivatives</a></li><li><a href="/Services/Trading/Derivatives/Overview?sc_lang=en" target="_parent">Overview</a></li>
+        </ul>
+    </div>
+</div>
+
+        
+<div class="noindex" id="hkex_market_topbanner">
+    <section id="banner_0_banner_section" class="banner">
+        
+            <div id="banner_0_banner_container" class="banner__container banner-light__container">
+                <div id="banner_0_banner_background" class="banner__background banner-light__background" style="background-image: url(/-/media/Market-System/TopBannerDefault.png?as=0&amp;mw=1440&amp;hash=9E5676AFC78537165383186736467B8F33A7B4BC);">
+                    <div class="container banner__breadcrumb">
+                        <ul>
+                            <li><a href="#" title="Services">Services</a></li><li><a href="#" title="Trading">Trading</a></li><li><a href="#" title="Derivatives">Derivatives</a></li><li><a href="/Services/Trading/Derivatives/Overview?sc_lang=en" title="Overview">Overview</a></li>
+                        </ul>
+                    </div>
+                    <h1 class="container banner__pageheading">
+                        Trading Calendar and Holiday Schedule
+                    </h1>
+                    
+                </div>
+            </div>
+        
+    </section>
+</div>
+        <div id="skip-to-content"> </div>
+        
+
+<div class="container content-container">
+    <nav class="nav-side left-menu" id="hkex_market_leftmenu">
+        
+
+
+     <div class="noindex">
+                <div class="left-menu__title menu-title"><h2 id="menuTitlePc" class="data-pc-title">Derivatives</h2><h2 id="menuTitleMobile" class="data-mobile-title">Overview</h2><div class="nav-icon" style="height: 48px"><img class="icon-nav" src="/Images/HKEX/HKEX MARKET/menu.png" alt="Navigation Icon"><img class="nav-close" src="/Images/HKEX/HKEX MARKET/CANCEL.png" alt="Navigation Icon"></div></div><div class="left-menu__wrapper"><ul class="left-menu__level1"><li class='left-menu__item  hasChildren' tabindex="0"><a class="" class="left-menu__link" href="/Services/Trading/Derivatives/Overview/Trading-Mechanism?sc_lang=en" target="_self" title="Overview">Overview</a><ul class="left-menu__level2"><li class="leftside-menu_item menutitle">Overview</li><li data-toggle-1='collapse' data-target='#menu-349C190CC5464DA681B833430969AE80'  class="leftside-menu__item hasChildren" tabindex="0"><a class=""href="/Services/Trading/Derivatives/Overview/Trading-Mechanism?sc_lang=en" title="Trading Mechanism" target="_self" class="leftside-menu__level2-text">Trading Mechanism</a><ul class='left-menu__level3' id='menu-349C190CC5464DA681B833430969AE80'><li class="leftside-menu__item2"><a class="" href="/Services/Trading/Derivatives/Overview/Trading-Mechanism/Error-Trades?sc_lang=en" title="Error Trade Handling Procedures" target="_self" class="leftside-menu__level3-text">Error Trade Handling Procedures</a></li><li class="leftside-menu__item2"><a class="" href="/Services/Trading/Derivatives/Overview/Trading-Mechanism/Order-Size-Limit?sc_lang=en" title="Order Size Limit" target="_self" class="leftside-menu__level3-text">Order Size Limit</a></li><li class="leftside-menu__item2"><a class="" href="/Services/Trading/Derivatives/Overview/Trading-Mechanism/Tailor-Made-Combinations?sc_lang=en" title="Tailor-Made Combinations" target="_self" class="leftside-menu__level3-text">Tailor-Made Combinations</a></li><li class="leftside-menu__item2"><a class="" href="/Services/Trading/Derivatives/Overview/Trading-Mechanism/After-Hours-Futures-Trading?sc_lang=en" title="After-Hours Trading" target="_self" class="leftside-menu__level3-text">After-Hours Trading</a></li><li class="leftside-menu__item2"><a class="" href="/Services/Trading/Derivatives/Overview/Trading-Mechanism/Volatility-Control-Mechanism-(VCM)?sc_lang=en" title="Volatility Control Mechanism (VCM)" target="_self" class="leftside-menu__level3-text">Volatility Control Mechanism (VCM)</a></li><li class="leftside-menu__item2"><a class="" href="/Services/Trading/Derivatives/Overview/Trading-Mechanism/Pre-Trade-Risk-Management-(PTRM)-System-in-Derivatives-Markets?sc_lang=en" title="Pre-Trade Risk Management (PTRM) System in Derivatives Markets" target="_self" class="leftside-menu__level3-text">Pre-Trade Risk Management (PTRM) System in Derivatives Markets</a></li><li class="leftside-menu__item2"><a class="" href="/Services/Trading/Derivatives/Overview/Trading-Mechanism/Pre-Market-Opening-Period?sc_lang=en" title="Pre-Market Opening Period" target="_self" class="leftside-menu__level3-text">Pre-Market Opening Period</a></li><li class="leftside-menu__item2"><a class="" href="/Services/Trading/Derivatives/Overview/Trading-Mechanism/Block-Trade-Facility?sc_lang=en" title="Block Trade Facility" target="_self" class="leftside-menu__level3-text">Block Trade Facility</a></li><li class="leftside-menu__item2"><a class="" href="/Services/Trading/Derivatives/Overview/Trading-Mechanism/Large-Open-Positions-and-Position-Limits?sc_lang=en" title="Large Open Positions and Position Limits" target="_self" class="leftside-menu__level3-text">Large Open Positions and Position Limits</a></li></ul></li></ul></li><li class='left-menu__item  hasChildren' tabindex="0"><a class="" class="left-menu__link" href="/Services/Trading/Derivatives/Infrastructure/HKATS?sc_lang=en" target="_self" title="Infrastructure">Infrastructure</a><ul class="left-menu__level2"><li class="leftside-menu_item menutitle">Infrastructure</li><li data-toggle-1='collapse' data-target='#menu-3F3EBF95D99E49BC844D395BC9144EC7'  class="leftside-menu__item hasChildren" tabindex="0"><a class=""href="/Services/Trading/Derivatives/Infrastructure/HKATS?sc_lang=en" title="HKATS" target="_self" class="leftside-menu__level2-text">HKATS</a><ul class='left-menu__level3' id='menu-3F3EBF95D99E49BC844D395BC9144EC7'><li class="leftside-menu__item2"><a class="" href="/Services/Trading/Derivatives/Infrastructure/HKATS/HKATS-and-DCASS-Upgrade?sc_lang=en" title="HKATS and DCASS Upgrade" target="_self" class="leftside-menu__level3-text">HKATS and DCASS Upgrade</a></li><li class="leftside-menu__item2"><a class="" href="/-/media/HKEX-Market/Services/Trading/Derivatives/Infrastructure/HKATS/Genium_User_s_Guide.pdf" title="HKATS User’s Guide" target="_blank" class="leftside-menu__level3-text">HKATS User’s Guide<span class="pdf"></span></a></li><li class="leftside-menu__item2"><a class="" href="/-/media/HKEX-Market/Services/Trading/Derivatives/Infrastructure/HKATS/CLICK-Trade-Installation-Guide/click-trade-1-24-7-229-installation-guide-(v1-3).pdf" title="CLICK Trade Installation Guide" target="_blank" class="leftside-menu__level3-text">CLICK Trade Installation Guide<span class="pdf"></span></a></li><li class="leftside-menu__item2"><a class="" href="/-/media/HKEX-Market/Services/Trading/Derivatives/Infrastructure/HKATS/OAPI-Technical-Documentations/OAPI_TECH_DOC.zip" title="OAPI Technical Documentations" target="_blank" class="leftside-menu__level3-text">OAPI Technical Documentations<span class="zip"></span></a></li><li class="leftside-menu__item2"><a class="" href="/Services/Trading/Derivatives/Infrastructure/HKATS/List-of-OAPI-Developers?sc_lang=en" title="List of OAPI Developers" target="_self" class="leftside-menu__level3-text">List of OAPI Developers</a></li><li class="leftside-menu__item2"><a class="" href="/Services/Trading/Derivatives/Infrastructure/HKATS/HKATS-System-Training-Course?sc_lang=en" title="HKATS System Training Course" target="_self" class="leftside-menu__level3-text">HKATS System Training Course</a></li></ul></li><li data-toggle-1='collapse' data-target='#menu-D91A8DAF05F841FBB255AB3A7D93C62C'  class="leftside-menu__item"><a class=""href="/Services/Connectivity/SDNet-2/Derivatives-Trading-(HKATS)?sc_lang=en" title="SDNet/2" target="_self" class="leftside-menu__level2-text">SDNet/2</a></li></ul></li><li class='left-menu__item  hasChildren' tabindex="0"><a class="" class="left-menu__link" href="/Products/Listed-Derivatives/Market-Maker-Program?sc_lang=en" target="_blank" title="Market Maker Programmes">Market Maker Programmes</a><ul class="left-menu__level2"><li class="leftside-menu_item menutitle">Market Maker Programmes</li><li data-toggle-1='collapse' data-target='#menu-49C7D37BAAA9418CAE7FF2A63059B637'  class="leftside-menu__item"><a class=""href="/Products/Listed-Derivatives/Market-Maker-Program/Primary-Market-Maker-Program?sc_lang=en" title="Primary Market Maker Program" target="_blank" class="leftside-menu__level2-text">Primary Market Maker Program</a></li><li data-toggle-1='collapse' data-target='#menu-F258ACF7603C4CDEBC698C3500EA9DF2'  class="leftside-menu__item"><a class=""href="/Products/Listed-Derivatives/Market-Maker-Program/List-of-Market-Makers_Liquidity-Providers?sc_lang=en" title="List of Market/Makers/Liquidity Providers" target="_blank" class="leftside-menu__level2-text">List of Market/Makers/Liquidity Providers</a></li><li data-toggle-1='collapse' data-target='#menu-7F6F4F9D11F140D0AC971E07272B11D0'  class="leftside-menu__item"><a class=""href="/Products/Listed-Derivatives/Market-Maker-Program/Market-Maker-Obligations-and-Incentives?sc_lang=en" title="Market Maker Obligations and Incentives" target="_blank" class="leftside-menu__level2-text">Market Maker Obligations and Incentives</a></li></ul></li></ul></div>
+</div>
+            
+    </nav>
+    <main class="nav-content-wrap">
+        <section id="pagecontent_0_maincontent_0_common_content_section">
+
+        <div class="section__title-left-border">
+            <h2>
+                Trading Calendar and Holiday Schedule
+            </h2>
+        </div>
+
+        <div class="section__panel">
+			<div class="common_panel_content">
+                
+				<p><strong>Trading Calendar<br>
+<br>
+</strong><strong>Last Trading Day / Expiry Day and Final Settlement Day</strong></p>
+<p class="spanHeading">Hang Seng Index Futures and Options (Including Flexible Index Options)<br>
+Mini-Hang Seng Index Futures and Options<span><br>
+</span>Hang Seng China Enterprises Index Futures and Options (Including Flexible Index Options)<br>
+Mini-Hang Seng China Enterprises Index Futures and Options<br>
+Stock Futures and Options<br>
+Sector Index Futures</p>
+<strong> </strong>
+<table class="ms-rteTable-2 table migrate">
+    <thead>
+        <tr class="ms-rteTableHeaderRow-2">
+            <th class="ms-rteTableHeaderOddCol-2">Contract Month</th>
+            <th class="ms-rteTableHeaderEvenCol-2">Last Trading Day / Expiry Day</th>
+            <th class="ms-rteTableHeaderOddCol-2">Final Settlement Day</th>
+        </tr>
+    </thead>
+    <colgroup></colgroup><colgroup><col> <col> <col></colgroup>
+    <tbody>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jan-17</td>
+            <td class="ms-rteTableEvenCol-2">26-Jan-17</td>
+            <td class="ms-rteTableOddCol-2">27-Jan-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-17</td>
+            <td class="ms-rteTableEvenCol-2">27-Feb-17</td>
+            <td class="ms-rteTableOddCol-2">28-Feb-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-17</td>
+            <td class="ms-rteTableEvenCol-2">30-Mar-17</td>
+            <td class="ms-rteTableOddCol-2">31-Mar-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-17</td>
+            <td class="ms-rteTableEvenCol-2">27-Apr-17</td>
+            <td class="ms-rteTableOddCol-2">28-Apr-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">May-17</td>
+            <td class="ms-rteTableEvenCol-2">29-May-17</td>
+            <td class="ms-rteTableOddCol-2">31-May-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-17</td>
+            <td class="ms-rteTableEvenCol-2">29-Jun-17</td>
+            <td class="ms-rteTableOddCol-2">30-Jun-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jul-17</td>
+            <td class="ms-rteTableEvenCol-2">28-Jul-17</td>
+            <td class="ms-rteTableOddCol-2">31-Jul-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-17</td>
+            <td class="ms-rteTableEvenCol-2">30-Aug-17</td>
+            <td class="ms-rteTableOddCol-2">31-Aug-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-17</td>
+            <td class="ms-rteTableEvenCol-2">28-Sep-17</td>
+            <td class="ms-rteTableOddCol-2">29-Sep-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-17</td>
+            <td class="ms-rteTableEvenCol-2">30-Oct-17</td>
+            <td class="ms-rteTableOddCol-2">31-Oct-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Nov-17</td>
+            <td class="ms-rteTableEvenCol-2">29-Nov-17</td>
+            <td class="ms-rteTableOddCol-2">30-Nov-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-17</td>
+            <td class="ms-rteTableEvenCol-2">28-Dec-17</td>
+            <td class="ms-rteTableOddCol-2">29-Dec-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jan-18</td>
+            <td class="ms-rteTableEvenCol-2">30-Jan-18</td>
+            <td class="ms-rteTableOddCol-2">31-Jan-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-18</td>
+            <td class="ms-rteTableEvenCol-2">27-Feb-18</td>
+            <td class="ms-rteTableOddCol-2">28-Feb-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-18</td>
+            <td class="ms-rteTableEvenCol-2">28-Mar-18</td>
+            <td class="ms-rteTableOddCol-2">29-Mar-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-18</td>
+            <td class="ms-rteTableEvenCol-2">27-Apr-18</td>
+            <td class="ms-rteTableOddCol-2">30-Apr-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">May-18</td>
+            <td class="ms-rteTableEvenCol-2">30-May-18</td>
+            <td class="ms-rteTableOddCol-2">31-May-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-18</td>
+            <td class="ms-rteTableEvenCol-2">28-Jun-18</td>
+            <td class="ms-rteTableOddCol-2">29-Jun-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jul-18</td>
+            <td class="ms-rteTableEvenCol-2">30-Jul-18</td>
+            <td class="ms-rteTableOddCol-2">31-Jul-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-18</td>
+            <td class="ms-rteTableEvenCol-2">30-Aug-18</td>
+            <td class="ms-rteTableOddCol-2">31-Aug-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-18</td>
+            <td class="ms-rteTableEvenCol-2">27-Sep-18</td>
+            <td class="ms-rteTableOddCol-2">28-Sep-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-18</td>
+            <td class="ms-rteTableEvenCol-2">30-Oct-18</td>
+            <td class="ms-rteTableOddCol-2">31-Oct-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Nov-18</td>
+            <td class="ms-rteTableEvenCol-2">29-Nov-18</td>
+            <td class="ms-rteTableOddCol-2">30-Nov-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-18</td>
+            <td class="ms-rteTableEvenCol-2">28-Dec-18</td>
+            <td class="ms-rteTableOddCol-2">31-Dec-18</td>
+        </tr>
+    </tbody>
+</table>
+<p><strong>Last Trading Day and Final Settlement Day </strong></p>
+<p class="spanHeading"><span>HSI</span><span> Dividend Point Index Futures<br>
+HSCEI Dividend Point Index Futures
+<strong> <br>
+</strong></span></p>
+<table class="ms-rteTable-2 table migrate">
+    <thead>
+        <tr class="ms-rteTableHeaderRow-2">
+            <th class="ms-rteTableHeaderOddCol-2"><strong>Contract Month</strong></th>
+            <th class="ms-rteTableHeaderEvenCol-2"><strong>Last Trading Day</strong></th>
+            <th class="ms-rteTableHeaderOddCol-2"><strong>Final Settlement Day</strong></th>
+        </tr>
+    </thead>
+    <colgroup></colgroup><colgroup><col> <col> <col></colgroup>
+    <tbody>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-17</td>
+            <td class="ms-rteTableEvenCol-2">27-Dec-17</td>
+            <td class="ms-rteTableOddCol-2">29-Dec-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-18</td>
+            <td class="ms-rteTableEvenCol-2">27-Dec-18</td>
+            <td class="ms-rteTableOddCol-2">31-Dec-18</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong><strong>Last Trading Day and Final Settlement Day</strong></strong></p>
+<p class="spanHeading"><span>HSI Volatility Index Futures</span></p>
+<table class="ms-rteTable-2 table migrate">
+    <thead>
+        <tr class="ms-rteTableHeaderRow-2">
+            <th class="ms-rteTableHeaderOddCol-2"><strong>Contract Month</strong></th>
+            <th class="ms-rteTableHeaderEvenCol-2"><strong>Last Trading Day</strong></th>
+            <th class="ms-rteTableHeaderOddCol-2"><strong>Final Settlement Day</strong></th>
+        </tr>
+    </thead>
+    <colgroup></colgroup><colgroup><col> <col> <col></colgroup>
+    <tbody>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">
+            <p>Jan-17</p>
+            </td>
+            <td class="ms-rteTableEvenCol-2">27-Jan-17</td>
+            <td class="ms-rteTableOddCol-2">1-Feb-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-17</td>
+            <td class="ms-rteTableEvenCol-2">28-Feb-17</td>
+            <td class="ms-rteTableOddCol-2">1-Mar-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-17</td>
+            <td class="ms-rteTableEvenCol-2">28-Mar-17</td>
+            <td class="ms-rteTableOddCol-2">29-Mar-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-17</td>
+            <td class="ms-rteTableEvenCol-2">28-Apr-17</td>
+            <td class="ms-rteTableOddCol-2">2-May-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">May-17</td>
+            <td class="ms-rteTableEvenCol-2">29-May-17</td>
+            <td class="ms-rteTableOddCol-2">31-May-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-17</td>
+            <td class="ms-rteTableEvenCol-2">28-Jun-17</td>
+            <td class="ms-rteTableOddCol-2">29-Jun-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jul-17</td>
+            <td class="ms-rteTableEvenCol-2">31-Jul-17</td>
+            <td class="ms-rteTableOddCol-2">1-Aug-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-17</td>
+            <td class="ms-rteTableEvenCol-2">29-Aug-17</td>
+            <td class="ms-rteTableOddCol-2">30-Aug-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-17</td>
+            <td class="ms-rteTableEvenCol-2">29-Sep-17</td>
+            <td class="ms-rteTableOddCol-2">3-Oct-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-17</td>
+            <td class="ms-rteTableEvenCol-2">30-Oct-17</td>
+            <td class="ms-rteTableOddCol-2">31-Oct-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Nov-17</td>
+            <td class="ms-rteTableEvenCol-2">28-Nov-17</td>
+            <td class="ms-rteTableOddCol-2">29-Nov-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-17</td>
+            <td class="ms-rteTableEvenCol-2">29-Dec-17</td>
+            <td class="ms-rteTableOddCol-2">2-Jan-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jan-18</td>
+            <td class="ms-rteTableEvenCol-2">26-Jan-18</td>
+            <td class="ms-rteTableOddCol-2">29-Jan-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-18</td>
+            <td class="ms-rteTableEvenCol-2">26-Feb-18</td>
+            <td class="ms-rteTableOddCol-2">27-Feb-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-18</td>
+            <td class="ms-rteTableEvenCol-2">28-Mar-18</td>
+            <td class="ms-rteTableOddCol-2">29-Mar-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-18</td>
+            <td class="ms-rteTableEvenCol-2">30-Apr-18</td>
+            <td class="ms-rteTableOddCol-2">2-May-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">May-18</td>
+            <td class="ms-rteTableEvenCol-2">29-May-18</td>
+            <td class="ms-rteTableOddCol-2">30-May-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-18</td>
+            <td class="ms-rteTableEvenCol-2">29-Jun-18</td>
+            <td class="ms-rteTableOddCol-2">3-Jul-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jul-18</td>
+            <td class="ms-rteTableEvenCol-2">31-Jul-18</td>
+            <td class="ms-rteTableOddCol-2">1-Aug-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-18</td>
+            <td class="ms-rteTableEvenCol-2">28-Aug-18</td>
+            <td class="ms-rteTableOddCol-2">29-Aug-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-18</td>
+            <td class="ms-rteTableEvenCol-2">28-Sep-18</td>
+            <td class="ms-rteTableOddCol-2">2-Oct-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-18</td>
+            <td class="ms-rteTableEvenCol-2">30-Oct-18</td>
+            <td class="ms-rteTableOddCol-2">31-Oct-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Nov-18</td>
+            <td class="ms-rteTableEvenCol-2">28-Nov-18</td>
+            <td class="ms-rteTableOddCol-2">29-Nov-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-18</td>
+            <td class="ms-rteTableEvenCol-2">31-Dec-18</td>
+            <td class="ms-rteTableOddCol-2">2-Jan-19</td>
+        </tr>
+    </tbody>
+</table>
+<p><strong><strong>Last Trading Day and Final Settlement Day</strong></strong></p>
+<p class="spanHeading"><span class="spanHeading">CES China 120 Index Futures</span></p>
+<table class="ms-rteTable-2 table migrate">
+    <thead>
+        <tr class="ms-rteTableHeaderRow-2">
+            <th class="ms-rteTableHeaderOddCol-2">Contract Month</th>
+            <th class="ms-rteTableHeaderEvenCol-2">Last Trading Day</th>
+            <th class="ms-rteTableHeaderOddCol-2">Final Settlement Day</th>
+        </tr>
+    </thead>
+    <colgroup></colgroup><colgroup><col> <col> <col></colgroup>
+    <tbody>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jan-17</td>
+            <td class="ms-rteTableEvenCol-2">26-Jan-17</td>
+            <td class="ms-rteTableOddCol-2">27-Jan-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-17</td>
+            <td class="ms-rteTableEvenCol-2">27-Feb-17</td>
+            <td class="ms-rteTableOddCol-2">28-Feb-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-17</td>
+            <td class="ms-rteTableEvenCol-2">30-Mar-17</td>
+            <td class="ms-rteTableOddCol-2">31-Mar-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-17</td>
+            <td class="ms-rteTableEvenCol-2">27-Apr-17</td>
+            <td class="ms-rteTableOddCol-2">28-Apr-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">May-17</td>
+            <td class="ms-rteTableEvenCol-2">26-May-17</td>
+            <td class="ms-rteTableOddCol-2">29-May-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-17</td>
+            <td class="ms-rteTableEvenCol-2">29-Jun-17</td>
+            <td class="ms-rteTableOddCol-2">30-Jun-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jul-17</td>
+            <td class="ms-rteTableEvenCol-2">28-Jul-17</td>
+            <td class="ms-rteTableOddCol-2">31-Jul-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-17</td>
+            <td class="ms-rteTableEvenCol-2">30-Aug-17</td>
+            <td class="ms-rteTableOddCol-2">31-Aug-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-17</td>
+            <td class="ms-rteTableEvenCol-2">28-Sep-17</td>
+            <td class="ms-rteTableOddCol-2">29-Sep-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-17</td>
+            <td class="ms-rteTableEvenCol-2">30-Oct-17</td>
+            <td class="ms-rteTableOddCol-2">31-Oct-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Nov-17</td>
+            <td class="ms-rteTableEvenCol-2">29-Nov-17</td>
+            <td class="ms-rteTableOddCol-2">30-Nov-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-17</td>
+            <td class="ms-rteTableEvenCol-2">28-Dec-17</td>
+            <td class="ms-rteTableOddCol-2">29-Dec-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jan-18</td>
+            <td class="ms-rteTableEvenCol-2">30-Jan-18</td>
+            <td class="ms-rteTableOddCol-2">31-Jan-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-18</td>
+            <td class="ms-rteTableEvenCol-2">27-Feb-18</td>
+            <td class="ms-rteTableOddCol-2">28-Feb-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-18</td>
+            <td class="ms-rteTableEvenCol-2">28-Mar-18</td>
+            <td class="ms-rteTableOddCol-2">29-Mar-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-18</td>
+            <td class="ms-rteTableEvenCol-2">27-Apr-18</td>
+            <td class="ms-rteTableOddCol-2">30-Apr-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">May-18</td>
+            <td class="ms-rteTableEvenCol-2">30-May-18</td>
+            <td class="ms-rteTableOddCol-2">31-May-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-18</td>
+            <td class="ms-rteTableEvenCol-2">28-Jun-18</td>
+            <td class="ms-rteTableOddCol-2">29-Jun-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jul-18</td>
+            <td class="ms-rteTableEvenCol-2">30-Jul-18</td>
+            <td class="ms-rteTableOddCol-2">31-Jul-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-18</td>
+            <td class="ms-rteTableEvenCol-2">30-Aug-18</td>
+            <td class="ms-rteTableOddCol-2">31-Aug-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-18</td>
+            <td class="ms-rteTableEvenCol-2">27-Sep-18</td>
+            <td class="ms-rteTableOddCol-2">28-Sep-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-18</td>
+            <td class="ms-rteTableEvenCol-2">30-Oct-18</td>
+            <td class="ms-rteTableOddCol-2">31-Oct-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Nov-18</td>
+            <td class="ms-rteTableEvenCol-2">29-Nov-18</td>
+            <td class="ms-rteTableOddCol-2">30-Nov-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-18</td>
+            <td class="ms-rteTableEvenCol-2">28-Dec-18</td>
+            <td class="ms-rteTableOddCol-2">31-Dec-18</td>
+        </tr>
+    </tbody>
+</table>
+<p>Note: Subject to the official announcement of Mainland China public holiday, the&nbsp;Last Trading Day and Final Settlement Day might be revised accordingly.</p>
+<p>&nbsp;</p>
+<p><strong><strong>Last Trading Day and Final Settlement Day</strong></strong></p>
+<p class="spanHeading"><span class="spanHeading">BRICS Futures<br>
+</span></p>
+<p class="spanHeading"><span class="spanHeading">- IBOVESPA Futures<span class="spanHeading"> </span></span></p>
+<table class="ms-rteTable-2 table migrate">
+    <thead>
+        <tr class="ms-rteTableHeaderRow-2">
+            <th class="ms-rteTableHeaderOddCol-2"><strong>Contract Month</strong></th>
+            <th class="ms-rteTableHeaderEvenCol-2"><strong>Last Trading Day</strong></th>
+            <th class="ms-rteTableHeaderOddCol-2"><strong>Final Settlement Day</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-17</td>
+            <td class="ms-rteTableEvenCol-2">15-Feb-17</td>
+            <td class="ms-rteTableOddCol-2">17-Feb-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-17</td>
+            <td class="ms-rteTableEvenCol-2">12-Apr-17</td>
+            <td class="ms-rteTableOddCol-2">18-Apr-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-17</td>
+            <td class="ms-rteTableEvenCol-2">14-Jun-17</td>
+            <td class="ms-rteTableOddCol-2">16-Jun-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-17</td>
+            <td class="ms-rteTableEvenCol-2">16-Aug-17</td>
+            <td class="ms-rteTableOddCol-2">18-Aug-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-17</td>
+            <td class="ms-rteTableEvenCol-2">18-Oct-17</td>
+            <td class="ms-rteTableOddCol-2">20-Oct-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-17</td>
+            <td class="ms-rteTableEvenCol-2">13-Dec-17</td>
+            <td class="ms-rteTableOddCol-2">15-Dec-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-18</td>
+            <td class="ms-rteTableEvenCol-2">14-Feb-18</td>
+            <td class="ms-rteTableOddCol-2">20-Feb-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-18</td>
+            <td class="ms-rteTableEvenCol-2">18-Apr-18</td>
+            <td class="ms-rteTableOddCol-2">20-Apr-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-18</td>
+            <td class="ms-rteTableEvenCol-2">13-Jun-18</td>
+            <td class="ms-rteTableOddCol-2">15-Jun-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-18</td>
+            <td class="ms-rteTableEvenCol-2">15-Aug-18</td>
+            <td class="ms-rteTableOddCol-2">17-Aug-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-18</td>
+            <td class="ms-rteTableEvenCol-2">16-Oct-18</td>
+            <td class="ms-rteTableOddCol-2">19-Oct-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-18</td>
+            <td class="ms-rteTableEvenCol-2">12-Dec-18</td>
+            <td class="ms-rteTableOddCol-2">14-Dec-18</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p class="spanHeading"><span>- </span><span>MICEX Index</span><span> Futures</span></p>
+<table class="ms-rteTable-2 table migrate">
+    <thead>
+        <tr class="ms-rteTableHeaderRow-2">
+            <th class="ms-rteTableHeaderOddCol-2"><strong>Contract Month</strong></th>
+            <th class="ms-rteTableHeaderEvenCol-2"><strong>Last Trading Day</strong></th>
+            <th class="ms-rteTableHeaderOddCol-2"><strong>Final Settlement Day</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-17</td>
+            <td class="ms-rteTableEvenCol-2">16-Mar-17</td>
+            <td class="ms-rteTableOddCol-2">20-Mar-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-17</td>
+            <td class="ms-rteTableEvenCol-2">15-Jun-17</td>
+            <td class="ms-rteTableOddCol-2">19-Jun-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-17</td>
+            <td class="ms-rteTableEvenCol-2">21-Sep-17</td>
+            <td class="ms-rteTableOddCol-2">25-Sep-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-17</td>
+            <td class="ms-rteTableEvenCol-2">21-Dec-17</td>
+            <td class="ms-rteTableOddCol-2">27-Dec-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-18</td>
+            <td class="ms-rteTableEvenCol-2">15-Mar-18</td>
+            <td class="ms-rteTableOddCol-2">19-Mar-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-18</td>
+            <td class="ms-rteTableEvenCol-2">21-Jun-18</td>
+            <td class="ms-rteTableOddCol-2">25-Jun-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-18</td>
+            <td class="ms-rteTableEvenCol-2">20-Sep-18</td>
+            <td class="ms-rteTableOddCol-2">24-Sep-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-18</td>
+            <td class="ms-rteTableEvenCol-2">20-Dec-18</td>
+            <td class="ms-rteTableOddCol-2">24-Dec-18</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p class="spanHeading"><span class="spanHeading">- S&amp;P </span>BSE SENSEX Index&nbsp;Futures</p>
+<table class="ms-rteTable-2 table migrate">
+    <thead>
+        <tr class="ms-rteTableHeaderRow-2">
+            <th class="ms-rteTableHeaderOddCol-2"><strong>Contract Month</strong></th>
+            <th class="ms-rteTableHeaderEvenCol-2"><strong>Last Trading Day</strong></th>
+            <th class="ms-rteTableHeaderOddCol-2"><strong>Final Settlement Day</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jan-17</td>
+            <td class="ms-rteTableEvenCol-2">25-Jan-17</td>
+            <td class="ms-rteTableOddCol-2">27-Jan-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-17</td>
+            <td class="ms-rteTableEvenCol-2">23-Feb-17</td>
+            <td class="ms-rteTableOddCol-2">27-Feb-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-17</td>
+            <td class="ms-rteTableEvenCol-2">30-Mar-17</td>
+            <td class="ms-rteTableOddCol-2">3-Apr-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-17</td>
+            <td class="ms-rteTableEvenCol-2">27-Apr-17</td>
+            <td class="ms-rteTableOddCol-2">2-May-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">May-17</td>
+            <td class="ms-rteTableEvenCol-2">25-May-17</td>
+            <td class="ms-rteTableOddCol-2">29-May-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-17</td>
+            <td class="ms-rteTableEvenCol-2">29-Jun-17</td>
+            <td class="ms-rteTableOddCol-2">3-Jul-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jul-17</td>
+            <td class="ms-rteTableEvenCol-2">27-Jul-17</td>
+            <td class="ms-rteTableOddCol-2">31-Jul-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-17</td>
+            <td class="ms-rteTableEvenCol-2">31-Aug-17</td>
+            <td class="ms-rteTableOddCol-2">4-Sep-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-17</td>
+            <td class="ms-rteTableEvenCol-2">28-Sep-17</td>
+            <td class="ms-rteTableOddCol-2">3-Oct-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-17</td>
+            <td class="ms-rteTableEvenCol-2">26-Oct-17</td>
+            <td class="ms-rteTableOddCol-2">30-Oct-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Nov-17</td>
+            <td class="ms-rteTableEvenCol-2">30-Nov-17</td>
+            <td class="ms-rteTableOddCol-2">4-Dec-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-17</td>
+            <td class="ms-rteTableEvenCol-2">28-Dec-17</td>
+            <td class="ms-rteTableOddCol-2">2-Jan-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jan-18</td>
+            <td class="ms-rteTableEvenCol-2">25-Jan-18</td>
+            <td class="ms-rteTableOddCol-2">29-Jan-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-18</td>
+            <td class="ms-rteTableEvenCol-2">22-Feb-18</td>
+            <td class="ms-rteTableOddCol-2">26-Feb-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-18</td>
+            <td class="ms-rteTableEvenCol-2">29-Mar-18</td>
+            <td class="ms-rteTableOddCol-2">4-Apr-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-18</td>
+            <td class="ms-rteTableEvenCol-2">26-Apr-18</td>
+            <td class="ms-rteTableOddCol-2">30-Apr-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">May-18</td>
+            <td class="ms-rteTableEvenCol-2">31-May-18</td>
+            <td class="ms-rteTableOddCol-2">4-Jun-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-18</td>
+            <td class="ms-rteTableEvenCol-2">28-Jun-18</td>
+            <td class="ms-rteTableOddCol-2">3-Jul-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jul-18</td>
+            <td class="ms-rteTableEvenCol-2">26-Jul-18</td>
+            <td class="ms-rteTableOddCol-2">30-Jul-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-18</td>
+            <td class="ms-rteTableEvenCol-2">30-Aug-18</td>
+            <td class="ms-rteTableOddCol-2">3-Sep-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-18</td>
+            <td class="ms-rteTableEvenCol-2">27-Sep-18</td>
+            <td class="ms-rteTableOddCol-2">2-Oct-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-18</td>
+            <td class="ms-rteTableEvenCol-2">25-Oct-18</td>
+            <td class="ms-rteTableOddCol-2">29-Oct-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Nov-18</td>
+            <td class="ms-rteTableEvenCol-2">29-Nov-18</td>
+            <td class="ms-rteTableOddCol-2">3-Dec-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-18</td>
+            <td class="ms-rteTableEvenCol-2">27-Dec-18</td>
+            <td class="ms-rteTableOddCol-2">31-Dec-18</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p class="spanHeading"><span>- FTSE/JSE Top40</span><span> Futures</span></p>
+<table class="ms-rteTable-2 table migrate">
+    <thead>
+        <tr class="ms-rteTableHeaderRow-2">
+            <th class="ms-rteTableHeaderOddCol-2"><strong>Contract Month</strong></th>
+            <th class="ms-rteTableHeaderEvenCol-2"><strong>Last Trading Day</strong></th>
+            <th class="ms-rteTableHeaderOddCol-2"><strong>Final Settlement Day</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-17</td>
+            <td class="ms-rteTableEvenCol-2">16-Mar-17</td>
+            <td class="ms-rteTableOddCol-2">20-Mar-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-17</td>
+            <td class="ms-rteTableEvenCol-2">15-Jun-17</td>
+            <td class="ms-rteTableOddCol-2">19-Jun-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-17</td>
+            <td class="ms-rteTableEvenCol-2">21-Sep-17</td>
+            <td class="ms-rteTableOddCol-2">25-Sep-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-17</td>
+            <td class="ms-rteTableEvenCol-2">21-Dec-17</td>
+            <td class="ms-rteTableOddCol-2">27-Dec-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-18</td>
+            <td class="ms-rteTableEvenCol-2">15-Mar-18</td>
+            <td class="ms-rteTableOddCol-2">19-Mar-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-18</td>
+            <td class="ms-rteTableEvenCol-2">21-Jun-18</td>
+            <td class="ms-rteTableOddCol-2">25-Jun-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-18</td>
+            <td class="ms-rteTableEvenCol-2">20-Sep-18</td>
+            <td class="ms-rteTableOddCol-2">24-Sep-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-18</td>
+            <td class="ms-rteTableEvenCol-2">20-Dec-18</td>
+            <td class="ms-rteTableOddCol-2">24-Dec-18</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p class="spanHeading"><span>Note: Subject to the official announcement of Last Trading Days schedule by BRICS Exchanges, the Last Trading Day and Final Settlement Day might be revised accordingly.</span></p>
+<p><strong><strong></strong></strong>&nbsp;</p>
+<p><strong><strong>Last Trading Day and Final Settlement Day</strong></strong></p>
+<p>One-Month HIBOR Futures<br>
+Three-Month HIBOR Futures <br>
+USD/CNH&nbsp;Futures and Options</p>
+<table class="ms-rteTable-2 table migrate">
+    <thead>
+        <tr class="ms-rteTableHeaderRow-2">
+            <th class="ms-rteTableHeaderOddCol-2"><strong>Contract Month</strong></th>
+            <th class="ms-rteTableHeaderEvenCol-2"><strong>Last Trading Day / Expiry Day</strong></th>
+            <th class="ms-rteTableHeaderOddCol-2"><strong>Final Settlement Day</strong></th>
+        </tr>
+    </thead>
+    <colgroup> <col> <col> <col> </colgroup>
+    <tbody>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jan-17</td>
+            <td class="ms-rteTableEvenCol-2">16-Jan-17</td>
+            <td class="ms-rteTableOddCol-2">18-Jan-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-17</td>
+            <td class="ms-rteTableEvenCol-2">13-Feb-17</td>
+            <td class="ms-rteTableOddCol-2">15-Feb-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-17</td>
+            <td class="ms-rteTableEvenCol-2">13-Mar-17</td>
+            <td class="ms-rteTableOddCol-2">15-Mar-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-17</td>
+            <td class="ms-rteTableEvenCol-2">13-Apr-17</td>
+            <td class="ms-rteTableOddCol-2">19-Apr-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">May-17</td>
+            <td class="ms-rteTableEvenCol-2">15-May-17</td>
+            <td class="ms-rteTableOddCol-2">17-May-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-17</td>
+            <td class="ms-rteTableEvenCol-2">19-Jun-17</td>
+            <td class="ms-rteTableOddCol-2">21-Jun-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jul-17</td>
+            <td class="ms-rteTableEvenCol-2">17-Jul-17</td>
+            <td class="ms-rteTableOddCol-2">19-Jul-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-17</td>
+            <td class="ms-rteTableEvenCol-2">14-Aug-17</td>
+            <td class="ms-rteTableOddCol-2">16-Aug-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-17</td>
+            <td class="ms-rteTableEvenCol-2">18-Sep-17</td>
+            <td class="ms-rteTableOddCol-2">20-Sep-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-17</td>
+            <td class="ms-rteTableEvenCol-2">16-Oct-17</td>
+            <td class="ms-rteTableOddCol-2">18-Oct-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Nov-17</td>
+            <td class="ms-rteTableEvenCol-2">13-Nov-17</td>
+            <td class="ms-rteTableOddCol-2">15-Nov-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-17</td>
+            <td class="ms-rteTableEvenCol-2">18-Dec-17</td>
+            <td class="ms-rteTableOddCol-2">20-Dec-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jan-18</td>
+            <td class="ms-rteTableEvenCol-2">15-Jan-18</td>
+            <td class="ms-rteTableOddCol-2">17-Jan-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-18</td>
+            <td class="ms-rteTableEvenCol-2">15-Feb-18</td>
+            <td class="ms-rteTableOddCol-2">21-Feb-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-18</td>
+            <td class="ms-rteTableEvenCol-2">19-Mar-18</td>
+            <td class="ms-rteTableOddCol-2">21-Mar-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-18</td>
+            <td class="ms-rteTableEvenCol-2">16-Apr-18</td>
+            <td class="ms-rteTableOddCol-2">18-Apr-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">May-18</td>
+            <td class="ms-rteTableEvenCol-2">14-May-18</td>
+            <td class="ms-rteTableOddCol-2">16-May-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-18</td>
+            <td class="ms-rteTableEvenCol-2">15-Jun-18</td>
+            <td class="ms-rteTableOddCol-2">20-Jun-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jul-18</td>
+            <td class="ms-rteTableEvenCol-2">16-Jul-18</td>
+            <td class="ms-rteTableOddCol-2">18-Jul-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-18</td>
+            <td class="ms-rteTableEvenCol-2">13-Aug-18</td>
+            <td class="ms-rteTableOddCol-2">15-Aug-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-18</td>
+            <td class="ms-rteTableEvenCol-2">17-Sep-18</td>
+            <td class="ms-rteTableOddCol-2">19-Sep-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-18</td>
+            <td class="ms-rteTableEvenCol-2">15-Oct-18</td>
+            <td class="ms-rteTableOddCol-2">18-Oct-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Nov-18</td>
+            <td class="ms-rteTableEvenCol-2">19-Nov-18</td>
+            <td class="ms-rteTableOddCol-2">21-Nov-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-18</td>
+            <td class="ms-rteTableEvenCol-2">17-Dec-18</td>
+            <td class="ms-rteTableOddCol-2">19-Dec-18</td>
+        </tr>
+    </tbody>
+</table>
+<p class="spanHeading"><span><strong><strong></strong></strong></span></p>
+<p><strong><strong></strong></strong>&nbsp;</p>
+<p><strong><strong>Last Trading Day and Final Settlement Day</strong></strong></p>
+<p>EUR/CNH Futures<br>
+JPY/CNH&nbsp;Futures <br>
+AUD/CNH&nbsp;Futures<br>
+CNH/USD Futures</p>
+<p> </p>
+<table class="ms-rteTable-2 table migrate">
+    <thead>
+        <tr class="ms-rteTableHeaderRow-2">
+            <th class="ms-rteTableHeaderOddCol-2"><strong>Contract Month</strong></th>
+            <th class="ms-rteTableHeaderEvenCol-2"><strong>Last Trading Day</strong></th>
+            <th class="ms-rteTableHeaderOddCol-2"><strong>Final Settlement Day</strong></th>
+        </tr>
+    </thead>
+    <colgroup> <col> <col> <col> </colgroup>
+    <tbody>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jan-17</td>
+            <td class="ms-rteTableEvenCol-2">16-Jan-17</td>
+            <td class="ms-rteTableOddCol-2">17-Jan-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-17</td>
+            <td class="ms-rteTableEvenCol-2">13-Feb-17</td>
+            <td class="ms-rteTableOddCol-2">14-Feb-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-17</td>
+            <td class="ms-rteTableEvenCol-2">13-Mar-17</td>
+            <td class="ms-rteTableOddCol-2">14-Mar-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-17</td>
+            <td class="ms-rteTableEvenCol-2">13-Apr-17</td>
+            <td class="ms-rteTableOddCol-2">18-Apr-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">May-17</td>
+            <td class="ms-rteTableEvenCol-2">15-May-17</td>
+            <td class="ms-rteTableOddCol-2">16-May-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-17</td>
+            <td class="ms-rteTableEvenCol-2">19-Jun-17</td>
+            <td class="ms-rteTableOddCol-2">20-Jun-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jul-17</td>
+            <td class="ms-rteTableEvenCol-2">17-Jul-17</td>
+            <td class="ms-rteTableOddCol-2">18-Jul-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-17</td>
+            <td class="ms-rteTableEvenCol-2">14-Aug-17</td>
+            <td class="ms-rteTableOddCol-2">15-Aug-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-17</td>
+            <td class="ms-rteTableEvenCol-2">18-Sep-17</td>
+            <td class="ms-rteTableOddCol-2">19-Sep-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-17</td>
+            <td class="ms-rteTableEvenCol-2">16-Oct-17</td>
+            <td class="ms-rteTableOddCol-2">17-Oct-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Nov-17</td>
+            <td class="ms-rteTableEvenCol-2">13-Nov-17</td>
+            <td class="ms-rteTableOddCol-2">14-Nov-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-17</td>
+            <td class="ms-rteTableEvenCol-2">18-Dec-17</td>
+            <td class="ms-rteTableOddCol-2">19-Dec-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jan-18</td>
+            <td class="ms-rteTableEvenCol-2">15-Jan-18</td>
+            <td class="ms-rteTableOddCol-2">16-Jan-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-18</td>
+            <td class="ms-rteTableEvenCol-2">15-Feb-18</td>
+            <td class="ms-rteTableOddCol-2">20-Feb-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-18</td>
+            <td class="ms-rteTableEvenCol-2">19-Mar-18</td>
+            <td class="ms-rteTableOddCol-2">
+            <p>20-Mar-18</p>
+            </td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-18</td>
+            <td class="ms-rteTableEvenCol-2">16-Apr-18</td>
+            <td class="ms-rteTableOddCol-2">17-Apr-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">May-18</td>
+            <td class="ms-rteTableEvenCol-2">14-May-18</td>
+            <td class="ms-rteTableOddCol-2">15-May-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-18</td>
+            <td class="ms-rteTableEvenCol-2">15-Jun-18</td>
+            <td class="ms-rteTableOddCol-2">19-Jun-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jul-18</td>
+            <td class="ms-rteTableEvenCol-2">16-Jul-18</td>
+            <td class="ms-rteTableOddCol-2">17-Jul-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-18</td>
+            <td class="ms-rteTableEvenCol-2">13-Aug-18</td>
+            <td class="ms-rteTableOddCol-2">14-Aug-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-18</td>
+            <td class="ms-rteTableEvenCol-2">17-Sep-18</td>
+            <td class="ms-rteTableOddCol-2">18-Sep-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-18</td>
+            <td class="ms-rteTableEvenCol-2">15-Oct-18</td>
+            <td class="ms-rteTableOddCol-2">16-Oct-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Nov-18</td>
+            <td class="ms-rteTableEvenCol-2">19-Nov-18</td>
+            <td class="ms-rteTableOddCol-2">20-Nov-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-18</td>
+            <td class="ms-rteTableEvenCol-2">17-Dec-18</td>
+            <td class="ms-rteTableOddCol-2">18-Dec-18</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<span><strong><strong>Last Trading Day and Final Settlement Day</strong></strong></span>
+<p class="spanHeading"><span class="spanHeading">London Aluminium/Zinc/Copper/Nickel/Tin/Lead&nbsp;Mini Futures</span></p>
+<p> <strong> </strong></p>
+<table class="ms-rteTable-2 table migrate">
+    <thead>
+        <tr class="ms-rteTableHeaderRow-2">
+            <th class="ms-rteTableHeaderOddCol-2">Contract Month</th>
+            <th class="ms-rteTableHeaderEvenCol-2">Last Trading Day</th>
+            <th class="ms-rteTableHeaderOddCol-2">Final Settlement Day</th>
+        </tr>
+    </thead>
+    <colgroup></colgroup><colgroup><col> <col> <col></colgroup>
+    <tbody>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jan-17</td>
+            <td class="ms-rteTableEvenCol-2">16-Jan-17</td>
+            <td class="ms-rteTableOddCol-2">18-Jan-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-17</td>
+            <td class="ms-rteTableEvenCol-2">13-Feb-17</td>
+            <td class="ms-rteTableOddCol-2">15-Feb-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-17</td>
+            <td class="ms-rteTableEvenCol-2">13-Mar-17</td>
+            <td class="ms-rteTableOddCol-2">15-Mar-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-17</td>
+            <td class="ms-rteTableEvenCol-2">13-Apr-17</td>
+            <td class="ms-rteTableOddCol-2">19-Apr-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">May-17</td>
+            <td class="ms-rteTableEvenCol-2">15-May-17</td>
+            <td class="ms-rteTableOddCol-2">17-May-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-17</td>
+            <td class="ms-rteTableEvenCol-2">19-Jun-17</td>
+            <td class="ms-rteTableOddCol-2">21-Jun-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jul-17</td>
+            <td class="ms-rteTableEvenCol-2">17-Jul-17</td>
+            <td class="ms-rteTableOddCol-2">19-Jul-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-17</td>
+            <td class="ms-rteTableEvenCol-2">14-Aug-17</td>
+            <td class="ms-rteTableOddCol-2">16-Aug-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-17</td>
+            <td class="ms-rteTableEvenCol-2">18-Sep-17</td>
+            <td class="ms-rteTableOddCol-2">20-Sep-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-17</td>
+            <td class="ms-rteTableEvenCol-2">16-Oct-17</td>
+            <td class="ms-rteTableOddCol-2">18-Oct-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Nov-17</td>
+            <td class="ms-rteTableEvenCol-2">13-Nov-17</td>
+            <td class="ms-rteTableOddCol-2">15-Nov-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-17</td>
+            <td class="ms-rteTableEvenCol-2">18-Dec-17</td>
+            <td class="ms-rteTableOddCol-2">20-Dec-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jan-18</td>
+            <td class="ms-rteTableEvenCol-2">15-Jan-18</td>
+            <td class="ms-rteTableOddCol-2">17-Jan-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-18</td>
+            <td class="ms-rteTableEvenCol-2">15-Feb-18</td>
+            <td class="ms-rteTableOddCol-2">21-Feb-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-18</td>
+            <td class="ms-rteTableEvenCol-2">19-Mar-18</td>
+            <td class="ms-rteTableOddCol-2">21-Mar-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-18</td>
+            <td class="ms-rteTableEvenCol-2">16-Apr-18</td>
+            <td class="ms-rteTableOddCol-2">18-Apr-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">May-18</td>
+            <td class="ms-rteTableEvenCol-2">14-May-18</td>
+            <td class="ms-rteTableOddCol-2">16-May-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-18</td>
+            <td class="ms-rteTableEvenCol-2">15-Jun-18</td>
+            <td class="ms-rteTableOddCol-2">20-Jun-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jul-18</td>
+            <td class="ms-rteTableEvenCol-2">16-Jul-18</td>
+            <td class="ms-rteTableOddCol-2">18-Jul-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-18</td>
+            <td class="ms-rteTableEvenCol-2">13-Aug-18</td>
+            <td class="ms-rteTableOddCol-2">15-Aug-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-18</td>
+            <td class="ms-rteTableEvenCol-2">17-Sep-18</td>
+            <td class="ms-rteTableOddCol-2">19-Sep-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-18</td>
+            <td class="ms-rteTableEvenCol-2">15-Oct-18</td>
+            <td class="ms-rteTableOddCol-2">18-Oct-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Nov-18</td>
+            <td class="ms-rteTableEvenCol-2">19-Nov-18</td>
+            <td class="ms-rteTableOddCol-2">21-Nov-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-18</td>
+            <td class="ms-rteTableEvenCol-2">17-Dec-18</td>
+            <td class="ms-rteTableOddCol-2">19-Dec-18</td>
+        </tr>
+    </tbody>
+</table>
+<p>Note: If London Metal Exchange revises its schedule for Last Trading Days, the Last Trading Day and Final Settlement Day at HKFE might be revised accordingly.</p>
+<p class="spanHeading"><span><strong><strong>Last Trading Day and Final Settlement Day</strong></strong></span></p>
+<p class="spanHeading"><span class="spanHeading">USD &amp; CNH Gold Futures</span></p>
+<p> <strong> </strong></p>
+<table class="ms-rteTable-2 table migrate">
+    <thead>
+        <tr class="ms-rteTableHeaderRow-2">
+            <th class="ms-rteTableHeaderOddCol-2">Contract Month</th>
+            <th class="ms-rteTableHeaderEvenCol-2">Last Trading Day</th>
+            <th class="ms-rteTableHeaderOddCol-2">Final Settlement Day</th>
+        </tr>
+    </thead>
+    <colgroup></colgroup><colgroup><col> <col> <col></colgroup>
+    <tbody>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-17</td>
+            <td class="ms-rteTableEvenCol-2">21-Aug-17</td>
+            <td class="ms-rteTableOddCol-2">23-Aug-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-17</td>
+            <td class="ms-rteTableEvenCol-2">18-Sep-17</td>
+            <td class="ms-rteTableOddCol-2">20-Sep-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-17</td>
+            <td class="ms-rteTableEvenCol-2">16-Oct-17</td>
+            <td class="ms-rteTableOddCol-2">18-Oct-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Nov-17</td>
+            <td class="ms-rteTableEvenCol-2">20-Nov-17</td>
+            <td class="ms-rteTableOddCol-2">22-Nov-17</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-17</td>
+            <td class="ms-rteTableEvenCol-2">18-Dec-17</td>
+            <td class="ms-rteTableOddCol-2">20-Dec-17</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jan-18</td>
+            <td class="ms-rteTableEvenCol-2">15-Jan-18</td>
+            <td class="ms-rteTableOddCol-2">17-Jan-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-18</td>
+            <td class="ms-rteTableEvenCol-2">20-Feb-18</td>
+            <td class="ms-rteTableOddCol-2">22-Feb-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-18</td>
+            <td class="ms-rteTableEvenCol-2">19-Mar-18</td>
+            <td class="ms-rteTableOddCol-2">21-Mar-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-18</td>
+            <td class="ms-rteTableEvenCol-2">16-Apr-18</td>
+            <td class="ms-rteTableOddCol-2">18-Apr-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">May-18</td>
+            <td class="ms-rteTableEvenCol-2">21-May-18</td>
+            <td class="ms-rteTableOddCol-2">24-May-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-18</td>
+            <td class="ms-rteTableEvenCol-2">19-Jun-18</td>
+            <td class="ms-rteTableOddCol-2">21-Jun-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jul-18</td>
+            <td class="ms-rteTableEvenCol-2">16-Jul-18</td>
+            <td class="ms-rteTableOddCol-2">18-Jul-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-18</td>
+            <td class="ms-rteTableEvenCol-2">20-Aug-18</td>
+            <td class="ms-rteTableOddCol-2">22-Aug-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-18</td>
+            <td class="ms-rteTableEvenCol-2">17-Sep-18</td>
+            <td class="ms-rteTableOddCol-2">19-Sep-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-18</td>
+            <td class="ms-rteTableEvenCol-2">15-Oct-18</td>
+            <td class="ms-rteTableOddCol-2">18-Oct-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Nov-18</td>
+            <td class="ms-rteTableEvenCol-2">19-Nov-18</td>
+            <td class="ms-rteTableOddCol-2">21-Nov-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-18</td>
+            <td class="ms-rteTableEvenCol-2">17-Dec-18</td>
+            <td class="ms-rteTableOddCol-2">19-Dec-18</td>
+        </tr>
+    </tbody>
+</table>
+<p class="spanHeading"><strong><strong>Last Trading Day and Final Settlement Day</strong></strong></p>
+<p class="spanHeading">Iron Ore&nbsp;Futures</p>
+<p><strong></strong></p>
+<table class="ms-rteTable-2 table migrate">
+    <thead>
+        <tr class="ms-rteTableHeaderRow-2">
+            <th class="ms-rteTableHeaderOddCol-2">Contract Month</th>
+            <th class="ms-rteTableHeaderEvenCol-2">Last Trading Day</th>
+            <th class="ms-rteTableHeaderOddCol-2">Final Settlement Day</th>
+        </tr>
+    </thead>
+    <colgroup></colgroup><colgroup><col><col><col></colgroup>
+    <tbody>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jan-18</td>
+            <td class="ms-rteTableEvenCol-2">31-Jan-18</td>
+            <td class="ms-rteTableOddCol-2">2-Feb-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Feb-18</td>
+            <td class="ms-rteTableEvenCol-2">28-Feb-18</td>
+            <td class="ms-rteTableOddCol-2">2-Mar-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Mar-18</td>
+            <td class="ms-rteTableEvenCol-2">29-Mar-18</td>
+            <td class="ms-rteTableOddCol-2">4-Apr-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Apr-18</td>
+            <td class="ms-rteTableEvenCol-2">30-Apr-18</td>
+            <td class="ms-rteTableOddCol-2">3-May-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">May-18</td>
+            <td class="ms-rteTableEvenCol-2">31-May-18</td>
+            <td class="ms-rteTableOddCol-2">4-Jun-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Jun-18</td>
+            <td class="ms-rteTableEvenCol-2">29-Jun-18</td>
+            <td class="ms-rteTableOddCol-2">4-Jul-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Jul-18</td>
+            <td class="ms-rteTableEvenCol-2">31-Jul-18</td>
+            <td class="ms-rteTableOddCol-2">2-Aug-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Aug-18</td>
+            <td class="ms-rteTableEvenCol-2">31-Aug-18</td>
+            <td class="ms-rteTableOddCol-2">4-Sep-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Sep-18</td>
+            <td class="ms-rteTableEvenCol-2">28-Sep-18</td>
+            <td class="ms-rteTableOddCol-2">3-Oct-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Oct-18</td>
+            <td class="ms-rteTableEvenCol-2">31-Oct-18</td>
+            <td class="ms-rteTableOddCol-2">2-Nov-18</td>
+        </tr>
+        <tr class="ms-rteTableEvenRow-2">
+            <td class="ms-rteTableOddCol-2">Nov-18</td>
+            <td class="ms-rteTableEvenCol-2">30-Nov-18</td>
+            <td class="ms-rteTableOddCol-2">4-Dec-18</td>
+        </tr>
+        <tr class="ms-rteTableOddRow-2">
+            <td class="ms-rteTableOddCol-2">Dec-18</td>
+            <td class="ms-rteTableEvenCol-2">31-Dec-18</td>
+            <td class="ms-rteTableOddCol-2">3-Jan-19</td>
+        </tr>
+    </tbody>
+</table>
+<p>
+<strong>Holiday Schedule</strong><br>
+<br>
+<strong>Futures &amp;&nbsp;Index Options</strong><br>
+<br>
+</p>
+<table class="table_grey_border table migrate" cellspacing="2" cellpadding="2">
+    <thead>
+        <tr class="tr_header">
+            <th class="verd_black12">
+            <p><strong>Date</strong></p>
+            </th>
+            <th class="verd_black12">
+            <p><strong>Day</strong></p>
+            </th>
+            <th class="verd_black12">
+            <p><strong>Holiday</strong></p>
+            </th>
+        </tr>
+    </thead>
+    <colgroup> <col> <col> <col> </colgroup>
+    <tbody>
+        <tr class="tr_normal">
+            <td class="verd_black12">02/01/2017</td>
+            <td class="verd_black12">Monday</td>
+            <td class="verd_black12">The day following the first day of January</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">30/01/2017</td>
+            <td class="verd_black12">Monday</td>
+            <td class="verd_black12">The third day of Lunar New Year</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">31/01/2017</td>
+            <td class="verd_black12">Tuesday</td>
+            <td class="verd_black12">The fourth day of Lunar New Year</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">04/04/2017</td>
+            <td class="verd_black12">Tuesday</td>
+            <td class="verd_black12">Ching Ming Festival</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">14/04/2017</td>
+            <td class="verd_black12">Friday</td>
+            <td class="verd_black12">Good Friday</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">17/04/2017</td>
+            <td class="verd_black12">Monday</td>
+            <td class="verd_black12">Easter Monday</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">01/05/2017</td>
+            <td class="verd_black12">Monday</td>
+            <td class="verd_black12">Labour Day</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">03/05/2017</td>
+            <td class="verd_black12">Wednesday</td>
+            <td class="verd_black12">The Birthday of the Buddha</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">30/05/2017</td>
+            <td class="verd_black12">Tuesday</td>
+            <td class="verd_black12">Tuen Ng Festival</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">02/10/2017</td>
+            <td class="verd_black12">Monday</td>
+            <td class="verd_black12">The day following National Day</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">05/10/2017</td>
+            <td class="verd_black12">Thursday</td>
+            <td class="verd_black12">The day following the Chinese Mid-Autumn Festival</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">25/12/2017</td>
+            <td class="verd_black12">Monday</td>
+            <td class="verd_black12">Christmas Day</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">26/12/2017</td>
+            <td class="verd_black12">Tuesday</td>
+            <td class="verd_black12">The first weekday after Christmas Day</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">01/01/2018</td>
+            <td class="verd_black12">Monday</td>
+            <td class="verd_black12">The first day of January</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">16/02/2018</td>
+            <td class="verd_black12">Friday</td>
+            <td class="verd_black12">Lunar New Year&rsquo;s Day</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">19/02/2018</td>
+            <td class="verd_black12">Monday</td>
+            <td class="verd_black12">The fourth day of Lunar New Year</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">30/03/2018</td>
+            <td class="verd_black12">Friday</td>
+            <td class="verd_black12">Good Friday</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">02/04/2018</td>
+            <td class="verd_black12">Monday</td>
+            <td class="verd_black12">Easter Monday</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">05/04/2018</td>
+            <td class="verd_black12">Thursday</td>
+            <td class="verd_black12">Ching Ming Festival</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">01/05/2018</td>
+            <td class="verd_black12">Tuesday</td>
+            <td class="verd_black12">Labour day</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">22/05/2018</td>
+            <td class="verd_black12">Tuesday</td>
+            <td class="verd_black12">The Birthday of the Buddha</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">18/06/2018</td>
+            <td class="verd_black12">Monday</td>
+            <td class="verd_black12">Tuen Ng Festival</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">02/07/2018</td>
+            <td class="verd_black12">Monday</td>
+            <td class="verd_black12">The day following Hong Kong Special Administrative Region Establishment Day</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">25/09/2018</td>
+            <td class="verd_black12">Tuesday</td>
+            <td class="verd_black12">The day following the Chinese Mid-Autumn Festival</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">01/10/2018</td>
+            <td class="verd_black12">Monday</td>
+            <td class="verd_black12">National Day</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">17/10/2018</td>
+            <td class="verd_black12">Wednesday</td>
+            <td class="verd_black12">Chung Yeung Festival</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">25/12/2018</td>
+            <td class="verd_black12">Tuesday</td>
+            <td class="verd_black12">Christmas Day</td>
+        </tr>
+        <tr class="tr_normal">
+            <td class="verd_black12">26/12/2018</td>
+            <td class="verd_black12">Wednesday</td>
+            <td class="verd_black12">The first weekday after Christmas Day</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+Notes:
+<br>
+<br>
+There will be no afternoon trading session and after-hours trading session on the following business day:
+<br>
+27 January 2017 (Friday) &ndash; Eve of Lunar New Year
+<br>
+<br>
+15 February 2018 (Thursday) &ndash; Eve of Lunar New Year&rsquo;s Day
+<br>
+24 December 2018 (Monday) &ndash; Eve of Christmas Day
+<br>
+31 December 2018 (Monday) &ndash; Eve of New Year
+<br>
+<br>
+On the following business day, there will be no After-Hours Trading Session for Stock Index Futures, RMB Currency Futures and London Metal Mini Futures:
+<br>
+29 May 2017 (Monday) - Bank holiday in both the United Kingdom (UK) and the United States (U.S.)
+<br>
+<br>
+On the following business day, there will be no after-hours trading session for Stock Index Futures and RMB Currency Futures while the after-hours trading session for London Metal Mini Futures will continue as normal:
+<br>
+28 May 2018 (Monday) - Bank holiday in both the United Kingdom (UK) and the United States (U.S.)
+<br>
+<br>
+<br>
+<br>
+				
+			</div>
+            
+            <div class="baseholder">
+                
+            </div>
+            <br style="clear:both;" />
+        </div>
+
+        <div id="pagecontent_0_maincontent_0_TimeTag" class="container loadMore__timetag-container" data-last-updated="1513070276">
+            <i id="pagecontent_0_maincontent_0_TimeIcon" class="loadMore__timetag-icon"></i>
+            <p class="loadMore__timetag">Updated 12 Dec 2017</p>
+        </div>
+</section>
+    </main>
+    <aside class="nav-side side-content">
+        
+    </aside>
+</div>
+
+
+
+        
+
+<div class="noindex" id="hkex_market_footer">
+<footer>
+          <div class="container">
+            <div class="footer__logo">
+                <a href="/?sc_lang=en" title="footerbrand"><img src="/-/media/Market-System/footerbrand.png" alt="footerbrand" /></a>
+            </div>
+            <ul class="footer__social-icons">
+                <li><a href="https://twitter.com/hkexgroup" Title="Follow on Twitter" Target="_blank"><img src="/images/HKEX/HKEX MARKET/twitter.svg" alt="Follow on Twitter"></a></li><li><a href="https://www.linkedin.com/company/hkex" Title="Follow on LinkedIn" Target="_blank"><img src="/images/HKEX/HKEX MARKET/linkedin.svg" alt="Follow on LinkedIn"></a></li><li><a href="/Global/Follow-Us-on-WeChat?sc_lang=en" Title="Follow on WeChat" Target="_self"><img src="/images/HKEX/HKEX MARKET/wechat.svg" alt="Follow on WeChat"></a></li><li><a href="https://www.youtube.com/user/hkexgroup" Title="Follow on YouTube" Target="_blank"><img src="/images/HKEX/HKEX MARKET/youtube.svg" alt="Follow on YouTube"></a></li><li><a href="/Global/RSS-Feeds?sc_lang=en" Title="RSS Feed" Target="_self"><img src="/images/HKEX/HKEX MARKET/rss.svg" alt="RSS Feed"></a></li>
+            </ul>
+              <div class="footer__clearBoth"></div>            	      
+            	<ul class="footer__nav">
+                    <li class='footer__nav-item'><a class='footer__nav-link' href="/Global/Exchange/Contact?sc_lang=en" Title="Contact">Contact</a></li><li class='footer__nav-item'><a class='footer__nav-link' href="http://www.hkexgroup.com/About-HKEX/Careers" Title="Career" target="_blank">Career</a></li><li class='footer__nav-item'><a class='footer__nav-link' href="/Global/Exchange/FAQ/Top-Questions?sc_lang=en" Title="FAQ" target="_self">FAQ</a></li><li class='footer__nav-item'><a class='footer__nav-link' href="/Global/Exchange/Sitemap?sc_lang=en" Title="Sitemap">Sitemap</a></li><li class='footer__nav-item'><a class='footer__nav-link' href="/Global/Exchange/Glossary?sc_lang=en" Title="Glossary">Glossary</a></li><li class='footer__nav-item'><a class='footer__nav-link' href="/Global/Exchange/Disclaimer?sc_lang=en" Title="Disclaimer">Disclaimer</a></li><li class='footer__nav-item'><a class='footer__nav-link' href="/Global/Exchange/Hyperlink-Policy?sc_lang=en" Title="Hyperlink Policy">Hyperlink Policy</a></li><li class='footer__nav-item'><a class='footer__nav-link' href="/Global/Exchange/Privacy-Policy?sc_lang=en" Title="Privacy Policy">Privacy Policy</a></li><li class='footer__nav-item'><a class='footer__nav-link' href="/Global/Exchange/Website-Tutorials?sc_lang=en" Title="Website Tutorials">Website Tutorials</a></li>
+            	</ul>
+              <div class="footer__clearBoth"></div>                
+            	<p class="footer__privacy">
+                    ©2017 Hong Kong Exchanges and Clearing Limited. All rights reserved.            		
+            	</p>
+            
+            
+          </div>
+        </footer>
+</div>
+        <div class="overlay"></div>
+        <!--<div class="overlay noindex"></div>
+        <div id="disclaimerDialog" class="noindex"></div>
+        <script src="scripts/vendor.js"></script>  
+    
+        <script type="text/javascript">
+            $(function () {
+                $('input, textarea').placeholder();
+            });
+        </script>
+    
+        <script src="scripts/main.js"></script>
+        -->
+        <!--[if lte IE 9]>
+        <script src="scripts/ie9.js"></script>
+    
+        ![endif]-->
+    
+<script src="/Scripts/HKEX/HKEX Market/main.js?v=1" type="text/javascript"></script><script src="/Scripts/HKEX/HKEX Market/market.js?v=1" type="text/javascript"></script><script src="/Scripts/HKEX/HKEX Market/jquery.fancybox.pack.js?v=1" type="text/javascript"></script></form>
+    <div id="loading" class="hide">
+        <div id="loading-content">
+            <img src="/Images/HKEX/HKEX MARKET/videocontrol/video_loading.gif" alt="Loading" />
+        </div>
+    </div>
+	
+	<script type="text/javascript">
+	    $(document).ready(function () {
+	        antiClickJack();
+	    });
+
+	    //anti clickjack function goes here
+	    function antiClickJack() {
+	        var isFramed = self != top;
+	        var currentDomain = window.location.host;
+	        //check if the application sites navigate within themselves
+	        //then antiClickJack should have no effect
+	        var navigateWithinDomain = window.parent.location.href.toString().indexOf(currentDomain) != -1;
+	        if (navigateWithinDomain == false) {
+	            $("body").css("display", "none");
+	            return;
+	        }
+
+	        if (isFramed) {
+	            var url = document.referrer;
+	            var acceptedHostFrame = isHostFrameAllowed(url);
+	            if (!acceptedHostFrame) {
+	                $("body").css("display", "none");
+	                //alert("accepted host");
+	            } else {
+	                return;
+	            }
+	        }
+	    }
+
+	    function isHostFrameAllowed(targetHostFrame) {
+	        var hostframes = "www.hkgem.com,www.hkex.com.hk,www.hkexgroup.com,sc.hkex.com.hk,sc.hkexnews.hk,www.hkexnews.hk";
+	        if (hostframes.length == 0) {
+	            return true;
+	        }
+	        var hosts = hostframes.split(",");
+	        for (var i = 0; i < hosts.length; i++) {
+	            if (targetHostFrame.indexOf(hosts[i]) > -1) {
+	                return true;
+	            }
+	        }
+	        return false;
+	    }
+    </script>
+</body>
+</html>

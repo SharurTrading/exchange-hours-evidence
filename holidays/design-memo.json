@@ -1,0 +1,81 @@
+{
+  "task": "design-memo",
+  "written_utc": "2026-09-12",
+  "memo_path": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/DESIGN-holiday-tables.md",
+  "crate_modified": false,
+  "inputs": {
+    "results": ["cme-2010-2012.json","cme-2013-2015.json","cme-2016-2018.json","cme-2019-2021.json","cme-2022-2024.json","cme-2025-2027.json","cfe-eurex-ice-cde-smfe-2026-2027.json"],
+    "verifiers": ["cme-2010-2012.verify.json","cme-2013-2015.verify.json","cme-2019-2021.verify.json","cme-2022-2024.verify.json","cme-2025-2027.verify.json","cfe-eurex-ice-cde-smfe-2026-2027.verify.json"],
+    "unverified_block": "cme-2016-2018",
+    "code": ["src/calendar/policy.rs","src/calendar/policy/static_policy.rs","src/calendar/exchange_calendar/mod.rs","src/calendar/query/schedule.rs","src/calendar/query/status.rs","src/calendar/query/sessions.rs","src/calendar/query/candles.rs","src/calendar/query/identity.rs","src/calendar/schedules/timeline.rs","src/calendar/schedules/profile.rs","src/calendar/exceptions.rs","src/calendar/exceptions/static_table.rs"],
+    "review": ["architecture-review/B-sharur-consumption.md#7","architecture-review/D-consequences.md#9.1"]
+  },
+  "decisions": {
+    "key": "crate venue-local trade date; operator event dates collapse into it; operator's printed trade date is corroborating evidence",
+    "row": "(trade_date, kind, tier, document_id) static ascending slice built by a holidays! macro with five const-eval fences, mirroring revisions!",
+    "kinds": ["Closed","EarlyClose","LateOpen","LateOpenAndEarlyClose","Unsourced"],
+    "no_normal_rows": true,
+    "coverage": "inclusive (first,last) trade-date window mirroring ExceptionCoverage; in-coverage-no-row = audited normal",
+    "early_close_and_wrap_removal": "no new mechanism; existing clamp_to_policy and resolve_rule_bounds already correct",
+    "late_open": "existing wrapped/unwrapped ssm disambiguation; a session the normal week lacks (2026-06-20 Saturday) is a declared gap",
+    "modified_days": "triage against the era profile; identical->normal, close-only->EarlyClose, open-only->LateOpen, else declared gap",
+    "crypto": "Closed rows on holiday trade dates drive identity::assign_normal's business-date roll; has_overlay() must include the built-in table or the roll stays dead and the 24/7 family goes dark",
+    "location": "src/calendar/schedules/holidays/<owner>.rs, no-catch-all table_for(CalendarSource)",
+    "layer": "third innermost layer in QueryContext, resolved once per query, applied in resolve_rule_bounds before the caller's DayPolicy",
+    "precedence": "caller SessionExceptionSource (explicit Closed/ReplaceSessions only) -> built-in table -> caller DayPolicy clips; compose by tightening; KnownNormal does not suppress",
+    "api": ["ExchangeCalendar::holiday_on","ExchangeCalendar::holiday_coverage","ExchangeCalendar::without_holidays"],
+    "hot_path": "coverage gate: one partition_point over the sorted rows before any trading-day derivation; identity-derived gate window [D,D+1] ordinary, [D-1,D+1] SET, [D,D+18] crypto; proven by a differential gate-soundness test",
+    "tier": "T1 preferred, T2 admissible and carried in the row; T3/T4 do not compile",
+    "evidence": "docs/evidence/<owner>.md gains a ## Holidays section, one subsection per year, instants quoted in CT and ET as printed, plus a Derived-from column; new fence ties every row date to the file",
+    "venues": "CME/CBOT/COMEX/NYMEX tables are the intersection of the families routing to them; disagreement ships no row and is a named gap"
+  },
+  "root_cause_of_100x": "src/calendar/query/schedule.rs:335-348 - with any overlay attached, resolve_rule_bounds runs candle_end_with(Daily) and candle_start_with(Daily) per rule per candidate day (~17-23 us each per B section 7) purely to derive one trade date, against a 167.7 ns baseline is_open",
+  "performance_targets": {
+    "is_open_regular_far_from_holiday": "<=195 ns (baseline 167.7 ns)",
+    "is_open_closed_far_from_holiday": "<=420 ns (baseline 361.8 ns)",
+    "is_open_on_or_adjacent_to_holiday": "<=3 us",
+    "cold_axis_4999_is_open_plus_1_session_close": "<=1.1 ms regular / <=2.2 ms closed (vs ~84 ms at the unfixed 100x)",
+    "static_day_policy_uncovered_date": "<=2x once DayPolicy::may_affect ships",
+    "gate": "no rows merge until the far-from-a-holiday rows are met"
+  },
+  "waves": [
+    "Wave 0 - engine, gate, types, macro, API, fences, benchmark; zero rows",
+    "Wave 1 - eight served families 2025-2027 after repairing five cme-2025-2027 findings",
+    "Wave 2 - 2022-2024 after re-retrieving the six recoverable 2024 holidays",
+    "Wave 3 - 2019-2021 after rebuilding the fabricated 2019-01-01 nikkei quotation",
+    "Wave 4 - 2016-2018 BLOCKED until a verification task runs",
+    "Wave 5 - 2013-2015 after retrieving the excluded .xls class and resolving the 2015 Labor Day T1-vs-T1 conflict",
+    "Wave 6 - 2010-2012, lowest risk, closes the January-2010 floor",
+    "Wave 7 - venue intersection tables",
+    "Wave 8 - CFE/Eurex/ICE US/CDE/SMFE, 2026 onwards only"
+  ],
+  "row_magnitudes": {
+    "note": "pre-triage, derived by mapping six retrieval vocabularies onto the eight crate keys",
+    "per_key": {"equity_index":208,"interest_rates":229,"fx":212,"energy":203,"grains":242,"livestock":212,"crypto":90,"nikkei":113},
+    "total": 1509,
+    "per_family_year": "11-16",
+    "kind_mix": {"closed":533,"early_close":749,"late_open":61,"modified_to_triage":145,"unknown":9}
+  },
+  "unsourced": [
+    "2023 MLK, Presidents' Day, Good Friday - all families (independently confirmed absent from CME's T2 service)",
+    "Juneteenth 2019, 2020, 2021 - all families",
+    "Columbus Day / Veterans Day most years (2013 is a positive T1 statement of normality)",
+    "globex_nikkei_225_dollar as a distinct printed line 2010-2025",
+    "order-entry phase deviations on holidays (no is_open consequence)",
+    "intraday topology on modified days",
+    "the 2026-06-20 / 2026-07-04 / 2027-06-19 Saturday sessions (sourced but unrepresentable under scalars)",
+    "a T1 rendering for 2024-2027 (T2 only)",
+    "venue history below 2026 for CFE, Eurex, ICE US, CDE, SMFE",
+    "ICE Daily Gold and Silver further LBMA-holiday closures"
+  ],
+  "follow_ups": [
+    "verify cme-2016-2018",
+    "re-retrieve the six 2024 holidays incl. the 2024-07-03 ES 12:15 CT early close",
+    "rebuild the 2019-01-01 nikkei row from bytes",
+    "retrieve the 2013-2015 .xls class and resolve the 2015 Labor Day conflict",
+    "retrieve CDE notice 26-01 and re-run the skipped archive enumeration",
+    "v2 ExceptionBlock-carrying holiday rows (needs a LAW-HOLIDAY-SCOPE amendment)",
+    "DayPolicy::may_affect provided method",
+    "venue-intersection audit across all waves"
+  ]
+}

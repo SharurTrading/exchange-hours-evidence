@@ -1,0 +1,53 @@
+Title: CME Globex Notice: Sandbox-Dallas Launch Begins - June 15 - CME Group
+
+URL Source: https://www.cmegroup.com/notices/electronic-trading/2026/06/20260601.html
+
+Markdown Content:
+Electronic Trading (CME Globex)
+
+**To:** CME Globex and Market Data Customers
+
+**From:** Global Market Solutions & Services (GMSS)
+
+**#** 20260601
+
+**Notice Date:** 01 June 2026
+
+For the latest roadmap of CME Group technology initiatives: See the [Development Launch Schedule](https://www.cmegroup.com/globex/develop-to-cme-globex/development-launches.html).
+
+Find the previous versions of CME Group notices on the Notice Search page:
+
+*   [CME Globex Notices](https://www.cmegroup.com/notices.html#filters=all-12)
+*   [EBS Market on CME Globex Notices](https://www.cmegroup.com/notices.html#filters=ebs)
+*   [BrokerTec Markets on CME Globex Notices](https://www.cmegroup.com/notices.html#filters=brokertec)
+
+Effective **Monday, June 15**, the Sandbox-Dallas environment will launch with Market Segment 68, CME and CBOT Equity Futures (excluding E-mini S&P), and Market Data Platform (MDP) channels 318 - CME Equity Futures and 342 - CBOT Equity Index Futures. This is a critical early-access window for clients to validate their cloud journey and connectivity solutions.
+
+IPs for the new gateways and MDP channels and the schedule for the remaining [in-scope market segments](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457216122/CME+Globex+on+Google+Cloud#Scope) will be announced in a future CME Globex Notice.
+
+All CME Globex services will be available in the Sandbox-Dallas environment, including:
+
+*   iLink Order Entry Service Gateway (OESGW), Market Segment Gateway (MSGW) and Convenience Gateway (CGW)
+*   Drop Copy for MSGW and for CGW
+*   MDP Multicast on ULL Network
+*   Cloud Multicast
+*   MDP TCP Recovery
+
+All CME Globex features will be supported in the Sandbox-Dallas environment, except:
+
+*   Clients will not be able to create User-Defined Spreads (UDS).
+*   With the exception of Drop Copy, [Risk Management Services](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457412195/Risk+Management+Services) will not be available for Sandbox-Dallas sessions and activity.
+
+CME Group will replay production-level market activity for clients to test against **Monday-Friday**.
+
+CME Group is offering a Pilot Program for clients who achieve specific technical milestones. The first 50 participants to complete each obligation by the deadline and submit proof will earn a stipend. Details on this program are available in the [CME Globex Sandbox-Dallas Pilot Program Agreement](https://www.cmegroup.com/globex/files/sandbox-dallas-pilot-program.pdf).
+
+Information on compute pricing for U4C Bare Metal and U4S Virtual Machine instances is available now from Google Cloud’s Account Teams. To support the migration and the testing of U4 machines specifically, Google Cloud customers may opt in to a Google Cloud incentive program that provides up to $30,000 in credits for U4 compute usage. More information on this program is available from your Account Team or contact exchanges@google.com.
+
+#### Stay Informed on Technology Changes
+
+Don't miss important updates about new features, products and technology changes. Subscribe using the method(s) that best fits your workflow:
+
+##### Receive email notices
+
+Stay informed, with notices delivered directly to your inbox.

@@ -1,0 +1,3245 @@
+{
+ "task": "cme-2022-2024 - CME Group holiday trading schedules by product group, calendar years 2022, 2023 and 2024",
+ "coverage": "ROUND 2 (repair, 2026-09-14 UTC). This file supersedes cme-2022-2024.json, the round-1 result, which is kept byte-identical beside it as the record of what the verifier judged FAIL (cme-2022-2024.verify.json). Five prose or verbatim repairs were applied and nothing else: (1) the 2023-11-23 globex_grains verbatim no longer attributes a 'TRADE DATE' label to the Thursday column - the label is in the document (x 392.72, y 784.0) but belongs to the FX row's Thursday cell, and the GRAINS Thursday cell is empty; (2) the ZONES paragraph now states the measured per-document occurrence count of the Central Time line instead of claiming it is printed in both header and footer of every one-pager; (3) the same paragraph now enumerates all eleven 2022/2023 workbooks' UTC offsets rather than five of them; (4) the 2024-09-02 globex_grains verbatim now carries the whole 2024-09-03 eventDate with each event's own tradingDate; (5) the EARLY-CLOSE RULE's 'closed' clause now states the test actually applied - no session running through D at all - instead of the literal \"no session for D's own trade date\", which would have swallowed modified/early_close on a holiday Tuesday. The one-line pointer correcting the round-0 INDEX's T2 claim was added to raw/cme-2022-2024/INDEX.md. No status, close_instant, open_instant, date, name, family, line, tier or document value changed, and no entry was added or deleted. ROUND 1 (fixer, 2026-09-12 UTC). This file supersedes cme-2022-2024.r0.json, which is the round-0 result kept verbatim beside it. Five things changed and nothing else: (1) six 2024 windows the round-0 result declared unsourced were retrieved from CME's own trading-hours service and are now recorded, and the six matching 'missing' entries were deleted; (2) four verbatims that quoted a 'TRADE DATE' label out of a table cell that is empty in the bytes were corrected; (3) a single early-close rule was settled and applied across all three years; (4) the Energy/Metals key decoration was moved into a separate 'line' field; (5) the false claim about the T2 channel's behaviour was removed from this paragraph. Entries the verifier did not dispute are unchanged.\n\nWHAT THE T2 CHANNEL ACTUALLY DOES. The round-0 result said the trading-hours service 'returns empty event arrays for dates already past'. That is wrong, and it was generalised from a single probe. Re-read from the bytes on 2026-09-12 (UTC): the service serves a rolling window of recent history. At Wayback crawl instant 2024-07-08T16:14:38/39Z the response for fromEventDate=2023-05-28 carries hasEvents:false with every event array empty, and so do 2022-12-31, 2023-01-15, 2023-02-19 and 2023-04-06; the response for fromEventDate=2023-12-24 carries hasEvents:true, and so does every 2024 window probed - 2024-01-14, 2024-02-18, 2024-03-28, 2024-05-26, 2024-06-18 and 2024-07-03. So the 2024-07-08 crawl reaches back roughly seven months and every 2024 U.S. holiday is recoverable from it, while the January-April 2023 holidays are not. Negative and boundary controls are saved in raw/cme-2022-2024-fix/ (neg_api_2023-01-15.json, neg_api_2023-02-19.json, neg_api_2023-04-06.json, probe_2023-05-28.json, probe_2023-12-24.json).\n\nEARLY-CLOSE RULE (settled here, applied to 2022, 2023 and 2024 alike). A family's status on date D is read only from what the document prints for D itself, and the comparison instant is that family's ordinary final close as printed in the SAME document for an adjacent regular trade date - never carried over from another document or another year. 'closed': the document prints no session running through D at all - neither a D-dated trade date nor a next-business-day-dated session that is open across D; the only instants printed in D's column, if any, are the evening reopen that ends the closure. 'early_close': D's own trade date ends strictly earlier than the family's ordinary final-close instant. 'late_open': it starts later. 'modified': D's printed instants are the family's ordinary ones but something else printed for D is non-normal - in these documents that is almost always D carrying no trade date of its own, the session running through D being labelled with the next business day's trade date while the family still halts and reopens at its ordinary instants. 'normal': nothing printed for D differs from the family's ordinary day; the trade date of the evening reopen that begins after D's close belongs to the next day's row, not D's. Under this rule the 16:00 CT holiday halt that CME prints for FX and CRYPTOCURRENCIES on holiday Mondays and Thursdays is NOT an early close - 16:00 CT is exactly the ordinary final close those two families print on the adjacent regular trade date in the same sheet, one-pager or service response - so 28 entries that round 0 recorded as 'early_close' at 16:00 CT are now 'modified' (2022-01-17, 2022-02-21, 2022-05-30, 2022-06-20, 2022-07-04, 2022-09-05, 2022-11-24, 2023-05-29, 2023-06-19, 2023-07-04, 2023-09-04, 2023-11-23, 2024-09-02 and 2024-11-28, globex_fx and globex_cryptocurrency on each). The 2023-07-03 and 2024-12-31 rows that print 16:00 (CLOSED) for a trade date of their own stay 'normal', which is what the same rule gives; the inconsistency the verifier found between the two cases is resolved by the rule, not by moving one of them.\n\nWHAT IS SOURCED. Complete for calendar 2022 (all ten published U.S. holiday schedules plus the day after Thanksgiving) from CME Group's own per-asset-class Globex holiday spreadsheets at T1. For 2023, seven of the ten U.S. holidays are sourced at T1: six (Memorial Day, Juneteenth, Independence Day, Labor Day, Thanksgiving and Christmas Day) from CME's 'Holiday Schedule' one-pagers under cmegroup.com/trading-hours/files/ - memorial-day-2023.pdf, juneteenth-2023.pdf, 4th-of-july-2023.pdf, labor-day-2023.pdf, thanksgiving-day-2023.pdf, christmas-day-2023.pdf, the only six of that family that return 200 in the archive - and New Year's Day 2023 from the last of the old .xls Globex schedules; MLK 2023-01-16, Presidents Day 2023-02-20 and Good Friday 2023-04-07 remain unsourced - no one-pager was published for them (mlk-day-2023.pdf and good-friday-2023.pdf were crawled and 404; presidents-day-2023.pdf was never crawled), the only 2023 .xls files are the compact MGEX/DME sheets that carry no CME product groups, and the T2 service is empty for all three windows at every 200 capture that exists. For 2024, all ten U.S. holidays plus the 3 July early close are now recorded: New Year's Day 2024 at T1 from the last one-pager, and MLK, Presidents Day, Good Friday, Memorial Day, Juneteenth, 3-4 July, Labor Day, Thanksgiving and the day after, Christmas Eve, Christmas Day and New Year's Eve at T2 from Wayback id_ replays of CME's own trading-hours service.\n\nTHE 2024 ROWS ADDED IN THIS ROUND. 2024-01-15 (MLK), 2024-02-19 (Presidents Day), 2024-03-29 (Good Friday), 2024-05-27 (Memorial Day), 2024-06-19 (Juneteenth), 2024-07-03 (Independence Day eve) and 2024-07-04 (Independence Day). Every verbatim in these rows was generated mechanically from the saved response bytes - each printed eventTime, marketEventType and tradingDate, in the service's own spelling, for all three eventDates of the window. Two things in them are new to this file rather than repeats of a pattern: on 2024-07-03 the service prints 12:15 closed for ES (an equity-index early close round 0 recorded nowhere) while ZN, CL, GC, 6E, BTC and CSC print their ordinary 16:00 close, and on 2024-03-28, the Thursday before Good Friday, CSC prints 13:55 closed - dairy's week-end close brought forward - with no evening reopen. On 2024-03-29 itself every one of the ten products has an empty event array, and so does 2024-03-30; the requested window ends there, so no open instant for the Sunday 31 March reopen is recorded from this document.\n\nZONES, EXACTLY AS PRINTED. The 2022 sheets state 'All times are Central Time' with the UTC offset printed per sheet: the five daylight-time sheets - Good Friday, Memorial Day, Juneteenth, Independence Day and Labor Day - print 'ET +1  UTC  +5', and the six standard-time sheets - New Year 2022, MLK, Presidents Day, Thanksgiving (both vintages), Christmas and the 2023 New Year sheet - print 'ET +1  UTC  +6'. The 2023 and 2024 one-pagers print 'Trading hours are subject to change and are in U.S. Central Time unless otherwise stated'. memorial-day-2023.pdf, juneteenth-2023.pdf, labor-day-2023.pdf and 4th-of-july-2023.pdf print it twice, once in the header and once in the footer; thanksgiving-day-2023.pdf, christmas-day-2023.pdf and new-years-day-2024.pdf print it once, in the header only. The T2 service JSON carries no zone field at all; it is rendered by cmegroup.com in U.S. Central Time, and every instant taken from it is recorded as the service prints it and labelled CT on that basis. Nothing was inferred from another year's pattern, and where a family's row is absent from a document that absence is stated in the verbatim rather than filled in.\n\nPRODUCT GROUPS, AS CME PRINTS THEM. 2022 sheets: Equity Products (with a Nikkei line on the MLK, Presidents Day and Memorial Day sheets), Interest Rate Products, FX Products, one combined Energy/Metals/Softs/DME line, Grains and Oilseeds, Livestock, Cryptocurrency, Dairy, Lumber. 2023 one-pagers and the 2024 service: INTEREST RATE, EQUITIES, ENERGY, GRAINS, FX, METALS, LIVESTOCK (printed AGRICULTURE on thanksgiving-day-2023.pdf), CRYPTOCURRENCIES, DAIRY, LUMBER, with ENERGY and METALS as separate lines. Because NYMEX energy and COMEX metals share one served key, 'family' is now always the served key spelling 'globex_energy' and the document's own row label is carried in a separate 'line' field ('ENERGY', 'METALS', or the 2022 sheets' combined label), so a consumer can key on 'family' mechanically.\n\nRETRIEVAL. cmegroup.com answers 403 to this machine, so every document was read through the Wayback Machine's verbatim id_ replay of the operator's own bytes; all artifacts retrieved in this round are saved with their sha256 and byte length in raw/cme-2022-2024-fix/INDEX.md, whose addendum also supplies the sha256 and a description for the twelve helper and derived files and the two CDX responses that raw/cme-2022-2024/INDEX.md left unlisted or unlabelled.\n\nDOCUMENT MAP ADDED IN THIS ROUND (these six files are saved in raw/cme-2022-2024-fix/, not in raw/cme-2022-2024/; the 'document' field gives filename @ Wayback id_ capture instant in UTC; all six are the same crawl instant 2024-07-08T16:14:39Z of CME's own trading-hours service): api_2024-01-14.json = https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-01-14&toEventDate=2024-01-16&isProtected || api_2024-02-18.json = https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-02-18&toEventDate=2024-02-20&isProtected || api_2024-03-28.json = https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-03-28&toEventDate=2024-03-30&isProtected || api_2024-05-26.json = https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-05-26&toEventDate=2024-05-28&isProtected || api_2024-06-18.json = https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-06-18&toEventDate=2024-06-20&isProtected || api_2024-07-03.json = https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-07-03&toEventDate=2024-07-05&isProtected. The round-0 document map is unchanged and is reproduced here: DOCUMENT MAP (the 'document' field gives filename @ Wayback id_ capture instant in UTC; full operator URLs here): 2022-new-years-holiday-schedule.xls = https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-new-years-holiday-schedule.xls || 2022-mlk-day-holiday-schedule.xls = https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-mlk-day-holiday-schedule.xls || 2022-presidents-day-holiday-schedule.xls = https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-presidents-day-holiday-schedule.xls || 2022-good-friday-holiday-schedule.xls = https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-good-friday-holiday-schedule.xls || 2022-memorial-day-holiday-schedule.xls = https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-memorial-day-holiday-schedule.xls || 2022-juneteenth-holiday-schedule.xls = https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-juneteenth-holiday-schedule.xls || 2022-independence-day-holiday-schedule.xls = https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-independence-day-holiday-schedule.xls || 2022-labor-day-holiday-schedule.xls = https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-labor-day-holiday-schedule.xls || 2022-thanksgiving-holiday-schedule.FINAL-20221122.xls = https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-thanksgiving-holiday-schedule.xls || 2022-christmas-holiday-schedule.xls = https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-christmas-holiday-schedule.xls || 2023-new-years-holiday-schedule.xls = https://www.cmegroup.com/tools-information/holiday-calendar/files/2023-new-years-holiday-schedule.xls || memorial-day-2023.pdf = https://www.cmegroup.com/trading-hours/files/memorial-day-2023.pdf || juneteenth-2023.pdf = https://www.cmegroup.com/trading-hours/files/juneteenth-2023.pdf || 4th-of-july-2023.pdf = https://www.cmegroup.com/trading-hours/files/4th-of-july-2023.pdf || labor-day-2023.pdf = https://www.cmegroup.com/trading-hours/files/labor-day-2023.pdf || thanksgiving-day-2023.pdf = https://www.cmegroup.com/trading-hours/files/thanksgiving-day-2023.pdf || christmas-day-2023.pdf = https://www.cmegroup.com/trading-hours/files/christmas-day-2023.pdf || new-years-day-2024.pdf = https://www.cmegroup.com/trading-hours/files/new-years-day-2024.pdf || api_2024-09-01.json = https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageSize=999&fromEventDate=2024-09-01&toEventDate=2024-09-03 || api_2024-11-27.json = https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageSize=999&fromEventDate=2024-11-27&toEventDate=2024-11-29 || api_2024-12-24.json = https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageSize=999&fromEventDate=2024-12-24&toEventDate=2024-12-26 || api_2024-12-31.json = https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageSize=999&fromEventDate=2024-12-31&toEventDate=2025-01-02.",
+ "holidays": [
+  {
+   "date": "2022-01-01",
+   "name": "New Year's Day 2022 (Saturday 1 January 2022; CME Globex schedule covers Thu 30 Dec 2021 - Mon 3 Jan 2022)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "normal",
+     "verbatim": "Equity Products - Thursday, December 30: Close 16:00, Pre-opening** 16:45, Open 17:00 ;; Friday, December 31: Close 16:00 ;; Sunday, January 2: Pre-opening** 16:00, Open 17:00 ;; Monday, January 3: NORMAL SCHEDULE",
+     "document": "2022-new-years-holiday-schedule.xls @ 2022-01-02T13:06:55Z",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "normal",
+     "verbatim": "No outright Nikkei line is printed on this sheet; the Equity Products exception block lists only \"Nikkei/TOPIX BTIC\" (Thursday, December 30 Close 00:00 ;; Friday, December 31 halt Closed ;; Monday, January 3: \"(Normal Schedule for Trade Date 1/4/22)\"), so the Equity Products row governs outright Nikkei.",
+     "document": "2022-new-years-holiday-schedule.xls @ 2022-01-02T13:06:55Z",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "normal",
+     "verbatim": "Interest Rate Products - Thursday, December 30: Close 16:00, Pre-opening** 16:45, Open 17:00 ;; Friday, December 31: Close 16:00 ;; Sunday, January 2: Pre-opening** 16:00, Open 17:00 ;; Monday, January 3: NORMAL SCHEDULE",
+     "document": "2022-new-years-holiday-schedule.xls @ 2022-01-02T13:06:55Z",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_fx",
+     "status": "normal",
+     "verbatim": "FX Products - Thursday, December 30: Close 16:00, Pre-opening** 16:45, Open 17:00 ;; Friday, December 31: Close 16:00 ;; Sunday, January 2: Pre-opening** 16:00, Open 17:00 ;; Monday, January 3: NORMAL SCHEDULE",
+     "document": "2022-new-years-holiday-schedule.xls @ 2022-01-02T13:06:55Z",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_energy",
+     "line": "Energy, Metals, Softs & DME Products",
+     "status": "normal",
+     "verbatim": "Energy, Metals, Softs & DME Products - Thursday, December 30: Close 16:00, Pre-opening** 16:45, Open 17:00 ;; Friday, December 31: Close 16:00 ;; Sunday, January 2: Pre-opening** 16:00, Open 17:00 ;; Monday, January 3: NORMAL SCHEDULE",
+     "document": "2022-new-years-holiday-schedule.xls @ 2022-01-02T13:06:55Z",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_grains",
+     "status": "normal",
+     "verbatim": "Grains and Oilseeds - Thursday, December 30: Close 13:20, PCP 14:30-16:00, Pre-opening** 16:45, Open 19:00 ;; Friday, December 31: Pre-opening** 8:00, Open 08:30, Close 13:20, PCP* 14:30-16:00 ;; Sunday, January 2: Pre-opening** 16:00, Open 19:00 ;; Monday, January 3: NORMAL SCHEDULE",
+     "document": "2022-new-years-holiday-schedule.xls @ 2022-01-02T13:06:55Z",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "normal",
+     "verbatim": "Livestock - Thursday, December 30: Close 13:05, PCP 14:30-16:00 ;; Friday, December 31: Pre-opening** 08:00, Open 08:30, Close 13:05, PCP* 14:30-16:00 ;; Monday, January 3: Pre-opening** 08:00, Open 08:30",
+     "document": "2022-new-years-holiday-schedule.xls @ 2022-01-02T13:06:55Z",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "normal",
+     "verbatim": "Cryptocurrency - Thursday, December 30: Close 16:00, Pre-opening** 16:45, Open 17:00 ;; Friday, December 31: Close 16:00 ;; Sunday, January 2: Pre-opening** 16:00, Open 17:00 ;; Monday, January 3: NORMAL SCHEDULE",
+     "document": "2022-new-years-holiday-schedule.xls @ 2022-01-02T13:06:55Z",
+     "tier": "T1"
+    },
+    {
+     "family": "dairy",
+     "status": "normal",
+     "verbatim": "Dairy - Thursday, December 30: Close 16:00, Pre-opening** 16:45, Open 17:00 ;; Friday, December 31: Close 13:55 ;; Sunday, January 2: Pre-opening** 16:00, Open 17:00",
+     "document": "2022-new-years-holiday-schedule.xls @ 2022-01-02T13:06:55Z",
+     "tier": "T1"
+    },
+    {
+     "family": "lumber",
+     "status": "normal",
+     "verbatim": "Lumber - Thursday, December 30: Close 15:05 ;; Friday, December 31: Pre-opening** 06:00, Open 09:00, Close 15:05 ;; Monday, January 3: Pre-opening** 06:00, Open 09:00",
+     "document": "2022-new-years-holiday-schedule.xls @ 2022-01-02T13:06:55Z",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2022-01-17",
+   "name": "Dr. Martin Luther King, Jr. Day 2022 (Monday 17 January 2022)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity Products - Friday, January 14 Regular Fri. Close 16:00 ;; Sunday, January 16 Pre-opening** 16:00, Open 17:00 ;; Monday, January 17 Halt 12:00, Pre-opening 12:00, Open 17:00",
+     "document": "2022-mlk-day-holiday-schedule.xls @ 2022-01-17T21:22:30Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "Nikkei - Friday, January 14 Regular Fri. Close 16:00 ;; Sunday, January 16 Pre-opening** 16:00, Open 17:00 ;; Monday, January 17 Pre-opening** 12:00, Open 17:00. [The Nikkei row prints 12:00 under the \"Pre-opening**\" column and leaves the adjacent \"Halt\" cell blank; the Equity Products row prints the same 12:00 under \"Halt\". Recorded as printed.]",
+     "document": "2022-mlk-day-holiday-schedule.xls @ 2022-01-17T21:22:30Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate Products - Friday, January 14 Regular Fri. Close 16:00 ;; Sunday, January 16 Pre-opening** 16:00, Open 17:00 ;; Monday, January 17 Halt 12:00, Pre-opening 12:00, Open 17:00",
+     "document": "2022-mlk-day-holiday-schedule.xls @ 2022-01-17T21:22:30Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "FX Products - Friday, January 14 Regular Fri. Close 16:00 ;; Sunday, January 16 Pre-opening** 16:00, Open 17:00 ;; Monday, January 17 Halt 16:00, Pre-opening 16:00, Open 17:00",
+     "document": "2022-mlk-day-holiday-schedule.xls @ 2022-01-17T21:22:30Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "Energy, Metals. Softs & DME Products",
+     "status": "early_close",
+     "verbatim": "Energy, Metals. Softs & DME Products - Friday, January 14 Regular Fri. Close 16:00 ;; Sunday, January 16 Pre-opening** 16:00, Open 17:00 ;; Monday, January 17 Halt 13:30, Pre-opening 13:30, Open 17:00 [one combined Energy+Metals line on the 2022 sheets]",
+     "document": "2022-mlk-day-holiday-schedule.xls @ 2022-01-17T21:22:30Z",
+     "tier": "T1",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grains and Oilseeds - Friday, January 14 Regular Fri. Close 13:20, PCP* 14:30-16:00 ;; Sunday, January 16 Pre-opening** 16:00 ;; Monday, January 17 Open 19:00 ;; Tuesday, January 18 Pre-opening** 7:45 (H) 8:00, Open 08:30. [No Sunday-evening open and no Monday day session: the market sits in pre-open from Sunday 16:00 until Monday 19:00.]",
+     "document": "2022-mlk-day-holiday-schedule.xls @ 2022-01-17T21:22:30Z",
+     "tier": "T1",
+     "open_instant": "19:00 CT (Mon 17 Jan, for trade date Tue 18 Jan)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock - Friday, January 14 Regular Fri. Close 13:05, PCP* 14:30-16:00 ;; Tuesday, January 18 Pre-opening** 08:00, Open 08:30. [No entry for Sunday 16 or Monday 17 January.]",
+     "document": "2022-mlk-day-holiday-schedule.xls @ 2022-01-17T21:22:30Z",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Tue 18 Jan)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "Cryptocurrency - Friday, January 14 Regular Fri. Close 16:00 ;; Sunday, January 16 Pre-opening** 16:00, Open 17:00 ;; Monday, January 17 Halt 16:00, Pre-opening 16:00, Open 17:00",
+     "document": "2022-mlk-day-holiday-schedule.xls @ 2022-01-17T21:22:30Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy - Friday, January 14 Regular Fri. Close 13:55 ;; Sunday, January 16 Pre-opening** 16:00 ;; Monday, January 17 Open 17:00. [No Sunday-evening open; market sits in pre-open until Monday 17:00.]",
+     "document": "2022-mlk-day-holiday-schedule.xls @ 2022-01-17T21:22:30Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 17 Jan)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber - Friday, January 14 Regular Fri. Close 15:05 ;; Tuesday, January 18 Pre-opening** 06:00, Open 09:00.",
+     "document": "2022-mlk-day-holiday-schedule.xls @ 2022-01-17T21:22:30Z",
+     "tier": "T1",
+     "open_instant": "09:00 CT (Tue 18 Jan)"
+    }
+   ]
+  },
+  {
+   "date": "2022-02-21",
+   "name": "Presidents Day 2022 (Monday 21 February 2022)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity Products - Friday, February 18 Regular Fri. Close 16:00 ;; Sunday, February 20 Pre-opening** 16:00, Open 17:00 ;; Monday, February 21 Halt 12:00, Pre-opening 12:00, Open 17:00",
+     "document": "2022-presidents-day-holiday-schedule.xls @ 2022-07-04T07:38:10Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "Nikkei - Friday, February 18 Regular Fri. Close 16:00 ;; Sunday, February 20 Pre-opening** 16:00, Open 17:00 ;; Monday, February 21 Pre-opening** 12:00, Open 17:00. [12:00 printed under \"Pre-opening**\", adjacent \"Halt\" cell blank, as on the MLK sheet.]",
+     "document": "2022-presidents-day-holiday-schedule.xls @ 2022-07-04T07:38:10Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate Products - Friday, February 18 Regular Fri. Close 16:00 ;; Sunday, February 20 Pre-opening** 16:00, Open 17:00 ;; Monday, February 21 Halt 12:00, Pre-opening 12:00, Open 17:00",
+     "document": "2022-presidents-day-holiday-schedule.xls @ 2022-07-04T07:38:10Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "FX Products - Friday, February 18 Regular Fri. Close 16:00 ;; Sunday, February 20 Pre-opening** 16:00, Open 17:00 ;; Monday, February 21 Halt 16:00, Pre-opening 16:00, Open 17:00",
+     "document": "2022-presidents-day-holiday-schedule.xls @ 2022-07-04T07:38:10Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "Energy, Metals, Softs & DME Products",
+     "status": "early_close",
+     "verbatim": "Energy, Metals, Softs & DME Products - Friday, February 18 Regular Fri. Close 16:00 ;; Sunday, February 20 Pre-opening** 16:00, Open 17:00 ;; Monday, February 21 Halt 13:30, Pre-opening 13:30, Open 17:00",
+     "document": "2022-presidents-day-holiday-schedule.xls @ 2022-07-04T07:38:10Z",
+     "tier": "T1",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grains and Oilseeds - Friday, February 18 Regular Fri. Close 13:20, PCP* 14:30-16:00 ;; Sunday, February 20 Pre-opening** 16:00 ;; Monday, February 21 Open 19:00 ;; Tuesday, February 22 Pre-opening** 7:45 (H) 8:00, Open 08:30",
+     "document": "2022-presidents-day-holiday-schedule.xls @ 2022-07-04T07:38:10Z",
+     "tier": "T1",
+     "open_instant": "19:00 CT (Mon 21 Feb, for trade date Tue 22 Feb)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock - Friday, February 18 Regular Fri. Close 13:05, PCP* 14:30-16:00 ;; Tuesday, February 22 Pre-opening** 08:00, Open 08:30",
+     "document": "2022-presidents-day-holiday-schedule.xls @ 2022-07-04T07:38:10Z",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Tue 22 Feb)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "Cryptocurrency - Friday, February 18 Regular Fri. Close 16:00 ;; Sunday, February 20 Pre-opening** 16:00, Open 17:00 ;; Monday, February 21 Halt 16:00, Pre-opening 16:00, Open 17:00",
+     "document": "2022-presidents-day-holiday-schedule.xls @ 2022-07-04T07:38:10Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy - Friday, February 18 Regular Fri. Close 13:55 ;; Sunday, February 20 Pre-opening** 16:00 ;; Monday, February 21 Open 17:00",
+     "document": "2022-presidents-day-holiday-schedule.xls @ 2022-07-04T07:38:10Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 21 Feb)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber - Friday, February 18 Regular Fri. Close 15:05 ;; Tuesday, February 22 Pre-opening** 06:00, Open 09:00",
+     "document": "2022-presidents-day-holiday-schedule.xls @ 2022-07-04T07:38:10Z",
+     "tier": "T1",
+     "open_instant": "09:00 CT (Tue 22 Feb)"
+    }
+   ]
+  },
+  {
+   "date": "2022-04-15",
+   "name": "Good Friday 2022 (Friday 15 April 2022)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "closed",
+     "verbatim": "Equity Products - Thursday, April 14 Regular Close 16:00 ;; Friday, April 15 \"Globex Closed\" ;; Sunday, April 17 Pre-opening** 16:00, Open 17:00",
+     "document": "2022-good-friday-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Sun 17 Apr)"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "closed",
+     "verbatim": "No outright Nikkei line is printed on this sheet; the Equity Products exception block lists only \"Nikkei BTIC\" (Thursday, April 14 Regular Close 1:00 ;; Friday, April 15 \"Globex Closed\" ;; Sunday, April 17 Pre-opening** 16:00, Open 17:00 ;; Monday, April 18 Close 01:00), so the Equity Products row - \"Friday, April 15: Globex Closed\" - governs outright Nikkei.",
+     "document": "2022-good-friday-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Sun 17 Apr)"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "closed",
+     "verbatim": "Interest Rate Products - Thursday, April 14 Regular Close 16:00 ;; Friday, April 15 \"Globex Closed\" ;; Sunday, April 17 Pre-opening** 16:00, Open 17:00",
+     "document": "2022-good-friday-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Sun 17 Apr)"
+    },
+    {
+     "family": "globex_fx",
+     "status": "closed",
+     "verbatim": "FX Products - Thursday, April 14 Regular Close 16:00 ;; Friday, April 15 \"Globex Closed\" ;; Sunday, April 17 Pre-opening** 16:00, Open 17:00",
+     "document": "2022-good-friday-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Sun 17 Apr)"
+    },
+    {
+     "family": "globex_energy",
+     "line": "Energy, Metals, Softs & DME Products",
+     "status": "closed",
+     "verbatim": "Energy, Metals, Softs & DME Products - Thursday, April 14 Regular Close 16:00 ;; Friday, April 15 \"Globex Closed\" ;; Sunday, April 17 Pre-opening** 16:00, Open 17:00",
+     "document": "2022-good-friday-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Sun 17 Apr)"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grains and Oilseeds - Thursday, April 14 Regular Close 13:20, PCP* 14:30-16:00 ;; Friday, April 15 \"Globex Closed\" ;; Sunday, April 17 Pre-opening** 16:00, Open 19:00",
+     "document": "2022-good-friday-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "19:00 CT (Sun 17 Apr)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock - Thursday, April 14 Regular Close 13:05, PCP* 14:30-16:00 ;; Friday, April 15 \"Globex Closed\" ;; Monday, April 18 Pre-opening** 08:00, Open 08:30",
+     "document": "2022-good-friday-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Mon 18 Apr)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "closed",
+     "verbatim": "Cryptocurrency - Thursday, April 14 Regular Close 16:00 ;; Friday, April 15 \"Globex Closed\" ;; Sunday, April 17 Pre-opening** 16:00, Open 17:00",
+     "document": "2022-good-friday-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Sun 17 Apr)"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy - Thursday, April 14 Early Thur. Close 13:55 ;; Friday, April 15 \"Globex Closed\" ;; Sunday, April 17 Pre-opening** 16:00, Open 17:00",
+     "document": "2022-good-friday-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Sun 17 Apr)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber - Thursday, April 14 Regular Close 15:05 ;; Friday, April 15 \"Globex Closed\" ;; Monday, April 18 Pre-opening** 06:00, Open 09:00",
+     "document": "2022-good-friday-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "09:00 CT (Mon 18 Apr)"
+    }
+   ]
+  },
+  {
+   "date": "2022-05-30",
+   "name": "Memorial Day 2022 (Monday 30 May 2022)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity Products - Friday, May 27 Regular Fri. Close 16:00 ;; Sunday, May 29 Pre-opening** 16:00, Open 17:00 ;; Monday, May 30 Halt 12:00, Pre-opening** 12:00, Open 17:00",
+     "document": "2022-memorial-day-holiday-schedule.xls @ 2022-07-04T06:54:38Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "Nikkei & BTIC (Equity Products exception row r12) - Friday, May 27 Regular Fri. Close 1:00, Pre-opening 10:30, Open 11:00, Close 16:00 ;; Sunday, May 29 Pre-opening** 16:00, Open 17:00 ;; Monday, May 30 Halt \"1:00 (close)\", Pre-opening** 16:45, Open 17:00 ;; Tuesday, May 31 \"1:00 (close)\". [This sheet merges the outright and BTIC Nikkei lines under one label and prints the BTIC-style 01:00 Friday close; on the MLK and Presidents Day sheets the outright \"Nikkei\" row carries a 16:00 Friday close and a separate \"Nikkei BTIC\" row carries 00:00. Recorded as printed; the merge is a residual ambiguity.]",
+     "document": "2022-memorial-day-holiday-schedule.xls @ 2022-07-04T06:54:38Z",
+     "tier": "T1",
+     "close_instant": "01:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate Products - Friday, May 27 Regular Fri. Close 16:00 ;; Sunday, May 29 Pre-opening** 16:00, Open 17:00 ;; Monday, May 30 Halt 12:00, Pre-opening** 12:00, Open 17:00",
+     "document": "2022-memorial-day-holiday-schedule.xls @ 2022-07-04T06:54:38Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "FX Products - Friday, May 27 Regular Fri. Close 16:00 ;; Sunday, May 29 Pre-opening** 16:00, Open 17:00 ;; Monday, May 30 Halt 16:00, Pre-opening** 16:00, Open 17:00",
+     "document": "2022-memorial-day-holiday-schedule.xls @ 2022-07-04T06:54:38Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "Energy, Metals & DME Products",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME Products - Friday, May 27 Regular Fri. Close 16:00 ;; Sunday, May 29 Pre-opening** 16:00, Open 17:00 ;; Monday, May 30 Halt 13:30, Pre-opening** 13:30, Open 17:00",
+     "document": "2022-memorial-day-holiday-schedule.xls @ 2022-07-04T06:54:38Z",
+     "tier": "T1",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grains and Oilseeds - Friday, May 27 Regular Fri. Close 13:20, PCP* 14:30-16:00 ;; Sunday, May 29 Pre-opening** 16:00 ;; Monday, May 30 Open 19:00 ;; Tuesday, May 31 Pre-opening** 7:45 (H) 8:00, Open 08:30",
+     "document": "2022-memorial-day-holiday-schedule.xls @ 2022-07-04T06:54:38Z",
+     "tier": "T1",
+     "open_instant": "19:00 CT (Mon 30 May, for trade date Tue 31 May)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock - Friday, May 27 Regular Fri. Close 13:05, PCP* 14:30-16:00 ;; Tuesday, May 31 Pre-opening** 08:00, Open 08:30",
+     "document": "2022-memorial-day-holiday-schedule.xls @ 2022-07-04T06:54:38Z",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Tue 31 May)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "Cryptocurrency - Friday, May 27 Regular Fri. Close 16:00 ;; Sunday, May 29 Pre-opening** 16:00, Open 17:00 ;; Monday, May 30 Halt 16:00, Pre-opening** 16:00, Open 17:00",
+     "document": "2022-memorial-day-holiday-schedule.xls @ 2022-07-04T06:54:38Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy - Friday, May 27 Regular Fri. Close 13:55 ;; Sunday, May 29 Pre-opening** 16:00 ;; Monday, May 30 Open 17:00",
+     "document": "2022-memorial-day-holiday-schedule.xls @ 2022-07-04T06:54:38Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 30 May)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber - Friday, May 27 Regular Fri. Close 15:05 ;; Tuesday, May 31 Pre-opening** 06:00, Open 09:00",
+     "document": "2022-memorial-day-holiday-schedule.xls @ 2022-07-04T06:54:38Z",
+     "tier": "T1",
+     "open_instant": "09:00 CT (Tue 31 May)"
+    }
+   ]
+  },
+  {
+   "date": "2022-06-20",
+   "name": "Juneteenth 2022 (observed Monday 20 June 2022; 19 June fell on a Sunday)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity Products - Friday, June 17 Regular Fri. Close 16:00 ;; Sunday, June 19 Pre-opening** 16:00, Open 17:00 ;; Monday, June 20 Halt 12:00, Pre-opening** 12:00, Open 17:00",
+     "document": "2022-juneteenth-holiday-schedule.xls @ 2022-06-20T20:02:10Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei line is printed on this sheet; the Equity Products exception block lists only \"Nikkei BTIC\" (Monday, June 20 Halt \"01:00 (close)\", Pre-opening** 16:45, Open 17:00), so the Equity Products row - Monday, June 20 Halt 12:00, Open 17:00 - governs outright Nikkei.",
+     "document": "2022-juneteenth-holiday-schedule.xls @ 2022-06-20T20:02:10Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate Products - Friday, June 17 Regular Fri. Close 16:00 ;; Sunday, June 19 Pre-opening** 16:00, Open 17:00 ;; Monday, June 20 Halt 12:00, Pre-opening** 12:00, Open 17:00",
+     "document": "2022-juneteenth-holiday-schedule.xls @ 2022-06-20T20:02:10Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "FX Products - Friday, June 17 Regular Fri. Close 16:00 ;; Sunday, June 19 Pre-opening** 16:00, Open 17:00 ;; Monday, June 20 Halt 16:00, Pre-opening** 16:00, Open 17:00",
+     "document": "2022-juneteenth-holiday-schedule.xls @ 2022-06-20T20:02:10Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "Energy, Metals & DME Products",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME Products - Friday, June 17 Regular Fri. Close 16:00 ;; Sunday, June 19 Pre-opening** 16:00, Open 17:00 ;; Monday, June 20 Halt 13:30, Pre-opening** 13:30, Open 17:00",
+     "document": "2022-juneteenth-holiday-schedule.xls @ 2022-06-20T20:02:10Z",
+     "tier": "T1",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grains and Oilseeds - Friday, June 17 Regular Fri. Close 13:20, PCP* 14:30-16:00 ;; Sunday, June 19 Pre-opening** 16:00 ;; Monday, June 20 Open 19:00 ;; Tuesday, Jun 21 Pre-opening** 7:45 (H) 8:00, Open 08:30",
+     "document": "2022-juneteenth-holiday-schedule.xls @ 2022-06-20T20:02:10Z",
+     "tier": "T1",
+     "open_instant": "19:00 CT (Mon 20 Jun, for trade date Tue 21 Jun)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock - Friday, June 17 Regular Fri. Close 13:05, PCP* 14:30-16:00 ;; Tuesday, Jun 21 Pre-opening** 08:00, Open 08:30",
+     "document": "2022-juneteenth-holiday-schedule.xls @ 2022-06-20T20:02:10Z",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Tue 21 Jun)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "Cryptocurrency - Friday, June 17 Regular Fri. Close 16:00 ;; Sunday, June 19 Pre-opening** 16:00, Open 17:00 ;; Monday, June 20 Halt 16:00, Pre-opening** 16:00, Open 17:00",
+     "document": "2022-juneteenth-holiday-schedule.xls @ 2022-06-20T20:02:10Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy - Friday, June 17 Regular Fri. Close 13:55 ;; Sunday, June 19 Pre-opening** 16:00 ;; Monday, June 20 Open 17:00",
+     "document": "2022-juneteenth-holiday-schedule.xls @ 2022-06-20T20:02:10Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 20 Jun)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber - Friday, June 17 Regular Fri. Close 15:05 ;; Tuesday, Jun 21 Pre-opening** 06:00, Open 09:00",
+     "document": "2022-juneteenth-holiday-schedule.xls @ 2022-06-20T20:02:10Z",
+     "tier": "T1",
+     "open_instant": "09:00 CT (Tue 21 Jun)"
+    }
+   ]
+  },
+  {
+   "date": "2022-07-04",
+   "name": "Independence Day 2022 (Monday 4 July 2022)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity Products - Friday, July 1 Regular Close 16:00 ;; Sunday, July 3 Pre-opening** 16:00, Open 17:00 ;; Monday, July 4 Halt 12:00, Pre-opening** 12:00, Open 17:00",
+     "document": "2022-independence-day-holiday-schedule.xls @ 2022-07-04T06:54:50Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei line is printed on this sheet; the Equity Products exception block lists only \"Nikkei BTIC\" (Monday, July 4 Halt \"1:00 (close)\", Pre-opening** 16:45, Open 17:00), so the Equity Products row - Monday, July 4 Halt 12:00, Open 17:00 - governs outright Nikkei.",
+     "document": "2022-independence-day-holiday-schedule.xls @ 2022-07-04T06:54:50Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate Products - Friday, July 1 Regular Close 16:00 ;; Sunday, July 3 Pre-opening** 16:00, Open 17:00 ;; Monday, July 4 Halt 12:00, Pre-opening** 12:00, Open 17:00",
+     "document": "2022-independence-day-holiday-schedule.xls @ 2022-07-04T06:54:50Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "FX Products - Friday, July 1 Regular Close 16:00 ;; Sunday, July 3 Pre-opening** 16:00, Open 17:00 ;; Monday, July 4 Halt 16:00, Pre-opening** 16:00, Open 17:00",
+     "document": "2022-independence-day-holiday-schedule.xls @ 2022-07-04T06:54:50Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "Energy, Metals & DME Products",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME Products - Friday, July 1 Regular Close 16:00 ;; Sunday, July 3 Pre-opening** 16:00, Open 17:00 ;; Monday, July 4 Halt 13:30, Pre-opening** 13:30, Open 17:00",
+     "document": "2022-independence-day-holiday-schedule.xls @ 2022-07-04T06:54:50Z",
+     "tier": "T1",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grains and Oilseeds - Friday, July 1 Regular Close 13:20, PCP* 14:30 - 16:00 ;; Tuesday, July 5 Pre-opening** 06:00, Open 08:30. [No Sunday 3 July and no Monday 4 July entry: the grain market did not reopen at all between Friday's close and Tuesday morning.]",
+     "document": "2022-independence-day-holiday-schedule.xls @ 2022-07-04T06:54:50Z",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Tue 5 Jul)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock - Friday, July 1 Regular Close 13:05, PCP* 14:30 - 16:00 ;; Tuesday, July 5 Pre-opening** 08:00, Open 08:30",
+     "document": "2022-independence-day-holiday-schedule.xls @ 2022-07-04T06:54:50Z",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Tue 5 Jul)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "Cryptocurrency - Friday, July 1 Regular Close 16:00 ;; Sunday, July 3 Pre-opening** 16:00, Open 17:00 ;; Monday, July 4 Halt 16:00, Pre-opening** 16:00, Open 17:00",
+     "document": "2022-independence-day-holiday-schedule.xls @ 2022-07-04T06:54:50Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy - Friday, July 1 Regular Close 13:55 ;; Sunday, July 3 Pre-opening** 16:00 ;; Monday, July 4 Open 17:00",
+     "document": "2022-independence-day-holiday-schedule.xls @ 2022-07-04T06:54:50Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 4 Jul)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber - Friday, July 1 Regular Close 15:05 ;; Tuesday, July 5 Pre-opening** 06:00, Open 09:00",
+     "document": "2022-independence-day-holiday-schedule.xls @ 2022-07-04T06:54:50Z",
+     "tier": "T1",
+     "open_instant": "09:00 CT (Tue 5 Jul)"
+    }
+   ]
+  },
+  {
+   "date": "2022-09-05",
+   "name": "Labor Day 2022 (Monday 5 September 2022)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity Products - Friday, September 2 Regular Fri. Close 16:00 ;; Sunday, September 4 Pre-opening** 16:00, Open 17:00 ;; Monday, September 5 Halt 12:00, Pre-opening** 12:00, Open 17:00",
+     "document": "2022-labor-day-holiday-schedule.xls @ 2022-07-04T06:54:41Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei line is printed on this sheet; the Equity Products exception block lists only \"Nikkei BTIC\" (Monday, September 5 Halt \"1:00(close)\", Pre-opening** 16:45, Open 17:00), so the Equity Products row - Monday, September 5 Halt 12:00, Open 17:00 - governs outright Nikkei.",
+     "document": "2022-labor-day-holiday-schedule.xls @ 2022-07-04T06:54:41Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate Products - Friday, September 2 Regular Fri. Close 16:00 ;; Sunday, September 4 Pre-opening** 16:00, Open 17:00 ;; Monday, September 5 Halt 12:00, Pre-opening** 12:00, Open 17:00",
+     "document": "2022-labor-day-holiday-schedule.xls @ 2022-07-04T06:54:41Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "FX Products - Friday, September 2 Regular Fri. Close 16:00 ;; Sunday, September 4 Pre-opening** 16:00, Open 17:00 ;; Monday, September 5 Halt 16:00, Pre-opening** 16:00, Open 17:00",
+     "document": "2022-labor-day-holiday-schedule.xls @ 2022-07-04T06:54:41Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "Energy, Metals & DME Products",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME Products - Friday, September 2 Regular Fri. Close 16:00 ;; Sunday, September 4 Pre-opening** 16:00, Open 17:00 ;; Monday, September 5 Halt 13:30, Pre-opening** 13:30, Open 17:00",
+     "document": "2022-labor-day-holiday-schedule.xls @ 2022-07-04T06:54:41Z",
+     "tier": "T1",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grains and Oilseeds - Friday, September 2 Regular Fri. Close 13:20, PCP* 14:30-16:00 ;; Sunday, September 4 Pre-opening** 16:00 ;; Monday, September 5 Open 19:00 ;; Tuesday, Sept. 6 Pre-opening** 7:45 (H) 8:00, Open 08:30",
+     "document": "2022-labor-day-holiday-schedule.xls @ 2022-07-04T06:54:41Z",
+     "tier": "T1",
+     "open_instant": "19:00 CT (Mon 5 Sep, for trade date Tue 6 Sep)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock - Friday, September 2 Regular Fri. Close 13:05, PCP* 14:30-16:00 ;; Tuesday, Sept. 6 Pre-opening** 08:00, Open 08:30",
+     "document": "2022-labor-day-holiday-schedule.xls @ 2022-07-04T06:54:41Z",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Tue 6 Sep)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "Cryptocurrency - Friday, September 2 Regular Fri. Close 16:00 ;; Sunday, September 4 Pre-opening** 16:00, Open 17:00 ;; Monday, September 5 Halt 16:00, Pre-opening** 16:00, Open 17:00",
+     "document": "2022-labor-day-holiday-schedule.xls @ 2022-07-04T06:54:41Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy - Friday, September 2 Regular Fri. Close 13:55 ;; Sunday, September 4 Pre-opening** 16:00 ;; Monday, September 5 Open 17:00",
+     "document": "2022-labor-day-holiday-schedule.xls @ 2022-07-04T06:54:41Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 5 Sep)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber - Friday, September 2 Regular Fri. Close 15:05 ;; Tuesday, Sept. 6 Pre-opening** 06:00, Open 09:00",
+     "document": "2022-labor-day-holiday-schedule.xls @ 2022-07-04T06:54:41Z",
+     "tier": "T1",
+     "open_instant": "09:00 CT (Tue 6 Sep)"
+    }
+   ]
+  },
+  {
+   "date": "2022-11-24",
+   "name": "Thanksgiving Day 2022 (Thursday 24 November 2022)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity Products - Wednesday, November 23 Regular Close 16:00, Pre-opening** 16:45, Open 17:00 ;; Thursday, November 24 Halt 12:00, Pre-opening** 12:00, Open 17:00",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei line is printed on this sheet; the Equity Products exception block lists only \"Nikkei BTIC\" (Thursday, November 24 Halt \"00:00(close)\", Pre-opening** 16:45, Open 17:00), so the Equity Products row - Thursday, November 24 Halt 12:00, Open 17:00 - governs outright Nikkei.",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate Products - Wednesday, November 23 Regular Close 16:00, Pre-opening** 16:45, Open 17:00 ;; Thursday, November 24 Halt 12:00, Pre-opening** 12:00, Open 17:00",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "FX Products - Wednesday, November 23 Regular Close 16:00, Pre-opening** 16:45, Open 17:00 ;; Thursday, November 24 Halt 16:00, Pre-opening** 16:00, Open 17:00",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "Energy, Metals & DME Products",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME Products - Wednesday, November 23 Regular Close 16:00, Pre-opening** 16:45, Open 17:00 ;; Thursday, November 24 Halt 13:30, Pre-opening** 13:30, Open 17:00",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grains (& Mini-Sized) and Oilseeds (& Mini-Sized) - Wednesday, November 23 Regular Close 13:20, PCP* 14:30-16:00, Pre-opening** 16:45 (trade date Friday, November 25) ;; Friday, November 25 Open 08:30, Close 12:05. [No Wednesday-evening open and no Thursday session: pre-open from Wednesday 16:45 straight to Friday 08:30.]",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Fri 25 Nov)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock - Wednesday, November 23 Regular Close 13:05, PCP* 14:30-16:00 ;; Friday, November 25 Pre-opening** 08:00, Open 08:30, Close 12:05",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Fri 25 Nov)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "Cryptocurrency - Wednesday, November 23 Regular Close 16:00, Pre-opening** 16:45, Open 17:00 ;; Thursday, November 24 Halt 16:00, Pre-opening** 16:00, Open 17:00",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy - Wednesday, November 23 Regular Close 16:00 ;; \"Dairy products will remain closed until their regularly scheduled open on Sunday Nov 27th @ 17:00\"",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Sun 27 Nov)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber - Wednesday, November 23 Regular Close 15:05 ;; Friday, November 25 Pre-opening** 06:00, Open 09:00, Close 12:05",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "open_instant": "09:00 CT (Fri 25 Nov)"
+    }
+   ]
+  },
+  {
+   "date": "2022-11-25",
+   "name": "Day after Thanksgiving 2022 (Friday 25 November 2022)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity Products - Friday, November 25 Close 12:15",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei line; the Equity Products row governs (Friday, November 25 Close 12:15). The \"Nikkei BTIC\" exception prints Friday, November 25 Close 00:00.",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate Products - Friday, November 25 Close 12:15",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX Products - Friday, November 25 Close 12:15",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "Energy, Metals & DME Products",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME Products - Friday, November 25 Close 12:45",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "close_instant": "12:45 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "early_close",
+     "verbatim": "Grains (& Mini-Sized) and Oilseeds (& Mini-Sized) - Friday, November 25 Open 08:30, Close 12:05",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "close_instant": "12:05 CT",
+     "open_instant": "08:30 CT"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "early_close",
+     "verbatim": "Livestock - Friday, November 25 Pre-opening** 08:00, Open 08:30, Close 12:05",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "close_instant": "12:05 CT",
+     "open_instant": "08:30 CT"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Cryptocurrency - Friday, November 25 Close 12:45",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "close_instant": "12:45 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy - \"Dairy products will remain closed until their regularly scheduled open on Sunday Nov 27th @ 17:00\"",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Sun 27 Nov)"
+    },
+    {
+     "family": "lumber",
+     "status": "early_close",
+     "verbatim": "Lumber - Friday, November 25 Pre-opening** 06:00, Open 09:00, Close 12:05",
+     "document": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+     "tier": "T1",
+     "close_instant": "12:05 CT",
+     "open_instant": "09:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2022-12-26",
+   "name": "Christmas 2022 (observed Monday 26 December 2022; 25 December fell on a Sunday)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "closed",
+     "verbatim": "Equity Products - Friday, December 23 Close 16:00 ;; Monday, December 26 \"Globex Closed\", Pre-opening** 16:00, Open 17:00 ;; Tuesday, December 27 Close 16:00",
+     "document": "2022-christmas-holiday-schedule.xls @ 2022-07-04T06:54:30Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 26 Dec)"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "closed",
+     "verbatim": "No outright Nikkei line is printed on this sheet; the Equity Products row - Monday, December 26 \"Globex Closed\", Open 17:00 - governs.",
+     "document": "2022-christmas-holiday-schedule.xls @ 2022-07-04T06:54:30Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 26 Dec)"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "closed",
+     "verbatim": "Interest Rate Products - Friday, December 23 Close 16:00 ;; Monday, December 26 \"Globex Closed\", Pre-opening** 16:00, Open 17:00 ;; Tuesday, December 27 Close 16:00",
+     "document": "2022-christmas-holiday-schedule.xls @ 2022-07-04T06:54:30Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 26 Dec)"
+    },
+    {
+     "family": "globex_fx",
+     "status": "closed",
+     "verbatim": "FX Products - Friday, December 23 Close 16:00 ;; Monday, December 26 \"Globex Closed\", Pre-opening** 16:00, Open 17:00 ;; Tuesday, December 27 Close 16:00",
+     "document": "2022-christmas-holiday-schedule.xls @ 2022-07-04T06:54:30Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 26 Dec)"
+    },
+    {
+     "family": "globex_energy",
+     "line": "Energy, Metals & DME products (see notes below)",
+     "status": "closed",
+     "verbatim": "Energy, Metals & DME products (see notes below) - Friday, December 23 Close 16:00 ;; Monday, December 26 \"Globex Closed\", Pre-opening** 16:00, Open 17:00 ;; Tuesday, December 27 Close 16:00",
+     "document": "2022-christmas-holiday-schedule.xls @ 2022-07-04T06:54:30Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 26 Dec)"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grains and Oilseeds - Friday, December 23 Close 13:20 (**PCP 14:30-16:00) ;; Monday, December 26 \"Globex Closed\", Pre-opening** 16:00, Open 19:00 ;; Tuesday, December 27 Pre-opening** 08:00, Open 08:30, Close 13:20, PCP* 14:30-16:00",
+     "document": "2022-christmas-holiday-schedule.xls @ 2022-07-04T06:54:30Z",
+     "tier": "T1",
+     "open_instant": "19:00 CT (Mon 26 Dec)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock - Friday, December 23 Close 13:05 (*PCP 14:30-16:00) ;; Monday, December 26 \"Globex Closed\" ;; Tuesday, December 27 Pre-opening** 08:00, Open 08:30, Close 13:05, PCP* 14:30-16:00",
+     "document": "2022-christmas-holiday-schedule.xls @ 2022-07-04T06:54:30Z",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Tue 27 Dec)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "closed",
+     "verbatim": "Cryptocurrency - Friday, December 23 Close 16:00 ;; Monday, December 26 \"Globex Closed\", Pre-opening** 16:00, Open 17:00 ;; Tuesday, December 27 Close 16:00",
+     "document": "2022-christmas-holiday-schedule.xls @ 2022-07-04T06:54:30Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 26 Dec)"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy - Friday, December 23 Close 13:55 ;; Monday, December 26 \"Globex Closed\", Pre-opening** 16:00, Open 17:00 ;; Tuesday, December 27 Close 16:00",
+     "document": "2022-christmas-holiday-schedule.xls @ 2022-07-04T06:54:30Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 26 Dec)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber - Friday, December 23 Close 15:05 ;; Monday, December 26 \"Globex Closed\" ;; Tuesday, December 27 Pre-opening** 06:00, Open 09:00, Close 15:05",
+     "document": "2022-christmas-holiday-schedule.xls @ 2022-07-04T06:54:30Z",
+     "tier": "T1",
+     "open_instant": "09:00 CT (Tue 27 Dec)"
+    }
+   ]
+  },
+  {
+   "date": "2023-01-02",
+   "name": "New Year's Day 2023 (observed Monday 2 January 2023; 1 January fell on a Sunday)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "closed",
+     "verbatim": "Equity Products - Friday, December 30 Close 16:00 ;; Monday, January 2 \"Globex Closed\", Pre-opening** 16:00, Open 17:00 ;; Tuesday, January 3 Close 16:00",
+     "document": "2023-new-years-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 2 Jan)"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "closed",
+     "verbatim": "No outright Nikkei line is printed on this sheet; the Equity Products row - Monday, January 2 \"Globex Closed\", Open 17:00 - governs.",
+     "document": "2023-new-years-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 2 Jan)"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "closed",
+     "verbatim": "Interest Rate Products - Friday, December 30 Close 16:00 ;; Monday, January 2 \"Globex Closed\", Pre-opening** 16:00, Open 17:00",
+     "document": "2023-new-years-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 2 Jan)"
+    },
+    {
+     "family": "globex_fx",
+     "status": "closed",
+     "verbatim": "FX Products - Friday, December 30 Close 16:00 ;; Monday, January 2 \"Globex Closed\", Pre-opening** 16:00, Open 17:00",
+     "document": "2023-new-years-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 2 Jan)"
+    },
+    {
+     "family": "globex_energy",
+     "line": "Energy, Metals & DME Products",
+     "status": "closed",
+     "verbatim": "Energy, Metals & DME Products - Friday, December 30 Close 16:00 ;; Monday, January 2 \"Globex Closed\", Pre-opening** 16:00, Open 17:00",
+     "document": "2023-new-years-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 2 Jan)"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grains and Oilseeds - Friday, December 30 Close 13:20, PCP 14:30-16:00 ;; Monday, January 2 \"Globex Closed\", Pre-opening** 16:00, Open 19:00 ;; Tuesday, January 3 NORMAL SCHEDULE",
+     "document": "2023-new-years-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "19:00 CT (Mon 2 Jan)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock - Friday, December 30 Close 13:05, PCP 14:30-16:00 ;; Monday, January 2 \"Globex Closed\" ;; Tuesday, January 3 Pre-opening** 08:00, Open 08:30",
+     "document": "2023-new-years-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Tue 3 Jan)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "closed",
+     "verbatim": "Cryptocurrency - Friday, December 30 Close 16:00 ;; Monday, January 2 \"Globex Closed\", Pre-opening** 16:00, Open 17:00",
+     "document": "2023-new-years-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 2 Jan)"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy - Friday, December 30 Close 16:00 ;; Monday, January 2 \"Globex Closed\", Pre-opening** 16:00, Open 17:00",
+     "document": "2023-new-years-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 2 Jan)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber - Friday, December 30 Close 15:05 ;; Monday, January 2 \"Globex Closed\" ;; Tuesday, January 3 Pre-opening** 06:00, Open 09:00",
+     "document": "2023-new-years-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+     "tier": "T1",
+     "open_instant": "09:00 CT (Tue 3 Jan)"
+    }
+   ]
+  },
+  {
+   "date": "2023-05-29",
+   "name": "Memorial Day 2023 (Monday 29 May 2023)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "EQUITIES - SUNDAY, 28 MAY 2023: TRADE DATE: TUES 30 MAY / 16:00 (PREOPEN) / 17:00 (OPEN) ;; MONDAY, 29 MAY 2023: TRADE DATE: TUES 30 MAY / 12:00 (PREOPEN) HALT / 17:00 (OPEN) ;; TUESDAY, 30 MAY 2023: 16:00 (CLOSED)",
+     "document": "memorial-day-2023.pdf @ 2023-04-20T22:40:18Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed on the 2023-format one-pagers; the EQUITIES row governs: MONDAY, 29 MAY 2023 12:00 (PREOPEN) HALT / 17:00 (OPEN).",
+     "document": "memorial-day-2023.pdf @ 2023-04-20T22:40:18Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "INTEREST RATE - SUNDAY, 28 MAY 2023: TRADE DATE: TUES 30 MAY / 16:00 (PREOPEN) / 17:00 (OPEN) ;; MONDAY, 29 MAY 2023: TRADE DATE: TUES 30 MAY / 12:00 (PREOPEN) HALT / 17:00 (OPEN) ;; TUESDAY, 30 MAY 2023: 16:00 (CLOSED)",
+     "document": "memorial-day-2023.pdf @ 2023-04-20T22:40:18Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "FX - MONDAY, 29 MAY 2023: TRADE DATE: TUES 30 MAY / 16:00 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "memorial-day-2023.pdf @ 2023-04-20T22:40:18Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "early_close",
+     "verbatim": "ENERGY - MONDAY, 29 MAY 2023: TRADE DATE: TUES 30 MAY / 13:30 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "memorial-day-2023.pdf @ 2023-04-20T22:40:18Z",
+     "tier": "T1",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "early_close",
+     "verbatim": "METALS - MONDAY, 29 MAY 2023: 13:30 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "memorial-day-2023.pdf @ 2023-04-20T22:40:18Z",
+     "tier": "T1",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "GRAINS - SUNDAY, 28 MAY 2023: TRADE DATE: TUES 30 MAY / 16:00 (PREOPEN) ;; MONDAY, 29 MAY 2023: TRADE DATE: TUES 30 MAY / 19:00 (OPEN). [No Sunday-evening open and no Monday day session.]",
+     "document": "memorial-day-2023.pdf @ 2023-04-20T22:40:18Z",
+     "tier": "T1",
+     "open_instant": "19:00 CT (Mon 29 May, for trade date Tue 30 May)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "LIVESTOCK - SUNDAY, 28 MAY 2023: (no entry) ;; MONDAY, 29 MAY 2023: (no entry) ;; TUESDAY, 30 MAY 2023: 08:00 (PREOPEN) / 08:30 (OPEN) / 13:05 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED)",
+     "document": "memorial-day-2023.pdf @ 2023-04-20T22:40:18Z",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Tue 30 May)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "CRYPTOCURRENCIES - MONDAY, 29 MAY 2023: TRADE DATE: TUES 30 MAY / 16:00 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "memorial-day-2023.pdf @ 2023-04-20T22:40:18Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "DAIRY - SUNDAY, 28 MAY 2023: 16:00 (PREOPEN) ;; MONDAY, 29 MAY 2023: 17:00 (OPEN)",
+     "document": "memorial-day-2023.pdf @ 2023-04-20T22:40:18Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 29 May)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "LUMBER - SUNDAY, 28 MAY 2023 and MONDAY, 29 MAY 2023: (no entries) ;; TUESDAY, 30 MAY 2023: 06:00 (PREOPEN) / 09:00 (OPEN) / 15:05 (CLOSED)",
+     "document": "memorial-day-2023.pdf @ 2023-04-20T22:40:18Z",
+     "tier": "T1",
+     "open_instant": "09:00 CT (Tue 30 May)"
+    }
+   ]
+  },
+  {
+   "date": "2023-06-19",
+   "name": "Juneteenth 2023 (Monday 19 June 2023)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "EQUITIES - SUNDAY, 18 JUNE 2023: TRADE DATE: TUES 20 JUNE / 16:00 (PREOPEN) / 17:00 (OPEN) ;; MONDAY, 19 JUNE 2023: TRADE DATE: TUES 20 JUNE / 12:00 (PREOPEN) HALT / 17:00 (OPEN) ;; TUESDAY, 20 JUNE 2023: 16:00 (CLOSED)",
+     "document": "juneteenth-2023.pdf @ 2023-06-13T18:59:49Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; the EQUITIES row governs: MONDAY, 19 JUNE 2023 12:00 (PREOPEN) HALT / 17:00 (OPEN).",
+     "document": "juneteenth-2023.pdf @ 2023-06-13T18:59:49Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "INTEREST RATE - MONDAY, 19 JUNE 2023: TRADE DATE: TUES 20 JUNE / 12:00 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "juneteenth-2023.pdf @ 2023-06-13T18:59:49Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "FX - MONDAY, 19 JUNE 2023: TRADE DATE: TUES 20 JUNE / 16:00 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "juneteenth-2023.pdf @ 2023-06-13T18:59:49Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "early_close",
+     "verbatim": "ENERGY - MONDAY, 19 JUNE 2023: TRADE DATE: TUES 20 JUNE / 13:30 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "juneteenth-2023.pdf @ 2023-06-13T18:59:49Z",
+     "tier": "T1",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "early_close",
+     "verbatim": "METALS - MONDAY, 19 JUNE 2023: TRADE DATE: TUES 20 JUNE / 13:30 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "juneteenth-2023.pdf @ 2023-06-13T18:59:49Z",
+     "tier": "T1",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "GRAINS - SUNDAY, 18 JUNE 2023: TRADE DATE: TUES 20 JUNE / 16:00 (PREOPEN) ;; MONDAY, 19 JUNE 2023: TRADE DATE: TUES 20 JUNE / 19:00 (OPEN)",
+     "document": "juneteenth-2023.pdf @ 2023-06-13T18:59:49Z",
+     "tier": "T1",
+     "open_instant": "19:00 CT (Mon 19 Jun, for trade date Tue 20 Jun)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "LIVESTOCK - no SUNDAY 18 or MONDAY 19 JUNE entries ;; TUESDAY, 20 JUNE 2023: 08:00 (PREOPEN) / 08:30 (OPEN) / 13:05 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED)",
+     "document": "juneteenth-2023.pdf @ 2023-06-13T18:59:49Z",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Tue 20 Jun)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "CRYPTOCURRENCIES - MONDAY, 19 JUNE 2023: TRADE DATE: TUES 20 JUNE / 16:00 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "juneteenth-2023.pdf @ 2023-06-13T18:59:49Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "DAIRY - SUNDAY, 18 JUNE 2023: 16:00 (PREOPEN) ;; MONDAY, 19 JUNE 2023: 17:00 (OPEN)",
+     "document": "juneteenth-2023.pdf @ 2023-06-13T18:59:49Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 19 Jun)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "LUMBER - no SUNDAY 18 or MONDAY 19 JUNE entries ;; TUESDAY, 20 JUNE 2023: 06:00 (PREOPEN) / 09:00 (OPEN) / 15:05 (CLOSED)",
+     "document": "juneteenth-2023.pdf @ 2023-06-13T18:59:49Z",
+     "tier": "T1",
+     "open_instant": "09:00 CT (Tue 20 Jun)"
+    }
+   ]
+  },
+  {
+   "date": "2023-07-03",
+   "name": "Independence Day eve 2023 (Monday 3 July 2023 - early close for some groups)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "EQUITIES - MONDAY, 3 JULY 2023: TRADE DATE: MON 3 JULY / 12:15 (CLOSED) ;; TRADE DATE: WED 5 JULY / 16:45 (PREOPEN) / 17:00 (OPEN)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1",
+     "close_instant": "12:15 CT",
+     "open_instant": "17:00 CT (evening reopen for trade date Wed 5 July)"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; the EQUITIES row governs: MONDAY, 3 JULY 2023 12:15 (CLOSED).",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1",
+     "close_instant": "12:15 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "normal",
+     "verbatim": "INTEREST RATE - MONDAY, 3 JULY 2023: TRADE DATE: MON 3 JULY / 16:00 (CLOSED) ;; TRADE DATE: WED 5 JULY / 16:45 (PREOPEN) / 17:00 (OPEN). [Regular 16:00 final close printed for the Monday trade date.]",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_fx",
+     "status": "normal",
+     "verbatim": "FX - MONDAY, 3 JULY 2023: TRADE DATE: MON 3 JULY / 16:00 (CLOSED) ;; TRADE DATE: WED 5 JULY / 16:45 (PREOPEN) / 17:00 (OPEN)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "normal",
+     "verbatim": "ENERGY - MONDAY, 3 JULY 2023: TRADE DATE: MON 3 JULY / 16:00 (CLOSED) ;; TRADE DATE: WED 5 JULY / 16:45 (PREOPEN) / 17:00 (OPEN)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "normal",
+     "verbatim": "METALS - MONDAY, 3 JULY 2023: TRADE DATE: MON 3 JULY / 16:00 (CLOSED) ;; TRADE DATE: WED 5 JULY / 16:45 (PREOPEN) / 17:00 (OPEN)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_grains",
+     "status": "modified",
+     "verbatim": "GRAINS - MONDAY, 3 JULY 2023: TRADE DATE: MON 3 JULY / 07:45 (PAUSED) / 08:00 (PREOPEN) / 08:30 (OPEN) / 13:20 (PAUSED) / 13:30 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED). [Regular Monday day session, but no Monday-evening reopen: the next GRAINS entry is WEDNESDAY, 5 JULY 06:00 (PREOPEN) / 08:30 (OPEN).]",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (final close of the Monday trade date)",
+     "open_instant": "08:30 CT (Wed 5 Jul)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "normal",
+     "verbatim": "LIVESTOCK - MONDAY, 3 JULY 2023: TRADE DATE: MON 3 JULY / 08:00 (PREOPEN) / 08:30 (OPEN) / 13:05 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "normal",
+     "verbatim": "CRYPTOCURRENCIES - MONDAY, 3 JULY 2023: TRADE DATE: MON 3 JULY / 16:00 (CLOSED) ;; TRADE DATE: WED 5 JULY / 16:45 (PREOPEN) / 17:00 (OPEN)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1"
+    },
+    {
+     "family": "dairy",
+     "status": "normal",
+     "verbatim": "DAIRY - MONDAY, 3 JULY 2023: TRADE DATE: MON 3 JULY / 16:00 (CLOSED) ;; TRADE DATE: WED 5 JULY / 16:45 (PREOPEN)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1"
+    },
+    {
+     "family": "lumber",
+     "status": "normal",
+     "verbatim": "LUMBER - MONDAY, 3 JULY 2023: TRADE DATE: MON 3 JULY / 06:00 (PREOPEN) / 09:00 (OPEN) / 15:05 (CLOSED)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2023-07-04",
+   "name": "Independence Day 2023 (Tuesday 4 July 2023)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "EQUITIES - TUESDAY, 4 JULY 2023: TRADE DATE: WED 5 JULY / 12:00 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; the EQUITIES row governs: TUESDAY, 4 JULY 2023 12:00 (PREOPEN) HALT / 17:00 (OPEN).",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "INTEREST RATE - TUESDAY, 4 JULY 2023: TRADE DATE: WED 5 JULY / 12:00 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "FX - TUESDAY, 4 JULY 2023: TRADE DATE: WED 5 JULY / 16:00 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "early_close",
+     "verbatim": "ENERGY - TUESDAY, 4 JULY 2023: TRADE DATE: WED 5 JULY / 13:30 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "early_close",
+     "verbatim": "METALS - TUESDAY, 4 JULY 2023: TRADE DATE: WED 5 JULY / 13:30 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "GRAINS - TUESDAY, 4 JULY 2023: no entries. Next entry WEDNESDAY, 5 JULY 2023: TRADE DATE: WED 5 JULY / 06:00 (PREOPEN) / 08:30 (OPEN)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Wed 5 Jul)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "LIVESTOCK - TUESDAY, 4 JULY 2023: no entries. Next entry WEDNESDAY, 5 JULY 2023: 08:00 (PREOPEN) / 08:30 (OPEN) / 13:05 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Wed 5 Jul)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "CRYPTOCURRENCIES - TUESDAY, 4 JULY 2023: TRADE DATE: WED 5 JULY / 16:00 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "DAIRY - TUESDAY, 4 JULY 2023: TRADE DATE: WED 5 JULY / 17:00 (OPEN)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Tue 4 Jul)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "LUMBER - TUESDAY, 4 JULY 2023: no entries. Next entry WEDNESDAY, 5 JULY 2023: 06:00 (PREOPEN) / 09:00 (OPEN) / 15:05 (CLOSED)",
+     "document": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+     "tier": "T1",
+     "open_instant": "09:00 CT (Wed 5 Jul)"
+    }
+   ]
+  },
+  {
+   "date": "2023-09-04",
+   "name": "Labor Day 2023 (Monday 4 September 2023)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "EQUITIES - SUNDAY, 3 SEPTEMBER 2023: TRADE DATE: TUES 5 SEP / 16:00 (PREOPEN) / 17:00 (OPEN) ;; MONDAY, 4 SEPTEMBER 2023: TRADE DATE: TUES 5 SEP / 12:00 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "labor-day-2023.pdf @ 2023-08-02T19:24:46Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; the EQUITIES row governs: MONDAY, 4 SEPTEMBER 2023 12:00 (PREOPEN) HALT / 17:00 (OPEN).",
+     "document": "labor-day-2023.pdf @ 2023-08-02T19:24:46Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "INTEREST RATE - MONDAY, 4 SEPTEMBER 2023: TRADE DATE: TUES 5 SEP / 12:00 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "labor-day-2023.pdf @ 2023-08-02T19:24:46Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "FX - MONDAY, 4 SEPTEMBER 2023: TRADE DATE: TUES 5 SEP / 16:00 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "labor-day-2023.pdf @ 2023-08-02T19:24:46Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "early_close",
+     "verbatim": "ENERGY - MONDAY, 4 SEPTEMBER 2023: TRADE DATE: TUES 5 SEP / 13:30 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "labor-day-2023.pdf @ 2023-08-02T19:24:46Z",
+     "tier": "T1",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "early_close",
+     "verbatim": "METALS - MONDAY, 4 SEPTEMBER 2023: 13:30 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "labor-day-2023.pdf @ 2023-08-02T19:24:46Z",
+     "tier": "T1",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "GRAINS - SUNDAY, 3 SEPTEMBER 2023: TRADE DATE: TUES 5 SEP / 16:00 (PREOPEN) ;; MONDAY, 4 SEPTEMBER 2023: TRADE DATE: TUES 5 SEP / 19:00 (OPEN)",
+     "document": "labor-day-2023.pdf @ 2023-08-02T19:24:46Z",
+     "tier": "T1",
+     "open_instant": "19:00 CT (Mon 4 Sep, for trade date Tue 5 Sep)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "LIVESTOCK - no SUNDAY 3 or MONDAY 4 SEPTEMBER entries ;; TUESDAY, 5 SEPTEMBER 2023: 08:00 (PREOPEN) / 08:30 (OPEN) / 13:05 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED)",
+     "document": "labor-day-2023.pdf @ 2023-08-02T19:24:46Z",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Tue 5 Sep)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "CRYPTOCURRENCIES - MONDAY, 4 SEPTEMBER 2023: TRADE DATE: TUES 5 SEP / 16:00 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "labor-day-2023.pdf @ 2023-08-02T19:24:46Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "DAIRY - SUNDAY, 3 SEPTEMBER 2023: 16:00 (PREOPEN) ;; MONDAY, 4 SEPTEMBER 2023: 17:00 (OPEN)",
+     "document": "labor-day-2023.pdf @ 2023-08-02T19:24:46Z",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 4 Sep)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "LUMBER - no SUNDAY 3 or MONDAY 4 SEPTEMBER entries ;; TUESDAY, 5 SEPTEMBER 2023: 06:00 (PREOPEN) / 09:00 (OPEN) / 15:05 (CLOSED)",
+     "document": "labor-day-2023.pdf @ 2023-08-02T19:24:46Z",
+     "tier": "T1",
+     "open_instant": "09:00 CT (Tue 5 Sep)"
+    }
+   ]
+  },
+  {
+   "date": "2023-11-23",
+   "name": "Thanksgiving Day 2023 (Thursday 23 November 2023)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "EQUITIES - WEDNESDAY, 22 NOVEMBER 2023: TRADE DATE: WED 22 NOV / 16:00 (CLOSED); TRADE DATE: FRI 24 NOV / 16:45 (PREOPEN) / 17:00 (OPEN) ;; THURSDAY, 23 NOVEMBER 2023: TRADE DATE: FRI 24 NOV / 12:00 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; the EQUITIES row governs: THURSDAY, 23 NOVEMBER 2023 12:00 (PREOPEN) HALT / 17:00 (OPEN).",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "INTEREST RATE - THURSDAY, 23 NOVEMBER 2023: TRADE DATE: FRI 24 NOV / 12:00 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "FX - THURSDAY, 23 NOVEMBER 2023: TRADE DATE: FRI 24 NOV / 16:00 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "early_close",
+     "verbatim": "ENERGY - THURSDAY, 23 NOVEMBER 2023: 13:30 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "early_close",
+     "verbatim": "METALS - THURSDAY, 23 NOVEMBER 2023: 13:30 (PREOPEN) HALT / 17:00 (OPEN)",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "GRAINS - WEDNESDAY, 22 NOVEMBER 2023 column: TRADE DATE: WED 22 NOV / 07:45 (PAUSED) / 08:00 (PREOPEN) / 08:30 (OPEN) / 13:20 (PAUSED) / 13:30 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED) / TRADE DATE: FRI 24 NOV / 16:45 (PREOPEN) [every word of this cell sits at x 170.96-288.21, the WEDNESDAY column, whose head x is 170.96] ;; THURSDAY, 23 NOVEMBER 2023 column: no entries - this row prints nothing in that column (pdftotext -bbox-layout shows no word at all in the THURSDAY x band 392.7-584.2 between y 579.1 and y 784.0, and the GRAINS row band is y 624.6-739.0); the 'TRADE DATE: FRI 24 NOV' at x 392.72 y 784.0 and the '16:00 (PREOPEN) HALT' at x 405.5 y 797.1 that appear just below it belong to the FX row's THURSDAY cell, whose centre y 796.0 equals the FX row label's own y ;; FRIDAY, 24 NOVEMBER 2023 column: TRADE DATE: FRI 24 NOV / 08:30 (OPEN) / 12:05 (CLOSED)",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Fri 24 Nov)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "AGRICULTURE (the label this one-pager uses for the livestock line) - WEDNESDAY, 22 NOVEMBER 2023: TRADE DATE: WED 22 NOV / 08:00 (PREOPEN) / 08:30 (OPEN) / 13:05 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED) ;; THURSDAY, 23 NOVEMBER 2023: no entries ;; FRIDAY, 24 NOVEMBER 2023: TRADE DATE: FRI 24 NOV / 08:00 (PREOPEN) / 08:30 (OPEN) / 12:05 (CLOSED)",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Fri 24 Nov)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "CRYPTOCURRENCIES - THURSDAY, 23 NOVEMBER 2023: TRADE DATE: FRI 24 NOV / 16:00 (PREOPEN) / 17:00 (OPEN). [Unlike the INTEREST RATE, EQUITIES, ENERGY, FX and METALS rows, this cell prints no \"HALT\" after \"(PREOPEN)\".]",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "DAIRY - WEDNESDAY, 22 NOVEMBER 2023: TRADE DATE: WED 22 NOV / 16:00 (CLOSED) ;; THURSDAY, 23 NOVEMBER 2023: no entries ;; FRIDAY, 24 NOVEMBER 2023: no entries. [The dairy market does not reopen inside the window this document covers.]",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "LUMBER - WEDNESDAY, 22 NOVEMBER 2023: 06:00 (PREOPEN) / 09:00 (OPEN) / 15:05 (CLOSED) ;; THURSDAY, 23 NOVEMBER 2023: (no entries) ;; FRIDAY, 24 NOVEMBER 2023: 06:00 (PREOPEN) / 09:00 (OPEN) / 12:05 (CLOSED)",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "open_instant": "09:00 CT (Fri 24 Nov)"
+    }
+   ]
+  },
+  {
+   "date": "2023-11-24",
+   "name": "Day after Thanksgiving 2023 (Friday 24 November 2023)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "EQUITIES - FRIDAY, 24 NOVEMBER 2023: 12:15 (CLOSED)",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; the EQUITIES row governs: FRIDAY, 24 NOVEMBER 2023 12:15 (CLOSED).",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "INTEREST RATE - FRIDAY, 24 NOVEMBER 2023: 12:15 (CLOSED)",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX - FRIDAY, 24 NOVEMBER 2023: 12:15 (CLOSED)",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "early_close",
+     "verbatim": "ENERGY - FRIDAY, 24 NOVEMBER 2023: 12:45 (CLOSED)",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "close_instant": "12:45 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "early_close",
+     "verbatim": "METALS - FRIDAY, 24 NOVEMBER 2023: 12:45 (CLOSED)",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "close_instant": "12:45 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "early_close",
+     "verbatim": "GRAINS - FRIDAY, 24 NOVEMBER 2023: 08:30 (OPEN) / 12:05 (CLOSED)",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "close_instant": "12:05 CT",
+     "open_instant": "08:30 CT"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "early_close",
+     "verbatim": "AGRICULTURE (this one-pager's label for the livestock line) - FRIDAY, 24 NOVEMBER 2023: TRADE DATE: FRI 24 NOV / 08:00 (PREOPEN) / 08:30 (OPEN) / 12:05 (CLOSED)",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "close_instant": "12:05 CT",
+     "open_instant": "08:30 CT"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "CRYPTOCURRENCIES - FRIDAY, 24 NOVEMBER 2023: 12:45 (CLOSED)",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "close_instant": "12:45 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "DAIRY - the only dairy entry on this document is WEDNESDAY, 22 NOVEMBER 2023 TRADE DATE: WED 22 NOV / 16:00 (CLOSED); no Thursday or Friday entry is printed.",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1"
+    },
+    {
+     "family": "lumber",
+     "status": "early_close",
+     "verbatim": "LUMBER - FRIDAY, 24 NOVEMBER 2023: 06:00 (PREOPEN) / 09:00 (OPEN) / 12:05 (CLOSED)",
+     "document": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+     "tier": "T1",
+     "close_instant": "12:05 CT",
+     "open_instant": "09:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2023-12-25",
+   "name": "Christmas Day 2023 (Monday 25 December 2023)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "closed",
+     "verbatim": "EQUITIES - MONDAY, 25 DECEMBER 2023: TRADE DATE: TUES 26 DEC / 16:00 (PREOPEN) / 17:00 (OPEN) ;; TUESDAY, 26 DECEMBER 2023: TRADE DATE: TUES 26 DEC / 16:00 (CLOSED). [No day session on 25 December; the market reopens that evening for trade date Tuesday 26 December.]",
+     "document": "christmas-day-2023.pdf @ 2026-07-19T09:52:48Z (document still live)",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 25 Dec)"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "closed",
+     "verbatim": "No Nikkei-specific line is printed; the EQUITIES row governs.",
+     "document": "christmas-day-2023.pdf @ 2026-07-19T09:52:48Z (document still live)",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 25 Dec)"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "closed",
+     "verbatim": "INTEREST RATE - MONDAY, 25 DECEMBER 2023: TRADE DATE: TUES 26 DEC / 16:00 (PREOPEN) / 17:00 (OPEN)",
+     "document": "christmas-day-2023.pdf @ 2026-07-19T09:52:48Z (document still live)",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 25 Dec)"
+    },
+    {
+     "family": "globex_fx",
+     "status": "closed",
+     "verbatim": "FX - MONDAY, 25 DECEMBER 2023: TRADE DATE: TUES 26 DEC / 16:00 (PREOPEN) / 17:00 (OPEN)",
+     "document": "christmas-day-2023.pdf @ 2026-07-19T09:52:48Z (document still live)",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 25 Dec)"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "closed",
+     "verbatim": "ENERGY - MONDAY, 25 DECEMBER 2023: 16:00 (PREOPEN) / 17:00 (OPEN)",
+     "document": "christmas-day-2023.pdf @ 2026-07-19T09:52:48Z (document still live)",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 25 Dec)"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "closed",
+     "verbatim": "METALS - MONDAY, 25 DECEMBER 2023: 16:00 (PREOPEN) / 17:00 (OPEN)",
+     "document": "christmas-day-2023.pdf @ 2026-07-19T09:52:48Z (document still live)",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 25 Dec)"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "GRAINS - the MONDAY, 25 DECEMBER 2023 column is EMPTY for this row: pdftotext -bbox-layout shows no text at x=196.8/209.6 at the GRAINS row (y=680.6) - no trade-date label and no time events ;; TUESDAY, 26 DECEMBER 2023: TRADE DATE: TUES 26 DEC / 06:00 (PREOPEN) / 08:30 (OPEN) / 13:20 (PAUSED) / 13:30 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED) ;; TRADE DATE: WED 27 DEC / 16:45 (PREOPEN) / 19:00 (OPEN)",
+     "document": "christmas-day-2023.pdf @ 2026-07-19T09:52:48Z (document still live)",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Tue 26 Dec)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "LIVESTOCK - the MONDAY, 25 DECEMBER 2023 column is EMPTY for this row: no text at x=196.8/209.6 at the LIVESTOCK row (y=954.1) ;; TUESDAY, 26 DECEMBER 2023: TRADE DATE: TUES 26 DEC / 08:00 (PREOPEN) / 08:30 (OPEN) / 13:05 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED)",
+     "document": "christmas-day-2023.pdf @ 2026-07-19T09:52:48Z (document still live)",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Tue 26 Dec)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "closed",
+     "verbatim": "CRYPTOCURRENCIES - MONDAY, 25 DECEMBER 2023: TRADE DATE: TUES 26 DEC / 16:00 (PREOPEN) / 17:00 (OPEN)",
+     "document": "christmas-day-2023.pdf @ 2026-07-19T09:52:48Z (document still live)",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 25 Dec)"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "DAIRY - MONDAY, 25 DECEMBER 2023: 16:00 (PREOPEN) / 17:00 (OPEN)",
+     "document": "christmas-day-2023.pdf @ 2026-07-19T09:52:48Z (document still live)",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 25 Dec)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "LUMBER - MONDAY, 25 DECEMBER 2023: no time events ;; TUESDAY, 26 DECEMBER 2023: 06:00 (PREOPEN) / 09:00 (OPEN) / 15:05 (CLOSED)",
+     "document": "christmas-day-2023.pdf @ 2026-07-19T09:52:48Z (document still live)",
+     "tier": "T1",
+     "open_instant": "09:00 CT (Tue 26 Dec)"
+    }
+   ]
+  },
+  {
+   "date": "2024-01-01",
+   "name": "New Year's Day 2024 (Monday 1 January 2024)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "closed",
+     "verbatim": "EQUITIES - MONDAY, 1 JANUARY 2024: TRADE DATE: TUES 2 JAN / 16:00 (PREOPEN) / 17:00 (OPEN) ;; TUESDAY, 2 JANUARY 2024: TRADE DATE: TUES 2 JAN / 16:00 (CLOSED)",
+     "document": "new-years-day-2024.pdf @ 2026-08-11T16:57:16Z (document still live)",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 1 Jan)"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "closed",
+     "verbatim": "No Nikkei-specific line is printed; the EQUITIES row governs.",
+     "document": "new-years-day-2024.pdf @ 2026-08-11T16:57:16Z (document still live)",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 1 Jan)"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "closed",
+     "verbatim": "INTEREST RATE - MONDAY, 1 JANUARY 2024: TRADE DATE: TUES 2 JAN / 16:00 (PREOPEN) / 17:00 (OPEN)",
+     "document": "new-years-day-2024.pdf @ 2026-08-11T16:57:16Z (document still live)",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 1 Jan)"
+    },
+    {
+     "family": "globex_fx",
+     "status": "closed",
+     "verbatim": "FX - MONDAY, 1 JANUARY 2024: TRADE DATE: TUES 2 JAN / 16:00 (PREOPEN) / 17:00 (OPEN)",
+     "document": "new-years-day-2024.pdf @ 2026-08-11T16:57:16Z (document still live)",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 1 Jan)"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "closed",
+     "verbatim": "ENERGY - MONDAY, 1 JANUARY 2024: 16:00 (PREOPEN) / 17:00 (OPEN)",
+     "document": "new-years-day-2024.pdf @ 2026-08-11T16:57:16Z (document still live)",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 1 Jan)"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "closed",
+     "verbatim": "METALS - MONDAY, 1 JANUARY 2024: 16:00 (PREOPEN) / 17:00 (OPEN)",
+     "document": "new-years-day-2024.pdf @ 2026-08-11T16:57:16Z (document still live)",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 1 Jan)"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "GRAINS - the MONDAY, 1 JANUARY 2024 column is EMPTY for this row: pdftotext -bbox-layout shows no text at x=226.4/239.2 at the GRAINS row (y=672.6) - no trade-date label and no time events ;; TUESDAY, 2 JANUARY 2024: TRADE DATE: TUES 2 JAN / 06:00 (PREOPEN) / 08:30 (OPEN) / 13:20 (PAUSED) / 13:30 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED) ;; TRADE DATE: WED 3 JAN / 16:45 (PREOPEN) / 19:00 (OPEN)",
+     "document": "new-years-day-2024.pdf @ 2026-08-11T16:57:16Z (document still live)",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Tue 2 Jan)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "LIVESTOCK - the MONDAY, 1 JANUARY 2024 column is EMPTY for this row: no text at x=226.4/239.2 at the LIVESTOCK row (y=946.1) ;; TUESDAY, 2 JANUARY 2024: TRADE DATE: TUES 2 JAN / 08:00 (PREOPEN) / 08:30 (OPEN) / 13:05 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED)",
+     "document": "new-years-day-2024.pdf @ 2026-08-11T16:57:16Z (document still live)",
+     "tier": "T1",
+     "open_instant": "08:30 CT (Tue 2 Jan)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "closed",
+     "verbatim": "CRYPTOCURRENCIES - MONDAY, 1 JANUARY 2024: TRADE DATE: TUES 2 JAN / 16:00 (PREOPEN) / 17:00 (OPEN)",
+     "document": "new-years-day-2024.pdf @ 2026-08-11T16:57:16Z (document still live)",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 1 Jan)"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "DAIRY - MONDAY, 1 JANUARY 2024: 16:00 (PREOPEN) / 17:00 (OPEN)",
+     "document": "new-years-day-2024.pdf @ 2026-08-11T16:57:16Z (document still live)",
+     "tier": "T1",
+     "open_instant": "17:00 CT (Mon 1 Jan)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "LUMBER - MONDAY, 1 JANUARY 2024: no time events ;; TUESDAY, 2 JANUARY 2024: 06:00 (PREOPEN) / 09:00 (OPEN) / 15:05 (CLOSED)",
+     "document": "new-years-day-2024.pdf @ 2026-08-11T16:57:16Z (document still live)",
+     "tier": "T1",
+     "open_instant": "09:00 CT (Tue 2 Jan)"
+    }
+   ]
+  },
+  {
+   "date": "2024-01-15",
+   "name": "Dr. Martin Luther King, Jr. Day 2024 (Monday 15 January 2024)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "E-mini S&P 500 Futures (ES, productId 133, the service's \"Equities\" representative) - 2024-01-14: 16:00 preopen (tradingDate 2024-01-16), 17:00 open (tradingDate 2024-01-16) ;; 2024-01-15: 12:00 preopen (tradingDate 2024-01-16), 17:00 open (tradingDate 2024-01-16) ;; 2024-01-16: 16:00 closed (tradingDate 2024-01-16), 16:45 preopen (tradingDate 2024-01-17), 17:00 open (tradingDate 2024-01-17)",
+     "document": "api_2024-01-14.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "unknown",
+     "verbatim": "The service response covers only the ten representative products the trading-hours page requests (ids 316,133,425,300,58,437,22,8478,5201,10191); no Nikkei product is among them and no Nikkei-specific line exists in this channel.",
+     "document": "api_2024-01-14.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "10-Year T-Note Futures (ZN, productId 316, \"Interest Rates\" representative) - 2024-01-14: 16:00 preopen (tradingDate 2024-01-16), 17:00 open (tradingDate 2024-01-16) ;; 2024-01-15: 12:00 preopen (tradingDate 2024-01-16), 17:00 open (tradingDate 2024-01-16) ;; 2024-01-16: 16:00 closed (tradingDate 2024-01-16), 16:45 preopen (tradingDate 2024-01-17), 17:00 open (tradingDate 2024-01-17)",
+     "document": "api_2024-01-14.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "Euro FX Futures (6E, productId 58, \"FX\" representative) - 2024-01-14: 16:00 preopen (tradingDate 2024-01-16), 17:00 open (tradingDate 2024-01-16) ;; 2024-01-15: 16:00 preopen (tradingDate 2024-01-16), 17:00 open (tradingDate 2024-01-16) ;; 2024-01-16: 16:00 closed (tradingDate 2024-01-16), 16:45 preopen (tradingDate 2024-01-17), 17:00 open (tradingDate 2024-01-17)",
+     "document": "api_2024-01-14.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "early_close",
+     "verbatim": "Crude Oil Futures (CL, productId 425, \"Energy\" representative) - 2024-01-14: 16:00 preopen (tradingDate 2024-01-16), 17:00 open (tradingDate 2024-01-16) ;; 2024-01-15: 13:30 preopen (tradingDate 2024-01-16), 17:00 open (tradingDate 2024-01-16) ;; 2024-01-16: 16:00 closed (tradingDate 2024-01-16), 16:45 preopen (tradingDate 2024-01-17), 17:00 open (tradingDate 2024-01-17)",
+     "document": "api_2024-01-14.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "early_close",
+     "verbatim": "Gold Futures (GC, productId 437, \"Metals\" representative) - 2024-01-14: 16:00 preopen (tradingDate 2024-01-16), 17:00 open (tradingDate 2024-01-16) ;; 2024-01-15: 13:30 preopen (tradingDate 2024-01-16), 17:00 open (tradingDate 2024-01-16) ;; 2024-01-16: 16:00 closed (tradingDate 2024-01-16), 16:45 preopen (tradingDate 2024-01-17), 17:00 open (tradingDate 2024-01-17)",
+     "document": "api_2024-01-14.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Corn Futures (ZC, productId 300, \"Grains\" representative) - 2024-01-14: 16:00 preopen (tradingDate 2024-01-16) ;; 2024-01-15: 19:00 open (tradingDate 2024-01-16) ;; 2024-01-16: 07:45 paused (tradingDate 2024-01-16), 08:00 preopen (tradingDate 2024-01-16), 08:30 open (tradingDate 2024-01-16), 13:20 paused (tradingDate 2024-01-16), 13:30 closed (tradingDate 2024-01-16), 14:30 pcp (tradingDate 2024-01-16), 16:00 closed (tradingDate 2024-01-16), 16:45 preopen (tradingDate 2024-01-17), 19:00 open (tradingDate 2024-01-17)",
+     "document": "api_2024-01-14.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "19:00 CT (Mon 15 Jan, for trade date Tue 16 Jan)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Live Cattle Futures (LE, productId 22, \"Livestock\" representative) - 2024-01-14: events [] ;; 2024-01-15: events [] ;; 2024-01-16: 08:00 preopen (tradingDate 2024-01-16), 08:30 open (tradingDate 2024-01-16), 13:05 closed (tradingDate 2024-01-16), 14:30 pcp (tradingDate 2024-01-16), 16:00 closed (tradingDate 2024-01-16)",
+     "document": "api_2024-01-14.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "08:30 CT (Tue 16 Jan)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "Bitcoin Futures (BTC, productId 8478, \"Cryptocurrencies\" representative) - 2024-01-14: 16:00 preopen (tradingDate 2024-01-16), 17:00 open (tradingDate 2024-01-16) ;; 2024-01-15: 16:00 preopen (tradingDate 2024-01-16), 17:00 open (tradingDate 2024-01-16) ;; 2024-01-16: 16:00 closed (tradingDate 2024-01-16), 16:45 preopen (tradingDate 2024-01-17), 17:00 open (tradingDate 2024-01-17)",
+     "document": "api_2024-01-14.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Cash-Settled Cheese Futures (CSC, productId 5201, the service's \"Dairy\" representative) - 2024-01-14: 16:00 preopen (tradingDate 2024-01-16) ;; 2024-01-15: 17:00 open (tradingDate 2024-01-16) ;; 2024-01-16: 16:00 closed (tradingDate 2024-01-16), 16:45 preopen (tradingDate 2024-01-17), 17:00 open (tradingDate 2024-01-17)",
+     "document": "api_2024-01-14.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "17:00 CT (Mon 15 Jan, for trade date Tue 16 Jan)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber Futures (LBR, productId 10191, \"Lumber\" representative) - 2024-01-14: events [] ;; 2024-01-15: events [] ;; 2024-01-16: 06:00 preopen (tradingDate 2024-01-16), 09:00 open (tradingDate 2024-01-16), 15:05 closed (tradingDate 2024-01-16)",
+     "document": "api_2024-01-14.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "09:00 CT (Tue 16 Jan)"
+    }
+   ]
+  },
+  {
+   "date": "2024-02-19",
+   "name": "Presidents Day 2024 (Monday 19 February 2024)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "E-mini S&P 500 Futures (ES, productId 133, the service's \"Equities\" representative) - 2024-02-18: 16:00 preopen (tradingDate 2024-02-20), 17:00 open (tradingDate 2024-02-20) ;; 2024-02-19: 12:00 preopen (tradingDate 2024-02-20), 17:00 open (tradingDate 2024-02-20) ;; 2024-02-20: 16:00 closed (tradingDate 2024-02-20), 16:45 preopen (tradingDate 2024-02-21), 17:00 open (tradingDate 2024-02-21)",
+     "document": "api_2024-02-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "unknown",
+     "verbatim": "The service response covers only the ten representative products the trading-hours page requests (ids 316,133,425,300,58,437,22,8478,5201,10191); no Nikkei product is among them and no Nikkei-specific line exists in this channel.",
+     "document": "api_2024-02-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "10-Year T-Note Futures (ZN, productId 316, \"Interest Rates\" representative) - 2024-02-18: 16:00 preopen (tradingDate 2024-02-20), 17:00 open (tradingDate 2024-02-20) ;; 2024-02-19: 12:00 preopen (tradingDate 2024-02-20), 17:00 open (tradingDate 2024-02-20) ;; 2024-02-20: 16:00 closed (tradingDate 2024-02-20), 16:45 preopen (tradingDate 2024-02-21), 17:00 open (tradingDate 2024-02-21)",
+     "document": "api_2024-02-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "Euro FX Futures (6E, productId 58, \"FX\" representative) - 2024-02-18: 16:00 preopen (tradingDate 2024-02-20), 17:00 open (tradingDate 2024-02-20) ;; 2024-02-19: 16:00 preopen (tradingDate 2024-02-20), 17:00 open (tradingDate 2024-02-20) ;; 2024-02-20: 16:00 closed (tradingDate 2024-02-20), 16:45 preopen (tradingDate 2024-02-21), 17:00 open (tradingDate 2024-02-21)",
+     "document": "api_2024-02-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "early_close",
+     "verbatim": "Crude Oil Futures (CL, productId 425, \"Energy\" representative) - 2024-02-18: 16:00 preopen (tradingDate 2024-02-20), 17:00 open (tradingDate 2024-02-20) ;; 2024-02-19: 13:30 preopen (tradingDate 2024-02-20), 17:00 open (tradingDate 2024-02-20) ;; 2024-02-20: 16:00 closed (tradingDate 2024-02-20), 16:45 preopen (tradingDate 2024-02-21), 17:00 open (tradingDate 2024-02-21)",
+     "document": "api_2024-02-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "early_close",
+     "verbatim": "Gold Futures (GC, productId 437, \"Metals\" representative) - 2024-02-18: 16:00 preopen (tradingDate 2024-02-20), 17:00 open (tradingDate 2024-02-20) ;; 2024-02-19: 13:30 preopen (tradingDate 2024-02-20), 17:00 open (tradingDate 2024-02-20) ;; 2024-02-20: 16:00 closed (tradingDate 2024-02-20), 16:45 preopen (tradingDate 2024-02-21), 17:00 open (tradingDate 2024-02-21)",
+     "document": "api_2024-02-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Corn Futures (ZC, productId 300, \"Grains\" representative) - 2024-02-18: 16:00 preopen (tradingDate 2024-02-20) ;; 2024-02-19: 19:00 open (tradingDate 2024-02-20) ;; 2024-02-20: 07:45 paused (tradingDate 2024-02-20), 08:00 preopen (tradingDate 2024-02-20), 08:30 open (tradingDate 2024-02-20), 13:20 paused (tradingDate 2024-02-20), 13:30 closed (tradingDate 2024-02-20), 14:30 pcp (tradingDate 2024-02-20), 16:00 closed (tradingDate 2024-02-20), 16:45 preopen (tradingDate 2024-02-21), 19:00 open (tradingDate 2024-02-21)",
+     "document": "api_2024-02-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "19:00 CT (Mon 19 Feb, for trade date Tue 20 Feb)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Live Cattle Futures (LE, productId 22, \"Livestock\" representative) - 2024-02-18: events [] ;; 2024-02-19: events [] ;; 2024-02-20: 08:00 preopen (tradingDate 2024-02-20), 08:30 open (tradingDate 2024-02-20), 13:05 closed (tradingDate 2024-02-20), 14:30 pcp (tradingDate 2024-02-20), 16:00 closed (tradingDate 2024-02-20)",
+     "document": "api_2024-02-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "08:30 CT (Tue 20 Feb)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "Bitcoin Futures (BTC, productId 8478, \"Cryptocurrencies\" representative) - 2024-02-18: 16:00 preopen (tradingDate 2024-02-20), 17:00 open (tradingDate 2024-02-20) ;; 2024-02-19: 16:00 preopen (tradingDate 2024-02-20), 17:00 open (tradingDate 2024-02-20) ;; 2024-02-20: 16:00 closed (tradingDate 2024-02-20), 16:45 preopen (tradingDate 2024-02-21), 17:00 open (tradingDate 2024-02-21)",
+     "document": "api_2024-02-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Cash-Settled Cheese Futures (CSC, productId 5201, the service's \"Dairy\" representative) - 2024-02-18: 16:00 preopen (tradingDate 2024-02-20) ;; 2024-02-19: 17:00 open (tradingDate 2024-02-20) ;; 2024-02-20: 16:00 closed (tradingDate 2024-02-20), 16:45 preopen (tradingDate 2024-02-21), 17:00 open (tradingDate 2024-02-21)",
+     "document": "api_2024-02-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "17:00 CT (Mon 19 Feb, for trade date Tue 20 Feb)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber Futures (LBR, productId 10191, \"Lumber\" representative) - 2024-02-18: events [] ;; 2024-02-19: events [] ;; 2024-02-20: 06:00 preopen (tradingDate 2024-02-20), 09:00 open (tradingDate 2024-02-20), 15:05 closed (tradingDate 2024-02-20)",
+     "document": "api_2024-02-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "09:00 CT (Tue 20 Feb)"
+    }
+   ]
+  },
+  {
+   "date": "2024-03-29",
+   "name": "Good Friday 2024 (Friday 29 March 2024)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "closed",
+     "verbatim": "E-mini S&P 500 Futures (ES, productId 133, the service's \"Equities\" representative) - 2024-03-28: 16:00 closed (tradingDate 2024-03-28) ;; 2024-03-29: events [] ;; 2024-03-30: events []  [The requested window ends 2024-03-30, so the Sunday 31 March reopen is outside this document and no open instant is recorded from it.]",
+     "document": "api_2024-03-28.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "unknown",
+     "verbatim": "The service response covers only the ten representative products the trading-hours page requests (ids 316,133,425,300,58,437,22,8478,5201,10191); no Nikkei product is among them and no Nikkei-specific line exists in this channel.",
+     "document": "api_2024-03-28.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "closed",
+     "verbatim": "10-Year T-Note Futures (ZN, productId 316, \"Interest Rates\" representative) - 2024-03-28: 16:00 closed (tradingDate 2024-03-28) ;; 2024-03-29: events [] ;; 2024-03-30: events []  [The requested window ends 2024-03-30, so the Sunday 31 March reopen is outside this document and no open instant is recorded from it.]",
+     "document": "api_2024-03-28.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_fx",
+     "status": "closed",
+     "verbatim": "Euro FX Futures (6E, productId 58, \"FX\" representative) - 2024-03-28: 16:00 closed (tradingDate 2024-03-28) ;; 2024-03-29: events [] ;; 2024-03-30: events []  [The requested window ends 2024-03-30, so the Sunday 31 March reopen is outside this document and no open instant is recorded from it.]",
+     "document": "api_2024-03-28.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "closed",
+     "verbatim": "Crude Oil Futures (CL, productId 425, \"Energy\" representative) - 2024-03-28: 16:00 closed (tradingDate 2024-03-28) ;; 2024-03-29: events [] ;; 2024-03-30: events []  [The requested window ends 2024-03-30, so the Sunday 31 March reopen is outside this document and no open instant is recorded from it.]",
+     "document": "api_2024-03-28.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "closed",
+     "verbatim": "Gold Futures (GC, productId 437, \"Metals\" representative) - 2024-03-28: 16:00 closed (tradingDate 2024-03-28) ;; 2024-03-29: events [] ;; 2024-03-30: events []  [The requested window ends 2024-03-30, so the Sunday 31 March reopen is outside this document and no open instant is recorded from it.]",
+     "document": "api_2024-03-28.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Corn Futures (ZC, productId 300, \"Grains\" representative) - 2024-03-28: 07:45 paused (tradingDate 2024-03-28), 08:00 preopen (tradingDate 2024-03-28), 08:30 open (tradingDate 2024-03-28), 13:20 paused (tradingDate 2024-03-28), 13:30 closed (tradingDate 2024-03-28), 14:30 pcp (tradingDate 2024-03-28), 16:00 closed (tradingDate 2024-03-28) ;; 2024-03-29: events [] ;; 2024-03-30: events []  [The requested window ends 2024-03-30, so the Sunday 31 March reopen is outside this document and no open instant is recorded from it.]",
+     "document": "api_2024-03-28.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Live Cattle Futures (LE, productId 22, \"Livestock\" representative) - 2024-03-28: 08:00 preopen (tradingDate 2024-03-28), 08:30 open (tradingDate 2024-03-28), 13:05 closed (tradingDate 2024-03-28), 14:30 pcp (tradingDate 2024-03-28), 16:00 closed (tradingDate 2024-03-28) ;; 2024-03-29: events [] ;; 2024-03-30: events []  [The requested window ends 2024-03-30, so the Sunday 31 March reopen is outside this document and no open instant is recorded from it.]",
+     "document": "api_2024-03-28.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "closed",
+     "verbatim": "Bitcoin Futures (BTC, productId 8478, \"Cryptocurrencies\" representative) - 2024-03-28: 16:00 closed (tradingDate 2024-03-28) ;; 2024-03-29: events [] ;; 2024-03-30: events []  [The requested window ends 2024-03-30, so the Sunday 31 March reopen is outside this document and no open instant is recorded from it.]",
+     "document": "api_2024-03-28.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Cash-Settled Cheese Futures (CSC, productId 5201, the service's \"Dairy\" representative) - 2024-03-28: 13:55 closed (tradingDate 2024-03-28) ;; 2024-03-29: events [] ;; 2024-03-30: events []  [The requested window ends 2024-03-30, so the Sunday 31 March reopen is outside this document and no open instant is recorded from it.]",
+     "document": "api_2024-03-28.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber Futures (LBR, productId 10191, \"Lumber\" representative) - 2024-03-28: 06:00 preopen (tradingDate 2024-03-28), 09:00 open (tradingDate 2024-03-28), 15:05 closed (tradingDate 2024-03-28) ;; 2024-03-29: events [] ;; 2024-03-30: events []  [The requested window ends 2024-03-30, so the Sunday 31 March reopen is outside this document and no open instant is recorded from it.]",
+     "document": "api_2024-03-28.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    }
+   ]
+  },
+  {
+   "date": "2024-05-27",
+   "name": "Memorial Day 2024 (Monday 27 May 2024)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "E-mini S&P 500 Futures (ES, productId 133, the service's \"Equities\" representative) - 2024-05-26: 16:00 preopen (tradingDate 2024-05-28), 17:00 open (tradingDate 2024-05-28) ;; 2024-05-27: 12:00 preopen (tradingDate 2024-05-28), 17:00 open (tradingDate 2024-05-28) ;; 2024-05-28: 16:00 closed (tradingDate 2024-05-28), 16:45 preopen (tradingDate 2024-05-29), 17:00 open (tradingDate 2024-05-29)",
+     "document": "api_2024-05-26.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "unknown",
+     "verbatim": "The service response covers only the ten representative products the trading-hours page requests (ids 316,133,425,300,58,437,22,8478,5201,10191); no Nikkei product is among them and no Nikkei-specific line exists in this channel.",
+     "document": "api_2024-05-26.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "10-Year T-Note Futures (ZN, productId 316, \"Interest Rates\" representative) - 2024-05-26: 16:00 preopen (tradingDate 2024-05-28), 17:00 open (tradingDate 2024-05-28) ;; 2024-05-27: 12:00 preopen (tradingDate 2024-05-28), 17:00 open (tradingDate 2024-05-28) ;; 2024-05-28: 16:00 closed (tradingDate 2024-05-28), 16:45 preopen (tradingDate 2024-05-29), 17:00 open (tradingDate 2024-05-29)",
+     "document": "api_2024-05-26.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "Euro FX Futures (6E, productId 58, \"FX\" representative) - 2024-05-26: 16:00 preopen (tradingDate 2024-05-28), 17:00 open (tradingDate 2024-05-28) ;; 2024-05-27: 16:00 preopen (tradingDate 2024-05-28), 17:00 open (tradingDate 2024-05-28) ;; 2024-05-28: 16:00 closed (tradingDate 2024-05-28), 16:45 preopen (tradingDate 2024-05-29), 17:00 open (tradingDate 2024-05-29)",
+     "document": "api_2024-05-26.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "early_close",
+     "verbatim": "Crude Oil Futures (CL, productId 425, \"Energy\" representative) - 2024-05-26: 16:00 preopen (tradingDate 2024-05-28), 17:00 open (tradingDate 2024-05-28) ;; 2024-05-27: 13:30 preopen (tradingDate 2024-05-28), 17:00 open (tradingDate 2024-05-28) ;; 2024-05-28: 16:00 closed (tradingDate 2024-05-28), 16:45 preopen (tradingDate 2024-05-29), 17:00 open (tradingDate 2024-05-29)",
+     "document": "api_2024-05-26.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "early_close",
+     "verbatim": "Gold Futures (GC, productId 437, \"Metals\" representative) - 2024-05-26: 16:00 preopen (tradingDate 2024-05-28), 17:00 open (tradingDate 2024-05-28) ;; 2024-05-27: 13:30 preopen (tradingDate 2024-05-28), 17:00 open (tradingDate 2024-05-28) ;; 2024-05-28: 16:00 closed (tradingDate 2024-05-28), 16:45 preopen (tradingDate 2024-05-29), 17:00 open (tradingDate 2024-05-29)",
+     "document": "api_2024-05-26.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Corn Futures (ZC, productId 300, \"Grains\" representative) - 2024-05-26: 16:00 preopen (tradingDate 2024-05-28) ;; 2024-05-27: 19:00 open (tradingDate 2024-05-28) ;; 2024-05-28: 07:45 paused (tradingDate 2024-05-28), 08:00 preopen (tradingDate 2024-05-28), 08:30 open (tradingDate 2024-05-28), 13:20 paused (tradingDate 2024-05-28), 13:30 closed (tradingDate 2024-05-28), 14:30 pcp (tradingDate 2024-05-28), 16:00 closed (tradingDate 2024-05-28), 16:45 preopen (tradingDate 2024-05-29), 19:00 open (tradingDate 2024-05-29)",
+     "document": "api_2024-05-26.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "19:00 CT (Mon 27 May, for trade date Tue 28 May)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Live Cattle Futures (LE, productId 22, \"Livestock\" representative) - 2024-05-26: events [] ;; 2024-05-27: events [] ;; 2024-05-28: 08:00 preopen (tradingDate 2024-05-28), 08:30 open (tradingDate 2024-05-28), 13:05 closed (tradingDate 2024-05-28), 14:30 pcp (tradingDate 2024-05-28), 16:00 closed (tradingDate 2024-05-28)",
+     "document": "api_2024-05-26.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "08:30 CT (Tue 28 May)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "Bitcoin Futures (BTC, productId 8478, \"Cryptocurrencies\" representative) - 2024-05-26: 16:00 preopen (tradingDate 2024-05-28), 17:00 open (tradingDate 2024-05-28) ;; 2024-05-27: 16:00 preopen (tradingDate 2024-05-28), 17:00 open (tradingDate 2024-05-28) ;; 2024-05-28: 16:00 closed (tradingDate 2024-05-28), 16:45 preopen (tradingDate 2024-05-29), 17:00 open (tradingDate 2024-05-29)",
+     "document": "api_2024-05-26.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Cash-Settled Cheese Futures (CSC, productId 5201, the service's \"Dairy\" representative) - 2024-05-26: 16:00 preopen (tradingDate 2024-05-28) ;; 2024-05-27: 17:00 open (tradingDate 2024-05-28) ;; 2024-05-28: 16:00 closed (tradingDate 2024-05-28), 16:45 preopen (tradingDate 2024-05-29), 17:00 open (tradingDate 2024-05-29)",
+     "document": "api_2024-05-26.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "17:00 CT (Mon 27 May, for trade date Tue 28 May)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber Futures (LBR, productId 10191, \"Lumber\" representative) - 2024-05-26: events [] ;; 2024-05-27: events [] ;; 2024-05-28: 06:00 preopen (tradingDate 2024-05-28), 09:00 open (tradingDate 2024-05-28), 15:05 closed (tradingDate 2024-05-28)",
+     "document": "api_2024-05-26.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "09:00 CT (Tue 28 May)"
+    }
+   ]
+  },
+  {
+   "date": "2024-06-19",
+   "name": "Juneteenth 2024 (Wednesday 19 June 2024)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "E-mini S&P 500 Futures (ES, productId 133, the service's \"Equities\" representative) - 2024-06-18: 16:00 closed (tradingDate 2024-06-18), 16:45 preopen (tradingDate 2024-06-20), 17:00 open (tradingDate 2024-06-20) ;; 2024-06-19: 12:00 preopen (tradingDate 2024-06-20), 17:00 open (tradingDate 2024-06-20) ;; 2024-06-20: 16:00 closed (tradingDate 2024-06-20), 16:45 preopen (tradingDate 2024-06-21), 17:00 open (tradingDate 2024-06-21)",
+     "document": "api_2024-06-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "unknown",
+     "verbatim": "The service response covers only the ten representative products the trading-hours page requests (ids 316,133,425,300,58,437,22,8478,5201,10191); no Nikkei product is among them and no Nikkei-specific line exists in this channel.",
+     "document": "api_2024-06-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "10-Year T-Note Futures (ZN, productId 316, \"Interest Rates\" representative) - 2024-06-18: 16:00 closed (tradingDate 2024-06-18), 16:45 preopen (tradingDate 2024-06-20), 17:00 open (tradingDate 2024-06-20) ;; 2024-06-19: 12:00 preopen (tradingDate 2024-06-20), 17:00 open (tradingDate 2024-06-20) ;; 2024-06-20: 16:00 closed (tradingDate 2024-06-20), 16:45 preopen (tradingDate 2024-06-21), 17:00 open (tradingDate 2024-06-21)",
+     "document": "api_2024-06-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "Euro FX Futures (6E, productId 58, \"FX\" representative) - 2024-06-18: 16:00 closed (tradingDate 2024-06-18), 16:45 preopen (tradingDate 2024-06-20), 17:00 open (tradingDate 2024-06-20) ;; 2024-06-19: 16:00 preopen (tradingDate 2024-06-20), 17:00 open (tradingDate 2024-06-20) ;; 2024-06-20: 16:00 closed (tradingDate 2024-06-20), 16:45 preopen (tradingDate 2024-06-21), 17:00 open (tradingDate 2024-06-21)",
+     "document": "api_2024-06-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "early_close",
+     "verbatim": "Crude Oil Futures (CL, productId 425, \"Energy\" representative) - 2024-06-18: 16:00 closed (tradingDate 2024-06-18), 16:45 preopen (tradingDate 2024-06-20), 17:00 open (tradingDate 2024-06-20) ;; 2024-06-19: 13:30 preopen (tradingDate 2024-06-20), 17:00 open (tradingDate 2024-06-20) ;; 2024-06-20: 16:00 closed (tradingDate 2024-06-20), 16:45 preopen (tradingDate 2024-06-21), 17:00 open (tradingDate 2024-06-21)",
+     "document": "api_2024-06-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "early_close",
+     "verbatim": "Gold Futures (GC, productId 437, \"Metals\" representative) - 2024-06-18: 16:00 closed (tradingDate 2024-06-18), 16:45 preopen (tradingDate 2024-06-20), 17:00 open (tradingDate 2024-06-20) ;; 2024-06-19: 13:30 preopen (tradingDate 2024-06-20), 17:00 open (tradingDate 2024-06-20) ;; 2024-06-20: 16:00 closed (tradingDate 2024-06-20), 16:45 preopen (tradingDate 2024-06-21), 17:00 open (tradingDate 2024-06-21)",
+     "document": "api_2024-06-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Corn Futures (ZC, productId 300, \"Grains\" representative) - 2024-06-18: 07:45 paused (tradingDate 2024-06-18), 08:00 preopen (tradingDate 2024-06-18), 08:30 open (tradingDate 2024-06-18), 13:20 paused (tradingDate 2024-06-18), 13:30 closed (tradingDate 2024-06-18), 14:30 pcp (tradingDate 2024-06-18), 16:00 closed (tradingDate 2024-06-18), 16:45 preopen (tradingDate 2024-06-20) ;; 2024-06-19: 19:00 open (tradingDate 2024-06-20) ;; 2024-06-20: 07:45 paused (tradingDate 2024-06-20), 08:00 preopen (tradingDate 2024-06-20), 08:30 open (tradingDate 2024-06-20), 13:20 paused (tradingDate 2024-06-20), 13:30 closed (tradingDate 2024-06-20), 14:30 pcp (tradingDate 2024-06-20), 16:00 closed (tradingDate 2024-06-20), 16:45 preopen (tradingDate 2024-06-21), 19:00 open (tradingDate 2024-06-21)",
+     "document": "api_2024-06-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "19:00 CT (Wed 19 Jun, for trade date Thu 20 Jun)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Live Cattle Futures (LE, productId 22, \"Livestock\" representative) - 2024-06-18: 08:00 preopen (tradingDate 2024-06-18), 08:30 open (tradingDate 2024-06-18), 13:05 closed (tradingDate 2024-06-18), 14:30 pcp (tradingDate 2024-06-18), 16:00 closed (tradingDate 2024-06-18) ;; 2024-06-19: events [] ;; 2024-06-20: 08:00 preopen (tradingDate 2024-06-20), 08:30 open (tradingDate 2024-06-20), 13:05 closed (tradingDate 2024-06-20), 14:30 pcp (tradingDate 2024-06-20), 16:00 closed (tradingDate 2024-06-20)",
+     "document": "api_2024-06-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "08:30 CT (Thu 20 Jun)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "Bitcoin Futures (BTC, productId 8478, \"Cryptocurrencies\" representative) - 2024-06-18: 16:00 closed (tradingDate 2024-06-18), 16:45 preopen (tradingDate 2024-06-20), 17:00 open (tradingDate 2024-06-20) ;; 2024-06-19: 16:00 preopen (tradingDate 2024-06-20), 17:00 open (tradingDate 2024-06-20) ;; 2024-06-20: 16:00 closed (tradingDate 2024-06-20), 16:45 preopen (tradingDate 2024-06-21), 17:00 open (tradingDate 2024-06-21)",
+     "document": "api_2024-06-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Cash-Settled Cheese Futures (CSC, productId 5201, the service's \"Dairy\" representative) - 2024-06-18: 16:00 closed (tradingDate 2024-06-18), 16:45 preopen (tradingDate 2024-06-20) ;; 2024-06-19: 17:00 open (tradingDate 2024-06-20) ;; 2024-06-20: 16:00 closed (tradingDate 2024-06-20), 16:45 preopen (tradingDate 2024-06-21), 17:00 open (tradingDate 2024-06-21)",
+     "document": "api_2024-06-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "17:00 CT (Wed 19 Jun, for trade date Thu 20 Jun)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber Futures (LBR, productId 10191, \"Lumber\" representative) - 2024-06-18: 06:00 preopen (tradingDate 2024-06-18), 09:00 open (tradingDate 2024-06-18), 15:05 closed (tradingDate 2024-06-18) ;; 2024-06-19: events [] ;; 2024-06-20: 06:00 preopen (tradingDate 2024-06-20), 09:00 open (tradingDate 2024-06-20), 15:05 closed (tradingDate 2024-06-20)",
+     "document": "api_2024-06-18.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "09:00 CT (Thu 20 Jun)"
+    }
+   ]
+  },
+  {
+   "date": "2024-07-03",
+   "name": "Independence Day eve 2024 (Wednesday 3 July 2024 - early close for equity index)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "E-mini S&P 500 Futures (ES, productId 133, the service's \"Equities\" representative) - 2024-07-03: 12:15 closed (tradingDate 2024-07-03), 16:45 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-04: 12:00 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-05: 16:00 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:15 CT",
+     "open_instant": "17:00 CT (evening reopen for trade date Fri 5 July)"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "unknown",
+     "verbatim": "The service response covers only the ten representative products the trading-hours page requests (ids 316,133,425,300,58,437,22,8478,5201,10191); no Nikkei product is among them and no Nikkei-specific line exists in this channel.",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "normal",
+     "verbatim": "10-Year T-Note Futures (ZN, productId 316, \"Interest Rates\" representative) - 2024-07-03: 16:00 closed (tradingDate 2024-07-03), 16:45 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-04: 12:00 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-05: 16:00 closed (tradingDate 2024-07-05)  [Ordinary 16:00 final close printed for the 3 July trade date.]",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_fx",
+     "status": "normal",
+     "verbatim": "Euro FX Futures (6E, productId 58, \"FX\" representative) - 2024-07-03: 16:00 closed (tradingDate 2024-07-03), 16:45 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-04: 16:00 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-05: 16:00 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "normal",
+     "verbatim": "Crude Oil Futures (CL, productId 425, \"Energy\" representative) - 2024-07-03: 16:00 closed (tradingDate 2024-07-03), 16:45 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-04: 13:30 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-05: 16:00 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "normal",
+     "verbatim": "Gold Futures (GC, productId 437, \"Metals\" representative) - 2024-07-03: 16:00 closed (tradingDate 2024-07-03), 16:45 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-04: 13:30 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-05: 16:00 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_grains",
+     "status": "modified",
+     "verbatim": "Corn Futures (ZC, productId 300, \"Grains\" representative) - 2024-07-03: 07:45 paused (tradingDate 2024-07-03), 08:00 preopen (tradingDate 2024-07-03), 08:30 open (tradingDate 2024-07-03), 13:20 paused (tradingDate 2024-07-03), 13:30 closed (tradingDate 2024-07-03), 14:30 pcp (tradingDate 2024-07-03), 16:00 closed (tradingDate 2024-07-03) ;; 2024-07-04: events [] ;; 2024-07-05: 06:00 preopen (tradingDate 2024-07-05), 08:30 open (tradingDate 2024-07-05), 13:20 paused (tradingDate 2024-07-05), 13:30 closed (tradingDate 2024-07-05), 14:30 pcp (tradingDate 2024-07-05), 16:00 closed (tradingDate 2024-07-05)  [Ordinary Wednesday day session, but no Wednesday-evening reopen: the next entry is 2024-07-05 06:00 preopen.]",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "08:30 CT (Fri 5 Jul)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "normal",
+     "verbatim": "Live Cattle Futures (LE, productId 22, \"Livestock\" representative) - 2024-07-03: 08:00 preopen (tradingDate 2024-07-03), 08:30 open (tradingDate 2024-07-03), 13:05 closed (tradingDate 2024-07-03), 14:30 pcp (tradingDate 2024-07-03), 16:00 closed (tradingDate 2024-07-03) ;; 2024-07-04: events [] ;; 2024-07-05: 08:00 preopen (tradingDate 2024-07-05), 08:30 open (tradingDate 2024-07-05), 13:05 closed (tradingDate 2024-07-05), 14:30 pcp (tradingDate 2024-07-05), 16:00 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "normal",
+     "verbatim": "Bitcoin Futures (BTC, productId 8478, \"Cryptocurrencies\" representative) - 2024-07-03: 16:00 closed (tradingDate 2024-07-03), 16:45 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-04: 16:00 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-05: 16:00 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "dairy",
+     "status": "normal",
+     "verbatim": "Cash-Settled Cheese Futures (CSC, productId 5201, the service's \"Dairy\" representative) - 2024-07-03: 16:00 closed (tradingDate 2024-07-03), 16:45 preopen (tradingDate 2024-07-05) ;; 2024-07-04: 17:00 open (tradingDate 2024-07-05) ;; 2024-07-05: 13:55 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "lumber",
+     "status": "normal",
+     "verbatim": "Lumber Futures (LBR, productId 10191, \"Lumber\" representative) - 2024-07-03: 06:00 preopen (tradingDate 2024-07-03), 09:00 open (tradingDate 2024-07-03), 15:05 closed (tradingDate 2024-07-03) ;; 2024-07-04: events [] ;; 2024-07-05: 06:00 preopen (tradingDate 2024-07-05), 09:00 open (tradingDate 2024-07-05), 15:05 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    }
+   ]
+  },
+  {
+   "date": "2024-07-04",
+   "name": "Independence Day 2024 (Thursday 4 July 2024)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "E-mini S&P 500 Futures (ES, productId 133, the service's \"Equities\" representative) - 2024-07-03: 12:15 closed (tradingDate 2024-07-03), 16:45 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-04: 12:00 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-05: 16:00 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "unknown",
+     "verbatim": "The service response covers only the ten representative products the trading-hours page requests (ids 316,133,425,300,58,437,22,8478,5201,10191); no Nikkei product is among them and no Nikkei-specific line exists in this channel.",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "10-Year T-Note Futures (ZN, productId 316, \"Interest Rates\" representative) - 2024-07-03: 16:00 closed (tradingDate 2024-07-03), 16:45 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-04: 12:00 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-05: 16:00 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "Euro FX Futures (6E, productId 58, \"FX\" representative) - 2024-07-03: 16:00 closed (tradingDate 2024-07-03), 16:45 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-04: 16:00 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-05: 16:00 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "early_close",
+     "verbatim": "Crude Oil Futures (CL, productId 425, \"Energy\" representative) - 2024-07-03: 16:00 closed (tradingDate 2024-07-03), 16:45 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-04: 13:30 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-05: 16:00 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "early_close",
+     "verbatim": "Gold Futures (GC, productId 437, \"Metals\" representative) - 2024-07-03: 16:00 closed (tradingDate 2024-07-03), 16:45 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-04: 13:30 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-05: 16:00 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Corn Futures (ZC, productId 300, \"Grains\" representative) - 2024-07-03: 07:45 paused (tradingDate 2024-07-03), 08:00 preopen (tradingDate 2024-07-03), 08:30 open (tradingDate 2024-07-03), 13:20 paused (tradingDate 2024-07-03), 13:30 closed (tradingDate 2024-07-03), 14:30 pcp (tradingDate 2024-07-03), 16:00 closed (tradingDate 2024-07-03) ;; 2024-07-04: events [] ;; 2024-07-05: 06:00 preopen (tradingDate 2024-07-05), 08:30 open (tradingDate 2024-07-05), 13:20 paused (tradingDate 2024-07-05), 13:30 closed (tradingDate 2024-07-05), 14:30 pcp (tradingDate 2024-07-05), 16:00 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "08:30 CT (Fri 5 Jul)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Live Cattle Futures (LE, productId 22, \"Livestock\" representative) - 2024-07-03: 08:00 preopen (tradingDate 2024-07-03), 08:30 open (tradingDate 2024-07-03), 13:05 closed (tradingDate 2024-07-03), 14:30 pcp (tradingDate 2024-07-03), 16:00 closed (tradingDate 2024-07-03) ;; 2024-07-04: events [] ;; 2024-07-05: 08:00 preopen (tradingDate 2024-07-05), 08:30 open (tradingDate 2024-07-05), 13:05 closed (tradingDate 2024-07-05), 14:30 pcp (tradingDate 2024-07-05), 16:00 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "08:30 CT (Fri 5 Jul)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "Bitcoin Futures (BTC, productId 8478, \"Cryptocurrencies\" representative) - 2024-07-03: 16:00 closed (tradingDate 2024-07-03), 16:45 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-04: 16:00 preopen (tradingDate 2024-07-05), 17:00 open (tradingDate 2024-07-05) ;; 2024-07-05: 16:00 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Cash-Settled Cheese Futures (CSC, productId 5201, the service's \"Dairy\" representative) - 2024-07-03: 16:00 closed (tradingDate 2024-07-03), 16:45 preopen (tradingDate 2024-07-05) ;; 2024-07-04: 17:00 open (tradingDate 2024-07-05) ;; 2024-07-05: 13:55 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "17:00 CT (Thu 4 Jul, for trade date Fri 5 Jul)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber Futures (LBR, productId 10191, \"Lumber\" representative) - 2024-07-03: 06:00 preopen (tradingDate 2024-07-03), 09:00 open (tradingDate 2024-07-03), 15:05 closed (tradingDate 2024-07-03) ;; 2024-07-04: events [] ;; 2024-07-05: 06:00 preopen (tradingDate 2024-07-05), 09:00 open (tradingDate 2024-07-05), 15:05 closed (tradingDate 2024-07-05)",
+     "document": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "09:00 CT (Fri 5 Jul)"
+    }
+   ]
+  },
+  {
+   "date": "2024-09-02",
+   "name": "Labor Day 2024 (Monday 2 September 2024)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "E-mini S&P 500 Futures (ES, productId 133, the service's \"Equities\" representative) - 2024-09-01: {\"eventTime\":\"16:00\",\"marketEventType\":\"preopen\",\"tradingDate\":\"2024-09-03\"}, {\"17:00\",\"open\"} ;; 2024-09-02: {\"eventTime\":\"12:00\",\"marketEventType\":\"preopen\",\"tradingDate\":\"2024-09-03\"}, {\"17:00\",\"open\"} ;; 2024-09-03: {\"16:00\",\"closed\"}, {\"16:45\",\"preopen\"}, {\"17:00\",\"open\"}",
+     "document": "api_2024-09-01.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "unknown",
+     "verbatim": "The service response covers only the ten representative products the trading-hours page requests (ids 316,133,425,300,58,437,22,8478,5201,10191); no Nikkei product is among them and no Nikkei-specific line exists in this channel.",
+     "document": "api_2024-09-01.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "10-Year T-Note Futures (ZN, productId 316, \"Interest Rates\" representative) - 2024-09-02: {\"eventTime\":\"12:00\",\"marketEventType\":\"preopen\",\"tradingDate\":\"2024-09-03\"}, {\"17:00\",\"open\"}",
+     "document": "api_2024-09-01.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "Euro FX Futures (6E, productId 58) - 2024-09-02: {\"eventTime\":\"16:00\",\"marketEventType\":\"preopen\"}, {\"17:00\",\"open\"}",
+     "document": "api_2024-09-01.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "early_close",
+     "verbatim": "Crude Oil Futures (CL, productId 425) - 2024-09-02: {\"eventTime\":\"13:30\",\"marketEventType\":\"preopen\"}, {\"17:00\",\"open\"}",
+     "document": "api_2024-09-01.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "early_close",
+     "verbatim": "Gold Futures (GC, productId 437) - 2024-09-02: {\"eventTime\":\"13:30\",\"marketEventType\":\"preopen\"}, {\"17:00\",\"open\"}",
+     "document": "api_2024-09-01.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Corn Futures (ZC, productId 300) - 2024-09-01: {\"16:00\",\"preopen\",\"tradingDate\":\"2024-09-03\"} ;; 2024-09-02: {\"19:00\",\"open\",\"tradingDate\":\"2024-09-03\"} ;; 2024-09-03: 07:45 paused (tradingDate 2024-09-03), 08:00 preopen (tradingDate 2024-09-03), 08:30 open (tradingDate 2024-09-03), 13:20 paused (tradingDate 2024-09-03), 13:30 closed (tradingDate 2024-09-03), 14:30 pcp (tradingDate 2024-09-03), 16:00 closed (tradingDate 2024-09-03), 16:45 preopen (tradingDate 2024-09-04), 19:00 open (tradingDate 2024-09-04)",
+     "document": "api_2024-09-01.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "19:00 CT (Mon 2 Sep, for trade date Tue 3 Sep)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Live Cattle Futures (LE, productId 22) - 2024-09-01: events [] ;; 2024-09-02: events [] ;; 2024-09-03: 08:00 preopen, 08:30 open, 13:05 closed, 14:30 pcp, 16:00 closed",
+     "document": "api_2024-09-01.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "08:30 CT (Tue 3 Sep)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "Bitcoin Futures (BTC, productId 8478) - 2024-09-02: {\"eventTime\":\"16:00\",\"marketEventType\":\"preopen\"}, {\"17:00\",\"open\"}",
+     "document": "api_2024-09-01.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Cash-Settled Cheese Futures (CSC, productId 5201, the service's \"Dairy\" representative) - 2024-09-01: {\"16:00\",\"preopen\",\"tradingDate\":\"2024-09-03\"} ;; 2024-09-02: {\"17:00\",\"open\",\"tradingDate\":\"2024-09-03\"}",
+     "document": "api_2024-09-01.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "17:00 CT (Mon 2 Sep)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber Futures (LBR, productId 10191) - 2024-09-01: events [] ;; 2024-09-02: events [] ;; 2024-09-03: 06:00 preopen, 09:00 open, 15:05 closed",
+     "document": "api_2024-09-01.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "09:00 CT (Tue 3 Sep)"
+    }
+   ]
+  },
+  {
+   "date": "2024-11-28",
+   "name": "Thanksgiving Day 2024 (Thursday 28 November 2024)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "E-mini S&P 500 Futures (ES) - 2024-11-27: 16:00 closed (trade date 2024-11-27), 16:45 preopen, 17:00 open (trade date 2024-11-29) ;; 2024-11-28: {\"eventTime\":\"12:00\",\"marketEventType\":\"preopen\",\"tradingDate\":\"2024-11-29\"}, {\"17:00\",\"open\"}",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "unknown",
+     "verbatim": "No Nikkei product is among the ten representatives this channel returns.",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "10-Year T-Note Futures (ZN) - 2024-11-28: 12:00 preopen (trade date 2024-11-29), 17:00 open",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "modified",
+     "verbatim": "Euro FX Futures (6E) - 2024-11-28: 16:00 preopen (trade date 2024-11-29), 17:00 open",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "early_close",
+     "verbatim": "Crude Oil Futures (CL) - 2024-11-28: 13:30 preopen (trade date 2024-11-29), 17:00 open",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "early_close",
+     "verbatim": "Gold Futures (GC) - 2024-11-28: 13:30 preopen (trade date 2024-11-29), 17:00 open",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Corn Futures (ZC) - 2024-11-27: 07:45 paused, 08:00 preopen, 08:30 open, 13:20 paused, 13:30 closed, 14:30 pcp, 16:00 closed, 16:45 preopen (trade date 2024-11-29) ;; 2024-11-28: events [] ;; 2024-11-29: 08:30 open, 12:05 closed",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "08:30 CT (Fri 29 Nov)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Live Cattle Futures (LE) - 2024-11-27: 08:00 preopen, 08:30 open, 13:05 closed, 14:30 pcp, 16:00 closed ;; 2024-11-28: events [] ;; 2024-11-29: 08:00 preopen, 08:30 open, 12:05 closed",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "08:30 CT (Fri 29 Nov)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "modified",
+     "verbatim": "Bitcoin Futures (BTC) - 2024-11-28: 16:00 preopen (trade date 2024-11-29), 17:00 open",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "16:00 CT (the family's ordinary final-close instant, printed in the same document for the adjacent regular trade date; the holiday halt falls at that ordinary instant, so it is not an early close)",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Cash-Settled Cheese Futures (CSC) - 2024-11-27: 16:00 closed (trade date 2024-11-27) ;; 2024-11-28: events [] ;; 2024-11-29: events []. [No dairy session on 28 or 29 November.]",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber Futures (LBR) - 2024-11-27: 06:00 preopen, 09:00 open, 15:05 closed ;; 2024-11-28: events [] ;; 2024-11-29: 06:00 preopen, 09:00 open, 12:05 closed",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "open_instant": "09:00 CT (Fri 29 Nov)"
+    }
+   ]
+  },
+  {
+   "date": "2024-11-29",
+   "name": "Day after Thanksgiving 2024 (Friday 29 November 2024)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "E-mini S&P 500 Futures (ES) - 2024-11-29: {\"eventTime\":\"12:15\",\"marketEventType\":\"closed\",\"tradingDate\":\"2024-11-29\"}",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "unknown",
+     "verbatim": "No Nikkei product is among the ten representatives this channel returns.",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "10-Year T-Note Futures (ZN) - 2024-11-29: 12:15 closed",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "Euro FX Futures (6E) - 2024-11-29: 12:15 closed",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "early_close",
+     "verbatim": "Crude Oil Futures (CL) - 2024-11-29: 13:45 closed",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "13:45 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "early_close",
+     "verbatim": "Gold Futures (GC) - 2024-11-29: 13:45 closed",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "13:45 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "early_close",
+     "verbatim": "Corn Futures (ZC) - 2024-11-29: 08:30 open, 12:05 closed",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:05 CT",
+     "open_instant": "08:30 CT"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "early_close",
+     "verbatim": "Live Cattle Futures (LE) - 2024-11-29: 08:00 preopen, 08:30 open, 12:05 closed",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:05 CT",
+     "open_instant": "08:30 CT"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin Futures (BTC) - 2024-11-29: 12:45 closed",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:45 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Cash-Settled Cheese Futures (CSC) - 2024-11-29: events []",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2"
+    },
+    {
+     "family": "lumber",
+     "status": "early_close",
+     "verbatim": "Lumber Futures (LBR) - 2024-11-29: 06:00 preopen, 09:00 open, 12:05 closed",
+     "document": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+     "tier": "T2",
+     "close_instant": "12:05 CT",
+     "open_instant": "09:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2024-12-24",
+   "name": "Christmas Eve 2024 (Tuesday 24 December 2024 - early close)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "E-mini S&P 500 Futures (ES) - 2024-12-24: {\"eventTime\":\"12:15\",\"marketEventType\":\"closed\",\"tradingDate\":\"2024-12-24\"}",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "unknown",
+     "verbatim": "No Nikkei product is among the ten representatives this channel returns.",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "10-Year T-Note Futures (ZN) - 2024-12-24: 12:15 closed",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "Euro FX Futures (6E) - 2024-12-24: 12:45 closed",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "close_instant": "12:45 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "early_close",
+     "verbatim": "Crude Oil Futures (CL) - 2024-12-24: 12:45 closed",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "close_instant": "12:45 CT"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "early_close",
+     "verbatim": "Gold Futures (GC) - 2024-12-24: 12:45 closed",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "close_instant": "12:45 CT"
+    },
+    {
+     "family": "globex_grains",
+     "status": "early_close",
+     "verbatim": "Corn Futures (ZC) - 2024-12-24: 07:45 paused, 08:00 preopen, 08:30 open, 12:05 closed",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "close_instant": "12:05 CT",
+     "open_instant": "08:30 CT"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "early_close",
+     "verbatim": "Live Cattle Futures (LE) - 2024-12-24: 08:00 preopen, 08:30 open, 12:15 closed",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "close_instant": "12:15 CT",
+     "open_instant": "08:30 CT"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin Futures (BTC) - 2024-12-24: 12:45 closed",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "close_instant": "12:45 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "early_close",
+     "verbatim": "Cash-Settled Cheese Futures (CSC) - 2024-12-24: 12:00 closed",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "close_instant": "12:00 CT"
+    },
+    {
+     "family": "lumber",
+     "status": "early_close",
+     "verbatim": "Lumber Futures (LBR) - 2024-12-24: 06:00 preopen, 09:00 open, 12:05 closed",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "close_instant": "12:05 CT",
+     "open_instant": "09:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2024-12-25",
+   "name": "Christmas Day 2024 (Wednesday 25 December 2024)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "closed",
+     "verbatim": "E-mini S&P 500 Futures (ES) - 2024-12-25: {\"eventTime\":\"16:00\",\"marketEventType\":\"preopen\",\"tradingDate\":\"2024-12-26\"}, {\"17:00\",\"open\"}. [No day session on 25 December.]",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "open_instant": "17:00 CT (Wed 25 Dec)"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "unknown",
+     "verbatim": "No Nikkei product is among the ten representatives this channel returns.",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "closed",
+     "verbatim": "10-Year T-Note Futures (ZN) - 2024-12-25: 16:00 preopen (trade date 2024-12-26), 17:00 open",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "open_instant": "17:00 CT (Wed 25 Dec)"
+    },
+    {
+     "family": "globex_fx",
+     "status": "closed",
+     "verbatim": "Euro FX Futures (6E) - 2024-12-25: 16:00 preopen (trade date 2024-12-26), 17:00 open",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "open_instant": "17:00 CT (Wed 25 Dec)"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "closed",
+     "verbatim": "Crude Oil Futures (CL) - 2024-12-25: 16:00 preopen (trade date 2024-12-26), 17:00 open",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "open_instant": "17:00 CT (Wed 25 Dec)"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "closed",
+     "verbatim": "Gold Futures (GC) - 2024-12-25: 16:00 preopen (trade date 2024-12-26), 17:00 open",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "open_instant": "17:00 CT (Wed 25 Dec)"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Corn Futures (ZC) - 2024-12-25: events [] ;; 2024-12-26: 06:00 preopen, 08:30 open, 13:20 paused, 13:30 closed, 14:30 pcp, 16:00 closed, 16:45 preopen, 19:00 open",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "open_instant": "08:30 CT (Thu 26 Dec)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Live Cattle Futures (LE) - 2024-12-25: events [] ;; 2024-12-26: 08:00 preopen, 08:30 open, 13:05 closed, 14:30 pcp, 16:00 closed",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "open_instant": "08:30 CT (Thu 26 Dec)"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "closed",
+     "verbatim": "Bitcoin Futures (BTC) - 2024-12-25: 16:00 preopen (trade date 2024-12-26), 17:00 open",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "open_instant": "17:00 CT (Wed 25 Dec)"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Cash-Settled Cheese Futures (CSC) - 2024-12-25: 16:00 preopen (trade date 2024-12-26), 17:00 open",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "open_instant": "17:00 CT (Wed 25 Dec)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber Futures (LBR) - 2024-12-25: events [] ;; 2024-12-26: 06:00 preopen, 09:00 open, 15:05 closed",
+     "document": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "open_instant": "09:00 CT (Thu 26 Dec)"
+    }
+   ]
+  },
+  {
+   "date": "2024-12-31",
+   "name": "New Year's Eve 2024 (Tuesday 31 December 2024)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "normal",
+     "verbatim": "E-mini S&P 500 Futures (ES) - 2024-12-31: {\"eventTime\":\"16:00\",\"marketEventType\":\"closed\",\"tradingDate\":\"2024-12-31\"}. Regular final close; no early close printed.",
+     "document": "api_2024-12-31.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "unknown",
+     "verbatim": "No Nikkei product is among the ten representatives this channel returns.",
+     "document": "api_2024-12-31.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "normal",
+     "verbatim": "10-Year T-Note Futures (ZN) - 2024-12-31: 16:00 closed",
+     "document": "api_2024-12-31.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_fx",
+     "status": "normal",
+     "verbatim": "Euro FX Futures (6E) - 2024-12-31: 16:00 closed",
+     "document": "api_2024-12-31.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_energy",
+     "line": "ENERGY",
+     "status": "normal",
+     "verbatim": "Crude Oil Futures (CL) - 2024-12-31: 16:00 closed",
+     "document": "api_2024-12-31.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_energy",
+     "line": "METALS",
+     "status": "normal",
+     "verbatim": "Gold Futures (GC) - 2024-12-31: 16:00 closed",
+     "document": "api_2024-12-31.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_grains",
+     "status": "modified",
+     "verbatim": "Corn Futures (ZC) - 2024-12-31: 07:45 paused, 08:00 preopen, 08:30 open, 13:20 paused, 13:30 closed, 14:30 pcp, 16:00 closed. [Regular day session but no 31 December evening reopen: the next Corn event is 2025-01-02 06:00 preopen.]",
+     "document": "api_2024-12-31.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2",
+     "close_instant": "16:00 CT (final close of the 31 December trade date)"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "normal",
+     "verbatim": "Live Cattle Futures (LE) - 2024-12-31: 08:00 preopen, 08:30 open, 13:05 closed, 14:30 pcp, 16:00 closed",
+     "document": "api_2024-12-31.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "normal",
+     "verbatim": "Bitcoin Futures (BTC) - 2024-12-31: 16:00 closed",
+     "document": "api_2024-12-31.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2"
+    },
+    {
+     "family": "dairy",
+     "status": "normal",
+     "verbatim": "Cash-Settled Cheese Futures (CSC) - 2024-12-31: 16:00 closed",
+     "document": "api_2024-12-31.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2"
+    },
+    {
+     "family": "lumber",
+     "status": "normal",
+     "verbatim": "Lumber Futures (LBR) - 2024-12-31: 06:00 preopen, 09:00 open, 15:05 closed",
+     "document": "api_2024-12-31.json @ 2024-12-20T15:53:40Z",
+     "tier": "T2"
+    }
+   ]
+  }
+ ],
+ "missing": [
+  "2023 Dr. Martin Luther King, Jr. Day (Monday 16 January 2023) - ALL product groups (Equity Index, Nikkei, Interest Rates, FX, Energy, Metals, Grains, Livestock, Cryptocurrency, Dairy, Lumber). Channels tried: holiday-calendar/files/*.xls (only 2023-mlk-day-holiday-schedule-compact-mgex-dme.xls exists and it carries MGEX and DME rows only); trading-hours/files/mlk-day-2023.pdf and presidents-day-2023.pdf (live 404 via r.jina.ai); Wayback CDX prefix on cmegroup.com/trading-hours/files (re-counted 2026-09-12 from cdx_47e9ad.json: only six 2023 one-pagers return 200, all from Memorial Day onward - round 0 said seven); Wayback captures of /services/trading-hours-by-product for fromEventDate=2023-01-15 (the only 200 capture is 2024-07-08T16:14:38Z; re-read from those bytes on 2026-09-12 it carries hasEvents:false with all ten products' event arrays empty - saved as raw/cme-2022-2024-fix/neg_api_2023-01-15.json. This is a rolling-history limit, not a rule about past dates: the same crawl returns full events for fromEventDate=2023-12-24 and for every 2024 window); 2023-holiday-calendars.zip (404); archive.today (HTTP 429). The 16 Jan 2023 archived holiday-calendar page shows CME linking this holiday to trading-hours.html#foi=F&tradeDate=2023-01-16, a client-rendered view with no archived payload.",
+  "2023 Presidents Day (Monday 20 February 2023) - ALL product groups. Same channels and same outcome as 2023 MLK (presidents-day-2023.pdf was never crawled at all rather than crawled and 404, so its absence is weaker evidence than the mlk-day-2023 404; the T2 window is empty either way - raw/cme-2022-2024-fix/neg_api_2023-02-19.json); the trading-hours.html deep link is #foi=F&tradeDate=2023-02-20.",
+  "2023 Good Friday (Friday 7 April 2023) - ALL product groups. Same channels and same outcome (2023-holiday-calendars.zip 404; archive.today HTTP 429 - both as for 2023 MLK; T2 window empty - raw/cme-2022-2024-fix/neg_api_2023-04-06.json); deep link #foi=F&tradeDate=2023-04-07. Note this is the year CME is understood to have run a limited Good Friday session around the employment report, so the gap is materially more than a repeat of the 2022 full closure and must not be filled by pattern.",
+  "2022 and 2023 Columbus Day / Indigenous Peoples' Day and Veterans Day - not researched: CME Group publishes clearing and settlement advisories for these two days but no Globex product-group trading schedule, and the task scope names neither. The advisory and settlement-times files exist in the archive if they are later wanted.",
+  "Nikkei-specific lines for every 2023 and 2024 holiday - the 2023 one-pagers and all ten 2024 T2 service windows carry no Nikkei row at all (the service returns only the ten representative products the trading-hours page requests). Outright Nikkei is recorded above as governed by the EQUITIES row, which is how the 2022 sheets structure it, but no 2023/2024 document names Nikkei.",
+  "2022 Labor Day, 2022 Christmas and the 2022/23 New Year sheet are known only from a single Wayback capture dated 2022-07-04, whose \"Updated 6/29/2022\" stamp is months before CME's stated two-weeks-prior finalisation. No later capture of those three URLs exists. Treated as sourced but flagged: a finalised vintage, if one differed, is unrecoverable."
+ ],
+ "saved_json": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2022-2024.json"
+}

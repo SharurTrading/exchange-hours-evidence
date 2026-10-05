@@ -1,0 +1,130 @@
+{
+ "task": "cme-2022-2024.verify",
+ "round": 2,
+ "verified_task": "cme-2022-2024",
+ "verified_on": "2026-09-12",
+ "verified_file": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2022-2024.json",
+ "previous_verdict": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2022-2024.verify.r1.json",
+ "verdict": "FAIL",
+ "matches": false,
+ "evidence_dir": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2022-2024.verify2",
+ "round1_discrepancy_disposition": [
+  {
+   "id": "D1",
+   "round1_summary": "Six 2024 holidays declared unsourced although CME's own trading-hours service (T2) holds populated Wayback responses.",
+   "status": "RESOLVED",
+   "how_checked": "The deliverable now carries 2024-01-15, 2024-02-19, 2024-03-29, 2024-05-27, 2024-06-19, 2024-07-03 and 2024-07-04 (77 family entries, 11 per date) sourced at T2 from api_2024-01-14/02-18/03-28/05-26/06-18/07-03.json in raw/cme-2022-2024-fix/, and the six matching 'missing' entries are gone (the list is down from 12 to 6). I re-fetched all six windows from https://web.archive.org/web/20240708161439id_/... : after gunzip all six are byte-identical to the saved copies (a8fe0f3e.../af5ddb57.../9b417092.../ccff9685.../57acecac.../6ef0e2b0...). I then fetched a SECOND, independent vintage - Wayback capture 20241220155339/40 of the same six URLs, a crawl five months later - and every one is byte-identical to the 2024-07-08 copy, so the chosen vintage is not load-bearing. I re-derived the verbatim string for all 77 entries mechanically from the saved bytes (product name, each eventDate, each eventTime/marketEventType/tradingDate in the service's own spelling, and 'events []' for empty arrays): 0 mismatches. The false rule ('the service returns empty event arrays for dates already past') is gone from the coverage paragraph, replaced by a rolling-history account with five saved controls; I re-fetched all five (neg_api_2023-01-15/02-19/04-06, probe_2023-05-28, probe_2023-12-24) and all five are byte-identical, with hasEvents false/false/false/false and true respectively, which is exactly what the new paragraph claims.",
+   "residual": "raw/cme-2022-2024/INDEX.md itself still carries the wrong sentence in its channel notes and in the api_2022-12-31.json row ('the service returns hasEvents=false and empty event arrays for past dates ... proves why the pre-Sep-2024 windows cannot be recovered'). The fixer deliberately left the round-0 INDEX unedited as the round-0 record and corrected it in raw/cme-2022-2024-fix/INDEX.md section 5. That is defensible, but a reader who opens only the round-0 INDEX is still misled; see discrepancy R2-5."
+  },
+  {
+   "id": "D2",
+   "round1_summary": "Four verbatims quoted a 'TRADE DATE' label out of a table cell that is empty.",
+   "status": "RESOLVED FOR THE FOUR NAMED ENTRIES - BUT A FIFTH INSTANCE OF THE SAME DEFECT SURVIVES (see R2-1)",
+   "how_checked": "2023-12-25 globex_grains, 2023-12-25 globex_livestock, 2024-01-01 globex_grains and 2024-01-01 globex_livestock now all state that the Monday column is EMPTY for that row. I re-derived the cell grid independently with pdftotext -bbox-layout (saved as christmas2023_bbox.xml and newyears2024_bbox.xml): in christmas-day-2023.pdf the Monday column (x 190-300) carries words only at y=398.4/476.8/556.5/777.5/858.2/1022.4/1100.6 and nothing at the GRAINS (680.6), LIVESTOCK (954.1) or LUMBER (1179.9) rows; in new-years-day-2024.pdf the Monday column (x 220-330) carries words only at y=390.4/468.8/548.5/769.5/850.2/1014.4/1092.6 and nothing at GRAINS (672.6), LIVESTOCK (946.1) or LUMBER (1171.9). The corrected verbatims match the bytes. The fix round also ADDED a finding of its own that I confirm: thanksgiving-day-2023.pdf really does print 'TRADE DATE: FRI 24 NOV' in the CRYPTOCURRENCIES Thursday cell (x=392.7, y=1032.6) with '16:00 (PREOPEN)' and no trailing 'HALT', unlike the INTEREST RATE / EQUITIES / ENERGY / FX / METALS cells which all print '... (PREOPEN) HALT'."
+  },
+  {
+   "id": "D3",
+   "round1_summary": "'early_close' applied to families whose printed holiday halt instant equals their ordinary daily close, inconsistently between the holiday-Monday and Monday-before cases.",
+   "status": "RESOLVED",
+   "how_checked": "The coverage now states a single rule keyed to what the same document prints for an adjacent regular trade date, and 28 entries moved early_close -> modified. I diffed cme-2022-2024.r0.json against cme-2022-2024.json: exactly 28 status changes, all early_close -> modified, all globex_fx or globex_cryptocurrency, on exactly the 14 dates the coverage names (2022-01-17, 2022-02-21, 2022-05-30, 2022-06-20, 2022-07-04, 2022-09-05, 2022-11-24, 2023-05-29, 2023-06-19, 2023-07-04, 2023-09-04, 2023-11-23, 2024-09-02, 2024-11-28). No other status changed. I then scanned all 362 family entries: 122 remain 'early_close' and NOT ONE of them carries a 16:00 CT close_instant; the surviving early_close instants are 12:00 (49), 12:05 (12), 12:15 (17), 12:45 (8), 13:30 (19), 13:45 (2) and 01:00 (1, the merged 2022 Memorial Day 'Nikkei & BTIC' row). The 2023-07-03 and 2024-12-31 rows that print 16:00 (CLOSED) against a trade date of their own remain 'normal', which is what the stated rule gives."
+  },
+  {
+   "id": "D4",
+   "round1_summary": "Twelve files unlisted in INDEX.md; two rows with no URL and no description.",
+   "status": "RESOLVED",
+   "how_checked": "I re-hashed every row of both INDEX.md files: raw/cme-2022-2024/INDEX.md 44/44 match recorded sha256 AND recorded byte length; raw/cme-2022-2024-fix/INDEX.md 26/26 match. I then listed both directories: ZERO files are present but unlisted in either index. Sections 4a and 4b of the fix INDEX supply the twelve helper/derived files and give the two CDX responses a reproducing query and a description. I verified the cdx_47e9ad.json query by re-issuing it live: my fresh response (v2_cdx_th_files.json) has sha256 2dee06594369a62381e72beec878dc0af20ab305738fec34249e32d4c3c67463, byte-for-byte the same file."
+  },
+  {
+   "id": "D5",
+   "round1_summary": "Family keys decorated with '(ENERGY line)' / '(METALS line)', so a consumer cannot key on 'family'.",
+   "status": "RESOLVED",
+   "how_checked": "The family key set is now exactly the ten served keys (dairy, globex_cryptocurrency, globex_energy, globex_equity_index, globex_fx, globex_grains, globex_interest_rates, globex_livestock, globex_nikkei_225_dollar, lumber) with no decoration anywhere. The document's own row label moved into a separate 'line' field whose values are '', 'ENERGY', 'METALS' and the four 2022 combined labels, including CME's own typo 'Energy, Metals. Softs & DME Products' on the MLK sheet, which I confirmed is what row 26 of 2022-mlk-day-holiday-schedule.xls actually prints (the Presidents Day, Good Friday and New Year sheets print 'Energy, Metals, Softs & DME Products' with a comma)."
+  }
+ ],
+ "what_passed": [
+  "INDEX re-hash: 70/70 rows across raw/cme-2022-2024/INDEX.md (44) and raw/cme-2022-2024-fix/INDEX.md (26) match both the recorded sha256 and the recorded byte length; no listed file is missing and no present file is unlisted.",
+  "Independent re-fetch, 15 documents (target was six), across all three channels: the six new T2 windows (api_2024-01-14/02-18/03-28/05-26/06-18/07-03.json), the five T2 controls (neg_api_2023-01-15/02-19/04-06.json, probe_2023-05-28.json, probe_2023-12-24.json), two T1 one-pagers (memorial-day-2023.pdf @20230420224018, christmas-day-2023.pdf @20260719095248) and two T1 spreadsheets (2022-memorial-day-holiday-schedule.xls @20220704065438, 2022-thanksgiving-holiday-schedule.xls @20221122060801). All fifteen are byte-identical to the saved copies.",
+  "Second-vintage corroboration the deliverable did not claim: the 2024-12-20 crawl (20241220155339/40) of all six new T2 windows is byte-identical to the 2024-07-08 crawl the deliverable used, so none of the six new rows depends on a single capture.",
+  "Verbatim / status / instant / zone re-read from the saved bytes, far beyond the twelve-entry target. Mechanical re-derivation of all 143 T2-sourced family entries (2024-01-15, 02-19, 03-29, 05-27, 06-19, 07-03, 07-04, 09-02, 11-28, 11-29, 12-24, 12-25, 12-31): every printed eventTime, marketEventType, tradingDate, product name and empty-array clause matches, with zero real mismatches. Independent bbox re-derivation of the full 10-row x 3-column grid of memorial-day-2023.pdf, juneteenth-2023.pdf, labor-day-2023.pdf, 4th-of-july-2023.pdf, thanksgiving-day-2023.pdf, christmas-day-2023.pdf and new-years-day-2024.pdf, compared cell by cell against every 2023/2024 one-pager entry (77 entries): one real defect found (R2-1), everything else exact, including the operator's '(PREOPEN) HALT' word order, the 'AGRICULTURE' label thanksgiving-day-2023.pdf uses for the livestock line, the 12:15 EQUITIES close on Monday 3 July 2023 and the 12:45 ENERGY/METALS/CRYPTOCURRENCIES closes on Friday 24 November 2023. Cell-level re-read of the 2022 spreadsheets via xlrd for 2022-05-30 (all 10), 2022-11-24 (10), 2022-11-25 (10), 2022-12-26 (10), 2022-01-17 and 2022-02-21 (Nikkei / Equity / FX), plus a scan of every HH:MM token in all 111 xls-sourced entries against the sheet row it is attributed to: zero fabricated times.",
+  "Column-header semantics were checked, not assumed: I read the memorial-day-2023.pdf head row and confirmed the three columns really are 'SUNDAY, 28 MAY 2023' (x=201), 'MONDAY, 29 MAY 2023' (x=376) and 'TUESDAY, 30 MAY 2023' (x=558), which is how the deliverable labels them, and that '12:00 (PREOPEN)' at x=386/411 is followed by 'HALT' at x=465 - the deliverable's word order, not the naive reading order.",
+  "No instant inferred from another year: every one of the 362 family entries cites a document whose own year matches the holiday's year (the only cross-year documents are the December/January boundary sheets that legitimately span the turn), and a regex sweep for cross-year reasoning language ('same as', 'as in <year>', 'by analogy', 'pattern from', 'carried over', 'inferred from', 'prior year') returns zero hits. Where a document is silent for a family the entry says so; the 2022 Nikkei merge is flagged as a residual ambiguity rather than reconciled.",
+  "Missing list checked against a fresh CDX enumeration. cmegroup.com/trading-hours/files (2022-2026, 42 rows, v2_cdx_th_files.json): exactly seven URLs return 200 - memorial-day-2023, juneteenth-2023, 4th-of-july-2023, labor-day-2023, thanksgiving-day-2023, christmas-day-2023 and new-years-day-2024 - and every 2024/2025 one-pager plus mlk-day-2023 and good-friday-2023 return 404, with presidents-day-2023.pdf absent from the index entirely, exactly as the deliverable states. cmegroup.com/tools-information/holiday-calendar/files (2023-2025, 237 distinct URLs, v2_cdx_hcf.json): the only 2023 holiday-schedule spreadsheets are the five compact MGEX/DME sheets, and the only 2024/2025 files are *-advisory.pdf, otc-*.pdf and *-settlement-times-*.pdf - no 2024 Globex product-group schedule was ever published.",
+  "T2 service checked for every 2019+ holiday still listed as missing. A fresh CDX of cmegroup.com/services/trading-hours-by-product (2022-2026, 690 rows, v2_cdx_svc.json) shows that fromEventDate=2023-01-15 has exactly one 200 capture (20240708161438; a later 20260719102637 returns 500), and 2023-02-19 and 2023-04-06 have exactly one 200 capture each, the same crawl. I re-fetched all three and each carries hasEvents:false with all ten products' event arrays empty. No capture of any window covering 2023-01-16, 2023-02-20 or 2023-04-07 exists anywhere else in the index, and no capture of any Columbus Day or Veterans Day window exists at all. The three 2023 gaps and the two out-of-scope holidays are therefore genuine.",
+  "The rolling-history account is correct at both boundaries: the 2024-07-08 crawl returns hasEvents:false for 2022-12-31, 2023-01-15, 2023-02-19, 2023-04-06 and 2023-05-28 and hasEvents:true for 2023-12-24 and for every 2024 window."
+ ],
+ "discrepancies": [
+  {
+   "id": "R2-1",
+   "severity": "load-bearing (evidence discipline), state-neutral",
+   "kind": "verbatim over-claim: quoted text that is not in the document - a surviving instance of the round-1 D2 defect class",
+   "artifact": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2022-2024/thanksgiving-day-2023.pdf",
+   "entry": "cme-2022-2024.json -> holidays[date=2023-11-23] -> families[family=globex_grains] -> verbatim",
+   "summary": "The 2023-11-23 GRAINS entry quotes a 'TRADE DATE: FRI 24 NOV' label out of the Thursday column cell. That cell is completely empty. Round 1 fixed four instances of exactly this defect and re-read this very document for the CRYPTOCURRENCIES row, but missed this fifth instance in the same file.",
+   "current_text": "GRAINS - WEDNESDAY, 22 NOVEMBER 2023: TRADE DATE: WED 22 NOV / ... 13:30 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED); TRADE DATE: FRI 24 NOV / 16:45 (PREOPEN) ;; THURSDAY, 23 NOVEMBER 2023: TRADE DATE: FRI 24 NOV (no time events) ;; FRIDAY, 24 NOVEMBER 2023: 08:30 (OPEN) / 12:05 (CLOSED)",
+   "evidence": "pdftotext -bbox-layout (saved as raw/cme-2022-2024.verify2/tg_bbox.xml). Column heads: WEDNESDAY at x=171.0, THURSDAY at x=392.7, FRIDAY at x=584.2, all y=357.5. Row labels at x=43.7: ENERGY y=567.1, GRAINS y=682.0, FX y=796.0, so the GRAINS row band is y in [624.6, 739.0). Every word in y=[600,800): the WEDNESDAY column (x 171/183.7) carries 'TRADE DATE: WED 22 NOV' (620.7), '07:45 (PAUSED)' (633.8), '08:00 (PREOPEN)' (647.0), '08:30 (OPEN)' (660.1), '13:20 (PAUSED)' (673.2), '13:30 (CLOSED)' (686.4), '14:30 (PCP)' (699.5), '16:00 (CLOSED)' (712.7), 'TRADE DATE: FRI 24 NOV' (730.3), '16:45 (PREOPEN)' (743.4); the FRIDAY column (x 584.2/597.0) carries 'TRADE DATE: FRI 24 NOV' (668.9), '08:30 (OPEN)' (682.1), '12:05 (CLOSED)' (695.2); and the THURSDAY column (x 385-560) carries NOTHING between y=579.1 (the ENERGY row's '13:30 (PREOPEN) HALT') and y=784.0 (the FX row's 'TRADE DATE: FRI 24 NOV'). The Thursday GRAINS cell prints nothing at all.",
+   "exact_corrected_value": "GRAINS - WEDNESDAY, 22 NOVEMBER 2023: TRADE DATE: WED 22 NOV / 07:45 (PAUSED) / 08:00 (PREOPEN) / 08:30 (OPEN) / 13:20 (PAUSED) / 13:30 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED) ;; TRADE DATE: FRI 24 NOV / 16:45 (PREOPEN) ;; THURSDAY, 23 NOVEMBER 2023: the THURSDAY, 23 NOVEMBER 2023 column is EMPTY for this row - pdftotext -bbox-layout shows no text at x=392.7/405.5 anywhere in the GRAINS row band (y 624.6-739.0): no trade-date label and no time events ;; FRIDAY, 24 NOVEMBER 2023: TRADE DATE: FRI 24 NOV / 08:30 (OPEN) / 12:05 (CLOSED)",
+   "state_impact": "None. The derived status 'closed' and the open_instant are unaffected; only the quotation is wrong.",
+   "see_also": "The parallel 2023-11-23 globex_livestock ('AGRICULTURE') and lumber entries correctly say 'no entries' / '(no entries)' for Thursday, and the dairy entry correctly says 'no entries' for both Thursday and Friday, which I confirmed against the same grid. Only GRAINS over-claims."
+  },
+  {
+   "id": "R2-2",
+   "severity": "load-bearing (zone provenance), state-neutral",
+   "kind": "false statement about where the operator prints the zone",
+   "artifact": "cme-2022-2024.json -> coverage, paragraph 'ZONES, EXACTLY AS PRINTED'; and raw/cme-2022-2024/thanksgiving-day-2023.pdf, christmas-day-2023.pdf, new-years-day-2024.pdf",
+   "current_text": "The 2023 and 2024 one-pagers print 'Trading hours are subject to change and are in U.S. Central Time unless otherwise stated' in both the header and the footer.",
+   "summary": "That is true of four of the seven one-pagers and false of three. thanksgiving-day-2023.pdf, christmas-day-2023.pdf and new-years-day-2024.pdf print the sentence exactly ONCE, in the header; they have no footer occurrence.",
+   "evidence": "pdftotext on each document, then bbox to locate each occurrence. memorial-day-2023.pdf: two occurrences, y=197.0 (header) and y=1102.4 (footer) on a 1134pt page. 4th-of-july-2023.pdf: two, y=197.0 and y=1095.4. juneteenth-2023.pdf and labor-day-2023.pdf: two each. thanksgiving-day-2023.pdf: ONE, y=208.2 on a 1512pt page. christmas-day-2023.pdf: ONE, y=208.2. new-years-day-2024.pdf: ONE, y=208.2.",
+   "exact_corrected_value": "The 2023 and 2024 one-pagers print 'Trading hours are subject to change and are in U.S. Central Time unless otherwise stated'. memorial-day-2023.pdf, juneteenth-2023.pdf, labor-day-2023.pdf and 4th-of-july-2023.pdf print it twice, once in the header and once in the footer; thanksgiving-day-2023.pdf, christmas-day-2023.pdf and new-years-day-2024.pdf print it once, in the header only.",
+   "state_impact": "None. U.S. Central Time is correctly sourced from the header in all seven documents; only the claim about a second, footer occurrence is wrong."
+  },
+  {
+   "id": "R2-3",
+   "severity": "moderate (zone provenance), state-neutral",
+   "kind": "incomplete enumeration presented as the per-sheet UTC-offset finding",
+   "artifact": "cme-2022-2024.json -> coverage, paragraph 'ZONES, EXACTLY AS PRINTED'; and the eleven 2022/2023 .xls files in raw/cme-2022-2024/",
+   "current_text": "The 2022 sheets state 'All times are Central Time' with the UTC offset printed per sheet (Good Friday and Memorial Day print 'ET +1  UTC  +5'; New Year, Thanksgiving and Christmas print 'UTC  +6').",
+   "summary": "Five sheets print +5 and six print +6, not two and three. A reader following this sentence would wrongly conclude that the Independence Day, Juneteenth and Labor Day 2022 sheets print +6 and that the MLK and Presidents Day 2022 sheets print +5. Nothing the sentence names is misstated; it is the omission that misleads. Round 1 repeated the same partial enumeration in its what_passed list, so this went unchecked twice.",
+   "evidence": "Row 3 (row 4 on the Thanksgiving sheets), column 0, of each workbook, read with xlrd: 'All times are Central Time   ET +1  UTC  +5' on 2022-good-friday, 2022-independence-day, 2022-juneteenth, 2022-labor-day and 2022-memorial-day; 'All times are Central Time   ET +1  UTC  +6' on 2022-christmas, 2022-mlk-day, 2022-new-years, 2022-presidents-day, both 2022-thanksgiving vintages and 2023-new-years. The split is exactly U.S. daylight time versus standard time.",
+   "exact_corrected_value": "The 2022 sheets state 'All times are Central Time' with the UTC offset printed per sheet: the five daylight-time sheets - Good Friday, Memorial Day, Juneteenth, Independence Day and Labor Day - print 'ET +1  UTC  +5', and the six standard-time sheets - New Year 2022, MLK, Presidents Day, Thanksgiving (both vintages), Christmas and the 2023 New Year sheet - print 'ET +1  UTC  +6'."
+  },
+  {
+   "id": "R2-4",
+   "severity": "minor",
+   "kind": "verbatim truncation (omission, not fabrication)",
+   "artifact": "cme-2022-2024.json -> holidays[date=2024-09-02] -> families[family=globex_grains] -> verbatim; bytes in raw/cme-2022-2024/api_2024-09-01.json",
+   "current_text": "Corn Futures (ZC, productId 300) - 2024-09-01: {\"16:00\",\"preopen\",\"tradingDate\":\"2024-09-03\"} ;; 2024-09-02: {\"19:00\",\"open\",\"tradingDate\":\"2024-09-03\"} ;; 2024-09-03: 07:45 paused, 08:00 preopen, 08:30 open, 13:20 paused, 13:30 closed, 14:30 pcp, 16:00 closed",
+   "summary": "The 2024-09-03 clause stops two events early. The saved response also carries 16:45 preopen (tradingDate 2024-09-04) and 19:00 open (tradingDate 2024-09-04) for that eventDate. Nothing is fabricated and 2024-09-03 is not the holiday, but the clause reads as a complete list of that eventDate's events and is not one. Every other round-0 T2 verbatim I checked lists the eventDate's events in full.",
+   "exact_corrected_value": "... ;; 2024-09-03: 07:45 paused, 08:00 preopen, 08:30 open, 13:20 paused, 13:30 closed, 14:30 pcp, 16:00 closed (all tradingDate 2024-09-03), 16:45 preopen (tradingDate 2024-09-04), 19:00 open (tradingDate 2024-09-04)"
+  },
+  {
+   "id": "R2-5",
+   "severity": "minor (hygiene)",
+   "kind": "the corrected round-0 INDEX row is only corrected elsewhere",
+   "artifact": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2022-2024/INDEX.md",
+   "summary": "Round 1's required_to_pass asked for the false T2 rule to be corrected in the INDEX.md channel table as well as in the coverage paragraph. The coverage paragraph was fixed; raw/cme-2022-2024/INDEX.md was not. It still says, in its channel notes and in the api_2022-12-31.json row, that 'the service returns hasEvents=false and empty event arrays for past dates' and that this 'proves why the pre-Sep-2024 windows cannot be recovered from this channel'. The fixer states the reason - keep the round-0 record verbatim - and supplies the correction in raw/cme-2022-2024-fix/INDEX.md section 5. I accept the reasoning, but the round-0 file carries no pointer to the correction.",
+   "exact_corrected_value": "Add one line at the top of raw/cme-2022-2024/INDEX.md: 'SUPERSEDED IN PART: the channel note below and the api_2022-12-31.json row state that the trading-hours service returns empty event arrays for dates already past. That is wrong - the service serves a rolling history window. See raw/cme-2022-2024-fix/INDEX.md section 2 and section 5.' Leave the rest of the file unedited."
+  },
+  {
+   "id": "R2-6",
+   "severity": "minor (wording, not classification)",
+   "kind": "the stated 'closed' rule does not describe how 'closed' is actually applied",
+   "artifact": "cme-2022-2024.json -> coverage, paragraph 'EARLY-CLOSE RULE'",
+   "current_text": "'closed': the document prints no session for D's own trade date.",
+   "summary": "Read literally this swallows 'modified' and most of 'early_close'. On a holiday Tuesday such as 2023-07-04 the FX, CRYPTOCURRENCIES, EQUITIES, INTEREST RATE, ENERGY and METALS cells print nothing for a 4-July trade date either - every instant in them is dated WED 5 JULY - yet they are (correctly) classified modified/early_close, because a session started on the Monday evening is still running through the Tuesday. The 'modified' clause that follows implies the right test; the 'closed' clause should state it. The entries themselves are classified consistently, so this is a wording defect only.",
+   "exact_corrected_value": "'closed': the document prints no session running through D at all - neither a D-dated trade date nor a next-business-day-dated session that is open across D; the only instants printed in D's column, if any, are the evening reopen that ends the closure."
+  }
+ ],
+ "notes": [
+  "The fix round's own new finding on thanksgiving-day-2023.pdf (the CRYPTOCURRENCIES Thursday cell prints 'TRADE DATE: FRI 24 NOV' and '16:00 (PREOPEN)' with no trailing HALT, unlike the five rows above it) is correct and is now recorded in the 2023-11-23 globex_cryptocurrency verbatim. That the same re-read missed the empty GRAINS Thursday cell one column over is the only reason R2-1 survives.",
+  "Two archived 2023 compact MGEX/DME spreadsheets the deliverable does not save exist and are immaterial, as round 1 noted: 2023-juneteenth-holiday-schedule-compact-mgex-dme.xls and 2023-memorial-day-holiday-schedule-compact-mgex-dme.xls. My fresh CDX of the holiday-calendar/files tree confirms these five compact sheets are the complete 2023 spreadsheet set.",
+  "The 'missing' entry for the 2022 Labor Day, 2022 Christmas and 2022/23 New Year sheets (single 2022-07-04 capture, 'Updated 6/29/2022', earlier than CME's stated two-weeks-prior finalisation) is a genuine and well-flagged residual risk; my fresh CDX of the service tree adds nothing to it, and the archive holds no later capture of those three URLs.",
+  "The 2024-07-03 globex_grains entry is classified 'modified' with close_instant 16:00 CT even though ZC's 3 July day session is ordinary, because the Wednesday-evening reopen is absent. That follows the stated rule and is annotated in the verbatim; I record it as a judgment call inside a consistently applied convention, not a defect.",
+  "Five entries omit a 'TRADE DATE' label that the cell does print (2023-05-29 METALS and DAIRY, 2023-09-04 METALS, 2023-11-23 ENERGY and METALS, 2023-12-25 and 2024-01-01 ENERGY/METALS/DAIRY). These are omissions from a quotation, not fabrications, and none of them changes an instant or a status; I did not raise them as discrepancies."
+ ],
+ "required_to_pass": [
+  "R2-1: rewrite the 2023-11-23 globex_grains verbatim so the Thursday clause says the cell is empty, using the corrected text given above. This is the same defect class round 1 declared load-bearing.",
+  "R2-2: correct the coverage sentence about where the 2023/2024 one-pagers print the Central Time line - three of the seven print it in the header only.",
+  "R2-3: complete the 2022 UTC-offset enumeration (five +5 sheets, six +6 sheets) so no reader infers the wrong offset for the Independence Day, Juneteenth, Labor Day, MLK or Presidents Day sheets."
+ ],
+ "verify_artifacts_index": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2022-2024.verify2/INDEX.md"
+}

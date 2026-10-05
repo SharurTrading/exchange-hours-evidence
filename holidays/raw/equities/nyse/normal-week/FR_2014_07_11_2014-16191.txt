@@ -1,0 +1,627 @@
+<html>
+<head>
+<title>Federal Register, Volume 79 Issue 133 (Friday, July 11, 2014)</title>
+</head>
+<body><pre>
+[Federal Register Volume 79, Number 133 (Friday, July 11, 2014)]
+[Notices]
+[Pages 40183-40188]
+From the Federal Register Online via the Government Publishing Office [<a href="http://www.gpo.gov">www.gpo.gov</a>]
+[FR Doc No: 2014-16191]
+
+
+-----------------------------------------------------------------------
+
+SECURITIES AND EXCHANGE COMMISSION
+
+[Release No. 34-72548; File No. SR-NYSE-2014-32]
+
+
+Self-Regulatory Organizations; New York Stock Exchange LLC; 
+Notice of Filing of Proposed Rule Change Amending Rule 13 to Make the 
+Add Liquidity Only Modifier Available for Additional Limit Orders and 
+Make the Day Time-In-Force Condition Available for Intermarket Sweep 
+Orders
+
+July 7, 2014.
+    Pursuant to Section 19(b)(1) \1\ of the Securities Exchange Act of 
+1934 (``Act'') \2\ and Rule 19b-4 thereunder,\3\ notice is hereby given 
+that on June 27, 2014, New York Stock Exchange LLC (``NYSE'' or 
+``Exchange'') filed with the Securities and Exchange Commission 
+(``Commission'') the proposed rule change as described in Items I and 
+II below, which Items have been prepared by the self-regulatory 
+organization. The Commission is publishing this notice to solicit 
+comments on the proposed rule change from interested persons.
+---------------------------------------------------------------------------
+
+    \1\ 15 U.S.C. 78s(b)(1).
+    \2\ 15 U.S.C. 78a.
+    \3\ 17 CFR 240.19b-4.
+---------------------------------------------------------------------------
+
+I. Self-Regulatory Organization's Statement of the Terms of Substance 
+of the Proposed Rule Change
+
+    The Exchange proposes to amend NYSE Rule 13 to make the Add 
+Liquidity Only (``ALO'') modifier
+
+[[Page 40184]]
+
+available for additional limit orders and make the day time-in-force 
+condition available for Intermarket Sweep Orders (``ISO''). The text of 
+the proposed rule change is available on the Exchange's Web site at 
+<a href="http://www.nyse.com">www.nyse.com</a>, at the principal office of the Exchange, and at the 
+Commission's Public Reference Room.
+
+II. Self-Regulatory Organization's Statement of the Purpose of, and 
+Statutory Basis for, the Proposed Rule Change
+
+    In its filing with the Commission, the self-regulatory organization 
+included statements concerning the purpose of, and basis for, the 
+proposed rule change and discussed any comments it received on the 
+proposed rule change. The text of those statements may be examined at 
+the places specified in Item IV below. The Exchange has prepared 
+summaries, set forth in sections A, B and C below, of the most 
+significant parts of such statements.
+
+(A) Self-Regulatory Organization's Statement of the Purpose of, and 
+Statutory Basis for, the Proposed Rule Change
+
+1. Purpose
+    The Exchange is proposing to amend NYSE Rule 13 to make the ALO 
+modifier available for additional limit orders and make the day time-
+in-force condition available for ISOs.
+ALO Modifier
+    The Exchange currently offers an ALO modifier for MPL Orders, which 
+are undisplayed limit orders that execute at the mid-point of the 
+protected best bid or offer (``PBBO'').\4\ Pursuant to paragraph (e) 
+governing MPL Orders in Rule 13, an MPL-ALO Order will not execute upon 
+arrival, even if marketable. The Exchange proposes to amend Rule 13 to 
+make the ALO modifier available for day limit orders. The Exchange 
+notes that all other equity exchanges already make available add-
+liquidity-only functionality for limit orders.\5\
+---------------------------------------------------------------------------
+
+    \4\ See Rule 13 (Mid-Point Passive Liquidity (MPL) Order).
+    \5\ See BATS Exchange, Inc. (``BATS'') Rule 11.9(c)(6) (``BATS 
+Post Only Order''); BATS Y-Exchange, Inc. (``BATS-Y'') Rule 
+11.9(c)(6) (``BATS Post Only Order''); Chicago Stock Exchange, Inc. 
+(``CHX'') Article 20, Rule 4(b)(18) (``Post Only''); EDGA Exchange, 
+Inc. (``EDGA'') Rule 11.5(c)(5) (``Post Only Order''); EDGX 
+Exchange, Inc. (``EDGX'') Rule 11.5(c)(5) (``Post Only Order''); 
+NASDAQ Stock Market LLC (``Nasdaq'') Rule 4751(f)(10) (``Post-Only 
+Orders''); NASDAQ OMX BX LLC (``Nasdaq OMX BX'') Rule 4751(f)(10) 
+(``Post-Only Orders''); NASDAQ OMX PHLX LLC (``Nasdaq OMX PSX'') 
+Rule 3301(f)(11) (``Post-Only Orders''); and NYSE Arca Equities, 
+Inc. (``NYSE Arca Equities'') Rule 7.31(nn).
+---------------------------------------------------------------------------
+
+    To effect this change, the Exchange proposes to adopt a definition 
+of ALO Modifier in Rule 13. Proposed paragraph (a) of this new 
+definition would describe how an ALO Modifier impacts an order to which 
+it is appended, which is the same functionality as the ALO modifier 
+currently available for MPL Orders. Specifically, an order designated 
+ALO does not route and will not remove liquidity from the Exchange's 
+book. Proposed paragraph (a) of the new definition would also state 
+that ALO modifiers are available for MPL Orders, as they are today, and 
+for day limit orders.\6\ Because the behavior of MPL-ALO Orders is 
+currently described in paragraph (e) for MPL Orders in Rule 13, the 
+Exchange further proposes to cross-reference that rule text in the new 
+definition for ALO Modifiers. Accordingly, the remainder of the 
+proposed definition for ALO Modifier would describe the behavior of 
+limit orders designated ALO.
+---------------------------------------------------------------------------
+
+    \6\ Pursuant to Rule 13, a ``Limit, Limited Order, or Limited 
+Price Order'' means an order to buy or sell a stated amount of a 
+security at a specified price, or at a better price, if obtainable 
+and a ``Day Order'' means an order to buy or sell which, if not 
+executed, expires at the end of the 9:30 a.m. to 4:00 p.m. trading 
+session on the day on which it was entered.
+---------------------------------------------------------------------------
+
+    The Exchange further proposes in new paragraph (a) of the new 
+definition that limit orders designated ALO would be eligible to 
+participate in the open or close, which would include Limit on Open or 
+Limit on Close Orders, but that the ALO designation would be ignored. 
+The Exchange's opening and closing transactions are single-priced 
+auction transactions and the Exchange does not consider either side of 
+the transaction to be either a ``provider'' or a ``taker.'' 
+Accordingly, an ALO modifier is moot for the open or close. In order to 
+enable as much interest as possible to participate in the open or 
+close, the Exchange proposes to include any limit orders designated ALO 
+in these auctions, but to ignore the ALO designation.
+    To promote the display of liquidity, the Exchange further proposes 
+that a limit order designated ALO must be entered with a minimum of one 
+displayable round lot. Accordingly, the ALO Modifier would be available 
+for Minimum Display Reserve Orders (Rule 13) and Minimum Display 
+Reserve e-Quotes (Rule 70(f)(1)). The Exchange would reject incoming 
+limit orders designated ALO that do not meet the minimum display 
+requirement, including odd-lot sized orders designated ALO.
+    The Exchange proposes to specify in paragraph (c) to the new rule 
+text that the following interest may not be designated ALO: (1) DMM 
+interest entered via the Capital Commitment Schedule pursuant to Rule 
+1000; (2) d-Quotes, as defined in Rule 70.25; (3) Sell ``Plus''-Buy 
+``Minus'' Orders as defined in Rule 13; (4) Non-Display Reserve Orders, 
+as defined in Rule 13, or Non-Display Reserve e-Quotes, as defined in 
+Rule 70(f)(ii); (5) Retail Orders or Retail Price Improvement Orders, 
+as defined in Rule 107C; or (6) High-priced securities, as defined in 
+Rule 1000(a)(vi).
+    To assure that a limit order designated ALO meets its goal to be 
+available on the Exchange's book to add liquidity to arriving orders, 
+the Exchange proposes to re-price a limit order designated ALO that 
+upon arrival would be marketable against Exchange interest or would 
+lock or cross a protected quotation in violation of Rule 610(d) of 
+Regulation NMS.\7\ Accordingly, the Exchange proposes to specify in 
+paragraph (b) to the rule text for ALO Modifiers that if, at the time 
+of entry, a limit order designated ALO is marketable against Exchange 
+interest or would lock or cross a protected quotation in violation of 
+Rule 610(d) of Regulation NMS, the order would be re-priced and 
+displayed one minimum price variation, as defined in supplementary 
+material .10 to Rule 62, below the best-priced sell interest (for bids) 
+or above the best-priced buy interest (for offers). The Exchange notes 
+that re-pricing a limit order designated ALO so that it would not 
+execute against resting Exchange interest or lock or cross a protected 
+quotation is consistent with how other equities markets currently 
+operate.\8\
+---------------------------------------------------------------------------
+
+    \7\ 17 CFR 242.610(d).
+    \8\ See BATS Rules 11.9(c)(6) and 11.9(g)(2)(D); BATS-Y Rules 
+11.9(c)(6) and 11.9(g)(2)(D); CHX Article 20, Rule 4(b)(25 (``CHX 
+Only''); EDGA Rule 11.5(c)(5); EDGX Rule 11.5(c)(5); Nasdaq Rule 
+4751(f)(10); and NYSE Arca Equities Rule 7.31(mm) (PNP Blind order 
+combined with an ALO order).
+---------------------------------------------------------------------------
+
+    The Exchange proposes to use the term ``Exchange interest'' in the 
+proposed rule text in order to include both displayed interest and non-
+displayed interest (i.e., Non-Displayed Reserve Orders or odd-lot sized 
+orders), which may be priced better than the displayed quote. In 
+addition, the Exchange proposes to add new Supplementary Material .10 
+to Rule 13 to define new terms to capture the best price among Exchange 
+displayed and non-displayed interest and the best away protected quote. 
+As proposed, the term ``best-priced sell interest'' would refer to the 
+lowest-priced sell interest against which incoming buy interest
+
+[[Page 40185]]
+
+would be required to execute with and/or route to, including Exchange 
+displayed offers, Non-Display Reserve Orders, Non-Display Reserve e-
+Quotes, odd-lot sized sell interest, and protected offers on away 
+markets, but would not include non-displayed interest that is priced 
+based on the PBBO, such as MPL Orders or Retail Price Improvement 
+Orders (``RPI''). The term ``best-priced buy interest'' would refer to 
+the highest-priced buy interest against which incoming sell interest 
+would be required to execute with and/or route to, including Exchange 
+displayed bids, Non-Display Reserve Orders, Non-Display Reserve e-
+Quotes, odd-lot sized buy interest, and protected bids on away markets, 
+but would not include non-displayed interest that is priced based on 
+the PBBO, such as MPL Orders or RPIs. The Exchange believes it is 
+appropriate to exclude MPL Orders from the definition of best-priced 
+sell/buy interest because the price at which an MPL Order is eligible 
+to execute changes as the PBBO moves.
+    As further proposed, if the best-priced sell interest is re-priced 
+higher, an order to buy designated ALO would be re-priced and re-
+displayed higher, up to its limit price. If the best-priced buy 
+interest is re-priced lower, an order to sell designated ALO would be 
+re-priced and re-displayed lower, down to its limit price. The Exchange 
+believes that re-pricing and re-displaying limit orders designated ALO 
+each time the best-priced sell interest is priced higher (for bids) or 
+the best-priced buy interest is priced lower (for offers) would ensure 
+that the order is displayed at its most aggressive price without 
+requiring the order to either take liquidity or lock or cross a 
+protected quotation.
+    In addition, as proposed, a limit order designated ALO would not be 
+re-priced if it is displayed at its limit price or if the best-priced 
+sell interest moves down in price (for limit orders to buy designated 
+ALO) or if the best-priced buy interest moves up in price (for limit 
+orders to sell designated ALO). Once an order reaches its limit price, 
+the Exchange would no longer need to re-price it. The Exchange also 
+would not need to re-price a limit order designated ALO if the best-
+priced sell interest moves down (for bids) or the best-priced buy 
+interest moves up (for offers) because in such scenario, the limit 
+order designated ALO would have been displayed first at that price and 
+the opposite-side bid or offer would be required to execute with or 
+route to the resting limit order designated ALO.
+    For example, assume the Exchange best bid and offer (``BBO'') in 
+XYZ is 10.05 x 10.11, the PBBO is 10.05 x 10.09, and the Exchange has a 
+non-displayed odd-lot sell order priced at 10.07. In this scenario, the 
+best-priced sell interest, as defined in new supplementary material .10 
+to Rule 13, would be 10.07. Accordingly, if the Exchange were to 
+receive a limit order to buy designated ALO at 10.12 (``Order A''), the 
+Exchange would re-price and display Order A at $10.06, which is one MPV 
+below the 10.07 best-priced sell interest.
+    Assume now that the resting odd-lot order to sell on the Exchange 
+is either executed or cancelled, but the Exchange best offer and PBO 
+does not change. Because the new best-priced sell interest is the away-
+market PBO of 10.09, Order A would re-price and re-display to 10.08, 
+which is one MPV below the updated best-priced sell interest.
+    Assume further that the market updates so that both the Exchange's 
+BBO and the PBBO update to 10.08-10.14 and there is no undisplayed 
+interest to sell at the Exchange. Order A would be re-priced and re-
+displayed at its limit price of 10.12. At this point, because it has 
+been displayed at its limit price, Order A would not be subject to any 
+further re-pricing. If the Exchange were to receive incoming sell 
+interest marketable against Order A, Order A would be available 
+liquidity to execute against that incoming sell interest.
+    As further proposed, a limit order designated ALO would receive a 
+new time stamp each time it is re-priced and re-displayed. The Exchange 
+believes that providing a new time stamp each time a limit order 
+designated ALO is re-priced and re-displayed is consistent with current 
+Exchange rules that provide that an order that is modified to change 
+the price of the order shall receive a new time stamp.\9\
+---------------------------------------------------------------------------
+
+    \9\ See Rule 72(xii).
+---------------------------------------------------------------------------
+
+    As noted above, limit orders designated ALO would not be priced 
+based on resting opposite-side MPL Orders, which are triggered to trade 
+at the midpoint of the PBBO by arriving interest. To assure that limit 
+orders designated ALO would not trigger an opposite-side MPL Order to 
+trade, the Exchange proposes to add new paragraph (d) governing ALO 
+Modifiers in Rule 13 to specify that a limit order designated ALO would 
+not trigger a contra-side MPL Order to trade. The Exchange proposes to 
+make a conforming change to paragraph (a) governing MPL Orders in Rule 
+13 to specify that an incoming limit order designated ALO would not 
+interact with an MPL Order.
+    For example, assume the Exchange BBO and PBBO in XYZ is 10.05-10.09 
+and there is a sell MPL Order eligible to execute at the midpoint of 
+the PBBO, which would be 10.07. Assume further that the Exchange also 
+has a Non-Display Reserve Order to sell priced at 10.08. In this 
+scenario, an incoming buy order designated ALO priced at 10.11 (``Order 
+B'') would re-price and display one MPV below the best-priced sell 
+interest, which is 10.08. Accordingly, Order B would display at 10.07. 
+Although the new 10.07 bid is at the same price that the resting MPL 
+Order could have executed when the PBBO was 10.05 x 10.09, because the 
+new bid updates the PBBO to 10.07 x 10.09, the MPL Order is now 
+eligible to execute at 10.08 and no longer at 10.07.
+    Because pegging interest may be designated ALO, the Exchange 
+proposes to amend the rules governing pegging interest in Rule 13 to 
+take into consideration how an ALO Modifier would function with pegging 
+interest. As proposed in paragraph (c) governing pegging interest in 
+Rule 13, pegging interest to buy (sell) that is designated ALO would 
+not peg to a price that would result in its executing before displaying 
+and shall instead peg one minimum price variation below (above) the 
+undisplayed Exchange sell (buy) interest against which it would have 
+otherwise executed. For example, assume the Exchange BBO is 10.05 x 
+10.10 and the PBBO is 10.08 x 10.10 and the Exchange has sell odd-lot 
+interest priced at 10.08. Assume further incoming pegging interest to 
+buy designated ALO with a limit of 10.10 arrives (``Order C''). If 
+Order C were not designated ALO, it would peg to the PBB of 10.08 and 
+execute against the resting odd-lot interest, and any remainder would 
+be displayed at 10.08. As proposed, with the ALO designation, to assure 
+that Order C would not execute on arrival, it would peg to a price one 
+MPV below the 10.08 odd-lot sell interest and display at 10.07.
+Day Time-in-Force Designation for ISOs
+    An ISO is currently defined in Rule 13 as a limit order designated 
+for automatic execution that meets the following requirements: (i) It 
+is identified as an ISO in the manner prescribed by the Exchange; and 
+(ii) simultaneously with the routing of an ISO to the Exchange, one or 
+more additional limit orders, as necessary, are routed to execute 
+against the full displayed size of any protected bid, in the case of a 
+limit order to sell, or the full displayed size of any protected offer, 
+in the case of a limit order to buy and these additional orders are 
+identified as ISOs. This definition is based on the definition of an 
+ISO set
+
+[[Page 40186]]
+
+forth in Regulation NMS Rule 600(b)(30),\10\ and is consistent with 
+similar provisions on other exchanges.\11\
+---------------------------------------------------------------------------
+
+    \10\ 17 CFR 242.600(b)(30).
+    \11\ See BATS Rule 11.9(d); BATS-Y Rule 11.9(d); CHX Article 20, 
+Rule 4(b)(1) and (15); EDGA Rule 11.5(d); EDGX Rule 11.5(d); Nasdaq 
+Rule 4751(f)(6); Nasdaq OMX BX Rule 4751(f)(6); Nasdaq OMX PSX Rule 
+3301(f)(6); and NYSE Arca Equities Rule 7.31(jj).
+---------------------------------------------------------------------------
+
+    Currently, the Exchange immediately and automatically executes an 
+ISO upon arrival and the portion not so executed will be immediately 
+and automatically cancelled.\12\ Accordingly, the Exchange treats all 
+ISOs with an immediate-or-cancel time-in-force condition.
+---------------------------------------------------------------------------
+
+    \12\ See paragraph (b) governing ISOs in Rule 13.
+---------------------------------------------------------------------------
+
+    Other equities exchanges do not limit their ISOs to an immediate-
+or-cancel time-in-force condition.\13\ Accordingly, the Exchange 
+proposes to amend Rule 13 governing ISOs to make available an ISO Order 
+with a day time-in-force condition. As proposed, an ISO designated day 
+(``Day ISO''), if marketable upon arrival, would be immediately and 
+automatically executed against the displayed bid (offer) up to its full 
+size in accordance with and to the extent provided by Exchange Rules 
+1000-1004 and would then sweep the Display Book,[supreg] as provided in 
+Rule 1000(d)(iii). This proposed rule text is consistent with current 
+paragraph (b) governing ISOs in Rule 13.
+---------------------------------------------------------------------------
+
+    \13\ The rules of Nasdaq, BATS, BATS-Y, EDGA, and EDGX do not 
+expressly provide that their versions of ISOs can be day, however, 
+nor do their rules prohibit this functionality. In practice, Nasdaq, 
+BATS, BATS-Y EDGA, and EDGX all accept ISOs with a day time-in-force 
+condition. In addition, NYSE Arca Equities expressly permits an ISO 
+with a day time-in-force condition, which is entered as a Post No 
+Preference (``PNP'') Order. See, e.g., NYSE Arca Equities Rule 
+7.31(w) (PNP Order designated ISO does not route and may lock and 
+cross and trade through protected quotations). See also Securities 
+Exchange Act Release No. 34-54549 (Sept. 29, 2006), 71 FR 59179 
+(Oct. 6, 2006) (SR-NYSEArca-2006-59) (Order approving NYSE Arca 
+Equities' proposal to adopt ISO PNP Orders, which post to NYSE's 
+Arca book and may lock or cross protected quotations). See also CHX 
+Article 20, Rules 4(b)(1) and (23).
+---------------------------------------------------------------------------
+
+    The Exchange further proposes to provide that the remaining 
+unexecuted portion of a Day ISO would be posted to the Exchange's book 
+at its limit price and may lock or cross a protected quotation that was 
+displayed at the time of arrival of the Day ISO. The Exchange believes 
+this proposed rule text is consistent with Regulation NMS and the rules 
+of other exchanges because the member organization that sent the Day 
+ISO to the Exchange has an existing obligation (pursuant to paragraph 
+(a)(ii) governing ISOs in Rule 13) to simultaneously route ISOs to 
+trade with the full size of protected quotations on other markets.\14\ 
+Accordingly, the Exchange would consider any protected quotes that 
+existed at the time of arrival of the Day ISO as cleared when it posts 
+any remainder of a Day ISO to the Exchange's book.\15\
+---------------------------------------------------------------------------
+
+    \14\ See supra n. 11.
+    \15\ See supra n. 13.
+---------------------------------------------------------------------------
+
+    The Exchange further proposes that a Day ISO must be entered with a 
+minimum of one displayable round lot. Accordingly, similar to the 
+proposed ALO Modifier for limit orders, Day ISOs would be available for 
+Minimum Display Reserve Orders and Minimum Display Reserve e-Quotes. 
+The Exchange also proposes that a Day ISO may also be designated ALO.
+    Because Day ISOs would not route, which is similar to the proposed 
+ALO Modifier functionality, the Exchange proposes to re-price and re-
+display resting Day ISOs in a manner consistent with the proposed re-
+pricing and re-displaying functionality described above for limit 
+orders designated ALO. As proposed, if, after posting, a Day ISO would 
+lock or cross a protected quotation, the Exchange would re-price and 
+re-display the order consistent with proposed paragraph (b) for ALO 
+Modifiers in Rule 13. Accordingly, any such re-pricing would be based 
+on the best-priced sell interest (for bids) or best-priced buy interest 
+(for offers), as proposed in new Supplementary Material .10 to Rule 13.
+    The Exchange further proposes that a Day ISO designated ALO that is 
+marketable upon arrival would follow a combination of both the Day ISO 
+and ALO rules. Specifically, the Day ISO element of this order would be 
+permitted to trade through away market protected quotations on arrival 
+and lock or cross a protected quotation. In addition, the ALO element 
+would require that this order not result in taking liquidity. 
+Accordingly, the Exchange proposes that if a Day ISO designated ALO is 
+marketable against Exchange interest on arrival, it would be re-priced 
+and displayed one minimum price variation, as defined in supplementary 
+material .10 to Rule 62, below the Exchange's best-priced displayed or 
+non-displayed non-MPL Order sell interest (for bids) or above the best-
+priced Exchange displayed or non-displayed non-MPL Order buy interest 
+(for offers). Any re-pricing and display on arrival would ignore away-
+market protected quotations. As further proposed, once a Day ISO 
+designated ALO has been posted to the Exchange's book, to assure that 
+any subsequent re-pricing and re-displaying of a Day ISO designated ALO 
+does not lock or cross a protected quotation, the Exchange proposes to 
+follow the re-pricing rule set forth in proposed paragraph (b) for ALO 
+Modifiers in this Rule. Therefore, any subsequent re-pricing would be 
+based on the best-priced sell interest (for bids) or best-priced buy 
+interest (for offers), as proposed in new Supplementary Material .10 to 
+Rule 13.
+    For example, assume the BBO in XYZ is 10.05 x 10.11, the PBBO is 
+10.05 x 10.09, and the Exchange has a resting odd-lot order to sell 
+priced at 10.07. In this scenario, the best-priced sell interest, as 
+defined in new supplementary material .10 to Rule 13, would be 10.07. 
+If the Exchange were to receive a Day ISO to buy at 10.12 (``Order 
+D''), the Exchange would execute Order D against the resting odd-lot 
+order to sell at 10.07, ignore the best protected offer of 10.09, and 
+execute against the Exchange's best offer of 10.11. If there were any 
+remaining quantity of Order D, it would post at 10.12. Although this 
+10.12 bid would cross the 10.09 PBO, the Exchange would consider that 
+10.09 PBO cleared pursuant to the existing obligation for the entering 
+firm to have sent an ISO to trade with the full size of that PBO 
+simultaneous with entering Order D at the Exchange.
+    Assume instead that the Day ISO to buy at 10.12 is also designated 
+ALO (``Order E''). In this scenario, upon arrival, Order E would be re-
+priced and displayed at 10.06, which is one MPV below the Exchange's 
+best priced non-displayed interest. Assume instead that the Exchange 
+receives a Day ISO designated ALO to buy at 10.12 (``Order F''), but 
+that when Order F arrives, the BBO is 10.05 x 10.11, the PBBO is 10.05 
+x 10.09, and the Exchange has no non-displayed sell interest. In this 
+scenario, the Exchange would ignore the 10.09 PBO and Order F would be 
+re-priced and displayed at 10.10, which is one MPV below the Exchange's 
+best-priced displayed offer of 10.11. Assume the market updates and the 
+BBO becomes 10.10 x 10.14 and the PBBO is 10.10 x 10.12. Order F would 
+re-price and re-display one MPV below the best-priced sell interest, 
+which here would be the 10.12 PBO. Accordingly, Order F would re-price 
+and re-display at 10.11.
+    The Exchange also proposes to add new paragraph (e) governing ISOs 
+in Rule 13 to specify that IOC ISOs and Day ISOs are not available for 
+Sell ``Plus''--Buy ``Minus'' Orders or Non-Display Reserve Orders or 
+Non-Display Reserve e-Quotes, and that IOC ISOs are not available for 
+high-priced securities, as defined in Rule 1000(a)(vi).
+    Finally, the Exchange proposes non-substantive changes to paragraph 
+(a)
+
+[[Page 40187]]
+
+defining ISOs to provide more detail regarding the current operation of 
+ISOs, consistent with existing NYSE Arca Rule 7.31(jj). As proposed, 
+the Exchange would define an ISO as a limit order designated for 
+automatic execution in a particular security that is never routed to an 
+away market, may trade through a protected bid or offer, and will not 
+be rejected or cancelled if it would lock, cross, or be marketable 
+against an away market provided that it meets the requirements 
+described in the rule. The Exchange also proposes to make non-
+substantive, technical amendments to define the term ``Intermarket 
+Sweep Order'' as ``ISO'' and change references from ``Intermarket Sweep 
+Order'' to ``ISO.'' The Exchange further proposes a non-substantive, 
+technical change to define the existing form of an ISO as an ``ISO 
+designated IOC (`IOC ISO').''
+    Because of the technology changes associated with this proposed 
+rule change, the Exchange proposes to announce the implementation date 
+of ALO Modifiers for day limit orders and Day ISOs by Trader Update.
+2. Statutory Basis
+    The proposed rule change is consistent with Section 6(b) \16\ of 
+the Act, in general, and furthers the objectives of Section 
+6(b)(5),\17\ in particular, in that it is designed to promote just and 
+equitable principles of trade, remove impediments to and perfect the 
+mechanism of a free and open market and a national market system and, 
+in general, to protect investors and the public interest.
+---------------------------------------------------------------------------
+
+    \16\ 15 U.S.C. 78f(b).
+    \17\ 15 U.S.C. 78f(b)(5).
+---------------------------------------------------------------------------
+
+    The Exchange believes that the proposal is designed to remove 
+impediments to and perfect the mechanism of a free and open market and 
+a national market system because the expansion of the availability of 
+ALO Modifiers for day limit orders will increase competition, not only 
+among market participants, but also among exchanges offering similar 
+functionality. Specifically, all other equity exchanges currently 
+enable member firms to enter limit orders that would only post on the 
+designated exchange and not route.\18\ The Exchange proposes to expand 
+its existing ALO functionality, consistent with other markets, to also 
+make it available for limit orders. The Exchange believes that 
+requiring limit orders designated ALO to be entered with a minimum 
+display quantity will help perfect the mechanism of a free and open 
+market by encouraging additional displayed liquidity on a public 
+registered exchange, and therefore promote price discovery. The 
+Exchange further believes that the proposed re-pricing and re-
+displaying of a limit order designated ALO removes impediments to and 
+perfects the mechanism of a free and open market because it assures 
+that such an order would meet its intended goal to be available on the 
+Exchange's book as displayed liquidity without locking or crossing a 
+protected quotation in violation of Rule 610(d) of Regulation NMS.\19\ 
+The Exchange further notes that the proposed re-pricing and re-
+displaying of limit orders designated ALO is consistent with how other 
+exchanges currently operate.\20\
+---------------------------------------------------------------------------
+
+    \18\ See supra n. 5.
+    \19\ 17 CFR 242.610(d).
+    \20\ See supra n. 8.
+---------------------------------------------------------------------------
+
+    The Exchange also believes that adding a day time-in-force 
+condition for ISOs, an existing order type on the Exchange, is designed 
+to remove impediments to and perfect the mechanism of a free and open 
+market and national market system because the proposed expansion is 
+consistent with the definition of an ISO under Regulation NMS \21\ and 
+with the operation of how ISOs may be entered on other exchanges, 
+including that it may trade through protected quotations on arrival and 
+display on the Exchange at a price that may lock or cross a protected 
+quotation.\22\ The Exchange further believes that any subsequent re-
+pricing and re-displaying of a Day ISO after it has posted on the Book 
+will meet the entering firm's expectations that a Day ISO order not 
+route, while at the same time ensure that it would not lock or cross a 
+protected quotation in violation of Rule 610(d) of Regulation NMS.\23\
+---------------------------------------------------------------------------
+
+    \21\ 17 CFR 242.600(b)(3) and supra n. 11.
+    \22\ See supra n. 13, 71 FR at 59181 (``If an ISO is not marked 
+as `immediate or cancel,' any remaining balance in the order would 
+be displayed by the Exchange without regard to whether that display 
+would lock or cross another market center, only if the participant 
+routing the order has already sent an order to satisfy the 
+quotations of other markets so that the display of the order would 
+not lock or cross those markets.'') and at 59182 (approving, among 
+other things, NYSE Arca's proposed ISO order type and finding that 
+it is consistent with the Act).
+    \23\ 17 CFR 242.610(d).
+---------------------------------------------------------------------------
+
+(B) Self-Regulatory Organization's Statement on Burden on Competition
+
+    The Exchange does not believe that the proposed rule change will 
+impose any burden on competition that is not necessary or appropriate 
+in furtherance of the purposes of the Act. Rather, the Exchange 
+believes that the proposed rule change is pro-competitive because it 
+expands the functionality associated with existing NYSE order types to 
+conform to how these order types already operate on other exchanges, 
+thereby harmonizing the forms of order types available for market 
+participants that trade on equity exchanges.\24\
+---------------------------------------------------------------------------
+
+    \24\ See supra, nn. 5, 11, and 13.
+---------------------------------------------------------------------------
+
+(C) Self-Regulatory Organization's Statement on Comments on the 
+Proposed Rule Change Received From Members, Participants or Others
+
+    No written comments were solicited or received with respect to the 
+proposed rule change.
+
+III. Date of Effectiveness of the Proposed Rule Change and Timing for 
+Commission Action
+
+    Within 45 days of the date of publication of this notice in the 
+Federal Register or within such longer period up to 90 days (i) as the 
+Commission may designate if it finds such longer period to be 
+appropriate and publishes its reasons for so finding or (ii) as to 
+which the self-regulatory organization consents, the Commission will:
+    (A) By order approve or disapprove such proposed rule change, or
+    (B) institute proceedings to determine whether the proposed rule 
+change should be disapproved.
+
+IV. Solicitation of Comments
+
+    Interested persons are invited to submit written data, views, and 
+arguments concerning the foregoing, including whether the proposed rule 
+change is consistent with the Act. Comments may be submitted by any of 
+the following methods:
+
+Electronic Comments
+
+    <bullet> Use the Commission's Internet comment form (<a href="http://www.sec.gov/rules/sro.shtml">http://www.sec.gov/rules/sro.shtml</a>) or
+    Send an email to <a href="/cdn-cgi/l/email-protection#6c1e190009410f0301010902181f2c1f090f420b031a"><span class="__cf_email__" data-cfemail="2250574e470f414d4f4f474c5651625147410c454d54">[email&#160;protected]</span></a>. Please include File Number 
+SR-NYSE-2014-32 on the subject line.
+
+Paper Comments
+
+    <bullet> Send paper comments in triplicate to Secretary, Securities 
+and Exchange Commission, 100 F Street NE., Washington, DC 20549-1090.
+
+All submissions should refer to File Number SR-NYSE-2014-32. This file 
+number should be included on the subject line if email is used. To help 
+the Commission process and review your comments more efficiently, 
+please use only one method. The Commission will post all comments on 
+the Commission's Internet Web site (<a href="http://www.sec.gov/rules/sro.shtml">http://www.sec.gov/rules/sro.shtml</a>). Copies of the submission, all subsequent amendments, all 
+written statements
+
+[[Page 40188]]
+
+with respect to the proposed rule change that are filed with the 
+Commission, and all written communications relating to the proposed 
+rule change between the Commission and any person, other than those 
+that may be withheld from the public in accordance with the provisions 
+of 5 U.S.C. 552, will be available for Web site viewing and printing in 
+the Commission's Public Reference Room, 100 F Street NE., Washington, 
+DC 20549, on official business days between the hours of 10:00 a.m. and 
+3:00 p.m. Copies of such filing also will be available for inspection 
+and copying at the NYSE's principal office and on its Internet Web site 
+at <a href="http://www.nyse.com">www.nyse.com</a>. All comments received will be posted without change; 
+the Commission does not edit personal identifying information from 
+submissions. You should submit only information that you wish to make 
+available publicly. All submissions should refer to File Number SR-
+NYSE-2014-32 and should be submitted on or before August 1, 2014.
+
+    For the Commission, by the Division of Trading and Markets, 
+pursuant to delegated authority.\25\
+---------------------------------------------------------------------------
+
+    \25\ 17 CFR 200.30-3(a)(12).
+---------------------------------------------------------------------------
+
+Kevin M. O'Neill,
+Deputy Secretary.
+[FR Doc. 2014-16191 Filed 7-10-14; 8:45 am]
+BILLING CODE 8011-01-P
+
+
+</pre><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

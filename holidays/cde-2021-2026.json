@@ -1,0 +1,420 @@
+{
+ "task": "cde-2021-2026",
+ "coverage": "Retrieved 2026-09-19 02:02-02:4x UTC (LAW-UTC-DATES). Bytes + INDEX.md under ../exchange-hours-research/holidays/raw/cde-2021-2025/. Covers every CDE holiday notice from the venue's first trade date (2021-06-28) through 2026-09-07, the end of the window already shipped. 53 of 54 listed holiday notices retrieved live at T1; notice 22-10 (Thanksgiving 2022) is listed by the operator but its PDF is unreachable.",
+ "holidays": [],
+ "missing": [
+  "Notice 22-10 (2022 Thanksgiving) is listed by the operator (id 22-10, category Holiday, posted 12/12/2022, subject 'Market Notice - Thanksgiving Holiday Schedule 2022') but its link is a dead info.fairx.com page: the host fails TLS and the Wayback Machine holds no capture of it. Trade dates 2022-11-24 and 2022-11-25 are therefore Unsourced rather than claimed closed. Closed by: any surviving copy of notice 22-10, or a later notice that restates the outgoing 2022 schedule. Tracked as issue #112.",
+  "Trade date 2021-12-31 (Friday) carries no notice. The operator's own listing is complete for 2021 (21-01..21-07, no id gaps) and it published a notice for every other observed holiday, so the date is carried as audited normal. New Year's Day 2022 fell on a Saturday and the 23x5 grid has no Saturday session. Residual risk: an unpublished closure would be under-reported here.",
+  "Notice 24-26 records an UNPLANNED early close: 'On December 24, 2024, Coinbase Derivatives Crypto Futures markets closed early at 14:30 CT due to a technical issue.' It is a venue incident rather than a published holiday schedule, which is the operative reason it keys no row; trade date 2024-12-24 takes its row from notice 24-23, the published Christmas schedule, whose earliest grid close is 12:45 CT anyway.",
+  "Notice 24-27 states that trade date 2025-01-09 (a National Day of Mourning) 'will observe a normal trading day'. It is an audited-normal date and ships no row.",
+  "Notice 21-04 (Labor Day 2021) prints 'closed from 16:00 CT Friday, September 2nd', but 2021-09-02 was a Thursday and the Friday before Labor Day was 2021-09-03. The subject ('Labor Day Observed Monday, September 6th, 2021'), the Monday-17:00 reopening sentence and the identical construction in notice 21-03 all place the closure on the Monday, so 2021-09-06 is the affected trade date. Read literally the start instant would also close trade date 2021-09-03; that date is carried as audited normal and is the one residual source ambiguity in the window.",
+  "Notice 24-12 (Juneteenth 2024) is headed 'Market Notice | IN DRAFT' in the operator's own published PDF, the only notice in the corpus that is. It is listed by the operator at T1 with a posted date and its grid is unambiguous, and a wrongly-shipped closure errs toward closed, so trade date 2024-06-19 ships Closed. Residual risk: a later final revision is not held. Closed by: a non-draft copy of 24-12. Tracked as issue #112."
+ ],
+ "crate_rows": [
+  {
+   "trade_date": "2021-07-05",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-21-03"
+  },
+  {
+   "trade_date": "2021-09-06",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-21-04"
+  },
+  {
+   "trade_date": "2021-11-25",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-21-06"
+  },
+  {
+   "trade_date": "2021-11-26",
+   "kind": "early_close",
+   "close_ssm": 44100,
+   "document": "CDE-MN-21-06"
+  },
+  {
+   "trade_date": "2021-12-24",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-21-07"
+  },
+  {
+   "trade_date": "2022-01-17",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-22-01"
+  },
+  {
+   "trade_date": "2022-02-21",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-22-02"
+  },
+  {
+   "trade_date": "2022-04-15",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-22-04"
+  },
+  {
+   "trade_date": "2022-05-30",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-22-05"
+  },
+  {
+   "trade_date": "2022-06-20",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-22-06"
+  },
+  {
+   "trade_date": "2022-07-04",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-22-07"
+  },
+  {
+   "trade_date": "2022-09-05",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-22-08"
+  },
+  {
+   "trade_date": "2022-11-24",
+   "kind": "unsourced",
+   "close_ssm": null,
+   "document": "CDE-NOTICES-INDEX-2026-09-19"
+  },
+  {
+   "trade_date": "2022-11-25",
+   "kind": "unsourced",
+   "close_ssm": null,
+   "document": "CDE-NOTICES-INDEX-2026-09-19"
+  },
+  {
+   "trade_date": "2022-12-26",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-22-11"
+  },
+  {
+   "trade_date": "2023-01-02",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-23-01"
+  },
+  {
+   "trade_date": "2023-01-16",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-23-02"
+  },
+  {
+   "trade_date": "2023-02-20",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-23-03"
+  },
+  {
+   "trade_date": "2023-04-07",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-23-07"
+  },
+  {
+   "trade_date": "2023-05-29",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-23-09"
+  },
+  {
+   "trade_date": "2023-06-19",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-23-10"
+  },
+  {
+   "trade_date": "2023-07-04",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-23-11"
+  },
+  {
+   "trade_date": "2023-09-04",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-23-13"
+  },
+  {
+   "trade_date": "2023-11-23",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-23-16"
+  },
+  {
+   "trade_date": "2023-11-24",
+   "kind": "early_close",
+   "close_ssm": 44100,
+   "document": "CDE-MN-23-16"
+  },
+  {
+   "trade_date": "2023-12-25",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-23-19"
+  },
+  {
+   "trade_date": "2024-01-01",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-23-20"
+  },
+  {
+   "trade_date": "2024-01-15",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-24-01"
+  },
+  {
+   "trade_date": "2024-02-19",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-24-02"
+  },
+  {
+   "trade_date": "2024-03-29",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-24-04"
+  },
+  {
+   "trade_date": "2024-05-27",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-24-09"
+  },
+  {
+   "trade_date": "2024-06-19",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-24-12"
+  },
+  {
+   "trade_date": "2024-07-04",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-24-13"
+  },
+  {
+   "trade_date": "2024-09-02",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-24-16"
+  },
+  {
+   "trade_date": "2024-11-28",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-24-21"
+  },
+  {
+   "trade_date": "2024-11-29",
+   "kind": "early_close",
+   "close_ssm": 49500,
+   "document": "CDE-MN-24-21"
+  },
+  {
+   "trade_date": "2024-12-24",
+   "kind": "early_close",
+   "close_ssm": 45900,
+   "document": "CDE-MN-24-23"
+  },
+  {
+   "trade_date": "2024-12-25",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-24-23"
+  },
+  {
+   "trade_date": "2025-01-01",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-24-25"
+  },
+  {
+   "trade_date": "2025-01-20",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-25-01"
+  },
+  {
+   "trade_date": "2025-02-17",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-25-03"
+  },
+  {
+   "trade_date": "2025-04-18",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-25-15"
+  },
+  {
+   "trade_date": "2025-05-26",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-25-18"
+  },
+  {
+   "trade_date": "2025-06-19",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-25-20"
+  },
+  {
+   "trade_date": "2025-07-04",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-25-21"
+  },
+  {
+   "trade_date": "2025-09-01",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-25-29"
+  },
+  {
+   "trade_date": "2025-11-27",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-25-37"
+  },
+  {
+   "trade_date": "2025-11-28",
+   "kind": "early_close",
+   "close_ssm": 44100,
+   "document": "CDE-MN-25-37"
+  },
+  {
+   "trade_date": "2025-12-24",
+   "kind": "early_close",
+   "close_ssm": 44100,
+   "document": "CDE-MN-25-41"
+  },
+  {
+   "trade_date": "2025-12-25",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-25-41"
+  },
+  {
+   "trade_date": "2026-01-01",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-25-42"
+  },
+  {
+   "trade_date": "2026-01-19",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-26-01"
+  },
+  {
+   "trade_date": "2026-02-16",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-26-05"
+  },
+  {
+   "trade_date": "2026-04-03",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-26-12"
+  },
+  {
+   "trade_date": "2026-05-25",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-26-23"
+  },
+  {
+   "trade_date": "2026-06-19",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-26-27.1"
+  },
+  {
+   "trade_date": "2026-07-03",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-26-29"
+  },
+  {
+   "trade_date": "2026-09-07",
+   "kind": "closed",
+   "close_ssm": null,
+   "document": "CDE-MN-26-36"
+  }
+ ],
+ "documents": {
+  "CDE-NOTICES-INDEX-2026-09-19": "Coinbase Derivatives Market Notices listing, coinbase.com/derivatives/market-notices, read 2026-09-19 (client-rendered bytes via r.jina.ai, x-respond-with: html). Establishes which notices the operator published; notice 22-10 is listed but its PDF is unreachable.",
+  "CDE-NOTICES-PAGE-2022-12-15": "Wayback capture 20221215074037 of coinbase.com/derivatives/market-notices, the archived listing that carries the 2021-2022 notice PDF hrefs.",
+  "CDE-MN-21-03": "Coinbase Derivatives Market Notice 21-03",
+  "CDE-MN-21-04": "Coinbase Derivatives Market Notice 21-04",
+  "CDE-MN-21-06": "Coinbase Derivatives Market Notice 21-06",
+  "CDE-MN-21-07": "Coinbase Derivatives Market Notice 21-07",
+  "CDE-MN-22-01": "Coinbase Derivatives Market Notice 22-01",
+  "CDE-MN-22-02": "Coinbase Derivatives Market Notice 22-02",
+  "CDE-MN-22-04": "Coinbase Derivatives Market Notice 22-04",
+  "CDE-MN-22-05": "Coinbase Derivatives Market Notice 22-05",
+  "CDE-MN-22-06": "Coinbase Derivatives Market Notice 22-06",
+  "CDE-MN-22-07": "Coinbase Derivatives Market Notice 22-07",
+  "CDE-MN-22-08": "Coinbase Derivatives Market Notice 22-08",
+  "CDE-MN-22-11": "Coinbase Derivatives Market Notice 22-11",
+  "CDE-MN-23-01": "Coinbase Derivatives Market Notice 23-01",
+  "CDE-MN-23-02": "Coinbase Derivatives Market Notice 23-02",
+  "CDE-MN-23-03": "Coinbase Derivatives Market Notice 23-03",
+  "CDE-MN-23-07": "Coinbase Derivatives Market Notice 23-07",
+  "CDE-MN-23-09": "Coinbase Derivatives Market Notice 23-09",
+  "CDE-MN-23-10": "Coinbase Derivatives Market Notice 23-10",
+  "CDE-MN-23-11": "Coinbase Derivatives Market Notice 23-11",
+  "CDE-MN-23-13": "Coinbase Derivatives Market Notice 23-13",
+  "CDE-MN-23-16": "Coinbase Derivatives Market Notice 23-16",
+  "CDE-MN-23-19": "Coinbase Derivatives Market Notice 23-19",
+  "CDE-MN-23-20": "Coinbase Derivatives Market Notice 23-20",
+  "CDE-MN-24-01": "Coinbase Derivatives Market Notice 24-01",
+  "CDE-MN-24-02": "Coinbase Derivatives Market Notice 24-02",
+  "CDE-MN-24-04": "Coinbase Derivatives Market Notice 24-04",
+  "CDE-MN-24-09": "Coinbase Derivatives Market Notice 24-09",
+  "CDE-MN-24-12": "Coinbase Derivatives Market Notice 24-12",
+  "CDE-MN-24-13": "Coinbase Derivatives Market Notice 24-13",
+  "CDE-MN-24-16": "Coinbase Derivatives Market Notice 24-16",
+  "CDE-MN-24-21": "Coinbase Derivatives Market Notice 24-21",
+  "CDE-MN-24-23": "Coinbase Derivatives Market Notice 24-23",
+  "CDE-MN-24-25": "Coinbase Derivatives Market Notice 24-25",
+  "CDE-MN-25-01": "Coinbase Derivatives Market Notice 25-01",
+  "CDE-MN-25-03": "Coinbase Derivatives Market Notice 25-03",
+  "CDE-MN-25-15": "Coinbase Derivatives Market Notice 25-15",
+  "CDE-MN-25-18": "Coinbase Derivatives Market Notice 25-18",
+  "CDE-MN-25-20": "Coinbase Derivatives Market Notice 25-20",
+  "CDE-MN-25-21": "Coinbase Derivatives Market Notice 25-21",
+  "CDE-MN-25-29": "Coinbase Derivatives Market Notice 25-29",
+  "CDE-MN-25-37": "Coinbase Derivatives Market Notice 25-37",
+  "CDE-MN-25-41": "Coinbase Derivatives Market Notice 25-41",
+  "CDE-MN-25-42": "Coinbase Derivatives Market Notice 25-42",
+  "CDE-MN-26-01": "Coinbase Derivatives Market Notice 26-01",
+  "CDE-MN-26-05": "Coinbase Derivatives Market Notice 26-05",
+  "CDE-MN-26-12": "Coinbase Derivatives Market Notice 26-12",
+  "CDE-MN-26-23": "Coinbase Derivatives Market Notice 26-23",
+  "CDE-MN-26-27.1": "Coinbase Derivatives Market Notice 26-27.1",
+  "CDE-MN-26-29": "Coinbase Derivatives Market Notice 26-29",
+  "CDE-MN-26-36": "Coinbase Derivatives Market Notice 26-36",
+  "CDE-MN-24-26": "Coinbase Derivatives Market Notice 24-26, an UNPLANNED technical early close on 2024-12-24. Keys no row; see missing[2].",
+  "CDE-MN-24-27": "Coinbase Derivatives Market Notice 24-27, which states the 2025-01-09 National Day of Mourning session 'will observe a normal trading day'. Keys no row; see missing[3].",
+  "CDE-MN-26-27": "Coinbase Derivatives Market Notice 26-27, superseded by 26-27.1 (which moved Gold and Silver into the 24x7 tier on trade date 2026-06-15). Kept for lineage."
+ }
+}

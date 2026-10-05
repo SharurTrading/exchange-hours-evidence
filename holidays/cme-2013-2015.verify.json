@@ -1,0 +1,254 @@
+{
+  "task": "cme-2013-2015.verify",
+  "verified_task": "cme-2013-2015",
+  "round": 2,
+  "verified_on_utc": "2026-09-12",
+  "previous_verdict": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2013-2015.verify.r1.json",
+  "matches": false,
+  "verdict": "Every discrepancy the round-1 verdict raised is resolved, and the round-1 fix is real work: 45 .xls/.zip documents retrieved with an INDEX that re-hashes perfectly, 28 of them newly cited, 11 superseded operator statements recorded with lineage, 41 corroborating instants attached, the reopening-day rule stated and applied, and every verbatim-fidelity slip signposted. The arithmetic in `coverage` is now exact to the row. But the round-1 fix widened the .xls channel while leaving the PDF channel exactly as round 0 left it, and that is where it breaks: `2013-4th-of-july-done.pdf` sits in BOTH rounds' own saved CDX enumerations, was retrieved by neither, and is CME's later revision of the 2013 Independence Day schedule - it moves Dairy, Lumber and Livestock out of the 'Regular Close - Per each product schedule' list into explicit early closes at 1200/1202/1215 CT on Wednesday July 3 2013. The file records that row as status 'normal'. That is a wrong final-state status, not an evidence-record nit. A second class of failure has the same shape: 42 earlier distinct-digest captures of the cited PDF URLs were never retrieved while missing[10] presents the superseded set as complete, and I verified two of them carry different session values. Separately, missing[2] declares the Good Friday 2013 '1355' zone unknown while a document already in this corpus - X13GFPD's 'Good Fri.' sheet - prints 13:55 for Dairy, Livestock and Lumber under 'Early Thur. Close' with a Notes row reading 'All times are CT'.",
+  "round1_items_rechecked": [
+    {
+      "r1_id": 1,
+      "what": "The .xls exclusion 'same content, different container' was false.",
+      "status": "RESOLVED",
+      "detail": "All 45 .xls/.zip documents CME published under tools-information/holiday-calendar/files/ for 2013-2015 (plus the 2016 New Year's file) are retrieved into raw/cme-2013-2015-fix/xls/ with an INDEX.md carrying url, replay url, capture time, sha256 and byte count. I re-hashed all 45: every value matches. The exclusion is withdrawn in `coverage` and in missing[4]. Residual: the round-0 INDEX.md itself still carries the withdrawn sentence with no pointer to the fix directory - see discrepancy 11."
+    },
+    {
+      "r1_id": 2,
+      "what": "missing[0]'s 'channels tried' statement was false.",
+      "status": "RESOLVED",
+      "detail": "Rewritten to name the channels actually read. I re-ran the test independently: `grep -ril nikkei` and `grep -ril 'bitcoin|crypto'` over all 42 xlrd sheet dumps and all 32 pdftotext renderings return nothing. The conclusion and the statement of work now agree. (Fix INDEX item 7 says '43 dumped workbooks'; there are 42 - the other three of the 45 are .zip bundles.)"
+    },
+    {
+      "r1_id": 3,
+      "what": "Unrecorded T1-vs-T1 conflicts on 2015-09-04 and 2015-07-02.",
+      "status": "RESOLVED",
+      "detail": "Eleven family rows now carry relation 'superseded' (18 entries), including both. I verified the cell renders against the bytes: X15ANN sheet 'Labor' r009 'Interest Rate Products' = 15:15 and r011 'FX Products' = 15:15, both under the r003 column header 'Early Fri. Close' beneath the r002 calendar-date header 'Friday, September 4'; X15LDS prints 16:00 under 'Regular Fri. Close'. Same for the 'Independence' sheet's 12:15 Equity early close. Lineage is stated on every entry, and missing[11] flags the one pair (2014-12-26 / 2015-01-02) whose lineage rests on the PDFs' 'Last updated' footers rather than capture order."
+    },
+    {
+      "r1_id": 4,
+      "what": "Document count and row arithmetic wrong.",
+      "status": "RESOLVED",
+      "detail": "Recomputed from the file: 62 documents in the map, all 62 referenced by at least one row, none dangling; 72 dates, sorted, no duplicates, 2013-01-01..2015-12-31; 346 family rows; 638 family-days; 67 other_statements entries on 57 rows, of which 18 superseded across 11 rows and 49 corroborating across 49 rows; exactly 41 of the corroborating entries sit on rows whose verbatim says 'per each product schedule'. Every one of those figures matches `coverage` exactly."
+    },
+    {
+      "r1_id": 5,
+      "what": "Verbatim-fidelity slips: inserted 'for', Veterans Day table rendered as prose.",
+      "status": "RESOLVED",
+      "detail": "2013-07-03 livestock+dairy+lumber now reads 'Regular Close - Per each product schedule:' and carries '[not a quotation - list render] ... The word for is not in the document on this line.' Both Veterans Day rows carry '[not a quotation - table render]' before the table description. I re-ran a whole-corpus fragment check: 1410 of 1454 verbatim fragments are literal substrings of the cited document's extracted text; every one of the 44 that is not is either an explicitly-marked editorial note, a signposted list/table render, a split artifact of my own ' / ' tokenizer, or CME's own missing space around an en dash. Two exceptions are new and trivial - see discrepancy 9."
+    },
+    {
+      "r1_id": 6,
+      "what": "2013-07-04 grains line quoted without its Wednesday July 3 day header.",
+      "status": "RESOLVED",
+      "detail": "The row now carries '[not a quotation - note] D13J4's CBOT, KCBT, MGEX Grain & Agricultural Products section prints no Thursday, July 4 heading at all: it runs from Wednesday, July 3 straight to Friday, July 5.' Verified against the bytes."
+    },
+    {
+      "r1_id": 7,
+      "what": "Reopening-day rule applied unevenly; 2015-07-06 absent.",
+      "status": "RESOLVED",
+      "detail": "missing[9] states the rule and applies it. 2015-07-06 is present with the four agricultural families, mirroring 2014-07-07. Each year now carries exactly 24 dates in the same pattern. Every one of D15J4's Monday July 6 instants (0700, 0800, 0830, 900, 905 CT) is present in the row verbatims and in the cited document."
+    },
+    {
+      "r1_id": 8,
+      "what": "Note: the 2013 Columbus and Veterans PDFs carry no date in the body.",
+      "status": "RECORDED",
+      "detail": "Now in missing[3], together with the exact date strings the 2014/2015 .xls files do print ('Tuesday,  November 11', 'Wednesday,  November 11' - CME's double spaces preserved). I confirmed both 2013 PDFs contain only the title, one sentence and the command-centre footer."
+    }
+  ],
+  "checks_performed": {
+    "rehash_all_index_files": {
+      "result": "PASS",
+      "detail": "raw/cme-2013-2015/INDEX.md: 34 file rows (32 PDF + 2 XLS). raw/cme-2013-2015-fix/INDEX.md: 45 file rows (42 XLS + 3 ZIP). All 79 sha256 values and all 79 byte counts re-verify against the files on disk. No binary file on disk is absent from an INDEX, and no INDEX row lacks a file."
+    },
+    "independent_refetch": {
+      "result": "PASS",
+      "detail": "Ten documents re-fetched from their id_ replay URLs on 2026-09-12 UTC and compared byte for byte: 2015-cme-group-holiday-schedule@20150320071217, 2014-cme-group-holiday-schedule@20140826204712, 2013-good-friday-presidents-day@20130623203632, 2015-labor-day-holiday-schedule@20150905221329, 2015-labor-day-holiday-schedule@20150326073728, 2015-thanksgiving-holiday-schedule@20151203081209, 2015-4th-of-july@20150905222733, 2013-4th-of-july@20130623205825, 2014-4th-of-july@20140708015736, 2015-veterans-day@20151122230920. All ten identical. Bytes at raw/cme-2013-2015-verify-r2/refetch/."
+    },
+    "text_extraction_reproducible": {
+      "result": "PASS",
+      "detail": "pdftotext -layout re-run over all 32 PDFs: output byte-identical to raw/cme-2013-2015/txt/. I re-implemented the xlrd dumper from raw/cme-2013-2015-fix/dump_xls.py and re-ran it over all 42 .xls: output byte-identical to raw/cme-2013-2015-fix/txt/. Both text corpora are faithful renderings and are safe to quote from."
+    },
+    "verbatim_status_and_instant_spot_check": {
+      "result": "PASS on the 2014-2015 sample; one 2013 row wrong for a reason outside the saved corpus",
+      "dates_checked": [
+        "2013-01-01",
+        "2013-01-18",
+        "2013-01-21",
+        "2013-03-28",
+        "2013-03-29",
+        "2013-07-03",
+        "2013-07-04",
+        "2013-07-05",
+        "2013-11-29",
+        "2013-12-24",
+        "2013-12-26",
+        "2014-01-17",
+        "2014-01-20",
+        "2014-04-18",
+        "2014-07-04",
+        "2014-07-07",
+        "2014-11-11",
+        "2014-11-28",
+        "2014-12-26",
+        "2015-04-03",
+        "2015-05-25",
+        "2015-07-02",
+        "2015-07-06",
+        "2015-09-04",
+        "2015-10-12",
+        "2015-11-27",
+        "2015-12-24",
+        "2015-12-31"
+      ],
+      "detail": "28 dates re-read against the saved bytes, plus a whole-corpus automated fragment check over all 346 rows. Statuses, instants and zones are as CME printed them: CT alone for the CME/CBOT sections in 2013, CT/ET for NYMEX-COMEX-DME in 2013, CT/ET/UTC from January 2014. The operator's own errors are preserved, not corrected (2014 MLK '1515 CT / 1615 ET / 2215 UTC' with the arithmetic flagged; 'Tuesday, Jan 22' reopen heading kept with '[sic - Jan 21]'; 'uneffected'). The 2013 Good Friday zone-unstated handling is intact. The one substantive failure - 2013-07-03 livestock+dairy+lumber - is invisible from the saved corpus because the document that contradicts it was never retrieved."
+    },
+    "no_instant_inferred_from_another_year": {
+      "result": "PASS",
+      "detail": "587 numeric instant tokens across all close_instant, open_instant and other_statements.verbatim fields were searched in the normalised text of the document each row cites. All resolve inside their own cited document. The only non-literal matches are 29 rows where the *_instant field zero-pads CME's three-digit form ('0905' for the document's '905'); in every one of those rows the adjacent `verbatim` field preserves CME's printed form exactly. The single remaining token, '2115' on 2014-01-17, is the task's own flagged annotation of CME's UTC arithmetic, not a sourced instant. No instant was carried over from another year."
+    },
+    "internal_consistency": {
+      "result": "PASS",
+      "detail": "72 dates, sorted, no duplicates; 24 dates per year in an identical pattern. 346 family rows, 638 family-days, nine families, no family appearing twice on a date. Every date covers all nine families except the two reopening days 2014-07-07 and 2015-07-06, which carry four. All 62 document ids are referenced; none is dangling."
+    },
+    "missing_list_vs_fresh_cdx": {
+      "result": "FAIL",
+      "detail": "Fresh CDX enumerations for 2013, 2014 and 2015 (raw/cme-2013-2015-verify-r2/cdx/, retrieved 2026-09-12 UTC, collapse=digest). The .xls/.zip side is complete: every status-200 .xls and .zip under the path for those years is in raw/cme-2013-2015-fix/INDEX.md, and Columbus Day 2015 genuinely exists only as .xls. The PDF side is not. One status-200 PDF basename in the enumeration is cited nowhere - 2013-4th-of-july-done.pdf - and 42 further distinct-digest status-200 captures of the cited PDF URLs were never retrieved. See discrepancies 1, 2 and 3."
+    },
+    "cme_trading_hours_service_for_2019plus": {
+      "result": "N/A",
+      "detail": "The task's range is calendar 2013-2015 and its missing[] list contains no 2019-or-later holiday, so there is no entry for which the trading-hours service's archived T2 responses could be decisive. Recorded so the check is not silently skipped."
+    },
+    "interest_rate_fx_grouping_claim": {
+      "result": "FAIL (one counterexample)",
+      "detail": "I re-tested the fix INDEX's load-bearing claim independently over all 42 workbooks: 58 sheets carry both an Interest Rate row and an FX row, and 57 of the 58 pairs are identical in every column. The exception is X13GFPD sheet 'Good Fri.' - see discrepancy 5."
+    }
+  },
+  "discrepancies": [
+    {
+      "id": 1,
+      "severity": "load-bearing (wrong recorded status)",
+      "where": "cme-2013-2015.json, holidays 2013-07-03, family 'livestock+dairy+lumber'",
+      "recorded": "status 'normal'; verbatim \"Wednesday, July 3 / Regular Close - Per each product schedule: // [not a quotation - list render] ...\"; no close_instant. Document D13J4 = 2013-4th-of-july.pdf@20130623205825, footer 'Last updated 6/4/2013'.",
+      "finding": "CME revised this schedule after that capture and published the revision at a sibling URL that neither round retrieved: http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-4th-of-july-done.pdf, replayed at https://web.archive.org/web/20130717050333id_/... , captured 2013-07-17T05:03:33Z, sha256 768c7813542459dbc5443e79e514bb12fd511d93284beeb880af167f6049e0f0, 73249 bytes, footer 'Last updated 7/2/2013'. Saved at raw/cme-2013-2015-verify-r2/new/2013-4th-of-july-done__20130717050333.pdf with text at ../txt/. Under the heading 'Other CME Group Products' it prints, beneath the day header 'Wednesday, July 3': '1200 CT - Early close for Dairy', '1200 CT - Early close for Lumber', '1202 CT - Early close for Lumber Options', '1215 CT - Early close for Livestock Futures & Options', and only then 'Regular Close - Per each product schedule:' over a bullet list from which Livestock, Lumber and Dairy have been removed.",
+      "corrected_value": "status 'early_close'; close_instant '1200 CT (Dairy); 1200 CT (Lumber); 1202 CT (Lumber Options); 1215 CT (Livestock Futures & Options)'; document = the 7/2/2013 revision; and the present 6/4/2013 statement demoted to an other_statements entry with relation 'superseded'.",
+      "consequence": "A served-family holiday row states a regular close where CME's own final statement for that day states an early close. This is the only recorded status in the file that is wrong on the operator's evidence."
+    },
+    {
+      "id": 2,
+      "severity": "load-bearing (superseded line quoted as current)",
+      "where": "cme-2013-2015.json, holidays 2013-07-03, family 'grains_oilseeds'",
+      "recorded": "verbatim contains '1215 CT - Early MGEX Wheat close'.",
+      "finding": "The same 7/2/2013 revision prints '1215 CT - Early MGEX Wheat & Apple Juice close'. (The recorded close_instant values, 1200 CT for CBOT & KCBT and 1230 CT for Mini-Sized grain, are unchanged between the two revisions.)",
+      "corrected_value": "verbatim line '1215 CT - Early MGEX Wheat & Apple Juice close', cited to the 7/2/2013 revision, with the 6/4/2013 wording recorded as superseded.",
+      "consequence": "A verbatim field quotes a line CME later rewrote, without saying so."
+    },
+    {
+      "id": 3,
+      "severity": "load-bearing (completeness claim not met)",
+      "where": "raw/cme-2013-2015-fix/INDEX.md 'Enumeration'; cme-2013-2015.json coverage and missing[10]",
+      "claim": "missing[10]: 'CME revised these schedules in place at the same URL. Eleven family rows now carry an other_statements entry with relation superseded ... Two generations account for all of them.' The fix INDEX says the round 'enumerated the path afresh'.",
+      "finding": "The enumeration covered only the .xls/.zip half of it. Against my fresh CDX for 2013-2015 (raw/cme-2013-2015-verify-r2/cdx/): (a) the status-200 row '20130717050333 http://www.cmegroup.com:80/.../2013-4th-of-july-done.pdf 200 application/pdf' is present in raw/cme-2013-2015/cdx_holiday_calendar.json AND in raw/cme-2013-2015-fix/cdx_all.json, and appears in neither download list (names.txt, todo.tsv) nor either INDEX - that is discrepancies 1 and 2; (b) the cited PDF URLs carry 42 further status-200 distinct-digest captures that were never retrieved (2013-christmas 4, 2013-new-years 4, 2013-thanksgiving 4, 2013-labor-day 3, 2014-new-years 3, 2015-christmas 3, and so on). I retrieved two of the 42 and both differ in session content: 2015-4th-of-july-holiday-schedule.pdf@20150326113353 (footer 'Last updated 12/29/2014', sha256 664f4b885e090fccfe15152781ba62014aaa1650d1dfdf41564483d457d4ce2b) gives Equity Products '1215 CT / 1315 ET / 1715 UTC - Early close' on Thursday July 2 2015 where the cited 6/1/2015 revision gives '1615 CT / 1715 ET / 2115 UTC - Regular close'; 2014-4th-of-july-holiday-schedule.pdf@20140326153233 (footer 'Last updated 2/26/2014', sha256 61ef891b5f43164317814b0d5de6619337e1e11f5df1251b0ced886a7193827b) prints '1200 CT / 1330 ET / 1700 UTC - Early close' where the cited 7/1/2014 revision prints '1300 ET'.",
+      "corrected_value": "Either retrieve the 43 outstanding PDF captures and reconcile them as the .xls revisions were reconciled, or state in missing[] exactly how many PDF revisions exist per URL, that only the latest capture of each was read, and what that leaves unknown. The sentence in missing[10] must stop implying that the eleven superseded rows are the whole revision history.",
+      "consequence": "The evidence record overstates the completeness of CME's in-place revision history in precisely the channel that round 1 was commissioned to widen, and it hid a real data error (discrepancy 1)."
+    },
+    {
+      "id": 4,
+      "severity": "load-bearing (a recorded gap the corpus already closes)",
+      "where": "cme-2013-2015.json, missing[2]; holidays 2013-03-28, family 'livestock+dairy+lumber'",
+      "recorded": "close_instant '1355 (zone not printed on this line; the document's other times are CT)'; missing[2] 'CME prints 1355 - Early Close for Lumber, Dairy & Livestock with NO time zone on that line ... The zone is recorded as unstated rather than inferred from the later years.' No other_statements entry.",
+      "finding": "X13GFPD - 2013-good-friday-presidents-day.xls@20130623203632, a document already cited elsewhere in this file - settles it from 2013 itself, with no cross-year inference. Its sheet 'Good Fri.' has the calendar-date header 'Thursday, March 28' at r002 col1 and the column header 'Early Thur. Close' at r003 col2; rows r025 'Dairy', r029 'Livestock' and r030 'Lumber' all carry 13:55 in that column; and the sheet's own Notes block at r047-r048 reads 'All times are CT'. The neighbouring 2013-03-28 grains_oilseeds row already cites this very workbook as corroborating.",
+      "corrected_value": "Attach an other_statements entry (X13GFPD, relation 'corroborating') to the 2013-03-28 livestock+dairy+lumber row, and rewrite missing[2] to say the zone is sourced as CT by CME's own 2013 workbook rather than left unstated - or, if the hedge is kept deliberately, say why a T1 operator statement in the corpus does not close it.",
+      "consequence": "A gap is declared open against a served-family early close while the operator's answer is sitting in the corpus, unattached."
+    },
+    {
+      "id": 5,
+      "severity": "load-bearing (a stated evidential claim with a counterexample)",
+      "where": "raw/cme-2013-2015-fix/INDEX.md, 'What the reconciliation found' item 1; cme-2013-2015.json coverage clause (1)",
+      "claim": "'Across all 45 files and every date in range the two rows carry identical values in every column. The round-0 grouping survives on evidence rather than on the PDFs' shared section heading.'",
+      "finding": "57 of the 58 Interest-Rate/FX row pairs in the corpus are identical; one is not. In X13GFPD sheet 'Good Fri.', r012 'CME Group Interest Rate' carries 16:00 in the 'Regular Close' column and 16:00 / 17:00 in the Sunday-March-31 'Pre-opening**' and 'Open' columns, while r014 'CME Group FX' carries only the 16:00 Regular Close; the Sunday pair appears instead on the unlabelled continuation row r013. The grouping conclusion still holds on the closes, but the claim as written is false and the sheet's layout quirk should be stated.",
+      "corrected_value": "'Across all 42 workbooks, 57 of the 58 sheets that carry both rows give them identical values in every column; the exception is X13GFPD sheet Good Fri., where the FX row's Sunday pre-open and open sit on the unlabelled row between the two product rows.'",
+      "consequence": "The load-bearing justification for collapsing interest_rates and fx into one row is stated absolutely when it is true with one stated exception."
+    },
+    {
+      "id": 6,
+      "severity": "moderate (unrecorded gap for crate identities)",
+      "where": "cme-2013-2015.json, coverage ('Families: equity_index, interest_rates, fx, energy, metals, grains_oilseeds, livestock, dairy, lumber') and missing[]",
+      "finding": "missing[] records the two crate keys the documents are silent about (globex_nikkei_225_dollar, globex_cryptocurrency) but says nothing about the crate keys the documents DO give distinct holiday instants for and that this file does not model. In X15ANN sheet 'Labor', under 'Friday, September 4': r035 'Weather' = 15:15 and r020 'Mini-Sized Grains and Oilseeds' = 13:45 in the 'Regular Fri. Close' column, against Equity 16:15 and 'Grains and Oilseeds' 13:15 in the same column; X13GFPD sheet 'MLK, Jr.' r019 gives Mini-Sized Grains 14:30 against Grains 14:00. The crate holds globex_weather and globex_mini_grains (both dormant, ledger rows at docs/schedules/verification.md:482 and :460), and the 2013 PDFs likewise print Weather, Real Estate and GSCI instants that survive in this file only incidentally, inside dairy-row verbatims.",
+      "corrected_value": "Add a missing[] entry naming the product rows CME prints that this file does not model - Weather, Real Estate, S&P GSCI, Mini-Sized Grains and Oilseeds, MGEX Hard Red Spring Wheat / Indices / Apple Juice, Black Sea Wheat, Ethanol & DDG, Crude Palm Oil, Bloomberg indices, Custom Indexes, S&P CNX Nifty, USD-Ibovespa, EUA Daily, DME Oman Crude TAM, the metals TAS lines, KOSPI 200, Bursa Malaysia and CME Europe - and say which of them correspond to existing crate keys and what would close each.",
+      "consequence": "Best-effort is the right obligation for a dormant identity (LAW-SERVICE-TIERS), but LAW-FOLLOW-UPS-ARE-ISSUES requires the gap and its closing condition to be recorded; an unrecorded gap reads as a claim that it was never needed. The word 'complete' in the coverage sentence is unqualified as to product."
+    },
+    {
+      "id": 7,
+      "severity": "minor (self-description)",
+      "where": "cme-2013-2015.json, coverage",
+      "claim": "'...plus 28 CME .xls documents cited here for the first time, among them the 2014 and 2015 annual master workbooks and both 2013 multi-sheet bundles.'",
+      "finding": "Only one 2013 multi-sheet workbook is cited. Of the three 2013 .xls files retrieved, 2013-good-friday-presidents-day.xls (sheets: New Years, MLK Jr., President, Good Fri.) is X13GFPD; 2013-martin-luther-king.xls (sheets: New Years, MLK Jr.) carries doc id '-' in the fix INDEX and is absent from the documents map; 2013-presidents-day.xls is single-sheet and also uncited.",
+      "corrected_value": "'...among them the 2014 and 2015 annual master workbooks and the 2013 four-sheet Good Friday / Presidents Day bundle.'",
+      "consequence": "The self-description of the cited evidence base is wrong by one document, the same class of slip as round-1 discrepancy 4."
+    },
+    {
+      "id": 8,
+      "severity": "minor (note not true as written)",
+      "where": "cme-2013-2015.json, holidays 2014-11-11, other_statements[0] (X14VET), field 'note'",
+      "claim": "'The identical sheet appears in the annual master workbook X14ANN.'",
+      "finding": "The statement is the same; the sheet is not identical. X14VET sheet 'Veterans' reads '  Tuesday,  November 11 ... uneffected and will run on a normal schedule. If you have any questions, please call the CME Global Command Center at  +1 800 438 8616, in Europe at + 44 800 898 013 or in Asia at + 65 6532 5010'. X14ANN sheet 'Veterans Day' reads ' Tuesday November 11 ... uneffected and will run on a normal schedule' - no comma after Tuesday, no period after schedule, and the older contact numbers '312.456.2391 / 44.207.623.4708 / 65.6223.1357'.",
+      "corrected_value": "'The same statement appears in X14ANN sheet Veterans Day, with different punctuation and the older command-centre numbers.'",
+      "consequence": "A corroboration note asserts byte-level identity that the bytes do not support."
+    },
+    {
+      "id": 9,
+      "severity": "minor (verbatim fidelity)",
+      "where": "cme-2013-2015.json, holidays 2013-10-14 and 2013-11-11 (the nine-family rows)",
+      "finding": "Both quote the document title as 'Globex Columbus Day Holiday Schedule' / 'Globex Veterans Day Holiday Schedule'. D13COL and D13VET print 'Globex(R) Columbus Day Holiday Schedule' and 'Globex(R) Veterans Day Holiday Schedule' - the registered-trademark glyph is in the title and is dropped in the quotation. Every other fragment in the file survives a literal substring test.",
+      "corrected_value": "Restore the registered mark in both title quotations, or mark the title as a normalised render.",
+      "consequence": "Two verbatim fields are not quotable back to the bytes character for character."
+    },
+    {
+      "id": 10,
+      "severity": "observation, not a defect",
+      "where": "cme-2013-2015.json, close_instant / open_instant on 29 rows",
+      "finding": "Where CME prints a three-digit clock time ('905 CT / 1005 ET / 1405 UTC', '800 CT', '900 CT'), the derived *_instant field zero-pads it ('0905 CT / 1005 ET / 1405 UTC'). The charter asks for the operator's stated instant exactly as printed, but in every one of the 29 rows the adjacent verbatim field preserves CME's printed form and the clock time is unchanged, so nothing is lost. Recorded so a later reader does not mistake the padding for a transcription error, and so the choice is deliberate rather than incidental."
+    },
+    {
+      "id": 11,
+      "severity": "minor (record hygiene)",
+      "where": "raw/cme-2013-2015/INDEX.md lines 57-61 and interpretive note 6",
+      "finding": "The round-0 INDEX still reads '...and the `.xls` twins of the PDFs above (same content, different container)' and still states the 2015 Labor Day change categorically: 'That is CME's own printed change, not an inference.' Both were withdrawn by round 1, but only in the fix directory and in the JSON. The round-0 INDEX carries no amendment line and no pointer to raw/cme-2013-2015-fix/, so a reader who opens it first reads two statements the task itself no longer holds.",
+      "corrected_value": "Add a dated amendment block at the top of raw/cme-2013-2015/INDEX.md: the exclusion sentence is withdrawn and superseded by raw/cme-2013-2015-fix/INDEX.md, and note 6 is superseded by the lineage recorded on the 2015-09-04 interest_rates+fx row. Do not delete the original text - a capture dates the observation.",
+      "consequence": "The evidence store contains two live documents that contradict each other with nothing telling a reader which one governs."
+    },
+    {
+      "id": 12,
+      "severity": "minor (rule applied unevenly)",
+      "where": "cme-2013-2015.json, holidays 2013-01-01 and 2013-01-02 (all rows)",
+      "finding": "X13GFPD's sheet 'New Years' is headed 'CME Group Globex New Year's Holiday Schedule: December 31, 2012 to January 2, 2013' and carries the full product grid for Tuesday January 1 and Wednesday January 2 2013 - including the per-product instants that the 41 corroborating entries elsewhere exist to capture. None of the ten 2013-01-01 / 2013-01-02 rows carries a corroborating statement, although the sibling 2013-01-18 and 2013-03-28 rows cite the same workbook. Of the 57 rows whose verbatim says 'per each product schedule', 16 carry no .xls instant; 14 of the 16 have no 2013 .xls covering that holiday at all, but 2013-01-02 grains_oilseeds does.",
+      "corrected_value": "Attach X13GFPD's 'New Years' sheet to the 2013-01-01 and 2013-01-02 rows on the same basis as the MLK and Good Friday rows, or state the rule that limits corroboration to certain sheets.",
+      "consequence": "The corroboration pass is not applied evenly across the sheets of a workbook the file already cites."
+    }
+  ],
+  "confirmed_sound": [
+    "All 79 sha256 values and byte counts across both INDEX.md files re-verify against the files on disk; nothing on disk is unlisted and nothing listed is missing.",
+    "Ten cited documents spanning 2013, 2014, 2015 and 2016 and both containers re-fetched independently and byte-identical.",
+    "pdftotext -layout reproduces all 32 saved .txt renderings byte for byte, and an independent re-run of the xlrd dumper reproduces all 42 .xls dumps byte for byte.",
+    "62 documents, all referenced, none dangling; 72 dates sorted with no duplicates; 346 rows; 638 family-days; 67 other_statements (18 superseded on 11 rows, 49 corroborating, exactly 41 of them on 'per each product schedule' rows). Every figure in `coverage` matches the file.",
+    "587 instant tokens all resolve inside the document their own row cites: no instant was inferred from another year, and the 2013 Good Friday zone-unstated handling is intact in the row itself.",
+    "The eleven superseded statements are real and correctly directed: I re-read the X15ANN 'Labor' and 'Independence' sheets and the X16NY / X15ANN 'New Year' sheets against the bytes, and in every case the recorded PDF value is CME's later statement.",
+    "The 2014 MLK 'Tuesday, Jan 22' typo finding is independently confirmed: X14MLK sheet 'MLK, Jr.' puts Livestock 09:05 and Lumber 09:00 in the 'Open' column under the r002 calendar-date header 'Tuesday, January 21'.",
+    "The Nikkei and cryptocurrency absences hold: my own grep over all 74 extracted documents returns nothing for either.",
+    "The .xls/.zip enumeration is complete against a fresh CDX for all three years, and Columbus Day 2015 genuinely exists only as .xls.",
+    "The settlement-times PDFs, trading-floor cards and ClearPort calendars remain correctly excluded under LAW-SESSION-NOT-EXPIRY, and the Veterans Day rows now rest on CME's own purpose-published Globex .xls rather than only on a settlement-procedures PDF."
+  ],
+  "required_remediation": [
+    "Retrieve 2013-4th-of-july-done.pdf@20130717050333 (already saved at raw/cme-2013-2015-verify-r2/new/), cite it, and correct 2013-07-03 livestock+dairy+lumber to status 'early_close' with close_instant '1200 CT (Dairy); 1200 CT (Lumber); 1202 CT (Lumber Options); 1215 CT (Livestock Futures & Options)', demoting the 6/4/2013 statement to relation 'superseded'.",
+    "Correct the 2013-07-03 grains_oilseeds verbatim line to '1215 CT - Early MGEX Wheat & Apple Juice close' from the same revision, recording the earlier wording as superseded.",
+    "Either retrieve and reconcile the 42 unretrieved distinct-digest PDF captures of the cited URLs, or state in missing[] how many exist per URL, that only the latest capture of each was read, and what that leaves unknown. Stop implying in missing[10] that the eleven superseded rows are the complete revision history.",
+    "Attach X13GFPD's 'Good Fri.' sheet (Dairy / Livestock / Lumber = 13:55 under 'Early Thur. Close'; Notes: 'All times are CT') to the 2013-03-28 livestock+dairy+lumber row and rewrite missing[2] accordingly.",
+    "Restate the Interest-Rate/FX identity claim with its one counterexample (X13GFPD sheet 'Good Fri.', rows r012-r014).",
+    "Add a missing[] entry for the product rows CME prints that this file does not model, naming the crate keys they correspond to (globex_weather, globex_mini_grains and the metals TAS keys) and what would close each.",
+    "Fix the coverage's '2013 multi-sheet bundles' wording, the X14VET 'identical sheet' note, and the two dropped registered marks in the 2013 Columbus / Veterans title quotations.",
+    "Add a dated amendment block to raw/cme-2013-2015/INDEX.md withdrawing the .xls exclusion sentence and note 6 and pointing at raw/cme-2013-2015-fix/INDEX.md, without deleting the original text."
+  ],
+  "evidence_dir": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015-verify-r2",
+  "saved_json": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2013-2015.verify.json"
+}

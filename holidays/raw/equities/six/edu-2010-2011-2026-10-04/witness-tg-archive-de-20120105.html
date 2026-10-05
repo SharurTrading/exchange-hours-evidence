@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>SIX Swiss Exchange - Trading Guides</title><script type="text/javascript" language="javascript">
+          
+          function hasData(text) {
+          return text.value != null && text.value.length > 0;
+          }
+
+          
+          </script><script type="text/javascript" language="javascript">
+          function navAction(state, id) {
+          if (state == "expanded") {
+          
+          dojo.style('t_' + id + '_collapsed', 'display', 'block');
+          dojo.style('t_' + id + '_expanded', 'display', 'none');
+          } else if (state == "collapsed") {
+          
+          dojo.style('t_' + id + '_collapsed', 'display', 'none');
+          dojo.style('t_' + id + '_expanded', 'display', 'block');
+          }
+          }
+        </script><script type="text/javascript" language="javascript">
+          function doHover(obj) {
+          obj.className += "-hover";
+          }
+
+          function undoHover(obj) {
+          obj.className = obj.className.replace(/\b-hover\b/,'');
+          }
+        </script><script type="text/javascript" language="javascript">
+        var quicklinkTitle = 'Trading Guides';
+      </script><script type="text/javascript" language="javascript">
+        djConfig = {
+          usePlainJson: true,
+          isDebug: false,
+          parseOnLoad: true,
+          locale:
+        'de-ch'
+        };
+      </script><script language="JavaScript" type="text/javascript">
+        var dojoURL = window.location.protocol + "//" + window.location.host + "/javascript/dojo-1.1.2/release/dojo/dojo/dojo.js";
+        document.write(unescape('%3Cscript language="JavaScript" type="text/javascript" src="' + dojoURL + '"%3E;%3C/script%3E'));
+      </script><script type="text/javascript" src="/javascript/dojo-1.1.2/release/dojo/dojo/swxDojo.js">;</script><script type="text/javascript" src="/javascript/common/logger@gvxr8i0w.js">;</script><script type="text/javascript" src="/javascript/fqs/QuotePlayer@gtydrrsg.js">;</script><script type="text/javascript" src="/javascript/common/md5@glulcsso.js">;</script><script type="text/javascript" src="/resources/scripts/printPage@gs5v8n0o.js">;</script><script type="text/javascript" src="/resources/scripts/tableConfiguration@g8wzprx4.js">;</script><script type="text/javascript" src="/resources/scripts/metaNavigation@g8wzprx4.js">;</script><script type="text/javascript" src="/resources/scripts/topNavigation@gv3v2n8g.js">;</script><script type="text/javascript" src="/resources/scripts/htmlCoordinates@g8wzprx4.js">;</script><script type="text/javascript" language="javascript">
+        dojo.require("dojo.parser");
+        dojo.require("dojox.grid.Grid");
+        dojo.require("dojox.grid._data.model");
+        dojo.require("dijit.form.Button");
+        dojo.require("dijit.Menu");
+        dojo.require("dijit.Tooltip");
+</script><script type="text/javascript" src="/resources/scripts/quickLinks@g9fcbnao.js">;</script><script type="text/javascript" src="/javascript/common/sidebar-clock@gwhk8rw8.js">;</script><script type="text/javascript" src="/javascript/fqs/SmiTicker@gmekpifk.js">;</script><script type="text/javascript" language="javascript">
+          balancerIdDefinition = "BALANCERID=b.cocoon0a1838";
+          var tickerMovie = null;
+          var ticker = new swx.QuotePlayer(
+            tickerMovie,
+            tickerUpdateCell,
+            null,
+            "/ajax/fqs/lbMovie.json?" + balancerIdDefinition + "&id=-1&whichMovie=ticker"
+          );
+        </script><script type="text/javascript" language="javascript">
+            var quickLinks = new QuickLinks("quicklinksTable",
+            "quicklinks-ipo",
+            [ quicklinkTitle, window.location.href ],
+            {
+            add_link_text:
+            "Seite hinzufügen",
+
+            add_img_tooltip:
+            "Seite hinzufügen",
+
+            rem_img_tooltip:
+            "Seite löschen"
+            },
+            []);
+          
+
+          
+          dojo.addOnLoad(function() { ticker.play() } );
+
+          
+          dojo.addOnLoad(function() {
+
+            
+
+            
+            dojo.connect(metaNavLangButton, 'onmouseout', function(event) {
+              if ( metaNavLanguage.mouseOutOfButtonAndDropdown(event) ) {
+                metaNavLanguage.hideDropdown();
+              }
+            });
+            dojo.connect(metaNavLangDropdown, 'onmouseout', function(event) {
+              if ( metaNavLanguage.mouseOutOfButtonAndDropdown(event) ) {
+                metaNavLanguage.hideDropdown();
+              }
+            });
+          });
+
+          
+            dojo.addOnLoad(function() { quickLinks.displayQuickLinks() } );
+            dojo.addOnLoad(function() { setInterval ( "setJSDateTime()", 1000 ) });
+          </script><script type="text/javascript" language="javascript">
+      DELAYED_15_IMG_SRC = "/resources/images/icons_inv/delay_15.png";
+      DELAYED_0_IMG_SRC = "/resources/images/icons_inv/delay_0.png";
+      
+          DELAYED_15_TXT_STR = "15 Minuten verzögert";
+          DELAYED_0_TXT_STR = "Echtzeit";
+          CHART_MONTH_LABELS = ["Jan", "Feb", "Mar", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"];
+        
+
+      // Shows alternative index chart
+      function showBox(setName, key) {
+
+      // Get the list of indices in this set
+      var setList = pageIndexList[setName];
+      var index = 0;
+      for (var i=0; i < setList.length; i++) {
+
+      // For the required index, switch on visibility and load it
+      if (setList[i] == key) {
+      index = i;
+      dojo.style(setName + "Box" + key, "visibility", "");
+      dojo.addClass(dojo.byId("chartBox"+key), "chartBox-active");
+
+      // Load values if not already done
+      if (!dojo.eval("smallchart"+setList[i]+".values_domain.id")) {
+      dojo.eval("smallchart"+setList[i]
+      +".getAjaxValues(\"id\", smallchart"+setList[i]+".id)");
+      }
+      } else {
+
+      // For the others, switch off visibilty
+      dojo.style(setName + "Box" + setList[i], "visibility", "hidden");
+      dojo.removeClass(dojo.byId("chartBox"+setList[i]), "chartBox-active");
+      }
+      }
+      return index;
+      }
+    </script><script type="text/javascript" src="/resources/scripts/chartConfig@g2mz4my0.js">;</script><script type="text/javascript" src="/javascript/charts/chart_main@gte3bfkw.js">;</script><script type="text/javascript" src="/javascript/charts/chart_dataUpdater@gsmv0h1k.js">;</script><script type="text/javascript" src="/javascript/charts/chart_drawer@gryqppgg.js">;</script><script type="text/javascript" src="/javascript/charts/chart_graphDrawer@gsln4p4o.js">;</script><script type="text/javascript" src="/javascript/charts/chart_axisDrawer@gryqppgg.js">;</script><script type="text/javascript" src="/javascript/charts/chart_valuesHelper@gryqppgg.js">;</script><script type="text/javascript" src="/javascript/charts/chart_valuesHelper_Advanced@gryqppgg.js">;</script><script type="text/javascript" src="/javascript/charts/chart_functions_Advanced@gwhk8rw8.js">;</script><script type="text/javascript" src="/javascript/charts/chart_slider_Advanced@gryqppgg.js">;</script><script type="text/javascript" src="/javascript/charts/chart_addonDrawer_Advanced@gryqppgg.js">;</script><script type="text/javascript" src="/javascript/charts/chart_eventDrawer_Advanced@gryqppgg.js">;</script><script type="text/javascript" src="/javascript/charts/chart_indicators_Advanced@gryqppgg.js">;</script><script type="text/javascript" src="/javascript/charts/chart_config_Advanced@gryqppgg.js">;</script><link type="text/css" href="/resources/styles/ssecom-default@gwj0lz6g.css" rel="stylesheet"/><link type="text/css" href="/resources/styles/ssecom-dojocalendar@fxnbsbsg.css" rel="stylesheet"/><link type="text/css" href="/resources/styles/Tooltip@ggf2v8e8.css" rel="stylesheet"/><link type="text/css" href="/javascript/dojo-1.1.2/release/dojo/dijit/themes/dijit.css" rel="stylesheet"/></head><body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" onload="" background="/resources/images/layout/header_bg.gif
+          "><table border="0" cellspacing="0" cellpadding="0" height="100%" width="100%"><tr valign="top" height="100%"><td><table border="0" cellpadding="0" cellspacing="0" height="100%"><tr><td valign="top"><table border="0" cellpadding="0" cellspacing="0" width="12" height="100%" id="left-bg"><tr><td height="121" width="12">&nbsp;</td></tr><tr><td height="198" background="/resources/images/layout/shadow_left_blue@g5gkkpvc.gif">&nbsp;</td></tr><tr><td height="100%" valign="top" background="/resources/images/layout/shadow_left_white@g5gkkpvc.gif">&nbsp;</td></tr></table></td><td style="vertical-align:top;"><table border="0" cellpadding="0" cellspacing="0" height="100%" id="sublayout-default-content-table"><tr><td height="121" style="vertical-align:top;"><table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"><tr><td style="vertical-align:top; padding-left:54px; padding-top:22px;"><a href="/index_de.html" title="SIX Swiss Exchange Homepage"><img src="/resources/images/layout/sse_logo@g5gkkpvc.gif" border="0"/></a></td><td style="text-align:right; vertical-align:top; padding-right:18px;"><table border="0" cellpadding="0" cellspacing="0" id="smiticker"><tr><td style="padding-top: 1px;"><table border="0" cellpadding="0" cellspacing="0" style="background-color: #E6E6E4;"><tr><td width="1" height="49"><img src="/resources/images/layout/ticker_bg_border@g5gkkpvc.gif" width="1" height="49"/></td><td><table border="0" cellpadding="0" cellspacing="0"><tr><td height="22" colspan="4" style="vertical-align: top; padding-left: 8px; padding-top: 3px; color:#747678; font-size: 11px; line-height: 14px;">Kurse</td></tr><tr><td height="27" id="ticker_SMI" style="
+                    padding-right: 9px; vertical-align: top; padding-top: 3px;  font-size: 11px; line-height: 14px;
+                    border-right: 1px solid #FFFFFF;padding-left: 8px;"><div onclick="location.href='/indices/security_info_de.html?id=CH0009980894CHF9'" style="cursor:pointer;width:128px;"><nobr><span style="text-decoration: none; color: black;">SMI</span><span style="margin-left: 9px" id="ticker_SMI_ClosingPrice">6058.08</span><span id="ticker_SMI_ClosingDelta" style="
+                          margin-left: 9px;
+                          color: green">+0.12%
+                      </span><img border="0" width="9" height="9" style="margin-left: 6px" id="ticker_SMI_arrow" src="/resources/images/smi_ticker/arrow_up@g5gkks6o.png"/></nobr></div></td><td height="27" id="ticker_SLI" style="
+                    padding-right: 9px; vertical-align: top; padding-top: 3px;  font-size: 11px; line-height: 14px;
+                    border-right: 1px solid #FFFFFF;padding-left: 8px;"><div onclick="location.href='/indices/security_info_de.html?id=CH0030252883CHF9'" style="cursor:pointer;width:128px;"><nobr><span style="text-decoration: none; color: black;">SLI</span><span style="margin-left: 9px" id="ticker_SLI_ClosingPrice">898.20</span><span id="ticker_SLI_ClosingDelta" style="
+                          margin-left: 9px;
+                          color: red">-0.03%
+                      </span><img border="0" width="9" height="9" style="margin-left: 6px" id="ticker_SLI_arrow" src="/resources/images/smi_ticker/arrow_down@g5gkks6o.png"/></nobr></div></td><td height="27" id="ticker_SXGE" style="
+                    padding-right: 9px; vertical-align: top; padding-top: 3px;  font-size: 11px; line-height: 14px;
+                    border-right: 1px solid #FFFFFF;padding-left: 8px;"><div onclick="location.href='/indices/security_info_de.html?id=CH0009987501CHF9'" style="cursor:pointer;width:128px;"><nobr><span style="text-decoration: none; color: black;">SPI</span><span style="margin-left: 9px" id="ticker_SXGE_ClosingPrice">5456.56</span><span id="ticker_SXGE_ClosingDelta" style="
+                          margin-left: 9px;
+                          color: green">+0.07%
+                      </span><img border="0" width="9" height="9" style="margin-left: 6px" id="ticker_SXGE_arrow" src="/resources/images/smi_ticker/arrow_up@g5gkks6o.png"/></nobr></div></td><td height="27" id="ticker_SBR14T" style="
+                    padding-right: 9px; vertical-align: top; padding-top: 3px;  font-size: 11px; line-height: 14px;
+                    padding-left: 8px;"><div onclick="location.href='/indices/security_info_de.html?id=CH0027441887CHF9'" style="cursor:pointer;width:128px;"><nobr><span style="text-decoration: none; color: black;">SBI</span><span style="margin-left: 9px" id="ticker_SBR14T_ClosingPrice">120.53</span><span id="ticker_SBR14T_ClosingDelta" style="
+                          margin-left: 9px;
+                          color: green">+0.17%
+                      </span><img border="0" width="9" height="9" style="margin-left: 6px" id="ticker_SBR14T_arrow" src="/resources/images/smi_ticker/arrow_up@g5gkks6o.png"/></nobr></div></td></tr></table></td><td width="1" height="49"><img src="/resources/images/layout/ticker_bg_border@g5gkkpvc.gif" width="1" height="49"/></td></tr></table></td></tr></table></td></tr><tr><td height="100%" width="100%">&nbsp;</td><td style="vertical-align: bottom;"><table border="0" cellpadding="0" cellspacing="0" height="40" width="100%"><tr style="vertical-align: bottom;"><td width="100%">&nbsp;</td><td class="meta-nav-border"><image src="/resources/images/layout/trans.gif" width="1"/></td><td nowrap="nowrap" onclick="
+                                  window.location.href='/index_de.html';
+                                " onmouseover="
+                                  this.className='meta-nav meta-nav-inactiv-over';
+                                " onmouseout="
+                                  this.className='meta-nav meta-nav-inactiv';
+                                " class="meta-nav meta-nav-inactiv"><span>Home<a href="/index_de.html" style="display:none">Home</a></span></td><td class="meta-nav-border"><image src="/resources/images/layout/trans.gif" width="1"/></td><td nowrap="nowrap" onclick="
+                                  window.location.href='/contact_de.html';
+                                " onmouseover="
+                                  this.className='meta-nav meta-nav-inactiv-over';
+                                " onmouseout="
+                                  this.className='meta-nav meta-nav-inactiv';
+                                " class="meta-nav meta-nav-inactiv"><span>Kontakt<a href="/contact_de.html" style="display:none">Kontakt</a></span></td><td class="meta-nav-border"><image src="/resources/images/layout/trans.gif" width="1"/></td><td class="meta-nav meta-nav-button" id="meta-nav-lang-button" onmouseover="this.className='meta-nav meta-nav-button-over';                                            this.getElementsByTagName('div')[0].className = 'meta-nav-arrow meta-nav-arrow-over';                                            document.getElementById('meta-nav-lang-dropdown').style.display = 'block';                                            metaNavLanguage.init();">Deutsch<div class="meta-nav-arrow" name="meta-nav-button-arrow"/></td><td class="meta-nav-border" width="18"><image src="/resources/images/layout/trans.gif" width="18" height="37"/></td></tr></table></td></tr></table></td></tr><tr><td valign="top" style="border-bottom:#9A9B9C solid 1px; background-color:#FFFFFF;"><table border="0" id="sublayout-default-content-table2" cellpadding="0" cellspacing="0" height="100%" width="100%"><tr><td colspan="3"><div id="topnav"><div id="topnav-1st-lev"><ul class="clearfix"><li id="topnav-1st-lev-item-1" onmouseover="topNavigation1.showFlyout();" class=" first"><a href="/news/overview_de.html"><span>News</span></a></li><li id="topnav-1st-lev-item-2" onmouseover="topNavigation2.showFlyout();"><a href="/shares/overview_de.html"><span>Marktdaten</span></a></li><li id="topnav-1st-lev-item-3" onmouseover="topNavigation3.showFlyout();" class=" active"><a href="/participants_de.html"><span>Teilnehmer</span></a></li><li id="topnav-1st-lev-item-4" onmouseover="topNavigation4.showFlyout();"><a href="/issuers_de.html"><span>Emittenten</span></a></li><li id="topnav-1st-lev-item-5" onmouseover="topNavigation5.showFlyout();"><a href="/investors_de.html"><span>Investoren</span></a></li><li id="topnav-1st-lev-item-6" onmouseover="topNavigation6.showFlyout();"><a href="/about_us/company_de.html"><span>&Uuml;ber uns</span></a></li><li class="search-form"><form name="search" method="get" action="/search/site/search_de.html"><input id="topSearchInputField" type="text" value="Suche nach..." name="q" onfocus="if (this.value=='Suche nach...') {this.value='';this.style.color='#000000';};" onblur="if (this.value=='') {this.value='Suche nach...';this.style.color='#C3C3C4';};"/><img src="/resources/images/layout/search_arrow@g5gkkpvc.gif" id="searcharrow" name="srcharrow" onmouseover="showSearchDropdown();return false;" onmouseout="hideSearchDropdown();return false;"/></form><img src="/resources/images/layout/button_search@gs5v8n0o.gif" id="search-button" onmouseover="this.src='/resources/images/layout/button_search_a.gif';" onmouseout="this.src='/resources/images/layout/button_search.gif';" onclick="submitSearchForm('Suche nach...');"/><script type="text/javascript" language="javascript">
+        timeout = setTimeout("toggleSearchDropdown();", 0);;
+        dropDownCurrent = 0;
+        dropDownNext = 0;
+
+        function showSearchDropdown() {
+          dropDownNext = 1;
+          clearTimeout(timeout);
+          timeout = setTimeout("toggleSearchDropdown();", 150);
+        }
+
+        function hideSearchDropdown() {
+          dropDownNext = 0;
+          clearTimeout(timeout);
+          timeout = setTimeout("toggleSearchDropdown();", 300);
+        }
+
+        function toggleSearchDropdown() {
+          if (dropDownNext == 1 && dropDownCurrent == 0 ) {
+            posX = findPosX(document.getElementById('searcharrow'));
+            document.getElementById('searchDropdown').style.left=posX-145;
+            document.getElementById('searchDropdown').style.visibility='visible';
+            document['srcharrow'].src='/resources/images/layout/search_arrow_a.gif';
+            dropDownCurrent = 1;
+          }
+          if (dropDownNext==0 && dropDownCurrent == 1 && document['srcharrow'].src.indexOf('search_arrow_a')>0) {
+            document.getElementById('searchDropdown').style.visibility='hidden';
+            document['srcharrow'].src="/resources/images/layout/search_arrow.gif";
+            dropDownCurrent = 0;
+          }
+        }
+
+        function findPosX(obj) {
+           var curleft = 0;
+           if(obj.offsetParent) {
+              while(obj.offsetParent) {
+                 curleft += obj.offsetLeft
+                 obj = obj.offsetParent;
+              }
+           }
+           else if(obj.x)
+             curleft = obj.x;
+           return curleft;
+        }
+
+        function submitSearchForm(helpTxt) {
+          dojo.query('input#topSearchInputField').forEach(
+              function(scriptTag) {
+                if (scriptTag.value == helpTxt) {
+                   scriptTag.value='';
+                };
+              }
+          );
+          document.search.submit();
+        }
+      </script></li></ul></div><div id="topnav-flyout-border-suppression-1" class="topnav-flyout-border-suppression"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="1" width="1"/></div><div id="topnav-flyout-1" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-1-item-1" class="topnav-flyout-list"><a href="/news/sse_messages/2011_de.html">Exchange Messages</a></li><li id="topnav-flyout-1-item-2" class="topnav-flyout-list"><a href="/news/media_releases/2012_de.html">Medienmitteilungen</a></li><li id="topnav-flyout-1-item-3" class="topnav-flyout-list"><a href="/news/events_de.html">Veranstaltungen</a></li><li id="topnav-flyout-1-item-4" class="topnav-flyout-list"><a href="/news/newsboard/prod_de.html">Newsboard</a></li><li id="topnav-flyout-1-item-5" class="topnav-flyout-list"><a href="/news/official_notices/search_de.html">Ver&ouml;ffentlichte Meldungen</a></li><li id="topnav-flyout-1-item-6" class="topnav-flyout-list"><a href="/news/rssfeeds_de.html">RSS Newsfeeds</a></li></ul><script language="JavaScript" type="text/javascript">
+                  var topNavTab1 = document.getElementById('topnav-1st-lev-item-1');
+                  var topNavFlyout1 = document.getElementById('topnav-flyout-1');
+                  var topNavFlyoutBorderSuppression1 = document.getElementById('topnav-flyout-border-suppression-1');
+                  var topNavigation1 = new TopNavigation(topNavTab1, topNavFlyout1, topNavFlyoutBorderSuppression1, false, true);
+
+                  
+
+                  
+                  dojo.addOnLoad(function() {
+
+
+                    
+                    dojo.connect(topNavTab1, 'onmouseout', function(event) {
+                      if ( topNavigation1.mouseOutOfTabAndFlyout(event) ) {
+                        topNavigation1.hideFlyout();
+                      }
+                    });
+                    
+                    dojo.connect(topNavFlyout1, 'onmouseout', function(event) {
+                      if ( topNavigation1.mouseOutOfTabAndFlyout(event) ) {
+                        topNavigation1.hideFlyout();
+                      }
+                    });
+                  });
+                </script></div><div id="topnav-flyout-border-suppression-2" class="topnav-flyout-border-suppression"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="1" width="1"/></div><div id="topnav-flyout-2" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-2-item-1" class="topnav-flyout-list"><a href="/shares/overview_de.html">Aktien</a></li><li id="topnav-flyout-2-item-2" class="topnav-flyout-list"><a href="/bonds/overview_de.html">Anleihen</a></li><li id="topnav-flyout-2-item-3" class="topnav-flyout-list"><a href="/funds/overview_de.html">ETFs &amp; Fonds</a></li><li id="topnav-flyout-2-item-4" class="topnav-flyout-list"><a href="/exchange_traded_products/overview_de.html">ETPs</a></li><li id="topnav-flyout-2-item-5" class="topnav-flyout-list"><a href="/indices/overview_de.html">Indizes</a></li><li id="topnav-flyout-2-item-6" class="topnav-flyout-list"><a href="/statistics/overview_de.html">Statistiken</a></li></ul><script language="JavaScript" type="text/javascript">
+                  var topNavTab2 = document.getElementById('topnav-1st-lev-item-2');
+                  var topNavFlyout2 = document.getElementById('topnav-flyout-2');
+                  var topNavFlyoutBorderSuppression2 = document.getElementById('topnav-flyout-border-suppression-2');
+                  var topNavigation2 = new TopNavigation(topNavTab2, topNavFlyout2, topNavFlyoutBorderSuppression2, false, false);
+
+                  
+
+                  
+                  dojo.addOnLoad(function() {
+
+
+                    
+                    dojo.connect(topNavTab2, 'onmouseout', function(event) {
+                      if ( topNavigation2.mouseOutOfTabAndFlyout(event) ) {
+                        topNavigation2.hideFlyout();
+                      }
+                    });
+                    
+                    dojo.connect(topNavFlyout2, 'onmouseout', function(event) {
+                      if ( topNavigation2.mouseOutOfTabAndFlyout(event) ) {
+                        topNavigation2.hideFlyout();
+                      }
+                    });
+                  });
+                </script></div><div id="topnav-flyout-border-suppression-3" class="topnav-flyout-border-suppression"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="1" width="1"/></div><div id="topnav-flyout-3" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-3-item-1" class="topnav-flyout-list"><a href="/participants/participation_de.html">Teilnehmerschaft</a></li><li id="topnav-flyout-3-item-2" class="topnav-flyout-list"><a href="/participants/trading_de.html">Handel</a></li><li id="topnav-flyout-3-item-3" class="topnav-flyout-list"><a href="/participants/reporting_de.html">Reporting</a></li><li id="topnav-flyout-3-item-4" class="topnav-flyout-list"><a href="/participants/clearing_de.html">Clearing &amp; Settlement</a></li><li id="topnav-flyout-3-item-5" class="topnav-flyout-list"><a href="/participants/regulation_de.html">Regularien</a></li><li id="topnav-flyout-3-item-6" class="topnav-flyout-list"><a href="/member_section/login.html">Member Section</a></li><li id="topnav-flyout-3-item-7" class="topnav-flyout-list"><a href="/participants/contact_support/account_management_de.html">Kontakt &amp; Support</a></li></ul><script language="JavaScript" type="text/javascript">
+                  var topNavTab3 = document.getElementById('topnav-1st-lev-item-3');
+                  var topNavFlyout3 = document.getElementById('topnav-flyout-3');
+                  var topNavFlyoutBorderSuppression3 = document.getElementById('topnav-flyout-border-suppression-3');
+                  var topNavigation3 = new TopNavigation(topNavTab3, topNavFlyout3, topNavFlyoutBorderSuppression3, true, false);
+
+                  
+                    var topNavigationActive = topNavigation3;
+                  
+
+                  
+                  dojo.addOnLoad(function() {
+
+
+                    
+                    dojo.connect(topNavTab3, 'onmouseout', function(event) {
+                      if ( topNavigation3.mouseOutOfTabAndFlyout(event) ) {
+                        topNavigation3.hideFlyout();
+                      }
+                    });
+                    
+                    dojo.connect(topNavFlyout3, 'onmouseout', function(event) {
+                      if ( topNavigation3.mouseOutOfTabAndFlyout(event) ) {
+                        topNavigation3.hideFlyout();
+                      }
+                    });
+                  });
+                </script></div><div id="topnav-flyout-border-suppression-4" class="topnav-flyout-border-suppression"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="1" width="1"/></div><div id="topnav-flyout-4" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-4-item-1" class="topnav-flyout-list"><a href="/issuers/marketplace_de.html">B&ouml;rsenplatz Schweiz</a></li><li id="topnav-flyout-4-item-2" class="topnav-flyout-list"><a href="/issuers/listing_de.html">Kotierung</a></li><li id="topnav-flyout-4-item-3" class="topnav-flyout-list"><a href="/issuers/services_de.html">Services</a></li><li id="topnav-flyout-4-item-4" class="topnav-flyout-list"><a href="/issuers/contact_support/issuer_relations_de.html">Kontakt &amp; Support</a></li></ul><script language="JavaScript" type="text/javascript">
+                  var topNavTab4 = document.getElementById('topnav-1st-lev-item-4');
+                  var topNavFlyout4 = document.getElementById('topnav-flyout-4');
+                  var topNavFlyoutBorderSuppression4 = document.getElementById('topnav-flyout-border-suppression-4');
+                  var topNavigation4 = new TopNavigation(topNavTab4, topNavFlyout4, topNavFlyoutBorderSuppression4, false, false);
+
+                  
+
+                  
+                  dojo.addOnLoad(function() {
+
+
+                    
+                    dojo.connect(topNavTab4, 'onmouseout', function(event) {
+                      if ( topNavigation4.mouseOutOfTabAndFlyout(event) ) {
+                        topNavigation4.hideFlyout();
+                      }
+                    });
+                    
+                    dojo.connect(topNavFlyout4, 'onmouseout', function(event) {
+                      if ( topNavigation4.mouseOutOfTabAndFlyout(event) ) {
+                        topNavigation4.hideFlyout();
+                      }
+                    });
+                  });
+                </script></div><div id="topnav-flyout-border-suppression-5" class="topnav-flyout-border-suppression"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="1" width="1"/></div><div id="topnav-flyout-5" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-5-item-1" class="topnav-flyout-list"><a href="/services/mymarketpulse/login_de.html">myMarketpulse</a></li><li id="topnav-flyout-5-item-2" class="topnav-flyout-list"><a href="/services/tools_de.html">Tools</a></li><li id="topnav-flyout-5-item-3" class="topnav-flyout-list"><a href="/knowhow/overview_de.html">Know-how</a></li></ul><script language="JavaScript" type="text/javascript">
+                  var topNavTab5 = document.getElementById('topnav-1st-lev-item-5');
+                  var topNavFlyout5 = document.getElementById('topnav-flyout-5');
+                  var topNavFlyoutBorderSuppression5 = document.getElementById('topnav-flyout-border-suppression-5');
+                  var topNavigation5 = new TopNavigation(topNavTab5, topNavFlyout5, topNavFlyoutBorderSuppression5, false, false);
+
+                  
+
+                  
+                  dojo.addOnLoad(function() {
+
+
+                    
+                    dojo.connect(topNavTab5, 'onmouseout', function(event) {
+                      if ( topNavigation5.mouseOutOfTabAndFlyout(event) ) {
+                        topNavigation5.hideFlyout();
+                      }
+                    });
+                    
+                    dojo.connect(topNavFlyout5, 'onmouseout', function(event) {
+                      if ( topNavigation5.mouseOutOfTabAndFlyout(event) ) {
+                        topNavigation5.hideFlyout();
+                      }
+                    });
+                  });
+                </script></div><div id="topnav-flyout-border-suppression-6" class="topnav-flyout-border-suppression"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="1" width="1"/></div><div id="topnav-flyout-6" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-6-item-1" class="topnav-flyout-list"><a href="/about_us/company_de.html">Unternehmen</a></li><li id="topnav-flyout-6-item-2" class="topnav-flyout-list"><a href="/about_us/media_releases/2012_de.html">Medien</a></li><li id="topnav-flyout-6-item-3" class="topnav-flyout-list"><a href="/about_us/publications/annual_report_de.html">Publikationen</a></li><li id="topnav-flyout-6-item-4" class="topnav-flyout-list"><a href="/about_us/careers_de.html">Karriere</a></li></ul><script language="JavaScript" type="text/javascript">
+                  var topNavTab6 = document.getElementById('topnav-1st-lev-item-6');
+                  var topNavFlyout6 = document.getElementById('topnav-flyout-6');
+                  var topNavFlyoutBorderSuppression6 = document.getElementById('topnav-flyout-border-suppression-6');
+                  var topNavigation6 = new TopNavigation(topNavTab6, topNavFlyout6, topNavFlyoutBorderSuppression6, false, false);
+
+                  
+
+                  
+                  dojo.addOnLoad(function() {
+
+
+                    
+                    dojo.connect(topNavTab6, 'onmouseout', function(event) {
+                      if ( topNavigation6.mouseOutOfTabAndFlyout(event) ) {
+                        topNavigation6.hideFlyout();
+                      }
+                    });
+                    
+                    dojo.connect(topNavFlyout6, 'onmouseout', function(event) {
+                      if ( topNavigation6.mouseOutOfTabAndFlyout(event) ) {
+                        topNavigation6.hideFlyout();
+                      }
+                    });
+                  });
+                </script></div><div id="topnav-2nd"><ul class="clearfix"><li id="topnav-2nd-lev-item-1"><a href="/participants/participation_de.html">Teilnehmerschaft</a></li><li id="topnav-2nd-lev-item-2"><a href="/participants/trading_de.html">Handel</a></li><li id="topnav-2nd-lev-item-3"><a href="/participants/reporting_de.html">Reporting</a></li><li id="topnav-2nd-lev-item-4"><a href="/participants/clearing_de.html">Clearing &amp; Settlement</a></li><li id="topnav-2nd-lev-item-5" class="active"><a href="/participants/regulation_de.html">Regularien</a></li><li id="topnav-2nd-lev-item-6"><a href="/member_section/login.html">Member Section</a></li><li id="topnav-2nd-lev-item-7"><a href="/participants/contact_support/account_management_de.html">Kontakt &amp; Support</a></li></ul></div></div></td></tr><tr><td>&nbsp;</td><td><img src="/resources/images/trans@g5gkkl8o.gif" height="36" width="1" border="0"/></td><td><noscript>
+                          Javascript required to display<br/>
+                          page correctly !
+                        </noscript><div class="sidebar-js-date"><img src="/resources/images/layout/trans@g5gkkpvc.gif" width="2px"/><span id="js-date-part1">&nbsp;</span><span id="js-date-seconds">&nbsp;</span><span id="js-date-cet">&nbsp;</span></div><script type="text/javascript" language="javascript">
+      js_date_lang = 1;
+    </script></td></tr><tr><td valign="top" height="100%"><table border="0" cellpadding="0" cellspacing="0" width="164" height="100%"><tr><td class="navigation-left"><div id="t_1_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('expanded','1_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon1_0_0_a').src='/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon1_0_0_a').src='/resources/images/dojo/nav_arrow_down.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/dojo/nav_arrow_down.gif" border="0"');
+                
+                  document.write('id="navicon1_0_0_a"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/participants/regulation/framework_de.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_down@gwg64fvk.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/participants/regulation/framework_de.html" onmouseover="document.getElementById('navicon1_0_0_a').src='/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon1_0_0_a').src='/resources/images/dojo/nav_arrow_down.gif';">Rahmenordnung</a></td></tr></table><div id="t_1_1_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/participants/regulation/framework/federal_law_de.html">Gesetzesrecht</a></td></tr></table></div><div id="t_1_1_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/participants/regulation/framework/federal_law_de.html">Gesetzesrecht</a></td></tr></table></div><div id="t_1_2_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/participants/regulation/framework/ordinances_de.html">Verordnungsrecht</a></td></tr></table></div><div id="t_1_2_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/participants/regulation/framework/ordinances_de.html">Verordnungsrecht</a></td></tr></table></div></div><div id="t_1_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('collapsed','1_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon1_0_0_').src='/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon1_0_0_').src='/resources/images/dojo/nav_arrow_right.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/dojo/nav_arrow_right.gif" border="0"');
+                
+                  document.write('id="navicon1_0_0_"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/participants/regulation/framework_de.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_right@gwg64f3s.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/participants/regulation/framework_de.html" onmouseover="document.getElementById('navicon1_0_0_').src='/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon1_0_0_').src='/resources/images/dojo/nav_arrow_right.gif';">Rahmenordnung</a></td></tr></table></div><div id="t_2_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/federal_acts_de.html">Bundeserlasse</a></td></tr></table></div><div id="t_2_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/federal_acts_de.html">Bundeserlasse</a></td></tr></table></div><div id="t_3_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/rules_regs_de.html">Reglemente</a></td></tr></table></div><div id="t_3_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/rules_regs_de.html">Reglemente</a></td></tr></table></div><div id="t_4_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/directives_de.html">Weisungen</a></td></tr></table></div><div id="t_4_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/directives_de.html">Weisungen</a></td></tr></table></div><div id="t_5_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/sse_messages/2011_de.html">Exchange Messages</a></td></tr></table></div><div id="t_5_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/sse_messages/2011_de.html">Exchange Messages</a></td></tr></table></div><div id="t_6_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/trading_guides_de.html">Trading Guides</a></td></tr></table></div><div id="t_6_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/trading_guides_de.html">Trading Guides</a></td></tr></table></div><div id="t_7_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/faqs_de.html">FAQs</a></td></tr></table></div><div id="t_7_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/faqs_de.html">FAQs</a></td></tr></table></div><div id="t_8_0_0__expanded"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('expanded','8_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon8_0_0_a').src='/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon8_0_0_a').src='/resources/images/dojo/nav_arrow_down.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/dojo/nav_arrow_down.gif" border="0"');
+                
+                  document.write('id="navicon8_0_0_a"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/participants/regulation/revisions/rule_book_de.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_down@gwg64fvk.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/participants/regulation/revisions/rule_book_de.html" style="font-weight:bold;" onmouseover="document.getElementById('navicon8_0_0_a').src='/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon8_0_0_a').src='/resources/images/dojo/nav_arrow_down.gif';">Revisionen</a></td></tr></table><div id="t_8_1_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/participants/regulation/revisions/rule_book_de.html">Handelsreglement / Weisungen</a></td></tr></table></div><div id="t_8_1_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/participants/regulation/revisions/rule_book_de.html">Handelsreglement / Weisungen</a></td></tr></table></div><div id="t_8_2_0__expanded"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21" onclick="
+              navAction('expanded','8_2_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon8_2_0_a').src='/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon8_2_0_a').src='/resources/images/dojo/nav_arrow_down.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/dojo/nav_arrow_down.gif" border="0"');
+                
+                  document.write('id="navicon8_2_0_a"');
+                
+              document.write('style="margin-top:2px; margin-left:11px"/>');
+            </script><noscript><a href="/participants/regulation/revisions/until_2010_03_31/general_conditions_de.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_down@gwg64fvk.gif" border="0" style="margin-top:2px; margin-left:11px"/></a></noscript></td><td width="143"><a href="/participants/regulation/revisions/until_2010_03_31/general_conditions_de.html" style="font-weight:bold;" onmouseover="document.getElementById('navicon8_2_0_a').src='/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon8_2_0_a').src='/resources/images/dojo/nav_arrow_down.gif';">Archiv per 31.03.2010</a></td></tr></table><div id="t_8_2_1__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/revisions/until_2010_03_31/general_conditions_de.html">Allgemeine Gesch&auml;ftsbedingungen</a></td></tr></table></div><div id="t_8_2_1__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/revisions/until_2010_03_31/general_conditions_de.html">Allgemeine Gesch&auml;ftsbedingungen</a></td></tr></table></div><div id="t_8_2_2__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/revisions/until_2010_03_31/directives_de.html">Weisungen</a></td></tr></table></div><div id="t_8_2_2__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/revisions/until_2010_03_31/directives_de.html">Weisungen</a></td></tr></table></div><div id="t_8_2_3__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/revisions/until_2010_03_31/transitional_rule_book_de.html">Transitional Rule Book</a></td></tr></table></div><div id="t_8_2_3__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/revisions/until_2010_03_31/transitional_rule_book_de.html">Transitional Rule Book</a></td></tr></table></div><div id="t_8_2_4__expanded"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7-active" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/revisions/until_2010_03_31/trading_guides_de.html">Trading Guides</a></td></tr></table></div><div id="t_8_2_4__collapsed" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7-active" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/revisions/until_2010_03_31/trading_guides_de.html">Trading Guides</a></td></tr></table></div></div><div id="t_8_2_0__collapsed" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21" onclick="
+              navAction('collapsed','8_2_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon8_2_0_').src='/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon8_2_0_').src='/resources/images/dojo/nav_arrow_right.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/dojo/nav_arrow_right.gif" border="0"');
+                
+                  document.write('id="navicon8_2_0_"');
+                
+              document.write('style="margin-top:2px; margin-left:11px"/>');
+            </script><noscript><a href="/participants/regulation/revisions/until_2010_03_31/general_conditions_de.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_right@gwg64f3s.gif" border="0" style="margin-top:2px; margin-left:11px"/></a></noscript></td><td width="143"><a href="/participants/regulation/revisions/until_2010_03_31/general_conditions_de.html" style="font-weight:bold;" onmouseover="document.getElementById('navicon8_2_0_').src='/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon8_2_0_').src='/resources/images/dojo/nav_arrow_right.gif';">Archiv per 31.03.2010</a></td></tr></table></div></div><div id="t_8_0_0__collapsed" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('collapsed','8_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon8_0_0_').src='/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon8_0_0_').src='/resources/images/dojo/nav_arrow_right.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/dojo/nav_arrow_right.gif" border="0"');
+                
+                  document.write('id="navicon8_0_0_"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/participants/regulation/revisions/rule_book_de.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_right@gwg64f3s.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/participants/regulation/revisions/rule_book_de.html" style="font-weight:bold;" onmouseover="document.getElementById('navicon8_0_0_').src='/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon8_0_0_').src='/resources/images/dojo/nav_arrow_right.gif';">Revisionen</a></td></tr></table></div></td></tr><tr><td>&nbsp;</td></tr><tr height="100%"><td>&nbsp;</td></tr></table></td><td width="596" valign="top" height="100%" class="
+                        main
+                        "><table border="0" cellpadding="0" cellspacing="0" width="596" height="100%"><tr><td valign="top" style="background-color:#FFFFFF;" height="400"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><h1>Trading Guides</h1></td></tr></table>
+    
+
+      
+
+  <p class="para">
+    Das Archiv beinhaltet die Teilnehmer-Regularien, die im Rahmen der Totalrevision
+    <b>per 31. M&auml;rz 2010 ausser Kraft gesetzt</b> wurden.
+  </p>
+  
+  
+
+
+
+      <p class="para">
+        
+          Die Trading Guides helfen den Teilnehmern bei der Orientierung rund um die geltenden
+          Regelungen f&uuml;r den Handel.
+        
+        
+        
+      </p>
+
+      <div><table border="0" cellspacing="0" cellpadding="0" class="table-grid" width="100%"><tr><td width="100%"><img src="/resources/images/trans@g5gkkl8o.png" height="1" width="100%" border="0" hspace="0" vspace="0"/></td><td width="70"><img src="/resources/images/trans@g5gkkl8o.png" height="1" width="70" border="0" hspace="0" vspace="0"/></td><td width="70"><img src="/resources/images/trans@g5gkkl8o.png" height="1" width="70" border="0" hspace="0" vspace="0"/></td><td align="center" width="70"><img src="/resources/images/trans@g5gkkl8o.png" height="1" width="70" border="0" hspace="0" vspace="0"/></td></tr><tr class="row-head"><td class="first">
+            Beschreibung
+            
+            
+          </td><td>
+            g&uuml;ltig ab
+            
+            
+          </td><td>
+            g&uuml;ltig bis
+            
+            
+          </td><td align="center">Download</td></tr><tr class="row-odd"><td class="first" align="left" valign="top">Business Day Overview</td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/business_day_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top">Market Model Overview</td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/market_model_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top">
+            Produkte Guide - Aktienmarkt
+            
+            
+          </td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/product_guide_equities_2010_01_11_de.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top">
+            Produkte Guide - Fondsmarkt
+            
+            
+          </td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/product_guide_funds_2010_01_11_de.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top">
+            Produkte Guide - Anleihenmarkt
+            
+            
+          </td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/product_guide_bonds_2010_01_11_de.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top">
+            Produkte Guide - Derivatemarkt
+            
+            
+          </td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/product_guide_derivates_2010_01_11_de.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top">Trading Interruption Overview</td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/trading_interruption_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top">Price Step (Tick Size) Overview</td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/price_steps_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top">Trade Type Code Overview</td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/guide_overview_ttc_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top">On Order Book Functionality</td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/on_order_book_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top">Off Order Book Functionality</td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/off_order_book_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top">Trading Guide&nbsp;<nobr>SIX Swiss Exchange</nobr></td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/trading_guide_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr></table><br/></div>
+
+    
+  <br/></td></tr><tr><td valign="top" style="background-color:#FFFFFF;"><div style="height: 30px; float:right; margin-top:50px;"><div style="display: inline; margin-left: 4px;"><a href="#" id="print-view-icon" onclick="printPage()" onmouseover="document.getElementById('printbutton').src='/resources/images/layout/button_print_a.gif';" onmouseout="document.getElementById('printbutton').src='/resources/images/layout/button_print.gif';"><img src="/resources/images/layout/button_print@fy8szl8g.gif" border="0" id="printbutton" title="Seite drucken"/></a></div><div style="display: inline; margin-left: 4px;"><script type="text/javascript">
+        var addthis_config = {
+          username: "SWXmarketpulse",
+          ui_language: "de",
+          ui_click: true
+        }
+      </script><a href="http://www.addthis.com/bookmark.php?v=250" class="addthis_button" id="bookmark-icon" onmouseover="document.getElementById('bookmarkbutton').src='/resources/images/layout/button_bookmark_a.gif';" onmouseout="document.getElementById('bookmarkbutton').src='/resources/images/layout/button_bookmark.gif';"><img src="/resources/images/layout/button_bookmark@g5gkkpvc.gif" id="bookmarkbutton" border="0" title="Bookmark &amp; Share"/></a><script type="text/javascript">
+        document.write(unescape("%3Cscript src='" + document.location.protocol + "//s7.addthis.com/js/250/addthis_widget.js' type='text/javascript'%3E%3C/script%3E"));
+      </script><script type="text/javascript">
+          ; // Don't remove this or addthis_widget.js will break the page
+        </script></div></div></td></tr></table></td><td valign="top" style="background-color:#FFFFFF;"><div><noscript>
+      Javascript required to display<br/>
+      page correctly !
+    </noscript><table width="100%" cellpadding="0" cellspacing="0" border="0" class="dijitTitlePane mpulse-sidebar" style="padding-bottom:6px;"><tr><td class="sidebar-icon-item"><a class="sidebar-icon-item" href="/news/rssfeeds_de.html" style="background: url(/resources/images/layout/../icons_inv/rss.png) left center no-repeat;">RSS Newsfeeds</a></td></tr></table><div dojoType="swx.widget.TitlePane" id="sbHpLoginPane" saveState="true" duration="500" class="mpulse-sidebar" style="visibility:hidden" title="Login"><table width="100%" cellpadding="0" cellspacing="0"><tr><td class="sidebar-item"><a class="sidebar-item" href="/member_section/login.html">Member Section</a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="http://www.six-exchange-regulation.com/obligations/issuer_reporting_de.html" target="_blank">Emittenten Reporting<img src="/resources/images/layout/trans@g5gkkpvc.gif" width="3" height="1" border="0"/><img src="/resources/images/layout/../icons_inv/new_window@g5gkkobs.png" border="0" width="11" height="9"/></a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="/issuers/services/connexor/ibt/login_de.html ">IBT</a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" target="_blank" href="https://www.six-exchange-regulation.com/admission/listing/ibl/login_de.html">IBL<img src="/resources/images/layout/trans@g5gkkpvc.gif" width="3" height="1" border="0"/><img src="/resources/images/layout/../icons_inv/new_window@g5gkkobs.png" border="0" width="11" height="9"/></a></td></tr></table></div><script type="text/javascript" language="javascript">
+      dojo.addOnLoad(function() {
+      dojo.style("sbHpLoginPane", "visibility", "visible");
+      });
+    </script><script type="text/javascript" language="javascript">
+      dojo.addOnLoad(function() {
+        dojo.style("sbSearchPane", "visibility", "visible");
+      });
+    </script><div dojoType="swx.widget.TitlePane" id="sbSearchPane" duration="500" class="mpulse-sidebar" style="visibility:hidden" saveState="true" title="Produktsuche"><table width="100%" cellpadding="0" cellspacing="0"><tr><td width="100%" style="padding-left:10px; vertical-align:top;"><form name="sidebarSearchForm" method="get" action="/search/quotes_de.html" style="padding:0px; margin:0px; height:18px;"><input type="text" value="Firma, Valor, Symbol, ISIN..." name="security" style="width:155px; height:18px; border:0px; padding-top:3px; padding-left:4px;                     background: url(/resources/images/layout/search_bg.gif) no-repeat;                     color:#C3C3C4; font-face:Arial; font-size:11px; vertical-align:top;" onfocus="if (this.value=='Firma, Valor, Symbol, ISIN...') {this.value='';this.style.color='#000000';};" onblur="if (this.value=='') {this.value='Firma, Valor, Symbol, ISIN...';this.style.color='#C3C3C4';};"/><img src="/resources/images/layout/button_search_small@g4fjryrs.png" onmouseover="this.src='/resources/images/layout/button_search_a_small.png';" onmouseout="this.src='/resources/images/layout/button_search_small.png';" onclick="document.sidebarSearchForm.submit();" style="margin-bottom:2px; cursor:pointer;" title="Suchen"/></form></td></tr></table></div><div dojoType="swx.widget.TitlePane" id="sbQuickLinksPane" saveState="true" duration="500" class="mpulse-sidebar" style="visibility:hidden" title="MyFavorites"><table width="100%" id="quicklinksTable" cellpadding="0" cellspacing="0"> </table></div><script type="text/javascript" language="javascript">
+      dojo.addOnLoad(function() {
+      dojo.style("sbQuickLinksPane", "visibility", "visible");
+      });
+    </script><br/></div></td></tr></table></td></tr><tr><td height="80" valign="top" bgcolor="#F3F3F3" style="border-top:#FFFFFF solid 1px;"><div class="footer" style="padding-top:9px; padding-left:12px;">Relevante Websites:
+          &nbsp;
+          <span class="first"><a class="footer" href="http://www.six-group.com/index_de.html" target="_blank">SIX Group<img src="/resources/images/icons_inv/new_window@g5gkkobs.png" border="0" style="margin-left:3px; margin-right:3px;"/></a></span><span><a class="footer" href="http://www.six-exchange-regulation.com/index_de.html" target="_blank">SIX Exchange Regulation<img src="/resources/images/icons_inv/new_window@g5gkkobs.png" border="0" style="margin-left:3px; margin-right:3px;"/></a></span><span><a class="footer" href="http://www.exfeed.com/index.html" target="_blank">SIX Exfeed<img src="/resources/images/icons_inv/new_window@g5gkkobs.png" border="0" style="margin-left:3px; margin-right:3px;"/></a></span><span><a class="footer" href="http://www.scoach.com" target="_blank">Scoach<img src="/resources/images/icons_inv/new_window@g5gkkobs.png" border="0" style="margin-left:3px; margin-right:3px;"/></a></span><span><a class="footer" href="http://www.stoxx.com/" target="_blank">STOXX<img src="/resources/images/icons_inv/new_window@g5gkkobs.png" border="0" style="margin-left:3px; margin-right:3px;"/></a></span><span><a class="footer" href="http://www.swissfunddata.ch/index_de.html" target="_blank">Swiss Fund Data<img src="/resources/images/icons_inv/new_window@g5gkkobs.png" border="0" style="margin-left:3px; margin-right:3px;"/></a></span></div><div class="footer" style="padding-top:9px; padding-left:12px;"><span class="first"><a class="footer" href="/sitemap_de.html">Sitemap</a></span><span><a class="footer" href="/disclaimer_de.html">Rechtliche Hinweise (Disclaimer)</a></span><span><a class="footer" href="/technical_details_de.html">Technische Hinweise</a></span></div><div class="footer" style="padding-top:9px; padding-left:12px;">
+          &copy; 2011, SIX Swiss Exchange
+          AG</div></td></tr></table></td><td><table border="0" cellpadding="0" cellspacing="0" width="6" height="100%" id="right-bg"><tr><td height="121">&nbsp;</td></tr><tr><td height="198" background="/resources/images/layout/right_top_bg@g5gkkpvc.gif">&nbsp;</td></tr><tr><td valign="top" width="6" background="/resources/images/layout/right_bg@g5gkkpvc.gif" height="100%">&nbsp;</td></tr></table></td><script>
+              if (String(document.location).indexOf("https://")==-1) {
+                document.write('<td valign="top" style="padding-top:121px;">')
+                document.write('<iframe src="/resources/html/sky_home_de.html" width="310" height="610" frameborder="no" scrolling="no" id="skyscraper">')
+                document.write('</iframe>')
+                document.write('</td>')
+              }
+              </script></tr></table><div id="meta-nav-lang-dropdown" style="display:none; position:absolute; z-index:1;"><table border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" cellpadding="0" cellspacing="0" style="background:#333333; width:105px;"><tr><td class="meta-nav-dropdown meta-nav-dropdown-active">Deutsch</td></tr><tr><td class="meta-nav-dropdown meta-nav-dropdown-inactive" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="window.location.href='/participants/regulation/revisions/until_2010_03_31/trading_guides_en.html';">English</td></tr><tr><td class="meta-nav-dropdown meta-nav-dropdown-inactive" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="window.location.href='/participants/regulation/revisions/until_2010_03_31/trading_guides_fr.html';">Fran&ccedil;ais</td></tr><tr><td class="meta-nav-dropdown meta-nav-dropdown-active">&nbsp;</td></tr></table></td><td width="5" background="/resources/images/layout/shadow_right@g5gkkpvc.gif" style="filter:Alpha(opacity=30);opacity:.3;"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="1" width="5"/></td></tr><tr><td background="/resources/images/layout/shadow_bottom@g5gkkpvc.gif" style="filter:Alpha(opacity=20);opacity:.2;"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="5" width="1"/></td><td background="/resources/images/layout/shadow_bottomright@g5gkkpvc.gif" style="filter:Alpha(opacity=20);opacity:.2;"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="5" width="1"/></td></tr></table></div><script language="JavaScript" type="text/javascript">
+        
+        var metaNavLangButton = document.getElementById('meta-nav-lang-button');
+        var metaNavLangDropdown = document.getElementById('meta-nav-lang-dropdown');
+        var metaNavLanguage = new metaNavSelector(metaNavLangButton, metaNavLangDropdown);
+      </script></td></tr></table><div id="searchDropdown" style="visibility:hidden;position:absolute;top:144px;left:900px" onmouseover="showSearchDropdown();return false;" onmouseout="hideSearchDropdown();return false;"><table border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" cellpadding="0" cellspacing="0" style="background:#333333;width:162px;"><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/search/site/search_de.html';">Text</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/search/quotes_de.html';">Produkte</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/shares/explorer_de.html';">Aktien</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/bonds/explorer_de.html';">Anleihen</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/funds/explorer_de.html';">ETFs &amp; Fonds</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/exchange_traded_products/explorer_de.html';">Exchange Traded Products</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/news/notifications/management_transactions_de.html';">Management-Transaktionen</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/news/notifications/major_shareholders_de.html';">Bedeutende Aktion&auml;re</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/news/official_notices/search_de.html';">Offizielle Mitteilungen</td></tr><tr><td class="searchDD" style="cursor:cursor;">&nbsp;</td></tr></table></td><td width="5" background="/resources/images/layout/shadow_right@g5gkkpvc.gif" style="filter:Alpha(opacity=30);opacity:.3;"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="1" width="5"/></td></tr><tr><td background="/resources/images/layout/shadow_bottom@g5gkkpvc.gif" style="filter:Alpha(opacity=20);opacity:.2;"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="5" width="1"/></td><td background="/resources/images/layout/shadow_bottomright@g5gkkpvc.gif" style="filter:Alpha(opacity=20);opacity:.2;"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="5" width="1"/></td></tr></table></div><script type="text/javascript">
+            var isHttps = "https:" == document.location.protocol;
+            if (!isHttps) {
+              document.write(unescape("%3Cscript src='/resources/scripts/gatag.js' type='text/javascript'%3E%3C/script%3E"));
+              document.write(unescape("%3Cscript src='http://www.google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            }
+          </script><script type="text/javascript">
+            if (!isHttps) {
+              try {
+                var pageTracker = _gat._getTracker("UA-1241259-1");
+                pageTracker._trackPageview();
+              } catch(err) {}
+            }
+          </script></body></html>

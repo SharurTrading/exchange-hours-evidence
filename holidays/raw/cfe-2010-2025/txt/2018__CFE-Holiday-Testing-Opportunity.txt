@@ -1,0 +1,135 @@
+CFE Holiday Testing Opportunity
+Reference ID: C2018061802
+
+
+Overview
+To provide additional opportunities for holiday testing, the CFE Certification environment will be
+configured to observe a half day trading session followed by a holiday trading session beginning on
+Wednesday, June 27, 2018. The test is designed to mimic the modified trading hours associated with
+the Independence Day holiday. The testing opportunity will begin with an early close for business date
+June 27 at 12:15 pm CT. Simulated daily settlement price dissemination will occur shortly after the
+close of trading. After the restart of the CFE trading environment on the afternoon of Wednesday, June
+27, the holiday trading session will commence for business date of June 29, 2018.
+
+
+Simulated Modified Trading Schedule for Wednesday, June 27, 2018
+Trading in all futures products in the CFE Certification Environment will close at 12:15 p.m. on
+Wednesday, June 27, 2018. Simulated daily settlements will be calculated shortly thereafter.
+
+The trading hours for all Trade at Settlement (TAS) transactions in VX futures (VXT) in the CFE
+Certification Environment will end at 12:13 p.m. on June 27, 2018.
+
+
+Simulated Modified Trading Schedule for Thursday, June 28, 2018 and
+Friday, June 29, 2018
+VX and XBT Futures
+
+The schedule below will apply in the CFE Certification Environment for the Thursday, June 28, 2018
+holiday trading session in VX and XBT futures, including TAS transactions in VX futures (VXT):
+
+    Type of Trading              Thursday, June 28, 2018                Friday, June 29, 2018
+        Hours
+       Extended             5:00 p.m. (Wednesday) to 10:30 a.m.    5:00 p.m. (Thursday) to 8:30 a.m.
+                                    for VX, VXT, and XBT                          and
+                                                                         3:30 p.m. to 4:00 p.m.
+                                                                            for VX and XBT
+
+                                                                   5:00 p.m. (Thursday) to 8:30 a.m.
+                                                                                for VXT
+    Type of Trading            Thursday, June 28, 2018                     Friday, June 29, 2018
+        Hours
+       Regular                            None                             8:30 a.m. to 3:15 p.m.
+                                  for VX, VXT, and XBT                        for VX and XBT
+
+                                                                           8:30 a.m. to 3:13 p.m.
+                                                                                  for VXT
+
+A holiday trading session includes extended trading hours on the calendar day of the holiday and any
+extended trading hours for the holiday on the previous calendar day. Holiday trading sessions are not
+separate Business Days and are part of the next Business Day. Trading in VX and XBT futures is
+suspended between sessions of extended trading hours on the calendar day of a holiday.
+
+All Other Products
+
+Trading will be closed for all CFE products in the CFE Certification Environment other than VX and XBT
+futures after 12:15 p.m. on June 27, 2018 and on June 28, 2018.
+
+
+
+Order Submission Times
+
+The chart below sets forth the applicable time frames for the submission of orders (including Cancel
+Orders and Cancel Replace/Modify Orders) in VX and XBT futures, including VXT TAS transactions unless
+otherwise indicated, in connection with the simulated holiday.
+
+    Calendar Day                Time Frame               State of CFE’s      What May be Submitted
+                                                            Trading          to CFE’s Trading System
+                                                            System
+     Wednesday           5:00 p.m. (Tuesday) to 8:30       Extended            Orders (except Market
+    June 27, 2018                    a.m.                Trading Hours                Orders)
+
+                                                                                TAS Orders for VXT
+     Wednesday             8:30 a.m. to 12:15 p.m.       Regular Trading       Orders (except Market
+    June 27, 2018                                            Hours             Orders in XBT futures)
+                           8:30 a.m. to 12:13 p.m.
+                                   for VXT                                      TAS Orders for VXT
+     Wednesday           12:15 p.m. to system restart      Suspended                 Nothing
+    June 27, 2018         (which occurs sometime
+                          between 4:05 p.m. to 4:45
+                                    p.m.)
+     Wednesday          System restart (which occurs       Suspended            Cancel Orders for
+    June 27, 2018       sometime between 4:05 p.m.                             persisted Good-‘til-
+                          to 4:45 p.m.) to 4:45 p.m.                           Canceled (GTC) and
+                                                                               Good-‘til-Date (GTD)
+                                                                             Orders from prior trading
+                                                                                       date
+    Calendar Day                   Time Frame               State of CFE’s       What May be Submitted
+                                                               Trading           to CFE’s Trading System
+                                                               System
+      Wednesday              4:45 p.m.* to 5:00 p.m.        Queuing Period         Orders (except Market
+     June 27, 2018                                                                 Orders, Immediate or
+                                                                                 Cancel (IOC) Orders, and
+                                                                                 Fill or Kill (FOK) Orders)**
+
+                                                                                  TAS Orders for VXT**
+       Thursday             5:00 p.m. (Wednesday) to           Extended           Orders (except Market
+     June 28, 2018                 10:30 a.m.                Trading Hours               Orders)
+
+                                                                                    TAS Orders for VXT
+       Thursday            10:30 a.m. to system restart        Suspended                 Nothing
+     June 28, 2018          (which occurs sometime
+                            between 4:05 p.m. to 4:45
+                                       p.m.)
+       Thursday           System restart (which occurs         Suspended            Cancel Orders for
+     June 28, 2018        sometime between 4:05 p.m.                             persisted Day, GTC, and
+                            to 4:45 p.m.) to 4:45 p.m.                           GTD Orders from holiday
+                                                                                     trading session
+       Thursday              4:45 p.m.* to 5:00 p.m.        Queuing Period        Orders (except Market
+     June 28, 2018                                                               Orders, IOC Orders, and
+                                                                                      FOK Orders)**
+
+                                                                                  TAS Orders for VXT**
+        Friday            5:00 p.m. (Thursday) to 8:30         Extended           Orders (except Market
+     June 29, 2018                    a.m.                   Trading Hours               Orders)
+
+                                                                                    TAS Orders for VXT
+
+*The queuing period at the beginning of a Business Day commences at the referenced start time for the queuing
+period plus a randomized time period from zero to three seconds.
+**Orders permitted to be submitted to CFE’s trading system during these times are not executable until extended
+trading hours next commence.
+
+Additional Information
+
+Please refer to the following technical specifications for more details on the handling of orders on
+holiday trading sessions.
+
+     US Futures FIX Specification
+     US Futures BOE Specification
+
+We appreciate your continued support and will work hard every day to keep earning your business by
+powering your potential to stay ahead of an evolving market.
+CFE Trade Desk
+312.786.8700
+cfetradedesk@cboe.com
+

@@ -1,0 +1,71 @@
+Trading Guide of 28 May 2018 - Trading Calendar 2018 / 2019 cell derivation
+============================================================================
+Recorded 2026-10-03 UTC, closing the 2018-2019 half of #212 as data (PR #270).
+
+Source bytes: six-edu-trading-guide.live-20261003.pdf
+sha256 f459e1fba545bd057c72ef2f53ebc0540a7004c8419e9db82b05bdac58bee245
+(recomputed 2026-10-03 against SHA256SUMS.txt). The calendar sections are
+pages 25 ("Trading Calendar 2018") and 26 ("Trading Calendar 2019") of the
+28-page live education-path compilation; its own text extraction is saved as
+guide.txt. Page 28 footer: "(c) SIX Swiss Exchange Ltd, 2018 SIX Swiss
+Exchange Ltd Pfingstweidstrasse 110 P.O. Box, CH-8021 Zurich". Legend on both
+pages: "Saturday - Market Closed / Sunday - Market Closed / Market Holiday -
+Market Closed" (dark navy cells = Market Holiday).
+
+Method (same as the 2012-2027 editions, docs/evidence/six.md): the holiday
+fill is rgb (0.0, 0.173, 0.373) dark navy; weekend shades are rgb (0.808,
+0.906, 0.957) (Saturday) and rgb (0.718, 0.855, 0.933) (Sunday). Each day
+number's owning mini-calendar is the nearest grey weekday-header band above it
+in whose x-span the number sits; the day's kind is the smallest coloured
+rectangle containing the number's centre. Extracted with PyMuPDF 1.28.2.
+The result was cross-checked twice: (a) every weekend-shaded cell resolves to
+a genuine Saturday/Sunday and every dark cell to a Monday-Friday of the grid
+year; (b) the rendered pages read cell by cell.
+
+Every dark "Market Holiday - Market Closed" cell of each grid:
+
+--- Trading Calendar 2018 (page 25) ---
+  January: 2 dark cells: 2018-01-01 (Mon), 2018-01-02 (Tue)
+  February: 0 dark cells: 
+  March: 1 dark cells: 2018-03-30 (Fri)
+  April: 1 dark cells: 2018-04-02 (Mon)
+  May: 3 dark cells: 2018-05-01 (Tue), 2018-05-10 (Thu), 2018-05-21 (Mon)
+  June: 0 dark cells: 
+  July: 0 dark cells: 
+  August: 1 dark cells: 2018-08-01 (Wed)
+  September: 0 dark cells: 
+  October: 0 dark cells: 
+  November: 0 dark cells: 
+  December: 4 dark cells: 2018-12-24 (Mon), 2018-12-25 (Tue), 2018-12-26 (Wed), 2018-12-31 (Mon)
+  total 2018 dark cells: 12
+  cross-check dark cells are Mon-Fri: OK
+
+--- Trading Calendar 2019 (page 26) ---
+  January: 2 dark cells: 2019-01-01 (Tue), 2019-01-02 (Wed)
+  February: 0 dark cells: 
+  March: 0 dark cells: 
+  April: 2 dark cells: 2019-04-19 (Fri), 2019-04-22 (Mon)
+  May: 2 dark cells: 2019-05-01 (Wed), 2019-05-30 (Thu)
+  June: 1 dark cells: 2019-06-10 (Mon)
+  July: 0 dark cells: 
+  August: 1 dark cells: 2019-08-01 (Thu)
+  September: 0 dark cells: 
+  October: 0 dark cells: 
+  November: 0 dark cells: 
+  December: 4 dark cells: 2019-12-24 (Tue), 2019-12-25 (Wed), 2019-12-26 (Thu), 2019-12-31 (Tue)
+  total 2019 dark cells: 12
+  cross-check dark cells are Mon-Fri: OK
+
+Weekday cross-check of the weekend shading (both pages): every Saturday- and
+Sunday-shaded cell resolves to a genuine Saturday/Sunday of its grid year.
+
+No other arrangement appears anywhere in either grid: no half day, late open
+or intraday instant is marked, so `Closed` is the only kind the document
+supports. All 24 dark cells fall on weekdays; the operator marks no weekend
+cell as a holiday (weekend shading already deletes them), so no weekend date
+keys a row.
+
+Note on the hunt-3 INDEX.md: this document DOES carry the two calendar
+sections; the INDEX's "no trading-calendar section at all" sentence (and the
+evidence-file sentence copied from it) was written against an incomplete read
+and is corrected 2026-10-03 UTC in the store INDEX and the evidence file.

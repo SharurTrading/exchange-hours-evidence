@@ -1,0 +1,1914 @@
+<html>
+<head>
+<title>Federal Register, Volume 82 Issue 152 (Wednesday, August 9, 2017)</title>
+</head>
+<body><pre>
+[Federal Register Volume 82, Number 152 (Wednesday, August 9, 2017)]
+[Notices]
+[Pages 37257-37271]
+From the Federal Register Online via the Government Publishing Office [<a href="http://www.gpo.gov">www.gpo.gov</a>]
+[FR Doc No: 2017-16742]
+
+
+-----------------------------------------------------------------------
+
+SECURITIES AND EXCHANGE COMMISSION
+
+[Release No. 34-81310; File No. SR-NYSE-2017-36]
+
+
+Self-Regulatory Organizations; New York Stock Exchange LLC; 
+Notice of Filing of Proposed Rule Change for Trading UTP Securities on 
+Pillar, the Exchange's New Trading Technology Platform, Including 
+Orders and Modifiers, Order Ranking and Display, and Order Execution 
+and Routing
+
+August 3, 2017
+    Pursuant to Section 19(b)(1) \1\ of the Securities Exchange Act of 
+1934 (the ``Act'') \2\ and Rule 19b-4 thereunder,\3\ notice is hereby 
+given that, on July 28, 2017, New York Stock Exchange LLC (``NYSE'' or 
+the ``Exchange'') filed with the Securities and Exchange Commission 
+(the ``Commission'') the proposed rule change as described in Items I, 
+II, and III below, which Items have been prepared by the self-
+regulatory organization. The Commission is publishing this notice to 
+solicit comments on the proposed rule change from interested persons.
+---------------------------------------------------------------------------
+
+    \1\ 15 U.S.C.78s(b)(1).
+    \2\ 15 U.S.C. 78a.
+    \3\ 17 CFR 240.19b-4.
+---------------------------------------------------------------------------
+
+I. Self-Regulatory Organization's Statement of the Terms of Substance 
+of the Proposed Rule Change
+
+    The Exchange proposes rules for trading UTP Securities on Pillar, 
+the Exchange's new trading technology platform, including rules 
+governing orders and modifiers, order ranking and display, and order 
+execution and routing. The proposed rule change is available on the 
+Exchange's Web site at <a href="http://www.nyse.com">www.nyse.com</a>, at the principal office of the 
+Exchange, and at the Commission's Public Reference Room.
+
+II. Self-Regulatory Organization's Statement of the Purpose of, and 
+Statutory Basis for, the Proposed Rule Change
+
+    In its filing with the Commission, the self-regulatory organization 
+included statements concerning the purpose of, and basis for, the 
+proposed rule change and discussed any comments it received on the 
+proposed rule change. The text of those statements may be examined at 
+the places specified in Item IV below. The Exchange has prepared 
+summaries, set forth in sections A, B, and C below, of the most 
+significant parts of such statements.
+
+A. Self-Regulatory Organization's Statement of the Purpose of, and the 
+Statutory Basis for, the Proposed Rule Change
+
+1. Purpose
+    On January 29, 2015, the Exchange announced the implementation of 
+Pillar, which is an integrated trading technology platform designed to 
+use a single specification for connecting to the equities and options 
+markets operated by the Exchange and its affiliates, NYSE Arca, Inc. 
+(``NYSE Arca'') and NYSE MKT LLC (``NYSE MKT'').\4\ NYSE Arca Equities, 
+Inc. (``NYSE Arca Equities [sic]),\5\ which operates the cash equities 
+trading platform for NYSE Arca, was the first trading system to migrate 
+to Pillar.\6\
+
+[[Page 37258]]
+
+NYSE MKT's equities market will transition to Pillar in the third 
+quarter of 2017 and as part of this transition, will be renamed NYSE 
+American LLC (``NYSE American'').\7\
+---------------------------------------------------------------------------
+
+    \4\ See Trader Update dated January 29, 2015, available here: 
+<a href="http://www.nyse.com/pillar">www.nyse.com/pillar</a>.
+    \5\ NYSE Arca Equities is a wholly-owned corporation of NYSE 
+Arca and operates as a facility of NYSE Arca. NYSE Arca has filed a 
+proposed rule change to merge NYSE Arca Equities with and into NYSE 
+Arca. See Securities Exchange Act Release No. 80929 (June 14, 2017), 
+82 FR 28157 (June 20, 2017) (Notice) (``NYSE Arca Merger Filing''). 
+As part of the NYSE Arca Merger Filing, NYSE Arca has proposed that 
+the NYSE Arca Equities rules will be integrated in the NYSE Arca 
+rule book using the same rule number, but with an additional suffix 
+of ``-E'' added to a rule. For example, ``NYSE Arca Equities Rule 7 
+(Equities Trading)'' will become ``NYSE Arca Rule 7-E (Equities 
+Trading),'' and ``NYSE Arca Equities Rule 7.31'' will become ``NYSE 
+Arca Rule 7.31-E.'' Accordingly, if the NYSE Arca Merger Filing is 
+approved, all references in this proposed rule change to an NYSE 
+Arca Equities rule should be deemed to be a reference to an NYSE 
+Arca rule with the same number and added ``-E'' suffix.
+    \6\ In connection with the NYSE Arca implementation of Pillar, 
+NYSE Arca filed four rule proposals relating to Pillar. See 
+Securities Exchange Act Release Nos. 74951 (May 13, 2015), 80 FR 
+28721 (May 19, 2015) (Notice) and 75494 (July 20, 2015), 80 FR 44170 
+(July 24, 2015) (SR-NYSEArca-2015-38) (Approval Order of NYSE Arca 
+Pillar I Filing, adopting rules for Trading Sessions, Order Ranking 
+and Display, and Order Execution); Securities Exchange Act Release 
+Nos. 75497 (July 21, 2015), 80 FR 45022 (July 28, 2015) (Notice) and 
+76267 (October 26, 2015), 80 FR 66951 (October 30, 2015) (SR-
+NYSEArca-2015-56) (Approval Order of NYSE Arca Pillar II Filing, 
+adopting rules for Orders and Modifiers and the Retail Liquidity 
+Program); Securities Exchange Act Release Nos. 75467 (July 16, 
+2015), 80 FR 43515 (July 22, 2015) (Notice) and 76198 (October 20, 
+2015), 80 FR 65274 (October 26, 2015) (SR-NYSEArca-2015-58) 
+(Approval Order of NYSE Arca Pillar III Filing, adopting rules for 
+Trading Halts, Short Sales, Limit Up-Limit Down, and Odd Lots and 
+Mixed Lots); and Securities Exchange Act Release Nos. 76085 (October 
+6, 2015), 80 FR 61513 (October 13, 2015) (Notice) and 76869 (January 
+11, 2016), 81 FR 2276 (January 15, 2016) (Approval Order of NYSE 
+Arca Pillar IV Filing, adopting rules for Auctions).
+    \7\ See Securities Exchange Act Release Nos. 80283 (March 21, 
+2017), 82 FR 15244 (March 27, 2017) (SR-NYSEMKT-201714 [sic]) 
+(Notice of filing and immediate effectiveness of proposed rule 
+change to change the name of NYSE MKT to NYSE American) and 80748 
+(May 23, 2017), 82 FR 24764, 24765 (SR-NYSEMKT-2017-20) (Notice of 
+filing and immediate effectiveness of proposed rule change to change 
+the name of NYSE MKT to NYSE American) (``NYSE American Filings''). 
+In connection with the NYSE American implementation of Pillar, NYSE 
+MKT filed several rule changes. See Securities Exchange Act Release 
+Nos. 79242 (November 4, 2016), 81 FR 79081 (November 10, 2016) (SR-
+NYSEMKT-2016-97) (Notice and Filing of Immediate Effectiveness of 
+Proposed Rule Change of framework rules); 81038 (June 28, 2017), 82 
+FR 31118 (July 5, 2017) (SR-NYSEMKT-2016-103) (Approval Order) (the 
+``ETP Listing Rules Filing''); 80590 (May 4, 2017), 82 FR 21843 (May 
+10, 2017) (Approval Order) (NYSE MKT rules governing automated 
+trading); 80577 (May 2, 2017), 82 FR 21446 (May 8, 2017) (SR-
+NYSEMKT-2017-04) (Approval Order) (NYSE MKT rules governing market 
+makers); 80700 (May 16, 2017), 82 FR 23381 (May 22, 2017) (SR-
+NYSEMKT-2017-05) (Approval Order) (NYSE MKT rules governing delay 
+mechanism).
+---------------------------------------------------------------------------
+
+Overview
+    Currently, the Exchange only trades securities listed on the 
+Exchange. With Pillar, the Exchange proposes to introduce trading of 
+UTP Securities.\8\ Consistent with the Exchange's current allocation 
+model for its listed securities, trading in UTP Securities would be 
+subject to a parity allocation model. Unlike the trading of listed 
+securities on the Exchange, when trading UTP Securities on Pillar, the 
+Exchange would not offer Floor-based point-of-sale trading, Designated 
+Market Makers (``DMMs'') would not be assigned to UTP Securities, and 
+the Exchange would not conduct any auctions in UTP Securities.\9\ As 
+with listed securities, member organizations approved as Supplemental 
+Liquidity Providers would be eligible to be assigned UTP 
+Securities.\10\ In addition, member organizations that operate Floor 
+broker operations that are physically located on the Floor \11\ would 
+be eligible to trade UTP Securities.\12\
+---------------------------------------------------------------------------
+
+    \8\ The term ``UTP Security'' means a security that is listed on 
+a national securities exchange other than the Exchange and that 
+trades on the Exchange pursuant to unlisted trading privileges. See 
+Rule 1.1(ii). The Exchange has authority to extend unlisted trading 
+privileges to any security that is an NMS Stock that is listed on 
+another national securities exchange or with respect to which 
+unlisted trading privileges may otherwise be extended in accordance 
+with Section 12(f) of the Act. See Rule 5.1(a)(1).
+    \9\ The Exchange will continue to trade NYSE-listed securities 
+on its current trading platform without any changes. The Exchange 
+will transition trading in NYSE-listed securities to Pillar at a 
+separate date, which will be the subject of separate proposed rule 
+changes.
+    \10\ See Rule 107B, which the Exchange is proposing to amend, 
+see infra.
+    \11\ The term ``Floor'' means the trading Floor of the Exchange 
+and the premises immediately adjacent thereto, such as the various 
+entrances and lobbies of the 11 Wall Street, 18 New Street, 8 Broad 
+Street, 12 Broad Street and 18 Broad Street Buildings, and also 
+means the telephone facilities available in these locations. See 
+Rule 6. The term ``Trading Floor'' means the restricted-access 
+physical areas designated by the Exchange for the trading of 
+securities, commonly known as the ``Main Room'' and the ``Buttonwood 
+Room,'' but does not include (i) the areas in the ``Buttonwood 
+Room'' designated by the Exchange where NYSE Amex-listed options are 
+traded, which, for the purposes of the Exchange's Rules, shall be 
+referred to as the ``NYSE Amex Options Trading Floor'' or (ii) the 
+physical area within fully enclosed telephone booths located in 18 
+Broad Street at the Southeast wall of the Trading Floor. See Rule 
+6A.
+    \12\ Member organizations trading UTP Securities would continue 
+to be required to comply with Section 11(a)(1) of the Act, 15 U.S.C. 
+78k(a)(1), and any applicable exceptions thereto as are currently 
+applicable to trading on the Exchange.
+---------------------------------------------------------------------------
+
+    Trading in UTP Securities would be subject to the Pillar Platform 
+Rules, as set forth in Rules 1P-13P.\13\ With this proposed rule 
+change, the Exchange proposes changes to Rule 7P Equities Trading that 
+would govern trading in UTP Securities. The proposed rules are based in 
+part on the rules of NYSE Arca Equities and NYSE American,\14\ with the 
+following substantive differences:
+---------------------------------------------------------------------------
+
+    \13\ See Securities Exchange Act Release Nos. 76803 (December 
+30, 2015), 81 FR 536 (January 6, 2016) (SR-NYSE-2015-67) (Notice of 
+Filing and Immediate Effectiveness of Proposed Rule Change) 
+(``Framework Filing''); and 80214 (March 10, 2017), 82 FR 14050 
+(March 16, 2017) (SR-NYSE-2016-44) (Approval Order) (``ETP Listing 
+Rules Filing''). See also SR-NYSE-2017-35.
+    \14\ In the NYSE American Filings, supra note 7, NYSE MKT 
+represented that the name change to NYSE American would become 
+operative upon the effectiveness of an amendment to NYSE MKT's 
+Certificate of Formation, which is expected to be no later than July 
+31, 2017. Because the NYSE American name would be operative before 
+this proposed rule change would be approved, the Exchange believes 
+it would promote transparency and reduce confusion to refer to NYSE 
+MKT rules as ``NYSE American'' rules.
+---------------------------------------------------------------------------
+
+    <bullet> Consistent with the Exchange's current allocation model, 
+trading in UTP Securities on the Exchange would be a parity allocation 
+model with a setter priority allocation for the participant that sets 
+the BBO.\15\
+---------------------------------------------------------------------------
+
+    \15\ The term ``BBO'' means the best bid or offer on the 
+Exchange. See Rule 1.1(h).
+---------------------------------------------------------------------------
+
+    <bullet> The Exchange would not offer a Retail Liquidity Program 
+and related order types (Retail Orders and Retail Price Improvement 
+Orders) for UTP Securities.
+    <bullet> The Exchange would not conduct auctions in UTP Securities.
+    <bullet> The Exchange would offer two trading sessions, with the 
+Early Trading Session beginning at 7:00 a.m. Eastern Time.
+    <bullet> The Exchange is not proposing to offer the full suite of 
+order instructions and modifiers that are available on NYSE Arca 
+Equities and NYSE American.
+    Subject to rule approvals, the Exchange will announce the 
+implementation of trading UTP Securities on the Pillar trading system 
+by Trader Update, which the Exchange anticipates will be in the fourth 
+quarter of 2017.
+    Once trading in UTP Securities on the Pillar trading platform 
+begins, specified current Exchange trading rules would not be 
+applicable for trading UTP Securities. As described in more detail 
+below, for each current rule that would not be applicable for trading 
+on the Pillar trading platform, the Exchange proposes to state in a 
+preamble to such rule that ``this rule is not applicable to trading UTP 
+Securities on the Pillar trading platform.'' Current Exchange rules 
+governing equities trading that do not have this preamble will govern 
+Exchange operations on Pillar.
+Proposed Rule Changes
+    As noted above, the Exchange proposes rules that would be 
+applicable to trading UTP Securities on Pillar that are based on the 
+rules of NYSE Arca Equities and NYSE American. As a global matter, the 
+Exchange proposes non-substantive differences as compared to the NYSE 
+Arca Equities rules to use the terms ``Exchange'' instead of the terms 
+``NYSE Arca Marketplace,'' ``NYSE Arca,'' or ``Corporation,'' and to 
+use the terms ``mean'' or ``have meaning'' instead of the terms ``shall 
+mean'' or ``shall have the meaning.'' In addition, the Exchange will 
+use the term ``member organization,'' which is defined in Rule 2, 
+instead of the terms ``ETP Holder'' or ``User.'' \16\
+---------------------------------------------------------------------------
+
+    \16\ Because these non-substantive differences would be applied 
+throughout the proposed rules, the Exchange will not note these 
+differences separately for each proposed rule.
+---------------------------------------------------------------------------
+
+    As previously established in the Framework Filing, Section 1 of 
+Rule 7P sets forth the General Provisions relating to trading on the 
+Pillar trading platform and Section 3 of Rule 7P sets forth Exchange 
+Trading on the Pillar trading platform. In this filing, the Exchange 
+proposes new Rules 7.10, 7.11, and 7.16
+
+[[Page 37259]]
+
+and to amend Rule 7.18 for Section 1 of Rule 7P and new Rules 7.31, 
+7.34, 7.36, 7.37, and 7.38 for Section 3 of Rule 7P. In addition, the 
+Exchange proposes new Section 5 of Rule 7P to establish rules for the 
+Plan to Implement a Tick Size Pilot Program, and proposes new Rule 7.46 
+in that section.
+    Below, the Exchange first describes proposed Rules 7.36 and 7.37, 
+as these rules would establish the Exchange's Pillar rules governing 
+order ranking and display and order execution and routing. Next, the 
+Exchange describes proposed Rule 7.31, which would establish the orders 
+and modifiers available for trading UTP Securities on Pillar. Finally, 
+the Exchange describes proposed Rules 7.10, 7.11, 7.16, 7.34, 7.38, and 
+7.46 and amendments to Rule 7.18.
+Proposed Rule 7.36
+    Proposed Rule 7.36 (Order Ranking and Display) would establish how 
+orders in UTP Securities would be ranked and displayed on the Pillar 
+trading platform. As described above, the Exchange proposes to retain 
+its current allocation model for trading UTP Securities on Pillar, 
+including the concept of ``setter interest,'' which the Exchange would 
+define in proposed Rule 7.36 as ``Setter Priority.'' Except for the 
+addition of Setter Priority, the Exchange proposes to use Pillar 
+functionality for determining how orders would be ranked and displayed. 
+Accordingly, proposed Rule 7.36 is based in part on NYSE Arca Equities 
+Rule 7.36 and NYSE American Rule 7.36E, with substantive differences as 
+described below.
+Proposed Rule 7.36(a)-(g)
+    Proposed Rules 7.36(a)-(g) would establish rules defining terms 
+that would be used in Rule 7P--Equities Trading and describing display 
+and ranking of orders on the Exchange, including ranking based on 
+price, priority category, and time. The proposed rule text is based on 
+NYSE Arca Equities Rule 7.36(a)-(g) and NYSE American Rule 7.36E(a)-(g) 
+with the following substantive differences:
+    <bullet> Proposed Rule 7.36(a)(5) would add a definition of the 
+term ``Participant,'' which is based on how the term ``individual 
+participant'' is defined in current Rule 72(c)(ii), with non-
+substantive differences. The Exchange proposes that the term 
+``Participant'' would mean for purposes of parity allocation, a Floor 
+broker trading license (each, a ``Floor Broker Participant'') or orders 
+collectively represented in the Exchange Book that have not been 
+entered by a Floor Broker (``Book Participant''). The Exchange proposes 
+to use the term ``Floor broker trading license'' rather than ``each 
+single Floor broker'' because pursuant to Rule 300 a trading license is 
+required to effect transactions on the Floor of the Exchange or any 
+facility thereof and a member organization designates natural persons 
+to effect transactions on the Floor on its behalf. Accordingly, 
+reference to a ``Floor broker trading license'' makes clear that the 
+Floor broker participant is at the trading license level, rather than 
+at the member organization level. The Exchange also proposes to use the 
+term ``Exchange Book,'' which is a defined term, rather than referring 
+more generally to ``Exchange systems.''
+    <bullet> Proposed Rule 7.36(a)(6) would add the definition of 
+``Aggressing Order'' to mean a buy (sell) order that is or becomes 
+marketable against sell (buy) interest on the Exchange Book. This 
+proposed term would be used in proposed Rule 7.37, described below.
+    <bullet> Because all displayed Limit Orders would be displayed on 
+an anonymous basis, the Exchange does not propose to include text based 
+on the first clause of NYSE Arca Equities Rule 7.36(b)(2) in proposed 
+Rule 7.36(b)(2).
+    <bullet> Proposed Rule 7.36(c) regarding ranking would not include 
+reference to price-time priority, as the Exchange's allocation model 
+would not always be a price-time priority allocation, as described 
+below. As further described below, the Exchange would rank orders 
+consistent with proposed Rule 7.36(c).
+    <bullet> Proposed Rule 7.36(e) would establish three priority 
+categories: Priority 1--Market Orders, Priority 2--Display Orders, and 
+Priority 3--Non-Display Orders. The Exchange would not offer any 
+additional priority categories for trading of UTP Securities.
+    In addition to these substantive differences, the Exchange proposes 
+a non-substantive clarifying difference for proposed Rule 7.36(f)(1)(B) 
+to add ``[o]ther than as provided for in Rule 7.38(b)(2),'' to make 
+clear that the way in which a working time is assigned to an order that 
+is partially routed to an Away Market and returns to the Exchange is 
+addressed in both proposed Rule 7.36(f)(1)(B) and proposed Rule 
+7.38(b)(2). The Exchange also proposes non-substantive differences to 
+proposed Rule 7.36(f)(2) and (3) to streamline the rule text.
+Proposed Rule 7.36(h)--Setter Priority
+    Proposed Rule 7.36(h) would establish how Setter Priority would be 
+assigned to an order and is based in part on current Rules 72(a) and 
+(b). Rule 72(a)(ii) provides that when a bid or offer, including 
+pegging interest is established as the only displayable bid or offer 
+made at a particular price and such bid or offer is the only 
+displayable interest when such price is or becomes the Exchange BBO 
+(the ``setting interest''), such setting interest is entitled to 
+priority for allocation of executions at that price as described in 
+Rule 72. The rule further provides that:
+    <bullet> Odd-lot orders, including aggregated odd-lot orders that 
+are displayable, are not eligible to be setting interest. (Rule 
+72(a)(ii)(A))
+    <bullet> If, at the time displayable interest of a round lot or 
+greater becomes the Exchange BBO, there is other displayable interest 
+of a round lot or greater, including aggregated odd-lot orders that are 
+equal to or greater than a round lot, at the price that becomes the 
+Exchange BBO, no interest is considered to be a setting interest, and, 
+therefore, there is no priority established. (Rule 72(a)(ii)(B))
+    <bullet> If, at the time displayable interest of a round lot or 
+greater becomes the Exchange BBO, there is other displayable interest 
+the sum of which is less than a round lot, at the price that becomes 
+the Exchange BBO, the displayable interest of a round lot or greater 
+will be considered the only displayable bid or offer at that price 
+point and is therefore established as the setting interest entitled to 
+priority for allocation of executions at that price as described in 
+this rule. (Rule 72(a)(ii)(C))
+    <bullet> If executions decrement the setting interest to an odd-lot 
+size, a round lot or partial round lot order that joins such remaining 
+odd-lot size order is not eligible to be the setting interest. (Rule 
+72(a)(ii)(D))
+    <bullet> If, as a result of cancellation, interest is or becomes 
+the single displayable interest of a round lot or greater at the 
+Exchange BBO, it becomes the setting interest. (Rule 72(a)(ii)(E))
+    <bullet> Only the portion of setting interest that is or has been 
+published in the Exchange BBO is entitled to priority allocation of an 
+execution. That portion of setting interest that is designated as 
+reserve interest and therefore not displayed at the Exchange BBO (or 
+not displayable if it becomes the Exchange BBO) is not eligible for 
+priority allocation of an execution irrespective of the price of such 
+reserve interest or the time it is accepted into Exchange systems. 
+However, if, following an execution of part or all of setting interest, 
+such setting interest is replenished from any reserve interest, the 
+replenished volume of such setting interest shall be entitled to 
+priority if the setting interest is still the only
+
+[[Page 37260]]
+
+interest at the Exchange BBO. (Rule 72(a)(ii)(F))
+    <bullet> If interest becomes the Exchange BBO, it will be 
+considered the setting interest even if pegging interest, Limit Orders 
+designated ALO, or sell short orders during a Short Sale Period under 
+Rule 440B(e) are re-priced and displayed at the same price as such 
+interest, and it will retain its priority even if subsequently joined 
+at that price by re-priced interest. (Rule 72(a)(ii)(G))
+    Rule 72(b)(i) provides that once priority is established by setting 
+interest, such setting interest retains that priority for any execution 
+at that price when that price is at the Exchange BBO and if executions 
+decrement the setting interest to an odd-lot size, such remaining 
+portion of the setting interest retains its priority for any execution 
+at that price when that price is the Exchange BBO. Rule 72(b)(ii) 
+further provides that for any execution of setting interest that occurs 
+when the price of the setting interest is not the Exchange BBO, the 
+setting interest does not have priority and is executed on parity. 
+Finally, Rule 73(b)(ii) provides that priority of setting interest will 
+not be retained after the close of trading on the Exchange or following 
+the resumption of trading in a security after a trading halt in such 
+security has been invoked pursuant to Rule 123D or following the 
+resumption of trading after a trading halt invoked pursuant to the 
+provisions of Rule 80B. In addition, priority of the setting interest 
+is not retained on any portion of the priority interest that is routed 
+to an away market and is returned unexecuted unless such priority 
+interest is greater than a round lot and the only other interest at the 
+price point is odd-lot orders, the sum of which is less than a round 
+lot.
+    Proposed Rule 7.36(h) would use Pillar terminology to establish 
+``Setter Priority,'' which would function similarly to setting interest 
+under Rule 72. The Exchange proposes the following substantive 
+differences to how Setter Priority would be assigned and retained on 
+Pillar:
+    <bullet> To be eligible for Setter Priority, an order would have to 
+establish not only the BBO, but also either join an Away Market NBBO or 
+establish the NBBO. The Exchange believes that requiring an order to 
+either join or establish an NBBO before it is eligible for Setter 
+Priority would encourage the display of aggressive liquidity on the 
+Exchange.
+    <bullet> A resting order would not be eligible to be assigned 
+Setter Priority simply because it is the only interest at that price 
+when it becomes the BBO (either because of a cancellation of other 
+interest at that price or because a resting order that is priced worse 
+than the BBO becomes the BBO). The Exchange believes that the benefit 
+of Setter Priority should be for orders that are aggressively seeking 
+to improve the BBO, rather than for passive orders that become the BBO.
+    <bullet> The replenished portion of a Reserve Order would not be 
+eligible for Setter Priority. The Exchange believes that Setter 
+Priority should be assigned to interest willing to be displayed, and 
+because the reserve interest would not be displayed on arrival, it 
+would not be eligible for Setter Priority.
+    <bullet> Orders that are routed and returned unexecuted would be 
+eligible for Setter Priority consistent with the proposed rules 
+regarding the working time assigned to the returned quantity of an 
+order. As described in greater detail below, if such orders meet the 
+requirements to be eligible for Setter Priority, e.g., establish the 
+BBO and either join or establish the NBBO, they would be evaluated for 
+Setter Priority.
+    Proposed Rule 7.36(h) would provide that Setter Priority would be 
+assigned to an order ranked Priority 2--Display Orders with a display 
+quantity of at least a round lot if such order (i) establishes a new 
+BBO and (ii) either establishes a new NBBO or joins an Away Market 
+NBBO. The rule would further provide that only one order is eligible 
+for Setter Priority at each price. This proposed rule text is based in 
+part on Rule 72(a)(ii), 72(a)(ii)(A), 72(a)(ii)(B), 72(a)(ii)(C), 
+subject to the substantive differences described above.\17\
+---------------------------------------------------------------------------
+
+    \17\ Because of the proposed substantive differences, the 
+Exchange is not proposing rules based on current Rules 72(a)(ii)(D) 
+and (E). In addition, when an order is considered displayed on 
+Pillar would be addressed in proposed Rule 7.36(b)(1). Accordingly, 
+the Exchange is not proposing rule text based on Rule 72(a)(i).
+---------------------------------------------------------------------------
+
+    Proposed Rule 7.36(h)(1) would set forth when an order would be 
+evaluated for Setter Priority. As noted above, the Exchange proposes a 
+substantive difference from current Rule 72(a)(ii) in that a resting 
+order would not be eligible to be assigned Setter Priority simply 
+because it is the only interest at that price when it becomes the BBO.
+    <bullet> Proposed Rule 7.36(h)(1)(A) would provide that an order 
+would be evaluated for Setter Priority on arrival, which would include 
+when any portion of an order that has routed returns unexecuted and is 
+added to the Exchange Book. Pursuant to proposed Rule 7.37(a)(1), 
+described below, an order that is routed on arrival to an Away Market 
+would not be assigned a working time. Proposed Rule 7.36(f) provides 
+that an order would not be assigned a working time until it is placed 
+on the Exchange Book. As such, an order that has returned after routing 
+would be processed similarly to a newly arriving order. Therefore, the 
+Exchange believes that an order should be evaluated for Setter Priority 
+when it returns from an Away Market unexecuted in the same way as 
+evaluating an order for Setter Priority on arrival.
+    When evaluating Setter Priority for an order that has returned from 
+an Away Market unexecuted, the Exchange would assess whether such order 
+meets the requirements of proposed Rule 7.36(h), which is based in part 
+on the second sentence of Rule 72(b)(iii). The Exchange proposes that 
+for Pillar, an order that was routed to an Away Market and returned 
+unexecuted would be evaluated for Setter Priority based on how a 
+working time would be assigned to the returned quantity of the routed 
+order, as described in proposed Rules 7.16(f)(5)(H), 7.36(f)(1)(A) and 
+(B), and 7.38(b)(2).
+    [cir] Proposed Rule 7.16(f)(5)(H) provides that if a Short Sale 
+Price Test, as defined in that rule, is triggered after an order has 
+routed, any returned quantity of the order and the order it joins on 
+the Exchange Book would be adjusted to a Permitted Price.\18\ In such 
+case, the returned quantity and the resting quantity that would be re-
+priced to a Permitted Price would be a single order and the Exchange 
+would evaluate such order for Setter Priority. If such order would set 
+a new BO and either join or establish a new NBO, it would be assigned 
+Setter Priority. For example, if the Exchange receives a sell short 
+order of 200 shares ranked Priority 2--Display Orders, routes 100 
+shares (``A'') of such order and adds 100 shares (``B'') of such order 
+to the Exchange Book, ``B'' would be displayed at the price of the sell 
+short order. If an Away Market NBB locks the price of ``B'' and then a 
+Short Sale Price Test is triggered, ``B'' would remain displayed at the 
+price of the NBB.\19\ If subsequently, ``A'' returns unexecuted, 
+pursuant to proposed Rule 7.16(f)(5)(H), ``A'' and ``B'' would be 
+considered a single order and would be re-priced to a Permitted Price, 
+at which point the order would be evaluated for Setter Priority.
+---------------------------------------------------------------------------
+
+    \18\ Pursuant to proposed Rule 7.16(f)(5)(A), described below, 
+during a Short Sale Period, as defined in that rule, short sale 
+orders with a working price and/or a display price equal to or lower 
+than the NBB will have the working price and/or display price 
+adjusted one minimum price increment above the current NBB, which is 
+the ``Permitted Price.''
+    \19\ See proposed Rule 7.16(f)(6).
+
+---------------------------------------------------------------------------
+
+[[Page 37261]]
+
+    [cir] Proposed Rule 7.36(f)(1)(A) provides that an order that is 
+fully routed to an Away Market would not be assigned a working time 
+unless and until any unexecuted portion of the order returns to the 
+Exchange Book. As proposed, if the Exchange routes an entire order and 
+a portion returns unexecuted, the Exchange would evaluate the returned 
+quantity for Setter Priority as if it were a newly arriving order. For 
+example, if less than a round lot returns unexecuted, the returned 
+quantity would not be eligible for Setter Priority. If at least a round 
+lot returns unexecuted, establishes a new BBO, and either joins or 
+establishes the NBBO, it would be eligible for Setter Priority.
+    [cir] Proposed Rule 7.36(f)(1)(B) provides that (except as provided 
+for in proposed Rule 7.38(b)(2)), if an order is partially routed to an 
+Away Market on arrival, the portion that is not routed would be 
+assigned a working time and any portion of the order returning 
+unexecuted would be assigned the same working time as any remaining 
+portion of the original order resting on the Exchange Book and would be 
+considered the same order as the resting order. In such case, if the 
+resting portion of the order has Setter Priority, the returned portion 
+would also have Setter Priority. For example, if the Exchange receives 
+a 200 share order ranked Priority 2--Display Orders, routes 100 shares 
+(``C'') of such order and adds 100 shares (``D'') of such order to the 
+Exchange Book, which establishes the BBO and joined the NBBO, ``D'' 
+would be assigned Setter Priority. If ``D'' is partially executed and 
+decremented to 50 shares and another order ``E'' for 100 shares joins 
+``D'' at its price, pursuant to proposed Rules 7.36(h)(2)(A) and (B), 
+described below, ``D'' would retain Setter Priority. If ``C'' returns 
+unexecuted, it would join the working time of ``D'' pursuant to 
+proposed Rule 7.36(f)(1)(B), ``C'' and ``D'' would be considered a 
+single order, and ``C'' would therefore also receive Setter Priority.
+    [cir] Proposed Rule 7.38(b)(2) provides that for an order that is 
+partially routed to an Away Market on arrival, if any returned quantity 
+of such order joins resting odd-lot quantity of the original order and 
+the returned and resting quantity, either alone or together with other 
+odd-lot orders, would be displayed as a new BBO, both the returned and 
+resting quantity would be assigned a new working time. In such case, 
+the returned quantity and the resting odd-lot quantity together would 
+be a single order and would be evaluated for Setter Priority.
+    For example, if the Exchange receives an order for 100 shares, 
+routes 50 shares (``E'') of such order and the remaining 50 shares 
+(``F'') of such order are added to the Exchange Book, pursuant to 
+proposed Rule 7.36(f)(1)(B), ``F'' would be assigned a working time 
+when it is added to the Exchange Book. If ``E'' returns unexecuted, and 
+``E'' and ``F'' together would establish a new BBO at that price, 
+pursuant to proposed Rule 7.38(b)(2), ``F'' would be assigned a new 
+working time to join the working time of ``E,'' and ``E'' and ``F'' 
+would be considered a single order. If the returned quantity together 
+with the resting quantity establishes the BBO pursuant to proposed Rule 
+7.38(b)(2), the order would be eligible to be evaluated for Setter 
+Priority.
+    <bullet> Proposed Rule 7.36(h)(1)(B) would provide that an order 
+would be evaluated for Setter Priority when it becomes eligible to 
+trade for the first time upon transitioning to a new trading session. 
+When an order becomes eligible to trade upon a trading session 
+transition, it is treated as if it were a newly arriving order. 
+Accordingly, the Exchange believes it would be consistent with its 
+proposal to evaluate arriving orders for Setter Priority to also 
+evaluate orders that become eligible to trade upon a trading session 
+transition for Setter Priority. For example, pursuant to proposed Rule 
+7.34(c)(1), described below, the Exchange would accept Primary Pegged 
+Orders during the Early Trading Session, however, such orders would not 
+be eligible to trade until the Core Trading Session begins. In such 
+case, a Primary Pegged Order would be evaluated for Setter Priority 
+when it becomes eligible to trade in the Core Trading Session.
+    Proposed Rule 7.36(h)(2) would establish when an order retains its 
+Setter Priority, as follows:
+    <bullet> If it is decremented to any size because it has either 
+traded or been partially cancelled (proposed Rule 7.36(h)(2)(A)). This 
+proposed rule is based on Rule 72(b)(i), with non-substantive 
+differences to use Pillar terminology.
+    <bullet> if it is joined at that price by a resting order that is 
+re-priced and assigned a display price equal to the display price of 
+the order with Setter Priority (proposed Rule 7.36(h)(2)(B)). This 
+proposed rule is based on Rule 72(a)(ii)(G), with non-substantive 
+differences to use Pillar terminology.
+    <bullet> if the BBO or NBBO changes (proposed Rule 7.36(h)(2)(C)). 
+This proposed rule, together with proposed Rule 7.37(b)(1)(B), 
+described below, is based on Rule 72(b)(ii), with non-substantive 
+differences to use Pillar terminology. Specifically, once an order has 
+been assigned Setter Priority, it has that status so long as it is on 
+the Exchange Book, subject to proposed Rule 7.36(h)(3), described 
+below, regardless of the BBO or NBBO. However, as described in proposed 
+Rule 7.37(b)(1)(B), it would only be eligible for a Setter Priority 
+allocation if it is executed when it is the BBO.
+    <bullet> if the order marking changes from (A) sell to sell short, 
+(B) sell to sell short exempt, (C) sell short to sell, (D) sell short 
+to sell short exempt, (E) sell short exempt to sell, and (F) sell short 
+exempt to sell short (proposed Rule 7.36(h)(2)(D)). This proposed rule 
+text is consistent with proposed Rule 7.36(f)(4) because if an order 
+retains its working time, the Exchange believes it should also retain 
+its Setter Priority status.
+    <bullet> when transitioning from one trading session to another 
+(proposed Rule 7.36(h)(2)(E)). This text would be new because, with 
+Pillar, the Exchange would be introducing an Early Trading Session. The 
+Exchange believes that if an order entered during the Early Trading 
+Session is assigned Setter Priority, it should retain that status in 
+the Core Trading Session.
+    Proposed Rule 7.36(h)(3) would establish when an order would lose 
+Setter Priority, as follows:
+    <bullet> If trading in the security is halted, suspended, or paused 
+(proposed Rule 7.36(h)(3)(A)). This proposed rule is based on the first 
+sentence of current Rule 72(b)(iii), with non-substantive differences 
+to use Pillar terminology. In addition, because all orders expire at 
+the end of the trading day, the Exchange believes that the current rule 
+text providing that setting interest would not be retained after the 
+close of trading on the Exchange would not be necessary for Pillar.
+    <bullet> if such order is assigned a new display price (proposed 
+Rule 7.36(h)(3)(B)). The Exchange believes that if an order has Setter 
+Priority at a price, and then is assigned a new display price, it 
+should not retain the Setter Priority status that was associated with 
+its original display price.
+    <bullet> if such order is less than a round lot and is assigned a 
+new working time pursuant to proposed Rule 7.38(b)(2). As discussed 
+above, pursuant to proposed Rule 7.38(b)(2) the resting odd-lot portion 
+of an order would be assigned a new working time if the returned 
+quantity of that order, together with the resting portion, would 
+establish a new BBO. In such case, if the resting quantity had Setter 
+Priority status, it would lose that status, and would be re-evaluated 
+for Setter Priority at its new working time.
+
+[[Page 37262]]
+
+    For example, if the Exchange receives an order for 200 shares 
+ranked Priority 2--Display Orders, routes 100 shares (``G'') of such 
+order, and the remaining 100 shares (``H'') of such order are added to 
+the Exchange Book and assigned Setter Priority, ``H'' would retain 
+Setter Priority even if it is partially executed and the remaining 
+portion of ``H'' is less than a round lot. If ``G'' returns unexecuted 
+and ``G'' and ``H'' together would establish a new BBO at that price, 
+pursuant to proposed Rule 7.38(b)(2), ``H'' would be assigned a new 
+working time to join the working time of ``G,'' and ``G'' and ``H'' 
+would be considered a single order. When ``H'' is assigned a new 
+working time, it would lose its Setter Priority status. Even though 
+``G'' and ``H'' would establish the BBO, if that order does not also 
+join or establish an NBBO, it would not be assigned Setter Priority. In 
+this scenario, ``H'' would have lost its Setter Priority. The Exchange 
+believes it is appropriate to re-evaluate such order for Setter 
+Priority because it is being assigned a new working time together with 
+the returned quantity of the order.
+    Proposed Rule 7.36(h)(4) would establish when Setter Priority is 
+not available, as follows:
+    <bullet> For any portion of an order that is ranked Priority 3--
+Non-Display Orders (proposed Rule 7.36(h)(4)(A)). This proposed rule 
+text is based on the second sentence of Rule 72(a)(ii)(F), with non-
+substantive differences to use Pillar terminology.
+    <bullet> when the reserve quantity replenishes the display quantity 
+of a Reserve Order (proposed Rule 7.36(h)(4)(B)). This proposed rule 
+text would be new and would be a substantive difference, described 
+above, as compared to the third sentence of Rule 72(a)(ii)(F).
+    Because proposed Rule 7.36 would address the display and working 
+time of orders and Setter Priority, the Exchange proposes that Rules 
+72(a), (b), and (c)(xii) would not be applicable to trading UTP 
+Securities on the Pillar trading platform.
+Proposed Rule 7.37
+    Proposed Rule 7.37 (Order Execution and Routing) would establish 
+rules governing order execution and routing on the Pillar trading 
+platform. As described above, the Exchange proposes to retain its 
+parity allocation model, which the Exchange would set forth in proposed 
+Rule 7.37(b). Except for the addition of parity allocation, the 
+Exchange proposes to use Pillar functionality for determining how 
+orders would be executed and routed. Accordingly, the proposed rule is 
+based in part on NYSE Arca Equities Rule 7.37 and NYSE American Rule 
+7.37E, with substantive differences as described below.
+Proposed Rules 7.37(a), (c)-(g)
+    Proposed Rules 7.37(a) and paragraphs (c)-(d) would establish rules 
+regarding order execution, routing, use of data feeds, locking or 
+crossing quotations in NMS Stocks, and exceptions to the Order 
+Protection Rule. The proposed rule text is based on NYSE Arca Equities 
+Rule 7.37(a)-(f) and NYSE American Rule 7.37E(a)-(f) with the following 
+substantive differences: \20\
+---------------------------------------------------------------------------
+
+    \20\ Because proposed Rule 7.37(b) would establish parity 
+allocation, proposed Rule 7.37(c)-(g) would be based on NYSE Arca 
+Rules 7.37(b)-(f) and NYSE American Rules 7.37E(b)-(f).
+---------------------------------------------------------------------------
+
+    <bullet> Proposed Rule 7.37(a) would use the proposed new term 
+``Aggressing Order'' rather than the term ``incoming marketable order'' 
+to refer to orders that would be matched for execution. In addition, 
+because the Exchange would not use a price-time priority allocation for 
+all orders, the Exchange proposes to specify that orders would be 
+matched for execution as provided for in proposed Rule 7.37(b).
+    <bullet> As discussed below, the Exchange would not offer all order 
+types that are available on NYSE Arca Equities and NYSE American. 
+Accordingly, proposed Rule 7.37(a)(4) would not include a reference to 
+Inside Limit Orders.
+    <bullet> Similar to NYSE American, because the Exchange would not 
+be taking in data feeds from broker-dealers or routing to Away Markets 
+that are not displaying protected quotations, the Exchange proposes 
+that proposed Rule 7.37 would not include rule text from paragraph 
+(b)(3) of NYSE Arca Equities Rule 7.37, which specifies that an ETP 
+Holder can opt out of routing to Away Markets that are not displaying a 
+protected quotation, i.e., broker dealers, or paragraph (d)(1) of NYSE 
+Arca Equities Rule 7.37, which specifies that NYSE Arca Equities 
+receives data feeds directly from broker dealers.
+    <bullet> As discussed in greater detail below, because the Exchange 
+would not offer all orders available on NYSE Arca Equities and NYSE 
+American, including orders based on NYSE Arca Equities Rule 7.31(f) 
+that are orders with specific routing instructions, the Exchange 
+proposes that proposed Rules 7.37(c)(5) and (c)(7)(B) would not include 
+reference to orders that are designated to route to the primary listing 
+market. Similarly, the Exchange would not include rule text based on 
+NYSE Arca Equities Rule 7.37(b)(7)(C) and NYSE American Rule 
+7.37E(b)(7)(C).
+Proposed Rule 7.37(b)--Allocation
+    Proposed Rule 7.37(b) would set forth how an Aggressing Order would 
+be allocated against contra-side orders and is based in part on current 
+Rule 72(c). The Exchange proposes to use Pillar terminology to describe 
+allocations and proposes the following substantive differences to how 
+allocations are processed under Rule 72(c):
+    <bullet> Mid-point Liquidity Orders (``MPL'') with a Minimum Trade 
+Size (``MTS''), which are not currently available on the Exchange, 
+would be allocated based on MTS size (smallest to largest) and time.
+    <bullet> The Exchange would maintain separate allocation wheels on 
+each side of the market for displayed and non-displayed orders at each 
+price. Currently, the Exchange maintains a single allocation wheel for 
+each security.\21\
+---------------------------------------------------------------------------
+
+    \21\ See Rule 72(c)(viii)(A).
+---------------------------------------------------------------------------
+
+    <bullet> An allocation to a Floor Broker Participant would be 
+allocated to orders represented by that Floor Broker on parity.
+    <bullet> If resting orders on one side of the Exchange Book are 
+repriced such that they become marketable against orders on the other 
+side of the Exchange Book, they would trade as Aggressing Orders based 
+on their ranking pursuant to proposed Rule 7.36(c).
+    <bullet> If resting orders on both side of the Exchange Book are 
+repriced such that they become marketable against each other, e.g., a 
+crossed PBBO becomes uncrossed and orders priced based on the PBBO are 
+repriced, the Exchange would determine which order is the Aggressing 
+Order based on its ranking pursuant to Rule 7.36(c).
+    <bullet> Because there would not be any DMMs assigned to UTP 
+Securities, the proposed rule would not reference DMM allocations.
+    Proposed Rule 7.37(b)(1) would set forth that at each price, an 
+Aggressing Order would be allocated against contra-side orders as 
+follows:
+    <bullet> Proposed Rule 7.37(b)(1)(A) would provide that orders 
+ranked Priority 1--Market Orders would trade first based on time. This 
+proposed rule is based on the first sentence of Rule 72(c)(i) with non-
+substantive differences to use Pillar terminology.
+    <bullet> Proposed Rule 7.37(b)(1)(B) would provide that next, an 
+order with Setter Priority that has a display price and working price 
+equal to the BBO would receive 15% of the remaining quantity of the 
+Aggressing Order, rounded up to the next round lot size or the 
+remaining displayed quantity of the order with
+
+[[Page 37263]]
+
+Setter Priority, whichever is lower. The rule would further provide 
+that an order with Setter Priority is eligible for allocation under 
+proposed Rule 7.37(b)(1)(B) if the BBO is no longer the same as the 
+NBBO. This proposed rule text is based on Rules 72(b)(ii) and 
+72(c)(iii) with non-substantive differences to use Pillar terminology. 
+Although the Exchange is using different rule text, the quantity of an 
+Aggressing Order that would be allocated to an order with Setter 
+Priority would be the same under both current rules and the proposed 
+Pillar rule.
+    <bullet> Proposed Rule 7.37(b)(1)(C) would provide that next, 
+orders ranked Priority 2--Displayed Orders would be allocated on parity 
+by Participant and that any remaining quantity of an order with Setter 
+Priority would be eligible to participate in this parity allocation, 
+consistent with the allocation wheel position of the Participant that 
+entered the order with Setter Priority. This proposed rule text is 
+based on Rules 72(c)(i), (iv), (vi), and (ix) with non-substantive 
+differences to use Pillar terminology.
+    <bullet> Proposed Rule 7.37(b)(1)(D) would provide that next, 
+orders ranked Priority 3--Non-Display Orders, other than MPL Orders 
+with an MTS, would be allocated on parity by Participant. This proposed 
+rule text is based on Rules 72(c)(i), (iv), (vi), and (ix) with non-
+substantive differences to use Pillar terminology and a substantive 
+difference not to include MPL Orders with an MTS in the parity 
+allocation of resting non-displayed orders.
+    <bullet> Proposed Rule 7.37(b)(1)(E) would provide that MPL Orders 
+with an MTS would be allocated based on MTS size (smallest to largest) 
+and time. Because MPL Orders with an MTS would be a new offering on the 
+Exchange, this proposed rule text is new. With an MTS instruction, an 
+[sic] member organization is instructing the Exchange that it does not 
+want an execution of its order if the MTS cannot be met. Accordingly, 
+an MPL Order with an MTS is willing to be skipped if such instruction 
+cannot be met. The Exchange proposes to separate MPL Orders with an MTS 
+from the parity allocation of Priority 3--Non-Display Orders because 
+with a parity allocation, an MTS instruction would not be guaranteed. 
+In order to honor the MTS instruction of the resting MPL Order, the 
+Exchange proposes to allocate these orders after all other Priority 3--
+Non-Display Orders have been allocated on parity. The Exchange believes 
+that this proposed allocation priority would be consistent with the MTS 
+instruction in that such orders are willing to be skipped in order to 
+have the MTS met.
+    Proposed Rule 7.37(b)(2) would establish the allocation wheel for 
+parity allocations. The proposed rule would be new for Pillar and would 
+establish that at each price on each side of the market, the Exchange 
+would maintain an ``allocation wheel'' of Participants with orders 
+ranked Priority 2--Display Orders and a separate allocation wheel of 
+Participants with orders ranked Priority 3--Non-Display Orders. The 
+rule further describes how the position of an order on an allocation 
+wheel would be determined, as follows:
+    <bullet> Proposed Rule 7.37(b)(2)(A) would provide that the 
+Participant that enters the first order in a priority category at a 
+price would establish the first position on the applicable allocation 
+wheel for that price. The rule would further provide that if an 
+allocation wheel no longer has any orders at a price, the next 
+Participant to enter an order at that price would establish a new 
+allocation wheel. This proposed rule is based in part on the first 
+sentence of Rule 72(c)(viii)(A), with both non-substantive differences 
+to use Pillar terminology and substantive differences because the 
+Exchange would maintain separate allocation wheels at each price point, 
+rather than a single allocation wheel for a security. Accordingly, an 
+allocation wheel at a price point could be re-established throughout 
+the trading day.
+    <bullet> Proposed Rule 7.37(b)(2)(B) would provide that additional 
+Participants would be added to an allocation wheel based on time of 
+entry of the first order entered by a Participant. This proposed rule 
+is based in part on the second sentence of Rule 72(c)(viii)(A) with 
+non-substantive differences to use Pillar terminology.
+    <bullet> Proposed Rule 7.37(b)(2)(C) would provide that once a 
+Participant has established a position on an allocation wheel at a 
+price, any additional orders from that Participant at the same price 
+would join that position on an allocation wheel. This proposed rule 
+uses Pillar terminology to describe current functionality.
+    <bullet> Proposed Rule 7.37(b)(2)(D) would provide that if an order 
+receives a new working time or is cancelled and replaced at the same 
+working price, a Participant that entered such order would be moved to 
+the last position on an allocation wheel if that Participant has no 
+other orders at that price. This proposed rule is based in part on the 
+last sentence of Rule 72(c)(viii)(A) with non-substantive differences 
+to use Pillar terminology.
+    <bullet> Proposed Rule 7.37(b)(2)(E) would provide that a 
+Participant would be removed from an allocation wheel if (i) all orders 
+from that Participant at that price are executed or cancelled in full, 
+(ii) the working price of an order changes and that Participant has no 
+other orders at that price, or (iii) the priority category of the order 
+changes and that Participant has no other orders at that price. This 
+proposed rule would be new functionality associated with the 
+substantive difference of having separate allocation wheels at each 
+price point.
+    <bullet> Proposed Rule 7.37(b)(2)(F) would provide that if multiple 
+orders are assigned new working prices at the same time, the 
+Participants representing those orders would be added to an allocation 
+wheel at the new working price in time sequence relative to one 
+another. This proposed rule would be new functionality associated with 
+the substantive difference of having separate allocation wheels at each 
+price point.
+    Proposed Rule 7.37(b)(3) would set forth the parity pointer 
+associated with the allocation wheel. As proposed, if there is more 
+than one Participant on an allocation wheel, the Exchange would 
+maintain a ``pointer'' that would identify which Participant would be 
+next to be evaluated for a parity allocation and that the Participant 
+with the pointer would be considered the first position. This proposed 
+rule is based in part on the Parity Example 1 described in Rule 
+72(c)(viii)(A) and Rule 72(c)(viii)(B), with non-substantive 
+differences to use Pillar terminology. The rule would further provide 
+that the Setter Priority allocation described in proposed Rule 
+7.37(b)(1)(B) would not move the pointer, which is based on the second 
+sentence of Rule 72(c)(iv) with non-substantive differences to use 
+Pillar terminology.
+    Proposed Rule 7.37(b)(4) would set forth how an Aggressing Order 
+would be allocated on parity. As proposed, an Aggressing Order would be 
+allocated by round lots. The Participant with the pointer would be 
+allocated a round lot and then the pointer would advance to the next 
+Participant. The pointer would continue to advance on an allocation 
+wheel until the Aggressing Order is fully allocated or all Participants 
+in that priority category are exhausted. This proposed rule is based on 
+Rule 72(c)(viii), sub-paragraphs (A)-(C) of that Rule, and Parity 
+Examples 1 through 4, with non-substantive differences to use Pillar 
+terminology. Rather than include examples in the proposed rule, the 
+Exchange believes that the Pillar terminology streamlines the 
+description of parity allocations in
+
+[[Page 37264]]
+
+a manner that obviates the need for examples, as follows:
+    <bullet> Proposed Rule 7.37(b)(4)(A) would provide that not all 
+Participants on an allocation wheel would be guaranteed to receive an 
+allocation. The size of an allocation to a Participant would be based 
+on which Participant had the pointer at the beginning of the 
+allocation, the size of the Aggressing Order, the number of 
+Participants in the allocation, and the size of the orders entered by 
+Participants. The Exchange believes that this proposed rule makes clear 
+that while the parity allocation seeks to evenly allocate an Aggressing 
+Order, an even allocation may not be feasible and would be dependent on 
+multiple variables.
+    For example, if there are three Participants on an allocation 
+wheel, ``A,'' ``B,'' and ``C,'' each representing 200 shares and ``A'' 
+has the pointer, an Aggressing Order of 450 shares would be allocated 
+as follows: ``A'' would be allocated 100 shares, ``B'' would be 
+allocated 100 shares, ``C'' would be allocated 100 shares, ``A'' would 
+be allocated 100 shares, and ``B'' would be allocated 50 shares. In 
+this example, an uneven allocation would result because the Aggressing 
+Order cannot be evenly divided by round lots among the Participants and 
+the allocation sizes would be dependent on which Participant has the 
+pointer at the beginning of the allocation. Accordingly, ``A'' would be 
+allocated a total of 200 shares, ``B'' would be allocated a total of 
+150 shares, and ``C'' would be allocated a total of 100 shares.
+    <bullet> Proposed Rule 7.37(b)(4)(B) would provide that if the last 
+Participant to receive an allocation is allocated an odd lot, the 
+pointer would stay with that Participant. The Exchange proposes that 
+the pointer would advance only after a round-lot allocation. If the 
+last allocation is an odd-lot, the pointer would stay with that 
+Participant. For example, continuing with the example above where ``B'' 
+received an allocation of 150 shares because the last allocation was 50 
+shares, the pointer would remain with ``B'' for the next allocation at 
+that price. By contrast, if the last Participant receives a round-lot 
+allocation of an Aggressing Order, the pointer would advance to the 
+next Participant for the next allocation at that price.
+    <bullet> Proposed Rule 7.37(b)(4)(C) would provide that if the 
+Aggressing Order is an odd lot, the Participant with the pointer would 
+be allocated the full quantity of the order, unless that Participant 
+does not have an order that could satisfy the Aggressing Order in full, 
+in which case, the pointer would move to the next Participant on an 
+allocation wheel. This proposed rule uses Pillar terminology to 
+describe how an odd-lot sized Aggressing Order would be allocated.
+    <bullet> Proposed Rule 7.37(b)(4)(D) would provide that a 
+Participant that has an order or orders equaling less than a round lot 
+would be eligible for a parity allocation up to the size of the 
+order(s) represented by that Participant. This proposed rule is based 
+in part on Rule 72(c)(viii)(B) with non-substantive differences to use 
+Pillar terminology.
+    Proposed Rule 7.37(b)(5) would provide that an allocation to the 
+Book Participant would be allocated to orders that comprise the Book 
+Participant by working time. This proposed rule is based on the second 
+sentence of Rule 72(c)(ii) with non-substantive differences to use 
+Pillar terminology.
+    Proposed Rule 7.37(b)(6) would provide that an allocation to a 
+Floor Broker Participant, which would be defined as a ``Floor Broker 
+Allocation,'' would be allocated to orders with unique working times 
+that comprise the Floor Broker Participant, which would be defined as 
+``Floor Broker Orders,'' on parity. The proposed reference to ``unique 
+working times'' would refer to orders that have multiple working times. 
+For example, pursuant to proposed Rule 7.31(d)(1)(B), each time a 
+Reserve Order is replenished from reserve interest, a new working time 
+would be assigned to the replenished quantity of the Reserve Order, 
+while the reserve interest would retain the working time of original 
+order entry. As a result, the display quantity of a Reserve Order may 
+be represented by multiple orders with unique working times 
+representing each replenishment. For purposes of the Floor Broker 
+Allocation, each quantity with a unique working time would be 
+considered a separate order.
+    As further proposed, the parity allocation within a Floor Broker 
+Allocation would be processed as described in proposed Rule 7.37(b)(2)-
+(4) with the Floor Broker Allocation processed as the ``Aggressing 
+Order'' and each Floor Broker Order processed as a ``Participant.'' 
+Because a Floor Broker Participant may represent multiple orders, the 
+Exchange believes that allocating the Floor Broker Allocation on parity 
+would be consistent with the Exchange's allocation model, which 
+provides for a parity allocation to Floor brokers. For example, if an 
+Aggressing Order is allocated 200 shares to Floor Broker Participant 
+``X,'' which would be the Floor Broker Allocation, and ``X'' represents 
+three Floor Broker Orders, ``A,'' ``B,'' and ``C'' for 100 shares each 
+at a price and the parity pointer is on ``B,'' pursuant to proposed 
+Rule 7.37(b)(6), the Floor Broker Allocation would be allocated 100 
+shares to ``B'' and 100 shares to ``C'' and ``A'' would not receive an 
+allocation.
+    Proposed Rule 7.37(b)(8) would provide that if resting orders on 
+one side of the market are repriced and become marketable against 
+contra-side orders on the Exchange Book, the Exchange would rank the 
+re-priced orders as described in proposed Rule 7.36(c) and trade them 
+as Aggressing Orders consistent with their ranking.\22\ This proposed 
+functionality would be new for Pillar.
+---------------------------------------------------------------------------
+
+    \22\ The Exchange proposes to designated proposed Rule 
+7.37(b)(7) as ``Reserved.''
+---------------------------------------------------------------------------
+
+    Proposed Rule 7.37(b)(9) would provide that if resting orders on 
+both sides of the market are repriced and become marketable against one 
+another, the Exchange would rank the orders on each side of the market 
+as described in Rule 7.36(c) and trade them as follows:
+    <bullet> The best-ranked order would establish the price at which 
+the marketable orders will trade, provided that if the marketable 
+orders include MPL orders, orders would trade at the midpoint of the 
+PBBO (proposed Rule 7.37(b)(9)(A)).
+    <bullet> The next best-ranked order would trade as the Aggressing 
+Order with contra-side orders at that price pursuant to proposed Rule 
+7.37(b)(1) (proposed Rule 7.37(b)(9)(B)).
+    <bullet> When an Aggressing Order is fully executed, the next-best 
+ranked order would trade as the Aggressing Order with contra-side 
+orders at that price pursuant to proposed Rule 7.37(b)(1) (proposed 
+Rule 7.37(b)(9)(C)).
+    <bullet> Orders on both sides of the market would continue to trade 
+as the Aggressing Order until all marketable orders are executed 
+(proposed Rule 7.37(b)(9)(D)).
+    Because proposed Rule 7.37 would address order execution and 
+routing, including parity allocations, locking and crossing, and the 
+Order Protection Rule, the Exchange proposes that Rules 15A, 19, 72(c), 
+1000, 1001, 1002, and 1004 would not be applicable to trading UTP 
+Securities on the Pillar trading platform.\23\
+---------------------------------------------------------------------------
+
+    \23\ Rule 72(d) would also not be applicable to trading UTP 
+Securities on the Pillar trading platform, accordingly the Exchange 
+would designate the entirety of Rule 72 as not applicable to trading 
+UTP Securities on the Pillar trading platform.
+---------------------------------------------------------------------------
+
+Proposed Rule 7.31
+    Proposed Rule 7.31 (Orders and Modifiers) would establish the 
+orders and modifiers that would be available on the Exchange for 
+trading UTP
+
+[[Page 37265]]
+
+Securities on the Pillar trading platform. The Exchange proposes to 
+offer a subset of the orders and modifiers that are available on NYSE 
+Arca Equities and NYSE American, with specified substantive 
+differences, as described below.
+    <bullet> Proposed Rule 7.31(a) would establish the Exchange's 
+proposed Primary Order Types. The Exchange would offer Market Orders, 
+which would be described in proposed Rule 7.31(a)(1), and Limit Orders, 
+which would be described in proposed Rule 7.31(a)(2). These proposed 
+rules are based on NYSE Arca Equities Rule 7.31(a)(1) and (2) with one 
+substantive difference. Because the Exchange would not be conducting 
+auctions for UTP Securities and because, as described below, with the 
+exception of Primary Pegged Orders, Limit Orders entered before the 
+Core Trading Session would be deemed designated for both the Early 
+Trading Session and the Core Trading Session, the Exchange proposes not 
+to include the following text in proposed Rule 7.31(a)(2)(B): ``A Limit 
+Order entered before the Core Trading Session that is designated for 
+the Core Trading Session only will become subject to Limit Order Price 
+Protection after the Core Open Auction.'' Instead, the Exchange 
+proposes to provide that a Limit Order entered before the Core Trading 
+Session that becomes eligible to trade in the Core Trading Session 
+would become subject to the Limit Order Price Protection when the Core 
+Trading Session begins. Accordingly, Primary Pegged Orders entered 
+before the Core Trading Session begins would not be subject to Limit 
+Order Price Protection until the Core Trading Session begins.
+    <bullet> Proposed Rule 7.31(b) would establish the proposed time-
+in-force modifiers available for UTP Securities on the Pillar trading 
+platform. The Exchange would offer both Day and Immediate-or-Cancel 
+(``IOC'') time-in-force modifiers. The rule text is based on NYSE Arca 
+Equities Rule 7.31(b) and NYSE American Rule 7.31E(b) without any 
+substantive differences.
+    <bullet> Proposed Rule 7.31(c) would establish the Exchange's 
+Auction-Only Orders. Because the Exchange would not be conducting 
+auctions in UTP Securities, the Exchange would route all Auction-Only 
+Orders in UTP Securities to the primary listing market, as described in 
+greater detail below in proposed Rule 7.34. To reflect this 
+functionality, proposed Rule 7.31(c) would provide that an Auction-Only 
+Order is a Limit or Market Order that is only to be routed pursuant to 
+Rule 7.34. Proposed Rules 7.31(c)(1)-(4) would define Limit-on-Open 
+Orders (``LOO Order''), Market-on-Open Order (``MOO Order''), Limit-on-
+Close Order (``LOC Order''), and Market-on-Close (``MOC Order''). The 
+proposed rule text is based on NYSE Arca Equities Rule 7.31(c)(1)-(4) 
+and NYSE American Rule 7.31E(c)(1)-(4), with the substantive difference 
+not to include rule text relating to how Auction-Only Orders would 
+function during a Trading Halt Auction, as the Exchange would not be 
+conducting any auctions in UTP Securities. Because the Exchange would 
+not have defined terms for auctions in the Pillar rules, the Exchange 
+proposes an additional non-substantive difference to use the term ``an 
+opening or re-opening auction'' instead of ``the Core Open Auction or a 
+Trading Halt Auction'' and the term ``a closing auction'' instead of 
+``the Closing Auction.''
+    <bullet> Proposed Rule 7.31(d) would describe orders with a 
+conditional or undisplayed price and/or size. Proposed Rule 7.31(d) is 
+based on NYSE Arca Equities Rule 7.31(d) and NYSE American Rule 
+7.31E(d) without any differences.
+    <bullet> Proposed Rule 7.31(d)(1) would establish Reserve Orders, 
+which would be a Limit Order with a quantity of the size displayed and 
+with a reserve quantity (``reserve interest'') that is not displayed. 
+Proposed Rule 7.31(d)(1) and subparagraphs (A)-(C) to that rule are 
+based on NYSE Arca Equities Rule 7.31(d)(1) and its sub-paragraphs (A)-
+(C) without any substantive differences. As described below, the 
+Exchange proposes to describe Limit Orders that do not route as ``Limit 
+Non-Routable Order.''
+    <bullet> Proposed Rule 7.31(d)(2) would establish Limit Non-
+Displayed Orders, which would be a Limit Order that is not displayed 
+and does not route. This proposed rule is based on NYSE Arca Equities 
+Rule 7.31(d)(2), with one substantive difference: the Exchange would 
+not be offering the ability for a Limit Non-Displayed Order to be 
+designated with a Non-Display Remove Modifier and therefore would not 
+be proposing rule text based on NYSE Arca Equities Rule 7.31(d)(2)(B).
+    <bullet> Proposed Rule 7.31(d)(3) would establish MPL Orders, which 
+would be a Limit Order that is not displayed and does not route, with a 
+working price at the midpoint of the PBBO. Proposed Rule 7.31(d)(3) is 
+based on NYSE Arca Equities Rule 7.31(d)(3) and NYSE American Rule 
+7.31E(d)(3) with one substantive difference: because the Exchange would 
+not be conducting auctions in UTP Securities, the Exchange does not 
+propose to include rule text that MPL Orders do not participate in any 
+auctions. Proposed Rules 7.31(d)(3)(A)-(F), which further describe MPL 
+Orders, are based on NYSE Arca Equities Rule 7.31(d)(3)(A)-(F) with two 
+substantive differences. First, the Exchange would not offer the 
+optional functionality for an incoming Limit Order to be designated 
+with a ``No Midpoint Execution'' modifier. Second, the Exchange would 
+not offer for MPL Orders to be designated with a Non-Display Remove 
+Modifier. Because the Exchange would not offer the Non-Display Remove 
+Modifier for MPL Orders, the Exchange is not proposing rule text based 
+on NYSE Arca Equities Rule 7.31(d)(3)(G).
+    <bullet> Proposed Rule 7.31(e) would establish orders with 
+instructions not to route and is based on NYSE Arca Equities Rule 
+7.31(e) and NYSE American Rule 7.31E(e) without any differences.
+    <bullet> Proposed Rule 7.31(e)(1) would establish the Limit Non-
+Routable Order, which is a Limit Order that does not route. Proposed 
+Rule 7.31(e)(1) and its sub-paragraphs (A)-(B) is based on NYSE Arca 
+Equities Rule 7.31(e)(1) and its sub-paragraphs (A)-(B) and NYSE 
+American Rule 7.31E(1) and its sub-paragraphs (A)-(B) without any 
+substantive differences. Because the Exchange would not offer Non-
+Display Remove Modifiers for Limit Non-Routable Orders, the Exchange is 
+not proposing rule text based on NYSE Arca Equities Rule 7.31(e)(1)(C).
+    <bullet> Proposed Rule 7.31(e)(2) and sub-paragraphs (B)-(D) would 
+establish the ALO Order, which is a Limit Non-Routable Order that, 
+except as specified in the proposed rule, would not remove liquidity 
+from the Exchange Book. The proposed rule is based on NYSE Arca 
+Equities Rule 7.31(e)(2) and its sub-paragraphs (B)-(D) with two 
+substantive differences. First, because the Exchange would not have 
+auctions in UTP Securities, the Exchange does not propose rule text 
+based on NYSE Arca Equities Rule 7.31(e)(2)(A), and would designate 
+this sub-paragraph as ``Reserved.'' Second, because the Exchange would 
+not offer the Non-Display Remove Modifier for Limit Non-Routable Orders 
+or Limit Non-Display Orders, the Exchange does not propose rule text 
+based on NYSE Arca Equities Rule 7.31(e)(2)(B)(iv)(b).
+    <bullet> Proposed Rule 7.31(e)(3) and sub-paragraphs (A)-(D) would 
+establish Intermarket Sweep Orders (``ISO''), which would be a Limit 
+Order that does not route and meets the requirements of Rule 600(b)(3) 
+[sic] of Regulation NMS and could be designated IOC or Day. The 
+proposed rule is based on NYSE Arca Equities rule 7.31(e)(3) and its 
+sub-
+
+[[Page 37266]]
+
+paragraphs (A)-(D) and its sub-paragraphs (A)-(D) [sic] with two 
+substantive differences. First, because Exchange Floor brokers do not 
+have the ability to enter orders directly on Away Markets, the Exchange 
+does not currently offer the ability for Floor brokers to enter 
+ISOs.\24\ The Exchange similarly proposes that Floor brokers would not 
+be able to enter ISOs for trading UTP Securities on the Pillar trading 
+platform and therefore would specify that ISOs are not available to 
+Floor brokers. Second, because Non-Display Remove Modifiers would not 
+be available, the Exchange is not proposing rule text based on NYSE 
+Arca Equities Rule 7.31(e)(3)(D)(iii)(b).
+---------------------------------------------------------------------------
+
+    \24\ See Rule 70(a)(i).
+---------------------------------------------------------------------------
+
+    <bullet> Because the Exchange would not offer Primary Only Orders 
+or Cross Orders, the Exchange proposes that Rules 7.31(f) and (g) would 
+be designated as ``Reserved.''
+    <bullet> Proposed Rule 7.31(h) would establish Pegged Orders, which 
+would be a Limit Order that does not route with a working price that is 
+pegged to a dynamic reference price. Proposed Rule 7.31(h) is based on 
+NYSE Arca Equities Rule 7.31(h) with one substantive difference. 
+Consistent with the Exchange's current rules, Pegged Orders would be 
+available only to Floor brokers.\25\
+    Proposed Rule 7.31(h)(2) and sub-paragraphs (A) and (B) would 
+establish Primary Pegged Orders, which would be a Pegged Order to buy 
+(sell) with a working price that is pegged to the PBB (PBO), must 
+include a minimum of one round lot of displayed, and with no offset 
+allowed. This proposed rule text is based on NYSE Arca Equities Rule 
+7.31(h)(2) and sub-paragraphs (A) and (B) with one substantive 
+difference. Because the Exchange would not conduct auctions in UTP 
+Securities, the Exchange does not propose to include rule text that a 
+Primary Pegged Order would be eligible to participate in auctions at 
+the limit price of the order.
+    Proposed Rule 7.31(h)(4) and sub-paragraphs (A) and (B) would 
+establish a Non-Displayed Primary Pegged Order, which would be a Pegged 
+Order to buy (sell) with a working price that is pegged to the PBB 
+(PBO), with no offset allowed, that is not displayed. This rule text is 
+based on NYSE American Rule 7.31E(h)(2), which describes a Primary 
+Pegged Order that is not displayed. Similar to the rules of NYSE 
+American, the proposed Non-Displayed Primary Pegged Order would be 
+rejected on arrival, or cancelled when resting, if there is no PBBO 
+against which to peg. In addition, Non-Displayed Primary Pegged Orders 
+would be ranked Priority 3--Non-Display Orders and if the PBBO is 
+locked or crossed, both an arriving and resting Non-Displayd [sic] 
+Primary Pegged Order would wait for a PBBO that is not locked or 
+crossed before the working price is adjusted and the order becomes 
+eligible to trade.
+    Because the Exchange would not offer Market Pegged Order or 
+Discretionary Pegged Orders, the Exchange proposes that paragraphs 
+(h)(1) and (h)(3) of proposed Rule 7.31 would be designated as 
+``Reserved.''
+---------------------------------------------------------------------------
+
+    \25\ See Rule 13(f)(1)(A)(i), which describes Pegging Interest 
+as being available for e-Quotes and d-Quotes, which is functionality 
+available only to Floor brokers.
+---------------------------------------------------------------------------
+
+    <bullet> Proposed Rule 7.31(i)(2) would establish Self Trade 
+Prevention Modifiers (``STP'') on the Exchange. As proposed, any 
+incoming order to buy (sell) designated with an STP modifier would be 
+prevented from trading with a resting order to sell (buy) also 
+designated with an STP modifier and from the same Client ID, as 
+designated by the member organization, and the STP modifier on the 
+incoming order would control the interaction between two orders marked 
+with STP modifiers. Proposed Rule 7.31(i)(2)(A) would establish STP 
+Cancel Newest (``STPN'') and proposed Rule 7.31(i)(2)(B) would 
+establish STP Cancel Oldest (``STPO''). Proposed Rule 7.31(i)(2) and 
+subparagraphs (A) and (B) are based in part on NYSE Arca Equities Rule 
+7.31(i)(2) and its sub-paragraphs (A) and (B) and NYSE American Rule 
+7.31E(i)(2) and its sub-paragraphs (A) and (B), with substantive 
+differences to specify how STP modifiers would function consistent with 
+the Exchange's proposed allocation model.
+    Specifically, because, as described above, resting orders are 
+allocated either on parity or time based on the priority category of an 
+order, the Exchange proposes to specify in proposed Rule 7.31(i)(2) 
+that the Exchange would evaluate the interaction between two orders 
+marked with STP modifiers from the same Client ID consistent with the 
+allocation logic applicable to the priority category of the resting 
+order. The proposed rule would further provide that if resting orders 
+in a priority category do not have an STP modifier from the same Client 
+ID, the incoming order designated with an STP modifier would trade with 
+resting orders in that priority category before being evaluated for STP 
+with resting orders in the next priority category.
+    For STPN, proposed Rule 7.31(i)(2)(A)(i) would provide that if a 
+resting order with an STP modifier from the same Client ID is in a 
+priority category that allocates orders on price-time priority, the 
+incoming order marked with the STPN modifier would be cancelled back to 
+the originating member organization and the resting order marked with 
+one of the STP modifiers would remain on the Exchange Book. This 
+proposed rule is based on NYSE Arca Equities Rule 7.31(i)(2)(A) and 
+NYSE American Rule 7.31E(i)(2)(A), with non-substantive differences to 
+specify that this order processing would be applicable for orders that 
+are allocated in price-time priority.
+    Proposed Rule 7.31(i)(2)(A)(ii) would be new and would address how 
+STPN would function for resting orders in a priority category that 
+allocates orders on parity. As proposed, if a resting order with an STP 
+modifier from the same Client ID is in a priority category that 
+allocates orders on parity and would have been considered for an 
+allocation, none of the resting orders eligible for a parity allocation 
+in that priority category would receive an allocation and the incoming 
+order marked with the STPN modifier would be cancelled back.\26\ The 
+Exchange believes that if a member organization designates an order 
+with an STPN modifier, that member organization has instructed the 
+Exchange to cancel the incoming order rather than trade with a resting 
+order with an STP modifier from the same Client ID. Because in a parity 
+allocation, resting orders are allocated based on their position on an 
+allocation wheel, as described above, it would be consistent with the 
+incoming order's instruction to cancel the incoming order if any of the 
+resting orders eligible to participate in the parity allocation has an 
+STP modifier from the same Client ID.
+---------------------------------------------------------------------------
+
+    \26\ As described above, if there were resting Market Orders 
+against which the incoming order was marketable, because Market 
+Orders are in a different priority category, the incoming order 
+would trade with the resting Market Orders before being assessed for 
+STP with resting orders in a parity priority category.
+---------------------------------------------------------------------------
+
+    For STPO, proposed Rule 7.31(i)(2)(B)(i) would provide that if a 
+resting order with an STP modifier from the same Client ID is in a 
+priority category that allocates orders on price-time priority, the 
+resting order marked with the STP modifier would be cancelled back to 
+the originating member organization and the incoming order marked with 
+the STPO modifier would remain on the Exchange Book. This proposed rule 
+is based on NYSE Arca Equities Rule 7.31(i)(2)(B) and NYSE American 
+Rule 7.31E(i)(2)(B), with non-substantive differences to specify that 
+this order processing would
+
+[[Page 37267]]
+
+be applicable for orders that are allocated in price-time priority.
+    Proposed Rule 7.31(i)(2)(B)(ii) would be new and would address how 
+STPO would function for resting orders in a priority category that 
+allocates orders on parity. As proposed, if a resting order with an STP 
+modifier from the same Client ID is in a priority category that 
+allocates orders on parity, all resting orders with the STP modifier 
+with the same Client ID in that priority category that would have been 
+considered for an allocation would not be eligible for a parity 
+allocation and would be cancelled. The rule would further provide that 
+an incoming order marked with the STPO modifier would be eligible to 
+trade on parity with orders in that priority category that do not have 
+a matching STP modifier and that resting orders in that priority 
+category with an STP modifier from the same Client ID that would not 
+have been eligible for a parity allocation would remain on the Exchange 
+Book. The Exchange believes that this proposed processing of STPO would 
+allow for the incoming order to continue to trade with resting orders 
+that do not have an STP modifier from the same client ID, while at the 
+same time processing the instruction that resting orders with an STP 
+from the same Client ID would be cancelled if there were a potential 
+for an execution between the two orders.
+    <bullet> Proposed Commentary .01 and .02 to Rule 7.31is based on 
+Commentary .01 and .02 to NYSE Arca Equities Rule 7.31 without any 
+substantive differences.
+    Because proposed Rule 7.31 would govern orders and modifiers, 
+including orders entered by Floor brokers, the Exchange proposes that 
+Rules 13 (Orders and Modifiers) and 70 (Execution of Floor broker 
+interest) would not be applicable to trading UTP Securities on the 
+Pillar trading platform. In addition, references to Trading Collars in 
+Rule 1000(c) would not be applicable to trading UTP Securities on the 
+Pillar Trading platform.\27\
+---------------------------------------------------------------------------
+
+    \27\ As described in greater detail above in connection with 
+proposed Rule 7.37, the Exchange proposes that the entirety of Rule 
+1000 would not be applicable to trading UTP Securities on the Pillar 
+trading platform.
+---------------------------------------------------------------------------
+
+Proposed Rule 7.10
+    Proposed Rule 7.10 (Clearly Erroneous Executions) would set forth 
+the Exchange's rules governing clearly erroneous executions. The 
+proposed rule is based on NYSE Arca Equities Rule 7.10 and NYSE 
+American Rule 7.10E with substantive differences not to refer to a Late 
+Trading Session or Cross Orders. The Exchange proposes rule text based 
+on NYSE Arca Equities rather than current Rule 128 (Clearly Erroneous 
+Executions) because the NYSE Arca Equities and NYSE American version of 
+the rule uses the same terminology that the Exchange is proposing for 
+the Pillar trading platform, e.g., references to Early and Core Trading 
+Sessions. Accordingly, the Exchange proposes that Rule 128 (Clearly 
+Erroneous Executions) would not be applicable to trading UTP Securities 
+on the Pillar trading platform.\28\ Because the Exchange would not be 
+conducting auctions in UTP Securities, proposed Rule 7.10(a) would not 
+include the last sentence of NYSE Arca Equities Rule 7.10(a), which 
+provides that ``[e]xecutions as a result of a Trading Halt Auction are 
+not eligible for a request to review as clearly erroneous under 
+paragraph (b) of this Rule.''
+---------------------------------------------------------------------------
+
+    \28\ The Exchange proposes that because there is not a prior 
+version of proposed Rule 7.10, if the Limit Up-Limit Down Plan is 
+not approved, the prior version of sections (c), (e)(2), (f) and (g) 
+of Rule 128 would be in effect.
+---------------------------------------------------------------------------
+
+Proposed Rule 7.11
+    Proposed Rule 7.11 (Limit Up-Limit Down Plan and Trading Pauses in 
+Individual Securities Due to Extraordinary Market Volatility) would 
+establish how the Exchange would comply with the Regulation NMS Plan to 
+Address Extraordinary Market Volatility (``LULD Plan'').\29\ The 
+proposed rule is based on NYSE American Rule 7.11E with the following 
+substantive differences. First, as proposed, the Exchange would not 
+offer the optional functionality for a member organization to instruct 
+the Exchange to cancel a Limit Order that cannot be traded or routed at 
+prices at or within the Price bands, rather than the default processing 
+of re-pricing a Limit Order to the Price Bands, as described in 
+proposed Rule 7.11(a)(5)(B)(i). Accordingly, the Exchange would not 
+include text relating to this instruction, as described in NYSE 
+American Rules 7.11E(a)(5)(B)(i), 7.11E(a)(5)(C), or 7.11E(a)(5)(F). 
+Second, because the Exchange would not be offering orders that include 
+specific routing instructions, Q Orders, or Limit IOC Cross Orders, the 
+Exchange would not include text that references these order types, as 
+described in NYSE American Rule 7.11E(a)(5)(B)(iii), 7.11E(a)(5)(D), 
+7.11E(a)(5)(E), and 7.11E(a)(6). The Exchange proposes to designate 
+proposed Rules 7.11(a)(5)(D) and 7.11(a)(5)(E) as ``Reserved.''
+---------------------------------------------------------------------------
+
+    \29\ See Securities Exchange Act Release No. 80455 (April 13, 
+2017), 81 FR 24908 (April 27, 2016) (File No. 4-631) (Order 
+approving 12th Amendment to the LULD Plan) [sic].
+---------------------------------------------------------------------------
+
+    Finally, because proposed Rule 7.11 would govern trading in UTP 
+Securities and the Exchange would not conduct auctions for such 
+securities, the Exchange does not propose rule text from NYSE American 
+Rule 7.11E(b) that describes how the Exchange would re-open trading in 
+a security. The Exchange proposes that Rule 7.11(b)(1) would be based 
+on rule text from NYSE American Rule 7.11E(b)(1).
+    Because the proposed rule covers the same subject matter as Rule 
+80C, the Exchange proposes that Rule 80C would not be applicable to 
+trading UTP Securities on the Pillar trading platform.
+Proposed Rule 7.16
+    Proposed Rule 7.16 (Short Sales) would establish requirements 
+relating to short sales. The proposed rule is based on NYSE Arca 
+Equities Rule 7.16 and NYSE American Rule 7.16E with two substantive 
+differences. First, because the proposed rule would not be applicable 
+to any securities that are listed on the Exchange, the Exchange would 
+not be evaluating whether the short sale price test restrictions of 
+Rule 201 of Regulation SHO have been triggered. Accordingly, the 
+Exchange does not propose rule text based on NYSE Arca Equities Rule 
+7.16(f)(3) or NYSE American Rule 7.16E(f)(3) and would designate that 
+sub-paragraph as ``Reserved.'' For similar reasons, the Exchange 
+proposes not to include rule text based on NYSE Arca Equities Rules 
+7.16(f)(4)(A) and (B) or NYSE American Rule 7.16E(f)(4)(A) and (B).
+    Second, because the Exchange would not be offering Tracking Orders, 
+Cross Orders, or the Proactive if Locked/Crossed Modifier, the Exchange 
+does not propose rule text based on NYSE Arca Equities Rule 
+7.16(f)(5)(D), (G), or (I) or NYSE American Rule 7.16E(f)(5)(D), (G), 
+or (I). The Exchange proposes to designate proposed Rules 7.16(f)(5)(D) 
+and (G) as ``Reserved.''
+    Because the proposed rule covers the same subject matter as Rule 
+440B (Short Sales), the Exchange proposes that Rule 440B would not be 
+applicable to trading UTP Securities on the Pillar trading platform.
+Proposed Rule 7.18
+    The Exchange proposes to amend Rule 7.18 (Halts) to establish how 
+the Exchange would process orders during a halt in a UTP Security and 
+when it would halt trading in a UTP Exchange Traded Product.\30\ 
+Proposed Rule
+
+[[Page 37268]]
+
+7.18(b) would provide that the Exchange would not conduct a Trading 
+Halt Auction in a UTP Security and would process new and existing 
+orders in a UTP Security during a UTP Regulatory Halt \31\ as described 
+in proposed Rule 7.18(b)(1)-(6). The proposed rule text is based on 
+NYSE Arca Equities Rule 7.18(b) and its sub-paragraphs (1)-(6) and NYSE 
+American Rule 7.18E(b) and its sub-paragraphs (1)-(6) with one 
+substantive difference. Because the Exchange would not be offering 
+``Primary Only'' orders, proposed Rule 7.18(b)(5) would not reference 
+such order types.
+---------------------------------------------------------------------------
+
+    \30\ The term ``UTP Exchange Traded Product'' is defined in Rule 
+1.1(bbb) to mean an Exchange Traded Product that trades on the 
+Exchange pursuant to unlisted trading privileges. The terms 
+``Exchange Traded Product'' and ``UTP Exchange Traded Product'' on 
+the Exchange have the same meaning as the NYSE Arca Equities terms 
+``Derivatives Securities Product'' and ``UTP Derivative Securities 
+Product,'' which are defined in NYSE Arca Equities Rule 1.1(bbb). 
+The Exchange proposes a non-substantive difference in proposed Rule 
+7.18 as compared to NYSE Arca Equities Rule 7.18 to use the 
+Exchange-defined terms.
+    \31\ The term ``UTP Regulatory Halt'' is defined in Rule 1.1(kk) 
+to mean a trade suspension, halt, or pause called by the UTP Listing 
+Market in a UTP Security that requires all market centers to halt 
+trading in that security.
+---------------------------------------------------------------------------
+
+    The Exchange proposes to amend Rule 7.18(d)(1)(A) to specify that 
+if a UTP Exchange Traded Product begins trading on the Exchange in the 
+Early Trading Session and subsequently a temporary interruption occurs 
+in the calculation or wide dissemination of the Intraday Indicative 
+Value (``IIV'') or the value of the underlying index, as applicable, to 
+such UTP Exchange Traded Product, by a major market data vendor, the 
+Exchange may continue to trade the UTP Exchange Traded Product for the 
+remainder of the Early Trading Session. This proposed rule text is 
+based on NYSE Arca Equities Rule 7.18(d)(1)(A) and NYSE American Rule 
+7.18E(d)(1)(A) without any substantive differences. The Exchange also 
+proposes to amend Rule 7.18(d)(1)(B) to change the reference from 
+``Exchange's Normal Trading Hours'' to the term ``Core Trading 
+Session,'' which would be defined in proposed Rule 7.34, described 
+below.
+    The Exchange also proposes to amend Rule 7.18(a) to change the 
+cross reference from Rule 80C to Rule 7.11 as proposed Rule 7.11 would 
+govern how the Exchange would comply with the LULD Plan for trading UTP 
+Securities.
+Proposed Rule 7.34
+    Proposed Rule 7.34 would establish trading sessions on the 
+Exchange. The Exchange proposes that on the Pillar trading platform, it 
+would have Early and Core Trading Sessions. Accordingly, proposed Rule 
+7.34 is based in part on NYSE Arca Equities Rule 7.34 and NYSE American 
+Rule 7.34E, with the following substantive differences. First, similar 
+to NYSE American, the Exchange proposes that the Early Trading Session 
+would begin at 7:00 a.m. Eastern Time. Similar to NYSE Arca Equities 
+and NYSE American, the Exchange would begin accepting orders 30 minutes 
+before the Early Trading Session begins, which means order entry 
+acceptance would begin at 6:30 a.m. Eastern Time. These differences 
+would be reflected in proposed Rule 7.34(a)(1).
+    Second, proposed Rule 7.34(b) would be new and is not based on NYSE 
+Arca Equities Rule 7.34(b) or NYSE American Rule 7.34E(b). Rather than 
+require member organizations to include a designation for which trading 
+session the order would be in effect, the Exchange proposes to specify 
+in Rule 7.34(b) and (c) which trading sessions an order would be deemed 
+designated. Proposed Rule 7.34(b)(1) would provide that unless 
+otherwise specified in Rule 7.34(c), an order entered before or during 
+the Early or Core Trading Session would be deemed designated for the 
+Early Trading Session and the Core Trading Session. Proposed Rule 
+7.34(b)(2) would provide that an order without a time-in-force 
+designation would be deemed designated with a day time-in-force 
+modifier.
+    Proposed Rule 7.34(c) would specify which orders would be permitted 
+in each session. Proposed Rule 7.34(c)(1) would provide that unless 
+otherwise specified in paragraphs (c)(1)(A)-(C), orders and modifiers 
+defined in Rule 7.31 would be eligible to participate in the Early 
+Trading Session. This proposed rule text is based on NYSE Arca Equities 
+Rule 7.34(c)(1) and NYSE American Rule 7.34E(c)(1) with a substantive 
+difference not to refer to orders ``designated'' for the Early Trading 
+Session. In addition, because the Exchange would not be offering a 
+Retail Liquidity Program, the Exchange would not reference Rule 7.44.
+    <bullet> Proposed Rule 7.34(c)(1)(A) would provide that Pegged 
+Orders would not be eligible to participate in the Early Trading 
+Session. This rule text is based in part on NYSE Arca Equities Rule 
+7.34(c)(1)(A) and NYSE American Rule 7.34E(c)(1)(A) in the [sic] Pegged 
+Orders would not be eligible to participate in the Early Trading 
+Session. The Exchange proposes a substantive difference from the NYSE 
+Arca Equities and NYSE American rules because proposed Rule 
+7.34(c)(1)(A) would not refer to Market Orders. Market Orders entered 
+during the Early Trading Session would be addressed in proposed Rule 
+7.34(c)(1)(C), described below. The proposed rule would further provide 
+that Non-Displayed Primary Pegged Orders entered before the Core 
+Trading Session would be rejected and Primary Pegged Orders entered 
+before the Core Trading Session would be accepted but would not be 
+eligible to trade until the Core Trading Session begins. This rule text 
+is based in part on both NYSE Arca Equities Rule 7.34(c)(1)(A) and NYSE 
+American Rule 7.34E(c)(1)(A), but uses terminology consistent with the 
+Exchange's proposed order types.
+    <bullet> Proposed Rule 7.34(c)(1)(B) would provide that Limit 
+Orders designated IOC would be rejected if entered before the Early 
+Trading Session begins. This proposed rule is based on NYSE Arca 
+Equities Rule 7.34(c)(1)(B) and NYSE American Rule 7.34E(c)(1)(B) with 
+two substantive differences. First, because the Exchange would not be 
+conducting auctions, the Exchange proposes to specify that the 
+rejection period would begin ``before the Early Trading Session 
+begins'' rather than state ``before the Early Open Auction concludes.'' 
+Second, the Exchange would not refer to Cross Orders, which would not 
+be offered on the Exchange.
+    <bullet> Proposed Rule 7.34(c)(1)(C) would provide that Market 
+Orders and Auction-Only Orders in UTP Securities entered before the 
+Core Trading Session begins would be routed to the primary listing 
+market on arrival and any order routed directly to the primary listing 
+market on arrival would be cancelled if that market is not accepting 
+orders. This proposed rule is based on NYSE Arca Equities Rule 
+7.34(c)(1)(D) and NYSE American Rule 7.34E(c)(1)(D) with a non-
+substantive difference to specify that such orders would be routed 
+until the Core Trading Session begins.
+    Proposed Rule 7.34(c)(2) would provide that unless otherwise 
+specified in Rule 7.34(c)(2)(A)-(B), all orders and modifiers defined 
+in Rule 7.31 would be eligible to participate in the Core Trading 
+Session. This proposed rule text is based on NYSE Arca Equities Rule 
+7.34(c)(2) and NYSE American Rule 7.34E(c)(2) with a substantive 
+difference not to refer to orders ``designated'' for the Core Trading 
+Session. In addition, because the Exchange would not be offering a 
+Retail Liquidity Program, the Exchange would not reference Rule 7.44.
+    <bullet> Proposed Rule 7.34(c)(2)(A) would provide that Market 
+Orders in UTP Securities would be routed to the primary listing market 
+until the first opening print of any size on the primary listing market 
+or 10:00 a.m. Eastern Time, whichever is earlier. This
+
+[[Page 37269]]
+
+proposed rule is based on NYSE Arca Equities Rule 7.34(c)(2)(A) and 
+NYSE American Rule 7.34E(c)(2)(A) with a non-substantive difference to 
+use the term ``UTP Securities'' instead of referencing orders that 
+``are not eligible for the Core Open Auction.''
+    <bullet> Proposed Rule 7.34(c)(2)(B) would provide that Auction-
+Only Orders in UTP Securities would be accepted and routed directly to 
+the primary listing market. This proposed rule is based on NYSE Arca 
+Equities Rule 7.34(c)(2)(B) and NYSE American Rule 7.34E(c)(2)(B) with 
+a non-substantive difference to use the term ``UTP Securities'' instead 
+of referencing orders that ``are not eligible for an auction on the 
+Exchange.''
+    Proposed Rule 7.34(d) would establish requirements for member 
+organizations to provide customer disclosure when accepting orders for 
+execution in the Early Trading Session. The proposed rule is based on 
+NYSE Arca Equities Rule 7.34(d) and NYSE American Rule 7.34E(d) without 
+any substantive differences.
+    Proposed Rule 7.34(e) would provide that trades on the Exchange 
+executed and reported outside of the Core Trading Session would be 
+designated as .T trades. This proposed rule is based on NYSE Arca 
+Equities Rule 7.34(e) and NYSE American Rule 7.34E(e) without any 
+substantive differences.
+Proposed Rule 7.38
+    Proposed Rule 7.38 (Odd and Mixed Lot) would establish requirements 
+relating to odd lot and mixed lot trading on the Exchange. The proposed 
+rule is based on NYSE Arca Equities Rule 7.38 and NYSE American Rule 
+7.38E with one substantive difference. Because orders ranked Priority 
+2--Display Orders, including odd-lot sized orders, are on an allocation 
+wheel at their display price, the Exchange proposes that if the display 
+price of an odd-lot order to buy (sell) is above (below) its working 
+price (i.e., the PBBO, which is the price at which the odd-lot order is 
+eligible to trade, has crossed the display price of that odd-lot 
+order), the odd-lot order would be ranked and allocated based on its 
+display price. In such case, the order would execute at its working 
+price, but if there is more than one odd-lot order at the different 
+display price, they would be allocated on parity.
+    For example, if at 10.02, the Exchange has an order ``A'' to buy 50 
+shares ranked Priority 2--Display Orders, and at 10.01, the Exchange 
+has an order ``B'' to buy 10 shares ranked Priority 2--Display Orders, 
+an order ``C'' to buy 10 shares ranked Priority 2--Display Orders, and 
+an order ``D'' to buy 10 shares ranked Priority 2--Display Orders, and 
+the parity pointer is on order ``C,'' if the Away Market PBO becomes 
+10.00, which crosses the display price of ``A,'' ``B,'' ``C,'' and 
+``D,'' those orders would trade at 10.00. If the Exchange were to 
+receive a Market Order to sell 70 shares, it would trade at 10.00 and 
+be allocated 50 shares to ``A,'' 10 shares to ``C,'' and 10 shares to 
+``D.'' ``B'' would not receive an allocation based on its position on 
+the allocation wheel.
+    The Exchange proposes that Rule 61 (Recognized Quotations) would 
+not be applicable to trading UTP Securities on the Pillar trading 
+platform.
+Proposed Rule 7.46
+    Section 5 of Rule 7P would establish requirements relating to the 
+Plan to Implement a Tick Size Pilot Program. Proposed Rule 7.46 (Tick 
+Size Pilot Plan) would specify such requirements. The proposed rule is 
+based on NYSE American Rule 7.46E with the following substantive 
+differences for proposed Rule 7.46(f). First, because the Exchange 
+would not offer Market Pegged Orders, the Exchange proposes that 
+paragraph (f)(3) of the Rule would be designated as ``Reserved.'' 
+Second, the Exchange proposes to set forth the priority of resting 
+orders both for ranking and for allocation. For Pilot Securities in 
+Test Group Three, proposed Rule 7.46(f)(5)(A) would govern ranking 
+instead of proposed Rule 7.36(e), described above, as follows:
+    <bullet> Priority 2--Display Orders. Non-marketable Limit Orders 
+with a displayed working price would have first priority.
+    <bullet> Protected Quotations of Away Markets. Protected quotations 
+of Away Markets would have second priority.
+    <bullet> Priority 1--Market Orders. Unexecuted Market Orders would 
+have third priority.
+    <bullet> Priority 3--Non-Display Orders. Non-marketable Limit 
+Orders for which the working price is not displayed, including reserve 
+interest of Reserve Orders, would have fourth priority.
+    For Pilot Securities in Test Group Three, proposed Rule 
+7.46(f)(5)(B) would set forth how an Aggressing Order would be 
+allocated against contra-side orders, instead of proposed Rule 
+7.37(b)(1), described above, as follows:
+    <bullet> First, an order with Setter Priority that has a display 
+price and working price equal to the BBO would receive 15% of the 
+remaining quantity of the Aggressing Order, rounded up to the next 
+round lot size or the remaining displayed quantity of the order with 
+Setter Priority, whichever is lower. An order with Setter Priority 
+would be eligible for Setter Priority allocation if the BBO is no 
+longer the same as the NBBO.
+    <bullet> Next, orders ranked Priority 2--Displayed Orders would be 
+allocated on parity by Participant. The remaining quantity of the order 
+with Setting Priority would be eligible to participate in this parity 
+allocation, consistent with the allocation wheel position of the 
+Participant that entered the order with Setter Priority.
+    <bullet> Next, subject to proposed Rule 7.46(f)(5)(F) (describing 
+orders with instructions not to route), the Exchange would route the 
+Aggressing Order to protected quotations of Away Markets.
+    <bullet> Next, orders ranked Priority 1--Market Orders would trade 
+based on time.
+    <bullet> Next, orders ranked Priority 3--Non-Display Orders, other 
+than MPL Orders with an MTS, would be allocated on parity by 
+Participant.
+    <bullet> Next, MPL Orders with an MTS would be allocated based on 
+MTS size (smallest to largest) and time.
+    Third, the Exchange would not include rule text based on NYSE 
+American Rule 7.46E(f)(G), relating to Limit IOC Cross Orders, which 
+would not be offered on the Exchange. Finally, proposed Rules 
+7.46(f)(5)(F)(i)(a) and (b) are based on NYSE Arca Equities Rules 
+7.46(f)(5)(F)(i)(a) and (b) and not the NYSE American version of the 
+rule because NYSE American does not offer Day ISO orders.
+    The Exchange proposes that Rule 67 (Tick Size Pilot Plan) would not 
+be applicable to trading UTP Securities on the Pillar trading platform.
+Amendments to Rule 103B and 107B
+    As described above, the Exchange would not assign UTP Securities to 
+DMMs. Accordingly, the Exchange proposes to amend Rule 103B(I) 
+(Security Allocation and Reallocation) to specify that UTP Securities 
+would not be allocated to a DMM unit.
+    In addition, because UTP Securities would be eligible to be 
+assigned to Supplemental Liquidity Providers, the Exchange proposes to 
+amend Rule 107B (Supplemental Liquidity Providers) to replace the term 
+``NYSE-listed securities'' with the term ``NYSE-traded securities,'' 
+which would include UTP Securities.
+Current Rules That Would Not Be Applicable to Trading UTP Securities on 
+Pillar
+    As described in more detail above, in connection with the proposed 
+rules to support trading of UTP Securities on the Pillar trading 
+platform, the Exchange has identified current Exchange rules that would 
+not be applicable because
+
+[[Page 37270]]
+
+they would be superseded by a proposed rule. The Exchange has 
+identified additional current rules that would not be applicable to 
+trading on Pillar. These rules do not have a counterpart in the 
+proposed Pillar rules, described above, but would be obsolete when 
+trading UTP Securities on Pillar.
+    The main category of rules that would not be applicable to trading 
+on the Pillar trading platform are those rules that are specific to 
+auctions and Floor-based point-of-sale trading, including requirements 
+relating to DMMs and Floor brokers. For this reason, the Exchange 
+proposes that the following Floor-specific rules would not be 
+applicable to trading on the Pillar trading platform:
+    <bullet> Rule 15 (Pre-Opening Indication and Opening Order 
+Imbalance Information).
+    <bullet> Rule 74 (Publicity of Bids and Offers).
+    <bullet> Rule 75 (Disputes as to Bids and Offers).
+    <bullet> Rule 76 (`Crossing' Orders).
+    <bullet> Rule 77 (Prohibited Dealings and Activities).
+    <bullet> Rule 79A (Miscellaneous Requirements on Stock Market 
+Procedures).
+    <bullet> Rule 108 (Limitation on Members' Bids and Offers).
+    <bullet> Rule 111 (Reports of Executions).
+    <bullet> Rule 115A (Orders at Opening).
+    <bullet> Rule 116 (`Stop' Constitutes Guarantee).
+    <bullet> Rule 123A (Miscellaneous Requirements).
+    <bullet> Rule 123B (Exchange Automated Order Routing System).
+    <bullet> Rule 123C (The Closing Procedures).
+    <bullet> Rule 123D (Openings and Halts in Trading).
+    <bullet> Rule 127 (Block Crosses Outside the Prevailing NYSE 
+Quotation).
+    In addition, as noted above, the Exchange would not offer a Retail 
+Liquidity Program when it trades on the Pillar trading platform. 
+Proposed rules that are based on NYSE Arca Equities rules that include 
+a cross reference to NYSE Arca Equities Rule 7.44 would not include 
+that rule reference. The Exchange also proposes that Rule 107C would 
+not be applicable to trading UTP Securities on the Pillar trading 
+platform.
+* * * * *
+    As discussed above, because of the technology changes associated 
+with the migration to the Pillar trading platform, the Exchange will 
+announce by Trader Update when the Pillar rules for trading UTP 
+Securities will become operative.
+2. Statutory Basis
+    The proposed rule change is consistent with Section 6(b) of the 
+Securities Exchange Act of 1934 (the ``Act''),\32\ in general, and 
+furthers the objectives of Section 6(b)(5),\33\ in particular, because 
+it is designed to prevent fraudulent and manipulative acts and 
+practices, to promote just and equitable principles of trade, to foster 
+cooperation and coordination with persons engaged in facilitating 
+transactions in securities, to remove impediments to, and perfect the 
+mechanism of, a free and open market and a national market system and, 
+in general, to protect investors and the public interest. The Exchange 
+believes that the proposed rules to support Pillar on the Exchange 
+would remove impediments to and perfect the mechanism of a free and 
+open market because they provide for rules to support the Exchange's 
+introduction of trading UTP Securities on the Pillar trading platform.
+---------------------------------------------------------------------------
+
+    \32\ 15 U.S.C. 78f(b).
+    \33\ 15 U.S.C. 78f(b)(5).
+---------------------------------------------------------------------------
+
+    Generally, the Exchange believes that the proposed rules would 
+remove impediments to and perfect the mechanism of a free and open 
+market and a national market system because they would support the 
+Exchange's introduction of trading UTP Securities in a manner that 
+would use Pillar terminology to describe how the Exchange's current 
+Floor-based parity allocation model with Setter Priority would operate, 
+with specified substantive differences from current rules, and 
+introduce Pillar rules for the Exchange that are based on the rules of 
+its affiliated markets, NYSE Arca Equities and NYSE American.
+    With respect to how UTP Securities would be ranked, displayed, 
+executed, and routed on Pillar, the Exchange believes that proposed 
+Rules 7.36(a)-(g) and proposed Rules 7.37(a) and (c)-(g) would remove 
+impediments to and perfect the mechanism of a free and open market and 
+a national market system because these rules would use Pillar 
+terminology that is based on the approved rules of NYSE Arca Equities 
+and NYSE American. The Exchange believes that proposed Rule 7.36(h), 
+which would establish Setter Priority, would remove impediments to and 
+perfect the mechanism of a free and open market and a national market 
+system because the proposed rule is based on current Rule 72(a), with 
+substantive differences designed to encourage the display of 
+aggressively-priced orders by requiring that an order not only 
+establish the BBO, but also establish or join the NBBO to be eligible 
+for Setter Priority. The Exchange similarly believes that proposed Rule 
+7.37(b), which would use Pillar terminology to describe how an 
+Aggressing Order would be allocated, would remove impediments to and 
+perfect the mechanism of a free and open market and a national market 
+system because it is based on current Rule 72(b) and (c). The Exchange 
+believes that the proposed substantive difference to maintain separate 
+allocation wheels for displayed and non-displayed orders at each price 
+would promote just and equitable principles of trade because it would 
+allow for Exchange member organizations to establish their position on 
+an allocation wheel at each price point, rather than rely on their 
+position on a single allocation wheel that would be applicable to 
+trades at multiple price points.
+    The Exchange believes that proposed Rules 7.10, 7.11, 7.16, 7.18, 
+7.31, 7.34, 7.38, and 7.46 would remove impediments to and perfect the 
+mechanism of a free and open market and a national market system 
+because they are based on the rules of NYSE Arca Equities and NYSE 
+American. The proposed substantive differences to the Exchange's rules 
+would be because the Exchange would not be offering the full suite of 
+orders and modifiers available on NYSE Arca Equities and NYSE American. 
+In addition, the Exchange proposes substantive differences to these 
+rules consistent with the Exchange's proposed parity allocation model. 
+The Exchange believes that the proposed substantive differences for 
+these rules would remove impediments to and perfect the mechanism of a 
+free and open market and a national market system because they would 
+provide transparency of which orders, modifiers and instructions would 
+be available on the Exchange when it begins trading UTP Securities on 
+the Pillar trading platform, and how the Pillar rules would function 
+with a parity allocation model.
+    The Exchange believes that the proposed substantive differences to 
+Rule 7.34 to offer Early and Core Trading Sessions, but not a Late 
+Trading Session, would remove impediments to and perfect the mechanism 
+of a free and open market and a national market system because it is 
+consistent with the Exchange's current hours, described in Rule 51, 
+that the Exchange is not open for business after 4:00 p.m. Eastern 
+Time. The Exchange further believes that adding a trading session 
+before 9:30 a.m. Eastern Time would provide additional time for 
+Exchange member organizations to trade UTP Securities on the Exchange 
+consistent with the trading hours of other exchanges,
+
+[[Page 37271]]
+
+including NYSE American, which also will begin trading at 7:00 a.m. 
+Eastern Time.
+    The Exchange believes that the proposed amendments to Rules 103B 
+and 107B would remove impediments to and perfect the mechanism of a 
+free and open market and a national market system because they would 
+provide transparency that the Exchange would not be assigning UTP 
+Securities to DMMs and that member organizations would be eligible to 
+register as a Supplemental Liquidity Providers in UTP Securities. The 
+Exchange further believes that not assigning DMMs to UTP Securities is 
+consistent with just and equitable principles of trade because the 
+Exchange would not be conducting auctions in UTP Securities and 
+therefore the Exchange would not need DMMs assigned to such securities 
+to facilitate auctions. Not having DMMs registered in UTP Securities is 
+also consistent with how NYSE Arca Equities and NYSE American function 
+on Pillar, in that neither lead market makers (on NYSE Arca Equities) 
+nor electronic designated market makers (on NYSE American) are assigned 
+securities not listed on those exchanges. The Exchange further believes 
+that it would remove impediments to and perfect the mechanism of a free 
+and open market and a national market system for member organizations 
+to be eligible to register as Supplemental Liquidity Providers in UTP 
+Securities as this would provide an incentive for displayed liquidity 
+in UTP Securities.
+    The Exchange further believes that it would remove impediments to 
+and perfect the mechanism of a free and open market and a national 
+market system to specify which current rules would not be applicable to 
+trading UTP Securities on the Pillar trading platform. The Exchange 
+believes that the following legend, which would be added to existing 
+rules, ``This Rule is not applicable to trading UTP Securities on the 
+Pillar trading platform,'' would promote transparency regarding which 
+rules would govern trading UTP Securities on the Exchange on Pillar. 
+The Exchange has proposed to add this legend to rules that would be 
+superseded by proposed rules or rules that would not be applicable 
+because they relate to auctions or Floor-based point-of-sale trading.
+
+B. Self-Regulatory Organization's Statement on Burden on Competition
+
+    The Exchange does not believe that the proposed rule change will 
+impose any burden on competition that is not necessary or appropriate 
+in furtherance of the purposes of the Act. The proposed change is 
+designed to propose rules to support trading of UTP Securities on the 
+Exchange's new Pillar trading platform. The Exchange operates in a 
+highly competitive environment in which its unaffiliated exchange 
+competitors operate multiple affiliated exchanges that operate under 
+common rules. By adding the trading of UTP Securities on the Exchange, 
+the Exchange believes that it will be able to compete on a more level 
+playing field with its exchange competitors that similarly trade all 
+NMS Stocks. In addition, by basing certain rules on those of NYSE Arca 
+Equities and NYSE American, the Exchange will provide its members with 
+consistency across affiliated exchanges, thereby enabling the Exchange 
+to compete with unaffiliated exchange competitors that similarly 
+operate multiple exchanges on the same trading platforms.
+
+C. Self-Regulatory Organization's Statement on Comments on the Proposed 
+Rule Change Received From Members, Participants, or Others
+
+    No written comments were solicited or received with respect to the 
+proposed rule change.
+
+III. Date of Effectiveness of the Proposed Rule Change and Timing for 
+Commission Action
+
+    Within 45 days of the date of publication of this notice in the 
+Federal Register or up to 90 days (i) as the Commission may designate 
+if it finds such longer period to be appropriate and publishes its 
+reasons for so finding or (ii) as to which the self-regulatory 
+organization consents, the Commission will:
+    (A) By order approve or disapprove the proposed rule change, or
+    (B) institute proceedings to determine whether the proposed rule 
+change should be disapproved.
+
+IV. Solicitation of Comments
+
+    Interested persons are invited to submit written data, views, and 
+arguments concerning the foregoing, including whether the proposed rule 
+change is consistent with the Act. Comments may be submitted by any of 
+the following methods:
+
+Electronic Comments
+
+    <bullet> Use the Commission's Internet comment form (<a href="http://www.sec.gov/rules/sro.shtml">http://www.sec.gov/rules/sro.shtml</a>); or
+    <bullet> Send an email to <a href="/cdn-cgi/l/email-protection#394b4c555c145a5654545c574d4a794a5c5a175e564f"><span class="__cf_email__" data-cfemail="c6b4b3aaa3eba5a9ababa3a8b2b586b5a3a5e8a1a9b0">[email&#160;protected]</span></a>. Please include 
+File Number SR-NYSE-2017-36 on the subject line.
+
+Paper Comments
+
+    <bullet> Send paper comments in triplicate to Secretary, Securities 
+and Exchange Commission, 100 F Street NE., Washington, DC 20549-1090.
+
+All submissions should refer to File Number SR-NYSE-2017-36. This file 
+number should be included on the subject line if email is used. To help 
+the Commission process and review your comments more efficiently, 
+please use only one method. The Commission will post all comments on 
+the Commission's Internet Web site (<a href="http://www.sec.gov/rules/sro.shtml">http://www.sec.gov/rules/sro.shtml</a>). Copies of the submission, all subsequent amendments, all 
+written statements with respect to the proposed rule change that are 
+filed with the Commission, and all written communications relating to 
+the proposed rule change between the Commission and any person, other 
+than those that may be withheld from the public in accordance with the 
+provisions of 5 U.S.C. 552, will be available for Web site viewing and 
+printing in the Commission's Public Reference Room, 100 F Street NE., 
+Washington, DC 20549 on official business days between the hours of 
+10:00 a.m. and 3:00 p.m. Copies of the filing also will be available 
+for inspection and copying at the principal office of the Exchange. All 
+comments received will be posted without change; the Commission does 
+not edit personal identifying information from submissions. You should 
+submit only information that you wish to make available publicly. All 
+submissions should refer to File Number SR-NYSE-2017-36 and should be 
+submitted on or before August 30, 2017.
+
+    For the Commission, by the Division of Trading and Markets, 
+pursuant to delegated authority.\34\
+---------------------------------------------------------------------------
+
+    \34\ 17 CFR 200.30-3(a)(12).
+---------------------------------------------------------------------------
+
+Eduardo A. Aleman,
+Assistant Secretary.
+[FR Doc. 2017-16742 Filed 8-8-17; 8:45 am]
+ BILLING CODE 8011-01-P
+
+
+</pre><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

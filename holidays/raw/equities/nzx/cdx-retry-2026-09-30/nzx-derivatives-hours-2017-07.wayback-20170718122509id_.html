@@ -1,0 +1,595 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"6cf57c4df7","applicationID":"214909","transactionName":"e1ZXEkdcXVVURBoFAEpQTwdBWkdcQhlBEwRcUFcBalteTENF","queueTime":0,"applicationTime":288,"agentToken":null,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <title>NZX Derivatives</title>
+
+  <link href="/assets/application.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/ejsc/EJSChart.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/jquery-ui/jquery-ui.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript">
+    var siteTarget = "/SITE=NZX/AREA=HOME.ITEM";
+    var keyword = '';
+  </script>
+
+  <!-- -From gon gem -->
+  
+  <!-- -From gon gem -->
+
+  <script src="/assets/ejsc/EJSChart.js" type="text/javascript"></script>
+  <script src="/assets/application.js" type="text/javascript"></script>
+  <!--[if lt IE 8]>
+    <script src="/assets/vendor/html5shiv.min.js" type="text/javascript"></script>
+    <link href="/assets/ie8.css" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <!--[if lt IE 9]>
+    <script src="/assets/vendor/html5shiv.min.js" type="text/javascript"></script>
+    <link href="/assets/ie9.css" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  
+
+  <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+  <script>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+  </script>
+  <script>
+    googletag.cmd.push(function() {
+      googletag.defineSlot('/76899239/Leaderboard_Old', [728, 90], 'div-gpt-ad-1485478378598-0').addService(googletag.pubads());
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });
+  </script>
+  <script>
+    googletag.cmd.push(function() {
+      googletag.defineSlot('/76899239/MRec_Old', [300, 250], 'div-gpt-ad-1485478487025-0').addService(googletag.pubads());
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });
+  </script>
+
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="9Jd4KO5NrxfmzKUXPW9R+ChRyucwPR3zfIctjhJ9gv8=" name="csrf-token" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2">
+  <link href="/assets/apple/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" type="image/png" />
+<link href="/assets/apple/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" type="image/png" />
+<link href="/assets/apple/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png" />
+<link href="/assets/apple/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" type="image/png" />
+<link href="/assets/apple/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png" />
+<link href="/assets/apple/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" type="image/png" />
+<link href="/assets/apple/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png" />
+<link href="/assets/apple/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" type="image/png" />
+<link href="/assets/apple/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" type="image/png" />
+
+<link href="/assets/apple/apple-icon-57x57.png" rel="apple-icon" sizes="57x57" type="image/png" />
+<link href="/assets/apple/apple-icon-60x60.png" rel="apple-icon" sizes="60x60" type="image/png" />
+<link href="/assets/apple/apple-icon-72x72.png" rel="apple-icon" sizes="72x72" type="image/png" />
+<link href="/assets/apple/apple-icon-76x76.png" rel="apple-icon" sizes="76x76" type="image/png" />
+<link href="/assets/apple/apple-icon-114x114.png" rel="apple-icon" sizes="114x114" type="image/png" />
+<link href="/assets/apple/apple-icon-120x120.png" rel="apple-icon" sizes="120x120" type="image/png" />
+<link href="/assets/apple/apple-icon-144x144.png" rel="apple-icon" sizes="144x144" type="image/png" />
+<link href="/assets/apple/apple-icon-152x152.png" rel="apple-icon" sizes="152x152" type="image/png" />
+<link href="/assets/apple/apple-icon-180x180.png" rel="apple-icon" sizes="180x180" type="image/png" />
+
+  <meta name="msapplication-config" content="/assets/browserconfig.xml" />
+
+  <meta http-equiv="imagetoolbar" content="no">
+</head>
+
+<body>
+  <section class="interface">
+    <div class="status-bar">
+      <div class="fixed-width">
+        <ul id="featured-indices">
+            <li>
+              <span class="index-name">S&amp;P/NZX 50 </span>
+              0 <span>0.00%</span>
+            </li>
+            <li>
+              <span class="index-name">S&amp;P/NZX 20 </span>
+              0 <span>0.00%</span>
+            </li>
+            <li>
+              <span class="index-name">S&amp;P/NZX 10 </span>
+              0 <span>0.00%</span>
+            </li>
+        </ul>
+
+        <div id="search">
+          <div id="search-form" class="fragment float-right" ng-cloak ng-app="searchApp" ng-controller="searchController" >
+  <form id="search-form" action="/search" method="get">
+    <input ng-model="queryKeyword" ng-change="searchKeyword()" id="search_query" type="search" name="query" method="get" autocomplete="off" placeholder="Search by company name or code" >
+    <input name="authenticity_token" type="hidden" value=9Jd4KO5NrxfmzKUXPW9R+ChRyucwPR3zfIctjhJ9gv8=>
+    <input type="submit" value="" title="Submit" name="commit">
+  </form>
+
+  <ol id="search-results" class="menu-fragment-children">
+    <li ng-hide="emptyQ('securities')">
+      <div class="hd">securities</div>
+      <ol id="search-results-companies" ng-repeat="item in searchResults['securities']">
+        <li class="menu-fragment-child">
+          <a href="{{item.url}}"> <strong>{{item.code}}</strong> {{item.name}} </a>
+        </li>
+      </ol>
+    </li>
+
+    <li ng-hide="emptyQ('hybrids')">
+      <div class="hd">Price traded securities</div>
+      <ol id="search-results-companies" ng-repeat="item in searchResults['hybrids']">
+        <li class="menu-fragment-child">
+          <a href="{{item.url}}"> <strong>{{item.code}}</strong> {{item.name}} </a>
+        </li>
+      </ol>
+    </li>
+
+    <li ng-hide="emptyQ('bonds')">
+      <div class="hd">Yield traded securities</div>
+      <ol id="search-results-companies" ng-repeat="item in searchResults['bonds']">
+        <li class="menu-fragment-child">
+          <a href="{{item.url}}"> <strong>{{item.code}}</strong> {{item.name}} </a>
+        </li>
+      </ol>
+    </li>
+
+    <li ng-hide="emptyQ('companies')">
+      <div class="hd">companies</div>
+      <ol id="search-results-companies" ng-repeat="item in searchResults['companies']">
+        <li class="menu-fragment-child">
+          <a href="{{item.url}}"> <strong>{{item.code}}</strong> {{item.name}} </a>
+        </li>
+      </ol>
+    </li>
+
+    <li ng-hide="emptyQ('regulators')">
+      <div class="hd">regulators</div>
+      <ol id="search-results-companies" ng-repeat="item in searchResults['regulators']">
+        <li class="menu-fragment-child">
+          <a href="{{item.url}}"> <strong>{{item.code}}</strong> {{item.name}} </a>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</div>
+
+        </div>
+
+        <ul class="social-links">
+          <li><a href="https://www.linkedin.com/company/75896" class="linkedin"></a></li>
+          <li><a href="https://twitter.com/NZXGroup" class="twitter"></a></li>
+          <li><a href="https://www.youtube.com/channel/UCZ6mjQForwG_IrR64NZAkOw" class="youtube"></a></li>
+        </ul>
+      </div>
+    </div>
+
+    
+
+    <header class="awesome">
+      <div class="fixed-width">
+      <h1 class="fragment logo-fragment"><a href="/" title="NZX Homepage"></a></h1>
+
+      <div class="awesome-primary">
+        <div class="fragments-wrapper">
+          <div class="fragment expandable-menu-fragment menu-fragment">
+            <a href="/markets">Markets</a>
+
+              <ul class="menu-fragment-children">
+                <li class="menu-fragment-child"><a href="/markets/NZSX">NZX Main Board</a></li>
+                <li class="menu-fragment-child"><a href="http://www.nxt.co.nz">NXT Market</a></li>
+                <li class="menu-fragment-child"><a href="/markets/NZAX">NZX Alternative Market</a></li>
+                <li class="menu-fragment-child"><a href="/markets/NZDX">NZX Debt Market</a></li>
+                <li class="menu-fragment-child"><a href="/derivatives">NZX Derivatives</a></li>
+                <li class="menu-fragment-child"><a href="/markets/NZZX">Fonterra Shareholders&#x27; Market</a></li>
+              </ul>
+          </div>
+
+          <div class="fragment menu-fragment">
+            <a href="/regulation">Regulation</a>
+          </div>
+
+          <div class="fragment menu-fragment ">
+            <a href="/products">Products</a>
+          </div>
+
+          <div class="fragment menu-fragment ">
+            <a href="/services">Services</a>
+          </div>
+
+          <div class="fragment menu-fragment ">
+            <a href="/investing">Investing</a>
+          </div>
+
+          <div class="fragment menu-fragment">
+            <a href="http://www.nzxgroup.com">Corporate</a>
+          </div>
+
+          <div class="fragment menu-fragment">
+            <a href="/login">My NZX</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="fixed-width">
+        <header class="headline">
+          <aside class="slice ad-slice leaderboard_ad">
+    <div class="advertisement-text">Advertisement</div>
+    <div id='div-gpt-ad-1485478378598-0'>
+      <script>
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1485478378598-0'); });
+        </script>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        setTimeout(function(){
+          if ($('#div-gpt-ad-1485478378598-0').height() == 0){
+              $('#div-gpt-ad-1485478378598-0').parent().css("display","none");
+              $('#div-gpt-ad-1485478378598-0').parent().parent().addClass("no-ad")
+          }
+        }, 3000);
+      });
+    </script>
+</aside>
+
+          <div class="current_time">
+            <span class='date'>Wed 19 July</span>
+            <span class='time'>00:25:10 <small>NZST</small></span>
+          </div>
+          <div class="clearfix"></div>
+        </header>
+          <div class="master-detail-screen">
+    <div class="master inset-master">
+        <section class="choice-group"><ul class="choices">
+  <li><a href="/Derivatives" class="choice">NZX Derivatives</a></li>
+</ul></section>
+<section class="choice-group"><header class="choice-group-title"><a href="/derivatives#" class="content-title-anchor">Equity Derivatives</a></header><ul class="choices">    <li><a href="/markets/NZCX/derivative_quotes/index_futures" class="choice">Index Futures</a></li>
+    <li><a href="/markets/NZCX/derivative_quotes/equity_options" class="choice">Equity Options</a></li>
+</ul></section>
+<section class="choice-group"><ul class="choices">
+  <li><a href="/Derivatives/market_information" class="choice">Market Information</a></li>
+  <li><a href="/Derivatives/learn_more" class="choice">Learn More</a></li>
+  <li><a href="/Derivatives/trading_hours" class="choice current-choice">Trading Hours</a></li>
+  <li><a href="/Derivatives/reports" class="choice">Reports</a></li>
+</ul></section>
+
+    </div>
+    <div class="detail">
+        <header class="topic">
+    <h2>
+      
+
+      NZX Derivatives
+    </h2>
+    
+  </header>
+
+
+      
+
+<section id="calendar-entries" class="screen table-screen">
+<section id="trading-hours" class="screen table-screen">
+<h2>Dairy Derivatives Trading Hours</h2>
+<table>
+<thead>
+<tr><th>&nbsp;</th><th colspan="2">Dairy Futures</th><th colspan="2">Dairy Options</th></tr>
+<tr><th>Period</th><th>Monday</th><th>Tuesday - Friday</th><th>Monday</th><th>Tuesday - Friday</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Enquiry</td>
+<td><time>1:30am - 1<time>:40am</time></time></td>
+<td>1:30am - 1<time>:40am</time></td>
+<td><time><time><time><time>1:30am - 1<time>:40am</time></time></time></time></time></td>
+<td><time>1</time><time><time><time><time>:30am - 1<time>:40am</time></time></time></time></time></td>
+</tr>
+<tr>
+<td>Pre-open</td>
+<td><time>1:40am -&nbsp;<time>8:00am</time></time><time></time></td>
+<td><time>1:40am - 2<time>:00am</time></time></td>
+<td>1:40am -&nbsp;<time>8:00am</time></td>
+<td><time>1:40am</time>&nbsp;- 2<time>:00am</time></td>
+</tr>
+<tr>
+<td>Normal Trading</td>
+<td><span class="bold"><time>8:00am -&nbsp;<time>3:58pm</time></time><time></time></span></td>
+<td><span class="bold"><time>2:00am -&nbsp;<time>3:58pm</time></time></span></td>
+<td><span class="bold">8:00am - 4<time>:00pm</time></span></td>
+<td><span class="bold"><time>2:00am</time>&nbsp;- 4<time>:00pm</time></span></td>
+</tr>
+<tr>
+<td>Pre-close</td>
+<td><time>3:58pm -&nbsp;<time>4:00pm</time></time><time></time></td>
+<td><time>3:58pm - 4<time>:00pm</time></time></td>
+<td><time><time>4:00pm -&nbsp;<time>4:02pm</time></time></time></td>
+<td><time>4:00pm</time>&nbsp;- 4<time>:02pm</time></td>
+</tr>
+<tr>
+<td>Close</td>
+<td><time>4:00pm -&nbsp;<time>4:30pm</time></time><time></time></td>
+<td><time>4:00pm - 4<time>:30pm</time></time></td>
+<td><time><time>4:02pm -&nbsp;<time>4:30pm</time></time></time></td>
+<td><time>4:02pm</time>&nbsp;- 4<time>:30pm</time></td>
+</tr>
+<tr>
+<td>Enquiry</td>
+<td><time>4:30pm</time></td>
+<td>4:30pm</td>
+<td><time>4:30pm</time></td>
+<td><time>4:30pm</time></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calendar-entries" class="screen table-screen">
+<h2><strong>Notes:</strong></h2>
+<p class="p1">On days the GlobalDairyTrade (GDT) auction is held, Dairy Derivatives will be in HALT until 5.00am. GDT auction dates are published at:&nbsp;<span class="bold"><a href="http://www.globaldairytrade.info">www.globaldairytrade.info<br /><br /></a></span></p>
+<h2>&nbsp;</h2>
+<h2>Equity&nbsp;Derivatives Trading Hours</h2>
+<table>
+<thead>
+<tr><th>&nbsp;</th><th colspan="2">Index&nbsp;Futures</th><th colspan="2">Equity&nbsp;Options</th></tr>
+<tr><th>Period</th><th>Normal</th><th>Abbreviated</th><th>Normal</th><th>Abbreviated</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Enquiry</td>
+<td><time>1:30am - 9:00am</time></td>
+<td><time>1:30am - 9:00am</time></td>
+<td><time>1:30am - 9:00am</time></td>
+<td><time>1:30am - 9:00am</time></td>
+</tr>
+<tr>
+<td>Pre-open</td>
+<td><time>9:00am -&nbsp;9:45am</time></td>
+<td><time>9:00am -&nbsp;9:45am</time></td>
+<td><time>9:00am -&nbsp;10:00am</time></td>
+<td><time>9:00am -&nbsp;10:00am</time></td>
+</tr>
+<tr>
+<td>Normal Trading</td>
+<td><span class="bold"><time>9:45am -&nbsp;5:13pm</time></span></td>
+<td><time>9:45am -&nbsp;1:13pm</time></td>
+<td><span class="bold"><time>10:00am - 5:08pm</time></span></td>
+<td><time>10:00am -&nbsp;1:08pm</time></td>
+</tr>
+<tr>
+<td>Pre-close</td>
+<td><time>5:13pm -&nbsp;5:15pm</time></td>
+<td><time>1:13pm -&nbsp;1:15pm</time></td>
+<td><time>5:08pm -&nbsp;5:10pm</time></td>
+<td><time>1:08pm -&nbsp;1:10pm</time></td>
+</tr>
+<tr>
+<td>Close</td>
+<td><time>5:15pm -&nbsp;5:30pm</time></td>
+<td><time>1:15pm -&nbsp;1:30pm</time></td>
+<td><time>5:10pm -&nbsp;5:30pm</time></td>
+<td><time>1:10pm -&nbsp;1:30pm</time></td>
+</tr>
+<tr>
+<td>Enquiry</td>
+<td><time>5:30pm</time></td>
+<td>1:30pm&nbsp;</td>
+<td><time>5:30pm</time></td>
+<td>1:30pm&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<br />
+<p>&nbsp;</p>
+</section>
+<h2>Market Closed or Abbreviated Trading</h2>
+<table style="height: 335px;" width="773">
+<thead>
+<tr><th width="40%">Date</th><th width="30%">Description</th><th width="30%">Status</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 4px;">14/04/2017</td>
+<td>Good Friday</td>
+<td>Closed</td>
+</tr>
+<tr>
+<td style="width: 4px;">17/04/2017</td>
+<td>Easter Monday</td>
+<td>Closed</td>
+</tr>
+<tr>
+<td style="width: 4px;">25/04/2017</td>
+<td>Anzac Day</td>
+<td>Closed</td>
+</tr>
+<tr>
+<td style="width: 4px;">05/06/2017</td>
+<td>Queens Birthday</td>
+<td>Closed</td>
+</tr>
+<tr>
+<td style="width: 4px;">23/10/2017</td>
+<td>Labour Day</td>
+<td>Closed</td>
+</tr>
+<tr>
+<td style="width: 4px;">22/12/2017</td>
+<td>Business Day prior to Christmas Day&nbsp;</td>
+<td>Abbreviated (1)</td>
+</tr>
+<tr>
+<td style="width: 4px;">25/12/2017</td>
+<td>Christmas Day</td>
+<td>Closed</td>
+</tr>
+<tr>
+<td style="width: 4px;">26/12/2017</td>
+<td>Boxing Day</td>
+<td>Closed</td>
+</tr>
+<tr>
+<td style="width: 4px;">29/12/2017</td>
+<td>Business Day prior to New Years Day</td>
+<td>Abbreviated (1)</td>
+</tr>
+<tr>
+<td style="width: 4px;">01/01/2018</td>
+<td>New Year</td>
+<td>Closed</td>
+</tr>
+<tr>
+<td style="width: 4px;">02/01/2018</td>
+<td>New Year</td>
+<td>Closed</td>
+</tr>
+<tr>
+<td style="width: 4px;">06/02/2018</td>
+<td>Waitangi Day</td>
+<td>Closed</td>
+</tr>
+<tr>
+<td style="width: 4px;">30/03/2018</td>
+<td>Good Friday</td>
+<td>Closed</td>
+</tr>
+<tr>
+<td style="width: 4px;">02/04/2018</td>
+<td>Easter Monday</td>
+<td>Closed</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="screen table-screen"></section>
+<section class="screen table-screen"></section>
+<section class="screen table-screen"><strong>Notes:</strong></section>
+<section class="screen table-screen">
+<p style="font-size: 90%;">(1) &nbsp;NZX Dairy Derivatives Market will close at 1pm New Zealand Time (NZDT/NZST) on these dates. Index Futures and Equity Options Trading Hours will be shortened in line with the Abbreviated Trading column of the Index Futures Trading Hours table.</p>
+</section>
+
+    </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <footer class="foot fixed-width ">
+      <nav class="grid">
+        <div class="footer-grid">
+          <div class="footer-row">
+            <ul>
+              <li><h3>Markets</h3></li>
+
+              <li><a href="/markets/NZSX">NZX Main Board</a></li>
+              <li><a href="/markets/NZAX">NZX Alternative Market</a></li>
+              <li><a href="/markets/NZDX">NZX Debt Market</a></li>
+              <li><a href="/markets/NZZX">Fonterra Shareholders&#x27; Market</a></li>
+              <li><a href="/Derivatives">NZX Derivatives</a></li>
+              <li><a href="/data-policies">Data Glossary</a></li>
+            </ul>
+            <ul>
+              <li><h3>Regulation</h3></li>
+
+              <li><a href="/regulation">NZX Regulation</a></li>
+              <li><a href="/regulation/rules">Rules</a></li>
+              <li><a href="/NZMDT">NZMDT</a></li>
+              <li><a href="/regulation/complaints">Complaints &amp; Tips</a></li>
+              <li><a href="/regulation/faqs">FAQs</a></li>
+              <li><a href="/regulation/contact">Contact Us</a></li>
+            </ul>
+            <ul>
+
+              <li><h3>Products</h3></li>
+
+              <li><a href="/products">Products Overview</a></li>
+                <li><a href="/products/agrifax">AgriHQ</a></li>
+              <li><a href="/products/fundsource">FundSource</a></li>
+              <li><a href="/products/nzx-agri">NZX Agri</a></li>
+              <li><a href="/products/nzx-info">NZX Info</a></li>
+              <li><a href="/products/smartshares">Exchange Traded Funds (ETFs)</a></li>
+              <li><a href="/products/virtual-trading">NZX virtualTrading</a>
+
+            </ul>
+            <ul>
+              <li><h3>Services</h3></li>
+
+          <li><a href="/services">Services Overview</a></li>
+              <li><a href="/services/listing_sx_dx">Listing on the SX or DX</a></li>
+              <li><a href="/services/listing_fees">Listing Fees</a></li>
+              <li><a href="/services/become_a_participant">Become a Participant</a></li>
+              <li><a href="/services/become_a_vendor">Become a Data Vendor</a></li>
+            </ul>
+            <ul>
+              <li><h3>Investing</h3></li>
+
+              <li><a href="/investing">Investing Overview</a></li>
+              <li><a href="/investing/find_a_participant">Find a Participant</a></li>
+              <li><a href="/upcoming_listings">Upcoming Listings</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <p>&copy; Copyright 2017 NZX Limited | Market data delayed by 20 minutes | <a href="/terms">Terms of Use &amp; Privacy Policy</a> | <a href="/sitemap">Site Map</a> | <a href="/contact">Contact Us</a> | <a href="/advertising">Advertising</a> | <a href="http://www.nzxgroup.com">Corporate Info</a></p>
+      <a href="/" class="footer-logo"><img alt="NZX" height="20" src="/assets/footer-logo.png" width="70" /></a>
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+
+  </section>
+  <script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
+
+  <script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-2196699-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+<!-- BEGIN EFFECTIVE MEASURE CODE -->
+<!-- COPYRIGHT EFFECTIVE MEASURE -->
+<script type="text/javascript">
+  (function() {
+    var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+    em.src = ('https:' == document.location.protocol ? 'https://nz-ssl' : 'http://nz-cdn') + '.effectivemeasure.net/em.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+  })();
+</script>
+<noscript>
+  <img src="//nz.effectivemeasure.net/em_image" alt="" style="position:absolute; left:-5px;" />
+</noscript>
+<!--END EFFECTIVE MEASURE CODE -->
+
+<!-- START Nielsen Online SiteCensus V6.0 -->
+<!-- COPYRIGHT 2012 Nielsen Online -->
+<script type="text/javascript" src="//secure-nz.imrworldwide.com/v60.js">
+</script>
+
+<script type="text/javascript">
+  var pvar = { cid: "nz-adhub", content: "0", server: "secure-nz" };
+  var trac = nol_t(pvar);
+  trac.record().post();
+</script>
+
+<noscript>
+ <div>
+   <img src="//secure-nz.imrworldwide.com/cgi-bin/m?ci=nz-adhub&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="" />
+ </div>
+</noscript>
+<!-- END Nielsen Online SiteCensus V6.0 -->
+
+<script src="/assets/out_bound_analytics.js" type="text/javascript"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+CFE Christmas Day and New Year’s Day Testing Opportunity
+Reference ID: C2023120601
+
+
+OVERVIEW
+Applicable Cboe Exchanges: CFE
+To provide additional opportunities for holiday testing, the Cboe Futures Exchange, LLC (CFE) certification
+environment will be configured to observe a holiday trading session beginning Sunday, December 10, 2023.
+The test is designed to mimic the modified trading hours associated with the 2023 Christmas holiday and
+the 2024 New Year’s Day holiday.
+
+
+SIMULATED HOLIDAY TRADING SCHEDULE
+The following simulated holiday trading schedule will apply for CFE products in the CFE certification
+environment. All times referenced in this notice are Central Time (CT).
+
+                 Sunday,
+                December            Monday, December 11                    Tuesday, December 12
+ Product
+                   10
+                ETH Start    RTH Start   RTH Close     ETH Start    RTH Start    RTH Close      ETH Close
+ Volatility
+ Index                                                 5:00 p.m.     8:30 a.m.   3:00 p.m.      4:00 p.m.
+ Futures*
+ Corporate
+ Bond Index                                            5:00 p.m.     8:30 a.m.   3:00 p.m.      4:00 p.m.
+ Futures*
+ Options on
+ Corporate
+                                                                     8:30 a.m.   3:00 p.m.
+ Bond Index
+ Futures
+ AMERIBOR
+                                                       5:00 p.m.     8:30 a.m.   3:00 p.m.      4:00 p.m.
+ Futures
+ Trade Date                                                        Tuesday, December 12, 2023
+
+Volatility Index Futures: VX, VXT, VXM, VXMT
+Corporate Bond Index Futures: IBHY, IBHYT, IBIG, IBIGT
+Options on Corporate Bond Index Futures: IBYO, IBGO
+AMERIBOR Futures: AMB1, AMT1, AMT3
+*Trade at Settlement (TAS) contracts do not trade during the Curb ETH period from 3:00 p.m. to 4:00 p.m.
+ADDITIONAL INFORMATION
+For more information, please refer to the following:
+
+    •   CFE Hours and Holidays
+    •   Cboe Futures Exchange FIX Specification
+    •   Cboe Futures Exchange Binary Order Entry Specification
+    •   Cboe US Customer Web Portal Specification
+
+Please contact the CFE Trade Desk for support or with any questions.
+
+We appreciate your business. Our trading community inspires and drives our purpose of building trusted
+markets.
+
+
+CFE Trade Desk
+312.786.8700 | cfetradedesk@cboe.com
+
+THE EXCHANGE FOR THE WORLD STAGE TM
+

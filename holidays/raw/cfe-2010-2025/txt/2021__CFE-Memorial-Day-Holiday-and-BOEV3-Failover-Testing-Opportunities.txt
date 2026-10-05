@@ -1,0 +1,40 @@
+CFE Memorial Day Holiday and BOEv3 Failover Testing
+Opportunities
+Reference ID: C2021051400
+
+
+Overview
+
+To provide additional opportunities for testing holiday schedule system behavior, the CFE certification trading
+environment will be configured to observe a simulated Memorial Day holiday trading session beginning
+Sunday, May 23, 2021. CFE will also conduct BOEv3 protocol failover testing in its CFE certification
+environment on Wednesday, May 26, 2021 and Thursday, May 27, 2021.
+
+
+Simulated Memorial Day Holiday Trading Schedule
+The simulated Memorial Day Holiday Trading Schedule in the CFE certification trading environment will follow
+the modified trading hours of the previously announced CFE Modified Trading Hours for the Memorial Day
+Holiday notice. Please use the previous notice as a guide to our modified trading hours for the simulated
+Memorial Day Holiday during this testing opportunity.
+
+BOEv3 Protocol Failover Testing
+CFE will conduct BOEv3 failover testing on Wednesday, May 26, 2021 and Thursday, May 27, 2021 at 10:00
+a.m. C.T. on each of the respective days. The failover testing will simulate the scenarios described in our
+BOEv3 Specification where the BOEv3 Secaucus Primary port (A) is unavailable and BOEv3 protocol users are
+required to connect to Secaucus Secondary port (B). BOEv3 Unit 1 failover testing will occur on Wednesday,
+May 26, 2021, and BOEv3 Unit 2 failover testing will occur on Thursday, May 27, 2021. The table below
+describes the CFE products associated with each unit.
+
+          Symbol Range Start                  BOEv3 Unit Used for Testing.
+          VX, VXT, VXM, VXMT                            Unit 1
+           All Other Products                           Unit 2
+
+Additional Information
+Please contact the CFE Trade Desk for support or with any questions.
+
+We appreciate your business. Our trading community inspires and drives our mission of defining markets.
+
+CFE Trade Desk
+312.786.8700
+cfetradedesk@cboe.com
+

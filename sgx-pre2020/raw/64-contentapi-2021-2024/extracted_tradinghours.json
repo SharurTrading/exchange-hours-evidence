@@ -1,0 +1,893 @@
+{
+ "20201206215049": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.10 am - 7.23 am<br />\nNon -Cancel : 7.23 am - 7.25 am<br />\nOpening : 7.25 am - 6.30 pm<br />\nPre-Closing : 6.30 pm - 6.34 pm<br />\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 6.50 pm - 6.58 pm<br />\nNon -Cancel :6.58 pm - 7.00 pm<br />\nOpening : 7.00 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA </p>\n",
+   "tradingHoursOnLastDay": "Same as normal trading hours."
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as normal trading hours."
+  }
+ },
+ "20210105215220": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.10 am - 7.23 am<br />\nNon -Cancel : 7.23 am - 7.25 am<br />\nOpening : 7.25 am - 6.30 pm<br />\nPre-Closing : 6.30 pm - 6.34 pm<br />\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 6.50 pm - 6.58 pm<br />\nNon -Cancel :6.58 pm - 7.00 pm<br />\nOpening : 7.00 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA </p>\n",
+   "tradingHoursOnLastDay": "Same as normal trading hours."
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as normal trading hours."
+  }
+ },
+ "20210216135503": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.10 am - 7.23 am<br />\nNon -Cancel : 7.23 am - 7.25 am<br />\nOpening : 7.25 am - 6.30 pm<br />\nPre-Closing : 6.30 pm - 6.34 pm<br />\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 6.50 pm - 6.58 pm<br />\nNon -Cancel :6.58 pm - 7.00 pm<br />\nOpening : 7.00 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA </p>\n",
+   "tradingHoursOnLastDay": "Same as normal trading hours."
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20210505065146": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.10 am - 7.23 am<br />\nNon -Cancel : 7.23 am - 7.25 am<br />\nOpening : 7.25 am - 6.30 pm<br />\nPre-Closing : 6.30 pm - 6.34 pm<br />\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 6.50 pm - 6.58 pm<br />\nNon -Cancel :6.58 pm - 7.00 pm<br />\nOpening : 7.00 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA </p>\n",
+   "tradingHoursOnLastDay": "Same as normal trading hours."
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20210604230405": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.10 am - 7.23 am<br />\nNon -Cancel : 7.23 am - 7.25 am<br />\nOpening : 7.25 am - 6.30 pm<br />\nPre-Closing : 6.30 pm - 6.34 pm<br />\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 6.50 pm - 6.58 pm<br />\nNon -Cancel :6.58 pm - 7.00 pm<br />\nOpening : 7.00 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA </p>\n",
+   "tradingHoursOnLastDay": "Same as normal trading hours."
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20210916185853": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.10 am - 7.23 am<br />\nNon -Cancel : 7.23 am - 7.25 am<br />\nOpening : 7.25 am - 6.30 pm<br />\nPre-Closing : 6.30 pm - 6.34 pm<br />\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 6.50 pm - 6.58 pm<br />\nNon -Cancel :6.58 pm - 7.00 pm<br />\nOpening : 7.00 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA </p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20211121024828": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.10 am - 7.23 am<br />\nNon -Cancel : 7.23 am - 7.25 am<br />\nOpening : 7.25 am - 6.30 pm<br />\nPre-Closing : 6.30 pm - 6.34 pm<br />\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 6.50 pm - 6.58 pm<br />\nNon -Cancel :6.58 pm - 7.00 pm<br />\nOpening : 7.00 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA </p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20211123031015": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.10 am - 7.23 am<br />\nNon -Cancel : 7.23 am - 7.25 am<br />\nOpening : 7.25 am - 6.30 pm<br />\nPre-Closing : 6.30 pm - 6.34 pm<br />\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 6.50 pm - 6.58 pm<br />\nNon -Cancel :6.58 pm - 7.00 pm<br />\nOpening : 7.00 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA </p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20220331155214": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.10 am - 7.23 am<br />\nNon -Cancel : 7.23 am - 7.25 am<br />\nOpening : 7.25 am - 6.30 pm<br />\nPre-Closing : 6.30 pm - 6.34 pm<br />\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 6.50 pm - 6.58 pm<br />\nNon -Cancel :6.58 pm - 7.00 pm<br />\nOpening : 7.00 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA </p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20220523115319": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.10 am - 7.23 am<br />\nNon -Cancel : 7.23 am - 7.25 am<br />\nOpening : 7.25 am - 6.30 pm<br />\nPre-Closing : 6.30 pm - 6.34 pm<br />\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 6.50 pm - 6.58 pm<br />\nNon -Cancel :6.58 pm - 7.00 pm<br />\nOpening : 7.00 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA </p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20221102023108": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.10 am - 7.23 am<br />\nNon -Cancel : 7.23 am - 7.25 am<br />\nOpening : 7.25 am - 6.30 pm<br />\nPre-Closing : 6.30 pm - 6.34 pm<br />\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 6.50 pm - 6.58 pm<br />\nNon -Cancel :6.58 pm - 7.00 pm<br />\nOpening : 7.00 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA </p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20230205123204": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.10 am - 7.23 am<br />\nNon -Cancel : 7.23 am - 7.25 am<br />\nOpening : 7.25 am - 6.30 pm<br />\nPre-Closing : 6.30 pm - 6.34 pm<br />\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 6.50 pm - 6.58 pm<br />\nNon -Cancel :6.58 pm - 7.00 pm<br />\nOpening : 7.00 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA </p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20230409014043": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20230526055103": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.10 am - 7.23 am<br />\nNon -Cancel : 7.23 am - 7.25 am<br />\nOpening : 7.25 am - 6.30 pm<br />\nPre-Closing : 6.30 pm - 6.34 pm<br />\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 6.50 pm - 6.58 pm<br />\nNon -Cancel :6.58 pm - 7.00 pm<br />\nOpening : 7.00 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA </p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20230829130145": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.10 am - 7.23 am<br />\nNon -Cancel : 7.23 am - 7.25 am<br />\nOpening : 7.25 am - 6.30 pm<br />\nPre-Closing : 6.30 pm - 6.34 pm<br />\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 6.50 pm - 6.58 pm<br />\nNon -Cancel :6.58 pm - 7.00 pm<br />\nOpening : 7.00 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA </p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20240207134658": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.10 am - 7.23 am<br />\nNon -Cancel : 7.23 am - 7.25 am<br />\nOpening : 7.25 am - 6.30 pm<br />\nPre-Closing : 6.30 pm - 6.34 pm<br />\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 6.50 pm - 6.58 pm<br />\nNon -Cancel :6.58 pm - 7.00 pm<br />\nOpening : 7.00 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA </p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20240215021646": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.10 am - 7.23 am<br />\nNon -Cancel : 7.23 am - 7.25 am<br />\nOpening : 7.25 am - 6.30 pm<br />\nPre-Closing : 6.30 pm - 6.34 pm<br />\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 6.50 pm - 6.58 pm<br />\nNon -Cancel :6.58 pm - 7.00 pm<br />\nOpening : 7.00 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA </p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20240426072245": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.45 am - 8.58 am<br />\nNon - Cancel: 8.58 am - 9.00 am<br />\nOpening: 9.00 am - 4.30 pm<br />\nPre - Closing: 4.30 pm - 4.34 pm<br />\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p> </p>\n<p>T + 1 Session:<br />\nPre - Opening: 4.50 pm - 4.58 pm<br />\nNon - Cancel: 4.58 pm - 5.00 pm<br />\nOpening: 5.00 pm - 5.15 am<br />\nPre - Closing: NA<br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8.30 am - 8.43 am<br />\nNon - Cancel: 8.43 am - 8.45 am<br />\nOpening: 8.45 am - 1.45 pm<br />\nPre - Closing: 1.45 pm - 1.49 pm<br />\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 2.05 pm - 2.13 pm<br />\nNon - Cancel: 2.13 pm - 2.15 pm<br />\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre - Opening: 8:15 am - 8:28 am<br />\nNon - Cancel: 8:28 am - 8:30 am<br />\nOpening: 8:30 am - 5:20 pm<br />\nPre - Closing: 5:20 pm - 5:24 pm<br />\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre - Opening: 5:40 pm - 5:48 pm<br />\nNon - Cancel: 5:48 pm - 5:50 pm<br />\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p>T-session:<br />\nPre - Opening: 7.10 am - 7.23 am<br />\nNon - Cancel: 7.23 am - 7.25 am<br />\nOpening: 7.25 am - 6.30 pm<br />\nPre - Closing: 6.30 pm - 6.34 pm<br />\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T + 1 Session: <br />\nPre - Opening: 6.50 pm - 6.58 pm <br />\nNon - Cancel: 6.58 pm - 7.00 pm <br />\nOpening: 7.00 pm - 5.15 am <br />\nPre - Closing: NA <br />\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.10 am - 7.23 am<br />\nNon -Cancel : 7.23 am - 7.25 am<br />\nOpening : 7.25 am - 6.30 pm<br />\nPre-Closing : 6.30 pm - 6.34 pm<br />\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 6.50 pm - 6.58 pm<br />\nNon -Cancel :6.58 pm - 7.00 pm<br />\nOpening : 7.00 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA </p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p>T Session:<br />\nPre -Opening : 7.15 am - 7.28 am<br />\nNon -Cancel : 7.28 am - 7.30 am<br />\nOpening : 7.30 am - 2.25 pm<br />\nPre-Closing : 2.25 pm - 2.29 pm<br />\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p> </p>\n<p>T+1 Session:<br />\nPre -Opening : 2.45 pm - 2.53 pm<br />\nNon -Cancel : 2.53 pm - 2.55 pm<br />\nOpening : 2.55 pm - 5.15 am<br />\nPre - Closing : NA<br />\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20240605055619": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre - Opening: 8.45 am - 8.58 am<br><br>\nNon - Cancel: 8.58 am - 9.00 am<br><br>\nOpening: 9.00 am - 4.30 pm<br><br>\nPre - Closing: 4.30 pm - 4.34 pm<br><br>\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:<br><br>\nPre - Opening: 4.50 pm - 4.58 pm<br><br>\nNon - Cancel: 4.58 pm - 5.00 pm<br><br>\nOpening: 5.00 pm - 5.15&nbsp;am<br><br>\nPre - Closing: NA<br><br>\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre - Opening: 8.30 am - 8.43 am<br><br>\nNon - Cancel: 8.43 am - 8.45 am<br><br>\nOpening: 8.45 am - 1.45 pm<br><br>\nPre - Closing: 1.45 pm - 1.49 pm<br><br>\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br><br>\nPre - Opening: 2.05 pm - 2.13 pm<br><br>\nNon - Cancel: 2.13 pm - 2.15 pm<br><br>\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br><br>\nPre - Opening: 8:15 am - 8:28 am<br><br>\nNon - Cancel: 8:28 am - 8:30 am<br><br>\nOpening: 8:30 am - 5:20 pm<br><br>\nPre - Closing: 5:20 pm - 5:24 pm<br><br>\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p>&nbsp;</p>\n<p>T+1 Session:<br><br>\nPre - Opening: 5:40 pm - 5:48 pm<br><br>\nNon - Cancel: 5:48 pm - 5:50 pm<br><br>\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p dir=\"ltr\">T-session:<br><br>\nPre - Opening: 7.10 am - 7.23 am<br><br>\nNon - Cancel: 7.23 am - 7.25 am<br><br>\nOpening: 7.25 am - 6.30 pm<br><br>\nPre - Closing: 6.30 pm - 6.34 pm<br><br>\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:&nbsp;<br><br>\nPre - Opening: 6.50 pm - 6.58 pm&nbsp;<br><br>\nNon - Cancel: 6.58 pm - 7.00 pm&nbsp;<br><br>\nOpening: 7.00 pm - 5.15 am&nbsp;<br><br>\nPre - Closing: NA&nbsp;<br><br>\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre -Opening : 7.10 am - 7.23 am<br><br>\nNon -Cancel : 7.23 am - 7.25 am<br><br>\nOpening : 7.25 am - 6.30 pm<br><br>\nPre-Closing : 6.30 pm - 6.34 pm<br><br>\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br><br>\nPre -Opening : 6.50 pm - 6.58 pm<br><br>\nNon -Cancel :6.58 pm - 7.00 pm<br><br>\nOpening : 7.00 pm - 5.15 am<br><br>\nPre - Closing : NA<br><br>\nNon - Cancel : NA&nbsp;</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre -Opening : 7.15 am - 7.28 am<br><br>\nNon -Cancel : 7.28 am - 7.30 am<br><br>\nOpening : 7.30 am - 2.25 pm<br><br>\nPre-Closing : 2.25 pm - 2.29 pm<br><br>\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br><br>\nPre -Opening : 2.45 pm - 2.53 pm<br><br>\nNon -Cancel : 2.53 pm - 2.55 pm<br><br>\nOpening : 2.55 pm - 5.15 am<br><br>\nPre - Closing : NA<br><br>\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20240629110526": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre - Opening: 8.45 am - 8.58 am<br><br>\nNon - Cancel: 8.58 am - 9.00 am<br><br>\nOpening: 9.00 am - 4.30 pm<br><br>\nPre - Closing: 4.30 pm - 4.34 pm<br><br>\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:<br><br>\nPre - Opening: 4.50 pm - 4.58 pm<br><br>\nNon - Cancel: 4.58 pm - 5.00 pm<br><br>\nOpening: 5.00 pm - 5.15&nbsp;am<br><br>\nPre - Closing: NA<br><br>\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre - Opening: 8.30 am - 8.43 am<br><br>\nNon - Cancel: 8.43 am - 8.45 am<br><br>\nOpening: 8.45 am - 1.45 pm<br><br>\nPre - Closing: 1.45 pm - 1.49 pm<br><br>\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br><br>\nPre - Opening: 2.05 pm - 2.13 pm<br><br>\nNon - Cancel: 2.13 pm - 2.15 pm<br><br>\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br><br>\nPre - Opening: 8:15 am - 8:28 am<br><br>\nNon - Cancel: 8:28 am - 8:30 am<br><br>\nOpening: 8:30 am - 5:20 pm<br><br>\nPre - Closing: 5:20 pm - 5:24 pm<br><br>\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p>&nbsp;</p>\n<p>T+1 Session:<br><br>\nPre - Opening: 5:40 pm - 5:48 pm<br><br>\nNon - Cancel: 5:48 pm - 5:50 pm<br><br>\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p dir=\"ltr\">T-session:<br><br>\nPre - Opening: 7.10 am - 7.23 am<br><br>\nNon - Cancel: 7.23 am - 7.25 am<br><br>\nOpening: 7.25 am - 6.30 pm<br><br>\nPre - Closing: 6.30 pm - 6.34 pm<br><br>\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:&nbsp;<br><br>\nPre - Opening: 6.50 pm - 6.58 pm&nbsp;<br><br>\nNon - Cancel: 6.58 pm - 7.00 pm&nbsp;<br><br>\nOpening: 7.00 pm - 5.15 am&nbsp;<br><br>\nPre - Closing: NA&nbsp;<br><br>\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre -Opening : 7.10 am - 7.23 am<br><br>\nNon -Cancel : 7.23 am - 7.25 am<br><br>\nOpening : 7.25 am - 6.30 pm<br><br>\nPre-Closing : 6.30 pm - 6.34 pm<br><br>\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br><br>\nPre -Opening : 6.50 pm - 6.58 pm<br><br>\nNon -Cancel :6.58 pm - 7.00 pm<br><br>\nOpening : 7.00 pm - 5.15 am<br><br>\nPre - Closing : NA<br><br>\nNon - Cancel : NA&nbsp;</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre -Opening : 7.15 am - 7.28 am<br><br>\nNon -Cancel : 7.28 am - 7.30 am<br><br>\nOpening : 7.30 am - 2.25 pm<br><br>\nPre-Closing : 2.25 pm - 2.29 pm<br><br>\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br><br>\nPre -Opening : 2.45 pm - 2.53 pm<br><br>\nNon -Cancel : 2.53 pm - 2.55 pm<br><br>\nOpening : 2.55 pm - 5.15 am<br><br>\nPre - Closing : NA<br><br>\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20240721045147": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre - Opening: 8.45 am - 8.58 am<br><br>\nNon - Cancel: 8.58 am - 9.00 am<br><br>\nOpening: 9.00 am - 4.30 pm<br><br>\nPre - Closing: 4.30 pm - 4.34 pm<br><br>\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:<br><br>\nPre - Opening: 4.50 pm - 4.58 pm<br><br>\nNon - Cancel: 4.58 pm - 5.00 pm<br><br>\nOpening: 5.00 pm - 5.15&nbsp;am<br><br>\nPre - Closing: NA<br><br>\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre - Opening: 8.30 am - 8.43 am<br><br>\nNon - Cancel: 8.43 am - 8.45 am<br><br>\nOpening: 8.45 am - 1.45 pm<br><br>\nPre - Closing: 1.45 pm - 1.49 pm<br><br>\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br><br>\nPre - Opening: 2.05 pm - 2.13 pm<br><br>\nNon - Cancel: 2.13 pm - 2.15 pm<br><br>\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br><br>\nPre - Opening: 8:15 am - 8:28 am<br><br>\nNon - Cancel: 8:28 am - 8:30 am<br><br>\nOpening: 8:30 am - 5:20 pm<br><br>\nPre - Closing: 5:20 pm - 5:24 pm<br><br>\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p>&nbsp;</p>\n<p>T+1 Session:<br><br>\nPre - Opening: 5:40 pm - 5:48 pm<br><br>\nNon - Cancel: 5:48 pm - 5:50 pm<br><br>\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p dir=\"ltr\">T-session:<br><br>\nPre - Opening: 7.10 am - 7.23 am<br><br>\nNon - Cancel: 7.23 am - 7.25 am<br><br>\nOpening: 7.25 am - 6.30 pm<br><br>\nPre - Closing: 6.30 pm - 6.34 pm<br><br>\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:&nbsp;<br><br>\nPre - Opening: 6.50 pm - 6.58 pm&nbsp;<br><br>\nNon - Cancel: 6.58 pm - 7.00 pm&nbsp;<br><br>\nOpening: 7.00 pm - 5.15 am&nbsp;<br><br>\nPre - Closing: NA&nbsp;<br><br>\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre -Opening : 7.10 am - 7.23 am<br><br>\nNon -Cancel : 7.23 am - 7.25 am<br><br>\nOpening : 7.25 am - 6.30 pm<br><br>\nPre-Closing : 6.30 pm - 6.34 pm<br><br>\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br><br>\nPre -Opening : 6.50 pm - 6.58 pm<br><br>\nNon -Cancel :6.58 pm - 7.00 pm<br><br>\nOpening : 7.00 pm - 5.15 am<br><br>\nPre - Closing : NA<br><br>\nNon - Cancel : NA&nbsp;</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre -Opening : 7.15 am - 7.28 am<br><br>\nNon -Cancel : 7.28 am - 7.30 am<br><br>\nOpening : 7.30 am - 2.25 pm<br><br>\nPre-Closing : 2.25 pm - 2.29 pm<br><br>\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br><br>\nPre -Opening : 2.45 pm - 2.53 pm<br><br>\nNon -Cancel : 2.53 pm - 2.55 pm<br><br>\nOpening : 2.55 pm - 5.15 am<br><br>\nPre - Closing : NA<br><br>\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20240721045256": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre - Opening: 8.45 am - 8.58 am<br><br>\nNon - Cancel: 8.58 am - 9.00 am<br><br>\nOpening: 9.00 am - 4.30 pm<br><br>\nPre - Closing: 4.30 pm - 4.34 pm<br><br>\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:<br><br>\nPre - Opening: 4.50 pm - 4.58 pm<br><br>\nNon - Cancel: 4.58 pm - 5.00 pm<br><br>\nOpening: 5.00 pm - 5.15&nbsp;am<br><br>\nPre - Closing: NA<br><br>\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre - Opening: 8.30 am - 8.43 am<br><br>\nNon - Cancel: 8.43 am - 8.45 am<br><br>\nOpening: 8.45 am - 1.45 pm<br><br>\nPre - Closing: 1.45 pm - 1.49 pm<br><br>\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br><br>\nPre - Opening: 2.05 pm - 2.13 pm<br><br>\nNon - Cancel: 2.13 pm - 2.15 pm<br><br>\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br><br>\nPre - Opening: 8:15 am - 8:28 am<br><br>\nNon - Cancel: 8:28 am - 8:30 am<br><br>\nOpening: 8:30 am - 5:20 pm<br><br>\nPre - Closing: 5:20 pm - 5:24 pm<br><br>\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p>&nbsp;</p>\n<p>T+1 Session:<br><br>\nPre - Opening: 5:40 pm - 5:48 pm<br><br>\nNon - Cancel: 5:48 pm - 5:50 pm<br><br>\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p dir=\"ltr\">T-session:<br><br>\nPre - Opening: 7.10 am - 7.23 am<br><br>\nNon - Cancel: 7.23 am - 7.25 am<br><br>\nOpening: 7.25 am - 6.30 pm<br><br>\nPre - Closing: 6.30 pm - 6.34 pm<br><br>\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:&nbsp;<br><br>\nPre - Opening: 6.50 pm - 6.58 pm&nbsp;<br><br>\nNon - Cancel: 6.58 pm - 7.00 pm&nbsp;<br><br>\nOpening: 7.00 pm - 5.15 am&nbsp;<br><br>\nPre - Closing: NA&nbsp;<br><br>\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre -Opening : 7.10 am - 7.23 am<br><br>\nNon -Cancel : 7.23 am - 7.25 am<br><br>\nOpening : 7.25 am - 6.30 pm<br><br>\nPre-Closing : 6.30 pm - 6.34 pm<br><br>\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br><br>\nPre -Opening : 6.50 pm - 6.58 pm<br><br>\nNon -Cancel :6.58 pm - 7.00 pm<br><br>\nOpening : 7.00 pm - 5.15 am<br><br>\nPre - Closing : NA<br><br>\nNon - Cancel : NA&nbsp;</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre -Opening : 7.15 am - 7.28 am<br><br>\nNon -Cancel : 7.28 am - 7.30 am<br><br>\nOpening : 7.30 am - 2.25 pm<br><br>\nPre-Closing : 2.25 pm - 2.29 pm<br><br>\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br><br>\nPre -Opening : 2.45 pm - 2.53 pm<br><br>\nNon -Cancel : 2.53 pm - 2.55 pm<br><br>\nOpening : 2.55 pm - 5.15 am<br><br>\nPre - Closing : NA<br><br>\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20241007031911": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre - Opening: 8.45 am - 8.58 am<br><br>\nNon - Cancel: 8.58 am - 9.00 am<br><br>\nOpening: 9.00 am - 4.30 pm<br><br>\nPre - Closing: 4.30 pm - 4.34 pm<br><br>\nNon - Cancel: 4.34 pm - 4.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:<br><br>\nPre - Opening: 4.50 pm - 4.58 pm<br><br>\nNon - Cancel: 4.58 pm - 5.00 pm<br><br>\nOpening: 5.00 pm - 5.15&nbsp;am<br><br>\nPre - Closing: NA<br><br>\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre - Opening: 8.30 am - 8.43 am<br><br>\nNon - Cancel: 8.43 am - 8.45 am<br><br>\nOpening: 8.45 am - 1.45 pm<br><br>\nPre - Closing: 1.45 pm - 1.49 pm<br><br>\nNon - Cancel: 1.49 pm - 1.50 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br><br>\nPre - Opening: 2.05 pm - 2.13 pm<br><br>\nNon - Cancel: 2.13 pm - 2.15 pm<br><br>\nOpening: 2.15 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br><br>\nPre - Opening: 8:15 am - 8:28 am<br><br>\nNon - Cancel: 8:28 am - 8:30 am<br><br>\nOpening: 8:30 am - 5:20 pm<br><br>\nPre - Closing: 5:20 pm - 5:24 pm<br><br>\nNon - Cancel: 5:24 pm - 5:25 pm</p>\n<p>&nbsp;</p>\n<p>T+1 Session:<br><br>\nPre - Opening: 5:40 pm - 5:48 pm<br><br>\nNon - Cancel: 5:48 pm - 5:50 pm<br><br>\nOpening: 5:50 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p dir=\"ltr\">T-session:<br><br>\nPre - Opening: 7.10 am - 7.23 am<br><br>\nNon - Cancel: 7.23 am - 7.25 am<br><br>\nOpening: 7.25 am - 6.30 pm<br><br>\nPre - Closing: 6.30 pm - 6.34 pm<br><br>\nNon - Cancel: 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:&nbsp;<br><br>\nPre - Opening: 6.50 pm - 6.58 pm&nbsp;<br><br>\nNon - Cancel: 6.58 pm - 7.00 pm&nbsp;<br><br>\nOpening: 7.00 pm - 5.15 am&nbsp;<br><br>\nPre - Closing: NA&nbsp;<br><br>\nNon - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre -Opening : 7.10 am - 7.23 am<br><br>\nNon -Cancel : 7.23 am - 7.25 am<br><br>\nOpening : 7.25 am - 6.30 pm<br><br>\nPre-Closing : 6.30 pm - 6.34 pm<br><br>\nNon-Cancel : 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br><br>\nPre -Opening : 6.50 pm - 6.58 pm<br><br>\nNon -Cancel :6.58 pm - 7.00 pm<br><br>\nOpening : 7.00 pm - 5.15 am<br><br>\nPre - Closing : NA<br><br>\nNon - Cancel : NA&nbsp;</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br><br>\nPre -Opening : 7.15 am - 7.28 am<br><br>\nNon -Cancel : 7.28 am - 7.30 am<br><br>\nOpening : 7.30 am - 2.25 pm<br><br>\nPre-Closing : 2.25 pm - 2.29 pm<br><br>\nNon-Cancel : 2. 29 pm - 2.30 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br><br>\nPre -Opening : 2.45 pm - 2.53 pm<br><br>\nNon -Cancel : 2.53 pm - 2.55 pm<br><br>\nOpening : 2.55 pm - 5.15 am<br><br>\nPre - Closing : NA<br><br>\nNon - Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20250407083045": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre - Opening: 8.45 am - 8.58 am<br>Non - Cancel: 8.58 am - 9.00 am<br>Opening: 9.00 am - 4.30 pm<br>Pre - Closing: 4.30 pm - 4.34 pm<br>Non - Cancel: 4.34 pm - 4.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:<br>Pre - Opening: 4.40 pm - 4.43 pm<br>Non - Cancel: 4.43 pm - 4.45 pm<br>Opening: 4.45 pm - 5.15&nbsp;am<br>Pre - Closing: NA<br>Non - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre - Opening: 8.30 am - 8.43 am<br>Non - Cancel: 8.43 am - 8.45 am<br>Opening: 8.45 am - 1.45 pm<br>Pre - Closing: 1.45 pm - 1.49 pm<br>Non - Cancel: 1.49 pm - 1.50 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br>Pre - Opening: 1.55 pm - 1.58 pm<br>Non - Cancel: 1.58 pm - 2.00 pm<br>Opening: 2.00 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br>Pre - Opening: 8:15 am - 8:28 am<br>Non - Cancel: 8:28 am - 8:30 am<br>Opening: 8:30 am - 5:20 pm<br>Pre - Closing: 5:20 pm - 5:24 pm<br>Non - Cancel: 5:24 pm - 5:25 pm</p>\n<p>&nbsp;</p>\n<p>T+1 Session:<br>Pre - Opening: 5:30 pm - 5:33 pm<br>Non - Cancel: 5:33 pm - 5:35 pm<br>Opening: 5:35 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p dir=\"ltr\">T-session:<br>Pre - Opening: 7.10 am - 7.23 am<br>Non - Cancel: 7.23 am - 7.25 am<br>Opening: 7.25 am - 6.30 pm<br>Pre - Closing: 6.30 pm - 6.34 pm<br>Non - Cancel: 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:&nbsp;<br>Pre - Opening: 6.40 pm - 6.43 pm&nbsp;<br>Non - Cancel: 6.43 pm - 6.45 pm&nbsp;<br>Opening: 6.45 pm - 5.15 am&nbsp;<br>Pre - Closing: NA&nbsp;<br>Non - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre -Opening : 7.10 am - 7.23 am<br>Non -Cancel : 7.23 am - 7.25 am<br>Opening : 7.25 am - 6.30 pm<br>Pre-Closing : 6.30 pm - 6.34 pm<br>Non-Cancel : 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br>Pre -Opening : 6.40 pm - 6.43 pm<br>Non -Cancel :6.43 pm - 6.45 pm<br>Opening : 7.00 pm - 5.15 am<br>Pre - Closing : NA<br>Non - Cancel : NA&nbsp;</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre-Opening : 7.15 am - 7.28 am<br>Non-Cancel : 7.28 am - 7.30 am<br>Opening : 7.30 am - 2.55 pm<br>Pre-Closing : 2.55 pm - 2.59 pm<br>Non-Cancel : 2.59 pm - 3.00 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br>Pre-Opening : 3.05 pm - 3.08 pm<br>Non-Cancel : 3.08 pm - 3.10 pm<br>Opening : 3.10 pm - 5.15 am<br>Pre-Closing : NA<br>Non-Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20250531092552": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre - Opening: 8.45 am - 8.58 am<br>Non - Cancel: 8.58 am - 9.00 am<br>Opening: 9.00 am - 4.30 pm<br>Pre - Closing: 4.30 pm - 4.34 pm<br>Non - Cancel: 4.34 pm - 4.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:<br>Pre - Opening: 4.40 pm - 4.43 pm<br>Non - Cancel: 4.43 pm - 4.45 pm<br>Opening: 4.45 pm - 5.15&nbsp;am<br>Pre - Closing: NA<br>Non - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre - Opening: 8.30 am - 8.43 am<br>Non - Cancel: 8.43 am - 8.45 am<br>Opening: 8.45 am - 1.45 pm<br>Pre - Closing: 1.45 pm - 1.49 pm<br>Non - Cancel: 1.49 pm - 1.50 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br>Pre - Opening: 1.55 pm - 1.58 pm<br>Non - Cancel: 1.58 pm - 2.00 pm<br>Opening: 2.00 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br>Pre - Opening: 8:15 am - 8:28 am<br>Non - Cancel: 8:28 am - 8:30 am<br>Opening: 8:30 am - 5:20 pm<br>Pre - Closing: 5:20 pm - 5:24 pm<br>Non - Cancel: 5:24 pm - 5:25 pm</p>\n<p>&nbsp;</p>\n<p>T+1 Session:<br>Pre - Opening: 5:30 pm - 5:33 pm<br>Non - Cancel: 5:33 pm - 5:35 pm<br>Opening: 5:35 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p dir=\"ltr\">T-session:<br>Pre - Opening: 7.10 am - 7.23 am<br>Non - Cancel: 7.23 am - 7.25 am<br>Opening: 7.25 am - 6.30 pm<br>Pre - Closing: 6.30 pm - 6.34 pm<br>Non - Cancel: 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:&nbsp;<br>Pre - Opening: 6.40 pm - 6.43 pm&nbsp;<br>Non - Cancel: 6.43 pm - 6.45 pm&nbsp;<br>Opening: 6.45 pm - 5.15 am&nbsp;<br>Pre - Closing: NA&nbsp;<br>Non - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre -Opening : 7.10 am - 7.23 am<br>Non -Cancel : 7.23 am - 7.25 am<br>Opening : 7.25 am - 6.30 pm<br>Pre-Closing : 6.30 pm - 6.34 pm<br>Non-Cancel : 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br>Pre -Opening : 6.40 pm - 6.43 pm<br>Non -Cancel :6.43 pm - 6.45 pm<br>Opening : 7.00 pm - 5.15 am<br>Pre - Closing : NA<br>Non - Cancel : NA&nbsp;</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre-Opening : 7.15 am - 7.28 am<br>Non-Cancel : 7.28 am - 7.30 am<br>Opening : 7.30 am - 2.55 pm<br>Pre-Closing : 2.55 pm - 2.59 pm<br>Non-Cancel : 2.59 pm - 3.00 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br>Pre-Opening : 3.05 pm - 3.08 pm<br>Non-Cancel : 3.08 pm - 3.10 pm<br>Opening : 3.10 pm - 5.15 am<br>Pre-Closing : NA<br>Non-Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20250822020227": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre - Opening: 8.45 am - 8.58 am<br>Non - Cancel: 8.58 am - 9.00 am<br>Opening: 9.00 am - 4.30 pm<br>Pre - Closing: 4.30 pm - 4.34 pm<br>Non - Cancel: 4.34 pm - 4.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:<br>Pre - Opening: 4.40 pm - 4.43 pm<br>Non - Cancel: 4.43 pm - 4.45 pm<br>Opening: 4.45 pm - 5.15&nbsp;am<br>Pre - Closing: NA<br>Non - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre - Opening: 8.30 am - 8.43 am<br>Non - Cancel: 8.43 am - 8.45 am<br>Opening: 8.45 am - 1.45 pm<br>Pre - Closing: 1.45 pm - 1.49 pm<br>Non - Cancel: 1.49 pm - 1.50 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br>Pre - Opening: 1.55 pm - 1.58 pm<br>Non - Cancel: 1.58 pm - 2.00 pm<br>Opening: 2.00 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br>Pre - Opening: 8:15 am - 8:28 am<br>Non - Cancel: 8:28 am - 8:30 am<br>Opening: 8:30 am - 5:20 pm<br>Pre - Closing: 5:20 pm - 5:24 pm<br>Non - Cancel: 5:24 pm - 5:25 pm</p>\n<p>&nbsp;</p>\n<p>T+1 Session:<br>Pre - Opening: 5:30 pm - 5:33 pm<br>Non - Cancel: 5:33 pm - 5:35 pm<br>Opening: 5:35 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p dir=\"ltr\">T-session:<br>Pre - Opening: 7.10 am - 7.23 am<br>Non - Cancel: 7.23 am - 7.25 am<br>Opening: 7.25 am - 6.30 pm<br>Pre - Closing: 6.30 pm - 6.34 pm<br>Non - Cancel: 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:&nbsp;<br>Pre - Opening: 6.40 pm - 6.43 pm&nbsp;<br>Non - Cancel: 6.43 pm - 6.45 pm&nbsp;<br>Opening: 6.45 pm - 5.15 am&nbsp;<br>Pre - Closing: NA&nbsp;<br>Non - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre -Opening : 7.10 am - 7.23 am<br>Non -Cancel : 7.23 am - 7.25 am<br>Opening : 7.25 am - 6.30 pm<br>Pre-Closing : 6.30 pm - 6.34 pm<br>Non-Cancel : 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br>Pre -Opening : 6.40 pm - 6.43 pm<br>Non -Cancel :6.43 pm - 6.45 pm<br>Opening : 7.00 pm - 5.15 am<br>Pre - Closing : NA<br>Non - Cancel : NA&nbsp;</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre-Opening : 7.15 am - 7.28 am<br>Non-Cancel : 7.28 am - 7.30 am<br>Opening : 7.30 am - 2.55 pm<br>Pre-Closing : 2.55 pm - 2.59 pm<br>Non-Cancel : 2.59 pm - 3.00 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br>Pre-Opening : 3.05 pm - 3.08 pm<br>Non-Cancel : 3.08 pm - 3.10 pm<br>Opening : 3.10 pm - 5.15 am<br>Pre-Closing : NA<br>Non-Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20250901094028": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre - Opening: 8.45 am - 8.58 am<br>Non - Cancel: 8.58 am - 9.00 am<br>Opening: 9.00 am - 4.30 pm<br>Pre - Closing: 4.30 pm - 4.34 pm<br>Non - Cancel: 4.34 pm - 4.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:<br>Pre - Opening: 4.40 pm - 4.43 pm<br>Non - Cancel: 4.43 pm - 4.45 pm<br>Opening: 4.45 pm - 5.15&nbsp;am<br>Pre - Closing: NA<br>Non - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre - Opening: 8.30 am - 8.43 am<br>Non - Cancel: 8.43 am - 8.45 am<br>Opening: 8.45 am - 1.45 pm<br>Pre - Closing: 1.45 pm - 1.49 pm<br>Non - Cancel: 1.49 pm - 1.50 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br>Pre - Opening: 1.55 pm - 1.58 pm<br>Non - Cancel: 1.58 pm - 2.00 pm<br>Opening: 2.00 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br>Pre - Opening: 8:15 am - 8:28 am<br>Non - Cancel: 8:28 am - 8:30 am<br>Opening: 8:30 am - 5:20 pm<br>Pre - Closing: 5:20 pm - 5:24 pm<br>Non - Cancel: 5:24 pm - 5:25 pm</p>\n<p>&nbsp;</p>\n<p>T+1 Session:<br>Pre - Opening: 5:30 pm - 5:33 pm<br>Non - Cancel: 5:33 pm - 5:35 pm<br>Opening: 5:35 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p dir=\"ltr\">T-session:<br>Pre - Opening: 7.10 am - 7.23 am<br>Non - Cancel: 7.23 am - 7.25 am<br>Opening: 7.25 am - 6.30 pm<br>Pre - Closing: 6.30 pm - 6.34 pm<br>Non - Cancel: 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:&nbsp;<br>Pre - Opening: 6.40 pm - 6.43 pm&nbsp;<br>Non - Cancel: 6.43 pm - 6.45 pm&nbsp;<br>Opening: 6.45 pm - 5.15 am&nbsp;<br>Pre - Closing: NA&nbsp;<br>Non - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre -Opening : 7.10 am - 7.23 am<br>Non -Cancel : 7.23 am - 7.25 am<br>Opening : 7.25 am - 6.30 pm<br>Pre-Closing : 6.30 pm - 6.34 pm<br>Non-Cancel : 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br>Pre -Opening : 6.40 pm - 6.43 pm<br>Non -Cancel :6.43 pm - 6.45 pm<br>Opening : 7.00 pm - 5.15 am<br>Pre - Closing : NA<br>Non - Cancel : NA&nbsp;</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre-Opening : 7.15 am - 7.28 am<br>Non-Cancel : 7.28 am - 7.30 am<br>Opening : 7.30 am - 2.55 pm<br>Pre-Closing : 2.55 pm - 2.59 pm<br>Non-Cancel : 2.59 pm - 3.00 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br>Pre-Opening : 3.05 pm - 3.08 pm<br>Non-Cancel : 3.08 pm - 3.10 pm<br>Opening : 3.10 pm - 5.15 am<br>Pre-Closing : NA<br>Non-Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ },
+ "20250902152826": {
+  "SGX FTSE China A50 Index Futures": {
+   "contractCode": "CN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre - Opening: 8.45 am - 8.58 am<br>Non - Cancel: 8.58 am - 9.00 am<br>Opening: 9.00 am - 4.30 pm<br>Pre - Closing: 4.30 pm - 4.34 pm<br>Non - Cancel: 4.34 pm - 4.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:<br>Pre - Opening: 4.40 pm - 4.43 pm<br>Non - Cancel: 4.43 pm - 4.45 pm<br>Opening: 4.45 pm - 5.15&nbsp;am<br>Pre - Closing: NA<br>Non - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Pre - Opening: 8.45 am - 8.58 am\r\nNon - Cancel: 8.58 am - 9.00 am\r\nOpening: 9.00 am - 4.30 pm\r\nPre - Closing: 4.30 pm - 4.34 pm\r\nNon - Cancel: 4.34 pm - 4.35 pm"
+  },
+  "SGX FTSE Taiwan Index Futures": {
+   "contractCode": "TWN",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre - Opening: 8.30 am - 8.43 am<br>Non - Cancel: 8.43 am - 8.45 am<br>Opening: 8.45 am - 1.45 pm<br>Pre - Closing: 1.45 pm - 1.49 pm<br>Non - Cancel: 1.49 pm - 1.50 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br>Pre - Opening: 1.55 pm - 1.58 pm<br>Non - Cancel: 1.58 pm - 2.00 pm<br>Opening: 2.00 pm - 5.15 am</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours"
+  },
+  "SGX MSCI Singapore Index Futures": {
+   "contractCode": "SGP",
+   "tradingHours_processed": "<p>T Session:<br>Pre - Opening: 8:15 am - 8:28 am<br>Non - Cancel: 8:28 am - 8:30 am<br>Opening: 8:30 am - 5:20 pm<br>Pre - Closing: 5:20 pm - 5:24 pm<br>Non - Cancel: 5:24 pm - 5:25 pm</p>\n<p>&nbsp;</p>\n<p>T+1 Session:<br>Pre - Opening: 5:30 pm - 5:33 pm<br>Non - Cancel: 5:33 pm - 5:35 pm<br>Opening: 5:35 pm - 5:15 am</p>\n",
+   "tradingHoursOnLastDay": "T Session: Pre - Opening: 8:15 am - 8:28 am Non - Cancel: 8:28 am - 8:30 am Opening: 8:30 am - 5:20 pm Pre - Closing: 5:20 pm - 5:24 pm Non - Cancel: 5:24 pm - 5:25 pm"
+  },
+  "SGX MSCI Singapore Free NTR (USD) Index Futures": {
+   "contractCode": "NSG",
+   "tradingHours_processed": "<p dir=\"ltr\">T-session:<br>Pre - Opening: 7.10 am - 7.23 am<br>Non - Cancel: 7.23 am - 7.25 am<br>Opening: 7.25 am - 6.30 pm<br>Pre - Closing: 6.30 pm - 6.34 pm<br>Non - Cancel: 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T + 1 Session:&nbsp;<br>Pre - Opening: 6.40 pm - 6.43 pm&nbsp;<br>Non - Cancel: 6.43 pm - 6.45 pm&nbsp;<br>Opening: 6.45 pm - 5.15 am&nbsp;<br>Pre - Closing: NA&nbsp;<br>Non - Cancel: NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX MSCI Singapore NTR (USD) Index Futures": {
+   "contractCode": "NSP",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre -Opening : 7.10 am - 7.23 am<br>Non -Cancel : 7.23 am - 7.25 am<br>Opening : 7.25 am - 6.30 pm<br>Pre-Closing : 6.30 pm - 6.34 pm<br>Non-Cancel : 6.34 pm - 6.35 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br>Pre -Opening : 6.40 pm - 6.43 pm<br>Non -Cancel :6.43 pm - 6.45 pm<br>Opening : 7.00 pm - 5.15 am<br>Pre - Closing : NA<br>Non - Cancel : NA&nbsp;</p>\n",
+   "tradingHoursOnLastDay": "Same as T-session trading hours"
+  },
+  "SGX Nikkei 225 Index Futures": {
+   "contractCode": "NK",
+   "tradingHours_processed": "<p dir=\"ltr\">T Session:<br>Pre-Opening : 7.15 am - 7.28 am<br>Non-Cancel : 7.28 am - 7.30 am<br>Opening : 7.30 am - 2.55 pm<br>Pre-Closing : 2.55 pm - 2.59 pm<br>Non-Cancel : 2.59 pm - 3.00 pm</p>\n<p dir=\"ltr\">&nbsp;</p>\n<p dir=\"ltr\">T+1 Session:<br>Pre-Opening : 3.05 pm - 3.08 pm<br>Non-Cancel : 3.08 pm - 3.10 pm<br>Opening : 3.10 pm - 5.15 am<br>Pre-Closing : NA<br>Non-Cancel : NA</p>\n",
+   "tradingHoursOnLastDay": "Same as T Session trading hours."
+  }
+ }
+}

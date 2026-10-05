@@ -1,0 +1,55 @@
+=== SGX Derivatives Market Trading Calendar 2019 (live api2, doc 'accurate as of 15 January 2019') ===
+                Trading Hours of SGX Futures and Options Contracts
+
+
+                                                                                                                                                                                                                       Trading Hours
+                 CONTRACTS                                                  T SESSION #ˆ        T+1 SESSION # ˆ      CONTRACTS                                                  T SESSION #ˆ        T+1 SESSION # ˆ
+847:                SGX Eurodollar Futures                                      7.25am to 7.00pm    None                SGX Nikkei 225 Index Futures                                7.30am to 2.25pm    2.55pm to 4.45am
+848:                SGX Euroyen TIBOR Futures                                   7.25am to 7.05pm    7.20pm to 4.45am    SGX Nikkei 225 Index Options                                7.30am to 2.30pm    2.55pm to 4.45am
+853:                SGX FTSE China A50 Index Futures                            9.00am to 4.30pm    5.00pm to 4.45am    SGX Straits Times Index Futures                             8.30am to 5.10pm    5.40pm to 4.45am
+854:                SGX Mini Nikkei 225 Index Futures                           7.30am to 2.25pm    2.55pm to 4.45am    SGX USD Nikkei 225 Index Futures                            7.30am to 2.25pm    2.55pm to 4.45am
+898:                SGX MSCI Singapore Free Index Futures                       8.30am to 5.10pm    5.40pm to 4.45am
+905:                SGX MSCI Singapore Free Index Options                       8.30am to 5.15pm    5.40pm to 4.45am
+907:                SGX MSCI Singapore Free NTR (USD) Index Futures             7.25am to 6.30pm    7.00pm to 4.45am
+909:                SGX MSCI Taiwan Index Futures                               8.45am to 1.45pm    2.15pm to 4.45am
+911:                SGX MSCI Taiwan Index Options                               8.45am to 1.50pm    2.15pm to 4.45am                                                                7.25am to 8.00pm    8.15pm to 4.45am
+913:                SGX MSCI Taiwan NTR (USD) Index Futures                     7.25am to 6.30pm    7.00pm to 4.45am    SGX MB Iron Ore CFR China (65% FE Fines) Futures            7.25am to 8.00pm    8.15pm to 4.45am
+974:                                                                                                    NK         SGX Nikkei 225 Index Futures                                                                                          LNG         SGX Sling LNG Index Futures
+975:                         CN         SGX FTSE China A50 Index Futures                                                                                                      EC            SGX EUR/CNH Futures
+976:                                                                                                    NKO        SGX Nikkei 225 Index Options                                                                                          SMCF        SGX SM CFR China Futures
+988:                         ISSF       SGX India Single Stock Futures                                  NS         SGX Mini Nikkei 225 Index Futures                          TD            SGX TWD/USD Futures
+990:                         JP         SGX MSCI Japan Index Futures                                    NSG        SGX MSCI Singapore Free NTR (USD)                          YS            SGX CNY/SGD Futures                          IND India (NSE)
+1000:                         NCH        SGX MSCI China Free NTR (USD) Index Futures                     NTW        SGX MSCI Taiwan NTR (USD) Index Futures                    IOF           SGX Iron Ore Futures                         KRW Seoul Bank Holiday
+1001:                         ND         SGX Nikkei Stock Average Dividend Point                         NU         SGX USD Nikkei 225 Index Futures                           IOFO          SGX Iron Ore Options                         MYS Malaysia (Bursa Malaysia)
+1003:                         NEA        SGX MSCI Emerging Markets Asia NTR (USD)                        SGP        SGX MSCI Singapore Free Index Futures                                    Futures                                      PHL Philippines (PSE)
+1004:                                    Index Futures                                                   SGPO       SGX MSCI Singapore Free Index Options                      HRF           SGX Hot-Rolled Coil Steel CFR                SGP Singapore
+1009:                                                                                                    TW         SGX MSCI Taiwan Index Futures
+1011:                                                                                                    TWO        SGX MSCI Taiwan Index Options                                                                                         GBR United Kingdom Bank Holiday
+
+                         # Timings exclude pre-opening and pre-closing routines, the respective non-cancel periods as well as the respective order-cancellation session states where applicable. For detailed timings, visit https://www2.sgx.com/derivatives/trading.
+                         ^ NLT registration for all products commence at 7.10am.
+                         * Trade registration hours for SGX FlexC FX Futures. After the close of T session, there will be a 30-minute grace period for participants to continue registering T session trades.
+
+=== SGX Derivatives Market Trading Calendar 2018 (Apr) (live api2, doc 'accurate as of 26 December 2017') ===
+848:                SGX FTSE China A50 Index Futures                               9.00am to 4.30pm                  5.00pm to 4.45am                 SGX MYR/USD Futures                                                     7.25am to 5.55pm         6.15pm to 4.45am
+849:                SGX Mini Nikkei 225 Index Futures                              7.30am to 2.25pm                  2.55pm to 4.45am                 SGX PHP/USD Futures                                                     7.25am to 5.55pm         6.15pm to 4.45am
+868:                SGX MSCI Singapore Free Index Futures                          8.30am to 5.10pm                  5.40pm to 4.45am                 SGX Freight Options                                                     7.25am to 8.00pm         8.15pm to 4.45am
+869:                SGX MSCI Singapore Free Index Options                          8.30am to 5.15pm                  5.40pm to 4.45am                 SGX Indonesian Sub-Bit FOB Coal Futures                                 7.25am to 8.00pm         8.15pm to 4.45am
+870:                SGX MSCI Singapore Free NTR (USD) Index Futures                7.25am to 6.30pm                  7.00pm to 4.45am                 SGX SICOM RSS3 Rubber Futures                                           7.55am to 6.00pm         None
+871:                SGX MSCI Taiwan Index Futures                                  8.45am to 1.45pm                  2.15pm to 4.45am                 SGX SICOM TSR20 Rubber Futures                                          7.55am to 6.00pm         None
+872:                SGX MSCI Taiwan Index Options                                  8.45am to 1.50pm                  2.15pm to 4.45am                 SGX Platts PX CFR Taiwan/China Futures                                  7.25am to 8.00pm         8.15pm to 4.45am
+873:                SGX MSCI Taiwan NTR (USD) Index Futures                                7.25am to 6.30pm          7.00pm to 4.45am                 SGX PX-Naphtha Spread Futures                                           7.25am to 8.00pm         8.15pm to 4.45am
+881:                SGX Nikkei 225 Index Futures                                           7.30am to 2.25pm          2.55pm to 4.45am                 SGX Singapore Visco Spread Futures                                      7.25am to 8.00pm         8.15pm to 4.45am
+882:                SGX Nikkei 225 Index Options                                           7.30am to 2.30pm          2.55pm to 4.45am                 SGX Platts Gasoil FOB Singapore Index Futures                           7.25am to 8.00pm         8.15pm to 4.45am
+892:                SGX USD Nikkei 225 Index Futures                                       7.30am to 2.25pm          2.55pm to 4.45am                 SGX Singapore Sling LNG Futures                                         7.25am to 8.00pm         8.15pm to 4.45am
+942:                          CHO SGX MSCI China Index Options                                       NK   SGX Nikkei 225 Index Futures                       EC		 SGX EUR/CNH Futures                         PO   SGX Polyolefin Futures		
+943:                          CN    SGX FTSE China A50 Index Futures                                 NKO SGX Nikkei 225 Index Options                        IDR		 SGX IDR/USD Futures                        EE   SGX Monthly Electricity Futures
+950:                          ID    SGX MSCI Indonesia Index Futures                                 NS   SGX Mini Nikkei 225 Index Futures                  MYS		      SGX MYR/SGD Futures                   LNG  SGX Sling LNG Index Futures
+951:                          IN    SGX Nifty 50 Index Futures                                       NSG  SGX MSCI Singapore Free NTR (USD) Index Futures    PHP		      SGX PHP/USD Futures                   SMCF SGX SM CFR China Futures		
+952:                          INB   SGX Nifty Bank Index Futures                                     NTW SGX MSCI Taiwan NTR (USD) Index Futures             SY		 SGX SGD/CNH Futures                         MEGF SGX MEG CFR China Futures		
+953:                          ING   SGX Nifty CPSE Index Futures                                     NU   SGX USD Nikkei 225 Index Futures                   TD		 SGX TWD/USD Futures
+955:                                                                                                 SGP  SGX MSCI Singapore Free Index Futures                                                               HOLIDAYS
+957:                          INQ   SGX Nifty Midcap 50 Index Futures                                SGPO SGX MSCI Singapore Free Index Options              TF		       SGX SICOM TSR20 Rubber Futures        HKG Hong Kong                     TWN Taiwan
+960:                          MD    SGX MSCI India Index Futures                                     TW   SGX MSCI Taiwan Index Futures                      IOF		      SGX Iron Ore Futures
+961:                                                                                                 TWO SGX MSCI Taiwan Index Options                                                                        IDN Indonesia                     GBR United Kingdom
+899:                # Timings exclude pre-opening and pre-closing routines, the respective non-cancel periods as well as the respective order-cancellation session states where applicable. For detailed timings, visit sgx.com/derivativestradingcalendar

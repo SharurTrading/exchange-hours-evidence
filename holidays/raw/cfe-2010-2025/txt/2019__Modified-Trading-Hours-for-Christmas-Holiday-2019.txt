@@ -1,0 +1,138 @@
+CFE Modified Trading Hours for the Christmas Holiday
+Reference ID: C2019121000
+
+
+Overview
+This notice sets forth the modified trading hours on Cboe Futures Exchange, LLC (CFE) for Cboe Volatility
+Index (VX) futures, 7-Day AMERIBOR (AMW) futures, Three-Month AMERIBOR (AMB3) futures, and all
+other CFE products for the Christmas holiday. All times referenced in this notice are Chicago time.
+
+
+Modified Trading Schedule for Tuesday, December 24, 2019
+CFE products will have the following early closing times on Tuesday, December 24, 2019.
+
+
+                     Product                           Tuesday, December 24, 2019
+                                                              Closing Time
+               IBHY and IBIG futures                           12:00 p.m.
+       (including Trade at Settlement (TAS)
+ transactions in these futures (IBHYT and IBIGT))
+       TAS transactions in VX futures (VXT)                      12:13 p.m.
+      VX, AMW, AMB, VA, and VXTY futures                         12:15 p.m.
+
+
+Holiday Trading Schedule for Wednesday, December 25, 2019
+VX, AMW, and AMB3 Futures
+
+CFE will reopen following the Christmas holiday at 5:00 p.m. on Wednesday, December 25, 2019 with the
+start of extended trading hours for VX futures (including VXT TAS transactions), AMW futures, and AMB3
+futures.
+
+All Other Products
+
+Trading will be closed in IBHY, IBIG, VA, and VXTY futures on Wednesday, December 25, 2019.
+
+On Thursday, December 26, 2019, IBHY, IBIG, VA, and VXTY futures will open at their regularly scheduled
+opening times.
+
+The queuing period for the Wednesday trading session for non-TAS single leg contract expirations and
+non-TAS spreads in IBHY, IBIG, VA, and VXTY futures will commence at 5:00 p.m. on Wednesday,
+December 25, 2019 plus a randomized time period from zero to three seconds. The queuing period for
+the Wednesday trading session for any TAS single leg contract expirations and TAS spreads in IBHY and
+IBIG futures will commence at 5:00 p.m. on Wednesday, December 25, 2019 plus a randomized time
+period from three to six seconds.
+
+
+
+ECRP Transactions and Block Trades
+ECRP transactions and Block Trades in CFE futures contracts may be consummated on Tuesday, December
+24, 2019 or Wednesday, December 25, 2019 if they satisfy all of the following three requirements. The
+ECRP or Block Trade:
+
+       (i)     must be agreed to during a queuing period or trading hours for the applicable contract on
+               December 24, 2019 or December 25, 2019;
+
+       (ii)    must be fully reported to CFE by no later than 30 minutes after the transaction is agreed
+               upon for an ECRP transaction and by no later than 10 minutes after the transaction is
+               agreed upon for a Block Trade; and
+
+       (iii)   must be fully reported to CFE within a queuing period or trading hours for the applicable
+               contract on December 24, 2019 or December 25, 2019.
+
+For example, an ECRP transaction or Block Trade in VX futures may not be agreed to or reported during
+the suspension period for VX futures in place from 12:15 p.m. on December 24, 2019 until 4:45 p.m. on
+December 25, 2019.
+
+Additionally, ECRP transactions and Block Trades must be reported through the CFE Block Trade/ECRP
+Reporting Tool as is the case on regular trading days.
+
+
+Submission Time Frames for VX, AMW, and AMB3 Futures for the Christmas
+Holiday
+The chart below sets forth the applicable time frames for the submission of Orders (including Cancel
+Orders and Cancel Replace/Modify Orders) in VX, AMW, and AMB3 futures, including VXT TAS transactions
+unless otherwise indicated, in connection with the Christmas holiday.
+
+       Calendar Day                 Time Frame               State of CFE’s    What May be Submitted to
+                                                                Trading          CFE’s Trading System
+                                                                System
+        Tuesday            5:00 p.m. (Monday, December         Extended       Orders (except Market Orders)
+    December 24, 2019          23, 2019) to 8:30 a.m.        Trading Hours
+                                                                                   TAS Orders for VXT
+        Tuesday               8:30 a.m. to 12:15 p.m.           Regular       Orders (except Market Orders
+    December 24, 2019                                        Trading Hours     in AMW and AMB3 futures)
+                           8:30 a.m. to 12:13 p.m. for VXT
+                                                                                   TAS Orders for VXT
+        Tuesday             12:15 p.m. to system restart      Suspended                 Nothing
+    December 24, 2019      on Wednesday, December 25,
+       Calendar Day                  Time Frame             State of CFE’s    What May be Submitted to
+                                                               Trading          CFE’s Trading System
+                                                               System
+                             2019 (which occurs sometime
+                              between 4:05 p.m. to 4:45
+                                         p.m.)
+       Wednesday             System restart (which occurs    Suspended         Cancels for persisted Good-
+    December 25, 2019        sometime between 4:05 p.m.                      ‘til-Canceled (GTC) and Good-
+                               to 4:45 p.m.) to 4:45 p.m.                      ‘til-Date (GTD) Orders from
+                                                                                     prior trading date
+       Wednesday                4:45 p.m.* to 5:00 p.m.       Queuing             Orders (except Market,
+    December 25, 2019                                          Period          Immediate or Cancel (IOC),
+                                                                             and Fill or Kill (FOK) Orders)**
+
+                                                                                 TAS Orders for VXT**
+       Wednesday                 5:00 p.m. to 8:30 a.m.       Extended       Orders (except Market Orders)
+    December 25, 2019          (Thursday, December 26,      Trading Hours
+                                         2019)                                     TAS Orders for VXT
+
+*The queuing period at the beginning of a Business Day for VX, AMW, and AMB3 non-TAS single leg
+contract expirations and non-TAS spreads commences at the referenced start time for the queuing period
+plus a randomized time period from zero to three seconds. The queuing period at the beginning of a
+Business Day for VXT TAS single leg contract expirations and TAS spreads commences at the referenced
+start time for the queuing period plus a randomized time period from three to six seconds.
+
+**Orders permitted to be submitted to CFE’s trading system during these times are not executable until
+extended trading hours next commence.
+
+
+Session Disconnect on December 25, 2019
+At approximately 4:10 p.m. on December 25, 2019, a session disconnect will occur during the 12:15 p.m.
+(Tuesday, December 24, 2019) to 4:45 p.m. (Wednesday, December 25, 2019) suspended state.
+
+This disconnect will not cause any orders to cancel due to Cancel on Disconnect. As a general rule, Cancel
+on Disconnect is not in effect between the scheduled end of trading for a given futures product and the
+next system restart. Trading Privilege Holders may refer to the FIX and BOE specifications for further
+information on how to configure cancel on disconnect settings.
+
+         Cboe Futures Exchange FIX Specification
+         Cboe Futures Exchange Binary Order Entry Specification
+
+
+Additional Information
+Please contact the CFE Trade Desk for support or with any questions.
+
+We appreciate your business and remain committed to powering your potential with Cboe products,
+technologies, and solutions.
+CFE Trade Desk
+312.786.8700
+cfetradedesk@cboe.com
+

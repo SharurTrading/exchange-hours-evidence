@@ -1,0 +1,851 @@
+Proposed amendment to Practice Note 8.2.1
+Application of Market Phases and Algorithm
+Issue Date
+
+Cross Reference
+Rules 8.2.1 –
+8.2.3
+
+1 August 2011
+
+Enquiries
+Please contact Market Control:6236 8840
+
+1
+
+INTRODUCTION
+
+1.1
+
+This Practice Note explains the application of the various market phases and
+the algorithm used by SGX-ST in computing the single price for the Opening
+Routine, Closing Routine, and Adjust Phase.
+
+1.2
+
+Rule 8.2.1 says the trading hours and the application of the market phases are
+as published by SGX-ST.
+
+1.3
+
+Rule 8.2.2 says SGX-ST may vary the trading hours and application of the
+market phases.
+
+1.4
+
+Rule 8.2.3 sets out the various market phases.
+
+2
+
+APPLICATION OF MARKET PHASES
+
+2.1
+
+Summary of Market Phases
+(1) Normal Day Trading
+08.30
+
+08.59
+
+PreOpen
+
+09.00
+NonCancel
+
+12.3013.59* 14.00
+
+Trading
+
+Opening Routine
+* Please see Point 2.4(2).
+
+Adjust
+Phase
+Trading
+
+17.00
+
+Trading
+
+17.05
+
+PreClose
+
+NonCancel
+
+Closing Routine
+
+(2) Half-Day Trading
+08.30
+
+08.59
+
+PreOpen
+
+09.00
+NonCancel
+
+Opening Routine
+2.2
+
+12.30
+
+Trading
+
+12.35
+
+PreClose
+
+12.36
+
+NonCancel
+
+Closing Routine
+
+Opening Routine
+(1) The Opening Routine is a 30-minute session before normal trading starts
+at 09:00 hours. It comprises the Pre-Open Phase and the Non-Cancel
+Phase.
+(2) Pre-Open Phase (08:30 to 08:59 hours)
+
+17.06
+
+(a) Orders can be entered, reduced in quantity or withdrawn in the ready
+and unit share markets.
+(b) Order quantity cannot be undisclosed in the ready market.
+(c) The bid (offer) can be higher (lower) than the offer (bid).
+(d) No matching of orders.
+(3) Non-Cancel Phase (08:59 to 09:00 hours)
+(a) No input, amendment and withdrawal of orders.
+(b) Orders that can be matched are matched at a single price computed
+based on an algorithm set by SGX-ST. The computed price will be
+the opening price for the day.
+(c) Unmatched orders are carried forward into the morning trading
+session.
+2.3
+
+Trading Phases
+(1) There are 2 Trading Phases, the morning trading session from 09:00 to
+12:30 hours and the afternoon trading session from 14:00 to 17:00 hours.
+The Trading Phase will be from 09:00 to 17:00 hours.
+(2) The Trading Phase allows order entry, reduction in order size and
+withdrawal of orders. Orders are matched in the order of price priority
+followed by time priority.
+(3) All unmatched orders after the morning trading session are carried
+forward to the Adjust Phase.
+(4)(3) All unmatched orders after the afternoon Trading session Phase are
+carried forward to the Closing Routine.
+
+2.4
+
+Adjust Phases
+(1) The Adjust Phase during the lunch break allows order management. An
+Adjust Phase also operates upon the lifting of a suspension of a security
+or Futures Contract. A trading halt operates in the same way as an Adjust
+Phase.
+(2) Lunch Break Hours (Not Applicable to Half-Day Trading)
+(a) Between 12:30 and 13:59 hours:(i) Orders can be entered, reduced in quantity or withdrawn in the
+ready and unit share markets.
+(ii) Order quantity can be undisclosed in the ready market (subject
+to a minimum of 50,000 disclosed quantity).
+(iii) The bid (offer) can be higher (lower) than the offer (bid).
+(iv) No matching of orders.
+(b) Between 13:59 and 14:00 hours:(i) No input, amendment and withdrawal of orders.
+
+(ii) Orders that can be matched will be matched at a single price
+computed based on an algorithm set by SGX-ST.
+(iii) Unmatched orders are carried forward into the afternoon trading
+session.
+(3)(2) Upon Lifting of a Suspension
+(a) The Adjust Phase sets in for 15 minutes. A longer time can be
+specified.
+(b) Orders can be entered, reduced in quantity or withdrawn for the
+ready and unit share markets.
+(c) Order quantity can be undisclosed in the ready market (subject to a
+minimum of 50,000 disclosed quantity).
+(d) The bid (offer) can be higher (lower) than the offer (bid).
+(e) Orders that can be matched will be matched at the end of the Adjust
+Phase at a single price computed based on an algorithm set by SGXST before normal trading resumes. Unmatched orders at the end of
+the Adjust Phase are carried forward into the phase of the market
+applicable when the Adjust Phase ends.
+(f) However, this behaviour does not apply when the end of Adjust
+Phase coincides with the Opening Routine, lunch break Adjust Phase
+or Closing Routine. In these circumstances, orders entered are
+carried forward into and matched accordingly in the respective
+Opening Routine, lunch break Adjust Phase or Closing Routine.
+(4) During a Trading Halt
+(a) Existing orders remain valid.
+(b) Orders can be entered, reduced in quantity or withdrawn in the ready
+and unit share markets.
+(c) Order quantity can be undisclosed in the ready market (subject to a
+minimum of 50,000 disclosed quantity).
+(d) The bid (offer) can be higher (lower) than the offer (bid).
+(e) Orders that can be matched will be matched at the end of the trading
+halt at a single price computed based on an algorithm set by SGXST.
+(f) Unmatched orders are carried forward into the phase applicable to
+the market at the time of lifting of trading halt.
+(g) If the trading halt is not lifted by the end of a Market Day, all
+unmatched orders lapse.
+2.5
+
+Closing Routine
+(1) The Closing Routine is a 6-minute session after trading stops at 17:00
+hours for normal day trading, or 12:30 hours for half-day trading. It
+comprises the Pre-Close Phase and the Non-Cancel Phase.
+
+(2) All unmatched orders are carried forward to the Closing Routine at 17:00
+hours (for normal day trading) or 12:30 hours (for half-day trading).
+(3) Pre-Close Phase (17:00 to 17:05 hours/12:30 to 12:35 hours)
+(a) Orders can be entered, reduced in quantity or withdrawn in the ready
+and unit share markets.
+(b) Order quantity cannot be undisclosed in the ready market.
+(c) The bid (offer) can be higher (lower) than the offer (bid).
+(d) No matching of orders.
+(4) Non-Cancel Phase (17:05 to 17:06 hours/12:35 to 12:36 hours)
+(a) No input, amendment and withdrawal of orders.
+(b) Orders that can be matched are matched at a single price computed
+based on an algorithm set by SGX-ST. The computed price will be
+the closing price for the day.
+(c) All unmatched orders lapse.
+(5) This routine is designed to reduce the risk of manipulating closing prices
+with a single transaction at an unusually high or low price, just before the
+trading session ends.
+3
+
+ALGORITHM USED BY SGX-ST TO COMPUTE THE SINGLE
+PRICE AT WHICH ORDERS AT THE END OF THE OPENING
+ROUTINE, CLOSING ROUTINE AND ADJUST PHASE ARE
+MATCHED
+
+3.1
+
+The methodology for computing the single price is as follows:(1) A bid (offer) may be executed at a lower (higher) price.
+(2) The cumulative bid (offer) volume at any price is the bid (offer) quantity
+at that price plus the sum of bid (offer) quantities at all higher (lower)
+prices.
+(3) Sell (buy) pressure occurs when the cumulative offer (bid) volume is
+greater than the cumulative bid (offer) volume at a particular price. Zero
+pressure occurs when the cumulative offer volume is equal to the
+cumulative bid volume at a particular price.
+(4) The tradable volume at any price is the lower of the cumulative bid or
+offer volume.
+(5) The price overlap is the range of prices where tradable volumes are
+possible.
+(6) The equilibrium is the price range within the price overlap where buy
+pressure changes to sell pressure (see Example 1). The computed price is
+either one of the following:(a) The price within the equilibrium that has the largest trade volume, or
+
+(b) If there is no unique price, the average of all prices within the
+equilibrium with the maximum trade volume, or
+(c) The average is rounded to the next multiple of the minimum price
+multiple for this security or Futures Contract in the direction of the
+last traded price, or
+(d) If there is no last traded price, the average price is rounded to the
+next lower price multiple.
+(7) If there is only buy or sell pressure within the price overlap (see Example
+2), the computed price will be one of the following:(a) With only buy pressure within the price overlap, the highest price
+within the overlap with a non-zero trade volume, or
+(b) With only sell pressure within the price overlap, the lowest price
+within the overlap with a non-zero trade volume.
+(8) If there is zero buy and sell pressure within the price overlap (see
+Example 3), the computed price will be one of the following:(a) The simple average of the highest and the lowest price within the
+overlap of zero pressure, or
+(b) If the price average is not the correct multiple, the average is
+rounded to the next multiple in the direction of the last traded price,
+or
+(c) If there is no last traded price, the average price is rounded to the
+next lower price multiple.
+(9) If the buy pressure and sell pressure are separated by a range of prices
+within the price overlap with zero pressure (see Example 4), the
+computed price will be one of the following:(a) The simple average of the highest and the lowest prices within the
+overlap of zero pressure, or
+(b) If the price average is not the correct multiple, the average is
+rounded to the next multiple in the direction of the last traded price,
+or
+(c) If there is no last traded price, the average price is rounded to the
+next lower price multiple.
+3.2
+
+The following examples demonstrate how the single price is determined.
+However, the examples shown are not exhaustive.
+Example 1
+Cumulative
+Offer
+Volume
+
+Buy/Sel
+l
+Pressur
+e
+
+Tradab
+le
+Volume
+
+22
+
+101
+
+-
+
+-
+
+41
+
+79
+
+S
+
+2
+
+Cumulative
+Bid Volume
+
+Bid
+Qty
+
+Price Offer
+$
+Qty
+
+-
+
+-
+
+10.80
+
+2
+
+2
+
+10.70
+
+18
+
+16
+
+10.60
+
+20
+
+38
+
+S
+
+18
+
+40
+
+22
+
+10.50
+
+14
+
+18
+
+B
+
+18
+
+78
+
+38
+
+10.40
+
+2
+
+4
+
+B
+
+4
+
+167
+
+89
+
+10.30
+
+2
+
+2
+
+B
+
+2
+
+267
+
+100
+
+10.20
+
+-
+
+-
+
+-
+
+-
+
+In this example, trades are possible at prices between $10.30 and $10.70.
+However, the buy pressure changes to sell pressure from $10.50 to $10.60.
+Since the same number of trades can be executed at both prices, the computed
+price is either $10.50 or $10.60, depending on which price is closer to the last
+traded price.
+Example 2
+Cumulative
+Offer
+Volume
+
+Buy/Sel
+l
+Pressur
+e
+
+Tradab
+le
+Volume
+
+-
+
+5
+
+-
+
+-
+
+0.320
+
+-
+
+5
+
+-
+
+-
+
+16
+
+0.310
+
+-
+
+5
+
+B
+
+5
+
+16
+
+-
+
+0.305
+
+-
+
+5
+
+B
+
+5
+
+16
+
+-
+
+0.300
+
+5
+
+5
+
+B
+
+5
+
+16
+
+-
+
+0.255
+
+-
+
+-
+
+-
+
+-
+
+26
+
+10
+
+0.250
+
+-
+
+-
+
+-
+
+-
+
+Cumulative
+Bid Volume
+
+Bid
+Qty
+
+Price Offer
+$
+Qty
+
+-
+
+-
+
+0.345
+
+-
+
+-
+
+16
+
+In this example, trades are possible at prices between $0.300 and $0.310. Buy
+pressure from $0.300 to $0.310. The computed price is $0.310, the highest
+price within the overlap with a non-zero trade volume.
+Example 3
+Cumulative
+Bid Volume
+
+Bid
+Qty
+
+Price
+$
+
+Offer
+Qty
+
+Cumulative
+Offer
+Volume
+
+Buy/Sel
+l
+Pressure
+
+Tradabl
+e
+Volume
+
+-
+
+-
+
+0.440
+
+5,000
+
+11,000
+
+-
+
+-
+
+-
+
+-
+
+0.435
+
+2,000
+
+6,000
+
+-
+
+-
+
+4,000
+
+4,000
+
+0.430
+
+-
+
+4,000
+
+-
+
+4,000
+
+4,000
+
+-
+
+0.425
+
+-
+
+4,000
+
+-
+
+4,000
+
+4,000
+
+-
+
+0.420
+
+-
+
+4,000
+
+-
+
+4,000
+
+4,000
+
+-
+
+0.415
+
+-
+
+4,000
+
+-
+
+4,000
+
+4,000
+
+-
+
+0.410
+
+-
+
+4,000
+
+-
+
+4,000
+
+4,000
+
+-
+
+0.405
+
+4,000
+
+4,000
+
+-
+
+4,000
+
+7,000
+
+3,000
+
+0.400
+
+-
+
+-
+
+-
+
+-
+
+In this example, trades are possible at prices from $0.405 to $0.430, where
+there is neither a buy nor a sell pressure. The computed price would be
+$(0.405 + 0.430) / 2 = $0.4175; since this does not fall under the correct
+multiple, it will be rounded to the next multiple in the direction of the last
+traded price.
+Example 4
+Cumulative
+Offer
+Volume
+
+Buy/Sel
+l
+Pressur
+e
+
+Tradab
+le
+Volume
+
+5,000
+
+11,000
+
+-
+
+-
+
+0.435
+
+2,000
+
+6,000
+
+-
+
+-
+
+1,000
+
+0.430
+
+-
+
+4,000
+
+S
+
+1,000
+
+4,000
+
+3,000
+
+0.425
+
+-
+
+4,000
+
+-
+
+4,000
+
+4,000
+
+-
+
+0.420
+
+-
+
+4,000
+
+-
+
+4,000
+
+4,000
+
+-
+
+0.415
+
+-
+
+4,000
+
+-
+
+4,000
+
+4,000
+
+-
+
+0.410
+
+-
+
+4,000
+
+-
+
+4,000
+
+5,000
+
+1,000
+
+0.405
+
+3,000
+
+4,000
+
+B
+
+4,000
+
+5,000
+
+-
+
+0.400
+
+1,000
+
+1,000
+
+B
+
+1,000
+
+8,000
+
+3,000
+
+0.395
+
+-
+
+-
+
+-
+
+Cumulative
+Bid Volume
+
+Bid
+Qty
+
+Price Offer
+$
+Qty
+
+-
+
+-
+
+0.440
+
+-
+
+-
+
+1,000
+
+In this example, trades are possible at prices from $0.400 to $0.430. The buy
+pressure is separated from the sell pressure by a range of prices without
+pressure, i.e. between $0.410 and $0.425. The computed price would be
+$(0.410 + 0.425) / 2 = $0.4175; since this does not fall under the correct
+multiple, it will be rounded to the next multiple in the direction of the last
+traded price.
+Legend:
+Additions
+Deletions
+
+

@@ -1,0 +1,215 @@
+{
+ "task": "cme-2025-2027.verify",
+ "round": 2,
+ "verifies": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2025-2027.json",
+ "verifies_sha256": "6bc718e5fbaea70c01f3bf54ccab156028eef9c28ce24357a5217c633b5d5771",
+ "previous_verdict": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2025-2027.verify.r1.json",
+ "verified_on_utc": "2026-09-12",
+ "evidence_dir": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2025-2027-verify-r2/",
+ "matches": false,
+ "summary": "All seven round-1 discrepancies are resolved and the fix round's own claims hold under independent re-checking: 87/87 INDEX.md hashes re-computed byte-exact, 10 cited documents re-fetched byte-identical, the 8 documents taken from a non-latest capture re-fetched at their latest capture with 0 schedule differences, all 313 family rows re-parsed from the cited bytes with 0 mismatches, every instant literally present in its own document and every row date inside its document's window (no instant inferred from another year), and a fresh CDX enumeration reproduces the fix round's capture table exactly. Four new load-bearing defects, all arising from one false premise the fix round did not test: the task asserts throughout that CME's live trading-hours service 'carries only FORWARD holidays' and that 'past holidays are dropped'. It does not. The service still serves every window from Thanksgiving 2025 forward, for BOTH product-id sets. That makes three of the seven missing[] entries false and leaves two rows carrying status 'unknown' when the operator's current T2 publication is available. Separately, six Cryptocurrency rows are labelled status 'normal' although their 16:00 CT final close carries the next business day's trade date rather than their own - the exact defect class the fix round corrected for N3 and N18 and did not carry through to these.",
+ "round1_items_recheck": [
+  {
+   "id": 1,
+   "round1_finding": "Thanksgiving 2025 quoted a superseded pre-holiday publication; the 'missing' list falsely denied a later capture existed",
+   "status": "RESOLVED",
+   "evidence": "D09 is now the 2026-01-29T01:23:09Z capture. Re-fetched from the exact id_ replay URL and byte-identical to raw/cme-2025-2027-fix/arc/thbp_2025-11-26_2025-11-28_20260129012309.json (sha256 6c4c598791058dd9a11aff0ddb072c761a436c6d1054b891def74c6935f020f1; gz ab8342bd...). The eight 2025-11-28 rows now quote the 07:00 preopen / 07:30 open pair; all early-close instants unchanged. The superseded publication is retained and labelled D09P. A live read of the same window on 2026-09-12 independently reproduces D09 event for event."
+  },
+  {
+   "id": 2,
+   "round1_finding": "2025-07-03 Equity Index 12:15 CT early close classified 'modified' with no close_instant",
+   "status": "RESOLVED",
+   "evidence": "The row now reads status=early_close, close_instant='12:15 CT'. Confirmed against the cited bytes: raw/cme-2025-2027/arc/thbp_2025-07-03_2025-07-05_20241220155340.json has ES eventDate 2025-07-03 events [12:15 closed /TD 2025-07-03; 16:45 preopen /TD 2025-07-04; 17:00 open /TD 2025-07-04] while ZN, 6E, CL, GC and BTC all close 16:00 that day."
+  },
+  {
+   "id": 3,
+   "round1_finding": "17 rows noted [N3] labelled 'normal' although they carry no trade date of their own",
+   "status": "RESOLVED",
+   "evidence": "All 17 [N3] rows now carry status='modified' (counted programmatically over the payload). The status vocabulary is now defined explicitly in coverage."
+  },
+  {
+   "id": 4,
+   "round1_finding": "note code N17 used on 3 rows but never defined",
+   "status": "RESOLVED",
+   "evidence": "N17 and the new N18 are defined in raw/cme-2025-2027-fix/INDEX.md and appended to raw/cme-2025-2027/INDEX.md (lines 157-162), and restated in coverage. All 19 note codes used in the payload (N1-N18, EC) are now defined."
+  },
+  {
+   "id": 5,
+   "round1_finding": "INDEX.md archive URLs omit the '&isProtected&_t=<epoch>' suffix, so a literal re-fetch 404s; ~110 files on disk unlisted",
+   "status": "RESOLVED",
+   "evidence": "raw/cme-2025-2027-fix/REFETCH.tsv carries the exact one-step id_ replay URL for all 25 archived service artifacts; this verification used it for six re-fetches and every one returned the archived bytes on the first try. raw/cme-2025-2027-fix/MANIFEST-cme-2025-2027.sha256 hashes all 180 files on disk; 20 randomly sampled rows re-computed and all matched."
+  },
+  {
+   "id": 6,
+   "round1_finding": "Saturday 2025-11-29 unchecked and the gap unrecorded",
+   "status": "RESOLVED AS RECORDED, BUT NOW CLOSEABLE",
+   "evidence": "missing[] entry 6 now records it explicitly, and D52/D53 supply the 2026/2027 Saturdays as mitigation, both re-fetched byte-identical here. However the gap itself no longer exists - see discrepancy 3 below."
+  },
+  {
+   "id": 7,
+   "round1_finding": "the Good Friday 2026 CME quotation in coverage carried no document id",
+   "status": "RESOLVED",
+   "evidence": "coverage now attributes it to 'the T1 operator page D50 (line 2498 of html/trading-hours-20250830.html)'. Verified: sed -n '2498p' returns '<li>Due to the US Employment Situation Release on April 3, 2026, CME Group Equities, FX, Cryptocurrency and Interest Rate products will have unique Closes and Settlements for trade date April 3rd.</li>', and the two continuation sentences are present verbatim including the 'April 3th'/'observence' typos the task marks (sic). coverage also states correctly that D50 carries no instants and that the 08:15/10:15 CT closes rest on D14 alone."
+  }
+ ],
+ "checks_run": {
+  "rehash_index": {
+   "rows": 87,
+   "ok": 87,
+   "mismatch": 0,
+   "missing_files": 0,
+   "detail": "72 rows in raw/cme-2025-2027/INDEX.md and 15 in raw/cme-2025-2027-fix/INDEX.md, every sha256 recomputed from the bytes on disk. The round-0 INDEX self-hash row was honestly re-pointed at cme-2025-2027.r0.json (4cd4706a...) and the round-1 payload is indexed in the fix INDEX at 6bc718e5fbaea70c01f3bf54ccab156028eef9c28ce24357a5217c633b5d5771 - both recomputed and correct."
+  },
+  "manifest_spotcheck": {
+   "sampled": 20,
+   "ok": 20,
+   "note": "random sample of raw/cme-2025-2027-fix/MANIFEST-cme-2025-2027.sha256 (183 lines, 180 files)"
+  },
+  "refetch": {
+   "documents": 10,
+   "byte_identical": 10,
+   "detail": [
+    "D02 arc 2025-01-19..21 @20241220155340 -> 4f2ab56a MATCH",
+    "D07 arc 2025-07-03..05 @20241220155340 -> b80cd4bf MATCH",
+    "D09 arc 2025-11-26..28 @20260129012309 -> 6c4c5987 MATCH (and gz ab8342bd MATCH)",
+    "D10 arc 2025-12-24..26 @20260129012159 -> 322a2be9 MATCH",
+    "D14 arc 2026-04-01..03 @20260619114118 -> 54bcc271 MATCH",
+    "D16 arc 2026-06-17..19 @20260129012310 -> e4e2d5e4 MATCH",
+    "D44 live THBP-A 2027-11-24..26 -> 6aa7c0fd MATCH",
+    "D46 live THBP-A 2027-12-22..25 -> 5edc4dd5 MATCH",
+    "D41 live THBP-B 2027-07-04..06 -> 1a955035 MATCH",
+    "D52 live THBP-A 2026-11-27..29 -> 31c724b0 MATCH"
+   ],
+   "mix": "2025/2026/2027, archive and live, both product id sets, including the one document the fix round replaced"
+  },
+  "latest_capture_check": {
+   "documents": 8,
+   "schedule_diffs": 0,
+   "detail": "D11, D12, D13, D14, D15, D17, D18 and D19 are each cited from a capture that is not their window's latest. All eight latest captures were fetched (D12/D13 at 2026-08-12T18:51:18Z, which is later than the round-1 evidence reviewed) and compared over all 30 (product, eventDate) pairs each: 0 differences. No superseded publication remains quoted."
+  },
+  "verbatim_and_instants": {
+   "family_rows": 313,
+   "mismatches": 0,
+   "method": "Each row's document code was resolved to its saved file through the coverage legend, the verbatim event list was re-parsed, and every (product, eventDate) pair named by the row was compared against the bytes: event count, event time, marketEventType, order, and per-event tradingDate.",
+   "trade_date_parenthetical": "247 rows use the '(trade date X)' shorthand rather than per-event /TD. Every event of every product in those rows was checked to carry exactly X: 0 inconsistent.",
+   "instants": "all close_instant / open_instant values are formatted '<hh:mm> CT' and every one literally appears as an event time for that product on that date in the row's own cited document: 0 failures.",
+   "no_cross_year_inference": "every row's date lies inside its document's fromEventDate/toEventDate window: 0 failures. No instant is carried from another year.",
+   "zone": "'Trading hours are subject to change and are in U.S. Central Time unless otherwise stated.' verified verbatim at line 89 of raw/cme-2025-2027/live/trading-hours-live.md. The channel prints no ET column and the task asserts no ET value.",
+   "baseline": "the normal grids quoted in coverage were re-read from raw/cme-2025-2027/live/normal/normalweek_main.json (week 2026-10-18..24) and match, including the Friday-only trade-date roll for Cryptocurrency that discrepancy 4 turns on."
+  },
+  "twelve_plus_spot_reads": {
+   "note": "the 313-row pass above covers every entry, but these were additionally read out event by event from the bytes and checked for status, instant and zone",
+   "entries": [
+    "2025-01-01 all 5 family rows (D01)",
+    "2025-07-04 all 5 rows (D07)",
+    "2025-11-27 all 12 rows (D09)",
+    "2026-04-03 all 6 rows (D14)",
+    "2026-05-25 all 8 rows (D15)",
+    "2026-06-19 all 7 rows (D16/D17)",
+    "2027-11-25 all 21 rows (D44/D45)",
+    "2027-12-23 Cryptocurrency (D46)",
+    "2028-01-01 all 3 rows (D48/D49)",
+    "all 12 status=normal rows",
+    "all 17 status=modified [N3] rows",
+    "all 16 post-2026-05-29 Cryptocurrency rows"
+   ]
+  },
+  "enumeration": {
+   "holidays": 31,
+   "forward_list": "a fresh read of https://www.cmegroup.com/services/trading-hours-filters (raw/cme-2025-2027-verify-r2/live/filters_r2.md) returns 14 holidays, 2026-09-07 .. 2028-01-01; all 14 are present in the payload and each window used matches CME's stated startPeriod/endPeriod.",
+   "2025_and_2026": "all ten 2025 Globex holidays and all seven 2026 pre-September holidays present; Columbus Day and Veterans Day correctly excluded."
+  },
+  "fresh_cdx": {
+   "url": "https://web.archive.org/cdx/search/cdx?url=cmegroup.com/services/trading-hours-by-product*&output=json&fl=timestamp,original,statuscode,mimetype,digest,length&collapse=digest&limit=100000",
+   "rows": 688,
+   "retrieved": "2026-09-12T18:09Z",
+   "saved": "raw/cme-2025-2027-verify-r2/cdx/cdx_r2.json",
+   "windows": 56,
+   "id_sets": "THBP-A ten-product set 669, no-id filter queries 16, singletons id=316, id=5224, id=318. The THBP-B set (168,167,320,323,19,27) appears nowhere in the archive - the task's archive claim is correct.",
+   "capture_table": "independently reproduced and matches raw/cme-2025-2027-fix/INDEX.md exactly: New Year 2025 = 2 captures (latest 2024-12-20T15:53:40Z); MLK, Presidents', Good Friday, Memorial, Juneteenth, Independence and Labor 2025 = 1 each (same capture); Thanksgiving 2025 = 45 (latest 2026-01-29T01:23:09Z); Christmas 2025 = 45 (same latest); New Year 2026 = 51 (latest 2026-07-22T11:42:22Z). No archived window satisfies from <= 2025-11-29 <= to.",
+   "extra_find": "one later capture touching Good Friday 2026 that the fix round did not list: 2026-07-11T17:52:24Z over window 2026-04-01..2026-04-07 with id=5224 (Micro Gold only). Saved as arc/w7_20260711.json. It shows MGC with no events on Saturday 2026-04-04, corroborating rather than contradicting the task."
+  }
+ },
+ "discrepancies": [
+  {
+   "id": 1,
+   "severity": "material",
+   "kind": "false 'missing' claim - the named channel does serve these windows",
+   "where": "missing[] entries 0 and 1; also the GROUPS paragraph of coverage",
+   "claim_quoted": "Nikkei 225 (NKD Nikkei/USD, NIY Nikkei/JPY) for every 2025 holiday and for the 2026 holidays before Labor Day 2026 ... Channels tried: the live trading-hours service (drops past holiday events - verified by querying window 2025-01-19..2025-01-21, which returns the products with empty schedules)",
+   "finding": "The generalisation from the MLK-2025 probe is wrong. The live service was queried on 2026-09-12 with the THBP-B id set (168,167,320,323,19,27) for every window the two entries name. It returns a full schedule for nine of them: Thanksgiving 2025 (2025-11-26..29, 47 events), Christmas 2025 (40), New Year 2026 (48), MLK 2026 (46), Presidents' 2026 (46), Good Friday 2026 (60), Memorial 2026 (46), Juneteenth 2026 (2026-06-17..19, 60; eve window 2026-06-18..20, 32) and Independence 2026 (2026-07-02..04, 32; 2026-07-03..05, 16). Only the eight windows through Labor Day 2025 return zero events. Bytes saved in raw/cme-2025-2027-verify-r2/live/probeB_*.md.",
+   "impact": "Nine holidays x six products are declared unsourced while the operator's own T2 channel publishes them today. Under LAW-PRIMARY-SOURCES these are sourced, and under LAW-HOLIDAY-SCOPE the served families' tables would ship with an avoidable hole. The Nikkei line matters most: on Good Friday 2026 NKD/NIY do NOT follow ES.",
+   "fix": "Re-scope missing[] entries 0 and 1 to the eight windows through Labor Day 2025 only (New Year 2025, MLK, Presidents', Good Friday, Memorial, Juneteenth, Independence, Labor 2025) and add the nine holidays' THBP-B rows from the live service. Exact corrected values for two of them, verbatim from the saved bytes: Thanksgiving 2025 (probeB_2025-11-26_2025-11-29.md) - NKD and NIY: eventDate 2025-11-26 '16:00 closed /TD 2025-11-26; 16:45 preopen /TD 2025-11-28; 17:00 open /TD 2025-11-28'; eventDate 2025-11-27 '12:00 preopen /TD 2025-11-28; 17:00 open /TD 2025-11-28'; eventDate 2025-11-28 '07:00 preopen /TD 2025-11-28; 07:30 open /TD 2025-11-28; 12:15 closed /TD 2025-11-28'; ZS and ZW: 2025-11-28 '07:00 preopen /TD 2025-11-28; 08:30 open /TD 2025-11-28; 12:05 closed /TD 2025-11-28'; HE: 2025-11-28 '08:00 preopen; 08:30 open; 12:05 closed' /TD 2025-11-28; DC: no events on 2025-11-27 or 2025-11-28. Good Friday 2026 (probeB_2026-04-01_2026-04-03.md) - NKD and NIY: eventDate 2026-04-03 '08:15 closed /TD 2026-04-03' (an early close at 08:15 CT, tracking ES, NOT the 10:15 CT of ZN/6E/BTC); DC: eventDate 2026-04-02 '13:55 closed /TD 2026-04-02', eventDate 2026-04-03 no events; ZS, ZW, HE: no events on 2026-04-03."
+  },
+  {
+   "id": 2,
+   "severity": "material",
+   "kind": "false 'missing' claim + two rows left at status 'unknown' when the current operator publication is available",
+   "where": "missing[] entry 2; holidays[2026-06-19].families row 'Cryptocurrency (BTC) | date 2026-06-17' (D16) and holidays[2026-07-03].families row 'Cryptocurrency (BTC) | date 2026-07-02' (D18)",
+   "claim_quoted": "Cryptocurrency on 2026-06-17 and 2026-07-02 ... Channels tried: the live service (both dates are past and are dropped); CDX for later captures of windows 2026-06-17..19 and 2026-07-02..04, of which none exist after 2026-01-29.",
+   "finding": "The CDX half is correct and independently reproduced (44 captures each, latest 2026-01-29T01:23:10Z). The live half is false. Querying the live service on 2026-09-12 for fromEventDate=2026-06-17&toEventDate=2026-06-19 returns 80 events including BTC, and for fromEventDate=2026-07-02&toEventDate=2026-07-04 returns 55 events including BTC. Both carry the post-24/7 grid, not the superseded pre-24/7 publication the rows quote. Bytes: raw/cme-2025-2027-verify-r2/live/probeA_2026-06-17_2026-06-19.md and probeA_2026-07-02_2026-07-04.md.",
+   "impact": "These are the only two status='unknown' rows in the payload. Both are closeable from the operator's own T2 channel, and the recorded verbatim is a publication the task itself labels superseded ([N13]).",
+   "fix": "Delete missing[] entry 2. Replace the two rows with the live T2 values, verbatim from the saved bytes. Row 'Cryptocurrency (BTC) | date 2026-06-17': verbatim 'eventDate 2026-06-17: 16:00 closed /TD 2026-06-17; 16:01 preopen /TD 2026-06-18; 16:02 open /TD 2026-06-18', status 'normal' [N8] (2026-06-17 is a Wednesday and the re-open carries the next calendar day, matching the post-24/7 Mon-Thu grid), close_instant '16:00 CT'. Row 'Cryptocurrency (BTC) | date 2026-07-02': verbatim 'eventDate 2026-07-02: 16:00 closed /TD 2026-07-02; 16:01 preopen /TD 2026-07-06; 16:02 open /TD 2026-07-06', status 'modified' [N18] (Thursday; the re-open skips the closed Friday 2026-07-03 and carries Monday's trade date), close_instant '16:00 CT'. New document ids are needed for both; the retrieval is 2026-09-12 through r.jina.ai, tier T2."
+  },
+  {
+   "id": 3,
+   "severity": "material",
+   "kind": "recorded gap that the operator's own channel closes",
+   "where": "missing[] entry 6 (Saturday 2025-11-29)",
+   "claim_quoted": "Saturday 2025-11-29 ... no publication covering Saturday 2025-11-29 exists. Channels tried: the fresh CDX enumeration ... the live service drops past holidays.",
+   "finding": "The CDX half is correct (independently reproduced: zero archived windows cover 2025-11-29). The live half is false. A live query on 2026-09-12 for fromEventDate=2025-11-26&toEventDate=2025-11-29 returns 75 events and includes a 2025-11-29 schedule for all ten THBP-A products, every one of them empty: ZN, ES, CL, ZC, 6E, GC, LE, CSC, BTC and LBR all publish no events on Saturday 2025-11-29. The THBP-B set returns the same for ZS, ZW, HE, NIY, DC and NKD. Bytes: raw/cme-2025-2027-verify-r2/live/probeA_2025-11-26_2025-11-29.md and probeB_2025-11-26_2025-11-29.md. The same query reproduces D09's 2025-11-26/27/28 rows event for event, which independently corroborates the round-1 re-sourcing.",
+   "impact": "The one genuinely unchecked date in the 2025 set is answerable from T2 and the answer is 'no session'. CME's 2025 Globex table states the Thanksgiving period as '27 - 29 November 2025', so a reader is otherwise left to guess whether Saturday traded.",
+   "fix": "Delete missing[] entry 6 and record the answer instead: add a row 'Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC); Grains & Oilseeds (ZC); Livestock (LE); Dairy (CSC); Cryptocurrency (BTC); Lumber (LBR) | date 2025-11-29' with status 'closed', verbatim 'eventDate 2025-11-29: no events published [N1]', tier T2, citing a new live document id retrieved 2026-09-12."
+  },
+  {
+   "id": 4,
+   "severity": "material",
+   "kind": "status misclassification - the holiday's own trade date is lost",
+   "where": "the six Cryptocurrency rows noted [N8] on Friday holidays: holidays[2026-06-19] date 2026-06-19, holidays[2026-07-03] date 2026-07-03, holidays[2026-12-25] date 2026-12-25, holidays[2027-01-01] date 2027-01-01, holidays[2027-03-26] date 2027-03-26, holidays[2027-06-18] date 2027-06-18",
+   "recorded": "status='normal', note [N8] ('published event list equals the family's normal grid for that weekday'), no close_instant. Example: 'eventDate 2026-12-25: 16:00 closed; 16:01 preopen; 16:02 open (trade date 2026-12-28) [N8]'",
+   "finding": "The event TIMES equal the normal Friday grid but the trade dates do not. The reference week (raw/cme-2025-2027/live/normal/normalweek_main.json, Friday 2026-10-23) prints BTC as '16:00 closed /TD 2026-10-23; 16:01 preopen /TD 2026-10-26; 16:02 open /TD 2026-10-26' - the 16:00 final close settles the Friday itself. On all six holiday Fridays the 16:00 close instead carries the FOLLOWING MONDAY's trade date, so Cryptocurrency has no trade date of its own on the holiday and the whole day rolls. Verified against each row's own cited bytes: 2026-06-19 -> /TD 2026-06-22 (D17), 2026-07-03 -> /TD 2026-07-06 (D19), 2026-12-25 -> /TD 2026-12-28 (D26), 2027-01-01 -> /TD 2027-01-04 (D29), 2027-03-26 -> /TD 2027-03-29 (D34), 2027-06-18 -> /TD 2027-06-21 (D38).",
+   "impact": "This is precisely the defect class round 1 raised as items 3 and 4 and the fix round corrected for the 17 [N3] rows and for 2027-12-23 Cryptocurrency ([N18], now 'modified'). The Friday variant was missed. All six are full-closure Globex holidays; a consumer keyed on status would record no Cryptocurrency holiday entry for Good Friday 2027, Christmas 2026, New Year 2027, Juneteenth 2026/2027 or Independence 2026 and would compute a trade date that does not exist. The Monday/Thursday equivalents ([N10], 16:00 close omitted) are already 'modified', so the payload is internally inconsistent about the same fact.",
+   "fix": "Set status='modified' and note [N18] on all six rows, and add close_instant='16:00 CT' (the instant is printed in every one). N18's definition already covers them verbatim: 'the published event TIMES equal the family's normal grid for that weekday, but the re-open carries a trade date that skips the following closed holiday' - widen it to say the FINAL CLOSE, not only the re-open, may carry the rolled trade date. Leave 2028-01-01 Cryptocurrency alone: it is a Saturday, and '02:00 closed; 03:45 preopen; 04:00 open (trade date 2028-01-03)' is the normal Saturday grid exactly."
+  },
+  {
+   "id": 5,
+   "severity": "minor",
+   "kind": "false statement of channel behaviour, repeated in four places",
+   "where": "coverage ENUMERATION paragraph ('The live service carries only FORWARD holidays - as of 2026-09-12 it starts at Labor Day 2026-09-07 and runs to New Year 2028-01-01'), and missing[] entries 0, 2 and 3 ('past holidays are dropped' / 'both dates are past and are dropped' / 'the live service drops past holidays')",
+   "finding": "CME's forward holiday LIST (services/trading-hours-filters) does start at 2026-09-07 - that part is true and independently re-verified. But the trading-hours-by-product service itself is not limited to that list: it serves any window whose dates it still holds, which on 2026-09-12 reaches back to Thanksgiving 2025. The probe the task generalised from (2025-01-19..21) is simply past the retention edge. Thirteen windows were probed here; the boundary falls between Labor Day 2025 (0 events) and Thanksgiving 2025 (75 events).",
+   "impact": "This single false premise is what produced discrepancies 1, 2 and 3. It should be corrected wherever it is stated, since it is also the stated reason a future reviewer would not re-try the channel.",
+   "fix": "Replace with the observed behaviour: 'CME's forward holiday list starts at Labor Day 2026-09-07, but the trading-hours-by-product service still answers for past windows back to Thanksgiving 2025 (verified 2026-09-12: windows from 2025-11-26 forward return schedules; windows through Labor Day 2025 return the products with empty schedules).'"
+  },
+  {
+   "id": 6,
+   "severity": "minor",
+   "kind": "coverage prose contradicted by the payload's own rows",
+   "where": "coverage, 'TWO THINGS WORTH FLAGGING TO THE CRATE' item (2)",
+   "claim_quoted": "From 2026-05-29 Cryptocurrency is 24/7: on holidays it publishes only '16:01 preopen / 16:02 open' (the 16:00 CT final close is omitted because there is no settlement)",
+   "finding": "True only for the Monday and Thursday holidays (the eight [N10] rows). On all six Friday holidays the service DOES print the 16:00 CT close - it is the trade date that moves, not the event (discrepancy 4). As written the sentence would lead a reader to expect no 16:00 close on Good Friday 2027 or Christmas 2026, and the payload's own rows show one.",
+   "fix": "Split the sentence: on Monday and Thursday holidays the 16:00 CT final close is omitted; on Friday holidays it is printed but carries the following Monday's trade date, so the holiday still has no settlement of its own."
+  },
+  {
+   "id": 7,
+   "severity": "minor",
+   "kind": "artifact backing a coverage claim is not indexed",
+   "where": "coverage ('Saturday 2026-04-04 after Good Friday 2026 does NOT carry one (checked against the service for window 2026-04-02..04)')",
+   "finding": "The claim is true and is backed by raw/cme-2025-2027/api/test_eq_gf2026.json (ES, RTY, MES, NQ, MNQ, YM, RX, XAF, SDA, ASR over 2026-04-02..04, all empty on 2026-04-04), but that file is an Equity-Index-only probe, is not listed in INDEX.md, and is not named in coverage. It is covered by the fix round's MANIFEST. Corroboration found independently in this round: the archived 2026-07-11T17:52:24Z capture of window 2026-04-01..2026-04-07 (id=5224, Micro Gold) also shows no events on 2026-04-04, extending the check to Metals.",
+   "fix": "Name the artifact in the coverage sentence and add it to INDEX.md, or re-state the check against the ten-product set."
+  }
+ ],
+ "verified_clean": [
+  "all seven round-1 discrepancies resolved; each re-checked against the bytes rather than taken on the fix round's word",
+  "87/87 INDEX.md sha256 rows recomputed byte-exact across both evidence directories; no indexed file missing; the self-hash rows are honest about which payload they describe",
+  "10 cited documents re-fetched independently (6 Wayback id_ replays, 4 live r.jina.ai reads) - every one byte-identical to the saved artifact",
+  "the repaired re-fetch path works: REFETCH.tsv's URLs returned the archived bytes first try for every document tried",
+  "8 documents cited from a non-latest capture re-fetched at their window's latest capture (including two captures later than round 1 reviewed): 0 schedule differences, so no superseded publication is quoted anywhere",
+  "313/313 family rows re-parsed from their own cited bytes: event times, event types, order and per-event trading dates all match, 0 mismatches; the 247 rows using the '(trade date X)' shorthand were additionally checked event by event",
+  "every close_instant and open_instant literally appears as an event time for that product on that date in the row's own cited document, and every row date lies inside that document's window - no instant is inferred from another year",
+  "the CT zone statement is verbatim at line 89 of the saved live page; no ET value is asserted because this channel prints none",
+  "the D50 Good Friday 2026 quotation is verbatim at line 2498 of the saved T1 page, typos and all, and coverage correctly says D50 states no instants",
+  "the normal-grid baselines were recomputed from the saved reference-week bytes and match coverage, including the Friday-only trade-date roll for Cryptocurrency",
+  "holiday enumeration complete: all 14 holidays in a freshly read CME forward list are present with matching windows, plus all ten 2025 and seven 2026 pre-September holidays; Columbus Day and Veterans Day correctly excluded",
+  "a fresh 688-row CDX enumeration reproduces the fix round's per-window capture table exactly, confirms the THBP-B id set never appears in the archive, and confirms no archived window covers Saturday 2025-11-29"
+ ]
+}

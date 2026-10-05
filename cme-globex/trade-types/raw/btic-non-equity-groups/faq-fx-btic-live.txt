@@ -1,0 +1,151 @@
+Title: Frequently Asked Questions: BTIC and BTIC+ for FX Futures
+
+URL Source: https://www.cmegroup.com/articles/faqs/frequently-asked-questions-btic-and-btic-plus-for-fx-futures.html
+
+Published Time: 2022-11-21T00:00:00.000Z
+
+Markdown Content:
+## 1. What is BTIC for FX?
+
+*   BTIC, or Basis Trade at Index Close, is a pricing mechanism with its own product-specific ticker that provides market participants the ability to trade futures contracts at a fixed spread or basis to a reference price, such as the close of a known benchmark index.
+*   For FX, BTIC transactions are available for EUR/USD futures against the WM/Refinitiv Closing Spot Rate determined at 4:00 p.m. London time.
+
+## 2. What is BTIC+?
+
+BTIC+ is a separate futures contract that allows market participants to execute a BTIC basis trade in EUR/USD futures relative to the WM/Refinitiv Closing Spot Rate for the last business day of the current month.
+
+## 3. What currency pairs will BTIC and BTIC+ be available for?
+
+BTIC and BTIC+ is currently available for EUR/USD.
+
+## 4. What reference prices can BTIC and BTIC+ be traded against?
+
+For FX, we will offer BTIC and BTIC+ against the WM/Refinitiv Closing Spot Rate, determined at 4:00 p.m. London time.
+
+## 5. How does BTIC work?
+
+BTIC is a separately quoted market for EUR/USD futures trading, where the quoted price is the basis difference between futures and spot. Trades take place before the spot reference price is known. Once the spot reference price has been published, the futures trade will be assigned a price equal to the BTIC trade price plus the spot reference price.
+
+## 6. How does BTIC+ work?
+
+BTIC+ is distinct futures contract in its right. BTIC+ contracts can be held through to the penultimate business day of the month, at which point they deliver a BTIC trade in EUR/USD futures which in turn is priced against the WM/Refinitiv Closing Spot Rate on the last business day of the month.
+
+## 7. What are the CME Globex trading hours for BTIC and BTIC+ for FX?
+
+*   BTIC can be traded on CME Globex against the current day’s reference price up to 3:40 p.m. London time (typically 9:40 a.m. CT).
+*   After the current day’s reference price has been published, BTIC can be traded on CME Globex against the next day’s reference price from 4:30 p.m. London time (typically 10:30 a.m. CT). These trades will be treated as trades for the next day’s trade date.
+*   BTIC+ contracts can be traded through the standard CME Globex trading hours of Sunday-Friday 5:00 p.m.-4:00 p.m. CT.
+
+## 8. Why is CME Group launching BTIC and BTIC+ for FX?
+
+*   Benchmarking to and trading in relation to FX reference prices has been growing in prominence in recent years.
+*   By offering BTIC and BTIC+ for FX, CME is providing an efficient mechanism to use futures contracts to hedge and manage these exposures in a more precise way.
+
+## 9. Which futures contract is traded in a BTIC and a BTIC+ trade?
+
+BTIC and BTIC+ trades deliver in to the nearest quarterly (i.e., March, June, September, and December) futures contract month.
+
+## 10. How many contracts will be listed at a given time for BTIC and BTIC+?
+
+*   One BTIC market will be available at any time. On each trading day, BTIC will be available against that day’s reference price until 3:40 p.m. London time, and after reference price has been published, BTIC will be available against the next day’s reference price from 4:30 p.m. London time until the market close.
+*   BTIC+ will be available for trading against the reference price on the last business day of the current calendar month and can be traded until the close of trading on the penultimate business day of the calendar month.
+
+## 11. When is CME Group launching BTIC and BTIC+?
+
+The first day of trading for BTIC and BTIC+ is Monday February 6, 2023.
+
+## 12. Are these eligible for block trading?
+
+Yes, block trading is supported for both BTIC and BTIC+. The block minimum is in line with the underlying EUR/USD futures (i.e., 150 lots).
+
+## 13. What are the hours for block trade submission through CME ClearPort?
+
+*   BTIC block trades contracts can be submitted to CME ClearPort each business day, beginning at 5:00 p.m. CT on Sunday and 6:00 p.m. CT Monday-Thursday. There is no reporting Monday-Thursday from 5:45 p.m.-6:00 p.m. CT.
+*   BTIC block trades can be traded against the current day’s reference price up to 9:40 a.m. CT (typically 3:40 p.m. London time), and can be submitted to CME ClearPort subject to the [normal rules for block trades](https://www.cmegroup.com/rulebook/files/cme-group-Rule-526.pdf). After the current day’s reference price has been published, BTIC block trades against the next day’s reference price can be submitted to CME ClearPort from 11:30 a.m. CT (typically 5:30 p.m. London time).
+*   BTIC+ block trades contracts can be submitted through the standard CME ClearPort hours of Sunday - Friday 5:00 p.m.-5:45 p.m. CT, with no reporting Monday - Thursday from 5:45 p.m.-6:00 p.m. CT.
+
+## 14. What is the lifecycle of the BTIC and BTIC+ instruments?
+
+*   BTIC trades are available to trade against the next Closing Spot Rate.
+*   BTIC trades in the current trading day occurring before the current day’s Closing Spot Rate (i.e., trades before 3:40 p.m. London time are priced against the current day’s Closing Spot Rate).
+*   BTIC trades occurring after the current day’s Closing Spot Rate are priced against the next day’s Closing Spot Rate. These trades are treated as having a T+1 trade date.
+
+![Image 1: Lifecycle of the BTIC and BTIC+ instruments](blob:http://localhost/583028cba8dc59c923581189d828f712)
+
+*   BTIC+ is available to trade against the Closing Spot Rate for the last business day of the current calendar month.
+*   Trades are held as BTIC+ futures contracts until the close of the next-to-last trading day in the month. Open BTIC+ positions then deliver a BTIC trade, which in turn is priced against the Closing Spot Rate on the last business day in the month.
+
+![Image 2: Lifecycle of the BTIC and BTIC+ instruments](blob:http://localhost/984f64e664007f0fc248856f775a2006)
+
+## 15. What are the contract specifications for BTIC and BTIC+?
+
+| **Product** | **BTIC on Euro FX Futures** | **Euro FX BTIC+ Futures** |
+| --- | --- | --- |
+| Clearing Code | 6EB | 6EP |
+| Contract Size | €125,000 | €125,000 |
+| Price Quotation | US Dollars per Euro | US Dollars per Euro |
+| Minimum Price Increment | 0.000005 CME Globex 0.000001 CME ClearPort | 0.000005 CME Globex 0.000001 CME ClearPort |
+| Tick Value | US$ 0.625 | US$ 0.625 |
+| Listing Schedule | BTIC available against current day’s index. After index is published, BTIC available against next day’s index. | BTIC+ available for delivery of BTIC trade on last business day of the month. |
+| Underlying Future | Next quarterly (Mar, Jun, Sep, Dec) EUR/USD futures contract. | Quarterly (Mar, Jun, Sep, Dec) EUR/USD futures contract which the nearest available on the last day of the calendar month. |
+| Exchange Rule Chapter | CME 261 | CME 261B |
+| CME Globex Trading Hours | Sunday-Friday 5:00 p.m.-4:00 p.m. CT. Trading halt from 3:40 p.m. London time (9:40 a.m./10:40 a.m. CT) to 4:30 p.m. London Time (10:30 a.m./11:30 a.m. CT). Daily maintenance period from 4:00 p.m.-5:00 p.m. CT. | Sunday-Friday 5:00 p.m.-4:00 p.m. CT. Daily maintenance period from 4:00 p.m.-5:00 p.m. CT. |
+| CME ClearPort Hours | Sunday-Friday 5:00 p.m.-5:45 p.m. CT. Trading halt from 9:40 a.m. CT to 11:30 a.m. CT. No reporting Monday - Thursday from 5:45 p.m. - 6:00 p.m. CT. | Sunday-Friday 5:00 p.m.-5:45 p.m. CT. No reporting Monday-Thursday from 5:45 p.m.-6:00 p.m. CT. |
+| Termination of Trading | 3:40 p.m. London time daily for current day’s index. | 4:00 p.m. CT on LTD. |
+| Last Trading Day | Daily in respect of the index reference. 1 business day prior to LTD of underlying future. | 1 business day prior to the last business day of the contract month. |
+| Settlement Method | Creation of futures trade at [Trade Price + Index]. | Delivery of BTIC trade at final settlement price. |
+| Block Trade Minimum Volume Threshold | 150 lots | 150 lots |
+
+## 16. What if there is a scheduled holiday for the Closing Spot Rate?
+
+No BTIC trade will be made available on days which are a non-publication day for the WM/Refinitiv Closing Spot Rate.
+
+## 17. What if there is a scheduled Exchange holiday?
+
+On days which are an Exchange holiday but a publication day for the WM/Refinitiv Closing Spot Rate, BTIC trades will be made available against that day’s index, but these trades will be processed on the next Exchange business day.
+
+## 18. What are the ticker codes for these products?
+
+*   BTIC trades have the product code 6EB. A BTIC transaction against the March 2023 EUR/USD futures contract would have the ticker 6EBH3.
+*   BTIC+ contracts have the product code 6EP. A BTIC+ contract for February 2023 will have the ticker 6EPG3.
+*   The BTIC trade that is delivered will be against the next quarterly futures contract, e.g., for February 2023 BTIC+ the delivered BTIC will be against March 2023, i.e., 6EBH3.
+
+## 19. What are the vendor codes?
+
+| **CME Group Name/Venues/Symbols** | **CME Group** | **Bloomberg** | **CQG** | **DTN, Inc** | **Fidessa (ION)** | **FIS Global** | **ION Group** | **Itiviti** | **Refinitiv** | **Trading Technologies** | **Vela Trading Systems** |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **CME Group Product Name** | **Futures/Options** | **Globex** | **ClearPort** | **All Venues** | **All Venues** | **All Venues** | **All Venues** | **All Venues** | **All Venues** | **All Venues** | **Composite** | **All Venues** | **All Venues** |
+| BTIC on EUR/USD Futures | Futures | 6EB | 6EB | IEDA <Curncy> | G6EB | @6EB | 6EB | 6EB | 6EB | 6EB | UROB | 6EB | 6EB |
+| Nearby BTIC+ on EUR/USD Futures | Futures | 6EP | 6EP | JEDA <Curncy> | G6EP | @6EP | 6EP | 6EP | 6EP | 6EP | UROP | 6EP | 6EP |
+
+## 20. How is the daily settlement price determined?
+
+*   BTIC trades will be converted into regular positions in EUR/USD FX futures at a price of Index + trade price. Daily settlement for EUR/USD futures is established at 2:00 p.m. CT.
+*   For BTIC+, daily settlement is established at 2:00 p.m. CT, based on market information available at that time.
+
+## 21. How will the final delivery of the underlying EC futures be administered?
+
+Once the Closing Spot Rate is published, BTIC transactions are assigned a transaction price equal to the BTIC trade price + the Closing Spot Rate and are incorporated into EUR/USD futures positions at this price.
+
+## 22. What are the fees?
+
+## 23. Will there be additional market data fees to trade BTIC and BTIC+?
+
+Market participants who currently subscribe to CME DCM market data will receive the BTIC and BTIC+ data as part of that existing package at no additional charge.
+
+## 24. How will initial margin work for BTIC and BTIC+ contracts?
+
+*   BTIC trades are treated as trades in EUR/USD futures for margining purposes.
+*   BTIC trades against the current day’s Closing Spot Rate will be included in the following margining calculation (either intra-day or end of day).
+*   BTIC trades against the next day’s Closing Spot Rate are treated as T+1 trade date and are included in margining calculation from that date.
+*   BTIC+ is a separate futures contract and is margined as such. BTIC+ trades are included in following margining calculation. SPAN parameters for BTIC+ contract are available on the [CME Group website](https://www.cmegroup.com/clearing/margins/outright-vol-scans.html#sortField=exchange&sortAsc=true&pageNumber=1).
+*   When BTIC+ contracts go to delivery as BTIC trades (and subsequently EUR/USD futures trades), the positions will be margined as such.
+
+## 25. How will variation margin work?
+
+*   If a BTIC trade is closed out prior to the Closing Spot Rate determination, variation margin will reflect the profit/loss between the two trades.
+*   BTICs are assigned a transaction price of [BTIC trade price + Closing Spot Rate] as a EUR/USD futures contract. At the end of the day, variation margin will reflect the difference between this price and the EUR/USD futures daily settlement price.
+*   BTIC+ contracts have their own daily settlement price, and day 1 variation margin will reflect the difference between trade price and that day’s settlement price.
+*   When BTIC+ contracts go to delivery as BTIC trades (and subsequently EUR/USD futures trades), variation margin will be based on a BTIC trade equal to the final settlement price (i.e., the delivery price) of the BTIC+ futures contract.
+
+## 26. Where can I find more information on BTIC and BTIC+?

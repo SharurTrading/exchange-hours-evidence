@@ -1,0 +1,94 @@
+Title: FAQ: BTIC on Cryptocurrency Futures
+
+URL Source: https://www.cmegroup.com/articles/faqs/btic-on-cryptocurrency-futures-faq.html
+
+Published Time: 2026-09-01T00:00:00.000Z
+
+Markdown Content:
+##### What's new?
+
+BTIC is now available on Bitcoin Volatility futures.
+
+## 1. What is BTIC?
+
+BTIC, or Basis Trade at Index Close, is a pricing mechanism with its own product specific ticker that provides market participants the ability to trade futures contracts at a fixed spread or basis to a reference price, such as the close of a known benchmark index.
+
+BTIC transactions are currently available against the respective CME CF Reference Rate published at 4:00 p.m. London time, 4:00 p.m. New York time and 4:00 p.m. Hong Kong/Singapore time.
+
+## 2. Is there more than one BTIC mechanism available for each Cryptocurrency futures product?
+
+Yes, market participants will have the choice to transact Cryptocurrency futures relative to the underlying CME CF Reference Rate of their choice. For example, a North American bitcoin ETF provider looking to manage fund positions around NAV calculation (4:00 p.m. New York time) may choose to transact BTIC on Bitcoin futures versus the CME CF Bitcoin Reference Rate New York Variant (published at 4:00 p.m. New York time) rather than BTIC on Bitcoin futures versus the CME CF Bitcoin Reference Rate (published at 4:00 p.m. London time).
+
+Similarly, a Hong Kong bitcoin ETF provider looking to manage fund positions around NAV calculation (4:00 p.m. Hong Kong/Singapore time) may choose to transact BTIC on Bitcoin futures versus the CME CF Bitcoin Reference Rate APAC Variant (published at 4:00 p.m. Hong Kong/Singapore time) rather than BTIC on Bitcoin futures versus the CME CF Bitcoin Reference Rate (published at 4:00 p.m. London time).
+
+## 3. What BTIC transactions are available, and what are their contract specifications?
+
+## 4. What are the BTIC on Cryptocurrency futures trading hours?
+
+| Globex | 24/7 with the exception of the following maintenance windows: * Saturday: 2:00 a.m. to 4:00 a.m. CT * Monday – Thursday: 3:00 p.m. to 3:05 p.m. CT * Friday: 3:00 p.m. to 4:05 p.m. CT maintenance window The following hours will not be available for Globex trading for the regional cuts as follows: * APAC: 4:00 p.m. Hong Kong/Singapore to 4:05 p.m. Hong Kong/Singapore time * London: 4:00 p.m. London to 4:05 p.m. London time * New York: 4:00 p.m. New York (3:00 p.m. CT) to 4:05 p.m. New York time (3:05 p.m. CT) For Globex trades executed on a given trading day after the publication of the Index, the corresponding futures price shall be made by reference to the closing index value for the next trading day. |
+| --- |
+| ClearPort | Open daily with the exception of the maintenance window on Saturday from 2:00 a.m. to 4:00 a.m. CT. For a BTIC or BTIC block trade executed prior to the publication of the index on a given trading day, the corresponding futures price shall be made by reference to the closing Index value for the current trading day. For a BTIC or BTIC block trade executed on a given trading day after the publication of the Index, the corresponding futures price shall be made by reference to the closing Index value for the next trading day. * APAC BTICs can be submitted for the following clearing date after 10:00 a.m. CT. * London BTICs can be submitted for the following clearing date after 12:00 p.m. CT. * New York BTICs can be submitted for the following clearing date after 4:00 p.m. CT. |
+
+Trades and/or submissions after 4:00 p.m. CT Friday will price to Monday’s settlement price. In the event of a Friday holiday where the clearing cycle is suspended, all trades executed from Thursday through Sunday will be recorded with a Monday trade date. And if Monday is a clearing holiday, trades occurring from Friday through Tuesday will be assigned a Tuesday trade date.
+
+## 5. How are Globex BTIC transactions against the different regional closes handled on a CME Clearing holiday?
+
+BTIC transactions will be settled each day of the week to their underlying reference rate. Holidays have no impact. If there is a CME Clearing holiday, trades will be cleared the following business day. For example, if there is a CME Clearing holiday on a Monday, all trades up to 4:00 p.m. London time (10:00 a.m. CT), 4:00 p.m. Hong Kong/Singapore time (3:00 a.m. CT) and 4:00 p.m. New York time (3:00 p.m. CT) will use Monday's reference rate but have a trade date of Tuesday.
+
+*   This approach will be the same for any holiday throughout the week.
+*   Note: BTIC transactions will reopen on Fridays at 4:05 p.m. CT (5:05 p.m. ET).
+
+## 6. What are the vendor codes?
+
+## 7. Is BTIC on Cryptocurrency futures eligible for block trading?
+
+Yes, with the following minimum thresholds:
+
+| Cryptocurrency futures | Minimum threshold |
+| --- | --- |
+| ADA, AVAX, Bitcoin, Ether, LINK, Lumens, SOL, SUI, XRP, Nasdaq CME Crypto Index and Bitcoin Volatility futures | 5 contracts |
+| Micro ADA, Micro AVAX, Micro Bitcoin, Micro Ether, Micro LINK, Micro Lumens, Micro SOL, Micro SUI, Micro Nasdaq CME Crypto Index and Micro XRP futures | 10 contracts |
+| Bitcoin Friday futures | 25 contracts |
+| Micro Ether futures | 100 contracts |
+
+## 8. Will there be block liquidity providers for BTIC on Cryptocurrency futures?
+
+Yes. View a list of [block liquidity providers](https://www.cmegroup.com/trading/bitcoin-brokers-and-block-liquidity-providers.html) who have given CME Group consent to disclose their contact information.
+
+See [Rule 526](https://www.cmegroup.com/rulebook/files/cme-group-Rule-526.pdf) in the MRAN to find out more about block trades.
+
+##### Margin and fee details
+
+## 9. When will BTIC on Cryptocurrency futures trades be included in the margin calculation?
+
+BTIC on Cryptocurrency futures trades executed by 4:00 p.m. London time will be included in that day’s clearing cycle. BTIC on Cryptocurrency futures transactions consummated after 4:00 p.m. London time will be included in the next day’s clearing cycle, and margin will first be assessed in the intraday cycle on the following day.
+
+BTIC on Cryptocurrency futures trades executed by 4:00 p.m. New York time will be included in that day’s clearing cycle. BTIC on Cryptocurrency futures transactions consummated after 4:00 p.m. New York time will be included in the next day’s clearing cycle, and margin will first be assessed in the intraday cycle on the following day.
+
+BTIC on Cryptocurrency futures trades executed by 4:00 p.m. Hong Kong/Singapore time will be included in that day’s clearing cycle. BTIC on Cryptocurrency futures transactions consummated after 4:00 p.m. Hong Kong/Singapore time will be included in the next day’s clearing cycle, and margin will first be assessed in the intraday cycle on the following day.
+
+## 10. What are the fees for BTIC on Cryptocurrency futures?
+
+Fees for BTIC on Cryptocurrency futures transactions may be found on our [fee schedule](https://www.cmegroup.com/company/files/cme-fee-schedule-2019-02-01.pdf).
+
+##### Additional information
+
+## 11. How do you distinguish a BTIC execution from a futures outright execution?
+
+BTIC transactions have distinct product codes which differ from the corresponding outright Cryptocurrency futures. This results in a separate line on the trader’s blotter after the execution that will enable the traders to track their BTIC transactions throughout the day. Once the clearing cycle is complete, the BTIC transactions will be consolidated with the corresponding underlying Cryptocurrency futures.
+
+## 12. Is BTIC volume added to the corresponding outright futures market volume on a real-time basis?
+
+No, BTIC volume is **not** added to the outright futures volume on a real-time basis. While the final traded futures price of BTIC on Cryptocurrency futures transactions will be disseminated to the clearing firms after the cash close, the BTIC position will be consolidated with the corresponding underlying futures after the clearing cycle is complete for the day.
+
+## 13. When is the final price of Cryptocurrency futures from BTIC transactions disseminated?
+
+Approximately 15 minutes after the corresponding reference rate is published, finalized cleared trade data in the corresponding futures will be sent to your clearing firm with a trade price reflecting the index closing price plus the differential price at which the BTIC was traded. This price will be used when CME Group runs its end-of-day clearing cycle, at which point the trade will be marked to market versus the daily settlement price in the corresponding futures contract.
+
+## 14. How can I receive the resultant futures price from a BTIC on Cryptocurrency futures transaction?
+
+You can receive the resultant futures price reflecting the BTIC transaction either through your clearing firm or via our Straight Through Processing (STP) solution if you are subscribed. [Find out more about STP](https://www.cmegroup.com/trading/straight-through-processing/).
+
+Contact [GAM_CS@cmegroup.com](mailto:GAM_CS@cmegroup.com) to begin the STP onboarding process.
+
+## 15. Where can I find more information on BTIC on Cryptocurrency futures?

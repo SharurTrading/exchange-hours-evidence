@@ -1,0 +1,149 @@
+{
+ "task": "cme-2016-2018",
+ "verifier_round": 3,
+ "verified_on": "2026-09-12",
+ "matches": false,
+ "target": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.json",
+ "previous_verdict": {
+  "file": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.verify.r2.json",
+  "note": "The verdict that stood before this round (self-labelled verifier_round 1) was renamed to cme-2016-2018.verify.r2.json as instructed. It listed 11 discrepancies. Each was re-checked against the bytes, item by item; all 11 are RESOLVED. Detail in 'previous_discrepancies_recheck'.",
+  "round1_target_preserved_at": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.r1.json"
+ },
+ "artifacts_checked": [
+  "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018/INDEX.md (108 hashed rows)",
+  "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018/docs/ (88 files + docs/zip2016/ 20 files)",
+  "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018/cdx_holiday_calendar.json",
+  "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018/cdx_trading_hours.FAILED.html",
+  "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018-fix/INDEX.md (59 hashed rows)",
+  "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018-fix/docs/ (2 bundles + 53 extracted members + 2 intermediate revisions)",
+  "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018-fix/cdx_2018_fresh.json",
+  "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018-fix/cdx_2018_new_years_revisions.json"
+ ],
+ "previous_discrepancies_recheck": [
+  {
+   "n": 1,
+   "was": "2017-12-25 Cryptocurrency recorded 'unknown' with missing[0] claiming the channels were exhausted; CME's 2017 annual bundle prints a Bitcoin row.",
+   "status": "RESOLVED",
+   "evidence": "raw/cme-2016-2018-fix/docs/zip2017/2017-christmas-holiday-schedule.xls ('Last Updated: Dec 5, 2017', sha256 bfb291c9c08764ee2bcf0327690b98c58cbb4cf493723c7b1464eccb0d062d30) row 12 reads: 'Bitcoin' | col1 Close 16:00 | col2 'Globex Closed' | col3 Pre-opening 16:00 | col4 Open 17:00 | col11 Close 16:00. The target now records status 'closed', open_instant '17:00 CT / 18:00 ET (Monday, December 25)', document '2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26', and the verbatim reproduces those five cells exactly. The old missing[0] is gone. A 2017-12-22 Cryptocurrency row (Friday close 16:00, status 'normal') was correctly added from the same row."
+  },
+  {
+   "n": 2,
+   "was": "missing[6] claimed the 2018 channels were exhausted; 2018-holiday-calendars.zip exists and supersedes six 2018 documents.",
+   "status": "RESOLVED",
+   "evidence": "The bundle was re-fetched this round from https://web.archive.org/web/20260830100225id_/https://www.cmegroup.com/tools-information/holiday-calendar/files/2018-holiday-calendars.zip: sha256 aa0ac87005319be45d91d2a91fef907757dd8e5f0c6e3fb19875329940d9c5a2, 940879 bytes, byte-identical to the store. I independently hashed each served per-file capture against its bundle copy: 2018 good-friday, memorial-day, 4th-of-july, labor-day, thanksgiving and christmas DIFFER (superseded) and are now keyed to the bundle; 2018 martin-luther-king, presidents-day and new-years are byte-identical and correctly keep the per-file citation. 140 rows on 13 dates were re-keyed, exactly as the coverage prose states."
+  },
+  {
+   "n": 3,
+   "was": "2018-07-03 Cryptocurrency recorded 'normal' / Regular Close 16:00; the final revision prints Early Close 12:15.",
+   "status": "RESOLVED",
+   "evidence": "raw/cme-2016-2018-fix/docs/zip2018/2018-4th-of-july-holiday-schedule.xls header row 3 reads col1 'Regular Close', col2 'Early Close', col4 'Pre-opening**', col5 'Open'; row 12 'Bitcoin' carries col2 12:15, col4 16:45, col5 17:00 (the per-file capture carried col1 16:00). The target now records status 'early_close', close_instant '12:15 CT / 13:15 ET', open_instant '17:00 CT / 18:00 ET', with a matching verbatim."
+  },
+  {
+   "n": 4,
+   "was": "2017-12-25 Grains and Oilseeds served a Monday-evening 19:00 leg CME had withdrawn, while the identical leg was withheld on 2018-01-01.",
+   "status": "RESOLVED",
+   "evidence": "The Dec 5, 2017 revision's row 24 reads 'Grains and Oilseeds' | col1 12:05 | col2 'Globex Closed' | col9 06:00 | col10 08:30 | col11 13:20 | col12 '14:30-16:00' -- no col3/col4, i.e. no Monday leg. The target's open_instant is now '08:30 CT / 09:30 ET (Tuesday, December 26)' and the verbatim says so; I also confirmed the sibling rows named in the parenthetical (Mini-Sized, MGEX Hard Red Spring Wheat, MGEX Indices) each print col9 06:00 and no Monday leg. 2017-12-25 and 2018-01-01 are now handled identically."
+  },
+  {
+   "n": 5,
+   "was": "raw/cme-2016-2018/INDEX.md did not list the two 2016 New Year's documents the 2016-01-01 rows actually read, and omitted dl4_list.txt.",
+   "status": "RESOLVED",
+   "evidence": "INDEX.md lines 36-37 now carry docs/2016-new-years-holiday-schedule--20151203.xls (2015-12-03T08:17:29Z, sha256 ed036f1f...) and docs/2016-new-years-holiday-schedule--20160108.pdf (2016-01-08T20:30:07Z, sha256 118196a4...), both re-hashed OK here, and the 2016-01-08 PDF was re-fetched byte-identical. The Enumeration section now lists dl4_list.txt and says what it fetched. The INDEX row count went 106 -> 108."
+  },
+  {
+   "n": 6,
+   "was": "missing[3] said the archive holds two revisions of 2018-new-years-holiday-schedule.xls; it holds four.",
+   "status": "RESOLVED",
+   "evidence": "The two intermediate revisions were retrieved into raw/cme-2016-2018-fix/docs/ and I re-fetched both byte-identical (2017-06-28T17:38:31Z sha256 b219cfdb..., 61440 bytes; 2017-10-25T11:11:43Z sha256 a05414 19..., 61952 bytes). Reading all four: 'Mar 22, 2017', 'June 1, 2017' and 'Sep 21, 2017' each print Grains Monday Jan 1 col3 16:00 / col4 19:00 and Tuesday col9 08:00; 'Dec 5, 2017' prints no Monday leg and col9 06:00. Only the Dec 5 revision carries a Bitcoin row. The target's missing[2] states exactly this and no longer calls the two captures a disagreement."
+  },
+  {
+   "n": 7,
+   "was": "2018-12-25 Cryptocurrency carried a blank-cell caveat the final revision removes, and the dataset had no 2018-12-26 entry for the Equity-only Wednesday phase.",
+   "status": "RESOLVED",
+   "evidence": "zip2018/2018-christmas-holiday-schedule.xls row 12 'Bitcoin' now carries col2 'Globex Closed' (the per-file capture left it blank) and the caveat is deleted; row 4 'Equity Products' carries col9 15:15, col10 15:30, col11 16:00 under the 'Wednesday, December 26' calendar-date group. A 2018-12-26 entry with 12 family rows was added and each row's times reproduce the sheet's Wednesday columns (Interest Rate/FX/Energy/Bitcoin/Dairy col11 16:00; Grains 06:00/08:30/13:20/PCP 14:30-16:00; Livestock 06:00/08:30/13:05; Lumber 06:00/09:00/16:00). missing[9] records the unreconciled Wednesday phase."
+  },
+  {
+   "n": 8,
+   "was": "raw/cme-2016-2018/cdx_trading_hours.json was in fact the Internet Archive's 503 HTML page saved under a .json name.",
+   "status": "RESOLVED",
+   "evidence": "The file is now raw/cme-2016-2018/cdx_trading_hours.FAILED.html; its first bytes are still '<html><head><meta charset=\"UTF-8\"><title>Internet Archive: Temporarily Offline</title>', and INDEX.md lines 135-136 label it 'NOT data' and say what failed. No cdx_trading_hours.json remains."
+  },
+  {
+   "n": 9,
+   "was": "2016-05-30 Grains verbatim and open_instant contained a 'UTC' token the PDF does not print.",
+   "status": "RESOLVED",
+   "evidence": "pdftotext -layout raw/cme-2016-2018/docs/zip2016/2016-memorial-day-holiday-schedule.pdf line 28 reads '1900 CT / 2000 ET / 0000 - Open for trade date Tuesday, May 31'. The verbatim now matches and open_instant reads '1900 CT / 2000 ET / 0000 (Monday, May 30; the document omits the UTC label printed on every other line)'."
+  },
+  {
+   "n": 10,
+   "was": "2016-01-18 Grains verbatim normalised CME's 'Tuesday. Jan 19' to 'Tuesday, Jan 19'.",
+   "status": "RESOLVED",
+   "evidence": "pdftotext -layout raw/cme-2016-2018/docs/zip2016/2016-martin-luther-king-holiday-schedule.pdf line 29 reads '1900 CT / 2000 ET / 0100 UTC - Open for trade date Tuesday. Jan 19'; the verbatim now prints the period. The same document's '17100 ET' typo (line 15) is still untouched and is now named in the coverage prose."
+  },
+  {
+   "n": 11,
+   "was": "Coverage prose mis-stated the Energy/Metals row label history and claimed a constant 'UTC +6'.",
+   "status": "RESOLVED",
+   "evidence": "Coverage now names all three printed labels; I confirmed 'Energy, Metal, Softs & DME Products' (singular 'Metal') on 2018-martin-luther-king-holiday-schedule.xls and the 'Softs' form on the late-2017 sheets. On the zone line I read row 3 col 0 of all 17 cited 2017/2018 sheets: every one prints 'All times are Central Time   ET +1'; the trailing UTC offset is +6 on the winter sheets and +5 on the summer ones, and 2017-labor-day-holiday-schedule.xls really does change from 'UTC +6' ('Last Updated: Mar 22, 2017') to 'UTC +5' ('Last Updated: Aug 30, 2017'), exactly as the coverage now says."
+  }
+ ],
+ "checks_that_passed": [
+  "HASHES. All 108 sha256 rows of raw/cme-2016-2018/INDEX.md and all 59 of raw/cme-2016-2018-fix/INDEX.md were recomputed: 167/167 match, 0 mismatches, 0 missing files, and 0 files under either docs/ tree are absent from its INDEX.",
+  "BYTE RE-FETCH (8 documents). Re-fetched from the Internet Archive by id_ replay and byte-compared: 2017-holiday-calendars.zip @20210126094835 (f0dd1b52..., 491152), 2018-holiday-calendars.zip @20260830100225 (aa0ac870..., 940879), 2016-holiday-calendars.zip @20170628115819 (ce15abba..., 619386), 2018-new-years-holiday-schedule.xls @20170628173831 (b219cfdb...) and @20171025111143 (a0541419...), 2017-christmas-holiday-schedule.xls @20171025104928 (e75263b9...), 2017-4th-of-july-holiday-schedule.xls @20171025104918 (3e87d972...), 2016-new-years-holiday-schedule.pdf @20160108203007 (118196a4...). 8/8 BYTE-IDENTICAL. In addition all 53 members of the two re-fetched bundles were re-extracted and hashed: 53/53 identical to raw/cme-2016-2018-fix/docs/zip2017 and .../zip2018.",
+  "VERBATIM, xls-sourced (255 rows / 633 time tokens). Every family row citing an .xls was re-read from the saved BIFF bytes: the quoted row label was located in the sheet and every 'X = HH:MM' token in the verbatim was required to appear in that row's cells. 0 mismatches against the row itself; the only residue is the sibling-row parentheticals, and those surfaced the one real defect in discrepancy 1 below.",
+  "VERBATIM, pdf-sourced (120 rows / 272 quoted fragments). Each quoted fragment was required to appear in pdftotext -layout output of the cited 2016 PDF (en dash normalised to hyphen, as the coverage declares). Every fragment is present; the only non-matches are composites that prepend the PDF's own day header to the instant line printed under it, which I checked by hand on the 2016 MLK, Good Friday, Christmas and Thanksgiving PDFs.",
+  "NOTE QUOTATIONS. All 12 'Note: ...' and 'Dairy products will remain closed ...' quotations in xls-sourced rows were located verbatim in the cited sheet's cells. 0 failures.",
+  "NO INSTANT INFERRED FROM ANOTHER YEAR. All 375 rows cite a document whose own file-year equals the holiday's year (0 exceptions), including 2017-01-02 -> 2016-holiday-calendars.zip#2017-new-years-holiday-schedule.pdf and 2018-01-01 -> 2018-new-years-holiday-schedule.xls. Every instant I re-derived came from the cited document's own row/line for that calendar date; nothing is carried from an adjacent year's sheet.",
+  "ZONE. ET = CT + 1 with identical minutes on all 375 rows' close_instant/open_instant values (0 exceptions), which is the sheets' own printed rule. The 2016 PDFs print CT, ET and UTC themselves and are quoted as printed.",
+  "DERIVED FAMILIES. Nikkei 225 (dollar) matches its date's Equity Index status and instants on all 36 dates, and Metals matches Energy on all 36; 0 divergences. Both carry a verbatim saying they are the parent block's statement.",
+  "STATUS CLASSIFICATION, re-derived for 18 holiday groups spread across the range (2016-01-01, 2016-01-18, 2016-03-25, 2016-05-30, 2016-11-24, 2016-12-26, 2017-01-02, 2017-01-16, 2017-04-14, 2017-07-03, 2017-11-23, 2017-11-24, 2017-12-22, 2017-12-25, 2018-01-01, 2018-07-03, 2018-09-03, 2018-11-23, 2018-12-24, 2018-12-25, 2018-12-26): 'closed' wherever the row prints 'Globex Closed'/'Markets Closed'/'CME Globex is closed' or prints no session for that date, 'early_close' wherever an Early Close or Halt instant is printed for that date, 'normal' wherever the regular close is printed on a day its neighbours cut short. All agree with the saved values. 32 'normal', 174 'early_close', 169 'closed'; no row is left 'unknown'.",
+  "SOURCE SELECTION, re-tested independently. For each 2017/2018 schedule I hashed the served per-file capture against its copy inside the annual bundle: 2017 thanksgiving and christmas DIFFER; 2018 good-friday, memorial-day, 4th-of-july, labor-day, thanksgiving and christmas DIFFER; 2017 4th-of-july, good-friday, labor-day, martin-luther-king, memorial-day, presidents-day and 2018 martin-luther-king, presidents-day, new-years are byte-identical. The file's citations follow that split exactly. A full cell-level diff of all eight superseded pairs shows the only recorded-family changes are the four the target now records (2017 Christmas Bitcoin + grain leg, 2018 July 3 Bitcoin, 2018 Dec 25 Bitcoin cell, 2018 Dec 26 Equity phase); every other delta is in product rows this task does not record (BMD Crude Palm Oil, DME Oman TAM, KOSPI, Nifty, Fertilizer, Bloomberg, Rough Rice, E-mimi S&P TACO).",
+  "FRESH CDX, 2017 (a year the previous round did not enumerate). url=cmegroup.com/tools-information/holiday-calendar/files/2017* with no date filter, 108 rows, saved at raw/cme-2016-2018-verify-r3/cdx_2017_fresh.json. It confirms: 2017-holiday-calendars.zip has exactly one capture, 2021-01-26T09:48:35Z, matching the store; 2017-christmas and 2017-thanksgiving have no 200 capture after 2017-10-25, so the bundle really is the only channel to their final revisions; 2017 good-friday (2017-05-05), martin-luther-king and presidents-day (2017-06-28) have exactly the captures the file cites.",
+  "FRESH CDX, 2018 (re-run independently). url=...files/2018* with no date filter, 108 rows, saved at raw/cme-2016-2018-verify-r3/cdx_2018_fresh_r3.json. It is SET-IDENTICAL to the previous round's cdx_2018_fresh.json (0 rows either way) and confirms no 2018 per-file schedule has a 200 capture after 2018-05-08 and that 2018-holiday-calendars.zip exists only at 2026-08-30T10:02:25Z.",
+  "'MISSING' LIST vs THE ENUMERATIONS. The round-1 saved cdx_holiday_calendar.json spans 20140103043747 to 20201231161557 and contains exactly one annual bundle row (2016-holiday-calendars.zip @20170628115819); the 2017 bundle (2021) and 2018 bundle (2026) captures fall outside it. The target's missing[5] explanation of why the round-1 enumeration could not contain them is therefore accurate. Every remaining missing entry was checked against the bytes: the 2016 Thanksgiving PDF really prints 'Sunday, Nov 29' and the 2018 Thanksgiving sheet really prints 'Sunday Nov 26', both quoted and not resolved; the Nikkei, Columbus/Veterans Day, floor/ClearPort and clearing-advisory entries are scope statements, not evidence gaps.",
+  "CME TRADING-HOURS SERVICE (T2). Not applicable and correctly absent: the missing list contains no 2019-or-later holiday (I scanned every entry for a 2019+ date; none). For completeness I ran a CDX probe of cmegroup.com/CmeWS/mvc/Session/* this round and the Internet Archive returned an empty result set, so no archived T2 response exists to consult.",
+  "COUNTS. 36 dated entries, 375 family rows, all tier T1 -- matching the coverage prose; 140 rows on 13 dates were re-keyed to bundle documents, exactly as the coverage claims. The round-1 result is preserved verbatim at cme-2016-2018.r1.json."
+ ],
+ "discrepancies": [
+  {
+   "n": 1,
+   "severity": "load-bearing (verbatim attribution)",
+   "artifact": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.json -> holidays[2018-07-03].families['Grains and Oilseeds'], holidays[2018-11-23].families['Grains and Oilseeds'], holidays[2018-12-24].families['Grains and Oilseeds']",
+   "claim": "Each of the three verbatims quotes a sibling row 'MGEX Apple Juice' from the 2018 annual-bundle document it now cites: 2018-07-03 \"(Row 'Mini-Sized Grains and Oilseeds' 'Early Close' = 12:30; row 'MGEX Apple Juice' = 12:15.)\"; 2018-11-23 \"(Row 'Mini-Sized Grains and Oilseeds' 'Close' = 12:30 ; row 'MGEX Apple Juice' 'Close' = 12:15.)\"; 2018-12-24 \"(Row 'Mini-Sized Grains and Oilseeds' = 12:30 ; 'MGEX Apple Juice' = 12:15.)\".",
+   "finding": "False attribution. CME REMOVED the 'MGEX Apple Juice' row in the final 2018 revisions. raw/cme-2016-2018-fix/docs/zip2018/2018-4th-of-july-holiday-schedule.xls, .../2018-thanksgiving-holiday-schedule.xls and .../2018-christmas-holiday-schedule.xls print no MGEX Apple Juice row at all (the superseded 2018-05-08 per-file captures do, which is where these parentheticals came from). The rows were re-keyed to the bundle in round 2 but the parenthetical was carried over unchanged, so all three now quote a row their cited document does not contain. In each case the 12:15 sibling in the bundle is 'MGEX Hard Red Spring Wheat', and the 2018 Thanksgiving and Christmas bundle revisions additionally add a 'Rough Rice' row that tracks Grains exactly. The family-level values (status, close_instant, open_instant) are unaffected and correct; what fails is that a reader re-verifying from the cited bytes cannot find the quotation. Round 2 fixed the same class of defect for 2018-12-26 (whose parenthetical correctly names Mini-Sized, MGEX Hard Red Spring Wheat and MGEX Indices) and for 2017 (where the bundle sheets do still print MGEX Apple Juice), so the three rows below are the residue.",
+   "corrected_value": {
+    "2018-07-03 Grains and Oilseeds verbatim": "Row 'Grains and Oilseeds' -- Tuesday, July 3 'Early Close' = 12:05, 'PCP' = 12:30 - 16:00. (Row 'Mini-Sized Grains and Oilseeds' 'Early Close' = 12:30 ; row 'MGEX Hard Red Spring Wheat' 'Early Close' = 12:15 ; row 'MGEX Indices' 'Early Close' = 12:30. No 'MGEX Apple Juice' row is printed in this revision.) Note: 'July 3 Grain, Oilseed & Livestock TAS early 12:00 CT close.' [sheet: All times are Central Time, ET +1]",
+    "2018-11-23 Grains and Oilseeds verbatim": "Row 'Grains and Oilseeds' -- Friday, November 23 'Open' = 08:30, 'Close' = 12:05. (Row 'Mini-Sized Grains and Oilseeds' 'Close' = 12:30 ; row 'MGEX Hard Red Spring Wheat' 'Close' = 12:15 ; row 'MGEX Indices' 'Close' = 12:30 ; row 'Rough Rice' 'Close' = 12:05. No 'MGEX Apple Juice' row is printed in this revision.) Note: 'Grain, Oilseed & Livestock TAS close early at 12:00 CT'. [sheet: All times are Central Time, ET +1]",
+    "2018-12-24 Grains and Oilseeds verbatim": "Row 'Grains and Oilseeds' -- Monday, December 24 'Close' = 12:05. (Row 'Mini-Sized Grains and Oilseeds' = 12:30 ; 'MGEX Hard Red Spring Wheat' = 12:15 ; 'MGEX Indices' = 12:30 ; 'Rough Rice' = 12:05. No 'MGEX Apple Juice' row is printed in this revision.) Note: 'Grain, Oilseed & Livestock TAS close early at 12:00 CT'. [sheet: All times are Central Time, ET +1]",
+    "also": "raw/cme-2016-2018-fix/INDEX.md's round-2 diff notes say of 2018 Independence Day, Thanksgiving and Christmas that 'no other recorded family row changes'; add that these revisions also DELETE the 'MGEX Apple Juice' row (and, for Thanksgiving and Christmas, ADD 'Rough Rice'), since three recorded verbatims quoted it."
+   },
+   "sheet_bytes": "2018-4th-of-july bundle: Grains col2 12:05 / col3 '12:30 - 16:00'; Mini-Sized col2 12:30; MGEX Hard Red Spring Wheat col2 12:15; MGEX Indices col2 12:30. 2018-thanksgiving bundle (Friday Nov 23 = col19): Grains 12:05; Mini-Sized 12:30; Rough Rice 12:05; MGEX Hard Red Spring Wheat 12:15; MGEX Indices 12:30. 2018-christmas bundle (Monday Dec 24 = col1): Grains 12:05; Mini-Sized 12:30; Rough Rice 12:05; MGEX Hard Red Spring Wheat 12:15; MGEX Indices 12:30."
+  },
+  {
+   "n": 2,
+   "severity": "minor (undeclared normalisation)",
+   "artifact": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.json -> holidays[2017-12-22 / 2017-12-25].families['Energy'] and holidays[2018-12-24 / 2018-12-25 / 2018-12-26].families['Energy'] (5 rows); and -> coverage",
+   "claim": "Those five rows open \"Row 'Energy, Metals, Softs & DME products' --\", and the coverage says each entry 'quotes the label its own document prints'. The coverage declares exactly one normalisation: the 2016 PDFs' en dash to an ASCII hyphen.",
+   "finding": "On the two Christmas sheets the cell actually reads 'Energy, Metals, Softs & DME  products                                         (see notes below)' -- a double space inside the label and a trailing parenthetical, both silently dropped. I checked all 12 distinct quoted row labels across the 255 xls-sourced rows; this is the only label that differs from its cell, and it is not a value error. Separately, the file consistently writes 'Pre-opening' where several sheets print 'Pre-opening**' (e.g. every 2018-09-03 row against the bundle's relabelled column header) -- a harmless footnote-marker strip, but likewise undeclared.",
+   "corrected_value": "Either quote the labels as printed, or extend the coverage's normalisation sentence to: '...normalises that single character to an ASCII hyphen, uniformly and throughout; it likewise collapses runs of whitespace inside a quoted row label, drops a label's trailing parenthetical cross-reference (the Christmas sheets print \\'Energy, Metals, Softs & DME  products   (see notes below)\\'), and drops the \\'**\\' footnote marker from column headers such as \\'Pre-opening**\\'.'"
+  },
+  {
+   "n": 3,
+   "severity": "minor (asymmetric treatment of an operator note)",
+   "artifact": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.json -> holidays[2018-11-23].families['Metals'] (and ['Energy'])",
+   "claim": "The 2018-11-23 Metals entry is 'No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's \\'Energy\\' entry.' with close_instant 12:45 CT / 13:45 ET, and quotes no note. The same date's Grains entry does quote its TAS note.",
+   "finding": "The cited bundle sheet prints, in its Notes block (rows 66-71), 'November 23: Early closes for Metals TAS contracts:' followed by 'Copper TAS - Early close 1100 CT / 1200 ET', 'Silver TAS- Early close 1125 CT / 1225 ET', 'Gold TAS - Early close 1130 CT / 1230 ET', 'Platinum TAS - Early close -1105 CT / 1205 ET' and 'Palladium TAS  - Early close -1100 CT / 1200 ET' (the Palladium line is one of the bundle's additions over the served capture). The family-level Metals close of 12:45 is correct -- these are trade-type variants, which under LAW-SERVICE-TIERS earn their own key only when a consumer maps one -- but the file quotes the Grains TAS note on the very same date, so the omission reads as an oversight rather than a policy.",
+   "corrected_value": "Append to the 2018-11-23 Metals verbatim (and, if kept symmetrical, to Energy): \" The sheet's Notes block adds 'November 23: Early closes for Metals TAS contracts:' -- 'Copper TAS - Early close 1100 CT / 1200 ET' ; 'Silver TAS- Early close 1125 CT / 1225 ET' ; 'Gold TAS - Early close 1130 CT / 1230 ET' ; 'Platinum TAS - Early close -1105 CT / 1205 ET' ; 'Palladium TAS  - Early close -1100 CT / 1200 ET' ; 'Crude, Heating Oil, RBOB & Nat Gas TAS contracts close early at 12:30 CT / 1330 ET'. These are trade-type variants, not the family close.\" Alternatively record in 'missing' that per-product TAS early closes are out of scope, and drop the Grains TAS quotations for consistency."
+  },
+  {
+   "n": 4,
+   "severity": "minor (evidence-store provenance)",
+   "artifact": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018-fix/INDEX.md",
+   "claim": "The file's title line reads '# INDEX -- artifacts retrieved by the ADVERSARIAL VERIFIER (round 1) for cme-2016-2018' and its opening paragraph says 'Retrieved 2026-09-12 (UTC)' by that verifier.",
+   "finding": "Two parties now write into this store. The round-2 fixer added docs/2018-new-years-holiday-schedule--20170628.xls and --20171025.xls and cdx_2018_new_years_revisions.json; its own section further down is correctly headed 'Round-2 FIXER additions', but the document's title still attributes the whole store to the round-1 verifier. All 59 hashed rows are correct and complete -- this is provenance labelling only.",
+   "corrected_value": "Retitle to '# INDEX -- artifacts for cme-2016-2018 added after round 1 (round-1 ADVERSARIAL VERIFIER and round-2 FIXER)', and change the opening paragraph to scope itself to the bundles section."
+  }
+ ],
+ "summary": "matches=false. Every one of the 11 discrepancies in the previous verdict is resolved, and I confirmed each against the bytes rather than against the fixer's account: the 2017 and 2018 annual bundles were retrieved and re-fetched byte-identical (and all 53 of their members re-hashed), the supersession split was re-derived independently by hashing each per-file capture against its bundle copy, the four substantive revisions (2017 Christmas Bitcoin row and withdrawn grain leg, 2018 July 3 Bitcoin Early Close 12:15, 2018 Dec 25 Bitcoin 'Globex Closed' cell, 2018 Dec 26 Equity 15:15/15:30) were re-read cell by cell, all four revisions of the 2018 New Year's sheet were read row by row, and the two 2016 PDF transcription slips, the mislabelled CDX artifact and the two coverage-prose errors are all corrected. Retrieval integrity is now complete: 167/167 stored hashes reproduce, 8/8 re-fetched documents are byte-identical, 633 xls time tokens and 272 PDF fragments match the cited bytes, ET=CT+1 holds on all 375 rows, no row cites a document from a different year, and fresh unfiltered CDX enumerations of 2017 and 2018 confirm the bundles are the only channel to CME's final revisions. One load-bearing defect remains, and it is a residue of the round-2 re-keying rather than a new error: on 2018-07-03, 2018-11-23 and 2018-12-24 the Grains and Oilseeds verbatim still quotes a sibling row 'MGEX Apple Juice' that CME deleted in the very revisions those rows were re-keyed to, so three claimed quotations cannot be found in their cited documents. No instant, status or family-level value is wrong anywhere in the file. Items 2-4 are minor: one undeclared whitespace/label normalisation, one asymmetrically-omitted Metals TAS note, and a stale title on the shared fix INDEX.",
+ "verifier_artifacts": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018-verify-r3/ -- INDEX.md, cdx_2017_fresh.json, cdx_2018_fresh_r3.json, and refetch/ with the eight re-fetched documents (each listed with its archive timestamp, sha256 and byte count)."
+}

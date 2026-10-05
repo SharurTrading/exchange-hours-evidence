@@ -1,0 +1,238 @@
+{
+ "gate": "U4-regular-vs-extended",
+ "status": "RESOLVED",
+ "question": "Regular-vs-Extended classification, and the Pre-Open treatment, for every BTIC, TAS, TAM, TACO and TMAC shape proposed in docs/plans/2026-09-05-cme-trade-type-handoff.md; and whether the globex_spot_quoted sourced-absence precedent can be applied per shape.",
+ "answer_short": "No BTIC, TAS, TAM, TACO or TMAC shape has a regular (pit/RTH) session in any era the crate models. Every one ships regular: &[], its whole published executable window in extended, and its own group Pre-Open in order_entry. The globex_spot_quoted precedent is not merely met but superseded: CME's own structured product data states the negative affirmatively per root (all 234 trade-type product records carry floor \"-\", floorVol \"0\" and a venues string with no Floor component), and the ContractSpecs API demonstrably has an \"Open Outcry:\" venue label - it prints one for SOFR options - and never attaches it to a trade-type hours line. One correction to the previous pass: NYMEX & COMEX Rule 524.A.1 DID carry a pit route for TAS from 2009-09-14 until a 2015-03-06..2016-08-09 bracket, but CME lists that route under the UNDERLYING's product code while the Globex TAS root has its own commodity-code table, so it is a pricing convention in the underlying's pit and not a session of the instrument this crate keys.",
+ "states": [
+  {
+   "artifact": "CME Group Market Regulation Advisory Notice RA2302-5, \"TAS, TAM, BTIC, TACO, and TMAC Transactions\" (Rule References: Rule 524) - Section 3, \"Entry of TAS, TAM, BTIC, TACO, and TMAC Orders on CME Globex\"",
+   "artifact_date": "Advisory Date July 13, 2023; Effective Date July 31, 2023 (both stated in the notice's own header block)",
+   "capture_ts": "2026-09-06T05:15:01Z (Pass 1 capture; bytes re-verified against the recorded sha256 and re-read in full this pass, 2026-09-06T06:16Z)",
+   "url": "https://web.archive.org/web/20251020113006id_/https://www.cmegroup.com/rulebook/files/cme-group-Rule-524.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U4-regular-vs-extended/RA2302-5_wayback_20251020.pdf (+ RA2302-5.txt, pdftotext -layout; sha256 d7032a32734db371b1558000fb00a0903a2ccd00e7527aaaef3f7c30da4d2ce1 / fc4c00602f7a7eecffff666f89f37d4126e48e9f9faf9d6c392316124a3f6c20)",
+   "verbatim": "\"Rule 524 permits the initiation of TAS, TAM, BTIC, TACO, and TMAC orders into CME Globex only subsequent to the beginning of each group's pre-open state and during the time period the applicable contracts are available for TAS, TAM, BTIC, TACO, or TMAC trading on CME Globex, as applicable. The initiation of any TAS, TAM, BTIC, TACO or TMAC order on CME Globex outside of these time periods is strictly prohibited.\" Immediately following: \"Market participants are reminded that the timing of each groups' pre-open state may be randomized, as described in the Client Systems Wiki, available here.\" And, further down the same section: \"Any market participant who initiates the entry of a TAS, TAM, BTIC, TACO or TMAC order prior to receipt of the security status message indicating that the market has transitioned to the pre-open will be subject to disciplinary action ... notwithstanding that the order may have been rejected by the CME Globex system.\"",
+   "bears_on": "Splits each shape's day into exactly the crate's two executable-adjacent phases: order INITIATION is permitted from the beginning of that group's own pre-open state, and EXECUTION is confined to the period the contracts are 'available for ... trading'. That is `order_entry` then `extended`. The words 'each group's pre-open state' also establish that a TAS/TAM/BTIC/TACO/TMAC group has its OWN pre-open, separate from the underlying's."
+  },
+  {
+   "artifact": "RA2302-5 Section 6, \"Text of CME, CBOT, and NYMEX/COMEX Rule 524\" - the rule that creates all five shapes",
+   "artifact_date": "Advisory Date July 13, 2023; Effective Date July 31, 2023",
+   "capture_ts": "2026-09-06T05:15:01Z (bytes re-read in full this pass)",
+   "url": "https://web.archive.org/web/20251020113006id_/https://www.cmegroup.com/rulebook/files/cme-group-Rule-524.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U4-regular-vs-extended/RA2302-5.txt",
+   "verbatim": "CME/CBOT 524.A.1 (TAS): \"A TAS order may be entered on Globex at any time the applicable contract is available for TAS trading on Globex and during such TAS-eligible contract's prescribed pre-open time period. The initiation of any TAS order on Globex outside these time periods is prohibited.\" 524.A.2: \"...may be executed as a block trade pursuant to the requirements of Rule 526 or as an Exchange of Futures for Physical (“EFP”) or Exchange of Futures for Risk (“EFR”) transaction pursuant to the requirements of Rule 538.\" The identical two-clause structure is repeated verbatim for 524.B.1 (BTIC), 524.C.1 (TACO), 524.D.1 (TMAC) and, under NYMEX/COMEX, 524.A.1 (TAS) and 524.B.1 (TAM) - each naming Globex plus the block/EFP/EFR routes and no other.",
+   "bears_on": "The operator's own rule enumerates where each shape may be executed. As of 2023 no clause admits open outcry for any of the five. Combined with the pit-era text (next two rows), this is the rule-level basis for `regular: &[]` on every one of the proposed keys in their current era."
+  },
+  {
+   "artifact": "NYMEX & COMEX Market Regulation Advisory Notice RA0907-4, issued with NYMEX Submission 09-189 (CFTC rule-filing copy) - new Rule 524 on its adoption day",
+   "artifact_date": "Submission letter dated August 31, 2009; advisory issued September 1, 2009; Rule 524 adopted September 14, 2009",
+   "capture_ts": "reused from the U6 gate's raw set (sha256 a5693b21c1e57d54b043968a5066afee3556d5758c047435fcfc59a10e2111f1); read from those bytes this pass 2026-09-06T06:17Z",
+   "url": "https://www.cftc.gov/sites/default/files/stellent/groups/public/@rulesandproducts/documents/ifdocs/rul083109nymexandcomex001.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U6-energy-tas-mran-chain/rul083109nymexandcomex001.txt",
+   "verbatim": "524.A. \"1. TAS transactions executed in the pit must be made open and competitively pursuant to the requirements of Rule 521 during the hours designated for pit trading in the particular contract and must be identified as such on the member's trading records. 2. TAS transactions on Globex may take place at any time the applicable contracts are available for trading on Globex.\" The eligibility list above the rule is split under two headings: \"Pit-Traded Contracts\" - \"Light “Sweet” Crude Oil- spot (except on the last trading day), 2nd, 3rd and 7th months / New York Harbor No.2 Heating Oil ... / Natural Gas ... / NY Harbor Gasoline Blendstock (RBOB)...\" (no Globex codes) - and \"CME Globex Contracts\", a table of \"Commodity Code on CME Globex\" values: WST, RTI, BHT, HPT, HHT, BBT, CLT, HOT, NGT, RBT, RET.",
+   "bears_on": "CORRECTS the Pass-1 claim that no shape ever had an open-outcry route. NYMEX/COMEX TAS did, from 2009-09-14. But CME lists the pit route by the UNDERLYING's product name and the electronic route by the TAS root's own Globex commodity code, so the pit route is a pricing convention inside the underlying's pit, not a session of the `CLT`/`GCT`/`SIT` order book this crate would key. `regular: &[]` therefore still holds for the TAS keys - now as an adjudicated fact rather than an unexamined one."
+  },
+  {
+   "artifact": "NYMEX Rulebook Chapter 5, Rule 524 - archived editions bracketing the disappearance of the pit clause; and the same rule's TAM and MO sections",
+   "artifact_date": "Editions observed at Wayback timestamps 2015-03-06, 2016-08-09 and 2018-02-05 (the timestamp dates the observation of the edition, not a rule change)",
+   "capture_ts": "2026-09-06T06:20:54Z",
+   "url": "https://web.archive.org/web/20150306113807id_/http://www.cmegroup.com/rulebook/NYMEX/1/5.pdf ; https://web.archive.org/web/20160809000829id_/... ; https://web.archive.org/web/20180205015718id_/...",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U4-regular-vs-extended/p2_nymex_ch5_20150306113807.pdf/.txt, p2_nymex_ch5_20160809000829.pdf/.txt, p2_nymex_ch5_20180205015718.pdf/.txt",
+   "verbatim": "2015-03-06 edition, \"524. TRADING AT SETTLEMENT (“TAS”), TRADING AT MARKER (“TAM”) AND MATCHED ORDER (“MO”) TRANSACTIONS\": 524.A.1 still reads \"TAS transactions executed in the pit must be made open and competitively pursuant to the requirements of Rule 521 during the hours designated for pit trading in the particular contract...\"; 524.B (TAM) reads only \"1. TAM orders may be entered on Globex at any time the applicable contracts are available for TAM trading on Globex and during each TAM contract's prescribed pre-open time period... 2. TAM-eligible commodities and contract months may be executed as block trades pursuant to the requirements of Rule 526.\"; and 524.C states \"MO transactions are open outcry trades competitively executed pursuant to Rule 521 where the price of the trade is that day's settlement price for the contract.\" The 2016-08-09 and 2018-02-05 editions are titled \"TRADING AT SETTLEMENT (“TAS”) AND TRADING AT MARKER (“TAM”)\" and contain no occurrence of \"executed in the pit must be made open\".",
+   "bears_on": "Three things at once. (a) TAM has never had a pit route, even in the pit era - so `regular: &[]` for every TAM key is affirmative, not inferred. (b) The TAS pit clause left NYMEX/COMEX Rule 524 inside the bracket 2015-03-06..2016-08-09; the bracket is stated, no day is invented. (c) The decisive contrast: in the SAME rule CME names its open-outcry shape as such - \"MO transactions are open outcry trades\" - and does not say that of TAS, TAM, BTIC, TACO or TMAC. The omission is contrastive, not silent."
+  },
+  {
+   "artifact": "CME Rulebook Chapter 5 and CBOT Rulebook Chapter 5, Rule 524 - archived editions bracketing the rule's first appearance",
+   "artifact_date": "CME editions observed at 2012-05-12, 2015-03-19, 2015-09-05, 2015-10-14, 2016-11-22; CBOT editions at 2014-11-16 and 2015-09-15",
+   "capture_ts": "2026-09-06T06:18:27Z-06:20:18Z",
+   "url": "https://web.archive.org/web/20150319015903id_/http://www.cmegroup.com/rulebook/CME/I/5/5.pdf ; https://web.archive.org/web/20150905223702id_/... ; https://web.archive.org/web/20161122210636id_/... ; https://web.archive.org/web/20141116071003id_/http://www.cmegroup.com/rulebook/CBOT/I/5/5.pdf ; https://web.archive.org/web/20150915054703id_/...",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U4-regular-vs-extended/p2_cme_ch5_20120512.*, p2_cme_ch5_20150319015903.*, p2_cme_ch5_20150905223702.*, p2_cme_ch5_20151014210844.*, p2_cme_ch5_20161122210636.*, p2_cbot_ch5_20141116071003.*, p2_cbot_ch5_20150915054703.*",
+   "verbatim": "CME 2012-05-12 and 2015-03-19: \"524. [RESERVED]\" - and the string \"Trading at Settlement\" does not occur anywhere in the 2015-03-19 chapter. CBOT 2014-11-16: \"524.-525. [RESERVED]\". CME 2015-09-05: \"524. Trading at Settlement (“TAS”) Transactions ... 1. TAS orders may be entered on Globex at any time the applicable contracts are available for TAS trading on Globex and during each TAS contract's prescribed pre-open time period.\" CBOT 2015-09-15: identical wording. CME 2016-11-22: \"524. TRADING AT SETTLEMENT (“TAS”) AND BASIS TRADE AT INDEX CLOSE (“BTIC”) TRANSACTIONS\", with 524.B.1 \"Globex-eligible BTIC orders may be entered on Globex at any time the applicable contracts are available for BTIC trading on Globex and during each BTIC contract's prescribed pre-open time period.\" and 524.B.2 the Rule 526 block-trade route. Neither the CME nor the CBOT rule ever contains a pit clause.",
+   "bears_on": "CME/CBOT-side TAS and BTIC never coexisted with a CME or CBOT futures pit: their governing rule was [RESERVED] until after the 2015-07-02 open-outcry futures closure, and it was Globex-only on the day it first appeared. That closes the pit-era question for grain TAS, livestock TAS, Treasury TAS, equity BTIC, TACO and TMAC without needing any argument from silence, and it dates each shape's Pre-Open language back to its rule's first edition."
+  },
+  {
+   "artifact": "CME Group ProductSlate service (V2 List) - the operator's own per-product venue record, all 7 pages merged",
+   "artifact_date": "live; the response's own props.voi.tradeDate is \"04 Sep 2026\", reportType PRELIMINARY",
+   "capture_ts": "2026-09-06T06:15:01Z-06:15:28Z",
+   "url": "https://www.cmegroup.com/CmeWS/mvc/ProductSlate/V2/List?pageNumber=<1..7>&sortAsc=true&sortField=id&pageSize=500 (retrieved through https://r.jina.ai/ because cmegroup.com refuses this machine at IP level)",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U4-regular-vs-extended/p2_slate_p1.txt .. p2_slate_p7.txt (sha256 in INDEX.md)",
+   "verbatim": "3,248 unique product records. 234 of them are trade-type products (BTIC 173, TAS 45, TAM 8, TACO 4, TMAC 4). Every one of the 234 carries \"floor\":\"-\" and \"floorVol\":\"0\"; 231 carry \"venues\":\"Globex ClearPort \" and 3 carry \"venues\":\"ClearPort \". Worked examples read verbatim from the bytes: {\"id\":7968,...,\"globex\":\"EST\",\"floor\":\"-\",\"floorTraded\":false,\"venues\":\"Globex ClearPort \",...,\"name\":\"BTIC E-mini S&P 500 Futures\"}; {\"id\":8407,...,\"globex\":\"GCD\",\"floor\":\"-\",\"venues\":\"Globex ClearPort \",\"name\":\"Gold London Trade At Marker First PM\"}; {\"id\":10508,...,\"globex\":\"ESX\",\"floor\":\"-\",\"venues\":\"Globex ClearPort \",\"name\":\"TMAC on E-mini S&P 500 Futures\"}. For contrast, the floor-traded control in the same file: {\"id\":8849,...,\"globex\":\"SR3\",\"floor\":\"S3O\",\"floorTraded\":true,\"venues\":\"Globex Floor ClearPort \",\"floorVol\":\"449,759\",\"name\":\"Options on Three-Month SOFR Futures\"}.",
+   "bears_on": "Per-root, affirmative, machine-readable: CME states for each of the 234 trade-type products that it has no floor code, no floor volume and no Floor venue - while carrying \"Globex Floor ClearPort\" and a real floor code for the products that do. CAVEAT that must travel with this channel: the boolean `floorTraded` is unreliable - it reads true for NQQ (8914) and RTQ (8915) whose own records read floor \"-\", floorVol \"0\" and venues \"Globex ClearPort \", and the anomaly spans a contiguous id band (8914-8927) containing non-trade-type products too. Cite `venues`/`floor`/`floorVol`, never `floorTraded`."
+  },
+  {
+   "artifact": "CME Group ContractSpecs API - the `venue` label on the Trading Hours block, with a floor-traded control",
+   "artifact_date": "live (2026-09-06)",
+   "capture_ts": "2026-09-06T06:14:16Z (7968) and 2026-09-06T06:23:20Z-06:24:48Z (batch)",
+   "url": "https://www.cmegroup.com/CmeWS/mvc/ContractSpecs/List/productId/{133,437,425,300,8478,8849,8462,7968,...} (via https://r.jina.ai/)",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U4-regular-vs-extended/cs_133_es.txt, cs_437.txt, cs_425.txt, cs_300.txt, cs_8478.txt (Pass 1) and p2_cs_8849.txt, p2_cs_8462.txt, p2_cs_7968_est.txt (Pass 2)",
+   "verbatim": "E-mini S&P 500 (133), \"venue\":\"CME Globex:\" -> \"Sunday 6:00 p.m. - Friday - 5:00 p.m. ET (5:00 p.m. - 4:00 p.m. CT) with a daily maintenance period from 5:00 p.m. - 6:00 p.m. ET ... TACO: Sunday - Friday 6:00 p.m. - 9:30 a.m. ET. Monday - Friday 11:00 a.m. - 5:00 p.m. ET with a daily maintenance period 5:00 p.m. - 6:00 p.m. ET ... BTIC: Sunday - Friday 6:00 p.m. - 4:00 p.m. ET ... TMAC: Sunday - Friday 6:00 p.m. - 4:00 p.m. ET\". Gold (437) \"CME Globex:\" -> \"... TAS: Sun-Fri 6:00 p.m. - 1:30 p.m. ET (5:00 - 12:30 CT)\". Corn (300) \"CME Globex:\" -> \"... TAS: Sunday - Friday 7:00 p.m. - 7:45 a.m. and Monday - Friday 8:30 a.m. - 1:15 p.m. CT\". Bitcoin (8478) \"CME Globex:\" -> \"... BTIC APAC ... BTIC London ... BTIC NY ... TAS ...\". THE CONTROL: Options on Three-Month SOFR Futures (8849) prints a THIRD block, \"venue\":\"Open Outcry:\" -> \"MON - FRI: 7:20 a.m. - 2:00 p.m.\", alongside its \"CME Globex:\" and \"CME ClearPort:\" blocks. Across 27 captured records, 16 hours blocks carry a TAS/BTIC/TACO/TMAC line and all 16 sit under \"CME Globex:\", its \"CME ClearPort:\" duplicate, or a single-venue \"Default:\" page; none under \"Open Outcry:\".",
+   "bears_on": "This is what upgrades the `globex_spot_quoted` precedent. That key rests on four channels that are SILENT about RTH. Here the operator's own structured field for 'which market do these hours belong to' demonstrably has an `Open Outcry:` value, uses it where a pit exists, and never attaches it to a trade-type hours line. The absence of a regular session is affirmative, per shape and per underlying."
+  },
+  {
+   "artifact": "CME Group Daily Information Bulletin - the RTH/ETH convention `globex_weather` cites, and where each shape actually appears (Sections 00, 03, 09, 10, 11, 12, 61, 62)",
+   "artifact_date": "Fri, Sep 04, 2026 - BULLETIN # 171@ (PRELIMINARY), stated in each page header",
+   "capture_ts": "2026-09-06T06:21:38Z-06:22:07Z (independent Pass-2 capture; byte-identical sha256 to the Pass-1 capture of the same edition)",
+   "url": "https://www.cmegroup.com/daily_bulletin/current/Section{00,03,09,10,11,12,61,62}*.pdf (via https://r.jina.ai/)",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U4-regular-vs-extended/p2_db_Section00_*.txt, p2_db_Section03_*.txt, p2_db_Section09_*.txt, p2_db_Section10_*.txt, p2_db_Section11_*.txt, p2_db_Section12_*.txt, p2_db_Section61_*.txt, p2_db_Section62_*.txt",
+   "verbatim": "Section 11 legend: \"FOR PRODUCTS THAT ARE TRADED IN BOTH Open Outcry(RTH) AND ON CME Globex (ETH) THE INFORMATION REPRESENTED ON THIS PAGE FOR OPENING RANGE, HIGH, LOW, CLOSING RANGE, SETTLEMENT PRICE AND VOLUME REPRESENTS RTH ACTIVITY ONLY. ... RTH VOLUME REFLECTS PIT TRADING, BLOCK TRADES AND CASH-FOR-FUTURES ONLY. ETH REPRESENTS GLOBEX VOLUME TRANSACTIONS FROM THE GLOBEX® ELECTRONIC SESSION ONLY.\" No BTIC, TAS, TAM, TACO or TMAC instrument appears as a priced product row on that page or on any other RTH/ETH price page. Section 12 carries a separate page headed \"BTIC PRODUCTS VOLUME REPORT\" with columns \"COMMODITY CODE | CONTRACT | VOLUME | Exchange Code\" and rows keyed to the UNDERLYING codes (\"ES 202609 50,677 CME\", \"NQ 202609 6,137 CME\", \"YM 202609 664 CBT\", \"RTY\", \"ME\", \"XAF\", \"XAU\", \"XAB\", \"RS1\", \"JR\") and no price columns at all. Section 61 carries a separate page headed \"TRADE AT MARKER PRODUCTS\" with columns \"VOLUME BLOCK VOL MARKER PRICE\" and rows \"BZL BRENT CRUDE TAM LONDON\", \"BZS BRENT CRUDE TAM SINGAPORE\", \"CLL CRUDE OIL TRADE AT MARKER LONDON\", \"CLS CRUDE OIL TRADE AT MARKER SINGAPORE\", \"HOL HEATING OIL TAM AT LONDON\", \"RBL RBOB GASOLINE TAM LONDON\", and no RTH/ETH legend. TAS appears only as a column inside the ex-pit tables: Section 03 \"EX-PIT & OTHER BREAKDOWN\" over \"... BLOCKS DAILY TOTALS EFP DAILY TOTALS TAS DAILY TOTALS ...\"; Section 62 \"EX-PIT & OTHER BREAKDOWN\" over \"... TAS DAILY TOTAL ... BLOCK TAS DAILY TOTAL\"; Section 61 carries the same TAS/BLOCK TAS columns under seventeen per-complex EX-PIT BREAKDOWN headings. The Section 00 product index lists no page for TAS, BTIC, TAM, TACO or TMAC. TACO and TMAC appear nowhere in any section.",
+   "bears_on": "The channel `globex_weather` uses to justify an empty `regular` gives the same answer here, and gives it structurally: CME's RTH/ETH split operates on priced product rows, and no trade-type instrument is one. BTIC and TAM are reported on dedicated price-less pages outside that apparatus; TAS is a volume column in the ex-pit breakdown. TACO and TMAC are absent because they printed zero volume and zero open interest on 2026-09-04 (confirmed in the same day's ProductSlate) - an activity absence, NOT a CME classification statement, and it is recorded as such."
+  },
+  {
+   "artifact": "CME Group Daily Information Bulletin - two pit-era editions, the ones that make the negative meaningful",
+   "artifact_date": "Fri, Mar 20, 2015 - BULLETIN # 54@ (Section 03; the CBOT grain pit was open, closing 2015-07-02) and Mon, Mar 08, 2021 - BULLETIN # 44@ (Section 12; BTIC live since 2015-11-16)",
+   "capture_ts": "2026-09-06T05:25:51Z and 2026-09-06T05:27:12Z (Pass-1 captures; PDFs re-read from the bytes this pass)",
+   "url": "https://web.archive.org/web/20150322100952id_/http://www.cmegroup.com/daily_bulletin/current/Section03_Agricultural_Futures.pdf ; https://web.archive.org/web/20210309204159id_/https://www.cmegroup.com/daily_bulletin/current/Section12_Equity_And_Index_Futures_Continued.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U4-regular-vs-extended/db_sec03_wb20150322.pdf/.txt ; db_sec12_wb20210309204159.pdf/.txt",
+   "verbatim": "2015-03-20 Section 03 legend: \"FOR PRODUCTS THAT ARE TRADED IN BOTH REGULAR TRADING HOURS (RTH) AND ELECTRONIC TRADING HOURS (ETH) THE INFORMATION REPRESENTED ON THIS PAGE ... REPRESENTS RTH ACTIVITY ONLY. ... RTH VOLUME REFLECTS PIT TRADING, BLOCK TRADES AND CASH-FOR-FUTURES ONLY.\" The price table carries live RTH figures and TAS appears only under \"EX-PIT & OTHER BREAKDOWN\" in the column headed \"TAS DAILY TOTALS\", against the underlyings' rows (\"SOYBEAN FUTURES\", \"CORN FUTURES\"). 2021-03-08 Section 12 carries the \"Open Outcry(RTH)\" legend AND, in the same edition, the separate \"BTIC PRODUCTS VOLUME REPORT\" (\"CBT YM 202103 329 / CME RTY 202103 3,646 / CME ES 202103 32,776 / CME XAE 202103 42 ...\").",
+   "bears_on": "Removes the obvious objection that the modern bulletin's RTH/ETH legend is dead boilerplate. In an edition where RTH volume was really being reported, TAS still was not an RTH product row; in an edition carrying the RTH legend six years later, BTIC still had its own price-less page. The classification is not an artifact of the pits having closed."
+  },
+  {
+   "artifact": "CME Group Client Systems Wiki (public Confluence) - \"Trade at Settlement - TAS\" (page 457223974) and \"Trade Market at Close - TMAC\" (page 457224081)",
+   "artifact_date": "TAS page version 2, 2025-01-13T19:37:27Z; TMAC page version 1, 2024-12-21T17:06:00Z (both from the page's own version block)",
+   "capture_ts": "2026-09-06T05:24:29Z and 2026-09-06T05:25:00Z-05:25:10Z (Pass-1 captures; JSON bodies re-read in full this pass)",
+   "url": "https://cmegroupclientsite.atlassian.net/wiki/rest/api/content/457223974?expand=body.storage,version ; .../457224081?expand=body.storage,version",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U4-regular-vs-extended/wiki_tas_457223974.json ; wiki_457224081.json",
+   "verbatim": "TAS page: \"To ensure appropriate and efficient messaging practices for TAS orders into CME Globex, the timing of each TAS groups' pre-open state is randomized. The market state sequence for TAS groups has a market pause, communicated via the market data Security Status message (tag 35-MsgType=f), tag 326-SecurityTradingStatus=2 at 16:00:00 on Sunday and 16:45:00 Monday through Thursday. TAS groups then go into pre-open on Sundays between 16:00:00 and 16:01:00 Central time (CT), and Mondays through Thursdays between 16:45:00 and 16:46:00 CT.\" TMAC page: the identical paragraph with TMAC substituted (\"The market state sequence for TAC groups has a market pause ... TMAC groups then go into pre-open on Sundays between 16:00:00 and 16:01:00 Central time (CT), and Mondays through Thursdays between 16:45:00 and 16:46:00 CT.\").",
+   "bears_on": "CME states the Pre-Open in session-state language for the TAS and TMAC groups themselves, at the platform's Sunday 16:00 CT and Monday-Thursday 16:45 CT instants - the same queue onsets `cme_group.rs` already classifies as `order_entry`. The randomized 16:00:00-16:01:00 / 16:45:00-16:46:00 second is below this crate's resolution and is not encoded, exactly as the handoff decided for the energy TAS :30/:38 randomization. CAUTION recorded rather than smoothed over: the sentence is a blanket claim about \"TAS groups\", and grain TAS does not open until 19:00 CT on Sunday - so this sources the pre-open ONSET for the platform-default TAS groups and does not by itself fix the queue for a TAS family whose own open is later. Each family's Pre-Open still needs its own source."
+  },
+  {
+   "artifact": "CME Group Client Systems Wiki - \"Basis Trade at Cash Open\" (TACO, page 457092968) and \"Instrument Types Available on CME Globex\" (page 457086960)",
+   "artifact_date": "TACO page version 2, 2025-01-13T19:46:14Z; Instrument Types page version 3, 2025-02-11T20:49:05Z",
+   "capture_ts": "2026-09-06T05:25:00Z-05:25:10Z (Pass-1 captures; bodies re-read in full this pass)",
+   "url": "https://cmegroupclientsite.atlassian.net/wiki/rest/api/content/457092968?expand=body.storage,version ; .../457086960?expand=body.storage,version",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U4-regular-vs-extended/wiki_457092968.json ; wiki_457086960.json",
+   "verbatim": "TACO page: \"TACO Trading Hours for Equity Contracts Sunday - Friday as follows: Sunday Pre-Open 4:00 pm Central Time (CT) / Trading starts on Sunday at 5:00 pm (CT) and stops on Monday at 8:30 am (CT) / Monday - Friday trading stops and market close at 8:30 am (CT), ALL day orders eliminated / Monday - Friday Pre-Open 9:30 am (CT) / Monday - Friday trades from 10:00 am (CT) - 4:00 pm (CT) / Monday - Thursday Market Halt occurs at 4:00 pm - 5:00 pm (CT) - Globex Maintenance Period NO day orders eliminated / Monday - Thursday Pre-Open 4:45 pm (CT) / Monday - Thursday trades from 5:00 pm (CT) - 8:30 am (CT) next business day\". Instrument Types page, under the heading \"Trade at Settle and Trade at Marker Products\", within a topic that \"describes the tradeable instrument types for futures and options on futures available on CME Globex\": \"Trade at Settlement (TAS) ... Trade at Marker (TAM) ... Basis Trade Index Close (BTIC) ... Trade at Cash Open (TACO)\".",
+   "bears_on": "TACO's whole grid is published in session language with three named Pre-Opens, and CME distinguishes \"Pre-Open\" from \"trades from\", \"Market Halt\" and \"market close\" in one list - which is the crate's order_entry / extended / gap distinction stated by the operator. The Instrument Types page places all four named shapes inside the enumeration of instrument types available ON CME GLOBEX; there is no parallel open-outcry enumeration containing them."
+  },
+  {
+   "artifact": "CME Group trading-hours service (`/services/trading-hours-by-product`) - labelled session events per shape group, week of 2026-09-06..2026-09-12",
+   "artifact_date": "live; forward-looking schedule for trade dates 2026-09-07..2026-09-14",
+   "capture_ts": "2026-09-06T06:28:00Z-06:32:30Z",
+   "url": "https://www.cmegroup.com/services/trading-hours-by-product?id={7968,8528,10508,8407,4346,431,10319}&fromEventDate=2026-09-06&toEventDate=2026-09-12&pageSize=100 (via https://r.jina.ai/)",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U4-regular-vs-extended/p2_th_7968.txt, p2_th_8528.txt, p2_th_10508.txt, p2_th_8407.txt, p2_th_4346.txt, p2_th_431.txt, p2_th_10319.txt",
+   "verbatim": "EST (BTIC, \"prodGroup\":\"SB\"): events \"16:45 preopen\", \"17:00 open\", \"15:00 closed\" on each weekday. ESQ (TACO, group \"3T\"): \"09:30 preopen\", \"10:00 open\", \"16:00 paused\", \"16:45 preopen\", \"17:00 open\", \"08:30 closed\". ESX (TMAC, group \"E2\"): \"15:00 closed\", \"16:45 paused\", \"16:45 preopen\", \"17:00 open\". GCD (TAM, group \"GM\"): \"09:02 closed\", \"16:50 preopen\", \"17:00 open\". By contrast GCT (Gold TAS, group \"TG\"), CLT (Crude Oil TAS, group \"CT\") and TBT (TAS on Bitcoin, group \"CI\") each return \"hasEvents\":false with seven empty event arrays.",
+   "bears_on": "Per-group, in the operator's own session vocabulary: BTIC, TACO, TMAC and TAM each have their OWN preopen -> open -> closed cycle, and no event type in the vocabulary distinguishes a regular from an extended session. This sources the `order_entry` window directly for those four shapes. For TAS this channel is EMPTY this week - recorded as an absence in this channel, not as evidence either way; TAS's Pre-Open rests on the wiki, RA1303-4 and Rule 524.A.1 instead."
+  },
+  {
+   "artifact": "NYMEX & COMEX Market Regulation Advisory Notice RA1303-4 (NYMEX/COMEX Submission 13-063, CFTC copy) - the \"CME Globex Contracts\" preamble",
+   "artifact_date": "Submission letter dated February 26, 2013; effective Sunday, March 17, 2013 for trade date Monday, March 18, 2013",
+   "capture_ts": "reused from the U6 gate's raw set (sha256 1a19fef85157f8a4558c5f23c98437cc7d930b48b13b955dbd9561d0c2ba9679); read from those bytes this pass 2026-09-06T06:17Z",
+   "url": "https://www.cftc.gov/sites/default/files/stellent/groups/public/@rulesandproducts/documents/ifdocs/rul022613nymexandcomex001.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U6-energy-tas-mran-chain/rul022613nymexandcomex001.txt",
+   "verbatim": "Under the heading \"CME Globex Contracts\": \"For compliance and enforcement purposes, the start of a TAS pre-open period is defined by receipt of the security status message indicating that the group has transitioned to the pre-open state and the end of a TAS trading session is defined by receipt of the security status message indicating that group is closed. TAS orders may not be entered into CME Globex from the end of a TAS trading session until receipt of the security status message indicating that the group has transitioned to the pre-open state.\" The section's own product table lists \"Pit-Traded Contracts\" by underlying name (\"Light Sweet Crude Oil (CL)\", \"COMEX Gold (GC)\", \"COMEX Silver (SI)\", \"European Gasoil (100mt) Bullet (7F)\" ...) and \"CME Globex Contracts\" by TAS commodity code (CLT, BZT, BBT, ...).",
+   "bears_on": "CME uses the words \"a TAS trading session\" - session language for the shape itself - and bounds it exactly as the crate does: pre-open state opens the order-entry window, the group-closed message ends the trading session. It also dates the pre-open/order-entry structure for NYMEX/COMEX TAS back to 2013, ten years before RA2302-5, and it is the document that most clearly separates the pit route (underlying code) from the Globex route (TAS code)."
+  }
+ ],
+ "per_shape": [
+  {
+   "shape": "BTIC (Basis Trade at Index Close) - all 91 roots, i.e. globex_equity_index_btic, globex_credit_index_btic, globex_cryptocurrency_btic_{new_york,london,apac}, globex_commodity_index_btic, globex_nikkei_btic, globex_topix_btic, globex_europe_index_btic, globex_ftse_china_50_btic, globex_fx_btic_euro",
+   "regular": "&[] - EMPTY IN EVERY ERA",
+   "extended": "the shape's own published executable window (the BTIC: line on the underlying's spec page, or the shape's own spec/FAQ)",
+   "order_entry": "the BTIC group's own Pre-Open",
+   "channels_the_absence_rests_on": [
+    "CME/CBOT Rule 524.B.1 + .2 (Globex, plus Rule 526 block trades) - affirmative, and present from the rule's first edition (CME Chapter 5 capture 2016-11-22); the rule was [RESERVED] until after the 2015-07-02 futures-floor closure, so BTIC never coexisted with a CME/CBOT futures pit",
+    "ProductSlate: 173 BTIC records, all floor \"-\", floorVol \"0\", venues \"Globex ClearPort \" (3 exceptions are ClearPort-only non-Globex records: IBB, DGT, SET)",
+    "ContractSpecs venue label: every BTIC: line under \"CME Globex:\"; the API's \"Open Outcry:\" venue exists (SOFR options 8849) and never carries one",
+    "Daily Bulletin: its own price-less \"BTIC PRODUCTS VOLUME REPORT\", outside the RTH/ETH price apparatus, on both the 2026-09-04 and the 2021-03-08 (RTH-legend-carrying) editions",
+    "trading-hours service: group SB returns preopen@16:45 / open@17:00 / closed@15:00 - its own cycle, no RTH/ETH distinction in the vocabulary"
+   ],
+   "order_entry_basis": [
+    "RA2302-5 s3 (initiation only from the beginning of the group's pre-open state)",
+    "CME/CBOT Rule 524.B.1 (\"during each BTIC contract's prescribed pre-open time period\")",
+    "trading-hours service preopen events on the BTIC group itself"
+   ],
+   "precedent": "EXCEEDED. Three affirmative channels plus one contrastive one, versus globex_spot_quoted's four silent channels."
+  },
+  {
+   "shape": "TAS (Trading at Settlement) - all ~45 roots, i.e. globex_grains_tas, globex_livestock_tas, globex_cryptocurrency_tas, globex_energy_tas, globex_gasoil_tas, globex_gold_tas, globex_silver_tas, globex_copper_tas, globex_platinum_tas, globex_palladium_tas (and any Treasury-TAS key)",
+   "regular": "&[] - EMPTY IN EVERY ERA, but for CME/CBOT and NYMEX/COMEX for different reasons; see the pit-era note",
+   "extended": "the shape's own published executable window (the TAS: line on the underlying's spec page, the TAS fact cards, RA1005-4, or the 24/7 crypto wiki table)",
+   "order_entry": "the TAS group's own Pre-Open",
+   "channels_the_absence_rests_on": [
+    "CME and CBOT Rule 524.A: Globex + Rule 526 block + Rule 538 EFP/EFR, no pit clause in any edition; and [RESERVED] until after 2015-07-02, so CME/CBOT TAS never coexisted with a CME/CBOT futures pit",
+    "NYMEX/COMEX Rule 524.A: Globex + block + EFP/EFR TODAY; the 2009-2015 editions DID carry a pit clause (see pit_era_note)",
+    "ProductSlate: 45 TAS records, all floor \"-\", floorVol \"0\", venues \"Globex ClearPort \"",
+    "ContractSpecs venue label: every TAS: line under \"CME Globex:\"; never under \"Open Outcry:\"",
+    "Daily Bulletin: TAS is a volume column (\"TAS DAILY TOTALS\" / \"TAS DAILY TOTAL\" / \"BLOCK TAS DAILY TOTAL\") inside the EX-PIT breakdown, never a priced product row - and that already held on the 2015-03-20 pit-era edition where RTH volume was live"
+   ],
+   "pit_era_note": "NYMEX & COMEX Rule 524.A.1, from its adoption on 2009-09-14 (MRAN RA0907-4) until a bracket of 2015-03-06..2016-08-09, read \"TAS transactions executed in the pit must be made open and competitively pursuant to the requirements of Rule 521 during the hours designated for pit trading in the particular contract\". This does NOT give the TAS key a regular session: the advisory's own tables list the pit route by the UNDERLYING's product code under \"Pit-Traded Contracts\" (CL, HO, NG, RB, BZ, 7F, GC, SI - no TAS code) and the electronic route by the TAS root's own Globex commodity code under \"CME Globex Contracts\" (CLT, BZT, BBT, HOT, RBT, NGT, ...). The pit route was a pricing convention inside the underlying's pit; the crate keys the Globex TAS instrument. It is also consistent with the crate's existing treatment - energy_metals.rs already ships regular: &[] for the NYMEX/COMEX outrights in every era, so no NYMEX pit is modelled as regular anywhere. WRITE THIS INTO THE MODULE COMMENT so the next reader does not 'discover' the pit clause and conclude the key is wrong.",
+   "order_entry_basis": [
+    "RA2302-5 s3",
+    "CME/CBOT and NYMEX/COMEX Rule 524.A.1 (\"during such TAS-eligible contract's prescribed pre-open time period\")",
+    "RA1303-4 (2013-02-26): \"the start of a TAS pre-open period is defined by receipt of the security status message indicating that the group has transitioned to the pre-open state and the end of a TAS trading session is defined by receipt of the security status message indicating that group is closed\"",
+    "CME Client Systems Wiki, Trade at Settlement - TAS (v2, 2025-01-13): TAS groups go into pre-open Sunday 16:00:00-16:01:00 CT and Monday-Thursday 16:45:00-16:46:00 CT - subject to the caveat that grain TAS's own Sunday open is 19:00 CT"
+   ],
+   "precedent": "EXCEEDED for the absence of a pit; but the TAS Pre-Open is the one place where a per-family source is still owed, because the wiki's blanket 16:00/16:45 CT statement cannot be right for every TAS family's own grid. The trading-hours service is EMPTY for TAS groups TG, CT and CI this week, so it cannot supply it."
+  },
+  {
+   "shape": "TAM (Trading at Marker) - globex_energy_tam_london, globex_energy_tam_singapore, globex_energy_tam_shanghai, globex_gold_tam, globex_copper_tam",
+   "regular": "&[] - EMPTY IN EVERY ERA, and this one is the cleanest of the five",
+   "extended": "the shape's own published executable window (Energy TAM FAQ \"trading halts at the marker time, daily\", or the trading-hours service's closed@ event for GM / TR)",
+   "order_entry": "the TAM group's own Pre-Open",
+   "channels_the_absence_rests_on": [
+    "NYMEX/COMEX Rule 524.B has NEVER contained a pit clause - verified on the 2015-03-06 rulebook capture, i.e. during the pit era, where 524.A (TAS) still had one and 524.C defined MO as \"open outcry trades\". TAM was Globex-only from its 2011 birth",
+    "ProductSlate: 8 TAM records, all floor \"-\", floorVol \"0\", venues \"Globex ClearPort \"",
+    "Daily Bulletin: its own page headed \"TRADE AT MARKER PRODUCTS\" with a single MARKER PRICE column and no RTH/ETH legend",
+    "trading-hours service: group GM returns closed@09:02 / preopen@16:50 / open@17:00 - its own cycle"
+   ],
+   "order_entry_basis": [
+    "RA2302-5 s3",
+    "NYMEX/COMEX Rule 524.B.1 (\"during each TAM contract's prescribed pre-open time period\"), present since at least the 2015-03-06 capture",
+    "trading-hours service preopen@16:50 on group GM (GCD) and the same shape on TR (HGF)"
+   ],
+   "precedent": "EXCEEDED, and by a stronger form than the others: the pit-era rule text is an affirmative negative - the same rule that named the pit route for TAS and defined MO as open outcry gave TAM neither.",
+   "note": "ContractSpecs is NOT a channel for TAM: productIds 8407 (GCD) and 6266 (CLL) return empty records, and the CL (425) spec's CME Globex block carries only a TAS: line. TAM's window comes from the FAQ and the session service."
+  },
+  {
+   "shape": "TACO (Basis Trade at Cash Open) - globex_equity_index_taco (ESQ, NQQ, RTQ), and the TACO+ root EQ1 if keyed",
+   "regular": "&[] - EMPTY IN EVERY ERA (the shape was created in 2018, three years after the CME futures floor closed)",
+   "extended": "Sun 17:00 CT -> Mon 08:30 CT; Mon-Fri 10:00-16:00 CT; Mon-Thu 17:00 CT -> next day 08:30 CT",
+   "order_entry": "Sun 16:00-17:00 CT; Mon-Fri 09:30-10:00 CT; Mon-Thu 16:45-17:00 CT",
+   "channels_the_absence_rests_on": [
+    "CME/CBOT Rule 524.C.1 + .2: Globex plus Rule 526 block trades only",
+    "ProductSlate: 4 TACO records, all floor \"-\", floorVol \"0\", venues \"Globex ClearPort \" (cite venues/floor, NOT floorTraded - it is spuriously true on NQQ and RTQ)",
+    "ContractSpecs venue label: the TACO: line on ES (133) sits under \"CME Globex:\"",
+    "CME Client Systems Wiki \"Basis Trade at Cash Open\": a full session-language grid with three named Pre-Opens and a named \"Market Halt ... Globex Maintenance Period\", and no RTH/ETH split",
+    "trading-hours service: group 3T returns preopen@09:30 / open@10:00 / paused@16:00 / preopen@16:45 / open@17:00 / closed@08:30"
+   ],
+   "order_entry_basis": [
+    "The wiki grid names all three Pre-Opens explicitly and separates them from \"trades from\" and \"market close\"",
+    "CME Globex Notice 2018-05-07 (trade date 2018-05-14) states the same grid - already cited in the handoff",
+    "trading-hours service preopen events on group 3T",
+    "RA2302-5 s3 and Rule 524.C.1"
+   ],
+   "precedent": "NOT NEEDED. TACO's Pre-Opens and executable window are both stated affirmatively in session language by CME; the absence of a regular session follows from the rule and the slate rather than from silence. TACO's absence from the Daily Bulletin is an ACTIVITY absence (vol 0, oi 0 on 2026-09-04) and is not evidence."
+  },
+  {
+   "shape": "TMAC (Trade Marker at Close) - globex_equity_index_tmac (ESX, NQX, RTX, YMX)",
+   "regular": "&[] - EMPTY IN EVERY ERA (created 2023; CME and CBOT Rule 524.D was adopted with RA2302-5 itself)",
+   "extended": "Sun-Fri 17:00 -> 15:00 CT (CME's \"6:00 p.m. - 4:00 p.m. ET\"), with the Globex maintenance gap",
+   "order_entry": "Sun 16:00-17:00 CT and Mon-Thu 16:45-17:00 CT",
+   "channels_the_absence_rests_on": [
+    "CME/CBOT Rule 524.D.1 + .2: Globex plus Rule 526 block trades or Rule 538 EFP/EFR only",
+    "ProductSlate: 4 TMAC records, all floor \"-\", floorVol \"0\", venues \"Globex ClearPort \"",
+    "ContractSpecs venue label: the TMAC: line on ES (133) sits under \"CME Globex:\"",
+    "CME Client Systems Wiki \"Trade Market at Close - TMAC\": the pre-open-state paragraph, no RTH/ETH split",
+    "trading-hours service: group E2 returns closed@15:00 / paused@16:45 / preopen@16:45 / open@17:00"
+   ],
+   "order_entry_basis": [
+    "Wiki: \"TMAC groups then go into pre-open on Sundays between 16:00:00 and 16:01:00 Central time (CT), and Mondays through Thursdays between 16:45:00 and 16:46:00 CT\"",
+    "trading-hours service preopen@16:45 on group E2",
+    "RA2302-5 s3 and Rule 524.D.1"
+   ],
+   "precedent": "NOT NEEDED, same as TACO. Its Daily Bulletin absence is an activity absence (vol 0, oi 0) and is recorded as such."
+  }
+ ],
+ "conclusion": "Author all thirteen-plus proposed trade-type keys with regular: &[] in every era, the published executable window in extended, and the shape's own Pre-Open in order_entry. Do not carry globex_equity_index's 08:30-15:15 CT CME_REGULAR onto any BTIC/TACO/TMAC key: CME excludes BTIC and TACO products from that family by name, and Rule 524 gives none of these shapes a floor route. Each module comment must name the channel its empty regular rests on (they differ per shape) and, for the energy and metals TAS keys, must record the 2009-2015 NYMEX/COMEX pit clause and why it does not create a regular session. U-4 is no longer a blocker for any shape.",
+ "dead_ends": "CME's refdata API is inadmissible (401) - unchanged. The trading-hours service returns hasEvents:false for the TAS groups TG (gold), CT (crude) and CI (crypto) for the week 2026-09-06..2026-09-12, so it cannot source a TAS Pre-Open. There is no Client Systems Wiki text page for BTIC or TAM: a CQL title search returns only the attachment images \"Basis Trade Index Close_BTIC\" and \"Trade at Marker_TAM\", and title~\"Basis Trade at Index Close\" returns size 0 - so the pre-open-state paragraph that exists for TAS and TMAC does not exist for BTIC or TAM, and their Pre-Opens rest on Rule 524 plus the session service instead. ContractSpecs returns an all-\"-\" empty record for most trade-type productIds (8528 ESQ, 8407 GCD, 6266 CLL, 4346 GCT, 7891 ZCT, 10319 TBT, 10205 MCT): their hours live on the underlying's page. The r.jina.ai reader returns HTTP 429 under load; two saved files are that error body, labelled in INDEX.md. The ProductSlate `floorTraded` boolean is unusable - spuriously true across the contiguous id band 8914-8927.",
+ "follow_ups_for_issues": [
+  "LAW-FOLLOW-UPS-ARE-ISSUES: the previous pass's INDEX.md for this gate asserts \"There is no open-outcry route for any of the five shapes in the rule that creates them.\" That is falsified by NYMEX & COMEX Rule 524.A.1 (2009-09-14 .. 2015-03-06 at least). The Pass-2 addendum in the same INDEX.md corrects it; any handoff prose derived from Pass 1 must be corrected too.",
+  "U-0a (MCT): CME's ProductSlate names MCT - {\"id\":10205,\"globex\":\"MCT\",\"exch\":\"NYMEX\",\"name\":\"Micro Crude Oil TAS\"}. That is a CME statement of the product's identity and exchange, though not of its hours; it does not by itself close U-0a, which needs an hours statement.",
+  "BTIC row / U-1: EMT is listed as UNMAPPED and 'not sourced' in the handoff, but CME's slate carries {\"id\":7596,\"globex\":\"EMT\",\"exch\":\"CME\",\"name\":\"E-mini S&P MidCap 400 BTIC Futures\"} and the Daily Bulletin's BTIC PRODUCTS VOLUME REPORT prints an \"ME\" row (16 lots on 2026-09-04, 735 on 2026-08-20). Worth re-opening.",
+  "BTIC row / U-1: 6EB does not appear in CME's ProductSlate at all (6EP does). Either the FX BTIC root has been delisted or the slate omits it; the handoff maps 6EB to a new globex_fx_btic_euro key and this should be checked before the key is authored.",
+  "U-1 (EST envelope conflict): CME's trading-hours service returns closed@15:00 CT for EST's own group SB, which agrees with the \"6:00 p.m. - 4:00 p.m. ET\" BTIC line and not with the 16:00 CT outright envelope that ContractSpecs productId 7968 prints. A third CME channel now sits on the BTIC side of that conflict.",
+  "TAS Pre-Open per family: the wiki's blanket \"TAS groups then go into pre-open on Sundays between 16:00:00 and 16:01:00 CT, and Mondays through Thursdays between 16:45:00 and 16:46:00 CT\" cannot be the whole story for grain TAS, whose own Sunday open is 19:00 CT. Each TAS family's Pre-Open still needs a family-level source before its order_entry rules are encoded.",
+  "The exact day the TAS pit clause left NYMEX/COMEX Rule 524 is bracketed 2015-03-06..2016-08-09 and not stated by any document retrieved. It does not affect any encoded value (regular stays empty either way), so it is recorded rather than resolved."
+ ],
+ "raw_dir": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U4-regular-vs-extended/",
+ "index": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U4-regular-vs-extended/INDEX.md"
+}

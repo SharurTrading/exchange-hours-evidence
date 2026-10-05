@@ -1,0 +1,454 @@
+Starting at 4 p.m. Central Time on Friday, May 29, 2026,
+CME Group will expand
+cryptocurrency futures and options
+to 24/7 trading.
+Cryptocurrency futures and options will trade continuously on CME Globex with at least a two-hour weekly maintenance period
+occurring on the weekend. All holiday or weekend trading from Friday evening through Sunday evening will have a trade date of the following business day, with clearing, settlement and regulatory reporting processed the following business day.
+This topic outlines the necessary information for processing cryptocurrency 24/7 trading.
+Contents
+1
+6
+false
+default
+list
+true
+### Revision History
+<<TABLE START>>
+ROW: Date |  | Description | 
+ROW: May 22, 2026 |  | Updated weekday trading schedule start time to Sunday 4:05 p.m. CT. | Credit and Risk Management | - for Globex Credit Controls (GC2) application. | Summary of Impacts for 5 Day Cryptocurrency Trading | - for 5 day and 7 day clients | 
+ROW: May 19, 2026 |  | Added the following key events: | New MDP 3.0 Block Trades and CME CF Rates and Indexes channel | (updated to May 28) | Saturday startup sequence number reset | 
+ROW: May 15, 2026 |  | Summary of Impacts for 5 Day Cryptocurrency Trading | - 5 day sessions can trade during the expanded weekday schedule. | 
+ROW: May 14, 2026 |  | Removed Settlements and Valuations Support. | 
+ROW: May 13, 2026 |  | Updated 24/7 BTIC Crypto New York (NY) schedule | for Monday through Friday | 
+ROW: May 6, 2026 |  | Added Example 3 - Friday Holiday Trading Schedule | 
+ROW: April 30, 2026 |  | Added an Extended Maintenance | period for the first day of 24/7 cryptocurrency futures and options trading. | 
+ROW: April 29, 2026 |  | Updated CME ClearPort | with block trade availability details. | 
+ROW: April 27, 2026 |  | Updated Key Events and Dates | to reference a GC2 application update to manage weekend trading access and limits. | 
+ROW: April 24, 2026 |  | Reference Data API | - Added information for an attribute that indicates instrument availability for 24/7 trading. | 
+ROW: April 22, 2026 |  | Updated CME Globex Maintenance Windows and Market Hours | with a future cryptocurrency futures and options Saturday no-cancel market state. | Added the following new schedules/maintenance | : | Future Cryptocurrency Futures and Options Schedule - 24/7 Crypto Trade at Settlement | 24/7 Basis Trade at Index Close (BTIC) Crypto Asia-Pacific | 24/7 BTIC London Session | 24/7 BTIC Crypto New York | Cryptocurrency Spot Quoted Futures (SQF) will remain on a 5 day schedule. | 
+ROW: April 21, 2026 |  | Updated MDP 3.0 Market Data Recovery IP and port | and Production access to new 24/7 CME Globex CGW sessions availability | dates | . | 
+ROW: April 16, 2026 |  | Added production environment availability date | (May 3, 2026) for order entry service gateway (OESGW) | Updated close | and pre-open | times for cryptocurrency | and maintenance/trading | schedules | 
+ROW: April 13, 2026 |  | Added the following information: | CME ClearPort | will support 24/7 trading | Product Scope | outlines products remaining on a 5 day trading schedule | Information on UDS weekend | trading and creation availability | 
+ROW: April 9, 2026 |  | Updated Maintenance and Trading Schedule | , and Future Schedule | times for the following market states; close, pause, pre-open, no-cancel, open | 
+ROW: April 7, 2026 |  | Updated availability date for Production Access to new 24/7 CME Globex Convenience Gateway (CGW) sessions | to Sunday, May 3, 2026 | 
+ROW: March 31, 2026 |  | Updated the New Settlements and Valuations Support | section | 
+ROW: March 25, 2026 |  | Added Settlement and Valuations Market Data Multicast Channel | connection information | Updated | MDP Impact Summary | - Settlements and Valuations to channel 247 with 24/7 availability and | Key Events and Dates | - added client request dates for CGW iLink and Drop Copy sessions | 
+ROW: March 23, 2026 |  | Updated MDP 3.0 Market Data | with affected channels and TCP Recovery IP | and port connection details | Added CGW iLink and Drop Copy IP and port | ranges | 
+ROW: March 20, 2026 |  | Key Events and Dates | - updated New Release launch to April 2, 2026 and Production Streamlined CME CF-Rates and Indexes channel to March 29, 2026 | 
+ROW: March 18, 2026 |  | Order Entry Service Gateway - added production | market segment gateway and convenience gateway connection details, including impact on 5 and 7 day trading clients | 
+ROW: March 17, 2026 |  | Updated the following sections: | FirmSoft | - removed reference for new required FirmSoft entitlements | Credit and Risk Management | - Added reference to the Cryptocurrency Futures and Options Expansion to 24/7 Trading Overview | Production Streamlined CME CF-Rates and Indexes channel 214 | availability date | 
+ROW: March 11, 2026 |  | Updated MDP 3.0 Security Definition flat file availability schedule | 
+ROW: March 9, 2026 |  | Updated FirmSoft | weekend availability details | 
+ROW: March 6, 2026 |  | In section Straight Through Processing, added “Customers wanting to leverage STP for crypto 24/7 need to migrate to GCP connectivity, not available on-prem.” | Added to Key Events and Date: Sunday, March 15, 2026 - New Release Streamlined CME CF-Rates and Indexes channel 214 Launch | 
+ROW: March 4, 2026 |  | Updated key event and date for MDP 3.0 Market Data Recovery IP and port update | Added order entry service gateway | network IP details | 
+ROW: March 2, 2026 |  | Clarified Network Connectivity Updates for Market Segment 74 | and Production Network Connectivity Testing | with connectivity testing details | 
+ROW: February 25, 2026 |  | Added | the following information: | Cryptocurrency Futures and Options Expansion to 24/7 Overview | to Summary of Impacts | MDP 3.0 Market Data Recovery IP and port update | 
+ROW: February 25, 2026 |  | Updated Key Events and Dates | and Testing and Certification | with additional information to test network connectivity | 
+ROW: February 19, 2026 |  | Updated daily maintenance | security status from pause to close | 
+ROW: February 18, 2026 |  | Initial publication | 
+<<TABLE END>>
+### Key Events and Dates
+<<TABLE START>>
+ROW: Date |  | Milestone | 
+ROW: Sunday, March 15, 2026 |  | Network Connectivity Updates for Market Segment | 74 | Throughout the Segment 74 IP migration period, client systems may utilize heartbeat messages for connectivity testing every Saturday from 5:00 a.m. to 3:00 p.m. CT | 
+ROW: Sunday, March 15, 2026 |  | New Release Streamlined CME CF-Rates and Indexes channel 214 Launch | 
+ROW: Sunday, March 29, 2026 |  | prod-streamline | Production Streamlined CME CF-Rates and Indexes channel 214 Launch | 
+ROW: Thursday, April 2, 2026 |  | New Release Launch includes support for: | Globex iLink, Drop Copy and Market Data. | STP | Streamlined Block Trades channel 235 | Reference Data API | Streamlined CME CF-Rates and Indexes channel 214 | 
+ROW: Sunday, April 12, 2026 |  | Clients can request new production CGW iLink and Drop Copy Globex sessions. | 
+ROW: Sunday, May 3, 2026 |  | Production access to 7 day OESGW | 
+ROW: mdp3ipport | Sunday, May 10, 2026 |  | MDP 3.0 Market Data Recovery IP and port | update | Production access to new 24/7 CME Globex CGW sessions | 
+ROW: Monday, May 11, | 2026 |  | The Globex Credit Controls (GC2) application will be updated to include weekend exposure limits. The default limit is zero (weekend trading is disabled). Clients intending to trade over the weekend must enable weekend trading | and enter weekend limits | . | 
+ROW: 522 | Thursday, May 28, 2026 |  | At the end of the day, New MDP 3.0 Block Trades and CME CF Rates and Indexes channels will be added to configuration files. | 
+ROW: 523 | Saturday, May 23, 2026 |  | During the new Saturday startup, sequence numbers for iLink, Drop Copy, and market data will reset to 1 | . | 
+ROW: Friday, May 29, 2026, starting at 4:00 p.m. CT |  | Production Launch | CGW clients requiring weekend trading capabilities must migrate to the new 24/7 sessions | Clients that want to trade during the weekend must migrate to the OESGW | 
+<<TABLE END>>
+### Testing and Certification
+Certification is not
+required for customer systems already certified to
+CME MDP 3.0 Market Data
+,
+iLink Order Entry
+, and
+Drop Copy 4.0 Service for iLink
+. Testing is strongly encouraged.
+New release testing is available from Sunday, 5:00 p.m. Central Time (CT) to Friday, 4:00 p.m. CT. Weekend testing is not available
+.
+### Summary of Impacts
+For a summary of the information in this topic, see the
+Cryptocurrency Futures and Options Expansion to 24/7 Overview
+.
+Migration of cryptocurrency
+futures and options to 24/7 trading - (includes holidays, Saturday and Sunday)
+MDP 3.0 channels 326 and 327 will migrate to 24/7 trading
+New Convenience Gateway (CGW) sessions are required for 24/7 trading
+Clients who prefer five day trading can continue to use existing CGW sessions
+The Globex Sunday startup will be eliminated for cryptocurrency futures and options
+Sequence numbers for iLink, Drop Copy, and market data will reset to 1 during the new Saturday startup
+On Friday, Good Till (GT) cryptocurrency orders will be
+eliminated
+for all clients who do not support 24/7 trading via CME Globex Credit Controls
+(GC2)
+New CME CF Rates and Indexes Channel (214)
+New
+Streamlined IP and ports
+New Streamlined Block Trades Channel (235)
+New
+Streamlined IP and ports
+Network Connectivity Updates for Market Segment 74
+for Market Segment (74)
+MDP 3.0 Market Data Recovery IP and port update
+### 24/7 Trading
+This section describes technical front-end impacts for weekend trading with CME Group.
+CME Globex Maintenance Windows and Market Hours
+This section outlines schedule impacts for all clients trading cryptocurrency futures and options
+.
+Maintenance windows are subject to extension; updates will be communicated via the Globex Notice
+.
+sched
+Schedule and Maintenance
+Current Cryptocurrency Futures and Options Schedule
+Future Cryptocurrency Futures and Options Schedule
+Day One Extended Maintenance
+Future Cryptocurrency Futures and Options Schedule - 24/7 Crypto Trade at Settlement
+24/7 Basis Trade at Index Close Crypto Asia-Pacific
+24/7 BTIC London Session
+24/7 BTIC Crypto New York
+Cryptocurrency Spot Quoted Futures (SQF) will remain on a 5 day schedule.
+Current Cryptocurrency Futures and Options
+Schedule
+<<TABLE START>>
+ROW: Day |  | Type |  | Close |  | Pre-Open/Open | 
+ROW: Sunday |  | Sunday startup |  | - |  | 4:00 to 5:00 p.m. CT | 
+ROW: Monday through Friday |  | Daily Maintenance Window (with Trade Date roll) |  | 4:00 to 4:45 p.m. CT |  | 4:45 to 5:00 p.m. CT | 
+<<TABLE END>>
+back to
+schedule/maintenance
+Future Cryptocurrency Futures and Options
+Schedule
+<<TABLE START>>
+ROW: Day |  | Type |  | Close/Pause |  | Pre-Open/Open | 
+ROW: Saturday |  | Extended Maintenance Window |  | Close: 2:00 a.m. to 3:45 a.m. CT |  | Pre-open: 3:45 a.m. to 4:00 a.m. CT | No cancel: 3:59:30 a.m. to 4:00:00 a.m. CT | Open: 4:00 a.m. CT | 
+ROW: Monday through Friday |  | Daily Maintenance Window (with Trade Date roll) |  | Close: 4:00:00 p.m. to 4:01:00 | p.m. CT |  | Pre-open: 4:01:00 p.m. to 4:01:30 p.m. CT | No cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open: 4:02:00 p.m. CT | 
+<<TABLE END>>
+back to
+schedule/maintenance
+### Day One Extended Maintenance
+For the first day of 24/7 cryptocurrency futures and options trading (Friday, May 29, 2026) the standard
+daily maintenance of two minutes will be extended to 30 minutes (4:00 p.m. to 4:30:00 p.m. CT). The first day schedule will be as follows:
+<<TABLE START>>
+ROW: Day |  | Type |  | Close/Pause |  | Pre-Open/Open | 
+ROW: Friday, May 29, 2026 |  | Day One Extended Maintenance |  | Close: 4:00 p.m. to 4:02 p.m. CT |  | Pre-open: Following the Close and concluded with a 30 second No Cancel period. | No cancel: 4:29:30 p.m. to 4:30:00 p.m. CT | Open: 4:30 p.m. CT | 
+<<TABLE END>>
+back to
+schedule/maintenance
+Future Cryptocurrency Futures and Options
+Schedule - 24/7 Crypto Trade at Settlement (TAS)
+<<TABLE START>>
+ROW: Day |  | Type |  | Close/Pause |  | Pre-Open/Open | 
+ROW: Saturday |  | Extended Maintenance Window |  | Close: 2:00 a.m. to 3:45 a.m. CT |  | Pause: 3:45:00 a.m. to 3:45:30 a.m. CT | Pre-open: 3:45:30 a.m. to 3:59:30 a.m. CT | No cancel: 3:59:30 a.m. to 4:00:00 a.m. CT | Open: 4:00 a.m. CT | 
+ROW: Monday through Friday |  | Daily Maintenance Window (with Trade Date roll) |  | Close: 3:00:00 p.m. to 3:01:00 | p.m. CT | Pause: 3:01:00 p.m. to 3:01:30 p.m. CT |  | Pause: 3:01:00 p.m. to 3:01:30 p.m. CT | Pre-open: 3:01:30 p.m. to 3:04:30 p.m. CT | No cancel: 3:04:30 p.m. to 3:05:00 p.m. CT | Open: 3:05:00 p.m. to 4:01:00 p.m. CT | Pause: 4:01:00 p.m. to 4:02:00 p.m. CT | Open: 4:02:00 p.m. CT | 
+<<TABLE END>>
+back to
+schedule/maintenance
+24/7 Basis Trade at Index Close (BTIC) Crypto Asia-Pacific (
+### APAC)
+Daylight savings time applies to BTIC and Crypto APAC contracts.
+<<TABLE START>>
+ROW: Day |  | Type |  | Close/Pause |  | Pre-Open/Open | 
+ROW: Saturday |  | Extended Maintenance Window |  | Close: 2:00 a.m. to 3:45 a.m. CT |  | Pre-open: 3:45:00 a.m. to 4:00:00 a.m. CT | No cancel: 3:59:30 a.m. to 4:00:00 a.m. CT | Open: 4:00 a.m. CT | 
+ROW: Monday through Friday |  | Daily Maintenance Window (with Trade Date roll) |  | Close: 3:00:00 a.m. to | 3:01:00 | a.m. CT |  | Pre-open: 3:01:00 a.m. to 3:04:30 a.m. CT | No cancel: 3:04:30 a.m. to 3:05:00 a.m. CT | Open: 3:05:00 | a.m. | to 4:01:00 | p.m. | CT | Pre-open: 4:01:00 p.m. to 4:01:30 p.m. CT | No cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open: 4:02:00 p.m. CT | 
+<<TABLE END>>
+back to
+schedule/maintenance
+24/7 BTIC Crypto London Session (
+### LDN)
+British Summer Time (BST) applies to 24/7 BTIC Crypto London Session (LDN) contracts.
+<<TABLE START>>
+ROW: Day |  | Type |  | Close/Pause |  | Pre-Open/Open | 
+ROW: Saturday |  | Extended Maintenance Window |  | Close: 2:00 a.m. to 3:45 a.m. CT |  | Pre-open: 3:45:00 a.m. to 3:59:30 a.m. CT | No cancel: 3:59:30 a.m. to 4:00:00 a.m. CT | Open: 4:00 a.m. CT | 
+ROW: Monday through Friday |  | Daily Maintenance Window (with Trade Date roll) |  | Close: 10:00:00 a.m. to 10:01:30 | a.m. CT |  | Pre-open: 10:01:30 a.m. to 10:04:30 a.m. CT | No cancel: 10:04:30 a.m. to 10:05:00 a.m. CT | Open: 10:05:00 | a.m. | to 4:01:00 | p.m. | CT | Pre-open: 4:01:00 p.m. to 4:01:30 p.m. CT | No cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open: 4:02:00 p.m. CT | 
+<<TABLE END>>
+back to
+schedule/maintenance
+24/7 BTIC Crypto New York (
+### NY)
+<<TABLE START>>
+ROW: Day |  | Type |  | Close/Pause |  | Pre-Open/Open | 
+ROW: Saturday |  | Extended Maintenance Window |  | Close: 2:00 a.m. to 3:45 a.m. CT |  | Pre-open: 3:45:00 a.m. to 4:00:00 a.m. CT | No cancel: 3:59:30 a.m. to 4:00:00 a.m. CT | Open: 4:00 a.m. CT | 
+ROW: Monday through Friday |  | Daily Maintenance Window (with Trade Date roll) |  | Close: 3:00:00 p.m. to | 3:01:30 | p.m. CT |  | Pre-open: 3:01:30 p.m. to 3:04:30 p.m. CT | No cancel: 3:04:30 p.m. to 3:05:00 p.m. CT | Open: 3:05:00 p.m. to 4:01:00 p.m. CT | Pre-open: 4:01:00 p.m. to 4:01:30 p.m. CT | No cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open: 4:02:00 p.m. CT | 
+<<TABLE END>>
+back to
+schedule/maintenance
+### Saturday Maintenance Window Processing Overview
+The following section outlines Saturday maintenance processing for 24/7 trading.
+### Saturday Shutdown and Startup
+### Shutdown
+At the beginning of the maintenance
+p
+eriod, client systems will receive a
+MDP 3.0 - Security Status
+. Then CME Globex will send the iLink messages to
+iLink Execution Report - Elimination
+orders. Next, client systems will experience MDP multicast, TCP iLink and Drop Copy disconnections. At this point, clients should reset their books. CME Group recommends that clients and vendors restart their applications at this time and go through their own restart processes.
+Startup
+iLink order entry, Drop Copy and market data sequence numbers reset to 1 during the Saturday startup
+cycle. Client systems will re-establish connectivity to the MDP multicast groups and receive the following startup messaging:
+The
+MDP 3.0 - Market Data Snapshot
+(tag 35-MsgType=W) messages on the Market Recovery feed are deleted for the impacted 24/7 channel. Tag 83-RptSeq for Market by Price (MBP) book updates resets to 1 for each instrument repeating group.
+CME Globex disseminates incremental real-time market data for that channel and client systems can process the data. A
+MDP 3.0 - Market Data Incremental Refresh
+(tag 35-MsgType=X) message will be sent with an empty End of Event indicator if no other information is available. If session statistics are available, they will be republished via the normal Incremental Refresh messaging:
+Current session trade volume
+Price levels in the order books
+Highest and lowest trade
+MDP 3.0 - Security Status
+messages containing market states (per instrument group) will be sent for the 24/7 channel. Then any instrument states that are different from the instrument group state are sent (e.g., Forbidden/Halted instruments).
+Pre-registered administrative information will be removed during the Saturday maintenance window. Clients must re-submit their
+iLink Party Details Definition Request
+following the pre-open on Saturday.
+### 24/7 Maintenance and Trading Schedule Examples
+This section provides examples for 24/7 trading.
+ex1
+### Example 1 - Typical Maintenance and Trading Schedule
+The following is a Maintenance and Trading Schedule example for swap-based event contracts. CME Globex communicates the instrument’s open and close messages via the
+MDP 3.0 - Security Status
+(35=f).
+<<TABLE START>>
+ROW: Day |  | Schedule |  | Type |  | Trade Date |  | Notes | 
+ROW: Friday |  | Close: 4:00:00 p.m. to 4:01:00 p.m. CT | Pre-open: 4:01:00 p.m. CT to 4:01:30 p.m. CT | No-cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open: 4:02:00 p.m. CT |  | Daily maintenance |  | Monday trade date after open |  | 
+ROW: sat-start | Saturday |  | Close: 2:00 a.m. to 3:45 a.m. CT | Pre-open: 3:45 am to 4:00 a.m. CT | Open: 4:00 a.m. CT |  | Extended maintenance |  | Monday trade date |  | Sequence numbers will reset. | 
+ROW: Sunday |  | Trading session continues |  | Monday trade date |  | 
+ROW: Monday |  | Close: 4:00:00 p.m. to 4:01:00 p.m. CT | Pre-open: | 4:01:00 p.m. CT to 4:01:30 p.m. CT | No-cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open: 4:02:00 p.m. CT |  | Daily maintenance |  | Tuesday trade date after open |  | 
+ROW: Tuesday |  | Close: 4:00:00 p.m. to 4:01:00 p.m. CT | Pre-open: | 4:01:00 p.m. CT to 4:01:30 p.m. CT | No-cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open: 4:02:00 p.m. CT |  | Daily maintenance |  | Wednesday trade date after open |  | 
+ROW: Wednesday |  | Close: 4:00:00 p.m. to 4:01:00 p.m. CT | Pre-open: | 4:01:00 p.m. CT to 4:01:30 p.m. CT | No-cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open: 4:02:00 p.m. CT |  | Daily maintenance |  | Thursday trade date after open |  | 
+ROW: Thursday |  | Close: 4:00:00 p.m. to 4:01:00 p.m. CT | Pre-open: | 4:01:00 p.m. CT to 4:01:30 p.m. CT | No-cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open: 4:02:00 p.m. CT |  | Daily maintenance |  | Friday trade date after open |  | 
+<<TABLE END>>
+### Example 2 - Monday Holiday Trading Schedule
+In the below example, Monday is a holiday. Therefore, there is no Monday daily maintenance, and the trade date is Tuesday.
+<<TABLE START>>
+ROW: Day |  | Schedule |  | Type |  | Trade Date |  | Notes | 
+ROW: Friday |  | Close | : 4:00:00 p.m. to 4:01:00 p.m. CT | Pre-open | : 4:01:00 p.m. CT to 4:01:30 p.m. CT | No-cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open | : 4:02:00 p.m. CT |  | Daily maintenance |  | Tuesday trade date | after open |  | 
+ROW: Saturday |  | Close | : 2:00 a.m. to 3:45 a.m. CT | Pre-open | : 3:46 am to 4:00 a.m. CT | Open | : 4:00 a.m. CT |  | Extended maintenance |  | Tuesday trade date |  | Sequence numbers will be reset. | 
+ROW: Sunday |  | Trading session continues |  | Tuesday trade date |  | 
+ROW: Monday |  | Holiday | - trading session continues |  | Tuesday trade date |  | 
+ROW: Tuesday |  | Close | : 4:00:00 p.m. to 4:01:00 p.m. CT | Pre-open | : 4:01:00 p.m. CT to 4:01:30 p.m. CT | No-cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open | : 4:02:00 p.m. CT |  | Daily maintenance |  | Wednesday trade date after open |  | 
+ROW: Wednesday |  | Close | : 4:00:00 p.m. to 4:01:00 p.m. CT | Pre-open | : 4:01:00 p.m. CT to 4:01:30 p.m. CT | No-cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open | : 4:02:00 p.m. CT |  | Daily maintenance |  | Thursday trade date after open |  | 
+ROW: Thursday |  | Close | : 4:00:00 p.m. to 4:01:00 p.m. CT | Pre-open | : 4:01:00 p.m. CT to 4:01:30 p.m. CT | No-cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open | : 4:02:00 p.m. CT |  | Daily maintenance |  | Friday trade date after open |  | 
+<<TABLE END>>
+### Example 3 - Friday Holiday Trading Schedule
+In the below example, Friday is a holiday. Therefore, the trade date after the Thursday maintenance is Monday. GT orders that only support 5-day trading
+will be eliminated Friday at 4:00 p.m. CT. Standard weekday credit limits apply to all Friday trades before 4:00 p.m. CT.
+<<TABLE START>>
+ROW: Day |  | Schedule |  | Type |  | Trade Date |  | Notes | 
+ROW: Wednesday |  | Close | : 4:00:00 p.m. to 4:01:00 p.m. CT | Pre-open | : 4:01:00 p.m. CT to 4:01:30 p.m. CT | No-cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open | : 4:02:00 p.m. CT |  | Daily maintenance |  | Thursday trade date after open |  | 
+ROW: Thursday |  | Close | : 4:00:00 p.m. to 4:01:00 p.m. CT | Pre-open | : 4:01:00 p.m. CT to 4:01:30 p.m. CT | No-cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open | : 4:02:00 p.m. CT |  | Daily maintenance |  | Monday | trade date after open |  | 
+ROW: Friday |  | Close | : 4:00:00 p.m. to 4:01:00 p.m. CT | Pre-open | : 4:01:00 p.m. CT to 4:01:30 p.m. CT | No-cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open | : 4:02:00 p.m. CT |  | Holiday maintenance |  | Monday trade date after open |  | Due to the Friday holiday, GT orders that | only support 5 day trading | will be eliminated Friday at 4:00 p.m. CT. Standard weekday credit limits apply to all Friday trades before 4:00 p.m. CT. | 
+ROW: Saturday |  | Close | : 2:00 a.m. to 3:45 a.m. CT | Pre-open | : 3:46 am to 4:00 a.m. CT | Open | : 4:00 a.m. CT |  | Extended maintenance |  | Monday trade date |  | Sequence numbers will be reset. | 
+ROW: Sunday |  | Trading session continues |  | Monday trade date |  | 
+ROW: Monday |  | Close | : 4:00:00 p.m. to 4:01:00 p.m. CT | Pre-open | : 4:01:00 p.m. CT to 4:01:30 p.m. CT | No-cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open | : 4:02:00 p.m. CT |  | Daily maintenance |  | Tuesday trade date after open |  | 
+ROW: Tuesday |  | Close | : 4:00:00 p.m. to 4:01:00 p.m. CT | Pre-open | : 4:01:00 p.m. CT to 4:01:30 p.m. CT | No-cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open | : 4:02:00 p.m. CT |  | Daily maintenance |  | Wednesday trade date after open |  | 
+ROW: Wednesday |  | Close | : 4:00:00 p.m. to 4:01:00 p.m. CT | Pre-open | : 4:01:00 p.m. CT to 4:01:30 p.m. CT | No-cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open | : 4:02:00 p.m. CT |  | Daily maintenance |  | Thursday trade date after open |  | 
+ROW: Thursday |  | Close | : 4:00:00 p.m. to 4:01:00 p.m. CT | Pre-open | : 4:01:00 p.m. CT to 4:01:30 p.m. CT | No-cancel: 4:01:30 p.m. to 4:02:00 p.m. CT | Open | : 4:02:00 p.m. CT |  | Daily maintenance |  | Friday trade date after open |  | 
+<<TABLE END>>
+Product Not In Scope
+The following spot quoted futures products will remain on a 5 day trading schedule.
+<<TABLE START>>
+ROW: Product |  | MDP 3.0: Tag 6937-Asset |  | iLink/MDP 3.0: Tag 1151-Security Group |  | Market Segment |  | MDP Channel | 
+ROW: SPOT-QUOTED BITCOIN FUT |  | QBTC |  | D5 |  | 74 |  | 326 | 
+ROW: ETHER SPOT QUOTED FUT NON TRADE |  | QEF |  | 02 |  | 74 |  | 326 | 
+ROW: ETHER MARKER SPOT QUOTED FUTURES |  | QEM |  | 02 |  | 74 |  | 326 | 
+ROW: SPOT-QUOTED ETHER FUT |  | QETH |  | D6 |  | 74 |  | 326 | 
+ROW: SOL SPOT QUOTED FUT NON |  | QOF |  | 02 |  | 74 |  | 326 | 
+ROW: SOL MARKER SPOT QUOTED |  | QOM |  | 02 |  | 74 |  | 326 | 
+ROW: SPOT-QUOTED SOL FUT |  | QSOL |  | D7 |  | 74 |  | 326 | 
+ROW: BITCOIN SPOT QUOTED FUT NON TRAD |  | QTF |  | 02 |  | 74 |  | 326 | 
+ROW: BITCOIN MARKER SPOT QUOTED FUT |  | QTM |  | 02 |  | 74 |  | 326 | 
+ROW: XRP SPOT QUOTED FUT NON TRAD |  | QXF |  | 02 |  | 74 |  | 326 | 
+ROW: XRP MARKER SPOT QUOTED |  | QXM |  | 02 |  | 74 |  | 326 | 
+ROW: SPOT-QUOTED XRP FUT |  | QXRP |  | D9 |  | 74 |  | 326 | 
+<<TABLE END>>
+### UDS Weekend Trading and Creation Availability
+User Defined Spreads
+(UDS) will be available for 24/7 trading, however, UDS creation is only supported from Sunday, 4:00 p.m. CT through Friday, 4:00 p.m. CT.
+### 24/7 Client System Impacts
+This section outlines 24/7 client system impacts.
+### iLink Order Entry
+At the beginning of the Saturday extended maintenance window, CME Globex will disconnect all clients' sessions; reset sequence numbers; and cancel resting day orders and mass quotes. Pre-registered administrative information will be removed during the Saturday maintenance window. Clients must re-submit their Party Details Definition
+following the pre-open on Saturday.
+### Market Segment Gateway (MSGW)
+All existing iLink Order Entry functionality is supported. Client systems may leverage existing iLink MSGW sessions.
+### Convenience Gateway (CGW)
+With this launch, iLink CGW sessions will support seven day markets.
+New
+CGW sessions must be created
+to support 24/7 trading. Newly created CGW sessions will support all Globex futures and options markets.
+Existing
+CGW sessions can only submit cryptocurrency futures and options orders during the weekday.
+### iLink Session Support Summary
+<<TABLE START>>
+ROW: Session Summary |  | Impact | 
+ROW: Existing MSGW Session |  | No impact. Existing | MSGW sessions can send orders 24/7 on CME Globex. | 
+ROW: Existing CGW Session |  | Existing | CGW sessions can only send orders between Sunday 4:00 p.m. and Friday 4:00 p.m. CT. | 
+ROW: New CGW Session |  | New | CGW sessions can send orders 24/7 on CME Globex. | To trade during the weekend, create | a new CGW session. | 
+<<TABLE END>>
+### Order Entry Service Gateway
+This section outlines OESGW network IP impacts for MSGW and CGW sessions.
+New Release
+To enable OESGW support, clients must update their configuration files with the following market segments:
+MSGW Sessions: market segment 12
+CGW Sessions: market segment 6
+Production
+Migration
+to the new order entry gateway is mandatory for all 7 day trading MSGW and CGW clients. No action is required for clients operating on a weekday-only schedule.
+<<TABLE START>>
+ROW: Client Type |  | Session Type |  | Market Segment OESGW |  | Current IPs |  | Future IPs | 
+ROW: 5 Day - No Action |  | MSGW |  | marketsegment id="12" |  | More details on the SFTP site is available on | MSGW - SFTP Configuration | . |  | No change | 
+ROW: CGW |  | marketsegment id="6" |  | More details on the SFTP site is available on | MSGW - SFTP Configuration | . |  | No change | 
+ROW: 7 Day - Client Migration |  | MSGW |  | marketsegment id="4" |  | n/a |  | More details on the SFTP site is available on | MSGW - SFTP Configuration | . | 
+ROW: CGW |  | marketsegment id="2" |  | n/a |  | View the Configuration and Connectivity | (IP and port) details (CME Group Login required). | The configuration file will be updated at a later date. | 
+<<TABLE END>>
+gtelim
+### Good Till (GT) Order Elimination
+If weekend trading is not enabled in CME Globex Credit Controls (GC2), all cryptocurrency Good Till (GT) orders will be eliminated at Friday 4:00 p.m. CT. Client systems that do not enable weekend trading are encouraged to cancel all cryptocurrency futures and options GT orders before Friday 4:00 p.m. CT.
+See also: Credit and Risk Management
+### Drop Copy
+All existing
+Drop Copy 4.0 Service for iLink
+functionality is supported. At the beginning of the Saturday extended maintenance window, CME Globex will disconnect all clients' sessions and reset sequence numbers.
+### Drop Copy MSGW Session
+With this launch, client systems can leverage existing Drop Copy MSGW sessions.
+### Drop Copy CGW Session
+With this launch, Drop Copy CGW target sessions will support seven day markets.
+New
+CGW target SessionID must be created to support 24/7 trading. Newly created CGW target sessions will support all futures and options markets on Globex.
+Existing
+CGW target sessions will only be active during the weekday.
+### Drop Copy Target Session Support Summary
+<<TABLE START>>
+ROW: Session Summary |  | Impact | 
+ROW: Existing MSGW target sessions |  | No impact. Existing | MSGW target sessions can receive Drop Copy messages 24/7 on CME Globex. | 
+ROW: Existing CGW target sessions |  | Existing | CGW target sessions can only receive orders between Sunday 4:00 p.m. and Friday 4:00 p.m. CT. | 
+ROW: New CGW target sessions |  | New | CGW target sessions can receive real-time copies of iLink Execution Report and Acknowledgement | From CME Globex to Client System | of 24/7 activity on CME Globex. | To receive Drop Copy messages during the weekend, create | a new CGW target session. | 
+<<TABLE END>>
+### Market Data Support
+This section outlines market data impacts.
+### MDP 3.0 Market Data
+CME Globex Market by Order/Market by Price (MBO/MBP) User Datagram Protocol (UDP)
+MDP 3.0 - CME Globex Market Data Channel Guide
+will migrate to 24/7 trading. Existing CME Globex MDP 3.0 functionality is supported.
+Additionally, both
+CME Smart Stream on GCP SBE
+and the
+Real-Time Futures and Options WebSocket API
+support 24/7 trading.
+### MDP 3.0 TCP Recovery IP Update
+For details on affected MDP 3.0 channels, refer to:
+MDP 3.0 TCP Recovery IP Update
+.
+### Security Definition Flat File
+To support weekend trading, Security Definition Flat File
+updates have been modified to the following times:
+<<TABLE START>>
+ROW: Day |  | Update Times (CT) | 
+ROW: Sunday |  | 10:00 a.m. | 12:10 p.m. | 1:10 p.m. | 8:10 p.m. | 11:00 p.m. | 
+ROW: Monday - Friday |  | 10:00 a.m. | 2:25 p.m. | 8:25 p.m. | 11:00 p.m. | 
+ROW: Saturday |  | 10:00 a.m. | 12:10 p.m. | 1:10 p.m. | 8:10 p.m. | 11:00 p.m. | 
+<<TABLE END>>
+### New CME CF Rates and Indexes Channel
+A new
+SBE - Streamlined Market Data for CME CF Cryptocurrency Indices
+(Channel 214) will launch with this migration, offering 24/7 availability. The new channel will provide parallel data to the existing Streamline CME CF Rates and Indexes channel (213
+) during weekday operations.
+View connection information
+(channel, subnet, multicast, port, IP). CME Group Login is required.
+### New Streamlined Block Trades Channel
+A new 7 day enabled
+SBE - Streamlined Market Data for Block Trades
+(Channel 235) for 24/7 cryptocurrency futures and options will launch with this release. Availability will support the same 24/7 maintenance windows as Globex.
+View connection information
+(channel, subnet, multicast, port, IP); new IPs and ports (CME Group Login is required).
+### MDP Impact Summary
+<<TABLE START>>
+ROW: Feature |  | Channel / ID |  | Availability* |  | Impact | 
+ROW: MDP 3.0 |  | Channels 326 and 327 |  | 24/7 |  | Migrating to 24/7. | 
+ROW: CME CF Rates and Indexes |  | NEW | - Channel 214 |  | 24/7 |  | Parallel to existing Channel 213, which remains weekday only. | 
+ROW: Streamlined Block Trades |  | NEW | - Channel 235 |  | 24/7 |  | This new channel supports the same instruments currently available on CME Block Trades (Channel 230), including cryptocurrencies. The channel extends support to 24/7 block trading functionality. | 
+<<TABLE END>>
+*
+For availability details, see: CME Globex Maintenance Windows and Market Hours
+### Straight Through Processing
+CME Straight Through Processing
+supports trade reports for the 24/7 markets.
+Customers wanting to leverage STP for crypto 24/7 need to migrate to GCP connectivity, not available on-prem.
+The FIXML STP URL is different from 24/7 Swap-Based Event contracts FIXML URL.
+<<TABLE START>>
+ROW: Service |  | Environment Connectivity | 
+ROW: FIX |  | CME STP FIX API on Google Cloud | 
+ROW: FIXML |  | CME STP FIXML - Environment Connectivity | 
+<<TABLE END>>
+Reference Data API
+CME Reference Data API Version 3
+supports
+24/7 trading including
+CME Reference Data API - CME Globex Trading Hours and Holiday Schedules
+functionality.
+A new attribute will be added to CME Reference Data API to support 24/7 trading. Clients can use the sevenDayTradingIndicator
+to identify only 24/7 instruments.
+### New Attribute - Seven Day Trading Indicator
+<<TABLE START>>
+ROW: Endpoint |  | Attribute Name |  | Description |  | Type |  | Filterable | 
+ROW: Instrument |  | sevenDayTradingIndicator |  | A yes/no (Y/N) flag that indicates if an instrument is available for 24/7 trading. |  | String |  | 
+<<TABLE END>>
+CME ClearPort
+The CME ClearPort
+web-based user interface will support 24/7 trading
+.
+Block Trades
+Entry is available through the ClearPort platform
+during the weekend. There are no specific weekend limits for ClearPort, however, a firm can adjust RAV limits
+prior to the start of the weekend session or over the weekend.
+### CME Direct
+CME Direct
+does not support weekend trading.
+### CME DataMine
+CME DataMine
+supports cryptocurrency futures and options and 24/7 trading.
+### FirmSoft
+The following table outlines FirmSoft availability.
+<<TABLE START>>
+ROW: Feature |  | Weekdays |  | Weekends | 
+ROW: FirmSoft | - Orders | and Trades | View |  | Accessible at: one.cmegroup.com |  | Accessible | at: https://firmsoftweekend.prod.cmegroup.com/ | 
+<<TABLE END>>
+### Credit and Risk Management
+With launch, CME Globex Credit Controls (GC2) will support unique GC2 weekend Limits
+. Client specified limits may affect weekend GT order cancellation
+. The GC2 weekday schedule for 5 day clients begins Sunday at 4:05 p.m. CT. At this time, 5 day client systems can start trading. For weekday limits, 5 day clients can trade during the expanded weekday schedule.
+7-day clients should follow the standard product schedule.
+For more information see
+the
+CME Clearing & Global Operations Summary of Requirements and Guidelines for Cryptocurrency Trading and 24x7 Clearing
+.
+### Network Connectivity Details
+Access network connectivity information
+for cryptocurrency futures and options (CME Group Login required).
+Summary of Network Connectivity Impacts
+New CME CF Rates and Indexes Channel
+New Streamlined Block Trades Channel
+MDP 3.0 Market Data TCP Recovery IP and port update
+CGW Order Entry Service Gateway
+7 Day CGW iLink and Drop Copy Session
+### Summary of Impacts for 5 Day Cryptocurrency Trading
+The following table summarizes impacts for clients who choose not to support 24/7 trading.
+<<TABLE START>>
+ROW: Type |  | Impact | 
+ROW: Schedule update |  | The GC2 weekday schedule for 5 day clients begins Sunday at 4:05 p.m. CT. At this time, 5 day client systems can start trading. For weekday limits, 5 day clients can trade during the expanded weekday schedule. | 7-day clients should follow the standard product schedule. | 
+ROW: CME Globex Sunday startup |  | Currently 5 day cryptocurrency futures and options clients can utilize | CME Globex Start-up Processing | . However, due to the new 7 day trading schedule there is no longer a Globex Sunday startup processing cycle. | 
+ROW: Convenience Gateway (CGW) Support |  | Clients can continue to use 5 day CGW sessions, however, order submission is not available until 4:05 | p.m. CT on Sunday. If a client wishes to trade between Friday 4:00 p.m. CT - Sunday 4:00 p.m. CT, a new CGW session must be created. | 
+ROW: Good Till (GT) Order Elimination |  | If weekend trading is not enabled in CME Globex Credit Controls (GC2), GT orders will be eliminated on Friday at 4:00 p.m. CT. All client systems are encouraged to cancel all cryptocurrency futures and options GT orders before Friday 4:00 p.m. CT. | 
+ROW: Network Impact |  | See | network connectivity information | (CME Group Login required). | 
+<<TABLE END>>
+### Contact Information
+Technical development support: Certification Support for Electronic Trading (CSET)
+Production requests, technical assistance, order status: Global Command Center (GCC)
+All other inquiries: Global Account Management (GAM)

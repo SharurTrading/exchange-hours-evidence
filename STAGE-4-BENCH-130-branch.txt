@@ -1,0 +1,574 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.24
+   Compiling serde_core v1.0.229
+   Compiling serde v1.0.229
+   Compiling autocfg v1.5.1
+   Compiling zerocopy v0.8.56
+   Compiling shlex v2.0.1
+   Compiling zmij v1.0.23
+   Compiling find-msvc-tools v0.1.11
+   Compiling libc v0.2.189
+   Compiling serde_json v1.0.151
+   Compiling cc v1.4.4
+   Compiling siphasher v1.0.3
+   Compiling cfg-if v1.0.4
+   Compiling phf_shared v0.12.1
+   Compiling num-traits v0.2.19
+   Compiling ciborium-io v0.2.2
+   Compiling memchr v2.8.3
+   Compiling either v1.18.0
+   Compiling itoa v1.0.18
+   Compiling regex-syntax v0.8.11
+   Compiling chrono-tz v0.10.4
+   Compiling anstyle v1.0.14
+   Compiling clap_lex v1.1.0
+   Compiling itertools v0.13.0
+   Compiling clap_builder v4.6.6
+   Compiling phf v0.12.1
+   Compiling cast v0.3.0
+   Compiling same-file v1.0.6
+   Compiling oorandom v11.1.5
+   Compiling anes v0.1.6
+   Compiling walkdir v2.5.0
+   Compiling syn v3.0.3
+   Compiling syn v2.0.119
+   Compiling page_size v0.6.0
+   Compiling alloca v0.4.0
+   Compiling chrono v0.4.45
+   Compiling regex-automata v0.4.18
+   Compiling criterion-plot v0.8.2
+   Compiling serde_derive v1.0.229
+   Compiling clap v4.6.6
+   Compiling regex v1.13.1
+   Compiling zerocopy-derive v0.8.56
+   Compiling tinytemplate v1.2.1
+   Compiling serde_test v1.0.177
+   Compiling exchange-hours v1.0.0 (/Users/agedvagabond/Developer/eh-wt-130)
+   Compiling half v2.7.1
+   Compiling ciborium-ll v0.2.2
+   Compiling ciborium v0.2.2
+   Compiling criterion v0.8.2
+    Finished `bench` profile [optimized] target(s) in 18.79s
+     Running benches/calendar_queries.rs (target/release/deps/calendar_queries-ffc56380d6cf690e)
+Benchmarking globex_equity_index/is_open
+Benchmarking globex_equity_index/is_open: Warming up for 3.0000 s
+Benchmarking globex_equity_index/is_open: Collecting 100 samples in estimated 5.0018 s (3.2M iterations)
+Benchmarking globex_equity_index/is_open: Analyzing
+globex_equity_index/is_open
+                        time:   [1.2885 µs 1.3485 µs 1.4221 µs]
+Found 5 outliers among 100 measurements (5.00%)
+  3 (3.00%) high mild
+  2 (2.00%) high severe
+Benchmarking globex_equity_index/session_bounds
+Benchmarking globex_equity_index/session_bounds: Warming up for 3.0000 s
+Benchmarking globex_equity_index/session_bounds: Collecting 100 samples in estimated 5.0004 s (9.3M iterations)
+Benchmarking globex_equity_index/session_bounds: Analyzing
+globex_equity_index/session_bounds
+                        time:   [505.20 ns 519.64 ns 534.81 ns]
+Found 6 outliers among 100 measurements (6.00%)
+  5 (5.00%) high mild
+  1 (1.00%) high severe
+Benchmarking globex_equity_index/candle_end_daily
+Benchmarking globex_equity_index/candle_end_daily: Warming up for 3.0000 s
+Benchmarking globex_equity_index/candle_end_daily: Collecting 100 samples in estimated 5.0047 s (1.1M iterations)
+Benchmarking globex_equity_index/candle_end_daily: Analyzing
+globex_equity_index/candle_end_daily
+                        time:   [4.4205 µs 4.4811 µs 4.5549 µs]
+Found 17 outliers among 100 measurements (17.00%)
+  6 (6.00%) high mild
+  11 (11.00%) high severe
+Benchmarking globex_equity_index/trade_date
+Benchmarking globex_equity_index/trade_date: Warming up for 3.0000 s
+Benchmarking globex_equity_index/trade_date: Collecting 100 samples in estimated 5.0009 s (1.1M iterations)
+Benchmarking globex_equity_index/trade_date: Analyzing
+globex_equity_index/trade_date
+                        time:   [4.5962 µs 4.6483 µs 4.7153 µs]
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+Benchmarking globex_equity_index/session_state_closed
+Benchmarking globex_equity_index/session_state_closed: Warming up for 3.0000 s
+Benchmarking globex_equity_index/session_state_closed: Collecting 100 samples in estimated 5.0020 s (3.7M iterations)
+Benchmarking globex_equity_index/session_state_closed: Analyzing
+globex_equity_index/session_state_closed
+                        time:   [1.3422 µs 1.3454 µs 1.3489 µs]
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking globex_equity_index/is_open/overnight
+Benchmarking globex_equity_index/is_open/overnight: Warming up for 3.0000 s
+Benchmarking globex_equity_index/is_open/overnight: Collecting 100 samples in estimated 5.0021 s (5.7M iterations)
+Benchmarking globex_equity_index/is_open/overnight: Analyzing
+globex_equity_index/is_open/overnight
+                        time:   [880.23 ns 881.73 ns 883.33 ns]
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking globex_equity_index/is_open/maintenance
+Benchmarking globex_equity_index/is_open/maintenance: Warming up for 3.0000 s
+Benchmarking globex_equity_index/is_open/maintenance: Collecting 100 samples in estimated 5.0012 s (4.5M iterations)
+Benchmarking globex_equity_index/is_open/maintenance: Analyzing
+globex_equity_index/is_open/maintenance
+                        time:   [1.1435 µs 1.1769 µs 1.2189 µs]
+Found 10 outliers among 100 measurements (10.00%)
+  1 (1.00%) low mild
+  2 (2.00%) high mild
+  7 (7.00%) high severe
+Benchmarking globex_equity_index/is_open/closed_weekend
+Benchmarking globex_equity_index/is_open/closed_weekend: Warming up for 3.0000 s
+Benchmarking globex_equity_index/is_open/closed_weekend: Collecting 100 samples in estimated 5.0022 s (5.5M iterations)
+Benchmarking globex_equity_index/is_open/closed_weekend: Analyzing
+globex_equity_index/is_open/closed_weekend
+                        time:   [766.20 ns 767.33 ns 768.52 ns]
+Found 6 outliers among 100 measurements (6.00%)
+  1 (1.00%) low mild
+  5 (5.00%) high mild
+Benchmarking globex_equity_index/is_open/adjacent
+Benchmarking globex_equity_index/is_open/adjacent: Warming up for 3.0000 s
+Benchmarking globex_equity_index/is_open/adjacent: Collecting 100 samples in estimated 5.0805 s (182k iterations)
+Benchmarking globex_equity_index/is_open/adjacent: Analyzing
+globex_equity_index/is_open/adjacent
+                        time:   [27.371 µs 28.860 µs 30.586 µs]
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking globex_equity_index/is_open/holiday
+Benchmarking globex_equity_index/is_open/holiday: Warming up for 3.0000 s
+Benchmarking globex_equity_index/is_open/holiday: Collecting 100 samples in estimated 5.0854 s (182k iterations)
+Benchmarking globex_equity_index/is_open/holiday: Analyzing
+globex_equity_index/is_open/holiday
+                        time:   [24.441 µs 25.680 µs 27.250 µs]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking globex_equity_index/session_state/regular
+Benchmarking globex_equity_index/session_state/regular: Warming up for 3.0000 s
+Benchmarking globex_equity_index/session_state/regular: Collecting 100 samples in estimated 5.0007 s (9.9M iterations)
+Benchmarking globex_equity_index/session_state/regular: Analyzing
+globex_equity_index/session_state/regular
+                        time:   [506.23 ns 534.78 ns 567.61 ns]
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) high mild
+Benchmarking globex_equity_index/session_state/closed_weekend
+Benchmarking globex_equity_index/session_state/closed_weekend: Warming up for 3.0000 s
+Benchmarking globex_equity_index/session_state/closed_weekend: Collecting 100 samples in estimated 5.0028 s (4.9M iterations)
+Benchmarking globex_equity_index/session_state/closed_weekend: Analyzing
+globex_equity_index/session_state/closed_weekend
+                        time:   [1.0130 µs 1.0376 µs 1.0855 µs]
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) low mild
+  1 (1.00%) high mild
+  2 (2.00%) high severe
+Benchmarking globex_equity_index/daily_window
+Benchmarking globex_equity_index/daily_window: Warming up for 3.0000 s
+Benchmarking globex_equity_index/daily_window: Collecting 100 samples in estimated 5.0218 s (323k iterations)
+Benchmarking globex_equity_index/daily_window: Analyzing
+globex_equity_index/daily_window
+                        time:   [15.417 µs 15.517 µs 15.609 µs]
+
+Benchmarking overlay_layers/none/is_open/regular
+Benchmarking overlay_layers/none/is_open/regular: Warming up for 3.0000 s
+Benchmarking overlay_layers/none/is_open/regular: Collecting 100 samples in estimated 5.0006 s (5.0M iterations)
+Benchmarking overlay_layers/none/is_open/regular: Analyzing
+overlay_layers/none/is_open/regular
+                        time:   [1.0581 µs 1.0918 µs 1.1226 µs]
+Found 6 outliers among 100 measurements (6.00%)
+  2 (2.00%) high mild
+  4 (4.00%) high severe
+Benchmarking overlay_layers/none/is_open/overnight
+Benchmarking overlay_layers/none/is_open/overnight: Warming up for 3.0000 s
+Benchmarking overlay_layers/none/is_open/overnight: Collecting 100 samples in estimated 5.0010 s (5.7M iterations)
+Benchmarking overlay_layers/none/is_open/overnight: Analyzing
+overlay_layers/none/is_open/overnight
+                        time:   [944.35 ns 970.05 ns 996.37 ns]
+Found 7 outliers among 100 measurements (7.00%)
+  3 (3.00%) high mild
+  4 (4.00%) high severe
+Benchmarking overlay_layers/none/is_open/maintenance
+Benchmarking overlay_layers/none/is_open/maintenance: Warming up for 3.0000 s
+Benchmarking overlay_layers/none/is_open/maintenance: Collecting 100 samples in estimated 5.0053 s (4.4M iterations)
+Benchmarking overlay_layers/none/is_open/maintenance: Analyzing
+overlay_layers/none/is_open/maintenance
+                        time:   [1.1843 µs 1.2154 µs 1.2437 µs]
+Found 18 outliers among 100 measurements (18.00%)
+  2 (2.00%) high mild
+  16 (16.00%) high severe
+Benchmarking overlay_layers/none/is_open/closed_weekend
+Benchmarking overlay_layers/none/is_open/closed_weekend: Warming up for 3.0000 s
+Benchmarking overlay_layers/none/is_open/closed_weekend: Collecting 100 samples in estimated 5.0021 s (6.3M iterations)
+Benchmarking overlay_layers/none/is_open/closed_weekend: Analyzing
+overlay_layers/none/is_open/closed_weekend
+                        time:   [778.53 ns 782.75 ns 787.13 ns]
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+Benchmarking overlay_layers/none/is_open/adjacent
+Benchmarking overlay_layers/none/is_open/adjacent: Warming up for 3.0000 s
+Benchmarking overlay_layers/none/is_open/adjacent: Collecting 100 samples in estimated 5.0037 s (207k iterations)
+Benchmarking overlay_layers/none/is_open/adjacent: Analyzing
+overlay_layers/none/is_open/adjacent
+                        time:   [23.453 µs 23.579 µs 23.694 µs]
+Benchmarking overlay_layers/none/is_open/holiday
+Benchmarking overlay_layers/none/is_open/holiday: Warming up for 3.0000 s
+Benchmarking overlay_layers/none/is_open/holiday: Collecting 100 samples in estimated 5.1128 s (197k iterations)
+Benchmarking overlay_layers/none/is_open/holiday: Analyzing
+overlay_layers/none/is_open/holiday
+                        time:   [28.658 µs 30.544 µs 32.508 µs]
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking overlay_layers/without_holidays/is_open/regular
+Benchmarking overlay_layers/without_holidays/is_open/regular: Warming up for 3.0000 s
+Benchmarking overlay_layers/without_holidays/is_open/regular: Collecting 100 samples in estimated 5.0029 s (6.5M iterations)
+Benchmarking overlay_layers/without_holidays/is_open/regular: Analyzing
+overlay_layers/without_holidays/is_open/regular
+                        time:   [844.02 ns 873.12 ns 899.94 ns]
+Found 22 outliers among 100 measurements (22.00%)
+  3 (3.00%) high mild
+  19 (19.00%) high severe
+Benchmarking overlay_layers/without_holidays/is_open/overnight
+Benchmarking overlay_layers/without_holidays/is_open/overnight: Warming up for 3.0000 s
+Benchmarking overlay_layers/without_holidays/is_open/overnight: Collecting 100 samples in estimated 5.0011 s (6.9M iterations)
+Benchmarking overlay_layers/without_holidays/is_open/overnight: Analyzing
+overlay_layers/without_holidays/is_open/overnight
+                        time:   [744.69 ns 765.70 ns 784.83 ns]
+Found 19 outliers among 100 measurements (19.00%)
+  3 (3.00%) high mild
+  16 (16.00%) high severe
+Benchmarking overlay_layers/without_holidays/is_open/maintenance
+Benchmarking overlay_layers/without_holidays/is_open/maintenance: Warming up for 3.0000 s
+Benchmarking overlay_layers/without_holidays/is_open/maintenance: Collecting 100 samples in estimated 5.0001 s (5.7M iterations)
+Benchmarking overlay_layers/without_holidays/is_open/maintenance: Analyzing
+overlay_layers/without_holidays/is_open/maintenance
+                        time:   [961.55 ns 989.20 ns 1.0142 µs]
+Found 20 outliers among 100 measurements (20.00%)
+  2 (2.00%) high mild
+  18 (18.00%) high severe
+Benchmarking overlay_layers/without_holidays/is_open/closed_weekend
+Benchmarking overlay_layers/without_holidays/is_open/closed_weekend: Warming up for 3.0000 s
+Benchmarking overlay_layers/without_holidays/is_open/closed_weekend: Collecting 100 samples in estimated 5.0005 s (7.6M iterations)
+Benchmarking overlay_layers/without_holidays/is_open/closed_weekend: Analyzing
+overlay_layers/without_holidays/is_open/closed_weekend
+                        time:   [579.11 ns 581.79 ns 584.91 ns]
+Found 11 outliers among 100 measurements (11.00%)
+  2 (2.00%) low mild
+  4 (4.00%) high mild
+  5 (5.00%) high severe
+Benchmarking overlay_layers/without_holidays/is_open/adjacent
+Benchmarking overlay_layers/without_holidays/is_open/adjacent: Warming up for 3.0000 s
+Benchmarking overlay_layers/without_holidays/is_open/adjacent: Collecting 100 samples in estimated 5.0037 s (6.6M iterations)
+Benchmarking overlay_layers/without_holidays/is_open/adjacent: Analyzing
+overlay_layers/without_holidays/is_open/adjacent
+                        time:   [810.98 ns 839.45 ns 865.59 ns]
+Found 20 outliers among 100 measurements (20.00%)
+  1 (1.00%) high mild
+  19 (19.00%) high severe
+Benchmarking overlay_layers/without_holidays/is_open/holiday
+Benchmarking overlay_layers/without_holidays/is_open/holiday: Warming up for 3.0000 s
+Benchmarking overlay_layers/without_holidays/is_open/holiday: Collecting 100 samples in estimated 5.0029 s (7.4M iterations)
+Benchmarking overlay_layers/without_holidays/is_open/holiday: Analyzing
+overlay_layers/without_holidays/is_open/holiday
+                        time:   [730.86 ns 753.43 ns 774.04 ns]
+Found 19 outliers among 100 measurements (19.00%)
+  3 (3.00%) high mild
+  16 (16.00%) high severe
+Benchmarking overlay_layers/exceptions_gated/is_open/regular
+Benchmarking overlay_layers/exceptions_gated/is_open/regular: Warming up for 3.0000 s
+Benchmarking overlay_layers/exceptions_gated/is_open/regular: Collecting 100 samples in estimated 5.0003 s (3.4M iterations)
+Benchmarking overlay_layers/exceptions_gated/is_open/regular: Analyzing
+overlay_layers/exceptions_gated/is_open/regular
+                        time:   [1.4836 µs 1.5034 µs 1.5287 µs]
+Found 16 outliers among 100 measurements (16.00%)
+  16 (16.00%) high severe
+Benchmarking overlay_layers/exceptions_gated/is_open/overnight
+Benchmarking overlay_layers/exceptions_gated/is_open/overnight: Warming up for 3.0000 s
+Benchmarking overlay_layers/exceptions_gated/is_open/overnight: Collecting 100 samples in estimated 5.0029 s (4.2M iterations)
+Benchmarking overlay_layers/exceptions_gated/is_open/overnight: Analyzing
+overlay_layers/exceptions_gated/is_open/overnight
+                        time:   [1.2320 µs 1.2421 µs 1.2541 µs]
+Found 16 outliers among 100 measurements (16.00%)
+  2 (2.00%) high mild
+  14 (14.00%) high severe
+Benchmarking overlay_layers/exceptions_gated/is_open/maintenance
+Benchmarking overlay_layers/exceptions_gated/is_open/maintenance: Warming up for 3.0000 s
+Benchmarking overlay_layers/exceptions_gated/is_open/maintenance: Collecting 100 samples in estimated 5.0043 s (3.1M iterations)
+Benchmarking overlay_layers/exceptions_gated/is_open/maintenance: Analyzing
+overlay_layers/exceptions_gated/is_open/maintenance
+                        time:   [1.6890 µs 1.7067 µs 1.7276 µs]
+Found 10 outliers among 100 measurements (10.00%)
+  8 (8.00%) high mild
+  2 (2.00%) high severe
+Benchmarking overlay_layers/exceptions_gated/is_open/closed_weekend
+Benchmarking overlay_layers/exceptions_gated/is_open/closed_weekend: Warming up for 3.0000 s
+Benchmarking overlay_layers/exceptions_gated/is_open/closed_weekend: Collecting 100 samples in estimated 5.0038 s (5.8M iterations)
+Benchmarking overlay_layers/exceptions_gated/is_open/closed_weekend: Analyzing
+overlay_layers/exceptions_gated/is_open/closed_weekend
+                        time:   [858.98 ns 862.19 ns 865.45 ns]
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) low mild
+  3 (3.00%) high mild
+Benchmarking overlay_layers/exceptions_gated/is_open/adjacent
+Benchmarking overlay_layers/exceptions_gated/is_open/adjacent: Warming up for 3.0000 s
+Benchmarking overlay_layers/exceptions_gated/is_open/adjacent: Collecting 100 samples in estimated 5.0948 s (217k iterations)
+Benchmarking overlay_layers/exceptions_gated/is_open/adjacent: Analyzing
+overlay_layers/exceptions_gated/is_open/adjacent
+                        time:   [23.323 µs 23.411 µs 23.502 µs]
+Found 3 outliers among 100 measurements (3.00%)
+  1 (1.00%) low mild
+  2 (2.00%) high mild
+Benchmarking overlay_layers/exceptions_gated/is_open/holiday
+Benchmarking overlay_layers/exceptions_gated/is_open/holiday: Warming up for 3.0000 s
+Benchmarking overlay_layers/exceptions_gated/is_open/holiday: Collecting 100 samples in estimated 5.0514 s (232k iterations)
+Benchmarking overlay_layers/exceptions_gated/is_open/holiday: Analyzing
+overlay_layers/exceptions_gated/is_open/holiday
+                        time:   [21.748 µs 21.904 µs 22.118 µs]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high severe
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/regular
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/regular: Warming up for 3.0000 s
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/regular: Collecting 100 samples in estimated 5.0183 s (237k iterations)
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/regular: Analyzing
+overlay_layers/exceptions_in_coverage/is_open/regular
+                        time:   [20.802 µs 20.875 µs 20.947 µs]
+Found 3 outliers among 100 measurements (3.00%)
+  2 (2.00%) low mild
+  1 (1.00%) high mild
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/overnight
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/overnight: Warming up for 3.0000 s
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/overnight: Collecting 100 samples in estimated 5.0181 s (308k iterations)
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/overnight: Analyzing
+overlay_layers/exceptions_in_coverage/is_open/overnight
+                        time:   [16.001 µs 16.070 µs 16.142 µs]
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/maintenance
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/maintenance: Warming up for 3.0000 s
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/maintenance: Collecting 100 samples in estimated 5.0999 s (242k iterations)
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/maintenance: Analyzing
+overlay_layers/exceptions_in_coverage/is_open/maintenance
+                        time:   [20.932 µs 20.996 µs 21.061 µs]
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/closed_weekend
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/closed_weekend: Warming up for 3.0000 s
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/closed_weekend: Collecting 100 samples in estimated 5.0005 s (5.9M iterations)
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/closed_weekend: Analyzing
+overlay_layers/exceptions_in_coverage/is_open/closed_weekend
+                        time:   [847.59 ns 854.26 ns 865.98 ns]
+Found 3 outliers among 100 measurements (3.00%)
+  2 (2.00%) high mild
+  1 (1.00%) high severe
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/adjacent
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/adjacent: Warming up for 3.0000 s
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/adjacent: Collecting 100 samples in estimated 5.1017 s (217k iterations)
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/adjacent: Analyzing
+overlay_layers/exceptions_in_coverage/is_open/adjacent
+                        time:   [23.379 µs 23.440 µs 23.503 µs]
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/holiday
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/holiday: Warming up for 3.0000 s
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/holiday: Collecting 100 samples in estimated 5.0505 s (232k iterations)
+Benchmarking overlay_layers/exceptions_in_coverage/is_open/holiday: Analyzing
+overlay_layers/exceptions_in_coverage/is_open/holiday
+                        time:   [21.402 µs 21.560 µs 21.812 µs]
+Found 3 outliers among 100 measurements (3.00%)
+  3 (3.00%) high severe
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/regular
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/regular: Warming up for 3.0000 s
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/regular: Collecting 100 samples in estimated 5.0373 s (247k iterations)
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/regular: Analyzing
+overlay_layers/day_policy_elsewhere/is_open/regular
+                        time:   [20.135 µs 20.190 µs 20.245 µs]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high severe
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/overnight
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/overnight: Warming up for 3.0000 s
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/overnight: Collecting 100 samples in estimated 5.0793 s (323k iterations)
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/overnight: Analyzing
+overlay_layers/day_policy_elsewhere/is_open/overnight
+                        time:   [15.620 µs 15.658 µs 15.698 µs]
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) low mild
+  3 (3.00%) high mild
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/maintenance
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/maintenance: Warming up for 3.0000 s
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/maintenance: Collecting 100 samples in estimated 5.0752 s (247k iterations)
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/maintenance: Analyzing
+overlay_layers/day_policy_elsewhere/is_open/maintenance
+                        time:   [20.408 µs 20.469 µs 20.527 µs]
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) low mild
+  3 (3.00%) high mild
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/closed_weekend
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/closed_weekend: Warming up for 3.0000 s
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/closed_weekend: Collecting 100 samples in estimated 5.0000 s (6.7M iterations)
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/closed_weekend: Analyzing
+overlay_layers/day_policy_elsewhere/is_open/closed_weekend
+                        time:   [747.56 ns 749.69 ns 751.75 ns]
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) low severe
+  2 (2.00%) low mild
+  1 (1.00%) high severe
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/adjacent
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/adjacent: Warming up for 3.0000 s
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/adjacent: Collecting 100 samples in estimated 5.1377 s (162k iterations)
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/adjacent: Analyzing
+overlay_layers/day_policy_elsewhere/is_open/adjacent
+                        time:   [31.672 µs 31.789 µs 31.908 µs]
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/holiday
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/holiday: Warming up for 3.0000 s
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/holiday: Collecting 100 samples in estimated 5.0886 s (237k iterations)
+Benchmarking overlay_layers/day_policy_elsewhere/is_open/holiday: Analyzing
+overlay_layers/day_policy_elsewhere/is_open/holiday
+                        time:   [21.254 µs 21.305 µs 21.358 µs]
+Benchmarking overlay_layers/day_policy_on_date/is_open/regular
+Benchmarking overlay_layers/day_policy_on_date/is_open/regular: Warming up for 3.0000 s
+Benchmarking overlay_layers/day_policy_on_date/is_open/regular: Collecting 100 samples in estimated 5.0018 s (242k iterations)
+Benchmarking overlay_layers/day_policy_on_date/is_open/regular: Analyzing
+overlay_layers/day_policy_on_date/is_open/regular
+                        time:   [20.367 µs 20.571 µs 20.927 µs]
+Found 11 outliers among 100 measurements (11.00%)
+  3 (3.00%) low mild
+  5 (5.00%) high mild
+  3 (3.00%) high severe
+Benchmarking overlay_layers/day_policy_on_date/is_open/overnight
+Benchmarking overlay_layers/day_policy_on_date/is_open/overnight: Warming up for 3.0000 s
+Benchmarking overlay_layers/day_policy_on_date/is_open/overnight: Collecting 100 samples in estimated 5.0391 s (318k iterations)
+Benchmarking overlay_layers/day_policy_on_date/is_open/overnight: Analyzing
+overlay_layers/day_policy_on_date/is_open/overnight
+                        time:   [15.760 µs 15.805 µs 15.849 µs]
+Benchmarking overlay_layers/day_policy_on_date/is_open/maintenance
+Benchmarking overlay_layers/day_policy_on_date/is_open/maintenance: Warming up for 3.0000 s
+Benchmarking overlay_layers/day_policy_on_date/is_open/maintenance: Collecting 100 samples in estimated 5.0242 s (242k iterations)
+Benchmarking overlay_layers/day_policy_on_date/is_open/maintenance: Analyzing
+overlay_layers/day_policy_on_date/is_open/maintenance
+                        time:   [20.680 µs 20.736 µs 20.793 µs]
+Found 5 outliers among 100 measurements (5.00%)
+  5 (5.00%) low mild
+Benchmarking overlay_layers/day_policy_on_date/is_open/closed_weekend
+Benchmarking overlay_layers/day_policy_on_date/is_open/closed_weekend: Warming up for 3.0000 s
+Benchmarking overlay_layers/day_policy_on_date/is_open/closed_weekend: Collecting 100 samples in estimated 5.0013 s (6.6M iterations)
+Benchmarking overlay_layers/day_policy_on_date/is_open/closed_weekend: Analyzing
+overlay_layers/day_policy_on_date/is_open/closed_weekend
+                        time:   [752.16 ns 754.46 ns 756.65 ns]
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) low severe
+  3 (3.00%) high mild
+Benchmarking overlay_layers/day_policy_on_date/is_open/adjacent
+Benchmarking overlay_layers/day_policy_on_date/is_open/adjacent: Warming up for 3.0000 s
+Benchmarking overlay_layers/day_policy_on_date/is_open/adjacent: Collecting 100 samples in estimated 5.0487 s (157k iterations)
+Benchmarking overlay_layers/day_policy_on_date/is_open/adjacent: Analyzing
+overlay_layers/day_policy_on_date/is_open/adjacent
+                        time:   [31.925 µs 32.197 µs 32.652 µs]
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) low mild
+  2 (2.00%) high mild
+  1 (1.00%) high severe
+Benchmarking overlay_layers/day_policy_on_date/is_open/holiday
+Benchmarking overlay_layers/day_policy_on_date/is_open/holiday: Warming up for 3.0000 s
+Benchmarking overlay_layers/day_policy_on_date/is_open/holiday: Collecting 100 samples in estimated 5.0124 s (232k iterations)
+Benchmarking overlay_layers/day_policy_on_date/is_open/holiday: Analyzing
+overlay_layers/day_policy_on_date/is_open/holiday
+                        time:   [21.392 µs 21.461 µs 21.527 µs]
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) low mild
+  2 (2.00%) high mild
+  1 (1.00%) high severe
+Benchmarking overlay_layers/none/daily_window
+Benchmarking overlay_layers/none/daily_window: Warming up for 3.0000 s
+Benchmarking overlay_layers/none/daily_window: Collecting 100 samples in estimated 5.0396 s (343k iterations)
+Benchmarking overlay_layers/none/daily_window: Analyzing
+overlay_layers/none/daily_window
+                        time:   [14.958 µs 15.029 µs 15.109 µs]
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) high mild
+Benchmarking overlay_layers/exceptions_gated/daily_window
+Benchmarking overlay_layers/exceptions_gated/daily_window: Warming up for 3.0000 s
+Benchmarking overlay_layers/exceptions_gated/daily_window: Collecting 100 samples in estimated 5.0888 s (258k iterations)
+Benchmarking overlay_layers/exceptions_gated/daily_window: Analyzing
+overlay_layers/exceptions_gated/daily_window
+                        time:   [19.743 µs 19.822 µs 19.902 µs]
+Found 3 outliers among 100 measurements (3.00%)
+  2 (2.00%) low mild
+  1 (1.00%) high mild
+Benchmarking overlay_layers/day_policy_elsewhere/daily_window
+Benchmarking overlay_layers/day_policy_elsewhere/daily_window: Warming up for 3.0000 s
+Benchmarking overlay_layers/day_policy_elsewhere/daily_window: Collecting 100 samples in estimated 6.6505 s (20k iterations)
+Benchmarking overlay_layers/day_policy_elsewhere/daily_window: Analyzing
+overlay_layers/day_policy_elsewhere/daily_window
+                        time:   [329.00 µs 330.13 µs 331.23 µs]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) low mild
+
+Benchmarking cold_axis/none/regular
+Benchmarking cold_axis/none/regular: Warming up for 3.0000 s
+Benchmarking cold_axis/none/regular: Collecting 20 samples in estimated 5.2677 s (1050 iterations)
+Benchmarking cold_axis/none/regular: Analyzing
+cold_axis/none/regular  time:   [4.9804 ms 4.9941 ms 5.0072 ms]
+Found 1 outliers among 20 measurements (5.00%)
+  1 (5.00%) low mild
+Benchmarking cold_axis/none/closed_weekend
+Benchmarking cold_axis/none/closed_weekend: Warming up for 3.0000 s
+Benchmarking cold_axis/none/closed_weekend: Collecting 20 samples in estimated 5.5810 s (1260 iterations)
+Benchmarking cold_axis/none/closed_weekend: Analyzing
+cold_axis/none/closed_weekend
+                        time:   [4.3507 ms 4.3659 ms 4.3815 ms]
+Found 1 outliers among 20 measurements (5.00%)
+  1 (5.00%) low mild
+Benchmarking cold_axis/without_holidays/regular
+Benchmarking cold_axis/without_holidays/regular: Warming up for 3.0000 s
+Benchmarking cold_axis/without_holidays/regular: Collecting 20 samples in estimated 5.7336 s (1470 iterations)
+Benchmarking cold_axis/without_holidays/regular: Analyzing
+cold_axis/without_holidays/regular
+                        time:   [3.9012 ms 3.9136 ms 3.9244 ms]
+
+Benchmarking hot_path_year/none
+Benchmarking hot_path_year/none: Warming up for 3.0000 s
+Benchmarking hot_path_year/none: Collecting 30 samples in estimated 6.7778 s (90 iterations)
+Benchmarking hot_path_year/none: Analyzing
+hot_path_year/none      time:   [74.516 ms 74.756 ms 74.982 ms]
+Found 4 outliers among 30 measurements (13.33%)
+  4 (13.33%) low mild
+Benchmarking hot_path_year/without_holidays
+Benchmarking hot_path_year/without_holidays: Warming up for 3.0000 s
+Benchmarking hot_path_year/without_holidays: Collecting 30 samples in estimated 5.2895 s (210 iterations)
+Benchmarking hot_path_year/without_holidays: Analyzing
+hot_path_year/without_holidays
+                        time:   [25.075 ms 25.156 ms 25.233 ms]
+
+Benchmarking query_surface/session_bounds/overnight
+Benchmarking query_surface/session_bounds/overnight: Warming up for 3.0000 s
+Benchmarking query_surface/session_bounds/overnight: Collecting 100 samples in estimated 5.0025 s (5.6M iterations)
+Benchmarking query_surface/session_bounds/overnight: Analyzing
+query_surface/session_bounds/overnight
+                        time:   [883.19 ns 885.91 ns 888.53 ns]
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) low mild
+Benchmarking query_surface/trade_date/overnight
+Benchmarking query_surface/trade_date/overnight: Warming up for 3.0000 s
+Benchmarking query_surface/trade_date/overnight: Collecting 100 samples in estimated 5.0405 s (601k iterations)
+Benchmarking query_surface/trade_date/overnight: Analyzing
+query_surface/trade_date/overnight
+                        time:   [8.5625 µs 8.6361 µs 8.7158 µs]
+Found 12 outliers among 100 measurements (12.00%)
+  11 (11.00%) high mild
+  1 (1.00%) high severe
+Benchmarking query_surface/is_closed_trade_date
+Benchmarking query_surface/is_closed_trade_date: Warming up for 3.0000 s
+Benchmarking query_surface/is_closed_trade_date: Collecting 100 samples in estimated 5.0135 s (1.5M iterations)
+Benchmarking query_surface/is_closed_trade_date: Analyzing
+query_surface/is_closed_trade_date
+                        time:   [3.2351 µs 3.2419 µs 3.2490 µs]
+Found 3 outliers among 100 measurements (3.00%)
+  3 (3.00%) low mild
+Benchmarking query_surface/holiday_on/miss
+Benchmarking query_surface/holiday_on/miss: Warming up for 3.0000 s
+Benchmarking query_surface/holiday_on/miss: Collecting 100 samples in estimated 5.0000 s (741M iterations)
+Benchmarking query_surface/holiday_on/miss: Analyzing
+query_surface/holiday_on/miss
+                        time:   [6.7216 ns 6.7370 ns 6.7528 ns]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking query_surface/holiday_on/hit
+Benchmarking query_surface/holiday_on/hit: Warming up for 3.0000 s
+Benchmarking query_surface/holiday_on/hit: Collecting 100 samples in estimated 5.0000 s (641M iterations)
+Benchmarking query_surface/holiday_on/hit: Analyzing
+query_surface/holiday_on/hit
+                        time:   [7.9658 ns 7.9879 ns 8.0095 ns]
+Found 6 outliers among 100 measurements (6.00%)
+  4 (4.00%) low mild
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+

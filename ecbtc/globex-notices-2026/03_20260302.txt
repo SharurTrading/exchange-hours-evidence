@@ -1,0 +1,361 @@
+Title: CME Globex Notice: March 02, 2026 - CME Group
+
+URL Source: https://www.cmegroup.com/notices/electronic-trading/2026/03/20260302.html
+
+Markdown Content:
+For the latest roadmap of CME Group technology initiatives: See the [Development Launch Schedule](https://www.cmegroup.com/globex/develop-to-cme-globex/development-launches.html).
+
+Find the previous versions of CME Group notices on the Notice Search page:
+
+*   [CME Globex Notices](https://www.cmegroup.com/notices.html#filters=all-12)
+*   [EBS Market on CME Globex Notices](https://www.cmegroup.com/notices.html#filters=ebs)
+*   [BrokerTec Markets on CME Globex Notices](https://www.cmegroup.com/notices.html#filters=brokertec)
+
+## Critical Updates
+
+### Maintenance Window Schedule Changes for MDP 3.0 Event Contracts II - This Week
+
+Effective this **Saturday**, **March 7**, the Saturday maintenance window for the MDP 3.0 Channel Event Contracts II (ID 333) is temporarily extended and open from 02:00 – 08:00 a.m. CT.
+
+Following this one-day extension, the Saturday window will revert to its standard schedule of 02:00 – 04:00 a.m. CT.
+
+Please note that as of Tuesday, March 3, the extended maintenance window on Tuesdays has been permanently discontinued.
+
+Going forward, the only extended maintenance window for Event Contracts II will be on Saturdays from 02:00– 04:00 a.m. CT.
+
+### Urgent Action Required: Access Changes to Cryptocurrency Futures and Options and Event Contracts - March 15
+
+Effective **Sunday, March 15**, clients must connect to new IPs to access iLink, Drop Copy and MDP 3.0 for Cryptocurrency futures and options and event contracts.
+
+Failure to allowlist new WAN subnets and update IP addresses for iLink, Drop Copy, and MDP 3.0 will result in a loss of connectivity to Market Segment 74.
+
+Coordinate with your network team immediately to allowlist the new WAN subnets and update session configuration files. Verification of connectivity to the new IPs should be completed prior to the March 15 launch to ensure seamless Sunday startup. Client systems may utilize heartbeat messages for connectivity testing every Saturday throughout the migration period.
+
+Please review the [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/Network+Connectivity+Updates+for+Market+Segment+74) for network connectivity information.
+
+### New Market Data Channel 324 - Q1 2026
+
+In **Q1 2026**, CME Group will launch a new market data multicast group to be used for a new CME Group futures product suite in the Equity Indices and Alternative Products asset class.
+
+The new market data multicast group will use Channel ID 324. Additional details will be announced in future CME Globex Notices.
+
+Please review the updated[client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/New+Market+Data+Multicast+Group) for multicast IP and ports.
+
+### MDP 3.0 TCP Recovery IP Update for Channels 326, 327 and 329 - April 12
+
+Effective **Sunday, April 12**, CME Group will update the MDP 3.0 TCP Market Data Recovery IP and port for MDP 3.0 channel 326, 327 and 329.
+
+View the Configuration and Connectivity Details page using your CME Group login for [Production environment IP and port details](https://www.cmegroup.com/solutions/market-access/globex/globex-resources.html#mdp30tcpipupdate).
+
+### iLink SBE Schema Version 8 Decommission - April 24
+
+On Sunday, February 22, CME Group completed the launch of iLink SBE Schema version 9 on all futures and options on futures market segments. CME Globex is now only sending version 9 messages for all futures and options on futures markets.
+
+Client systems can send iLink messages using version 8 or 9 until the end of day **Friday, April 24**, after which only version 9 messages will be accepted.
+
+### Cryptocurrency Futures and Options Expansion to 24/7 Trading - May 29
+
+Starting at **4:00 p.m. Central Time on Friday, May 29,** CME Group will expand [Cryptocurrency futures and options](https://www.cmegroup.com/markets/cryptocurrencies.html) to 24/7 trading, pending regulatory review.
+
+Cryptocurrency futures and options will trade continuously on CME Globex with at least a two-hour weekly maintenance period over the weekend. All holiday or weekend trading from Friday evening through Sunday evening will have a trade date of the following business day, with clearing, settlement and regulatory reporting processed the following business day as well.
+
+A [Cryptocurrency Futures and Options Expansion to 24/7 Overview](https://www.cmegroup.com/markets/cryptocurrencies/files/client-facing-cryptocurrency-futures-and-options-expansion-to-24-7-trading.pdf) is now available for high-level information on the initiative. Please review the 24/7 cryptocurrency [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/1283194884/Cryptocurrency+Futures+and+Options+Migration+to+24-7+Trading) for full technical analysis and comprehensive details.
+
+### Globex Trade Date Behavior Change - June 19
+
+Effective **Friday,June 19**, CME Group is implementing the following change to align CME Globex and CME Clearing trade dates when the Globex trade date falls on a Friday U.S. holiday.
+
+All CME Globex futures and options trades executed on a Friday U.S. holiday will now reflect a Globex trade date to align with the next valid Clearing House trade date.
+
+Please review the [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/Globex+Trade+Date+Behavior+Change) for full technical details and launch schedule.
+
+### New New Market Data Multicast Group - MDP 3.0 Channel ID 350 - Q2 2026
+
+In **Q2 2026**, CME Group will launch a new market data multicast group to be used for a new CME Group product suite in the interest rate options asset class.
+
+The new market data multicast group will use MDP 3.0 Channel ID 350. Additional details will be announced in future CME Globex notices.
+
+Please use your CME Group login to review configuration details in the [New Market Data Multicast Group - MDP 3.0 Channel ID 350](https://www.cmegroup.com/solutions/market-access/globex/globex-resources.html#nmdmgmdp30c350) section of the [Configuration and Connectivity Details](https://www.cmegroup.com/solutions/market-access/globex/globex-resources.html) page.
+
+### New Market Data Channel 335 for Equity Index and Alternative Product Launch - H1 2026
+
+To support the expansion of the Equity Index and Alternative Products asset class, CME Group will launch a new market data multicast group in the first half of 2026.
+
+This new multicast group will utilize Channel ID 335.
+
+While the product launch is scheduled for 2026, we are providing these [network specifications](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/New+Market+Data+Channel+335+for+Equity+and+Alternative+Product+Launch) now to allow clients ample time to proactively manage firewall policies and network configurations.
+
+### CME Globex on Google Cloud
+
+Later this year, client testing will begin in the new CME Globex on Google Cloud Sandbox environment, located in the private Ultra Low Latency zones of the Google Cloud Dallas Region.
+
+New information is now available in the [Client Systems Wiki](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457216122/CME+Globex+on+Google+Cloud) to ensure a smooth transition and successful onboarding. This content includes the detailed scope for client testing, a production readiness checklist, and the onboarding process.
+
+Additional information will be published regularly and announced via the CME Globex Notices.
+
+### Position Reporting Under CFTC Part 17
+
+On April 30, 2024, the Commodity Futures Trading Commission ("CFTC") approved final rules to amend its [Large Trading Reporting Regulations for Futures and Options](https://www.cftc.gov/PressRoom/PressReleases/8902-24). The amendments were made to modernize CFTC's Large Trader Reporting process and align it with other reporting structures outlined in CFTC regulations.
+
+Since October 2024, CME Group has offered methods to retrieve its instrument listing containing the Unique Instrument Code (UIC) and other instrument data elements in compliance with the amended rule.
+
+Starting March 10, 2025, CME Group began accepting test files in the new Position Message FIXML format via SFTP. For details regarding submitting the new FIXML Position Message, file management, field validations, and example scenarios, please refer to the information in [CME Group Client Systems Wiki](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457216877/Position+Reporting+Under+CFTC+Part+17).
+
+The Market Regulation Department will be publishing further guidance regarding Large Trader Reporting in subsequent Special Executive Reports as solutions become available.
+
+CFTC's final rules became effective upon publication in the Federal Register on June 3, 2024. Reporting Firms must comply with the CFTC's final rules regarding Large Trader Reporting Requirements two years after publication in the Federal Register.
+
+## Product Launches
+
+### Event Contracts on European Soccer and Professional Golf - This Week
+
+Effective this **Thursday, March 5**, pending completion of all regulatory review periods, [event contracts on European soccer and professional golf](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/1062502402/New+24-7+Event+Contracts) will be listed for trading on CME Globex.
+
+These event contracts are currently available for customer testing in New Release.
+
+### WTI Ex-Pipe (Argus) BALMO Futures and Daily Brent Futures - March 15
+
+Effective **Sunday, March 15** (trade date Monday, March 16), pending completion of all regulatory review periods, WTI Ex-Pipe (Argus) BALMO futures and daily Brent futures will be listed for trading on CME Globex and submission for clearing via CME ClearPort.
+
+| WTI Ex-Pipe (Argus) BALMO Futures and Daily Brent Futures |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | iLink/MDP 3.0 Tag 1151 - Security Group | MARKET DATA CHANNEL MDP 3.0 TAG 1180 - APPLID |
+| WTI Ex-Pipe (Argus) vs. WTI Trade Month BALMO Futures | XTB | CC | 382 |
+| Daily Brent Futures | DBZ | CC |
+
+These futures is currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+### New EMDA Canadian Crude Futures - March 22
+
+Effective **Sunday, March 22** (trade date Monday, March 23), pending completion of all regulatory review periods, EMDA Canadian Crude futures will be listed for trading on CME Globex and submission for clearing via CME ClearPort.
+
+| EMDA Canadian Crude Futures |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | iLink/MDP 3.0 Tag 1151 - Security Group | MARKET DATA CHANNEL MDP 3.0 TAG 1180 - APPLID |
+| WCS Hardisty (EMDA) Monthly Futures | WCW | CC | 382 |
+| C5+ Condensate Edmonton (EMDA) Monthly Futures | CC5 |
+| Synthetic SYN Edmonton (EMDA) Monthly Futures | SSW |
+| Sweet SW Edmonton (EMDA) Monthly Futures | LSW |
+
+These futures will be available for customer testing in New Release on this **Sunday, March 8**.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+### Bloomberg Emerging Market Credit Futures & BTIC - March 29
+
+Effective **Sunday, March 29** (trade date Monday, March 30), pending completion of all regulatory review periods, Bloomberg Emerging Market Credit futures and BTIC will be listed for trading on CME Globex and submission for clearing via CME ClearPort.
+
+| Bloomberg Emerging Market Credit Futures and BTIC |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink/MDP 3.0 Tag 1151 - Security Group | Included Spread and Combos - Tag 762- SecuritySubType | MARKET DATA CHANNEL MDP 3.0 TAG 1180 - APPLID |
+| Bloomberg Emerging Market Credit Futures | DLB | CE | RT - Reduced Tick | 344 |
+| Bloomberg Emerging Market Credit Futures Fixing (Non-Tradable) | DLF | - | - | 252 |
+| BTIC on Bloomberg Emerging Market Credit Futures | DLBT | CG | - | 344 |
+| Bloomberg Emerging Market Credit Futures Marker (Non-Tradable) | DLM | - | - | 252 |
+
+The corresponding fixing prices and markers are sent on [CME Data Insights - Settlements and Valuations](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457089321/CME+Data+Insights+-+Settlements+and+Valuations) channels via [MDP 3.0 Market Data Incremental Refresh](https://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Market+Data+Incremental+Refresh) (tag 35-MsgType=X) message types with the following attributes:
+
+*   Tag 279-MDUpdateAction will be set to 0 = New
+*   Tag 269-MDEntryType will be set to 6 = Settlement Price OR 269-MDEntryType will be set to W = Fixing Price
+*   Tag 5796-Trading Reference will display the date for which the marker price was calculated
+
+These products will be available for customer testing in New Release on **Sunday, March 15.**
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+### Bloomberg IG Credit Futures - March 29
+
+Effective **Sunday, March 29** (trade date Monday, March 30), pending completion of all regulatory review periods, Bloomberg IG Credit futures will be listed for trading on CME Globex and submission for clearing via CME ClearPort.
+
+| Bloomberg IG Credit Futures |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | iLink/MDP 3.0 Tag 1151 - Security Group | Included Spreads and Combos - Tag 762- SecuritySubType | MARKET DATA CHANNEL MDP 3.0 TAG 1180 - APPLID |
+| Bloomberg 1-5 Year Maturity IG Credit Futures | IQS | CE | RT - Reduced Tick | 344 |
+| Bloomberg 1-5 Year Maturity IG Credit Futures Fixing (Non-tradable) | FQS | - | - | 252 |
+| BTIC on Bloomberg 1-5 Year Maturity IG Credit Futures | IQST | CG | - | 344 |
+| Bloomberg 1-5 Year Maturity IG Credit Futures Marker (Non-tradable) | MQS | - | - | 252 |
+| Bloomberg 5-10 Year Maturity IG Credit Futures | IQY | CE | RT - Reduced Tick | 344 |
+| Bloomberg 5-10 Year Maturity IG Credit Futures Fixing (Non-tradable) | FQY | - | - | 252 |
+| BTIC on Bloomberg 5-10 Year Maturity IG Credit Futures | IQYT | CG | - | 344 |
+| Bloomberg 5-10 Year Maturity IG Credit Futures Marker (Non-tradable) | MQY | - | - | 252 |
+| Bloomberg 10+ Year Maturity IG Credit Futures | IQL | CE | RT - Reduced Tick | 344 |
+| Bloomberg 10+ Year Maturity IG Credit Futures Fixing (Non-tradable) | FQL | - | - | 252 |
+| BTIC on Bloomberg 10+ Year Maturity IG Credit Futures | IQLT | CG | - | 344 |
+| Bloomberg 10+ Year Maturity IG Credit Futures Marker (Non-tradable) | MQL | - | - | 252 |
+
+The corresponding fixing prices and markers are sent on [CME Data Insights - Settlements and Valuations](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457089321/CME+Data+Insights+-+Settlements+and+Valuations) channels via [MDP 3.0 Market Data Incremental Refresh](https://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Market+Data+Incremental+Refresh) (tag 35-MsgType=X) message types with the following attributes:
+
+*   Tag 279-MDUpdateAction will be set to 0 = New
+*   Tag 269-MDEntryType will be set to 6 = Settlement Price OR 269-MDEntryType will be set to W = Fixing Price
+*   Tag 5796-Trading Reference will display the date for which the marker price was calculated
+
+These futures will be available for customer testing in New Release on **Sunday, March 15.**
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+### Launching New CME Group Rolling Futures Indices - Now Available
+
+On **Monday, March 2**, four new CME Group Rolling Futures Indices for Credit and Crypto futures markets became available via MDP Streamline on the Benchmark Premium Channel (Channel 261).
+
+The CME Group Rolling Futures Indices represent the performance of a rolling investment in an underlying CME Group futures contract. The rolling mechanism has been designed to follow the liquidity profile of each futures contract.
+
+| CME Group Rolling Futures Indices |
+| --- |
+| Index Name | BENCHMARK PREMIUM TAG 37500-CLEARING PRODUCT CODE | MARKET DATA CHANNEL MDP 3.0 TAG 1180 - ApplID |
+| CME Group XRP Rolling Futures Index | XRPCRF | 261 |
+| CME Group Solana Rolling Futures Index | SOLCRF |
+| CME Group IG Credit Rolling Futures Index | IQBCRF |
+| CME Group HY Credit Rolling Futures Index | HYBCRF |
+
+These is currently available for customer testing in New Release.
+
+### Event Contracts on International Baseball Single Game, International Baseball Point Spread, International Baseball Point Totals and Tennis - Now Available
+
+On**Tuesday, March 3**,[event contracts on international baseball single game, international baseball point spread, international baseball point totals and tennis](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/1062502402/New+24-7+Event+Contracts)were listed for trading on CME Globex.
+
+These event contracts are currently available for customer testing in New Release.
+
+## Product Changes
+
+### Listing Cycle Expansion for E-Mini Nasdaq-100 Products - This Week
+
+Effective this **Sunday, March 8** (trade date Monday, March 9), the listing cycle for the following E-Mini Nasdaq-100 products will be expanded on CME Globex.
+
+| Listing Cycle Expansion for E-Mini Nasdaq-100 Products |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink/MDP 3.0 Tag 1151 - Security Group | Current Listing Schedule | New Listing Schedule |
+| E-mini Nasdaq-100 Futures | NQ | NQ | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 6 consecutive quarters and 4 additional December contract months. | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 6 consecutive quarters, 2 additional June contracts and 4 additional December contract months. |
+| Options on E-mini Nasdaq-100 Futures | NQ | NW | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 4 consecutive quarters and 4 additional December contracts. | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 4 consecutive quarters, 2 additional June contracts and 4 additional December contracts. |
+| BTIC on E-mini Nasdaq-100 Futures | NQT | NB | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 6 consecutive quarters and 4 additional December contract months. | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 6 consecutive quarters, 2 additional June contracts and 4 additional December contract months. |
+| TACO on E-mini Nasdaq-100 Futures | NQQ | NT | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 6 consecutive quarters and 4 additional December contract months. | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 6 consecutive quarters, 2 additional June contracts and 4 additional December contract months. |
+| TMAC ON E-MINI NASDAQ-100 FUTURE (non Tradable) | NQX | - | One Quarterly | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 6 consecutive quarters, 2 additional June contracts and 4 additional December contract months. |
+| E-MINI NASDAQ-100 FUTURES MARKER (Not Tradable) | NQI | - | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 6 consecutive quarters and 4 additional December contract months. | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 6 consecutive quarters, 2 additional June contracts and 4 additional December contract months. |
+| E-MINI NASDAQ-100 FUTURES MARKER (Not Tradable) | QQ1 | - | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 6 consecutive quarters and 4 additional December contract months. | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 6 consecutive quarters, 2 additional June contracts and 4 additional December contract months. |
+
+These products is currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+### Expand Brent Crude Oil Last Day Financial Butterfly Spread Listing - March 22
+
+Effective **Sunday, March 22** (trade date Monday, March 23), the listing cycle for the following Brent Crude Oil Last Day Financial butterfly spreads will be expanded on CME Globex.
+
+| Expand Brent Crude Oil Last Day Financial Butterfly Spread Listing |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink/MDP 3.0 Tag 1151 - Security Group | Included Spreads and Combos - Tag 762- SecuritySubType | Current Listing Schedule | New Listing Schedule |
+| Brent Crude Oil Last Day Financial Futures | BZ | OP | BF- Butterfly | Consecutive month butterflies in the nearest 13 months, 8 3-month butterflies in the nearest 8 months, nearest Jun/Dec/Jun and Dec/Jun/Dec butterflies. | Consecutive month butterflies for the first 18 months; any Apr/May/Jun, May/Jun/Jul, Jun/Jul/Aug, Oct/Nov/Dec, Nov/Dec/Jan, Dec/Jan/Feb butterflies for the first 24 months; 3-month butterflies for the first 8 months, the next Mar/Jun/Sep, Jun/Sep/Dec, Sep/Dec/Mar, Dec/Mar/Jun butterflies; 2 Jun/Dec/Jun and 2 Dec/Jun/Dec butterflies |
+
+These spreads will be available for customer testing in New Release on this **Sunday, March 8**.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+### Change to Minimum Price Increment for GBP/USD Calendar Spreads - April 26
+
+Effective **Sunday**, **April 26** (trade date Monday, April 27), the minimum price increment tag 969-MinPriceIncrement will be changed for the following.
+
+| Change to Minimum Price Increment for GBP/USD Calendar Spreads |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink/MDP 3.0 Tag 1151 - Security Group | MDP 3.0 tag 762-SecuritySubType | Current tag 969 - MinPriceIncrement | New tag 969 - MinPriceIncrement |
+| British Pound Sterling/U.S. Dollar (GBP/USD) Futures Calendar Spread | 6B | 6B | SD | 0.500000000 | 0.250000000 |
+
+These spreads is currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+## Events and Announcements
+
+### CME STP FIXML - Service Availability and Regional Maintenance Update - March 22
+
+Effective **Sunday**, **March 22** (trade date Monday, March 23), CME Group will make the CME STP FIXML service available on a 24/7 basis and will introduce regional maintenance during weekends.
+
+Clients should note that the x-cme-token, which is used by client systems for ongoing subscriptions and for multi-batch queries, will not be valid across regions. After regional maintenance, Client systems will receive a TradeCaptureReportRequestAck with the attribute @txt="x-cme-token is no longer valid. Please initiate a new subscription" and must reestablish their subscription to obtain a valid token.
+
+This change is currently available in New Release (maintenance weekly on Wednesdays). Customers are highly encouraged to test their recovery processes in New Release and complete the mandatory supplemental certification.
+
+CME STP FIXML service in New Release is not available on weekends.
+
+Please contact [Certification Support for Electronic Trading (CSET)](mailto:cset@cmegroup.com) with any questions in the U.S. at +1 312 930 2322, in Europe at +44 20 3379 3803 or in Asia at +65 6593 5593.
+
+### CME STP FIX on Google Cloud - Service Availability and Regional Maintenance - March 22
+
+Effective **Sunday**, **March 22** (trade date Monday, March 23), CME Group will make the CME STP FIX service on Google Cloud available on a 24/7 basis and will introduce regional maintenance during weekends.
+
+During the regional maintenance, client systems using the Managed Connectivity options will be disconnected and are required to reestablish their connections and resubscribe to continue the receipt of post-trade messages. Client systems using Regional Connectivity options should switch regions on their end upon disconnection.
+
+View [Production client connectivity options](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/CME+STP+FIX+API+on+Google+Cloud#Production-Environment) for more information.
+
+This change is currently available in New Release (maintenance weekly on Wednesdays). Customers are highly encouraged to test their recovery processes in New Release and complete the mandatory supplemental certification.
+
+CME STP FIX service in New Release is not available on weekends.
+
+Please contact [Certification Support for Electronic Trading (CSET)](mailto:cset@cmegroup.com) with any questions in the U.S. at +1 312 930 2322, in Europe at +44 20 3379 3803 or in Asia at +65 6593 5593.
+
+### CME STP FIX on Google Cloud - Production Internet Connectivity - April 26
+
+As part of a phased migration of CME Straight Through Processing APIs to Google Cloud, [Production internet connectivity](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457218323/CME+STP+FIX+API+on+Google+Cloud#Internet-Connectivity) options for CME STP FIX API are **now available**.
+
+By **Sunday,April 26**, all clients must complete migration and connect to CME STP FIX API Production using only the Google Cloud hostnames.
+
+CME STP FIX on Google Cloud is available in parallel to the current on-prem instance. When connecting in parallel to Google Cloud **and** on-prem instances, clients should ensure trades are not double-booked.
+
+A mandatory supplemental certification for message recovery is now available for CME STP FIX on Google Cloud.
+
+Please contact [Certification Support for Electronic Trading](mailto:cset@cmegroup.com) (CSET) with any questions in the U.S. at +1 312 930 2322, in Europe at +44 20 3379 3803, or in Asia at +65 6593 5593.
+
+### CME STP FIX on Google Cloud - Production Dedicated Connectivity -April 26
+
+As part of a phased migration of CME Straight Through Processing APIs to Google Cloud, [Production dedicated connectivity](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457218323/CME+STP+FIX+API+on+Google+Cloud#Dedicated-Line-Connectivity) options for CME STP FIX API are **now available**.
+
+By **Sunday,****April 26**, all clients must complete migration and connect to CME STP FIX API Production using only the Google Cloud hostnames.
+
+CME STP FIX on Google Cloud is available in parallel to the current on-prem instance. When connecting in parallel to Google Cloud **and** on-prem instances, clients should ensure trades are not double-booked.
+
+A mandatory supplemental certification for message recovery is now available for CME STP FIX on Google Cloud.
+
+Please contact [Certification Support for Electronic Trading](mailto:cset@cmegroup.com) (CSET) with any questions in the U.S. at +1 312 930 2322, in Europe at +44 20 3379 3803, or in Asia at +65 6593 5593.
+
+### CME Globex Connectivity Upgrades and Changes for Listed Derivative Markets- April
+
+Starting in **April**, CME Group plans to replace End-of-Life network equipment that supports listed derivatives connectivity at [CME Globex Hubs](https://cmegroup.com/solutions/market-access/globex/connectivity-options.html#overview). Customers will be notified in advance if they are impacted by an equipment upgrade.
+
+CME Globex market data for listed derivatives now regularly exceeds 1Gbps, increasing the risk of packet loss, performance concerns, and quality of service degradations on 1Gbps connections.
+
+**Impact on 1Gbps Listed Derivatives Connections**
+
+*   **Multicast Market Data:** Effective in March 2026, 1Gbps services will no longer support MDP 3 multicast market data.
+*   **Existing 1Gbps Customers with Market Data:** Customers with 1Gbps service currently listening to multicast market data are encouraged to upgrade connections to 10Gbps as soon as possible.
+*   **Existing 1Gbps Customers without Market Data:** Unicast services such as iLink, Drop Copy, STP, MQ and others will continue to be supported on 1Gbps connections. Customers with 1Gbps connectivity who are not receiving Market Data will have their service migrated to the new equipment.
+*   **New 1Gbps Connections:** Effective immediately, new connections for 1Gbps service will not support access to listed derivatives multicast market data.
+
+**Copper Handoffs**
+
+*   When the CME Globex Connectivity upgrades are rolled out in 2026, CME Group will no longer support copper handoffs.
+
+Additional details about the CME Globex Connectivity upgrades will be announced in future CME Globex Notices.
+
+Please contact your [Global Account Manager](mailto:gam@cmegroup.com) for additional information.
+
+### CME STP FIX - Update to New Release Host Connectivity - Now Available
+
+CME STP FIX service will now incorporate the following managed and regional connectivity options in the New Release environment to better align functionality with Production.
+
+| CME STP FIX - Update to New Release Host Connectivity |
+| --- |
+| Connectivity Option | Hostname | IP Addresses | Port | Asset Class | Usage |
+| Managed | stpfix.api.uat.cmegroup.com |  | 443 | All | Client systems connect to one Host for all entitled STP trade data. CME Group manages regional connectivity. Customers should account for DNS update time during regional IP switch. Client systems must reestablish connections and resubscribe after weekly regional switch (Weekly on Wednesday) disconnections to resume receiving post-trade messages. |
+| Regional | stpfix**-a**.api. uat.cmegroup.com | 208.112.193.131 | 443 | All | Clients can connect to both regions in parallel providing flexibility and redundancy. Clients can subscribe to the same or different STP trade data across regions based on their entitlements. Sequences of messages are not guaranteed to be the same across regions. |
+| stpfix**-b**.api. uat.cmegroup.com | 208.112.193.10 |
+
+Client systems are required to target the hostname(s). IPs are provided for convenience of local client side whitelisting purposes only. Clients can continue to use their existing entitled API IDs with this Host change.
+
+This change does not affect Production connectivity.
+
+#### Stay Informed on Technology Changes
+
+Don't miss important updates about new features, products and technology changes. Subscribe using the method(s) that best fits your workflow:
+
+##### Receive email notices
+
+Stay informed, with notices delivered directly to your inbox.

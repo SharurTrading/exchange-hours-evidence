@@ -1,0 +1,435 @@
+Title: CME Globex Notice: August 24, 2026 - CME Group
+
+URL Source: https://www.cmegroup.com/notices/electronic-trading/2026/08/20260824.html
+
+Markdown Content:
+## Critical Updates
+
+### New 24/7 Maintenance Window Schedule Extension - Starting This Week
+
+Starting this **Saturday, August 29**, CME Group will temporarily extend the **Saturday** maintenance window schedule for 24/7 markets on two upcoming dates:
+
+*   **Saturday, August 29**: 2:00 a.m. – 6:00 a.m. Central Time (CT)
+*   **Saturday, September 19**: 2:00 a.m. – 8:00 a.m. CT
+
+Following each extension, the **Saturday** maintenance window will revert to its 2:00 a.m. – 4:00 a.m. CT standard schedule.
+
+| Maintenance Window Schedule Extension |
+| --- |
+| Channel Name | Market Segment ID (tag 1300-MarketSegmentID) | MDP Channel Number |
+| CME Crypto Futures | 74 | 326 |
+| CME Crypto Options | 327 |
+| Event-Based Contracts | 329 |
+| Event Contracts II | 90 | 333 |
+
+### 100-Ounce Silver Futures Migration and Expansion to 24/7 Trading - This Week
+
+Effective this**Sunday, August 30** (trade date Monday, August 31), pending completion of regulatory review periods, CME Group will migrate 100-Ounce Silver futures to existing CME Market Data Platform (MDP) 3.0 channel 329 and to market segment 74. With this change, CME Group will expand 100-Ounce Silver futures to [24/7 Trading](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/1553563649/24-7+Technical+Market+Functionality). Production 100-Ounce Silver futures weekend trading will begin **Friday, September 11**, at 4:30 p.m. Central Time (CT).
+
+The summary of changes are as follows:
+
+*   New Security Group code (tag 1151-Security Group): 4S
+*   Migration of 100-Ounce Silver futures from CME MDP 3.0 channel 360 to existing channel 329.
+*   Migration of 100-Ounce Silver futures Market segment (tag 1300-MarketSegmentID) from 78 to 74.
+*   Block trades will no longer be supported for 100-Ounce Silver futures.
+
+100-Ounce Silver futures will trade continuously on CME Globex with at least a two-hour weekly maintenance period over the weekend. All holiday or weekend trading from **Friday** evening through **Sunday** evening will have a trade date of the following business day, with clearing, settlement and regulatory reporting processed the following business day as well.
+
+**Please Note:**For the first day of 24/7 100-Ounce Silver futures weekend trading on **Friday, September 11**, the standard daily maintenance will be extended from two minutes to 30 minutes, from 4:00 p.m. to 4:30 p.m. CT. All subsequent **Friday** trading sessions will open at their regular time of 4:02 p.m. CT.
+
+Please review the 100-Ounce Silver futures [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/100-Ounce+Silver+Futures+Expansion+to+24-7+Trading) for full technical analysis and comprehensive migration details.
+
+These futures are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of COMEX.
+
+### Update CME MDP 3.0 Market Data Security Definition Updates- Starting This Week
+
+† Denotes update to the article
+
+On this **†Saturday, August 29,** and**†Sunday, August 30,**CME Group will continue populating existing fields in the [CME Market Data 3.0 Security Definition](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457672532/MDP+3.0+-+Security+Definition) 35-MsgType=d messages. The following fields and markets are impacted:
+
+*   **Tag 1682-MDSecurityTradingStatus** – Impacts listed derivatives, BrokerTec, and EBS
+*   **Tag 37513-InstrumentGUID** – Impacts listed derivatives
+
+These changes are being phased-in across the New Release and Production environments for CME Globex listed derivatives, BrokerTec and EBS markets.
+
+Please review the [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/CME+MDP+3.0+Market+Data+Security+Definition+Updates) for full technical details and launch schedule.
+
+### Update New Inter-Commodity Ratio Spread and Asset Tag Change - September 13
+
+† Denotes update to the article
+
+Effective **Sunday, September 13** (trade date Monday, September 14), additional exchange-defined Inter-Commodity Ratio spreads will be made available for trading on CME Globex. The spreads will utilize a new strategy type (**EA**).
+
+The EA spread is the simultaneous purchase/sale of an inter-commodity spread between two products, namely between Nikkei/USD (NKD) and Nikkei/Yen (NIY)) with different pre-determined leg ratios. The Exchange currently avails inter-commodity spreads for the Contracts on CME Globex with a ratio of 1:1. Effective **Sunday, September 13**, additional inter-commodity spread ratio functionality will be available per the[client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/New+Inter-Commodity+Ratio+Spread).
+
+Please review the [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/New+Inter-Commodity+Ratio+Spread) for detailed spread construction and pricing examples.
+
+In conjunction with this new spread, the existing Nikkei/USD vs. Nikkei/Yen spread will be changing as follows:
+
+| **†**Change to the current Nikkei/USD vs. Nikkei/Yen Spread |
+| --- |
+| Product Name | Current MDP 3.0 TAG 6937-Asset | New MDP 3.0 TAG 6937 -Asset | iLink/MDP 3.0 TAG 1151-SecurityGroup | Leg Ratio | MDP 3.0 Market Data Channel |
+| Nikkei/USD (NKD) vs. Nikkei/Yen (NIY) Ratio | NKD | NK1N11 | N1 | 1:1 | 318 |
+
+This spread is listed with, and subject to, the rules and regulations of CME.
+
+The spread is currently available for customer testing in New Release.
+
+### Resting Order Elimination: Livestock Futures and Options Migration to New Market Segments and MDP Channels - September 13
+
+Effective **Sunday, September 13** (trade date Monday, September 14), CME Group is launching new, dedicated Market Segments and Market Data Platform (MDP) Channels on-premise to segregate Livestock markets from the rest of the Agricultural complex.
+
+This migration is part of CME Group preparation for Livestock markets migration to Google Cloud in Q4 2026, launching on-premise to segregate Livestock markets from the rest of the Agricultural complex.
+
+Clients will need to connect to new multicast channels for market data, and the new Market Segment Gateways (MSGW) and Drop Copy for MSGW instances for access to Livestock listed derivative markets.
+
+After the Livestock markets close on the **Friday** before migration, all resting Good Till Cancel (GTC) and Good Till Date (GTD) orders on User-Defined Spreads (UDS) will be eliminated and all UDS will be allowed to expire. GTC and GTD orders on exchange defined instruments and spreads will be persisted and will migrate to the new Segments along with the instruments.
+
+These changes are currently available for customer testing in New Release.
+
+These new market segments will be available in the Sandbox-Dallas environment before the Production-Dallas launch. The launch date will be announced in future CME Globex Notices.
+
+Further details on these changes, including new networking information, are now available in the [Client Systems Wiki](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/Livestock+Futures+and+Options+Migration+to+Production-Dallas).
+
+### Update New Market Data Channel 335 for CME FSPI Sports Index Futures - September 27
+
+† Denotes update to the article
+
+Effective**Sunday, September 27**, CME Group will launch a new market data multicast group to support CME FSPI Sports Index futures.
+
+This new multicast group will utilize Channel ID 335.
+
+Please use your CME Group login to review [network specifications](https://www.cmegroup.com/solutions/market-access/globex/globex-resources.html#nmdc335) to manage firewall policies and network configurations.
+
+Please review the [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/CME+FSPI+Sports+Index+Futures) for product details and 24/7 functionality.
+
+These †futures will be available for testing in New Release on **Sunday, September 13.**
+
+### New Treasury Link Spreads on CME Globex - Q4 2026
+
+In **Q4 2026**, pending regulatory review, CME Group will introduce Treasury Link (cash versus futures) spreads for trading on CME Globex.
+
+This offering represents a price differential between BrokerTec U.S. Treasury Actives offered on BrokerTec Chicago and CBOT U.S. Treasury futures, facilitating the simultaneous and atomic execution of both legs within a single transaction, eliminating legging risk.
+
+Treasury Link spreads will be listed with 1 to 1 Ratio and DV01 Weighted (X:Y) Ratio. For more information, view the [Treasury Link Spreads - Product Specifications](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/Treasury+Link+Spreads+on+CME+Globex#Treasury-Link-Spreads---Product-Specification).
+
+Please review the [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/Treasury+Link+Spreads+on+CME+Globex) for connectivity and configuration information, technical details and launch schedules.
+
+Use your CME Group Login to view market data multicast IP and port details on the [Connectivity and Configuration Details](https://www.cmegroup.com/solutions/market-access/globex/globex-resources.html#tlmdcd) page.
+
+These products will be available for customer testing in New Release on **Monday, October 5**.
+
+### CME Globex Migration to Google Cloud - Q4 2026
+
+[Listed Derivative markets on the CME Globex platform](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457216122/CME+Globex+on+Google+Cloud#Scope) are migrating to Google Cloud’s Ultra Low Latency (ULL) Solution to deliver a more flexible, scalable, and resilient trading ecosystem for clients. By combining Google Cloud’s ULL infrastructure with industry-leading Globex execution capabilities, this transition will unlock expanded co-location options, real-time data analytics, and enhanced operational efficiency to better support your needs. Maintaining market integrity and operational continuity remains our highest priority; we are dedicated to supporting you throughout every phase of this migration with robust testing sandboxes, transparent roadmaps, and dedicated support to deliver a reliable transition.
+
+In response to client interest, CME Group is extending the Sandbox-Dallas Pilot Program for clients who achieve specific technical milestones in the Sandbox-Dallas environment. The first 50 participants to complete each obligation by**Wednesday, September 30**, and submit proof will earn a stipend. Details on this program are available in the [CME Globex Sandbox-Dallas Pilot Program Agreement](https://www.cmegroup.com/globex/files/sandbox-dallas-pilot-program.pdf).
+
+To provide clients with a real-world production environment on Google Cloud prior to the Chicago region launch, **[Livestock futures and options will migrate to a new Production-Dallas environment](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/1601568771/Livestock+Futures+and+Options+Migration+to+Production-Dallas) in the private zones of the Dallas region in****Q4 2026**. In the second half of 2028, Livestock futures and options will migrate to the Production-Chicago environment, in the private Google Cloud Chicago region.
+
+To support market access and the [Dual Zones Solution](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457216122/CME+Globex+on+Google+Cloud#%5BinlineExtension%5DDual-Zones-Solution), CME Group offers new discovery services via REST API for easing client network connectivity management. CME Group now offers the [CME Globex Discovery Service - Configuration API](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/CME+Globex+Discovery+Service+API+-+Configuration). Clients can use this REST API endpoint to programmatically retrieve IP address configurations for MDP channels, MSGW, and Drop Copy gateways in the Sandbox environment. The [CME Globex Discovery Service - Zone Schedule API](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/1684373519/CME+Globex+Discovery+Service+API+-+Zone+Schedule) is also available, to determine which zone is currently Active and when the next zone swap is scheduled to occur.
+
+Information on compute pricing for U4C Bare Metal and U4S Virtual Machine instances is available now from Google Cloud’s Account Teams. To support the migration and the testing of U4 machines specifically, Google Cloud customers may opt in to a Google Cloud incentive program that provides up to $30,000 in credits for U4 compute usage. More information on this program is available from your Account Team or contact [exchanges@google.com](mailto:exchanges@google.com).
+
+**Stay Informed**
+
+Ensure your team is subscribed to CME Globex Notices by [email](https://www.cmegroup.com/subscription-center.html?itm_source=globex&itm_medium=cmegroup&itm_campaign=google_cloud#category=Trading%20%26%20Technology) and [RSS feed](https://www.cmegroup.com/rss.html?itm_source=globex&itm_medium=cmegroup&itm_campaign=google_cloud) for ongoing updates.
+
+### Decommission of IKEv1 Client Internet Connections- January 1
+
+Effective **Friday,****January 1,**Internet Key Exchange version 1 (IKEv1) will no longer be supported for all client internet connections. This includes Client Internet Link, CME Certification Virtual Private Network (CERT VPN) and CL2 Cert VPN.
+
+Please view the [minimum requirements for CME Group internet connectivity](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457319416/Client+INTERNET+Link).
+
+An upgrade to Internet Key Exchange version 2 (IKEv2) requires coordination with our network team. Please contact CME Group Global Account Management at [CMEDHGroup@cmegroup.com](mailto:CMEDHGroup@cmegroup.com?subject=IKEv%20inquiry&body=Company%20Name:%0D%0AWe%20choose%20the%20following%20action:)for questions or an IKEv2 upgrade.
+
+### Update 10-Barrel WTI Crude Oil Futures with 24/7 Trading - Postponed
+
+† Denotes update to the article
+
+†The [10-Barrel WTI Crude Oil Futures on 24/7 Trading](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/1618051076/10-Barrel+WTI+Crude+Oil+Futures+on+24-7+Trading) launch scheduled for this**Sunday, August 30,**has been postponed pending regulatory review. An updated launch schedule will be announced in future CME Globex Notices.
+
+### Update CME FutureSports Performance Indexes (FSPI) Over WebSocket API and SBE Market Data - Now Available
+
+† Denotes update to the article
+
+On **Thursday, August 20**, CME Group launched the new [CME FutureSports Performance Indexes (FSPI)](https://www.cmegroup.com/markets/equities/sports-index-futures.html?redirect=/fspi) Over WebSocket API and SBE Market Data for CME FSPI NHL Indexes on Channel 271. The CME FSPI NHL Indexes are rules-based benchmarks designed to measure cumulative team performance over time through the systematic aggregation of officially reported league performance statistics. Data is available as intra-day and end-of-day (EOD) streams.
+
+For more details, please review CME FSPI[Over WebSocket API](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/1737654297/CME+FutureSports+Performance+Indexes+Over+WebSocket+API) and [SBE Market Data](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/1737326606/SBE+-+Market+Data+for+CME+FutureSports+Performance+Indexes) client impact assessments. †Data Licensing for CME FSPI NHL Indices can be obtained via [CME DataMine.](https://datamine.new.cmegroup.com/catalog?category=0020)
+
+Market Data for CME FSPI NHL Indexes on Channel 271 is currently available for customer testing in New Release.
+
+### Position Reporting Under CFTC Part 17
+
+On April 30, 2024, the Commodity Futures Trading Commission ("CFTC") approved final rules to amend its [Large Trading Reporting Regulations for Futures and Options](https://www.cftc.gov/PressRoom/PressReleases/8902-24). The amendments were made to modernize CFTC's Large Trader Reporting process and align it with other reporting structures outlined in CFTC regulations.
+
+Since October 2024, CME Group has offered methods to retrieve its instrument listing containing the Unique Instrument Code (UIC) and other instrument data elements in compliance with the amended rule.
+
+Starting March 10, 2025, CME Group began accepting test files in the new Position Message FIXML format via SFTP. For details regarding submitting the new FIXML Position Message, file management, field validations, and example scenarios, please refer to the information in the[CME Group Client Systems Wiki](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457216877/Position+Reporting+Under+CFTC+Part+17).
+
+CFTC's final rules became effective upon publication in the Federal Register on June 3, 2024. Subject to the conditions of the January 27, 2026, no-action letter, reporting firms must comply with these CFTC regulations by **July 26, 2027.**
+
+A test environment for Large Trader Reporting is now available within the Firm Regulatory Portal (FRP UT). Users can access the testing portal at: [https://frp.uat.cmegroup.com](https://frp.uat.cmegroup.com/).
+
+A brief [video demonstration](https://www.cmegroup.com/articles/2026/large-trader-position-reporting-in-firm-regulatory-portal.html) is available to highlight the new look and functionality of the FRP UT.
+
+The Market Regulation Department will be publishing further guidance regarding Large Trader Reporting in subsequent Special Executive Reports as solutions become available.
+
+**Support Contacts**
+
+*   To request access to FRP UT, please contact the [Enterprise Application & System Entitlements (EASE) team](mailto:EASE@cmegroup.com).
+*   For questions or comments regarding FRP UT, please contact [LTR_Part17_Alerts@cmegroup.com](mailto:LTR_Part17_Alerts@cmegroup.com).
+*   For questions about trade practice rules, please contact [MarketReg.Outreach@cmegroup.com](mailto:MarketReg.Outreach@cmegroup.com).
+
+## Product Launches
+
+### Jan-Jul Soybean Calendar Spread Options - This Week
+
+Effective this**Sunday, August 30** (trade date Monday, August 31), pending completion of all regulatory review periods, Soybean calendar spread options will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| Jan-Jul Soybean Calendar Spread Options |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | iLink/MDP 3.0 Tag 1151 - Security Group | MARKET DATA CHANNEL / MDP 3.0 TAG 1180 - APPLID |
+| Jan-Jul Calendar Spread Option on Soybean Futures | JJS | Q1 | 341 |
+| Jan-Jul Soybean Synthetic Calendar Spread | JJH | 05 | 340 |
+
+These products are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+### ERCOT Electricity Futures and Option - This Week
+
+Effective this**Sunday, August 30** (trade date Monday, August 31), pending completion of all regulatory review periods, [ERCOT Electricity futures and option](https://www.cmegroup.com/content/dam/cmegroup/globex/files/ercot-electricity-futures-option.pdf) will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+These products are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+### CME CF Cryptocurrency Pricing Data: CME CF Crypto Market Index and Emerging Crypto Index - August 31
+
+Effective **Monday, August 31**, shortly after 10 a.m. London time, CME Group will launch the CME CF Crypto Market Index and CME CF Emerging Crypto Index, free-float market capitalization-weighted indices tracking the performance of the largest and most investable digital assets.
+
+The pricing data will be offered via streamlined [CME CF Cryptocurrency Pricing Market Data feed on Channels 213 and 214](https://www.cmegroup.com/confluence/display/EPICSANDBOX/SBE+-+Streamlined+Market+Data+for+CME+CF+Cryptocurrency+Indices).
+
+The feed will publish the following:
+
+*   **Real-Time Indices**to be published daily approximately once every second:
+    *   CME CF Crypto Market Index - Real Time (CRYPTORT)
+    *   CME CF Emerging Crypto Index - Real Time (ECIRT)
+
+*   Settlements to be published shortly after **4 p.m. London time** each day, including weekends and bank holidays:
+    *   CME CF Crypto Market Index - London Settlement (CRYPTORR)
+    *   CME CF Emerging Crypto Index - London Settlement (ECIRR)
+
+*   Settlements to be published shortly after **4 p.m. Eastern Time** each day, including weekends and bank holidays:
+    *   CME CF Crypto Market Index - New York Settlement (CRYPTONY)
+    *   CME CF Emerging Crypto Index - New York Settlement (ECINY)
+
+*   Settlements to be published shortly after **4 p.m. Hong Kong Time/Singapore Time** each day, including weekends and bank holidays:
+    *   CME CF Crypto Market Index - APAC Settlement (CRYPTOAP)
+    *   CME CF Emerging Crypto Index - APAC Settlement (ECIAP)
+
+**Please Note:**These indices will not be used in the settlement of any contracts.
+
+The new cryptocurrency indices are currently available for testing in New Release. Certification is not required.
+
+### New Dutch TTF Natural Gas Calendar Spread Options - September 13
+
+Effective **Sunday, September 13** (trade date Monday, September 14), pending completion of all regulatory review periods, [Dutch TTF Natural Gas calendar spread options](https://www.cmegroup.com/content/dam/cmegroup/globex/files/dutch-ttf-natural-gas-calendar-spread-options.pdf) will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+These options will be available for customer testing in New Release on this **Sunday, August 30**.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+### S&P UBS USD Liquid Leveraged Loan Index Futures - September 13
+
+Effective **Sunday, September 13** (trade date Monday, September 14), pending completion of all regulatory review periods, S&P UBS USD Liquid Leveraged Loan Index futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| S&P UBS USD Liquid Leveraged Loan Index Futures |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | iLink/MDP 3.0 Tag 1151 - Security Group | Included Spreads and Combos - Tag 762-SecuritySubType | MARKET DATA CHANNEL / MDP 3.0 TAG 1180 - APPLID |
+| S&P UBS USD Liquid Leveraged Loan Index Futures | LVE | L9 | RT- Reduced Tick Calendar Spread | 344 |
+| S&P UBS USD Liquid Leveraged Loan Index Futures Fixing | LVF | - | - | 252 |
+
+The corresponding fixing prices are sent on [CME Data Insights - Settlements and Valuations](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457089321/CME+Data+Insights+-+Settlements+and+Valuations) channels via [MDP 3.0 Market Data Incremental Refresh](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457226984/MDP+3.0+-+Market+Data+Incremental+Refresh) (tag 35-MsgType=X) message types with the following attributes:
+
+*   Tag 279- MDUpdateAction will be set to 0 = New
+*   Tag 269-MDEntryType will be set to 6 = Settlement Price _or_ 269-MDEntryType will be set to W = Fixing Price
+*   Tag 5796-Trading Reference will display the date for which the marker price was calculated
+
+These products are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+### New Listing of Five CME and One CBOT S&P Factor Futures Contracts - September 20
+
+Effective **Sunday, September 20** (trade date Monday, September 21), pending completion of all regulatory review periods, [five CME and one CBOT S&P Factor futures contracts](https://www.cmegroup.com/content/dam/cmegroup/globex/files/factor-index-futures.pdf) will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+The corresponding fixing prices are sent on [CME Data Insights - Settlements & Valuations](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457089321/CME+Data+Insights+-+Settlements+and+Valuations) channels via [Market Data Platform (MDP) 3.0 Market Data Incremental Refresh](https://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Market+Data+Incremental+Refresh) (tag 35-MsgType=X) message types with the following attributes:
+
+*   Tag 279- MDUpdateAction will be set to 0 = New
+*   Tag 269-MDEntryType will be set to 6 = Settlement Price OR 269-MDEntryType will be set to W = Fixing Price
+*   Tag 5796-Trading Reference will display the date for which the marker price was calculated
+
+These products will be available for customer testing in New Release on this **Sunday, August 30**.
+
+These contracts are listed with, and subject to, the rules and regulations of CME and CBOT.
+
+### Compute Futures - October 4
+
+Effective **Sunday, October 4** (trade date Monday, October 5), pending completion of all regulatory review periods, Compute futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| Compute Futures |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | iLink/MDP 3.0 Tag 1151 - Security Group | Included Spreads and Combos - Tag 762-SecuritySubType | MARKET DATA CHANNEL MDP 3.0 TAG 1180 - APPLID |
+| Silicon Data H100 Rental Index Futures | GPU1 | 1(one)C | SA - Average Price Strip SP - Standard Calendar Spread SB - Balanced Strip | 386 |
+| Silicon Data B200 Rental Index Futures | GPU2 | SA - Average Price Strip SP - Standard Calendar Spread RI - Reduced Tick Inter-Commodity Spread |
+
+These futures will be available for customer testing in New Release on this**Sunday, August 30**.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+## Product Changes
+
+### Listing Cycle Expansion for AIR TRF Futures - This Week
+
+Effective this **Sunday, August 30** (trade date Monday, August 31), the listing cycle for the [included AIR TRF futures](https://www.cmegroup.com/content/dam/cmegroup/globex/files/listing-cycle-expansion-air-trf-futures.pdf) will be expanded on CME Globex.
+
+These changes are available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME and CBOT.
+
+### Listing Cycle Expansion for MXN/USD Futures Contract Months and FX Calendar Spreads - This Week
+
+Effective this**Sunday, August 30** (trade date Monday, August 31), listing cycle for the MXN/USD future contract months and FX calendar spreads will be expanded on CME Globex.
+
+These changes are currently available for customer testing in New Release.
+
+| Listing Cycle Expansion for MXN/USD Futures Contract Months and FX Calendar Spreads |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink/MDP 3.0 Tag 1151 - Security Group | Tag 762-SecuritySubType | Current Listing Schedule | New Listing Schedule |
+| MXN/USD Futures | 6M | 6M | - | Monthly contracts listed for 13 consecutive months and 2 additional quarterly contracts (Mar, Jun, Sep, Dec). | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 20 consecutive quarters and serial contracts listed for 16 months. |
+| MXN/USD FX Calendar Spreads | 6M | 6M | SD | 10 1-quarter calendar spreads. 1 1-month calendar spread. 1 2-month calendar spread. 1 2-quarter calendar spread. 1 3-quarter calendar spread. 1 4-quarter calendar spread. | 4 1-month calendar spreads. 19 1-quarter calendar spreads. 4 2-quarter calendar spreads. 4 3-quarter calendar spreads. 4 4-quarter calendar spreads. 2 5-quarter calendar spreads. 2 6-quarter calendar spreads. 2 7-quarter calendar spreads. 1 8-quarter calendar spreads. 4 2-month calendar spreads. 2 3-month calendar spreads. 2 4-month calendar spreads. 2 5-month calendar spreads. 2 7-month calendar spreads. 2 8-month calendar spreads. 2 10-month calendar spreads. 1 11-month calendar spread. |
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+### New Sunsetting Micro Gold Monthly Option - September 3
+
+Effective **Thursday, September 3**, the following Micro Gold Option contract months will be sunset and no additional contract months will be listed.
+
+| Sunsetting Micro Gold Option |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | ILINK/MDP 3.0 TAG 1151 - SECURITY GROUP | LAST LISTED CONTRACTS |
+| Micro Gold Option | OMG | OM | Monthly contracts: Sep-26-Jan-27 and Oct-27 |
+
+These contracts are listed with, and subject to, the rules and regulations of COMEX.
+
+### Resting Order Elimination: Change to Minimum Price Increment, Display Factor and External Instrument Name Format for Lean Beef Trim Futures and Options - September 13
+
+Effective **Sunday, September 13** (trade date Monday, September 14), the minimum price increment, display factor and external instrument name format for Lean Beef Trim futures and options will change on CME Globex as indicated in the following table.
+
+These updates will follow the market segment and Market Data Platform (MDP) channel migration schedule outlined in the[Livestock Futures and Options Migration](https://www.cmegroup.com/notices/electronic-trading/2026/08/20260817.html#lfaomtnmsamc) article.
+
+**Please Note:**To facilitate this change, customers are asked to cancel all Good Till Cancel (GTC) and Good Till Date (GTD) orders after close on **Friday, September 11**. After 16:00 CT on Friday, September 11, all remaining GT orders for the 90% & 50% Lean Beef Trim Options will be canceled or deleted by the CME Global Command Center (GCC).
+
+| Change to Minimum Price Increment and Display Factor for Lean Beef Trim Futures and Options |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | iLink/MDP 3.0 Tag 1151 - Security Group | Current Tag 9787 - DisplayFactor | New Tag 9787 - DisplayFactor | Current tag 969 - MinPriceIncrement | New tag 969 - MinPriceIncrement | Included Spreads and Combos - Tag 762-SecuritySubType | Current External Instrument Name Format | New External Instrument Name Format |
+| 90% Lean Beef Trim Futures | BTN | LB | 0.01 | 0.001 | 5 | 50 | SP - Calendar Spread IS - Inter-Commodity Spread | - | - |
+| 50% Lean Beef Trim Futures | BTF | LB | 0.01 | 0.001 | 5 | 50 | SP - Calendar Spread IS - Inter-Commodity Spread | - | - |
+| Options on 90% Lean Beef Trim Futures | BTN | L7 | 0.01 | 0.001 | 5 | 50 | N/A | BTNQ6 C 39750 | BTNQ6 C 397500 |
+| Options on 50% Lean Beef Trim Futures | BTF | L7 | 0.01 | 0.001 | 5 | 50 | N/A | BTFQ6 C 39750 | BTFQ6 C 397500 |
+
+These spreads will be available for customer testing in New Release on this**Sunday, August 30**.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+### Listing Live Cattle vs. Lean Beef Trim Inter-Commodity Spreads - September 13
+
+In conjunction with the changes announced in the [Lean Beef Trim Futures and Options](https://www.cmegroup.com/notices/electronic-trading/2026/08/20260817.html#roectmpidfaeinfflbftao)article, effective **Sunday, September 13** (trade date Monday, September 14), pending completion of all regulatory review periods, Live Cattle vs. Lean Beef Trim Inter-Commodity spreads will be listed for trading on CME Globex.
+
+| Listing Live Cattle vs. Lean Beef Trim Inter-Commodity Spreads |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | iLink/MDP 3.0 Tag 1151 - Security Group | Included Spreads and Combos - Tag 762-SecuritySubType | MARKET DATA CHANNEL / MDP 3.0 TAG 1180 - APPLID |
+| Live Cattle Future/ 90% Lean Beef Trim Future | LE-BTN | LE | RI - Reduced Tick Inter-Commodity Spread | 352 |
+| Live Cattle Future/ 50% Lean Beef Trim Future | LE-BTF | LE | RI - Reduced Tick Inter-Commodity Spread | 352 |
+
+These spreads will be available for customer testing in New Release on this**Sunday, August 30**.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+### Listing North European Hot-Rolled Coil Steel (Argus) Balanced Strip Spreads - September 13
+
+Effective **Sunday, September 13** (trade date Monday, September 14), North European Hot-Rolled Coil Steel (Argus) Balanced Strip spreads will be listed for all quarterly strip spread combinations on CME Globex.
+
+| Listing North European Hot-Rolled Coil Steel (Argus) Balanced Strip Spreads |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink/MDP 3.0: tag 1151 - Security Group | MDP 3.0: tag 762- SecuritySubType |
+| North European Hot-Rolled Coil Steel (Argus) Futures | EHR | MA | SB - Balanced Strip |
+
+These spreads will be available for customer testing in New Release on this**Sunday, August 30**.
+
+These contracts are listed with, and subject to, the rules and regulations of COMEX.
+
+### New Amendment to Hard Red Spring Wheat Futures and Options Listing - September 14
+
+Effective **Monday, September 14**, (trade date Tuesday, September 15), the listing of the Hard Red Spring Wheat will be amended on CME Globex as follows:
+
+| Amendment to the Hard Red Spring Wheat Futures and Options Listing |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink/MDP 3.0 tag 1151 - Security Group | Current Listing | Delayed Listing |
+| Hard Red Spring Wheat Futures | HRS | WH | 2 Sep and all preceding Mar, May, Jul, and Dec contracts | Dec 2027 and Mar, May, Jul, and Sep 2028 |
+| Options on Hard Red Spring Wheat Futures | HSO | W2 | Sep, Oct, Nov, Dec 2026 and Mar, May, Jul, and Sep 2027 | Dec 2027 |
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+## Post-Trade
+
+### Unit of Measure Update to Support Compute Futures - October 4
+
+Effective **Sunday, October 4** (trade date Monday, October 5), the following new value will be added to the Unit of Measure fields in CME STP FIXML and FIX, to support the launch of [Compute futures.](https://www.cmegroup.com/notices/electronic-trading/2026/08/20260817.html#cf)
+
+| Unit of Measure update to support Compute Futures |
+| --- |
+| FIX tag-Name | FIXML Abbr | Enumerations |
+| 996-UnitOfMeasure | TrdCaptRpt/Instrmt/@UOM | GPU-H (GPU Hours) |
+| 999-LegUnitOfMeasure | TrdCaptRpt/TrdLeg/Leg/@UOM |
+| 1191-PriceUnitOfMeasure | TrdCaptRpt/Instrmt/@PxUOM |
+| 2644-CommissionUnitOfMeasure | TrdCaptRpt/RptSide/CommData/@UOM |
+| 41309-StreamNotionalUnitOfMeasure | TrdCaptRpt/Instrmt/Strm/@NotlUOM |
+| 41311-StreamTotalNotionalUnitOfMeasure | TrdCaptRpt/Instrmt/Strm/@TotNotlUOM |
+| 42022-UnderlyingStreamNotionalUnitOfMeasure | TrdCaptRpt/Undly/Strm/@NotlUOM |
+| 42024-UnderlyingStreamTotalNotionalUnitOfMeasure | TrdCaptRpt/Undly/Strm/@TotNotlUOM |
+
+The [CME STP FIX Data dictionary](https://www.cmegroup.com/stp/files/cme-stp-fix-data-dictionary.xml) has been updated to support this additional Enumerated value.
+
+This change will be available for customer testing in New Release on this**Sunday, August 30**.
+
+## Events and Announcements
+
+### New Removal of itBit as a CME CF Constituent Exchange Following the Retirement of the Platform - This Week
+
+Effective this **Thursday, August 27**, following the [retirement](https://www.paxos.com/itbit) of the itBit trading platform, itBit will be formally removed as a CME CF Constituent Exchange. This applies to the following CME CF Cryptocurrency Reference Rates and Real-Time Indices.
+
+*   CME CF Bitcoin Reference Rate - BRR
+*   CME CF Bitcoin Reference Rate - New York Variant - BRRNY
+*   CME CF Bitcoin Reference Rate - Asia Pacific Variant - BRRAP
+*   CME CF Bitcoin Real-Time Index - BRTI
+*   CME CF Ether–Dollar Reference Rate - ETHUSD_RR
+*   CME CF Ether–Dollar Reference Rate - New York Variant - ETHUSD_NY
+*   CME CF Ether–Dollar Reference Rate - Asia Pacific Variant - ETHUSD_AP
+*   CME CF Ether–Dollar Real-Time Index - ETHUSD_RTI
+*   CME CF Litecoin–Dollar Reference Rate - LTCUSD_RR
+*   CME CF Litecoin–Dollar Reference Rate - New York Variant - LTCUSD_NY
+*   CME CF Litecoin–Dollar Reference Rate - Asia Pacific Variant - LTCUSD_AP
+*   CME CF Litecoin–Dollar Real-Time Index - LTCUSD_RTI
+
+#### Stay Informed on Technology Changes
+
+Don't miss important updates about new features, products and technology changes. Subscribe using the method(s) that best fits your workflow:
+
+##### Receive email notices
+
+Stay informed, with notices delivered directly to your inbox.

@@ -1,0 +1,91 @@
+{
+  "gate": "U8-cross-zone-design",
+  "role": "adversarial verifier",
+  "verified_at": "2026-09-06",
+  "verified_against_repo_commit": "fdc5408412079f9d0513acb49ebf7a2ab4003c5c",
+  "matches": false,
+  "verdict_summary": "The design conclusion survives every check and is materially STRENGTHENED: I re-measured ten of the twelve shapes first-hand against CME's own trading-hours service and every Chicago-clock pair in the result is confirmed. Three defects nonetheless fail load-bearing checks: (D1) a false claim of absence in dead_ends, (D2) an unrecorded CME-vs-CME source conflict on the crypto BTIC London stop width, and (D3) five proposed revision-row dates given as trade dates where the repo's own explicit convention requires the preceding Sunday opening day.",
+  "confirmed": [
+    "Integrity: all 12 stored artifacts under raw/U8-cross-zone-design/ hash exactly to SHA256SUMS.txt (recomputed; the checksum file's own self-line cannot match by construction).",
+    "energy-tam-faq.jina.txt: 'Published Time: 2024-06-05T00:00:00.000Z' is line 5; the three quoted sentences are lines 92, 94, 96 verbatim, including CME's own Central pairs '(2:30/3:30 a.m. Central time)' and '(1:00/2:00 a.m. Central time)'. The elision in the result's stitched quote is marked and does not alter meaning.",
+    "svc-8407-oct/dec/2027mar and svc-7956-oct/dec: quoted event objects are byte-exact; counts are 5x closed / 4x preopen / 4x open per week as claimed; preopen@16:50 (grp GM) and 16:45 (grp C1) and open@17:00 are identical in every week.",
+    "Zone arithmetic: GCD's close is 15:02 Europe/London in all three captured weeks (10:02 CDT and 09:02 CST both equal 15:02 UTC while the UK is on GMT); FTC's close is 16:00 Asia/Hong_Kong in both. The MISALIGNED / ALIGNED labels on 2026-10-26, 2026-12-07 and 2027-03-15 are correct.",
+    "Premise falsification: exactly six reference_delta_seconds selectors ship, at the exact lines cited - ice_endex.rs:150, ice_abu_dhabi.rs:103, eurex_fixed_income.rs:287, europe.rs:120, b3.rs:201, bmv.rs:235 - and each is an offset-selected static-profile pair. Two are key-side (MarketHoursKey::Eurex routes to eurex_profile_at at futures_profile.rs:394, MarketHoursKey::EurexFixedIncome to eurex_fixed_income_profile_at at :403), so 'EurexFixedIncome is the key-side precedent' holds.",
+    "Verbatim in-repo quotes all check out byte-for-byte: eurex_fixed_income.rs 'A single fixed-local-wall-clock profile would therefore be wrong for roughly half of every year...' and 'Both seasonal timelines carry the same effective dates; ... so the two never disagree about a day that has a session.'; ice_abu_dhabi.rs:103; verification.md:144 'recurring US/EU DST grids are exact' and :145 'the New-York-locked grid and pre-open are translated into `Asia/Dubai` with date-aware US DST selection', both rows rated Primary.",
+    "reference_delta_seconds (timeline.rs:163) is pure: it takes as_of as a parameter, resolves through mk_local_open at venue noon, and its own doc says 'it does not read a clock'. LAW-DETERMINISM and LAW-PANIC hold.",
+    "OPEN_DAY_ANCHOR_SSM = 86_399 at query/schedule.rs:26; profile_for_open_day at :262-271 carries the quoted doc line. I walked the four 2026/2027 transition weekends by hand: opening-day selection returns the correct state on every one, including the Sunday 2026-10-25 open whose Monday close the captured bytes independently show as 10:02.",
+    "Golden blind spot: 1_787_400_000 s after UNIX_EPOCH is exactly 2026-08-22 12:00:00 UTC, a day on which the US is on CDT and the UK on BST - the ALIGNED state - so a seasonal key's second profile never appears in tests/golden/normal_week_grids.txt. The claim is correct and the handwritten-test remedy is the right one.",
+    "session_profile (futures_profile/profiles.rs:307-317) does promise 'the static current table ... equals the revision timeline's selection at any instant on or after the family's knowledge-bound row', and hours_for_market_hours_key (futures_profile.rs:365) does say keys 'resolve to their one grid at every instant'. Both are already false for EurexFixedIncome for roughly half of every year, so follow-ups 1 and 2 name a real pre-existing defect.",
+    "Dead-end arithmetic: MarketHours::new (hours.rs:89) takes exactly 7 positional parameters, so an 8th is breaking; EXCHANGE_VARIANT_COUNT = 94; the market_hours_keys! table has 31 rows. joins_adjacent_same_kind (identity.rs:18) is indeed an identity capability limited to GlobexCryptocurrency and GlobexEventContractsBtc, not a shape heuristic.",
+    "recheck-2026-09-06b.py is a genuinely independent derivation (different structure, different method, no reference to drift-computation.py) and its output reproduces: exactly two offset states per zone pair 2010-2030; America/New_York constant at 1.0h against Chicago, so TMAC/TACO/equity BTIC/credit BTIC/crypto-NY/commodity-index BTIC need no mechanism; 2026 weekday splits 241/20 (London) and 170/91 (Asia) of 261; misalignment 21 or 28 calendar days per year; nearest-Chicago-midnight boundary 00:30 CT at Nikkei/TOPIX. The two second-pass corrections in conclusion item 10 are exactly the ones the script supports. The derived cost figures follow: 20 misaligned weekdays x 1h = 20h/yr; 91/261 = 34.9% and 170/261 = 65.1% = the stated 35-65%.",
+    "LAW-SESSION-NOT-EXPIRY classification is right. 'trading halts at the marker time, daily' is the law's own first listed session phrasing. The memo correctly withholds the adjacent marker CALCULATION windows - and the copper 'trade data from 12:34 p.m. - 12:35 p.m. London Time' is literally the worked example the law's text quotes - and correctly leaves open whether GCD's and HGF's service closed@ events promote those to closes. The Nikkei/TOPIX fact card's separate 'TERMINATION OF TRADING' row is expiry and is correctly not used.",
+    "LAW-NO-FABRICATED-DATES: the seasonal switch asserts no date, exactly as the shipped Eurex/ICE/B3/BMV selectors do, and AGENTS.md item 3 of 'Adding or revising a venue' explicitly anticipates 'a cross-zone or otherwise recurring selector' needing date-aware ExchangeCalendar transition coverage. No fabrication.",
+    "Executable-window priority: AGENTS.md does rank a gap in regular/extended above a gap in order_entry, so ranking this error class highest is correct.",
+    "INDEX.md handles capture-vs-artifact date correctly, stating in terms that the service returns a forward-looking published calendar and that a 2026-09-06 capture of the 2027-03-15 week is not a fact observed in March 2027.",
+    "INDEPENDENT RE-MEASUREMENT (new evidence, raw/U8-cross-zone-design.verify/): every Chicago-clock pair in the result except 6EB is now confirmed first-hand against CME's own service - CLL(6266) 10:30/11:30, CLS(6332) 02:30/03:30, CLC(10725) 01:00/02:00, HGF(8652) 06:35/07:35, DVT(8005) 10:30/11:30, E3T(9999) 10:30/11:30, TPB(8492) 00:30/01:30, NIT(8633) 00:30/01:30, BTB(8970) 10:00-10:05/11:00-11:05, ABB(10664) 02:00-02:05/03:00-03:05 - with open@17:00 fixed in every one. 6EB's pair is CME's own FX BTIC FAQ prose verbatim. Nikkei's extra midday block (preopen@10:30, open@11:00, paused/closed@16:00) does NOT move between the two weeks, confirming it is Chicago/New-York-anchored as the memo says."
+  ],
+  "discrepancies": [
+    {
+      "id": "D1",
+      "severity": "load-bearing",
+      "field": "dead_ends",
+      "claim": "\"no product id was located for CLL/CLS/CLC, so those three closes are not measured first-hand and rest on CME's Energy TAM FAQ prose plus the shape-queue schedule decode\"",
+      "finding": "False claim of absence. The channel the researcher was already using returns the ids in two calls: https://www.cmegroup.com/CmeWS/mvc/ProductSlate/V2/List?pageNumber=N&sortAsc=false&sortField=oi&pageSize=500&cleared=Futures&exch=NYMEX (paged; pageSize is capped at 500) yields CLL=6266, BZL=6268, HOL=6270, RBL=6273, CLS=6332, BZS=6333, CLC=10725; exch=CME and exch=COMEX yield DVT=8005, E3T=9999, BTB=8970, ABB=10664, NIT=8633, TPB=8492, HGF=8652. I then measured all of them first-hand across both DST states. AGENTS.md: \"'Unsourced' means 'not worked up', never 'no source exists'\" and \"do not write that nothing survives unless the predecessor channels have actually been searched\".",
+      "effect": "Strengthens rather than overturns the conclusion - the pairs are all confirmed - but as written it would tell the next reader the channel is exhausted when it is not, and it understates CLL/CLS/CLC/DVT/E3T/HGF/TPB/NIT/BTB/ABB from feed-decode or prose to service-measured.",
+      "evidence": "raw/U8-cross-zone-design.verify/slate-*.txt and svc-*.txt with SHA256SUMS.txt"
+    },
+    {
+      "id": "D2",
+      "severity": "load-bearing",
+      "field": "encodable",
+      "claim": "\"crypto BTIC London stop 10:00-10:05 / 11:00-11:05\" listed among \"Directly encodable Chicago-clock pairs, measured or published\"",
+      "finding": "An unrecorded CME-vs-CME source conflict. CME's BTIC on Cryptocurrency futures FAQ - quoted in shape-queue/btic-basis-trade-at-index-close-inventor.json block [7], which INDEX.md lists as a relied-on artifact - states the London-anchored grid as 'Sunday - Friday 6:00 p.m. ET - 4:00 p.m. London time (11:00 a.m./12:00 p.m. ET). Monday - Thursday 4:30 p.m. London time (11:30 a.m./12:30 p.m. ET) - 5:00 p.m. ET', i.e. a 30-minute stop ending 16:30 London = 10:30/11:30 CT. CME's own service (id 8970, verified by me first-hand: closed@10:00, preopen@10:01, open@10:05) restarts at 16:05 London = 10:05/11:05 CT. Two CME statements, 25 disputed minutes, neither superseding the other on its face.",
+      "effect": "AGENTS.md's sourced-intersection rule governs a source conflict directly: 'serve what both state, withhold only what they dispute, and record the conflict beside the table. Establish the order of the statements first'. The result records neither the conflict nor the disputed remainder, and presents the narrower feed reading as settled. The same gap applies to the APAC row (id 10664, open@02:05), for which the FAQ excerpt states no restart at all. Compounding it, the shape-queue's own blockers say everything retrieved for crypto BTIC 'describes the pre-2026 five-day grid' and the 2026-05-29 24/7 notice is unretrieved - so these two rows are not encodable yet on any reading.",
+      "evidence": "raw/U8-cross-zone-design.verify/svc-8970-{oct,dec}.txt, svc-10664-{oct,dec}.txt; shape-queue/btic-basis-trade-at-index-close-inventor.json block [7]"
+    },
+    {
+      "id": "D3",
+      "severity": "load-bearing",
+      "field": "encodable / conclusion item 3",
+      "claim": "\"Dated revision rows already sourced in the handoff: SER-5788 trade date 2011-06-13 (London TAM), SER-5794 2011-07-11 (Singapore), SER-9380 2024-06-17 (Shanghai), Globex Notice 20171016 2017-10-23 (GCD), Globex Notice 20190211 2019-02-25 (HGF)\", repeated in conclusion item 3 as \"revisions! carries only sourced launch days\".",
+      "finding": "All five are TRADE dates, and all five of these keys wrap: my captures show open@17:00 CT on the previous evening for every one of them. AGENTS.md LAW-NO-FABRICATED-DATES: 'Day-level revision rows are keyed to the local opening day of the first session they govern, and a day-level revision boundary never splits a running session'; 'Adding or revising a venue' item 5: 'For a wrap, record the local opening day (often Sunday for a Monday trade-date change).' The rows must be keyed to 2011-06-12, 2011-07-10, 2024-06-16, 2017-10-22 and 2019-02-24. SER-9380 states both days in the handoff's own quote - 'Effective Sunday, June 16, 2024, for trade date Monday, June 17, 2024' - and the result took the wrong half.",
+      "effect": "The repo's worked precedent is explicit and contradicts the result: src/calendar/schedules/futures/us/event_contracts.rs, 'DATE KEYING. CME states both days and they mean different things. The row is keyed to the venue-local **opening** day, Sunday 2022-09-18, not the stated trade date of Monday 2022-09-19: ... a wrapped rule keyed a day late would render that Sunday evening closed.' spot_quoted.rs keys its launch the same way. An author transcribing this encodable field verbatim would ship five revision rows one day late, each rendering a real Sunday-evening session closed.",
+      "evidence": "AGENTS.md lines 45-50 and 380-382; src/calendar/schedules/futures/us/event_contracts.rs:265-269; src/calendar/schedules/futures/us/spot_quoted.rs:185-196; handoff lines 100-104"
+    },
+    {
+      "id": "D4",
+      "severity": "minor, not load-bearing",
+      "field": "conclusion item 6 / recheck-2026-09-06b.txt",
+      "claim": "\"UK 01:00 UTC = Sat 19:00 CDT\"",
+      "finding": "01:00 UTC Sunday is 20:00 CDT Saturday, not 19:00. The 19:00 figure comes from recheck-2026-09-06b.py, whose transition scan prints prev[0] - the last hour BEFORE the offset changes - so every instant in recheck-2026-09-06b.txt is one hour early: the US rows read 07:00/06:00 UTC and '01:00 Chicago' where the true instants are 08:00/07:00 UTC and 02:00 local, and the UK rows read 00:00 UTC where the true instant is 01:00 UTC. The conclusion mixes the script's wrong Chicago figure with the correct UTC figure.",
+      "effect": "None on the argument. All four instants remain Saturday evening (20:00 CT) or early Sunday morning (02:00 CT), hours outside any session on a venue that opens Sunday 17:00 CT, so 'no session ever spans an offset change' holds. Fix the script's off-by-one before anyone reuses it as a citation."
+    },
+    {
+      "id": "D5",
+      "severity": "minor, not load-bearing",
+      "field": "states[5] / memo 1.2",
+      "claim": "DVT/E3T's foreign anchor is '16:30 Europe/London'",
+      "finding": "The shape-queue decoded the same 15:30 UTC close as '17:30 CEST', i.e. a continental-European anchor. The retrieved evidence does not distinguish the two, and no CME hours document for DVT/E3T was ever retrieved (shape-queue row 24: 'CANNOT DETERMINE').",
+      "effect": "Immaterial to the design and to the pair: Europe/London and the EU continental zones change offset at the same UTC instant, so both readings yield the identical two Chicago values, which my first-hand capture of ids 8005 and 9999 confirms as 10:30/11:30. But the memo asserts a zone the evidence does not fix; say 'a European-anchored 15:30 UTC boundary' or source the zone."
+    },
+    {
+      "id": "D6",
+      "severity": "minor, characterization",
+      "field": "encodable",
+      "claim": "\"Directly encodable Chicago-clock pairs, measured or published\"",
+      "finding": "As written at the time of the result, that heading mixed three provenance grades: CME prose (CLS/BZS, CLC, 6EB), CME's own service (GCD, FTC), and - for DVT/E3T, Nikkei, TOPIX, and the crypto stops - a TradingSessionList decode whose own author labelled it 'SEED ONLY ... none of this closes a profile'. My re-measurement promotes all but 6EB to service-sourced, so this resolves in the researcher's favour, but the field over-stated what the gate itself held.",
+      "effect": "No change to the recommendation."
+    }
+  ],
+  "residual_caveats": [
+    "No both-zones-on-DST week was ever captured: all three GCD weeks and both FTC weeks sit in UK-GMT, and my own captures are the same two weeks. The aligned summer value is derived, not observed (15:02 BST = 14:02 UTC = 09:02 CDT). The arithmetic is unambiguous and the December captures agree, but the memo's 'the aligned state is not a summer artefact' rests on inference, not on a summer artifact.",
+    "GCD's and HGF's closes still rest solely on the service's closed@ events; CME's prose for both gives only a marker calculation window, and the COMEX metals-marker page frames the markers as 'informational reference points'. The result flags this correctly and it remains the single largest open question for those two keys.",
+    "The COMEX metals-marker copper London/New-York DST carve-out is still second-hand from shape-queue block [4]; I did not re-fetch it either. Its content is corroborated by my first-hand HGF measurement (06:35/07:35 CT), which is what the carve-out predicts.",
+    "U-4 regular-vs-extended is unresolved for every one of these shapes and blocks all of them independently of U-8.",
+    "Pre-open onsets remain undated. My captures widen the inventory: preopen@16:50 for groups TM, TS, WM, GM, TR; 16:45 for C1, DT, EQ, BJ, N6; 16:01 for BX, HB. None has a sourced day.",
+    "6EB is the one shape with no first-hand measurement on either run; I could not locate its product id in the slate pages fetched. Its pair is CME's own published prose, which is a stronger source than a feed decode, but the shape is unmeasured.",
+    "LAW-FOLLOW-UPS-ARE-ISSUES: the five follow-ups the result names, plus D1, D2 and D3, must be opened as GitHub issues before any of this merges. The researcher correctly declined to publish without the user's go-ahead; the obligation stands."
+  ],
+  "design_verdict": "Option G - one America/Chicago tz per key, two static profiles selected by reference_delta_seconds - is correct, law-clean, and already the crate's shipped convention in six places including two MarketHoursKey arms. U-8's premise that neither endpoint is expressible without the other drifting is false. Nothing in this verification disturbs that. The defects are in the result's provenance bookkeeping and in three of the dates and windows it hands the next author.",
+  "verifier_evidence_dir": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/U8-cross-zone-design.verify/"
+}

@@ -1,0 +1,3766 @@
+{
+ "task": "cme-2019-2021 — CME Group published holiday schedules for calendar years 2019, 2020 and 2021, per product group (Equity Index incl. Nikkei note, Interest Rates, FX, Energy/Metals, Grains & Oilseeds, Livestock, Cryptocurrency, plus the Dairy and Lumber lines printed on the same sheets).",
+ "coverage": "COMPLETE for 2019, 2020 and 2021. Every U.S. holiday for which CME Group published a Globex holiday schedule in those three years is sourced at tier T1 from CME's own documents.\n\nENUMERATION FIRST (as instructed). Internet Archive CDX was run over four prefixes and saved under raw/cme-2019-2021/: cmegroup.com/tools-information/holiday-calendar* (cdx-hc.json), .../holiday-calendar/files/ as matchType=prefix (cdx-files.json), cmegroup.com/trading-hours* (cdx-tradinghours.json), and the snapshots of holiday-calendar.html itself (cdx-hcpage.json). Four archived copies of holiday-calendar.html (2019-12-06, 2020-03-26, 2020-04-20, 2020-06-11) were then retrieved and their hrefs extracted: those pages are CME's own index of which holiday documents existed each year, and they are what proved that 2020 had a consolidated ZIP and named the exact filenames for the 2020 MLK / Presidents' Day / Good Friday sheets that the CDX index alone did not surface.\n\nCONSOLIDATED ANNUAL DOCUMENTS. CME published one ZIP per year, and each ZIP sources every holiday in its year:\n  2019-holiday-calendars.zip  (archive capture 2021-01-26T09:48:37Z; 18 Globex schedule .xls + 11 settlement-notice PDFs; members dated 2019-10-23) sha256 1e861e355238903b013c1288f4eb9e8026e6ddd5fc1001dfd2acdbfcc1832e05\n  2020-holiday-calendars.zip  (archive capture 2026-07-30T11:18:34Z, the only capture the archive holds; operator Last-Modified: Tue, 29 Dec 2020 21:32:10 GMT; 18 .xls; members dated 2020-12-29) sha256 5263a4a5e9076bc0e69c7cd0e3fd9f82dc4d80b66f1b56f14070f08c1d762b59\n  2021-holiday-calendars.zip  (archive capture 2026-08-30T10:03:27Z, the only capture the archive holds; operator Last-Modified: Mon, 03 Jan 2022 21:29:08 GMT; 18 .xls; members dated 2022-01-03) sha256 0ee0860a3a0e035eb9d079419aca3cafcc4256d296fa916647987c396dda8c59\nIndividually captured copies of 26 of the same per-holiday sheets were also downloaded (raw/cme-2019-2021/docs/, manifest in list.txt) and agree with the ZIP members.\n\nONE SUPPLEMENT. Each year's \"new years\" sheet covers 31 Dec of that year into January of the NEXT year, so 1 January 2019 is governed by the December-2018 document, retrieved separately: 2019-new-years-holiday-schedule-compact.xls, archive capture 2018-01-07T04:13:43Z, sha256 2684a5f1b3a9f65802f6911ca6089e2cb68c3cdf2520dfaf3cdcf3105328c188, title verbatim \"CME Group Globex New Years Holiday Schedule: December 31, 2018 - January 2, 2019\".\n\nRETRIEVAL. cmegroup.com returns 403 to this machine, so every artifact was read through the Internet Archive raw-replay form https://web.archive.org/web/<ts>id_/<url>. All retrievals performed 2026-09-12 UTC. Bytes, text dumps, sha256 manifest and INDEX.md are under /Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2019-2021/. Each .xls is a real BIFF workbook, read with xlrd (dumper saved as dumpxls.py; per-sheet plain-text dumps in text/).\n\nZONE AS PRINTED. These sheets print Central Time with UTC — the full sheets carry the header \"All times are Central Time   ET +1  UTC  +5\" (or \"+6\" in winter), and the compact sheets print each cell as e.g. \"Regular @ 1600 CT / 2200 UTC\". ET appears only in the TAS/TAM notes, where CME prints \"CT / ET\" (e.g. \"Gold TAS - Early close 1130 CT / 1230 ET\"). Both forms are quoted verbatim in the rows. NO INSTANT IS CONVERTED BETWEEN ZONES OR INFERRED FROM ANOTHER YEAR, with this one disclosed qualification: on 2021-12-23 the compact sheet prints \"Regular per Product\" for the five Globex groups, so their close is read from the full sheet's bare \"16:00\" cell under the header \"All times are Central Time   ET +1  UTC  +6\"; those five rows now record the cell as printed plus that header instead of a CT/UTC pair (round-1 recorded \"1600 CT / 2200 UTC\", a string that on that sheet belongs to the Monday December 27 column). All five are status=normal.\n\nNOTATION IN `verbatim`. Each string is the group's own row as CME prints it, cells separated by ' | '; an ellipsis (…) marks cells of that same row omitted here for length — the untruncated per-sheet text is in raw/cme-2019-2021/text/. GROUP LABELS AS CME PRINTS THEM. Compact sheets: Equity; Bitcoin (renamed Cryptocurrency in the 2021 full sheets); Interest Rate; FX; \"Energy, Metals & DME\"; \"Grain & Oilseed\"; Mini-Grain; MGEX Wheat / MGEX Indices; Dairy; \"Lumber Futures&Options\"; Livestock. Full sheets use \"Equity Products\", \"Interest Rate Products\", \"FX Products\", \"Energy, Metals, Softs & DME Products\", \"Grain, Oilseed & MGEX Products\". Dairy and Lumber are printed on the same sheet and are included here as dairy_same_page / lumber_same_page. globex_energy carries the single \"Energy, Metals & DME\" line because CME states NYMEX energy and COMEX metals on one row.\n\nNIKKEI (corrected round 1). None of these sheets prints an outright Nikkei row; the Nikkei 225 futures fall under the \"Equity\"/\"Equity Products\" line, which is what every globex_nikkei_225_dollar row records. Most full sheets carry a Nikkei-labelled BTIC trade-type exception row (\"Nikkei/Topix BTIC\" or \"Nikkei/ TOPIX BTIC\"), and each such row is quoted beside the Equity line. THREE SHEETS PRINT NO NIKKEI-LABELLED ROW AT ALL and are now described as such rather than as if they carried one: the DEC-2018 new-years sheet that governs 1 Jan 2019 (no Nikkei and no TOPIX row; its Equity exception rows are US Equity BTIC's & FTSE Emerging BTIC, FTSE Developed Euro BTIC, E-mini FTSE China 50 BTIC, E-mini FTSE BTIC, S&P CNX Nifty (Nifty 50)), 2019-mlk-day-schedule.xls and 2020-mlk-day-schedule.xls (the string \"Nikkei\" occurs nowhere in either; the nearest trade-type row is \"Topix BTIC\" / \"TOPIX BTIC\"). A TOPIX BTIC row is not a Nikkei row. Two 2021 sheets are different and are marked status=modified: 2021 Good Friday splits \"Nikkei BTIC\" from \"TOPIX BTIC\", and 2021 Thanksgiving prints \"Nikkei & BTIC\" with its own 10:30 pre-open / 11:00 open / 16:00 halt and 00:00 close.\n\nCRYPTOCURRENCY. Bitcoin has a line on every sheet from 2019 onward, so globex_cryptocurrency is sourced for all three years.\n\nNOTABLE PER-GROUP DIFFERENCES FOUND (not pattern-inferred — each is read off its own sheet): 3 July 2019 only Equity and Bitcoin closed early (12:15 CT) while Interest Rate, FX and Energy/Metals closed regular at 16:00 CT; 2 July 2020 all five of those closed regular and only the ags closed early; Good Friday 2021 was a partial session (Equity and Cryptocurrency closed 08:15 CT / 1315 UTC, Interest Rate and FX closed 10:15 CT / 1515 UTC, Energy/Metals/Grains/Livestock/Lumber/Dairy closed all day), unlike Good Friday 2019 and 2020 which were full closures for every group; the Friday after Thanksgiving 2021 put Cryptocurrency at 12:45 CT while Equity/Rates/FX stayed 12:15 CT.\n\nHOLIDAYS WITH NO CME SCHEDULE IN THESE YEARS. Juneteenth: CME published no Juneteenth holiday schedule for 2019, 2020 or 2021 — the archived holiday-calendar.html file lists for those years contain no juneteenth document, and the first is 2022-juneteenth-advisory.pdf / 2022-juneteenth-holiday-schedule.xls. Columbus Day and Veterans Day: CME published only settlement-time and OTC-clearing advisories for these, never a Globex trading schedule, so Globex ran normally; those PDFs are settlement language, not session language, and were not used to key any row (LAW-SESSION-NOT-EXPIRY).\n\nNOT USED AS EVIDENCE. The settlement-notices/*-settlement-times.pdf and *-otc-advisory.pdf members inside the ZIPs state settlement and OTC clearing times, not session boundaries; they are retained in the research store but key nothing.\n\nDOCUMENT-ID LEGEND. Each row's `document` is a short code for the CME sheet it was read from. Expand it as: <year>-<holiday>[(DEC2018)], where the sheet is the \"compact\" Globex holiday schedule for that holiday, taken from CME's own consolidated annual ZIP:\n  codes starting 2019- -> https://www.cmegroup.com/tools-information/holiday-calendar/files/2019-holiday-calendars.zip#globex-trading-schedules/  (IA id_ replay, capture 2021-01-26T09:48:37Z)\n  codes starting 2020-, and 2021-ny -> .../files/2020-holiday-calendars.zip#  (IA id_ replay, capture 2026-07-30T11:18:34Z, members dated 2020-12-29)\n  codes starting 2021- (other than 2021-ny) and 2022-ny -> .../files/2021-holiday-calendars.zip#  (IA id_ replay, capture 2026-08-30T10:03:27Z, members dated 2022-01-03)\n  2019-ny(DEC2018) -> http://www.cmegroup.com/tools-information/holiday-calendar/files/2019-new-years-holiday-schedule-compact.xls (IA id_ replay, capture 2018-01-07T04:13:43Z), the sheet titled \"December 31, 2018 - January 2, 2019\", which governs 1 Jan 2019.\nHoliday tokens: mlk, presidents, goodfri, memorial, july4, labor, thx, xmas, ny. Exact member filenames, sha256 of every artifact, and the untruncated per-sheet text are in raw/cme-2019-2021/ (INDEX.md, shasum.txt, text/). Where a row's note cites a full (non-compact) sheet, it is the same-named member without \"-compact\" in the same ZIP.\n\nROUND-1 FIX (fixer, 2026-09-12 UTC), against verify verdict cme-2019-2021.verify.json. The round-0 result is preserved verbatim at /Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2019-2021.r0.json; new bytes, a fresh CDX enumeration and an INDEX.md for this round are under /Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2019-2021-fix/. Every corrected quotation below was re-read by the fixer from the saved .xls bytes with an independently invoked xlrd cell dump (raw value plus column index), not from round 0's text/ dumps and not from the verifier's transcription. Family rows: 424 -> 440.\n  D1 (load-bearing, fixed). 2019-01-01 globex_nikkei_225_dollar quoted \"Nikkei/Topix BTIC | 00:00 | Globex Closed\" against the DEC-2018 sheet. That sheet contains no Nikkei row and no TOPIX row; the quoted line belongs to a different year's document (2019-2020-new-years-holiday-schedule.xls), which this file quotes correctly for 2020-01-01. The verbatim now states that CME printed no Nikkei- or TOPIX-labelled row on that sheet, lists the five Equity exception rows it does print, and quotes the compact and full Equity lines. Status (closed) and open_instant (1700 CT / 2300 UTC) were independently correct and are unchanged.\n  D2 (fixed in the evidence store). raw/cme-2019-2021/docs/2020-good-friday-holiday-compact.xls is a Wayback \"has not archived that URL\" HTML page, not a CME workbook. A fresh exact-URL CDX returns [] and a 224-row prefix crawl of .../holiday-calendar/files/ (2019-2023) shows no standalone 2020 Good Friday .xls under any name, so the retrieval could never have succeeded. INDEX.md now carries a \"Failed retrievals\" section saying so; the file is left byte-for-byte in place so shasum.txt still verifies 86/86, and it sources nothing. All 2020 Good Friday rows cite the genuine ZIP member zip2020/2020-good-friday-holiday-compact.xls (sha256 aa0936e9278904f40bc23abba57c2c379207af49d0cb6971f07289010fe1745e).\n  D3 (fixed). The 2020 and 2021 annual ZIPs were recorded as \"nearest-2021/2022 replay\". Fresh per-URL CDX shows each has exactly one capture: 2026-07-30T11:18:34Z and 2026-08-30T10:03:27Z. Both were re-fetched at those exact timestamps; the bytes are identical to the saved copies (sha256 5263a4a5... and 0ee0860a...), and the operator's own Last-Modified headers (Tue, 29 Dec 2020 21:32:10 GMT; Mon, 03 Jan 2022 21:29:08 GMT) are now recorded beside the capture times here and in INDEX.md. A capture dates the observation, never the state: the documents are dated by those Last-Modified headers and by the ZIP member dates (2019-10-23 / 2020-12-29 / 2022-01-03).\n  D4 (fixed). 2019-01-21 and 2020-01-20 globex_nikkei_225_dollar said \"Only Nikkei-labelled row (BTIC)\" and then quoted a row headed Topix/TOPIX BTIC. The string \"Nikkei\" occurs nowhere in either MLK full sheet; both verbatims now say the sheet prints no Nikkei-labelled row at all and that the nearest trade-type row is TOPIX BTIC.\n  D5 (fixed, 11 fields). Ten open_instant fields inserted a \"CT\" token CME does not print, dropped \"Regular\", or reordered the date. Each now quotes the cell exactly as printed - \"Monday @ 0830/ 1330 UTC\", \"Friday @ 0830 / 1330 UTC\", \"Friday  @ 0900 / 1400 UTC\", \"Monday  @ 0900 / 1400 UTC\", \"Tuesday July 6 Regular  @ 0900 / 1400 UTC\", double spaces included - with the zone noted as an editorial parenthetical, not folded into the quotation. An eleventh field with the same defect that the verifier did not enumerate (2021-07-05 globex_livestock, cell \"Tuesday July 6 Regular  @ 0830 / 1330 UTC\") was found on re-reading the bytes and fixed identically. No time changed.\n  D6 (fixed). See ZONE AS PRINTED above: the five 2021-12-23 close_instants now record the full sheet's \"16:00\" cell and its header instead of a CT/UTC pair borrowed from the Monday December 27 column, and the unqualified \"no instant was converted or inferred\" claim is replaced by a qualified statement.\n  D7 (fixed). 2019-thanksgiving-day-holiday-schedule-arragements.xlsx (IA capture 2024-02-20T03:37:34Z, operator Last-Modified Thu, 26 Dec 2019 12:24:03 GMT, sha256 6e65b0989065c7636b54aa63f150243fe628e6fb4ae22f9854347c797f389758) was retrieved, saved under raw/cme-2019-2021-fix/docs/ and read. It is a NYMEX \"Execution List\" of BALMO / price-reporting-agency contracts tick-marked against 2019-11-28 and 2019-11-29; it states no session instants. Excluded from keying any row under LAW-SESSION-NOT-EXPIRY and now listed with that disposition in `missing`.\n  D8 (fixed in the evidence store). raw/cme-2019-2021/INDEX.md gains a supplementary hash manifest for the files that were relied on but never hashed (the four archived holiday-calendar.html pages, the six CDX result files, t1.xls - identified as a byte-identical scratch duplicate of docs/2021-presidents-compact.xls - plus list.txt, dumpxls.py and fetch.sh), and records the two capture times list.txt omitted (2020-mlk-day-schedule.xls 2026-08-15T19:42:02Z; 2020-martin-luther-king-holiday-schedule-compact.xls 2025-08-27T08:21:54Z; both byte-identical to their ZIP members).\n  D9 (fixed in the evidence store). INDEX.md printed the compact sheet's hash (2684a5f1...) for docs/2019-new-years-full-JAN2019.xls; it is 6eafe7ee71c676299bd612eb3760d23d449c2111be8cee463d24308959e4d170, re-hashed here.\n  D10 (fixed, 16 rows added). 2020-01-02 carried 4 of the 8 served families; the six absent ones (cryptocurrency, interest_rates, fx, energy, dairy_same_page and nikkei) are added from the Thursday, Jan 2 columns of the same 2019-2020 new-years sheet, all status=normal. globex_nikkei_225_dollar was absent from 11 dates; a row is now present on every one of the 44 dates. Nine of the ten added Nikkei rows are status=normal (the Equity line is normal and the BTIC exception row trades), and two are status=modified because CME's Nikkei-labelled row itself diverges: on 2020-12-31 the full sheet's \"Nikkei/TOPIX BTIC\" row prints \"Globex Closed\" in the Thursday, December 31 Close column while Equity Products closes 16:00, and on 2021-12-31 the same row prints \"Closed\" in the first column of the \"Friday, December 31\" block while Equity Products closes 16:00. Both were read cell-by-cell with column indices and are quoted with their column position.\n  NOT CHANGED. Every date, status, tier and document id the verifier did not dispute is untouched, as are the 380 instants it reproduced verbatim. The verifier's confirmations stand: 86/86 hashes re-verify, the three annual ZIPs and 65 ZIP members are byte-identical, and the 'missing' list survives a fresh enumeration.",
+ "holidays": [
+  {
+   "date": "2019-01-01",
+   "name": "New Year's Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "closed",
+     "verbatim": "Equity | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @ 1700 CT / 230…",
+     "document": "2019-ny(DEC2018)",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC (Tue 1 Jan, for trade date W…"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "closed",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @ 1700 CT / 23…",
+     "document": "2019-ny(DEC2018)",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "closed",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @ 1700 C…",
+     "document": "2019-ny(DEC2018)",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "closed",
+     "verbatim": "FX | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @ 1700 CT / 2300 UTC",
+     "document": "2019-ny(DEC2018)",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "closed",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @…",
+     "document": "2019-ny(DEC2018)",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular Close | Closed for New Year's | Closed for New Year's | Pre-o…",
+     "document": "2019-ny(DEC2018)",
+     "tier": "T1",
+     "open_instant": "Wed 2 Jan Pre-open 6:00 CT /12:00 UTC, Open 8:3…"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular close | Closed for New Year's | Closed for New Year's | Pre-open 6:…",
+     "document": "2019-ny(DEC2018)",
+     "tier": "T1",
+     "open_instant": "Wed 2 Jan Open 8:30 CT /14:30 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "closed",
+     "verbatim": "CME prints NO Nikkei- and NO TOPIX-labelled row anywhere on this document. The full sheet (2019-new-years-holiday-schedule.xls, the Dec-2018 sheet titled \"December 31, 2018 - January 2, 2019\") lists exactly these Equity exception rows: \"US Equity BTIC's & FTSE Emerging BTIC\", \"FTSE Developed Euro BTIC\", \"E-mini  FTSE China 50 BTIC\", \"E-mini FTSE BTIC\", \"S&P CNX Nifty (Nifty 50)\". Nikkei 225 therefore falls under the Equity line, which is what is recorded here. Compact sheet row 4: \"Equity | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @ 1700 CT / 2300 UTC |  | Regular @ 1600 CT / 2200 UTC\". Full sheet row 4: \"Equity Products | 16:00 | Globex Closed | 16:00 | 17:00 | … | 16:00\" (header: \"All times are Central Time   ET +1  UTC  +6\").",
+     "document": "2019-ny(DEC2018)",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular close | Closed for New Year's | Regular @ 1700 CT / 2300 UTC | | Regula…",
+     "document": "2019-ny(DEC2018)",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Regular close | Closed for New Year's | Closed for New Year's | Pre-open 6:00C…",
+     "document": "2019-ny(DEC2018)",
+     "tier": "T1",
+     "open_instant": "Wed 2 Jan Open 9:00 CT /15:00 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2019-01-21",
+   "name": "Martin Luther King Jr. Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800 U…",
+     "document": "2019-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800…",
+     "document": "2019-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT /…",
+     "document": "2019-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800 UTC…",
+     "document": "2019-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 12…",
+     "document": "2019-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Extended Pre Open @ 1600 | | Regular @ 1900 CT…",
+     "document": "2019-mlk",
+     "tier": "T1",
+     "open_instant": "1900 CT / 0100 UTC (Mon 21 Jan, for trade date…"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for MLK Day | Closed for MLK Day | Tuesday @ 0…",
+     "document": "2019-mlk",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0830 CT/1430 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "This sheet prints no Nikkei-labelled row at all — the string \"Nikkei\" does not appear anywhere in 2019-mlk-day-schedule.xls. The nearest trade-type exception row is TOPIX: row 11 \"Topix BTIC | 00:00 | … | 16:45 | 17:00 |  | 00:00 (close)\". A TOPIX BTIC row is not a Nikkei row. Nikkei 225 follows the Equity line, which is what is recorded here: compact sheet row 6 \"Equity | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800 UTC | Regular @ 1700 CT / 2300 UTC\" (columns CLOSE | OPEN | HALT | OPEN); full sheet row 4 \"Equity Products | 16:00 | … | 12:00 | 12:00 | 17:00\".",
+     "document": "2019-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular per Product | Extended Pre Open @1600 | | Regular @ 1700 CT/2300 UTC",
+     "document": "2019-mlk",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Regular per Product | Closed for MLK Day | Closed for MLK Day | Tuesday @ 0900…",
+     "document": "2019-mlk",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0900 CT/1500 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2019-02-18",
+   "name": "Presidents' Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800 U…",
+     "document": "2019-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800…",
+     "document": "2019-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT /…",
+     "document": "2019-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800 UTC…",
+     "document": "2019-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 12…",
+     "document": "2019-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Extended Pre Open @ 1600 | | Regular @ 1900 CT…",
+     "document": "2019-presidents",
+     "tier": "T1",
+     "open_instant": "1900 CT / 0100 UTC (Mon 18 Feb, for trade date…"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for President's Day | Closed for President's D…",
+     "document": "2019-presidents",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0830 CT/1430 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/Topix BTIC | 00:00 | ... | 16:45 | 17:00 | 00;00 (close)\" (2019-presidents-day-schedule.xls). Equity line: \"Equity | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800 UTC…",
+     "document": "2019-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular per Product | Extended Pre Open @ 1600 | | Regular @ 1700 CT/2300 UTC",
+     "document": "2019-presidents",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Regular per Product | Closed for President's Day | Closed for President's Day…",
+     "document": "2019-presidents",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0900 CT/1500 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2019-04-18",
+   "name": "Thursday before Good Friday (early closes, Dairy/Lumber only)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "normal",
+     "verbatim": "Equity | Regular @ 1600 CT / 2100 UTC | Closed for Good Friday | Regular @ 1700 CT / 22…",
+     "document": "2019-goodfri",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "normal",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2019-goodfri",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_fx",
+     "status": "normal",
+     "verbatim": "FX | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2019-goodfri",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_energy",
+     "status": "normal",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2019-goodfri",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "normal",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2019-goodfri",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_grains",
+     "status": "normal",
+     "verbatim": "Grain & Oilseed | Regular per Product | Closed for Good Friday | Regular @ 1900 CT / 00…",
+     "document": "2019-goodfri",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "normal",
+     "verbatim": "Livestock | Regular per Product | Closed for Good Friday | Monday @ 0830/ 1330 UTC",
+     "document": "2019-goodfri",
+     "tier": "T1"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "early_close",
+     "verbatim": "Dairy | Early @ 1355 CT / 1855 UTC | Closed for Good Friday | Regular @ 1700 CT / 2200…",
+     "document": "2019-goodfri",
+     "tier": "T1",
+     "close_instant": "1355 CT / 1855 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "early_close",
+     "verbatim": "Lumber | Early @ 1355 CT / 1855 UTC | Closed for Good Friday | Monday @ 0900 / 1400 UTC",
+     "document": "2019-goodfri",
+     "tier": "T1",
+     "close_instant": "1355 CT / 1855 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "normal",
+     "verbatim": "No outright Nikkei row on this sheet; Nikkei 225 follows the Equity line: compact row 4 \"Equity | Regular @ 1600 CT / 2100 UTC | Closed for Good Friday | Regular @ 1700 CT / 2200 UTC\". Nikkei-labelled row (BTIC trade type), full sheet 2019-good-friday-schedule.xls row 11: \"Nikkei/Topix BTIC | 1:00 | Globex Closed | 16:00 | 17:00 | 01:00\" — c1 \"1:00\" is the Thursday, April 18 \"Regular Close\" column (header \"All times are Central Time   ET +1  UTC  +5\").",
+     "document": "2019-goodfri",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2019-04-19",
+   "name": "Good Friday",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "closed",
+     "verbatim": "Equity | Regular @ 1600 CT / 2100 UTC | Closed for Good Friday | Regular @ 1700 CT / 22…",
+     "document": "2019-goodfri",
+     "tier": "T1",
+     "open_instant": "Sun 21 Apr into Mon 22 Apr, Regular @ 1700 CT /…"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "closed",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2100 UTC | Closed for Good Friday | Regular @ 1700 CT / 2…",
+     "document": "2019-goodfri",
+     "tier": "T1",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "closed",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2100 UTC | Closed for Good Friday | Regular @ 1700…",
+     "document": "2019-goodfri",
+     "tier": "T1",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "closed",
+     "verbatim": "FX | Regular @ 1600 CT / 2100 UTC | Closed for Good Friday | Regular @ 1700 CT / 2200 U…",
+     "document": "2019-goodfri",
+     "tier": "T1",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "closed",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2100 UTC | Closed for Good Friday | Regular…",
+     "document": "2019-goodfri",
+     "tier": "T1",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Closed for Good Friday | Regular @ 1900 CT / 00…",
+     "document": "2019-goodfri",
+     "tier": "T1",
+     "open_instant": "Regular @ 1900 CT / 0000 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for Good Friday | Monday @ 0830/ 1330 UTC",
+     "document": "2019-goodfri",
+     "tier": "T1",
+     "open_instant": "\"Monday @ 0830/ 1330 UTC\" (cell as printed; CME prints no CT token in this cell — the column is Central Time, as the same column's other cells show, e.g. \"Regular @ 1700 CT / 2200 UTC\")"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "closed",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/Topix BTIC | 1:00 | ... | Globex Closed | ... | 16:00 | 17:00 | ... | 01:00\" (2019-good-friday-schedule.xls). Equity line: \"Equity | Regular @ 1600 CT / 2100 UTC | Closed for Good Friday | Regular @…",
+     "document": "2019-goodfri",
+     "tier": "T1",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Early @ 1355 CT / 1855 UTC | Closed for Good Friday | Regular @ 1700 CT / 2200…",
+     "document": "2019-goodfri",
+     "tier": "T1",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Early @ 1355 CT / 1855 UTC | Closed for Good Friday | Monday @ 0900 / 1400 UTC",
+     "document": "2019-goodfri",
+     "tier": "T1",
+     "open_instant": "\"Monday @ 0900 / 1400 UTC\" (cell as printed; CME prints no CT token in this cell — the column is Central Time, as the same column's other cells show, e.g. \"Regular @ 1700 CT / 2200 UTC\")"
+    }
+   ]
+  },
+  {
+   "date": "2019-05-27",
+   "name": "Memorial Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700 U…",
+     "document": "2019-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700…",
+     "document": "2019-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT /…",
+     "document": "2019-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700 UTC…",
+     "document": "2019-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 12…",
+     "document": "2019-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Extended Pre Open @ 1600 CT | | Regular @ 1900…",
+     "document": "2019-memorial",
+     "tier": "T1",
+     "open_instant": "1900 CT / 0000 UTC (Mon 27 May, for trade date…"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for Memorial Day | Closed for Memorial Day | T…",
+     "document": "2019-memorial",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0830 CT/1330 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei /Topix BTIC | 1:00 | ... | 16:45 | 17:00 | 1:00 ( close)\" (2019-memorial-day-schedule.xls). Equity line as quoted for globex_equity_index.",
+     "document": "2019-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular per Product | Extended Pre Open @ 1600 CT | | Regular @ 1700CT / 2200 U…",
+     "document": "2019-memorial",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2200 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Regular per Product | Closed for Memorial Day | Closed for Memorial Day | Tues…",
+     "document": "2019-memorial",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0900 CT/1400 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2019-07-03",
+   "name": "Day before Independence Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Early @ 1215 CT / 1715 UTC | Regular @ 1700 CT/ 2200 UTC | 1200 CT / 1700 UTC…",
+     "document": "2019-july4",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1715 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin | Early @ 1215 CT / 1715 UTC | Regular @ 1700 CT/ 2200 UTC …",
+     "document": "2019-july4",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1715 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "normal",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT/ 2200 UTC | 1200 CT /…",
+     "document": "2019-july4",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "normal",
+     "verbatim": "FX | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT/ 2200 UTC …",
+     "document": "2019-july4",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "normal",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT/ 2200 UTC …",
+     "document": "2019-july4",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "early_close",
+     "verbatim": "Grain & Oilseed | Early @ 1205 CT / 1705 UTC | Markets Closed | Markets Closed | Friday…",
+     "document": "2019-july4",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1705 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "early_close",
+     "verbatim": "Livestock | Early @ 1215 CT / 1715 UTC | Markets Closed | Markets Closed | Friday @ 083…",
+     "document": "2019-july4",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1715 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/ Topix BTIC | 1:00 | ... | 16:45 | 17:00 | 1:00 (close)\" (2019-independence-day-schedule.xls). Equity full-sheet line: \"Equity Products | (Early Close) 12:15 | ... | 16:45 | 17:00 | ... | 12:00 | 12…",
+     "document": "2019-july4",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1715 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "early_close",
+     "verbatim": "Dairy | Early @ 1200 CT / 1700 UTC | Markets Closed | Markets Closed | Regular @ 1700 C…",
+     "document": "2019-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "early_close",
+     "verbatim": "Lumber Futures&Options | Early @ 1205 CT / 1700 UTC | Markets Closed | Markets Closed…",
+     "document": "2019-july4",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1700 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2019-07-04",
+   "name": "Independence Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity … | Regular @ 1700 CT/ 2200 UTC | 1200 CT / 1700 UTC | Regular @ 1700 CT / 2200…",
+     "document": "2019-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin … | 1200 CT / 1700 UTC | Regular @ 1700 CT / 2200 UTC",
+     "document": "2019-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate … | 1200 CT / 1700 UTC | Regular @ 1700 CT / 2200 UTC",
+     "document": "2019-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX … | 1200 CT / 1700 UTC | Regular @ 1700 CT / 2200 UTC",
+     "document": "2019-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME … | 1200 CT / 1700 UTC | Regular @ 1700 CT / 2200 UTC",
+     "document": "2019-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Early @ 1205 CT / 1705 UTC | Markets Closed | Markets Closed | Friday…",
+     "document": "2019-july4",
+     "tier": "T1",
+     "open_instant": "\"Friday @ 0830 / 1330 UTC\" (cell as printed; CME prints no CT token in this cell — the column is Central Time, as the same column's other cells show, e.g. \"Regular @ 1700 CT / 2200 UTC\")"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Early @ 1215 CT / 1715 UTC | Markets Closed | Markets Closed | Friday @ 083…",
+     "document": "2019-july4",
+     "tier": "T1",
+     "open_instant": "\"Friday @ 0830 / 1330 UTC\" (cell as printed; CME prints no CT token in this cell — the column is Central Time, as the same column's other cells show, e.g. \"Regular @ 1700 CT / 2200 UTC\")"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/ Topix BTIC\" row (2019-independence-day-schedule.xls). Equity line: halt 12:00 CT on Thursday, July 4.",
+     "document": "2019-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Early @ 1200 CT / 1700 UTC | Markets Closed | Markets Closed | Regular @ 1700 C…",
+     "document": "2019-july4",
+     "tier": "T1",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber Futures&Options | Early @ 1205 CT / 1700 UTC | Markets Closed | Markets Closed…",
+     "document": "2019-july4",
+     "tier": "T1",
+     "open_instant": "\"Friday  @ 0900 / 1400 UTC\" (cell as printed incl. the double space; CME prints no CT token in this cell — the column is Central Time, as the same column's other cells show, e.g. \"Regular @ 1700 CT / 2200 UTC\")"
+    }
+   ]
+  },
+  {
+   "date": "2019-09-02",
+   "name": "Labor Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700 U…",
+     "document": "2019-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700…",
+     "document": "2019-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT /…",
+     "document": "2019-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700 UTC…",
+     "document": "2019-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 12…",
+     "document": "2019-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Extended Pre Open @ 1600 CT | | Regular @ 1900…",
+     "document": "2019-labor",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2400 UTC (Mon 2 Sep, for trade date T…"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for Labor Day | Closed for Labor Day | Tuesday…",
+     "document": "2019-labor",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0830 CT/1330 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei / Topix BTIC | 1:00 | ... | 16:45 | 17:00 | 1:00 (close)\" (2019-labor-day-schedule.xls).",
+     "document": "2019-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular per Product | Extended Pre Open @ 1600 CT | | Regular @ 1700 CT/2200 UTC",
+     "document": "2019-labor",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2200 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Regular per Product | Closed for Labor Day | Closed for Labor Day | Tuesday @…",
+     "document": "2019-labor",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0900 CT/1400 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2019-11-28",
+   "name": "Thanksgiving Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800 U…",
+     "document": "2019-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin … | 1200 CT / 1800 UTC | Regular @ 1700 CT / 2300 UTC …",
+     "document": "2019-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate … | 1200 CT / 1800 UTC | Regular @ 1700 CT / 2300 UTC …",
+     "document": "2019-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX … | 1200 CT / 1800 UTC | Regular @ 1700 CT / 2300 UTC …",
+     "document": "2019-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME … | 1200 CT / 1800 UTC | Regular @ 1700 CT / 2300 UTC …",
+     "document": "2019-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Pre-open State | Pre-open State | Pre-open Stat…",
+     "document": "2019-thx",
+     "tier": "T1",
+     "open_instant": "Friday 29 Nov, Regular per Product"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for Thanksgiving | Closed for Thanksgiving | C…",
+     "document": "2019-thx",
+     "tier": "T1",
+     "open_instant": "Friday 29 Nov, Regular per Product"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/Topix BTIC | 00:00 | ... | 16:45 | 17:00 | ... | 00:00\" (2019-thanksgiving-schedule.xls).",
+     "document": "2019-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular per Product | Closed for Thanksgiving | Closed for Thanksgiving | Close…",
+     "document": "2019-thx",
+     "tier": "T1"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber Futures&Options | Regular per Product | Closed for Thanksgiving | Closed for Tha…",
+     "document": "2019-thx",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2019-11-29",
+   "name": "Day after Thanksgiving",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity … | Friday November 29 CLOSE: Early @ 1215 CT/ 1815 UTC",
+     "document": "2019-thx",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin … | Early @ 1215 CT/ 1815 UTC",
+     "document": "2019-thx",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate … | Early @ 1215 CT/ 1815 UTC",
+     "document": "2019-thx",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX … | Early @ 1215 CT/ 1815 UTC",
+     "document": "2019-thx",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME … | Early @ 1245 CT/ 1845 UTC",
+     "document": "2019-thx",
+     "tier": "T1",
+     "close_instant": "1245 CT / 1845 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "early_close",
+     "verbatim": "Grain & Oilseed … | Regular per Product | Early @ 1205 CT/ 1805 UTC (Mini-Grain: Early…",
+     "document": "2019-thx",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1805 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "early_close",
+     "verbatim": "Livestock … | Regular per Product | Early @ 1215 CT/ 1815 UTC",
+     "document": "2019-thx",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/Topix BTIC\" row closes 00:00 on Friday (2019-thanksgiving-schedule.xls). Equity line: Early @ 1215 CT/ 1815 UTC.",
+     "document": "2019-thx",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy … | Closed for Thanksgiving | Closed for Thanksgiving",
+     "document": "2019-thx",
+     "tier": "T1"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "early_close",
+     "verbatim": "Lumber Futures&Options … | Regular per Product | Early @ 1205 CT/ 1800 UTC",
+     "document": "2019-thx",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1800 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2019-12-24",
+   "name": "Christmas Eve",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Early @ 1215 CT / 1815 UTC | Closed for Christmas | Regular @ 1700 CT / 2300 U…",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin | Early @ 1215 CT / 1815 UTC …",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate | Early @ 1215 CT / 1815 UTC …",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX | Early @ 1215 CT / 1815 UTC …",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME | Early @ 1245 CT / 1845 UTC …",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "close_instant": "1245 CT / 1845 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "early_close",
+     "verbatim": "Grain & Oilseed | Early @ 1205 CT / 1805 UTC … (Mini-Grain: Early @ 1230 CT / 1830 UTC)",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1805 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "early_close",
+     "verbatim": "Livestock | Early @ 1215 CT / 1815 UTC …",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/Topix BTIC | 00:00 | Globex Closed | 16:00 | 17:00 | ... | 00:00\" (2019-christmas-holiday-schedule.xls). Equity full-sheet line: \"Equity Products | 12:15 | Globex Closed | 16:00 | 17:00\"",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "early_close",
+     "verbatim": "Dairy | Early @ 1200 CT / 1800 UTC …",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "early_close",
+     "verbatim": "Lumber Futures&Options | Early @ 1205 CT / 1800 UTC …",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1800 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2019-12-25",
+   "name": "Christmas Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "closed",
+     "verbatim": "Equity | Early @ 1215 CT / 1815 UTC | Closed for Christmas | Regular @ 1700 CT / 2300 U…",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "open_instant": "Wed 25 Dec, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "closed",
+     "verbatim": "Bitcoin … | Closed for Christmas | Regular @ 1700 CT / 2300 UTC",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "closed",
+     "verbatim": "Interest Rate … | Closed for Christmas | Regular @ 1700 CT / 2300 UTC",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "closed",
+     "verbatim": "FX … | Closed for Christmas | Regular @ 1700 CT / 2300 UTC",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "closed",
+     "verbatim": "Energy, Metals & DME … | Closed for Christmas | Regular @ 1700 CT / 2300 UTC",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed … | Closed for Christmas | Closed for Christmas | Pre-open 6:00CT /12:0…",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "open_instant": "Thu 26 Dec, Open 8:30 CT /14:30 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock … | Closed for Christmas | Closed for Christmas | Pre-open 6:00CT /12:00 UTC…",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "open_instant": "Thu 26 Dec, Open 8:30 CT /14:30 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "closed",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/Topix BTIC | 00:00 | Globex Closed | 16:00 | 17:00\" (2019-christmas-holiday-schedule.xls).",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy … | Closed for Christmas | Regular @ 1700 CT / 2300 UTC",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber Futures&Options … | Closed for Christmas | Closed for Christmas | Pre-open 6:00C…",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "open_instant": "Thu 26 Dec, Open 9:00 CT /15:00 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2019-12-26",
+   "name": "Day after Christmas",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "normal",
+     "verbatim": "Equity … | Thursday, Dec 26 CLOSED: Regular @ 1600 CT / 2200 UTC",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "normal",
+     "verbatim": "Bitcoin … | Regular @ 1600 CT / 2200 UTC",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "normal",
+     "verbatim": "Interest Rate … | Regular @ 1600 CT / 2200 UTC",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "normal",
+     "verbatim": "FX … | Regular @ 1600 CT / 2200 UTC",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "normal",
+     "verbatim": "Energy, Metals & DME … | Regular @ 1600 CT / 2200 UTC",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "late_open",
+     "verbatim": "Grain & Oilseed … | Pre-open 6:00CT /12:00 UTC Open 8:30 CT /14:30 UTC | Regular per Pr…",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "open_instant": "Open 8:30 CT /14:30 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "late_open",
+     "verbatim": "Livestock … | Pre-open 6:00CT /12:00 UTC Open 8:30 CT /14:30 UTC | Regular per Product",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "open_instant": "Open 8:30 CT /14:30 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "normal",
+     "verbatim": "Dairy … | Regular per Product",
+     "document": "2019-xmas",
+     "tier": "T1"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "late_open",
+     "verbatim": "Lumber Futures&Options … | Pre-open 6:00CT /12:00 UTC Open 9:00CT /15:00 UTC | Regular…",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "open_instant": "Open 9:00 CT /15:00 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "normal",
+     "verbatim": "No outright Nikkei row on this sheet; Nikkei 225 follows the Equity line: compact row 4 \"Equity | Early @ 1215 CT / 1815 UTC | Closed for Christmas | Regular @ 1700 CT / 2300 UTC |  | Regular @ 1600 CT / 2200 UTC\" (the last cell is the Thursday, Dec 26 column). Nikkei-labelled row (BTIC trade type), full sheet 2019-christmas-holiday-schedule.xls row 11: \"Nikkei/Topix BTIC | 00:00 | Globex Closed | 16:00 | 17:00 | … | 00:00\" — the last cell (c11) is the Thursday, December 26 \"Close\" column (header \"All times are Central Time   ET +1  UTC  +6\").",
+     "document": "2019-xmas",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2019-12-31",
+   "name": "New Year's Eve",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "normal",
+     "verbatim": "Equity | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @ 1700 CT / 230…",
+     "document": "2019-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "normal",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2200 UTC …",
+     "document": "2019-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "normal",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2200 UTC …",
+     "document": "2019-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "normal",
+     "verbatim": "FX | Regular @ 1600 CT / 2200 UTC …",
+     "document": "2019-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "normal",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2200 UTC …",
+     "document": "2019-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "normal",
+     "verbatim": "Grain & Oilseed | Regular Close | Closed for New Year's …",
+     "document": "2019-ny",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "normal",
+     "verbatim": "Livestock | Regular close | Closed for New Year's …",
+     "document": "2019-ny",
+     "tier": "T1"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "early_close",
+     "verbatim": "Dairy | Early Close @ 1355 CT/1955 UTC | Closed for New Year's | Regular @ 1700 CT / 23…",
+     "document": "2019-ny",
+     "tier": "T1",
+     "close_instant": "1355 CT / 1955 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "early_close",
+     "verbatim": "Lumber | Early Close @ 1355 CT/1955 UTC | Closed for New Year's | Closed for New Year's…",
+     "document": "2019-ny",
+     "tier": "T1",
+     "close_instant": "1355 CT / 1955 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "normal",
+     "verbatim": "No outright Nikkei row on this sheet; Nikkei 225 follows the Equity line: compact row 4 \"Equity | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @ 1700 CT / 2300 UTC |  | Regular @ 1600 CT / 2200 UTC\". Nikkei-labelled row (BTIC trade type), full sheet 2019-2020-new-years-holiday-schedule.xls row 11: \"Nikkei/Topix BTIC | 00:00 | Globex Closed | … | 00:00\" — c1 \"00:00\" is the Tuesday, December 31 \"Close\" column (header \"All times are Central Time   ET +1  UTC  +6\").",
+     "document": "2019-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2020-01-01",
+   "name": "New Year's Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "closed",
+     "verbatim": "Equity | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @ 1700 CT / 230…",
+     "document": "2019-ny",
+     "tier": "T1",
+     "open_instant": "Wed 1 Jan, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "closed",
+     "verbatim": "Bitcoin … | Closed for New Year's | Regular @ 1700 CT / 2300 UTC",
+     "document": "2019-ny",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "closed",
+     "verbatim": "Interest Rate … | Closed for New Year's | Regular @ 1700 CT / 2300 UTC",
+     "document": "2019-ny",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "closed",
+     "verbatim": "FX … | Closed for New Year's | Regular @ 1700 CT / 2300 UTC",
+     "document": "2019-ny",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "closed",
+     "verbatim": "Energy, Metals & DME … | Closed for New Year's | Regular @ 1700 CT / 2300 UTC",
+     "document": "2019-ny",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular Close | Closed for New Year's | Closed for New Year's | Pre-o…",
+     "document": "2019-ny",
+     "tier": "T1",
+     "open_instant": "Thu 2 Jan, Open 8:30 CT /14:30 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular close | Closed for New Year's | Closed for New Year's | Pre-open 6:…",
+     "document": "2019-ny",
+     "tier": "T1",
+     "open_instant": "Thu 2 Jan, Open 8:30 CT /14:30 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "closed",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/Topix BTIC | 00:00 | Globex Closed | ... | 00:00\" (2019-2020-new-years-holiday-schedule.xls).",
+     "document": "2019-ny",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Early Close @ 1355 CT/1955 UTC | Closed for New Year's | Regular @ 1700 CT / 23…",
+     "document": "2019-ny",
+     "tier": "T1",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Early Close @ 1355 CT/1955 UTC | Closed for New Year's | Closed for New Year's…",
+     "document": "2019-ny",
+     "tier": "T1",
+     "open_instant": "Thu 2 Jan, Open 9:00 CT /15:00 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2020-01-02",
+   "name": "Day after New Year's Day",
+   "families": [
+    {
+     "family": "globex_grains",
+     "status": "late_open",
+     "verbatim": "Grain & Oilseed … | Pre-open 6:00CT /12:00 UTC Open 8:30 CT /14:30 UTC | Regular per Pr…",
+     "document": "2019-ny",
+     "tier": "T1",
+     "open_instant": "Open 8:30 CT /14:30 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "late_open",
+     "verbatim": "Livestock … | Pre-open 6:00CT /12:00 UTC Open 8:30 CT /14:30 UTC | Regular Open and Clo…",
+     "document": "2019-ny",
+     "tier": "T1",
+     "open_instant": "Open 8:30 CT /14:30 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "late_open",
+     "verbatim": "Lumber … | Pre-open 6:00CT /12:00 UTC Open 9:00CT /15:00 UTC | Regular Open and Close",
+     "document": "2019-ny",
+     "tier": "T1",
+     "open_instant": "Open 9:00 CT /15:00 UTC"
+    },
+    {
+     "family": "globex_equity_index",
+     "status": "normal",
+     "verbatim": "Equity … | Thursday, Jan 2 CLOSE: Regular @ 1600 CT / 2200 UTC",
+     "document": "2019-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "normal",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @ 1700 CT / 2300 UTC |  | Regular @ 1600 CT / 2200 UTC  — the last cell is the Thursday, Jan 2 CLOSE column",
+     "document": "2019-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "normal",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @ 1700 CT / 2300 UTC |  | Regular @ 1600 CT / 2200 UTC  — the last cell is the Thursday, Jan 2 CLOSE column",
+     "document": "2019-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "normal",
+     "verbatim": "FX  | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @ 1700 CT / 2300 UTC |  | Regular @ 1600 CT / 2200 UTC  — the last cell is the Thursday, Jan 2 CLOSE column",
+     "document": "2019-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "normal",
+     "verbatim": "Energy, Metals & DME  | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @ 1700 CT / 2300 UTC |  | Regular @ 1600 CT / 2200 UTC  — the last cell is the Thursday, Jan 2 CLOSE column",
+     "document": "2019-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "normal",
+     "verbatim": "Dairy | Early Close @ 1355 CT/1955 UTC | Closed for New Year's | Regular @ 1700 CT / 2300 UTC |  | \"Regular Open and Close \" — the Thursday, Jan 2 CLOSE cell states no instant",
+     "document": "2019-ny",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "normal",
+     "verbatim": "No outright Nikkei row on this sheet; Nikkei 225 follows the Equity line: compact row 4 \"Equity | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @ 1700 CT / 2300 UTC |  | Regular @ 1600 CT / 2200 UTC\". The only Nikkei-labelled row is the BTIC trade-type exception on the full sheet 2019-2020-new-years-holiday-schedule.xls row 11: \"Nikkei/Topix BTIC | 00:00 | Globex Closed | … | 00:00\" — the first cell is the Tuesday, December 31 Close and the last (c11) is the Thursday, Jan 2 Close (header \"All times are Central Time   ET +1  UTC  +6\").",
+     "document": "2019-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2020-01-20",
+   "name": "MLK Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800 U…",
+     "document": "2020-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800…",
+     "document": "2020-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT /…",
+     "document": "2020-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800 UTC…",
+     "document": "2020-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 12…",
+     "document": "2020-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Extended Pre Open @ 1600 | | Regular @ 1900 CT…",
+     "document": "2020-mlk",
+     "tier": "T1",
+     "open_instant": "1900 CT / 0100 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for MLK Day | Closed for MLK Day | Tuesday @ 0…",
+     "document": "2020-mlk",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0830 CT/1430 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "This sheet prints no Nikkei-labelled row at all — the string \"Nikkei\" does not appear anywhere in 2020-mlk-day-schedule.xls. The nearest trade-type exception row is TOPIX: row 11 \"TOPIX BTIC | 00:00 | … | 16:45 | 17:00 | 00:00 (close)\" (the cell is printed with leading spaces: \"                 00:00\"). A TOPIX BTIC row is not a Nikkei row. Nikkei 225 follows the Equity line, which is what is recorded here: full sheet row 4 \"Equity Products | 16:00 | 16:00 | 17:00 | … | 12:00 | 12:00 | 17:00\" (header: \"All times are Central Time   ET +1  UTC  +6\").",
+     "document": "2020-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular per Product | Extended Pre Open @ 1600 | | Regular @ 1700 CT/2300 UTC",
+     "document": "2020-mlk",
+     "tier": "T1",
+     "open_instant": "1700 CT/2300 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Regular per Product | Closed for MLK Day | Closed for MLK Day | Tuesday @ 0900…",
+     "document": "2020-mlk",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0900 CT/1500 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2020-02-17",
+   "name": "President's Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800 U…",
+     "document": "2020-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800…",
+     "document": "2020-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT /…",
+     "document": "2020-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800 UTC…",
+     "document": "2020-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 12…",
+     "document": "2020-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Extended Pre Open @ 1600 | | Regular @ 1900 CT…",
+     "document": "2020-presidents",
+     "tier": "T1",
+     "open_instant": "1900 CT / 0100 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for President's Day | Closed for President's D…",
+     "document": "2020-presidents",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0830 CT/1430 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/TOPIX BTIC | 00:00 | ... | 16:45 | 17:00 | 00;00 (close)\" (2020-presidents-day-schedule.xls)",
+     "document": "2020-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular per Product | Extended Pre Open @ 1600 | | Regular @ 1700 CT/2300 UTC",
+     "document": "2020-presidents",
+     "tier": "T1",
+     "open_instant": "1700 CT/2300 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Regular per Product | Closed for President's Day | Closed for President's Day…",
+     "document": "2020-presidents",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0900 CT/1500 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2020-04-09",
+   "name": "Thursday before Good Friday (Dairy early close)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "normal",
+     "verbatim": "Equity | Regular @ 1600 CT / 2100 UTC | Closed for Good Friday | Regular @ 1700 CT / 22…",
+     "document": "2020-goodfri",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "normal",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2020-goodfri",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "normal",
+     "verbatim": "FX | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2020-goodfri",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "normal",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2020-goodfri",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "normal",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2020-goodfri",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "normal",
+     "verbatim": "Grain & Oilseed | Regular per Product | Closed for Good Friday | Regular @ 1900 CT / 00…",
+     "document": "2020-goodfri",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "normal",
+     "verbatim": "Livestock | Regular per Product | Closed for Good Friday | Monday @ 0830/ 1330 UTC",
+     "document": "2020-goodfri",
+     "tier": "T1"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "early_close",
+     "verbatim": "Dairy | Early @ 1355 CT / 1855 UTC | Closed for Good Friday | Regular @ 1700 CT / 2200…",
+     "document": "2020-goodfri",
+     "tier": "T1",
+     "close_instant": "1355 CT / 1855 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "normal",
+     "verbatim": "Lumber | Regular per Product | Closed for Good Friday | Monday @ 0900 / 1400 UTC",
+     "document": "2020-goodfri",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "normal",
+     "verbatim": "No outright Nikkei row on this sheet; Nikkei 225 follows the Equity line: compact row 4 \"Equity | Regular @ 1600 CT / 2100 UTC | Closed for Good Friday | Regular @ 1700 CT / 2200 UTC\". Nikkei-labelled row (BTIC trade type), full sheet 2020-good-friday-schedule.xls row 11: \"Nikkei/TOPIX BTIC | 1:00 | Globex Closed | 16:00 | 17:00 | 01:00\" — c1 \"1:00\" is the Thursday, April 9 \"Regular Close\" column (header \"All times are Central Time   ET +1  UTC  +5\").",
+     "document": "2020-goodfri",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2020-04-10",
+   "name": "Good Friday",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "closed",
+     "verbatim": "Equity | Regular @ 1600 CT / 2100 UTC | Closed for Good Friday | Regular @ 1700 CT / 22…",
+     "document": "2020-goodfri",
+     "tier": "T1",
+     "open_instant": "Sun 12 Apr into Mon 13 Apr, Regular @ 1700 CT /…"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "closed",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2100 UTC | Closed for Good Friday | Regular @ 1700 CT / 2…",
+     "document": "2020-goodfri",
+     "tier": "T1",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "closed",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2100 UTC | Closed for Good Friday | Regular @ 1700…",
+     "document": "2020-goodfri",
+     "tier": "T1",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "closed",
+     "verbatim": "FX | Regular @ 1600 CT / 2100 UTC | Closed for Good Friday | Regular @ 1700 CT / 2200 U…",
+     "document": "2020-goodfri",
+     "tier": "T1",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "closed",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2100 UTC | Closed for Good Friday | Regular…",
+     "document": "2020-goodfri",
+     "tier": "T1",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Closed for Good Friday | Regular @ 1900 CT / 00…",
+     "document": "2020-goodfri",
+     "tier": "T1",
+     "open_instant": "Regular @ 1900 CT / 0000 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for Good Friday | Monday @ 0830/ 1330 UTC",
+     "document": "2020-goodfri",
+     "tier": "T1",
+     "open_instant": "\"Monday @ 0830/ 1330 UTC\" (cell as printed; CME prints no CT token in this cell — the column is Central Time, as the same column's other cells show, e.g. \"Regular @ 1700 CT / 2200 UTC\")"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "closed",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/TOPIX BTIC | 1:00 | ... | Globex Closed | ... | 16:00 | 17:00 | ... | 01:00\" (2020-good-friday-schedule.xls)",
+     "document": "2020-goodfri",
+     "tier": "T1",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Early @ 1355 CT / 1855 UTC | Closed for Good Friday | Regular @ 1700 CT / 2200…",
+     "document": "2020-goodfri",
+     "tier": "T1",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Regular per Product | Closed for Good Friday | Monday @ 0900 / 1400 UTC",
+     "document": "2020-goodfri",
+     "tier": "T1",
+     "open_instant": "\"Monday @ 0900 / 1400 UTC\" (cell as printed; CME prints no CT token in this cell — the column is Central Time, as the same column's other cells show, e.g. \"Regular @ 1700 CT / 2200 UTC\")"
+    }
+   ]
+  },
+  {
+   "date": "2020-05-25",
+   "name": "Memorial Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700 U…",
+     "document": "2020-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700…",
+     "document": "2020-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT /…",
+     "document": "2020-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700 UTC…",
+     "document": "2020-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 12…",
+     "document": "2020-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Extended Pre Open @ 1600 CT | | Regular @ 1900…",
+     "document": "2020-memorial",
+     "tier": "T1",
+     "open_instant": "1900 CT / 0000 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for Memorial Day | Closed for Memorial Day | T…",
+     "document": "2020-memorial",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0830 CT/1330 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei /TOPIX BTIC | 1:00 | ... | 16:45 | 17:00 | 1:00 ( close)\" (2020-memorial-day-schedule.xls)",
+     "document": "2020-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular per Product | Extended Pre Open @ 1600 CT | | Regular @ 1700CT / 2200 U…",
+     "document": "2020-memorial",
+     "tier": "T1",
+     "open_instant": "1700CT / 2200 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Regular per Product | Closed for Memorial Day | Closed for Memorial Day | Tues…",
+     "document": "2020-memorial",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0900 CT/1400 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2020-07-02",
+   "name": "Thursday before Independence Day observed",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "normal",
+     "verbatim": "Equity | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT/ 2200 UTC | 1200 CT / 1700 UT…",
+     "document": "2020-july4",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "normal",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2020-july4",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "normal",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2020-july4",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "normal",
+     "verbatim": "FX | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2020-july4",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "normal",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2020-july4",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "early_close",
+     "verbatim": "Grain & Oilseed | Early @ 1205 CT / 1705 UTC | Markets Closed | Markets Closed | Regula…",
+     "document": "2020-july4",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1705 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "early_close",
+     "verbatim": "Livestock | Early @ 1215 CT / 1715 UTC | Markets Closed | Markets Closed | Monday @ 083…",
+     "document": "2020-july4",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1715 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "early_close",
+     "verbatim": "Dairy | Early @ 1200 CT / 1700 UTC | Markets Closed | Markets Closed | Regular @ 1700 C…",
+     "document": "2020-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "early_close",
+     "verbatim": "Lumber Futures&Options | Early @ 1205 CT / 1700 UTC | Markets Closed | Markets Closed…",
+     "document": "2020-july4",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "normal",
+     "verbatim": "No outright Nikkei row on this sheet; Nikkei 225 follows the Equity line: compact row 5 \"Equity | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT/ 2200 UTC | 1200 CT / 1700 UTC | Regular @ 1700 CT / 2200 UTC\". Nikkei-labelled row (BTIC trade type), full sheet 2020-independence-day-schedule.xls row 12: \"Nikkei/ TOPIX BTIC | 1:00 | … | 16:00 | 17:00 | … | 1:00 (close)\" — c1 \"1:00\" is the Thursday, July 2 \"Regular Close\" column (header \"All times are Central Time   ET +1  UTC  +5\").",
+     "document": "2020-july4",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2020-07-03",
+   "name": "Independence Day (observed Friday 3 July)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT/ 2200 UTC | 1200 CT / 1700 UT…",
+     "document": "2020-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin … | 1200 CT / 1700 UTC | Regular @ 1700 CT / 2200 UTC",
+     "document": "2020-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate … | 1200 CT / 1700 UTC | Regular @ 1700 CT / 2200 UTC",
+     "document": "2020-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX … | 1200 CT / 1700 UTC | Regular @ 1700 CT / 2200 UTC",
+     "document": "2020-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME … | 1200 CT / 1700 UTC | Regular @ 1700 CT / 2200 UTC",
+     "document": "2020-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Early @ 1205 CT / 1705 UTC | Markets Closed | Markets Closed | Regula…",
+     "document": "2020-july4",
+     "tier": "T1",
+     "open_instant": "Sun 5 Jul, Regular @ 1900 CT / 2400 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Early @ 1215 CT / 1715 UTC | Markets Closed | Markets Closed | Monday @ 083…",
+     "document": "2020-july4",
+     "tier": "T1",
+     "open_instant": "\"Monday @ 0830 / 1330 UTC\" (cell as printed; CME prints no CT token in this cell — the column is Central Time, as the same column's other cells show, e.g. \"Regular @ 1700 CT / 2200 UTC\")"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/ TOPIX BTIC | 1:00 | ... | 16:00 | 17:00 | 1:00 (close)\" (2020-independence-day-schedule.xls). Equity full-sheet line: close 12:00 on Friday, July 3.",
+     "document": "2020-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Early @ 1200 CT / 1700 UTC | Markets Closed | Markets Closed | Regular @ 1700 C…",
+     "document": "2020-july4",
+     "tier": "T1",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber Futures&Options | Early @ 1205 CT / 1700 UTC | Markets Closed | Markets Closed…",
+     "document": "2020-july4",
+     "tier": "T1",
+     "open_instant": "\"Monday  @ 0900 / 1400 UTC\" (cell as printed incl. the double space; CME prints no CT token in this cell — the column is Central Time, as the same column's other cells show, e.g. \"Regular @ 1700 CT / 2200 UTC\")"
+    }
+   ]
+  },
+  {
+   "date": "2020-09-07",
+   "name": "Labor Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700 U…",
+     "document": "2020-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700…",
+     "document": "2020-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT /…",
+     "document": "2020-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700 UTC…",
+     "document": "2020-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 12…",
+     "document": "2020-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Extended Pre Open @ 1600 CT | | Regular @ 1900…",
+     "document": "2020-labor",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2400 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for Labor Day | Closed for Labor Day | Tuesday…",
+     "document": "2020-labor",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0830 CT/1330 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei / TOPIX BTIC | 1:00 | ... | 16:45 | 17:00 | 1:00 (close)\" (2020-labor-day-schedule.xls)",
+     "document": "2020-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular per Product | Extended Pre Open @ 1600 CT | | Regular @ 1700 CT/2200 UTC",
+     "document": "2020-labor",
+     "tier": "T1",
+     "open_instant": "1700 CT/2200 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Regular per Product | Closed for Labor Day | Closed for Labor Day | Tuesday @…",
+     "document": "2020-labor",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0900 CT/1400 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2020-11-26",
+   "name": "Thanksgiving Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800 U…",
+     "document": "2020-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin … | 1200 CT / 1800 UTC | Regular @ 1700 CT / 2300 UTC",
+     "document": "2020-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate … | 1200 CT / 1800 UTC | Regular @ 1700 CT / 2300 UTC",
+     "document": "2020-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX … | 1200 CT / 1800 UTC | Regular @ 1700 CT / 2300 UTC",
+     "document": "2020-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME … | 1200 CT / 1800 UTC | Regular @ 1700 CT / 2300 UTC",
+     "document": "2020-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Pre-open State | Pre-open State | Pre-open Stat…",
+     "document": "2020-thx",
+     "tier": "T1",
+     "open_instant": "Friday 27 Nov, Regular per Product"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for Thanksgiving | Closed for Thanksgiving | C…",
+     "document": "2020-thx",
+     "tier": "T1",
+     "open_instant": "Friday 27 Nov, Regular per Product"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/TOPIX BTIC | 00:00 | ... | 16:45 | 17:00 | ... | 00:00\" (2020-thanksgiving-schedule.xls)",
+     "document": "2020-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular per Product | Closed for Thanksgiving | Closed for Thanksgiving | Close…",
+     "document": "2020-thx",
+     "tier": "T1"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber Futures&Options | Regular per Product | Closed for Thanksgiving | Closed for Tha…",
+     "document": "2020-thx",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2020-11-27",
+   "name": "Day after Thanksgiving",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity … | Friday November 27 CLOSE: Early @ 1215 CT/ 1815 UTC",
+     "document": "2020-thx",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin … | Early @ 1215 CT/ 1815 UTC",
+     "document": "2020-thx",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate … | Early @ 1215 CT/ 1815 UTC",
+     "document": "2020-thx",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX … | Early @ 1215 CT/ 1815 UTC",
+     "document": "2020-thx",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME … | Early @ 1245 CT/ 1845 UTC",
+     "document": "2020-thx",
+     "tier": "T1",
+     "close_instant": "1245 CT / 1845 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "early_close",
+     "verbatim": "Grain & Oilseed … | Regular per Product | Early @ 1205 CT/ 1805 UTC (Mini-Grain: Early…",
+     "document": "2020-thx",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1805 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "early_close",
+     "verbatim": "Livestock … | Regular per Product | Early @ 1205 CT/ 1805 UTC",
+     "document": "2020-thx",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1805 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/TOPIX BTIC\" closes 00:00 Friday (2020-thanksgiving-schedule.xls). Equity line: Early @ 1215 CT/ 1815 UTC.",
+     "document": "2020-thx",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy … | Closed for Thanksgiving | Closed for Thanksgiving",
+     "document": "2020-thx",
+     "tier": "T1"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "early_close",
+     "verbatim": "Lumber Futures&Options … | Regular per Product | Early @ 1205 CT/ 1805 UTC",
+     "document": "2020-thx",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1805 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2020-12-24",
+   "name": "Christmas Eve",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Early @ 1215 CT / 1815 UTC | Closed for Christmas | Regular @ 1700 CT / 2300 U…",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin | Early @ 1215 CT / 1815 UTC …",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate | Early @ 1215 CT / 1815 UTC …",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX | Early @ 1215 CT / 1815 UTC …",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME | Early @ 1245 CT / 1845 UTC …",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "close_instant": "1245 CT / 1845 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "early_close",
+     "verbatim": "Grain & Oilseed | Early @ 1205 CT / 1805 UTC … (Mini-Grain: Early @ 1230 CT / 1830 UTC)",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1805 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "early_close",
+     "verbatim": "Livestock | Early @ 1205 CT / 1805 UTC …",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1805 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/TOPIX BTIC | 00:00 | Globex Closed | 16:00 | 17:00 | ... | 00:00\" (2020-christmas-holiday-schedule.xls)",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "early_close",
+     "verbatim": "Dairy | Early @ 1200 CT / 1800 UTC …",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "early_close",
+     "verbatim": "Lumber Futures&Options | Early @ 1205 CT / 1800 UTC …",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1800 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2020-12-25",
+   "name": "Christmas Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "closed",
+     "verbatim": "Equity | Early @ 1215 CT / 1815 UTC | Closed for Christmas | Regular @ 1700 CT / 2300 U…",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "open_instant": "Sunday 27 Dec, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "closed",
+     "verbatim": "Bitcoin … | Closed for Christmas | Regular @ 1700 CT / 2300 UTC",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "open_instant": "Sunday 27 Dec, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "closed",
+     "verbatim": "Interest Rate … | Closed for Christmas | Regular @ 1700 CT / 2300 UTC",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "open_instant": "Sunday 27 Dec, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "closed",
+     "verbatim": "FX … | Closed for Christmas | Regular @ 1700 CT / 2300 UTC",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "open_instant": "Sunday 27 Dec, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "closed",
+     "verbatim": "Energy, Metals & DME … | Closed for Christmas | Regular @ 1700 CT / 2300 UTC",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "open_instant": "Sunday 27 Dec, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed … | Closed for Christmas | Regular @ 1900 CT / 0100 UTC | Pre-open 8:00…",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "open_instant": "Sunday 27 Dec, Regular @ 1900 CT / 0100 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock … | Closed for Christmas | Closed for Christmas | Pre-open 8:00CT /14:00 UTC…",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "open_instant": "Monday 28 Dec, Open 8:30 CT"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "closed",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/TOPIX BTIC | 00:00 | Globex Closed | 16:00 | 17:00\" (2020-christmas-holiday-schedule.xls)",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "open_instant": "Sunday 27 Dec, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy … | Closed for Christmas | Regular @ 1700 CT / 2300 UTC",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "open_instant": "Sunday 27 Dec, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber Futures&Options … | Closed for Christmas | Closed for Christmas | Pre-open 6:00C…",
+     "document": "2020-xmas",
+     "tier": "T1",
+     "open_instant": "Monday 28 Dec, Open 9:00 CT /15:00 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2020-12-31",
+   "name": "New Year's Eve",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "normal",
+     "verbatim": "Equity | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @ 1700 CT / 230…",
+     "document": "2021-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "normal",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2200 UTC …",
+     "document": "2021-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "normal",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2200 UTC …",
+     "document": "2021-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "normal",
+     "verbatim": "FX | Regular @ 1600 CT / 2200 UTC …",
+     "document": "2021-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "normal",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2200 UTC …",
+     "document": "2021-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "normal",
+     "verbatim": "Grain & Oilseed | Regular Close | Closed for New Year's …",
+     "document": "2021-ny",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "normal",
+     "verbatim": "Livestock | Regular close | Closed for New Year's …",
+     "document": "2021-ny",
+     "tier": "T1"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "early_close",
+     "verbatim": "Dairy | Early Close @ 1355 CT/1955 UTC | Closed for New Year's | Regular @ 1700 CT / 23…",
+     "document": "2021-ny",
+     "tier": "T1",
+     "close_instant": "1355 CT / 1955 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "normal",
+     "verbatim": "Lumber | Regular Close | Closed for New Year's …",
+     "document": "2021-ny",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "modified",
+     "verbatim": "No outright Nikkei row on this sheet; Nikkei 225 follows the Equity line, which is normal: full sheet 2021-new-years-holiday-schedule.xls row 4 \"Equity Products | 16:00 | Globex Closed | 16:00 | 17:00 | … | 16:00\", compact \"Equity | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @ 1700 CT / 2300 UTC | …\". The Nikkei-labelled BTIC row diverges and is recorded here as status=modified: full sheet row 11 \"Nikkei/TOPIX BTIC | Globex Closed | Globex Closed | … | 10:30 | 11:00 | 16:00\" — c1, the Thursday, December 31 \"Close\" column, reads \"Globex Closed\", i.e. CME states the Nikkei/TOPIX BTIC trade type did not trade that day, while c9/c10/c11 give the Monday, January 4 pre-open 10:30, open 11:00 and close 16:00 (header \"All times are Central Time   ET +1  UTC  +6\").",
+     "document": "2021-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2021-01-01",
+   "name": "New Year's Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "closed",
+     "verbatim": "Equity | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @ 1700 CT / 230…",
+     "document": "2021-ny",
+     "tier": "T1",
+     "open_instant": "Sunday 3 Jan, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "closed",
+     "verbatim": "Bitcoin … | Closed for New Year's | Regular @ 1700 CT / 2300 UTC",
+     "document": "2021-ny",
+     "tier": "T1",
+     "open_instant": "Sunday 3 Jan, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "closed",
+     "verbatim": "Interest Rate … | Closed for New Year's | Regular @ 1700 CT / 2300 UTC",
+     "document": "2021-ny",
+     "tier": "T1",
+     "open_instant": "Sunday 3 Jan, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "closed",
+     "verbatim": "FX … | Closed for New Year's | Regular @ 1700 CT / 2300 UTC",
+     "document": "2021-ny",
+     "tier": "T1",
+     "open_instant": "Sunday 3 Jan, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "closed",
+     "verbatim": "Energy, Metals & DME … | Closed for New Year's | Regular @ 1700 CT / 2300 UTC",
+     "document": "2021-ny",
+     "tier": "T1",
+     "open_instant": "Sunday 3 Jan, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular Close | Closed for New Year's | Regular @ 1900 CT / 0100 UTC…",
+     "document": "2021-ny",
+     "tier": "T1",
+     "open_instant": "Sunday 3 Jan, Regular @ 1900 CT / 0100 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular close | Closed for New Year's | Closed for New Year's | Pre-open 8:…",
+     "document": "2021-ny",
+     "tier": "T1",
+     "open_instant": "Monday 4 Jan, Open 8:30 CT /14:30 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "closed",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/TOPIX BTIC | Globex Closed | Globex Closed | ... | 10:30 | 11:00 | 16:00\" (2021-new-years-holiday-schedule.xls)",
+     "document": "2021-ny",
+     "tier": "T1",
+     "open_instant": "Sunday 3 Jan, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Early Close @ 1355 CT/1955 UTC | Closed for New Year's | Regular @ 1700 CT / 23…",
+     "document": "2021-ny",
+     "tier": "T1",
+     "open_instant": "Sunday 3 Jan, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Regular Close | Closed for New Year's | Closed for New Year's | Pre-open 6:00C…",
+     "document": "2021-ny",
+     "tier": "T1",
+     "open_instant": "Monday 4 Jan, Open 9:00 CT /15:00 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2021-01-18",
+   "name": "MLK Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800 U…",
+     "document": "2021-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800…",
+     "document": "2021-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT /…",
+     "document": "2021-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800 UTC…",
+     "document": "2021-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 12…",
+     "document": "2021-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Extended Pre Open @ 1600 | | Regular @ 1900 CT…",
+     "document": "2021-mlk",
+     "tier": "T1",
+     "open_instant": "1900 CT / 0100 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for MLK Day | Closed for MLK Day | Tuesday @ 0…",
+     "document": "2021-mlk",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0830 CT/1430 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/TOPIX BTIC | 00:00 | ... | 16:45 | 17:00 | 00:00 (close)\" (2021-mlk-day-holiday-schedule.xls)",
+     "document": "2021-mlk",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular per Product | Extended Pre Open @ 1600 | | Regular @ 1700 CT/2300 UTC",
+     "document": "2021-mlk",
+     "tier": "T1",
+     "open_instant": "1700 CT/2300 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Regular per Product | Closed for MLK Day | Closed for MLK Day | Tuesday @ 0900…",
+     "document": "2021-mlk",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0900 CT/1500 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2021-02-15",
+   "name": "President's Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800 U…",
+     "document": "2021-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800…",
+     "document": "2021-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT /…",
+     "document": "2021-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800 UTC…",
+     "document": "2021-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 12…",
+     "document": "2021-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Extended Pre Open @ 1600 CT/ 2200 UTC | | Regul…",
+     "document": "2021-presidents",
+     "tier": "T1",
+     "open_instant": "1900 CT / 0100 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for President's Day | Closed for President's D…",
+     "document": "2021-presidents",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0830 CT/1430 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/TOPIX BTIC | 00:00 | ... | 16:45 | 17:00 | 00:00 (close)\" (2021-presidents-day-holiday-schedule.xls)",
+     "document": "2021-presidents",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular per Product | Extended Pre Open @ 1600 CT/ 2200 UTC | | Regular @ 1700…",
+     "document": "2021-presidents",
+     "tier": "T1",
+     "open_instant": "1700 CT/2300 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Regular per Product | Closed for President's Day | Closed for President's Day…",
+     "document": "2021-presidents",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0900 CT/1500 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2021-04-01",
+   "name": "Thursday before Good Friday (Dairy early close)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "normal",
+     "verbatim": "Equity | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | Closed @ 0815 CT…",
+     "document": "2021-goodfri",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "normal",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2021-goodfri",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "normal",
+     "verbatim": "FX | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2021-goodfri",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "normal",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2021-goodfri",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "normal",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2100 UTC | Closed for Good Friday …",
+     "document": "2021-goodfri",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "normal",
+     "verbatim": "Grain & Oilseed | Regular per Product | Closed for Good Friday …",
+     "document": "2021-goodfri",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "normal",
+     "verbatim": "Livestock | Regular per Product | Closed for Good Friday …",
+     "document": "2021-goodfri",
+     "tier": "T1"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "early_close",
+     "verbatim": "Dairy | Early @ 1355 CT / 1855 UTC | Closed for Good Friday | Closed for Good Friday…",
+     "document": "2021-goodfri",
+     "tier": "T1",
+     "close_instant": "1355 CT / 1855 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "normal",
+     "verbatim": "Lumber | Regular per Product | Closed for Good Friday …",
+     "document": "2021-goodfri",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "normal",
+     "verbatim": "No outright Nikkei row on this sheet; Nikkei 225 follows the Equity line: compact row 4 \"Equity | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | Closed @ 0815 CT  / 1315 UTC | Regular @ 1700 CT / 2200 UTC\" (c1 is the Thursday, April 1 CLOSE). This sheet splits the BTIC rows: full sheet 2021-good-friday-holiday-schedule.xls row 11 \"Nikkei BTIC | 1:00 | 10:30 | 11:00 | 16:00 | 16:45 | 17:00 | 01:00 | 16:00 | 17:00 | 01:00\" and row 12 \"TOPIX BTIC | 1:00 | 16:45 | 17:00 | 01:00\" — in both, c1 \"1:00\" is the Thursday, April 1 \"Regular Close\" column (header \"All times are Central Time   ET +1  UTC  +5\").",
+     "document": "2021-goodfri",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2021-04-02",
+   "name": "Good Friday (partial session for Equity/Crypto/Rates/FX)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | Closed @ 0815 CT…",
+     "document": "2021-goodfri",
+     "tier": "T1",
+     "close_instant": "0815 CT / 1315 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | Closed @ 0815 C…",
+     "document": "2021-goodfri",
+     "tier": "T1",
+     "close_instant": "0815 CT / 1315 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | Closed @…",
+     "document": "2021-goodfri",
+     "tier": "T1",
+     "close_instant": "1015 CT / 1515 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | Closed @ 1015 CT / 1…",
+     "document": "2021-goodfri",
+     "tier": "T1",
+     "close_instant": "1015 CT / 1515 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "closed",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2100 UTC | Closed for Good Friday | Closed f…",
+     "document": "2021-goodfri",
+     "tier": "T1",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Closed for Good Friday | Closed for Good Friday…",
+     "document": "2021-goodfri",
+     "tier": "T1",
+     "open_instant": "Regular @ 1900 CT / 0000 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for Good Friday | Closed for Good Friday | Mon…",
+     "document": "2021-goodfri",
+     "tier": "T1",
+     "open_instant": "Monday @ 0830 CT / 1330 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "modified",
+     "verbatim": "Nikkei-specific exception row (2021-good-friday-holiday-schedule.xls): \"Nikkei BTIC | 1:00 | | | 10:30 | 11:00 | 16:00 | 16:45 | 17:00 | 01:00 | 16:00 | 17:00 | | | | 01:00\"; separate \"TOPIX BTIC | 1:00 | | | 16:45 | 17:00 | | | | 01:00\". The outright Nikkei 225 futures are not broken out and fall…",
+     "document": "2021-goodfri",
+     "tier": "T1",
+     "close_instant": "0815 CT / 1315 UTC",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Early @ 1355 CT / 1855 UTC | Closed for Good Friday | Closed for Good Friday…",
+     "document": "2021-goodfri",
+     "tier": "T1",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Regular per Product | Closed for Good Friday | Closed for Good Friday | Monday…",
+     "document": "2021-goodfri",
+     "tier": "T1",
+     "open_instant": "Monday @ 0900 CT / 1400 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2021-05-31",
+   "name": "Memorial Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700 U…",
+     "document": "2021-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700…",
+     "document": "2021-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT /…",
+     "document": "2021-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700 UTC…",
+     "document": "2021-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 12…",
+     "document": "2021-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Extended Pre Open @ 1600 CT | | Regular @ 1900…",
+     "document": "2021-memorial",
+     "tier": "T1",
+     "open_instant": "1900 CT / 0000 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for Memorial Day | Closed for Memorial Day | T…",
+     "document": "2021-memorial",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0830 CT/1330 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei /TOPIX BTIC | 1:00 | ... | 16:45 | 17:00 | 1:00 ( close)\" (2021-memorial-day-holiday-schedule.xls)",
+     "document": "2021-memorial",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular per Product | Extended Pre Open @ 1600 CT | | Regular @ 1700CT / 2200 U…",
+     "document": "2021-memorial",
+     "tier": "T1",
+     "open_instant": "1700CT / 2200 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Regular per Product | Closed for Memorial Day | Closed for Memorial Day | Tues…",
+     "document": "2021-memorial",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0900 CT/1400 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2021-07-02",
+   "name": "Friday before Independence Day observed",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "normal",
+     "verbatim": "Equity | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT/ 2200 UTC | 1200 CT / 1700 UT…",
+     "document": "2021-july4",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "normal",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2021-july4",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "normal",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2021-july4",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "normal",
+     "verbatim": "FX | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2021-july4",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "normal",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2100 UTC …",
+     "document": "2021-july4",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "normal",
+     "verbatim": "Grain & Oilseed | Regular Per Product | Markets Closed | Markets Closed | Tuesday July…",
+     "document": "2021-july4",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "normal",
+     "verbatim": "Livestock | Regular Per Product | Markets Closed | Markets Closed | Tuesday July 6 Regu…",
+     "document": "2021-july4",
+     "tier": "T1"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "normal",
+     "verbatim": "Dairy | Regular Per Product | Extended Pre Open @ 1600 | | Regular @ 1700 CT / 2200 UTC",
+     "document": "2021-july4",
+     "tier": "T1"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "normal",
+     "verbatim": "Lumber Futures&Options | Regular Per Product | Markets Closed | Markets Closed | Tuesda…",
+     "document": "2021-july4",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "normal",
+     "verbatim": "No outright Nikkei row on this sheet; Nikkei 225 follows the Equity line: compact row 5 \"Equity | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT/ 2200 UTC | 1200 CT / 1700 UTC | Regular @ 1700 CT / 2200 UTC\". Nikkei-labelled row (BTIC trade type), full sheet 2021-independence-day-holiday-schedule.xls row 12: \"Nikkei/ TOPIX BTIC | 1:00 | … | 16:45 | 17:00 | 1:00 (close)\" — c1 \"1:00\" is the Friday, July 2 \"Regular Close\" column (header \"All times are Central Time   ET +1  UTC  +5\").",
+     "document": "2021-july4",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2100 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2021-07-05",
+   "name": "Independence Day (observed Monday 5 July)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT/ 2200 UTC | 1200 CT / 1700 UT…",
+     "document": "2021-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin … | 1200 CT / 1700 UTC | Regular @ 1700 CT / 2200 UTC",
+     "document": "2021-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate … | 1200 CT / 1700 UTC | Regular @ 1700 CT / 2200 UTC",
+     "document": "2021-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX … | 1200 CT / 1700 UTC | Regular @ 1700 CT / 2200 UTC",
+     "document": "2021-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME … | 1200 CT / 1700 UTC | Regular @ 1700 CT / 2200 UTC",
+     "document": "2021-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular Per Product | Markets Closed | Markets Closed | Tuesday July…",
+     "document": "2021-july4",
+     "tier": "T1",
+     "open_instant": "Tuesday 6 July @ 0830 CT / 1330 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular Per Product | Markets Closed | Markets Closed | Tuesday July 6 Regu…",
+     "document": "2021-july4",
+     "tier": "T1",
+     "open_instant": "\"Tuesday July 6 Regular  @ 0830 / 1330 UTC\" (cell as printed incl. the double space; CME prints no CT token in this cell — the column is Central Time, as the same column's other cells show, e.g. \"Regular @ 1700 CT / 2200 UTC\")"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/ TOPIX BTIC | 1:00 | ... | 16:45 | 17:00 | 1:00 (close)\" (2021-independence-day-holiday-schedule.xls)",
+     "document": "2021-july4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular Per Product | Extended Pre Open @ 1600 | | Regular @ 1700 CT / 2200 UTC",
+     "document": "2021-july4",
+     "tier": "T1",
+     "open_instant": "Regular @ 1700 CT / 2200 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber Futures&Options | Regular Per Product | Markets Closed | Markets Closed | Tuesda…",
+     "document": "2021-july4",
+     "tier": "T1",
+     "open_instant": "\"Tuesday July 6 Regular  @ 0900 / 1400 UTC\" (cell as printed incl. the double space; CME prints no CT token in this cell — the column is Central Time, as the same column's other cells show, e.g. \"Regular @ 1700 CT / 2200 UTC\")"
+    }
+   ]
+  },
+  {
+   "date": "2021-09-06",
+   "name": "Labor Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700 U…",
+     "document": "2021-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700…",
+     "document": "2021-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT /…",
+     "document": "2021-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 1200 CT / 1700 UTC…",
+     "document": "2021-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | 12…",
+     "document": "2021-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Extended Pre Open @ 1600 CT | | Regular @ 1900…",
+     "document": "2021-labor",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2400 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for Labor Day | Closed for Labor Day | Tuesday…",
+     "document": "2021-labor",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0830 CT/1330 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "early_close",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei / TOPIX BTIC | 1:00 | ... | 16:45 | 17:00 | 1:00 (close)\" (2021-labor-day-holiday-schedule.xls)",
+     "document": "2021-labor",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1700 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular per Product | Extended Pre Open @ 1600 CT | | Regular @ 1700 CT/2200 UTC",
+     "document": "2021-labor",
+     "tier": "T1",
+     "open_instant": "1700 CT/2200 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber | Regular per Product | Closed for Labor Day | Closed for Labor Day | Tuesday @…",
+     "document": "2021-labor",
+     "tier": "T1",
+     "open_instant": "Tuesday @ 0900 CT/1400 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2021-11-25",
+   "name": "Thanksgiving Day",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800 U…",
+     "document": "2021-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | 1200 CT / 1800…",
+     "document": "2021-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate … | 1200 CT / 1800 UTC | Regular @ 1700 CT / 2300 UTC",
+     "document": "2021-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX … | 1200 CT / 1800 UTC | Regular @ 1700 CT / 2300 UTC",
+     "document": "2021-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME … | 1200 CT / 1800 UTC | Regular @ 1700 CT / 2300 UTC",
+     "document": "2021-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Pre-open State | Pre-open State | Pre-open Stat…",
+     "document": "2021-thx",
+     "tier": "T1",
+     "open_instant": "Friday 26 Nov, Regular @ 8:30 CT / 1430 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for Thanksgiving | Closed for Thanksgiving | C…",
+     "document": "2021-thx",
+     "tier": "T1",
+     "open_instant": "Friday 26 Nov, Regular @ 8:30 CT / 1430 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "modified",
+     "verbatim": "Nikkei-specific exception row (2021-thanksgiving-holiday-schedule.xls): \"Nikkei & BTIC | 00:00 | | 10:30 | 11:00 | 16:00 | 16:45 | 17:00 | | | | 00:00 | 16:45 | 17:00 | | | | | | 00:00\"; a separate \"TOPIX BTIC | 00:00 | ... | 16:45 | 17:00 | ... | 00:00\" row. Equity Products line: close 16:00 Wed…",
+     "document": "2021-thx",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1800 UTC (Equity Products line); N…",
+     "open_instant": "1700 CT / 2300 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular per Product | Closed for Thanksgiving | Closed for Thanksgiving | Close…",
+     "document": "2021-thx",
+     "tier": "T1"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber Futures&Options | Regular per Product | Closed for Thanksgiving | Closed for Tha…",
+     "document": "2021-thx",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2021-11-26",
+   "name": "Day after Thanksgiving",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "early_close",
+     "verbatim": "Equity … | Friday November 26 CLOSE: Early @ 1215 CT/ 1815 UTC",
+     "document": "2021-thx",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Bitcoin … | Friday November 26 CLOSE: Early @ 1245 CT/ 1845 UTC (full sheet: \"Cryptocur…",
+     "document": "2021-thx",
+     "tier": "T1",
+     "close_instant": "1245 CT / 1845 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "early_close",
+     "verbatim": "Interest Rate … | Early @ 1215 CT/ 1815 UTC",
+     "document": "2021-thx",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "early_close",
+     "verbatim": "FX … | Early @ 1215 CT/ 1815 UTC",
+     "document": "2021-thx",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME … | Early @ 1245 CT/ 1845 UTC",
+     "document": "2021-thx",
+     "tier": "T1",
+     "close_instant": "1245 CT / 1845 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "early_close",
+     "verbatim": "Grain & Oilseed … | Regular @ 8:30 CT/ 1430 UTC | Early @ 1205 CT/ 1805 UTC (Mini-Grain…",
+     "document": "2021-thx",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1805 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "early_close",
+     "verbatim": "Livestock … | Regular @ 8:30 CT/ 1430 UTC | Early @ 1205 CT/ 1805 UTC",
+     "document": "2021-thx",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1805 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "modified",
+     "verbatim": "Nikkei-specific exception row (2021-thanksgiving-holiday-schedule.xls): \"Nikkei & BTIC | 00:00 | | 10:30 | 11:00 | 16:00 | 16:45 | 17:00 | | | | 00:00 | 16:45 | 17:00 | | | | | | 00:00\"; a separate \"TOPIX BTIC | 00:00 | ... | 16:45 | 17:00 | ... | 00:00\" row. Equity Products line: close 16:00 Wed…",
+     "document": "2021-thx",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1815 UTC (Equity Products line); N…"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy … | Closed for Thanksgiving | Closed for Thanksgiving (full sheet: \"Dairy product…",
+     "document": "2021-thx",
+     "tier": "T1"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "early_close",
+     "verbatim": "Lumber Futures&Options … | Regular @ 9:00 CT/15:00 UTC | Early @ 1205 CT/ 1805 UTC",
+     "document": "2021-thx",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1805 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2021-12-23",
+   "name": "Thursday before Christmas observed",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "normal",
+     "verbatim": "Equity | Regular per Product | Closed for Christmas | Regular @ 1700 CT / 2300 UTC | Re…",
+     "document": "2021-xmas",
+     "tier": "T1",
+     "close_instant": "\"16:00\" — read from the full sheet 2021-christmas-holiday-schedule.xls row 4/13/17/21/25, column c1, whose Calendar Date header is \"Thursday, December 23\" and whose column header is \"Close\"; sheet header: \"All times are Central Time   ET +1  UTC  +6\". The compact sheet prints \"Regular per Product\" in this cell and states no instant. No CT/UTC pair is printed for this cell on either sheet; the \"1600 CT / 2200 UTC\" string on the compact sheet belongs to the Monday December 27 column and is NOT the source of this value."
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "normal",
+     "verbatim": "Bitcoin | Regular per Product … (full sheet: \"Cryptocurrency | 16:00\")",
+     "document": "2021-xmas",
+     "tier": "T1",
+     "close_instant": "\"16:00\" — read from the full sheet 2021-christmas-holiday-schedule.xls row 4/13/17/21/25, column c1, whose Calendar Date header is \"Thursday, December 23\" and whose column header is \"Close\"; sheet header: \"All times are Central Time   ET +1  UTC  +6\". The compact sheet prints \"Regular per Product\" in this cell and states no instant. No CT/UTC pair is printed for this cell on either sheet; the \"1600 CT / 2200 UTC\" string on the compact sheet belongs to the Monday December 27 column and is NOT the source of this value."
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "normal",
+     "verbatim": "Interest Rate | Regular per Product … (full sheet: 16:00)",
+     "document": "2021-xmas",
+     "tier": "T1",
+     "close_instant": "\"16:00\" — read from the full sheet 2021-christmas-holiday-schedule.xls row 4/13/17/21/25, column c1, whose Calendar Date header is \"Thursday, December 23\" and whose column header is \"Close\"; sheet header: \"All times are Central Time   ET +1  UTC  +6\". The compact sheet prints \"Regular per Product\" in this cell and states no instant. No CT/UTC pair is printed for this cell on either sheet; the \"1600 CT / 2200 UTC\" string on the compact sheet belongs to the Monday December 27 column and is NOT the source of this value."
+    },
+    {
+     "family": "globex_fx",
+     "status": "normal",
+     "verbatim": "FX | Regular per Product … (full sheet: 16:00)",
+     "document": "2021-xmas",
+     "tier": "T1",
+     "close_instant": "\"16:00\" — read from the full sheet 2021-christmas-holiday-schedule.xls row 4/13/17/21/25, column c1, whose Calendar Date header is \"Thursday, December 23\" and whose column header is \"Close\"; sheet header: \"All times are Central Time   ET +1  UTC  +6\". The compact sheet prints \"Regular per Product\" in this cell and states no instant. No CT/UTC pair is printed for this cell on either sheet; the \"1600 CT / 2200 UTC\" string on the compact sheet belongs to the Monday December 27 column and is NOT the source of this value."
+    },
+    {
+     "family": "globex_energy",
+     "status": "normal",
+     "verbatim": "Energy, Metals & DME | Regular per Product … (full sheet: 16:00)",
+     "document": "2021-xmas",
+     "tier": "T1",
+     "close_instant": "\"16:00\" — read from the full sheet 2021-christmas-holiday-schedule.xls row 4/13/17/21/25, column c1, whose Calendar Date header is \"Thursday, December 23\" and whose column header is \"Close\"; sheet header: \"All times are Central Time   ET +1  UTC  +6\". The compact sheet prints \"Regular per Product\" in this cell and states no instant. No CT/UTC pair is printed for this cell on either sheet; the \"1600 CT / 2200 UTC\" string on the compact sheet belongs to the Monday December 27 column and is NOT the source of this value."
+    },
+    {
+     "family": "globex_grains",
+     "status": "normal",
+     "verbatim": "Grain & Oilseed | Regular per Product … (full sheet: \"Grains and Oilseeds | 13:20 (**PC…",
+     "document": "2021-xmas",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "normal",
+     "verbatim": "Livestock | Regular per Product …",
+     "document": "2021-xmas",
+     "tier": "T1"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "normal",
+     "verbatim": "Dairy | Regular per Product …",
+     "document": "2021-xmas",
+     "tier": "T1"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "normal",
+     "verbatim": "Lumber Futures&Options | Regular per Product …",
+     "document": "2021-xmas",
+     "tier": "T1"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "normal",
+     "verbatim": "No outright Nikkei row on this sheet; Nikkei 225 follows the Equity line: compact row 4 \"Equity | Regular per Product | Closed for Christmas | Regular @ 1700 CT / 2300 UTC | Regular @ 1600 CT / 2200 UTC\" (c1, the Thursday Dec 23 Close, states no instant), full sheet row 4 \"Equity Products | 16:00 | … | Globex Closed | … | 16:00 | 17:00 | … | 16:00\". Nikkei-labelled row (BTIC trade type), full sheet 2021-christmas-holiday-schedule.xls row 11: \"Nikkei/TOPIX BTIC | 00:00 | Globex Closed | 16:00 | 17:00 | 00:00\" — c1 \"00:00\" is the Thursday, December 23 \"Close\" column (header \"All times are Central Time   ET +1  UTC  +6\").",
+     "document": "2021-xmas",
+     "tier": "T1",
+     "close_instant": "\"16:00\" — read from the full sheet 2021-christmas-holiday-schedule.xls row 4/13/17/21/25, column c1, whose Calendar Date header is \"Thursday, December 23\" and whose column header is \"Close\"; sheet header: \"All times are Central Time   ET +1  UTC  +6\". The compact sheet prints \"Regular per Product\" in this cell and states no instant. No CT/UTC pair is printed for this cell on either sheet; the \"1600 CT / 2200 UTC\" string on the compact sheet belongs to the Monday December 27 column and is NOT the source of this value."
+    }
+   ]
+  },
+  {
+   "date": "2021-12-24",
+   "name": "Christmas Day (observed Friday 24 December)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "closed",
+     "verbatim": "Equity | Regular per Product | Closed for Christmas | Regular @ 1700 CT / 2300 UTC | Re…",
+     "document": "2021-xmas",
+     "tier": "T1",
+     "open_instant": "Sunday 26 Dec, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "closed",
+     "verbatim": "Bitcoin | Regular per Product | Closed for Christmas | Regular @ 1700 CT / 2300 UTC | R…",
+     "document": "2021-xmas",
+     "tier": "T1",
+     "open_instant": "Sunday 26 Dec, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "closed",
+     "verbatim": "Interest Rate | Regular per Product | Closed for Christmas | Regular @ 1700 CT / 2300 U…",
+     "document": "2021-xmas",
+     "tier": "T1",
+     "open_instant": "Sunday 26 Dec, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "closed",
+     "verbatim": "FX | Regular per Product | Closed for Christmas | Regular @ 1700 CT / 2300 UTC | Regula…",
+     "document": "2021-xmas",
+     "tier": "T1",
+     "open_instant": "Sunday 26 Dec, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "closed",
+     "verbatim": "Energy, Metals & DME | Regular per Product | Closed for Christmas | Regular @ 1700 CT /…",
+     "document": "2021-xmas",
+     "tier": "T1",
+     "open_instant": "Sunday 26 Dec, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "closed",
+     "verbatim": "Grain & Oilseed | Regular per Product | Closed for Christmas | Regular @ 1900 CT / 0100…",
+     "document": "2021-xmas",
+     "tier": "T1",
+     "open_instant": "Sunday 26 Dec, Regular @ 1900 CT / 0100 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "closed",
+     "verbatim": "Livestock | Regular per Product | Closed for Christmas | Closed for Christmas | Pre-ope…",
+     "document": "2021-xmas",
+     "tier": "T1",
+     "open_instant": "Monday 27 Dec, Open 8:30 CT /14:30 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "closed",
+     "verbatim": "No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/TOPIX BTIC | 00:00 | ... | Globex Closed | ... | 16:00 | 17:00 | ... | 00:00\" (2021-christmas-holiday-schedule.xls)",
+     "document": "2021-xmas",
+     "tier": "T1",
+     "open_instant": "Sunday 26 Dec, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "closed",
+     "verbatim": "Dairy | Regular per Product | Closed for Christmas | Regular @ 1700 CT / 2300 UTC | Reg…",
+     "document": "2021-xmas",
+     "tier": "T1",
+     "open_instant": "Sunday 26 Dec, Regular @ 1700 CT / 2300 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "closed",
+     "verbatim": "Lumber Futures&Options | Regular per Product | Closed for Christmas | Closed for Christ…",
+     "document": "2021-xmas",
+     "tier": "T1",
+     "open_instant": "Monday 27 Dec, Open 9:00 CT /15:00 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2021-12-31",
+   "name": "New Year's Eve (New Year's Day 2022 fell on a Saturday; no CME closure)",
+   "families": [
+    {
+     "family": "globex_equity_index",
+     "status": "normal",
+     "verbatim": "Equity | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | | Regular @ 1600…",
+     "document": "2022-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_cryptocurrency",
+     "status": "normal",
+     "verbatim": "Bitcoin | Regular @ 1600 CT / 2200 UTC …",
+     "document": "2022-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_interest_rates",
+     "status": "normal",
+     "verbatim": "Interest Rate | Regular @ 1600 CT / 2200 UTC …",
+     "document": "2022-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_fx",
+     "status": "normal",
+     "verbatim": "FX | Regular @ 1600 CT / 2200 UTC …",
+     "document": "2022-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_energy",
+     "status": "normal",
+     "verbatim": "Energy, Metals & DME | Regular @ 1600 CT / 2200 UTC …",
+     "document": "2022-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    },
+    {
+     "family": "globex_grains",
+     "status": "normal",
+     "verbatim": "Grain & Oilseed | Regular @ 1320 CT/1920 UTC | Regular @ 1900 CT/0100 UTC | Pre-open 8:…",
+     "document": "2022-ny",
+     "tier": "T1",
+     "close_instant": "1320 CT / 1920 UTC"
+    },
+    {
+     "family": "globex_livestock",
+     "status": "normal",
+     "verbatim": "Livestock | Regular @ 1305 CT/1905 UTC | | Pre-open 8:00CT /14:00 UTC Open 8:30CT /14:3…",
+     "document": "2022-ny",
+     "tier": "T1",
+     "close_instant": "1305 CT / 1905 UTC"
+    },
+    {
+     "family": "dairy_same_page",
+     "status": "early_close",
+     "verbatim": "Dairy | Regular @ 1600 CT / 2200 UTC | Regular @ 1700 CT / 2300 UTC | | Regular @ 1355…",
+     "document": "2022-ny",
+     "tier": "T1",
+     "close_instant": "1355 CT / 1955 UTC"
+    },
+    {
+     "family": "lumber_same_page",
+     "status": "normal",
+     "verbatim": "Lumber | Regular @ 1505 CT / 2105 UTC | | Pre-open 6:00CT /12:00 UTC Open 9:00CT /15:00…",
+     "document": "2022-ny",
+     "tier": "T1",
+     "close_instant": "1505 CT / 2105 UTC"
+    },
+    {
+     "family": "globex_nikkei_225_dollar",
+     "status": "modified",
+     "verbatim": "No outright Nikkei row on this sheet; Nikkei 225 follows the Equity line, which is normal: full sheet 2022-new-years-holiday-schedule.xls row 4 \"Equity Products | 16:00 | 16:45 | 17:00 | … | 16:00 | … | 16:00 | 17:00 | NORMAL | … | SCHEDULE\", where c14 \"16:00\" is the Friday, December 31 \"Close\". The Nikkei-labelled BTIC row diverges and is recorded here as status=modified: full sheet row 11 \"Nikkei/TOPIX BTIC | 00:00 | … | Closed | … | (Normal Schedule for Trade Date 1/4/22)\" — c1 \"00:00\" is the Thursday, December 30 \"Close\" and c11, the first column of the \"Friday, December 31\" block (its own column header reads \"halt\"), reads \"Closed\" (header \"All times are Central Time   ET +1  UTC  +6\").",
+     "document": "2022-ny",
+     "tier": "T1",
+     "close_instant": "1600 CT / 2200 UTC"
+    }
+   ]
+  }
+ ],
+ "missing": [
+  "Nothing is missing for the eight served CME Group product families across 2019, 2020 and 2021: every holiday CME published a Globex schedule for in those years is sourced at T1.",
+  "Juneteenth 2019, 2020, 2021 — all groups: no CME document exists. Channels tried: CDX over cmegroup.com/tools-information/holiday-calendar* and .../files/ (matchType=prefix, 2018-2023), CDX over cmegroup.com/trading-hours*, and the href lists of four archived holiday-calendar.html snapshots (2019-12-06, 2020-03-26, 2020-04-20, 2020-06-11). No juneteenth filename appears before 2022. Recorded as 'no operator schedule published', not as a status.",
+  "Columbus Day and Veterans Day 2019-2021 — all groups: CME published only settlement-time and OTC-clearing advisories (e.g. 2019-columbus-day-holiday-settlement-times.pdf, 2021-veterans-day-advisory.pdf), never a Globex trading schedule. Same channels tried. No session-language document exists, so no row is keyed; the absence of a schedule is CME's own indication that Globex ran normally, but that inference is not recorded as sourced.",
+  "globex_nikkei_225_dollar as a distinct outright line — all three years: CME prints no outright Nikkei row on any of these sheets. The family is recorded as following the quoted \"Equity\"/\"Equity Products\" line, with the sheet's Nikkei-labelled BTIC trade-type row quoted beside it where one exists. Three sheets print no Nikkei-labelled row of any kind — the DEC-2018 new-years sheet governing 1 Jan 2019, 2019-mlk-day-schedule.xls and 2020-mlk-day-schedule.xls — and those rows now say so and name the nearest row (TOPIX BTIC) instead (round-1 fix, discrepancies D1 and D4). Only 2021 Good Friday (\"Nikkei BTIC\" / \"TOPIX BTIC\" split) and 2021 Thanksgiving (\"Nikkei & BTIC\") print a Nikkei line with its own instants. Channels tried: both the compact and the full sheet for every holiday in all three ZIPs, re-read cell-by-cell in round 1. As of round 1 the family is present on all 44 dates; two dates carry status=modified because CME's own Nikkei/TOPIX BTIC row diverges from the Equity line (2020-12-31 \"Globex Closed\", 2021-12-31 \"Closed\").",
+  "globex_cryptocurrency on the 2019-04-18/2019-04-19 Good Friday compact sheet — the Bitcoin row exists and is quoted; no gap. (Listed only to note the sheet carries 'Bitcoin', not 'Cryptocurrency', until the 2021 full sheets rename it.)",
+  "Per-instant detail for MGEX, Dairy and Lumber sub-products, and for TAS/TAM/BTIC trade-type variants, is present in the artifacts but is summarised rather than enumerated here; the full per-row text is in raw/cme-2019-2021/text/.",
+  "2019-thanksgiving-day-holiday-schedule-arragements.xlsx — surfaced by a fresh CDX prefix enumeration in round 1 and retrieved (IA capture 2024-02-20T03:37:34Z, operator Last-Modified Thu, 26 Dec 2019 12:24:03 GMT, sha256 6e65b0989065c7636b54aa63f150243fe628e6fb4ae22f9854347c797f389758, saved at raw/cme-2019-2021-fix/docs/). Read in full: a NYMEX \"Execution List\" of BALMO and price-reporting-agency contracts (Gulf Coast Jet (Argus) Up-Down BALMO Futures, Mont Belvieu LDH Propane (OPIS) BALMO Futures, …) tick-marked against 2019-11-28 and 2019-11-29. It states no session instants and no open/close language, so under LAW-SESSION-NOT-EXPIRY it keys no row — the same disposition as the settlement-time and OTC-advisory PDFs.",
+  "raw/cme-2019-2021/docs/2020-good-friday-holiday-compact.xls is a failed retrieval, not a CME document: it is a Wayback \"has not archived that URL\" HTML page. The archive holds no capture of that URL (exact CDX returns []), and no standalone 2020 Good Friday .xls exists under any name in a 224-row prefix crawl of .../holiday-calendar/files/ for 2019-2023 — only 2020-good-friday-advisory.pdf. Nothing is lost: the 2020 Good Friday schedule is inside the annual ZIP as zip2020/2020-good-friday-holiday-compact.xls and is what every 2020 Good Friday row cites."
+ ],
+ "saved_json": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2019-2021.json"
+}

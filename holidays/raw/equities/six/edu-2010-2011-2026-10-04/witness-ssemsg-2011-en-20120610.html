@@ -1,0 +1,803 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>SIX Swiss Exchange - 2011</title><link type="text/css" href="/resources/styles/ssecom-default@h37g6448.css" rel="stylesheet"/><link type="text/css" href="/resources/styles/ssecom-dojocalendar@fxnbsbsg.css" rel="stylesheet"/><link type="text/css" href="/resources/styles/Tooltip@ggf2v8e8.css" rel="stylesheet"/><link type="text/css" href="/javascript/dojo-1.1.2/release/dojo/dijit/themes/dijit.css" rel="stylesheet"/><script type="text/javascript" language="javascript">
+          
+          function hasData(text) {
+          return text.value != null && text.value.length > 0;
+          }
+
+          
+          </script><script type="text/javascript" language="javascript">
+          function navAction(state, id) {
+          if (state == "expanded") {
+          
+          dojo.style('t_' + id + '_collapsed', 'display', 'block');
+          dojo.style('t_' + id + '_expanded', 'display', 'none');
+          } else if (state == "collapsed") {
+          
+          dojo.style('t_' + id + '_collapsed', 'display', 'none');
+          dojo.style('t_' + id + '_expanded', 'display', 'block');
+          }
+          }
+        </script><script type="text/javascript" language="javascript">
+          function doHover(obj) {
+          obj.className += "-hover";
+          }
+
+          function undoHover(obj) {
+          obj.className = obj.className.replace(/\b-hover\b/,'');
+          }
+        </script><script type="text/javascript" language="javascript">
+        var quicklinkTitle = '2011';
+      </script><script type="text/javascript" language="javascript">
+        djConfig = {
+          usePlainJson: true,
+          isDebug: false,
+          parseOnLoad: true,
+          locale:
+        'en-us'
+        };
+      </script><script language="JavaScript" type="text/javascript">
+        var dojoURL = window.location.protocol + "//" + window.location.host + "/javascript/dojo-1.1.2/release/dojo/dojo/dojo.js";
+        document.write(unescape('%3Cscript language="JavaScript" type="text/javascript" src="' + dojoURL + '"%3E;%3C/script%3E'));
+      </script><script type="text/javascript" src="/javascript/dojo-1.1.2/release/dojo/dojo/swxDojo.js">;</script><script type="text/javascript" src="/javascript/common/logger@gvxr8i0w.js">;</script><script type="text/javascript" src="/javascript/fqs/QuotePlayer@h0ng0hc0.js">;</script><script type="text/javascript" src="/javascript/common/md5@glulcsso.js">;</script><script type="text/javascript" src="/resources/scripts/tableConfiguration@g8wzprx4.js">;</script><script type="text/javascript" src="/resources/scripts/metaNavigation@h1bu9ju8.js">;</script><script type="text/javascript" src="/resources/scripts/topNavigation@gv3v2n8g.js">;</script><script type="text/javascript" src="/resources/scripts/htmlCoordinates@g8wzprx4.js">;</script><script type="text/javascript" language="javascript">
+        dojo.require("dojo.parser");
+        dojo.require("dojox.grid.Grid");
+        dojo.require("dojox.grid._data.model");
+        dojo.require("dijit.form.Button");
+        dojo.require("dijit.Menu");
+        dojo.require("dijit.Tooltip");
+</script><script type="text/javascript" src="/resources/scripts/quickLinks@g9fcbnao.js">;</script><script type="text/javascript" src="/javascript/common/sidebar-clock@gwhk8rw8.js">;</script><script type="text/javascript" language="javascript">
+          balancerIdDefinition = "BALANCERID=b.cocoon0b1828";
+        </script><script type="text/javascript" language="javascript">
+            var quickLinks = new QuickLinks("quicklinksTable",
+            "quicklinks-ipo",
+            [ quicklinkTitle, window.location.href ],
+            {
+            add_link_text:
+            "Add this page",
+
+            add_img_tooltip:
+            "Add this page",
+
+            rem_img_tooltip:
+            "Remove this page"
+            },
+            []);
+          
+            dojo.addOnLoad(function() { quickLinks.displayQuickLinks() } );
+          </script><script type="text/javascript" language="javascript">
+      DELAYED_15_IMG_SRC = "/resources/images/icons_inv/delay_15.png";
+      DELAYED_0_IMG_SRC = "/resources/images/icons_inv/delay_0.png";
+      
+          DELAYED_15_TXT_STR = "15 minutes delayed";
+          DELAYED_0_TXT_STR = "Real time";
+          CHART_MONTH_LABELS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        
+
+      // Shows alternative index chart
+      function showBox(setName, key) {
+
+      // Get the list of indices in this set
+      var setList = pageIndexList[setName];
+      var index = 0;
+      for (var i=0; i < setList.length; i++) {
+
+      // For the required index, switch on visibility and load it
+      if (setList[i] == key) {
+      index = i;
+      dojo.style(setName + "Box" + key, "visibility", "");
+      dojo.addClass(dojo.byId("chartBox"+key), "chartBox-active");
+
+      // Load values if not already done
+      if (!dojo.eval("smallchart"+setList[i]+".values_domain.id")) {
+      dojo.eval("smallchart"+setList[i]
+      +".getAjaxValues(\"id\", smallchart"+setList[i]+".id)");
+      }
+      } else {
+
+      // For the others, switch off visibilty
+      dojo.style(setName + "Box" + setList[i], "visibility", "hidden");
+      dojo.removeClass(dojo.byId("chartBox"+setList[i]), "chartBox-active");
+      }
+      }
+      return index;
+      }
+    </script><script type="text/javascript" src="/resources/scripts/chartConfig@g2mz4my0.js">;</script><script type="text/javascript" src="/javascript/charts/chart_main@gte3bfkw.js">;</script><script type="text/javascript" src="/javascript/charts/chart_dataUpdater@gsmv0h1k.js">;</script><script type="text/javascript" src="/javascript/charts/chart_drawer@gryqppgg.js">;</script><script type="text/javascript" src="/javascript/charts/chart_graphDrawer@gsln4p4o.js">;</script><script type="text/javascript" src="/javascript/charts/chart_axisDrawer@gryqppgg.js">;</script><script type="text/javascript" src="/javascript/charts/chart_valuesHelper@gryqppgg.js">;</script><script type="text/javascript" src="/javascript/charts/chart_valuesHelper_Advanced@gryqppgg.js">;</script><script type="text/javascript" src="/javascript/charts/chart_functions_Advanced@gwhk8rw8.js">;</script><script type="text/javascript" src="/javascript/charts/chart_slider_Advanced@gryqppgg.js">;</script><script type="text/javascript" src="/javascript/charts/chart_addonDrawer_Advanced@gryqppgg.js">;</script><script type="text/javascript" src="/javascript/charts/chart_eventDrawer_Advanced@gryqppgg.js">;</script><script type="text/javascript" src="/javascript/charts/chart_indicators_Advanced@gryqppgg.js">;</script><script type="text/javascript" src="/javascript/charts/chart_config_Advanced@gryqppgg.js">;</script></head><body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" onload=""><table border="0" cellspacing="0" cellpadding="0" height="100%" width="100%"><tr valign="top" height="100%"><td><table border="0" cellpadding="0" cellspacing="0" height="100%"><tr><td valign="top"><table border="0" cellpadding="0" cellspacing="0" width="12" height="100%" id="left-bg"><tr><td height="130" width="12">&nbsp;</td></tr><tr><td height="208" background="/resources/images/layout/shadow_left_blue@h1bu9ju8.gif">&nbsp;</td></tr><tr><td height="100%" valign="top" background="/resources/images/layout/shadow_left_white@g5gkkpvc.gif">&nbsp;</td></tr></table></td><td style="vertical-align:top;"><table border="0" cellpadding="0" cellspacing="0" height="100%" id="sublayout-default-content-table"><tr><td height="130" style="vertical-align:top;" id="area-head"><table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"><tr><td><div class="six_brand"><a href="/index_en.html" title="SIX Swiss Exchange"><img src="/resources/images/layout/SIX_logo_SSX@h1tfc4hk.gif" border="0"/></a></div><div class="six_corp_nav"><ul><li class="first"><a href="/">Swiss Exchange</a></li><li><a href="http://www.six-securities-services.com/">Securities Services</a></li><li><a href="http://www.six-financial-information.com/">Financial Information</a></li><li><a href="http://www.six-payment-services.com/">Payment Services</a></li><li><a href="http://www.six-group.com/careers/">Careers</a></li><li class="last"><a href="http://www.six-group.com/">About SIX</a></li></ul></div></td></tr><tr><td height="100%" width="100%">&nbsp;</td><td style="vertical-align: bottom;"><table border="0" cellpadding="0" cellspacing="0" height="65" width="100%"><tr style="vertical-align: bottom;"><td width="100%">&nbsp;</td><td class="meta-nav-border"><image src="/resources/images/trans.gif" width="1"/></td><td nowrap="nowrap" onclick="
+                                  window.location.href='/contact_en.html';
+                                " onmouseover="
+                                  this.className='meta-nav meta-nav-inactiv-over';
+                                " onmouseout="
+                                  this.className='meta-nav meta-nav-inactiv';
+                                " class="meta-nav meta-nav-inactiv"><span>Contact<a href="/contact_en.html" style="display:none">Contact</a></span></td><td class="meta-nav-border"><image src="/resources/images/trans.gif" width="1"/></td><td class="meta-nav meta-nav-button" style="white-space: nowrap" id="meta-nav-lang-button">English<span class="meta-nav-arrow" name="meta-nav-button-arrow"><image src="/resources/images/layout/trans.gif" width="5" height="9"/></span></td><td class="meta-nav-border" width="18"><image src="/resources/images/trans.gif" width="18" height="37"/></td></tr></table></td></tr></table></td></tr><tr><td valign="top" style="border-bottom:#9A9B9C solid 1px; background-color:#FFFFFF;"><table border="0" id="sublayout-default-content-table2" cellpadding="0" cellspacing="0" height="100%" width="100%"><tr><td id="area-mainnav" colspan="3"><div id="topnav"><div id="topnav-1st-lev"><ul class="clearfix"><li id="topnav-1st-lev-item-1" class=" first"><a href="/index_en.html"><span>Home</span></a></li><li id="topnav-1st-lev-item-2" onmouseover="topNavigation2.showFlyout();"><a href="/news/overview_en.html"><span>News</span></a></li><li id="topnav-1st-lev-item-3" onmouseover="topNavigation3.showFlyout();"><a href="/shares/overview_en.html"><span>Market Data</span></a></li><li id="topnav-1st-lev-item-4" onmouseover="topNavigation4.showFlyout();" class=" active"><a href="/participants_en.html"><span>Participants</span></a></li><li id="topnav-1st-lev-item-5" onmouseover="topNavigation5.showFlyout();"><a href="/issuers_en.html"><span>Issuers</span></a></li><li id="topnav-1st-lev-item-6" onmouseover="topNavigation6.showFlyout();"><a href="/investors_en.html"><span>Investors</span></a></li><li id="topnav-1st-lev-item-7" onmouseover="topNavigation7.showFlyout();"><a href="/profile/profil_en.html"><span>Profile</span></a></li><li class="search-form"><form name="search" method="get" action="/search/site/search_en.html"><input id="topSearchInputField" type="text" value="Search for..." name="q" onfocus="if (this.value=='Search for...') {this.value='';this.style.color='#000000';};" onblur="if (this.value=='') {this.value='Search for...';this.style.color='#C3C3C4';};"/><img src="/resources/images/layout/search_arrow@g5gkkpvc.gif" id="searcharrow" name="srcharrow" onmouseover="showSearchDropdown();return false;" onmouseout="hideSearchDropdown();return false;"/></form><img src="/resources/images/layout/button_search@gs5v8n0o.gif" id="search-button" onmouseover="this.src='/resources/images/layout/button_search_a.gif';" onmouseout="this.src='/resources/images/layout/button_search.gif';" onclick="submitSearchForm('Search for...');"/><script type="text/javascript" language="javascript">
+        timeout = setTimeout("toggleSearchDropdown();", 0);;
+        dropDownCurrent = 0;
+        dropDownNext = 0;
+
+        function showSearchDropdown() {
+          dropDownNext = 1;
+          clearTimeout(timeout);
+          timeout = setTimeout("toggleSearchDropdown();", 150);
+        }
+
+        function hideSearchDropdown() {
+          dropDownNext = 0;
+          clearTimeout(timeout);
+          timeout = setTimeout("toggleSearchDropdown();", 300);
+        }
+
+        function toggleSearchDropdown() {
+          if (dropDownNext == 1 && dropDownCurrent == 0 ) {
+            posX = findPosX(document.getElementById('searcharrow'));
+            document.getElementById('searchDropdown').style.left=posX-145;
+            document.getElementById('searchDropdown').style.visibility='visible';
+            document['srcharrow'].src='/resources/images/layout/search_arrow_a.gif';
+            dropDownCurrent = 1;
+          }
+          if (dropDownNext==0 && dropDownCurrent == 1 && document['srcharrow'].src.indexOf('search_arrow_a')>0) {
+            document.getElementById('searchDropdown').style.visibility='hidden';
+            document['srcharrow'].src="/resources/images/layout/search_arrow.gif";
+            dropDownCurrent = 0;
+          }
+        }
+
+        function findPosX(obj) {
+           var curleft = 0;
+           if(obj.offsetParent) {
+              while(obj.offsetParent) {
+                 curleft += obj.offsetLeft
+                 obj = obj.offsetParent;
+              }
+           }
+           else if(obj.x)
+             curleft = obj.x;
+           return curleft;
+        }
+
+        function submitSearchForm(helpTxt) {
+          dojo.query('input#topSearchInputField').forEach(
+              function(scriptTag) {
+                if (scriptTag.value == helpTxt) {
+                   scriptTag.value='';
+                };
+              }
+          );
+          document.search.submit();
+        }
+      </script></li></ul></div><div id="topnav-flyout-border-suppression-2" class="topnav-flyout-border-suppression"><img src="/resources/images/trans@g5gkkl8o.gif" height="1" width="1"/></div><div id="topnav-flyout-2" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-2-item-1" class="topnav-flyout-list"><a href="/news/sse_messages/2012_en.html">Exchange Messages</a></li><li id="topnav-flyout-2-item-2" class="topnav-flyout-list"><a href="/news/media_releases/2012_en.html">Media Releases</a></li><li id="topnav-flyout-2-item-3" class="topnav-flyout-list"><a href="/news/events_en.html">Events</a></li><li id="topnav-flyout-2-item-4" class="topnav-flyout-list"><a href="/news/newsboard/prod_en.html">Newsboard</a></li><li id="topnav-flyout-2-item-5" class="topnav-flyout-list"><a href="/news/official_notices/search_en.html">Published Notifications</a></li><li id="topnav-flyout-2-item-6" class="topnav-flyout-list"><a href="/news/rssfeeds_en.html">RSS Newsfeeds</a></li></ul><script language="JavaScript" type="text/javascript">
+                    var topNavTab2 = document.getElementById('topnav-1st-lev-item-2');
+                    var topNavFlyout2 = document.getElementById('topnav-flyout-2');
+                    var topNavFlyoutBorderSuppression2 = document.getElementById('topnav-flyout-border-suppression-2');
+                    var topNavigation2 = new TopNavigation(topNavTab2, topNavFlyout2, topNavFlyoutBorderSuppression2, false, false);
+
+                    
+
+                    
+                    dojo.addOnLoad(function() {
+
+
+                      
+                      dojo.connect(topNavTab2, 'onmouseout', function(event) {
+                        if ( topNavigation2.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation2.hideFlyout();
+                        }
+                      });
+                      
+                      dojo.connect(topNavFlyout2, 'onmouseout', function(event) {
+                        if ( topNavigation2.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation2.hideFlyout();
+                        }
+                      });
+                    });
+                  </script></div><div id="topnav-flyout-border-suppression-3" class="topnav-flyout-border-suppression"><img src="/resources/images/trans@g5gkkl8o.gif" height="1" width="1"/></div><div id="topnav-flyout-3" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-3-item-1" class="topnav-flyout-list"><a href="/shares/overview_en.html">Shares</a></li><li id="topnav-flyout-3-item-2" class="topnav-flyout-list"><a href="/bonds/overview_en.html">Bonds</a></li><li id="topnav-flyout-3-item-3" class="topnav-flyout-list"><a href="/funds/overview_en.html">ETFs &amp; Funds</a></li><li id="topnav-flyout-3-item-4" class="topnav-flyout-list"><a href="/exchange_traded_products/overview_en.html">ETPs</a></li><li id="topnav-flyout-3-item-5" class="topnav-flyout-list"><a href="/indices/overview_en.html">Indices</a></li><li id="topnav-flyout-3-item-6" class="topnav-flyout-list"><a href="/statistics/overview_en.html">Statistics</a></li><li id="topnav-flyout-3-item-7" class="topnav-flyout-list"><a href="/market_data/data_services_en.html">Data Services</a></li></ul><script language="JavaScript" type="text/javascript">
+                    var topNavTab3 = document.getElementById('topnav-1st-lev-item-3');
+                    var topNavFlyout3 = document.getElementById('topnav-flyout-3');
+                    var topNavFlyoutBorderSuppression3 = document.getElementById('topnav-flyout-border-suppression-3');
+                    var topNavigation3 = new TopNavigation(topNavTab3, topNavFlyout3, topNavFlyoutBorderSuppression3, false, false);
+
+                    
+
+                    
+                    dojo.addOnLoad(function() {
+
+
+                      
+                      dojo.connect(topNavTab3, 'onmouseout', function(event) {
+                        if ( topNavigation3.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation3.hideFlyout();
+                        }
+                      });
+                      
+                      dojo.connect(topNavFlyout3, 'onmouseout', function(event) {
+                        if ( topNavigation3.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation3.hideFlyout();
+                        }
+                      });
+                    });
+                  </script></div><div id="topnav-flyout-border-suppression-4" class="topnav-flyout-border-suppression"><img src="/resources/images/trans@g5gkkl8o.gif" height="1" width="1"/></div><div id="topnav-flyout-4" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-4-item-1" class="topnav-flyout-list"><a href="/participants/participation_en.html">Participation</a></li><li id="topnav-flyout-4-item-2" class="topnav-flyout-list"><a href="/participants/trading_en.html">Trading</a></li><li id="topnav-flyout-4-item-3" class="topnav-flyout-list"><a href="/participants/reporting_en.html">Reporting</a></li><li id="topnav-flyout-4-item-4" class="topnav-flyout-list"><a href="/participants/clearing_en.html">Clearing &amp; Settlement</a></li><li id="topnav-flyout-4-item-5" class="topnav-flyout-list"><a href="/participants/regulation_en.html">Regulation</a></li><li id="topnav-flyout-4-item-6" class="topnav-flyout-list"><a href="/member_section/login.html">Member Section</a></li><li id="topnav-flyout-4-item-7" class="topnav-flyout-list"><a href="/participants/contact_support/account_management_en.html">Contact &amp; Support</a></li></ul><script language="JavaScript" type="text/javascript">
+                    var topNavTab4 = document.getElementById('topnav-1st-lev-item-4');
+                    var topNavFlyout4 = document.getElementById('topnav-flyout-4');
+                    var topNavFlyoutBorderSuppression4 = document.getElementById('topnav-flyout-border-suppression-4');
+                    var topNavigation4 = new TopNavigation(topNavTab4, topNavFlyout4, topNavFlyoutBorderSuppression4, true, false);
+
+                    
+                      var topNavigationActive = topNavigation4;
+                    
+
+                    
+                    dojo.addOnLoad(function() {
+
+
+                      
+                      dojo.connect(topNavTab4, 'onmouseout', function(event) {
+                        if ( topNavigation4.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation4.hideFlyout();
+                        }
+                      });
+                      
+                      dojo.connect(topNavFlyout4, 'onmouseout', function(event) {
+                        if ( topNavigation4.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation4.hideFlyout();
+                        }
+                      });
+                    });
+                  </script></div><div id="topnav-flyout-border-suppression-5" class="topnav-flyout-border-suppression"><img src="/resources/images/trans@g5gkkl8o.gif" height="1" width="1"/></div><div id="topnav-flyout-5" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-5-item-1" class="topnav-flyout-list"><a href="/issuers/marketplace_en.html">Swiss Financial Marketplace</a></li><li id="topnav-flyout-5-item-2" class="topnav-flyout-list"><a href="/issuers/listing_en.html">Listing</a></li><li id="topnav-flyout-5-item-3" class="topnav-flyout-list"><a href="/issuers/services_en.html">Services</a></li><li id="topnav-flyout-5-item-4" class="topnav-flyout-list"><a href="/issuers/contact_support/issuer_relations_en.html">Contact &amp; Support</a></li></ul><script language="JavaScript" type="text/javascript">
+                    var topNavTab5 = document.getElementById('topnav-1st-lev-item-5');
+                    var topNavFlyout5 = document.getElementById('topnav-flyout-5');
+                    var topNavFlyoutBorderSuppression5 = document.getElementById('topnav-flyout-border-suppression-5');
+                    var topNavigation5 = new TopNavigation(topNavTab5, topNavFlyout5, topNavFlyoutBorderSuppression5, false, false);
+
+                    
+
+                    
+                    dojo.addOnLoad(function() {
+
+
+                      
+                      dojo.connect(topNavTab5, 'onmouseout', function(event) {
+                        if ( topNavigation5.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation5.hideFlyout();
+                        }
+                      });
+                      
+                      dojo.connect(topNavFlyout5, 'onmouseout', function(event) {
+                        if ( topNavigation5.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation5.hideFlyout();
+                        }
+                      });
+                    });
+                  </script></div><div id="topnav-flyout-border-suppression-6" class="topnav-flyout-border-suppression"><img src="/resources/images/trans@g5gkkl8o.gif" height="1" width="1"/></div><div id="topnav-flyout-6" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-6-item-1" class="topnav-flyout-list"><a href="/services/mymarketpulse/login_en.html">myMarketpulse</a></li><li id="topnav-flyout-6-item-2" class="topnav-flyout-list"><a href="/services/tools_en.html">Tools</a></li><li id="topnav-flyout-6-item-3" class="topnav-flyout-list"><a href="/knowhow/overview_en.html">Know-how</a></li></ul><script language="JavaScript" type="text/javascript">
+                    var topNavTab6 = document.getElementById('topnav-1st-lev-item-6');
+                    var topNavFlyout6 = document.getElementById('topnav-flyout-6');
+                    var topNavFlyoutBorderSuppression6 = document.getElementById('topnav-flyout-border-suppression-6');
+                    var topNavigation6 = new TopNavigation(topNavTab6, topNavFlyout6, topNavFlyoutBorderSuppression6, false, false);
+
+                    
+
+                    
+                    dojo.addOnLoad(function() {
+
+
+                      
+                      dojo.connect(topNavTab6, 'onmouseout', function(event) {
+                        if ( topNavigation6.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation6.hideFlyout();
+                        }
+                      });
+                      
+                      dojo.connect(topNavFlyout6, 'onmouseout', function(event) {
+                        if ( topNavigation6.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation6.hideFlyout();
+                        }
+                      });
+                    });
+                  </script></div><div id="topnav-flyout-border-suppression-7" class="topnav-flyout-border-suppression"><img src="/resources/images/trans@g5gkkl8o.gif" height="1" width="1"/></div><div id="topnav-flyout-7" class="topnav-flyout"><ul class="clearfix" style="height:112px !important; height /**/:136px;"><li id="topnav-flyout-7-item-1" class="topnav-flyout-list"><a href="/profile/vision_en.html">Vision</a></li><li id="topnav-flyout-7-item-2" class="topnav-flyout-list"><a href="/profile/numbers_en.html">In numbers</a></li><li id="topnav-flyout-7-item-3" class="topnav-flyout-list"><a href="/profile/management_en.html">Management</a></li><li id="topnav-flyout-7-item-4" class="topnav-flyout-list"><a href="/profile/employees_en.html">Employees</a></li><li id="topnav-flyout-7-item-5" class="topnav-flyout-list"><a href="/profile/network/network_en.html">Network</a></li><li id="topnav-flyout-7-item-6" class="topnav-flyout-list"><a href="/profile/banner_advertisement_en.html">Banner Advertisement</a></li></ul><script language="JavaScript" type="text/javascript">
+                    var topNavTab7 = document.getElementById('topnav-1st-lev-item-7');
+                    var topNavFlyout7 = document.getElementById('topnav-flyout-7');
+                    var topNavFlyoutBorderSuppression7 = document.getElementById('topnav-flyout-border-suppression-7');
+                    var topNavigation7 = new TopNavigation(topNavTab7, topNavFlyout7, topNavFlyoutBorderSuppression7, false, false);
+
+                    
+
+                    
+                    dojo.addOnLoad(function() {
+
+
+                      
+                      dojo.connect(topNavTab7, 'onmouseout', function(event) {
+                        if ( topNavigation7.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation7.hideFlyout();
+                        }
+                      });
+                      
+                      dojo.connect(topNavFlyout7, 'onmouseout', function(event) {
+                        if ( topNavigation7.mouseOutOfTabAndFlyout(event) ) {
+                          topNavigation7.hideFlyout();
+                        }
+                      });
+                    });
+                  </script></div><div id="topnav-2nd"><ul class="clearfix"><li id="topnav-2nd-lev-item-1"><a href="/participants/participation_en.html">Participation</a></li><li id="topnav-2nd-lev-item-2"><a href="/participants/trading_en.html">Trading</a></li><li id="topnav-2nd-lev-item-3"><a href="/participants/reporting_en.html">Reporting</a></li><li id="topnav-2nd-lev-item-4"><a href="/participants/clearing_en.html">Clearing &amp; Settlement</a></li><li id="topnav-2nd-lev-item-5" class="active"><a href="/participants/regulation_en.html">Regulation</a></li><li id="topnav-2nd-lev-item-6"><a href="/member_section/login.html">Member Section</a></li><li id="topnav-2nd-lev-item-7"><a href="/participants/contact_support/account_management_en.html">Contact &amp; Support</a></li></ul></div></div></td></tr><tr><td id="area-mainsep1">&nbsp;</td><td id="area-mainsep2"><img src="/resources/images/trans@g5gkkl8o.gif" height="36" width="1" border="0"/></td></tr><tr><td valign="top" id="area-sidenav" height="100%"><table border="0" cellpadding="0" cellspacing="0" width="164" height="100%"><tr><td class="navigation-left"><div id="t_1_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('expanded','1_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon1_0_0_a').src='/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon1_0_0_a').src='/resources/images/dojo/nav_arrow_down.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/dojo/nav_arrow_down.gif" border="0"');
+                
+                  document.write('id="navicon1_0_0_a"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/participants/regulation/framework_en.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_down@gwg64fvk.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/participants/regulation/framework_en.html" onmouseover="document.getElementById('navicon1_0_0_a').src='/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon1_0_0_a').src='/resources/images/dojo/nav_arrow_down.gif';">Framework of Regulation</a></td></tr></table><div id="t_1_1_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/participants/regulation/framework/federal_law_en.html">Federal Law</a></td></tr></table></div><div id="t_1_1_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/participants/regulation/framework/federal_law_en.html">Federal Law</a></td></tr></table></div><div id="t_1_2_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/participants/regulation/framework/ordinances_en.html">Ordinances</a></td></tr></table></div><div id="t_1_2_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/participants/regulation/framework/ordinances_en.html">Ordinances</a></td></tr></table></div></div><div id="t_1_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('collapsed','1_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon1_0_0_').src='/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon1_0_0_').src='/resources/images/dojo/nav_arrow_right.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/dojo/nav_arrow_right.gif" border="0"');
+                
+                  document.write('id="navicon1_0_0_"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/participants/regulation/framework_en.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_right@gwg64f3s.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/participants/regulation/framework_en.html" onmouseover="document.getElementById('navicon1_0_0_').src='/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon1_0_0_').src='/resources/images/dojo/nav_arrow_right.gif';">Framework of Regulation</a></td></tr></table></div><div id="t_2_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/federal_acts_en.html">Federal Acts</a></td></tr></table></div><div id="t_2_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/federal_acts_en.html">Federal Acts</a></td></tr></table></div><div id="t_3_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/rules_regs_en.html">Rules</a></td></tr></table></div><div id="t_3_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/rules_regs_en.html">Rules</a></td></tr></table></div><div id="t_4_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/directives_en.html">Directives</a></td></tr></table></div><div id="t_4_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/directives_en.html">Directives</a></td></tr></table></div><div id="t_5_0_0__expanded"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5-active" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/sse_messages/2012_en.html">Exchange Messages</a></td></tr></table></div><div id="t_5_0_0__collapsed" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5-active" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/sse_messages/2012_en.html">Exchange Messages</a></td></tr></table></div><div id="t_6_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/trading_guides_en.html">Trading Guides</a></td></tr></table></div><div id="t_6_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/trading_guides_en.html">Trading Guides</a></td></tr></table></div><div id="t_7_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/faqs_en.html">FAQs</a></td></tr></table></div><div id="t_7_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/faqs_en.html">FAQs</a></td></tr></table></div><div id="t_8_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('expanded','8_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon8_0_0_a').src='/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon8_0_0_a').src='/resources/images/dojo/nav_arrow_down.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/dojo/nav_arrow_down.gif" border="0"');
+                
+                  document.write('id="navicon8_0_0_a"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/participants/regulation/revisions/rule_book_en.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_down@gwg64fvk.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/participants/regulation/revisions/rule_book_en.html" onmouseover="document.getElementById('navicon8_0_0_a').src='/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon8_0_0_a').src='/resources/images/dojo/nav_arrow_down.gif';">Revisions</a></td></tr></table><div id="t_8_1_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/participants/regulation/revisions/rule_book_en.html">Rule Book / Directives</a></td></tr></table></div><div id="t_8_1_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/participants/regulation/revisions/rule_book_en.html">Rule Book / Directives</a></td></tr></table></div><div id="t_8_2_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21" onclick="
+              navAction('expanded','8_2_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon8_2_0_a').src='/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon8_2_0_a').src='/resources/images/dojo/nav_arrow_down.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/dojo/nav_arrow_down.gif" border="0"');
+                
+                  document.write('id="navicon8_2_0_a"');
+                
+              document.write('style="margin-top:2px; margin-left:11px"/>');
+            </script><noscript><a href="/participants/regulation/revisions/until_2010_03_31/general_conditions_en.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_down@gwg64fvk.gif" border="0" style="margin-top:2px; margin-left:11px"/></a></noscript></td><td width="143"><a href="/participants/regulation/revisions/until_2010_03_31/general_conditions_en.html" onmouseover="document.getElementById('navicon8_2_0_a').src='/resources/images/dojo/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon8_2_0_a').src='/resources/images/dojo/nav_arrow_down.gif';">Archive as of 31.03.2010</a></td></tr></table><div id="t_8_2_1__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/revisions/until_2010_03_31/general_conditions_en.html">General Conditions</a></td></tr></table></div><div id="t_8_2_1__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/revisions/until_2010_03_31/general_conditions_en.html">General Conditions</a></td></tr></table></div><div id="t_8_2_2__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/revisions/until_2010_03_31/directives_en.html">Directives</a></td></tr></table></div><div id="t_8_2_2__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/revisions/until_2010_03_31/directives_en.html">Directives</a></td></tr></table></div><div id="t_8_2_3__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/revisions/until_2010_03_31/transitional_rule_book_en.html">Transitional Rule Book</a></td></tr></table></div><div id="t_8_2_3__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/revisions/until_2010_03_31/transitional_rule_book_en.html">Transitional Rule Book</a></td></tr></table></div><div id="t_8_2_4__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/revisions/until_2010_03_31/trading_guides_en.html">Trading Guides</a></td></tr></table></div><div id="t_8_2_4__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level7" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/revisions/until_2010_03_31/trading_guides_en.html">Trading Guides</a></td></tr></table></div></div><div id="t_8_2_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21" onclick="
+              navAction('collapsed','8_2_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon8_2_0_').src='/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon8_2_0_').src='/resources/images/dojo/nav_arrow_right.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/dojo/nav_arrow_right.gif" border="0"');
+                
+                  document.write('id="navicon8_2_0_"');
+                
+              document.write('style="margin-top:2px; margin-left:11px"/>');
+            </script><noscript><a href="/participants/regulation/revisions/until_2010_03_31/general_conditions_en.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_right@gwg64f3s.gif" border="0" style="margin-top:2px; margin-left:11px"/></a></noscript></td><td width="143"><a href="/participants/regulation/revisions/until_2010_03_31/general_conditions_en.html" onmouseover="document.getElementById('navicon8_2_0_').src='/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon8_2_0_').src='/resources/images/dojo/nav_arrow_right.gif';">Archive as of 31.03.2010</a></td></tr></table></div></div><div id="t_8_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('collapsed','8_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon8_0_0_').src='/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon8_0_0_').src='/resources/images/dojo/nav_arrow_right.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/dojo/nav_arrow_right.gif" border="0"');
+                
+                  document.write('id="navicon8_0_0_"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/participants/regulation/revisions/rule_book_en.html" style="padding:0px; margin:0px" rel="nofollow"><img src="/resources/images/dojo/nav_arrow_right@gwg64f3s.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/participants/regulation/revisions/rule_book_en.html" onmouseover="document.getElementById('navicon8_0_0_').src='/resources/images/dojo/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon8_0_0_').src='/resources/images/dojo/nav_arrow_right.gif';">Revisions</a></td></tr></table></div></td></tr><tr><td>&nbsp;</td></tr><tr height="100%"><td>&nbsp;</td></tr></table></td><td width="596" valign="top" height="100%" id="area-main" class="
+                        main
+                        "><table border="0" cellpadding="0" cellspacing="0" width="596" height="100%"><tr><td valign="top" style="background-color:#FFFFFF;" height="400"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><h1>SIX Swiss Exchange Messages</h1></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr class="link-table" height="100%"><td width="10%" class="link-table" onmouseover="this.style.background='url(/resources/images/trans.gif)';" onmouseout="this.style.background='#F9F9F8 url(/resources/images/dojo/tab_inside_navi.gif) repeat-x';this.style.backgroundPosition='bottom';"><a class="link-table" href="/participants/regulation/sse_messages/2012_en.html">2012</a></td><td width="10%" class="link-table-active"><a class="link-table-active" href="/participants/regulation/sse_messages/2011_en.html">2011</a></td><td width="10%" class="link-table" onmouseover="this.style.background='url(/resources/images/trans.gif)';" onmouseout="this.style.background='#F9F9F8 url(/resources/images/dojo/tab_inside_navi.gif) repeat-x';this.style.backgroundPosition='bottom';"><a class="link-table" href="/participants/regulation/sse_messages/2010_en.html">2010</a></td><td width="10%" class="link-table" onmouseover="this.style.background='url(/resources/images/trans.gif)';" onmouseout="this.style.background='#F9F9F8 url(/resources/images/dojo/tab_inside_navi.gif) repeat-x';this.style.backgroundPosition='bottom';"><a class="link-table" href="/participants/regulation/sse_messages/2009_en.html">2009</a></td><td width="10%" class="link-table" onmouseover="this.style.background='url(/resources/images/trans.gif)';" onmouseout="this.style.background='#F9F9F8 url(/resources/images/dojo/tab_inside_navi.gif) repeat-x';this.style.backgroundPosition='bottom';"><a class="link-table" href="/participants/regulation/sse_messages/2008_en.html">2008</a></td><td width="10%" class="link-table" onmouseover="this.style.background='url(/resources/images/trans.gif)';" onmouseout="this.style.background='#F9F9F8 url(/resources/images/dojo/tab_inside_navi.gif) repeat-x';this.style.backgroundPosition='bottom';"><a class="link-table" href="/participants/regulation/sse_messages/2007_en.html">2007</a></td><td width="10%" class="link-table" onmouseover="this.style.background='url(/resources/images/trans.gif)';" onmouseout="this.style.background='#F9F9F8 url(/resources/images/dojo/tab_inside_navi.gif) repeat-x';this.style.backgroundPosition='bottom';"><a class="link-table" href="/participants/regulation/sse_messages/2006_en.html">2006</a></td><td width="10%" class="link-table" onmouseover="this.style.background='url(/resources/images/trans.gif)';" onmouseout="this.style.background='#F9F9F8 url(/resources/images/dojo/tab_inside_navi.gif) repeat-x';this.style.backgroundPosition='bottom';"><a class="link-table" href="/participants/regulation/sse_messages/2005_en.html">2005</a></td><td width="10%" class="link-table" onmouseover="this.style.background='url(/resources/images/trans.gif)';" onmouseout="this.style.background='#F9F9F8 url(/resources/images/dojo/tab_inside_navi.gif) repeat-x';this.style.backgroundPosition='bottom';"><a class="link-table" href="/participants/regulation/sse_messages/2004_en.html">2004</a></td><td width="10%" class="link-table" onmouseover="this.style.background='url(/resources/images/trans.gif)';" onmouseout="this.style.background='#F9F9F8 url(/resources/images/dojo/tab_inside_navi.gif) repeat-x';this.style.backgroundPosition='bottom';"><a class="link-table" href="/participants/regulation/sse_messages/2003_en.html">2003</a></td></tr><tr><td colspan="10"><img src="/resources/images/trans@g5gkkl8o.gif" height="1"/></td></tr></table><br/><table border="0" cellspacing="0" cellpadding="0" style="margin-bottom:6px;" width="100%"><tr width="100%"><td width="100%"><img src="/resources/images/trans@g5gkkl8o.png" height="1" width="100%" border="0" hspace="0" vspace="0"/></td></tr><tr class="plaintable-first"><td align="right" class="last" valign="top"><a href="/swiss_exchange_messages/rss_en.xml" target="_blank"><img border="0" src="/resources/images/icons_inv/rss@fyb8oobs.png" style="vertical-align:bottom" title=""/></a><img border="0" hspace="0" vspace="0" src="/resources/images/trans@g5gkkl8o.png" width="5" height="1"/><a href="/swiss_exchange_messages/rss_en.xml" target="_blank">Subscribe to the RSS Newsfeed</a></td></tr></table><div><table border="0" cellspacing="0" cellpadding="0" class="table-grid" ssecom-hover="true" width="100%"><tr><td width="50"><img src="/resources/images/trans@g5gkkl8o.png" height="1" width="50" border="0" hspace="0" vspace="0"/></td><td width="70"><img src="/resources/images/trans@g5gkkl8o.png" height="1" width="70" border="0" hspace="0" vspace="0"/></td><td width="100%"><img src="/resources/images/trans@g5gkkl8o.png" height="1" width="100%" border="0" hspace="0" vspace="0"/></td><td align="center" width="65"><img src="/resources/images/trans@g5gkkl8o.png" height="1" width="65" border="0" hspace="0" vspace="0"/></td></tr><tr class="row-head"><td class="first">Number</td><td>Date</td><td>Title</td><td align="center">Download</td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>71/2011</b></td><td align="left" valign="top">22.12.2011</td><td align="left" valign="top">
+
+        
+
+        Change of stop trading range
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201112221536_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>70/2011</b></td><td align="left" valign="top">22.12.2011</td><td align="left" valign="top">
+
+        
+
+        Price Step Group Change for Bonds
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201112221534_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>69/2011</b></td><td align="left" valign="top">15.12.2011</td><td align="left" valign="top">
+
+        
+
+        Raiffeisen Centrobank AG
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201112151536_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>68/2011</b></td><td align="left" valign="top">01.12.2011</td><td align="left" valign="top">
+
+        
+
+        Adaptation of Directive 6   Market Information
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201112010959_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>67/2011</b></td><td align="left" valign="top">23.11.2011</td><td align="left" valign="top">
+
+        
+
+        Change of stop trading range
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201111231740_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>66/2011</b></td><td align="left" valign="top">23.11.2011</td><td align="left" valign="top">
+
+        
+
+        Price Step Group Change for Bonds
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201111231739_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>65/2011</b></td><td align="left" valign="top">22.11.2011</td><td align="left" valign="top">
+
+        
+
+        Goldman Sachs Bank AG
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201111221500_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>64/2011</b></td><td align="left" valign="top">16.11.2011</td><td align="left" valign="top">
+
+        
+
+        RBS Coutts Bank AG - Name change
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201111161402_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>63/2011</b></td><td align="left" valign="top">01.11.2011</td><td align="left" valign="top">
+
+        
+
+        Suspension of MF Global UK Limited
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201111010924_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>62/2011</b></td><td align="left" valign="top">26.10.2011</td><td align="left" valign="top">
+
+        
+
+        Newedge UK Financial Limited
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201110261635_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>61/2011</b></td><td align="left" valign="top">25.10.2011</td><td align="left" valign="top">
+
+        
+
+        MF Global UK Limited - Commencement of trading on SIX Swiss Exchange
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201110251713_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>60/2011</b></td><td align="left" valign="top">25.10.2011</td><td align="left" valign="top">
+
+        
+
+        Change of stop trading range
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201110251617_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>59/2011</b></td><td align="left" valign="top">25.10.2011</td><td align="left" valign="top">
+
+        
+
+        Price Step Group Change for Bonds
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201110251613_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>58/2011</b></td><td align="left" valign="top">05.10.2011</td><td align="left" valign="top">
+
+        
+
+        Launch of SWXess Maintenance Release 1.2
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201110051554_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>57/2011</b></td><td align="left" valign="top">29.09.2011</td><td align="left" valign="top">
+
+        
+
+        SWXess Maintenance Release 1.2 launch postponed
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201109291840_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>56/2011</b></td><td align="left" valign="top">26.09.2011</td><td align="left" valign="top">
+
+        
+
+        SIX Swiss Exchange Liquidnet Service (SLS) - Fees
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201109261618_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>55/2011</b></td><td align="left" valign="top">26.09.2011</td><td align="left" valign="top">
+
+        
+
+        Change of stop trading range
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201109261341_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>54/2011</b></td><td align="left" valign="top">26.09.2011</td><td align="left" valign="top">
+
+        
+
+        Price Step Group Change for Bonds
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201109261340_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>53/2011</b></td><td align="left" valign="top">20.09.2011</td><td align="left" valign="top">
+
+        
+
+        Tullett Prebon (Europe) Limited - Commencement of trading on SIX Swiss Exchange
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201109201154_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>52/2011</b></td><td align="left" valign="top">13.09.2011</td><td align="left" valign="top">
+
+        
+
+        Amendment to Blue Chip Trading Tariffs
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201109131840_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>51/2011</b></td><td align="left" valign="top">12.09.2011</td><td align="left" valign="top">
+
+        
+
+        Definite index adjustment effective from 19 September 2011
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201109120810_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>50/2011</b></td><td align="left" valign="top">31.08.2011</td><td align="left" valign="top">
+
+        
+
+        Extension of Fee Holiday for SLS
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201108311805_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>49/2011</b></td><td align="left" valign="top">25.08.2011</td><td align="left" valign="top">
+
+        
+
+        Change of stop trading range
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201108250926_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>48/2011</b></td><td align="left" valign="top">25.08.2011</td><td align="left" valign="top">
+
+        
+
+        Price Step Group Change for Bonds
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201108250925_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>47/2011</b></td><td align="left" valign="top">22.08.2011</td><td align="left" valign="top">
+
+        
+
+        Adjustments to the equity indices on 19 September 2011
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201108220818_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>46/2011</b></td><td align="left" valign="top">10.08.2011</td><td align="left" valign="top">
+
+        
+
+        LaBranche Structured Products Europe Ltd - Name change
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201108101629_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>45/2011</b></td><td align="left" valign="top">04.08.2011</td><td align="left" valign="top">
+
+        
+
+        Change in trading segments for Schindler Holding AG and Weatherford International Ltd due to the ordinary index review
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201108041621_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>44/2011</b></td><td align="left" valign="top">03.08.2011</td><td align="left" valign="top">
+
+        
+
+        CIM Banque SA - Commencement of trading on SIX Swiss Exchange
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201108031844_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>43/2011</b></td><td align="left" valign="top">03.08.2011</td><td align="left" valign="top">
+
+        
+
+        Launch of SWXess Maintenance Release 1.2
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201108031841_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>42/2011</b></td><td align="left" valign="top">29.07.2011</td><td align="left" valign="top">
+
+        
+
+        Madison Tyler Europe Limited - Name change
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201107291433_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>41/2011</b></td><td align="left" valign="top">27.07.2011</td><td align="left" valign="top">
+
+        
+
+        LaBranche Structured Products Europe Ltd - Handelsaufnahme an SIX Swiss Exchange
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201107271700_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>40/2011</b></td><td align="left" valign="top">26.07.2011</td><td align="left" valign="top">
+
+        
+
+        Change of stop trading range
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201107261611_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>39/2011</b></td><td align="left" valign="top">26.07.2011</td><td align="left" valign="top">
+
+        
+
+        Price Step Group Change for Bonds
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201107261610_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>38/2011</b></td><td align="left" valign="top">25.07.2011</td><td align="left" valign="top">
+
+        
+
+        Additional capacity in bond segments
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201107251140_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>37/2011</b></td><td align="left" valign="top">20.07.2011</td><td align="left" valign="top">
+
+        
+
+        Changes in the registration procedure for traders of new participants
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201107201054_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>36/2011</b></td><td align="left" valign="top">08.07.2011</td><td align="left" valign="top">
+
+        
+
+        Index adjustments on the occasion of the ordinary index review
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201107081735_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>35/2011</b></td><td align="left" valign="top">06.07.2011</td><td align="left" valign="top">
+
+        
+
+        Changes to Directive 7 - Access Fee
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201107061542_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>34/2011</b></td><td align="left" valign="top">01.07.2011</td><td align="left" valign="top">
+
+        
+
+        SIX Exchange Regulation Message No. 2/2011 to replace SIX Swiss Exchange Message No. 01/2009
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201107011702_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>33/2011</b></td><td align="left" valign="top">30.06.2011</td><td align="left" valign="top">
+
+        
+
+        Launch of SLS
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201106301813_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>32/2011</b></td><td align="left" valign="top">30.06.2011</td><td align="left" valign="top">
+
+        
+
+        Liquidnet Europe Limited - Commencement of trading on SIX Swiss Exchange
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201106301621_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>31/2011</b></td><td align="left" valign="top">23.06.2011</td><td align="left" valign="top">
+
+        
+
+        Change of stop trading range
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201106231031_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>30/2011</b></td><td align="left" valign="top">23.06.2011</td><td align="left" valign="top">
+
+        
+
+        Price Step Group Change for Bonds
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201106231030_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>29/2011</b></td><td align="left" valign="top">06.06.2011</td><td align="left" valign="top">
+
+        
+
+        SIX Swiss Exchange further extends range of services for participants
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201106061707_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>28/2011</b></td><td align="left" valign="top">31.05.2011</td><td align="left" valign="top">
+
+        
+
+        Termination of Swiss Block Service
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201105311017_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>27/2011</b></td><td align="left" valign="top">27.05.2011</td><td align="left" valign="top">
+
+        
+
+        GETCO Europe Limited - Commencement of trading on SIX Swiss Exchange
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201105271741_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>26/2011</b></td><td align="left" valign="top">25.05.2011</td><td align="left" valign="top">
+
+        
+
+        Change of stop trading range
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201105251723_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>25/2011</b></td><td align="left" valign="top">25.05.2011</td><td align="left" valign="top">
+
+        
+
+        Price Step Group Change for Bonds
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201105251721_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>24/2011</b></td><td align="left" valign="top">16.05.2011</td><td align="left" valign="top">
+
+        
+
+        Goldenberg Hehmeyer LLP - Commencement of trading on SIX Swiss Exchange
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201105161603_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>23/2011</b></td><td align="left" valign="top">27.04.2011</td><td align="left" valign="top">
+
+        
+
+        Change of stop trading range
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201104271640_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>22/2011</b></td><td align="left" valign="top">27.04.2011</td><td align="left" valign="top">
+
+        
+
+        Price Step Group Change for Bonds
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201104271638_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>21/2011</b></td><td align="left" valign="top">26.04.2011</td><td align="left" valign="top">
+
+        
+
+        Sun Trading International Limited - Commencement of trading on SIX Swiss Exchange
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201104261844_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>20/2011</b></td><td align="left" valign="top">26.04.2011</td><td align="left" valign="top">
+
+        
+
+        NZB Neue Z&uuml;rcher Bank AG
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201104261603_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>19/2011</b></td><td align="left" valign="top">21.04.2011</td><td align="left" valign="top">
+
+        
+
+        Banque Syz &amp; Co. SA - Commencement of trading on SIX Swiss Exchange
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201104211155_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>18/2011</b></td><td align="left" valign="top">19.04.2011</td><td align="left" valign="top">
+
+        
+
+        Execution Ltd.
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201104191331_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>17/2011</b></td><td align="left" valign="top">13.04.2011</td><td align="left" valign="top">
+
+        
+
+        All Options Helvetia AG
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201104131427_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>16/2011</b></td><td align="left" valign="top">05.04.2011</td><td align="left" valign="top">
+
+        
+
+        Spire Europe Limited - Commencement of trading on SIX Swiss Exchange
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201104051800_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>15/2011</b></td><td align="left" valign="top">01.04.2011</td><td align="left" valign="top">
+
+        
+
+        All Options International B.V. - Commencement of trading on SIX Swiss Exchange
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201104011415_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>14/2011</b></td><td align="left" valign="top">25.03.2011</td><td align="left" valign="top">
+
+        
+
+        Change of stop trading range
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201103251615_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>13/2011</b></td><td align="left" valign="top">25.03.2011</td><td align="left" valign="top">
+
+        
+
+        Price Step Group Change for Bonds
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201103251614_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>12/2011</b></td><td align="left" valign="top">15.03.2011</td><td align="left" valign="top">
+
+        
+
+        AlgoEngineering Europe Ltd - Commencement of trading on SIX Swiss Exchange
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201103151652_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>11/2011</b></td><td align="left" valign="top">14.03.2011</td><td align="left" valign="top">
+
+        
+
+        Definite index adjustments effective from 21 March 2011
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201103140800_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>10/2011</b></td><td align="left" valign="top">11.03.2011</td><td align="left" valign="top">
+
+        
+
+        Changes to the Index Rules for the SMI&reg; and SPI&reg; Index Families as well as the SLI Swiss Leader Index&reg; effective as of 1 July 2011
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201103111618_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>09/2011</b></td><td align="left" valign="top">09.03.2011</td><td align="left" valign="top">
+
+        
+
+        Change in trading segments for Weatherford International Ltd and Petroplus Holdings Ltd due to extraordinary inclusion of Weatherford International in SLI&reg;
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201103090836_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>08/2011</b></td><td align="left" valign="top">22.02.2011</td><td align="left" valign="top">
+
+        
+
+        Price Step Group Change for Bonds
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201102221600_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>07/2011</b></td><td align="left" valign="top">22.02.2011</td><td align="left" valign="top">
+
+        
+
+        Neue Helvetische Bank AG - Commencement of trading on SIX Swiss Exchange
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201102221413_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>06/2011</b></td><td align="left" valign="top">21.02.2011</td><td align="left" valign="top">
+
+        
+
+        Adjustments to the equity indices on 21 March 2011
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201102210800_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>05/2011</b></td><td align="left" valign="top">08.02.2011</td><td align="left" valign="top">
+
+        
+
+        Hudson River Trading Europe Ltd - Commencement of trading on SIX Swiss Exchange
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201102081653_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>04/2011</b></td><td align="left" valign="top">31.01.2011</td><td align="left" valign="top">
+
+        
+
+        Winchester Capital B.V. - Commencement of trading on SIX Swiss Exchange
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201101311538_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>03/2011</b></td><td align="left" valign="top">28.01.2011</td><td align="left" valign="top">
+
+        
+
+        Change of stop trading range
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201101281601_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top"><b>02/2011</b></td><td align="left" valign="top">28.01.2011</td><td align="left" valign="top">
+
+        
+
+        Price Step Group Change for Bonds
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201101281558_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top"><b>01/2011</b></td><td align="left" valign="top">03.01.2011</td><td align="left" valign="top">
+
+        
+
+        New sector indices have been added to the index universe of the Swiss Bond Index SBI&reg; as at 3 January 2011
+      </td><td align="center" valign="top"><a href="/swx_messages/online/swx_message_201101030915_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="pdf"/></a></td></tr></table><br/></div><br/></td></tr><tr><td valign="top" style="background-color:#FFFFFF;"><div style="height: 30px; float:right; margin-top:50px;"><div style="display: inline; margin-left: 4px;"><a href="#" id="print-view-icon" onclick="window.print();" onmouseover="document.getElementById('printbutton').src='/resources/images/layout/button_print_a.gif';" onmouseout="document.getElementById('printbutton').src='/resources/images/layout/button_print.gif';"><img src="/resources/images/layout/button_print@fy8szl8g.gif" border="0" id="printbutton" title="Print page"/></a></div><div style="display: inline; margin-left: 4px;"><a href="http://www.addthis.com/bookmark.php?v=250" class="addthis_button" id="bookmark-icon" onmouseover="document.getElementById('bookmarkbutton').src='/resources/images/layout/button_bookmark_a.gif';" onmouseout="document.getElementById('bookmarkbutton').src='/resources/images/layout/button_bookmark.gif';"><img src="/resources/images/layout/button_bookmark@g5gkkpvc.gif" id="bookmarkbutton" border="0" title="Bookmark &amp; Share"/></a></div></div></td></tr></table></td><td valign="top" id="area-sidebar" style="background-color:#FFFFFF;"><div><noscript>
+      Javascript required to display<br/>
+      page correctly !
+    </noscript><table border="0" cellpadding="0" cellspacing="0" style="margin-bottom:20px" width="100%"><tr><td class="sidebar-permalinks"><a class="sidebar-permalink-external" href="http://www.six-exchange-regulation.com" target="_blank"><image src="/resources/images/trans.gif" width="14" height="1" border="0"/>SIX Exchange Regulation</a></td></tr><tr><td class="sidebar-permalinks"><a class="sidebar-permalink-external" href="http://www.connexor.ch" target="_blank"><image src="/resources/images/trans.gif" width="14" height="1" border="0"/>Connexor</a></td></tr><tr><td style="border-top:#9a9b9c solid 1px;"><image src="/resources/images/trans.gif" width="14" height="1" border="0"/></td></tr></table><table width="100%" cellpadding="0" cellspacing="0" border="0" class="dijitTitlePane mpulse-sidebar" style="padding-bottom:6px;"><tr><td class="sidebar-icon-item"><a class="sidebar-icon-item" href="/news/rssfeeds_en.html" style="background: url(/resources/images/icons_inv/rss.png) left center no-repeat;">RSS Newsfeeds</a></td></tr></table><div dojoType="swx.widget.TitlePane" id="sbHpLoginPane" saveState="true" duration="500" class="mpulse-sidebar" style="visibility:hidden" title="Login"><table width="100%" cellpadding="0" cellspacing="0"><tr><td class="sidebar-item"><a class="sidebar-item" href="/member_section/login.html">Member Section</a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="http://www.six-exchange-regulation.com/obligations/issuer_reporting_en.html" target="_blank">Issuer Reporting<img src="/resources/images/trans@g5gkkl8o.gif" width="3" height="1" border="0"/><img src="/resources/images/icons_inv/new_window@g5gkkobs.png" border="0" width="11" height="9"/></a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="/issuers/services/connexor/ibt2_en.html ">IBT</a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" target="_blank" href="https://www.six-exchange-regulation.com/admission/listing/ibl/login_en.html">IBL<img src="/resources/images/trans@g5gkkl8o.gif" width="3" height="1" border="0"/><img src="/resources/images/icons_inv/new_window@g5gkkobs.png" border="0" width="11" height="9"/></a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="http://www.exfeed.com/" target="_blank">Data Services Client Area<img src="/resources/images/trans@g5gkkl8o.gif" width="3" height="1" border="0"/><img src="/resources/images/icons_inv/new_window@g5gkkobs.png" border="0" width="11" height="9"/></a></td></tr></table></div><script type="text/javascript" language="javascript">
+      dojo.addOnLoad(function() {
+      dojo.style("sbHpLoginPane", "visibility", "visible");
+      });
+    </script><script type="text/javascript" language="javascript">
+      dojo.addOnLoad(function() {
+        dojo.style("sbSearchPane", "visibility", "visible");
+      });
+    </script><div dojoType="swx.widget.TitlePane" id="sbSearchPane" duration="500" class="mpulse-sidebar" style="visibility:hidden" saveState="true" title="Product search"><table width="100%" cellpadding="0" cellspacing="0"><tr><td width="100%" style="padding-left:10px; vertical-align:top;"><form name="sidebarSearchForm" method="get" action="/search/quotes_en.html" style="padding:0px; margin:0px; height:18px;"><input type="text" value="Company, valor, symbol, ISIN..." name="security" style="width:155px; height:18px; border:0px; padding-top:3px; padding-left:4px;                     background: url(/resources/images/layout/search_bg.gif) no-repeat;                     color:#C3C3C4; font-face:Arial; font-size:11px; vertical-align:top;" onfocus="if (this.value=='Company, valor, symbol, ISIN...') {this.value='';this.style.color='#000000';};" onblur="if (this.value=='') {this.value='Company, valor, symbol, ISIN...';this.style.color='#C3C3C4';};"/><img src="/resources/images/layout/button_search_small@g4fjryrs.png" onmouseover="this.src='/resources/images/layout/button_search_a_small.png';" onmouseout="this.src='/resources/images/layout/button_search_small.png';" onclick="document.sidebarSearchForm.submit();" style="margin-bottom:2px; cursor:pointer;" title="Search"/></form></td></tr></table></div><div dojoType="swx.widget.TitlePane" id="sbQuickLinksPane" saveState="true" duration="500" class="mpulse-sidebar" style="visibility:hidden" title="MyFavorites"><table width="100%" id="quicklinksTable" cellpadding="0" cellspacing="0"> </table></div><script type="text/javascript" language="javascript">
+      dojo.addOnLoad(function() {
+      dojo.style("sbQuickLinksPane", "visibility", "visible");
+      });
+    </script><br/></div></td></tr></table></td></tr><tr><td height="80" valign="top" bgcolor="#F3F3F3" id="area-foot" style="border-top:#FFFFFF solid 1px;"><div class="footer" style="padding-top:9px; padding-left:12px;">Relevant web sites:
+          &nbsp;
+          <span><a class="footer" href="http://www.six-exchange-regulation.com/index_en.html" target="_blank">SIX Exchange Regulation<img src="/resources/images/icons_inv/new_window@g5gkkobs.png" border="0" style="margin-left:3px; margin-right:3px;"/></a></span><span><a class="footer" href="http://www.scoach.com" target="_blank">Scoach<img src="/resources/images/icons_inv/new_window@g5gkkobs.png" border="0" style="margin-left:3px; margin-right:3px;"/></a></span><span><a class="footer" href="http://www.stoxx.com/" target="_blank">STOXX<img src="/resources/images/icons_inv/new_window@g5gkkobs.png" border="0" style="margin-left:3px; margin-right:3px;"/></a></span><span><a class="footer" href="http://www.swissfunddata.ch/index_de.html" target="_blank">Swiss Fund Data<img src="/resources/images/icons_inv/new_window@g5gkkobs.png" border="0" style="margin-left:3px; margin-right:3px;"/></a></span></div><div class="footer" style="padding-top:9px; padding-left:12px;"><span class="first"><a class="footer" href="/sitemap_en.html">Sitemap</a></span><span><a class="footer" href="/disclaimer_en.html">Disclaimer</a></span><span><a class="footer" href="/technical_details_en.html">Technical details</a></span></div><div class="footer" style="padding-top:9px; padding-left:12px;">
+          &copy; SIX Swiss Exchange
+          Ltd</div></td></tr></table></td><td><table border="0" cellpadding="0" cellspacing="0" width="6" height="100%" id="right-bg"><tr><td height="130">&nbsp;</td></tr><tr><td height="208" background="/resources/images/layout/right_top_bg@h1bu9ju8.gif">&nbsp;</td></tr><tr><td valign="top" width="6" background="/resources/images/layout/right_bg@g5gkkpvc.gif" height="100%">&nbsp;</td></tr></table></td><script>
+              if (String(document.location).indexOf("https://")==-1) {
+                document.write('<td valign="top" style="padding-top:130px;">')
+                document.write('<iframe src="/resources/html/sky_home_en.html" width="310" height="610" frameborder="no" scrolling="no" id="skyscraper">')
+                document.write('</iframe>')
+                document.write('</td>')
+              }
+              </script></tr></table><div id="meta-nav-lang-dropdown" style="display:none; position:absolute; z-index:1;"><table border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" cellpadding="0" cellspacing="0" style="background:#333333; width:105px;"><tr><td class="meta-nav-dropdown meta-nav-dropdown-inactive" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="window.location.href='/participants/regulation/sse_messages/2011_de.html';">Deutsch</td></tr><tr><td class="meta-nav-dropdown meta-nav-dropdown-active">English</td></tr><tr><td class="meta-nav-dropdown meta-nav-dropdown-inactive" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="window.location.href='/participants/regulation/sse_messages/2011_fr.html';">Fran&ccedil;ais</td></tr><tr><td class="meta-nav-dropdown meta-nav-dropdown-active">&nbsp;</td></tr></table></td><td width="5" background="/resources/images/layout/shadow_right@g5gkkpvc.gif" style="filter:Alpha(opacity=30);opacity:.3;"><img src="/resources/images/trans@g5gkkl8o.gif" height="1" width="5"/></td></tr><tr><td background="/resources/images/layout/shadow_bottom@g5gkkpvc.gif" style="filter:Alpha(opacity=20);opacity:.2;"><img src="/resources/images/trans@g5gkkl8o.gif" height="5" width="1"/></td><td background="/resources/images/layout/shadow_bottomright@g5gkkpvc.gif" style="filter:Alpha(opacity=20);opacity:.2;"><img src="/resources/images/trans@g5gkkl8o.gif" height="5" width="1"/></td></tr></table><script type="text/javascript" language="javascript">
+
+      
+          dojo.addOnLoad(function() {
+
+            
+            var metaNavLangButton = dojo.byId('meta-nav-lang-button');
+            var metaNavLangDropdown = dojo.byId('meta-nav-lang-dropdown');
+            var metaNavLanguage = new metaNavSelector(metaNavLangButton, metaNavLangDropdown);
+            metaNavLanguage.init();
+
+            
+            dojo.connect(metaNavLangButton, 'mouseenter', function(){
+              metaNavLangButton.className='meta-nav meta-nav-button-over';
+              metaNavLangButton.getElementsByTagName('span')[0].className = 'meta-nav-arrow meta-nav-arrow-over';
+              dojo.style(metaNavLangDropdown, 'display', 'block');
+            });
+
+            
+            dojo.connect(metaNavLangButton, 'mouseleave', function(event) {
+              if ( metaNavLanguage.mouseOutOfButtonAndDropdown(event) ) {
+                metaNavLanguage.hideDropdown();
+              }
+            });
+
+            
+            dojo.connect(metaNavLangDropdown, 'mouseleave', function(event) {
+              if ( metaNavLanguage.mouseOutOfButtonAndDropdown(event) ) {
+                metaNavLanguage.hideDropdown();
+              }
+            });
+          });
+        </script></div></td></tr></table><div id="searchDropdown" style="visibility:hidden;position:absolute;top:144px;left:900px" onmouseover="showSearchDropdown();return false;" onmouseout="hideSearchDropdown();return false;"><table border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" cellpadding="0" cellspacing="0" style="background:#333333;width:162px;"><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/search/site/search_en.html';">Text</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/search/quotes_en.html';">Products</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/shares/explorer_en.html';">Shares</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/bonds/explorer_en.html';">Bonds</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/funds/explorer_en.html';">ETFs &amp; funds</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/exchange_traded_products/explorer_en.html';">Exchange Traded Products</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/news/notifications/management_transactions_en.html';">Management Transactions</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/news/notifications/major_shareholders_en.html';">Significant Shareholders</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/news/official_notices/search_en.html';">Official Notices</td></tr><tr><td class="searchDD" style="cursor:cursor;">&nbsp;</td></tr></table></td><td width="5" background="/resources/images/layout/shadow_right@g5gkkpvc.gif" style="filter:Alpha(opacity=30);opacity:.3;"><img src="/resources/images/trans@g5gkkl8o.gif" height="1" width="5"/></td></tr><tr><td background="/resources/images/layout/shadow_bottom@g5gkkpvc.gif" style="filter:Alpha(opacity=20);opacity:.2;"><img src="/resources/images/trans@g5gkkl8o.gif" height="5" width="1"/></td><td background="/resources/images/layout/shadow_bottomright@g5gkkpvc.gif" style="filter:Alpha(opacity=20);opacity:.2;"><img src="/resources/images/trans@g5gkkl8o.gif" height="5" width="1"/></td></tr></table></div><script type="text/javascript" language="javascript">
+        var isHttps = "https:" == document.location.protocol;
+        if (!isHttps) {
+          document.write(unescape("%3Cscript src='/resources/scripts/gatag.js' type='text/javascript'%3E%3C/script%3E"));
+          document.write(unescape("%3Cscript src='http://www.google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        }
+      </script><script type="text/javascript" language="javascript">
+        if (!isHttps) {
+          try {
+            var pageTracker = _gat._getTracker("UA-1241259-1");
+            pageTracker._trackPageview();
+          } catch(err) {}
+        }
+
+        
+        var addthis_config = {
+          username: "SWXmarketpulse",
+          ui_language: "en",
+          ui_click: true
+        }
+        document.write(unescape("%3Cscript src='" + document.location.protocol + "//s7.addthis.com/js/250/addthis_widget.js' type='text/javascript'%3E%3C/script%3E"));
+        ; 
+      </script></body></html>

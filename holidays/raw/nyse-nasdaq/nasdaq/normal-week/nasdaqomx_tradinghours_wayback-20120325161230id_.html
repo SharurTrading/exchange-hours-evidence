@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Trading hours</title>
+
+<meta charset="UTF-8">
+<meta name="generator" content="InfoGlue CMS" />
+<meta name="robots" content="index,follow" />
+<meta name="description" content="Trading hours" />
+<meta name="keywords" content="Trading hours" />
+<meta name="copyright" content="Copyright 2011, NASDAQ OMX Group, Inc." />
+<meta name="verify-v1" content="vAZ4ON8KRfVEGA5xYBmkNPoIyFcHcx652T8RRTa7Oj8=" />
+<link rel="shortcut icon" href="http://www.nasdaqomx.com/static/ico/Q_Corp.ico" />
+
+<style type="text/css" media="all">
+	@import url(/static/css/normalize.css);
+	@import url("http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css");
+	@import url(/static/css/class.css);
+	@import url(/static/corp2/css/main.css);
+	
+	
+	@import url(/static/corp2/css/nasdaq-font.css);
+</style>
+
+<!--[if IE]>
+<style type="text/css" media="all">
+
+input[type=checkbox] {
+	border: none;
+}
+</style>
+<![endif]-->
+
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAdN0-y9Jzm0t7k0wx3dQRdxQ4HvwrGBdAA3zfteiNHAeMCdRtCBQDBcB_RRsTNMdevgM7EaUvT3qGeQ"></script>
+<script type="text/javascript">
+	google.load("jquery", "1");
+	google.load("feeds", "1");
+	google.load("jqueryui", "1");
+	google.load("swfobject", "2");
+</script>
+
+<script type="text/javascript" src="/static/jwplayer/v59/jwplayer.js"></script>
+<script src="/static/corp2/js/modernizr.min.js"></script>
+<script type="text/javascript" src="/system/js/utilsjs/"></script><!-- Utils JS -->
+<script type="text/javascript" src="/static/corp2/js/nasdaqomx.js"></script>
+<script type="text/javascript" src="/static/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/static/corp2/js/dateFormat.js"></script>
+
+</head>
+<body>
+
+<div id="mainWrapper">
+	<header id="topArea" class="overflowHidden">
+		<div id="headerContentContainer" class="overflowHidden">
+			<div id="logoArea" class="floatLeft">
+				<h4><a href="/" title="Go to home page"><img border="0" alt="Nasdaqomx" src="/static/corp2/css/img/nasdaqomxlogo.png" width="270"/></a></h4>
+			</div>
+			<div id="headerArea" class="floatRight">
+				<script type="text/javascript">
+	var topLinks = {
+		"openMenu": "",
+		"openParent": "",
+		"mouseHasEntered": false,
+		"clickedId": "",
+		"closeCurrent": function () {
+			topLinks.openParent.toggleClass("selected");
+			topLinks.openMenu = "";
+			topLinks.openParent = "";
+			$("#topLinksSub").hide();
+			$("#" + topLinks.clickedId).hide();
+		}
+	};
+	jQuery(document).ready(function () {
+		$("#topLinks li a").live("click", function(e) {
+			e.preventDefault();
+			var clickedPosition = $(this).position();
+			topLinks.clickedId = $(this).attr("href").substr(1);
+			
+			if(topLinks.openMenu == "") {
+				$(this).toggleClass("selected");
+				topLinks.openMenu = $(this).attr("href");
+				topLinks.openParent = $(this);
+				$("#topLinksSub").show();
+				$("#topLinksSub").position({
+					"of": $(this),
+					"my": "center top",
+					"at": "left bottom",
+					"offset": "",
+					"collision": "none none"
+				});
+				$("#" + topLinks.clickedId).show();
+			} else if(topLinks.openMenu == $(this).attr("href")) {
+				topLinks.closeCurrent();
+			} else {
+				topLinks.openParent.toggleClass("selected");
+				$(this).toggleClass("selected");
+				topLinks.openParent = $(this);
+				$(topLinks.openMenu).hide(); // Close the sub that is open
+				topLinks.openMenu = $(this).attr("href"); // Set new open sub
+				$("#topLinksSub").position({
+					"of": $(this),
+					"my": "center top",
+					"at": "left bottom",
+					"offset": "",
+					"collision": "none none"
+				});
+				$("#" + topLinks.clickedId).show(); // Show clicked sub
+			}
+		});
+		$("#topLinksSub").mouseenter(function(){
+			topLinks.mouseHasEntered = true;
+		}).mouseleave(function(){
+			if(topLinks.mouseHasEntered) {
+				topLinks.mouseHasEntered = false;
+				topLinks.closeCurrent();
+			}
+		});
+		$("#topArea").mouseover(function () {
+			if(topLinks.openParent != "" && !topLinks.mouseHasEntered) {
+				topLinks.closeCurrent();
+			}
+		});
+	});
+
+</script>
+<nav class="floatLeft">
+	<ul id="topLinks">
+<li><a href="#subTopLink-AboutUs" class="ui-corner-top " title="About Us">About Us</a></li><li><img alt="divider" src="http://www.nasdaqomx.com/static/corp2/css/img/divider.png" /></li><li><a href="#subTopLink-Newsroom" class="ui-corner-top " title="Newsroom">Newsroom</a></li><li><img alt="divider" src="http://www.nasdaqomx.com/static/corp2/css/img/divider.png" /></li><li><a href="#subTopLink-InvestorRelations" class="ui-corner-top " title="Investor Relations">Investor Relations</a></li><li><img alt="divider" src="http://www.nasdaqomx.com/static/corp2/css/img/divider.png" /></li><li><a href="#subTopLink-ContactUs" class="ui-corner-top " title="Contact Us">Contact Us</a></li>
+
+	</ul>
+	<div id="topLinksSub" class="hide ui-corner-all">
+<div id="subTopLink-AboutUs" class="hide"><a href="http://www.nasdaqomx.com/aboutus/" title="About Us Overview" class="overviewLink bold">About Us Overview</a><ul><li><a href="http://www.nasdaqomx.com/aboutus/whatisnasdaq/" title="What is NASDAQ?">What is NASDAQ?</a></li><li><a href="http://www.nasdaqomx.com/aboutus/timeline/" title="Timeline">Timeline</a></li><li><a href="http://www.nasdaqomx.com/aboutus/wewerethefirst1/" title="We Were the First">We Were the First</a></li><li><a href="http://www.nasdaqomx.com/aboutus/awards/" title="Awards">Awards</a></li><li><a href="http://www.nasdaqomx.com/aboutus/ourleadership/" title="Our Leadership">Our Leadership</a></li><li><a href="http://www.nasdaqomx.com/aboutus/ourmarkets/" title="Markets & Listings">Markets & Listings</a></li><li><a href="http://www.nasdaqomx.com/aboutus/careers/" title="Careers">Careers</a></li><li><a href="http://www.nasdaqomx.com/aboutus/sustainability/" title="Corporate Sustainability">Corporate Sustainability</a></li></ul></div><div id="subTopLink-Newsroom" class="hide"><a href="http://www.nasdaqomx.com/newsroom/" title="Newsroom Overview" class="overviewLink bold">Newsroom Overview</a><ul><li><a href="http://www.nasdaqomx.com/newsroom/pressreleases/" title="Press Releases">Press Releases</a></li><li><a href="http://www.nasdaqomx.com/newsroom/imagelogolibrary/" title="Image & Logo Library">Image & Logo Library</a></li><li><a href="http://www.nasdaqomx.com/newsroom/marketbellceremonies/" title="Market Bell Ceremonies">Market Bell Ceremonies</a></li><li><a href="http://www.nasdaqomx.com/newsroom/videobroll/" title="Video & B-roll">Video & B-roll</a></li></ul></div><div id="subTopLink-InvestorRelations" class="hide"><a href="http://www.nasdaqomx.com/investorrelations/" title="Investor Relations Overview" class="overviewLink bold">Investor Relations Overview</a><ul><li><a href="http://www.nasdaqomx.com/investorrelations/ourcompany/" title="Our company">Our company</a></li><li><a href="http://www.nasdaqomx.com/investorrelations/ourfinancials/" title="Our financials">Our financials</a></li><li><a href="http://www.nasdaqomx.com/investorrelations/ourstock/" title="Our stock">Our stock</a></li><li><a href="http://www.nasdaqomx.com/investorrelations/irnewsevents/" title="IR News & Events">IR News & Events</a></li><li><a href="http://www.nasdaqomx.com/investorrelations/investortools/" title="Investor Tools">Investor Tools</a></li></ul></div><div id="subTopLink-ContactUs" class="hide"><a href="http://www.nasdaqomx.com/contactus/" title="Contact Us Overview" class="overviewLink bold">Contact Us Overview</a><ul><li><a href="http://www.nasdaqomx.com/contactus/nasdaqomxexchanges/" title="NASDAQ OMX Exchanges">NASDAQ OMX Exchanges</a></li><li><a href="http://www.nasdaqomx.com/contactus/productsservices/" title="Products & Services">Products & Services</a></li><li><a href="http://www.nasdaqomx.com/contactus/regionaloffices/" title="Regional Offices">Regional Offices</a></li></ul></div>
+
+	</div>
+</nav><script type="text/javascript">
+	jQuery(document).ready(function () {
+		$(".searchButton").button();
+		$("#searchButton").live("click", function () {
+			$("#searchform").submit();
+		});
+	});
+</script>
+<div id="searchBox" class="floatLeft">
+	<form name="searchform" id="searchform" action="http://www.nasdaqomx.com/searchresult/" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded">
+		
+		<input id="searchbox" name="q" type="text" value="Search" class="ui-corner-all" size="20"/>
+		
+	</form>
+</div>
+<div id="searchButton" class="searchButton floatLeft">Go</div>
+			</div>
+		</div>
+	</header>
+	<div id="topMenu"><nav>
+	<div id="mainMenuDropShadow"></div>
+	<div id="navigationWrapper">
+		<div id="navigationContainer" class="overflowHidden">
+			<ul id="mainMenu" class="overflowHidden floatLeft">
+				<li class="first"><div title="Open sub menu for Listing" class="mainMenuItem pointer overflowHidden " siteNodeId="8856"><span class="floatLeft">Listing</span><span class="corp-sprite menu-arrow-s floatRight"></span></div></li><li><div title="Open sub menu for Trading" class="mainMenuItem pointer overflowHidden isActive" siteNodeId="8857"><span class="floatLeft">Trading</span><span class="corp-sprite menu-arrow-s floatRight"></span></div></li><li><div title="Open sub menu for Technology" class="mainMenuItem pointer overflowHidden " siteNodeId="8858"><span class="floatLeft">Technology</span><span class="corp-sprite menu-arrow-s floatRight"></span></div></li><li><div title="Open sub menu for Services" class="mainMenuItem pointer overflowHidden " siteNodeId="9016"><span class="floatLeft">Services</span><span class="corp-sprite menu-arrow-s floatRight"></span></div></li>
+
+			</ul>
+			<div id="followUsLinks" class="overflowHidden floatRight">
+				<a href="https://www.facebook.com/nasdaqomx" title="Go to NASDAQ OMX Facebook page"><span class="corp-sprite follow-us-facebook floatLeft"></span></a>
+				<a href="https://twitter.com/NASDAQOMX" title="Go to NASDAQ OMX Twitter page"><span class="corp-sprite follow-us-twitter floatLeft"></span></a>
+				<a href="https://plus.google.com/115745144664442295460" title="Go to NASDAQ OMX Google+ page"><span class="corp-sprite follow-us-google floatLeft"></span></a>
+				<a href="http://nasdaq.tumblr.com/" title="Go to NASDAQ Tumblr page"><span class="corp-sprite follow-us-tumblr floatLeft"></span></a>
+			</div>
+		</div>
+	</div>
+	<div id="subMenuContainerHolder" class="hide overflowHidden">
+		<div id="subMenuContainer" class="overflowHidden">
+			<div id="subMenu-8856" class="hide overflowHidden"><div class="overviewLink floatLeft"><a href="http://www.nasdaqomx.com/listing/" class="displayBlock" title="Go to Listing overview">Listing Overview</a></div><br class="clear" /><div class="subMenuSectionContainer"><div class="subMenuSection floatLeft clear " style="width: 172px;"><h3 class="noBorder"><a title="Go to New Listings page" href="http://www.nasdaqomx.com/listing/newlistings/" class="nodePicLink" imageClass="NewListings">New Listings</a></h3><ul class="noBorder" ><li><a class="imageLink" href="http://www.nasdaqomx.com/listing/newlistings/" title="Go to New Listings page"><img class="nodePic NewListings" imageClass="NewListings" src="http://www.nasdaqomx.com/digitalAssets/76/76520_marketopen136x90.jpg" alt="New Listings"/></a></li></ul></div><div class="subMenuSection floatLeft  " style="width: 172px;"><h3 class="noBorder"><a title="Go to Be a Better Public Company page" href="http://www.nasdaqomx.com/listing/beabetterpubliccompany/" class="nodePicLink" imageClass="BeaBetterPublicCompany">Be a Better Public Company</a></h3><ul class="noBorder" ><li><a class="imageLink" href="http://www.nasdaqomx.com/listing/beabetterpubliccompany/" title="Go to Be a better public company page"><img class="nodePic BeaBetterPublicCompany" imageClass="BeaBetterPublicCompany" src="http://www.nasdaqomx.com/digitalAssets/76/76518_tower136x90.jpg" alt="Be a better public company"/></a></li></ul></div><div class="subMenuSection floatLeft  " style="width: 172px;"><h3 class="noBorder"><a title="Go to Build Your Brand page" href="http://www.nasdaqomx.com/listing/buildyourbrand/" class="nodePicLink" imageClass="BuildYourBrand">Build Your Brand</a></h3><ul class="noBorder" ><li><a class="imageLink" href="http://www.nasdaqomx.com/listing/buildyourbrand/" title="Go to Build your brand page"><img class="nodePic BuildYourBrand" imageClass="BuildYourBrand" src="http://www.nasdaqomx.com/digitalAssets/76/76519_ceo136x90.jpg" alt="Build your brand"/></a></li></ul></div><div class="subMenuSection floatLeft  " style="width: 172px;"><h3 class="noBorder"><a title="Go to U.S. Market page" href="http://www.nasdaqomx.com/listing/us/" class="nodePicLink" imageClass="USMarket">U.S. Market</a></h3><ul class="noBorder" ><li><a class="imageLink" href="http://www.nasdaqomx.com/listing/us/" title="Go to U.S. Market page"><img class="nodePic USMarket" imageClass="USMarket" src="http://www.nasdaqomx.com/digitalAssets/78/78663_flagusa.gif" alt="U.S. Market"/></a></li></ul></div><div class="subMenuSection floatLeft  isLast" style="width: 172px;"><h3 class="noBorder"><a title="Go to European Markets page" href="http://www.nasdaqomx.com/listing/europe/" class="nodePicLink" imageClass="EuropeanMarkets">European Markets</a></h3><ul class="noBorder" ><li><a class="imageLink" href="http://www.nasdaqomx.com/listing/europe/" title="Go to European Markets page"><img class="nodePic EuropeanMarkets" imageClass="EuropeanMarkets" src="http://www.nasdaqomx.com/digitalAssets/78/78662_flageu.gif" alt="European Markets"/></a></li></ul></div></div></div><div id="subMenu-8857" class="hide overflowHidden"><div class="overviewLink floatLeft"><a href="http://www.nasdaqomx.com/trading/" class="displayBlock" title="Go to Trading overview">Trading Overview</a></div><br class="clear" /><div class="subMenuSectionContainer"><div class="subMenuSection floatLeft clear " style="width: 172px;"><h3 class="noBorder"><a title="Go to Instruments page" href="http://www.nasdaqomx.com/trading/instruments/" class="nodePicLink" imageClass="Instruments">Instruments</a></h3><ul class="noBorder" ><li><a class="imageLink" href="http://www.nasdaqomx.com/trading/instruments/" title="Go to Instruments page"><img class="nodePic Instruments" imageClass="Instruments" src="http://www.nasdaqomx.com/digitalAssets/78/78030_instruments.png" alt="Instruments"/></a></li></ul></div><div class="subMenuSection floatLeft  " style="width: 172px;"><h3 class="noBorder"><a title="Go to Indexes page" href="http://www.nasdaqomx.com/trading/indexes/" class="nodePicLink" imageClass="Indexes">Indexes</a></h3><ul class="noBorder" ><li><a class="imageLink" href="http://www.nasdaqomx.com/trading/indexes/" title="Go to Indexes page"><img class="nodePic Indexes" imageClass="Indexes" src="http://www.nasdaqomx.com/digitalAssets/76/76521_indexes-color.png" alt="Indexes"/></a></li></ul></div><div class="subMenuSection floatLeft  isLast" style="width: 172px;"><h3><a title="Go to Market Data page" href="http://www.nasdaqomx.com/trading/marketdata/">Market Data</a></h3><ul><li><a href="http://www.nasdaqomx.com/trading/marketdata/datafeeds/" title="Go to Data Feeds page">Data Feeds</a></li><li><a href="http://www.nasdaqomx.com/trading/marketdata/europeanproducts/" title="Go to European Products page">European Products</a></li><li><a href="http://www.nasdaqomx.com/trading/marketdata/u.s.products/" title="Go to U.S. Products page">U.S. Products</a></li></ul></div></div></div><div id="subMenu-8858" class="hide overflowHidden"><div class="overviewLink floatLeft"><a href="http://www.nasdaqomx.com/technology/" class="displayBlock" title="Go to Technology overview">Technology Overview</a></div><br class="clear" /><div class="subMenuSectionContainer"><div class="subMenuSection floatLeft clear " style="width: 172px;"><h3><a title="Go to Your Business page" href="http://www.nasdaqomx.com/technology/yourbusiness/">Your Business</a></h3><ul><li><a href="http://www.nasdaqomx.com/technology/yourbusiness/brokerstraders/" title="Go to Brokers & Traders page">Brokers & Traders</a></li><li><a href="http://www.nasdaqomx.com/technology/yourbusiness/clearinghousescsds/" title="Go to Clearinghouses & CSDs page">Clearinghouses & CSDs</a></li><li><a href="http://www.nasdaqomx.com/technology/yourbusiness/institutionalinvestors/" title="Go to Institutional Investors page">Institutional Investors</a></li><li><a href="http://www.nasdaqomx.com/technology/yourbusiness/issuers/" title="Go to Issuers page">Issuers</a></li><li><a href="http://www.nasdaqomx.com/technology/yourbusiness/marketoperators/" title="Go to Market Operators page">Market Operators</a></li><li><a href="http://www.nasdaqomx.com/technology/yourbusiness/regulators/" title="Go to Regulators page">Regulators</a></li></ul></div><div class="subMenuSection floatLeft  " style="width: 172px;"><h3><a title="Go to Marketplace Solutions page" href="http://www.nasdaqomx.com/technology/marketplacesolutions/">Marketplace Solutions</a></h3><ul><li><a href="http://www.nasdaqomx.com/technology/marketplacesolutions/advisoryservices/" title="Go to Advisory Services page">Advisory Services</a></li><li><a href="http://www.nasdaqomx.com/technology/marketplacesolutions/corporatesolutions/" title="Go to Corporate Solutions page">Corporate Solutions</a></li><li><a href="http://www.nasdaqomx.com/technology/marketplacesolutions/globaldataservices/" title="Go to Global Data Services page">Global Data Services</a></li><li><a href="http://www.nasdaqomx.com/technology/marketplacesolutions/globalinfrastructureservices/" title="Go to Global Infrastructure Services page">Global Infrastructure Services</a></li><li><a href="http://www.nasdaqomx.com/technology/marketplacesolutions/posttrade/" title="Go to Post-Trade page">Post-Trade</a></li><li><a href="http://www.nasdaqomx.com/technology/marketplacesolutions/surveillancecompliance/" title="Go to Surveillance and Compliance page">Surveillance and Compliance</a></li><li><a href="http://www.nasdaqomx.com/technology/marketplacesolutions/trading/" title="Go to Trading page">Trading</a></li></ul></div><div class="subMenuSection floatLeft  " style="width: 172px;"><h3><a title="Go to Thought Leadership page" href="http://www.nasdaqomx.com/technology/thoughtleadership/">Thought Leadership</a></h3><ul><li><a href="http://www.nasdaqomx.com/technology/thoughtleadership/articlesspeecheswhitepapers/" title="Go to Articles, Speeches, Whitepapers page">Articles, Speeches, Whitepapers</a></li><li><a href="http://www.nasdaqomx.com/technology/thoughtleadership/marketview/" title="Go to Market View Magazine page">Market View Magazine</a></li><li><a href="http://www.nasdaqomx.com/technology/thoughtleadership/pressreleases/" title="Go to Press Releases page">Press Releases</a></li></ul></div><div class="subMenuSection floatLeft  isLast" style="width: 172px;"><h3><a title="Go to Community page" href="http://www.nasdaqomx.com/technology/community/">Community</a></h3><ul><li><a href="http://www.nasdaqomx.com/technology/community/supportmaintenance/" title="Go to Support & Maintenance page">Support & Maintenance</a></li></ul></div></div></div><div id="subMenu-9016" class="hide overflowHidden"><div class="overviewLink floatLeft"><a href="http://www.nasdaqomx.com/services/" class="displayBlock" title="Go to Services overview">Services Overview</a></div><br class="clear" /><div class="subMenuSectionContainer"><div class="subMenuSection floatLeft clear " style="width: 172px;"><h3><a title="Go to Public Policy Advocacy page" href="http://www.nasdaqomx.com/services/publicpolicyadvocacy/">Public Policy Advocacy</a></h3><ul><li><a href="http://www.nasdaqomx.com/services/publicpolicyadvocacy/nasdaqomxontheissues/" title="Go to NASDAQ OMX on the Issues page">NASDAQ OMX on the Issues</a></li><li><a href="http://www.nasdaqomx.com/services/publicpolicyadvocacy/nasdaqssecrulefilings/" title="Go to NASDAQs SEC rule filings page">NASDAQs SEC rule filings</a></li><li><a href="http://www.nasdaqomx.com/services/publicpolicyadvocacy/testimonybeforecongress/" title="Go to Testimony Before Congress page">Testimony Before Congress</a></li></ul></div><div class="subMenuSection floatLeft  " style="width: 172px;"><h3><a title="Go to Corporate Solutions page" href="http://www.nasdaqomx.com/services/corporatesolutions/">Corporate Solutions</a></h3><ul><li><a href="http://www.nasdaqomx.com/services/corporatesolutions/intelligence/" title="Go to Intelligence page">Intelligence</a></li><li><a href="http://www.nasdaqomx.com/services/corporatesolutions/communications/" title="Go to Communications page">Communications</a></li><li><a href="http://www.nasdaqomx.com/services/corporatesolutions/governance/" title="Go to Governance page">Governance</a></li><li><a href="http://www.nasdaqomx.com/services/corporatesolutions/visibility/" title="Go to Visibility page">Visibility</a></li></ul></div><div class="subMenuSection floatLeft  isLast" style="width: 172px;"><h3><a title="Go to Initiatives page" href="http://www.nasdaqomx.com/services/initiatives/">Initiatives</a></h3><ul><li><a href="http://www.nasdaqomx.com/services/initiatives/educationalfoundation/" title="Go to Educational Foundation page">Educational Foundation</a></li><li><a href="http://www.nasdaqomx.com/services/initiatives/nordicfoundation/" title="Go to Nordic foundation page">Nordic foundation</a></li></ul></div></div></div>
+
+		</div>
+	</div>
+</nav>
+<script type="text/javascript">
+	var mainMenuObj = {
+		currentOpenId: "0",
+		currentActiveId: "0"
+	};
+	
+	jQuery(".imageLink").mouseenter(function(){
+		$(this).addClass("hover");
+	}).mouseleave(function(){
+		$(this).removeClass("hover");
+	});
+	
+	jQuery(document).ready(function () {
+		// Set Active Id
+		if($(".isActive").length != 0) {
+			mainMenuObj.currentActiveId = $(".isActive").attr("sitenodeid");
+		}
+		
+		$(".nodePic").hover(function () {
+			$(this).addClass("nodePicHover");
+		}, function () {
+			$(this).removeClass("nodePicHover");
+		});
+		
+		$(".mainMenuItem").hover(function () {
+			$(this).find(".corp-sprite").removeClass("menu-arrow-s").addClass("menu-arrow-s-hover");
+		}, function () {
+			$(this).find(".corp-sprite").addClass("menu-arrow-s").removeClass("menu-arrow-s-hover");
+		});
+		$(".nodePicLink").hover(function () {
+			var imageClass = $(this).attr("imageClass");
+			$(".subMenuSection ." + imageClass).addClass("nodePicHover");
+		}, function () {
+			var imageClass = $(this).attr("imageClass");
+			$(".subMenuSection ." + imageClass).removeClass("nodePicHover");
+		});
+		$(".nodePic").hover(function () {
+			var imageClass = $(this).attr("imageClass");
+			$(".subMenuSection a[imageClass=" + imageClass +"]").addClass("hovered");
+		}, function () {
+			var imageClass = $(this).attr("imageClass");
+			$(".subMenuSection a[imageClass=" + imageClass +"]").removeClass("hovered");
+		});
+		
+		$(".mainMenuItem").on("click", function (e) {
+			e.preventDefault();
+			var _openElem = $(this);
+			
+			// CLOSE OR SWITCH ITEM
+			if(mainMenuObj.currentOpenId != "0") {
+			
+				// CLOSE ITEM
+				if(_openElem.attr("siteNodeId") == mainMenuObj.currentOpenId) {
+					
+					$(document).trigger("topBanner.start");
+					// Set isActive
+					if(mainMenuObj.currentActiveId != "0") {
+						$("[sitenodeid=" + mainMenuObj.currentActiveId + "]").addClass("isActive");
+					}
+					
+					_openElem.find(".corp-sprite").removeClass("menu-arrow-n").addClass("menu-arrow-s");
+					$("#subMenuContainerHolder").slideToggle("fast", function () {
+						_openElem.removeClass("isOpen");
+						$("#subMenu-" + _openElem.attr("siteNodeId")).hide();
+						mainMenuObj.currentOpenId = "0";
+					});
+				// SWITCH ITEM
+				} else {
+					_openElem.find(".corp-sprite").removeClass("menu-arrow-s").addClass("menu-arrow-n");
+					$("#mainMenu").find(".isOpen").removeClass("isOpen").find(".corp-sprite").removeClass("menu-arrow-n").addClass("menu-arrow-s");
+					
+					$("#subMenu-" + mainMenuObj.currentOpenId).hide();
+					mainMenuObj.currentOpenId = _openElem.attr("siteNodeId");
+					_openElem.addClass("isOpen");
+					$("#subMenu-" + mainMenuObj.currentOpenId).show();
+					
+				}
+			// OPEN ITEM
+			} else {
+				$(document).trigger("topBanner.stop");
+				// Remove isActive
+				if(mainMenuObj.currentActiveId != "0") {
+					$("[sitenodeid=" + mainMenuObj.currentActiveId + "]").removeClass("isActive");
+				}
+			
+				_openElem.find(".corp-sprite").removeClass("menu-arrow-s").addClass("menu-arrow-n");
+				
+				mainMenuObj.currentOpenId = _openElem.attr("siteNodeId");
+				_openElem.addClass("isOpen");
+				$("#subMenu-" + _openElem.attr("siteNodeId")).show();
+				$("#subMenuContainerHolder").slideToggle("fast");
+			}
+			return false;
+		});
+	});
+
+</script></div>
+	<div id="mainWrapperCenter" class="overflowHidden">
+		<div id="topSectionWrapper" class="overflowHidden">
+			<div id="topSectionContainer">
+				
+			</div>
+		</div>
+		<div id="mainContentContainer" class="clear overflowHidden">
+			<div id="breadcrumbWrapper" class="overflowHidden">
+				<div id="breadcrumComponentContainer" class="overflowHidden">
+
+	<div class="floatLeft"><a href="http://www.nasdaqomx.com/">NASDAQ OMX</a></div>
+
+	<div class="ui-icon ui-icon-carat-1-e floatLeft"></div>
+
+	<div class="floatLeft"><a href="http://www.nasdaqomx.com/trading/">Trading</a></div>
+
+	<div class="ui-icon ui-icon-carat-1-e floatLeft"></div>
+
+	<div class="floatLeft"><a href="http://www.nasdaqomx.com/trading/marketplaces/">Marketplaces</a></div>
+
+	<div class="ui-icon ui-icon-carat-1-e floatLeft"></div>
+
+	<div class="floatLeft">Trading hours</div>
+
+</div>
+			</div><!-- CLOSING #topSectionWrapper -->
+			<div id="contentSectionContainer" class="contentSectionContainer overflowHidden">
+
+				<div id="contentContainerCenterWLOR" class="floatLeft contentContainerCenter defaultCenter">
+				
+					<h1 class="pageLabel">Trading Hours</h1>
+<div class="overflowHidden  clear boxContainer" >
+
+
+<div class="relatedDocsSection"></div></div><h2 class="label"></h2>
+<div id="Accordion_03370049476913308_48BBB0710F6B88A7C7F8D142AD5A63A8" class="clear AccordionContainer">
+<div id="accordionHolder_03370049476913308_48BBB0710F6B88A7C7F8D142AD5A63A8" class="firstAccordion">
+<div class="contentAccordion">
+<h3 class="accordionItemTitle"><a href="#"><b>U.S. Markets</b><span></span></a></h3>
+<div class="accordionContent">
+<p>Regular Trading Session Schedule <br /> The NASDAQ Stock Market Trading Sessions (Eastern Time)<br /> Pre-Market Trading Hours from 7:00 a.m. to 9:30 a.m.<br /> Market Hours from 9:30 a.m. to 4:00 p.m. <br /> After-Market Hours from 4:00 p.m. to 8:00 p.m.</p> <p>Quote and order-entry from 7:00 a.m. to 8:00 p.m.<br /> Quotes are open and firm from 7:00 a.m. to 8:00 p.m.</p> <hr /> <p>Please Note: Closing price information reported externally by NASDAQ to market data vendors and the media is based on the price at 4:01 PM ET when the market officially closes, and is not affected by other sessions.</p> <hr /> <h4>NASDAQ Holiday Trading Schedule</h4> <p><a href="http://www.nasdaqtrader.com/Trader.aspx?id=Calendar" target="_blank" title="Current holiday scedule for U.S. markets">Current Holiday Schedule &raquo;</a></p> <h4>Trading Session Schedule</h4> <p><a href="http://www.nasdaqtrader.com/Trader.aspx?id=Calendar#Trade" target="_blank" title="Trade Date - Settlement Date Schedule on U.S. markets">Trade Date--Settlement Date Schedule &raquo;</a><br /> &nbsp;</p>
+<div class="relatedDocsSection">
+</div>
+</div>
+</div>
+<div class="contentAccordion">
+<h3 class="accordionItemTitle"><a href="#"><b>European Markets - Nordic</b><span></span></a></h3>
+<div class="accordionContent">
+<ul>   <li><a href="http://www.nasdaqomxnordic.com/tradinghours/" target="_blank" title="Trading hours on the Nordic market">Trading hours on the Nordic markets</a></li><hr /> </ul> <h4>Holiday schedule 2012</h4>  <table width="95%" cellspacing="3" cellpadding="3" border="0" summary="">   <tbody>     <tr>       <td valign="top" align="left">&nbsp;</td>       <td valign="top" align="left"><strong>Market closed</strong></td>       <td valign="top" align="left"><strong>Half day trading</strong></td>     </tr>     <tr>       <td valign="top" bgcolor="#f0f2f4" align="left"><strong>Copenhagen</strong></td>       <td valign="top" bgcolor="#f0f2f4" align="left">5-6/4, 9/4, 4/5, 17-18/5, 28/5, 5/6, 24-26/12, 31/12<br />       &nbsp;</td>       <td valign="top" bgcolor="#f0f2f4" align="left">-</td>     </tr>     <tr>       <td valign="top" align="left"><strong>Stockholm</strong></td>       <td valign="top" align="left">6/1, 6/4, 9/4, 1/5, 17/5, 6/6, 22/6, 24-26/12, 31/12<br />       &nbsp;</td>       <td valign="top" align="left"><p>* 5/1, 5/4, 30/4, 16/5, 2/11</p></td>     </tr>     <tr>       <td valign="top" bgcolor="#f0f2f4" align="left"><strong>Helsinki</strong></td>       <td valign="top" bgcolor="#f0f2f4" align="left">6/1, 6/4, 9/4, 1/5, 17/5, 22/6, 6/12, 24-26/12, 31/12<br />       &nbsp;</td>       <td valign="top" bgcolor="#f0f2f4" align="left">-</td>     </tr>     <tr>       <td valign="top" align="left"><strong>Iceland</strong></td>       <td valign="top" align="left">5-6/4, 9/4, 19/4, 1/5, 17/5, 28/5, 6/8, 24-26/12, 31/12</td>       <td valign="top" align="left">-</td>     </tr>   </tbody> </table> <p><br />* The Fixed income market in Stockholm also have these half days:&nbsp;5/6, 21/6&nbsp;(not including Premium Bonds).</p>
+<div class="relatedDocsSection">
+</div>
+</div>
+</div>
+<div class="contentAccordion">
+<h3 class="accordionItemTitle"><a href="#"><b>European Markets - Baltic</b><span></span></a></h3>
+<div class="accordionContent">
+<ul><li><a href="http://www.nasdaqomxbaltic.com/en/exchange-information/trading/trading-3/" target="_blank" title="Trading day structure and phases in Baltic markets">Trading day structure and phases</a></li><li><a href="http://www.nasdaqomxbaltic.com/news/trading-holidays" target="_blank" title="Trading holidays in the Baltic markets">Holiday schedule</a></li></ul>
+<div class="relatedDocsSection">
+</div>
+</div>
+</div>
+<div class="contentAccordion">
+<h3 class="accordionItemTitle"><a href="#"><b>Commodities</b><span></span></a></h3>
+<div class="accordionContent">
+<p><a href="http://www.nasdaqomxcommodities.com/trading/practicaltradinginformation/" target="_blank" title="NASDAQ OMX Commodities Europe's practical trading information">NASDAQ OMX Commodities Europe's practical trading information &raquo;</a></p>
+<div class="relatedDocsSection">
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+// #*
+	jQuery(document).ready(function () {
+		// Accordion
+		var theUrl = window.location.href;
+		var hashValue = theUrl.split('#')[1];
+		var openItem = -1;
+
+		openItem = parseInt(hashValue);
+		
+		
+		$("#accordionHolder_03370049476913308_48BBB0710F6B88A7C7F8D142AD5A63A8").accordion({ header: "h3", autoHeight: false, collapsible: true, active: false });
+		
+		if(!isNaN(openItem) && openItem != -1) {
+			openItem -= 1;
+			$("#accordionHolder_03370049476913308_48BBB0710F6B88A7C7F8D142AD5A63A8").accordion("activate", openItem);
+		} 
+	});
+// *#
+</script><div id="shareThePage" class="overflowHidden fontSize15 fontRegular">
+<div class="floatLeft">SHARE&nbsp;</div>
+<!-- AddThis Button BEGIN -->
+<div class="floatLeft addthis_toolbox addthis_default_style">
+    <a class="addthis_button_facebook"></a>
+    <a class="addthis_button_twitter"></a>
+    <a class="addthis_button_google_plusone" g:plusone:size="small" g:plusone:annotation="none"></a>
+    <a class="addthis_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-4ee9c60a06b0f5f1"></script>
+</div>
+				</div><!-- CLOSING #contentContainerCenter (WLOR/WLAR) -->
+
+				<div id="contentContainerRight" class="floatRight contentContainerAside defaultRight">
+					
+				</div><!-- CLOSING #contentContainerRight -->
+
+			</div><!-- CLOSING #contentSectionContainer -->
+		</div><!-- CLOSING #mainContentContainer -->
+	</div><!-- CLOSING #mainWrapperCenter -->
+	<div id="bottomContainer" class="overflowHidden">
+		<div class="bottomMenu overflowHidden">
+			<div class="megaFooterSection width19">
+		<h3>Investors</h3><ul><li><a href="http://www.nasdaqomx.com/investorrelations/ourstock/" title="Get Stock Info">Get Stock Info</a></li><li><a href="http://www.nasdaqomx.com/investorrelations/ourfinancials/" title="Get Financial Data">Get Financial Data</a></li><li><a href="http://www.nasdaqomx.com/investorrelations/ourfinancials/annualreports/" title="Read Our Reports">Read Our Reports</a></li><li><a href="http://www.nasdaqomx.com/newsroom/" title="Visit Our Newsroom">Visit Our Newsroom</a></li><li><a href="http://www.nasdaqomx.com/investorrelations/ourcompany/boardofdirectors/" title="Board of Directors">Board of Directors</a></li></ul>
+	</div>
+
+	<img width="2" height="150" alt="Divider" src="http://www.nasdaqomx.com/static/corp2/css/img/BottomDivider.png" /><div class="megaFooterSection width19">
+		<h3>Market Professionals</h3><ul><li><a href="http://www.nasdaqomx.com/trading/instruments/" title="Learn About Instruments">Learn About Instruments</a></li><li><a href="http://www.nasdaqomx.com/trading/indexes/" title="Learn About Indexes">Learn About Indexes</a></li><li><a href="http://www.nasdaqomx.com/trading/marketdata/" title="Get Market Data">Get Market Data</a></li><li><a href="http://www.nasdaqomx.com/technology/" title="Our Technology">Our Technology</a></li></ul>
+	</div>
+
+	<img width="2" height="150" alt="Divider" src="http://www.nasdaqomx.com/static/corp2/css/img/BottomDivider.png" /><div class="megaFooterSection width19">
+		<h3>Companies</h3><ul><li><a href="http://www.nasdaqomx.com/listing/us/" title="List in the U.S.">List in the U.S.</a></li><li><a href="http://www.nasdaqomx.com/listing/europe/" title="List in Europe">List in Europe</a></li><li><a href="http://www.nasdaqomx.com/listing/europe/growthmarket/" title="List on a Growth Market">List on a Growth Market</a></li><li><a href="http://www.nasdaqomx.com/listing/" title="Why List With Us?">Why List With Us?</a></li><li><a href="http://www.nasdaqomx.com/services/publicpolicyadvocacy/" title="Our Public Policy Goals">Our Public Policy Goals</a></li><li><a href="http://www.nasdaqomx.com/technology/" title="Our Technology">Our Technology</a></li></ul>
+	</div>
+
+	<img width="2" height="150" alt="Divider" src="http://www.nasdaqomx.com/static/corp2/css/img/BottomDivider.png" /><div class="megaFooterSection width19">
+		<h3>Media</h3><ul><li><a href="http://www.nasdaqomx.com/newsroom/pressreleases/" title="Read Press Releases">Read Press Releases</a></li><li><a href="http://www.nasdaqomx.com/investorrelations/ourfinancials/annualreports/" title="Read Our Reports">Read Our Reports</a></li><li><a href="http://www.nasdaqomx.com/investorrelations/ourfinancials/secfilings/" title="Review SEC Filings">Review SEC Filings</a></li></ul>
+	</div>
+
+	<img width="2" height="150" alt="Divider" src="http://www.nasdaqomx.com/static/corp2/css/img/BottomDivider.png" /><div class="megaFooterSection width19">
+		<h3>Researchers</h3><ul><li><a href="http://www.nasdaqomx.com/aboutus/" title="Learn About Us">Learn About Us</a></li><li><a href="http://www.nasdaqomx.com/socialstream/" title="Follow Our Company">Follow Our Company</a></li><li><a href="http://www.nasdaqomx.com/aboutus/awards/" title="Awards & Recognition">Awards & Recognition</a></li></ul>
+	</div>
+		</div>
+		<footer id="mainFooterWrapper">
+			<p><a href="http://www.nasdaqomx.com/Privacy_Statement/">Privacy</a> | <a target="_self" href="http://www.nasdaqomx.com/disclaimerandcopyright/">Copyright</a> | <a target="_self" href="http://www.nasdaqomx.com/disclaimerandcopyright/">Disclaimer</a> | <a target="_blank" href="https://listingcenter.nasdaqomx.com/Show_Doc.aspx?File=LegalCompliance.html">Legal &amp; Compliance</a> | <a href="http://www.nasdaqomx.com/eip/">Invoices</a> |&nbsp;<a href="http://www.nasdaqomx.com/contactus/">Contact Us</a> | <a href="http://www.nasdaqomx.com/sitemap/">Sitemap</a> | <a id="feedBackLink" href="#">Feedback</a> <!--ooend--></p><p>&copy; 2012, The NASDAQ OMX Group, Inc. All Rights Reserved.</p><!--
+<p><a title="Web Analytics" href="http://getclicky.com/66469033"><img alt="Web Analytics" border="0" src="//static.getclicky.com/media/links/badge.gif" /></a></p>
+--><script src="//static.getclicky.com/js" type="text/javascript"></script><script type="text/javascript">try{ clicky.init(66469033); }catch(e){}</script><noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66469033ns.gif" /></p></noscript><script type="text/javascript">
+// #*
+	var feedbackFormObj = {
+		init: function () {
+			feedbackFormObj.mailFormContainer = $("#feedbackFormContainer");
+		},
+		mailFormContainer: null,
+		isValid: true,
+		validateForm: function () {
+			feedbackFormObj.isValid = true;
+			$("[req=req]").each(function (key, val) {
+				var _elem = $(val);
+				_elem.removeClass("validation-error");
+			
+				if(_elem.val() == "") {
+					feedbackFormObj.isValid = false;
+					_elem.addClass("validation-error"); 
+				}
+			});
+			if(feedbackFormObj.mailFormContainer.find("form .verifiedCheckbox").length != 0 && !feedbackFormObj.mailFormContainer.find("form .verifiedCheckbox").is(":checked")) {
+				feedbackFormObj.isValid = false;
+				feedbackFormObj.mailFormContainer.find("form .verifiedCheckbox").siblings("label").addClass("validation-error");
+			}
+			
+			if (feedbackFormObj.mailFormContainer.find("form .email").val() != undefined){
+				if(feedbackFormObj.mailFormContainer.find("form .email").val().toUpperCase().match(/^[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/) == null) {
+					feedbackFormObj.isValid = false;
+					feedbackFormObj.mailFormContainer.find("form .email").addClass("validation-error");
+				} else if (feedbackFormObj.mailFormContainer.find("form .verifyemail").val() != undefined) { 
+					if(feedbackFormObj.mailFormContainer.find("form .email").val() != feedbackFormObj.mailFormContainer.find("form .verifyemail").val()) {
+						feedbackFormObj.isValid = false;
+						feedbackFormObj.mailFormContainer.find("form .verifyemail").addClass("validation-error");
+					}
+				}
+			}
+		},
+		renderSuccessContent: function () {
+			var _c = $("<div>").addClass("successSection clear overflowHidden ui-corner-all");
+			var _h = $("<h3>").text("Thank you for your feedback");
+			var _t = $("<p>").html("<p>Thank you for taking your time to send feedback to us.</p>");
+			_c.append(_h).append("<p>Thank you for taking your time to send feedback to us.</p>");
+			$("#feedbackSuccessFailContent").append(_c);
+		},
+		renderFailContent: function () {
+			var _c = $("<div>").addClass("failSection clear overflowHidden ui-corner-all");
+			var _h = $("<h3>").text("Failed sending feedback email");
+			var _t = $("<p>").html("<p>There was a problem sending your email.</p>");
+			_c.append(_h).append("<p>There was a problem sending your email.</p>");
+			$("#feedbackSuccessFailContent").append(_c);
+		}
+	};
+	jQuery(document).ready(function () {
+		feedbackFormObj.init();
+		$(".button").button();
+		$("[req=req]").parent().find("label").prepend($("<span>").addClass("isReq").css("color", "red").css("margin-right", "5px").text("*"));
+	});
+
+	
+	$("#feedBackLink").live("click", function (e) {
+		e.preventDefault();
+		$("#feedbackFormContainer").dialog({
+			title: "Feedback",
+			resizable: false,
+			width: "370px",
+			buttons: {
+				"Submit": function () {
+					$("#feedbackSuccessFailContent").empty();
+					feedbackFormObj.validateForm();
+					if(feedbackFormObj.isValid) {
+						//console.log(feedbackFormUtils.formDataToJsonObject($("#feedbackFormContainer form")));
+						$.ajax({
+							url: corpUtils.baseUrl + "/System/ajax/MailService",
+							dataType: 'json',
+							data: feedbackFormUtils.formDataToJsonObject($("#feedbackFormContainer form")),//{ "from": strfrom, "to": strto, "subject": strsubject, "message": strmessage },
+							success: function (data) {
+								if(data.success == 1) {
+									feedbackFormObj.renderSuccessContent();
+								} else {
+									feedbackFormObj.renderFailContent();
+								}
+							},
+							error: function (data) {
+								feedbackFormObj.renderFailContent();
+							},
+							type: "post"
+						});
+					}
+				}
+			}
+		});
+		return false;
+	});
+	
+	var feedbackFormUtils = {
+		formDataToJsonObject: function(_form) {
+	        var o = {};
+	        var a = _form.serializeArray();
+	        $.each(a, function() {
+	            if (o[this.name]) {
+	                /*if (!o[this.name].push) {
+	                o[this.name] = [o[this.name]];
+	                }
+	                o[this.name].push(this.value || '');*/
+	            } else {
+	                o[this.name] = this.value || '';
+	            }
+	        });
+	        return o;
+	    }
+	};
+// *#
+</script>
+
+<div id="feedbackFormContainer" class="moduleContainer hide overflowHidden">
+	<div id="feedbackSuccessFailContent"></div>
+	<form>
+		<label for="feedbackSender">Name:</label><br />
+		<input type="text" name="feedbackSender" id="feedbackSender" size="40" autofocus/><br />
+		<label for="feedbackFrom">E-mail:</label><br />
+		<input type="text" name="feedbackFrom" size="40" id="feedbackFrom" /><br />
+		<label for="feedbackMessage">Message:</label><br />
+		<textarea rows="5" cols="40" name="feedbackMessage" id="feedbackMessage"></textarea><br />
+		<input type="hidden" value="noreply@nasdaqomx.com" id="from" name="from" />
+		<input type="hidden" value="webmanagementgroup@nasdaqomx.com" id="to" name="to"/>
+		<input type="hidden" value="Feedback from the web" id="subject" name="subject" />
+		<input type="hidden" value="FpTeD@4@6x" name="auth" />
+		<input type="hidden" value="feedback" name="isFeedback" />
+	</form>
+</div>
+		</footer>
+	</div>
+</div><!-- CLOSING #mainWrapper -->
+
+ 
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- SiteCatalyst code version: H.22.1.
+Copyright 1996-2011 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="http://www.nasdaqomx.com/system/omniturejs/omniturejsdefault/"></script>
+<script language="JavaScript" type="text/javascript"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+
+s.pageName=document.title
+s.server=""
+s.channel=""
+s.pageType=""
+s.prop1=""
+s.prop2=""
+s.prop3=""
+s.prop4=""
+s.prop5=""
+/* Conversion Variables */
+s.campaign=""
+s.state=""
+s.zip=""
+s.events=""
+s.products=""
+s.purchaseID=""
+s.eVar1=""
+s.eVar2=""
+s.eVar3=""
+s.eVar4=""
+s.eVar5=""
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://nasdaq.122.2o7.net/b/ss/nasdaqpublicpolicy/1/H.22.1--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.22.1. -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11692785-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+</body>
+</html>
+

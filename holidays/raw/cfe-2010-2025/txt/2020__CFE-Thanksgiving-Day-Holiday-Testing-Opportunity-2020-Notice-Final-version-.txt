@@ -1,0 +1,135 @@
+CFE Thanksgiving Day Holiday Testing Opportunity
+Reference ID: C2020100701
+
+
+Overview
+To provide additional opportunities for holiday testing, the Cboe Futures Exchange, LLC (CFE) certification
+environment will be configured to observe a holiday trading session beginning Wednesday, October 14,
+2020. The test is designed to mimic the modified trading hours associated with the 2020 Thanksgiving
+Day holiday. After the start of the CFE certification trading environment on the afternoon of October 14,
+2020, the simulated holiday trading session will commence for the business date of October 16, 2020.
+
+
+Simulated Holiday Trading Schedule
+VX and AMERIBOR Futures
+
+The CFE Certification schedule below will apply for the Thursday, October 15, 2020 simulated holiday
+trading session in VX and AMERIBOR futures, including Trade at Settlement (TAS) transactions in VX and
+VXM futures (VXT, VXMT):
+
+   Type of Trading Hours        Thursday, October 15, 2020           Friday, October 16, 2020
+         Extended        5:00 p.m. (Wednesday) to10:30 a.m. CT    5:00 p.m. (Thursday) to 8:30
+                                  for VX, VXM,VXT,VXMT and         a.m. C T for VX, VXM, VXT,
+                                           AMERIBOR                  VXMT and AMERIBOR
+
+
+
+
+         Regular                          None                         8:30 a.m. to 12:15
+                         for VX, VXM, VXT, VXMT and AMERIBOR            p.m. C T for VX,
+                                                                      VXM and AMERIBOR
+
+                                                                       8:30 a.m. to 11:58
+                                                                        a.m. C T for VXT
+                                                                           and VXMT
+
+
+
+A holiday trading session includes extended trading hours on the calendar day of the holiday and any
+extended trading hours for the holiday on the previous calendar day. In this case, Thursday October 15,
+2020 is simulating Thursday, November 26, 2020 as the date of the holiday, which is the date on which
+the 2020 Thanksgiving Day holiday is being observed. Holiday trading sessions are not separate business
+days and are part of the next business day.
+All Other Products
+
+Simulated trading in the certification environment will be closed for all CFE products other than VX, VXM,
+VXT, VXMT and AMERIBOR futures on Thursday, October 15, 2020.
+
+
+Submission Time Frames for the Simulated Thanksgiving Day Holiday
+The chart below sets forth the applicable time frames for the submission of Quotes and Orders (including
+Cancel Orders and Cancel Replace/Modify Orders) in VX, VXM, and AMERIBOR futures, including Quotes
+and Orders in VXT and VXMT (unless otherwise indicated), in connection with the simulated Thanksgiving
+Day holiday.
+
+    Calendar Day               Time Frame                State of CFE’s         What May be
+                                                             System            Submitted to CFE’s
+                                                                                 Trading System
+    Wednesday               4:00 p.m. to system            Suspended               Nothing
+  October 14, 2020         restart (which occurs
+                         sometime between 4:05
+                            p.m. and 4:45 p.m.)
+
+     Wednesday            System restart (which            Suspended         Cancels for persisted
+   October 14, 2020         occurs sometime                                    Good-‘til-Canceled
+                                 between                                      (GTC) and Good-‘til-
+                       4:05 p.m. to 4:45 p.m. CT) to                               Date (GTD)
+                                4:45 p.m.                                      Orders from prior
+                                                                                  trading date
+    Wednesday           4:45 p.m. to 5:00 p.m. CT*      Queuing Period        Quotes and Orders
+  October 14, 2020                                                              (except Market,
+                                                                             Immediate or Cancel
+                                                                          (IOC), and Fill or Kill (FOK)
+                                                                                   Orders)**
+
+
+
+
+      Thursday           5:00 p.m. (Wednesday,         Extended Trading      Quotes and Orders
+  October 15 , 2020     October 14, 2020) to 10:30          Hours          (except Market Orders)
+                                 a.m. CT
+
+
+     Thursday           10:30 a.m. to system restart      Suspended                 Nothing
+  October 15, 2020        (which occurs sometime
+                         between 4:05 p.m. to 4:45
+                                   p.m.)
+     Thursday             System restart (which            Suspended        Cancels for persisted Quotes
+  October 15, 2020           occurs sometime                                  and Day, GTC, and GTD
+                         between 4:00 pm to 4:45                             Orders from holiday trading
+                           p.m. CT) to 4:45 p.m.                                        session
+
+
+
+
+     Thursday            4:45 p.m. to 5:00 p.m. CT       Queuing Period          Quotes and Orders
+  October 15, 2020                                                              (except Market, IOC,
+                                                                                 and FOK Orders)**
+
+
+
+
+       Friday          5:00 p.m. (Thursday October 15,   Extended Trading    Quotes and Orders (except
+  October 16, 2020          2020) to 8:30 a.m. CT             Hours               Market Orders)
+
+
+
+       Friday             8:30 a.m. to 12:15 p.m.            Regular         Quotes and Orders (except
+  October 16, 2020                                        Trading Hours     Market Orders for VXT, VXMT
+                        8:30 a.m. to 11:58 a.m. CT                               and AMERIBOR)
+                              for VXT/VXMT
+
+
+*The queuing period at the beginning of a business day for VX, VXM and AMERIBOR non-TAS single leg
+contract expirations and non-TAS spreads commences at the referenced start time for the queuing period
+plus a randomized time period from zero to three seconds. The queuing period at the beginning of a
+business day for VX and VXM TAS single leg contract expirations and TAS spreads commences at the
+referenced start time for the queuing period plus a randomized time period from three to six seconds.
+
+**Orders and Quotes permitted to be submitted to CFE’s trading system during these times are not
+executable until extended trading hours next commence.
+
+
+Additional Information
+Please refer to the following technical specifications for more details on the handling of Orders and Quotes
+during holiday trading sessions.
+
+     US Futures FIX Specification
+     US Futures BOE Specification
+
+We appreciate your business. Our trading community inspires and drives our mission of defining markets.
+
+CFE Trade Desk
+312.786.8700
+cfetradedesk@cboe.com
+

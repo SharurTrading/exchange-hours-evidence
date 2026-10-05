@@ -1,0 +1,164 @@
+<title>exchange-hours Charter Review</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --paper: #F5F6F4; --surface: #EBEEEC; --ink: #1B222B; --muted: #5E6B78;
+    --accent: #0C6C8F; --accent-ink: #0A5670; --hurt: #A8412B; --keep: #2E6E4E; --rule: #D5DAD8;
+    --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --mono: "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #101519; --surface: #171E25; --ink: #E4E8EB; --muted: #93A0AC;
+      --accent: #5CB6D6; --accent-ink: #8FD0E8; --hurt: #E0806A; --keep: #6FBF92; --rule: #2A333B;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #101519; --surface: #171E25; --ink: #E4E8EB; --muted: #93A0AC;
+    --accent: #5CB6D6; --accent-ink: #8FD0E8; --hurt: #E0806A; --keep: #6FBF92; --rule: #2A333B;
+  }
+  body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.55; margin: 0; }
+  .page { max-width: 72ch; margin: 0 auto; padding: 48px 24px 96px; }
+  .eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  h1 { font-family: var(--display); font-weight: 700; font-size: 40px; line-height: 1.08; letter-spacing: -0.015em; margin: 10px 0 14px; text-wrap: balance; }
+  h2 { font-family: var(--display); font-weight: 700; font-size: 24px; line-height: 1.2; margin: 56px 0 14px; text-wrap: balance; }
+  h3 { font-family: var(--display); font-weight: 600; font-size: 18px; margin: 28px 0 6px; text-wrap: balance; }
+  p { margin: 0 0 14px; }
+  .stance { font-size: 19px; color: var(--ink); border-left: 3px solid var(--accent); padding-left: 16px; margin: 20px 0 8px; }
+  .note { font-size: 15px; color: var(--muted); }
+  a { color: var(--accent-ink); }
+  code { font-family: var(--mono); font-size: 0.86em; background: var(--surface); padding: 1px 5px; border-radius: 3px; }
+  .purpose { background: var(--surface); padding: 18px 20px; margin: 20px 0; border-radius: 4px; }
+  .purpose p:last-child { margin-bottom: 0; }
+  ul, ol { padding-left: 1.3em; margin: 0 0 14px; }
+  li { margin-bottom: 8px; }
+  .findings { display: grid; grid-template-columns: 3.2ch 1fr; column-gap: 14px; row-gap: 0; border-top: 1px solid var(--rule); }
+  .findings > div { padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  .findings .id { font-family: var(--mono); font-size: 13px; color: var(--accent-ink); padding-top: 15px; }
+  .findings .fact { margin: 0 0 6px; }
+  .findings .so { margin: 0; font-size: 15px; color: var(--muted); }
+  .findings .so::before { content: "so "; font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-ink); }
+  .rule { margin: 26px 0; }
+  .rule h3 { margin: 0 0 6px; }
+  .rule .id { font-family: var(--mono); font-size: 13px; color: var(--accent-ink); margin-right: 8px; }
+  .rule p { margin: 0 0 8px; }
+  .replaces { font-family: var(--mono); font-size: 12.5px; color: var(--muted); margin: 0; }
+  .replaces b { font-weight: 500; color: var(--hurt); }
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+  .steps li { position: relative; padding-left: 40px; margin-bottom: 12px; }
+  .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: 0; top: 2px; width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: var(--paper); font-family: var(--mono); font-size: 13px; display: grid; place-items: center; }
+  .q { margin: 0 0 14px; padding: 12px 16px; border: 1px solid var(--rule); border-radius: 4px; }
+  .q p { margin: 0; }
+  .q .rec { font-size: 15px; color: var(--muted); margin-top: 4px; }
+  .q .rec::before { content: "recommended "; font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--keep); }
+  .sources { font-size: 14px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 14px; margin-top: 48px; }
+  .num { font-variant-numeric: tabular-nums; }
+  @media (max-width: 560px) { body { font-size: 16px; } h1 { font-size: 32px; } .findings { grid-template-columns: 3ch 1fr; } }
+</style>
+<div class="page">
+  <div class="eyebrow">exchange-hours · architectural review · 2026-09-12 UTC</div>
+  <h1>What exchange-hours is for, and the rules that follow</h1>
+  <p class="stance">The crate is SharurPlatform's live session calendar. It should be priced like one: model what the platform can route, as far back as its data reaches, from the operator's own statements, with holidays in scope and the evidence out of the source tree.</p>
+  <p class="note">By instruction this review ignores the repository's current laws. It rests on four fact reports gathered read-only on the same day (crate anatomy and cost, SharurPlatform's consumption, prior art, consequences), in the research store under <code>architecture-review/</code>. Nothing here is decided until the maintainer says so.</p>
+
+  <h2>1. What the crate is for</h2>
+  <p>It began as "exchange hours good enough to find session breaks and candle boundaries for backtesting", grew a product-family profile type when futures such as cattle did not fit a venue envelope, and now faces a plan for 32 more keys covering CME trade-type variants. The fact reports settle what it is actually for today.</p>
+  <ul>
+    <li>SharurPlatform is the only consumer. Two of its fourteen crates import it, through one adapter. It asks five things: is it open now; where does this trading day begin and end; which trade date does an instant belong to; when does the next session open; is this gap a closure to compress out of the chart.</li>
+    <li>Seven of the eight production <code>is_open</code> calls ask about now. The platform ships no historical replay engine. Intraday history never exceeds about 75 days. The only deep query is the daily chart's backward walk, unclamped by accident, which reaches 2007 and gets zero rows back.</li>
+    <li>Being told "closed" when the venue is open destroys data: live prints are dropped and daily bars fold into the next day. Being told "open" when the venue is closed corrupts labels and gates only. A calendar that can only widen is recoverable; one that narrows is not.</li>
+  </ul>
+  <div class="purpose">
+    <p><strong>Purpose, restated.</strong> exchange-hours is SharurPlatform's live session calendar for the instruments its adapters can route. It answers those five questions correctly for today and for as far back as the platform's own data reaches. It is not an archive of exchange history, and it is not a public reference work.</p>
+  </div>
+
+  <h2>2. The findings that force the shape</h2>
+  <div class="findings">
+    <div class="id">F1</div><div><p class="fact"><span class="num">36</span> keys exist; <span class="num">8</span> are reachable from a Sharur instrument; <span class="num">23</span> have no reference anywhere in SharurPlatform. All five SGX equity-index keys, all five metals TAS keys, weather, spot-quoted, event contracts, mini grains, rough rice, six ICE softs and Eurex fixed income have no consumer.</p><p class="so">the admission rule, not the model shape, is what is unbounded.</p></div>
+    <div class="id">F2</div><div><p class="fact"><span class="num">279</span> revision rows; <span class="num">35</span> reachable; <span class="num">185</span> (66%) pre-2020. Of the 35 reachable rows exactly two fall in 2020–2025.</p><p class="so">the January-2010 floor manufactures rows no query reaches on purpose.</p></div>
+    <div class="id">F3</div><div><p class="fact">The SGX pre-2020 programme: 6 issues, 4 PRs, 10 days, about 100 agent runs, 417 files, 101 MB, 14 revision rows, all still Partial, zero reachable. ECBTC: eight runs and 37 artifacts to adjudicate one hour on an unreachable key.</p><p class="so">the evidence process is priced for a public reference work the crate is not.</p></div>
+    <div class="id">F4</div><div><p class="fact">Holidays are excluded by law; SharurPlatform built the overlay seam and never injects it. About 13 CME days a year, roughly 5% of a daily window, are served as open on every root, and the DOM ladder stays armed on Christmas Day.</p><p class="so">the one recurring defect every root suffers every year is the one thing the law forbids fixing.</p></div>
+    <div class="id">F5</div><div><p class="fact">Rithmic admits NYBOT and EUREX, the crate has correct keys for ICE softs and Eurex fixed income, and Sharur's root table is Globex-only, so ICE Sugar silently gets NYSE FANG+ hours, wrong by about 12.5 hours a day.</p><p class="so">a live, current-schedule error on a traded venue costs zero crate work to fix; it is a catalog gap.</p></div>
+    <div class="id">F6</div><div><p class="fact">Prose outweighs Rust 2.35 to 1 by bytes; schedule modules are 60% comment; <code>futures_profile.rs</code> sits at 488 of a 500-line ceiling; four modules were split only to store citations.</p><p class="so">the ceiling is binding on prose, not code.</p></div>
+    <div class="id">F7</div><div><p class="fact">Effort splits roughly 35% retrieval, 25% adjudication, 20% citation prose, 10% fence upkeep, 10% review cycles. cmegroup.com returns 403 at IP level; the operator's own machine feed returns 401 and is excluded by law.</p><p class="so">the law forbids the cheapest correct channel and the process pays for its absence.</p></div>
+    <div class="id">F8</div><div><p class="fact"><code>regular</code> versus <code>extended</code> is inert on 78% of Sharur's roots and tracks whether CME printed the word "RTH"; <code>order_entry</code> is load-bearing, since it keeps the Pre-Open out of <code>is_open</code>. The 4-hour maintenance heuristic that decides how every chart renders a gap has no citation at all.</p><p class="so">rigour is spent on the field that carries no information and none on the rule that decides rendering.</p></div>
+    <div class="id">F9</div><div><p class="fact"><code>globex_cryptocurrency</code>, on 21 Sharur roots, changed three times in five weeks and carries a forward-dated row for 2026-09-19. Nothing in the governance prioritises watching it over archaeology on an unreachable key.</p><p class="so">monitoring the served keys is the real correctness risk.</p></div>
+    <div class="id">F10</div><div><p class="fact">The 32-key plan projects about 10,000 source lines, 70 rows, 169 hand-written registration edits and twelve guaranteed ledger conflicts, for zero reachable roots. Neither Sharur adapter can produce a trade-type root.</p><p class="so">the plan is correct research aimed at nobody.</p></div>
+  </div>
+
+  <h2>3. Proposed charter</h2>
+  <p class="note">Each rule names what it replaces. The laws that stay are listed under R11.</p>
+
+  <div class="rule"><h3><span class="id">R1</span>Purpose</h3><p>As restated in section 1. Every other rule is judged against it.</p></div>
+
+  <div class="rule"><h3><span class="id">R2</span>Granularity: product family, admitted on demand</h3>
+    <p>A key exists when a root a consumer's adapter can produce maps to it and the listing-exchange default would be wrong for that root at a day boundary, on <code>is_open</code>, or on the trade date. Trade-type variants (TAS, TAM, BTIC, TACO, TMAC) get no keys: the consumer maps a variant to its underlying family with a disclosed variant flag and the known close offset, and refuses nothing; a variant with more structure than its underlying (Nikkei BTIC's second window, 6EB's London break, the crypto BTIC stops) stays on the flagged fallback. The 23 unreachable keys are frozen, not deleted: they keep their wire identity, their ledger row says "frozen, no consumer", and they receive no further research or review cycles until a consumer appears.</p>
+    <p class="replaces"><b>replaces</b> unbounded admission · the 32-key plan</p></div>
+
+  <div class="rule"><h3><span class="id">R3</span>History: a per-key horizon, never a floor</h3>
+    <p>Each key declares the earliest date its evidence covers. Below it the calendar serves the sessionless closure the crypto key already uses, documented as "not modelled" rather than "closed", and the consumer's window walk returns nothing rather than a fabricated day. Existing rows stay; nothing is carried back below its first operator statement. New keys start at the current schedule plus the dated changes the consumer's data can reach.</p>
+    <p class="replaces"><b>replaces</b> the January-2010 floor · carry-back · sourced intersections across undated spans · the knowledge-boundary Monday rule</p></div>
+
+  <div class="rule"><h3><span class="id">R4</span>Evidence: tiered and recorded</h3>
+    <p>T1, the operator's own statement (rulebook, notice, specification, circular), public or a verbatim member mirror. T2, the operator's machine feed or service, public preferred, authenticated admissible when the artifact is saved. T3, a member firm's or vendor's restatement. T4, press. A current schedule needs T1 or T2; a dated change needs an operator-stated day at T1 or T2; T3 may date a change only when it mirrors an operator document verbatim; T4 never keys a row. Every row records its tier. When two operator statements conflict, document lineage decides and both are recorded, as ECBTC did. A close that coincides with a settlement range is still a close when T2 observes it; the settlement instant itself is never the boundary.</p>
+    <p class="replaces"><b>replaces</b> primary-only and public-only as absolutes</p></div>
+
+  <div class="rule"><h3><span class="id">R5</span>Holidays: in scope, per family, for served keys</h3>
+    <p>The crate carries its own holiday and early-close tables per product family, from the operator's published holiday calendar (T1, annual), for served families only, starting with the current and next year. Lookup must be a sorted-date binary search so the overlay stops costing a hundred times an <code>is_open</code>; re-measure first.</p>
+    <p class="replaces"><b>replaces</b> LAW-HOLIDAY-SCOPE</p></div>
+
+  <div class="rule"><h3><span class="id">R6</span>Fields</h3>
+    <p>Session boundaries, trade date and <code>order_entry</code> are required. <code>regular</code> is optional and declared with one sentence, not four channels. The maintenance-versus-closed heuristic is written into the charter as crate policy with a test, not sourced per key.</p>
+    <p class="replaces"><b>replaces</b> the four-channel proof of an empty <code>regular</code></p></div>
+
+  <div class="rule"><h3><span class="id">R7</span>Evidence lives in <code>docs/evidence/&lt;key&gt;.md</code></h3>
+    <p>A schedule module holds rule data, one line per row (effective day, tier, document id) and a link; the narrative, quotations and URLs live in the evidence file; a fence checks that every row's day appears there. The 500-line ceiling applies to code. Ledger rows shrink to a fixed shape: key, owner, served or frozen, tier, horizon, reviewed-on (UTC), gap kind, at most three sentences.</p>
+    <p class="replaces"><b>replaces</b> citation beside the literal · the 6,000-character ledger cell</p></div>
+
+  <div class="rule"><h3><span class="id">R8</span>Admission is a bounded task</h3>
+    <p>A key PR is: the current schedule from T1 or T2, its horizon, tests for the boundaries, the trade date, the weekend and any dated change, the evidence file, the ledger row and the registration list. One PR, one day, no adversarial multi-agent programme, no archaeology. The research store stays local; only the evidence file is committed.</p></div>
+
+  <div class="rule"><h3><span class="id">R9</span>Watch, don't dig</h3>
+    <p>Served keys carry a review cadence: monthly for high-churn families such as crypto and event contracts, quarterly otherwise. A forward-dated row carries a confirm-by date. Every schedule change ships as a tagged release with a CHANGELOG entry so the consumer pins versions, not commits.</p></div>
+
+  <div class="rule"><h3><span class="id">R10</span>Consumer contract</h3>
+    <p>The ledger marks each key served or frozen. SharurPlatform owns the root-to-family map and must cover every venue namespace its adapters admit (ICE softs and Eurex fixed income today), clamps the daily walk to the contract's activation, and pins a tagged release rather than a non-ancestor commit.</p></div>
+
+  <div class="rule"><h3><span class="id">R11</span>Laws kept and laws changed</h3>
+    <p><strong>Kept as written:</strong> DETERMINISM, PANIC, SESSION-NOT-EXPIRY, UTC-DATES, NO-FABRICATED-DATES (a dated row needs a stated day; the horizon replaces the floor), FOLLOW-UPS-ARE-ISSUES (scoped to served keys).</p>
+    <p><strong>Changed:</strong> PRIMARY-SOURCES becomes R4; PUBLIC-SOURCES becomes R4's tiering; HOLIDAY-SCOPE becomes R5; citation-beside-literal becomes R7; the floor and carry-back become R3.</p></div>
+
+  <div class="rule"><h3><span class="id">R12</span>What this gives up</h3>
+    <p>The crate stops being a public evidence ledger with history to 2010. The SGX, ICE and metals-TAS research is preserved but frozen. A future replay engine that needs deep history extends a key's horizon as a bounded R8 task, which the evidence-file model makes cheap.</p></div>
+
+  <h2>4. Migration, in order</h2>
+  <ol class="steps">
+    <li>The maintainer decides on this review (section 5).</li>
+    <li>One PR rewrites <code>AGENTS.md</code> to the charter. It is the only PR that touches law.</li>
+    <li>Close out the trade-type programme: #83 is not merged and its branch is kept as research; #79–#82, #71, #72 and #73–#77 close as "frozen scope: trade types are not modelled"; #58 is re-scoped to the consumer-side variant flag; #66 closes as frozen. #78 is cut down to the two fences that survive the ledger reshape (the ledger array equals <code>MarketHoursKey::ALL</code>; the number-word capacity fix) and merged.</li>
+    <li>One PR reshapes the ledger and moves the eight served keys' evidence into <code>docs/evidence/</code>; one PR marks the remaining keys frozen and moves their evidence opportunistically.</li>
+    <li>Holidays: re-measure the overlay, then implement per-family tables for the eight served families from CME Group's 2026 and 2027 holiday calendars with a binary-search lookup.</li>
+    <li>Tag 1.1.0. SharurPlatform pins it, clamps the daily walk to activation, and adds root tables for ICE softs and Eurex fixed income.</li>
+    <li>Confirm the crypto key's 2026-09-19 row before that Saturday; start the watch cadence.</li>
+  </ol>
+
+  <h2>5. Questions for the maintainer</h2>
+  <div class="q"><p>1. Is SharurPlatform the crate's only intended consumer for the foreseeable future? R2's freezing of 23 keys and R3's horizon assume yes.</p></div>
+  <div class="q"><p>2. Freeze or delete the unreachable keys?</p><p class="rec">freeze: reversible, no wire-identity break, no code churn.</p></div>
+  <div class="q"><p>3. Holidays in the crate (R5) or in a separate crate?</p><p class="rec">in-crate: one dependency, one release, and the family granularity already fits.</p></div>
+  <div class="q"><p>4. Horizon equals the existing evidence horizon (keep every paid-for row), or a repo-wide cut at 2019 or 2020 (delete rows)?</p><p class="rec">the former.</p></div>
+  <div class="q"><p>5. Confirm closing #83 unmerged and cutting #78 down, as in step 3.</p></div>
+
+  <h2>6. Decisions taken</h2>
+  <p class="note">Maintainer, 2026-09-12 UTC. These amend the charter above; the charter PR (#84) encodes the amended version.</p>
+  <ol>
+    <li><strong>SharurPlatform is the only intended consumer</strong> for the foreseeable future, and it will support more markets. R2's "frozen" becomes <strong>dormant</strong>: kept, correct as of the last review, re-reviewed on demand. Nothing is deleted.</li>
+    <li><strong>Holidays live in this crate</strong>, per family, from the January-2010 floor to the operator's published future (exchanges publish one to two years ahead).</li>
+    <li><strong>History runs from January 2010 to the future.</strong> The floor and carry-back stay. Depth is an obligation for served keys and best-effort, labelled, for dormant ones; each key's ledger row records its horizon.</li>
+    <li><strong>Paid-for work is kept.</strong> #78 merges as is; #83 (five metals TAS keys) merges as dormant after a proportionate review that found no defects; the remaining 27 trade-type keys are built only when a consumer maps a variant. #71 and #72 are answered by the evidence-tier rule and closed.</li>
+    <li>The charter PR rewrites <code>AGENTS.md</code> (law names kept so citations stay valid); the ledger reshape, evidence files and holiday tables follow as separate PRs.</li>
+  </ol>
+
+  <p class="sources">Sources: <code>architecture-review/A-crate-anatomy-and-cost.md</code>, <code>B-sharur-consumption.md</code>, <code>C-prior-art.md</code>, <code>D-consequences.md</code> in the local research store; the same text as Markdown at <code>architecture-review/REVIEW-2026-09-12.md</code>. Measured against exchange-hours-rs at <code>5530f22</code> and SharurPlatform at <code>7af5d5f4</code>.</p>
+</div>

@@ -1,0 +1,633 @@
+{
+ "gate": "btic-non-equity-groups",
+ "issue": "exchange-hours-rs#58",
+ "research_date": "2026-09-06",
+ "retrieval_channels_used": [
+  "public text reader https://r.jina.ai/ in front of cmegroup.com (direct GET still 403s from this host)",
+  "CME ContractSpecs API /CmeWS/mvc/ContractSpecs/List/productId/N",
+  "CME trading-hours service /services/trading-hours-by-product",
+  "CME product-slate service /services/product-slate (pageSize=500, 7 pages, 3,248 rows)",
+  "CME annual CFTC rule-filing indexes /market-regulation/rule-filings/<YYYY>/cftc-rule-filings-<YYYY>.pdf (2017-2026) as the discovery channel",
+  "CME rule-filing PDFs under /content/dam/cmegroup/market-regulation/rule-filings/<YYYY>/<M|MM>/",
+  "CME notices search JSON /content/cmegroup/en/notices/jcr:content/.../search_sort_filter_d.ssfajax.<page>.0.<from>.<to>.json - NEW in this gate, it is how the SERs and clearing advisories were found",
+  "CME clearing advisories /notices/clearing/<YYYY>/<MM>/Chadv<NN-NNN>.pdf and SERs /notices/ser/<YYYY>/<MM>/ser-NNNN.pdf (and the /content/dam/ variant)",
+  "CME client-systems Confluence wiki v2 API (public)",
+  "web.archive.org id_ replay - USED EARLY, then WENT OFFLINE mid-gate ('Internet Archive services are temporarily offline'), so no further archive work was possible"
+ ],
+ "keys": [
+  {
+   "key": "globex_commodity_index_btic",
+   "roots": [
+    "DRT (group LH)",
+    "GDT (group GT)",
+    "GIT (group GH)"
+   ],
+   "anchor": "America/Chicago at BOTH endpoints. Single-zone. ENCODABLE NOW - no U-8 exposure.",
+   "eras": [
+    {
+     "from": "below the 2010 floor",
+     "to": "2018-12-01",
+     "grid": "sessionless (BTIC not eligible on GD/GIE/DRS)",
+     "basis": "Launch-dated family: CME/CBOT 18-431 is the eligibility notification."
+    },
+    {
+     "from": "2018-12-02 (first session Sunday; trade date Monday 2018-12-03)",
+     "to": "present",
+     "grid": "Sunday-Friday open 17:00 CT, close 13:30 CT. Pre-open Sunday 16:00-17:00 CT, Monday-Thursday 16:45-17:00 CT. NO Friday-evening reopen (Friday closes 13:30 and the week ends).",
+     "basis": "18-431 (unconditional day + hours); Chadv18-443R (revised Globex hours, 'no 5:00 p.m. session on Friday'); GSCI spec captures 2019-07-18/2020-09-23/2021-06-12; DRS spec captures 2019-07-17/2021-06-16; live ContractSpecs 33/32/7294; trading-hours service 8608/8609/8610 across three probe windows."
+    }
+   ],
+   "conflicts": [
+    "SER-9138 (2023-02-14) and CME/CBOT 23-074 (2023-02-23) state a prior 17:00-16:00 CT Globex BTIC window and amend it to 17:00-13:30 CT effective Sunday 2023-03-12 / trade date Monday 2023-03-13. Four other CME documents spanning 2018-2021 say the window was already 17:00-13:30 CT. The SER's table has a second demonstrable error (its AW row), and the value it prints as 'Current' is exactly the ClearPort BTIC window printed one line below the Globex one on the same spec pages. ASSERT NO 2023-03-12 REVISION; serve 17:00->13:30 CT for the whole life of the family; record the conflict beside the table."
+   ],
+   "withheld": [
+    "The 13:30-16:00 CT hour for 2018-12-02..2023-03-11 that only SER-9138/23-074 claims.",
+    "Regular-vs-extended classification (U-4, unchanged by this gate)."
+   ],
+   "excluded": [
+    "AWT, BAT, BET, BGT, BLT, BMT, BPT, BST, CCT - measured at open@08:15 / closed@13:30 CT on their own groups (B7, 8G, 8R, 8S, 8U, 8T, 8Q, 8X, FX). They stay UNMAPPED as the handoff says."
+   ]
+  },
+  {
+   "key": "globex_credit_index_btic",
+   "roots": [
+    "IQBT, HYBT, IQLT, IQYT, DLBT, DHBT, DHYT (group CG)",
+    "IQST (currently routed on the OUTRIGHT group CE)"
+   ],
+   "anchor": "America/Chicago at both endpoints. Single-zone. ENCODABLE NOW.",
+   "eras": [
+    {
+     "from": "below the 2010 floor",
+     "to": "2024-09-14",
+     "grid": "sessionless",
+     "basis": "CBOT 24-328 is the eligibility certification; the underlying futures themselves listed 2024-06-17 (CBOT 24-175, cited in 24-328)."
+    },
+    {
+     "from": "2024-09-15 (first session Sunday; trade date Monday 2024-09-16)",
+     "to": "present",
+     "grid": "Sunday-Friday open 17:00 CT, close 15:00 CT. Pre-open Sunday 16:00-17:00 CT, Monday-Thursday 16:45-17:00 CT. No Friday-evening reopen.",
+     "basis": "CBOT 24-328 for the day; ContractSpecs 10676/10677/11451/11459/11461/11463 for the 15:00 close; trading-hours service on group CG across a September week, the 2026-10-25..11-07 DST window and a January week."
+    }
+   ],
+   "conflicts": [
+    "The ContractSpecs BTIC sentence 'Sunday - Friday 5:00 p.m. - 3:00 p.m. CT with a 60-minute break each day beginning at 4:00 p.m.' is internally inconsistent - a book closed at 15:00 cannot break at 16:00. The break clause is boilerplate inherited from the outright line above it. DO NOT encode a 16:00-17:00 gap.",
+    "IQST (id 11460) is on group CE, which is the credit OUTRIGHT group (IQB, IQS and IQL all sit there), and therefore publishes the outright's closed@16:00 while its own spec says 15:00. Serve the intersection 17:00->15:00 CT; treat IQST's CE routing as per-root catalog data."
+   ],
+   "withheld": [
+    "IQST's 15:00-16:00 CT hour.",
+    "Regular-vs-extended (U-4)."
+   ],
+   "member_listings": [
+    "DHBT: CBOT 24-423, first session Sunday 2024-12-15, trade date Monday 2024-12-16.",
+    "DLBT: CBOT/CME 26-064, first session Sunday 2026-03-29, trade date Monday 2026-03-30.",
+    "IQST/IQYT/IQLT: CBOT 26-087 (2026-02-26) - the PDF is not reachable at either /2026/2/ or /2026/02/; OPEN.",
+    "DHYT: not separately dated in this gate; the 2025 index shows CBOT 25-061 (2025-02-05) listing the HY Duration-Hedged underlying."
+   ]
+  },
+  {
+   "key": "globex_cryptocurrency_btic_new_york",
+   "roots": [
+    "19 roots on 9 groups: BNB, MYB (BI); ENB, EYB (RN); SNB, ONB (LS); XNB, RNB (XH); CNB, CYB (4C); LNB, LYB (L6); ANB, VNB (V2); INB, BNS (U8); XYB, YLB (4E); BFB (FN)"
+   ],
+   "anchor": "America/Chicago. The reference is 4:00 p.m. New York, and America/New_York shares DST rules with America/Chicago, so the grid is exact in Chicago local seconds. Single-zone. ENCODABLE NOW.",
+   "eras": [
+    {
+     "from": "below the 2010 floor",
+     "to": "2022-07-23",
+     "grid": "sessionless",
+     "basis": "22-220 is the eligibility certification; the 2021-07-10 BTC ContractSpecs capture carries no BTIC line at all."
+    },
+    {
+     "from": "2022-07-24 (first session Sunday; trade date Monday 2022-07-25)",
+     "to": "undated cutover in (2025-10-28, 2026-09-06]",
+     "grid": "Sunday-Friday 17:00 -> 15:00 CT with a 60-minute break each day beginning at 16:00 CT.",
+     "basis": "22-220 for the day; BTC ContractSpecs captures 2024-09-29, 2025-02-21, 2025-10-28 for the grid ('BTIC NY: Sunday - Friday 5:00 p.m. - 3:00 p.m. CT with a 60-minute break each day beginning at 4:00 p.m. CT')."
+    },
+    {
+     "from": "undated (strongly indicated 2026-05-29 16:00 CT)",
+     "to": "present",
+     "grid": "24/7 with: Saturday close 02:00 -> pre-open 03:45 -> open 04:00 CT; Monday-Friday close 15:00:00-15:01:30, pre-open to 15:04:30, no-cancel to 15:05:00, open 15:05:00 (this is the TRADE-DATE ROLL); and a further pause 16:01:00-16:02:00 CT.",
+     "basis": "Live BTC ContractSpecs; CME client-systems wiki '24/7 BTIC Crypto New York (NY)' table; trading-hours service on BI/RN/LS/FN across three probe windows."
+    }
+   ],
+   "conflicts": [
+    "The live spec's BTIC lines omit the 16:01-16:02 CT pause that both the wiki and the schedule feed publish.",
+    "The wiki puts the pre-open at 15:01:30 where the feed rounds to 15:01."
+   ],
+   "withheld": [
+    "The era-2 cutover DAY (U-15): CME 26-114 and SER-9740R state 'effective Friday, May 29, 2026' for cryptocurrency FUTURES AND OPTIONS and name no BTIC product code. The wiki publishes the BTIC schedules inside the same migration page and 26-114's new pre-open times (Mon-Fri 16:01-16:02 CT, Saturday 03:45-04:00 CT) are byte-for-byte the BTIC feed's, but that is inference.",
+    "Regular-vs-extended (U-4)."
+   ]
+  },
+  {
+   "key": "globex_cryptocurrency_btic_london",
+   "roots": [
+    "10 roots on 5 groups: BTB, MIB, BLB (BX); ETB, EMB (RJ); SLB, OLB (LL); XLB, RLB (XJ); BVB (CK)"
+   ],
+   "anchor": "CROSS-ZONE. Daily trade-date roll at 16:00 Europe/London; Saturday maintenance and the 16:01-16:02 pause at America/Chicago. NOT encodable in one tz -> U-8.",
+   "eras": [
+    {
+     "from": "below the 2010 floor",
+     "to": "2021-09-25",
+     "grid": "sessionless",
+     "basis": "21-002; the 2021-07-10 BTC spec capture has no BTIC line."
+    },
+    {
+     "from": "2021-09-26 (first session Sunday; trade date Monday 2021-09-27)",
+     "to": "undated cutover in (2025-10-28, 2026-09-06]",
+     "grid": "Sunday-Friday 18:00 ET -> 16:00 London; Monday-Thursday 16:30 London -> 17:00 ET; Friday 16:30 London -> 17:00 ET for Monday's reference rate; Monday-Thursday 17:00-18:00 ET daily maintenance. (A 30-minute interruption, not today's 5-minute one.)",
+     "basis": "21-002 verbatim; BTC ContractSpecs captures 2022-09-21, 2023-11-23, 2024-09-29, 2025-02-21, 2025-10-28."
+    },
+    {
+     "from": "undated (strongly indicated 2026-05-29 16:00 CT)",
+     "to": "present",
+     "grid": "24/7 with Saturday 02:00->04:00 CT; Monday-Friday close 10:00:00-10:01:30 CT, open 10:05:00 CT (London-anchored: 11:00 CT in the 2026-10-26..30 week when London is on GMT and Chicago still on CDT); pause 16:01-16:02 CT.",
+     "basis": "Live BTC ContractSpecs; wiki '24/7 BTIC Crypto London Session (LDN)' with its explicit 'British Summer Time (BST) applies' note; service on BX/LL/CK across three probe windows."
+    }
+   ],
+   "conflicts": [],
+   "withheld": [
+    "The whole key, pending U-8.",
+    "The era-2 cutover day (U-15)."
+   ]
+  },
+  {
+   "key": "globex_cryptocurrency_btic_apac",
+   "roots": [
+    "5 roots on 2 groups: ABB, AMB, BAB (HB); ATB, AHB (EC)"
+   ],
+   "anchor": "CROSS-ZONE. Daily roll at 16:00 Hong Kong/Singapore = 08:00 UTC fixed (no DST there), inside an America/Chicago frame. NOT encodable in one tz -> U-8.",
+   "eras": [
+    {
+     "from": "below the 2010 floor",
+     "to": "2024-03-16",
+     "grid": "sessionless",
+     "basis": "24-080."
+    },
+    {
+     "from": "2024-03-17 (first session Sunday; trade date Monday 2024-03-18)",
+     "to": "undated cutover in (2025-10-28, 2026-09-06]",
+     "grid": "Sunday-Friday 17:00 CT -> 16:00 HK/SG; Monday-Thursday 16:30 HK/SG -> 16:00 CT; Friday same for Monday's rate; Monday-Thursday 16:00-17:00 CT maintenance.",
+     "basis": "24-080 for the day; BTC ContractSpecs captures 2024-09-29, 2025-02-21, 2025-10-28 for the grid."
+    },
+    {
+     "from": "undated (strongly indicated 2026-05-29 16:00 CT)",
+     "to": "present",
+     "grid": "24/7 with Saturday 02:00->04:00 CT; Monday-Friday close 03:00:00-03:01:00 CT / open 03:05:00 CT in US DST, 02:00/02:05 CT in US standard time (i.e. 08:00 UTC fixed); pause 16:01-16:02 CT.",
+     "basis": "Live BTC ContractSpecs; wiki '24/7 Basis Trade at Index Close (BTIC) Crypto Asia-Pacific (APAC)'; service on HB/EC across three probe windows."
+    }
+   ],
+   "conflicts": [],
+   "withheld": [
+    "The whole key, pending U-8.",
+    "The era-2 cutover day (U-15)."
+   ],
+   "scope_note": "SOL, XRP, ADA, LINK, AVAX, SUI and Stellar Lumens have NO APAC variant - the handoff's row-14 caution is upheld and extended. Only the Bitcoin and Ether complexes (plus Bitcoin Friday Futures) carry one."
+  },
+  {
+   "key": "globex_topix_btic",
+   "roots": [
+    "TPB, TPT (both group BJ)"
+   ],
+   "anchor": "CROSS-ZONE. Open 17:00 America/Chicago; close 15:30 Asia/Tokyo (01:30 CDT / 00:30 CST). -> U-8.",
+   "eras": [
+    {
+     "from": "below the 2010 floor",
+     "to": "2018-02-03",
+     "grid": "sessionless",
+     "basis": "CME 18-007 / Chadv18-013: TPY and TPB were listed for the first time on trade date 2018-02-05."
+    },
+    {
+     "from": "2018-02-04 (first session Sunday; trade date Monday 2018-02-05)",
+     "to": "2024-11-02",
+     "grid": "Sunday-Friday 17:00 CT -> 15:00 Tokyo (00:00/01:00 CT). No daytime leg. Pre-open Sunday 16:00-17:00 CT, Monday-Thursday 16:45-17:00 CT.",
+     "basis": "18-007 ('for BTIC trading between the hours of 5:00 pm Chicago time and 3:00 pm Tokyo time'); Chadv18-013 (unconditional, same value); the pre-open in session language from 22-413; the prior value is also the struck text in 24-263's blackline."
+    },
+    {
+     "from": "2024-11-03 (first session Sunday; CME 24-263 names trade date Tuesday 2024-11-05 because Monday 2024-11-04 is a Japanese bank holiday)",
+     "to": "present",
+     "grid": "Sunday-Friday 18:00 ET -> 15:30 Tokyo (01:30 CDT / 00:30 CST). Still no daytime leg.",
+     "basis": "CME 24-263 (unconditional 40.6(a) certification); SER-9412 carries the same text conditionally; trading-hours service on group BJ across three probe windows."
+    }
+   ],
+   "conflicts": [],
+   "withheld": [
+    "The whole key, pending U-8.",
+    "Regular-vs-extended (U-4)."
+   ],
+   "member_listings": [
+    "TPT: CME 22-413, first session Sunday 2022-11-20, trade date Monday 2022-11-21 - a later member listing on an existing family clock, i.e. caller catalog data."
+   ],
+   "holiday_note": "Group BJ publishes no session for trade dates that are Japanese holidays (e.g. no Sunday 2027-01-10 evening session for the 2027-01-11 Coming-of-Age Day trade date). That is DayPolicy input, not template data."
+  },
+  {
+   "key": "globex_nikkei_btic",
+   "roots": [
+    "NIT (group N6)",
+    "NKT (group ND)"
+   ],
+   "anchor": "CROSS-ZONE and the hardest shape in this gate: the overnight close is Asia/Tokyo (15:30 = 01:30 CDT / 00:30 CST) while the open (17:00 CT) AND the whole daytime leg (11:00-16:00 CT = Noon-5:00 p.m. ET) are America/Chicago. -> U-8.",
+   "eras": [
+    {
+     "from": "below the 2010 floor",
+     "to": "2019-02-17",
+     "grid": "sessionless",
+     "basis": "CME 19-012 is the eligibility certification for NKT/NIT."
+    },
+    {
+     "from": "2019-02-18 (CME 19-012: 'effective on Monday, February 18, 2019, for trade date Tuesday, February 19, 2019')",
+     "to": "2021-09-30",
+     "grid": "Sunday 18:00 ET -> 01:00/02:00 ET (15:00 Tokyo); Monday-Thursday Noon-17:00 ET AND 18:00 ET -> 15:00 Tokyo; Monday-Thursday 17:00-18:00 ET maintenance; NO Friday daytime leg ('Friday: No BTIC trading is permitted after 1:00 a.m. EST (2:00 a.m. EDT)').",
+     "basis": "19-012, which states the grid 'For any regular week containing no US or Japanese market holidays' - the crate's exact template semantics."
+    },
+    {
+     "from": "2021-10-01 (CME 21-294: 'commencing on Friday, October 1, 2021 for trade date Monday, October 4, 2021')",
+     "to": "2024-11-02",
+     "grid": "Same, plus a Friday Noon-17:00 ET daytime leg carrying Monday's trade date.",
+     "basis": "21-294 blackline: 'Monday - Thursday 12:00 p.m. to 5:00 p.m. ET' -> 'Monday - Friday 12:00p.m. to 5:00 p.m. ET'."
+    },
+    {
+     "from": "2024-11-03 (CME 24-263; trade date Tuesday 2024-11-05)",
+     "to": "present",
+     "grid": "Same, with the overnight close moved 15:00 -> 15:30 Tokyo.",
+     "basis": "24-263; trading-hours service on N6/ND across three probe windows (paused@16:00, preopen@16:45, open@17:00, closed@01:30 or 00:30)."
+    }
+   ],
+   "conflicts": [
+    "U-18(b) RESOLVED IN THE NEGATIVE. There was never an 11:00 a.m. -> Noon ET Globex change. 19-012 puts Globex at 12:00 noon ET and CME ClearPort at 11:00 a.m. ET on the same page; the conditional clearing advisory Chadv19-025 (2019-01-17) prints the ClearPort value in its Globex row; 21-294's 2021 'Current' column says 12:00 p.m. ET; and the live feed opens 11:00 CT = Noon ET. Serve Noon ET from launch and record Chadv19-025 as the outlier."
+   ],
+   "withheld": [
+    "The whole key, pending U-8.",
+    "The Saturday block: groups N6 and ND publish 'open@05:00 ... closed@17:00' with the following Monday's (or next Japanese business day's) trade date in every retrieved week - 2026-09-19, 2026-10-31, 2026-11-07, 2027-01-16 - and no retrieved CME prose explains a Saturday session. Same signature as U-16 on TACO group 3T, re-verified live today on both.",
+    "Regular-vs-extended (U-4)."
+   ],
+   "holiday_note": "19-012's own note and Chadv19-025's 'BTIC trading will not be permitted on U.S. Exchange or Japanese Banking Holidays' are DayPolicy input."
+  },
+  {
+   "key": "globex_fx_btic_euro",
+   "roots": [
+    "6EB - and note it has NO product-slate row and NO Globex security group of its own; the slate carries only 6E (group 6E) and 6EP (group 6X)."
+   ],
+   "anchor": "CROSS-ZONE, but the cheapest sub-case: the ENVELOPE is America/Chicago (17:00 open, 16:00 close, 16:00-17:00 maintenance) and only a 50-minute interior interruption is Europe/London-anchored (15:40 -> 16:30 London = 09:40-10:30 CT normally, 10:40-11:30 CT in the weeks when London and Chicago DST disagree, which CME spells out itself).",
+   "eras": [
+    {
+     "from": "below the 2010 floor",
+     "to": "2023-02-04",
+     "grid": "sessionless",
+     "basis": "CME 23-015 is the BTIC eligibility certification for 6E."
+    },
+    {
+     "from": "2023-02-05 (first session Sunday; trade date Monday 2023-02-06)",
+     "to": "present",
+     "grid": "Sunday-Friday 17:00 -> 16:00 CT with the 16:00-17:00 CT daily maintenance, plus a daily trade-date roll: the book stops at 15:40 London and reopens at 16:30 London against the NEXT day's reference rate. Pre-open Sunday 16:00-17:00 CT, Monday-Thursday 16:45-17:00 CT.",
+     "basis": "CME 23-015 for the day and the envelope; the FX BTIC/BTIC+ FAQ for the interruption, its London anchoring and the trade-date roll; the 6E ContractSpecs BTIC line."
+    }
+   ],
+   "conflicts": [
+    "The handoff's 'CME uses two different words and two different end times for the same interruption' is DISSOLVED: the spec's 'trading halt 9:40 a.m. to 11:30 a.m. CT' is the CME ClearPort window and the 'trading close from 3:40 p.m. - 4:30 p.m. London time (9:40 a.m. - 10:30 a.m. CT)' is the CME Globex window. Two venues, two windows, no contradiction. The FAQ prints both consistently.",
+    "23-015's Exhibit E states the plain FX envelope with no BTIC-specific interruption - it is the contract's boilerplate hours block, not a denial."
+   ],
+   "classification": "Closed / inter-trade-date, NOT Halt. The FAQ: 'These trades will be treated as trades for the next day's trade date.' The 50-minute gap is a trade-date roll, so under the crate's conventions it is an inter-trade-date gap under four hours within one ISO week -> Maintenance, never Halt.",
+   "withheld": [
+    "The 50-minute London-anchored gap, pending U-8. Withholding it here is the least costly of all the cross-zone shapes because the envelope itself is Chicago and only 50 minutes is at stake; but note that encoding it as a fixed 09:40-10:30 CT window would MIS-STATE the market by up to an hour for roughly two weeks a year, which is worse than withholding.",
+    "Whether 6EB earns a key at all, given it has no separate security group and no session feed - the handoff's section 3.2 asserts 6EB is not a globex_fx reuse while 6EP is; that asymmetry now rests entirely on the spec/FAQ interruption."
+   ]
+  }
+ ],
+ "unresolved_items_addressed": {
+  "U_2": "RESOLVED. Current product slate: ART id 10040, group BV, 'BTIC on Adjusted Interest Rate Russell 1000 Total Return (EFFR) Futures', beside AST (8926, BV), AQT (10044, BV), A2T (10042, BV), ASPT (10830, BV); ADT (10046) is on DH. Time-aligned week 2026-09-13..19 shows BV, DH and PB all on the equity-index BTIC grid (preopen 16:00 Sun / 16:45 weekdays, open 17:00, closed 15:00 CT, no Friday reopen). ART -> globex_equity_index_btic; the April-vs-August route drift is closed.",
+  "U_3": "RESOLVED. EMT id 7596, group PB, 'E-mini S&P MidCap 400 BTIC Futures'. Underlying = E-mini S&P MidCap 400 (EMD, productId 166; ProductCode BTIC = EMT), whose ContractSpecs prints 'BTIC: Sunday - Friday 6:00 p.m. - 4:00 p.m. ET'. Same grid in the time-aligned week. EMT -> globex_equity_index_btic; no new key.",
+  "U_18a": "RESOLVED. CME Submission 24-263 (2024-08-27), unconditional 40.6(a) certification, 'effective Sunday, November 3, 2024, for trade date Tuesday, November 5, 2024', blackline 'BTIC: Sunday - Friday 6:00 p.m. ET - [3:00 p.m.] 3:30 p.m. Tokyo time' for NKT, NIT, TPB and TPT together. Monday 2024-11-04 is a Japanese bank holiday, which is why the trade date named is Tuesday.",
+  "U_18b": "RESOLVED IN THE NEGATIVE. There was no 11:00 a.m. -> Noon ET change. CME 19-012 states Globex Noon ET and ClearPort 11:00 a.m. ET on the same page; the conditional clearing advisory Chadv19-025 conflates them; 21-294's 2021 'Current' column already says 12:00 p.m. ET; the live feed opens 11:00 CT = Noon ET.",
+  "U_8": "FED, with a hard split. Encodable now (single-zone America/Chicago): globex_commodity_index_btic, globex_credit_index_btic, globex_cryptocurrency_btic_new_york. Blocked: globex_cryptocurrency_btic_london (Europe/London roll), globex_cryptocurrency_btic_apac (fixed UTC+8 roll), globex_topix_btic (Asia/Tokyo close), globex_nikkei_btic (Asia/Tokyo close AND a Chicago-anchored daytime leg in the same profile - the hardest case), globex_fx_btic_euro (Chicago envelope with a 50-minute Europe/London interior gap - the cheapest case to withhold).",
+  "U_15": "STANDS, and is now sharper. CME 26-114 and SER-9740R both scope 'all cryptocurrency futures and options on futures contracts' and neither contains the string 'BTIC'. The BTIC 24/7 schedules ARE published, at second resolution and in session language, on CME's client-systems wiki page for the same migration, whose own change log adds them on 2026-04-22 and revises the NY one on 2026-05-13 - but those are page-revision dates, not effective days. What would close it: a CME notice, SER or clearing advisory naming a BTIC product code against 2026-05-29.",
+  "U_16": "EXTENDED BEYOND TACO. The Saturday 'open@05:00 ... closed@17:00 with the following Monday's trade date' block appears on Nikkei BTIC groups N6 and ND in every retrieved week, and was re-verified live today on both ND (id 8634) and TACO group 3T (ESQ, id 8528). It is a property of the families that carry a separate daytime leg, not of TACO. Withhold the weekend boundary on globex_nikkei_btic for the same reason."
+ },
+ "corrections_to_the_handoff": [
+  "Row 20 (DRT/GDT/GIT): three security groups, not one (GT, GH, LH), all on one identical grid; and the grid has been 17:00->13:30 CT since launch on 2018-12-02 - there is no 2023 change to encode, only a documented conflict.",
+  "Row 9 (credit BTIC): eight roots, not six - DHBT and DHYT are missing from the handoff row. And the family is not one feed grid: IQST sits on the outright group CE at 16:00 while the other seven sit on CG at 15:00.",
+  "The credit spec sentence's '60-minute break each day beginning at 4:00 p.m.' is inherited boilerplate and must not become a session gap.",
+  "Crypto BTIC membership is 34 roots, not 29, and the name is not a safe selector: BFB 'BTIC on Bitcoin Friday Futures' runs the NEW YORK grid and BVB 'BTIC on Bitcoin Volatility Futures' runs the LONDON grid, neither naming a city.",
+  "6EB has no product-slate row, no Globex security group and no schedule-service entry; it is a BTIC code on the 6E product. This qualifies the handoff's section 3.2 asymmetry between 6EB and 6EP.",
+  "6EB's supposed 'two different words and two different end times for the same interruption' is a venue confusion: Globex 3:40-4:30 p.m. London, ClearPort 9:40-11:30 a.m. CT.",
+  "The 6E spec's Globex BTIC line carries a CT rendering the handoff omitted: '(9:40 a.m. - 10:30 a.m. CT)'; the FAQ's table gives the DST-aware pair '(9:40 a.m./10:40 a.m. CT)' to '(10:30 a.m./11:30 a.m. CT)'.",
+  "AWT/BAT/.../CCT are now measured, not merely argued: open@08:15, closed@13:30 CT on their own groups. This is the second demonstrable error in SER-9138/23-074's table."
+ ],
+ "evidence": [
+  {
+   "artifact": "CME ContractSpecs API, productId 33 (S&P GSCI Commodity Index Futures, Globex GD, BTIC GDT)",
+   "artifact_date": "2026-09-06 (live)",
+   "capture_ts": "2026-09-06T05:14:59Z",
+   "url": "https://www.cmegroup.com/CmeWS/mvc/ContractSpecs/List/productId/33",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/specs-productId-33-GD.txt",
+   "verbatim": "\"CME Globex:\" -> \"Sunday - Friday 5:00 p.m. - 4:00 p.m. (6:00 p.m. - 5:00 p.m. ET) with a 60-minute break each day beginning at 4:00 p.m. (5:00 p.m. ET)<br /><br />BTIC: Sunday - Friday 5:00 p.m. - 1:30 p.m. (6:00 p.m. - 2:30 p.m. ET)\"; \"ProductCode\":{\"ClearPort\":\"GI\",\"BTIC\":\"GDT\",\"ClearingCode\":\"GI\",\"CmeGlobex\":\"GD\"}",
+   "bears_on": "globex_commodity_index_btic current grid; GDT is the BTIC code of GD."
+  },
+  {
+   "artifact": "CME ContractSpecs API, productId 7294 (Bloomberg Roll Select Commodity Index Futures, Globex DRS, BTIC DRT)",
+   "artifact_date": "2026-09-06 (live)",
+   "capture_ts": "2026-09-06T05:15:03Z",
+   "url": "https://www.cmegroup.com/CmeWS/mvc/ContractSpecs/List/productId/7294",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/specs-productId-7294-DRS.txt",
+   "verbatim": "CME Globex: \"Sunday - Friday  5:00 p.m. - 4:00 p.m. CT with a 60-minute break each day beginning at 4:00 p.m. CT<br /><br />BTIC: Sunday - Friday 5:00 p.m. - 1:30 p.m. (6:00 p.m. - 2:30 p.m. ET)\"; CME ClearPort: \"... BTIC: Sunday - Friday  5:00 p.m. - 4:00 p.m. CT with a 60-minute break each day beginning at 4:00 p.m. CT\"",
+   "bears_on": "Same grid for DRT; and the ClearPort BTIC line (17:00-16:00 CT) is the likely source of the erroneous 'current' column in SER-9138/23-074."
+  },
+  {
+   "artifact": "CME/CBOT Submission 18-431 (1 of 3), CFTC Reg 40.6(d) notification: BTIC eligibility for Bloomberg Roll Select CI, S&P GSCI CI, S&P GSCI ER futures/swaps",
+   "artifact_date": "2018-11-14",
+   "capture_ts": "2026-09-06T06:30:50Z",
+   "url": "https://www.cmegroup.com/content/dam/cmegroup/market-regulation/rule-filings/2018/11/18-431_1.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/rf-18-431_1.txt",
+   "verbatim": "\"...they will permit Basis Trade at Index Close (“BTIC”) transactions for the contracts noted in the table below (the “Contracts”) effective Sunday, December 2, 2018, for trade date of Monday, December 3, 2018.\"  ...  \"Trading and Clearing BTIC Hours: CME Globex : (Bloomberg Roll Select Commodity Index Futures, S&P GSCI Commodity Index Futures, and S&P GSCI ER Futures only): Sunday-Friday 6:00 p.m.-2:30 p.m. Eastern Time/ET (5:00 p.m.-1:30 p.m. Central Time/CT). CME ClearPort : Sunday-Friday 6:00 p.m.-5:00 p.m. ET (5:00 p.m.-4:00 p.m. CT) with a 60-minute clearing halt each day beginning at 5:00 p.m. ET (4:00 p.m. CT).\"  Table: \"Bloomberg Roll Select Commodity Index Futures CBOT Rulebook Chapter 29D DRS DRS DRT S&P GSCI Commodity Index Futures CME Rulebook Chapter 401 GD GI GDT S&P GSCI ER Index Futures CME Rulebook Chapter 415 GIE GA GIT\"",
+   "bears_on": "Unconditional day-level launch for globex_commodity_index_btic (first session Sun 2018-12-02, trade date Mon 2018-12-03) AND the launch grid 17:00->13:30 CT, contradicting SER-9138/23-074's 'current 5:00 pm - 4:00 pm CT'."
+  },
+  {
+   "artifact": "CME Clearing House Advisory 18-443R, 'New Product Summary ... (Revised Globex Trading Hours)'",
+   "artifact_date": "2018-11-09",
+   "capture_ts": "2026-09-06T07:09:29Z",
+   "url": "https://www.cmegroup.com/notices/clearing/2018/11/Chadv18-443R.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/chadv18-443R-pdf.txt",
+   "verbatim": "\"Product Exchange  CME and CBOT CH Advisory# 18-443 (Revised Globex Trading Hours)\" ... \"Trading Hours  GIT, GDT, DRT : CME Globex: 5:00 p.m. - 1:30 p.m. (6:00 p.m. - 2:30 p.m. ET), daily, no 5:00 p.m. session on Friday; CME Clearport: Sunday - Friday 5:00 p.m. - 4:00 p.m. (6:00 p.m. - 5:00 p.m. ET) with a 60-minute break each day beginning at 4:00 p.m. (5:00 p.m. ET)\"",
+   "bears_on": "Second CME channel for the launch grid, and the only source for 'no 5:00 p.m. session on Friday' (the feed's missing Friday-evening reopen). The unrevised Chadv18-443 (2018-11-08) printed 'CME Globex: M-F 8:15 a.m. - 1:30 p.m.' and was corrected one day later - record the superseded value, do not cite it."
+  },
+  {
+   "artifact": "CME server-rendered contract specification page, S&P GSCI (gsci_contract_specifications.html), Wayback id_ replay 20190718214010; identical text at 20200923170402 and 20210612112951",
+   "artifact_date": "2019-07-18 (also 2020-09-23, 2021-06-12)",
+   "capture_ts": "2026-09-06T06:40:47Z",
+   "url": "https://web.archive.org/web/20190718214010id_/https://www.cmegroup.com/trading/agricultural/commodity-index/gsci_contract_specifications.html",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/gsci-spec-20190718214010.html",
+   "verbatim": "\"Trading Hours Sunday - Friday 5:00 p.m. - 4:00 p.m. (6:00 p.m. - 5:00 p.m. ET) with a 60-minute break each day beginning at 4:00 p.m. (5:00 p.m. ET) Globex BTIC: Sunday - Friday 5:00 p.m. - 1:30 p.m. (6:00 p.m. - 2:30 p.m. ET) ClearPort BTIC:Sunday - Friday 5:00 p.m. - 4:00 p.m. (6:00 p.m. - 5:00 p.m. ET) with a 60-minute break each day beginning at 4:00 p.m. (5:00 p.m. ET)\"",
+   "bears_on": "Three dated captures inside the interval SER-9138/23-074 claims was 17:00-16:00 CT. The page separates 'Globex BTIC' from 'ClearPort BTIC' explicitly, which is the exact confusion in the SER's table."
+  },
+  {
+   "artifact": "CME server-rendered contract specification page, Bloomberg Roll Select CI, Wayback id_ replay 20190717070123; identical text at 20210616235730",
+   "artifact_date": "2019-07-17 (also 2021-06-16)",
+   "capture_ts": "2026-09-06T06:41:47Z",
+   "url": "https://web.archive.org/web/20190717070123id_/https://www.cmegroup.com/trading/agricultural/commodity-index/bloomberg-roll-select-commodity-index_contract_specifications.html",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/drs-spec-20190717070123.html",
+   "verbatim": "\"Trading Hours CME Globex: Sunday - Friday 5:00 p.m. - 4:00 p.m. CT with a 60-minute break each day beginning at 4:00 p.m. CT BTIC: Sunday - Friday 5:00 p.m. - 1:30 p.m. (6:00 p.m. - 2:30 p.m. ET) CME ClearPort: Sunday - Friday 5:00 p.m. - 4:00 p.m. CT with a 60-minute break each day beginning at 4:00 p.m. CT BTIC: Sunday - Friday 5:00 p.m. - 4:00 p.m. CT with a 60-minute break each day beginning at 4:00 p.m. CT\"",
+   "bears_on": "Same, for DRT, on a second product."
+  },
+  {
+   "artifact": "CME Special Executive Report SER-9138 (and the identical text in CME/CBOT Submission 23-074 (1 of 2), filed 2023-02-23)",
+   "artifact_date": "2023-02-14 (SER); 2023-02-23 (filing)",
+   "capture_ts": "2026-09-06T07:07:45Z",
+   "url": "https://www.cmegroup.com/notices/ser/2023/02/SER-9138.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/ser-9138-pdf.txt",
+   "verbatim": "\"Effective Sunday, March 12, 2023, for trade date Monday, March 13, 2023, and pending all relevant CFTC regulatory review periods, ... will amend the CME Globex ... hours for Basis Trade at Index Close (“BTIC”) transactions of the three (3) CME and CBOT commodity index futures contracts listed in the table below.\"  Table: \"S&P GSCI Commodity Index Futures  GD/GI  CME 401  5:00 pm – 4:00 pm CT  5:00 pm – 1:30 pm CT | S&P GSCI ER Index Futures  GIE/GA  CME 415  5:00 pm – 4:00 pm CT  5:00 pm – 1:30 pm CT | Bloomberg Commodity Index Futures  AW  CBOT 29  5:00 pm – 1:30pm CT  No change | Bloomberg Roll Select Commodity Index Futures  DRS  CBOT 29D  5:00 pm – 4:00 pm CT  5:00 pm – 1:30 pm CT\"",
+   "bears_on": "The conflicting primary. Its 'Amended' column matches every other channel; its 'Current' column does not, and its AW row ('5:00 pm - 1:30pm CT | No change') is contradicted by the live AWT schedule (open@08:15, closed@13:30). Serve the intersection 17:00->13:30 CT for the whole life of the family and assert NO 2023-03-12 revision."
+  },
+  {
+   "artifact": "CME trading-hours service, GDT (id 8609, group GT), DRT (id 8610, group LH), GIT (id 8608, group GH) - September week, the 2026-10-25..11-07 DST window, and a January week",
+   "artifact_date": "2026-09-06 (live schedule publication)",
+   "capture_ts": "2026-09-06T05:18:06Z / 05:20:15Z / 05:21:36Z",
+   "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=8609&pageSize=100&fromEventDate=2026-10-25&toEventDate=2026-11-07",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/svc-8609-GDT-sep.json, svc-8609-GDT-dst.json, svc-8609-GDT-jan.json, svc-8610-DRT-*.json, svc-8608-GIT-*.json",
+   "verbatim": "2026-09-13 preopen@16:00->2026-09-14, open@17:00->2026-09-14; 2026-09-14 closed@13:30, preopen@16:45, open@17:00; ... 2026-09-18 closed@13:30 (no reopen); 2026-09-19 (Saturday) no events. Identical times in 2026-10-25..2026-11-07 (closed@13:30 in both the London-GMT/US-CDT week and after the US DST change) and in 2027-01-10..16.",
+   "bears_on": "globex_commodity_index_btic is America/Chicago-anchored at BOTH endpoints - single-zone, encodable now, no U-8 exposure. Three distinct security groups (GT, GH, LH) run one identical grid."
+  },
+  {
+   "artifact": "CME ContractSpecs API, productIds 10677/10676/11459/11463/11461/11451 (Bloomberg HY / IG / 1-5Y / 10+Y / 5-10Y / EM Credit Futures)",
+   "artifact_date": "2026-09-06 (live)",
+   "capture_ts": "2026-09-06T05:15:04Z",
+   "url": "https://www.cmegroup.com/CmeWS/mvc/ContractSpecs/List/productId/10677",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/specs-productId-10677-HYB.txt (and 10676, 11459, 11463, 11461, 11451)",
+   "verbatim": "CME Globex: \"Sunday - Friday 5:00 p.m. - 4:00 p.m. with a 60-minute break each day beginning at 4:00 p.m.<br /><br />BTIC: Sunday - Friday 5:00 p.m. - 3:00 p.m. CT with a 60-minute break each day beginning at 4:00 p.m.\"",
+   "bears_on": "All six print the same BTIC sentence. The sentence is internally inconsistent: a book that closes 15:00 cannot have a break beginning 16:00. The break clause is inherited boilerplate from the outright line above it and must NOT be encoded as a session gap."
+  },
+  {
+   "artifact": "CME trading-hours service, credit BTIC roots: IQBT 10875, HYBT 10876, IQYT 11462, IQLT 11464, DLBT 11452, DHBT 10899, DHYT 11067 (group CG) vs IQST 11460 (group CE); plus the credit OUTRIGHTS IQB 10676 / IQS 11459 / IQL 11463 (group CE)",
+   "artifact_date": "2026-09-06 (live schedule publication)",
+   "capture_ts": "2026-09-06T07:18:19Z (IQST/IQLT re-verify); 05:45:08Z (outrights)",
+   "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=11460&pageSize=100&fromEventDate=2026-09-13&toEventDate=2026-09-19",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/svc-11460-IQST-v2sep.json, svc-11464-IQLT-v2sep.json, svc-10876-HYBT-{sep,dst,jan}.json, svc-10676-IQB-outright-sep.json",
+   "verbatim": "IQLT [CG] 2026-09-14 closed@15:00, preopen@16:45, open@17:00. IQST [CE] 2026-09-14 closed@16:00, preopen@16:45, open@17:00. IQB [CE] (outright) 2026-09-14 closed@16:00, preopen@16:45, open@17:00. HYBT [CG] closed@15:00 unchanged in 2026-10-25..11-07 and 2027-01-10..16.",
+   "bears_on": "Credit BTIC is Chicago-anchored, 17:00->15:00 CT, single-zone, encodable now. IQST alone is routed on the OUTRIGHT group CE and therefore shows the outright's 16:00 close; that is a per-root routing fact (caller catalog data), not a second schedule. Serve the sourced intersection 17:00->15:00 and withhold IQST's 15:00-16:00 hour. Note DHBT and DHYT are two credit BTIC roots the handoff row omits."
+  },
+  {
+   "artifact": "CBOT Submission 24-328, CFTC Reg 40.6(a) certification: BTIC eligibility for Bloomberg U.S. Corporate Investment Grade and High Yield Very Liquid Index Futures",
+   "artifact_date": "2024-08-27 (index date; filing 24-328)",
+   "capture_ts": "2026-09-06T06:23:14Z",
+   "url": "https://www.cmegroup.com/content/dam/cmegroup/market-regulation/rule-filings/2024/8/24-328.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/cbot-24-328.txt",
+   "verbatim": "\"...certifies to the Commodity Futures Trading Commission ... the eligibility of the Basis Trading at Index Close (“BTIC”) transactions for the ... Bloomberg U.S. Corporate Investment Grade Index Futures and Bloomberg U.S. Corporate High Yield Very Liquid Index Futures contracts for trading on the CME Globex electronic trading platform ... effective on Sunday, September 15, 2024 for trade date Monday, September 16, 2024\" ; \"BTIC Code  IQBT  HYBT\" ; \"CME Globex Pre-open: Sunday 4:00 p.m. - 5:00 p.m. Central Time (CT) Monday – Thursday 4:45 p.m. - 5:00 p.m. CT\"",
+   "bears_on": "Unconditional day-level launch for globex_credit_index_btic: first session Sun 2024-09-15, trade date Mon 2024-09-16. Pre-launch: sessionless. NOTE the filing's hours block states the OUTRIGHT window (17:00-16:00 CT with a 16:00-17:00 maintenance) and no BTIC-specific close; the 15:00 close is sourced only from the ContractSpecs page and the feed."
+  },
+  {
+   "artifact": "CBOT Submission 24-423 (DHBT) and CBOT/CME Submission 26-064 (DLBT)",
+   "artifact_date": "2024-11-… (24-423) and 2026-02-26 (26-064)",
+   "capture_ts": "2026-09-06T06:34:33Z / 06:37:23Z",
+   "url": "https://www.cmegroup.com/content/dam/cmegroup/market-regulation/rule-filings/2024/11/24-423.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/rf-24-423.txt, /Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/rf-26-064.txt",
+   "verbatim": "24-423: \"...eligibility of the Basis Trading at Index Close (“BTIC”) transactions for the ... Bloomberg U.S. Corporate Investment Grade Duration-Hedged Index Futures contract ... effective on Sunday, December 15, 2024, for trade date Monday, December 16, 2024\"; \"BTIC Code  DHBT\". 26-064: \"...the initial listing of the Bloomberg Emerging Market USD Sovereign and Sovereign Owned Index Futures contract ... effective on Sunday, March 29, 2026, for trade date Monday, March 30, 2026.\"; \"BTIC Code  DLBT\"",
+   "bears_on": "Later member listings on the credit BTIC clock - caller catalog data under the AGENTS.md member-listing rule, not family revisions. IQST/IQYT/IQLT come from CBOT 26-087 (2026-02-26), whose PDF is not reachable at either the padded or unpadded month path - open."
+  },
+  {
+   "artifact": "CME Submission 21-002, CFTC Reg 40.6(a) certification: various amendments to Bitcoin/Micro Bitcoin/Ether futures including enabling BTIC",
+   "artifact_date": "2021-09-10",
+   "capture_ts": "2026-09-06T06:32:42Z",
+   "url": "https://www.cmegroup.com/content/dam/cmegroup/market-regulation/rule-filings/2021/9/21-002.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/rf-21-002.txt",
+   "verbatim": "\"...certifies ... various amendments to the Bitcoin Futures, Micro Bitcoin Futures, Ether Futures, and Options on Bitcoin Futures contracts ... effective Sunday, September 26, 2021 for trade date Monday, September 27, 2021.\"  \"BTIC CME Globex Hours: Sunday - Friday 6:00 p.m. Eastern time (ET) - 4:00 p.m. London time (11:00 a.m./12:00 p.m. ET). Monday - Thursday 4:30 p.m. London time (11:30 a.m./12:30 p.m. ET) - 5:00 p.m. ET. Friday 4:30 p.m. London time (11:30 a.m./12:30 p.m. ET) – 5:00 p.m. ET for Monday’s Reference Rate. Monday - Thursday 5:00 p.m. - 6:00 p.m. ET daily maintenance period.\"",
+   "bears_on": "Unconditional launch for globex_cryptocurrency_btic_london: first session Sun 2021-09-26, trade date Mon 2021-09-27. Also the full pre-24/7 London grid, in session language, with CME's own dual ET renderings ('11:00 a.m./12:00 p.m. ET') proving the roll is Europe/London-anchored."
+  },
+  {
+   "artifact": "CME Submission 22-220 (1 of 2), CFTC Reg 40.6(a) certification: BTIC eligibility in connection with CME CF Reference Rates New York",
+   "artifact_date": "2022-07-08",
+   "capture_ts": "2026-09-06T06:32:53Z",
+   "url": "https://www.cmegroup.com/content/dam/cmegroup/market-regulation/rule-filings/2022/7/22-220_1.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/rf-22-220_1.txt",
+   "verbatim": "\"...the eligibility of Basis Trade at Index Close (“BTIC”) transactions for Micro Ether Futures, Micro Bitcoin Futures, Ether Futures, and Bitcoin Futures contracts (the “Contracts”) to the relative CME CF Reference Rate published at 4:00 p.m. New York time for trading on the CME Globex electronic trading platform (“CME Globex”) ... effective Sunday, July 24, 2022 for trade date Monday, July 25, 2022 ... BTIC transactions shall remain available on the London close for the Contracts (see CME Submission No. 21-002 dated September 10, 2021).\"  Table: \"MET  EMB  EYB | MBT  MIB  MYB | ETH  ETB  ENB | BTC  BTB  BNB\"",
+   "bears_on": "Unconditional launch for globex_cryptocurrency_btic_new_york: first session Sun 2022-07-24, trade date Mon 2022-07-25. Anchor is 4:00 p.m. New York; America/New_York and America/Chicago share DST rules, so the key is exactly expressible in Chicago local seconds - single-zone, encodable now."
+  },
+  {
+   "artifact": "CME Submission 24-080 (1 of 2), CFTC Reg 40.6(a) certification: BTIC eligibility in connection with CME CF Reference Rates Asia Pacific",
+   "artifact_date": "2024-02-26",
+   "capture_ts": "2026-09-06T06:33:04Z",
+   "url": "https://www.cmegroup.com/content/dam/cmegroup/market-regulation/rule-filings/2024/2/24-080_1.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/rf-24-080_1.txt",
+   "verbatim": "\"...the eligibility of Basis Trade at Index Close (“BTIC”) transactions for Bitcoin Futures, Micro Bitcoin Futures, Ether Futures, and Micro Ether Futures contracts ... to the relative CME CF Reference Rate published at 4:00 p.m. Hong Kong/Singapore time ... effective Sunday, March 17, 2024, for trade date Monday, March 18, 2024\"; \"BTIC transactions shall remain available on the London close and New York close for the Contracts (see CME Submission No. 22-220 dated July 8, 2022).\"",
+   "bears_on": "Unconditional launch for globex_cryptocurrency_btic_apac: first session Sun 2024-03-17, trade date Mon 2024-03-18. 4:00 p.m. HK/SG = 08:00 UTC year-round, which is exactly the observed 03:00 CDT / 02:00 CST roll."
+  },
+  {
+   "artifact": "CME contract specification page for Bitcoin futures, ContractSpecs productId 8478, Wayback id_ replay 20251028 (pre-24/7 state); the same JSON at 20240929 and 20250221; and the BTIC-free state at 20210710",
+   "artifact_date": "2025-10-28 (pre-24/7); 2021-07-10 (pre-BTIC)",
+   "capture_ts": "2026-09-06T05:34:xxZ",
+   "url": "https://web.archive.org/web/20251028id_/https://www.cmegroup.com/CmeWS/mvc/ContractSpecs/List/productId/8478",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/wbspec-8478-BTC-20251028-plain.json (and -20240929-, -20250221-, -20220921-, -20231123-, -20210710-)",
+   "verbatim": "2025-10-28 CME Globex: \"BTIC London: Sunday - Friday 5:00 p.m. CT - 4:00 p.m London time (10:00 a.m/11:00 a.m. CT). Monday - Thursday 4:30 p.m. London Time (10:30 a.m./11:30 a.m. CT) - 4:00 p.m. CT for next day's Reference Rate. Friday 4:30 p.m. London Time (10:30 a.m./11:30 a.m. CT) - 4:00 p.m. CT for Monday's Reference Rate. Monday - Thursday 4:00 p.m. - 5:00 p.m. CT daily maintenance period.  BTIC NY: Sunday - Friday 5:00 p.m. - 3:00 p.m. CT with a 60-minute break each day beginning at 4:00 p.m. CT.  BTIC APAC: Sunday - Friday 5:00 p.m. CT - 4:00 p.m. Hong Kong/Singapore time (2:00 a.m./3:00 a.m. CT). Monday - Thursday 4:30 p.m. Hong Kong/Singapore time (2:30 a.m./3:30 a.m. CT) - 4:00 p.m. CT. for next day's Reference Rate. ... Monday - Thursday 4:00 p.m. - 5:00 p.m. CT daily maintenance period.\"  The 2021-07-10 capture carries NO BTIC line at all.",
+   "bears_on": "The complete pre-2026-05-29 grid for all three crypto BTIC keys, in CME's own spec channel, and the sessionless pre-launch boundary (2021-07-10 capture has no BTIC line, consistent with the 2021-09-26 launch). Note the pre-24/7 interruption was 30 minutes (16:00->16:30 local reference city); today it is 5 minutes."
+  },
+  {
+   "artifact": "CME ContractSpecs API, productId 8478 (Bitcoin Futures) - current 24/7 state",
+   "artifact_date": "2026-09-06 (live)",
+   "capture_ts": "2026-09-06T05:15:12Z",
+   "url": "https://www.cmegroup.com/CmeWS/mvc/ContractSpecs/List/productId/8478",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/specs-productId-8478-BTC.txt",
+   "verbatim": "CME Globex: \"Outright: 24/7 with the exception of the following maintenance windows: Saturday 2:00 a.m. to 4:00 a.m. CT & Monday-Friday 4:00 p.m. to 4:02 p.m. CT<br /><br />BTIC APAC: 24/7 with the exception of the following maintenance windows: Saturday: 2:00 a.m. to 4:00 a.m. CT & Monday-Friday from 3:00 a.m. to 3:05 a.m. CT<br /><br />BTIC London: 24/7 ... Saturday: 2:00 a.m. to 4:00 a.m. CT & Monday-Friday from 10:00 a.m. to 10:05 a.m. CT<br /><br />BTIC NY: 24/7 ... Saturday: 2:00 a.m. to 4:00 a.m. CT & Monday-Friday from 3:00 p.m. to 3:05 p.m. CT\"; \"ProductCode\":{...\"BTIC\":\"\\\"BNB\\\",\\\"BTB\\\",\\\"ABB\\\"\"...}",
+   "bears_on": "Current grid for all three crypto BTIC keys. The spec omits the 16:01-16:02 CT pause that the schedule feed and the client-systems wiki both publish for the BTIC books - record the omission."
+  },
+  {
+   "artifact": "CME Client Systems wiki, 'Cryptocurrency Futures and Options Migration to 24-7 Trading' (Confluence page 1283194884), storage-format body via the public v2 API",
+   "artifact_date": "page version dated 2026-08-14; the BTIC schedules were added by the entry dated 2026-04-22 and the NY schedule updated 2026-05-13",
+   "capture_ts": "2026-09-06T05:31:05Z",
+   "url": "https://cmegroupclientsite.atlassian.net/wiki/api/v2/pages/1283194884?body-format=storage",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/wiki-1283194884-api.json",
+   "verbatim": "\"24/7 BTIC Crypto New York (NY)\": \"Monday through Friday | Daily Maintenance Window (with Trade Date roll) | Close: 3:00:00 p.m. to 3:01:30 p.m. CT | Pre-open: 3:01:30 p.m. to 3:04:30 p.m. CT  No cancel: 3:04:30 p.m. to 3:05:00 p.m. CT  Open: 3:05:00 p.m. to 4:01:00 p.m. CT  Pre-open: 4:01:00 p.m. to 4:01:30 p.m. CT  No cancel: 4:01:30 p.m. to 4:02:00 p.m. CT  Open: 4:02:00 p.m. CT\"; \"Saturday | Extended Maintenance Window | Close: 2:00 a.m. to 3:45 a.m. CT | Pre-open: 3:45:00 a.m. to 4:00:00 a.m. CT ... Open: 4:00 a.m. CT\". \"24/7 BTIC Crypto London Session (LDN)\": \"British Summer Time (BST) applies to 24/7 BTIC Crypto London Session (LDN) contracts.\" ... \"Close: 10:00:00 a.m. to 10:01:30 a.m. CT\" ... \"Open: 10:05:00 a.m. to 4:01:00 p.m. CT\". \"24/7 Basis Trade at Index Close (BTIC) Crypto Asia-Pacific (APAC)\": \"Daylight savings time applies to BTIC and Crypto APAC contracts.\" ... \"Close: 3:00:00 a.m. to 3:01:00 a.m. CT\" ... \"Open: 3:05:00 a.m. to 4:01:00 p.m. CT\". Page intro: \"Starting at 4 p.m. Central Time on Friday, May 29, 2026, CME Group will expand cryptocurrency futures and options to 24/7 trading.\" First-day exception: \"For the first day ... (Friday, May 29, 2026) the standard daily maintenance of two minutes will be extended to 30 minutes (4:00 p.m. to 4:30:00 p.m. CT).\"",
+   "bears_on": "The operator's own second-resolution grid for all three crypto BTIC keys, in session language, labelled 'with Trade Date roll' - so the daily stop is an inter-trade-date boundary, not an intra-date halt. It also states the anchoring explicitly per variant (BST for London; 'daylight savings time applies' for APAC; nothing for NY). The migration instant '4 p.m. CT on Friday, May 29, 2026' is an exact-instant boundary, and the 2026-05-29 16:00-16:30 CT extended maintenance is a single-date exception (LAW-HOLIDAY-SCOPE)."
+  },
+  {
+   "artifact": "CME Submission 26-114 and Special Executive Report SER-9740R, expansion of cryptocurrency trading and clearing hours",
+   "artifact_date": "2026-05-13 (SER-9740, superseded) / 2026-05-28 (SER-9740R); filing 26-114",
+   "capture_ts": "2026-09-06T06:40:32Z / 2026-09-06T07:16:19Z",
+   "url": "https://www.cmegroup.com/content/dam/cmegroup/notices/ser/2026/05/ser-9740r.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/rf-26-114.txt, /Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/ser-9740r-dam.txt",
+   "verbatim": "26-114: \"...the expansion of the trading hours on the CME Globex electronic trading platform ... for all cryptocurrency futures and options on futures contracts noted in Table 1. below (the “Contracts”) effective Friday, May 29, 2026\". SER-9740R: \"Effective Friday, May 29, 2026, and pending all relevant Commodity Futures Trading Commission ... regulatory review periods ... will expand the trading hours ... for all cryptocurrency futures and options on futures contracts noted in Table 1. below\". Neither document contains the string 'BTIC' (grep count 0 on the SER text).",
+   "bears_on": "U-15 STANDS for BTIC. The 2026-05-29 day is stated only for futures and options; no retrieved primary source names a BTIC product code against that day. The circumstantial link is strong - 26-114's own new pre-open times (Mon-Fri 4:01-4:02 p.m. CT; Saturday 3:45-4:00 a.m. CT) are byte-for-byte the BTIC feed's - but it is inference, not a stated day for the BTIC books."
+  },
+  {
+   "artifact": "CME trading-hours service, crypto BTIC across the three variants and nine security groups",
+   "artifact_date": "2026-09-06 (live schedule publication)",
+   "capture_ts": "2026-09-06T05:18:38Z .. 2026-09-06T07:18:00Z",
+   "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=10185&pageSize=100&fromEventDate=2026-10-25&toEventDate=2026-11-07",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/svc-10185-BNB-{sep,dst,jan}.json, svc-10187-ENB-*.json, svc-8970-BTB-{sep,dst,jan}.json, svc-10664-ABB-{sep,dst,jan}.json, svc-10915-SNB-sep.json, svc-10916-SLB-sep.json, svc-10666-ATB-sep.json, svc-10886-BFB-sep.json, svc-11570-BVB-sep.json, svc-10920-BLB-sep.json, svc-10921-BAB-sep.json",
+   "verbatim": "BNB [BI] 2026-09-14 closed@15:00, preopen@15:01, open@15:05, preopen@16:01, open@16:02; Saturday 2026-09-19 closed@02:00, preopen@03:45, open@04:00 -> trade date 2026-09-21. Identical 15:00 in 2026-10-26..30 and from 2026-11-02 and in 2027-01-11..15. BTB [BX] closed@10:00 in September, closed@11:00 for 2026-10-26..30, closed@10:00 from 2026-11-02 and in January. ABB [HB] closed@03:00 in September and 2026-10-26..30, closed@02:00 from 2026-11-02 and in January. SNB [LS] and BFB [FN] closed@15:00; SLB [LL] and BVB [CK] closed@10:00; ATB [EC] and BAB [HB] closed@03:00.",
+   "bears_on": "Anchor classification, measured: NY variant = America/Chicago (constant 15:00 across all three probe windows); London variant = Europe/London (11:00 CT only in the week when London is on GMT and Chicago still on CDT); APAC variant = fixed UTC+8 (moves with the US DST change, not the UK one). Also the key membership trap: BFB 'BTIC on Bitcoin Friday Futures' has no city in its name but runs the NY grid, and BVB 'BTIC on Bitcoin Volatility Futures' runs the London grid."
+  },
+  {
+   "artifact": "CME Submission 18-007, CFTC Reg 40.2(a) notification: initial listing of Yen Denominated TOPIX Index Futures",
+   "artifact_date": "2018-01-12",
+   "capture_ts": "2026-09-06T06:38:21Z",
+   "url": "https://www.cmegroup.com/content/dam/cmegroup/market-regulation/rule-filings/2018/1/18-007.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/rf-18-007.txt",
+   "verbatim": "\"...self-certifying terms and conditions for Yen Denominated TOPIX Index Futures contract (the “Contract”) to be listed for trading on the CME Globex electronic trading platform (“CME Globex”) and for submission for clearing on CME ClearPort on Sunday, February 4, 2018, for trade date of Monday, February 5, 2018.\"  \"Trading Venues and Hours: These futures shall be listed for trading on the CME Globex, for outright purchase or sale between the hours of 5:00 pm and 4:00 pm, Sunday through Friday, and for BTIC trading between the hours of 5:00 pm Chicago time and 3:00 pm Tokyo time (typically midnight Chicago time), Sunday through Friday.\"  \"Commodity Code  Futures: TPY  BTIC: TPB\"",
+   "bears_on": "Launch day and launch grid for globex_topix_btic. Caveat recorded: the Exhibit-1 'Trading Hours and Venue' cell also carries 'Futures shall trade on and according to the rules of Chicago Mercantile Exchange Inc., pending certification of contract terms and conditions with the US Commodity Futures Trading Commission and completion of all regulatory review periods' - the cover-letter sentence is unconditional, the exhibit boilerplate is not. Chadv18-013 removes the doubt."
+  },
+  {
+   "artifact": "CME Clearing House Advisory 18-013, 'New Product Summary ... Initial Listing of the Yen Denominated TOPIX Index Futures Contract'",
+   "artifact_date": "2018-01-09",
+   "capture_ts": "2026-09-06T07:10:25Z",
+   "url": "https://www.cmegroup.com/notices/clearing/2018/01/Chadv18-013.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/chadv18-013-pdf.txt",
+   "verbatim": "\"Listing Date  Trade Date Monday, February 5, 2018\" ; \"BTIC on Yen Denominated TOPIX Futures  TPB  TPB  TPY\" ; \"Trading Hours  Futures: CME Globex and CME ClearPort: Sunday – Friday 5:00 pm – 4:00 pm CT; Monday-Thursday 4:00-5:00 pm CT daily maintenance period.  BTIC: CME Globex – 5:00 p.m. – 12:00 a.m./1:00 a.m. CT (3:00 p.m. Tokyo Time).\"",
+   "bears_on": "Unconditional corroboration of the TOPIX BTIC launch (trade date Mon 2018-02-05, first session Sun 2018-02-04) and of the Tokyo anchoring, stated by CME with both CT renderings ('12:00 a.m./1:00 a.m. CT')."
+  },
+  {
+   "artifact": "CME Submission 22-413, CFTC Reg 40.2(a) certification: initial listing of USD Denominated TOPIX Index Futures (TPD / BTIC TPT)",
+   "artifact_date": "2022-10-17",
+   "capture_ts": "2026-09-06T06:38:41Z",
+   "url": "https://www.cmegroup.com/content/dam/cmegroup/market-regulation/rule-filings/2022/10/22-413.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/rf-22-413.txt",
+   "verbatim": "\"...hereby certifies ... the initial listing of USD Denominated TOPIX Index Futures contract (the “Contract”) for trading on the CME Globex electronic trading platform ... effective on Sunday, November 20, 2022, for trade date Monday, November 21, 2022\"  \"CME Globex Preopen: TPD and TPT: Sunday 5:00 p.m. - 6:00 p.m. Eastern Prevailing Time (EPT); Monday - Thursday: 5:45 p.m. - 6:00 p.m. EPT\"  \"CME Globex  TPD: Sunday - Friday 6:00 p.m. - 5:00 p.m. EPT with a 60-minute break each day beginning at 5:00 p.m. ET  TPT: Sunday - Friday 6:00 p.m. - 3:00 p.m. Tokyo time (1:00 a.m. or 2:00 a.m. EPT)\"",
+   "bears_on": "TPT is a later member listing on the TOPIX BTIC clock (caller catalog data). The filing is also the only retrieved primary that states the BTIC PRE-OPEN in session language: Sunday 16:00-17:00 CT, Monday-Thursday 16:45-17:00 CT - exactly what the feed publishes."
+  },
+  {
+   "artifact": "CME Submission 19-012 (1 of 2), CFTC Reg 40.6(a) certification: BTIC eligibility and expansion of listing schedules in CME Nikkei Stock Average Futures and CME Yen Denominated Nikkei Stock Average Futures",
+   "artifact_date": "2019-01-28",
+   "capture_ts": "2026-09-06T06:31:01Z",
+   "url": "https://www.cmegroup.com/content/dam/cmegroup/market-regulation/rule-filings/2019/1/19-012_1.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/rf-19-012_1.txt",
+   "verbatim": "\"...to permit Basis Trade at Index Close (“BTIC”) trading on the CME Globex electronic trading platform (“CME Globex”) and in submission of block trades for clearing via CME ClearPort effective on Monday, February 18, 2019, for trade date Tuesday, February 19, 2019.\"  \"For any regular week containing no US or Japanese market holidays, BTIC hours shall be as follows ... CME Globex • Sunday 6:00 p.m. ET to Monday 1:00 a.m. EST (2:00 a.m. EDT) for next US business day. • Monday–Thursday: 12:00 noon ET to 5:00 p.m. ET for current US business day. 6:00 p.m. ET to 1:00 a.m. EST (2:00 a.m. EDT) for next US business day. • Friday: No BTIC trading is permitted after 1:00 a.m. EST (2:00 a.m. EDT).\"  \"CME ClearPort • ... Monday–Thursday: 11:00 a.m. ET to 5:00 p.m. ET, and 6:00 p.m. ET to 1:00 a.m. EST (2:00 a.m. EDT). • Friday: 11:00 a.m. ET to 5:00 p.m. ET.\"  Exhibit 1: \"GBX Open  12:00 noon ... GBX and CPC Close  1:00 a.m. EST (2:00 a.m. EDT)  3:00 p.m.\" [Japan Standard Time column]",
+   "bears_on": "Launch day, launch grid, and the resolution of U-18(b): the Globex midday leg has been NOON ET since day one; 11:00 a.m. ET is the ClearPort open printed on the same page. Also states the era-A absence of a Friday day leg, and gives an explicitly holiday-free normal week - exactly the crate's template semantics."
+  },
+  {
+   "artifact": "CME Clearing House Advisory 19-025, 'Product Modification Summary ... BTIC Eligibility ... for Nikkei Stock Average Futures (Yen and Dollar Denominated)'",
+   "artifact_date": "2019-01-17",
+   "capture_ts": "2026-09-06T07:11:17Z",
+   "url": "https://www.cmegroup.com/notices/clearing/2019/01/Chadv19-025.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/chadv19-025-pdf.txt",
+   "verbatim": "\"Pending all relevant CFTC regulatory review periods ... The effective date of the aforementioned is forthcoming and pursuant to the CFTC’s process and timeline.\"  \"Trading Hours  CME Globex: Sunday - Friday 6:00 p.m. - Monday 1:00 a.m./2:00 a.m. ET (3 p.m. Tokyo). Monday - Thursday 11:00 a.m. - 1:00 a.m./2:00 a.m. ET (3 p.m. Tokyo); no 11:00 a.m.- 5:00 p.m. ET session on Friday. Monday - Thursday 5:00 p.m. - 6:00 p.m. ET daily maintenance period.\"  \"Please note: BTIC trading will not be permitted on U.S. Exchange or Japanese Banking Holidays\"",
+   "bears_on": "This is where U-18(b)'s '11:00 a.m. ET' comes from: a CONDITIONAL clearing advisory that prints the ClearPort open in the Globex row. It does not date anything ('effective date ... is forthcoming'). Its holiday sentence is caller-owned DayPolicy input, not template data."
+  },
+  {
+   "artifact": "CME Submission 21-294, CFTC Reg 40.6(a) certification: expansion of the TACO trading session for ES/NQ/RTY and the BTIC trading session for Yen and USD Nikkei",
+   "artifact_date": "2021-07-23",
+   "capture_ts": "2026-09-06T06:32:30Z",
+   "url": "https://www.cmegroup.com/content/dam/cmegroup/market-regulation/rule-filings/2021/7/21-294.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/rf-21-294.txt",
+   "verbatim": "\"...to permit Friday trading sessions commencing on Friday, October 1, 2021 for trade date Monday, October 4, 2021 as more specifically described in the table below ... This submission shall become effective on August 9, 2021.\"  Table, Nikkei rows (NKT 352, NIT 352B): Current \"BTIC: Sunday - Friday 6:00 p.m. ET - 3:00 p.m. Tokyo time (1:00 a.m./2:00 a.m. ET)  Monday - Thursday 12:00 p.m. to 5:00 p.m. ET\" -> Expanded \"BTIC: Sunday - Friday 6:00 p.m. ET - 3:00 p.m. Tokyo time (1:00 a.m./2:00 a.m. ET)  Monday – Friday  12:00p.m. to 5:00 p.m. ET\". TACO rows (ESQ 358, NQQ 359, RTQ 393): Current \"TACO: Sunday - Friday 6:00 p.m. - 9:30 a.m. ET.  Monday - Thursday 11:00 a.m. - 5:00 p.m. ET.\" -> Expanded \"Monday -Friday 11:00 a.m. - 5:00 p.m. ET.\"",
+   "bears_on": "Dates the second Nikkei BTIC era: first session Friday 2021-10-01, trade date Monday 2021-10-04. Confirms the Globex midday leg was already Noon ET. The same table also closes U-17 for TACO (Monday-Thursday -> Monday-Friday, same day) - that belongs to the TACO gate."
+  },
+  {
+   "artifact": "CME Submission 24-263, CFTC Reg 40.6(a) certification: amendments to Rule 3XXX2.I. and BTIC trading hours of all Nikkei and TOPIX equity futures contracts to align with JPX extended trading hours",
+   "artifact_date": "2024-08-27",
+   "capture_ts": "2026-09-06T06:33:59Z",
+   "url": "https://www.cmegroup.com/content/dam/cmegroup/market-regulation/rule-filings/2024/8/24-263.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/rf-24-263.txt",
+   "verbatim": "\"The Exchange will also amend the Basis Trade at Index Close (“BTIC”) trading hours on the CME Globex electronic trading platform (“CME Globex”) of all Nikkei and TOPIX equity futures contracts as noted in Table 1. below (collectively, the “Rule Amendments”), effective Sunday, November 3, 2024, for trade date Tuesday, November 5, 2024.*\"  Table 1 blackline: \"Trading Hours: BTIC: Sunday - Friday 6:00 p.m. ET - [struck: 3:00 p.m.] 3:30 p.m. Tokyo time\" for \"Yen Denominated Nikkei Stock Average Futures NKD/NK NKT 352\", \"USD Denominated Nikkei Stock Average Futures NIY/N1 NIT 352B\", \"Yen Denominated TOPIX Index Futures TPY/TPY TPB 371\", \"USD Denominated TOPIX Index Futures TPD/TPD TPT 376\".  Footnotes: \"*Monday, November 4, 2024, is a bank holiday in Japan\" and \"**not BTIC eligible\" (for ENY).",
+   "bears_on": "U-18(a) RESOLVED. One unconditional day-level cutover shared by globex_nikkei_btic and globex_topix_btic: first session Sunday 2024-11-03; the trade date named is Tuesday 2024-11-05 because Monday is a Japanese bank holiday. The struck text sources the prior era's value (3:00 p.m. Tokyo). SER-9412 (2024-08-27) carries the identical text but is conditional ('pending all relevant CFTC regulatory review periods'), so the certification is the anchor."
+  },
+  {
+   "artifact": "CME trading-hours service, TOPIX BTIC (TPB id 8492, TPT id 10251, group BJ) and Nikkei BTIC (NIT id 8633 group N6, NKT id 8634 group ND) across a September week, the 2026-10-25..11-07 DST window, and a January week",
+   "artifact_date": "2026-09-06 (live schedule publication)",
+   "capture_ts": "2026-09-06T07:05:25Z (NKT re-verified live), 2026-09-06T05:19:25Z, 05:20:37Z, 05:21:47Z, 07:05:xxZ",
+   "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=8634&pageSize=100&fromEventDate=2026-10-25&toEventDate=2026-11-07",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/svc-8492-TPB-{sep,dst,jan}.json, svc-10251-TPT-{sep,v2dst}.json, svc-8633-NIT-{sep,v2jan}.json, svc-8634-NKT-{sep,dst,jan,v2sep,v2dst}.json",
+   "verbatim": "TPB/TPT [BJ]: 2026-09-14 closed@01:30, preopen@16:45, open@17:00; 2026-10-26..30 closed@01:30; from 2026-11-02 closed@00:30; 2027-01-12..15 closed@00:30. No day leg on any date. NKT/NIT [ND, N6]: 2026-09-14 closed@01:30, preopen@10:30->2026-09-15, open@11:00->2026-09-15, paused@16:00, preopen@16:45, open@17:00; Friday 2026-10-30 preopen@10:30->2026-11-02, open@11:00->2026-11-02, closed@16:00->2026-11-02; from 2026-11-02 the overnight close is 00:30. Saturday rows on N6 and ND only: 2026-09-19 open@05:00->2026-09-24, closed@17:00->2026-09-24; 2026-10-31 open@05:00->2026-11-02, closed@17:00->2026-11-02; 2026-11-07 open@05:00->2026-11-09; 2027-01-16 open@05:00->2027-01-19.",
+   "bears_on": "Both Japanese BTIC keys are CROSS-ZONE: open 17:00 America/Chicago constant, close 15:30 Asia/Tokyo (01:30 CDT / 00:30 CST). Nikkei's Noon-5:00 p.m. ET day leg is 11:00-16:00 America/Chicago constant across all three windows, so the day leg is Chicago-anchored while the overnight close is Tokyo-anchored - the hardest U-8 shape in this gate. The Saturday 05:00-17:00 CT block is the U-16 anomaly, and it is NOT TACO-specific."
+  },
+  {
+   "artifact": "CME trading-hours service, TACO on E-mini S&P 500 (ESQ id 8528, group 3T) - cross-check of the Saturday anomaly",
+   "artifact_date": "2026-09-06 (live schedule publication)",
+   "capture_ts": "2026-09-06T07:05:54Z",
+   "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=8528&pageSize=100&fromEventDate=2026-09-13&toEventDate=2026-09-19",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/svc-8528-ESQ-xref-sep.json",
+   "verbatim": "2026-09-18 [3T] closed@08:30->2026-09-18 | preopen@09:30->2026-09-21 | open@10:00->2026-09-21 | closed@16:00->2026-09-21;  2026-09-19 [3T] open@05:00->2026-09-21 | closed@17:00->2026-09-21",
+   "bears_on": "U-16 is not a TACO quirk. The identical Saturday 'open@05:00 ... closed@17:00 with the following Monday's trade date' signature appears on TACO group 3T and on Nikkei BTIC groups N6 and ND, i.e. on exactly the families that carry a separate daytime leg. Withhold the Saturday boundary on globex_nikkei_btic for the same reason TACO withholds it."
+  },
+  {
+   "artifact": "CME ContractSpecs API, productId 58 (Euro/U.S. Dollar (EUR/USD) Futures, Globex 6E, BTIC 6EB)",
+   "artifact_date": "2026-09-06 (live)",
+   "capture_ts": "2026-09-06T05:22:30Z",
+   "url": "https://www.cmegroup.com/CmeWS/mvc/ContractSpecs/List/productId/58",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/specs-productId-58-6E.txt",
+   "verbatim": "CME Globex: \"Sunday - Friday 5:00 p.m. - 4:00 p.m. CT with a 60-minute break each day beginning at 4:00 p.m. CT<br /><br />BTIC: Sunday - Friday 5:00 p.m. - 4:00 p.m. CT with a trading close from 3:40 p.m. - 4:30 p.m. London time (9:40 a.m. - 10:30 a.m. CT)  and a 60-minute break each day beginning at 4:00 p.m. CT\"  CME ClearPort: \"... BTIC: Sunday - Friday 5:00 p.m. - 5:45p.m. CT with a trading halt 9:40 a.m. to 11:30 a.m. CT, and with no reporting Monday - Thursday from 5:45 p.m. to 6:00 p.m. CT\"",
+   "bears_on": "The Globex line carries a CT rendering the handoff did not record: '(9:40 a.m. - 10:30 a.m. CT)'. And the handoff's 'CME uses two different words and two different end times for the same interruption' dissolves: the 9:40-11:30 a.m. CT halt is the CLEARPORT window, the 3:40-4:30 p.m. London one is GLOBEX. Two venues, not one contradiction."
+  },
+  {
+   "artifact": "CME article 'Frequently Asked Questions: BTIC and BTIC+ for FX Futures'",
+   "artifact_date": "page metadata Published Time 2022-11-21 (pre-launch)",
+   "capture_ts": "2026-09-06T05:40:30Z",
+   "url": "https://www.cmegroup.com/articles/faqs/frequently-asked-questions-btic-and-btic-plus-for-fx-futures.html",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/faq-fx-btic-live.txt",
+   "verbatim": "Q7: \"BTIC can be traded on CME Globex against the current day’s reference price up to 3:40 p.m. London time (typically 9:40 a.m. CT).\" / \"After the current day’s reference price has been published, BTIC can be traded on CME Globex against the next day’s reference price from 4:30 p.m. London time (typically 10:30 a.m. CT). These trades will be treated as trades for the next day’s trade date.\" / \"BTIC+ contracts can be traded through the standard CME Globex trading hours of Sunday-Friday 5:00 p.m.-4:00 p.m. CT.\"  Q11: \"The first day of trading for BTIC and BTIC+ is Monday February 6, 2023.\"  Comparison table: \"CME Globex Trading Hours | Sunday-Friday 5:00 p.m.-4:00 p.m. CT. Trading halt from 3:40 p.m. London time (9:40 a.m./10:40 a.m. CT) to 4:30 p.m. London Time (10:30 a.m./11:30 a.m. CT). Daily maintenance period from 4:00 p.m.-5:00 p.m. CT.\"",
+   "bears_on": "Three things. (1) The dual CT renderings '(9:40 a.m./10:40 a.m. CT)' are CME's own admission that the interruption is Europe/London-anchored and drifts against Chicago. (2) 'These trades will be treated as trades for the next day’s trade date' makes the interruption an INTER-trade-date boundary, so it is a close, not a Halt - this settles the classification the handoff left open. (3) Launch day corroborated at trade date 2023-02-06."
+  },
+  {
+   "artifact": "CME Submission 23-015 (1 of 2), CFTC Reg 40.6(a) certification: BTIC transaction eligibility for the EUR/USD futures contract",
+   "artifact_date": "2023-01-05",
+   "capture_ts": "2026-09-06T06:34:21Z",
+   "url": "https://www.cmegroup.com/content/dam/cmegroup/market-regulation/rule-filings/2023/1/23-015_1.pdf",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/rf-23-015_1.txt",
+   "verbatim": "\"...certifying ... Basis Trade on Index Close (“BTIC”) transactions eligibility for the Euro/U.S. Dollar (EUR/USD) Futures contract (Chapter 261; Code: 6E; BTIC Code: 6EB; Clearing Code: EC); (the “Contract”) for trading on the CME Globex electronic trading platform (“CME Globex”) and for submission for clearing via CME ClearPort effective Sunday, February 5, 2023 for trade date Monday, February 6, 2023.\"  Exhibit E – Trading and Clearing Hours: \"CME Globex Pre-Open: • Sunday 4:00 p.m. – 5:00 p.m. Central Time (CT) • Monday – Thursday 4:45 p.m. – 5:00 p.m. CT   CME Globex: • Sunday - Friday 5:00 p.m. - 4:00 p.m. CT • Daily maintenance period from 4:00 p.m. to 5:00 p.m. CT\"",
+   "bears_on": "Unconditional launch day for globex_fx_btic_euro (first session Sun 2023-02-05, trade date Mon 2023-02-06). Note Exhibit E states only the plain FX envelope with NO BTIC-specific interruption - the interruption is sourced from the FAQ and the spec page, not from the certification."
+  },
+  {
+   "artifact": "CME product-slate service, full catalogue (3,248 rows, 7 pages) and the trading-hours service for ART (id 10040), AST (8926), ADT (10046), EMT (7596)",
+   "artifact_date": "2026-09-06 (live)",
+   "capture_ts": "2026-09-06T06:18:28Z (slate) / 2026-09-06T05:23:21Z (schedules)",
+   "url": "https://www.cmegroup.com/services/product-slate?sortAsc=true&sortField=globex&pageSize=500&pageNumber=1",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/slate2-p1..p7.txt, /Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/slate2-parsed.json, /Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/svc-10040-ART-sep.json, /Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/svc-8926-AST-sep.json, /Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/svc-10046-ADT-sep.json, /Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/svc-7596-EMT-sep.json",
+   "verbatim": "Slate rows: \"ART id=10040 grp=BV :: BTIC on Adjusted Interest Rate Russell 1000 Total Return (EFFR) Futures\"; \"AST id=8926 grp=BV\"; \"AQT id=10044 grp=BV\"; \"A2T id=10042 grp=BV\"; \"ASPT id=10830 grp=BV\"; \"ADT id=10046 grp=DH\"; \"EMT id=7596 grp=PB :: E-mini S&P MidCap 400 BTIC Futures\". Schedules, week 2026-09-13..19: ART [BV], AST [BV], ADT [DH] and EMT [PB] all read preopen@16:00 Sunday / open@17:00, then closed@15:00, preopen@16:45, open@17:00 daily, Friday closed@15:00 with no reopen. There is NO 6EB row anywhere in the slate; only \"6E id=58 grp=6E :: Euro FX Futures\" and \"6EP id=10308 grp=6X :: Nearby BTIC+ on EUR/USD Futures\".",
+   "bears_on": "U-2 RESOLVED: the current product slate puts ART on group BV beside AST/AQT/A2T/ASPT, and a time-aligned week shows BV on the standard equity-index BTIC grid (17:00->15:00 CT). U-3 RESOLVED: EMT is the BTIC on E-mini S&P MidCap 400, group PB, on the same grid. Also: 6EB has no slate row and no security group of its own, which qualifies the case for a separate globex_fx_btic_euro key."
+  },
+  {
+   "artifact": "CME ContractSpecs API, productId 166 (E-mini S&P Midcap 400 Futures)",
+   "artifact_date": "2026-09-06 (live)",
+   "capture_ts": "2026-09-06T05:23:49Z",
+   "url": "https://www.cmegroup.com/CmeWS/mvc/ContractSpecs/List/productId/166",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/specs-productId-166-EMD.txt",
+   "verbatim": "\"ProductCode\":{\"ClearPort\":\"ME\",\"BTIC\":\"EMT\",\"ClearingCode\":\"ME\",\"CmeGlobex\":\"EMD\"}; CME Globex: \"Sunday 6:00 p.m. - Friday - 5:00 p.m. ET (5:00 p.m. - 4:00 p.m. CT) with a daily maintenance period from 5:00 p.m. - 6:00 p.m. ET (4:00 p.m. - 5:00 p.m. CT)<br /><br />BTIC: Sunday - Friday 6:00 p.m. - 4:00 p.m. ET\"",
+   "bears_on": "U-3 closed on the underlying's own page: EMT's underlying is EMD, and its BTIC line is the standard equity-index BTIC window (18:00-16:00 ET = 17:00-15:00 CT). EMT -> globex_equity_index_btic, no new key."
+  },
+  {
+   "artifact": "CME trading-hours service, the nine Bloomberg-commodity BTIC roots and their outrights",
+   "artifact_date": "2026-09-06 (live schedule publication)",
+   "capture_ts": "2026-09-06T06:20:14Z .. 06:21:26Z",
+   "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=8539&pageSize=100&fromEventDate=2026-09-13&toEventDate=2026-09-19",
+   "saved_as": "/Users/agedvagabond/Developer/exchange-hours-research/cme-globex/trade-types/raw/btic-non-equity-groups/svc-8539-AWT-sep.json, svc-10210-BAT-sep.json, svc-10212-BPT-sep.json, svc-10214-BET-sep.json, svc-10216-BGT-sep.json, svc-10218-BMT-sep.json, svc-10220-BLT-sep.json, svc-10222-BST-sep.json, svc-11181-CCT-sep.json, svc-333-AW-sep.json, svc-11180-CCI-sep.json",
+   "verbatim": "AWT [B7] 2026-09-13 preopen@16:00->2026-09-14; 2026-09-14 open@08:15->2026-09-14, closed@13:30->2026-09-14, preopen@16:45->2026-09-15. Identical shape on BAT [8G], BPT [8Q], BET [8R], BGT [8S], BMT [8T], BLT [8U], BST [8X], CCT [FX] and on the outrights AW [AW] and CCI [FW].",
+   "bears_on": "The nine BCOM/CRB BTIC roots do NOT belong in globex_commodity_index_btic: their executable window is 08:15-13:30 CT with a 16:45->08:15 order-entry queue, not 17:00->13:30. It also falsifies SER-9138/23-074's AW row ('Current CME Globex BTIC Trading Hours 5:00 pm - 1:30pm CT'), which is the second demonstrable error in that table and the reason its 'Current' column cannot carry the 2023 revision."
+  }
+ ]
+}

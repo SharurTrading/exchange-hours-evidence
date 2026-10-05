@@ -1,0 +1,33 @@
+curl: (7) Failed to connect to web.archive.org port 443 after 168 ms: Couldn't connect to server
+curl: (3) bad range in URL position 197:
+https://web.archive.org/cdx/search/cdx?url=ice.com/publicdocs/futures_us*&output=json&fl=timestamp,original,statuscode,mimetype,digest,length&from=2024&to=2027&collapse=urlkey&filter=original:.*([Hh]oliday|HOLIDAY).*
+                                                                                                                                                                                                    ^
+curl: (3) bad range in URL position 197:
+https://web.archive.org/cdx/search/cdx?url=ice.com/publicdocs/futures_us*&output=json&fl=timestamp,original,statuscode,mimetype,digest,length&from=2024&to=2027&collapse=urlkey&filter=original:.*([Hh]oliday|HOLIDAY).*
+                                                                                                                                                                                                    ^
+curl: (3) bad range in URL position 197:
+https://web.archive.org/cdx/search/cdx?url=ice.com/publicdocs/futures_us*&output=json&fl=timestamp,original,statuscode,mimetype,digest,length&from=2024&to=2027&collapse=urlkey&filter=original:.*([Hh]oliday|HOLIDAY).*
+                                                                                                                                                                                                    ^
+curl: (7) Failed to connect to web.archive.org port 443 after 176 ms: Couldn't connect to server
+attempt 1 failed (rc=7) https://web.archive.org/web/20250120140842id_/https://www.ice.com/publicdocs/futures/IFUS_Trading_Hours_Holiday_Calendar.pdf
+curl: (7) Failed to connect to web.archive.org port 443 after 178 ms: Couldn't connect to server
+attempt 1 failed (rc=7) https://web.archive.org/web/20260114000228id_/https://www.ice.com/publicdocs/futures/IFUS_Trading_Hours_Holiday_Calendar.pdf
+curl: (7) Failed to connect to web.archive.org port 443 after 178 ms: Couldn't connect to server
+attempt 1 failed (rc=7) https://web.archive.org/cdx/search/cdx?url=ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_&matchType=prefix&output=json&fl=timestamp,original,statuscode,digest&collapse=urlkey
+curl: (7) Failed to connect to web.archive.org port 443 after 180 ms: Couldn't connect to server
+attempt 2 failed (rc=7) https://web.archive.org/cdx/search/cdx?url=ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_&matchType=prefix&output=json&fl=timestamp,original,statuscode,digest&collapse=urlkey
+curl: (7) Failed to connect to web.archive.org port 443 after 178 ms: Couldn't connect to server
+attempt 3 failed (rc=7) https://web.archive.org/cdx/search/cdx?url=ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_&matchType=prefix&output=json&fl=timestamp,original,statuscode,digest&collapse=urlkey
+curl: (7) Failed to connect to web.archive.org port 443 after 184 ms: Couldn't connect to server
+attempt 4 failed (rc=7) https://web.archive.org/cdx/search/cdx?url=ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_&matchType=prefix&output=json&fl=timestamp,original,statuscode,digest&collapse=urlkey
+curl: (7) Failed to connect to web.archive.org port 443 after 194 ms: Couldn't connect to server
+curl: (7) Failed to connect to web.archive.org port 443 after 169 ms: Couldn't connect to server
+curl: (7) Failed to connect to web.archive.org port 443 after 177 ms: Couldn't connect to server
+curl: (7) Failed to connect to web.archive.org port 443 after 183 ms: Couldn't connect to server
+attempt 1 failed (rc=7) https://web.archive.org/cdx/search/cdx?url=ice.com/publicdocs/futures_us/exchange_notices*&output=json&fl=timestamp,original,statuscode,digest&collapse=urlkey&filter=original:.*(IndDay|Independence|Christmas).*
+curl: (7) Failed to connect to web.archive.org port 443 after 179 ms: Couldn't connect to server
+attempt 2 failed (rc=7) https://web.archive.org/cdx/search/cdx?url=ice.com/publicdocs/futures_us/exchange_notices*&output=json&fl=timestamp,original,statuscode,digest&collapse=urlkey&filter=original:.*(IndDay|Independence|Christmas).*
+curl: (7) Failed to connect to web.archive.org port 443 after 178 ms: Couldn't connect to server
+attempt 3 failed (rc=7) https://web.archive.org/cdx/search/cdx?url=ice.com/publicdocs/futures_us/exchange_notices*&output=json&fl=timestamp,original,statuscode,digest&collapse=urlkey&filter=original:.*(IndDay|Independence|Christmas).*
+curl: (7) Failed to connect to web.archive.org port 443 after 171 ms: Couldn't connect to server
+attempt 4 failed (rc=7) https://web.archive.org/cdx/search/cdx?url=ice.com/publicdocs/futures_us/exchange_notices*&output=json&fl=timestamp,original,statuscode,digest&collapse=urlkey&filter=original:.*(IndDay|Independence|Christmas).*

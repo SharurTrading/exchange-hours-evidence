@@ -1,0 +1,501 @@
+Title: 20200210 - CME Group
+
+URL Source: https://www.cmegroup.com/notices/electronic-trading/2020/02/20200210.html
+
+Markdown Content:
+For the latest roadmap of CME Group technology initiatives:
+
+[See the Development Launch Schedule.](https://www.cmegroup.com/globex/develop-to-cme-globex/development-launches.html)
+
+## Critical System Updates
+
+### Update Update - Leg Security Description Change on iLink Security Definition Request- March 29
+
+† Denotes update to the article
+
+On †**Sunday, March 29** (trade date Monday, March 30), to better align with iLink 3 Binary Order Entry Protocol, CME Globex will change FIX tag 620-LegSecurityDesc validation for the [Security Definition Request](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Security+Definition+Request) (tag 35-MsgType=**c**) message. Currently, CME Globex validate tag 620-LegSecurityDec in Security Definition Request, and the message is rejected if this tag is not included. With this change, if the tag 620-LegSecurityDesc is **not**present, but the Security Definition Request contains tag 602-LegSecurityID, CME Globex will accept the message.
+
+The Security Definition Request will be rejected with a Business Level Reject (35=**j**) message if the Security Definition Request:
+
+*   does not contain both tag 620-LegSecurityDesc and tag 602-LegSecurityID, the reject message will include the following tag 58-Text=<Business Reject: Required Fields Missing 'Missing fields: LEG_SECURITY_DESC (620) and LEG_SECURITY_ID (602)'>.
+*   does not contain tag 620-LegSecurityDesc, but contains an invalid value for tag 602-LegSecurityID, the reject message will include the following tag 58-Text=< Business Reject: Required Fields Invalid 'Invalid fields: LEG_SECURITY_DESC (620) and LEG_SECURITY_ID (602)’>
+
+This change is currently available for customer testing in New Release.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2020/02/20200210.html#top)
+
+### Update Update - Mandatory iLink 3 Binary Order Entry Protocol for MSGW- Available Now in New Release
+
+† Denotes update to the article
+
+Starting **Sunday, March 29**(trade date Monday, March 30), CME Group will launch iLink 3, a new order entry protocol for trading futures, options, and BrokerTec products on CME Globex, over 4 launch weekends. All customers connected via Market Segment Gateway (MSGW) will need to migrate to the iLink 3 by **Q4 2020**.
+
+iLink 3 includes:
+
+*   [Simple Binary Encoding (SBE)](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+-+Simple+Binary+Encoding);delivers faster encoding/decoding
+*   [FIX Performance (FIXP) protocol](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+Binary+Order+Entry+-+Session+Layer); very simple, lightweight, point-to-point session layer
+*   More efficient iLink FIX messaging
+*   Standard message size, fixed positions, and fixed length fields
+*   Consistent encoding method for order entry and market data
+
+iLink 3 will **only support** iLink MSGW sessions. The [Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+Binary+Order+Entry) is available and provides detailed functionality and messaging information.
+
+**iLink 3 Binary Order Entry Update**:
+
+†Effective**Friday, February 28**, CME Group will update the schema to version 5 for iLink 3 in New Release. Version 5 will be used for the production launches starting**Sunday, March 29**.
+
+With this launch, only version 4 and version 5 messages will be accepted in the New Release environment and CME Globex will only send version 5 messages.
+
+Version 5 includes the following enhancements:
+
+*   Remove old template IDs for the following messages:
+    *   547 – Quote Cancel Acknowledgment
+    *   558 – Order Mass Action Report
+
+*   Add new template IDs for the following messages:
+    *   562 – Quote Cancel Acknowledgment
+    *   563 – Order MassAction Report
+
+*   New tag 54 - Side to the 550-ExecutionReportTradeAddendumSpreadLeg message
+*   † New tag 5187 - Reserved - to the 517- MassQuote message
+*   New tag 9537- Location, tag 5297– SendingTimeEpoch, and tag 1028-ManualOrdIndicator to the 539-Execution Ack message (*for BrokerTec markets only)
+
+All client systems must complete the full certification before migrating to iLink 3 in production.
+
+*   [†iLink 3 Session Layer Tests](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+Session+Layer) for client systems that pre-register administrative information in the new Service Gateway **- Starting February 19, 2020**
+    *   Client systems must be certified for this via Autocert+ prior to participate the **first** iLink 3 mock trading session.
+
+*   [iLink 3 Session Layer Tests](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+Application+Layer) for all client systems - **Availability will be announced in the future Globex Notices**
+    *   The mandatory AutoCert+ certifications for iLink 3 will use the following versions for session layer tests:
+        *   **†February 19****- February 27**: Version 4
+        *   Starting **February 28**: Version 5
+
+Please note: There are no session layer message changes in schema versions 2, 3, 4, or 5.
+
+*   [iLink 3 Business Layer Tests](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+Application+Layer)- **Availability will be announced in the future Globex Notices**
+    *   The mandatory AutoCert+ certifications for iLink 3 will use version 5 for business layer tests.
+
+| **iLink 3 Binary Order Entry Timeline** |
+| --- |
+| Market Segment ID | Market Segment Description | Production Launch |
+| 76 | NYMEX Metals, Softs and Alternative Markets Futures; COMEX Futures | Sunday, March 29, 2020 |
+| 50 68 | CME Interest Options CME Equity Futures II; CBOT Equity Futures | Sunday, April 19, 2020 |
+| 52 54 58 60 70 72 84 88 | CME FX Futures and Options II CME and CBOT Equity Options CBOT Interest Rate Options CME, CBOT and MGEX Commodity Options CME, CBOT and MGEX Commodity Futures CBOT Commodity Futures II CBOT Interest Rate Futures CME FX Futures and Options | Sunday, May 3, 2020 |
+| 56 64 74 78 80 82 | NYMEX Emissions Options; NYMEX Energy, Metals, Softs and Alternative Market Options; COMEX Options; DME Options CME Equity Futures – E-mini S&P BMD Futures and Options; NYMEX SEF NYMEX Emissions and Non-Crude Energy Futures DME Futures; NYMEX Crude and Crude Refined Energy Futures CME Interest Rate Futures | Sunday, May 17, 2020 |
+
+**Mock Trading Session:**
+
+To support customer experience with the iLink 3 protocol in the CME Globex production environment, CME Group will offer six customer mock trading sessions on the following dates. In order to participate in the Saturday, March 7 and Saturday, March 21 mock trading sessions, customers are required to register the iLink 2 MSGW sessions they plan to use in advance of these trading sessions. For the remaining mock trading sessions, customers must migrate iLink 2 MSGW sessions they plan to use to iLink 3 sessions through CME Request Center by Friday prior to each iLink 3 launch weekend.
+
+| Date | †Mock Scope | †MSGW iLink Session ID |
+| --- | --- | --- |
+| Saturday, March 7, 2020 | Pre-registered administrative information. | [Register](https://go.cmegroup.com/l/502091/2019-12-11/21smcrg "Mock Trading Session") with iLink 2 MSGW session(s) |
+| Saturday, March 21, 2020 | Pre-registered administrative information. On-demand administrative information. |
+| Saturday, March 28, 2020 | Customers must manage the iLink 3 MSGW session(s) they plan to use for mock trading through CME Request Center by **Friday, March 27, 2020.** |
+| Saturday, April 18, 2020 | Customers must manage the iLink 3 MSGW session(s) they plan to use for mock trading through CME Request Center by **Friday, April 17, 2020**. |
+| Saturday, May 2, 2020 | Customers must manage the iLink 3 MSGW session(s) they plan to use for mock trading through CME Request Center by **Friday, May 1, 2020.** |
+| Saturday, May 16, 2020 | Customers must manage the iLink 3 MSGW session(s) they plan to use for mock trading through CME Request Center by **Friday, May 15, 2020.** |
+
+†Client systems must be certified for iLink 3 session layer tests via Autocert+ prior to participate the iLink 3 mock trading sessions.
+
+Please contact your [Global Account Manager](mailto:globalaccountmanagement@cmegroup.com) in the U.S. at +1 312 634 8700, in Europe at +44 203 379 3754 or in Asia at +65 6593 5505 for additional information.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2020/02/20200210.html#top)
+
+### Drop Copy Impact: iLink 3 Binary Order Entry Protocol for MSGW- Available Now in New Release
+
+Starting **Sunday, March 29**, CME Group will introduce iLink 3, a new[order entry protocol](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+Binary+Order+Entry) on CME Globex. When source sessions for Drop Copy migrate to iLink 3, the encoded payload messages sent on Drop Copy will be in ASCII format but will reflect the following changes:
+
+*   Deprecated message tags
+*   Change to FIX Type for Tag 548-CrossID
+*   Additional Enumeration for Tag 59-TimeInForce
+
+These changes are currently available in New Release for customer testing.
+
+The[Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Drop+Copy+Impacts+-+iLink+3+Binary+Order+Entry)is available and provides detailed information on the changes to the encoded iLink 3 messages.
+
+Certification of client systems leveraging Drop Copy Market Segment Gateway (MSGW) is not required.
+
+Please find the iLink 3 binary order entry deployment schedule [here](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+Binary+Order+Entry#iLink3BinaryOrderEntry-iLink3BinaryOrderEntryTimeline).
+
+**Mock Trading Session:**
+
+To support customer experience with the iLink 3 protocol impacts on Drop Copy in the CME Globex production environment, CME Group will offer customer mock trading sessions on the following dates:
+
+*   **Saturday, March 21, 2020**
+*   **Saturday, April 18, 2020**
+*   **Saturday, May 2, 2020**
+*   **Saturday, May 16, 2020**
+
+Customers are required to register in advance in order to participate in this mock trading session. The mock trading session script will be announced in future CME Globex Notices.
+
+CME Group strongly recommends Drop Copy clients thoroughly test these changes to the encoded iLink messages before migration.
+
+Please contact your [Global Account Manager](mailto:globalaccountmanagement@cmegroup.com) in the U.S. at +1 312 634 8700, in Europe at +44 203 379 3754 or in Asia at +65 6593 5505 for additional information.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2020/02/20200210.html#top)
+
+### Decommission of Select ITC Market Data- Q1 2020
+
+In **Q1 2020**, select ITC market data functions will be decommissioned in favor of an architecture that will support price decimals beyond 7 digits. As the result of the launch of [SBE Settlements and Valuations](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Data+Insights+-+Settlements+and+Valuations) and [CME Reference Data API](https://www.cmegrorup.com/confluence/display/EPICSANDBOX/CME+Reference+Data+API), many ITC data functions will become redundant and will be decommissioned.
+
+There is currently a parallel period from the Settlements and Valuations production launch and decommission of select ITC market data. In **Q1 2020**, the following ITC market data impacts will be implemented:
+
+*   NYMEX, COMEX and DME ITC channels will be eliminated
+*   Futures and options settlements
+*   Cleared volume and open interest
+*   Cumulative volume
+*   High/Low/Last prices
+*   Fixing prices
+*   Marker prices
+*   Close prices
+*   Net change
+*   Lead month indicator
+*   Contract specifications
+*   Index prices
+
+Real-time trading floor data, such as trades, will continue to be disseminated on ITC channels for CME, CBOT, and MGEX.
+
+Please review the [Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Decommission+of+ITC+Functions) for additional information and decommission schedules.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2020/02/20200210.html#top)
+
+### New New - CME Globex Updates: Market Segment and MDP 3.0 Channel Migrations- May 17
+
+Effective **Sunday, May 17** (for trade date Monday, May 18), to better align related markets across the platform, the following changes will be applied to CME Globex market segments and MDP 3.0 market data channels.
+
+*   All futures currently listed on market segment 72 will migrate to segment 70.
+*   Good Till Cancel and Good Till Date (GTC and GTD) orders will migrate with the markets.
+*   Market Data for all migrated products will be published on channel 340.
+*   The updated config.xml files for MDP will be available at launch.
+
+| Product | CME Globex Product Code | Current Market Segment ID | New Market Segment ID | Current MDP 3.0 Channel | New MDP 3.0 Channel |
+| --- | --- | --- | --- | --- | --- |
+| Denatured Fuel Ethanol Futures and Spreads | EH | 72 | 70 | 346 | 340 |
+| Oat Futures and Spreads | ZO | 72 | 70 | 346 | 340 |
+| Soybean Oil Futures and Spreads | ZL | 72 | 70 | 346 | 340 |
+| Test Soybean Futures and Spreads | 00S | 72 | 70 | 346 | 340 |
+| Soybean Oil TAS Futures and Spreads | ZLT | 72 | 70 | 346 | 340 |
+| Soybean Futures and Spreads | ZS | 72 | 70 | 346 | 340 |
+| BTIC on Bloomberg Roll Select Commodity Index Futures and Spreads | DRT | 72 | 70 | 346 | 340 |
+| Soybean Meal Futures and Spreads | ZM | 72 | 70 | 346 | 340 |
+| Soybean Meal TAS Futures and Spreads | ZMT | 72 | 70 | 346 | 340 |
+| Bloomberg Roll Select Commodity Index Futures and Spreads | DRS | 72 | 70 | 346 | 340 |
+| Rough Rice Futures and Spreads | ZR | 72 | 70 | 346 | 340 |
+| Soybean TAS Futures and Spreads | SBT | 72 | 70 | 346 | 340 |
+| Denatured Fuel Ethanol Forward Month Futures and Spreads | FZE | 72 | 70 | 346 | 340 |
+| Mini Soybean Futures and Spreads | XK | 72 | 70 | 346 | 340 |
+| BTIC on Bloomberg Commodity Index Futures and Spreads | AWT | 72 | 70 | 346 | 340 |
+| Bloomberg Commodity Index Futures and Spreads | AW | 72 | 70 | 346 | 340 |
+| Non-tradeable Synthetic Futures Spreads | BCX, SOM, QC4, QM2, QM3, QM4, QM5, QM6, QO2, QO3, QO4, QO5, QO6, QS0, QS1, QS2, QS3, QS5, QS8, QS9, QX5, S7C, SQ2, SQ5 | 72 | 70 | 346 | 340 |
+
+In internal testing, these changes increased round-trip times for iLink less than 5% at the 50th percentile.
+
+With this change, market segment 72 will not have any listed markets, and MDP channel 346 will only publish heartbeats. CME Group intends to use this MDP 3.0 channel again soon and strongly encourages clients to keep the channel information in their configurations.
+
+These changes will be available in New Release for customer testing **Monday, March 9**.
+
+Effective **Sunday, June 7**(trade date Monday, June 8), the following additional changes will be made:
+
+*   All products on market segment 54 except the standard and e-mini S&P 500 options markets will migrate to market segment 72.
+*   The standard S&P 500 options markets will migrate to MDP 3 channel 311 (currently on 319)
+*   User-Defined Spreads, Good Till Cancel and Good Till Date (GTC and GTD) orders will migrate with the markets.
+*   Market data will continue to be published on channels 311, 319 and 343.
+*   Market data channels 319 and 343 will reflect new source IPs.
+*   The updated config.xml files for MDP and MSGW will be available at launch.
+
+| Product | CME Globex Product Code | Current Market Segment ID | New Market Segment ID | MDP 3.0 Channel |
+| --- | --- | --- | --- | --- |
+| Test Nikkei 225 (YEN) Options | 0NK | 54 | 72 | 319 |
+| Test E-mini Dow ($5) | 0OY | 54 | 72 | 343 |
+| Test E-mini S&P 500 Options | 0SO | 54 | 54 | 311 |
+| Options on Bitcoin Futures | BTC | 54 | 72 | 319 |
+| E-mini S&P 500 Monday Weekly Options | E1A-E5A | 54 | 54 | 311 |
+| Wednesday Weekly Options on E-mini S&P 500 Futures | E1C-E5C | 54 | 54 | 311 |
+| E-mini S&P 400 Options | EMD | 54 | 72 | 319 |
+| E-mini S&P 500 Options | ES | 54 | 54 | 311 |
+| S&P 500 End Of Month Options | EV | 54 | 54 | 311 |
+| S&P 500 Weekly Options | EV1-EV5 | 54 | 54 | 311 |
+| E-mini S&P 500 EOM Option | EW | 54 | 54 | 311 |
+| E-mini S&P 500 Weekly Options | EW1-EW5 | 54 | 54 | 311 |
+| E-mini Dow ($5) End of Month Options | EYM | 54 | 72 | 343 |
+| Weekly Options on E-mini S&P MidCap 400 Futures | ME1-ME5 | 54 | 72 | 319 |
+| Nikkei/Yen Quarterly Options | NKW | 54 | 72 | 319 |
+| Option on Yen Denominated Nikkei Stock Average Futures | NKY | 54 | 72 | 319 |
+| E-mini Nasdaq 100 Options | NQ | 54 | 72 | 319 |
+| E-mini Dow ($5) Options | OYM | 54 | 72 | 343 |
+| E-mini Nasdaq 100 Weekly Options | QN1-QN5 | 54 | 72 | 319 |
+| E-mini Nasdaq 100 End-of-Month Options | QNE | 54 | 72 | 319 |
+| Weekly Options on E-mini Russell 2000 Futures | R1E-R5E | 54 | 72 | 319 |
+| Options on E-mini Russell 2000 Index Futures - End-of-Month | RTM | 54 | 72 | 319 |
+| Options on E-mini Russell 2000 Index Futures | RTO | 54 | 72 | 319 |
+| S&P 500 Monday Weekly Options | S1A-S5A | 54 | 54 | 311 |
+| S&P 500 Wednesday Weekly Options | S1C-S5C | 54 | 54 | 311 |
+| E-mini S&P 600 SmallCap Options | SMC | 54 | 72 | 319 |
+| S&P 500 Options | SP | 54 | 54 | 311 |
+| E-mini Dow ($5) Weekly Options | YM1-YM5 | 54 | 72 | 343 |
+
+These changes will be available in New Release for customer testing **Monday, March 23**.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2020/02/20200210.html#top)
+
+### CME Globex Market Segment Gateway Enhancements- May 17
+
+CME Group will introduce the following Market Segment Gateway (MSGW) enhancements to further safeguard CME Globex infrastructure. With this enhancement, if a Market Segment Gateway (MSGW) iLink session sends a network packet with an incomplete message, that session will be subject to additional processing to ensure the stability of the platform. This processing results in at least 3 microseconds before the message(s) can be sent to the trading engine.
+
+iLink messages impacted by this enhancement will be flagged in the corresponding Acknowledgment sent from CME Globex.
+
+Customers are strongly encouraged to ensure all messages are contained within a single network packet by the following methods:
+
+*   Ensure any packet sent to CME group contains only complete messages
+*   Limit the number of quote entries in a mass quote message that fits within a single TCP packet
+*   Disable nagling, an algorithm that concatenates a number of small buffer messages to decrease the number of sent packets, on your order routing systems
+
+As a reminder, conduct that disrupts, delays, or overloads the systems or operations of the exchange may be deemed to violate Rule 575 (“Disruptive Practices Prohibited”) or other rules, including Rule 432.Q. (“General Offenses – to commit an act which is detrimental to the interest or welfare of the Exchange or to engage in any conduct which tends to impair the dignity or good name of the Exchange”). Rule 575 further provides that it is a violation to enter or cause to be entered an order where the intent at the time of order entry is to cancel the order before execution. It is also a violation of Rule 575 to intentionally or recklessly enter or cause to be entered an actionable or non-actionable message that may cause an adverse impact on the orderliness of the markets.
+
+Customers interested in finding out how MSGW enhancements would impact their iLink sessions should contact their [Global Account Manager](https://www.cmegroup.com/notices/electronic-trading/2020/02/globalaccountmanagement@cmegroup.com) in the U.S. at +1 312 634 8700, in Europe at +44 203 379 3754 or in Asia at +65 6593 5505 for additional information.
+
+In internal testing, iLink round trip times at the 75th percentile and above increased at least 10%.
+
+Please review the [Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/CME+Globex+Market+Segment+Gateway+Enhancements) for additional information on these Market Segment Gateway enhancements.
+
+Starting on **Friday, February 28**, the CME Globex MSGW enhancements will be available for customer testing in New Release. In addition, the new FIX tags for this enhancement will be available for customer testing in AutoCert+ Test Suite - MSGW Protection Enhancements. Certification is not required for these MSGW enhancements.
+
+**Mock Trading Session:**
+
+CME Group will offer two customer mock trading sessions on **Saturday, April 18**and **Saturday, May 2,** to support customer experience with the MSGW enhancements in the CME Globex production environment. Customers are required to [register](https://go.cmegroup.com/l/502091/2019-12-10/21qg8h4) in advance in order to participate in this mock trading session. The mock trading session script will be announced in future CME Globex Notices.
+
+The mock trading session script will be announced in future CME Globex Notices.
+
+| MSGW Enhancements Timeline |
+| --- |
+|  |
+| Market Segment ID | Market Segment Description | Production Launch |
+| 50 76 | CME Interest Rate Options NYMEX Metals, Softs and Alternative Markets Futures; COMEX Futures | Sunday, May 17, 2020 |
+| 54 68 72 88 | CME and CBOT Equity Options CME Equity Futures II; CBOT Equity Futures CBOT Commodity Futures II CME FX Futures and Options | Sunday, May 31, 2020 |
+| 52 58 60 64 70 78 | CME FX Futures and Options II CBOT Interest Rate Options CME, CBOT and MGEX Commodity Options CME Equity Futures - E-mini S&P CME, CBOT and MGEX Commodity Futures NYMEX Emissions and Non-Crude Energy Futures | Sunday, June 7, 2020 |
+| 56 74 80 82 84 | NYMEX Emissions Options; NYMEX Energy, Metals, Softs and Alternative Markets Options; COMEX Options; DME Options BMD Futures and Options; NYMEX SEF DME Futures; NYMEX Crude and Crude Refined Energy Futures CME Interest Rate Futures CBOT Interest Rate Futures | Sunday, June 21, 2020 |
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2020/02/20200210.html#top)
+
+## Product Launches
+
+### Update Update - TAPS on Dubai Crude Oil- Postponed
+
+† Denotes update to the article
+
+†The launch of the following DME TAPS (Trade-at-Assessment Price on Settlement) on Dubai Crude Oil futures scheduled for **Sunday, February 23**, has been postponed.
+
+The TAPS products will function similar to the [Basis Trade at Index Close (BTIC)](https://www.cmegroup.com/trading/equity-index/btic-transactions.html) products but will use the Platts "Dubai Crude Oil" assessment as the index reference.
+
+| **TAPS on Dubai Crude Oil** |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| Dubai Crude Oil (S&P Platts) Futures TAPs | DCT | DP | 440 |
+| Dubai Crude Oil (S&P Platts) BALMO Futures TAPs | DDT | DP | 440 |
+
+†These futures were not launched in New Release as previously scheduled on **Monday, February 10**.
+
+These contracts are listed with, and subject to, the rules and regulations of DME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2020/02/20200210.html#top)
+
+### Monday Premium Quoted Options on Five Major FX Futures- February 23
+
+Effective **Sunday, February 23** (trade date Monday, February 24), Monday Premium Quoted options on Five Major FX futures (AUD/USD, GBP/USD, CAD/USD, EUR/USD & JPY/USD) will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| **Monday Premium Quoted Options on Five Major FX Futures** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| AUD/USD Weekly Monday Options | MA1-MA5 | XA | 315 |
+| GBP/USD Weekly Monday Options | MB1-MB5 | YB |
+| CAD/USD Weekly Monday Options | MD1-MD5 | CD | 321 |
+| EUR/USD Weekly Monday Options | MO1-MO5 | XE |
+| JPY/USD Weekly Monday Options | MJ1-MJ5 | QJ | 315 |
+
+These options are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2020/02/20200210.html#top)
+
+### New New - North European Hot-Rolled Coil Steel (Argus) Futures- March 8
+
+Effective **Sunday, March 8** (trade date Monday, March 9), pending completion of all regulatory review periods, North European Hot-Rolled Coil Steel (Argus) Futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| **North European Hot-Rolled Coil Steel (Argus) Futures** |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| North European Hot-Rolled Coil Steel (Argus) Futures | EHR | MA | 360 |
+
+This North European Hot-Rolled Coil Steel (Argus) Futures will be available for customer testing in New Release on **Monday, February 24**.
+
+These contracts are listed with, and subject to, the rules and regulations of COMEX
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2020/02/20200210.html#top)
+
+## Product Changes
+
+### New New - Delisting and Removal of Housing Index Options
+
+On **Monday, January 27**, previously listed contract months without open-interest for the following Housing Index options were delisted, and effective close of business on **Friday, January 31**, these options were removed from CME Globex. Following the expiration of the last available contract months, the Composite Cities Housing Index options and Miami Housing Index options will be delisted and removed from CME Globex.
+
+| **Delisting and Removal of Housing Index Options** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Contract Months delisted on January 27, 2020 | Last Contract Month Available for Trading and Clearing |
+| Composite Cities Housing Index Options | CUS | A7 | May 2020 and beyond | February 2020 |
+| Boston Housing Index Options | BOS | A7 | February 2020 and beyond | -- |
+| Chicago Housing Index Options | CHI | A7 | February 2020 and beyond | -- |
+| Denver Housing Index Options | DEN | A7 | February 2020 and beyond | -- |
+| Las Vegas Housing Index Options | LAV | A7 | February 2020 and beyond | -- |
+| Los Angeles Housing Index Options | LAX | A7 | February 2020 and beyond | -- |
+| Miami Housing Index Options | MIA | A7 | May 2020 and beyond | February 2020 |
+| New York Housing Index Options | NYM | A7 | February 2020 and beyond | -- |
+| San Diego Housing Index Options | SDG | A7 | February 2020 and beyond | -- |
+| San Francisco Housing Index Options | SFR | A7 | February 2020 and beyond | -- |
+| Washington DC Housing Index Options | WDC | A7 | February 2020 and beyond | -- |
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2020/02/20200210.html#top)
+
+### New New - Listing Cycle Modification for Housing Index Futures
+
+On **Sunday, February 9** (trade date Monday, February 10), the listing cycle for the following Housing Index futures was modified on CME Globex.
+
+| **Listing Cycle Modification for Housing Index Futures** |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Listing Schedule | New Listing Schedule |
+| Composite Cities Housing Index Futures | CUS | HI | Contract months extending out 18 months in the future shall be listed on a quarterly cycle in the contract months of February, May, August and November; Contract months extending out 19 to 36 months into the future shall be listed on a bi-annual schedule in the contract months of May and November; and Contract months extending out 37 months to 60 months into the future shall be listed on an annual schedule in the contract month of November. | First five contract months on a quarterly cycle in the contract months of February, May, August and November; and Four deferred contract months in the contract month of February |
+| Boston Housing Index Futures | BOS | HI |
+| Chicago Housing Index Futures | CHI | HI |
+| Denver Housing Index Futures | DEN | HI |
+| Las Vegas Housing Index Futures | LAV | HI |
+| Los Angeles Housing Index Futures | LAX | HI |
+| Miami Housing Index Futures | MIA | HI |
+| New York Housing Index Futures | NYM | HI |
+| San Diego Housing Index Futures | SDG | HI |
+| San Francisco Housing Index Futures | SFR | HI |
+| Washington DC Housing Index Futures | WDC | HI |
+
+With this change, on **Friday, January 24**, the contract months of May 2021, November 2021, May 2022, November 2023, and November 2024 were removed from trading, for all Housing Index futures products.
+
+These chnages are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2020/02/20200210.html#top)
+
+### Change to CME Globex Trading Hours for Black Sea Wheat and Corn Futures and Options- February 23
+
+Effective**Sunday, February 23** (trade date Monday, February 24), the trading hours for the following Black Sea Wheat and Corn futures and options will be expanded on CME Globex.
+
+| **Change to CME Globex Trading Hours for Black Sea Wheat and Corn Futures and Options** |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Trading Hours | New Trading Hours |
+| Black Sea Wheat Financially Settled (Platts) Futures | BWF | WP | Sunday - Friday 5:00 p.m. - 4:00 p.m. CT (6:00 p.m. - 5:00 p.m. ET) with a 60-minute break each day beginning at 4:00 p.m. CT (5:00 p.m. ET) | Sunday - Friday 7:00 p.m. – 1:20 p.m. CT (8:00 p.m. - 2:20 p.m. ET) |
+| Black Sea Wheat Financially Settled (Platts) Options | BWO | W2 |
+| Black Sea Corn Financially Settled (Platts) Futures | BCF | CS |
+| Black Sea Corn Financially Settled (Platts) Options | BSO | CG |
+
+These changes are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2020/02/20200210.html#top)
+
+### Changes to Crude Oil Options- February 23
+
+Effective **Sunday, February 23**(trade date Monday, February 24), pending completion of all regulatory review periods, the following attributes of the crude oil options will be changed as follows:
+
+| **Changes to Crude Oil Options** |
+| --- |
+| New Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Underlying Product | New Underlying Product |
+| WTI Houston vs. Brent Crude Oil Spread Option | HCB | EF (UDS-EX) | WTI Houston vs. Brent Trade Month Futures - HBR | HCL vs. BZ Combo |
+| WTI Houston vs. WTI Crude Oil Spread Option | HAP | EF (UDS-EX) | WTI Houston vs. WTI Trade Month Futures - HTI | HCL vs. CL Combo |
+
+With this change, the listing cycle change will be amended to ATM +/- 10 strikes at $0.25 plus dynamic strikes at $0.25 for months 1 to 24. Months 25+ dynamic strikes only at $0.25 for these products. Currently, the list listing cycle is dynamic only strikes at $0.25.
+
+These changes will be available for customer testing in New Release on **Monday, February 10**.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2020/02/20200210.html#top)
+
+### Transfer of NYMEX Ferrous Metals to COMEX – Resting Order Eliminations- March 29
+
+Effective**Sunday, March 29**(trade date Monday, March 30), pending CFTC regulatory review,the following NYMEX Ferrous metals products will be transferred from the NYMEX Designated Contract Market (DCM) to the COMEX DCM. With this change, all CME Group Ferrous metal contracts will be listed on a single DCM.
+
+The transfer of open interest will be administrative in nature as there will be no impact on trading or to the economic value of the contracts. The contracts will continue to clear at CME Clearing and the commodity codes will remain unchanged.
+
+To effect this change, the contracts will be removed from NYMEX and added to COMEX. The product codes and Market Segments will not change. The product groups and market data channel changes are detailed below.
+
+****Please Note:** To facilitate this change, customers will be asked to cancel all Good ‘Till Cancel (GTC) and Good ‘Till Date (GTD) orders for these contracts, including any User- or Exchange-Defined Spreads, by the close on Friday, March 27. After 16:00 CT on Friday, March 27, any remaining GT orders on these markets will be removed by the CME Global Command Center (GCC).**
+
+| **Transfer of NYMEX Ferrous Metals to COMEX** |
+| --- |
+|  |
+| Product | Current iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | New iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current MDP 3.0: tag 207-SecurityExchange | New MDP 3.0: tag 207-SecurityExchange | Current MDP 3.0 Market Data Channel | New MDP 3.0 Market Data Channel |
+| U.S. Midwest #1 Busheling Ferrous Scrap (AMM) Futures – BUS | ST | MA | XNYM | XCEC | 384 | 360 |
+| HMS 80/20 Ferrous Scrap, CFR Turkey (Platts) Futures – FSF | ST | MA | 384 | 360 |
+| Iron Ore 58% Fe, Low Alumina, CFR China (TSI) Futures – TIC | ST | MA | 384 | 360 |
+| Iron Ore 62% Fe, CFR China (TSI) Futures – TIO | IO | 384 | 360 |
+| U.S. Midwest Domestic Hot-Rolled Coil Steel Index Futures – HRC | HR | 384 | 360 |
+| U.S. Midwest Domestic Hot-Rolled Coil Steel Index Average Price Option – HRO | H1 | 385 | 361 |
+| Iron Ore 62% Fe, CFR China (TSI) Average Price Option - ICT | I5 | 385 | 361 |
+
+There will be no changes to MDP 3.0 functionality or messaging format. The multicast address, source IPs, TCP address, and ports for the channels and Market Segment Gateways are available on the CME [FTP](ftp://ftp.cmegroup.com/SBEFix/Production/Configuration/) and [SFTP](http://sftpng.cmegroup.com/) sites.
+
+Further details will be forthcoming closer to the effective date.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2020/02/20200210.html#top)
+
+### Transfer of NYMEX UxC Uranium U308 Futures to COMEX – Resting Order Eliminations- March 29
+
+Effective**Sunday, March 29**(trade date Monday, March 30), pending CFTC regulatory review,the UxC Uranium U308 futures (tag 6937-Asset=**UX**) will be transferred from the NYMEX Designated Contract Market (DCM) to the COMEX DCM.
+
+The transfer of open interest will be administrative in nature as there will be no impact on trading or to the economic value of the contract. The contract will continue to clear at CME Clearing and the commodity codes will remain unchanged. To effect this change, the contract will be removed from NYMEX and added to COMEX. The product codes and groups will not change. The market segment, product groups and market data channel changes are detailed below.
+
+**Please Note: To facilitate this change, customers will be asked to cancel all Good ‘Till Cancel (GTC) and Good ‘Till Date (GTD) orders for these contracts, including any User- or Exchange-Defined Spreads, by the close on Friday, March 27. After 16:00 CT on Friday, March 27, any remaining GT orders on these markets will be removed by the CME Global Command Center (GCC).**
+
+| Transfer of NYMEX UxC Uranium U308 Futures to COMEX |
+| --- |
+|  |
+| Product | Current MDP 3.0: tag 207-SecurityExchange | New MDP 3.0: tag 207-SecurityExchange | Current Market Data Channel | New Market Data Channel | Current Tag 1300-MarketSegmentID | New Tag 1300-MarketSegmentID |
+| UxC Uranium U3O8 Futures - UX | XNYM (NYMEX) | XCEC (COMEX) | 386 | 360 | 78 | 76 |
+
+There will be no changes to MDP 3.0 functionality or messaging format. The multicast address, source IPs, TCP address, and ports for the channels and Market Segment Gateways are available on the CME [FTP](ftp://ftp.cmegroup.com/SBEFix/Production/Configuration/) and [SFTP](http://sftpng.cmegroup.com/) sites.
+
+Further details will be forthcoming closer to the effective date.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2020/02/20200210.html#top)
+
+## Events and Announcements
+
+### BrokerTec CME Globex New Release Environment Access
+
+In preparation for the BrokerTec markets launch on CME Globex in **Q4 2020**, customers and vendors will need to begin to develop and test their applications via CME Globex New Release Environment. The New Release Environment supports products, messaging and functionality testing prior to production launch. Basic functionality for all APIs is currently available in the New Release Environment.
+
+All BrokerTec customers will be required to establish connectivity to the CME Globex New Release Environment prior to testing. Customers may choose one of two ways to connect:
+
+*   **CME Cert VPN**- which uses a secure, encrypted tunnel through an Internet service that supports VPN protocols
+*   **CME Cert Data Center**- which allows customers to cross connect to CME Data Center locations where this option is offered, using a 1Gbps fiber handoff.
+
+Internet access to the New Release environment for the CME STP and CME STP FIX APIs is also available now.
+
+To request connectivity to the CME Globex New Release Environment for BrokerTec:
+
+*   BrokerTec customers who are new to CME Group must submit a Certification/New Release Environment Access Request and Change Form. This form can be found on the [BrokerTec Support Portal](https://go.cmegroup.com/e/502091/tecontocmeglobex-connectivity-/z48bb4/498608169?h=oVfZSBr7LF5EQIPDjbbTLjJ4Jw_cflfKNR7nTHLJZec).
+    *   To access the BrokerTec Support Portal you must be an existing customer or vendor with a signed Non-Disclosure Agreement (NDA) in place with BrokerTec.
+
+*   BrokerTec customers who already have a CME Cert VPN or CME Cert Data Center connection should contact their Global Account Manager to request that their existing connection be configured to connect to BrokerTec in the New Release Environment.
+
+[Learn more](https://go.cmegroup.com/e/502091/tecontocmeglobex-connectivity-/z48bb4/498608169?h=oVfZSBr7LF5EQIPDjbbTLjJ4Jw_cflfKNR7nTHLJZec) about how to get set up to test in the CME Globex New Release Environment:
+
+If you have any questions, please contact your CME Global Account Manager in the U.S.: +1 312 634 8700, in Europe +44 203 379 3754 or in Asia +65 6593 5505 for additional information.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2020/02/20200210.html#top)

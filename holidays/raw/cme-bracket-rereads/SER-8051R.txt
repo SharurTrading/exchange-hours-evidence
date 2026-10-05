@@ -1,0 +1,131 @@
+Special Executive Report
+DATE:              December 14, 2017
+
+SER#:              8051R
+
+SUBJECT:           Initial Listing of the Bitcoin Futures Contract
+
+(This SER supersedes SER-8051 dated December 1, 2017, to update daily settlement time from 4:00
+p.m. London Time to 3:00 p.m. Central Time. No other changes have been made to the original SER.)
+
+Effective Sunday, December 17, 2017, for trade date Monday, December 18, 2017, and pending all
+relevant CFTC regulatory review periods, Chicago Mercantile Exchange Inc. (“CME” or “Exchange”) will
+list the Bitcoin Futures contract (commodity code: BTC; rulebook chapter: 350) for trading on the CME
+Globex electronic trading platform, and for submission for clearing via CME ClearPort as noted in the
+table below.
+
+Trading Unit        The unit of trading shall be 5 bitcoin, as defined by the CME CF Bitcoin Reference Rate (BRR).
+Listing Schedule    Nearest 2 months in the March Quarterly cycle (Mar, Jun, Sep, Dec) plus the nearest 2 "serial"
+                    months not in the March Quarterly cycle.
+                    Delivery months for initial listing: Jan 2018, Feb 2018, Mar 2018, and Jun 2018.
+
+Price Basis and     Prices are quoted and traded in U.S. dollar. Minimum price increments --
+Minimum Price
+Increment           Outright: $5.00 per bitcoin, equal to $25.00 per contract.
+                    Calendar spread: $1.00 per bitcoin, equal to $5.00 per calendar spread.
+
+Price Limits        Price limits for a given Business Day are calculated in relation to a reference price, which
+                    generally will be set at the most recent Bitcoin Futures settlement price, calculated at 3:00 p.m.
+                    Central time each Business Day. The reference price may be adjusted at the sole discretion of
+                    the Exchange to incorporate BRR changes on non-trading days.
+                    A price limit of 20% above or below the reference price and special price fluctuation limits equal
+                    to 7% above or below the reference price and 13% above or below the reference price apply.
+                    Trading will not be permitted outside of the 20% range above or below the reference price.
+
+Termination         Last Day of Trading is the last Friday of the contract delivery month.
+of Trading          Trading in expiring futures terminates at 4:00 pm London time on the Last Day of Trading.
+
+Delivery            Delivery is by cash settlement by reference to the Final Settlement Price, equal to the CME CF
+                    Bitcoin Reference Rate (BRR) on the Last Day of Trading.
+
+Position Limits     Spot Position Limits are set at 1,000 contracts. A position accountability level of 5,000 contracts
+and Reportable      will be applied to positions in single months outside the spot month and in all months combined.
+Levels              The reportable level will be 1 contract.
+
+Minimum Block       5 contracts
+Trade Threshold
+Level
+
+Trading Hours       Commodity Code: BTC
+And Commodity       CME Globex and CME ClearPort: 5:00 p.m. to 4:00 p.m., Sun-Fri. (Central Time)
+Code
+
+CME Globex          F: First In First Out (FIFO)
+Matching
+Algorithm
+
+
+
+
+Fee Schedule:
+
+Membership Type                                                        Venue/Transaction Type   Exchange Fee
+                                                                            Open Outcry              n/a
+Individual Members                                                          CME Globex              $2.50
+Clearing Members
+                                                                              EFP|EFR               $3.75
+Rule 106.J Equity Member Firms & Rule 106.J Qualified Subsidiaries
+                                                                               Block                $3.75
+Rule 106.I Members & Rule 106.I Qualified Affiliates
+Rule 106.S Member Approved Funds                                              Delivery              $1.25
+                                                                        Exe|Asn|Future From          n/a
+                                                                            Open Outcry              n/a
+                                                                            CME Globex              $4.00
+Rule 106.D Lessees                                                            EFP|EFR               $6.00
+Rule 106.F Employees                                                           Block                $6.00
+                                                                              Delivery              $2.00
+                                                                        Exe|Asn|Future From          n/a
+                                                                            CME Globex             $4.10
+Rule 106.R Electronic Corporate Members
+(For other than Globex - Non-Member rates apply)
+                                                                         CME Globex - BTIC          n/a
+                                                                            Open Outcry             n/a
+                                                                            CME Globex             $4.40
+                                                                              EFP|EFR              $6.40
+Rule 106.H and 106.N Firms
+                                                                               Block               $6.40
+                                                                              Delivery             $2.20
+                                                                        Exe|Asn|Future From         n/a
+
+                                                                            CME Globex             $4.50
+International Incentive Program (IIP) and International Volume
+Incentive Program (IVIP) Participants
+(Open Outcry at same rate as Globex for Interest Rate products only)
+                                                                         CME Globex - BTIC          n/a
+
+
+
+Central Bank Incentive Program (CBIP), Emerging Markets Bank                CME Globex             $4.85
+Incentive Program (EMBIP), Latin American Fund Manager Incentive
+Program (FMIP), Latin American Proprietary Trading Incentive Program
+(LAPTIP) Participants
+(For other than Globex - Non-Member rates apply)                         CME Globex - BTIC          n/a
+
+
+Members Trading Outside of Division                                        CME Globex
+                                                                                                   $4.75
+(For other than Globex During ETH - Non-Member rates apply)               During ETH Only
+                                                                           Open Outcry              n/a
+                                                                           CME Globex              $5.00
+Non-Members
+                                                                              EFP|EFR              $7.50
+                                                                               Block               $7.50
+                                                                     Delivery            $2.50
+                                                               Exe|Asn|Future From        n/a
+
+
+
+                    Processing Fees                                Fee
+                    106.D Lessee/106.H Brokerage                  $0.13
+                    106.F Employee Brokerage                      $0.13
+                    Floor / "New" Brokerage                       $0.04
+                    Position Adjustments/Position Transfers       $0.10
+                    Give-Up Surcharge                             $0.05
+                    Facilitation Fee                              $0.40
+
+
+If you require any additional information, please contact Dave Lehman at 312 930 1875 or
+David.Lehman@cmegroup.com, Tim McCourt at 212 299 2415 or Tim.McCourt@cmegroup.com, Alison
+Coughlin at 312 338 7171 or Alison.Coughlin@cmegroup.com, or Giovanni Vicioso at 212 299 2163 or
+Giovanni.Vicioso@cmegroup.com.
+

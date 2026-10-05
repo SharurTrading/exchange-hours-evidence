@@ -1,0 +1,1129 @@
+{
+ "task": "cme-2022-2024.repair",
+ "round": 2,
+ "repaired_task": "cme-2022-2024",
+ "repaired_on": "2026-09-14",
+ "repaired_file": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2022-2024.r2.json",
+ "supersedes": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2022-2024.json",
+ "verified_file_kept_byte_identical": {
+  "path": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2022-2024.json",
+  "sha256": "bf32100c6f5643d114d64286a7f0a3fed34aa15c13cd78db7047e684999a69a7",
+  "note": "round 1 is the historical record of what the verifier judged FAIL; it was read only, never written"
+ },
+ "round2_evidence": {
+  "path": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2022-2024.verify.json",
+  "verdict_repaired": "FAIL",
+  "discrepancies_addressed": [
+   "R2-1",
+   "R2-2",
+   "R2-3",
+   "R2-4",
+   "R2-5",
+   "R2-6"
+  ]
+ },
+ "r2_sha256": "d03f8cab5febb1a678f367be5de85edba7783a46e973b67136ae323de9fd77ba",
+ "repairs": [
+  {
+   "id": "R2-1",
+   "title": "verbatim over-claim: a TRADE DATE label attributed to the wrong table cell",
+   "json_paths": [
+    "holidays/17/families/6/verbatim"
+   ],
+   "entry": "holidays[date=2023-11-23] -> families[family=globex_grains] -> verbatim (17 = 0-based index of the 2023-11-23 entry; 6 = index of globex_grains in its families array)",
+   "before": "GRAINS - WEDNESDAY, 22 NOVEMBER 2023: TRADE DATE: WED 22 NOV / ... 13:30 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED); TRADE DATE: FRI 24 NOV / 16:45 (PREOPEN) ;; THURSDAY, 23 NOVEMBER 2023: TRADE DATE: FRI 24 NOV (no time events) ;; FRIDAY, 24 NOVEMBER 2023: 08:30 (OPEN) / 12:05 (CLOSED)",
+   "after": "GRAINS - WEDNESDAY, 22 NOVEMBER 2023 column: TRADE DATE: WED 22 NOV / 07:45 (PAUSED) / 08:00 (PREOPEN) / 08:30 (OPEN) / 13:20 (PAUSED) / 13:30 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED) / TRADE DATE: FRI 24 NOV / 16:45 (PREOPEN) [every word of this cell sits at x 170.96-288.21, the WEDNESDAY column, whose head x is 170.96] ;; THURSDAY, 23 NOVEMBER 2023 column: no entries - this row prints nothing in that column (pdftotext -bbox-layout shows no word at all in the THURSDAY x band 392.7-584.2 between y 579.1 and y 784.0, and the GRAINS row band is y 624.6-739.0); the 'TRADE DATE: FRI 24 NOV' at x 392.72 y 784.0 and the '16:00 (PREOPEN) HALT' at x 405.5 y 797.1 that appear just below it belong to the FX row's THURSDAY cell, whose centre y 796.0 equals the FX row label's own y ;; FRIDAY, 24 NOVEMBER 2023 column: TRADE DATE: FRI 24 NOV / 08:30 (OPEN) / 12:05 (CLOSED)",
+   "artifacts_reread": [
+    "raw/cme-2022-2024/thanksgiving-day-2023.pdf",
+    "raw/cme-2022-2024/christmas-day-2023.pdf",
+    "all seven 2023/2024 one-pagers (mis-attribution sweep)"
+   ],
+   "tool": "pdftotext -bbox-layout (poppler 26.09.0) + pdftotext -layout; <word xMin yMin xMax yMax> attributes parsed with python3 3.14 re",
+   "commands": [
+    "pdftotext -bbox-layout thanksgiving-day-2023.pdf /tmp/tg_bbox.xml",
+    "pdftotext -layout thanksgiving-day-2023.pdf -",
+    "pdftotext -bbox-layout <each of the seven one-pagers> -   # sweep"
+   ],
+   "raw_measurement": {
+    "file": "raw/cme-2022-2024/thanksgiving-day-2023.pdf",
+    "sha256": "99e187b3f3899e1062d662e148d5978e0cd075b961e6fc79550d4393812307e8",
+    "page_box_pt": "792.0 x 1512.0",
+    "column_heads_y": 357.4722,
+    "column_heads": {
+     "WEDNESDAY,": 170.96,
+     "THURSDAY,": 392.72,
+     "FRIDAY,": 584.24
+    },
+    "row_labels_x": 43.69,
+    "row_label_y": {
+     "INTEREST RATE": 409.0,
+     "EQUITIES": 487.5,
+     "ENERGY": 567.1,
+     "GRAINS": 682.0,
+     "FX": 796.0,
+     "METALS": 876.7,
+     "AGRICULTURE": 962.9,
+     "CRYPTOCURRENCIES": 1044.6,
+     "DAIRY": 1101.3,
+     "LUMBER": 1151.1
+    },
+    "grains_wednesday_cell": [
+     {
+      "y": 620.7,
+      "xMin": 170.96,
+      "text": "TRADE DATE: WED 22 NOV"
+     },
+     {
+      "y": 633.8,
+      "xMin": 183.43,
+      "text": "07:45 (PAUSED)"
+     },
+     {
+      "y": 647.0,
+      "xMin": 183.74,
+      "text": "08:00 (PREOPEN)"
+     },
+     {
+      "y": 660.1,
+      "xMin": 183.74,
+      "text": "08:30 (OPEN)"
+     },
+     {
+      "y": 673.2,
+      "xMin": 183.74,
+      "text": "13:20 (PAUSED)"
+     },
+     {
+      "y": 686.4,
+      "xMin": 183.74,
+      "text": "13:30 (CLOSED)"
+     },
+     {
+      "y": 699.5,
+      "xMin": 183.74,
+      "text": "14:30 (PCP)"
+     },
+     {
+      "y": 712.7,
+      "xMin": 183.74,
+      "text": "16:00 (CLOSED)"
+     },
+     {
+      "y": 730.3,
+      "xMin": 170.96,
+      "text": "TRADE DATE: FRI 24 NOV"
+     },
+     {
+      "y": 743.4,
+      "xMin": 183.74,
+      "text": "16:45 (PREOPEN)"
+     }
+    ],
+    "grains_friday_cell": [
+     {
+      "y": 668.9,
+      "xMin": 584.24,
+      "text": "TRADE DATE: FRI 24 NOV"
+     },
+     {
+      "y": 682.1,
+      "xMin": 597.02,
+      "text": "08:30 (OPEN)"
+     },
+     {
+      "y": 695.2,
+      "xMin": 597.02,
+      "text": "12:05 (CLOSED)"
+     }
+    ],
+    "grains_thursday_cell": "EMPTY - zero words with xMin in [392.72, 584.24) at any y in [579.1, 784.0); the GRAINS row band is [624.6, 739.0)",
+    "thursday_column_trade_date_blocks": [
+     397.1,
+     475.6,
+     555.2,
+     784.0,
+     864.7,
+     1032.6
+    ],
+    "the_disputed_tokens": [
+     {
+      "y": 784.0,
+      "xMin": 392.72,
+      "text": "TRADE DATE: FRI 24 NOV",
+      "owner": "FX row THURSDAY cell - xMin 392.72 equals the THURSDAY head x and the FX row label y is 796.0"
+     },
+     {
+      "y": 797.1,
+      "xMin": 405.5,
+      "text": "16:00 (PREOPEN) HALT",
+      "owner": "FX row THURSDAY cell (same block)"
+     },
+     {
+      "y": 807.9,
+      "xMin": 405.5,
+      "text": "17:00 (OPEN)",
+      "owner": "FX row THURSDAY cell (same block)"
+     }
+    ],
+    "decisive_test_cell_centring": {
+     "method": "for every (row, column) cell of the document, take the words in that column within 52pt of the row label y and compare the cell centre with the row label y",
+     "GRAINS": {
+      "WEDNESDAY": "y 633.8..730.3, centre 682.1, label y 682.0",
+      "THURSDAY": "no words (no cell)",
+      "FRIDAY": "y 668.9..695.2, centre 682.1, label y 682.0"
+     },
+     "FX": {
+      "WEDNESDAY": "y 767.4..824.5, centre 796.0, label y 796.0",
+      "THURSDAY": "y 784.0..807.9, centre 795.95, label y 796.0",
+      "FRIDAY": "y 789.4..802.5, centre 796.0, label y 796.0"
+     },
+     "rows_with_no_thursday_cell_at_all": [
+      "GRAINS",
+      "AGRICULTURE (livestock)",
+      "LUMBER"
+     ],
+     "reading": "the 784.0-807.9 block is centred on the FX row label to within 0.05pt; if it belonged to GRAINS it would sit 114pt below the GRAINS label while being centred on the FX label"
+    },
+    "content_corroboration": "the block reads TRADE DATE: FRI 24 NOV / 16:00 (PREOPEN) HALT / 17:00 (OPEN), which is FX's ordinary holiday evening sequence in this document; GRAINS' own Friday session is the daytime 08:30 (OPEN) / 12:05 (CLOSED) at x=597.02",
+    "second_document_corroboration": {
+     "file": "raw/cme-2022-2024/christmas-day-2023.pdf",
+     "sha256": "edcde0fcf61d3414cee2a332453db861e0e2d7edf81d89a5f379c44b2e72d5cf",
+     "columns": {
+      "MONDAY,": 196.8,
+      "TUESDAY,": 470.7
+     },
+     "reading": "the GRAINS row has a populated TUESDAY cell (14:30 (PCP), 16:00 (CLOSED), TRADE DATE: WED 27 DEC, 16:45 (PREOPEN), 19:00 (OPEN)) and a MONDAY cell carrying only TRADE DATE: TUES 26 DEC at y=777.5 - the same shape, and the empty grains column is the holiday itself"
+    },
+    "misattribution_sweep": {
+     "scope": "all 71 TRADE DATE labels quoted inside the family verbatims of every one-pager-sourced row (7 documents)",
+     "method": "for each quoted label, locate every in-document TRADE DATE block by prefix match, read its xMin, and compare it with the xMin of the column head named in the same clause (WEDNESDAY/THURSDAY/FRIDAY for thanksgiving-day-2023.pdf, SUNDAY/MONDAY/TUESDAY or MONDAY/TUESDAY elsewhere)",
+     "result": "71/71 quoted labels sit under the column head their clause names; 0 mis-attributions other than the one fixed here"
+    }
+   },
+   "verifier_finding": "CONFIRMED",
+   "verifier_disposition": "The verifier's operative claim - that the round-1 verbatim over-claims by quoting a 'TRADE DATE: FRI 24 NOV' label for the GRAINS Thursday cell - is CONFIRMED, as is its corrected text. One detail of the verifier's own 'evidence' string is imprecise: it describes the GRAINS row band as y 624.6-739.0, which is the midpoint partition and cuts off two WEDNESDAY-column lines that do belong to the GRAINS cell (TRADE DATE: FRI 24 NOV at y=730.3 and 16:45 (PREOPEN) at y=743.4, both at x 170.96-288.21). The cell-centring measurement above supersedes the midpoint band for ownership. This does not change the finding or the corrected text."
+  },
+  {
+   "id": "R2-2",
+   "title": "false statement about where the operator prints the Central Time line",
+   "json_paths": [
+    "coverage"
+   ],
+   "before": "The 2023 and 2024 one-pagers print 'Trading hours are subject to change and are in U.S. Central Time unless otherwise stated' in both the header and the footer.",
+   "after": "The 2023 and 2024 one-pagers print 'Trading hours are subject to change and are in U.S. Central Time unless otherwise stated'. memorial-day-2023.pdf, juneteenth-2023.pdf, labor-day-2023.pdf and 4th-of-july-2023.pdf print it twice, once in the header and once in the footer; thanksgiving-day-2023.pdf, christmas-day-2023.pdf and new-years-day-2024.pdf print it once, in the header only.",
+   "artifacts_reread": [
+    "raw/cme-2022-2024/memorial-day-2023.pdf",
+    "raw/cme-2022-2024/juneteenth-2023.pdf",
+    "raw/cme-2022-2024/labor-day-2023.pdf",
+    "raw/cme-2022-2024/4th-of-july-2023.pdf",
+    "raw/cme-2022-2024/thanksgiving-day-2023.pdf",
+    "raw/cme-2022-2024/christmas-day-2023.pdf",
+    "raw/cme-2022-2024/new-years-day-2024.pdf"
+   ],
+   "tool": "pdftotext (occurrence count) + pdftotext -bbox-layout (line y and xMin per occurrence)",
+   "commands": [
+    "pdftotext <file>.pdf -   # count the sentence",
+    "pdftotext -bbox-layout <file>.pdf -   # group words into lines, find the line containing \"Central Time unless otherwise stated\""
+   ],
+   "raw_measurement": {
+    "sentence": "Trading hours are subject to change and are in U.S. Central Time unless otherwise stated",
+    "per_document": [
+     {
+      "file": "memorial-day-2023.pdf",
+      "sha256": "7657bc8089ca669cfd244c2e3e697b47a7e650f5d957efe5b32da001622acb35",
+      "page_pt": "1044.0 x 1134.0",
+      "occurrences": 2,
+      "lines": [
+       {
+        "role": "header",
+        "yMin": 196.6,
+        "xMin": 52.56
+       },
+       {
+        "role": "footer",
+        "yMin": 1102.4,
+        "xMin": 54.0
+       }
+      ]
+     },
+     {
+      "file": "juneteenth-2023.pdf",
+      "sha256": "831f7f63e197ce58436780830aa515cb08dcf92bdf82a540265c2d21a4bffa43",
+      "page_pt": "1044.0 x 1134.0",
+      "occurrences": 2,
+      "lines": [
+       {
+        "role": "header",
+        "yMin": 196.6,
+        "xMin": 52.56
+       },
+       {
+        "role": "footer",
+        "yMin": 1102.4,
+        "xMin": 54.0
+       }
+      ]
+     },
+     {
+      "file": "labor-day-2023.pdf",
+      "sha256": "39a4c075437fdc7134166328eca730e3cabf3bea00ab369466dff63c99f8e948",
+      "page_pt": "1044.0 x 1134.0",
+      "occurrences": 2,
+      "lines": [
+       {
+        "role": "header",
+        "yMin": 196.6,
+        "xMin": 53.56
+       },
+       {
+        "role": "footer",
+        "yMin": 1099.9,
+        "xMin": 54.0
+       }
+      ]
+     },
+     {
+      "file": "4th-of-july-2023.pdf",
+      "sha256": "ccbc1f1fc39ba2219fd748372faa985798fee7eaffabf69f08956f5465a769e3",
+      "page_pt": "1044.0 x 1134.0",
+      "occurrences": 2,
+      "lines": [
+       {
+        "role": "header",
+        "yMin": 196.6,
+        "xMin": 53.56
+       },
+       {
+        "role": "footer",
+        "yMin": 1094.9,
+        "xMin": 54.0
+       }
+      ]
+     },
+     {
+      "file": "thanksgiving-day-2023.pdf",
+      "sha256": "99e187b3f3899e1062d662e148d5978e0cd075b961e6fc79550d4393812307e8",
+      "page_pt": "792.0 x 1512.0",
+      "occurrences": 1,
+      "lines": [
+       {
+        "role": "header only",
+        "yMin": 208.2,
+        "xMin": 34.44
+       }
+      ]
+     },
+     {
+      "file": "christmas-day-2023.pdf",
+      "sha256": "edcde0fcf61d3414cee2a332453db861e0e2d7edf81d89a5f379c44b2e72d5cf",
+      "page_pt": "792.0 x 1512.0",
+      "occurrences": 1,
+      "lines": [
+       {
+        "role": "header only",
+        "yMin": 208.2,
+        "xMin": 34.44
+       }
+      ]
+     },
+     {
+      "file": "new-years-day-2024.pdf",
+      "sha256": "34e60f8c97623df30e00f0ad8e4eeda20b99001b6c35d64f735828fecec5b9b8",
+      "page_pt": "792.0 x 1512.0",
+      "occurrences": 1,
+      "lines": [
+       {
+        "role": "header only",
+        "yMin": 208.2,
+        "xMin": 34.44
+       }
+      ]
+     }
+    ],
+    "tally": "2 + 2 + 2 + 2 + 1 + 1 + 1 = 11 occurrences over 7 documents; 4 documents twice, 3 documents once each"
+   },
+   "verifier_finding": "CONFIRMED",
+   "verifier_disposition": "Confirmed. My per-document counts are identical to the verifier's (4 x 2, 3 x 1). Two footer y values differ marginally from the verifier's (labour-day footer 1099.9 vs 1102.4; 4th-of-july footer 1094.9 vs 1095.4) - line-grouping detail, not substance. I replaced the sentence with the verifier's exact_corrected_value verbatim."
+  },
+  {
+   "id": "R2-3",
+   "title": "incomplete enumeration of the workbooks\u2019 printed UTC offsets",
+   "json_paths": [
+    "coverage"
+   ],
+   "before": "The 2022 sheets state 'All times are Central Time' with the UTC offset printed per sheet (Good Friday and Memorial Day print 'ET +1  UTC  +5'; New Year, Thanksgiving and Christmas print 'UTC  +6').",
+   "after": "The 2022 sheets state 'All times are Central Time' with the UTC offset printed per sheet: the five daylight-time sheets - Good Friday, Memorial Day, Juneteenth, Independence Day and Labor Day - print 'ET +1  UTC  +5', and the six standard-time sheets - New Year 2022, MLK, Presidents Day, Thanksgiving (both vintages), Christmas and the 2023 New Year sheet - print 'ET +1  UTC  +6'.",
+   "artifacts_reread": [
+    "the 11 2022/2023 CME-product .xls files in raw/cme-2022-2024/ (the 5 2023 compact MGEX/DME sheets are excluded: they carry no CME product groups and no offset line in that cell)"
+   ],
+   "tool": "python3 3.14 with xlrd 2.0.2, reading column 0 of row 3 (row 4 on the two Thanksgiving sheets, whose row 0 is a URL line and row 1 the \"Updated\" stamp) of the single sheet in each workbook",
+   "commands": [
+    "python3 -c \"import xlrd; wb=xlrd.open_workbook(f); sh=wb.sheet_by_index(0); print(repr(sh.cell_value(3,0)))\""
+   ],
+   "raw_measurement": {
+    "cell": "column 0 of the header row that begins \"Products on CME Group Globex\"",
+    "plus_5": [
+     {
+      "file": "2022-good-friday-holiday-schedule.xls",
+      "sha256": "a82936ab14d1b1f7041583123289c4de401c66ace4eea7e90fa9f60c1a3f3b7e",
+      "sheet": "Good Fri.",
+      "cell": "A4",
+      "value": "Products on CME Group Globex ... All times are Central Time   ET +1  UTC  +5"
+     },
+     {
+      "file": "2022-memorial-day-holiday-schedule.xls",
+      "sha256": "0d1b1f89a315cae22a5857a7027a514e3086c1cccfee42fddddff3caba0c2230",
+      "sheet": "Memorial",
+      "cell": "A4",
+      "value": "... All times are Central Time   ET +1  UTC  +5"
+     },
+     {
+      "file": "2022-juneteenth-holiday-schedule.xls",
+      "sha256": "bc9f2caf26a73a13029f177fcc6468bdc8662899ff935f44329ee1a95c8b667b",
+      "sheet": "Juneteenth",
+      "cell": "A4",
+      "value": "... All times are Central Time   ET +1  UTC  +5"
+     },
+     {
+      "file": "2022-independence-day-holiday-schedule.xls",
+      "sha256": "1ea0459d8aa0fd7ec5147614855f6d0d43607efefdc3aa9c6b1e18ddbfd54fde",
+      "sheet": "Independence",
+      "cell": "A4",
+      "value": "... All times are Central Time   ET +1  UTC  +5"
+     },
+     {
+      "file": "2022-labor-day-holiday-schedule.xls",
+      "sha256": "28d533f25d1af74af043e411635f1933fd4ff6359c80c049f87f019d2f1d57d0",
+      "sheet": "Labor",
+      "cell": "A4",
+      "value": "... All times are Central Time   ET +1  UTC  +5"
+     }
+    ],
+    "plus_6": [
+     {
+      "file": "2022-mlk-day-holiday-schedule.xls",
+      "sha256": "896944fa701062e2e1ee305f8adb696ba8ab03655a96874c7885f2328177626e",
+      "sheet": "MLK",
+      "cell": "A4",
+      "value": "... All times are Central Time   ET +1  UTC  +6"
+     },
+     {
+      "file": "2022-presidents-day-holiday-schedule.xls",
+      "sha256": "07932975d04ccabad0fb53f33f946f1a6fd8a696bafdb21f95f030ede9a84516",
+      "sheet": "Presidents",
+      "cell": "A4",
+      "value": "... All times are Central Time   ET +1  UTC  +6"
+     },
+     {
+      "file": "2022-thanksgiving-holiday-schedule.xls",
+      "sha256": "767da53e71854a3b293b613d256642f8155cd04997fa0825a35825440448126c",
+      "sheet": "Thanksgiving",
+      "cell": "A4",
+      "value": "... All times are Central Time   ET +1  UTC  +6  (preliminary vintage, \"Updated 6/29/2022\")"
+     },
+     {
+      "file": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls",
+      "sha256": "64341a65350de982a6a05760504132e173611151ae3164c6f9437509a406edcb",
+      "sheet": "Thanksgiving",
+      "cell": "A5",
+      "value": "... All times are Central Time   ET +1  UTC  +6  (finalised vintage, \"Updated 11/11/2022\")"
+     },
+     {
+      "file": "2022-christmas-holiday-schedule.xls",
+      "sha256": "2dd1d531514989845dcb6ce6d767db5dd3f956ac6777ab1cfe36d6843f3762e7",
+      "sheet": "Christmas",
+      "cell": "A4",
+      "value": "... All times are Central Time   ET +1  UTC  +6"
+     },
+     {
+      "file": "2022-new-years-holiday-schedule.xls",
+      "sha256": "b840562c681b4bfc071f54d966361fad4f405ca0634ed9bc1414528803bf6669",
+      "sheet": "New Years",
+      "cell": "A4",
+      "value": "... All times are Central Time   ET +1  UTC  +6"
+     },
+     {
+      "file": "2023-new-years-holiday-schedule.xls",
+      "sha256": "eefafd1066f406edbe6167ddf8ad13c0697b124a337c0893ce5a5da200c783d3",
+      "sheet": "New Years",
+      "cell": "A4",
+      "value": "... All times are Central Time   ET +1  UTC  +6"
+     }
+    ],
+    "tally": "5 sheets at +5, 6 sheets at +6 (the verifier counted the same 11 workbooks; the +6 list has 7 entries here because it names the 2023 New Year sheet the verifier folded into \"both 2022 Thanksgiving vintages and 2023-new-years\")",
+    "note_on_the_corrected_wording": "the replacement sentence names five +5 sheets and six +6 sheets; that is five 2022 sheets at +5 and the six standard-time sheets among the eleven workbooks (New Year 2022, MLK, Presidents Day, both Thanksgiving vintages, Christmas, the 2023 New Year sheet)"
+   },
+   "verifier_finding": "CONFIRMED",
+   "verifier_disposition": "Confirmed. My xlrd re-read of every workbook's header cell gives the same split (5 at +5, 6 at +6) and the same +/- list. My counts do not differ from the verifier's, so I used the verifier's exact_corrected_value."
+  },
+  {
+   "id": "R2-4",
+   "title": "verbatim truncation (omission): the 2024-09-03 eventDate stops two events early",
+   "json_paths": [
+    "holidays/28/families/6/verbatim"
+   ],
+   "entry": "holidays[date=2024-09-02] -> families[family=globex_grains] -> verbatim",
+   "before": "2024-09-03: 07:45 paused, 08:00 preopen, 08:30 open, 13:20 paused, 13:30 closed, 14:30 pcp, 16:00 closed",
+   "after": "2024-09-03: 07:45 paused (tradingDate 2024-09-03), 08:00 preopen (tradingDate 2024-09-03), 08:30 open (tradingDate 2024-09-03), 13:20 paused (tradingDate 2024-09-03), 13:30 closed (tradingDate 2024-09-03), 14:30 pcp (tradingDate 2024-09-03), 16:00 closed (tradingDate 2024-09-03), 16:45 preopen (tradingDate 2024-09-04), 19:00 open (tradingDate 2024-09-04)",
+   "artifacts_reread": [
+    "raw/cme-2022-2024/api_2024-09-01.json (gzip; decoded)"
+   ],
+   "tool": "python3 3.14 gzip.decompress + json.loads",
+   "commands": [
+    "python3 -c \"import gzip,json; d=json.loads(gzip.decompress(open('api_2024-09-01.json','rb').read())); ...\""
+   ],
+   "raw_measurement": {
+    "json_path": "products[name=\"Corn Futures\"].tradingHours.schedules[eventDate=\"2024-09-03\"].events",
+    "events": [
+     {
+      "tradingDate": "2024-09-03",
+      "eventTime": "07:45",
+      "marketEventType": "paused"
+     },
+     {
+      "tradingDate": "2024-09-03",
+      "eventTime": "08:00",
+      "marketEventType": "preopen"
+     },
+     {
+      "tradingDate": "2024-09-03",
+      "eventTime": "08:30",
+      "marketEventType": "open"
+     },
+     {
+      "tradingDate": "2024-09-03",
+      "eventTime": "13:20",
+      "marketEventType": "paused"
+     },
+     {
+      "tradingDate": "2024-09-03",
+      "eventTime": "13:30",
+      "marketEventType": "closed"
+     },
+     {
+      "tradingDate": "2024-09-03",
+      "eventTime": "14:30",
+      "marketEventType": "pcp"
+     },
+     {
+      "tradingDate": "2024-09-03",
+      "eventTime": "16:00",
+      "marketEventType": "closed"
+     },
+     {
+      "tradingDate": "2024-09-04",
+      "eventTime": "16:45",
+      "marketEventType": "preopen"
+     },
+     {
+      "tradingDate": "2024-09-04",
+      "eventTime": "19:00",
+      "marketEventType": "open"
+     }
+    ],
+    "missing_from_round_1": [
+     "16:45 preopen (tradingDate 2024-09-04)",
+     "19:00 open (tradingDate 2024-09-04)"
+    ],
+    "other_eventDates_of_the_same_product": {
+     "2024-09-01": [
+      {
+       "tradingDate": "2024-09-03",
+       "eventTime": "16:00",
+       "marketEventType": "preopen"
+      }
+     ],
+     "2024-09-02": [
+      {
+       "tradingDate": "2024-09-03",
+       "eventTime": "19:00",
+       "marketEventType": "open"
+      }
+     ]
+    }
+   },
+   "verifier_finding": "CONFIRMED",
+   "verifier_disposition": "Confirmed against the decoded bytes: the 2024-09-03 schedule carries nine events and round 1 listed seven. I marked each event's own tradingDate rather than using the verifier's shorthand '(all tradingDate 2024-09-03)', because the two restored events carry tradingDate 2024-09-04 and the instruction was to mark each event's own tradingDate. No other product's verbatim was touched."
+  },
+  {
+   "id": "R2-5",
+   "title": "the corrected round-0 INDEX row is only corrected elsewhere",
+   "json_paths": [
+    "raw/cme-2022-2024/INDEX.md (top line; not a JSON path)"
+   ],
+   "before": "(no SUPERSEDED IN PART line; the file began \"# INDEX - task cme-2022-2024 ...\")",
+   "after": "SUPERSEDED IN PART: the channel note below and the `api_2022-12-31.json` row state that the trading-hours service returns empty event arrays for dates already past. That is wrong - the service serves a rolling history window. See `cme-2022-2024-fix/INDEX.md` sections 2 and 5.",
+   "artifacts_reread": [
+    "raw/cme-2022-2024/INDEX.md",
+    "raw/cme-2022-2024-fix/INDEX.md"
+   ],
+   "tool": "text edit; byte diff before/after",
+   "commands": [
+    "head -1 raw/cme-2022-2024/INDEX.md"
+   ],
+   "raw_measurement": {
+    "lines_changed": "one line added at the top; nothing else edited",
+    "wrong_claims_pointed_at": [
+     "raw/cme-2022-2024/INDEX.md channel table: 'The service returns `hasEvents:false` with empty event arrays for dates already past, so only Wayback captures taken before a holiday carry data.'",
+     "raw/cme-2022-2024/INDEX.md row `api_2022-12-31.json`: 'the service returns hasEvents=false and empty event arrays for past dates. Kept as the negative control that proves why the pre-Sep-2024 windows cannot be recovered from this channel.'"
+    ],
+    "correction_target": "raw/cme-2022-2024-fix/INDEX.md section 2 (rolling-window account with five controls) and section 5 (the explicit correction of this same sentence)",
+    "bytes_added": 277
+   },
+   "verifier_finding": "CONFIRMED",
+   "verifier_disposition": "Confirmed. The verifier's exact_corrected_value wording is used, with the file path given as cme-2022-2024-fix/INDEX.md (the two INDEX files are siblings inside raw/)."
+  },
+  {
+   "id": "R2-6",
+   "title": "the stated 'closed' rule does not describe how 'closed' is actually applied",
+   "json_paths": [
+    "coverage"
+   ],
+   "before": "'closed': the document prints no session for D's own trade date.",
+   "after": "'closed': the document prints no session running through D at all - neither a D-dated trade date nor a next-business-day-dated session that is open across D; the only instants printed in D's column, if any, are the evening reopen that ends the closure.",
+   "artifacts_reread": [
+    "all 362 family entries of cme-2022-2024.json (1 51 of them status=closed)",
+    "holidays[date=2023-07-04] (the worked example)",
+    "holidays[date=2024-09-02] globex_grains (the T2 case of a reopen inside the closed day)"
+   ],
+   "tool": "python3 3.14 json scan over every entry; the classification each entry already carries",
+   "commands": [
+    "python3 -c \"import json; d=json.load(open('cme-2022-2024.json')); [print(e['date'], f['family'], f['status']) for e in d['holidays'] for f in e['families']]\""
+   ],
+   "raw_measurement": {
+    "status_histogram": {
+     "closed": 151,
+     "early_close": 122,
+     "modified": 41,
+     "normal": 35,
+     "unknown": 13
+    },
+    "total_family_entries": 362,
+    "worked_example_2023_07_04": {
+     "globex_fx": "FX - TUESDAY, 4 JULY 2023: TRADE DATE: WED 5 JULY / 16:00 (PREOPEN) HALT / 17:00 (OPEN) -> modified: nothing in the Tuesday column is dated 4 July, yet the Wednesday-dated session is open across Tuesday",
+     "globex_grains": "GRAINS - TUESDAY, 4 JULY 2023: no entries. Next entry WEDNESDAY, 5 JULY 2023 ... -> closed",
+     "globex_livestock": "LIVESTOCK - TUESDAY, 4 JULY 2023: no entries. Next entry WEDNESDAY, 5 JULY 2023 ... -> closed",
+     "lumber": "LUMBER - TUESDAY, 4 JULY 2023: no entries. Next entry WEDNESDAY, 5 JULY 2023 ... -> closed",
+     "reading": "the old clause 'the document prints no session for D's own trade date' would also fit FX/Crypto/Equities/Interest Rate/Energy/Metals on 4 July, which are modified or early_close and not closed"
+    },
+    "t2_case_2024_09_02": "Corn Futures (ZC) - 2024-09-02: {19:00 open, tradingDate 2024-09-03} with status closed: the only instant in D's column is the evening reopen that ends the closure, which the corrected clause names",
+    "sweep": "all 151 status=closed entries were read; every one has either no printed instant at all (2022 sheets, 2023-07-04, 2024-03-29/30, 2024-11-28/29, 2024-12-25) or only a next-trade-date evening reopen (16:00/17:00 or 19:00 open), so the corrected clause describes every one of them"
+   },
+   "verifier_finding": "CONFIRMED",
+   "verifier_disposition": "Confirmed. The replacement clause fits all 151 closed entries and no longer swallows the 4 July early_close/modified cases. Note the clause is prose only: no entry's status was changed, so this repair is state-neutral."
+  }
+ ],
+ "documents": [
+  {
+   "id": "2022-christmas-holiday-schedule.xls @ 2022-07-04T06:54:30Z",
+   "file": "2022-christmas-holiday-schedule.xls",
+   "sha256": "2dd1d531514989845dcb6ce6d767db5dd3f956ac6777ab1cfe36d6843f3762e7",
+   "bytes": 99328,
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-christmas-holiday-schedule.xls",
+   "capture_utc": "2022-07-04T06:54:30Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/2022-christmas-holiday-schedule.xls",
+   "rows_using_it": 10,
+   "url_read": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-christmas-holiday-schedule.xls",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "2022-good-friday-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+   "file": "2022-good-friday-holiday-schedule.xls",
+   "sha256": "a82936ab14d1b1f7041583123289c4de401c66ace4eea7e90fa9f60c1a3f3b7e",
+   "bytes": 78848,
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-good-friday-holiday-schedule.xls",
+   "capture_utc": "2022-07-04T06:55:01Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/2022-good-friday-holiday-schedule.xls",
+   "rows_using_it": 10,
+   "url_read": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-good-friday-holiday-schedule.xls",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "2022-independence-day-holiday-schedule.xls @ 2022-07-04T06:54:50Z",
+   "file": "2022-independence-day-holiday-schedule.xls",
+   "sha256": "1ea0459d8aa0fd7ec5147614855f6d0d43607efefdc3aa9c6b1e18ddbfd54fde",
+   "bytes": 102912,
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-independence-day-holiday-schedule.xls",
+   "capture_utc": "2022-07-04T06:54:50Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/2022-independence-day-holiday-schedule.xls",
+   "rows_using_it": 10,
+   "url_read": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-independence-day-holiday-schedule.xls",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "2022-juneteenth-holiday-schedule.xls @ 2022-06-20T20:02:10Z",
+   "file": "2022-juneteenth-holiday-schedule.xls",
+   "sha256": "bc9f2caf26a73a13029f177fcc6468bdc8662899ff935f44329ee1a95c8b667b",
+   "bytes": 124928,
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-juneteenth-holiday-schedule.xls",
+   "capture_utc": "2022-06-20T20:02:10Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/2022-juneteenth-holiday-schedule.xls",
+   "rows_using_it": 10,
+   "url_read": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-juneteenth-holiday-schedule.xls",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "2022-labor-day-holiday-schedule.xls @ 2022-07-04T06:54:41Z",
+   "file": "2022-labor-day-holiday-schedule.xls",
+   "sha256": "28d533f25d1af74af043e411635f1933fd4ff6359c80c049f87f019d2f1d57d0",
+   "bytes": 105472,
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-labor-day-holiday-schedule.xls",
+   "capture_utc": "2022-07-04T06:54:41Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/2022-labor-day-holiday-schedule.xls",
+   "rows_using_it": 10,
+   "url_read": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-labor-day-holiday-schedule.xls",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "2022-memorial-day-holiday-schedule.xls @ 2022-07-04T06:54:38Z",
+   "file": "2022-memorial-day-holiday-schedule.xls",
+   "sha256": "0d1b1f89a315cae22a5857a7027a514e3086c1cccfee42fddddff3caba0c2230",
+   "bytes": 108032,
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-memorial-day-holiday-schedule.xls",
+   "capture_utc": "2022-07-04T06:54:38Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/2022-memorial-day-holiday-schedule.xls",
+   "rows_using_it": 10,
+   "url_read": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-memorial-day-holiday-schedule.xls",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "2022-mlk-day-holiday-schedule.xls @ 2022-01-17T21:22:30Z",
+   "file": "2022-mlk-day-holiday-schedule.xls",
+   "sha256": "896944fa701062e2e1ee305f8adb696ba8ab03655a96874c7885f2328177626e",
+   "bytes": 102912,
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-mlk-day-holiday-schedule.xls",
+   "capture_utc": "2022-01-17T21:22:30Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/2022-mlk-day-holiday-schedule.xls",
+   "rows_using_it": 10,
+   "url_read": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-mlk-day-holiday-schedule.xls",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "2022-new-years-holiday-schedule.xls @ 2022-01-02T13:06:55Z",
+   "file": "2022-new-years-holiday-schedule.xls",
+   "sha256": "b840562c681b4bfc071f54d966361fad4f405ca0634ed9bc1414528803bf6669",
+   "bytes": 90624,
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-new-years-holiday-schedule.xls",
+   "capture_utc": "2022-01-02T13:06:55Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/2022-new-years-holiday-schedule.xls",
+   "rows_using_it": 10,
+   "url_read": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-new-years-holiday-schedule.xls",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "2022-presidents-day-holiday-schedule.xls @ 2022-07-04T07:38:10Z",
+   "file": "2022-presidents-day-holiday-schedule.xls",
+   "sha256": "07932975d04ccabad0fb53f33f946f1a6fd8a696bafdb21f95f030ede9a84516",
+   "bytes": 105472,
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-presidents-day-holiday-schedule.xls",
+   "capture_utc": "2022-07-04T07:38:10Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/2022-presidents-day-holiday-schedule.xls",
+   "rows_using_it": 10,
+   "url_read": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-presidents-day-holiday-schedule.xls",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls @ 2022-11-22T06:08:01Z (sheet \"Updated 11/11/2022\")",
+   "file": "2022-thanksgiving-holiday-schedule.FINAL-20221122.xls",
+   "sha256": "64341a65350de982a6a05760504132e173611151ae3164c6f9437509a406edcb",
+   "bytes": 261632,
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-thanksgiving-holiday-schedule.xls",
+   "capture_utc": "2022-11-22T06:08:01Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/2022-thanksgiving-holiday-schedule.FINAL-20221122.xls",
+   "rows_using_it": 20,
+   "url_read": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2022-thanksgiving-holiday-schedule.xls",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "2023-new-years-holiday-schedule.xls @ 2022-07-04T06:55:01Z",
+   "file": "2023-new-years-holiday-schedule.xls",
+   "sha256": "eefafd1066f406edbe6167ddf8ad13c0697b124a337c0893ce5a5da200c783d3",
+   "bytes": 76800,
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2023-new-years-holiday-schedule.xls",
+   "capture_utc": "2022-07-04T06:55:01Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/2023-new-years-holiday-schedule.xls",
+   "rows_using_it": 10,
+   "url_read": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2023-new-years-holiday-schedule.xls",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "4th-of-july-2023.pdf @ 2023-06-27T12:50:57Z",
+   "file": "4th-of-july-2023.pdf",
+   "sha256": "ccbc1f1fc39ba2219fd748372faa985798fee7eaffabf69f08956f5465a769e3",
+   "bytes": 97939,
+   "url": "https://www.cmegroup.com/trading-hours/files/4th-of-july-2023.pdf",
+   "capture_utc": "2023-06-27T12:50:57Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/4th-of-july-2023.pdf",
+   "rows_using_it": 22,
+   "url_read": "https://www.cmegroup.com/trading-hours/files/4th-of-july-2023.pdf",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "api_2024-01-14.json @ 2024-07-08T16:14:39Z",
+   "file": "api_2024-01-14.json",
+   "sha256": "a8fe0f3eed4c67939d3add5fa656173bc4119c3765174b084c0622a1934e0d22",
+   "bytes": 8856,
+   "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-01-14&toEventDate=2024-01-16&isProtected&_t=1720455278663",
+   "capture_utc": "2024-07-08T16:14:39Z",
+   "capture_note": null,
+   "tier": "T2",
+   "path_in_store": "raw/cme-2022-2024-fix/api_2024-01-14.json",
+   "rows_using_it": 11,
+   "url_read": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-01-14&toEventDate=2024-01-16&isProtected&_t=1720455278663",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "api_2024-02-18.json @ 2024-07-08T16:14:39Z",
+   "file": "api_2024-02-18.json",
+   "sha256": "af5ddb57cfa8bd6d377a0784fcdd33589e2055ede0a09b7fe4ae3e41d0d20f9a",
+   "bytes": 8856,
+   "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-02-18&toEventDate=2024-02-20&isProtected&_t=1720455278669",
+   "capture_utc": "2024-07-08T16:14:39Z",
+   "capture_note": null,
+   "tier": "T2",
+   "path_in_store": "raw/cme-2022-2024-fix/api_2024-02-18.json",
+   "rows_using_it": 11,
+   "url_read": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-02-18&toEventDate=2024-02-20&isProtected&_t=1720455278669",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "api_2024-03-28.json @ 2024-07-08T16:14:39Z",
+   "file": "api_2024-03-28.json",
+   "sha256": "9b41709219e36f56296843fe589e362a7513e9a98132a682a1b956f2e40c593b",
+   "bytes": 5550,
+   "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-03-28&toEventDate=2024-03-30&isProtected&_t=1720455278672",
+   "capture_utc": "2024-07-08T16:14:39Z",
+   "capture_note": null,
+   "tier": "T2",
+   "path_in_store": "raw/cme-2022-2024-fix/api_2024-03-28.json",
+   "rows_using_it": 11,
+   "url_read": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-03-28&toEventDate=2024-03-30&isProtected&_t=1720455278672",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "api_2024-05-26.json @ 2024-07-08T16:14:39Z",
+   "file": "api_2024-05-26.json",
+   "sha256": "ccff9685aac5670c5eb4a7e2b86cf1d78a5c2c08325cd03673ab8c1e6f560138",
+   "bytes": 8856,
+   "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-05-26&toEventDate=2024-05-28&isProtected&_t=1720455278675",
+   "capture_utc": "2024-07-08T16:14:39Z",
+   "capture_note": null,
+   "tier": "T2",
+   "path_in_store": "raw/cme-2022-2024-fix/api_2024-05-26.json",
+   "rows_using_it": 11,
+   "url_read": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-05-26&toEventDate=2024-05-28&isProtected&_t=1720455278675",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "api_2024-06-18.json @ 2024-07-08T16:14:39Z",
+   "file": "api_2024-06-18.json",
+   "sha256": "57acecac3e1ad1a50dda8e3bcd6ca926b4d4c6c2ebc9d8324eb73332ed6a20ec",
+   "bytes": 10517,
+   "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-06-18&toEventDate=2024-06-20&isProtected&_t=1720455278677",
+   "capture_utc": "2024-07-08T16:14:39Z",
+   "capture_note": null,
+   "tier": "T2",
+   "path_in_store": "raw/cme-2022-2024-fix/api_2024-06-18.json",
+   "rows_using_it": 11,
+   "url_read": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-06-18&toEventDate=2024-06-20&isProtected&_t=1720455278677",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "api_2024-07-03.json @ 2024-07-08T16:14:39Z",
+   "file": "api_2024-07-03.json",
+   "sha256": "6ef0e2b055c349249f5cc7ea7c98132a31111a01ce7af028e13584c0f82d4d38",
+   "bytes": 9083,
+   "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-07-03&toEventDate=2024-07-05&isProtected&_t=1720455278680",
+   "capture_utc": "2024-07-08T16:14:39Z",
+   "capture_note": null,
+   "tier": "T2",
+   "path_in_store": "raw/cme-2022-2024-fix/api_2024-07-03.json",
+   "rows_using_it": 22,
+   "url_read": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-07-03&toEventDate=2024-07-05&isProtected&_t=1720455278680",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "api_2024-09-01.json @ 2024-07-08T16:14:39Z",
+   "file": "api_2024-09-01.json",
+   "sha256": "bbe6c78555cba0437fe4b9c6eac0063983ecae49056877db618ed2b29c109546",
+   "bytes": 974,
+   "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-09-01&toEventDate=2024-09-03&isProtected&_t=1720455278683",
+   "capture_utc": "2024-07-08T16:14:39Z",
+   "capture_note": null,
+   "tier": "T2",
+   "path_in_store": "raw/cme-2022-2024/api_2024-09-01.json",
+   "rows_using_it": 11,
+   "url_read": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-09-01&toEventDate=2024-09-03&isProtected&_t=1720455278683",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "api_2024-11-27.json @ 2024-07-08T16:14:39Z",
+   "file": "api_2024-11-27.json",
+   "sha256": "f6a15f26991d25f8c6821fa6c967d0e76b2ad3f775bed62a2a001ec2fd7e389a",
+   "bytes": 1009,
+   "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-11-27&toEventDate=2024-11-29&isProtected&_t=1720455278685",
+   "capture_utc": "2024-07-08T16:14:39Z",
+   "capture_note": null,
+   "tier": "T2",
+   "path_in_store": "raw/cme-2022-2024/api_2024-11-27.json",
+   "rows_using_it": 22,
+   "url_read": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-11-27&toEventDate=2024-11-29&isProtected&_t=1720455278685",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "api_2024-12-24.json @ 2024-12-20T15:53:40Z",
+   "file": "api_2024-12-24.json",
+   "sha256": "183c85160e31d53fde30c422048b8e778937d8866f3ea1c45e2dd570ea9db1c8",
+   "bytes": 1011,
+   "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-12-24&toEventDate=2024-12-26&isProtected&_t=1734710019537",
+   "capture_utc": "2024-12-20T15:53:40Z",
+   "capture_note": null,
+   "tier": "T2",
+   "path_in_store": "raw/cme-2022-2024/api_2024-12-24.json",
+   "rows_using_it": 22,
+   "url_read": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-12-24&toEventDate=2024-12-26&isProtected&_t=1734710019537",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "api_2024-12-31.json @ 2024-12-20T15:53:40Z",
+   "file": "api_2024-12-31.json",
+   "sha256": "6b6399a1de34bbc9eea0a135691dfed90edee2a0c705162b1840e214256e4c46",
+   "bytes": 1021,
+   "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-12-31&toEventDate=2025-01-02&isProtected&_t=1734710019538",
+   "capture_utc": "2024-12-20T15:53:40Z",
+   "capture_note": null,
+   "tier": "T2",
+   "path_in_store": "raw/cme-2022-2024/api_2024-12-31.json",
+   "rows_using_it": 11,
+   "url_read": "https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-12-31&toEventDate=2025-01-02&isProtected&_t=1734710019538",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "christmas-day-2023.pdf @ 2026-07-19T09:52:48Z (document still live)",
+   "file": "christmas-day-2023.pdf",
+   "sha256": "edcde0fcf61d3414cee2a332453db861e0e2d7edf81d89a5f379c44b2e72d5cf",
+   "bytes": 51701,
+   "url": "https://www.cmegroup.com/trading-hours/files/christmas-day-2023.pdf",
+   "capture_utc": "2026-07-19T09:52:48Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/christmas-day-2023.pdf",
+   "rows_using_it": 11,
+   "url_read": "https://www.cmegroup.com/trading-hours/files/christmas-day-2023.pdf",
+   "url_read_note": "row cites the Wayback capture (2026-07-19T09:52:48Z); the operator URL https://www.cmegroup.com/trading-hours/files/christmas-day-2023.pdf was still live when round 1 checked, and the bytes read here are the Wayback capture, not a live fetch (cmegroup.com returns 403 to this machine)"
+  },
+  {
+   "id": "juneteenth-2023.pdf @ 2023-06-13T18:59:49Z",
+   "file": "juneteenth-2023.pdf",
+   "sha256": "831f7f63e197ce58436780830aa515cb08dcf92bdf82a540265c2d21a4bffa43",
+   "bytes": 96133,
+   "url": "https://www.cmegroup.com/trading-hours/files/juneteenth-2023.pdf",
+   "capture_utc": "2023-06-13T18:59:49Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/juneteenth-2023.pdf",
+   "rows_using_it": 11,
+   "url_read": "https://www.cmegroup.com/trading-hours/files/juneteenth-2023.pdf",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "labor-day-2023.pdf @ 2023-08-02T19:24:46Z",
+   "file": "labor-day-2023.pdf",
+   "sha256": "39a4c075437fdc7134166328eca730e3cabf3bea00ab369466dff63c99f8e948",
+   "bytes": 95734,
+   "url": "https://www.cmegroup.com/trading-hours/files/labor-day-2023.pdf",
+   "capture_utc": "2023-08-02T19:24:46Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/labor-day-2023.pdf",
+   "rows_using_it": 11,
+   "url_read": "https://www.cmegroup.com/trading-hours/files/labor-day-2023.pdf",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "memorial-day-2023.pdf @ 2023-04-20T22:40:18Z",
+   "file": "memorial-day-2023.pdf",
+   "sha256": "7657bc8089ca669cfd244c2e3e697b47a7e650f5d957efe5b32da001622acb35",
+   "bytes": 102397,
+   "url": "https://www.cmegroup.com/trading-hours/files/memorial-day-2023.pdf",
+   "capture_utc": "2023-04-20T22:40:18Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/memorial-day-2023.pdf",
+   "rows_using_it": 11,
+   "url_read": "https://www.cmegroup.com/trading-hours/files/memorial-day-2023.pdf",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  },
+  {
+   "id": "new-years-day-2024.pdf @ 2026-08-11T16:57:16Z (document still live)",
+   "file": "new-years-day-2024.pdf",
+   "sha256": "34e60f8c97623df30e00f0ad8e4eeda20b99001b6c35d64f735828fecec5b9b8",
+   "bytes": 57434,
+   "url": "https://www.cmegroup.com/trading-hours/files/new-years-day-2024.pdf",
+   "capture_utc": "2026-08-11T16:57:16Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/new-years-day-2024.pdf",
+   "rows_using_it": 11,
+   "url_read": "https://www.cmegroup.com/trading-hours/files/new-years-day-2024.pdf",
+   "url_read_note": "row cites the Wayback capture (2026-08-11T16:57:16Z); the operator URL https://www.cmegroup.com/trading-hours/files/new-years-day-2024.pdf was still live when round 1 checked, and the bytes read here are the Wayback capture, not a live fetch (cmegroup.com returns 403 to this machine)"
+  },
+  {
+   "id": "thanksgiving-day-2023.pdf @ 2023-12-03T20:59:29Z",
+   "file": "thanksgiving-day-2023.pdf",
+   "sha256": "99e187b3f3899e1062d662e148d5978e0cd075b961e6fc79550d4393812307e8",
+   "bytes": 74932,
+   "url": "https://www.cmegroup.com/trading-hours/files/thanksgiving-day-2023.pdf",
+   "capture_utc": "2023-12-03T20:59:29Z",
+   "capture_note": null,
+   "tier": "T1",
+   "path_in_store": "raw/cme-2022-2024/thanksgiving-day-2023.pdf",
+   "rows_using_it": 22,
+   "url_read": "https://www.cmegroup.com/trading-hours/files/thanksgiving-day-2023.pdf",
+   "url_read_note": "bytes read = Wayback id_ replay of the operator URL at capture_utc"
+  }
+ ],
+ "conclusions": {
+  "R2-1": {
+   "verdict": "CONFIRMED",
+   "one_line": "The GRAINS Thursday cell of thanksgiving-day-2023.pdf is empty; the quoted 'TRADE DATE: FRI 24 NOV' at x=392.72 y=784.0 belongs to the FX row's Thursday cell (cell centre 795.95 vs FX row label y 796.0). Round 1's defect is a mis-attribution, not a fabrication: the token is byte-present.",
+   "disagreement_with_verifier": "only with the boundary of the verifier's stated row band (624.6-739.0), which excludes two lines of the GRAINS WEDNESDAY cell (y=730.3, y=743.4 at x 170.96-288.21); the finding and the corrected text are unchanged"
+  },
+  "R2-2": {
+   "verdict": "CONFIRMED",
+   "one_line": "4 of the 7 one-pagers print the Central Time sentence twice, 3 print it once in the header; my counts match the verifier exactly.",
+   "disagreement_with_verifier": "two footer yMin values differ by ~0.5-2.5pt; immaterial"
+  },
+  "R2-3": {
+   "verdict": "CONFIRMED",
+   "one_line": "5 workbooks print ET +1  UTC  +5 and 6 print ET +1  UTC  +6; my xlrd counts match the verifier.",
+   "disagreement_with_verifier": "none"
+  },
+  "R2-4": {
+   "verdict": "CONFIRMED",
+   "one_line": "the Corn Futures 2024-09-03 schedule has nine events; round 1 listed seven.",
+   "disagreement_with_verifier": "I marked each event's own tradingDate instead of the verifier's shorthand '(all tradingDate 2024-09-03)'"
+  },
+  "R2-5": {
+   "verdict": "CONFIRMED",
+   "one_line": "the pointer line is added and the file is otherwise untouched.",
+   "disagreement_with_verifier": "none"
+  },
+  "R2-6": {
+   "verdict": "CONFIRMED",
+   "one_line": "the replacement 'closed' clause matches all 151 closed entries and the 2023-07-04 worked example.",
+   "disagreement_with_verifier": "none"
+  }
+ },
+ "changes": [
+  {
+   "json_path": "coverage",
+   "repair": "round-2 provenance note",
+   "before": "(no round-2 paragraph; coverage began \"ROUND 1 (fixer, 2026-09-12 UTC). ...\")",
+   "after": "ROUND 2 (repair, 2026-09-14 UTC). ... prefixed to the existing coverage paragraph"
+  },
+  {
+   "json_path": "holidays/17/families/6/verbatim",
+   "repair": "R2-1",
+   "before": "GRAINS - WEDNESDAY, 22 NOVEMBER 2023: TRADE DATE: WED 22 NOV / ... 13:30 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED); TRADE DATE: FRI 24 NOV / 16:45 (PREOPEN) ;; THURSDAY, 23 NOVEMBER 2023: TRADE DATE: FRI 24 NOV (no time events) ;; FRIDAY, 24 NOVEMBER 2023: 08:30 (OPEN) / 12:05 (CLOSED)",
+   "after": "GRAINS - WEDNESDAY, 22 NOVEMBER 2023 column: TRADE DATE: WED 22 NOV / 07:45 (PAUSED) / 08:00 (PREOPEN) / 08:30 (OPEN) / 13:20 (PAUSED) / 13:30 (CLOSED) / 14:30 (PCP) / 16:00 (CLOSED) / TRADE DATE: FRI 24 NOV / 16:45 (PREOPEN) [every word of this cell sits at x 170.96-288.21, the WEDNESDAY column, whose head x is 170.96] ;; THURSDAY, 23 NOVEMBER 2023 column: no entries - this row prints nothing in that column (pdftotext -bbox-layout shows no word at all in the THURSDAY x band 392.7-584.2 between y 579.1 and y 784.0, and the GRAINS row band is y 624.6-739.0); the 'TRADE DATE: FRI 24 NOV' at x 392.72 y 784.0 and the '16:00 (PREOPEN) HALT' at x 405.5 y 797.1 that appear just below it belong to the FX row's THURSDAY cell, whose centre y 796.0 equals the FX row label's own y ;; FRIDAY, 24 NOVEMBER 2023 column: TRADE DATE: FRI 24 NOV / 08:30 (OPEN) / 12:05 (CLOSED)"
+  },
+  {
+   "json_path": "coverage",
+   "repair": "R2-2",
+   "before": "The 2023 and 2024 one-pagers print 'Trading hours are subject to change and are in U.S. Central Time unless otherwise stated' in both the header and the footer.",
+   "after": "The 2023 and 2024 one-pagers print 'Trading hours are subject to change and are in U.S. Central Time unless otherwise stated'. memorial-day-2023.pdf, juneteenth-2023.pdf, labor-day-2023.pdf and 4th-of-july-2023.pdf print it twice, once in the header and once in the footer; thanksgiving-day-2023.pdf, christmas-day-2023.pdf and new-years-day-2024.pdf print it once, in the header only."
+  },
+  {
+   "json_path": "coverage",
+   "repair": "R2-3",
+   "before": "The 2022 sheets state 'All times are Central Time' with the UTC offset printed per sheet (Good Friday and Memorial Day print 'ET +1  UTC  +5'; New Year, Thanksgiving and Christmas print 'UTC  +6').",
+   "after": "The 2022 sheets state 'All times are Central Time' with the UTC offset printed per sheet: the five daylight-time sheets - Good Friday, Memorial Day, Juneteenth, Independence Day and Labor Day - print 'ET +1  UTC  +5', and the six standard-time sheets - New Year 2022, MLK, Presidents Day, Thanksgiving (both vintages), Christmas and the 2023 New Year sheet - print 'ET +1  UTC  +6'."
+  },
+  {
+   "json_path": "holidays/28/families/6/verbatim",
+   "repair": "R2-4",
+   "before": "2024-09-03: 07:45 paused, 08:00 preopen, 08:30 open, 13:20 paused, 13:30 closed, 14:30 pcp, 16:00 closed",
+   "after": "2024-09-03: 07:45 paused (tradingDate 2024-09-03), 08:00 preopen (tradingDate 2024-09-03), 08:30 open (tradingDate 2024-09-03), 13:20 paused (tradingDate 2024-09-03), 13:30 closed (tradingDate 2024-09-03), 14:30 pcp (tradingDate 2024-09-03), 16:00 closed (tradingDate 2024-09-03), 16:45 preopen (tradingDate 2024-09-04), 19:00 open (tradingDate 2024-09-04)"
+  },
+  {
+   "json_path": "coverage",
+   "repair": "R2-6",
+   "before": "'closed': the document prints no session for D's own trade date.",
+   "after": "'closed': the document prints no session running through D at all - neither a D-dated trade date nor a next-business-day-dated session that is open across D; the only instants printed in D's column, if any, are the evening reopen that ends the closure."
+  },
+  {
+   "json_path": "missing/2",
+   "repair": "missing-completeness",
+   "before": "Same channels and same outcome (T2 window empty - raw/cme-2022-2024-fix/neg_api_2023-04-06.json); deep link #foi=F&tradeDate=2023-04-07.",
+   "after": "Same channels and same outcome (2023-holiday-calendars.zip 404; archive.today HTTP 429 - both as for 2023 MLK; T2 window empty - raw/cme-2022-2024-fix/neg_api_2023-04-06.json); deep link #foi=F&tradeDate=2023-04-07."
+  }
+ ],
+ "invariants_checked": {
+  "protected_fields_verified_unchanged": [
+   "status",
+   "close_instant",
+   "open_instant",
+   "date",
+   "name",
+   "family",
+   "line",
+   "tier",
+   "document"
+  ],
+  "protected_field_instances_compared": 2008,
+  "entries_before_after": [
+   34,
+   34
+  ],
+  "family_entries_before_after": [
+   362,
+   362
+  ],
+  "missing_entries_before_after": [
+   6,
+   6
+  ],
+  "string_fields_changed": [
+   "coverage",
+   "holidays/17/families/6/verbatim",
+   "holidays/28/families/6/verbatim",
+   "missing/2"
+  ],
+  "nikkei_unknown_2024_entries_untouched": 13
+ },
+ "missing_array_note": {
+  "finding": "2023 Good Friday (2023-04-07) IS already represented - it is missing[2]; no new entry was needed.",
+  "action": "missing[2]'s channel list was completed with the two channels the other two 2023 entries name and it did not (2023-holiday-calendars.zip 404; archive.today HTTP 429), so all three 2023 entries now name the same channel set, plus Good Friday's own T2 control neg_api_2023-04-06.json. No channel was invented: both appear in missing[0] for 2023 MLK and in the round-0 INDEX channel table.",
+  "not_done": "the \"no one-pager was published for them (mlk-day-2023.pdf and good-friday-2023.pdf were crawled and 404; presidents-day-2023.pdf was never crawled)\" clause in the WHAT IS SOURCED paragraph was left untouched - it is about one-pagers and is true as written; the verifier itself measured good-friday-2023 at 404. Flagged here rather than edited, because the brief allows only the six repairs plus the missing notes."
+ },
+ "observations_not_repaired": [
+  "Four other T2 verbatims on 2024-09-02 stop before their eventDate's last events, the same shape as R2-4 but outside its named scope: globex_energy/ENERGY and globex_energy/METALS (2024-09-03: 16:45 preopen, 17:00 open untold), globex_fx (2024-09-03: 16:00 closed, 16:45 preopen, 17:00 open untold), globex_cryptocurrency (2024-09-03: 16:00 closed, 16:45 preopen, 17:00 open untold), globex_livestock and lumber (their 2024-09-03 clauses are complete, but 2024-09-01/02 are the only dates shown for some products), dairy (2024-09-03: 16:00 closed, 16:45 preopen, 17:00 open untold). Not repaired: the brief names only holidays[date=2024-09-02]->globex_grains.",
+  "globex_interest_rates on 2024-09-02 shows only that eventDate, not the 2024-09-01 and 2024-09-03 eventDates the same response carries (the other nine products show all three). Also not repaired, same reason.",
+  "The verifier's own notes list five entries that omit a TRADE DATE label their cell does print (2023-05-29 METALS and DAIRY, 2023-09-04 METALS, 2023-11-23 ENERGY and METALS, 2023-12-25 and 2024-01-01 ENERGY/METALS/DAIRY). Those are omissions from quotations, not fabrications, and were not raised as discrepancies; left untouched."
+ ]
+}

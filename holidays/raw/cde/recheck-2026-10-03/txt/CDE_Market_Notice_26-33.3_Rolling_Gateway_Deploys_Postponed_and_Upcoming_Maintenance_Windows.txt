@@ -1,0 +1,61 @@
+                                                  Market Notice
+
+
+To:​     ​         Coinbase Derivatives Clients
+
+From:​ ​           Derivatives Command Center
+
+Notice:​           26-33.3
+
+Date:​ ​           09/24/2026
+
+Subject: ​         Amendment to 26-33.2 and 26-25: Rolling Gateway Deploys Postponed and
+Upcoming Maintenance Windows
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+Summary
+Coinbase Derivatives, LLC ("CDE" or "Exchange") is deferring the rolling gateway deploys
+during market hours and the removal of the weekly 1-hour Friday maintenance window
+described in Market Notice 26-33.2 (published 09/10/2026).
+
+This notice amends Market Notice 26-33.2 and Market Notice 26-25 (published 05/20/2026).
+
+
+
+Customer Impact
+    ●​ The weekly 1-hour Friday maintenance window (16:00 to 17:00 CT) remains in effect.
+       CDE deployments will take place during this window.
+    ●​ The Friday 14:30 CT rolling deploy events listed in Market Notice 26-33.2 are canceled,
+       including Friday, Sept 25, 2026 and all weekly Friday events through GoLive.
+    ●​ Products in the weekend trading set will keep their current trading hours, including the
+       Friday maintenance window. The TradingSessionID (336) value in FIX Market Data,
+       introduced in Market Notice 26-32, will not change to TRUE_24X7 until the transition is
+       rescheduled.
+    ●​ The Connectivity Recommendations in Market Notice 26-33.2 (aggregate ports for
+       Internet sessions, ResetSeqNumFlag=Y (Tag 141) on logon, and ExecID-based
+       recovery) remain recommended as safeguards for unplanned service events.
+    ●​ https://status.cde.coinbase.com/ is updated before each deployment, during any
+       unexpected issues, and at the conclusion of the deployment.
+
+
+
+
+Any questions please contact Derivatives Command Center at derivatives@coinbase.com or +1 (312) 469-0985
+Integration (UAT)
+The hourly rolling deploys in Integration announced in Market Notice 26-33.2 have been
+discontinued. To schedule a seamless deploy test in Integration, please contact
+derivatives@coinbase.com.
+
+
+
+Upcoming Maintenance Windows
+    ●​ Q4: Saturday, October 24, 2026 (aligned with FIA DR test). See Market Notice 26-37 for
+       details.
+    ●​ Future quarterly maintenance dates will be announced in a subsequent Market Notice.
+
+
+
+
+Any questions please contact Derivatives Command Center at derivatives@coinbase.com or +1 (312) 469-0985
+

@@ -1,0 +1,62 @@
+[
+  {
+    "identity": "cme",
+    "row": "| `cme` | [cme_group.rs](../../src/calendar/schedules/futures/us/cme_group.rs) | [US-CME-GROUP](sources.md#us-cme-group) | Partial / order-entry | T1 | served | 2010-01-01 | 2026-08-29 | monthly | Compatibility default for the scoped CME and CBOT equity-index family, on the 17:00-16:00 CT Globex envelope around the 08:30-15:15 CT pit session. The January-2010 floor grid comes from CME's own October-2009 product guide and the 2010, 2012, 2015 and 2021 revisions are each dated at T1. The Sunday queue's 16:15 to 16:00 move has no operator-stated day, so dated profiles serve the sourced 16:15-17:00 intersection and withhold only the disputed quarter-hour; full-size `SP`, NKD, BTIC and TACO are excluded. | [evidence](../evidence/cme.md) |",
+    "evidence_file": "docs/evidence/cme.md"
+  },
+  {
+    "identity": "cbot",
+    "row": "| `cbot` | [grains.rs](../../src/calendar/schedules/futures/us/grains.rs) | [US-CME-GROUP](sources.md#us-cme-group) | Partial / order-entry | T1 | served | 2010-03-15 | 2026-08-29 | quarterly | Compatibility default for standard-size CBOT grain and oilseed futures, currently 19:00-07:45 CT around the 08:30-13:20 CT day session. Current matching, morning Pre-Open and PCP envelopes are sourced at T1, every matching and RTH revision from 2010-04-19 to 2015-07-05 is dated, and the 2013-03-22 Global Command Center notice dates every current queue to 2013-04-07. Only the 21-hour 2012-05-20..2013-04-06 regime's queue states remain undated, and mini grains are excluded. | [evidence](../evidence/cbot.md) |",
+    "evidence_file": "docs/evidence/cbot.md"
+  },
+  {
+    "identity": "comex",
+    "row": "| `comex` | [energy_metals.rs](../../src/calendar/schedules/futures/us/energy_metals.rs) | [US-CME-GROUP](sources.md#us-cme-group) | Partial / order-entry | T1 | served | 2012-05-11 | 2026-08-29 | monthly | Compatibility default for the named COMEX metals and NYMEX energy family, on the 17:00-16:00 CT Globex grid. The January-2010 floor grid and the 2015-09-20 close move are sourced at T1 from CME's own advisories. The Sunday queue's 16:15 to 16:00 onset day is unavailable, so dated profiles serve the sourced Sunday 16:15-17:00 intersection and withhold the 16:00-16:15 quarter-hour; TAS, TAM, BTIC, options and other clocks are excluded. | [evidence](../evidence/comex.md) |",
+    "evidence_file": "docs/evidence/comex.md"
+  },
+  {
+    "identity": "nymex",
+    "row": "| `nymex` | [energy_metals.rs](../../src/calendar/schedules/futures/us/energy_metals.rs) | [US-CME-GROUP](sources.md#us-cme-group) | Partial / order-entry | T1 | served | 2012-05-11 | 2026-08-29 | monthly | Compatibility default for the named NYMEX energy and PGM plus COMEX metals family, on the 17:00-16:00 CT Globex grid. The January-2010 floor grid and the 2015-09-20 close move are sourced at T1 from CME's own advisories. The Sunday queue's 16:15 to 16:00 onset day is unavailable, so dated profiles serve the sourced Sunday 16:15-17:00 intersection and withhold the 16:00-16:15 quarter-hour; TAS, TAM, BTIC, options and other clocks are excluded. | [evidence](../evidence/nymex.md) |",
+    "evidence_file": "docs/evidence/nymex.md"
+  },
+  {
+    "identity": "globex_equity_index",
+    "row": "| `globex_equity_index` | [cme_group.rs](../../src/calendar/schedules/futures/us/cme_group.rs) | [US-CME-GROUP](sources.md#us-cme-group) | Partial / order-entry | T1 | served | 2010-01-01 | 2026-08-29 | monthly | Scoped modern CME and CBOT U.S.-grid equity-index family, including YM and MYM but excluding full-size `SP`, NKD, BTIC and TACO. Current RTH, ETH and queues are exact, and the 2010 weekday-queue change together with the 2012, 2015 and 2021 matching revisions are dated at T1. The Sunday queue's 16:15 to 16:00 move is bracketed to 2012-05-28..2012-06-07 with both CME notice channels read in full and silent, so dated profiles carry the sourced 16:15-17:00 intersection from the January-2010 floor and withhold only the quarter-hour. | [evidence](../evidence/globex_equity_index.md) |",
+    "evidence_file": "docs/evidence/globex_equity_index.md"
+  },
+  {
+    "identity": "globex_energy",
+    "row": "| `globex_energy` | [energy_metals.rs](../../src/calendar/schedules/futures/us/energy_metals.rs) | [US-CME-GROUP](sources.md#us-cme-group) | Partial / order-entry | T1 | served | 2012-05-11 | 2026-08-29 | monthly | Named NYMEX energy and PGM plus COMEX metals roots only, on the 17:00-16:00 CT Globex grid, with TAS, TAM, BTIC, options and different product clocks excluded. Current matching and queues are exact and the 2015-09-20 close revision is dated at T1. The Sunday queue's 16:15 to 16:00 move is bracketed to 2012-05-28..2012-06-07 with both CME notice channels read in full and silent, so dated profiles carry the sourced 16:15-17:00 intersection and withhold only the 16:00-16:15 quarter-hour. | [evidence](../evidence/globex_energy.md) |",
+    "evidence_file": "docs/evidence/globex_energy.md"
+  },
+  {
+    "identity": "globex_grains",
+    "row": "| `globex_grains` | [grains.rs](../../src/calendar/schedules/futures/us/grains.rs) | [US-CME-GROUP](sources.md#us-cme-group) | Partial / order-entry | T1 | served | 2010-03-15 | 2026-08-29 | quarterly | Standard-size CBOT grain and oilseed futures only, with mini grains excluded. Current matching, morning Pre-Open and PCP phases are exact, the 2010 and 2011 phase changes together with the 2012, 2013 and 2015 matching revisions are dated at T1, and the 2013-03-22 Global Command Center notice dates every current queue to 2013-04-07. The 21-hour 2012-05-20..2013-04-06 regime's queue states are sourced from CME's own trading-hours captures but their switch-on day is bracketed to 2012-05-11..2012-05-28, so no queue revision is keyed inside it. | [evidence](../evidence/globex_grains.md) |",
+    "evidence_file": "docs/evidence/globex_grains.md"
+  },
+  {
+    "identity": "globex_fx",
+    "row": "| `globex_fx` | [fx.rs](../../src/calendar/schedules/futures/us/fx.rs) | [US-CME-GROUP](sources.md#us-cme-group) | Partial / order-entry | T1 | served | 2010-01-01 | 2026-08-29 | monthly | Standard-grid CME FX futures only, on the 17:00-16:00 CT Globex matching grid, with eFix, BTIC, TAS, options and separately specified products excluded. Matching and the 2010-11-15 weekday-queue revision are exact at T1. The current Sunday Pre-Open is sourced but its 16:15 to 16:00 cutover day is unavailable, so dated profiles carry the sourced 16:15-17:00 intersection from the January-2010 floor and withhold only the 16:00-16:15 quarter-hour. | [evidence](../evidence/globex_fx.md) |",
+    "evidence_file": "docs/evidence/globex_fx.md"
+  },
+  {
+    "identity": "globex_interest_rates",
+    "row": "| `globex_interest_rates` | [interest_rates.rs](../../src/calendar/schedules/futures/us/interest_rates.rs) | [US-CME-GROUP](sources.md#us-cme-group) | Partial / order-entry | T1 | served | 2010-01-01 | 2026-08-29 | monthly | CBOT Treasury and micro-Treasury, 30-Day Fed Funds and CME SOFR futures on the standard 17:00-16:00 CT grid. The January-2010 queues, the 2010-11-15 weekday-queue revision and the 2011-10-02 matching-open revision are exact at T1. The current Sunday queue is sourced but its 16:15 to 16:00 cutover day is unavailable, so dated profiles carry the sourced 16:15-17:00 intersection and withhold only the 16:00-16:15 quarter-hour. | [evidence](../evidence/globex_interest_rates.md) |",
+    "evidence_file": "docs/evidence/globex_interest_rates.md"
+  },
+  {
+    "identity": "globex_livestock",
+    "row": "| `globex_livestock` | [livestock.rs](../../src/calendar/schedules/futures/us/livestock.rs) | [US-CME-GROUP](sources.md#us-cme-group) | Partial / order-entry | T1 | served | 2010-01-01 | 2026-08-29 | quarterly | CME Live Cattle, Feeder Cattle and Lean Hog futures, currently 08:30-13:05 CT with an 08:00 Pre-Open and a 14:30-16:00 CT Post-Close. The 2014 and 2016 matching revisions, the 2016-06-06 PCP onset and the 2020-05-31 move of the Pre-Open start from 06:00 to 08:00 are dated at T1, and SER-8599R's statement of the outgoing 06:00 value carries that queue across 2016-02-29..2020-05-31. Official trading-hours and contract-specification captures both omit the PCP row between November 2016 and March 2020 with no removal notice, and the pre-2020 morning queue's own onset before 2016-02-29 is unresolved. | [evidence](../evidence/globex_livestock.md) |",
+    "evidence_file": "docs/evidence/globex_livestock.md"
+  },
+  {
+    "identity": "globex_cryptocurrency",
+    "row": "| `globex_cryptocurrency` | [cryptocurrency.rs](../../src/calendar/schedules/futures/us/cryptocurrency.rs) | [US-CME-GROUP](sources.md#us-cme-group) | Partial / order-entry | T1 | served | — | 2026-09-06 | monthly | CME non-spot-quoted cryptocurrency futures, on the 24/7 Globex grid CME filing 26-114 introduced for trade date 2026-05-30. The 2017-12-17 launch grid, the 2026-05-29 transition day and the three one-day Saturday extensions are exact, and the 2026-09-19 row is forward-dated on CME Globex notice 20260824. Primary evidence does not date the five-day era's Sunday and weekday Pre-Open onset, so dated history omits those queues. | [evidence](../evidence/globex_cryptocurrency.md) |",
+    "evidence_file": "docs/evidence/globex_cryptocurrency.md"
+  },
+  {
+    "identity": "globex_nikkei_225_dollar",
+    "row": "| `globex_nikkei_225_dollar` | [cme_nikkei.rs](../../src/calendar/schedules/futures/us/cme_nikkei.rs) | [US-CME-GROUP](sources.md#us-cme-group) | Partial / executable | T1 | served | — | 2026-08-24 | quarterly | Nikkei 225 Dollar (`NKD`) only, on the current 17:00-16:00 CT continuous Globex grid sourced from CME's own contract specification. The dated timeline runs from the 2011-01-12 trading-hours capture through SER-6465, SER-6554R and CME Globex Notice #20150817. CME's 2010-03-10 and 2010-04-07 captures show a materially different, DST-dependent NKD grid with no Sunday hours in CST and that changeover is undated, so dates before 2011-01-12 are modelled sessionless rather than carried. | [evidence](../evidence/globex_nikkei_225_dollar.md) |",
+    "evidence_file": "docs/evidence/globex_nikkei_225_dollar.md"
+  }
+]

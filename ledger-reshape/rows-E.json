@@ -1,0 +1,92 @@
+[
+ {
+  "identity": "cboe_options_c1",
+  "row": "| `cboe_options_c1` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-CBOE-OPTIONS](sources.md#us-cboe-options) | Partial / order-entry | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | Cboe Options (C1) ordinary individual-stock options: a 07:30 ET order-acceptance queue and the 09:30-16:00 ET regular session, both held by the current C1 rule book and Cboe's own US options hours page. The execution grid is sourced through the January-2010 floor by Cboe's 2006 close-change filing 34-53246 and the venue carries no dated revision row above it. The queue's onset day is undated and is carried across the whole modelled history by a decision recorded on 2026-09-01, which asserts continuity no document states and affects order acceptance only. | [evidence](../evidence/cboe_options_c1.md) |",
+  "evidence_file": "docs/evidence/cboe_options_c1.md"
+ },
+ {
+  "identity": "cboe_c2_options",
+  "row": "| `cboe_c2_options` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-CBOE-OPTIONS](sources.md#us-cboe-options) | Partial / order-entry | T1 | dormant | — | 2026-08-22 | on demand | Cboe C2 Options ordinary individual-stock options: closed before the operator-dated 2010-10-29 launch, then the 07:30 ET order-acceptance queue and the 09:30-16:00 ET regular session. SR-C2-2019-009 records the 07:30 queuing period as the time the System already began accepting orders, so the queue is sourced at least that far back while its onset day stays undated. It is carried back to the 2010-10-29 launch row under the 2026-09-01 carry-back decision, which affects order acceptance only. | [evidence](../evidence/cboe_c2_options.md) |",
+  "evidence_file": "docs/evidence/cboe_c2_options.md"
+ },
+ {
+  "identity": "cboe_bzx_options",
+  "row": "| `cboe_bzx_options` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-CBOE-OPTIONS](sources.md#us-cboe-options) | Partial / order-entry | T1 | dormant | — | 2026-08-22 | on demand | Cboe BZX Options ordinary individual-stock options: closed before the operator-dated 2010-02-26 launch, then the 07:30 ET order-acceptance queue and the 09:30-16:00 ET regular session. SR-CboeBZX-2020-012 records 07:30 as the time the System already began accepting orders and quotes, so the queue is sourced at least that far back while its onset day stays undated. It is carried back to the 2010-02-26 launch row under the 2026-09-01 carry-back decision, which affects order acceptance only. | [evidence](../evidence/cboe_bzx_options.md) |",
+  "evidence_file": "docs/evidence/cboe_bzx_options.md"
+ },
+ {
+  "identity": "cboe_edgx_options",
+  "row": "| `cboe_edgx_options` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-CBOE-OPTIONS](sources.md#us-cboe-options) | Partial / order-entry | T1 | dormant | — | 2026-08-22 | on demand | Cboe EDGX Options ordinary individual-stock options: closed before the operator-dated 2015-11-02 phase-one launch, then the 07:30 ET order-acceptance queue and the 09:30-16:00 ET regular session. The launch day comes from Cboe's own EDGX options update and symbol rollout schedule, and the queue's onset day is undated. The queue is carried back to the launch row under the 2026-09-01 carry-back decision, which affects order acceptance only. | [evidence](../evidence/cboe_edgx_options.md) |",
+  "evidence_file": "docs/evidence/cboe_edgx_options.md"
+ },
+ {
+  "identity": "nyse_arca_options",
+  "row": "| `nyse_arca_options` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-NYSE-OPTIONS](sources.md#us-nyse-options) | Partial / order-entry | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | NYSE Arca Options ordinary individual-stock options: the 06:00 ET window NYSE publishes as its Pre-Opening Session and the 09:30-16:00 ET regular session. The execution grid is sourced through the January-2010 floor by the 2006 close-change filing 34-53249 and the current NYSE Arca rules, and the venue carries no dated revision row above it. The 06:00 onset day is undated and is carried across the whole modelled history under the 2026-09-01 carry-back decision, which affects order acceptance only. | [evidence](../evidence/nyse_arca_options.md) |",
+  "evidence_file": "docs/evidence/nyse_arca_options.md"
+ },
+ {
+  "identity": "nyse_american_options",
+  "row": "| `nyse_american_options` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-NYSE-OPTIONS](sources.md#us-nyse-options) | Partial / order-entry | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | NYSE American Options ordinary individual-stock options: the 06:00 ET window NYSE publishes as its Pre-Opening Session and the 09:30-16:00 ET regular session. The execution grid is sourced through the January-2010 floor by the 2006 close-change filing 34-53244 and the current NYSE American rules, and the venue carries no dated revision row above it. The 06:00 onset day is undated and is carried across the whole modelled history under the 2026-09-01 carry-back decision, which affects order acceptance only. | [evidence](../evidence/nyse_american_options.md) |",
+  "evidence_file": "docs/evidence/nyse_american_options.md"
+ },
+ {
+  "identity": "nasdaq_phlx",
+  "row": "| `nasdaq_phlx` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-NASDAQ-OPTIONS](sources.md#us-nasdaq-options) | Partial / order-entry | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | Nasdaq PHLX ordinary individual-stock options: the 07:30 ET queue the venue's Nasdaq System Settings publish as \"System begins accepting orders\" and the 09:30-16:00 ET regular session. The execution grid is sourced through the January-2010 floor by the 2006 close-change filing 34-53247 and the current Phlx Options 3 rulebook, and the venue carries no dated revision row above it. The queue's onset day is undated and is carried across the whole modelled history under the 2026-09-01 carry-back decision, which affects order acceptance only. | [evidence](../evidence/nasdaq_phlx.md) |",
+  "evidence_file": "docs/evidence/nasdaq_phlx.md"
+ },
+ {
+  "identity": "nasdaq_ise",
+  "row": "| `nasdaq_ise` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-NASDAQ-OPTIONS](sources.md#us-nasdaq-options) | Partial / order-entry | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | Nasdaq ISE ordinary individual-stock options: the 06:00 ET queue the ISE System Settings publish as \"System begins accepting orders\" and the 09:30-16:00 ET regular session. The execution grid is sourced through the January-2010 floor by the 2006 close-change filing 34-53248 and the current ISE Options 3 rulebook, and the 2019-10-17 INET System Settings capture already shows 06:00. The exact onset day is undated and the queue is carried across the whole modelled history under the 2026-09-01 carry-back decision, which affects order acceptance only. | [evidence](../evidence/nasdaq_ise.md) |",
+  "evidence_file": "docs/evidence/nasdaq_ise.md"
+ },
+ {
+  "identity": "nasdaq_nom",
+  "row": "| `nasdaq_nom` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-NASDAQ-OPTIONS](sources.md#us-nasdaq-options) | Partial / order-entry | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | The Nasdaq Options Market ordinary individual-stock options: the 07:30 ET queue the NOM System Settings publish as \"System begins accepting orders\" and the 09:30-16:00 ET regular session. NOM's approved rules 34-57478 set 09:30-16:00 for this family and its 2008-03-31 launch alert names AMAT among the launch classes, so the execution grid is sourced through the January-2010 floor and the venue carries no dated revision row above it. The queue's onset day is undated and is carried across the whole modelled history under the 2026-09-01 carry-back decision, which affects order acceptance only. | [evidence](../evidence/nasdaq_nom.md) |",
+  "evidence_file": "docs/evidence/nasdaq_nom.md"
+ },
+ {
+  "identity": "nasdaq_mrx",
+  "row": "| `nasdaq_mrx` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-NASDAQ-OPTIONS](sources.md#us-nasdaq-options) | Partial / order-entry | T1 | dormant | — | 2026-08-22 | on demand | Nasdaq MRX ordinary individual-stock options: closed before the operator-dated 2016-02-16 launch, then the 06:00 ET order-acceptance queue and the 09:30-16:00 ET regular session. The launch day is fixed by SEC 34-77256 and corroborated by the operator's own volume statistics, and the queue's onset day is undated and carried back to the launch row under the 2026-09-01 carry-back decision. MRX's approved Options 3C session stays unencoded until the required trader alert makes it operative. | [evidence](../evidence/nasdaq_mrx.md) |",
+  "evidence_file": "docs/evidence/nasdaq_mrx.md"
+ },
+ {
+  "identity": "nasdaq_gemx",
+  "row": "| `nasdaq_gemx` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-NASDAQ-OPTIONS](sources.md#us-nasdaq-options) | Partial / order-entry | T1 | dormant | — | 2026-08-22 | on demand | Nasdaq GEMX ordinary individual-stock options: closed before the operator-dated 2013-08-05 launch, then the 06:00 ET order-acceptance queue and the 09:30-16:00 ET regular session. The launch day comes from GEMX's own audited filing 16019242, which calls it an equity-and-index-options exchange, and the queue's onset day is undated. The queue is carried back to the launch row under the 2026-09-01 carry-back decision, which affects order acceptance only. | [evidence](../evidence/nasdaq_gemx.md) |",
+  "evidence_file": "docs/evidence/nasdaq_gemx.md"
+ },
+ {
+  "identity": "nasdaq_bx_options",
+  "row": "| `nasdaq_bx_options` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-NASDAQ-OPTIONS](sources.md#us-nasdaq-options) | Partial / order-entry | T1 | dormant | — | 2026-08-22 | on demand | Nasdaq BX Options ordinary individual-stock options: closed before the operator-dated 2012-06-29 launch, then the 07:30 ET order-acceptance queue and the 09:30-16:00 ET regular session. The launch day comes from Nasdaq OTA 2012-41, which names five stock classes including AA and INTC, and the queue's onset day is undated. The queue is carried back to the launch row under the 2026-09-01 carry-back decision, which affects order acceptance only. | [evidence](../evidence/nasdaq_bx_options.md) |",
+  "evidence_file": "docs/evidence/nasdaq_bx_options.md"
+ },
+ {
+  "identity": "miax_options",
+  "row": "| `miax_options` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-MIAX](sources.md#us-miax) | Partial / order-entry | T1 | dormant | — | 2026-08-22 | on demand | MIAX Options ordinary individual-stock options: closed before the operator-dated 2012-12-07 launch, a queue-free 09:30-16:00 ET grid from that day, and the 07:30 ET order-acceptance queue from 2013-05-07. This row makes no carry-back assumption and is the counterexample the other seventeen US options rows are measured against, because the 2012-12-09 capture of the operator's hours page says pre-window activity will not affect the live quote state while the 2013-05-07 capture says it will. The true onset therefore falls between those two captures and no archived operator alert states the day. | [evidence](../evidence/miax_options.md) |",
+  "evidence_file": "docs/evidence/miax_options.md"
+ },
+ {
+  "identity": "miax_emerald_options",
+  "row": "| `miax_emerald_options` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-MIAX](sources.md#us-miax) | Partial / order-entry | T1 | dormant | — | 2026-08-22 | on demand | MIAX Emerald ordinary individual-stock options: closed before the operator-dated 2019-03-01 launch, then the 07:30 ET order-acceptance queue and the 09:30-16:00 ET regular session. The launch day comes from MIAX's own launch announcement and the queue's onset day is undated. The queue is carried back to the launch row under the 2026-09-01 carry-back decision, which affects order acceptance only. | [evidence](../evidence/miax_emerald_options.md) |",
+  "evidence_file": "docs/evidence/miax_emerald_options.md"
+ },
+ {
+  "identity": "miax_pearl_options",
+  "row": "| `miax_pearl_options` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-MIAX](sources.md#us-miax) | Partial / order-entry | T1 | dormant | — | 2026-08-22 | on demand | MIAX Pearl ordinary individual-stock options: closed before the operator-dated 2017-02-06 launch, then the 07:30 ET order-acceptance queue and the 09:30-16:00 ET regular session. The launch day comes from MIAX's own Pearl launch alert and the queue's onset day is undated. The queue is carried back to the launch row under the 2026-09-01 carry-back decision, which affects order acceptance only. | [evidence](../evidence/miax_pearl_options.md) |",
+  "evidence_file": "docs/evidence/miax_pearl_options.md"
+ },
+ {
+  "identity": "miax_sapphire_options",
+  "row": "| `miax_sapphire_options` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-MIAX](sources.md#us-miax) | Partial / order-entry | T1 | dormant | — | 2026-08-22 | on demand | MIAX Sapphire ordinary individual-stock options: closed before the operator-dated 2024-08-12 launch, then the 07:30 ET order-acceptance queue and the 09:30-16:00 ET regular session. The launch day comes from MIAX's own press release and the queue's onset day is undated. The queue is carried back to the launch row under the 2026-09-01 carry-back decision, which affects order acceptance only. | [evidence](../evidence/miax_sapphire_options.md) |",
+  "evidence_file": "docs/evidence/miax_sapphire_options.md"
+ },
+ {
+  "identity": "box_options",
+  "row": "| `box_options` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-BOX-OPTIONS](sources.md#us-box-options) | Partial / order-entry | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | BOX Options ordinary individual-stock options: the 07:00 ET order-acceptance queue and the 09:30-16:00 ET regular session, held by the current BOX rulebook and quoting-requirements summary. The execution grid is sourced through the January-2010 floor by the 2006 close-change filing 34-53245 and the venue carries no dated revision row above it. The queue's onset day is undated and carried across the whole modelled history under the 2026-09-01 carry-back decision, and BOX's notice bodies were not machine-readable during the review so its review date was not advanced. | [evidence](../evidence/box_options.md) |",
+  "evidence_file": "docs/evidence/box_options.md"
+ },
+ {
+  "identity": "memx_options",
+  "row": "| `memx_options` | [options.rs](../../src/calendar/schedules/equities/us/options.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/options/history.rs) | [US-MEMX](sources.md#us-memx) | Primary | T1 | dormant | — | 2026-08-22 | on demand | MEMX Options ordinary individual-stock options: closed before the operator-dated 2023-09-27 launch, then the 09:30-16:00 ET regular session. MEMX publishes no pre-open order-acceptance window and its user manual states that it rejects orders before 09:30, so nothing is carried and this row makes none of the queue assumption the other seventeen US options rows make. The launch day comes from MEMX trader alert 23-42. | [evidence](../evidence/memx_options.md) |",
+  "evidence_file": "docs/evidence/memx_options.md"
+ }
+]

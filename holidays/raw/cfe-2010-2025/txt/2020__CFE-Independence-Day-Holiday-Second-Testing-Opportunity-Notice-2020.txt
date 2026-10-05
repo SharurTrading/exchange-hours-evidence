@@ -1,0 +1,122 @@
+CFE Independence Day Holiday Testing Opportunity
+Reference ID: C2020062401
+
+
+Overview
+To provide additional opportunities for holiday testing, the CFE certification environment will be
+configured to observe a holiday trading session beginning Thursday, June 25, 2020. The test is designed
+to mimic the modified trading hours associated with the 2020 Independence Day holiday. After the start
+of the CFE certification trading environment on the afternoon of June 25, 2020, the simulated holiday
+trading session will commence for the business date of June 29, 2020.
+
+
+Simulated Holiday Trading Schedule
+VX and AMERIBOR Futures
+
+The CFE Certification schedule below will apply for the Friday, June 26, 2020 simulated holiday trading
+session in VX and AMERIBOR futures, including Trade at Settlement (TAS) transactions in VX futures (VXT):
+
+   Type of Trading Hours          Friday, June 26, 2020             Monday, June 29, 2020
+         Extended              5:00 p.m. (Thursday) to       5:00 p.m. (Sunday) to 8:30 a.m. C T
+                            10:30 a.m. CT for VX, VXT, and   and 3:30 p.m. to 4:00 p.m. C T for
+                                      AMERIBOR                       VX and AMERIBOR
+
+                                                             5:00 p.m. (Sunday) to 8:30 a.m. CT
+                                                                          for VXT
+         Regular                        None                     8:30 a.m. to 3:15 p.m. C T
+                             for VX, VXT, and AMERIBOR             for VX and AMERIOBR
+
+                                                                 8:30 a.m. to 3:13 p.m. C T
+                                                                          for VXT
+
+
+
+A holiday trading session includes extended trading hours on the calendar day of the holiday and any
+extended trading hours for the holiday on the previous calendar day. In this case, Friday, June 26, 2020 is
+simulating Friday, July 3, 2020 as the date of the holiday, which is the date on which the 2020
+Independence Day holiday is being observed. Holiday trading sessions are not separate business days and
+are part of the next business day.
+All Other Products
+
+Simulated trading in the certification environment will be closed for all CFE products other than VX and
+AMERIBOR futures on Friday, June 26, 2020.
+
+
+Submission Time Frames for the Simulated Independence Day Holiday
+The chart below sets forth the applicable time frames for the submission of Orders (including Cancel
+Orders and Cancel Replace/Modify Orders) in VX and AMERIBOR futures, including Quotes and Orders in
+VXT TAS transactions (unless otherwise indicated), in connection with the simulated Independence Day
+holiday.
+
+      Calendar Day              Time Frame             State of CFE’s    What May be Submitted to
+                                                          System           CFE’s Trading System
+
+        Thursday,         4:00 p.m. CT to system         Suspended                 Nothing
+      June 25, 2020        restart (which occurs
+                            sometime between
+                                4:05 p.m. CT.
+                              to 4:45 p.m. CT.)
+
+        Thursday           System restart (which         Suspended          Cancels for persisted
+      June 25, 2020          occurs sometime                              Good-‘til-Canceled (GTC)
+                                 between                                  and Good-‘til-Date (GTD)
+                         4:05 p.m. to 4:45 p.m. CT)                     Orders from prior trading date
+                              to 4:45 p.m. CT
+       Thursday          4:45 p.m. to 5:00 p.m. CT*     Queuing            Orders (except Market,
+     June 25, 2020                                      Period           Immediate or Cancel (IOC),
+                                                                        and Fill or Kill (FOK) Orders)**
+
+                                                                        TAS Quotes and Orders for VXT**
+        Friday          5:00 p.m. (Thursday, June 25,   Extended                    Orders
+     June 26, 2020         2020) to 10:30 a.m. CT     Trading Hours         (except Market Orders)
+
+                                                                        TAS Quotes and Orders for VXT
+
+
+
+        Sunday           10:30 a.m. CT (Friday, June     Suspended                 Nothing
+     June 28, 2020       26, 2020) to system restart
+                         (which occurs sometime
+                                 between
+                         10:00 a.m. to 10:15 a.m.
+                                     CT)
+
+
+        Sunday             System restart (which         Suspended         Cancels for persisted
+     June 28, 2020           occurs sometime                              Quotes, Day, GTC, and
+                          between 10:00 a.m. to                           GTD Orders from holiday
+                          10:15 a.m. CT) to 4:00                              trading session
+                                 p.m. CT
+        Sunday            4:00 p.m. to 5:00 p.m. CT       Queuing          Orders (except Market, IOC,
+     June 28, 2020                                        Period               and FOK Orders)**
+
+                                                                          TAS Quotes and Orders for VXT**
+        Monday          5:00 p.m. (Sunday, July 28, 2020)   Extended      Orders (except Market Orders)
+      June 29, 2020             to 8:30 a.m. CT           Trading Hours
+                                                                          TAS Quotes and Orders for VXT
+
+
+
+*The queuing period at the beginning of a business day for VX and AMERIBOR non-TAS single leg contract
+expirations and non-TAS spreads commences at the referenced start time for the queuing period plus a
+randomized time period from zero to three seconds. The queuing period at the beginning of a business
+day for VX TAS single leg contract expirations and TAS spreads commences at the referenced start time
+for the queuing period plus a randomized time period from three to six seconds.
+
+**Orders and Quotes permitted to be submitted to CFE’s trading system during these times are not
+executable until extended trading hours next commence.
+
+
+Additional Information
+Please refer to the following technical specifications for more details on the handling of Orders and Quotes
+during holiday trading sessions.
+
+    ➢ US Futures FIX Specification
+    ➢ US Futures BOE Specification
+
+We appreciate your business. Our trading community inspires and drives our mission of defining markets.
+
+CFE Trade Desk
+312.786.8700
+cfetradedesk@cboe.com
+

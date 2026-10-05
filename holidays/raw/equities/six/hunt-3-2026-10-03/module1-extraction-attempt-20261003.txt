@@ -1,0 +1,10 @@
+module-1 extraction attempt, 2026-10-03 UTC (worktree fix for PR #270 review blocking 2)
+
+$ pdftotext six-edu-module1-trading.wayback-20191119233413id_.pdf -
+Syntax Error: Couldn't find trailer dictionary
+Syntax Error: Couldn't find trailer dictionary
+Syntax Error: Couldn't read xref table
+exit: 0
+
+$ python3 -c pymupdf open + get_text
+ERROR: FileDataError Failed to open file 'six-edu-module1-trading.wayback-20191119233413id_.pdf' as type pdf.

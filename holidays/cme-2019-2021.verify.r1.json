@@ -1,0 +1,409 @@
+{
+ "task": "cme-2019-2021.verify",
+ "role": "adversarial verifier",
+ "verified_on_utc": "2026-09-12",
+ "target": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2019-2021.json",
+ "artifacts": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2019-2021/",
+ "verdict": "FAIL — the holiday statuses and instants are substantially correct and independently reproducible, but one T1 quotation is fabricated (carried over from a different year's document), one manifested artifact is not a CME document at all, and two capture dates are misrecorded. Correct these before any row ships.",
+ "matches": false,
+ "what_was_done": {
+  "rehash": "shasum -a 256 -c over all 86 entries of shasum.txt: 86/86 OK, 0 failures, 0 entries missing on disk.",
+  "refetch": "9 cited documents re-fetched from the Internet Archive id_ raw replay and compared byte-for-byte (see refetched_documents).",
+  "zip_member_integrity": "All three annual ZIPs re-downloaded and re-extracted; all 65 members (2019: 18 .xls + 11 settlement PDFs; 2020: 18 .xls; 2021: 18 .xls) are byte-identical to the saved extractions. ZIP member dates confirmed: 2019 = 10-23-2019, 2020 = 12-29-2020, 2021 = 01-03-2022.",
+  "independent_reread": "All 56 .xls re-parsed with an independently written xlrd dumper (raw cell type + value, no HH:MM heuristics), not the task's text/ dumps. Every `verbatim`, `status`, `close_instant` and `open_instant` in all 424 family rows was then machine-compared against those dumps; 24 rows were additionally read by eye.",
+  "cross_year_inference_check": "Every CT/UTC token in all 390 instant fields was searched for in the row's own cited document. 380/390 found verbatim; the 10 misses are formatting (see D5), not cross-year borrows. One cross-year borrow was found in a quotation rather than an instant field (see D1).",
+  "missing_list_check": "Fresh CDX enumeration, matchType=prefix over cmegroup.com/tools-information/holiday-calendar/files/, from=2018 to=2027, collapse=urlkey (403 rows, 390 distinct filenames), plus per-URL CDX for each annual ZIP."
+ },
+ "refetched_documents": [
+  {
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2019-holiday-calendars.zip",
+   "archive_ts": "20210126094837",
+   "memento_datetime_utc": "2021-01-26T09:48:37Z",
+   "sha256": "1e861e355238903b013c1288f4eb9e8026e6ddd5fc1001dfd2acdbfcc1832e05",
+   "bytes": 742628,
+   "result": "identical to saved copy"
+  },
+  {
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2020-holiday-calendars.zip",
+   "archive_ts": "2021 (nearest)",
+   "memento_datetime_utc": "2026-07-30T11:18:34Z",
+   "x_archive_orig_last_modified": "Tue, 29 Dec 2020 21:32:10 GMT",
+   "sha256": "5263a4a5e9076bc0e69c7cd0e3fd9f82dc4d80b66f1b56f14070f08c1d762b59",
+   "bytes": 305220,
+   "result": "identical to saved copy; capture date misrecorded (see D3)"
+  },
+  {
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2021-holiday-calendars.zip",
+   "archive_ts": "2022 (nearest)",
+   "memento_datetime_utc": "2026-08-30T10:03:27Z",
+   "x_archive_orig_last_modified": "Mon, 03 Jan 2022 21:29:08 GMT",
+   "sha256": "0ee0860a3a0e035eb9d079419aca3cafcc4256d296fa916647987c396dda8c59",
+   "bytes": 302047,
+   "result": "identical to saved copy; capture date misrecorded (see D3)"
+  },
+  {
+   "url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2019-new-years-holiday-schedule-compact.xls",
+   "memento_datetime_utc": "2018-01-07T04:13:43Z",
+   "sha256_prefix": "2684a5f1b3a9f658",
+   "result": "identical to saved docs/2019-new-years-compact-JAN2019.xls"
+  },
+  {
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2020-memorial-day-holiday-schedule-compact.xls",
+   "memento_datetime_utc": "2020-05-29T21:12:12Z",
+   "sha256_prefix": "f3052963d22aca96",
+   "result": "identical to saved docs/2020-memorial-day-compact.xls"
+  },
+  {
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2021-good-friday-holiday-schedule.xls",
+   "memento_datetime_utc": "2021-04-02T14:18:03Z",
+   "sha256_prefix": "0bb04c395a8b5fac",
+   "result": "identical to saved docs/2021-good-friday-full.xls"
+  },
+  {
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2021-thanksgiving-holiday-schedule.xls",
+   "memento_datetime_utc": "2022-09-17T17:56:04Z",
+   "sha256_prefix": "127744cc8570a05f",
+   "result": "identical to saved docs/2021-thanksgiving-full.xls"
+  },
+  {
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar/files/2020-thanksgiving-holiday-schedule-compact.xls",
+   "memento_datetime_utc": "2020-11-23T17:32:46Z",
+   "sha256_prefix": "bcf6b5e616b91663",
+   "result": "identical to saved docs/2020-thanksgiving-compact.xls"
+  },
+  {
+   "url": "https://www.cmegroup.com/tools-information/holiday-calendar.html",
+   "memento_datetime_utc": "2020-06-11T06:07:20Z",
+   "sha256": "53d488146a44308cfe9bfefbfa54c43b5e0564d635e3db84250a7b3864715f41",
+   "result": "identical to saved page-20200611060720.html (a file INDEX.md does not hash — see D8)"
+  }
+ ],
+ "entries_reread_from_saved_bytes": [
+  {
+   "date": "2019-01-01",
+   "family": "globex_equity_index",
+   "doc": "docs/2019-new-years-compact-JAN2019.xls row[4]",
+   "sheet_line": "Equity | Regular @ 1600 CT / 2200 UTC | Closed for New Year's | Regular @ 1700 CT / 2300 UTC |  | Regular @ 1600 CT / 2200 UTC",
+   "status_ok": true,
+   "instant_ok": true
+  },
+  {
+   "date": "2019-01-01",
+   "family": "globex_nikkei_225_dollar",
+   "doc": "docs/2019-new-years-full-JAN2019.xls",
+   "status_ok": true,
+   "instant_ok": true,
+   "quotation_ok": false,
+   "note": "see D1 — the quoted Nikkei/Topix BTIC row is not in this document"
+  },
+  {
+   "date": "2019-07-03",
+   "family": "globex_equity_index",
+   "doc": "zip2019/.../2019-4th-of-july-holiday-schedule-compact.xls row[5]",
+   "sheet_line": "Equity | Early  @ 1215 CT / 1715 UTC | Regular @ 1700 CT/ 2200 UTC | 1200 CT / 1700 UTC | Regular @ 1700 CT / 2200 UTC",
+   "status_ok": true,
+   "instant_ok": true
+  },
+  {
+   "date": "2019-07-03",
+   "family": "globex_interest_rates",
+   "doc": "same sheet row[7]",
+   "sheet_line": "Interest Rate | Regular @ 1600 CT / 2100 UTC | ...",
+   "status_ok": true,
+   "instant_ok": true,
+   "note": "status=normal confirmed; corroborated by the full sheet row[16] 'Interest Rate Products | 16:00'. The task's headline claim that only Equity and Bitcoin closed early on 3 Jul 2019 is correct."
+  },
+  {
+   "date": "2019-07-04",
+   "family": "globex_grains",
+   "doc": "same sheet row[11]",
+   "sheet_line": "Grain & Oilseed | Early @ 1205 CT / 1705 UTC | Markets Closed | Markets Closed | Friday @ 0830 / 1330 UTC",
+   "status_ok": true,
+   "instant_ok": "paraphrased — sheet prints '0830 / 1330 UTC', JSON records '0830 CT / 1330 UTC' (D5)"
+  },
+  {
+   "date": "2019-11-28",
+   "family": "globex_equity_index",
+   "doc": "zip2019/.../2019-thanksgiving-holiday-schedule-compact.xls row[5]",
+   "sheet_line": "... | 1200 CT / 1800 UTC | Regular @ 1700 CT / 2300 UTC | | Early @ 1215 CT/ 1815 UTC",
+   "status_ok": true,
+   "instant_ok": true
+  },
+  {
+   "date": "2019-11-29",
+   "family": "globex_energy",
+   "doc": "same sheet row[9] col 'Friday November 29 CLOSE'",
+   "sheet_line": "Energy, Metals & DME | ... | Early @ 1245 CT/ 1845 UTC",
+   "status_ok": true,
+   "instant_ok": true,
+   "note": "1245 vs equity's 1215 read off this sheet, not inferred"
+  },
+  {
+   "date": "2019-11-29",
+   "family": "lumber_same_page",
+   "doc": "same sheet row[16]",
+   "sheet_line": "Lumber Futures&Options | ... | Early @ 1205 CT/ 1800 UTC",
+   "status_ok": true,
+   "instant_ok": true,
+   "note": "CME's own CT/UTC inconsistency (1205 CT would be 1805 UTC) is preserved verbatim — good discipline"
+  },
+  {
+   "date": "2019-12-24",
+   "family": "globex_equity_index",
+   "doc": "zip2019/.../2019-christmas-holiday-schedule-compact.xls row[4]",
+   "sheet_line": "Equity | Early @ 1215 CT / 1815 UTC | Closed for Christmas | ...",
+   "status_ok": true,
+   "instant_ok": true
+  },
+  {
+   "date": "2019-12-26",
+   "family": "globex_grains",
+   "doc": "same sheet row[10]",
+   "sheet_line": "Grain & Oilseed | Early @ 1205 CT / 1805 UTC | Closed for Christmas | Closed for Christmas | Pre-open 6:00CT /12:00 UTC Open 8:30 CT /14:30 UTC | Regular per Product",
+   "status_ok": true,
+   "instant_ok": true,
+   "note": "late_open classification correct"
+  },
+  {
+   "date": "2019-12-31",
+   "family": "dairy_same_page",
+   "doc": "zip2019/.../2019-new-years-holiday-schedule-compact.xls row[15]",
+   "sheet_line": "Dairy | Early Close @ 1355 CT/1955 UTC | ...",
+   "status_ok": true,
+   "instant_ok": true
+  },
+  {
+   "date": "2020-01-02",
+   "family": "globex_grains",
+   "doc": "same sheet row[10]",
+   "sheet_line": "... | Pre-open 6:00CT /12:00 UTC Open 8:30 CT /14:30 UTC | Regular per Product",
+   "status_ok": true,
+   "instant_ok": true
+  },
+  {
+   "date": "2020-01-20",
+   "family": "globex_grains",
+   "doc": "zip2020/2020-martin-luther-king-holiday-schedule-compact.xls row[12]",
+   "sheet_line": "Grain & Oilseed | Regular per Product | Extended Pre Open @ 1600 |  | Regular @ 1900 CT / 0100 UTC",
+   "status_ok": true,
+   "instant_ok": true,
+   "note": "'closed' is the right kind — CME lists trade dates Fri Jan 17 and Tue Jan 21 only"
+  },
+  {
+   "date": "2020-01-20",
+   "family": "globex_nikkei_225_dollar",
+   "doc": "zip2020/2020-mlk-day-schedule.xls row[11]",
+   "status_ok": true,
+   "instant_ok": true,
+   "quotation_ok": false,
+   "note": "see D4 — sheet's only such row is 'TOPIX BTIC'; there is no Nikkei-labelled row"
+  },
+  {
+   "date": "2020-07-02",
+   "family": "globex_interest_rates",
+   "doc": "zip2020/2020-4th-of-july-holiday-schedule-compact.xls row[7]",
+   "sheet_line": "Interest Rate | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT/ 2200 UTC | 1200 CT / 1700 UTC | Regular @ 1700 CT / 2200 UTC",
+   "status_ok": true,
+   "instant_ok": true,
+   "note": "confirms the task's 2019-vs-2020 contrast is sourced per year"
+  },
+  {
+   "date": "2020-07-03",
+   "family": "globex_equity_index",
+   "doc": "same sheet row[5], column 'Friday July 3 ClOSE'",
+   "sheet_line": "... | 1200 CT / 1700 UTC | ...",
+   "status_ok": true,
+   "instant_ok": true
+  },
+  {
+   "date": "2020-12-24",
+   "family": "globex_energy",
+   "doc": "zip2020/2020-christmas-holiday-schedule-compact.xls row[8]",
+   "sheet_line": "Energy, Metals & DME | Early @ 1245 CT / 1845 UTC | Closed for Christmas | ...",
+   "status_ok": true,
+   "instant_ok": true
+  },
+  {
+   "date": "2020-12-31",
+   "family": "dairy_same_page",
+   "doc": "zip2020/2021-new-years-holiday-schedule-compact.xls row[16]",
+   "sheet_line": "Dairy | Early Close @ 1355 CT/1955 UTC | Closed for New Year's | ...",
+   "status_ok": true,
+   "instant_ok": true
+  },
+  {
+   "date": "2021-04-01",
+   "family": "dairy_same_page",
+   "doc": "zip2021/2021-good-friday-holiday-schedule-compact.xls row[16]",
+   "sheet_line": "Dairy | Early @ 1355 CT / 1855 UTC | Closed for Good Friday | ...",
+   "status_ok": true,
+   "instant_ok": true
+  },
+  {
+   "date": "2021-04-02",
+   "family": "globex_equity_index",
+   "doc": "same sheet row[4]",
+   "sheet_line": "Equity | Regular @ 1600 CT / 2100 UTC | Regular @ 1700 CT / 2200 UTC | Closed @ 0815 CT  / 1315 UTC | Regular @ 1700 CT / 2200 UTC",
+   "status_ok": true,
+   "instant_ok": true
+  },
+  {
+   "date": "2021-04-02",
+   "family": "globex_interest_rates",
+   "doc": "same sheet row[6]",
+   "sheet_line": "Interest Rate | ... | Closed @ 1015 CT / 1515 UTC | ...",
+   "status_ok": true,
+   "instant_ok": true
+  },
+  {
+   "date": "2021-04-02",
+   "family": "globex_nikkei_225_dollar",
+   "doc": "zip2021/2021-good-friday-holiday-schedule.xls rows[11],[12]",
+   "sheet_line": "Nikkei BTIC | 1:00 | | | 10:30 | 11:00 | 16:00 | 16:45 | 17:00 | 01:00 | 16:00 | 17:00 | | | | 01:00  ;  TOPIX BTIC | 1:00 | ... | 16:45 | 17:00 | ... | 01:00",
+   "status_ok": true,
+   "instant_ok": true,
+   "quotation_ok": true,
+   "note": "status=modified justified; the Nikkei/TOPIX split is real on this sheet"
+  },
+  {
+   "date": "2021-11-26",
+   "family": "globex_cryptocurrency",
+   "doc": "zip2021/2021-thanksgiving-holiday-schedule-compact.xls row[6]",
+   "sheet_line": "Bitcoin | ... | Early @ 1245 CT/ 1845 UTC",
+   "status_ok": true,
+   "instant_ok": true,
+   "note": "corroborated by the full sheet row[14] 'Cryptocurrency | ... | 12:45'; the 1245-vs-1215 divergence from Equity is genuine and per-year"
+  },
+  {
+   "date": "2021-11-25",
+   "family": "globex_nikkei_225_dollar",
+   "doc": "zip2021/2021-thanksgiving-holiday-schedule.xls row[12]",
+   "sheet_line": "Nikkei & BTIC | 00:00 |  | 10:30 | 11:00 | 16:00 | 16:45 | 17:00 | | | | 00:00 | 16:45 | 17:00 | | | | | | 00:00",
+   "status_ok": true,
+   "instant_ok": true,
+   "quotation_ok": true
+  },
+  {
+   "date": "2021-12-23",
+   "family": "globex_equity_index",
+   "doc": "zip2021/2021-christmas-holiday-schedule-compact.xls row[4] + full sheet row[4]",
+   "sheet_line": "Equity | Regular per Product | Closed for Christmas | Regular @ 1700 CT / 2300 UTC | Regular @ 1600 CT / 2200 UTC   (full sheet: 'Equity Products | 16:00')",
+   "status_ok": true,
+   "instant_ok": "derived — see D6"
+  },
+  {
+   "date": "2021-12-24",
+   "family": "globex_equity_index",
+   "doc": "same sheet row[4]",
+   "sheet_line": "... | Closed for Christmas | Regular @ 1700 CT / 2300 UTC | ...",
+   "status_ok": true,
+   "instant_ok": true
+  },
+  {
+   "date": "2021-12-31",
+   "family": "dairy_same_page",
+   "doc": "zip2021/2022-new-years-holiday-schedule-compact.xls",
+   "status_ok": true,
+   "instant_ok": true
+  }
+ ],
+ "discrepancies": [
+  {
+   "id": "D1",
+   "severity": "load-bearing",
+   "kind": "fabricated / cross-year quotation",
+   "where": "holidays[0] (2019-01-01), family globex_nikkei_225_dollar, document \"2019-ny(DEC2018)\"",
+   "claim": "verbatim reads: 'No outright Nikkei row; Nikkei 225 follows the Equity line. Only Nikkei-labelled row (BTIC): \"Nikkei/Topix BTIC | 00:00 | Globex Closed\" (2019-new-years-holiday-schedule.xls).'",
+   "finding": "The cited document — docs/2019-new-years-full-JAN2019.xls, sha256 6eafe7ee71c676299bd612eb3760d23d449c2111be8cee463d24308959e4d170, IA capture 2018-01-06T22:58:28Z, titled 'CME Group Globex New Years Holiday Schedule: December 31, 2018 - January 2, 2019' — contains no Nikkei row and no Topix row of any kind. Its complete list of Equity exception rows is: US Equity BTIC's & FTSE Emerging BTIC; FTSE Developed Euro BTIC; E-mini FTSE China 50 BTIC; E-mini FTSE BTIC; S&P CNX Nifty (Nifty 50). The companion compact sheet has no such row either. The quoted line is instead row [11] of a DIFFERENT year's document — zip2019/globex-trading-schedules/2019-2020-new-years-holiday-schedule.xls ('Nikkei/Topix BTIC | 00:00 | Globex Closed | ... | 00:00') — which this same JSON quotes correctly for 2020-01-01. The quotation was carried across years and attributed to a document that does not contain it.",
+   "impact": "The row's status (closed) and open_instant (1700 CT / 2300 UTC) are independently correct from the DEC-2018 sheet's Equity Products line, so no holiday kind or instant is wrong. But a T1 quotation the evidence file would carry is not in its cited document, which is exactly the failure LAW-PRIMARY-SOURCES and the charter's 'quote verbatim / never infer from another year' rule forbid.",
+   "fix": "Replace the quotation with what the DEC-2018 sheet actually prints (Equity Products line only) and state plainly that CME printed no Nikkei- or TOPIX-labelled row on that sheet."
+  },
+  {
+   "id": "D2",
+   "severity": "moderate",
+   "kind": "manifested artifact is not the document it is labelled as",
+   "where": "raw/cme-2019-2021/docs/2020-good-friday-holiday-compact.xls, listed in shasum.txt as 2c10f98451635b204f24db82793e079dd4c806568333ff04137f154f6e8db1a2",
+   "finding": "The file is 4,749 bytes of HTML: '<!DOCTYPE html> ... <title>Wayback Machine</title> ... The Wayback Machine has not archived that URL'. It is not a CME workbook. It is the only one of the 31 docs/ files that fails to parse as BIFF.",
+   "impact": "INDEX.md states the individually-captured docs/ copies 'are byte-identical in content to the ZIP members and serve as corroboration'; that statement is false for this file. No row is keyed to it (2020 Good Friday rows cite the ZIP member zip2020/2020-good-friday-holiday-compact.xls, which is a genuine workbook and which I verified), so no instant is affected.",
+   "fix": "Delete the file or relabel it as a failed retrieval; correct the INDEX sentence."
+  },
+  {
+   "id": "D3",
+   "severity": "moderate",
+   "kind": "misrecorded capture date",
+   "where": "INDEX.md 'Primary artifacts' table and the JSON coverage narrative, for the 2020 and 2021 annual ZIPs",
+   "claim": "'nearest-2021 replay; ZIP members dated 2020-12-29' and 'nearest-2022 replay; ZIP members dated 2022-01-03'",
+   "finding": "CDX for each URL returns exactly one capture. 2020-holiday-calendars.zip: 20260730111834 only. 2021-holiday-calendars.zip: 20260830100327 only. My re-fetches returned memento-datetime 2026-07-30T11:18:34Z and 2026-08-30T10:03:27Z. The /web/2021id_/ and /web/2022id_/ forms therefore resolved forward to 2026 captures, not to 2021/2022 ones.",
+   "impact": "The bytes are right and the member dates (10-23-2019 / 12-29-2020 / 01-03-2022) are confirmed, and the operator's own Last-Modified headers (2020-12-29 and 2022-01-03) still date the documents. But the charter requires the capture time in UTC in INDEX.md, and 'nearest-2021 replay' reads as a 2021 capture. Contrast the 2019 ZIP, whose stated capture 2021-01-26T09:48:37Z I confirmed exactly.",
+   "fix": "Record capture 2026-07-30T11:18:34Z and 2026-08-30T10:03:27Z, with the x-archive-orig-last-modified values beside them."
+  },
+  {
+   "id": "D4",
+   "severity": "minor",
+   "kind": "misdescription of a document",
+   "where": "2019-01-21 and 2020-01-20, family globex_nikkei_225_dollar",
+   "finding": "Both rows say 'Only Nikkei-labelled row (BTIC):' and then quote a row headed 'Topix BTIC' / 'TOPIX BTIC'. zip2019/globex-trading-schedules/2019-mlk-day-schedule.xls row[11] is 'Topix BTIC' and zip2020/2020-mlk-day-schedule.xls row[11] is 'TOPIX BTIC'; neither sheet contains the string 'Nikkei' anywhere. A TOPIX BTIC row is not a Nikkei row.",
+   "impact": "Statuses and instants unaffected (the family follows the Equity Products line, which is quoted and correct).",
+   "fix": "Say 'this sheet prints no Nikkei-labelled row at all; the nearest trade-type row is TOPIX BTIC'."
+  },
+  {
+   "id": "D5",
+   "severity": "minor",
+   "kind": "instant not recorded exactly as printed",
+   "where": "10 open_instant fields: 2019-04-19 livestock & lumber; 2019-07-04 grains, livestock & lumber; 2020-04-10 livestock & lumber; 2020-07-03 livestock & lumber; 2021-07-05 lumber",
+   "finding": "CME prints these cells without a 'CT' token, e.g. 'Friday @ 0830 / 1330 UTC', 'Monday  @ 0900 / 1400 UTC', 'Tuesday July 6 Regular  @ 0900 / 1400 UTC'. The JSON records '0830 CT / 1330 UTC', '0900 CT / 1400 UTC', 'Tuesday 6 July @ 0900 CT / 1400 UTC' — inserting CT, dropping 'Regular', and reordering the date. Separately, CME's double spaces ('Early  @ 1215', 'Nikkei/ Topix') are silently normalised in many `verbatim` strings.",
+   "impact": "No instant is wrong (the column is Central Time by the sheet header). It breaches 'exactly as printed'.",
+   "fix": "Quote the cell text and, if a zone label is needed, add it in brackets as an editorial insertion."
+  },
+  {
+   "id": "D6",
+   "severity": "minor",
+   "kind": "derived instant presented as printed; contradicts the file's own claim",
+   "where": "2021-12-23, five rows (equity_index, cryptocurrency, interest_rates, fx, energy), close_instant '1600 CT / 2200 UTC'",
+   "finding": "The cited compact sheet prints 'Regular per Product' in the Thursday Dec 23 Close cell; the full sheet prints bare '16:00' under a header reading 'All times are Central Time   ET +1  UTC  +6'. The string '1600 CT / 2200 UTC' does appear on the compact sheet, but in the Monday Dec 27 column. So the UTC half is arithmetic from the header and the CT/UTC pair is borrowed from a different column. The JSON's own coverage narrative asserts 'no instant was converted or inferred'; that assertion is not true for these five rows.",
+   "impact": "All five are status=normal, so no holiday row depends on them. The narrative claim should be softened.",
+   "fix": "Record '16:00 (full sheet; sheet header: All times are Central Time, UTC +6)' and drop the unqualified 'no instant was converted' sentence."
+  },
+  {
+   "id": "D7",
+   "severity": "minor",
+   "kind": "enumeration gap (no row affected)",
+   "where": "the 'missing' list / coverage narrative",
+   "finding": "A fresh CDX prefix enumeration surfaces one 2019 file the task did not list or retrieve: 2019-thanksgiving-day-holiday-schedule-arragements.xlsx (IA capture 2024-02-20T03:37:34Z, sha256 6e65b0989065c7636b54aa63f150243fe628e6fb4ae22f9854347c797f389758). I fetched and read it: a NYMEX 'Execution List' of BALMO / price-reporting-agency contracts with tick-marks against 2019-11-28 and 2019-11-29. It states no session instants.",
+   "impact": "None — it is not session language (LAW-SESSION-NOT-EXPIRY). It should nonetheless appear in the enumeration with a one-line 'not session language' disposition, as the settlement PDFs do."
+  },
+  {
+   "id": "D8",
+   "severity": "minor",
+   "kind": "evidence-discipline gaps in INDEX.md / shasum.txt",
+   "finding": "Files relied on but neither hashed nor tabulated: the four archived holiday-calendar.html pages (page-20191206230021 / 20200326083500 / 20200420113115 / 20200611060720), which the coverage narrative credits with proving the 2020 ZIP existed and naming the 2020 MLK / Presidents' Day / Good Friday filenames; the six CDX result files; and t1.xls, which INDEX.md never mentions and which is a byte-identical duplicate of docs/2021-presidents-compact.xls (7a8d5ce35c639998...). list.txt, described as 'the per-file fetch manifest' for docs/, has no entry for docs/2020-mlk-day-schedule.xls, docs/2020-martin-luther-king-holiday-schedule-compact.xls or docs/2020-good-friday-holiday-compact.xls, so those three have no recorded capture time.",
+   "impact": "Reproducibility only. I re-fetched page-20200611060720.html and it is byte-identical (sha256 53d48814...), and confirmed the two unmanifested 2020 MLK files are byte-identical to their ZIP members."
+  },
+  {
+   "id": "D9",
+   "severity": "minor",
+   "kind": "wrong hash printed in INDEX.md",
+   "finding": "The INDEX supplementary table gives the sha256 of docs/2019-new-years-full-JAN2019.xls as '2684…(see shasum.txt)'. 2684a5f1… is the COMPACT sheet's hash; the full sheet is 6eafe7ee71c676299bd612eb3760d23d449c2111be8cee463d24308959e4d170. shasum.txt itself is correct."
+  },
+  {
+   "id": "D10",
+   "severity": "minor",
+   "kind": "uneven family coverage",
+   "finding": "2020-01-02 carries only 4 of the 8 served families (grains, livestock, lumber_same_page, equity_index); interest_rates, fx, energy, cryptocurrency, dairy and nikkei are absent. globex_nikkei_225_dollar is absent from 11 of the 44 dates (2019-04-18, 2019-12-26, 2019-12-31, 2020-01-02, 2020-04-09, 2020-07-02, 2020-12-31, 2021-04-01, 2021-07-02, 2021-12-23, 2021-12-31).",
+   "impact": "Every omission falls on a date where the corresponding Equity/product line is 'normal', so no holiday row is lost. It is an inconsistency in the file's own convention, not a sourcing error."
+  }
+ ],
+ "confirmed_sound": [
+  "Hash manifest: 86/86 entries re-hash correctly; every hashed file is present; no silent substitution.",
+  "Byte fidelity: 9 re-fetched documents (3 annual ZIPs, 5 per-holiday .xls across 2018/2020/2021/2022 captures, 1 archived index page) are byte-identical to the saved copies. All 65 ZIP members match the saved extractions.",
+  "Verbatim fidelity: 403 of 424 family rows' quoted fragments match the cited sheet exactly under whitespace normalisation; every one of the 21 exceptions resolves to a real cell or a disclosed annotation except D1.",
+  "Instants: 380 of 390 recorded CT/UTC tokens appear verbatim in the row's own cited document; the 10 exceptions are the formatting issue in D5, not wrong times.",
+  "No cross-year instant inference: every instant field traces to its own year's document. The task's per-year divergences were each verified against their own sheet — 2019-07-03 (Equity/Bitcoin 1215 CT early; Interest Rate/FX/Energy regular 1600 CT / 2100 UTC) vs 2020-07-02 (all five regular, only ags early); 2019-11-29 Energy 1245 vs Equity 1215; 2021-11-26 Cryptocurrency 1245 vs Equity/Rates/FX 1215 while 2019-11-29 Bitcoin was 1215; Good Friday 2019 and 2020 full closures vs 2021's partial session (Equity/Crypto 'Closed @ 0815 CT  / 1315 UTC', Interest Rate/FX 'Closed @ 1015 CT / 1515 UTC', Energy/Grains/Livestock/Lumber/Dairy 'Closed for Good Friday'); grains late-open on 2019-12-26 and 2020-01-02 but correctly NOT on 2021-01-04, where the sheet shows the normal Sunday 1900 CT open.",
+  "CME's own internal inconsistencies are preserved rather than silently corrected (e.g. Lumber 'Early @ 1205 CT/ 1800 UTC' on the 2019 Thanksgiving sheet, the '00;00' typo on the Presidents' Day sheets, 'ClOSE' column header on the 2020 July 4 sheet).",
+  "New Year's supplement: the DEC-2018 document's title is exactly as INDEX.md quotes it — 'CME Group Globex New Years Holiday Schedule: December 31, 2018 - January 2, 2019' — and it is genuinely the document that governs 1 Jan 2019, since each year's own 'new years' sheet runs 31 Dec into the following January.",
+  "'missing' list stands up to a fresh enumeration: a new CDX prefix crawl of cmegroup.com/tools-information/holiday-calendar/files/ (2018-2027, collapse=urlkey, 403 rows) contains no Juneteenth filename before 2022-juneteenth-advisory.pdf (capture 2022-01-28) and 2022-juneteenth-holiday-schedule.xls (capture 2022-06-20), exactly as claimed. Columbus Day and Veterans Day 2019-2021 appear only as *-advisory.pdf, *-otc-advisory.pdf and *-settlement-times.pdf. I read two of them (2021-columbus-day-advisory.pdf sha256 6288e5023a078a26..., 2019-veterans-day-advisory.pdf sha256 e69134f57c7bbb10...): both are 'IMPORTANT MEMORANDUM / FROM: CME Group Clearing' processing memos whose entire 'Trading:' entry is the line 'GLOBEX, Clearport and Trading Floor   http://www.cmegroup.com/tools-information/holiday-calendar/' — no instants, no session language. Nothing the file lists as missing is in fact held by the archive.",
+  "Settlement-time and OTC-advisory PDFs are correctly excluded from keying any row (LAW-SESSION-NOT-EXPIRY).",
+  "Tier: all 424 rows are T1 and every one is a CME Group Globex holiday schedule read from the operator's own document."
+ ],
+ "bottom_line": "The substance of cme-2019-2021 holds: all 44 dates and 424 family rows reproduce from bytes I re-downloaded myself, the statuses and instants are right, the per-year differences are genuinely sourced per year, and the 'missing' list survives a fresh enumeration. It fails verification on evidence discipline: one quotation (2019-01-01 Nikkei) does not exist in the document it cites and was carried over from another year's sheet; one manifested 'CME document' is a Wayback error page; and two of the three annual ZIPs have capture dates recorded as 2021/2022 when the archive's only captures are 2026-07-30 and 2026-08-30. D1-D3 must be fixed before these rows or their evidence file ship."
+}

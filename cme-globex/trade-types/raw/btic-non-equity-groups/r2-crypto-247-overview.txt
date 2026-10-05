@@ -1,0 +1,262 @@
+Title: Client Facing Cryptocurrency Futures and Options Expansion to 24/7 Trading
+
+URL Source: https://www.cmegroup.com/globex/files/client-facing-cryptocurrency-futures-and-options-expansion-to-24-7-trading.pdf
+
+Published Time: Wed, 27 May 2026 18:07:08 GMT
+
+Number of Pages: 12
+
+Markdown Content:
+> © 2026 CME Group. All rights reserved. CME GROUP PUBLIC
+
+# Cryptocurrency Futures and Options Expansion to 24/7 Overview 
+
+May 27, 2026 © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+● 24/7 Trading will include holidays, Saturday, and Sunday: 
+
+● Existing iLink Order Entry, Drop Copy and Market Data Platform (MDP 3.0) functionality is supported. 
+
+● Full market hours are available from the Cryptocurrency Futures and Options Migration to 24/7 Trading client impact document. 
+
+# 24/7 Cryptocurrency Trading Impacts 
+
+Key changes to support 24/7 cryptocurrency trading 
+
+Day Type Close Pre-Open/Open 
+
+Saturday Extended Maintenance Window 
+
+Close: 2:00 a.m. to 3:45 a.m. Central time (CT) 
+
+● Pre-open: 3:45 a.m. to 4:00 a.m. CT 
+
+● No cancel: 3:59:30 a.m. to 4:00:00 a.m. CT 
+
+● Open: 4:00 a.m. CT 
+
+Monday through Friday 
+
+Daily Maintenance Window (with Trade Date roll) 
+
+Close: 4:00:00 p.m. to 4:01:00 p.m. CT 
+
+● Pre-open: 4:01:00 p.m. to 4:01:30 p.m. CT 
+
+● No cancel: 4:01:30 p.m. to 4:02:00 p.m. CT 
+
+● Open: 4:02:00 p.m. CT © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+## 24/7 Trading - Maintenance Cycle 
+
+CME Globex Maintenance Cycles - Cryptocurrency today 
+
+Monday Tuesday Thursday Friday Saturday Sunday 
+
+Available Maintenance 
+
+Beginning of daily maintenance 4:00 – 5:00 p.m. CT Beginning of weekend maintenance 4:00 p.m. CT CME Globex online 11:00 a.m. CT 
+
+CME Globex Maintenance Cycles - Cryptocurrency 24/7 
+
+Saturday Sunday 
+
+Saturday maintenance 2:00 – 4:00 a.m. CT 
+
+-The 58-minute reduction in the daily maintenance window is an impact for both five and 7-day clients. -On Friday 4:00 p.m. beginning of maintenance Good Till Cancel (GTC) / Good Till Date (GTD) orders are eliminated for 5-day clients. -During Saturday startup, client systems must clear their books and prepare for an iLink/Drop Copy/MDP 3.0 sequence number reset. Resting day orders and mass quotes are eliminated. 
+
+Chicago Calendar Day 
+
+24/7 Maintenance Impacts 
+
+Monday Tuesday Wednesday Thursday Wednesday 
+
+Beginning of daily maintenance 4:00 – 4:02 p.m. CT 
+
+Friday 
+
+GT Order eliminated for 5-day clients 4:00 p.m. CT © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+## 24/7 Trading - Trade Date Processing 
+
+Trade date processing follows established standards 
+
+CME Globex Available Daily Maintenance -Close/Pre-open/Open 
+
+Typical - 24/7 
+
+Monday Tuesday Wednesday Thursday Friday Saturday Sunday As with CME Globex today, the trade date will change with the daily Monday-Friday Close > Pre-open > No Cancel > Open (4:00 – 4:02 p.m. CT). Wednesday Thursday Friday 
+
+Weekly Maintenance - Close Trade Date 
+
+Friday 
+
+Holiday - 24/7 
+
+Monday Wednesday Thursday Friday Sunday Wednesday Friday 
+
+Chicago Calendar Day 
+
+Tuesday trade date due to upcoming Monday holiday Trade date changes Monday holiday 
+
+Thursday Friday 
+
+24/7 Trade Date Impacts 
+
+Monday Tuesday Tuesday 
+
+Weekly Maintenance - Close/Pre-open 
+
+Saturday Tuesday © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+Market Segment (Engine) 
+
+• Existing market segment ID 74 (tag 1300-MarketSegmentID) 
+
+## Client Impacts - Engine & Market Data 
+
+Access global data, 24/7 
+
+Market Data 
+
+System Impact Channel ID(s) Note 
+
+CME Globex MDP 3.0 Existing 326, 327 326 supports futures. 327 supports options. New CME CF Rates and Indexes Channel New 214 Same data as existing 5 day rates channel (213) with 24/7 support New Streamlined Block Trades Channel New 235 Same data as existing 5 day blocks channel (230) with 24/7 support ● Existing CME Globex MDP 3.0 functionality is supported. 
+
+● CME Smart Stream SBE and MDP Websocket API support. 
+
+● New network impacts - see “5 vs 7 Day Client Journey Summary” section for more information. © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+## Client Impacts - CME Globex Market Access 
+
+iLink Order Entry 
+
+• Existing iLink functionality is supported. • No new messaging impacts. • NEW - GTC / GTD order support. • NEW - Convenience Gateway (CGW) support. 
+
+• NEW - network impacts - see “5 vs 7 Day Client Journey Summary” section for more information. 
+
+• NEW - Order Entry Service Gateway (OESGW) IP impact. 
+
+Drop Copy 
+
+• Existing Drop Copy functionality is supported. • No new messaging impacts. 
+
+• NEW - network impacts - for more information see 5 vs 7 Day Client Journey Summary. • NEW - CGW support. 
+
+Empowering clients with around the clock market access © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+## iLink and Drop Copy Session Support 
+
+Access Client Type Impact 
+
+Market Segment Gateway (MSGW) iLink or Drop Copy Session 5-day and 7-day Clients No impact. Existing sessions support 24/7 on CME Globex. Convenience Gateway (CGW) iLink or Drop Copy Session 5-Day Clients Existing CGW sessions support market hours between Sunday 4:05 p.m. and Friday 4:00 p.m. CT. Migration optional for 5-day clients. 7-day Clients CGW clients who wish to access weekend trading must create a new CGW 24/7 session. The new session can access all CME Globex futures and options markets (e.g. interest rates, energy, etc) during the weekday. 
+
+● For the first time CME Globex will support iLink and Drop Copy CGW during the weekend 
+
+● See also: OESGW production information © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+## Good Till Cancel / Good Till Date Order Support 
+
+For the first time CME Globex will support GTC / GTD orders during weekend trading! ● Key challenge: How can 5 day and 7 day clients manage resting GTC / GTD orders? 
+
+Solution 
+
+● New Functionality: CME Globex Credit Controls (GC2) will support automatic GT elimination functionality via a distinct weekend GC2 limit at the execution firm level. ● GC2 Weekend Trading Configuration 
+
+○ Accounts default to a 5-day support schedule (zero weekend limit). 
+
+Good till when? 
+
+Weekend GFIDs NOT Enabled Weekend GFIDs Enabled 
+
+Cancellation Time: GTC / GTD orders for these products will be canceled every Friday at 4:00 p.m. CT .
+
+Scope: This cancellation applies only to products designated as "7-Day Products" and is enforced at the GFID level. 
+
+iLink 7 day session: GT Orders submitted through 7 day GFIDs will remain active and manageable in the market. 
+
+iLink 5 day Session: GT Orders submitted through 5 day session will remain working, although not accessible via an iLink session. © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+# Client Impacts - Core Systems 
+
+Straight through processing (STP) 
+
+• CME STP FIXML and CME STP FIX will support trade reports for 24/7 markets - No new messaging impacts. • Google Cloud connectivity required, on-prem is not available. 
+
+Reference Data API 
+
+• Supports 24/7 trading, including schedule functionality 
+
+• New 7 day trading attribute added 
+
+CME DataMine 
+
+• CME DataMine supports 24/7 trading 
+
+CME Direct 
+
+• CME Direct does not support weekend trading 
+
+Initiative FIXML 24/7 Support FIX 24/7 Support 
+
+Cryptocurrency futures and options Yes NEW - Yes © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+# 5-Day vs. 7-Day Client Journey Summary 
+
+5-Day Cryptocurrency Clients 7-Day Cryptocurrency Clients 
+
+Weekday Schedule Update Daily maintenance window reduced from one hour to one minute. 
+
+Weekend Schedule Expansion N/A Clients must successfully process the new Saturday startup. 
+
+CME Globex Sunday Startup Decommission 
+
+Sunday startup is no longer applicable, startup moves to Saturday. 
+
+GTC) / GTD Order Support 
+
+Default : GTC / GTD orders are eliminated on Friday. GC2 Opt-in : FCMs enable weekend support to retain GTC / GTD orders. 
+
+iLink & Drop Copy CGW Session Support 
+
+No Impact - clients can use existing CGW sessions to continue to trade cryptocurrency products during the weekday. New CGW session required to support weekend trading and all CME Globex futures and options markets (e.g. interest rates, energy, etc) during the weekday. 
+
+iLink & Drop Copy MSGW Session Support 
+
+No impact - clients can use existing MSGW sessions. 
+
+Network Impacts 
+
+● Network Connectivity Updates for Market Segment 74 (complete) 
+
+● MDP 3.0 Market Data TCP Recovery IP and port update 
+
+● Network Connectivity Updates for Market Segment 74 
+
+● New CME CF Rates and Indexes Channel 
+
+● New Streamlined Block Trades Channel 
+
+● MDP 3.0 Market Data TCP Recovery IP and port update 
+
+● CGW Order Entry Service Gateway 
+
+● 7 Day CGW iLink and Drop Copy Session IP and Port range 
+
+iLink MSGW and CGW OESGW New Release OESGW support: MSGW sessions will use market segment 12 and CGW sessions will use market segment 6. More information regarding production will be provided at a later date. © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+# Timelines 
+
+Date Milestone 
+
+Now Available Client Documentation: 
+
+● Cryptocurrency Futures and Options Migration to 24/7 Trading (Full Documentation) 
+
+● CME Clearing & Global Operations Summary of Requirements and Guidelines for Cryptocurrency Trading and 24/7 Clearing 
+
+● Cryptocurrency Futures and Options Expansion to 24/7 Overview Sunday, March 15, 2026 ● Network Connectivity Updates for Market Segment 74 
+
+Note : During the Segment 74 IP migration, clients may use heartbeat messages to test connectivity on Saturdays (5:00 a.m. – 3:00 p.m. CT). Sunday, March 15, 2026 New Release Streamlined CME CF-Rates and Indexes channel 214 Launch Sunday, March 29, 2026 Production Streamlined CME CF-Rates and Indexes channel 214 Launch Thursday, April 2, 2026 New Release Launch Sunday, April 12, 2026 iLink and Drop Copy session creation is available Sunday, May 3, 2026 ● Production access to 7 day OESGW Sunday, May 3, 2026 ● Production Access to new 24/7 CME CGW sessions 
+
+● MDP 3.0 Market Data TCP Recovery IP and Port Update Friday, May 29, 2026, starting at 4 p.m. CT Production Launch

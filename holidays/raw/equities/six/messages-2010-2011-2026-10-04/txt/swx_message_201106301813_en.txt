@@ -1,0 +1,209 @@
+SIX Swiss Exchange message
+
+From
+Telephone
+E-mail
+                 Member Services
+                 +41 58 399 2473
+                 member.services@six-group.com
+                                                                                           2011
+                                                                                           No. 33
+Pages            4
+Date             30.06.2011
+
+
+
+
+Launch of SLS
+
+
+Dear Sir or Madam
+                                           1
+We are pleased to inform you about SLS which is scheduled to be launched on 8 July 2011.
+
+SLS allows SIX Swiss Exchange participants to execute block trades efficiently via the existing SIX Swiss
+Exchange Standard Trading Interface based on mid-point matching, typically achieving significant price
+improvement and additional savings in market impact costs.
+This message provides a general overview of SLS.
+
+Participation
+• SLS is an optional service.
+• All participants of SIX Swiss Exchange are able to trade in SLS and activity will be governed by the
+  SIX Swiss Exchange Rule Book and Directives.
+• SIX Swiss Exchange participants will be able to access SLS via the existing Standard Trading
+  Interface (STI) of the SWXess platform. For participants using SLS, some minor changes are required
+  to the STI as well as to participants' applications connecting to SWXess. The changes include a new
+  routing instruction, a new trade type code and a new order condition for minimum fills which will
+  enable investors to expose larger blocks without compromising on match sizes.
+
+Securities
+• Initially, equities covering Switzerland, UK, France, Germany and the Netherlands will be available for
+  trading in SLS. In parallel to the introduction of the service, new Rules for the Admittance to Trading of
+  international equity securities on SIX Swiss Exchange have been approved.
+• An additional Security Reference Data file will be available via Reference Data Interface (RDI) of the
+  SWXess platform.
+• The SIX Swiss Exchange participants have to obtain market information, corporate actions and
+  research on the international securities from their existing channels and Market Data Vendor (MDV)
+  systems.
+
+
+
+
+1
+    SIX Swiss Exchange Liquidnet Service
+
+Message No. 33 | 2011                                                                                    1|4
+Orders and Trades
+• Trading in SLS will be possible on SIX Swiss Exchange trading days according to the SIX Swiss
+  Exchange Trading Calendar whereby trading hours are as follows:
+    −     securities from Swiss market from 09.00 to 17.20 CET
+    −     securities from all other markets from 09.00 to 17.30 CET
+• SIX Swiss Exchange participants will submit orders via the existing STI selecting the routing
+  instruction “LN” and SWXess will route these orders to SLS. The service will support the following
+  order types and conditions:
+    −     market or limit;
+    −     day order only; and
+    −     minimum fill quantity (optional)
+• SLS is a non-displayed trading service, technically operated by Liquidnet Europe Limited having a
+  unique matching engine.
+• Orders are executed at the mid-point price, which means the mid-point between the highest real time
+  displayed bid price and lowest displayed ask price in the Primary Reference Market at the time of
+  execution.
+• Orders shall be executed against each other and if there are two or more orders on the same side of
+  the SLS order book, they will be executed against an incoming order on the other side. No time
+  priorities will be set. The following rules apply:
+    −     If the incoming order is the same or larger than the sum of the executable orders on the other
+          side of the order book, these orders will be executed in full. Any remaining order volume from the
+          incoming order will be listed in the SLS order book.
+    −     If the incoming order is smaller than the sum of the executable orders on the other side of the
+          order book, these orders will be executed up to their individual maximums by means of an equal
+          division of the incoming order volume. Any remaining order volume from the incoming order
+          which cannot be executed in equal parts against executable orders from the other side of the
+          order book will be executed according to time priority.
+• If an order cannot be executed or can only be partially executed, the remainder shall remain in the
+  SLS market place unless it is withdrawn or until the end of the trading day. Other order validities
+  remain reserved.
+• Minimum Quantity: if MinQty is met with initial execution, the remaining quantity of the order can be
+  executed without prescribing to MinQty requirement.
+• Trading continues while a reference price is available from the Primary Reference Market. Trading is
+  interrupted when the Primary Reference Market is interrupted, suspended or closed. In these cases or
+  in the event of a disruption of the SLS matching engine, all open orders will be deleted from the
+  affected SLS order book.
+• Trades in securities executed in SLS, are classified as “on exchange off order book” as defined in the
+  Rule Book and are disseminated via the SWXess Market Data Interface (MDI) and SIX Exfeed’s Swiss
+  Market Feed (SMF) with trade type code “LN”.
+
+
+
+
+Message No. 33 | 2011
+                                                                                                          2|4
+SIX Swiss Exchange Ltd     T +41 58 399 5454
+Selnaustrasse 30           F +41 58 499 5455
+P.O. Box 1758              www.six-swiss-exchange.com
+CH-8021 Zurich
+Clearing and Settlement
+• Clearing and Settlement of executions will be processed via the existing central counterparties
+  (LCH.Clearnet Limited and SIX x-clear AG). SLS will only facilitate automatic clearing and settlement.
+• Manual bilateral settlement (without clearing) will not be supported.
+• Transactions in European equities will settle at the domestic CSD for the instrument and against the
+  relevant CCP. Transactions in Swiss products continue to settle in SIX SIS as they do today.
+• The settlement cycle for executions in SLS will follow the domestic model:
+    −     Swiss, French, Dutch and UK markets: 3 business days (T+3)
+    −     German market: 2 business days (T+2)
+• Participants must ensure that for UK securities they instruct Euroclear UK & Ireland (EUI) with the
+  Trade System of Origin (TSO) indicator applicable for SIX Swiss Exchange on all instructions. The
+  TSO code to be used is “H”.
+• Clearing and Settlement Standing Instructions must be updated in order that a SIX Swiss Exchange
+  participant can trade in SLS. Additional static data for European markets will be required. Interested
+  participants are kindly requested to contact the Member Services Team.
+• The application form “Clearing & Settlement Standing Instructions (CSSI)“ has been adapted and is
+  available under the following link:
+    http://www.six-swiss-exchange.com/participants/participation/forms_en.html
+• Participants should ensure that they have all the necessary arrangements, approvals and, where
+  relevant, executed any additional agreements necessary to support the SLS service as required by
+  their CCP or GCM. Participants should contact their CCP or GCM Relationship Managers in this
+  regard.
+
+UK Stamp Duty Reserve Tax Relief
+• Transactions in relevant UK securities will attract UK Stamp Duty Reserve Tax (SDRT).
+• SIX Swiss Exchange has organised the necessary recognition as an approved venue for the purpose
+  of facilitating SDRT relief. SIX Swiss Exchange participants acting as intermediaries can apply for
+  approval from HMRC for relief by completing the form available. Participants who have already gained
+  approval from other venues or have arrangements directly with HMRC still need to complete this form
+  indicating those arrangements. We kindly ask you to return the completed form to Member Services. It
+  is available under this link.
+
+    Once approval is given participants will be informed of the effective date. In order for relief to be
+    applied automatically at EUI participants must ensure that they instruct EUI with the Trade System of
+    Origin (TSO) indicator applicable for SIX Swiss Exchange. The TSO is “H”.
+
+Regulatory Framework
+• SLS is operated under Swiss regulation and trading is monitored in real-time by SIX Swiss Exchange.
+  The changes to the Rule Book and Directives can be accessed via the following link:
+    http://www.six-exchange-regulation.com/regulation/participants_en.html
+    The changes will be effective with production live date.
+
+
+
+Message No. 33 | 2011
+                                                                                                        3|4
+SIX Swiss Exchange Ltd   T +41 58 399 5454
+Selnaustrasse 30         F +41 58 499 5455
+P.O. Box 1758            www.six-swiss-exchange.com
+CH-8021 Zurich
+Transmission of Data
+• SIX Swiss Exchange has engaged Liquidnet Europe Limited as service provider for SLS.
+
+• In this context, the original order information and trade execution data are transmitted, processed
+  and/or stored in the European Union and/or the United States of America.
+
+Fees
+• Fee waiver – participants will benefit from a free-of-charge trading period from the live date until 31
+  August 2011.
+
+Further Information and Next Steps
+SIX Swiss Exchange is very pleased to offer this new service as we believe it will add significant value for
+our participants and their clients. For further information on SLS, please refer to the MSC messages
+published in the Member Section regarding functional changes, the rollout concept and roadmap for SLS.
+The changes to the technical specification are available at:
+https://www.six-swiss-exchange.com/member_section/it/manuals.html
+SIX Swiss Exchange is also happy to undertake three way discussions with yourselves and your ISV/ASP
+to help with the process of expediting your integration. Should you have any questions in this regard,
+please feel free to contact your Account Manager or ISV/ASP Relationship Manager:
+
+Participants
+                            Diana D’Amelio             +41 58 399 2974      diana.damelio@six-group.com
+CH & Continental Europe
+                            Paul Tschirky              +41 58 399 4195      paul.tschirky@six-group.com
+                            Tony Shaw                  +44 207 864 4335     tony.shaw@six-group.com
+UK & Scandinavia
+                            David Briody               +44 207 864 4336     david.briody@six-group.com
+
+
+ISV / ASPs
+                            Maneesh Wadhwa             +41 58 399 5654      maneesh.wadhwa@six-group.com
+All regions
+                            Diarmuid O‘Dwyer           +41 58 399 2856      diarmuid.odwyer@six-group.com
+
+
+
+Kind regards,
+
+SIX Swiss Exchange
+
+
+
+Daniel Risold                                                 Adrian Isler
+Head Business Engineering                                     Head Market Operations
+
+
+
+
+Message No. 33 | 2011
+                                                                                                            4|4
+SIX Swiss Exchange Ltd    T +41 58 399 5454
+Selnaustrasse 30          F +41 58 499 5455
+P.O. Box 1758             www.six-swiss-exchange.com
+CH-8021 Zurich
+

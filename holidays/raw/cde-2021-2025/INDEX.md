@@ -1,0 +1,87 @@
+# Evidence index — task `cde-2021-2026`
+
+Coinbase Derivatives (CDE), formerly FairX: every holiday notice from the venue's first trade
+date (2021-06-28) through 2026-09-07. All retrieval times are UTC (`date -u`), per LAW-UTC-DATES.
+Retrieval session: **2026-09-19 02:02–02:45 UTC**.
+
+`cde_market_notices_raw.html` (773,949 bytes, sha256 below) is the operator's own Market Notices
+listing read through the public reader with `x-respond-with: html`; every notice PDF href and
+table row is carried inside its embedded Contentful JSON. Direct `coinbase.com` returns 403 from
+this machine.
+
+| Document | URL | Retrieved (UTC) | sha256 | What it is |
+|---|---|---|---|---|
+| `cde_market_notices_raw.html` | https://r.jina.ai/https://www.coinbase.com/derivatives/market-notices | 2026-09-19 02:02 | `54816ca2d73db15058f89afecb88861b13fe7f16c2a22bcc3092cc4ddc5d0dbc` | **T1.** The complete Market Notices table: 156 rows, 21-01 (2021-06-01) through 26-33.2 (2026-09-10), with each notice's id, type, posted date, subject and category. |
+| `cde_notices_page_20221215.html` | https://web.archive.org/web/20221215074037id_/https://www.coinbase.com/derivatives/market-notices | 2026-09-19 02:05 | `7064e4dadf00d36fc52951c3fabdd986339798c7d88964ca50ad4c1a96b06b9a` | **T1.** Wayback capture of the same listing as it stood 2022-12-15, which **does** carry the 2021–2022 notice hrefs the live page has since dropped. Source of the `assets.ctfassets.net` URLs for 21-01..22-11 and of 22-10's dead `info.fairx.com` link. |
+| `cdx_ctfassets.json` | https://web.archive.org/cdx/search/cdx?url=assets.ctfassets.net/k3n74unfin40*&output=json&fl=timestamp,original,statuscode,mimetype,digest,length&collapse=digest&limit=5000 | 2026-09-19 02:03 | — | CDX enumeration: 818 distinct artifacts, 144 `Market_Notice` PDFs carrying ids 21-01..26-13. Negative evidence that no 22-10 capture exists. |
+| `cdx_fairx.json` / `cdx_fairx_info.json` | https://web.archive.org/cdx/search/cdx?url=fairx.com&matchType=domain … / `url=info.fairx.com*` | 2026-09-19 02:03 | — | CDX enumeration of the FairX-era hosts. `info.fairx.com` holds exactly one capture (an unrelated 22-01 page) and no copy of 22-10. |
+| `cdx_cde_notices_page.json` | https://web.archive.org/cdx/search/cdx?url=coinbase.com/derivatives/market-notices … | 2026-09-19 02:03 | — | 133 captures of the notices page, 2022-06-25 through 2026-09-28; the source of the 2022-12-15 capture above. |
+
+## The 53 notice PDFs
+
+| Notice | URL | Channel | Retrieved (UTC) | sha256 | Bytes |
+|---|---|---|---|---|---|
+| `21-03` (07/05/2021) | https://assets.ctfassets.net/k3n74unfin40/5j6yZybmG6MbpPTLPauK7g/9c1d755fbccae82d8d8603ec935741c0/Market_Notice_21-03.pdf | live | 2026-09-19 02:02–02:45 | `5a73460829fc98288c754c7c0cf4230a716d5e4f3decac57bb76f32679dc57c3` | 39,972 |
+| `21-04` (09/06/2021) | https://assets.ctfassets.net/k3n74unfin40/3J67latBawdEG4jEjzpYnR/2a719ed20a044e29a419dc1411cfca70/Market_Notice_21-04.pdf | live | 2026-09-19 02:02–02:45 | `18872d6f3993a3e22f2dc0f982889b7b71d8971148ddedf6cfcba8fd0fe89c1d` | 40,734 |
+| `21-06` (11/24/2021) | https://assets.ctfassets.net/k3n74unfin40/2tUXFAck99wsMx6mdOxxrE/147cfabf288adaed696fc153b2aad05d/Market_Notice_21-06_-_Thanksgiving_Schedule.pdf | live | 2026-09-19 02:02–02:45 | `25ffa93abcd57af4fd46250baeac927075fe9d6b40e63f0f73461e4f8bf592af` | 291,662 |
+| `21-07` (12/25/2021) | https://assets.ctfassets.net/k3n74unfin40/7xnJ9WM8jTyCMzVhj7u7hh/058dfe0ec720df4bc6580071eb25acf0/Market_Notice_21-07.pdf | live | 2026-09-19 02:02–02:45 | `1cdafb6827367d7ee86f27b3c70d7e2fd0708c51eccb59cd7b20289905d7bad8` | 288,258 |
+| `22-01` (01/06/2022) | https://assets.ctfassets.net/k3n74unfin40/3eN7Oh4yWCpE24Bqa9Z6OT/85b4cac3126c48d0361a97cb0faf17c4/Market_Notice_22-01.pdf | live | 2026-09-19 02:02–02:45 | `d8e683ec405f991f107814bfd71b3733936263e9834fd875f465f654e24d3176` | 288,752 |
+| `22-02` (02/16/2022) | https://assets.ctfassets.net/k3n74unfin40/2W6sAOxys14tR9HqrJdn4b/b83a557ad4f3886b9f616188541435e6/Market_Notice_22-02.pdf | live | 2026-09-19 02:02–02:45 | `5ea1e7872f16692720cd1ad98e898c94f5e02e3884418653ec1048fe6b5d0db9` | 287,814 |
+| `22-04` (04/01/2022) | https://assets.ctfassets.net/k3n74unfin40/2o0RNydeKJeHydTx6t7pHr/b01e70592a80966724c514479a3c77a1/Market_Notice_22-04-1.pdf | live | 2026-09-19 02:02–02:45 | `c1807219193507dae8759a91f93d350b380df9f341068e33b54ccaddf3fd477c` | 112,266 |
+| `22-05` (05/16/2022) | https://assets.ctfassets.net/k3n74unfin40/78Ip0rSxgcXRKuodjWf6Co/ff22d52cae720bf0fc3f8b4bc11d3fd6/Market_Notice_22-05.pdf | live | 2026-09-19 02:02–02:45 | `3fb42b97a01ed8b3d1d2ab587abcfe943e0bd2b730fc9d666d391df25fdfd86e` | 62,857 |
+| `22-06` (06/06/2022) | https://assets.ctfassets.net/k3n74unfin40/1AF9j5X7IGcMNTzYbYjEr8/e0c532ce277200a7dd667433cd56c7c1/Market_Notice_22-06.pdf | live | 2026-09-19 02:02–02:45 | `1e7bb387263b0d13e9676e92ec2dea93c4dd2d7b4e638db49797142492a2d97f` | 62,338 |
+| `22-08` (11/10/2022) | https://assets.ctfassets.net/k3n74unfin40/5kTsBSbrdFquUSRaE0Y3Bu/9338b85c0c15cab3b99969b5f08e77a6/Market_Notice_22-08.pdf | live | 2026-09-19 02:02–02:45 | `a64f6953582926df8209a487d3bfda7bc3786179744a19025bd00013c88ef825` | 71,964 |
+| `22-07` (12/12/2022) | https://assets.ctfassets.net/k3n74unfin40/4wYR4rvG3WqUT3wX7xpYK0/1fcb914490242560a6e96686c103c56c/Market_Notice__22-07__.pdf | live | 2026-09-19 02:02–02:45 | `e9662aff64a82fbbddaf975db72039ac2b249ee7473f41dcd88764283bb434b8` | 62,292 |
+| `22-11` (12/12/2022) | https://assets.ctfassets.net/k3n74unfin40/1bcPFyFDQbRNqR6RhKwdX3/744286f7573b8b1b043a919670d70641/Market_Notice__22-11.pdf | live | 2026-09-19 02:02–02:45 | `b4981e4fe3c6d388612716b1c72721ff5870825f867b67e75d8f3c9e036f8927` | 71,422 |
+| `23-01` (12/19/2022) | https://assets.ctfassets.net/k3n74unfin40/4Kwy5eQqAODwNauwpzOy5Q/ac41fe91f469a2ce779319d3f3e4b19f/Market_Notice_23-01.pdf | live | 2026-09-19 02:02–02:45 | `e5057eb09b731a68839253744028d6040dedaf5e7fc70d9b7a6b29c5b23accd5` | 71,975 |
+| `23-02` (01/04/2023) | https://assets.ctfassets.net/k3n74unfin40/3HeoJwlxc8HjhN6SLYjqKy/2a120c0ee39ad4ec05e09d1a70defc93/Market_Notice_23-02.pdf | live | 2026-09-19 02:02–02:45 | `ecd6968cb969aa0294585a9ec7fd08eac2b46a8a73057bb879fddd045509c55c` | 72,262 |
+| `23-03` (02/06/2023) | https://assets.ctfassets.net/k3n74unfin40/TB4RZvutilimzGnn3KZiu/c5b8b6c9bc19810379f77d53e48998b0/Market_Notice_23-03.pdf | live | 2026-09-19 02:02–02:45 | `44b6dfdd9203d303d79bf4c5330ffa424bd6e79511bbdb9f92e09c1c14c2d349` | 71,390 |
+| `23-07` (03/24/2023) | https://assets.ctfassets.net/k3n74unfin40/3FPP5Zka1eTdppqoYhUZrs/66f61225d7890421b8718b19ed7f7155/Market_Notice_23-07.pdf | live | 2026-09-19 02:02–02:45 | `c01b86456bc364bda6376714b84f1ad8c688cdc106afcd6b1cf0bde4b8a206ee` | 73,620 |
+| `23-09` (05/15/2023) | https://assets.ctfassets.net/k3n74unfin40/5u2uRMkdHX3Ugj6g4uhc0y/a1646aa1344490307dce4b003e454f1f/Market_Notice_23-09.pdf | live | 2026-09-19 02:02–02:45 | `cef3d02dfb08659cac3e71731ab5d60ec1b5a4aca78ec8373b9497b20ffce9a9` | 74,283 |
+| `23-10` (06/05/2023) | https://assets.ctfassets.net/k3n74unfin40/6MOugUw3S4bMDnOcve6sgP/441982361827158977c87d8c4059ebda/Market_Notice_23-10.pdf | live | 2026-09-19 02:02–02:45 | `7424b3e500c74135226622581cc747d002fb26e57cab24b8bbd8517255f8cf5d` | 74,472 |
+| `23-11` (06/20/2023) | https://assets.ctfassets.net/k3n74unfin40/2VBzXQYE9eXPjNDoul0lTC/bdeb4b8493b91c1793d6536258d83a22/Market_Notice_23-11.pdf | live | 2026-09-19 02:02–02:45 | `65c59d6d37f028c1bb43dba87778b62b09f9fa99d80367c9ecd34b2cf4b2c984` | 74,792 |
+| `23-16` (11/10/2023) | https://assets.ctfassets.net/k3n74unfin40/o77I9xXmB5oKk1iqS7a2E/921a498e23a9abd48c5ea8d236508e35/Market_Notice_23-16_.pdf | live | 2026-09-19 02:02–02:45 | `0480b2b4c3f2aae413886246c02c8d593f22605ff11d3620e284e35dc931e3e2` | 72,893 |
+| `23-19` (12/12/2023) | https://assets.ctfassets.net/k3n74unfin40/3AbzZqebgUWjKmcpFuXHHL/d5d6d0dcfa1b822da19ca0662527b3da/Market_Notice_23-19.pdf | live | 2026-09-19 02:02–02:45 | `ffd455d5e97d4c3ae179e2c923f7c14c73bbab502f6399fe93de701a852bc0c0` | 70,734 |
+| `23-20` (12/12/2023) | https://assets.ctfassets.net/k3n74unfin40/2z8C92dcb4Xr5vJlMhBN7O/d9842fb6981e0378554fe4c8a4f6395e/Market_Notice_23-20.pdf | live | 2026-09-19 02:02–02:45 | `757166da5be7cd12e458d589ee782acd4a3824a5b35334f023e1a7bf2fe8ad35` | 72,029 |
+| `24-01` (01/03/2024) | https://assets.ctfassets.net/k3n74unfin40/5vsfhWqUY3CvI6jHSRo69u/046ee817dac781c70d55c8fb2bea1178/Market_Notice_24-01.pdf | live | 2026-09-19 02:02–02:45 | `793ebdad7cc4aca12c1a7a36a7da2257f7b4754b4697c8484447e97836ccde9d` | 72,631 |
+| `24-02` (02/05/2024) | https://assets.ctfassets.net/k3n74unfin40/3rVNx1qvDfkqrk3C1AApvg/4eb2f5edb5db91258bf30950aebd210b/Market_Notice_24-02__Presidents-_Day.pdf | live | 2026-09-19 02:02–02:45 | `a6c9ae9deb9b0b6dbec6fb83256fcf6e7b4add00a71aed96b91d5f8f6169800e` | 71,998 |
+| `24-04` (03/20/2024) | https://assets.ctfassets.net/k3n74unfin40/3mCWZ94h0Md4NUTgwUIGyd/bacf10959ef4a75deb51a9e492f4f3c9/Market_Notice_24-04.pdf | live | 2026-09-19 02:02–02:45 | `c03e8e5bef2d017bd3b71d63077b5324e059db0c742e3975824f4925c8bd6041` | 75,870 |
+| `24-09` (05/13/2024) | https://assets.ctfassets.net/k3n74unfin40/1DNtOMWU6jTujck9FuQvW2/d7389961e4a1d0225cb3616a6956d264/Market_Notice_24-09__Memorial_Day.pdf | live | 2026-09-19 02:02–02:45 | `f3547bfed329242b5939836dc4b992aac79ff6309f94bd989ab7809799f7331b` | 74,208 |
+| `24-12` (06/05/2024) | https://assets.ctfassets.net/k3n74unfin40/3qWRHv5qyUppIBwZXGdAAs/108f4e2cb2379887811a5a9dbdbb59ab/Market_Notice_24-12__Juneteenth.pdf | live | 2026-09-19 02:02–02:45 | `fe2a89a8a4aae9372f0d4fd410a62f345d43bfb630abfe931c51b6c858674b20` | 77,019 |
+| `24-13` (06/20/2024) | https://assets.ctfassets.net/k3n74unfin40/mBPAEFh6TJB3oEtUjI70F/65936d9de4dd1255965c70b3330a49a4/Market_Notice_24-13__Independence_Day.pdf | live | 2026-09-19 02:02–02:45 | `abf2c18aecc0e8ed381c8579e730f6d9d63255e9dff0db695719303f5d3ee002` | 75,668 |
+| `24-16` (08/19/2024) | https://assets.ctfassets.net/k3n74unfin40/7gKjRY61IbchrmbIkFUWUG/935416c088fe48f01845b56d6615bdd9/Market_Notice_24-16__Labor_Day.pdf | live | 2026-09-19 02:02–02:45 | `0b39ec30c81ce2eeecb7d387850d354eca6d17b1db548a8c19a2e6845b414e44` | 73,213 |
+| `24-21` (11/13/2024) | https://assets.ctfassets.net/k3n74unfin40/5LqbVzBHS4xEypz6J5M4s4/0b107fb67289db11819d88acdb420421/Market_Notice_24-21_Thanksgiving.pdf | live | 2026-09-19 02:02–02:45 | `4cecb30797437bc88ecdab2e92c271093c38096d77ce83b7f56cfa3db42e61ff` | 89,271 |
+| `24-23` (12/11/2024) | https://assets.ctfassets.net/k3n74unfin40/4M0jGaNd1zO9eeamF3LLyg/01bdbe21710c7cf6283447107337e02f/Market_Notice_24-23_Christmas.pdf | live | 2026-09-19 02:02–02:45 | `afe928a517ff00149b5281a794c28eb740d6bbd3b044c4dc77ff605918cce4c2` | 94,752 |
+| `24-25` (12/20/2024) | https://assets.ctfassets.net/k3n74unfin40/2vlwxnd4tklT8Nk5wkZ0M9/5a38c34116702fa7e691fdcfcbe6d989/Market_Notice_24-25_New_Years_Day.pdf | live | 2026-09-19 02:02–02:45 | `41b602c904f69adbea9ec6c30074938b87de9a431b9110285c4d28af761c474a` | 88,277 |
+| `24-26` (12/24/2024) | https://assets.ctfassets.net/k3n74unfin40/9OQS9VAhJ2ivUiXjnNM4J/d817c78546bcda19b3daa6163d39e73e/Market_Notice_24-26_Early_Close_on_Dec-24.pdf | live | 2026-09-19 02:02–02:45 | `cc365da86ef0af2ce43819208b7c3daff26f070319ca777d0cd71d6c8f66a355` | 69,783 |
+| `24-27` (12/31/2024) | https://assets.ctfassets.net/k3n74unfin40/6bdOsBLIXmHyAM5HcQs6ep/56d02a0085be8b8da4696bc655e83fd3/Market_Notice_24-27_U.S._National_Day_of_Mourning.pdf | live | 2026-09-19 02:02–02:45 | `7cadc40b10df7ab2eece838b9d45536a2eef7bebe3d56cb29070d079d0dcd809` | 70,108 |
+| `25-01` (01/09/2025) | https://assets.ctfassets.net/k3n74unfin40/1CkT7Lv5cA2G7jN6b3TGxK/9b21090199763c2c81c5726f76ec4b87/Market_Notice_25-01__MLK.pdf | live | 2026-09-19 02:02–02:45 | `6250247db03bc5c595a894bf60d2e1e931ce5dde5add6205ffd5fa70a08cd507` | 122,031 |
+| `25-03` (02/04/2025) | https://assets.ctfassets.net/k3n74unfin40/HRCLVTq5c3Aymj34wr885/434e11816f4537e6de3b384cd51637c8/Market_Notice_25-03__Presidents-_Day.pdf | live | 2026-09-19 02:02–02:45 | `ee52b39083b6ea106efa5785053ff0143adab94232f157d5e1bc7c118b077080` | 121,483 |
+| `25-15` (04/07/2025) | https://assets.ctfassets.net/k3n74unfin40/52cGUHIs2GVIWyBF2aDrfF/83161f6ad1317cca4f1be654151d40de/25-15__Good_Friday.pdf | live | 2026-09-19 02:02–02:45 | `a2cd1b6dc73761ac357b4f3f6cca2166396652ee67ca5c65c628f3801f68e8aa` | 125,734 |
+| `25-18` (05/13/2025) | https://assets.ctfassets.net/k3n74unfin40/2fPRQKeU5nkKOvK26l8Asc/2a7af5c5893a58a2f3013065a54a3572/Market_Notice_25-18__Memorial_Day.pdf | live | 2026-09-19 02:02–02:45 | `da63c79eb196850a5e09c034dc6716507dfceb6d1f27af13206727b19ce3325b` | 152,430 |
+| `25-20` (06/05/2025) | https://assets.ctfassets.net/k3n74unfin40/2kXyopqCU858pWtLcDjuWJ/6e42751bff50238b748ff7bb9a7286d4/Market_Notice_25-20__Juneteenth.pdf | live | 2026-09-19 02:02–02:45 | `83a2ede3216fc304bbdd4766982b0c609864cd288ba69d496ca0db3caad94fff` | 133,455 |
+| `25-21` (06/25/2025) | https://assets.ctfassets.net/k3n74unfin40/2kaf1nLCbdKjY27wP3alhw/130dc3c520c16d33d5180f64b928854f/Market_Notice_25-21__Independence_Day_Holiday.pdf | live | 2026-09-19 02:02–02:45 | `6dcb0d5224654bee8f90849c424c5dde88b1ab5c6cffc932a7082924e614b364` | 141,782 |
+| `25-29` (08/19/2025) | https://assets.ctfassets.net/k3n74unfin40/7ojwVPGtodkdB4iZANQFKu/5c72b3329776b53973cb00d115eb2f58/CDE_Market_Notice_25-29_Labor_Day_Holiday.pdf | live | 2026-09-19 02:02–02:45 | `9fc3dd980675d0fadfa44502f054bb58dacc7450a8f61f4a0efd60647688d219` | 146,475 |
+| `25-37` (10/30/2025) | https://assets.ctfassets.net/k3n74unfin40/6ZRvjcwtmiDg4i46Dl35SP/527990b1872111261a81a77bc2f18377/Market_Notice_25-37__Thanksgiving_Schedule.pdf | live | 2026-09-19 02:02–02:45 | `3826ec0405ed0398ed31cb2523b7dc9d315f6443bdcd3454af97d602c61a46c7` | 147,648 |
+| `25-41` (11/25/2025) | https://assets.ctfassets.net/k3n74unfin40/1Dh6mmmzrARNnjQcFy5lob/ce2f407a6c1d9291cf204b1b65e3a35c/Market_Notice_25-41__Christmas.pdf | live | 2026-09-19 02:02–02:45 | `d8097f3af89a2702fc2f97f46bba8185e92eb4c4630a9ae066020979033b56d9` | 162,442 |
+| `25-42` (11/25/2025) | https://assets.ctfassets.net/k3n74unfin40/46Q4yxPzeFtSLYsDm4hz6C/f586118d66500c05dddcacceac04be97/Market_Notice_25-42_New_Years_Day.pdf | live | 2026-09-19 02:02–02:45 | `ac81272ecfc006a634cf855723f8a6d6875476555427d8612d90761172c12b0e` | 145,403 |
+| `26-01` (01/08/2026) | https://images.ctfassets.net/k3n74unfin40/jJEoZRkAZ0JlPC3UcJ2CL/d71ac89c5cd10783b9a7e11f449d1424/Market_Notice_26-01_MLK_Holiday.pdf | live | 2026-09-19 02:02–02:45 | `d4b206391f70a015002af78c04c46bdce0ed08f87005b5b8e383cc7c5cd01f38` | 138,529 |
+| `26-05` (02/02/2026) | https://assets.ctfassets.net/k3n74unfin40/46lI9u5Ahz4bX22aj4H29u/025010e407b86208a1442f4c6967f2a6/Market_Notice_26-05_Presidents-_Day_Holiday.pdf | live | 2026-09-19 02:02–02:45 | `9cc8ffb0b88a2a007d31243cd27ffc5c696585ddba8ec06ca562e63c1a448c34` | 100,846 |
+| `26-12` (03/19/2026) | https://assets.ctfassets.net/k3n74unfin40/6DezMFxYrU5eD4x51kbfEv/914143ffbf3349e88befe96d5c2e35cc/CDE_Market_Notice_26-12_Good_Friday_Holiday.pdf | live | 2026-09-19 02:02–02:45 | `3226ba73e92d91f252e8c163d49f9b329567c77f701dfba6a7f85413a25de150` | 102,489 |
+| `26-23` (05/15/2026) | https://assets.ctfassets.net/k3n74unfin40/6NUx3bRH0pdR2mSYCSW0pD/9cb91cc5b9165e39079e17fac0a03f8f/CDE_Market_Notice_26-23_2026_Memorial_Day.pdf | live | 2026-09-19 02:02–02:45 | `b41bc8ee48084084fe5dbe8ac77be1f98688fad1b4b5a134d4fa6cd79f5c0869` | 102,109 |
+| `26-27` (06/10/2026) | https://assets.ctfassets.net/k3n74unfin40/sISYGuk6L7FuXllMBlsIY/1d17b56138c2b6907e4cd02d07f7239b/CDE_Market_Notice_26-27_2026_Juneteenth_Schedule.pdf | live | 2026-09-19 02:02–02:45 | `e13cb644cebef3c851e83c14132860c8b6abc9b026a0dd23b36c5b55ae072b79` | 110,349 |
+| `26-27.1` (06/15/2026) | https://assets.ctfassets.net/k3n74unfin40/4Vy8yQyOCHG8dWW20SjNTU/033e076b88302e28249198bd72b518b5/CDE_Market_Notice_26-27.1_Amendment_to_26.27_2026_Juneteenth_Schedule_for_Gold_Silver_24x7.pdf | live | 2026-09-19 02:02–02:45 | `c141366e2f50eeacfd26def14e0ad6a9de448b0f319d79a5007933769881c10f` | 117,834 |
+| `26-29` (06/24/2026) | https://assets.ctfassets.net/k3n74unfin40/70J0u2Lv7TOspmrGMI30QI/95ee852baac3d551aabe41acb334837d/CDE_Market_Notice_26-29__2026_Independence_Day_Schedule.pdf | live | 2026-09-19 02:02–02:45 | `481e0f35da824519f4046129cc66142ae004b90fe19b2749b2073f8b89dea736` | 111,314 |
+| `26-36` (08/25/2026) | https://assets.ctfassets.net/k3n74unfin40/3QC7hwlE6hRHicbNapLlWn/e36b89318d9dbcfc17c931f70912e4c4/Market_Notice_26-36__2026_Labor_Day.pdf | live | 2026-09-19 02:02–02:45 | `c21dc783a6e6c560540126a30572e932654d8531f4e7225f0b3221514116616d` | 110,295 |
+| `23-13` ((no posted date)) | https://assets.ctfassets.net/k3n74unfin40/1bYBIHxporz5fEvaUrQbRq/cf93dfb37ea24423a38242035643fb6b/Market_Notice_23-13.pdf | live | 2026-09-19 02:02–02:45 | `e6ee3bde85e13c35c8a117219820d672ad18aa969baa839d37ecaa67115a4f6b` | 72,731 |
+
+`fetch_results.json`, `provenance.json` and `cde_notices_index.json` are the machine-readable
+records; `txt/` holds the `pdftotext -layout` dump each verbatim is read from (the dumps are
+whitespace-wrapped, so quotes in the block are compared after collapsing whitespace runs).
+
+## Unretrieved
+
+- **22-10** (2022 Thanksgiving). Listed by the operator at T1; its href points at
+  `info.fairx.com/coinbase-derivatives-market-notice-22-10-thanksgiving-holiday-schedule-2022`,
+  where the host no longer completes a TLS handshake and the Wayback Machine holds no capture.
+  Trade dates 2022-11-24 and 2022-11-25 therefore ship `Unsourced`.

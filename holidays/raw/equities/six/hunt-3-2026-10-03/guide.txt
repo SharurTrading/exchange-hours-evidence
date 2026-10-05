@@ -1,0 +1,7379 @@
+Trading Guide
+of 28 May 2018
+
+Start of Business Day
+
+08:00
+
+Start of Clearing Day
+
+08:30
+
+Opening
+
+08:55
+
+Start of Trading
+
+Trading
+Period
+
+06:00
+
+Segments
+
+Pre-Opening
+
+Description
+
+Bonds - CHF Swiss Confederation
+Bonds - CHF Swiss Pfandbriefe
+Bonds - Non CHF
+SIX Swiss Exchange Liquidnet Service (SLS)
+(AT Market)
+Blue Chip Shares
+Mid-/Small-Cap Shares
+Secondary Listing Shares
+Sponsored Foreign Shares
+Separate Trading Lines
+Investment Funds
+
+Exchange Traded Funds (ETF)
+Exchange Traded Funds (ETF) on Bonds of the
+Swiss Confederation
+Exchange Traded Structured Funds (ETSF)
+Exchange Traded Products (ETP)
+
+Opening
+
+09:00
+
+Start of Trading
+
+SIX Swiss Exchange Liquidnet Service (SLS) - (CH, BE, DE, FR, NL, PT, UK, DK, NO, FI,
+SE Markets)
+SIX Swiss Exchange at Midpoint (SwissAtMid)
+
+09:05
+
+Start of Trading
+
+SIX Swiss Exchange Liquidnet Service (SLS)
+(IT Market)
+
+09:15
+
+Opening
+
+Sponsored Funds
+Structured Products
+Warrants on Bonds of the Swiss Confederation
+Rights and Options
+
+09:30
+
+Opening
+
+Bonds - CHF
+
+16:20
+
+End of Trading
+
+SIX Swiss Exchange Liquidnet Service (SLS)
+(NO Market)
+
+16:55
+
+End of Trading
+
+SIX Swiss Exchange Liquidnet Service (SLS)
+(DK Market)
+
+17:00
+
+End of Trading
+
+Bonds - CHF Swiss Confederation
+Bonds - CHF Swiss Pfandbriefe
+Bonds - Non CHF
+Bonds - CHF
+Warrants on Bonds of the Swiss Confederation
+Exchange Traded Funds (ETF) on Bonds of the Swiss Confederation
+
+17:15
+
+End of Trading
+
+Structured Products
+Rights and Options
+
+17:20
+
+Start of Closing Auction
+
+17:20
+
+End of Trading
+
+SIX Swiss Exchange Liquidnet Service (SLS) - (CH Market)
+SIX Swiss Exchange at Midpoint (SwissAtMid)
+
+17:25
+
+End of Trading
+
+SIX Swiss Exchange Liquidnet Service (SLS)
+(FI, SE Markets)
+
+17:30
+
+Run Auction and Close
+
+17:30
+
+17:30
+
+Blue Chip Shares
+Mid-/Small-Cap Shares
+Secondary Listing Shares
+
+Sponsored Foreign Shares
+Separate Trading Lines
+Investment Funds
+
+Blue Chip Shares
+Mid-/Small-Cap Shares
+Secondary Listing Shares
+
+Sponsored Foreign Shares
+Separate Trading Lines
+Investment Funds
+
+End of Trading
+
+Exchange Traded Funds (ETF)
+Exchange Traded Structured Funds
+(ETSF)
+
+Exchange Traded Products (ETP)
+Sponsored Funds
+
+End of Trading
+
+SIX Swiss Exchange Liquidnet Service (SLS)
+(AT, BE, DE, FR, NL, PT, UK, IT Markets)
+
+18:15
+
+End of Clearing Day
+
+22:00
+
+End of Business Day
+
+End of Trading
+
+Continuous
+Trading
+
+09:00
+
+Opening
+
+Time
+(CET)
+
+Valid as of 02 May 2017
+
+PostTrading
+
+Trading Day
+
+Clearing Day
+
+Business Day
+
+Business Day Overview
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Market Model and Order Validity Overview
+Order Book Attributes
+
+Displayed Order Book Trading (SWX)
+
+(Routing Instructions)
+On Book Matcher - Partition
+
+OBM Partition 1
+Order Driven Market
+
+Market Model and Matching Rules
+
+OBM Partition 2
+Order Driven Market
+Quote Driven Market (QDM)
+Central Limit Order book (CLOB)
+
+CLOB
+
+QDM Orderbook
+
+Yes
+
+Yes
+
+Yes
+
+Bonds – CHF
+Bonds - CHF Swiss Confederation
+Bonds - CHF Swiss Pfandbriefe
+
+Warrants
+Structured Products
+Bonds – non CHF
+ETF
+ETP
+ETSF
+Sponsored Foreign Shares
+Sponsored Funds
+
+Pre-Trade Transparency
+Trading Segments
+
+Blue Chips
+Mid-/Small Caps
+Secondary Listing Shares
+Investment Funds
+Rights and Options
+Separate Trading Lines
+
+Trading Interruptions
+
+Deviation from the Reference Price
+Delay Opening
+Stop Trading
+Avalanche
+Non-executable market orders
+Non-Opening
+Underlying not trading
+Underlying Condition
+
+Blue Chips
+Mid-/Small Caps
+Secondary Listing Shares
+
+Executable orders without quotes in the orderbook
+Delay Opening
+Stop Trading
+Non-executable market orders
+Non-Opening
+Underlying not trading
+Underlying Condition
+
+Order Type
+
+Normal
+
+Iceberg
+
+Normal
+
+Price Limit
+
+Market or Limit
+
+Limit
+
+Market or Limit
+
+Good-for-Day
+
+X
+
+X
+
+X
+
+Immediate or Cancel
+
+X
+
+Fill or Kill
+
+X
+
+At the Opening
+
+X
+
+X
+
+At the Close
+
+X
+(NOT Rights and Options)
+
+X
+
+Good-till-Date
+
+X
+
+X
+
+X
+
+Good-for-Day
+
+X
+
+X
+
+X
+
+Immediate or Cancel
+
+X
+
+Fill or Kill
+
+X
+
+At the Opening
+
+X
+
+X
+
+At the Close
+
+X
+(NOT Rights and Options)
+
+X
+
+Standard
+Trading
+Interface
+(STI)
+
+OUCH
+Trading
+Interface
+(OTI)
+
+X
+X
+X
+
+X
+X
+X
+
+Good-till-Date
+
+QTI
+
+Good-for-Business
+
+X
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Market Model and Order Validity Overview
+Order Book Attributes
+
+SwissAtMid (SWM)
+
+Sweep (SWMX)*
+
+Plus (SWMB)**
+
+Liquidnet Service (LN)
+
+(Routing Instructions)
+On Book Matcher - Partition
+
+OBM Partition 1
+Order Driven Market
+
+OBM Partition 1
+Order Driven Market
+
+OBM Partition 1
+Order Driven Market
+
+SLS Liquidnet Platform
+
+Market Model and Matching Rules
+
+Mid-Point Order Book (MPOB)
+
+MPOB then CLOB
+
+MPOB and CLOB simultaneously
+
+Matching at Midpoint of primary market
+
+Pre-Trade Transparency
+
+No
+
+MPOB: No CLOB: Yes
+
+MPOB: No CLOB: Yes
+
+Trading Segments
+
+Blue Chips
+Mid-/Small Caps
+
+Blue Chips
+Mid-/Small Caps
+
+Blue Chips
+Mid-/Small Caps
+
+Trading Interruptions
+
+No mid-point price in CLOB
+MPOB Stop Trading
+
+CLOB
+Deviation from the Reference Price: Delay Opening, Stop Trading, Avalanche
+Non-executable market orders: Non-Opening
+Underlying not trading: Underlying Condition
+MPOB
+No mid-point price in CLOB
+MPOB Stop Trading
+Security not tradeable in CLOB:
+Primary Condition
+Deviation between MPOB price and CLOB Price:
+MPOB Stop Trading
+
+Security not tradeable in CLOB:
+Primary Condition
+Deviation between MPOB price and CLOB Price:
+MPOB Stop Trading
+
+OTE-SLS-AT
+OTE-SLS-BE
+OTE-SLS-CHF OTE-SLS-DE
+OTE-SLS-DK
+OTE-SLS-FI
+OTE-SLS-FR
+OTE-SLS-IT
+OTE-SLS-NL
+OTE-SLS-NO
+OTE-SLS-PT
+OTE-SLS-SE
+OTE-SLS-UK
+Security not tradeable in reference market:
+Primary Condition
+International Shares Double Volume Cap:
+6 month suspension on trading venue if 4%
+cap is breached.
+6 Month suspension on overall trading
+across the EU if 8% cap is breached
+
+Order Type
+
+Normal
+
+Normal
+
+Price Limit
+
+Market or Limit
+
+Market or Limit
+
+Limit
+
+Market or Limit
+
+Good-for-Day
+
+X
+
+X
+
+X
+
+X
+
+Immediate or Cancel
+
+X
+
+X
+
+Fill or Kill
+
+X
+
+X
+
+X
+
+X
+X
+
+X
+
+Standard
+Trading
+Interface
+(STI)
+
+Normal
+
+Iceberg
+
+Normal
+
+At the Opening
+At the Close
+Good-till-Date
+
+OUCH
+Trading
+Interface
+(OTI)
+
+Good-for-Day
+
+X
+
+Immediate or Cancel
+
+X
+
+Fill or Kill
+
+X
+
+At the Opening
+At the Close
+Good-till-Date
+
+QTI
+
+Good-for-Business
+
+* If the order book without pre-trade transparency is not activated for a given trading segment or while the order book is not in continuous trading, orders with Routing Instruction "SWMX" are forwarded directly to the Central Limit Order Book (CLOB) or
+to the Quote Driven Market order book.
+** If the order book without pre-trade transparency is not activated for a given trading segment, orders with Routing Instruction "SWMB" will be directly routed to the CLOB as normal limit or normal Iceberg (where Iceberg is allowed).
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Trading Period Overview
+Pre-Opening
+
+Valid as of 07 April 2014
+
+Opening
+
+Continuous Trading
+Without Closing Auction
+
+Duration
+
+06:00 CET until Opening
+
+OTI Orders
+
+Order Entry
+
+STI Orders
+
+Random Time
+
+STI Orders
+
+Opening until End of Trading
+
+not applicable
+
+10 Minutes
+
+Post Trading
+End of Trading until 22:00 CET
+
+not applicable
+
+2 Minutes
+
+not applicable
+
+None
+
+2 Minutes at Run Auction and Close
+
+not applicable
+
+Good-for-Day
+
+Yes
+
+No
+
+Yes
+
+No
+
+Yes
+
+No
+
+Immediate or Cancel
+
+No
+
+No
+
+Yes
+
+No
+
+No
+
+No
+
+Fill or Kill
+
+No
+
+No
+
+Yes
+
+No
+
+No
+
+No
+
+At the Opening
+
+Yes
+
+No
+
+No
+
+No
+
+No
+
+No
+
+At the Close
+
+Yes
+
+No
+
+Yes
+
+No
+
+Yes
+
+No
+
+Good-till-Date
+
+Yes
+
+No
+
+Yes
+
+No
+
+Yes
+
+Yes
+
+Day
+
+Yes
+
+No
+
+Yes
+
+No
+
+Yes
+
+No
+
+Immediate or Cancel
+
+No
+
+No
+
+Yes
+
+No
+
+No
+
+No
+
+Fill or Kill
+
+No
+
+No
+
+Yes
+
+No
+
+No
+
+No
+
+At the Opening
+
+Yes
+
+No
+
+No
+
+No
+
+No
+
+No
+
+At the Close
+
+Yes
+
+No
+
+Yes
+
+No
+
+Yes
+
+No
+
+QTI Quotes
+
+Yes
+
+No
+
+Yes
+
+No
+
+Yes
+
+Yes
+
+Good-for-Day
+
+Yes
+
+No
+
+Yes
+
+No
+
+Yes, expiry after End of Trading
+
+No
+
+Immediate or Cancel
+
+No
+
+No
+
+Deletion if no execution
+
+No
+
+No
+
+No
+
+Fill or Kill
+
+No
+
+No
+
+Deletion if no execution
+
+No
+
+No
+
+No
+
+At the Opening
+
+Yes
+
+Expiry if not executed in Opening
+
+No
+
+No
+
+No
+
+No
+No
+
+At the Close
+
+Yes
+
+No
+
+Yes
+
+No
+
+Yes, expiry if not executed in
+Auction
+
+Good-till-Date
+
+Yes
+
+No
+
+Yes
+
+No
+
+Yes
+
+Yes
+
+Good-for-Day
+
+Yes
+
+No
+
+Yes
+
+No
+
+Yes, expiry after End of Trading
+
+No
+
+Immediate or Cancel
+
+No
+
+No
+
+Deletion if no execution
+
+No
+
+No
+
+No
+
+Fill or Kill
+
+No
+
+No
+
+Deletion if no execution
+
+No
+
+No
+
+No
+
+At the Opening
+
+Yes
+
+Expiry if not executed in Opening
+
+No
+
+No
+
+No
+
+No
+
+At the Close
+
+Yes
+
+No
+
+Yes
+
+No
+
+Yes, expiry if not executed in
+Auction
+
+No
+
+QTI Quotes
+
+Yes
+
+No
+
+Yes
+
+No
+
+Yes
+
+Yes, Quotes deleted at End of
+Business
+
+Executions
+
+None
+
+Executions according to largest
+best execution principle
+
+Continuous execution of orders
+and quotes
+
+None
+
+During Closing Auction: No
+At Run Auction and Close:
+Executions according to largest best
+execution principle.
+
+None
+
+Price Calculation
+
+Theoretical Opening Price
+
+Opening Price
+
+Reference Price
+
+Closing Price
+
+Closing Price
+
+None
+
+OTI Orders
+
+Order Deletion & Expiry
+
+not applicable
+
+End of Trading
+With Closing Auction
+
+Exceptional Order Book
+Situations
+
+None
+
+Delay Opening; Non Opening
+
+Off Order Book Reporting
+
+Yes, duty to trade on order
+book does not apply.
+
+Yes, duty to trade on order book
+may apply
+
+Stop Trading; Non Opening;
+Underlying Condition
+Yes, duty to trade on order
+book may apply
+
+None
+
+Non Opening
+
+None
+
+Yes, duty to trade on order
+book may apply
+
+Yes, duty to trade on order book
+may apply
+
+Yes, duty to trade on order book
+may apply
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Product Guide – Equity Market
+
+Valid as of 28 May 2018
+
+Mid-/Small-Cap Shares
+
+Secondary Listing Shares
+
+SIX Swiss Exchange
+
+SIX Swiss Exchange
+
+SIX Swiss Exchange
+
+Regulatory Standard
+
+International Reporting Standard
+
+International Reporting Standard, Swiss Reporting Standard,
+Standard for Investment Companies, Standard for Real Estate
+Companies, Standard for Depository Receipts
+
+International Reporting Standard
+
+Market Model
+
+Central Limit Order Book (CLOB)
+
+Central Limit Order Book (CLOB)
+
+Central Limit Order Book (CLOB)
+
+Order Types
+
+Normal and Iceberg Orders, Limit Plus and Iceberg Plus Orders
+
+Normal and Iceberg Orders, Limit Plus and Iceberg Plus Orders
+
+Normal and Iceberg Orders
+
+Self-Match Prevention
+
+Yes
+
+Yes
+
+No
+
+Order Book Depth
+
+30
+
+10
+
+10
+
+Trading Hours
+
+09:00 - 17:30 CET
+
+09:00 - 17:30 CET
+
+09:00 - 17:30 CET
+
+Continuous Trading
+
+09:00 - 17:20 CET
+
+09:00 - 17:20 CET
+
+09:00 - 17:20 CET
+
+Closing Auction
+
+17:20 - 17:30 CET
+
+17:20 - 17:30 CET
+
+Randomised Opening
+
+2 Minutes
+
+09:00 - 09:02 CET
+
+2 Minutes
+
+09:00 - 09:02 CET
+
+2 Minutes
+
+09:00 - 09:02 CET
+
+Randomised Closing
+
+2 Minutes
+
+17:30 - 17:32 CET
+
+2 Minutes
+
+17:30 - 17:32 CET
+
+2 Minutes
+
+17:30 - 17:32 CET
+
+Trading Hours
+
+Blue Chip Shares
+Exchange
+
+Price Collar
+Maximum Order Value
+
+17:20 - 17:30 CET
+
+9
+CHF 100'000'000 or the equivalent amount in foreign trading
+currency
+CHF 10'000
+
+9
+CHF 10'000'000 or the equivalent amount in foreign trading currency
+
+9
+CHF 10'000'000 or the equivalent amount in foreign trading currency
+
+CHF 10'000
+
+CHF 10'000
+
+Round Lot
+
+A standard round lot is equivalent to the smallest tradeable
+denomination
+
+A standard round lot is equivalent to the smallest tradeable
+denomination
+
+A standard round lot is equivalent to the smallest tradeable
+denomination
+
+Price Increments
+Price Steps
+
+Please refer to Tick Size MiFIDII Tick Size Table in the Tick Size
+page of this Trading Guide
+
+Please refer to Tick Size MiFIDII Tick Size Table in the Tick Size
+page of this Trading Guide
+Interruption of 15 mins., if potential follow up price deviates by 2.00%
+or more from the reference price
+SMIM Securities: Interruption of 5 mins., if potential follow up price
+deviates by 2.00 % or more from the reference price
+Volatile Securities**: Interruption of 5 mins., if potential follow up
+price deviates by 10% or more from the reference price
+
+Please refer to Tick Size MiFIDII Tick Size Table in the Tick Size
+page of this Trading Guide
+Interruption of 5 mins., if potential follow up price deviates by 2.00%
+or more from the reference price.
+Volatile Securities**: Interruption of 5 mins., if potential follow up
+price deviates by 10% or more from the reference price
+
+Clearing & Off Order Book
+Settlement
+
+Trading Interruptions
+
+Minimum Iceberg Order Value
+
+Stop Trading in
+Opening
+Stop Trading
+Continuous Trading
+
+No Stop Trading
+
+Avalanche
+Stop Trading
+
+Interruption if potential follow-up price deviates by more than the
+Stop Trading Range from the reference price within a 10 second
+period. Benchmark for Avalanche equal to Stop Trading
+Continuous Trading.
+
+Interruption if potential follow-up price deviates by more than the Stop
+Trading Range from the reference price within a 10 second period.
+Benchmark for Avalanche equal to Stop Trading Continuous Trading.
+
+Interruption if potential follow-up price deviates by more than the Stop
+Trading Range from the reference price within a 10 second period.
+Benchmark for Avalanche equal to Stop Trading Continuous Trading.
+
+Non Opening
+
+Yes
+
+Yes
+
+Yes
+
+Underlying Condition
+
+No
+
+No
+
+No
+
+Duty to trade on order
+book
+Reporting duty
+
+None
+
+< CHF 200'000
+
+None
+
+Yes
+
+Yes
+
+Yes
+
+Reporting Time
+
+1 minute
+
+1 minute
+
+1 minute
+
+Publication
+
+Deferred publication on request for trade reporting based on
+ADT Delay
+
+Deferred publication on request for trade reporting based on ADT
+Delay
+
+Deferred publication on request for trade reporting based on ADT
+Delay
+
+C&S Segment Code
+
+BCCS - Shares Blue Chips (cleared by all CCPs)
+
+MSCS - Mid-/Small Caps (cleared by all CCPs)
+
+SHNC - Shares and Funds (not cleared)
+
+Settlement Cycle
+
+T+2
+
+T+2
+
+T+2
+
+Settlement Eligible
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+No
+
+Yes
+Yes
+
+No
+Yes
+
+*
+
+*
+
+Clearing Eligible
+Counterparty Disclosure
+Appendix
+
+Interruption of 5 mins., if potential follow up price deviates by
+1.50% or more from the reference price
+
+* Substantial price movements in a security will possibly cause a change in the stop trading category. SIX Swiss Exchange will inform all participants of changes via a SIX Swiss Exchange Message.
+** Securities with a reference price smaller than CHF 10.00 respectively 10%
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Product Guide – Equity Market
+Valid as of 01 January 2018
+
+Sponsored Foreign Shares
+
+Separate Trading Lines
+
+Rights and Options
+
+Exchange
+
+SIX Swiss Exchange
+
+SIX Swiss Exchange
+
+SIX Swiss Exchange
+
+Regulatory Standard
+
+SIX Swiss Exchange Sponsored Segment
+
+International Reporting Standard, Swiss Reporting
+Standard,Standard for Investment Companies
+
+Standard for Derivatives
+
+Market Model
+
+Quote Driven Market (QDM)
+
+Central Limit Order Book (CLOB)
+
+Central Limit Order Book (CLOB)
+
+Order Types
+
+Normal Orders and Quotes
+
+Normal Orders
+
+Normal Orders
+
+Self-Match Prevention
+
+No
+
+No
+
+No
+
+Order Book Depth
+
+10
+
+10
+
+09:00 - 17:30 CET
+
+09:00 - 17:30 CET
+
+Continuous Trading
+
+09:00 - 17:20 CET
+
+09:00 - 17:20 CET
+
+09:15-17:15 CET
+09:15-17:15 CET
+
+Closing Auction
+
+17:20 - 17:30 CET
+
+17:20 - 17:30 CET
+
+Randomised Opening
+
+2 Minutes 09:00 - 09:02 CET
+
+2 Minutes
+
+09:00 - 09:02 CET
+
+2 Minutes
+
+Randomised Closing
+
+2 Minutes 17:30 - 17:32 CET
+
+2 Minutes
+
+17:30 - 17:32 CET
+
+None
+
+Price Collar
+Maximum Order Value
+
+9
+CHF 10'000'000 or the equivalent amount in foreign trading
+currency
+
+9
+CHF 10'000'000 or the equivalent amount in foreign trading currency
+
+99
+CHF 10'000'000 or the equivalent amount in foreign trading
+currency
+
+Minimum Iceberg Order Value
+
+n/a
+
+n/a
+
+n/a
+
+Round Lot
+
+A standard round lot is equivalent to the smallest tradeable
+denomination
+Please refer to Tick Size MiFIDII Tick Size Table in the Tick
+Size page of this Trading Guide
+Interruption for a 5 minutes period if a trade between orders
+can be executed but no quote is in the order book. The stop
+trading duration can be interrupted as soon as quotes are
+posted.
+
+A standard round lot is equivalent to the smallest tradeable
+denomination
+Tick Size of the primary share line is applied
+
+A standard round lot is equivalent to the smallest tradeable
+denomination
+0.01 independent of market price
+
+No Stop Trading
+
+No Stop Trading
+
+No Stop Trading
+
+No Stop Trading
+
+Avalanche
+Stop Trading
+
+No Stop Trading
+
+No Stop Trading
+
+No Stop Trading
+
+Non Opening
+Underlying Condition
+
+Yes
+No
+
+Yes
+Interruption if underlying is in stop trading.
+
+Yes
+Interruption if underlying is in stop trading
+
+Duty to trade on order book
+Reporting duty
+
+None
+Yes
+
+None
+Yes
+
+Reporting Time
+Publication
+
+1 minute
+
+None
+Public tender offer: Yes
+Share buyback: Off order book is not allowed
+Public tender offer: 1 minute
+Public Tender Offer: Deferred publication on request for trading
+reporting based on ADT Delay
+SHMA - Shares and Funds (manual)
+SHNC - Shares and Funds (not cleared)
+T+2
+SHMA: No SHNC: Yes
+SHMA: No SHNC: No
+
+Immediate Publication
+
+Yes
+
+Yes
+
+Trading Hours
+
+5
+
+Trading Hours
+
+Clearing &
+Settlement
+
+Order Book
+
+Trading Interruptions
+
+Price Increments
+Price Steps
+Stop Trading in Opening
+Stop Trading
+Continuous Trading
+
+C&S Segment Code
+Settlement Cycle
+Settlement Eligible
+
+Clearing Eligible
+Counterparty Disclosure
+Appendix
+
+Deferred publication on request for trade reporting based on
+ADT Delay
+SSNC - Sponsored Shares (not cleared)
+T+2
+Yes
+No
+Yes
+*
+
+None
+09:15 - 09:17 CET
+
+1 minute
+
+RONC – Rights and Options (not cleared)
+1st Trading Day: T+2, as of 2nd Trading Day: T+1
+Yes
+No
+
+* Substantial price movements in a security will possibly cause a change in the stop trading category. SIX Swiss Exchange will inform all participants of changes via a SIX Swiss Exchange Message.
+** Securities with a reference price smaller than CHF 10.00 respectively 10%
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Product Guide – Bond Market
+Bonds – CHF Swiss Confederation
+SIX Swiss Exchange
+
+Bonds – CHF Swiss Pfandbriefe
+SIX Swiss Exchange
+
+Bonds – CHF
+SIX Swiss Exchange
+
+Standard for Bonds
+Central Limit Order Book (CLOB)
+Normal Orders and Quotes
+No
+5
+08:30 - 17:00 CET
+08:30 - 17:00 CET
+
+Standard for Bonds
+Central Limit Order Book (CLOB)
+Normal Orders and Quotes
+No
+5
+08:30 - 17:00 CET
+08:30 - 17:00 CET
+
+Standard for Bonds, Delisted Bonds: admitted to trading
+Central Limit Order Book (CLOB)
+Normal Orders and Quotes
+No
+5
+09:30 - 17:00 CET
+09:30 - 17:00 CET
+
+None
+2 Minutes 08:30 - 08:32 CET
+None
+
+None
+2 Minutes 08:30 - 08:32 CET
+None
+
+None
+2 Minutes 09:30 - 09:32 CET
+None
+
+9
+CHF 50’000’000
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+0.01% independent of market price
+
+9
+CHF 50’000’000
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+0.01% independent of market price
+
+Interruption of 15 min., if potential follow up price deviates by
+1.00% or more from the reference price. Bonds CHF with
+Maturity > 15 years: Interruption of 15min., if potential follow up
+price deviates by 3.00% or more from the reference price
+
+Interruption of 15 min., if potential follow up price deviates by 1.00%
+or more from the reference price. Bonds CHF with Maturity > 15
+years: Interruption of 15min., if potential follow up price deviates by
+3.00% or more from the reference price
+
+9
+CHF 50’000’000
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+Maturity >= 18 month 0.05% independent of market price***
+Maturity < 18 month 0.01% independent of market price
+Interruption of 15 min., if potential follow up price deviates by 2.00%
+or more from the reference price. Bonds CHF with Maturity > 15
+years: Interruption of 15 min., if potential follow up price deviates by
+3.00% or more from the reference price. Volatile Securities and
+Delisted Bonds**: Interruption of 5 min., if potential follow up price
+deviates by 10% or more from the reference price. Convertible and
+Warrant Bonds: No Stop Trading
+
+Avalanche
+Stop Trading
+
+Interruption if potential follow up price deviates by more than the
+Stop Trading Range from the reference price within a 10 second
+period. Benchmark for Avalanche equal to Stop Trading
+Continuous Trading.
+
+Interruption if potential follow up price deviates by more than the Stop
+Trading Range from the reference price within a 10 second period.
+Benchmark for Avalanche equal to Stop Trading Continuous Trading.
+
+Interruption if potential follow up price deviates by more than the Stop
+Trading Range from the reference price within a 10 second period.
+Benchmark for Avalanche equal to Stop Trading Continuous Trading.
+Convertible and Warrant Bonds: No Stop Trading
+
+Non Opening
+
+Yes
+
+Yes
+
+Yes
+
+Underlying Condition
+
+No
+
+No
+
+Duty to trade on order
+book
+Reporting duty
+
+< CHF 100'000.−
+
+< CHF 100'000.−
+
+No; Convertible and Warrant Bonds: Interruption if underlying
+instrument is in stop trading
+< CHF 100'000.−
+Delisted Bonds: None
+
+Yes
+
+Yes
+
+Yes
+
+Reporting Time
+Publication
+
+15 minutes
+
+15 minutes
+
+15 minutes
+
+Deferral to T+1, 7am is possible by request if bond is illiquid or
+trade qualifies for Large in Scale or SSTI post-trade
+transparency waivers.
+
+Deferral to T+1, 7am is possible by request if bond is illiquid or trade
+qualifies for Large in Scale or SSTI post-trade transparency waivers.
+
+Deferral to T+1, 7am is possible by request if bond is illiquid or trade
+qualifies for Large in Scale or SSTI post-trade transparency waivers.
+
+C&S Segment Code
+
+BOCS - Bonds CHF (cleared by one CCP)
+
+BOCS - Bonds CHF (cleared by one CCP)
+
+T+2
+Yes
+Yes
+Yes
+*
+
+T+2
+Yes
+Yes
+Yes
+*
+
+BOCS - Bonds CHF (cleared by one CCP)
+BONC - Bonds CHF (not cleared)
+T+2
+Yes
+Partially
+Yes
+*
+
+Trading Hours
+
+Exchange
+Regulatory Standard
+Market Model
+Order Types
+Self-Match Prevention
+Order Book Depth
+Trading Hours
+Continuous Trading
+Closing Auction
+Randomised Opening
+Randomised Closing
+Price Collar
+Maximum Order Value
+Round Lot
+
+Off Order Book
+
+Trading Interruptions
+
+Price Increments
+Price Steps
+Stop Trading in
+Opening
+Stop Trading
+Continuous Trading
+
+Clearing &
+Settlement
+
+Valid as of 28 May 2018
+
+Settlement Cycle
+Settlement Eligible
+Clearing Eligible
+Counterparty Disclosure
+Appendix
+
+* Substantial price movements in a security will possibly cause a change in the stop trading category. SIX Swiss Exchange will inform all participants of changes via a SIX Swiss Exchange Message.
+** Securities with a reference price smaller than CHF 10.00 respectively 10%
+***Not applicable to Floaters and Delisted Bonds
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Product Guide – Bond Market
+
+Valid as of 28 May 2018
+
+Bonds – Non CHF
+
+SIX Swiss Exchange
+Standard for Bonds
+Central Limit Order Book (CLOB)
+
+SIX Swiss Exchange
+admitted to trading
+Quote Driven Market (QDM)
+
+Order Types
+Self-Match Prevention
+Order Book Depth
+Trading Hours
+Continuous Trading
+Closing Auction
+
+Normal Orders and Quotes
+No
+5
+09:30 - 17:00 CET
+09:30 - 17:00 CET
+None
+2 Minutes 09:30 - 09:32 CET
+None
+
+Normal Orders and Quotes
+No
+5
+08:30 - 17:00 CET
+08:30 - 17:00 CET
+None
+2 Minutes 08:30 - 08:32 CET
+None
+
+Normal Orders and Quotes
+No
+5
+08:30 - 17:00 CET
+08:30 - 17:00 CET
+None
+2 Minutes 08:30 - 08:32 CET
+None
+
+9
+CHF 50'000'000
+
+9
+CHF 50'000'000 or the equivalent amount in foreign trading currency
+
+Round Lot
+
+A standard round lot is equivalent to the Minimum Denomination
+
+Price Increments
+Price Steps
+Stop Trading in
+Opening
+Stop Trading
+Continuous Trading
+
+Maturity >= 18 month 0.05% independent of market price***
+Maturity < 18 month 0.01% independent of market price
+Interruption of 15 min., if potential follow up price deviates by
+2.00% or more from the reference price. Bonds CHF with Maturity
+> 15 years: Interruption of 15min., if potential follow up price
+deviates by 3.00% or more from the reference price.
+Volatile Securities and Delisted Bonds **: Interruption of 5 min., if
+potential follow up price deviates by 10% or more from the reference
+price. Convertible and Warrant Bonds: No Stop Trading
+
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+0.01% independent of market price
+
+9
+CHF 50'000'000 or the equivalent amount in foreign trading
+currency
+A standard round lot is equivalent to the Minimum Denomination
+
+Avalanche
+Stop Trading
+
+Trading Hours
+
+Bonds – CHF Minimum Denomination
+Exchange
+Regulatory Standard
+Market Model
+
+Clearing &
+Settlement
+
+Off Order Book
+
+Trading Interruptions
+
+Randomised Opening
+Randomised Closing
+Price Collar
+Maximum Order Value
+
+Bonds – Non CHF Minimum Denomination
+Standard for Bonds
+
+SIX Swiss Exchange
+admitted to trading
+Quote Driven Market (QDM)
+
+Standard for Bonds
+
+0.01% independent of market price
+
+Interruption for a 5 minute period if a trade between orders can be
+executed but no quote is in the order book.
+The stop trading duration can be interrupted as soon as quotes are
+posted.
+
+Interruption for a 5 minute period if a trade between orders can be
+executed but no quote is in the order book.
+The stop trading duration can be interrupted as soon as quotes are
+posted.
+
+Interruption if potential follow up price deviates by more than the
+Stop Trading Range from the reference price within a 10 second
+period. Benchmark for Avalanche equal to Stop Trading Continuous Trading. Convertible and Warrant Bonds: No Stop Trading
+
+None
+
+None
+
+Non Opening
+
+Yes
+
+Yes
+
+Yes
+
+Underlying Condition
+
+No. Convertible and Warrant Bonds: Interruption if underlying
+instrument is in stop trading
+<CHF 100'000
+Delisted Bonds: None
+
+No
+
+No
+
+None
+
+None
+
+Yes
+15 minutes
+
+No
+None
+
+Deferral to T+1, 7am is possible by request if bond is illiquid or trade
+qualifies for Large in Scale or SSTI post-trade transparency waivers.
+
+Deferral to T+2, 7pm possible is possible on request if bond is illiquid
+or trade qualifies for Large in Scale or SSTI post-trade transparency
+waivers.
+
+Deferral to T+2, 7 pm possible if bond is illiquid or trade qualifies
+for Large in Scale or SSTI post-trade transparency waivers.
+
+BOCS - Bonds CHF (cleared by one CCP)
+BONC - Bonds CHF (not cleared)
+T+2
+Yes
+Partially
+Yes
+*
+
+IBMA - Bonds Non CHF (manual)
+IBNC - Bonds Non CHF (not cleared)
+T+1 - UK Gilts
+T+2 - All others
+IBMA: No
+IBNC: Yes
+BUNC: Yes (UK Gilts only)
+No
+Yes
+
+IBMA - Bonds Non CHF (manual)
+IBNC - Bonds Non CHF (not cleared)
+T+2
+IBMA: No
+IBNC: Yes
+No
+Yes
+
+Duty to trade on order
+book
+Reporting duty
+Reporting Time
+Publication
+
+C&S Segment Code
+
+Settlement Cycle
+Settlement Eligible
+Clearing Eligible
+Counterparty Disclosure
+Appendix
+
+Yes
+15 minutes
+
+No
+None
+
+Yes
+15 minutes
+
+* Substantial price movements in a security will possibly cause a change in the stop trading category. SIX Swiss Exchange will inform all participants of changes via a SIX Swiss Exchange Message.
+** Securities with a reference price smaller than CHF 10.00 respectively 10%
+***Not applicable to Floaters and Delisted Bonds
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Product Guide – Fund Market and Other Financial Products
+
+Valid as of 01 January 2018
+
+Investment Funds
+
+Sponsored Funds
+
+Exchange Traded Funds (ETF)
+
+Exchange
+
+SIX Swiss Exchange
+
+SIX Swiss Exchange
+
+SIX Swiss Exchange
+
+Regulatory Standard
+
+Standard for Collective Investment Schemes
+
+SIX Swiss Exchange Sponsored Investment Funds
+
+Standard for Collective Investment Schemes
+
+Market Model
+
+Central Limit Order Book (CLOB)
+
+Quote Driven Market (QDM)
+
+Quote Driven Market (QDM)
+
+Order Types
+
+Normal and Iceberg Orders
+
+Normal Orders and Quotes
+
+Normal Orders and Quotes
+
+Self-Match Prevention
+
+No
+
+No
+
+No
+
+Order Book Depth
+
+5
+
+5
+
+09:00 - 17:30 CET
+
+09:15 - 17:30 CET
+
+09:00 - 17:30 CET
+
+Continuous Trading
+
+09:00 - 17:20 CET
+
+09:15 - 17:30 CET
+
+09:00 - 17:30 CET
+
+Closing Auction
+
+17:20 - 17:30 CET
+
+None
+
+None
+
+Randomised Opening
+Randomised Closing
+
+2 Minutes 09:00 - 09:02 CET
+
+2 Minutes 09:15 - 09:17 CET
+
+2 Minutes 09:00 - 09:02 CET
+
+2 Minutes 17:30 - 17:32 CET
+
+None
+
+None
+
+Price Collar
+
+9
+
+9
+
+9
+
+Maximum Order Value
+
+CHF 10'000'000 or the equivalent amount in foreign trading
+currency
+
+CHF 10'000'000 or the equivalent amount in foreign trading currency
+
+CHF 10'000'000 or the equivalent amount in foreign trading currency
+
+Minimum Iceberg Order Value
+
+10'000
+
+n/a
+
+n/a
+
+Round Lot
+
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+The liquidity band "9000 ≤ Average daily number of transactions" is
+applied. Please refer to Tick Size MiFIDII Tick Size Table.
+Securities in JPY: 1.00 independent of market price
+
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+The liquidity band "9000 ≤ Average daily number of transactions" is
+applied. Please refer to Tick Size MiFIDII Tick Size Table.
+Securities in JPY: 1.00 independent of market price
+
+Interruption for a 5 min. period if a trade between orders can be
+executed but no quote is in the order book. The stop trading duration
+can be interrupted as soon as quotes are posted.
+
+Interruption for a 5 min. period if a trade between orders can be
+executed but no quote is in the order book. The stop trading duration
+can be interrupted as soon as quotes are posted.
+
+None
+
+None
+
+Non Opening
+
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+0.01
+through
+9.99
+0.01
+10.00
+through
+99.95
+0.05
+100.00
+through
+249.90
+0.10
+250.00
+through
+499.75
+0.25
+500.00
+through
+999.50
+0.50
+1'000.00
+through
+4'999.00
+1.00
+5'000.00
+and above
+5.00
+Interruption of 15 min., if potential follow up price deviates by
+2.00% or more from the reference price.
+Volatile Securities **: Interruption of 5 min., if potential follow up
+price deviates by 10% or more from the reference price.
+Interruption if potential follow up price deviates by more than the
+Stop Trading Range from the reference price within a 10 second
+period. Benchmark for Avalanche equal to Stop Trading
+Continuous Trading.
+Yes
+
+Yes
+
+Yes
+
+Underlying Condition
+
+No
+
+No
+
+No
+
+Duty to trade on order
+book
+Reporting duty
+
+<CHF 200'000.--
+
+None
+
+None
+
+Yes
+
+Yes
+
+Yes
+
+Reporting Time
+
+3 minutes
+
+3 minutes
+
+3 minutes
+
+Publication
+
+Immediate Publication
+
+Immediate Publication
+
+Immediate Publication
+
+C&S Segment Code
+
+SHNC - Shares and Funds (not cleared)
+
+ETCS - Exchange Traded Prod (cleared by all CCPs)
+
+Settlement Cycle
+
+T+2
+
+SFCH - Sponsored Funds - CH (not cleared)
+SFLU - Sponsored Funds - LU (not cleared)
+T+2
+
+Settlement Eligible
+
+Yes
+
+Yes
+
+Yes
+
+Clearing Eligible
+
+No
+
+No
+
+Yes
+
+Counterparty Disclosure
+
+Yes
+
+Yes
+
+Yes
+
+Appendix
+
+*
+
+Trading Hours
+
+10
+
+Trading Hours
+
+Clearing &
+Settlement
+
+Off Order
+Book
+
+Trading Interruptions
+
+Price Increments
+Price Steps
+
+Stop Trading in
+Opening
+Stop Trading
+Continuous Trading
+Avalanche
+Stop Trading
+
+T+2
+
+* Substantial price movements in a security will possibly cause a change in the stop trading category. SIX Swiss Exchange will inform all participants of changes via a SIX Swiss Exchange Message.
+** Securities with a reference price smaller than CHF 10.00 respectively 10%
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Product Guide – Fund Market and Other Financial Products
+
+Valid as of 01 January 2018
+
+Exchange Traded Products (ETP)
+
+SIX Swiss Exchange
+
+SIX Swiss Exchange
+
+Regulatory Standard
+
+Standard for Collective Investment Schemes
+
+Standard for Collective Investment Schemes
+
+Standard for Exchange Traded Products
+
+Market Model
+
+Quote Driven Market (QDM)
+
+Quote Driven Market (QDM)
+
+Quote Driven Market (QDM)
+
+Order Types
+
+Normal Orders and Quotes
+
+Normal Orders and Quotes
+
+Normal Orders and Quotes
+
+Self-Match Prevention
+
+No
+
+No
+
+No
+
+Order Book Depth
+
+5
+
+5
+
+5
+
+Trading Hours
+Continuous Trading
+
+09:00 - 17:00 CET
+
+09:00 - 17:30 CET
+
+09:00 - 17:30 CET
+
+09:00 - 17:00 CET
+
+09:00 - 17:30 CET
+
+09:00 - 17:30 CET
+
+Closing Auction
+
+None
+
+None
+
+None
+
+Randomised Opening
+
+2 Minutes 09:00 - 09:02 CET
+
+2 Minutes 09:00 - 09:02 CET
+
+2 Minutes 09:00 - 09:02 CET
+
+Randomised Closing
+
+None
+
+None
+
+None
+
+Price Collar
+
+9
+
+9
+
+9
+
+Maximum Order Value
+
+CHF 10'000'000 or the equivalent amount in foreign trading
+currency
+
+CHF 10'000'000 or the equivalent amount in foreign trading currency
+
+CHF 10'000'000 or the equivalent amount in foreign trading currency
+
+Minimum Iceberg Order Value
+
+n/a
+
+n/a
+
+n/a
+
+Round Lot
+
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+
+Price Increments
+Price Steps
+
+The liquidity band "9000 ≤ Average daily number of transactions"
+is applied. Please refer to Tick Size MiFIDII Tick Size Table.
+Securities in JPY: 1.00 independent of market price
+Interruption for a 5 min. period if a trade between orders can be
+executed but no quote is in the order book. The stop trading
+duration can be interrupted as soon as quotes are posted.
+
+The liquidity band "9000 ≤ Average daily number of transactions" is
+applied. Please refer to Tick Size MiFIDII Tick Size Table.
+Securities in JPY: 1.00 independent of market price
+Interruption for a 5 min. period if a trade between orders can be
+executed but no quote is in the order book. The stop trading duration
+can be interrupted as soon as quotes are posted.
+
+The liquidity band "9000 ≤ Average daily number of transactions" is
+applied. Please refer to Tick Size MiFIDII Tick Size Table.
+Securities in JPY: 1.00 independent of market price
+Interruption for a 5 min. period if a trade between orders can be
+executed but no quote is in the order book. The stop trading duration
+can be interrupted as soon as quotes are posted.
+
+None
+
+None
+
+None
+
+Trading
+Interruptions
+
+Trading Hours
+
+Exchange Traded Structured Funds (ETSF)
+
+Exchange
+
+Exchange Traded Funds (ETF) on Bonds of the Swiss
+Confederation
+SIX Swiss Exchange
+
+Stop Trading in
+Opening
+Stop Trading
+Continuous Trading
+Avalanche
+Stop Trading
+Non Opening
+
+Yes
+
+Yes
+
+No
+
+No
+
+No
+
+Duty to trade on order
+book
+Reporting duty
+
+None
+
+None
+
+None
+
+Yes
+
+Yes
+
+Yes
+
+Reporting Time
+
+3 minutes
+
+3 minutes
+
+3 minutes
+
+Publication
+
+Immediate Publication
+
+Immediate Publication
+
+Immediate Publication
+
+C&S Segment Code
+
+ETCS - Exchange Traded Prod (cleared by all CCPs)
+
+ETNC - Exchange Traded Prod (not cleared)
+
+ETCS - Exchange Traded Prod (cleared by all CCPs)
+
+Settlement Cycle
+
+T+2
+
+T+2
+
+T+2
+
+Settlement Eligible
+
+Yes
+
+Yes
+
+Yes
+
+Clearing Eligible
+
+Yes
+
+No
+
+Yes
+
+Counterparty Disclosure
+
+Yes
+
+Yes
+
+Yes
+
+Clearing &
+Settlement
+
+Off Order
+Book
+
+Yes
+
+Underlying Condition
+
+Appendix
+* Substantial price movements in a security will possibly cause a change in the stop trading category. SIX Swiss Exchange will inform all participants of changes via a SIX Swiss Exchange Message.
+** Securities with a reference price smaller than CHF 10.00 respectively 10%
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Product Guide – Structured Products Market
+
+Valid as of 01 January 2018
+
+Warrants on Baskets, Indices, Commodities and Currencies
+
+Warrants on Bonds of the Swiss Confederation
+
+SIX Swiss Exchange
+
+SIX Swiss Exchange
+
+SIX Swiss Exchange
+
+Regulatory Standard
+
+Standard for Derivatives
+
+Standard for Derivatives
+
+Standard for Derivatives
+
+Market Model
+
+Quote Driven Market (QDM)
+
+Quote Driven Market (QDM)
+
+Quote Driven Market (QDM)
+
+Order Types
+
+Normal Orders and Quotes
+
+Normal Orders and Quotes
+
+Normal Orders and Quotes
+
+Self-Match Prevention
+
+No
+
+No
+
+No
+
+Order Book Depth
+
+1
+
+1
+
+1
+
+Trading Hours
+
+09:15 - 17:15 CET
+
+09:15 - 17:15 CET
+
+09:15 - 17:00 CET
+
+Continuous Trading
+
+09:15 - 17:15 CET
+
+09:15 - 17:15 CET
+
+09:15 - 17:00 CET
+
+Closing Auction
+
+None
+
+None
+
+None
+
+Randomised Opening
+
+2 Minutes 09:15 - 09:17 CET
+None
+
+2 Minutes 09:15 - 09:17 CET
+None
+
+2 Minutes 09:15 - 09:17 CET
+None
+
+Price Collar
+
+99
+
+99
+
+99
+
+Maximum Order Value
+
+CHF 10'000'000 or the equivalent amount in foreign trading
+currency
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+0.001 of the relevant trading currency;
+1.00 of the relevant trading currency for instruments with a
+reference price of CHF 10'000 or above
+
+Trading Hours
+
+Warrants on Equity Securities
+Exchange
+
+Randomised Closing
+
+Round Lot
+
+CHF 10'000'000 or the equivalent amount in foreign trading currency
+
+CHF 10'000'000 or the equivalent amount in foreign trading currency
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+0.001 of the relevant trading currency;
+1.00 of the relevant trading currency for instruments with a reference
+price of CHF 10'000 or above
+Interruption for a 30 seconds period if a trade between orders can be
+executed but no quote is in the order book. The stop trading duration
+can be interrupted as soon as quotes are posted.
+
+Stop Trading in
+Opening
+Stop Trading
+Continuous Trading
+Avalanche
+Stop Trading
+Non Opening
+
+Interruption for a 30 seconds period if a trade between orders can
+be executed but no quote is in the order book. The stop trading
+duration can be interrupted as soon as quotes are posted.
+
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+0.001 of the relevant trading currency;
+1.00 of the relevant trading currency for instruments with a reference
+price of CHF 10'000 or above
+Interruption for a 30 seconds period if a trade between orders can be
+executed but no quote is in the order book. The stop trading duration
+can be interrupted as soon as quotes are posted.
+
+None
+
+None
+
+None
+
+Yes
+
+Yes
+
+Yes
+
+Underlying Condition
+
+Interruption if underlying instrument is in stop trading (only
+primary listed underlyings)
+
+No
+
+Interruption if underlying instrument is in stop trading (only primary
+listed underlyings)
+
+Duty to trade on order
+book
+Reporting duty
+
+<CHF 100'000.−
+
+<CHF 100'000.−
+
+<CHF 100'000.−
+
+Yes
+
+Yes
+
+Yes
+
+Reporting Time
+
+3 minutes
+
+3 minutes
+
+3 minutes
+
+Publication
+
+Immediate publication
+
+Immediate publication
+
+Immediate publication
+
+C&S Segment Code
+
+DENC - Structured Products (not cleared)
+
+DENC - Structured Products (not cleared)
+
+DENC - Structured Products (not cleared)
+
+Settlement Cycle
+
+T+2
+
+T+2
+
+T+2
+
+Settlement Eligible
+
+Yes
+
+Yes
+
+Yes
+
+Clearing Eligible
+
+No
+
+No
+
+No
+
+Counterparty Disclosure
+
+Yes
+
+Yes
+
+Yes
+
+Clearing &
+Settlement
+
+Off Order
+Book
+
+Trading Interruptions
+
+Price Increments
+Price Steps
+
+Appendix
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Product Guide – Structured Products Market
+
+Valid as of 01 January 2018
+
+Structured Products Warrants & Certificates
+
+Structured Products Bonds
+
+SIX Swiss Exchange
+
+SIX Swiss Exchange
+
+SIX Swiss Exchange
+
+Regulatory Standard
+
+Standard for Derivatives
+
+Standard for Derivatives
+
+Standard for Derivatives
+
+Market Model
+
+Quote Driven Market (QDM)
+
+Quote Driven Market (QDM)
+
+Quote Driven Market (QDM)
+
+Order Types
+
+Normal Orders and Quotes
+
+Normal Orders and Quotes
+
+Normal Orders and Quotes
+
+Self-Match Prevention
+
+No
+
+No
+
+No
+
+Order Book Depth
+
+1
+
+1
+
+1
+
+Trading Hours
+
+09:15 - 17:15 CET
+
+09:15 - 17:15 CET
+
+09:15 - 17:15 CET
+
+Continuous Trading
+
+09:15 - 17:15 CET
+
+09:15 - 17:15 CET
+
+09:15 - 17:15 CET
+
+Closing Auction
+
+None
+
+None
+
+None
+
+Randomised Opening
+
+2 Minutes 09:15 - 09:17 CET
+None
+
+2 Minutes 09:15 - 09:17 CET
+None
+
+2 Minutes 09:15 - 09:17 CET
+None
+
+Price Collar
+
+99
+
+99
+
+99
+
+Maximum Order Value
+
+CHF 10'000'000 or the equivalent amount in foreign trading
+currency
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+0.001 of the relevant trading currency;
+1.00 of the relevant trading currency for instruments with a
+reference price of CHF 10'000 or above
+
+Trading Hours
+
+Interest Rate Warrants
+Exchange
+
+Randomised Closing
+
+Round Lot
+
+CHF 10'000'000 or the equivalent amount in foreign trading currency
+
+CHF 10'000'000 or the equivalent amount in foreign trading currency
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+0.01% independent of market price
+
+Stop Trading in
+Opening
+Stop Trading
+Continuous Trading
+Avalanche
+Stop Trading
+Non Opening
+
+Interruption for a 30 seconds period if a trade between orders can
+be executed but no quote is in the order book. The stop trading
+duration can be interrupted as soon as quotes are posted.
+
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+0.001 of the relevant trading currency;
+1.00 of the relevant trading currency for instruments with a reference
+price of CHF 10'000 or above
+Interruption for a 30 seconds period if a trade between orders can be
+executed but no quote is in the order book. The stop trading duration
+can be interrupted as soon as quotes are posted.
+
+None
+
+None
+
+None
+
+Yes
+
+Yes
+
+Yes
+
+Underlying Condition
+
+No
+
+Interruption if underlying instrument is in stop trading (only primary
+listed underlyings)
+
+Interruption if underlying instrument is in stop trading (only primary
+listed underlyings)
+
+Duty to trade on order
+book
+Reporting duty
+
+< CHF 100'000.−
+
+< CHF 100'000.−
+
+< CHF 100'000.−
+
+Yes
+
+Yes
+
+Yes
+
+Reporting Time
+
+3 minutes
+
+3 minutes
+
+3 minutes
+
+Publication
+
+Immediate publication
+
+Immediate publication
+
+Immediate publication
+
+C&S Segment Code
+
+DENC - Structured Products (not cleared)
+
+DENC - Structured Products (not cleared)
+
+DENC - Structured Products (not cleared)
+
+Settlement Cycle
+
+T+2
+
+T+2
+
+T+2
+
+Settlement Eligible
+
+Yes
+
+Yes
+
+Yes
+
+Clearing Eligible
+
+No
+
+No
+
+No
+
+Counterparty Disclosure
+
+Yes
+
+Yes
+
+Yes
+
+Clearing &
+Settlement
+
+Off Order
+Book
+
+Trading Interruptions
+
+Price Increments
+Price Steps
+
+Interruption for a 30 seconds period if a trade between orders can be
+executed but no quote is in the order book. The stop trading duration
+can be interrupted as soon as quotes are posted.
+
+Appendix
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Product Guide – Trading without pre-trade transparency (Swiss Shares)
+
+Valid as of 01 January 2018
+
+SIX Swiss Exchange Liquidnet Service (SLS) Swiss Shares
+
+SwissAtMid
+
+SLS
+
+Country
+
+CH
+
+Market Code
+
+Blue Chip Shares: XVTX;
+
+Regulatory Standard
+Market Model
+
+International Reporting Standard; Swiss Reporting Standard
+Mid-Point Order Book (MPOB)
+
+International Reporting Standard; Swiss Reporting Standard
+Matching at the Mid-Point of the primary Reference Market
+
+Order Types
+
+Normal Orders; Sweep Orders
+
+Normal Orders
+
+Self-Match Prevention
+
+Yes
+
+Yes
+
+Order Book Depth
+
+Order book without pre-trade transparency
+
+Order book without pre-trade transparency
+
+Trading Hours
+
+09:00 - 17:20 CET
+
+09:00 - 17:20 CET
+
+Continuous Trading
+
+09:00 - 17:20 CET
+
+09:00 - 17:20 CET
+
+Closing Auction
+
+None
+
+None
+
+Randomised Opening
+
+None
+
+None
+
+Randomised Closing
+
+None
+
+None
+
+Price Collar
+
+9
+
+9
+
+Maximum Order Value
+
+Blue Chip Shares:
+100'000'000 CHF
+Mid-/Small Cap Shares: 10'000'00 CHF
+
+EUR 100'000'000
+
+Round Lot
+
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+Blue Chip Shares: 0.0001 independent of market price
+Mid-/Small Cap Shares: 0.0001 independent of market price
+No execution if no mid-point is available in reference market.
+No execution if security is not trading on the reference market.
+
+A standard round lot is equivalent to the smallest tradeable
+denomination.
+
+Blue Chip Shares:
+None
+Mid-/Small Cap Shares: < CHF 200'000
+Yes
+
+Blue Chip Shares:
+None
+Mid-/Small Cap Shares: < CHF 200'000
+Yes
+
+Trading Hours
+
+SIX Swiss Exchange at Midpoint (SwissAtMid) Swiss Shares
+Service
+
+Price Steps
+
+Off Order
+Book
+
+Trading Interruptions
+Duty to trade on order
+book
+Reporting Duty
+Reporting Time
+
+CH
+Mid-/Small Cap Shares: XSWX
+
+Blue Chip Shares: XVTX;
+
+Mid-/Small Cap Shares: XSWX
+
+No minimum price step
+No execution if no mid-point is available in reference market.
+No execution if security is not trading on the reference market.
+
+1 minute
+
+Deferred publication on request for trade reporting based on ADT
+Delay
+
+Deferred publication on request for trade reporting based on ADT
+Delay
+
+C&S Segment Code
+Settlement Cycle
+
+BCCS - Shares Blue Chips (cleared by all CCPs)
+MSCS - Mid-/Small Caps (cleared by all CCPs)
+T+2
+
+BCCS - Shares Blue Chips (cleared by all CCPs)
+MSCS - Mid-/Small Caps (cleared by all CCPs)
+T+2
+
+Settlement Eligible
+
+Yes
+
+Yes
+
+Clearing Eligible
+
+Yes
+
+Yes
+
+Automatic C&S
+
+Mandatory
+
+Mandatory
+
+Counterparty Disclosure
+
+No
+
+No
+
+Clearing &
+Settlement
+
+1 minute
+
+Publication
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Product Guide – Trading without pre-trade transparency (International Shares)
+
+Valid as of 01 January 2018
+
+SIX Swiss Exchange Liquidnet Service (SLS) – International Shares
+SLS
+
+SLS
+
+SLS
+
+SLS
+
+Country
+
+AT, IT
+
+BE, DE, FR, NL, PT, UK
+
+DK, NO
+
+FI, SE
+
+Market Code
+
+XSWX
+
+XSWX
+
+XSWX
+
+XSWX
+
+Regulatory Standard
+Market Model
+Order Types
+
+Standard for International Equity Securities
+Matching at the Mid-Point of the primary
+Reference Market
+Normal Orders
+
+Standard for International Equity Securities
+Matching at the Mid-Point of the primary
+Reference Market
+Normal Orders
+
+Standard for International Equity Securities
+Matching at the Mid-Point of the primary
+Reference Market
+Normal Orders
+
+Standard for International Equity Securities
+Matching at the Mid-Point of the primary
+Reference Market
+Normal Orders
+
+Self-Match Prevention
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Order Book Depth
+
+Order book without pre-trade transparency
+
+Order book without pre-trade transparency
+
+Order book without pre-trade transparency
+
+Order book without pre-trade transparency
+
+Trading Hours
+
+AT: 08.55 - 17.30 CET; IT: 09:05 - 17:30 CET
+
+09.00 - 17.30 CET
+
+DK: 09.00 - 16.55 CET; NO: 09:00 - 16:20 CET
+
+09.00 - 17.25 CET
+
+Continuous Trading
+
+AT: 08.55 - 17.30 CET; IT: 09:05 - 17:30 CET
+
+09.00 - 17.30 CET
+
+DK: 09.00 - 16.55 CET; NO: 09:00 - 16:20 CET
+
+09.00 - 17.25 CET
+
+Closing Auction
+
+None
+
+None
+
+None
+
+None
+
+Randomised Opening
+
+None
+
+None
+
+None
+
+None
+
+Randomised Closing
+
+None
+
+None
+
+None
+
+None
+
+Price Collar
+
+2
+
+2
+
+2
+
+2
+
+Maximum Order Value
+
+EUR 100'000'000
+
+EUR 100'000'000
+
+EUR 100'000'000
+
+EUR 100'000'000
+
+Round Lot
+
+A standard round lot is equivalent to the smallest
+tradeable denomination.
+
+A standard round lot is equivalent to the smallest
+tradeable denomination.
+
+A standard round lot is equivalent to the smallest
+tradeable denomination.
+
+A standard round lot is equivalent to the smallest
+tradeable denomination.
+
+Price Steps
+Trading Interruptions
+
+No minimum price step
+No execution if no mid-point is available in
+reference market.
+No execution if security is not trading on the
+reference market.
+Double Volume Cap: 6 month suspension on
+trading venue if 4% cap is breached, 6 month
+suspension on overall trading across the EU if 8%
+cap is breached.
+
+No minimum price step
+No execution if no mid-point is available in
+reference market.
+No execution if security is not trading on the
+reference market.
+Double Volume Cap: 6 month suspension on
+trading venue if 4% cap is breached, 6 month
+suspension on overall trading across the EU if 8%
+cap is breached.
+
+No minimum price step
+No execution if no mid-point is available in
+reference market.
+No execution if security is not trading on the
+reference market.
+Double Volume Cap: 6 month suspension on
+trading venue if 4% cap is breached, 6 month
+suspension on overall trading across the EU if 8%
+cap is breached.
+
+No minimum price step
+No execution if no mid-point is available in
+reference market.
+No execution if security is not trading on the
+reference market.
+Double Volume Cap: 6 month suspension on
+trading venue if 4% cap is breached, 6 month
+suspension on overall trading across the EU if 8%
+cap is breached.
+
+Duty to trade on order
+book
+Reporting Duty
+Reporting Time
+
+None
+
+None
+
+None
+
+None
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+1 minute
+
+1 minute
+
+1 minute
+
+1 minute
+
+Publication
+
+Deferred publication on request for trade reporting
+based on ADT Delay
+OXAT - Over the Exchange - AT
+OXIT - Over the Exchange - IT
+
+Deferred publication on request for trade reporting
+based on ADT Delay
+OXBE - Over the Exchange - BE
+OXDE - Over the Exchange - DE
+OXFR - Over the Exchange - FR
+OXNL - Over the Exchange - NL
+OXPT - Over the Exchange - PT
+OXUK - Over the Exchange - UK
+
+Deferred publication on request for trade reporting
+based on ADT Delay
+OXDK - Over the Exchange - DK
+OXNO - Over the Exchange - NO
+
+Deferred publication on request for trade reporting
+based on ADT Delay
+OXFI - Over the Exchange - FI
+OXSE - Over the Exchange - SE
+
+Settlement Cycle
+
+T+2
+
+T+2
+
+T+2
+
+T+2
+
+Settlement Eligible
+
+No
+
+No
+
+No
+
+No
+
+Clearing Eligible
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Automatic C&S
+
+Mandatory1
+
+Mandatory1
+
+Mandatory1
+
+Mandatory1
+
+Counterparty Disclosure
+
+No
+
+No
+
+No
+
+No
+
+Clearing & Settlement
+
+Off Order
+Book
+
+Trading Hours
+
+Service
+
+1
+
+C&S Segment Code
+
+Certain less liquid SLS eligible equities may result in a higher than normal margin call. Please liaise with your central counterparty for specific details.
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Price Step Overview (Tick Sizes) – Equity Market
+
+Valid as of 01 January 2018
+
+Blue Chip Shares; Mid-/Small-Cap Shares; Secondary Listing Shares*, Sponsored Foreign Shares*
+MiFIDII Tick Size Table
+Price Step Group Code
+
+LA
+
+LB
+
+LC
+
+LD
+
+LE
+
+LF
+
+Price ranges
+
+0 ≤ Average daily number of
+transactions < 10
+
+10 ≤ Average daily number of
+transactions < 80
+
+80 ≤ Average daily number of
+transactions < 600
+
+600 ≤ Average daily number of
+transactions < 2000
+
+2000 ≤ Average daily number
+of transactions < 9000
+
+9000 ≤ Average daily
+number of transactions
+
+0 ≤ price < 0.1
+
+0.0005
+
+0.0002
+
+0.0001
+
+0.0001
+
+0.0001
+
+0.0001
+
+0.1 ≤ price < 0.2
+
+0.0010
+
+0.0005
+
+0.0002
+
+0.0001
+
+0.0001
+
+0.0001
+
+0.2 ≤ price < 0.5
+
+0.0020
+
+0.0010
+
+0.0005
+
+0.0002
+
+0.0001
+
+0.0001
+
+0.5 ≤ price < 1
+
+0.0050
+
+0.0020
+
+0.0010
+
+0.0005
+
+0.0002
+
+0.0001
+
+1 ≤ price < 2
+
+0.0100
+
+0.0050
+
+0.0020
+
+0.0010
+
+0.0005
+
+0.0002
+
+2 ≤ price < 5
+
+0.0200
+
+0.0100
+
+0.0050
+
+0.0020
+
+0.0010
+
+0.0005
+
+5 ≤ price < 10
+
+0.0500
+
+0.0200
+
+0.0100
+
+0.0050
+
+0.0020
+
+0.0010
+
+10 ≤ price < 20
+
+0.1000
+
+0.0500
+
+0.0200
+
+0.0100
+
+0.0050
+
+0.0020
+
+20 ≤ price < 50
+
+0.2000
+
+0.1000
+
+0.0500
+
+0.0200
+
+0.0100
+
+0.0050
+
+50 ≤ price < 100
+
+0.5000
+
+0.2000
+
+0.1000
+
+0.0500
+
+0.0200
+
+0.0100
+
+100 ≤ price < 200
+
+1.0000
+
+0.5000
+
+0.2000
+
+0.1000
+
+0.0500
+
+0.0200
+
+200 ≤ price < 500
+
+2.0000
+
+1.0000
+
+0.5000
+
+0.2000
+
+0.1000
+
+0.0500
+
+500 ≤ price < 1000
+
+5.0000
+
+2.0000
+
+1.0000
+
+0.5000
+
+0.2000
+
+0.1000
+
+1000 ≤ price < 2000
+
+10.0000
+
+5.0000
+
+2.0000
+
+1.0000
+
+0.5000
+
+0.2000
+
+2000 ≤ price < 5000
+
+20.0000
+
+10.0000
+
+5.0000
+
+2.0000
+
+1.0000
+
+0.5000
+
+5000 ≤ price < 10000
+
+50.0000
+
+20.0000
+
+10.0000
+
+5.0000
+
+2.0000
+
+1.0000
+
+10000 ≤ price < 20000
+
+100.0000
+
+50.0000
+
+20.0000
+
+10.0000
+
+5.0000
+
+2.0000
+
+20000 ≤ price < 50000
+
+200.0000
+
+100.0000
+
+50.0000
+
+20.0000
+
+10.0000
+
+5.0000
+
+50000 ≤ price
+
+500.0000
+
+200.0000
+
+100.0000
+
+50.0000
+
+20.0000
+
+10.0000
+
+* If the primary market of the security is outside the EU the Liquidity Band LA "0 ≤ Average daily number of transactions < 10" will be allocated.
+
+Rights and Options
+
+SwissAtMid SLS
+
+Separate Trading Lines
+
+0.01 independent of market price
+
+independent of market price
+0.0001 Blue Chip Shares,
+0.0001 Mid-/Small Cap Shares
+
+The tick size of the primary line
+will be applied
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Price Step Overview (Tick Sizes) – Funds and Other Financial Products, Bonds, Structured Products
+Sponsored Funds; Exchange Traded Funds (ETF); Exchange Traded
+Structured Funds (ETSF); Exchange Traded Products (ETP)
+
+Investment Funds
+
+Price Step Group Code
+
+LF
+
+Price ranges
+
+9000 ≤ Average daily number of transactions
+
+0.01
+10.00
+
+through
+through
+
+9.99
+99.95
+
+Valid as of 01 January 2018
+
+0.01
+0.05
+
+0 ≤ price < 0.1
+
+0.0001
+
+100.00
+
+through
+
+249.90
+
+0.10
+
+0.1 ≤ price < 0.2
+
+0.0001
+
+250.00
+
+through
+
+499.75
+
+0.25
+
+0.2 ≤ price < 0.5
+
+0.0001
+
+500.00
+
+through
+
+999.50
+
+0.50
+
+0.5 ≤ price < 1
+
+0.0001
+
+1'000.00
+
+through
+
+4'999.00
+
+1 ≤ price < 2
+
+0.0002
+
+5'000.00
+
+and above
+
+2 ≤ price < 5
+
+0.0005
+
+5 ≤ price < 10
+
+0.0010
+
+10 ≤ price < 20
+
+0.0020
+
+20 ≤ price < 50
+
+0.0050
+
+50 ≤ price < 100
+
+0.0100
+
+100 ≤ price < 200
+
+0.0200
+
+200 ≤ price < 500
+
+0.0500
+
+500 ≤ price < 1000
+
+0.1000
+
+1000 ≤ price < 2000
+
+0.2000
+
+2000 ≤ price < 5000
+
+0.5000
+
+5000 ≤ price < 10000
+
+1.0000
+
+10000 ≤ price < 20000
+
+2.0000
+
+20000 ≤ price < 50000
+
+5.0000
+
+50000 ≤ price
+
+10.0000
+
+1.00
+5.00
+
+For securities traded in JPY, the tick size is 1.00 independent of market price
+
+Bond Market
+Bonds - CHF Swiss Confederation; Bonds - CHF Swiss Pfandbriefe; Bonds - Non CHF
+
+Bonds - CHF
+
+0.01% independent from market price
+
+Maturity >= 18 month 0.05% independent of market price (not applicable to Floaters
+and Delisted Bonds)
+Maturity < 18 month 0.01% independent of market price
+
+Structured Products Market
+Warrants; Structured Products Warrants & Certificates
+
+Structured Products Bonds
+
+0.001 of the relevant trading currency
+1.00 of the relevant trading currency for instruments with a reference price of CHF 10'000 or above
+
+0.01% independent from market price
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Trade Types
+
+Trade Types & Flags
+Field Value
+
+Fix Tag - Field Name
+
+Applicable Securities
+
+Transaction Type
+
+Additional Comments
+
+Special Price
+
+1839 - TradePriceCondition
+
+All
+
+One sided report
+Two sided report
+
+«Special Price» is specifying a trade report whose price differs from the market price at the time of entry (VWAP, PortfolioTrades, Counter Trades, Aggregated Orders, Trade reporting after emergency situations)
+
+Countertrade
+
+828 - TrdType
+
+All
+
+One sided report
+Two sided report
+
+«Countertrade» specifies that the original legally valid trade should be cancelled. Countertrades will be validated against
+the original trade. For two sided countertrades, the original trade identification of both Participants must concur for the
+trade reports legs to match.
+
+Delivery Report
+
+828 - TrdType
+
+All
+
+Two sided report
+
+All
+
+One sided report
+Two sided report
+
+«Deferred Publication» is specifying that a trade is requested for deferred publication.
+
+All
+
+One sided report
+Two sided report
+
+«Publish Trade» is specifying a trade report which is to be published immediately.
+
+Deferred Publication
+Publish Trade
+
+1390 - TradePublishIndicator
+
+On Exchange
+Off Exchange
+
+829 - TrdSubType
+
+All
+
+One sided report
+Two sided report
+
+«On Exchange» is specifying a trade report which is subject to the provisions of the Rule Book.
+«Off Exchange» is specifying a trade report which is subject to the provisions of the Reporting Rules.
+
+Transaction Report
+
+5055 - TransReport
+
+All
+
+all off order book trade
+reports
+
+«Transaction Report» specifies whether a transaction report should be derived from the entering firm's trade leg and
+submitted to fulfil the party's reporting duty. Only supported when Order Capacity is Principal.
+
+Both Parties
+
+6577 - Tariff
+
+All
+
+One sided report
+
+«Both Parties» is specifying a one-sided trade report which has been reported to the Exchange in the name of both parties
+involved in the transaction.
+
+All
+
+On Order Book
+
+«Removed Liquidity» is specifying the side of a trade which has triggered the trade in the order book.
+
+All
+
+On Order Book
+
+«Added Liquidity» is specifying the side of a trade which has contributed liquidity to the order book.
+
+Removed Liquidity
+Added Liquidity
+
+851 - LastLiquidityInd
+
+Auction
+
+All
+
+On Order Book
+
+«Auction» is specifying that both sides of a trade were executed during a non-continuous trading period.
+
+LN
+
+26562 - BookSubType
+
+SLS Securities
+
+Mid-Point Order Book
+
+«LN» is specifying a trade that has been executed via the SIX Swiss Exchange Liquidnet Service (SLS) non-displayed
+mid-point order book service.
+
+SWM
+
+26562 - BookSubType
+
+Blue Chip Shares
+Mid-/Small-Cap Shares
+
+Mid-Point Order Book
+
+«SWM» is specifying a trade that has been executed via the SIX Swiss Exchange at Midpoint (SwissAtMid) non-displayed
+mid-point order book service.
+
+All
+
+Trade Cancellation
+
+«Mistrade» is specifying a trade cancellation that declares a trade null and void and is performed by SIX Swiss Exchange
+according to Directive 4: Market Control.
+
+All
+
+Trade Cancellation
+
+«OnBehalf» is specifying a trade cancellation that is performed by SIX Swiss Exchange on behalf of the involved parties
+according to Directive 3: Trading.
+
+Mistrade
+Trade Flags
+
+Valid as of 01 January 2018
+
+On Behalf
+
+277 - TradeCondition
+
+Canc Buy
+
+All
+
+Cancellation Request
+
+«CancBuy» is specifying that the buy party will be charged the cancellation fee
+
+6577 - Tariff
+
+All
+
+Cancellation Request
+
+«CancSell» is specifying that the sell party will be charged the cancellation fee
+
+All
+
+Cancellation Request
+
+«CancSplit» is specifying that the cancellation fee will be split between the parties.
+
+Yes
+
+7205 - InternalCross
+
+All
+
+On Order Book
+
+Algorithm
+
+448 - PartyID
+(Entering Firm Algorithm
+repeating group)
+
+All
+
+On Order Book
+Off Order Book
+
+«Internal Cross» is specifying a trade for one and the same participant for its own name and for his own account
+(Principal). Entering buy and sell orders in a single security for the same beneficial owner are forbidden. The ban shall not
+cover simultaneous buy and sell orders for the participant's own account if the participant can prove that individual orders
+were entered independently of each other and without any form of agreement in the exchange system. The participant
+shall ensure the necessary precautions to prevent impermissible cross-trades.
+8-byte integer identifier for algorithmic trading that shall uniquely identify the algorithms involved in the creation and/or
+submission of the orders and quotes to the market
+
+Canc Sell
+Canc Split
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Deferred publication thresholds and delays
+
+Valid as of 01 January 2018
+
+Equities
+The table below shows for each permitted delay for publication and each class of equities in terms of average daily turnover (ADT), the minimum qualifying size of transaction that will qualify for that delay in respect of a equitiy of that type. ADT Values
+for Swiss equities will be maintained in their respective trading currency calculated by SSX whereas ADT values for EEA equities will be maintained in their respective nominal currency as published by ESMA. Currency conversions will be done based
+on daily exchange rates.
+
+Permitted delay for Publication
+60 minutes
+
+120 minutes
+
+End of the trading day
+
+End of the next trading day
+
+Class of equities in terms of
+average daily turnover (ADT)
+in CHF
+
+Minimum qualifying size of transaction for permitted delay
+> 100m
+
+CHF 10'000'000
+
+CHF 20'000'000
+
+CHF 35'000'000
+
+-
+
+50m – 100m
+
+CHF 7'000'000
+
+CHF 15'000'000
+
+CHF 25'000'000
+
+-
+
+25m – 50m
+
+CHF 5'000'000
+
+CHF 10'000'000
+
+CHF 12'000'000
+
+-
+
+5m – 25m
+
+CHF 2'500'000
+
+CHF 4'000'000
+
+CHF 5'000'000
+
+-
+
+1m - 5m
+
+CHF 450'000
+
+CHF 750'000
+
+CHF 1'000'000
+
+-
+
+500,000 – 1m
+
+CHF 75'000
+
+CHF 150'000
+
+CHF 225'000
+
+-
+
+100,000 – 500,000
+
+CHF 30'000
+
+CHF 80'000
+
+CHF 120'000
+
+-
+
+50,000 – 100,000
+
+CHF 15'000
+
+CHF 30'000
+
+CHF 50'000
+
+-
+
+< 50,000
+
+CHF 7'500
+
+CHF 15'000
+
+-
+
+CHF 25'000
+
+Bonds
+The table below shows, the permitted delay for publication for bonds based on Post Trade Transparency waivers.
+
+Bonds - CHF
+
+Bonds - Non-CHF
+
+Post-Trade Transparency
+
+Deferred publication based on Large-volume transactions
+(LIS); or
+Transactions which are above size specific (SSTI); or
+Transactions in securities for which no liquid market exists
+(Illiquid)
+
+Deferred publication based on Large-volume transactions
+(LIS); or
+Transactions which are above size specific (SSTI); or
+Transactions in securities for which no liquid market exists
+(Illiquid)
+
+Permitted Publication Delay
+
+Publication of trades is delayed until next business day at
+7:00 am CET.
+
+Publication of trades is delayed until two business days after
+the trade at 7:00 pm CET.
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+SWXess – On Order Book Functionality
+
+Valid as of 28 May 2018
+
+Standard Trading Interface (STI)
+
+OUCH Trading Interface (OTI)
+
+Quote Trading Interface (QTI)
+
+Type
+
+Order
+
+Order
+
+Quote
+
+User Type
+
+Price Taker User; PT
+
+OBM Partition 1 - «Equities»: OUCH User - O
+OBM Partition 2 - «Non-Equities»: OUCH Price Taker - T
+
+Quote User -Q
+
+Mass Functions
+Limitation
+
+Single enter, replace and delete
+Number of orders within order book is unlimited.
+
+Single enter, replace and delete
+Number of orders within order book is unlimited.
+
+Quotes; Mass withdraw
+Bonds and Structured Products: Step Quoting: Number of Quotes is
+limited to one pair of quotes per user per security.
+ETF, ETSF, ETP: Step Quoting: Number of Quotes is limited to three
+quotes per user per security.
+Sponsored Funds and Sponsored Foreign Shares: Step Quoting: Number
+of Quotes is limited to three quotes per user per security.
+
+Persistency
+
+Yes
+
+No
+
+No
+
+Side
+
+Buy or Sell
+
+Buy or Sell
+
+Buy and/or Sell (If B/S attribute = 0
+
+Behaviour on
+Disconnection
+
+No order deletion in case of disconnection.
+
+Orders automatically deleted in case of disconnection by default. Configuration for order persistency upon disconnect on user level.
+
+Quantity
+
+Equity-, Fund- and Structured Products Markets: Number of units. Bond Market: Nominal value
+The quantity of an order must comply with the following values that are defined per instrument:
+- Minimum Denomination (Bonds - Non CHF only) - Minimum Tradable Size (Structured Products only)
+
+Secondary
+Quantity
+
+Iceberg Orders: Visible quantity of an Iceberg Order. If this attribute is not
+set at order entry, the order is treated as a Normal order. SwissAtMid: The
+optional minimum acceptable quantity to execute per trade.
+
+Iceberg Orders: Visible quantity of an Iceberg Order. If this attribute is
+0 or not set at order entry , the order is transmitted to the exchange
+as a Normal order.
+
+not applicable
+
+OBM Partition
+
+OBM Partition 1 - «Equities»; OBM Partition 2 - «Non-Equities»
+
+OBM Partition 1 - «Equities»; OBM Partition 2 - «Non-Equities»
+
+OBM Partition 2 - «Non-Equities»
+
+Security
+
+All securities
+
+All securities
+
+Bond Market, ETF, ETSF, ETP, Sponsored Funds, Sponsored Foreign
+Shares, Structured Products
+
+Price Type
+
+Market or Limit
+Market or Limit
+Equity-, Fund, ETF, ETSF, ETP - and Structured Products Markets: Price per unit of quantity. Bond Market: Price in percentage of nominal
+Price must be on a valid Price Step for the respective security.
+
+Limit
+
+Order Types
+Routing Instruction
+
+Normal Order
+Iceberg Order
+SWX - SIX Swiss Exchange CLOB
+SWM - SIX Swiss Exchange MPOB
+SWMX - SIX Swiss Exchange Sweep MPOB to CLOB
+SWMB - SIX Swiss Exchange Iceberg Plus and Limit Plus**
+LN - SIX Swiss Exchange Liquidnet Service
+
+Quotes
+not applicable
+
+Time in Force
+Validity
+
+Day: Order expires after End of Trading.
+At the Opening: The order can be entered during Pre-Opening and is
+visible in the order book included in the Opening Auction. Non-executed
+parts of the order expires if not executed during Opening Auction.
+At the Close: The order becomes active / visible at the start of the closing
+auction and expires if not executed during Closing Auction.
+Immediate or Cancel: Expires immediately after exposure to book if
+order is not executed. Only supported for Normal Orders.
+Fill or Kill: Expires immediately after exposure to book if order is not fully
+executed. Only supported for Normal Orders.
+Good Till Date: Order expires after End of Trading on the Expiry Date.
+Maximum validity of an order is one year.
+Attribute of order
+P Principal
+R Riskless Principal
+
+Price
+
+Trading Capacity
+
+Normal Order
+Iceberg Order
+C - SIX Swiss Exchange CLOB
+F – SIX Swiss Exchange Limit Plus**
+M - SIX Swiss Exchange MPOB
+P - SIX Swiss Exchange Iceberg Plus**
+S - SIX Swiss Exchange Sweep MPOB to CLOB*
+Day: Order expires after End of Trading.
+Session at the Open: The order can be entered during Pre-Opening
+and is visible in the order book included in the Opening Auction. Nonexecuted parts of the order expires if not executed during Opening
+Auction.
+Session at the Close: The order becomes active / visible at the start
+of the closing auction and expires if not executed during Closing
+Auction.
+Immediate: Expires immediately after exposure to book if order is not
+executed. Only supported for Normal Orders.
+
+Attribute of order (Principal Id)
+P Principal
+
+R Riskless Principal
+
+all existing quotes will be deleted)
+
+End of Business Day
+
+Attribute of quote (Principal Id)
+P Principal
+R Riskless Principal (Liquidity Providers Only)
+
+Mandatory
+Mandatory (if Trader Id 0 is defined on order, the default Trader Id of
+Mandatory (if Trader Id 0 is defined on quote, the default Trader Id of the
+the user is applied)
+user is applied)
+Trader Id
+* Sweep orders are accepted for all instruments. If only a displayed order book is defined for an instrument, the Sweep order will be accepted and directly routed to the displayed order book.
+** If the order book without pre-trade transparency is not activated for a given trading segment, orders with Routing Instruction "SWMB" will be directly routed to the CLOB as normal limit or normal Iceberg (where Iceberg is allowed).
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+SWXess – Off Order Book Functionality
+
+Valid as of 23 October 2017
+
+Two-sided trade report
+
+One-sided trade report
+
+Input Source
+
+Standard Trading Interface (STI)
+
+Purpose
+
+Reporting the details of a trade agreed off order book with a participant of the Exchange or a reporting
+member.
+
+The details of a trade agreed off order book with a counterparty who is not a participant of the Exchange
+or a reporting member.
+
+Behaviour
+
+Enter and Accept: A two-sided trade report is entered by one party and is confirmed by the counterparty.
+Enter and Match: A two-sided trade report is entered by each party, if the relevant trade input attributes
+are equal the trade entries will match.
+
+One-sided trade reports do not need to be confirmed by the counterparty and immediately lead to a trade.
+
+Side
+
+Buy or Sell
+
+Buy or Sell
+
+Quantity
+
+Equity- Fund- and Structured Products Markets: Number of units
+Bond Market: Nominal value
+
+Equity- Fund- and Structured Products Markets: Number of units
+Bond Market: Nominal value
+
+During trading hours the value of a transaction must comply with the limit to trade on order book that is
+defined per instrument.
+
+During trading hours the value of a transaction must comply with the limit to trade on order book that is
+defined per instrument.
+
+Security
+
+On-Exchange: all securities except SLS non-Swiss securities
+Off-Exchange: all securities
+
+On-Exchange: all securities except SLS non-Swiss securities
+Off-Exchange: all securities
+
+Price Type
+
+Limit
+
+Limit
+
+Price
+
+Equity- Fund- and Structured Products Markets: Price per unit of quantity
+Bond Market: Price in percentage of nominal
+
+Equity- Fund- and Structured Products Markets: Price per unit of quantity
+Bond Market: Price in percentage of nominal
+
+Trade and Transaction Reporting GUI
+
+Standard Trading Interface (STI)
+
+Trade and Transaction Reporting GUI
+
+Price Steps do not apply to off order book trades.
+
+Price Steps do not apply to off order book trades.
+
+Trade Agreed Date
+Trade Agreed Time
+
+The date and time at which a trade is agreed
+by the two parties.
+
+The date and time at which a trade is agreed
+by the two parties.
+
+Trading Capacity
+
+Attribute of trade
+
+Reporting Hours
+
+Two-sided trade reports can be reported during business hours. The two legs of the two-sided trade
+report can be matched and deleted on the transaction date (date of first leg) or on the next business day.
+
+Original Trade ID
+
+-
+
+Trade Types
+
+Delivery Report
+
+Countertrade
+
+Countertrade
+
+Trade Subtypes
+
+On Exchange
+
+Off Exchange
+
+On Exchange
+
+Off Exchange
+
+Trade Publish
+Indicator
+
+Publish Trade
+
+Deferred Publication
+
+Publish Trade
+
+Deferred Publication
+
+Trade Reg
+Publication Type
+
+Pre-trade transparency waiver
+
+Post-trade deferral
+
+Pre-trade transparency waiver
+
+Post-trade deferral
+
+Tariff
+
+-
+
+Optional flag if trade report on behalf of both involved parties:
+
+Transaction Report
+
+«Transaction Report» specifies whether a transaction report should be derived from the entering firm's
+trade leg and submitted to fulfil the party's reporting duty. Only supported when Order Capacity is
+Principal.
+
+«Transaction Report» specifies whether a transaction report should be derived from the entering firm's
+trade leg and submitted to fulfil the party's reporting duty. Only supported when Order Capacity is
+Principal.
+
+Settlement Date
+
+The date when the trade is to be settled.
+If settlement date is not indicated, the settlement will be done T+2
+
+Manual settlement
+
+Clearing
+Instruction
+
+On-Exchange: If settlement date is not T+2, settlement only or manual mode is allowed. Default is
+automatic clearing and settlement.
+Off-Exchange: Manual Settlement only
+
+Manual settlement
+
+Commission
+
+Optional for Delivery Reports. The amount of the commission (absolute or percentage) and the side to
+which the commission is to be paid
+
+-
+
+P Principal
+
+R Riskless Principal
+
+Attribute of trade
+
+P Principal
+
+R Riskless Principal
+
+One-sided trade reports can be reported during business hours.
+-
+
+Both Parties
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+SWXess – Off Order Book Functionality
+
+Valid as of 23 October 2017
+
+Capacity Correction
+
+Cancellation Request
+
+Input Source
+
+Standard Trading Interface (STI)
+Trade and Transaction Reporting GUI
+
+Standard Trading Interface (STI)
+Trade and Transaction Reporting GUI
+
+Purpose
+
+Correcting the capacity of an On- or Off-Order Book trade. (A trade can only be corrected once per side).
+
+Requesting the Cancellation of an On-Exchange Off Order Book trade with SIX Swiss Exchange. (A trade
+can only be cancelled once).
+
+Behaviour
+
+One-Sided Capacity Corrections do not need to be confirmed by the counterparty and immediately lead to
+the correction of the trade. For unconfirmed two-sided trade reports this functionality is not available. The
+unmatched leg of the trade should be deleted and a new two-sided trade reported with the correct
+capacity.
+
+Cancellation Requests will trigger an e-mail with SIX Swiss Exchange. Upon receiving Cancellation
+Requests from involved parties, SIX Swiss Exchange will perform the Cancellation of the trade.
+
+Side
+
+Buy or Sell
+
+Buy or Sell
+
+Quantity
+
+Equity- Fund- and Structured Products Markets: Number of units
+Bond Market: Nominal value
+
+Equity- Fund- and Structured Products Markets: Number of units
+Bond Market: Nominal value
+
+Quantity of the trade to be corrected
+
+Quantity of the trade to be corrected
+
+Security
+
+All securities
+
+All securities except SLS
+
+Price Type
+
+Limit
+
+Limit
+
+Price
+
+Equity- Fund- and Structured Products Markets: Price per unit of quantity
+Bond Market: Price in percentage of nominal
+
+Equity- Fund- and Structured Products Markets: Price per unit of quantity
+Bond Market: Price in percentage of nominal
+
+Price Steps do not apply to off order book transactions.
+
+Price Steps do not apply to off order book transactions.
+
+Trade Agreed Date
+Trade Agreed Time
+
+not applicable
+
+The date and time at which the original trade has been agreed by the two parties.
+
+Trading Capacity
+
+Attribute of transaction
+P Principal
+R Riskless Principal
+(must be opposite of the original trade)
+
+Ignored on Cancellation Requests
+
+Reporting Hours
+
+Trade Corrections can be performed during business hours of the day the trade occurred or the next
+business day.
+
+Cancellation Requests can be submitted during business hours on the day the trade occurred or on the
+next business day. For trades in CCP-securities, SIX Swiss Exchange can perform Cancellations until End
+of Clearing on the transaction date only.
+
+Original Trade ID
+
+Trade Match ID of the original trade to be corrected
+
+Trade Match ID of the original trade to be cancelled
+
+Trade Types
+
+-
+
+-
+
+Trade Subtypes
+
+Correction
+
+Cancellation Request
+
+Trade Publish
+Indicator
+
+-
+
+Publish Trade
+Deferred Publication
+
+Trade Reg
+Publication Type
+
+Pre-trade transparency waiver
+Post-trade deferral
+
+Tariff
+
+-
+
+Party who covers the fee of the cancellation
+- CancSplit
+- CancBuy
+
+Transaction Report
+
+The original report must be cancelled and replaced with another containing the correct trading capacity
+
+-
+
+Settlement Date
+
+-
+
+-
+
+Clearing
+Instruction
+
+-
+
+-
+
+Commission
+
+-
+
+-
+
+- CancSell
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Emergency Deletions
+
+Valid as of 01 January 2018
+
+Summary
+According to Directive 4: Market Control the participants may request Market Control to delete its orders and/or quotes in case of failure of the participants’ access systems. Cancellation of orders must be given over the telephone to Market Control (+41
+(0)58 399 24 75); written confirmation of the emergency deletion must be e-mailed to Market Control (helpdesk.exc@six-group.com) as soon as possible, but no later than before the end of the current trading day. Please note that Market Control may
+reject the deletion of orders at its own discretion in exceptional situations. Please find below the most established and efficient scenarios to perform emergency deletions at SIX Swiss Exchange. Find a complete list of conditions for emergency deletions
+in the guide "Emergency Deletions - Conditions".
+
+Level
+
+Type of Emergency Deletion
+
+Participant
+
+Participant Level
+
+All orders and quotes for all securities
+
+x
+
+All orders and quotes in a single security
+
+x
+
+x
+
+All orders and quotes in an underlying.
+
+x
+
+x
+
+On order book and
+SwissAtMid
+
+Book
+Type
+
+Trader / User Level
+
+SLS
+
+Participant Level
+
+x
+1
+2
+
+Security Level
+2
+
+Force Logoff
+
+User
+
+Name of product
+or underlying
+
+Order ID
+
+Buy / Sell / All
+
+CLOB / MPOB / All
+
+Algo ID
+
+x
+
+x
+
+x
+
+x
+
+x
+
+x
+
+x
+
+x
+
+x
+x
+
+All orders and quotes for all securities
+
+x
+
+x
+
+x
+
+All orders and quotes in a single security
+
+x
+
+x
+
+x
+
+x
+
+x
+
+All orders and quotes in an underlying.
+
+x
+
+x
+
+x
+
+x
+
+x
+
+x
+
+x
+
+x
+
+Single order (STI only)
+
+1
+
+x
+
+All quotes for a QTI User (Market Maker)
+
+x
+
+x
+
+All orders for an OTI User
+All orders for all securities
+
+x
+
+x
+x
+
+Information to be provided on the confirmation message
+This type of emergency deletion will only be performed in exceptional situations.
+Force Logoff is not applicable to STI User. Only applicable if flag "order persistency upon disconnect" is NOT configured for QTI and OTI User.
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Emergency Deletions
+
+Valid as of 01 January 2018
+
+Conditions
+Find below a complete list of conditions under which emergency deletions can be made:
+
+Attribute
+At least one attribute
+is mandatory
+
+Participant
+
+STI FIX-Tag 448 - partyID
+OTI - partyID
+QTI - partyID
+
+User1
+Additional security
+attributes which are
+optional and cannot
+be accumulated
+
+Security
+
+This attribute does not delete orders for the entire legal entity but
+only for the indicated Party Id of the participant.
+
+The OTI or QTI user
+The instrument Identifier value. ISIN code of the product
+
+STI FIX-Tag 523 - PartySubID
+OTI - Principal Id (bit 14-30)
+QTI - Principal Id (bit 14-30)
+STI FIX-Tag 54 - Side
+OTI - Order Verb
+QTI - Order Verb
+STI FIX-Tag 528 - Order Capacity
+OTI - Principal Id (bit 31)
+QTI - Principal Id (bit 31)
+
+The identification of the user / trader
+
+Book Type
+
+STI FIX-Tag 26561 - BookType
+OTI - BookType (bit 35)
+
+Book (CLOB)
+Dark order book (MPOB)
+
+Client Reference
+
+STI FIX-Tag 448 - PartyID of Client Party
+OTI - Principal Id (bit 0-13)
+QTI - Principal Id (bit 0-13)
+
+The client reference.
+Optional max. 30 SWIFT characters
+
+Algorithm Reference
+
+STI FIX-Tag 448 - PartyID of Algorithm
+
+Identifier of the algorithm (8 byte integer)
+
+Single Order
+
+STI FIX-Tag 37 - OrderID
+
+Unique identifier for Order assigned by the exchange
+
+Force Logoff
+
+OTI
+QTI
+
+Underlying1
+
+Trader
+
+Side
+
+Trading Capacity
+
+1
+
+Comment
+
+Identifier of the participant
+
+RDI - isin
+STI FIX-Tag 48 - SecurityID
+OTI - Orderbook
+QTI - Orderbook
+RDI - boardId
+OTI - boardId
+QTI - boardId
+RDI - instrId
+OTI - instrId
+QTI - instrId
+
+Board1
+
+Additional order
+attributes which are
+optional and can be
+accumulated
+
+Field Description
+
+Group of securities that share the same attributes for instance
+market making, trading schedules, exchange rules etc.
+
+If none of these attributes is specified the emergency deletion of
+orders will be performed for all securities.
+
+The Instrument of a given security is used to model dependencies
+between securities (underlying security)
+
+Buy
+Sell
+P = Principal (Nostro)
+R = Riskless Principal (Customer)
+Not applicable for SLS
+
+Single Order deletion from the order book will only be performed in
+exceptional situations.
+OTI/QTI: No attribute on order or quote level. User configuration
+"order persistency upon disconnect" supported. If flag is set,
+orders/quotes will not be deleted upon Force Logoff.
+
+This type of emergency deletion will only be performed in exceptional situations.
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Trading Calendar 2018
+January
+
+February
+
+MO
+
+TU
+
+WE
+
+TH
+
+FR
+
+SA
+
+SU
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+15
+
+16
+
+17
+
+18
+
+19
+
+22
+
+23
+
+24
+
+25
+
+26
+
+29
+
+30
+
+31
+
+March
+
+MO
+
+TU
+
+WE
+
+14
+
+5
+
+6
+
+7
+
+20
+
+21
+
+12
+
+13
+
+27
+
+28
+
+19
+
+20
+
+26
+
+27
+
+28
+
+April
+
+TH
+
+FR
+
+SA
+
+SU
+
+MO
+
+TU
+
+WE
+
+1
+
+2
+
+3
+
+4
+
+8
+
+9
+
+10
+
+14
+
+15
+
+16
+
+21
+
+22
+
+23
+
+11
+
+5
+
+6
+
+7
+
+17
+
+18
+
+12
+
+13
+
+24
+
+25
+
+19
+
+20
+
+26
+
+May
+
+MO
+
+TU
+
+WE
+
+TH
+
+FR
+
+SA
+
+SU
+
+MO
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+7
+
+1
+
+TH
+
+FR
+
+SA
+
+SU
+
+1
+
+2
+
+3
+
+4
+
+8
+
+9
+
+10
+
+11
+
+14
+
+15
+
+16
+
+17
+
+18
+
+21
+
+22
+
+23
+
+24
+
+25
+
+27
+
+28
+
+29
+
+30
+
+31
+
+MO
+
+TU
+
+WE
+
+TH
+
+FR
+
+SA
+
+June
+TU
+
+WE
+
+TH
+
+FR
+
+SA
+
+SU
+
+SU
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+1
+
+2
+
+3
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+24
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+28
+
+29
+
+30
+
+31
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+SA
+
+SU
+
+1
+
+2
+
+30
+
+July
+
+August
+
+MO
+
+TU
+
+WE
+
+TH
+
+FR
+
+SA
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+9
+
+10
+
+11
+
+12
+
+13
+
+16
+
+17
+
+18
+
+19
+
+23
+
+24
+
+25
+
+26
+
+30
+
+31
+
+SU
+
+MO
+
+TU
+
+8
+
+6
+
+7
+
+14
+
+15
+
+13
+
+20
+
+21
+
+22
+
+27
+
+28
+
+29
+
+WE
+
+TH
+
+1
+
+2
+
+3
+
+4
+
+5
+
+8
+
+9
+
+10
+
+11
+
+14
+
+15
+
+16
+
+17
+
+20
+
+21
+
+22
+
+23
+
+24
+
+27
+
+28
+
+29
+
+30
+
+31
+
+1
+
+October
+
+September
+FR
+
+SA
+
+SU
+
+MO
+
+TU
+
+WE
+
+TH
+
+FR
+
+12
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+18
+
+19
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+25
+
+26
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+FR
+
+SA
+
+SU
+2
+
+November
+
+MO
+
+TU
+
+WE
+
+TH
+
+FR
+
+SA
+
+SU
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+15
+
+16
+
+17
+
+18
+
+19
+
+22
+
+23
+
+24
+
+25
+
+26
+
+29
+
+30
+
+31
+
+December
+
+MO
+
+TU
+
+WE
+
+TH
+
+FR
+
+14
+
+5
+
+6
+
+7
+
+20
+
+21
+
+12
+
+13
+
+27
+
+28
+
+19
+26
+
+SA
+
+SU
+
+MO
+
+TU
+
+WE
+
+TH
+
+1
+
+2
+
+3
+
+4
+
+8
+
+9
+
+10
+
+1
+
+1
+
+11
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+14
+
+15
+
+16
+
+9
+
+17
+
+18
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+20
+
+21
+
+22
+
+23
+
+27
+
+28
+
+29
+
+30
+
+24
+
+25
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+Saturday
+
+Market Closed
+
+Sunday
+
+Market Closed
+
+Market Holiday
+
+Market Closed
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Trading Calendar 2019
+January
+MO
+
+February
+
+TU
+
+WE
+
+TH
+
+FR
+
+SA
+
+SU
+
+March
+
+MO
+
+TU
+
+WE
+
+TH
+
+FR
+
+SA
+
+SU
+
+MO
+
+TU
+
+WE
+
+TH
+
+FR
+
+SA
+
+SU
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+1
+
+2
+
+3
+
+1
+
+2
+
+3
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+24
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+24
+
+28
+
+29
+
+30
+
+31
+
+25
+
+26
+
+27
+
+28
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+
+MO
+
+TU
+
+WE
+
+TH
+
+FR
+
+SA
+
+SU
+
+1
+
+2
+
+April
+
+May
+
+MO
+
+TU
+
+WE
+
+TH
+
+FR
+
+SA
+
+SU
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+15
+
+16
+
+17
+
+18
+
+19
+
+22
+
+23
+
+24
+
+25
+
+26
+
+29
+
+30
+
+June
+
+MO
+
+TU
+
+14
+
+6
+
+7
+
+20
+
+21
+
+13
+
+27
+
+28
+
+July
+
+WE
+
+TH
+
+FR
+
+SA
+
+SU
+
+1
+
+2
+
+3
+
+4
+
+5
+
+8
+
+9
+
+10
+
+11
+
+12
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+27
+
+28
+
+29
+
+30
+
+31
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+SU
+
+August
+
+MO
+
+TU
+
+WE
+
+TH
+
+FR
+
+SA
+
+SU
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+15
+
+16
+
+17
+
+18
+
+19
+
+22
+
+23
+
+24
+
+25
+
+26
+
+29
+
+30
+
+31
+
+September
+
+MO
+
+TU
+
+WE
+
+TH
+
+FR
+
+14
+
+5
+
+6
+
+7
+
+20
+
+21
+
+12
+
+13
+
+27
+
+28
+
+19
+26
+
+SA
+
+SU
+
+MO
+
+TU
+
+WE
+
+TH
+
+FR
+
+SA
+
+1
+
+2
+
+3
+
+4
+
+8
+
+9
+
+10
+
+11
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+14
+
+15
+
+16
+
+8
+
+17
+
+18
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+20
+
+21
+
+22
+
+27
+
+28
+
+29
+
+23
+
+24
+
+25
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+30
+
+31
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+SU
+
+1
+
+30
+
+October
+MO
+
+November
+
+TU
+
+WE
+
+TH
+
+FR
+
+SA
+
+SU
+
+December
+
+MO
+
+TU
+
+WE
+
+TH
+
+FR
+
+SA
+
+SU
+
+MO
+
+TU
+
+WE
+
+TH
+
+FR
+
+SA
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+1
+
+2
+
+3
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+24
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+28
+
+29
+
+30
+
+31
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+
+Saturday
+
+Market Closed
+
+Sunday
+
+Market Closed
+
+Market Holiday
+
+Market Closed
+
+1
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+Contacts for further questions
+Exchange Operations, Market Control
+Any queries in relation to on order book trading, mistrades and emergency deletions on SIX Swiss Exchange.
+Helpdesk
+
++41 58 399 2475
+
+Fax
+
+-
+
+E-Mail
+
+helpdesk.exc@six-group.com
+
+Member Services
+Any queries in relation to member and trader administration and other general queries.
+Helpdesk
+
++41 58 399 2473
+
+Fax
+
++41 58 499 2476
+
+E-Mail
+
+member.services@six-group.com
+
+Fax
+
+-
+
+E-Mail
+
+zulassung@six-group.com
+
+Fax
+
++41 58 499 2400
+
+E-Mail
+
+lsz@six-group.com
+
+Fax
+
++41 58 499 5643
+
+E-Mail
+
+lsg@six-group.com
+
+Fax
+
++44 207 864 4333
+
+E-Mail
+
+lsl@six-group.com
+
++41 58 499 2242
+
+E-Mail
+
+education@six-group.com
+
++41 58 499 2476
+
+E-Mail
+
+Sales&MemberRelations@six-group.com
+
+Static Data
+Any queries in relation to instrument static data.
+Helpdesk
+
++41 58 399 2490
+
+Local Support Center
+Any technical inquiries.
+Local Support Center Zürich
+Helpdesk
+
++41 58 399 2400
+
+Local Support Center Geneva
+Helpdesk
+
++41 58 399 5642
+
+Local Support Center London
+Helpdesk
+
++44 207 864 4364
+
+Education
+Any queries in relation to general trading information and trader education.
+Helpdesk
+
++41 58 399 3099
+
+Fax
+
+Account Management
+Any queries in relation to products and commercials.
+Helpdesk
+
++41 58 399 2474
+
+Fax
+
+Admission
+Any queries in relation to listing, reporting, ad hoc publicity, financial reporting, disclosure of shareholdings, corporate governance and management transactions.
+Helpdesk
+
++41 58 399 2990
+
+Fax
+
++41 58 499 2934
+
+E-Mail
+
+regulation@six-group.com
+
+Fax
+
++41 58 499 4999
+
+E-Mail
+
+sve-msi@six-group.com
+
+Fax
+
++41 58 499 2710
+
+E-Mail
+
+pressoffice@six-swiss-exchange.com
+
+Compliance & Surveillance
+Any queries in relation to rules and directives.
+Helpdesk
+
++41 58 399 4999
+
+Media Spokesman
+Exclusive contact for the media.
+Helpdesk
+
++41 58 399 2675
+
+SIX Swiss Exchange AG, P.O. Box, CH-8021 Zurich
+
+© SIX Swiss Exchange Ltd, 2018
+
+SIX Swiss Exchange Ltd
+Pfingstweidstrasse 110
+P.O. Box
+CH-8021 Zurich
+T + 41 58 399 5454
+F + 41 58 499 5455
+info@six-swiss-exchange.com
+www.six-swiss-exchange.com
+
+None of the information contained herein constitutes an offer to buy or sell a financial instrument that is traded on SIX Swiss Exchange Ltd. SIX Swiss Exchange Ltd is liable neither for
+the completeness and accuracy of the information given, nor for any loss incurred as a result of action taken on the basis of information provided in this or any other SIX Swiss
+Exchange Ltd publication. SIX Swiss Exchange Ltd expressly reserves the right to alter prices or product composition at any time. SIX Swiss Exchange Ltd is a joint-stock company
+SIX Swiss
+Exchange AG, P.O. Box, CH-8021 Zurich
+under Swiss law. It operates a securities exchange which is licensed and supervised by the Financial Market Supervisory Authority
+FINMA.
+
+

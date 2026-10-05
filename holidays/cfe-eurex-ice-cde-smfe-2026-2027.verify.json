@@ -1,0 +1,157 @@
+{
+  "verifier_task": "cfe-eurex-ice-cde-smfe-2026-2027 (adversarial verification, ROUND 2)",
+  "verified_at_utc": "2026-09-12 08:05-08:20",
+  "target_result": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cfe-eurex-ice-cde-smfe-2026-2027.json",
+  "target_evidence_dirs": [
+    "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cfe-eurex-ice-cde-smfe-2026-2027/",
+    "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cfe-eurex-ice-cde-smfe-2026-2027-fix/"
+  ],
+  "previous_verdict_moved_to": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cfe-eurex-ice-cde-smfe-2026-2027.verify.r1.json",
+  "round0_result_preserved_at": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cfe-eurex-ice-cde-smfe-2026-2027.r0.json",
+  "matches": true,
+  "verdict_summary": "Both round-1 load-bearing discrepancies (A: false negative on CDE 2026 MLK; B: untested 'web.archive.org unreachable' claim and the superseded ICE 2026 product-group headers) are fully resolved, and all four advisories are either answered or still correctly disclosed. Independently: 53 of 53 indexed artifacts re-hash; ten cited documents re-fetched live and byte-compared, ten identical (including the new CDE 26-01 PDF and the new ICE 20260609 calendar); the Wayback capture 20260728113521 replays byte-identical to live; a fresh CDX enumeration reproduces the saved ifus_notices_cdx_2025-2027.json byte-for-byte and re-confirms that no 2026 ICE MLK or Presidents Day notice is archived; 121 ICE-calendar family entries were machine-checked cell-by-cell against the PDFs with zero mismatches, and a further ~60 entries across CFE/Eurex/ICE-notice/CDE were re-read by hand with every status, instant and zone matching the operator's print; no instant is inferred from another year; every one of the 203 family entries is now T1 and none is 'unknown'. No load-bearing defect remains. Four non-blocking advisories are recorded below.",
+
+  "round1_discrepancy_closure": [
+    {
+      "id": "A",
+      "round1_finding": "CDE 2026-01-19 recorded status 'unknown', tier 'T1 (absence of document)', with missing[9] asserting that no CDE Market Notice for 2026 MLK exists and that notices 26-01/26-02/26-04 are absent from the operator's table — contradicted by the task's own saved cde_notices_page.md.",
+      "status": "RESOLVED",
+      "evidence": [
+        "raw/cfe-eurex-ice-cde-smfe-2026-2027-fix/CDE_Market_Notice_26-01_MLK_Holiday.pdf, sha256 d4b206391f70a015002af78c04c46bdce0ed08f87005b5b8e383cc7c5cd01f38 — I re-fetched https://images.ctfassets.net/k3n74unfin40/jJEoZRkAZ0JlPC3UcJ2CL/d71ac89c5cd10783b9a7e11f449d1424/Market_Notice_26-01_MLK_Holiday.pdf live at 2026-09-12 08:08 UTC: HTTP 200, sha256 identical.",
+        "My own `pdftotext -layout` of that PDF is byte-identical to the saved CDE_26-01.txt (sha256 0b5d63198bdbf8151697dc5a11132dc92945d14575301c8fcc25ec9549db5485).",
+        "The 'unknown' family entry is gone. 2026-01-19 now carries two sourced CDE families, both document CDE-MN-26-01, tier T1: 'Energy, Metal & Equity' = closed, and 'Crypto (24x7)' = normal.",
+        "Verbatim fidelity re-checked against the PDF grid: Energy/Metal/Equity — Fri 1/16 OPEN/START '1/15 17:00 CT', CLOSE/ROLL '1/16 16:00 CT'; Mon 1/19 'Closed for holiday'; Tue 1/20 OPEN/START '1/19 17:00 CT', CLOSE/ROLL '1/20 16:00 CT'. Crypto (24x7) — Mon 1/19 'See Tuesday'; Tue 1/20 OPEN/START '1/16 17:00 CT', CLOSE/ROLL '1/20 16:00 CT'; and the operator's own anomalous Friday 1/16 OPEN/START '1/15 16:00 CT' is reproduced as printed rather than normalised to 17:00. Zone recorded as printed ('CT'). All exact.",
+        "The prose quotations are verbatim: 'For select Coinbase Derivatives products, the January 19, 2026 trading session will be closed in observance of Martin Luther King Jr. Day.' and the whole 24x7 / non-24x7 rejection-window sentence.",
+        "The round-0 missing[] entry asserting the notice did not exist is deleted (r0 had 13 missing entries, r1 has 12).",
+        "raw/.../-fix/INDEX.md CORRECTIONS item 2 records the false claim and points at the round-0 bytes (cde_notices_page.md line 1257) that contradicted it. I confirmed line 1257 reads '26-01 / Market / 01/08/2026 / 2026 MLK / Holiday'."
+      ]
+    },
+    {
+      "id": "B",
+      "round1_finding": "The round-0 header claim 'web.archive.org was unreachable from this machine for the whole session' was never retried and was used to bound the gaps; the CDX enumeration it blocked surfaces a later-generated copy of the 2026 ICE calendar whose product-group headers differ, leaving ~18 2026 family labels on superseded spellings that diverge from the 2027 labels and omit Digital Asset.",
+      "status": "RESOLVED",
+      "evidence": [
+        "Withdrawal is recorded in three places: -fix/INDEX.md CORRECTIONS item 1, missing[4] ('CORRECTED at round 1 …'), and missing[11] (a dedicated entry stating the claim 'is WITHDRAWN and must not be relied on'). No surviving statement in the JSON relies on unreachability.",
+        "raw/.../-fix/ICE_Futures_US_Exchange_Notice_2026_Holiday_Calendar_20260609.pdf, sha256 b9723d9afa1c20a0792b628de36c7d3726add58ea3d94972a1e7cefd3e50bf4e. I independently (i) re-fetched it live (HTTP 200, identical sha256) and (ii) replayed Wayback capture 20260728113521id_ (HTTP 200, identical sha256). Both claims in INDEX.md hold.",
+        "PDF CreationDate claims verified with pdfinfo: 20260609 copy = 2026-02-18 15:46 UTC; hub copy IFUS_Trading_Hours_Holiday_Calendar.pdf = 2026-01-07 14:00 UTC. Exactly as the documents map states.",
+        "I diffed my own pdftotext -layout renders of the two copies. The ONLY differences are: the two product-group headers, 'Holiday' vs 'Holiday:' in table 1, 'For more information:' vs 'FOR MORE INFORMATION' in the footer, and whitespace. Every open / closed / open1 cell is identical. The INDEX's and the documents map's characterisation is exact.",
+        "All 18 affected 2026 labels are re-keyed: 11 entries to 'Cocoa, Coffee “C”®, Coffee \"C\"® Metric, Cotton No 2®, FCOJ, Sugar No. 11 and No. 16 Contracts' and 7 to 'Currency, Digital Asset, Stock, SOFR, MSCI Bond, and Mortgage Index Contracts'. A programmatic sweep of all 203 family entries finds ZERO occurrences of either superseded spelling as a family key, and the 2026 and 2027 spellings are now identical strings.",
+        "A full r0-vs-r1 field diff shows exactly 18 changed family entries, all of them changing only `family` and `verbatim` (appending a bracketed note that names the superseded spelling and the copy it came from), plus the 2026-01-19 CDE replacement. No `status`, `close_instant`, `open_instant`, `document` or `tier` value anywhere in the file was altered. Nothing undisputed was touched.",
+        "Negative evidence re-run by me: a fresh CDX query (url=ice.com/publicdocs/futures_us/exchange_notices*, from=2025, to=2027, collapse=urlkey) returns bytes whose sha256 is eeaae29bb32039f5e785291302e2618784703db963853aee22030da3cbbaff03 — identical to the saved ifus_notices_cdx_2025-2027.json — 113 distinct URLs. Holiday-matching rows are 2016/2017/2021/2022/2023/2025 notices plus the 2026 calendar. NO 2026 MLK and NO 2026 Presidents Day notice. missing[4] is correct and now rests on a tested basis."
+      ]
+    },
+    {
+      "id": "C",
+      "round1_advisory": "raw/.../INDEX.md interpretive note 2 ('Only 2026-12-25 has \"None / None\" and is a full closure') contradicts the JSON, which also records 2026-01-01 as closed.",
+      "status": "ANSWERED",
+      "evidence": "-fix/INDEX.md CORRECTIONS item 3 corrects the note and states the rule the JSON actually applies: early close when the Extended-Trading-Hours string ends at an instant ON the holiday date, closed when it does not. I confirmed the JSON obeys that rule on all 12 CFE rows. Residual nit recorded as advisory G below."
+    },
+    {
+      "id": "D",
+      "round1_advisory": "The CFE Central Time zone is not printed on the holiday table; it is taken from the page's '(all times are Central Time)' section header.",
+      "status": "STILL OPEN BY DESIGN, CORRECTLY DISCLOSED",
+      "evidence": "Not addressed by the fix, and need not be: it is an inference, not a defect. It remains disclosed in round-0 INDEX.md interpretive note 1, in missing[1], and inside every CFE verbatim ('Cboe prints CFE hours as “(all times are Central Time)”'). I re-confirmed the string is present in the live page render (cboe_page.md line 8), which is byte-identical to the saved cboe_hours_us_futures.md. Every CFE instant's UTC offset is correct for the date under US Central DST (-06:00 for Jan/Feb/Nov/Dec rows, -05:00 for Apr/May/Jun/Jul/Sep rows)."
+    },
+    {
+      "id": "E",
+      "round1_advisory": "raw/.../cfe_notices_raw.html exists on disk with no INDEX.md row.",
+      "status": "RESOLVED",
+      "evidence": "-fix/INDEX.md CORRECTIONS item 4 adds the row with size 169 bytes, sha256 7108fef32b066dcb8e074d4114e8614cfb6f1efeb9497c0b0268b7b4039f22bc, URL https://www.cboe.com/us/futures/notices/, retrieval 2026-09-12 04:18 UTC, and the correct content description (a Cloudflare '307 Temporary Redirect' stub that sources nothing). I re-hashed the file — matches — and read it: it is exactly that stub. Every artifact on disk in both directories now has an index row."
+    },
+    {
+      "id": "F",
+      "round1_advisory": "INDEX.md said the CDE market-notice PDF hrefs were recovered from the page's embedded Contentful JSON, but the saved cde_notices_links.md contains only CDEI-* disciplinary PDFs, so the recovery path was not reproducible from the saved bytes.",
+      "status": "RESOLVED",
+      "evidence": "-fix/cde_market_notices_page_raw.html (sha256 523705cd5fa828ba035ec789a637a5c5d71298d1db4ab39e554b05e2b2f15a87) is the client-rendered page and does carry the hrefs. I located the 26-01 hyperlink node in those bytes and it resolves to exactly the URL the documents map cites. I also re-fetched the live page through the reader and confirmed the same href and the '2026 MLK' label are present. Minor quotation nit recorded as advisory H below."
+    }
+  ],
+
+  "independent_checks": [
+    {
+      "check": "re-hash every file in both INDEX.md files",
+      "result": "PASS",
+      "detail": "Round-0 directory: 46 files, 45 artifacts + INDEX.md; 44 carry a row in round-0 INDEX.md (one of them, CDE_CDE_Market_Notice_26-27.1_….pdf, with an elided filename) and the 45th, cfe_notices_raw.html, is indexed by -fix CORRECTIONS item 4. Fix directory: 9 files, 8 artifact rows + INDEX.md. All 53 artifacts re-hash to the recorded sha256, including the six round-0 rows that print only an 8-hex prefix (126d00d7, 69b5faea, c206ac14, 7fce128d, d9d2a985, 031ae4aa) and the -fix row that prints da975035…. No indexed file is missing from disk and no file on disk is unindexed."
+    },
+    {
+      "check": "independent live re-fetch and byte comparison (target 6; performed 10) plus one archive replay",
+      "result": "PASS",
+      "detail": "All re-fetched 2026-09-12 08:05-08:12 UTC and sha256-identical to the saved bytes: (1) ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_Exchange_Notice_2026_Holiday_Calendar_20260609.pdf b9723d9a…; (2) ice.com/publicdocs/futures/IFUS_Trading_Hours_Holiday_Calendar.pdf da975035…; (3) ICE_Futures_US_Exchange_Notice-2027_Holiday_Calendar_20260604.pdf d2e39a2d…; (4) images.ctfassets.net/…/Market_Notice_26-01_MLK_Holiday.pdf d4b20639…; (5) ICE_Futures_US_2026_Memorial_DayHoliday_20260310.pdf 3dfe2a49…; (6) ICE_Futures_US_2026_JuneteenthHoliday_20260320.pdf 34a21ef6…; (7) eurex.com …/tradingcalendar_2026_en.pdf b0796b42…; (8) eurex.com …/indicative-trading-calendars.csv 47b41622…; (9) cboe.com/us/futures/holidays/csv/ cc98e21e… (same '# Generated: 2026:09:11 16:16:09' header); (10) the r.jina.ai render of cboe.com/about/hours/us-futures, byte-identical to the saved cboe_hours_us_futures.md. Archive: web.archive.org/web/20260728113521id_/…20260609.pdf replays HTTP 200 with sha256 b9723d9a… — identical to live, corroborating the -fix fetchlog's 'cmp: IDENTICAL'."
+    },
+    {
+      "check": "verbatim / status / instant / zone re-read from saved bytes (target: 12 groups; performed: 43 holiday dates, ~180 family entries)",
+      "result": "PASS",
+      "detail": "MACHINE-CHECKED: I parsed both ICE calendar PDFs (2026 table 1 = 18 rows, table 2 = 14; 2027 table 1 = 18, table 2 = 14) and cross-checked every family entry citing IFUS-CAL-2026 (43 entries) and IFUS-CAL-2027 (78 entries) cell by cell — 121 entries, ZERO status mismatches, and every verbatim carries the exact printed token (open / open1 / closed) for its own cell. HAND-CHECKED: CFE — all 12 CSV rows reproduce character-for-character, including the 'None' cells, the two-segment ETH strings and the day-of-week parentheticals; every close_instant is the instant printed in its own row with the correct Central offset (10:30 -06:00 on 01-19, 02-16, 11-26; 08:30 -05:00 on 04-03; 10:30 -05:00 on 05-25, 06-19, 07-03, 09-07; 08:30/12:15 -06:00 on 11-27 and 12-24). Eurex — the Holiday-regulations page contains exactly seven 2026 'in all derivatives' days (01-01, 04-03, 04-06, 05-01, 12-24, 12-25, 12-31), precisely the seven recorded, with 'closed for trading and clearing (exercise, settlement and cash)' on five and 'closed for trading' on 24 and 31 December, matching the Trading-Calendar PDF line 'Eurex is closed for trading in all derivatives: 24 December, 31 December'. ICE per-holiday notices — Good Friday (softs+Canola Closed/None; MSCI/FANG+/NYSE/FTSE 'Late Open - 5:00 am / Early Close – 9:15 am, No TAS trading'; USDX group 'Late Open - 5:00 am / Early Close - 11:15 am, No TAS Trading' — the inconsistent en-dash/hyphen and the capital T are reproduced as printed; Gold/Silver and Financial NG Closed; Apr 6 'Sugar No. 11, Coffee “C” and Cocoa - late open at 7:30 am'), Memorial Day (2:30 / 1:00 / 1:00 / Closed / 'Early Close 1:30 pm' with no dash), Juneteenth (2:30 / 1:00 / 1:00 / Gold 'Early Close - 1:30 pm' with Regular settlement times / 1:30), Independence Day revised (same set, plus Jul 6 'Late Open for Cotton: 8:00 am'), Labor Day (1:00 / 1:00 / USDX 'Regular Hours, TAS trading will not be held' correctly classed normal under LAW-SESSION-NOT-EXPIRY / 1:30 / Gold 1:30), Columbus Day (Canola closed, all others regular) — every instant carried at -04:00 (NY EDT), zone recorded as the operator prints it ('all times shown in NY time'). CDE — 25-42, 26-01, 26-05, 26-12, 26-23, 26-27.1, 26-29, 26-36: every OPEN/START and CLOSE/ROLL cell matches the grid, including the operator's own inconsistent zero-padding ('9/07 19:00 CT' in 26-36, '05/25 17:00 CT' in 26-23) and the column headers 'CLOSE/ROLL' vs 'ROLL'. Zone 'CT' as printed."
+    },
+    {
+      "check": "no instant inferred from another year",
+      "result": "PASS",
+      "detail": "Programmatic scan of all 203 family verbatims for 4-digit year tokens outside {year-1, year, year+1}: only 5 hits, all the Eurex indicative caveat's '2027 to 2036'. All 36 recorded instants fall on the holiday's own date (0 mismatches). Every family's document id year equals the holiday's year, with the single legitimate exception of the five 2028-01-03 entries, which cite IFUS-CAL-2027 because that calendar's own last row prints 'Monday, Jan 3, 2028'. The 2027 rows carry no instants at all — correct, since ICE marks those days open1 and announces hours later."
+    },
+    {
+      "check": "missing[] list against a fresh CDX enumeration (≥1 year) and live operator channels",
+      "result": "PASS",
+      "detail": "ICE: my fresh CDX enumeration over ice.com/publicdocs/futures_us/exchange_notices* for 2025-2027 (113 URLs) is byte-identical to the saved artifact and holds no 2026 MLK and no 2026 Presidents Day notice — only the 2025 equivalents, which missing[4] explicitly forbids reading across years. CFE: live re-check at 2026-09-12 08:10 UTC — cboe.com/about/hours/us-futures still carries only '2026<!-- --> Futures Holiday Schedule' in its HTML, and cboe.com/us/futures/holidays/csv/?year=2027 returns the identical 2026 rows; missing[0] is accurate. EUREX: the indicative CSV's EXCH (global) calendar holds exactly three 2027 rows — 01/01, 03/26 Good Friday, 03/29 Easter Monday — the three attributed to EXCH, while 12/24 and 12/31 appear under TRAD/TRA1 as 'Christmas Eve (Clearing open)' / 'New Year's Eve (Clearing open)', exactly as attributed; the absence of 2027-05-01 and 2027-12-25 is correct (both Saturdays). CDE: I re-fetched the live Market Notices index at 08:11 UTC; the highest 2026 notice in the payload is 26-36 and there is no 2026 Thanksgiving or Christmas notice, so missing[8] is accurate; 26-33/26-33.1/26-33.2 named in missing[9] are present in the payload. I also enumerated the archive for CDE notices on BOTH ctfassets hosts (the -fix run covered only assets.ctfassets.net, while 26-01 lives on images.ctfassets.net): images.ctfassets.net/k3n74unfin40* has zero captures, and assets.ctfassets.net has 167 Market_Notice captures of which exactly one is 2026-numbered (26-13, gateway maintenance) and exactly one matches MLK (the 2025 notice). The -fix conclusion that CDE has essentially no archival backstop therefore holds on both hosts. SMFE: the CFTC PR 9272-26 quotation is verbatim in the saved render and correctly tiered T3."
+    },
+    {
+      "check": "CME trading-hours service (T2) for any 2019+ holiday listed as missing",
+      "result": "NOT APPLICABLE",
+      "detail": "Every venue in this task — CFE/Cboe Futures Exchange, Eurex, ICE Futures U.S., Coinbase Derivatives, SMFE/Kraken Derivatives Exchange — is outside CME Group. CME's trading-hours service publishes CME/CBOT/NYMEX/COMEX product windows only and cannot source a session for any identity in this file, so no missing[] entry here can be closed by it. Recorded explicitly rather than silently skipped."
+    },
+    {
+      "check": "internal consistency and charter compliance",
+      "result": "PASS",
+      "detail": "203 family entries across 43 holiday dates; status distribution closed 90 / normal 47 / modified 36 / early_close 28 / late_open 2; ZERO entries with status 'unknown' and ZERO entries below T1 (round 0 had one 'unknown' at 'T1 (absence of document)'). Every day-of-week in the file agrees with the operator's printed weekday. LAW-UTC-DATES: every retrieval time in the -fix INDEX.md matches the file's own mtime converted to UTC (07:41-07:49 UTC against AEST mtimes 17:41-17:49), and 2026-09-12 is today's UTC date — no future-dated record. LAW-SESSION-NOT-EXPIRY is applied correctly: ICE's 2026 Juneteenth equity-index companion notice, which I re-read, contains only last-trade-day and final-settlement/SOQ content and keys nothing; 'TAS trading will not be held' is treated as a trade-type restriction, not a boundary. The Eurex 2027 rows are tiered 'T1 (operator-published but expressly INDICATIVE/PRELIMINARY — not an unconditional dated future under LAW-NO-FABRICATED-DATES)', which is the right handling."
+    }
+  ],
+
+  "discrepancies": [],
+
+  "advisories": [
+    {
+      "id": "G",
+      "severity": "advisory",
+      "where": "raw/cfe-eurex-ice-cde-smfe-2026-2027-fix/INDEX.md, CORRECTIONS item 3",
+      "detail": "The corrected CFE rule enumerates only the rows whose Regular Trading Hours cell prints 'None'. It does not mention the two rows that print an actual RTH range — 'Thanksgiving Early Close,2026-11-27,08:30:00 - 12:15:00,…' and 'Christmas Early Close,2026-12-24,08:30:00 - 12:15:00,…' — which the JSON (correctly) records as early_close with open_instant 08:30 and close_instant 12:15 Central. The JSON is right; only the restated rule is incomplete. Suggested wording: '… a holiday row is an early close when it prints a Regular-Trading-Hours range that ends before the normal 15:00 CT close, OR when its Extended-Trading-Hours string ends at an instant on the holiday date; and closed when it prints no Regular Trading Hours and no session ends on the date (2026-01-01) or prints \"None / None\" (2026-12-25).'"
+    },
+    {
+      "id": "H",
+      "severity": "advisory",
+      "where": "raw/cfe-eurex-ice-cde-smfe-2026-2027-fix/INDEX.md, row `cde_market_notices_page_raw.html`",
+      "detail": "The row presents the Contentful hyperlink node as a verbatim quotation with plain slashes and single-escaped quotes ('…\"uri\":\"https://images.ctfassets.net/…/Market_Notice_26-01_MLK_Holiday.pdf\"},\"content\":…') and says 'the hrefs are `/`-escaped'. The saved bytes actually read `\\\\\"uri\\\\\":\\\\\"https:\\\\u002F\\\\u002Fimages.ctfassets.net\\\\u002F…`, i.e. the slashes are \\\\u002F-escaped inside a doubly-escaped JSON string. The substance is correct and I resolved the URL from those bytes and re-fetched the PDF byte-identical, so nothing load-bearing turns on it — but a quotation offered as verbatim should be the bytes, with the normalisation stated. Corrected text: 'hrefs appear as `\\\\u002F`-escaped URLs inside a doubly-escaped embedded JSON payload; unescape `\\\\u002F` to `/` before use. Bytes as stored: `\\\\\"uri\\\\\":\\\\\"https:\\\\u002F\\\\u002Fimages.ctfassets.net\\\\u002Fk3n74unfin40\\\\u002FjJEoZRkAZ0JlPC3UcJ2CL\\\\u002Fd71ac89c5cd10783b9a7e11f449d1424\\\\u002FMarket_Notice_26-01_MLK_Holiday.pdf\\\\\"`.'"
+    },
+    {
+      "id": "I",
+      "severity": "advisory",
+      "where": "raw/cfe-eurex-ice-cde-smfe-2026-2027/INDEX.md",
+      "detail": "The round-0 INDEX.md is correctly left byte-intact, but it still asserts, with no pointer to the correction, three statements the fix has shown to be false: the header claim 'web.archive.org was unreachable from this machine for the whole session' (line 9), the cde_notices row's '**No 2026 MLK notice is listed** (26-01/26-02/26-04 are absent from the table)' (line 48), and interpretive note 2's 'Only 2026-12-25 has \"None / None\" and is a full closure' (line 66). It contains the string 'fix' zero times. A reader who opens only that file is misled. Remedy that preserves the bytes: add a sibling file raw/cfe-eurex-ice-cde-smfe-2026-2027/SUPERSEDED.md containing one line — 'Lines 9, 48 and 66 of INDEX.md are superseded; see ../cfe-eurex-ice-cde-smfe-2026-2027-fix/INDEX.md § CORRECTIONS (round-1 fix, 2026-09-12 UTC).' — and index it in the -fix INDEX.md."
+    },
+    {
+      "id": "J",
+      "severity": "advisory",
+      "where": "cfe-eurex-ice-cde-smfe-2026-2027.json, several ICE per-holiday family labels",
+      "detail": "A small number of ICE family labels are lightly normalised rather than reproduced as printed: 'Financial Natural Gas, Power, Natural Gas Liquid(s), Oil and Environmental Contracts' fuses the Good Friday notice's 'Natural Gas Liquids' with the Memorial/Juneteenth/Independence/Labor notices' 'Natural Gas Liquid'; 'NYSE FANG+™' renders the PDFs' superscript-TM; 'MSCI Stock Index Contracts' and 'MSCI Index Contracts' drop the footnote-marker digit that pdftotext attaches ('MSCI Stock Index2 Contracts'); and the softs labels print 'Coffee “C”®' where pdftotext renders 'Coffee “C” ®' with an interposed space. Each is a label, never a status or an instant, and every verbatim beneath them is exact, so nothing downstream is at risk — but if the crate keys families off these strings, the normalisation should be stated once in the evidence file rather than left implicit."
+    }
+  ],
+
+  "counts": {
+    "indexed_artifacts_rehashed": 53,
+    "indexed_artifacts_matching": 53,
+    "documents_refetched_live_and_byte_compared": 10,
+    "documents_byte_identical": 10,
+    "archive_replays_byte_compared": 1,
+    "archive_replays_identical": 1,
+    "cdx_enumerations_rerun": 3,
+    "cdx_enumerations_reproducing_saved_bytes": 1,
+    "holiday_dates_in_result": 43,
+    "total_family_entries_in_result": 203,
+    "family_entries_machine_checked_cell_by_cell": 121,
+    "family_entries_hand_reread_from_saved_bytes": 60,
+    "family_entries_with_transcription_status_instant_or_zone_error": 0,
+    "round1_load_bearing_discrepancies": 2,
+    "round1_load_bearing_discrepancies_resolved": 2,
+    "round1_advisories": 4,
+    "round1_advisories_resolved_or_correctly_disclosed": 4,
+    "new_load_bearing_discrepancies": 0,
+    "new_advisories": 4
+  }
+}

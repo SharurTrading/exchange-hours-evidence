@@ -1,0 +1,147 @@
+Title: Trade at Cash Open (TACO) FAQ - CME Group
+
+URL Source: https://www.cmegroup.com/education/articles-and-reports/trade-at-cash-open-taco-faq.html
+
+Published Time: Tue, 25 Aug 2026 15:44:02 GMT
+
+Markdown Content:
+## Trade at Cash Open (TACO)
+
+## Frequently Asked Questions
+
+*   [What is Trade at Cash Open (TACO) trading?](https://www.cmegroup.com/education/articles-and-reports/trade-at-cash-open-taco-faq.html#what-is-trade-at-cash-open-taco-trading)
+*   [Which futures contracts and contract months are available for TACO trading?](https://www.cmegroup.com/education/articles-and-reports/trade-at-cash-open-taco-faq.html#which-futures-contracts-and-contract-months-are-available-for-taco-trading)
+*   [What are the TACO trading hours?](https://www.cmegroup.com/education/articles-and-reports/trade-at-cash-open-taco-faq.html#what-are-the-taco-trading-hours)
+*   [How is TACO different than BTIC (Basis Trade at Index Close)?](https://www.cmegroup.com/education/articles-and-reports/trade-at-cash-open-taco-faq.html#how-is-taco-different-than-btic-basis-trade-at-index-close)
+*   [What are the contract specifications for TACO trading on E-mini S&P 500 futures?](https://www.cmegroup.com/education/articles-and-reports/trade-at-cash-open-taco-faq.html#what-are-the-contract-specifications-for-taco-trading-on-e-mini-sp-500-futures)
+*   [What are the codes for these products?](https://www.cmegroup.com/education/articles-and-reports/trade-at-cash-open-taco-faq.html#what-are-the-codes-for-these-products)
+*   [Can TACO trades be eligible for block trading?](https://www.cmegroup.com/education/articles-and-reports/trade-at-cash-open-taco-faq.html#can-taco-trades-be-eligible-for-block-trading)
+*   [How can participants execute a TACO trade for the Monday SOQ?](https://www.cmegroup.com/education/articles-and-reports/trade-at-cash-open-taco-faq.html#how-can-participants-execute-a-taco-trade-for-the-monday-soq)
+*   [When is the final price of E-mini S&P 500 futures disseminated?](https://www.cmegroup.com/education/articles-and-reports/trade-at-cash-open-taco-faq.html#when-is-the-final-price-of-e-mini-sp-500-futures-disseminated)
+*   [What are the fees for TACO futures?](https://www.cmegroup.com/education/articles-and-reports/trade-at-cash-open-taco-faq.html#what-are-the-fees-for-taco-futures)
+*   [In which division will the TACO reside?](https://www.cmegroup.com/education/articles-and-reports/trade-at-cash-open-taco-faq.html#in-which-division-will-the-taco-reside)
+*   [When will TACO trades be included in the margin calculation?](https://www.cmegroup.com/education/articles-and-reports/trade-at-cash-open-taco-faq.html#when-will-taco-trades-be-included-in-the-margin-calculation)
+*   [Will there be on-screen market makers for TACO?](https://www.cmegroup.com/education/articles-and-reports/trade-at-cash-open-taco-faq.html#will-there-be-on-screen-market-makers-for-taco)
+*   [How can I get access to CME Globex?](https://www.cmegroup.com/education/articles-and-reports/trade-at-cash-open-taco-faq.html#how-can-i-get-access-to-cme-globex)
+*   [Where can I find more information on TACO trading at CME Group?](https://www.cmegroup.com/education/articles-and-reports/trade-at-cash-open-taco-faq.html#where-can-i-find-more-information-on-taco-trading-at-cme-group)
+
+## Launch and Overview
+
+### 1. What is Trade at Cash Open (TACO) trading?
+
+TACO is a trading mechanism that allows participants to execute a basis trade on E-mini S&P 500 futures relative to the day’s official cash index opening level – before the underlying market. TACO on E-mini S&P 500 futures has been in market since May-2018. Over 80K contracts ($12B notional) have traded since their launch and have provided market participants a useful tool to hedge S&P 500 exposure.
+
+Building on the successful launch of TACO on ES futures, TACO is now available on Nasdaq-100 and Russell 2000. These contracts follow the same mechanics of the ES contracts which are TACO eligible.
+
+### 2. Which futures contracts and contract months are eligible for TACO trading?
+
+TACO trading is eligible for the five concurrent listed contracts for E-mini S&P 500 futures, E-mini Nasdaq-100 futures, and E-mini Russell 2000 futures.
+
+### 3. What are the TACO trading and clearing hours?
+
+Please note that since TACO is against the open, it can be traded on a T or a T+1 basis depending on what time of day you are executing. To trade against the SOQ (Official Cash Index Open) you can transact in TACO between 10:00 a.m. CT (T-1) and 8:30 am CT (T), with the normal trading halt between 4:00 p.m. and 5:00 p.m. CT. On Fridays, after the cash equity market opens in the US at 8:30 a.m. CT, TACO will only be available for block trades – the only way to trade the Monday open via TACO is a block trade on Friday, or Globex on Sunday night – this is due to a Globex limitation that CME hopes to address in the near future. Here is a trading calendar to show when TACO is available, and if traded during that window with relevant SOQ print TACO is based off of T or T+1. Please note that times are US Central Time.
+
+**![Image 1](https://www.cmegroup.com/content/dam/cmegroup/education/images/articles/2018/trade-at-cash-open-taco-faq-fig01.jpg?width=750&format=jpg)**
+
+### 4. How is TACO different than Basis Trade at Index Close (BTIC)?
+
+While TACO trading resembles that of BTIC, there are additional differences noted below:
+
+|  | Trade at Cash Open (TACO) on E-mini S&P 500 | Basis Trade at Index Close (BTIC) on E-mini S&P 500 |
+| --- | --- | --- |
+| Ticker symbol | ESQ | EST |
+| Pricing basis | vs. Special Opening Quotation (SOQ) of S&P 500 Price Index | vs. Closing Index Value of S&P 500 Price Index |
+| Trading session |
+| …terminates at | 8:30 a.m. CT | 3:00 p.m. CT |
+| …begins at | 10:00 a.m. CT prior day (except on CME Globex trades vs. Monday SOQ, which begins at 5:00 p.m. CT on Sunday) | 5:00 p.m. CT on prior day |
+| …trading halt | 4:00-5:00 p.m. CT for the systemwide trading halt on CME Globex | N/A |
+| After a Trade is Matched |
+| …on CME Globex | Confirm on the ESQ trade will be sent on CME Globex | Confirm on the EST trade will be sent on CME Globex |
+| …in clearing | Position in ES will be created, pending resolution of trade price in ES. |
+| …clearing price update | CME Clearing House continues to update the estimated price of the ultimate ES trade based on current index value. |
+
+*The same relationship is observed between NQQ and NQT & RTQ and RLT
+
+## Product Details
+
+### 5. What are the contract specifications for TACO trading on E-mini S&P 500 futures?
+
+TACO contracts are listed on the customary U.S. equity index futures cycle – there will be five concurrent futures listed. The tick increments are below:
+
+| **Index Futures Contracts** |  |
+| --- | --- |
+| TACO on E-mini S&P 500 Futures | 0.05 Index points= $2.50 |
+| TACO on E-mini Nasdaq-100 Futures | 0.05 Index points= $1.00 |
+| TACO on E-mini Russell 2000 Futures | 0.05 Index points= $2.50 |
+
+### 6. What are the codes for these products?
+
+| **Index Futures Contracts** | **CME Globex** | **Bloomberg Front Month** | **Thomson Reuters Front Month** |
+| --- | --- | --- | --- |
+| TACO on E-mini S&P 500 Futures | ESQ | TQOA Index | ESQc1 |
+| TACO on E-mini Nasdaq-100 Futures | NQQ | TNSA Index | NQQc1 |
+| TACO on E-mini Russell 2000 Futures | RTQ | TKPA Index | RTQc1 |
+
+### 7. Can TACO trades be eligible for block trading?
+
+Yes. All available TACO eligible contracts have block trade eligibility.
+
+[View more information on block trades in Market Regulation Rule 526](https://www.cmegroup.com/rulebook/files/cme-group-Rule-526.pdf)
+
+| **Index Futures Contracts** | **Block Threshold** |
+| --- | --- |
+| TACO on E-mini S&P 500 Futures | 500 |
+| TACO on E-mini Nasdaq-100 Futures | 500 |
+| TACO on E-mini Russell 2000 Futures | 40 |
+
+### 8. How can participants execute a TACO trade for the Monday SOQ?
+
+Participants can execute a block trade during the Friday trading session OR trade on CME Globex on Sunday evening beginning at 5pm ET. Due to a technology limitation, there is no trading on CME Globex on Friday. CME Group is working towards a solution to enable TACO trading on Globex for Friday trading sessions.
+
+### 9. When is the final price of E-mini S&P 500 futures disseminated?
+
+The final price of the futures will be disseminated shortly after the Special Opening Quotation (SOQ) for the day has been published by S&P Dow Jones Indexes, FTSE Russell, and Nasdaq. The calculation of the SOQ is, in turn, dependent on the opening of all constituent stocks at their respective primary listing venue. Under normal market conditions, the SOQ is typically disseminated within 30 minutes of the cash market opening.
+
+## Fee and Margin Details
+
+### 10. What are the fees for TACO futures?
+
+TACO will be charged the same as BTIC according to the current CME Fee Schedule.
+
+[View latest CME Fee Schedule](https://www.cmegroup.com/company/files/cme-fee-schedule-2018-05-14.pdf)
+
+### 11. In which division will the TACO reside?
+
+As far as membership, the products will reside in the IOM Division.
+
+### 12. When will TACO trades be included in the margin calculation?
+
+TACO trades executed between 10am and 4pm CT will not be included in that day’s clearing cycle and therefore will not have margin calculated such that there is a margin requirement that must be met. TACO trades during this window, along with trades executed between 5pm and 8:30am CT will be included in the next day’s clearing cycle; margin will first be assessed in the intraday cycle on the following day.
+
+## Additional Information
+
+### 13. How can I get access to CME Globex?
+
+To access CME Globex, you must have a relationship with a CME clearing member firm.
+
+[Learn more about connecting to CME Globex](https://www.cmegroup.com/tools-information/find-a-broker.html)
+
+### 14. Where can I find more information on TACO trading at CME Group?
+
+[Get the latest information about TACO](https://www.cmegroup.com/trading/equity-index/trade-at-cash-open.html)
+
+You can fill out the form on this page to stay informed of TACO product updates.
+
+Please reach out to Equity BLM for additional inquiries: [EquityProducts@cmegroup.com](mailto:EquityProducts@cmegroup.com)
+
+### Trade at Cash Open (TACO)
+
+Craving a better way to hedge Market on Open orders or manage a.m.-expiring deltas? Try TACO for E-mini S&P 500 futures.
+
+[Learn More](https://www.cmegroup.com/trading/equity-index/trade-at-cash-open.html)
+
+![Image 2](https://www.cmegroup.com/content/dam/cmegroup/authors/images/cme-group-288x288.jpg?width=750&format=jpg)
+
+**CME Group** As the world’s leading derivatives marketplace, CME Group is where the world comes to manage risk. Comprised of four exchanges - CME, CBOT, NYMEX and COMEX - we offer the widest range of global benchmark products across all major asset classes, helping businesses everywhere mitigate the myriad of risks they face in today's uncertain global economy.
+
+_All examples in this report are hypothetical interpretations of situations and are used for explanation purposes only. The views in this report reflect solely those of the author and not necessarily those of CME Group or its affiliated institutions. This report and the information herein should not be considered investment advice or the results of actual market experience._

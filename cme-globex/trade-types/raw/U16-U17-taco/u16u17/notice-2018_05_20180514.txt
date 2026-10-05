@@ -1,0 +1,293 @@
+Title: 20180514 - CME Group
+
+URL Source: https://www.cmegroup.com/notices/electronic-trading/2018/05/20180514.html
+
+Markdown Content:
+## Critical System Updates
+
+### MDP 3.0 Performance Enhancements- This Week
+
+Effective this **Sunday, May 20** (trade date Monday, May 7), CME Group will continue performance improvements on the following CME Globex MDP 3.0 channels. In internal testing, these enhancements improved MDP 3.0 performance up to 60%.
+
+These enhancements will not impact iLink order routing or market structure dynamics.
+
+| MDP 3.0 Performance Enhancements |
+| --- |
+| Launch Date | Impacted MDP 3.0 Channels |
+| May 20 | CME Interest Rate Options – 313 CME Globex FX Futures II – 320 CME Globex FX Options II – 321 NYMEX Globex Crude & Crude Refined Futures – 382 DME Globex Futures - 440 |
+| June 3 | CME Globex Equity Futures excluding ES – 318 CBOT Globex Equity Index Futures - 342 CBOT Globex Interest Rate Options - 345 CBOT Globex Commodity Futures II – 346 NYMEX Globex Emissions Futures – 380 NYMEX Globex Nat Gas & Other Non-Crude Energy Futures - 386 |
+| June 10 | CME Globex Equity Futures (ES) – 310 COMEX Globex Futures - 360 COMEX Globex Options - 361 NYMEX Globex Emissions Options - 381 NYMEX Globex Crude & Crude Refined Options – 383 NYMEX Globex Metals, Softs & Alternative Markets Futures - 384 NYMEX Globex Metals, Softs & Alternative Markets Options – 385 NYMEX Globex Nat Gas & Other Non-Crude Energy Options – 387 DME Globex Options – 441 |
+| June 24 | CME Globex Equity Options (ES) – 311 CME Globex Commodity Options – 317 CME Globex Equity Options excluding ES - 319 CBOT Globex Commodity Options – 341 CBOT Globex Equity Index Options – 343 BMD Globex Futures – 430 BMD Globex Options - 431 KRX Globex Futures - 450 MGEX Globex Options - 461 |
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2018/05/20180514.html#top)
+
+### Update Update - Price Precision Extension- 2018
+
+_† Denotes update to the article_
+
+CME Group is implementing end-to-end technology changes to support increased price granularity. Currently, CME Group systems support a maximum of 7 decimals. With this initiative, products with up to 9 decimals may be listed and traded. _†_ On **Sunday, January 13**(trade date Monday, January 14), pending regulatory approval, the 2-Year Treasury Note futures and spreads will move from 7 decimals to 8 to support trading at 1/8 of 1/32.
+
+Customers are encouraged to move to support 9 decimals now; but there are no plans to list a product that uses the 9th decimal at this time.
+
+Starting **Sunday, August 12**, the price precision extension rollout will begin with MDP 3.0. _†_ With this release, customer certification will be required for MDP 3.0 and Streamlined SBE.
+
+_†_ On **Sunday, November 4**, a production test instrument for the 2-Year Treasury Note futures will be launched on CME Globex. This new test instrument will give customers the ability to confirm system readiness for the introduction of 8-digit decimal price precision. Upon launch of the production test instrument, customer systems will be required to support 8 decimal precision or have the ability to ignore market data on this new instrument.
+
+**Price Precision Timeline:**
+
+![Image 1](http://www.cmegroup.com/notices/electronic-trading/2018/05/priceprecision20180514.jpg)
+
+For complete updated rollout information and dates, refer to [Key Events and Dates](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Price+Precision+Extension#PricePrecisionExtension-KeyEventsandDates) in the Client Impact Assessment.
+
+The [Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Price+Precision+Extension)includes additional information on the following:
+
+*   CME Globex iLink
+*   CME Globex MDP3 _†_ and Mandatory Certification
+*   Streamlined MDP _†_ and Mandatory Certification
+*   ITC
+*   CME Globex Drop Copy
+*   Referential Data
+*   _†_ Production Globex Test Instrument
+
+These changes are currently available in New Release for customer testing. _†_ The 2-Year Treasury Note futures will be listed with 1/8 of 1/32 tick in New Release on **Monday, June 11**.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2018/05/20180514.html#top)
+
+### CME Globex API Secure Logon – iLink and Drop Copy
+
+CME Group is committed to our customers’ information security. To ensure the highest levels of security, CME Group has launched the CME Globex API Secure Logon in Q1 2018 to harden iLink and Drop Copy 4.0 session authentication.
+
+The new Secure Logon is in production and will be supported in parallel with the current model with surcharges until **Friday, June 29**. Any iLink or Drop Copy Target sessions that connect using plain text password are subject to surcharges as follows:
+
+*   **Sunday April 29 – Friday June 1**: $100/session/month
+*   **Sunday June 3 – Friday June 29**: $500/session/month
+
+Only Secure Logons will be supported starting **Sunday, July 1**.
+
+The[Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/CME+Globex+API+Secure+Logon) provides more detailed process and messaging information.
+
+A new iLink and Drop Copy certification suite is currently available in AutoCert+. iLink and Drop Copy 4.0 customer systems must complete this mandatory certification.
+
+The CME Globex API Secure Logon is now available for customer testing in New Release.
+
+Please contact your [Global Account Manager](mailto:globalaccountmanagement@cmegroup.com) with any questions or concerns in the U.S. at +1 312 634 8700, in Europe at +44 203 379 3754 or in Asia at +65 6593 5505 for additional information.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2018/05/20180514.html#top)
+
+## New Functionality
+
+### New New - FIX tag 442-MultiLegReportingType - This Week
+
+Effective **May 17,** FIX tag 442-MultiLegReportingType will be added to the iLink Message Specification[Execution Report – Trade Correction](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Execution+Report+-+Trade+Correction) section. Tag 442- MultiLegReportingType is sent in the event of a trade correction. The tag is returned on the execution report of a trade correction message and Indicates if the acknowledgment message is sent for an outright, leg of spread, or spread.
+
+| FIX tag 442-MultiLegReportingType |
+| --- |
+| Tag | FIX Name | Req | Valid Values | Format | Description |
+| 442 | MultiLegReportingType | N | 1=Outright 2=Leg of Spread 3=Spread | Int(1) | Indicates if acknowledgment message is sent for an outright, leg of spread, or spread. |
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2018/05/20180514.html#top)
+
+### Globex MDP3 SBE Schema Update- August 12
+
+Starting**Sunday, August 12**, in conjunction with the [price precision initiative](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Price+Precision+Extension), CME Group will update the schema for all Globex MDP3 SBE market data channels. Please view the [rollout schedule](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Price+Precision+Extension#PricePrecisionExtension-MDP3andStreamlined).This release will not support[template extension](https://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Message+Schema#MDP3.0-MessageSchema-TemplateExtension), however the order of the fields will be preserved in the new templates. Please review an [overview of changes](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Price+Precision+Extension#PricePrecisionExtension-MDP3SchemaUpdateOverview).
+
+The new version 9 schema is currently available on the [New Release public FTP](ftp://ftp.cmegroup.com/SBEFix/NRCert/Templates/). Customers can begin testing schema version 9 in New Release on **Sunday, May 20**.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2018/05/20180514.html#top)
+
+### Streamlined MDP SBE Schema Update- August 26
+
+Starting**Sunday, August 26**, in conjunction with the [price precision initiative](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Price+Precision+Extension), CME Group will update the schema for streamlined SBE market data channels to support schema version 9 to ensure consistency between market data channels. Please view the [rollout schedule](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Price+Precision+Extension#PricePrecisionExtension-MDP3andStreamlined). This release will not support[template extension](https://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Message+Schema#MDP3.0-MessageSchema-TemplateExtension); however, the order of the fields will be preserved in the new templates. Please review an [overview of changes](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Price+Precision+Extension#PricePrecisionExtension-StreamlinedSchemaUpdateOverview).
+
+The new version 9 schema is currently available on the [New Release public FTP](ftp://ftp.cmegroup.com/SBEFix/NRCert/StrTemplates/). Customers can begin testing schema version 9 in New Release on **Sunday, May 20**.
+
+Please Note: The schema update timeline for Streamlined Equity Indices, Eris Exchange and Bitcoin channels will be announced at a later date.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2018/05/20180514.html#top)
+
+## Product Launches
+
+### New New - Additional CME CF Cryptocurrency Pricing Data- June 4
+
+Starting **Monday, June 4**, CME Group and Crypto Facilities (CF) will launch two additional cryptocurrency pricing products designed to give clients a reliable pricing index source.
+
+The pricing data will be offered via streamlined [CME CF Cryptocurrency Pricing Market Data feed on channel 213](https://www.cmegroup.com/confluence/display/EPICSANDBOX/SBE+-+Streamlined+Market+Data+for+CME+CF+Cryptocurrency+Indices).
+
+The feed will publish the following standardized reference rate and real time index pricing data:
+
+*   Reference Rates to provide a final settlement price in U.S. dollars shortly after 4 p.m. London time each day.
+    *   CME CF Ether-Dollar Reference Rates (ETH_RR_USD)
+
+*   Real Time Indices to allow users access to real-time cryptocurrency prices. 
+    *   CME CF Ether-Dollar Real Time Index (ETH_RTI_USD)
+
+The additional cryptocurrency pricing data will be available for testing in New Release on **Monday, May 21**. Certification is not required.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2018/05/20180514.html#top)
+
+### New New - Eurodollar Term Mid-Curve Options- June 10
+
+Effective **Sunday, June 10** (trade date Monday, June 11), Eurodollar Term Mid-Curve options will be listed for trading on CME Globex, trading floor, and for submission for clearing via CME ClearPort
+
+| **Eurodollar Term Mid-Curve Options** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| 3-Month Mid-Curve Options | TE2 | G3 (UDS: U$) | 313 |
+| 6-Month Mid-Curve Options | TE3 | G6 (UDS: U$) | 313 |
+| 9-Month Mid-Curve Options | TE4 | G4 (UDS: U$) | 313 |
+
+This change will be available for customer testing in New Release on **Monday, May 21**.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2018/05/20180514.html#top)
+
+## Product Changes
+
+### Strike Price Increment for Brent Crude Oil Last Day Financial Calendar Spread Option - 1 Month- This Week
+
+Effective this **Sunday, May 20**(trade date Monday, May 21)**,** the strike price listing rules for Brent Crude Oil Last Day Financial Calendar Spread options - 1 Month will be modified on CME Globex.
+
+| Strike Price Increment for Brent Crude Oil Last Day Financial Calendar Spread Option - 1 Month |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Strike Listing Rule | New Strike Listing Rule |
+| Brent Crude Oil Last Day Financial Calendar Spread Option - 1 Month | 9C | OT | Dynamic strikes only at $0.05 per barrel strike increment. | Minimum 20 strikes at $0.05 per barrel strike increment above and below the at-the-money strike then 10 strikes at $0.25 per barrel strike increment above and below the highest and lowest $0.05 per barrel increment strikes then 4 strikes at $0.50 per barrel strike increment above and below the highest and lowest $0.25 per barrel increment strikes plus dynamic strikes at $0.05 per barrel strike increment for the nearest 36 months. Dynamic strikes only for months 37+ at $0.05 per barrel strike increment. |
+
+This change is currently for customer testing in New Release.
+
+This contract is listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2018/05/20180514.html#top)
+
+### New New - Changes to Bursa Malaysia Derivatives (BMD) USD RBD Palm Olein Futures- May 24
+
+Effective **Thursday, May 24,** and pending final regulatory approval, Bursa Malaysia Derivatives (BMD) USD RBD Palm Olein futures will be made available for trading on CME Globex with the following changes.
+
+| Expiration Change for Bursa Malaysia Derivatives (BMD) USD RBD Palm Olein Futures |
+| --- |
+| Product | iLink: tag 1151- Security Group MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Expiration (Malaysia Time) | New Expiration (Malaysia Time) |
+| USD RBD Palm Olein futures | BL | FPOL | Expires at 1200 on the 15th day of the delivery month | Expires at 1800 on the 25th calendar day, 2 months prior to delivery month |
+
+These futures will be available for customer testing in New Release on **Monday, May 21**.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2018/05/20180514.html#top)
+
+### Listing Cycle Expansion for Black Sea Wheat Financially Settled (Platts) Futures - June 3
+
+Effective **Sunday, June 3** (trade date Monday, June 4), the listing cycle for Black Sea Wheat Financially Settled (Platts) futures will be expanded on CME Globex.
+
+| **Black Sea Wheat Financially Settled (Platts) Futures** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Listing Schedule | New Listing Schedule |
+| Black Sea Wheat Financially Settled (Platts) Futures | BWF | WP | Monthly contracts listed for twelve (12) consecutive months. | Monthly contracts listed for fifteen (15) consecutive months. |
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+This change will be available for customer testing in New Release on **Monday, May 28**.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2018/05/20180514.html#top)
+
+### Strike Price Increment for Silver Options and Silver Weekly Options- June 3
+
+Effective **Sunday, June 3** (trade date Monday, June 4), the strike price listing rules for Silver options and Silver Weekly options will be modified on CME Globex.
+
+| **Strike Price Increment for Silver Options and Silver Weekly Options** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Strike Listing Rule | New Strike Listing Rule |
+| Silver Option | SO | SO | Minimum 40 strikes at $0.25 per troy ounce strike increment above and below the at-the-money strike. If the underlying futures settle price is less than $10.00, then 10 strikes at $0.10 per troy ounce strike increment above and below the at-the-money strike in addition to the above $0.25 increment strikes. Dynamic strikes at $0.25 ($0.10 if the underlying futures settle price is below $10.00) per troy ounce strike increment above and below the highest and lowest pre-listed strikes. | Minimum 40 strikes at $0.25 per troy ounce strike increment above and below the at-the-money strike plus dynamic strikes at $0.05 per troy ounce strike increment for the nearest 48 calendar months. If the underlying futures’ settle price for contract months 1-3 is less than $25.00 then additional strikes at $0.05 per troy ounce strike increment. |
+| Silver Weekly Option | SO1–SO5 | SO | Minimum 20 strikes at $0.25 per troy ounce strike increment above and below the at-the-money strike. If the underlying futures settle price is less than $10.00, then 10 strikes at $0.10 per troy ounce strike increment above and below the at-the-money strike in addition to the above $0.25 increment strikes. | Minimum 20 strikes at $0.05 per troy ounce strike increment above and below the at-the-money strike then 16 strikes at $0.25 per troy ounce strike increment above and below the highest and lowest $0.05 increment strikes plus dynamic strikes at $0.05 per troy ounce strike increment. |
+
+The existing dynamic strike generation rule will also change to $0.05 intervals.
+
+These options will be available for customer testing in New Release on **Monday, May 21**.
+
+These contracts are listed with, and subject to, the rules and regulations of COMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2018/05/20180514.html#top)
+
+### New New - Listing Cycle Expansion for European Union Allowance (EUA) Futures- June 10
+
+Effective **Sunday, June 10**(trade date Monday, June 11)**,** the listing cycle for the following European Union Allowance (EUA) futures will be expanded on CME Globex.
+
+| Listing Cycle Expansion for European Union Allowance (EUA) Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Listing Schedule | New Listing Schedule |
+| In Delivery Month European Union Allowance (EUA) Futures | EAF | VX | 3 months; 8 quarterlies | Monthly contracts listed for 3 consecutive months, quarterly contracts listed for 8 consecutive quarters and all December contract months through and including 2025. |
+
+These futures will be available for customer testing in New Release on **Monday, May 28**.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2018/05/20180514.html#top)
+
+### New New - FIX Tag Changes for CBOT Grain Options- June 10
+
+Effective **Sunday, June 10** (trade date Monday, June 11), the values in the following FIX tags will be changed for the CBOT Grain options and spreads:
+
+*   iLink: tag 55-Symbol
+*   iLink: tag 1151-SecurityGroup
+
+| FIX Tag Changes for CBOT Grain Options |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group (UDS) | New iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group (UDS) |
+| Corn Options | OZC | OC | CY | CG |
+| Corn Weekly Options | ZC1-ZC5 | OC | CY | CG |
+| Short-Dated New Crop Corn Options | OCD | OC | CY | CG |
+| Soybean Options | OZS | SQ | PZ | CG |
+| Soybean Weekly Options | ZS1-ZS5 | SQ | PZ | Y2 |
+| Short-Dated New Crop Soybean Options | OSD | SQ | PZ | Y2 |
+| South American Short-Dated New Crop Soybean Options | SRS | SQ | PZ | Y2 |
+| Chicago SRW Wheat Options | OZW | OW | WZ | Y2 |
+| Chicago SRW Wheat Weekly Options | ZW1-ZW5 | OW | WZ | Y2 |
+| Short Dated New Crop Chicago SRW Wheat Options | OWD | OW | WZ | Y2 |
+| KC HRW Wheat Options | OKE | OK | 1G | Y2 |
+| KC HRW Wheat Weekly Options | OE1-OE5 | OK | 1G | Y2 |
+| Short-Dated New Crop KC HRW Wheat Options | KWE | OK | 1G | Y2 |
+| Corn CSOs | CZ8, CZ9, CZ6, 12C, CZ7, CZC | Y1 | Y2 | Y2 |
+| Soybean CSOs | SZ1, SZ3, SZ5, SZK, 12S, SC7, SZ8, SZ0, SZ4, CZS, SZ9, SZH | Q1 | Q2 | Y2 |
+| Wheat CSOs | WC3, WC6, CZW, WCM, 12W, CWZ | W1 | Z2 | Y2 |
+| KC Wheat CSOs | KC6, KCR, 12K, CKZ, CK3, KZC | K3 | K4 | Y2 |
+| Chicago SRW Wheat-Corn Intercommodity Spread Options | ZCW | Q3 | Q4 | Y2 |
+
+The values in the following FIX tags will be changed for KC HRW-Chicago SRW Wheat Inter-Commodity Spread options:
+
+*   iLink: tag 55-Symbol
+*   iLink: tag 1151-SecurityGroup
+
+| FIX Tag Changes for CBOT Grain Options |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | Current iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | New iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group (UDS) | New iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group (UDS) |
+| KC HRW-Chicago SRW Wheat Intercommodity Spread Options | KWC | KW | Q3 | KX | Y2 |
+
+These changes will be available for customer testing in New Release on **Monday, June 4**.
+
+To facilitate the change, customers are asked to cancel all Good ‘Till Cancel (GTC) and Good ‘Till Date (GTD) and UDS orders after the close on**June 8**. After 16:00 CT on **June 8**, all remaining GT orders for these options will be cancelled or deleted by the CME Global Command Center (GCC).
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2018/05/20180514.html#top)
+
+### Listing Cycle Changes and Delisting of E-mini Nifty 50 Index Futures- June 28
+
+On **Monday, February 26**, the E-mini Nifty 50 Index futures September 2018 and December 2018 contract months were removed from CME Globex. With this change, the June 2018 contract will be the last available contract month listed for trading. Following the expiration of the June 2018 contract month, on **Thursday, June 28**, E-mini Nifty 50 Index futures will be delisted and removed from CME Globex at the close of business.
+
+| **Listing Cycle Changes and Delisting of E-mini Nifty 50 Index Futures** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Listing Schedule | New Listing Schedule |
+| E-mini Nifty 50 Index Futures | MNF | FN | Four months in the March Quarterly Cycle and two nearest serial months | Monthly contracts listed up to and including June 2018 |
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2018/05/20180514.html#top)
+
+## Events and Announcements
+
+### New New - CME Group to List USD Eris Interest Rate Swap Futures- 4Q 2018
+
+As [previously announced](http://investor.cmegroup.com/investor-relations/releasedetail.cfm?ReleaseID=1067106), Eris Swap futures will be listed with and subject to the rules and regulations of CBOT starting in the fourth quarter of 2018, and existing open interest in the contracts will be transferred to CME Group at that time. The Eris futures will trade alongside the [MAC Swap Futures](http://www.cmegroup.com/trading/interest-rates/mac-swap-futures.html), bringing together the two leading interest rate swap futures on a single exchange venue. Until the migration in late 2018, Eris Swap Futures will remain listed at Eris Exchange and cleared at CME Clearing, where they are subject to margin offsets with CME Group's interest rate futures.
+
+An [FAQ on the change](http://www.erisfutures.com/eris-cme-faqs) is currently available.
+
+Technical information on the launch and API considerations will be available in future CME Globex Notices.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2018/05/20180514.html#top)

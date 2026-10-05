@@ -1,0 +1,599 @@
+Title: 20150817 - CME Group
+
+URL Source: https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html
+
+Markdown Content:
+Topics in this issue include:
+
+*   [**Critical System Updates**](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#csu)
+    *   [MDP 3.0 Migration Schedule](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#newcme)Update
+        *   [BM&F Bovespa Market Data via MDP 3.0](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#bvmd) - This Week
+        *   [MexDer Market Data via MDP 3.0](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#mdmdp) - September 14
+
+    *   [Drop Copy 4.0 Implementation](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#dci) - This Week
+    *   [Market Data Dissemination of Intraday Settlement Prices](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#mdds) - August 31 New
+    *   [China Financial Futures Exchange Market Data Available via MDP 3.0](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#cffe) - September 14
+    *   [Velocity Logic](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#vlog) - September 27
+    *   [AutoCert+ SMART Click Integration](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#acpsc) - September 2015
+    *   [Minimum Quantity Changes for NYMEX and COMEX Covered Options](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#mxud) - September 20
+    *   [New iLink Architecture](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#nia) - November 1
+        *   [New iLink Failover Process](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#fai) - September 20
+
+    *   [iLink Session ID Policy and Operational Guidelines](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#ilpp)
+
+*   [**New Functionality**](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#nf)
+    *   [User-Defined Instruments on CME Globex](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#udia) - Postponed
+    *   [iLink Enhancement for Mass Order Status Functionality](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#iemos) - August 30
+
+*   [**Product Launches**](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#pl)
+    *   [LLS APOs](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#apo) - September 20
+
+*   [**Product Changes**](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#pc)
+    *   [Monthly-to-Daily Conversion for Power Futures: Part 3](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#mtdth) - This Week
+    *   [Change to Minimum Price Increment for Calendar Spreads in CME Bundle Futures](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#micsbf) - August 30
+    *   [Listings of Additional Expiration Months in Serial Options and Serial Mid-Curve Options on Eurodollar Futures](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#seri) - August 30 New
+    *   [Changes to FX Roll Schedule](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#qrl) - September 6 New
+    *   [CBOT Treasury Invoice Swap Spreads: Naming Convention Change](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#tiss) - September 20 New
+
+*   [**Events and Announcements**](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#e)
+    *   [iLink Session ID Policy and Operational Guidelines](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#ilpp)
+    *   [Changes to Daily Maintenance Period for CME Globex](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#dmp) - September 21 New
+    *   [Removal of Dow Jones Global Total Stock Market Index Levels](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#rdjsmi) - September 28
+    *   [EOS Trader Decommission](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#estr) - October 2015
+    *   [Order Routing and Front-End Audit Trail Requirements](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#feat) - April 2016
+
+## Critical System Updates
+
+### Update - MDP 3.0 Migration Schedule
+
+**†**_Denotes update to the article_
+
+**†**On **Sunday**, **September 27, 2015**, MDP 3.0 will become the sole "Feed of Record" and markets will be halted for MDP 3.0 issues only. After this date, markets will not be halted for only for issues affecting FIX/FAST only. CME Group recommends all customers certify for and migrate to MDP 3.0 by Friday, September 25. The legacy FIX/FAST feed will be decommissioned after the close on Friday, October 30, 2015.
+
+Currently, both FIX/FAST and MDP 3.0 are considered to be "Feeds of Record." In case of market data failures, markets may be halted for either FIX/FAST or MDP 3.0 issues. CME Group will review each event individually to determine the best response.
+
+| Important Dates |
+| --- |
+| MDP 3.0 Sole Feed of Record – All Channels | **†**Sunday, September 27 |
+| All FIX/FAST Channels Decommissioned | **†**Friday, October 30 |
+
+The schedule for implementation of the MDP 3.0 format for the Order Routing Partner Exchanges, BM&FBOVESPA and MexDer (Mercado Mexicano de Derivados) is as follows:
+
+| **Environment** | **BVMF** | **MexDer** |
+| --- | --- | --- |
+| New Release | Available Now | **†**September 2 |
+| AutoCert+ Test Suite Available | Available Now | **†**September 14 |
+| Production Parallel | **†**August 23 | **†**September 14 |
+
+**†Please Note:** AutoCert+ certification of the MDP 3.0 and MDP 3.0 Partner Exchange Supplemental Certification Test Suites are mandatory prior to subscribing to production market data for each order routing Partner Exchange.
+
+**TAS Pre-Validation**
+
+Currently, order entry will be permitted in[TAS (Trade at Settlement)](http://www.cmegroup.com/confluence/display/EPICSANDBOX/Trade+at+Settlement+-+TAS)markets as soon as the Pre-Open state message is published, regardless of whether it is received first via the FIX/FAST or MDP 3.0 feeds. **†**Starting **September 27**, only the publishing of the MDP 3.0 Pre-Open state message will be valid for the start of the TAS market and TAS orders can be entered. The CME Group Market Regulation rules for TAS Transactions can be found [here](http://www.cmegroup.com/rulebook/files/nymex-comex-ra1323-4.pdf).
+
+**Trade Summary Message: Order Detail Level Processing**
+
+Enhanced Trade Summary Order Detail Level Processing specifications are now available [here](https://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Trade+Summary+Order+Level+Detail). CME Group strongly encourages client systems to support the dissemination of Trade Summary Order Details. Leveraging the Order Detail information provides a more granular view into trade events, access to fill information (for customers that opt to include their iLink order ID in the MDP 3.0 messages), and supports Time and Sales and charting applications.
+
+**Additional Information**
+
+Customer systems receiving market data via CME Globex must complete mandatory certification via AutoCert+. The [functional](http://www.cmegroup.com/confluence/display/EPICSANDBOX/CME+MDP+3.0+Market+Data) and [message specifications](http://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+Message+Specification) provide detailed information.
+
+Please contact your [Global Account Manager](mailto:globalaccountmanagement@cmegroup.com) with any questions or concerns in the U.S. at +1 312 634 8700, in Europe at +44 203 379 3754 or in Asia at +65 6593 5505 for additional information.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### BM&F Bovespa Market Data via MDP 3.0
+
+Effective this **Sunday, August 23** (trade date Monday, August 24), CME Group is introducing Market Data Platform (MDP) 3.0 for BM&F Bovespa (BVMF).
+
+The new protocol will be available on new production parallel channels.
+
+| **MDP 3.0 Channel** | **FIX/FAST Channel** | **Channel Label** |
+| --- | --- | --- |
+| 510 | 24 | BVMF Futures |
+| 511 | 25 | BVMF Options |
+
+BVMF MDP 3.0 will support:
+
+*   CME Globex Market Data MDP 3.0 format
+*   Spread legs repeating group
+*   Recovery Mechanism Improvements
+
+The [client impact assessment](http://www.cmegroup.com/confluence/display/EPICSANDBOX/BVMF+MDP+3.0) provides detailed functionality and messaging information.
+
+BVMF via MDP 3.0 is currently available in New Release for customer testing. Further information on the deployment plan and timing for all customer-facing environments will be published in upcoming CME Globex Notices.
+
+A new [MDP 3.0 Partner Exchange Supplemental certification suite](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#acpsc) will be available in AutoCert+ on **Sunday, August 16**. Customer systems receiving MDP 3.0 market data for BVMF must complete this mandatory certification.
+
+Please contact your [Global Account Manager](mailto:globalaccountmanagement@cmegroup.com) with any questions or concerns in the U.S. at +1 312 634 8700, in Europe at +44 203 379 3754 or in Asia at +65 6593 5505 for additional information.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### MexDer Market Data via MDP 3.0
+
+Effective **Monday, September 14**, CME Group is introducing Market Data Platform (MDP) 3.0 for MexDer (Mercado Mexicano de Derivados). The new protocol will be available on new production parallel channels.
+
+MexDer MDP 3.0 will support:
+
+*   CME Globex Market Data MDP 3.0 format
+*   Event-driven market price and trade information
+*   Enhanced market state dissemination
+*   Increased timestamp granularity
+*   Opt-In functionality for Order identifier on both market data and order entry messages
+
+The [client impact assessment](http://www.cmegroup.com/confluence/display/EPICSANDBOX/MexDer+MDP+3.0) provides detailed functionality and messaging information.
+
+MexDer via MDP 3.0 will be available in New Release for customer testing on **Wednesday, September 2**. Further information on the deployment plan and timing for all customer-facing environments will be published in upcoming CME Globex Notices.
+
+A new MexDer MDP 3.0 certification suite will be available in AutoCert+ on **Monday, September 14**. Customer systems receiving MDP 3.0 market data for MexDer must complete this mandatory certification.
+
+Please contact your [Global Account Manager](mailto:globalaccountmanagement@cmegroup.com) with any questions or concerns at +1 312 634 8700, in Europe at + 44 20 33793754 or in Asia at +65 6593 5505 for additional information.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### Drop Copy 4.0 Implementation
+
+This **Sunday, August 23** (trade date Monday, August 24), CME Group will introduce a new Drop Copy implementation to provide further consistency across iLink and Drop Copy. The new Drop Copy 4.0 implementation will have both functional and messaging changes.A customer mock session will be offered this **Saturday, August 22**:
+
+*   [Register](http://pages.cmegroup.com/event-2015-August-drop-copy-4-0-mock-trading-session.html) for the Drop Copy 4.0 mock trading session
+*   The mock trading session script is now available [online](http://www.cmegroup.com/globex/files/DropCopyMTSScript.pdf)
+
+Drop Copy 4.0 convenience target sessions for the production environment will be available to certified customers starting **Monday, August 17**. Customers should contact their account managers to request the new sessions.
+
+Certification is mandatory for all Drop Copy customers and is a prerequisite for access to Drop Copy Convenience Gateways and Market Segment Gateway target sessions.
+
+Executing firms planning to leverage market segment gateway iLink sessions should follow up with their Clearing firms to confirm their readiness to support Drop Copy 4.0.
+
+Drop Copy 4.0 is not backward compatible and customer systems not certified for Drop Copy 4.0 will not have the ability to add MSGW sessions to their Drop Copy Group.
+
+The new Drop Copy 4.0 implementation will include:
+
+*   Harmonized customer experience between iLink and Drop Copy
+*   New message format with [encapsulated message type](http://www.cmegroup.com/confluence/display/EPICSANDBOX/Drop+Copy+4.0#DropCopy4.0-EncapsulatedXMLNon-Fix(tag35-MsgType=n)Message).
+*   New supported FIX tags on Drop Copy messages - inbound and outbound
+*   Harmonized resend behavior (elimination of Application Resend functionality)
+*   Sequencing by market segment (see: [New iLink Architecture](http://www.cmegroup.com/confluence/display/EPICSANDBOX/New+iLink+Architecture) client impact assessment)
+*   Robust fault tolerance
+
+The [client impact assessment](http://www.cmegroup.com/confluence/display/EPICSANDBOX/Drop+Copy+4.0) is now available outlining changes introduced by the new Drop Copy 4.0 implementation and details regarding functionality and messaging in the [Drop Copy 4.0 Overview](http://www.cmegroup.com/confluence/display/EPICSANDBOX/Drop+Copy+4.0#DropCopy4.0-DropCopy4.0Overview) section.
+
+With the new implementation, the Drop Copy service will have a new session model where customers will have access to two types of target sessions:
+
+*   Drop Copy **Convenience Gateway (CGW)** target session - consumers manage sequence streams from Convenience Gateway iLink source sessions across all market segments.
+*   Drop Copy **Market Segment Gateway** target session - consumers manage sequence streams from Market Segment Gateway iLink source sessions per unique market segment; with the possibility of having the same sequence numbers from multiple market segments.
+
+The existing implementation of Drop Copy will be phased out in **Q1 2016**. All customers leveraging the Drop Copy service must be certified for Drop Copy 4.0 by that date.
+
+**Drop Copy 4.0 Failover**
+
+In the event of a Drop Copy 4.0 failover, upon logon to the new primary connection, customer systems will experience a significant increase in sequence numbers (tag 34-MsgSeqNum) on inbound messages from CME Globex to Client System. CME Group recommends that client systems request all missing messages. On **Monday, August 3**, the new Drop Copy 4.0 failover tests will be available in AutoCert+ for customer certification.
+
+**Additional Information**
+
+To facilitate migration to the new Drop Copy service, CME Group will support a parallel feed. Traffic from Convenience Gateway source sessions will be available via their current Drop Copy IPs and ports and via the new Drop Copy 4.0 IPs and ports. Certification is required for production access to Drop Copy 4.0. Please coordinate your migration with your CME Group Account Manager.
+
+The Drop Copy 4.0 source ranges on the CME Globex WAN extranet are now available [online](http://www.cmegroup.com/confluence/display/EPICSANDBOX/CME+Public+IP+Prefix+Summary).
+
+Upon completion of the Drop Copy 4.0 certification, customers can request Drop Copy CGW and/or Drop Copy MSGW target sessions.
+
+Certification and New Release Drop Copy sessions will be re-issued by your to Global Account Manager upon customer request.
+
+Drop Copy 4.0 is available in New Release for customer testing. A new Drop Copy 4.0 certification suite is available in AutoCert+. Customer systems leveraging the Drop Copy service must complete this mandatory certification.
+
+For more information, a [Frequently Asked Questions](http://www.cmegroup.com/globex/trading-cme-group-products/dropcopy4-faq.html) (FAQ) guide is now available.
+
+Please contact your [Global Account Manager](mailto:globalaccountmanagement@cmegroup.com) with any questions or concerns in the U.S. at +1 312 634 8700, in Europe at +44 203 379 3754 or in Asia at +65 6593 5505 for additional information.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### New - Market Data Dissemination of Intraday Settlement Prices
+
+Effective **Monday, August 31, 2015**, CME Group will begin disseminating Intraday Settlement Prices on the last trading day of the calendar month for some equity index contracts. These settlement prices will be disseminated while the trading session is still active. They will represent a snapshot valuation of the settlement price at the time that they are published.
+
+Tag 731-SettlPriceType will include bit 3 = “**1**” to indicate an Intraday Settlement Price. The MDP 3.0 Market Data Incremental Refresh message including the tag 731-SettlPriceType field is documented [here](http://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Market+Data+Incremental+Refresh).
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### China Financial Futures Exchange Market Data Available via MDP 3.0
+
+Effective **Monday, September 14**, CME Group will begin disseminating China Financial Futures Exchange (CFFEX) market data in MDP 3.0.
+
+The following CFFEX market data will be available via MDP 3.0:
+
+*   CFFEX Exchange top of book (bid/offer)
+*   Trade and Trade Volume
+*   Threshold Limits
+*   Statistics
+    *   Open Interest
+    *   Opening Price
+    *   High and Low Trade Price
+    *   Settlement Price
+
+*   Security Definitions
+
+CFFEX market data is available in New Release for customer testing.
+
+Certification via AutoCert+ is required for customers to receive MDP 3.0 market data for the CFFEX. A new [MDP 3.0 Partner Exchange Supplemental certification suite](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#acppe) is currently available in AutoCert+.
+
+Detailed information for CFFEX market data via MDP 3.0 is available [online](http://www.cmegroup.com/confluence/display/EPICSANDBOX/CFFEX).
+
+The [CFFEX](http://www.cffex.com.cn/en_new/) is a futures exchange established in Shanghai with the approval of the State Council and the authorization of the China Securities Regulatory Commission (CSRC). CFFEX products include Index futures and Government Bond futures. These products are being made available to authorized and licensed customers of the CFFEX for dissemination through the CME Market Data Platform (MDP); however they are not available for trading on CME Globex.
+
+The Frequently Asked Questions (FAQ) and Onboarding Reference Guide are available [online](http://www.cmegroup.com/international/partnership-resources/cffex.html).
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### Velocity Logic
+
+Starting **Sunday, September 27** (trade date Monday, September 28), CME Group will introduce enhancements to the Velocity Logic functionality. Velocity Logic is designed to deter extreme market moves by detecting market movements of a predefined number of points within a predefined time period and reserve the market(s) when triggered. Velocity Logic is only triggered by movement in CME Globex futures and future spreads markets for which the functionality is enabled.
+
+With this enhancement, in the event that a Fill and Kill, Minimum Quantity or Market Order were to trigger Velocity Logic, the following actions would occur. The order would be acknowledged, then CME Globex would cancel (tag 35-MsgType=**8**, tag 39-OrdStatus=**4**) the order in the case of a Market order or eliminate the order (tag 35-MsgType=**8**, tag 39-OrdStatus=**C**) in the case of Fill and Kill, and Minimum Quantity orders. The market will remain open.
+
+More information on Velocity Logic is available [online](http://www.cmegroup.com/confluence/display/EPICSANDBOX/Velocity+Logic).
+
+These changes will be available in New Release for customer testing on **Sunday, August 23**.
+
+The Velocity Logic values in Production and New Release are:
+
+*   predefined point value: two times the greater of either the non-reviewable range or the price banding range
+*   predefined time value: one second
+
+The non-reviewable range and price banding for every CME Globex product is defined in the [CME Globex Product Reference](http://www.cmegroup.com/confluence/download/attachments/11305002/Globex+Product+Reference.xls) in the [Client Systems Wiki](http://www.cmegroup.com/confluence/display/EPICSANDBOX/GCC+Product+Reference+Sheet).
+
+If you have any questions, please contact the [CME Global Command Center (GCC)](mailto:gcc@cmegroup.com) in the U.S. at +1 312 456 2391, in Europe at +44 20 7623 4708 or in Asia at +65 6223 1357.
+
+The Velocity Logic functionality will be implemented as follows:
+
+| MSGW Pre-Launch Schedule |
+| --- |
+| Tag1300-MarketSegmentID | Market Segment | Production Launch |
+| 76 | NYMEX and COMEX Metals and Alternative Market futures | September 27 |
+| -- | All other markets | October 4 |
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### AutoCert+ SMART Click Integration
+
+In **September 2015**, all AutoCert+ access will migrate to SMART Click. The migration has been designed to minimize customer impacts; users will [associate](http://www.cmegroup.com/globex/files/AutoCert_SMART_Click.pdf)their legacy entitlements to their SMART Click ID and connect via a new URL. Complete information on the migration will be published in upcoming CME Globex Notices.
+
+SMART Click is a self-managed, centralized user profile service that authenticates access to CME Group applications and services. Benefits of SMART Click include:
+
+*   A single User ID and password to access CME Group services and applications;
+*   One User ID to access multiple firms;
+*   User-owned IDs, regardless of changes to employers or firm relationships;
+*   Secure access using 2-factor authentication;
+
+Users now also have the option of using SMART Click to access AutoCert+. Some additional steps are required for these users only:
+
+*   [Associate](http://www.cmegroup.com/globex/files/AutoCert_SMART_Click.pdf) your legacy entitlements to your SMART Click ID
+*   Update your local host file with the following IPs:
+    *   69.50.112.210 [loginnr.chicago.cme.com](https://loginnr.chicago.cme.com/)
+    *   69.50.112.210 [ttnrap0012d.chicago.cme.com](http://ttnrap0012d.chicago.cme.com/)
+
+*   Login to AutoCert+ at [https://69.50.112.210:8081](https://69.50.112.210:8081/)**only**
+
+If you have questions, please contact [Certification Support for Electronic Trading (CSET)](mailto:cset_otc@cmegroup.com) in the U.S. at +1 312 930 2322, in Europe at +44 20 3379 3803, or in Asia at +65 6593 5593.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### Minimum Quantity Changes for NYMEX and COMEX Covered Options
+
+Effective **Sunday, September 20** (trade date Monday, September 21), CME Group will make changes to the minimum quantity value in the Security Definition (tag 35-MsgType=**d**) message on the NYMEX and COMEX options market.
+
+| Tag1300-MarketSegmentID | Market Segment |
+| --- | --- |
+| 56 | NYMEX Energy and COMEX Options |
+
+CME Globex will reject orders and mass quotes with quantities violating the minimum quantity value in tag 526-MinTradeVol for NYMEX and COMEX options strategies. There are no changes to the current functionality.
+
+The following new error codes have been introduced with these changes.
+
+| Error Code | Tag 58-Text |
+| --- | --- |
+| Sent in response to New Order (tag 35-MsgType=**D**)and Cancel Replace (tag 35-MsgType=**G**) messages in tag 103-OrdRejReason of the Execution Report (tag 35-MsgType=**8**) | Text explanation of error code |
+| 2115 | Order quantity is outside of the allowable range'Quantity: <Requested Quantity> Max: <Maximum configured for contract> Min: <Minimum configured for contract>’ |
+| 7613 | Disclosed quantity cannot be smaller than the minimum quantity 'Disclosed: <Requested Quantity> Min: <Minimum configured for contract>’ |
+
+For Mass quote or quote request messages with an invalid quantity, tag 368- QuoteEntryRejectReasonof the Quote Acknowledgment (tag 35-MsgType=**b**) message will reflect a new reject code.
+
+| Rejection Code | Description |
+| --- | --- |
+| 100 | Quote entry quantity is outside of the allowable range |
+| 101 | Quote entry quantity is outside of the allowable max & min qty range for contract and resting quote cancelled |
+
+More information on UDS: Covereds functionality and trading is available [online](http://www.cmegroup.com/confluence/display/EPICSANDBOX/User+Defined+Spread+Types+and+Characteristics#UserDefinedSpreadTypesandCharacteristics-CoveredUDS).
+
+The UDS: Covereds changes enhancement will be available in New Release for customer testing on **Monday, August 31**.
+
+If you have any questions, please contact the [CME Global Command Center](mailto:gcc@cmegroup.com) in the U.S. at +1 800 438 8616, in Europe at 0800 898 013 or in Asia at +65 6532 5010.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### New iLink Architecture
+
+Starting **Sunday, November 1**, CME Group will launch Phase 2 of the new iLink Architecture, which will implement Market Segment Gateways (MSGWs) throughout the iLink infrastructure, to provide:
+
+*   FIFO ordered message handling per market segment, and
+*   Elimination of variability associated with multiple sessions across multiple gateways.
+
+The Phase 2 launch will allow customers to access the Market Segment Gateways directly and introduce a new session ID model, messaging and functionality changes. Customers may choose to access CME Globex markets through the MSGWs or the current Convenience Gateways (CGWs), which will continue to be supported and will route through the MSGWs.
+
+Prior to the Phase 2 launch, CME Group will begin MSGW Phase 2 Pre-launch to implement the new MSGWs into the iLink architecture between the trading engines and the current iLink gateways (CGWs).
+
+Please note: Customers will not be able to connect directly to the MSGWs until the Phase 2 launch.
+
+The MSGW Phase 2 Pre-Launch and the Phase 2 launch will be phased in as follows:
+
+| New iLink Architecture Production Launch |
+| --- |
+| Tag1300-MarketSegmentID | Market Segment | MSGW Phase 2 Pre-Launch Schedule | MSGW Phase 2 Launch Schedule |
+| 52 | CME FX options | September 20 | November 01 |
+| 62 | CME FX futures | September 20 | November 01 |
+| 60 | CBOT Commodity and Equity options | October 04 | November 15 |
+| 70 | CME Commodity futures | October 04 | November 15 |
+| 72 | CBOT Commodity futures | October 04 | November 15 |
+| 54 | CME Equity options | October 11 | December 06 |
+| 64 | CME E-mini S&P 500 futures | October 11 | December 06 |
+| 66 | CBOT Equity futures | October 11 | December 06 |
+| 68 | CME Equity futures excluding E-mini S&P | October 11 | December 06 |
+| 50 | CME Eurodollar options | November 08 | December 13 |
+| 58 | CBOT Treasury options | November 08 | December 13 |
+| 82 | CME Eurodollar futures | November 08 | December 13 |
+| 84 | CBOT Treasury futures | November 08 | December 13 |
+| 56 | NYMEX and COMEX options | December 20 | January 10 |
+| 74 | Hosted Partner Exchange markets and NYMEX Emissions futures | December 20 | January 10 |
+| 76 | NYMEX and COMEX Metals and Alternative Market futures | December 20 | January 10 |
+| 78 | NYMEX Non-Crude Energy futures | December 20 | January 10 |
+| 80 | NYMEX Crude Energy futures | December 20 | January 10 |
+| 86 | CME Europe futures and options | December 20 | January 10 |
+
+CME Group will offer several customer mock trading sessions to ensure customers have opportunities to interact with the system prior to the new iLink Architecture Phase 2 Pre-Launch and the Phase 2 launch. There are 2 models of customer mocks:
+
+MSGW Phase 2 Pre-Launch mock trading sessions scheduled on:
+
+*   September 19
+
+MSGW Phase 2 mock trading sessions scheduled on:
+
+*   September 26
+*   October 10
+*   October 31
+*   November 14
+*   December 5
+*   December 12
+*   January 9
+
+Additional details and an overview to Mock Trading Sessions will be published in future Globex Notices.
+
+A new MSGW certification suite will be available in AutoCert+ in Summer 2015. Customer systems who want to connect directly to the MSGW must complete this mandatory certification.
+
+All customers are encouraged to review the new iLink Architecture [Client Impact Assessment](http://www.cmegroup.com/confluence/display/EPICSANDBOX/New+iLink+Architecture).
+
+Please contact your [Global Account Manager](mailto:globalaccountmanagement@cmegroup.com) with any questions or concerns in the U.S. at +1 312 634 8700, in Europe at +44 203 379 3754 or in Asia at +65 6593 5505 for additional information.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### New iLink Failover Process
+
+Starting **Sunday, September 20**, CME Group will introduce a new iLink failover process to improve customers’ ability to recover from a CME Globex component failure. This new iLink Failover Process change will affect all iLink sessions.
+
+When the Market Segment Gateway (MSGW) fails over from the primary to backup instance, customer iLink messages will be rejected with Session Level Reject (tag 35=**3**) messages including tag 58=Technical Error - Market Segment: is not available at this time.
+
+In addition to the new reject message, a new [Technical Pause](http://www.cmegroup.com/confluence/display/EPICSANDBOX/New+iLink+Architecture#NewiLinkArchitecture-MSGWFailoverScenariosDuringPre-LaunchPhase) will be introduced to ensure that all messages sent during the MSGW failover are acknowledged by CME Globex. During the MSGW failover, CME Globex will transition all product groups on that market segment into a Technical Pause and then Technical Pre-Open. The [MDP Security Status (tag 35-MsgType=**f**) message](http://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Market+Data+Security+Status) is generated with tag 327-HaltReason=**6** (Recovery in process) to notify the market of these states. After the market transitions to pre-open, order entry will be allowed as usual.
+
+The new iLink failover process is currently available for customer testing in New Release.
+
+Detailed information including these failover behavior changes and customer New Release testing window are now available [online](http://www.cmegroup.com/confluence/display/EPICSANDBOX/New+iLink+Architecture).
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### iLink Session ID Policy and Operational Guidelines
+
+As a result of the upcoming iLink Architecture with Market Segment Gateways, CME Group plans to introduce a new policy for the distribution and management of iLink session IDs as explained in the [iLink Session ID Policy and Operational Guidelines](http://www.cmegroup.com/globex/files/iLinkSessionIDPolicy.pdf).
+
+Please refer to the CME Globex Notices for more information about MSGW functionality and when the new policy for iLink session IDs will take effect.
+
+To ease and ensure a successful migration to the revised iLink Session Policy, clearing and executing firms are encouraged to contact their [Global Account Manager](mailto:globalaccountmanagement@cmegroup.com) with any questions.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+## New Functionality
+
+### User-Defined Instruments on CME Globex
+
+The launch of User-Defined Instruments (UDI) functionality on CME Globex scheduled for **Sunday, August 9**, has been postponed. A new launch date will be announced in future CME Globex Notices.
+
+CME Direct customers will be able to dynamically list outright option strikes. All CME Globex customers will receive market data on the UDI and be able to submit orders via iLink.
+
+For the initial launch, UDIs will be supported for options in the following markets:
+
+| **Market Segment** | **MDP 3.0 Channel** | **FIXFAST Channel** | **Channel Label** |
+| --- | --- | --- | --- |
+| 56 | 361 | 38 | COMEX Globex Options |
+| 56 | 383 | 35 | NYMEX Globex Crude & Crude Refined Options |
+| 56 | 385 | 37 | NYMEX Globex Metals, Softs, & Alternative Market Options |
+| 56 | 387 | 36 | NYMEX Globex Nat Gas & other Non-Crude Energy Options |
+
+These UDIs will be flagged in the FIX/FAST and MDP 3.0 Security Definition messages (tag 35-MsgType=**d**) with tag 9779-UserDefinedInstrument =**Y**.
+
+**Please Note:** There are no template changes required for FIX/FAST or MDP 3.0.
+
+Additional information regarding UDI functionality is available [online](http://www.cmegroup.com/confluence/display/EPICSANDBOX/User+Defined+Instruments).
+
+This change is currently available for testing in New Release.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### iLink Enhancement for Mass Order Status Functionality
+
+Effective **Sunday, August 30** (trade date Monday, August 31), Mass Order Status functionality will be enhanced to support retrieving status on all working orders for a particular market segment (tag 1300-MarketSegmentID). Currently, Mass Order Status can be used at the instrument, group or platform level.
+
+A new value for Tag 585-MassStatusReqType=**100** on the Order Mass Status Request (tag 35-MsgType=**AF**) message can be used to obtain statuses for all working orders on a particular market segment.
+
+With this launch, tag 1300-MarketSegmentID will also be added to the Order Mass Status Request (tag 35-MsgType=**AF**) message to specify the market segment for the products customers want to retrieve mass order status. Tag 1300 should be used in combination with tag 585=**100**.
+
+| **Message Changes for Order Mass Status Request (tag 35=AF)** |
+| --- |
+| Tag | FIX Name | Req | Valid Values | Format | Description |
+| 585 | MassStatusReqType | Y | 1=Instrument 3=Instrument Group 100=Market Segment (*New) 7=All Orders | Int (3) | Used to specify the scope of the Order Mass Status Request. |
+| 1300 | MarketSegmentID | C | -- | Int | Required when tag 585=**100** |
+
+Details on the Mass Order Status functionality can be found [online](http://www.cmegroup.com/confluence/display/EPICSANDBOX/Mass+Order+Status).
+
+The Mass Order Status functionality is now available for customer testing in New Release.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+## Product Launches
+
+### LLS APOs
+
+Effective **Sunday, September 13** (trade date Monday, September 14), the following LLS Average Price options (APOs) will be listed for trading on CME Globex, open outcry, and clearing submission via CME ClearPort.
+
+| LLS APOs |
+| --- |
+| Product | iLink: tag 1151-Security Group MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group (Outrights) | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group (UDS) |
+| LLS (Argus) vs. WTI Crude Oil Average Price Option | WJO | EF | EX |
+| LLS (Argus) vs. Brent Crude Oil Average Price Option | LRO | EF | EX |
+| LLS (Argus) Crude Oil Average Price Option | XAO | EF | EX |
+
+These options will be available in New Release for customer testing on Monday, August 31.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+## Product Changes
+
+### Monthly-to-Daily Conversion for Power Futures: Part 3
+
+Effective this **Sunday, August 23**(trade date Monday, August 24), the last trade date (LTD) rules for the following monthly electricity futures will be modified. With this change, positions in the monthly contracts will terminate trading prior to the start of the contract month and positions in the monthly contracts will automatically convert into a strip of corresponding daily contracts. Currently, the last day of trading for these monthly cash-settled contracts is the last business day of the contract month.
+
+A full list of the products is available[online](http://www.cmegroup.com/globex/files/MonthlyDaily3.pdf).
+
+These contracts are listed on, and subject to, the rules and regulations of NYMEX.
+
+This change is currently available in New Release for customer testing.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### Change to Minimum Price Increment for Calendar Spreads in CME Bundle Futures
+
+Effective **Sunday, August 30** (trade date Monday, August 31), the minimum price increment for the following CME Bundle futures calendar spreads will be changed from 0.0025 to 0.0005. With this change, tag 969-MinPriceIncrement will be modified as follows:
+
+| Change to Minimum Price Increment for Calendar Spreads in CME Bundle Futures |
+| --- |
+| Product | iLink: tag 1151-Security Group MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | tag 969-MinPriceIncrement (Current) | tag 969-MinPriceIncrement (New) |
+| 2-Yr Eurodollar Bundle Calendar Spread | BU2 | GE | 0.25 | 0.05 |
+| 3-Yr Eurodollar Bundle Calendar Spread | BU3 | GE | 0.25 | 0.05 |
+| 5-Yr Eurodollar Bundle Calendar Spread | BU5 | GE | 0.25 | 0.05 |
+
+In addition, tag 762-SecuritySubType value will change from**SP** (Calendar Spread) to**RT**(Reduced Tick).
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+These products are currently available in New Release for customer testing.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### New - Listings of Additional Expiration Months in Serial Options and Serial Mid-Curve Options on Eurodollar Futures
+
+Effective **Sunday, August 30**, (for trade date Monday, August 31), additional expiration months will be listed for Serial options and Serial Mid-Curve options on CME Three-Month Eurodollar.
+
+Detailed information on this change is available [here](http://www.cmegroup.com/tools-information/lookups/advisories/ser/SER-7439.pdf).
+
+| Listings of Additional Expiration Months in Serial Options and Serial Mid-Curve Options on Eurodollar Futures |
+| --- |
+| Product | iLink: tag 1151-Security Group MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Listing Schedule | New Listing Schedule (as of 8/30/2015) |
+| Eurodollar Serial options | GE | ZE | Two nearest serial month options | Four nearest serial month options |
+| Eurodollar 1-Year Midcurve options | GE0 | E0 | Two nearest serial month options | Four nearest serial month options |
+| Eurodollar 2-Year Midcurve options | GE2 | E2 | Two nearest serial month options | Four nearest serial month options |
+| Eurodollar 3-Year Midcurve options | GE3 | E3 | Two nearest serial month options | Four nearest serial month options |
+| Eurodollar 4-Year Midcurve options | GE4 | E4 | Two nearest serial month options | Four nearest serial month options |
+| Eurodollar 5-Year Midcurve options | GE5 | E5 | Two nearest serial month options | Four nearest serial month options |
+
+This change is currently available in New Release for customer testing.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### New - Changes to FX Roll Schedule
+
+Effective **Sunday, September 6** (for trade date Monday, September 7), the roll dates for FX futures products currently listed on CME Globex, and available for submission for clearing on CME ClearPort will be modified. . Additional information these changes are available [online](http://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/files/rollschedule.pdf).
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### New - CBOT Treasury Invoice Swap Spreads: Naming Convention Change
+
+Effective **Sunday, September 20** (trade date Monday, September 21), the external instrument naming convention (iLink: tag 107-SecurityDesc and MDP 3.0: tag 55-Symbol) for CBOT Treasury Invoice Swap Spreads will be modified as follows.
+
+| CBOT Treasury Invoice Swap Spreads – Naming Convention Change |
+| --- |
+| Current External Name iLink: tag 107-SecurityDesc MDP 3.0: tag 55-Symbol | New External Name iLink: tag 107-SecurityDesc MDP 3.0: tag 55-Symbol |
+| **IN:FFFFCRRRRDDMMMYY** Example**IN:ZTM5L026220NOV15** **IN:**= Strategy type (Invoice Swap) with colon **FFFF**=Full 4 character XXMY product code of the related treasury futures. In example, ZTM5 = 2-Yr Treasury Note futures for June 2015 delivery). **C** = Related futures contract delivery date indicator: **F** for contract’s first eligible delivery date. **L** for contract’s last eligible delivery date. **RRRR**= Coupon interest rate per annum of related futures contract’s nominated Cheapest-to-Deliver (CTD) Treasury security In example, **0262** = 2.625 percent per annum. **DDMMMYY** = Maturity Date of related futures contract’s nominated CTD Treasury security In example, **20NOV15** = 20 November 2015. | **IN:FFFFMMYYC** Example**IN:ZTM50317A** **IN:** = Strategy type (Invoice Swap) with colon **FFFF** = Full 4 character XXMY product code of the related treasury futures contract. In example, **ZTM5** (2-Yr Treasury Note futures for June 2015 delivery). **MM** = Numeric 2-character code for month of maturity date of Invoice Swap and related futures contract’s nominated Cheapest-to-Deliver (CTD) Treasury security.In example, **03** = March. **YY**= Numeric 2-character code for year of maturity date of Invoice Swap and related futures contract’s nominated CTD Treasury security. In example, **17** = 2017 **C** = Related futures contract delivery indicator: **A**, **B**, or **C** for related futures contract’s first-, second-, or third-nominated CTD Treasury security, for delivery on contract’s last eligible delivery date. In example, **A** = delivery of first-nominated CTD Treasury security on contract’s last eligible delivery date. **D**, **E**, or **F** for related futures contract’s first-, second-, or third-nominated CTD Treasury security, for delivery on contract’s first eligible delivery date. In example, **D** = delivery of first-nominated CTD Treasury security on contract’s first eligible delivery date. |
+
+This change will be available in New Release for customer testing on Monday, September 7.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+## Events and Announcements
+
+### New - Changes to Daily Maintenance Period for CME Globex
+
+Effective **Monday, September 21,**the daily CME Globex maintenance period will begin 15 minutes earlier Monday through Thursday from 16:00 until 16:45 Central Time (CT) . Currently, the daily maintenance period occurs Monday through Thursday from 16:15 to 16:45 CT. With this change, the closing times for the following markets will now occur 15 minutes earlier Monday through Friday at 16:00 CT.
+
+*   CME Equity
+*   CBOT Equity
+*   COMEX
+*   NYMEX
+*   DME
+
+All other CME Globex markets trading hours remain unchanged.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### Removal of Dow Jones Global Total Stock Market Index Levels
+
+Effective **Monday, September 28**, S&P Dow Jones Indices will remove end-of-day index levels for the Dow Jones Global Total Stock Market (DJ Global TSM) Indices from MDP Channel 152. For a full list of the affected index levels, please view the [full notice](http://support.djindexes.com/vendor/index.cfm?go=announcement&id=8db1695b-2419-49cc-b0c3-ebb0bbfedde7) on the S&P Dow Jones Indices website.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### EOS Trader Decommission
+
+CME EOS Trader will be retired **October 30, 2015**. Customers must migrate to another solution to ensure seamless access to electronically traded CME Group futures and options.
+
+CME Group is committed to providing support and ensuring a smooth transition. Information on [certified trading applications](http://www.cmegroup.com/globex/trading-cme-group-products/trading-applications/) is available online, including CME Direct.
+
+Please note, due to the upcoming decommission, EOS Trader will not be available to new users.
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)
+
+### Order Routing and Front-End Audit Trail Requirements
+
+As previously announced in the [Market Regulation Advisory Notice RA1509-5](http://www.cmegroup.com/rulebook/files/RA1509-5.pdf), all firms must comply with the new Order Routing and Front-End Audit Trail Requirements (Rule 536.B.) by **April 1, 2016**. All new, and currently certified, iLink order routing applications must certify or recertify their trading systems to ensure full compliance with the new audit trail requirements.
+
+Detailed information on the new specification is available in the [Client Systems Wiki](http://www.cmegroup.com/confluence/display/EPICSANDBOX/CME+Globex+Front-End+Audit+Trail+Requirements).
+
+Important changes to the Order Routing and Front-End Audit Trail Requirements:
+
+*   Market Regulation will now require the Audit Trail for certifications and annual exams to be submitted in CSV or Excel file format with specific column order as outlined in the [Minimum Acceptable Audit Trail Elements](http://www.cmegroup.com/confluence/display/EPICSANDBOX/Minimum+Acceptable+Audit+Trail+Elements+-+Data+Definitions+and+Validation+Rules).
+*   The new specifications of the audit trail file provides details for each column on data requirements for tier 1 and tier 2 components
+*   Clarification of how to represent market maker functionality at the quote entry level as well as how to properly represent Request for Cross (RFC) and Request for Quote (RFQ)s.
+*   Additional iLink messages are now in scope of the audit trail:
+    *   Session Level Reject (tag 35-MsgType=**3**)
+    *   Business Level Reject (tag 35-MsgType=**j**)
+    *   Order Mass Action Request (tag 35-MsgType=**CA**)
+    *   Order Mass Action Report (tag 35-MsgType=**BZ)**
+
+*   For improved representation of the information exchanged between trading systems and CME Globex, 17 data points have been added and 16 data points have been removed from the audit trail specifications.
+*   The new 2016 specifications simplify data capture by removing requirements to capture data from other interfaces than iLink, including market data and post-trade system interfaces.
+
+CME Group recommends all applications certifying for [Market Segment Gateway (MSGW)](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#nia) certify for the new audit trail requirements simultaneously.
+
+Please forward any questions regarding the new Order Routing and Front-End Audit Trail Requirements to: [audittrail@cmegroup.com](mailto:audittrail@cmegroup.com).
+
+[Back to Top](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20150817.html#top)

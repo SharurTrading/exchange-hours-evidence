@@ -1,0 +1,247 @@
+Title: CME Globex Notice: July 21, 2025 - CME Group
+
+URL Source: https://www.cmegroup.com/notices/electronic-trading/2025/07/20250721.html
+
+Markdown Content:
+For the latest roadmap of CME Group technology initiatives:
+
+[See the Development Launch Schedule.](https://www.cmegroup.com/globex/develop-to-cme-globex/development-launches.html)
+
+**Additional Resources:**
+
+*   [EBS Market on CME Globex Notices](https://www.cmegroup.com/notices.html#filters=ebs) provide the latest information on changes to EBS Market and eFix Market and are available at 2 a.m. CT Thursdays.
+*   [BrokerTec Markets on CME Globex Update](https://www.cmegroup.com/notices.html#filters=brokertec) provide the latest information on changes to BrokerTec markets and are available bi-weekly at 9 a.m. CT Thursdays.
+
+## Critical Updates
+
+### CME Globex on Google Cloud
+
+[Technical content](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/CME+Globex+on+Google+Cloud)is now available for the planned Globex migration to Google Cloud, including:
+
+*   [Key Events and Dates](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/CME+Globex+on+Google+Cloud#%5BinlineExtension%5DKey-Events-and-Dates)
+
+*   [Dual Zones Overview](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/CME+Globex+on+Google+Cloud#%5BinlineExtension%5DDual-Zones-Solution), including zone swap and maintenance information
+
+CME Group and Google Cloud[recently announced](https://www.cmegroup.com/media-room/press-releases/2024/6/26/cme_group_and_googlecloudannouncenewchicagoareaprivatecloudregio.html)a new private Google Cloud Chicago region and co-location facility for CME Group listed derivative markets.
+
+Additional information will be published regularly and announced via the CME Globex Notices.
+
+### Position Reporting Under CFTC Part 17
+
+On April 30, 2024, the Commodity Futures Trading Commission ("CFTC") approved final rules to amend its [Large Trading Reporting Regulations for Futures and Options](https://www.cftc.gov/PressRoom/PressReleases/8902-24). The amendments were made to modernize CFTC's Large Trader Reporting process and align it with other reporting structures outlined in CFTC regulations.
+
+Since October 2024, CME Group has offered methods to retrieve its instrument listing containing the Unique Instrument Code (UIC) and other instrument data elements in compliance with the amended rule.
+
+Starting March 10, 2025, CME Group began accepting test files in the new Position Message FIXML format via SFTP. For details regarding submitting the new FIXML Position Message, file management, field validations, and example scenarios, please refer to the information in [CME Group Client Systems Wiki](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457216877/Position+Reporting+Under+CFTC+Part+17).
+
+The Market Regulation Department will be publishing further guidance regarding Large Trader Reporting in subsequent Special Executive Reports as solutions become available.
+
+CFTC's final rules became effective upon publication in the Federal Register on June 3, 2024. Reporting Firms must comply with the CFTC's final rules regarding Large Trader Reporting Requirements two years after publication in the Federal Register.
+
+### New iLink Cancel on Behalf Enhancement- Now Available
+
+To offer clients additional session management flexibility, CME Group has increased the number of iLink order entry sessions that can be managed by [Cancel on Behalf](https://www.cmegroup.com/tools-information/webhelp/cme-customer-center/Content/cancel-on-behalf.html) to 10 sessions.
+
+Cancel on Behalf applies to all CME Group futures and options on futures on CME Globex. This functionality is available on iLink sessions using the schema version 8.
+
+### CME Globex Disaster Recovery Change for iLink Market Segment Gateways (MSGW)- August 10
+
+Effective **Sunday, August 10** (trade date Monday, August 11), CME Group will implement a change to the futures and options [Order Entry Path Disaster Recovery (DR) Process](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457217693/Order+Entry+Path+DR+Process) for a clear and consistent experience in the DR environment across all CME Group markets.
+
+With this change, the MSGW IDs in DR will be the same as those used in Production. Currently, for futures, options on futures markets, FX Link and FX Spot+, the MSGW IDs in DR are incremented by one from those used in Production. This change makes futures and options markets consistent with the current behavior for BrokerTec and EBS on CME Globex DR.
+
+Additional information on the CME Globex Disaster Recovery process is available in the [Client Systems Wiki.](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457412471/CME+Globex+Disaster+Recovery+Process)
+
+### New Market Data Multicast Group- Q3 2025
+
+In **Q3 2025,** CME Group will launch a new market data multicast group to be used for a new CME Group futures product suite in the Equity Indices and Alternative Products asset class.
+
+The new market data multicast group channel ID, along with additional details, will be announced in future Globex notices. Please review the [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/New+Market+Data+Multicast+Group) for the multicast IP and ports.
+
+### New UDS Lifecycle for Equity Options Combos- September 14
+
+Starting **Sunday, September 14** (trade date Monday, September 15), to optimize options trading and make instrument management easier, CME Globex will implement a new User-Defined Spread (UDS) lifecycle for options on Equity Index futures - Daily with Extension.
+
+UDS Combos on eligible products will be created with the last trade datetime (LTD) equal to the market close on the day of creation; and they will be eligible for LTD extensions based on Good Till Cancel (GTC) and Good Till Date (GTD) orders.
+
+Please review the [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/New+UDS+Lifecycle+-+Daily+With+Extension) for full details.
+
+This change will be available in the New Release environment for customer testing **Sunday, August 3**.
+
+### Update New Market Segment and Network Connectivity- September 2025
+
+† Denotes update to the article
+
+In **September 2025**, CME Group will launch a new market segment to be used for a new CME product suite in the Equity & Alternative Products asset class. This launch will include additional network connectivity for iLink, market data and Drop Copy.
+
+Further details on the instruments to be hosted on the new market segment will be provided in future CME Globex notices and related client impact assessment updates.
+
+† Please review the [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/New+Market+Segment+and+Network+Connectivity) for the new IP and ports. New Release connectivity information has been added to the client impact assessment.
+
+### CME Smart Stream on GCP SBE and JSON Project Name Migration- October 10
+
+On **Friday, October 10**, [CME Smart Stream on GCP](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/CME+Smart+Stream+on+GCP) will decommission SBE and JSON project names. In preparation for the decommission, clients must migrate to the new project names outlined below.
+
+| Name | Format | Environment | Legacy Project Name | Current Project Name |
+| --- | --- | --- | --- | --- |
+| Realtime and Delayed - All Other Data | SBE | Production | cmegroup-marketdata | prj-pr-mkdata-sbe-0509 |
+| Realtime and Delayed - Cryptocurrency | SBE | Production | cmegroup-marketdata-cr | prj-pr-crypt-sbe-0432 |
+| Futures | JSON | Production | cmegroup-marketdata-js | prj-pr-mkdjsonfut-7802 |
+| Options | JSON | Production | cmegroup-marketdata-js-opt | prj-pr-mkdjsonopt-3263 |
+| Crypto (Futures) | JSON | Production | cmegroup-marketdata-js | prj-pr-crypt-js-f-2281 |
+| Crypto (Options) | JSON | Production | cmegroup-marketdata-js-opt | prj-pr-crypt-js-o-6572 |
+
+## Product Launches
+
+### E-Mini S&P/BMV IPC Index Futures- August 17
+
+Effective **Sunday, August 17** (trade date Monday, August 18), pending completion of all regulatory review periods, E-mini S&P/BMV IPC Index futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| E-Mini S&P/BMV IPC Index Futures |
+| --- |
+| Product | MDP 3.0: Tag 6937-Asset | iLink: Tag 55-Symbol MDP 3.0 Tag 1151 - Security Group | Included Spreads and Combos - Tag 762- SecuritySubType | Market Data Channel MDP 3.0 Tag 1180 - APPLID | Market Data Settlements & Valuations Channel |
+| E-mini S&P/BMV IPC Index Futures | IPC | MD | RT - Reduced Tick | 318 | N/A |
+| BTIC on E-mini S&P/BMV IPC Index Futures | IPCT | MM | - | 318 | N/A |
+| E-mini S&P/BMV IPC Index Futures Fixing Price (non-tradeable) | IPX | 0B (Zero-B) | - | 318 | 251 |
+| E-mini S&P/BMV IPC Index Futures Marker (non-tradeable) | IPM | 0B (Zero-B) | - | 318 | 251 |
+
+The corresponding fixing prices and markers are sent on [CME Data Insights - Settlements & Valuations](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457089321/CME+Data+Insights+-+Settlements+and+Valuations) channels via[MDP 3.0 Market Data Incremental Refresh](https://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Market+Data+Incremental+Refresh) (tag 35-MsgType=X) message types with the following attributes:
+
+*   Tag 279-MDUpdateAction will be set to 0 = New
+*   Tag 269-MDEntryType will be set to 6 = Settlement Price OR 269-MDEntryType will be set to W = Fixing Price
+*   Tag 5796-Trading Reference will display the date for which the marker price was calculated
+
+These products will be available for customer testing in New Release on this **Sunday, July 27**.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+### New Mini FKLI Futures - Mini FTSE Bursa Malaysia Kuala Lumpur Composite Index (FBM KLCI)- November 23
+
+Effective **Sunday, November 23** (trade date Monday, November 24), pending completion of all regulatory review periods, Mini FKLI futures - Mini FTSE Bursa Malaysia Kuala Lumpur Composite Index (FBM KLCI)will be listed for trading on CME Globex.
+
+| Mini FKLI Futures - Mini FTSE Bursa Malasia Kuala Lumpur Composite Index (FBM KLCI) |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | ILINK: TAG 55-SYMBOL MDP 3.0 TAG 1151 - SECURITY GROUP | Included Spreads and Combos - Tag 762- SecuritySubType | MARKET DATA CHANNEL |
+| Mini FTSE Bursa Malaysia Kuala Lumpur Composite Index (FBM KLCI) | FKLM | BE | SP - Standard Calendar | 430 |
+
+These futures are available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of BMD.
+
+## Product Changes
+
+### Add TAS Eligibility for E-mini Gold, 1-Ounce Gold, Micro Copper and Micro Silver Futures- This Week
+
+Effective this **Sunday, July 27** (trade date Monday, July 28), TAS eligibility will be expanded for E-mini Gold, 1-Ounce Gold, Micro Copper and Micro Silver Metals futures on CME Globex.
+
+| Add TAS Eligibility for E-mini Gold, 1-Ounce Gold, Micro Copper and Micro Silver Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Included Spreads and Combos - Tag 762-SecuritySubType | New Listing Schedule | Market Data Channel |
+| E-Mini Gold TAS | QOT | TG | EC - Calendar | 5 monthly contracts of Feb, Apr, Jun, Aug, Oct and Dec | 360 |
+| 1-Ounce Gold TAS | 1OT | TG | EC - Calendar | 5 monthly contracts of Feb, Apr, Jun, Aug, Oct and Dec |
+| Micro Copper TAS | MHT | HT | EC - Calendar | 5 monthly contracts of Mar, May, Jul, Sep and Dec |
+| Micro Silver TAS | MST | MT | EC - Calendar | 5 monthly contracts of Mar, May, Jul, Sep and Dec |
+
+These TAS contracts are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of COMEX.
+
+### TAS Eligibility Expansion for Micro Gold Futures- This Week
+
+Effective this **Sunday, July 27** (trade date Monday, July 28), TAS eligibility will be expanded for Micro Gold futures on CME Globex.
+
+| TAS Eligibility Expansion for Micro Gold Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Listing Schedule | New Listing Schedule |
+| Micro Gold TAS | MGT | TG | Trading at Settlement (TAS) is allowed in the first, second and third nearby active contract months. The active contract months are Feb, Apr, Jun, Aug and Dec | Trading at Settlement (TAS) is allowed in the first, second, third, fourth and fifth nearby active contract months. The active contract months are Feb, Apr, Jun, Aug, Oct and Dec |
+
+These TAS contracts are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of COMEX.
+
+### Change to Reduced Tick Duration for Three-Month F-TIIE Futures and Spreads- This Week
+
+Effective this **Sunday, July 27** (trade date Monday, July 28), the reduced tick duration for Three-Month F-TIIE futures will be changed to the following:
+
+| Change to Reduced Tick Duration for Three-Month F-TIIE Futures and Spreads |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Reduced Tick Duration | New Reduced Tick Duration |
+| Three-Month F-TIIE Futures | TI3 | MI | All contracts with Four Months or Less Until Termination of Trading: 0.0025 IMM Index points (¼ basis point per annum) = MXN$125 per contract All Other Delivery Months: 0.005 IMM Index points (½ basis point per annum) = MXN$250 per contract | All contracts with Three months or less until termination of trading: 0.0025 IMM Index points (¼ basis point per annum) = MXN$125 per contract All Other Delivery Months: 0.005 IMM Index points (½ basis point per annum) = MXN$250 per contract |
+| Three-Month F-TIIE Futures Calendar Spread | TI3 | MI | All contracts with Four Months or Less Until Termination of Trading: 0.0025 IMM Index points (¼ basis point per annum) = MXN$125 per contract All Other Delivery Months: 0.005 IMM Index points (½ basis point per annum) = MXN$250 per contract | All contracts with Three months or less until termination of trading: 0.0025 IMM Index points (¼ basis point per annum) = MXN$125 per contract All Other Delivery Months: 0.005 IMM Index points (½ basis point per annum) = MXN$250 per contract |
+| Three-Month F-TIIE Futures Butterfly Spread | TI3:BF | MI | All contracts with Four Months or Less Until Termination of Trading: 0.0025 IMM Index points (¼ basis point per annum) = MXN$125 per contract All Other Delivery Months: 0.005 IMM Index points (½ basis point per annum) = MXN$250 per contract | All contracts with Three months or less until termination of trading: 0.0025 IMM Index points (¼ basis point per annum) = MXN$125 per contract All Other Delivery Months: 0.005 IMM Index points (½ basis point per annum) = MXN$250 per contract |
+| Three-Month F-TIIE Futures Condor Spread | TI3:CF | TI3:BF | All contracts with Four Months or Less Until Termination of Trading: 0.0025 IMM Index points (¼ basis point per annum) = MXN$125 per contract All Other Delivery Months: 0.005 IMM Index points (½ basis point per annum) = MXN$250 per contract | All contracts with Three months or less until termination of trading: 0.0025 IMM Index points (¼ basis point per annum) = MXN$125 per contract All Other Delivery Months: 0.005 IMM Index points (½ basis point per annum) = MXN$250 per contract |
+
+These products are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+### New Change to Minimum Price Increment and Strategy Type for 7-Year Eris SOFR Swap Futures Calendar Spreads- August 24
+
+Effective **Sunday, August 24** (trade date Monday, August 25), the strategy type for the 7-Year Eris SOFR swap futures calendar spreads will be changed from SP (Standard Calendar Spread) to RT (Reduced Tick Spread) to support the minimum price increment tag 969-MinPriceIncrement change.
+
+| Change to Minimum Price Increment for 7-Year Eris SOFR Swap Futures Calendar Spreads |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current tag 969 - MinPriceIncrement | New tag 969 - MinPriceIncrement | Current Tag 762- SecuritySubType | New Tag 762- SecuritySubType |
+| 7-Year Eris SOFR Swap Futures Calendar Spreads | YIB | EJ | 0.0100 | 0.0050 | SP - Calendar Spread | RT - Reduced Tick |
+
+These futures will be available for customer testing in New Release on **Sunday, August 17**.
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+## Events and Announcements
+
+### CME STP FIX on Google Cloud - Production Internet Connectivity - Now Available
+
+On **Sunday, May 11** (trade date Monday, May 12), CME Group enabled the Production internet connectivity options for CME STP FIX API as part of a phased migration of CME Straight Through Processing APIs to Google Cloud.
+
+CME STP FIX service will operate in two regions, the Eastern and Central United States.
+
+Clients have two different options for internet connectivity to CME STP FIX on Google Cloud.
+
+| CME STP FIX on Google Cloud - Production Internet Connectivity |
+| --- |
+| Connectivity Option | CME STP FIX Hostname(s) | Usage |
+| Managed | stpfix.api.cmegroup.com *[208.112.128.43] | Clients only need to connect to a single Host for all STP data that they are entitled to. CME Group will manage regional connectivity. |
+| Regional | stpfix-**a**.api.cmegroup.com *[208.112.128.46] stpfix-**b**.api.cmegroup.com *[208.112.128.45] | Clients can connect to both regions in parallel, providing flexibility and redundancy. Clients can subscribe to the same or different STP trade data across regions based on their entitlements. Sequences of messages are not guaranteed to be the same across regions. |
+
+*Client systems are required to target the Hostname(s). IPs are provided for convenience of client side whitelisting.
+
+CME STP FIX is accessible on port **443**. Clients can use their existing API credentials.
+
+CME STP FIX on Google Cloud is available in parallel to the current on-prem instance. Clients should ensure that they do not double-book trades if connecting in parallel to Google Cloud and on-prem instances.
+
+View the [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457218323/CME+STP+FIX+API+on+Google+Cloud) for additional information.
+
+### SPAN Files Decommission on FTP Sites- August 18
+
+Please note that due to requests from SPAN users for additional time to switch to CME DataMine, the new deadline is rescheduled to **August 18.**
+
+Effective **August 18,** CME Group will provide SPAN files only via the SFTP and CME DataMine services. SPAN files will no longer be available over the public FTP or CME Group website.
+
+This change applies to CME Group SPAN files as well as partner exchanges SPAN for BMD, XMA, SMX, etc.
+
+The following delivery mechanisms will no longer be available:
+
+*   Public FTP:
+    *   [ftp.cmegroup.com/pub/span/data](http://ftp.cmegroup.com/pub/span/data)
+    *   [ftp.cmgroup.com/span/data](http://ftp.cmgroup.com/span/data)
+
+*   CME Website:
+    *   [www.cmegroup.com/ftp/pub/span/data](http://www.cmegroup.com/ftp/pub/span/data)
+    *   [www.cmegroup.com/ftp/span/data](http://www.cmegroup.com/ftp/span/data)
+
+The following delivery channels will continue to be offered:
+
+*   CME DataMine: [https://datamine.cmegroup.com/#/datasets/cme.span](https://datamine.cmegroup.com/#/datasets/cme.span)
+*   SFTP: sftpng.cmegroup.com
+
+We recommend that firms with access to SFTP migrate their SPAN files downloads off Public FTP and CME Group websites before the deadline using the below paths:
+
+*   CME SPAN: cme/ftp/123/pub/SPAN
+*   Partner Exchanges SPAN: cme/ftp/123/pub/SPAN/ftp
+
+ where 123 is the Firm’s assigned SFTP ID
+
+Customers without access to SFTP, or who prefer to download SPAN files via CME DataMine, may register at [https://www.cmegroup.com/datamine.html](https://www.cmegroup.com/datamine.html)
+
+For more information, please contact CME Clearing at [ccs@cmegroup.com](mailto:ccs@cmegroup.com) or via phone at Chicago +1 312 207 2525, London +44 203 379 3198 or Singapore +65 6593 5591.

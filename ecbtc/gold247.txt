@@ -1,0 +1,244 @@
+Title: Client Facing 1-Ounce Gold and 10-Barrel Crude Futures Expansion to 24/7 Trading
+
+URL Source: https://www.cmegroup.com/globex/files/1-ounce-gold-and-10-barrel-crude-futures-expansion-to-24-7-trading.pdf
+
+Published Time: Wed, 08 Jul 2026 20:27:01 GMT
+
+Number of Pages: 13
+
+Markdown Content:
+© 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+# 24/7 Trading for 1-Ounce Gold and 10-Barrel Crude 
+
+July 8, 2026 © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+# 24/7 Trading for 1-Ounce Gold and 10-Barrel Crude 
+
+CME Group is launching two commodity 24/7 trading initiatives • 10-Barrel WTI Crude Oil futures - new functionality! 
+
+- New product launch • 10-Barrel WTI Crude Oil futures (CS) and future spreads - New CME MDP 3.0 market data channel - Trades 24/7 
+
+• 1-Ounce Gold futures 24/7 Expansion - client migration! 
+
+- 1-Ounce Gold futures migration to 24/7 • New Product group - GC to G1 - Migrating existing product to a different market segment - Migrating to existing Event Contracts channel • No impact to event contracts - Block trades will no longer be supported for 1-Ounce Gold futures - 1-Ounce Gold TAS (TG) products will be delisted © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+● 24/7 Trading will include holidays, Saturdays and Sundays: 
+
+## 24/7 Trading Impacts 
+
+Key changes to support 24/7 trading 
+
+Day Type Close Pre-Open/Open 
+
+Saturday Extended Maintenance Window 
+
+Close: 2:00 a.m. to 3:45 a.m. CT 
+
+● Pre-open: 3:45 a.m. CT to 4:00 a.m. CT 
+
+● Open: 4:00 a.m. CT Monday through Friday 
+
+Daily Maintenance Window (with Trade Date roll) 
+
+Close: 4:00:00 p.m. to 4:01:00 p.m. CT 
+
+● Pre-open: 4:01:00 p.m. CT to 4:01:30 p.m. CT 
+
+● No cancel: 4:01:30 p.m. to 4:02:00 p.m. CT 
+
+● Open: 4:02:00 p.m. CT 
+
+● No new iLink, Drop Copy, STP and MDP certifications required. © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+## 24/7 Trading - Maintenance Cycle 
+
+CME Globex Maintenance Cycles - Non 24/7 
+
+Monday Tuesday Thursday Friday Saturday Sunday 
+
+Available Maintenance 
+
+Beginning of Daily Maintenance 4:00-5:00 PM CT Beginning of Weekend Maintenance 4:00 PM CT Globex Online 11:00 AM CT 
+
+CME Globex Maintenance Cycles - 24/7 
+
+Saturday Sunday 
+
+Saturday Maintenance 2:00-4:00 AM CT 
+
+-The 58 minute reduction in the daily maintenance window is a significant impact for both 5-day and 7-day clients. -During Saturday startup client systems must clear their books and prepare for an iLink/DC/MDP3 sequence number reset. 
+
+Chicago Calendar Day 
+
+24/7 Maintenance Impacts 
+
+Monday Tuesday Wednesday Thursday Wednesday 
+
+Beginning of Daily Maintenance 4:00-4:02 PM CT 
+
+Friday © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+## 24/7 Trading - Trade Date Processing 
+
+Trade date processing follows established standards 
+
+Globex Available Daily Maintenance -Close/Preopen/Open 
+
+Typical - 24/7 
+
+Monday Tuesday Wednesday Thursday Friday Saturday Sunday -As with Globex today, the trade date will change with the daily Monday-Friday Close-> Preopen->->No Cancel -> Open 
+
+(4:00-4:02 p.m. CT). 
+
+Wednesday Thursday Friday 
+
+Weekly Maintenance - Close Trade Date 
+
+Friday 
+
+Holiday - 24/7 
+
+Monday Wednesday Thursday Friday Sunday Wednesday Friday 
+
+Chicago Calendar Day 
+
+Tuesday Trade Date Due to Upcoming Monday Holiday Trade Date Changes Monday Holiday 
+
+Thursday Friday 
+
+24/7 Trade Date Impacts 
+
+Monday Tuesday Tuesday 
+
+Weekly Maintenance - Close/Preopen 
+
+Saturday Tuesday © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+Market Segment 
+
+• 24/7 10-Barrel and 1-Ounce will launch on the existing market segment ID 74 (tag 1300-MarketSegmentID) 
+
+## Client Impacts - Market Segment & Market Data 
+
+Access global data, 24/7 
+
+Market Data 
+
+● Existing Globex MDP 3.0 functionality is supported. 
+
+● Smart Stream SBE and MDP Websocket API support. 
+
+● Channel configuration network impacts - see “5 vs 7-Day Client Journey Summary” section for more information. 
+
+System Product Impact Current Channel ID New Channel ID 
+
+Globex MDP 3.0 10-Barrel Crude futures New - 325 1-Ounce Gold futures Migration 360 329 (shared with events contracts) © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+## Client Impacts - Globex Market Access 
+
+iLink Order Entry 
+
+• Existing iLink functionality is supported. • No new messaging impacts. • Good Till (GT) order support. • Convenience Gateway (CGW) support. • Order Entry Service Gateway (OESGW) IP Impact. • Network impacts - see “5 vs 7-Day Client Journey Summary” section for more information. 
+
+Drop Copy 
+
+• Existing Drop Copy functionality is supported. • No new messaging impacts. • Convenience Gateway (CGW) support. • Network impacts - see “5 vs 7-Day Client Journey Summary” section for more information. 
+
+Empowering clients with around the clock market access © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+## iLink and Drop Copy Session Support 
+
+Access Client Type Impact 
+
+Market Segment Gateway (MSGW) iLink or Drop Copy Session 5 & 7-day clients No impact. Existing sessions support 24/7 on CME Globex. Convenience Gateway (CGW) iLink or Drop Copy Session 5-day clients Existing CGW sessions support market hours between Sunday 4:05 p.m. and Friday 4:00 p.m. CT. No migration required for 5-day clients. 7-day clients CGW clients who wish to access weekend trading must create a new 24/7 session. The new session can access all Globex listed derivatives markets (cryptocurrency, interest rates, energy, etc) during the weekday. 
+
+● 7-day OESGW production information is outlined here. © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+## Good Till (GT) Order Support 
+
+Globex will support Good Till (GT) orders during weekend trading ● Key question: How can 5-day and 7-day clients manage resting GT orders? 
+
+Solution 
+
+● CME Globex Credit Controls (GC2) supports automatic GT elimination functionality via a distinct weekend GC2 limit at the execution firm level. ● Accounts default to a 5-day support schedule (zero weekend limit). ● The GFID weekend credit setting determines GT order eliminations, not the type of session 
+
+Weekend GFIDs NOT Enabled Weekend GFIDs Enabled 
+
+Cancellation Time: GT orders for these products will be canceled every Friday at 4:00 p.m. CT .
+
+Scope: This cancellation applies only to products designated as "7-Day Products" and is enforced at the GFID level. 
+
+iLink 7-day session: GT Orders submitted through 7-day GFIDs will remain active and manageable in the market. 
+
+iLink 5-day CGW Session: GT Orders submitted through a 5-day session will remain working, although not accessible via an iLink session. © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+# Client Impacts - Core Systems 
+
+Straight Through Processing (STP) 
+
+• CME FIXML and FIX Straight Through Processing (STP) will support trade reports for 24/7 markets - No new messaging impacts. • GCP connectivity required, on-prem is not available. 
+
+Reference Data API 
+
+• Supports 24/7 trading, including schedule functionality. • New sevenDayTradingIndicator attribute 
+
+DataMine 
+
+• DataMine supports 24/7 trading. 
+
+CME Direct 
+
+• CME Direct does not support weekend trading. © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+# 5 vs 7-Day Client Journey Summary 
+
+5-Day Clients 7-Day Clients 
+
+Weekday Schedule Update Daily maintenance window reduced from one hour to two minutes. 
+
+Weekend Schedule Expansion N/A Clients must successfully process the new Saturday startup. 
+
+Globex Sunday Startup Decommission Sunday startup is no longer applicable, startup moves to Saturday. 
+
+Good Till (GT) Order Support -Default : GT orders are eliminated on Friday. -GC2 Opt-in : FCMs enable weekend support to retain GT orders. 
+
+iLink & DC Convenience Gateways (CGW) Session Support 
+
+No Impact - clients can use their existing CGW sessions to continue to trade during the weekday. 7-day CGW session required to support weekend trading and all 
+
+CME Globex futures and options markets (e.g., interest rates, energy, etc.) during the weekday. 
+
+iLink & DC Market Segment Gateway (MSGW) Session Support 
+
+No impact - clients can use their existing MSGW sessions. 
+
+Network Impacts for 10-Barrel Crude -Configure iLink and Drop Copy sessions for Market Segment (74) -New MDP 3.0 channel 325 
+
+Network Impacts for 1-Ounce Gold -Configure iLink and Drop Copy sessions to Market Segment (74) -Configure CME MDP 3.0 channel 329 
+
+iLink MSGW and CGW Order Entry Service Gateway (OESGW) 
+
+-New Release OESGW support: MSGW sessions will use market segment 12 and CGW sessions will use market segment 6. -Production OESGW information is outlined here. © 2026 CME Group. All rights reserved. CME GROUP PUBLIC 
+
+# Timelines & Resources 
+
+1-Ounce Gold Futures 
+
+Date Milestone 
+
+Now Available ● Client Overview 
+
+● 24/7 1-Once Gold Futures Client Impact Document (Full Documentation) Sunday, June 28, 2026 New Release launch Sunday, July 19, 2026 Production 1-Ounce Gold futures migrates to new market segment and CME MDP 3.0 channel 
+
+● Block trades will no longer be supported for 1-Ounce Gold futures. 
+
+● 1-Ounce Gold TAS (TG) instruments will be delisted. 4:30 p.m. Central Time on Friday, July 24, 2026 Production 1-Ounce Gold futures weekend trading begins. Day one will have a Friday extended maintenance. 
+
+10-Barrel WTI Crude Oil Futures 
+
+Date Milestone 
+
+Now Available ● Client Overview 
+
+● 24/7 10-Barrel WTI Crude Oil Futures Client Impact Document (Full Documentation) Tuesday, June 30, 2026 New Release launch Sunday, August 30, 2026 Production launch 4:02 p.m. Central Time on Friday, September 4, 2026 Production 10-Barrel WTI Crude futures weekend trading begins

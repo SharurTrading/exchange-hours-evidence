@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>SIX Swiss Exchange - Trading Guides cancelled as of 31 March 2010</title><script type="text/javascript" language="javascript">
+          
+          function hasData(text) {
+          return text.value != null && text.value.length > 0;
+          }
+
+          
+          </script><script type="text/javascript" language="javascript">
+          function navAction(state, id) {
+          if (state == "expanded") {
+          
+          dojo.style('t_' + id + '_collapsed', 'display', 'block');
+          dojo.style('t_' + id + '_expanded', 'display', 'none');
+          } else if (state == "collapsed") {
+          
+          dojo.style('t_' + id + '_collapsed', 'display', 'none');
+          dojo.style('t_' + id + '_expanded', 'display', 'block');
+          }
+          }
+        </script><script type="text/javascript" language="javascript">
+          function doHover(obj) {
+          obj.className += "-hover";
+          }
+
+          function undoHover(obj) {
+          obj.className = obj.className.replace(/\b-hover\b/,'');
+          }
+        </script><script type="text/javascript" language="javascript">
+        var quicklinkTitle = 'Trading Guides';
+      </script><script type="text/javascript" language="javascript">
+        djConfig = {
+        isDebug: false, parseOnLoad: true,
+        locale:
+        'en-us'
+        };
+      </script><script language="JavaScript" type="text/javascript">
+        var dojoURL = window.location.protocol + "//" + window.location.host + "/javascript/dojo-1.1.2/release/dojo/dojo/dojo.js";
+        document.write(unescape('%3Cscript language="JavaScript" type="text/javascript" src="' + dojoURL + '"%3E;%3C/script%3E'));
+      </script><script type="text/javascript" src="/javascript/dojo-1.1.2/release/dojo/dojo/swxDojo.js">;</script><script type="text/javascript" src="/javascript/dojo-1.1.2/fqs/QuotePlayer@g8u78utc.js">;</script><script type="text/javascript" src="/javascript/common/md5@g8uc6y2w.js">;</script><script type="text/javascript" src="/resources/scripts/printPage@g9fcbnao.js">;</script><script type="text/javascript" src="/resources/scripts/tableConfiguration@g8wzprx4.js">;</script><script type="text/javascript" src="/resources/scripts/metaNavigation@g8wzprx4.js">;</script><script type="text/javascript" src="/resources/scripts/htmlCoordinates@g8wzprx4.js">;</script><script type="text/javascript" src="/resources/scripts/quickLinks@g9fcbnao.js">;</script><script type="text/javascript" src="/javascript/common/sidebar-clock@g8uc6y2w.js">;</script><script type="text/javascript" src="/javascript/dojo-1.1.2/fqs/SmiTicker@g8u78utc.js">;</script><script type="text/javascript" language="javascript">
+            var quickLinks = new QuickLinks("quicklinksTable",
+            "quicklinks-ipo",
+            [ quicklinkTitle, window.location.href ],
+            {
+            add_link_text:
+            "Add this page",
+
+            add_img_tooltip:
+            "Add this page",
+
+            rem_img_tooltip:
+            "Remove this page"
+            },
+            []);
+          
+
+          
+          dojo.addOnLoad(function() {
+
+            
+
+            
+            dojo.connect(metaNavLangButton, 'onmouseout', function(event) {
+              if ( metaNavLanguage.mouseOutOfButtonAndDropdown(event) ) {
+                metaNavLanguage.hideDropdown();
+              }
+            });
+            dojo.connect(metaNavLangDropdown, 'onmouseout', function(event) {
+              if ( metaNavLanguage.mouseOutOfButtonAndDropdown(event) ) {
+                metaNavLanguage.hideDropdown();
+              }
+            });
+          });
+
+          
+            dojo.addOnLoad(function() { quickLinks.displayQuickLinks() } );
+            dojo.addOnLoad(function() { setInterval ( "setJSDateTime()", 1000 ) });
+          </script><script type="text/javascript" language="javascript">
+      DELAYED_15_IMG_SRC = "/resources/images/icons_inv/delay_15.png";
+      DELAYED_0_IMG_SRC = "/resources/images/icons_inv/delay_0.png";
+      
+          DELAYED_15_TXT_STR = "15 minutes delayed";
+          DELAYED_0_TXT_STR = "Real time";
+          CHART_MONTH_LABELS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        
+
+      // Shows alternative index chart
+      function showBox(setName, key) {
+
+      // Get the list of indices in this set
+      var setList = pageIndexList[setName];
+      var index = 0;
+      for (var i=0; i < setList.length; i++) {
+
+      // For the required index, switch on visibility and load it
+      if (setList[i] == key) {
+      index = i;
+      dojo.style(setName + "Box" + key, "visibility", "");
+      dojo.addClass(dojo.byId("chartBox"+key), "chartBox-active");
+
+      // Load values if not already done
+      if (!dojo.eval("smallchart"+setList[i]+".values_domain.id")) {
+      dojo.eval("smallchart"+setList[i]
+      +".getAjaxValues(\"id\", smallchart"+setList[i]+".id)");
+      }
+      } else {
+
+      // For the others, switch off visibilty
+      dojo.style(setName + "Box" + setList[i], "visibility", "hidden");
+      dojo.removeClass(dojo.byId("chartBox"+setList[i]), "chartBox-active");
+      }
+      }
+      return index;
+      }
+    </script><script language="JavaScript" type="text/javascript" src="/resources/scripts/chartConfig@g2mz4my0.js">;</script><script language="JavaScript" type="text/javascript" src="/javascript/charts/chart_main@g96re8xc.js">;</script><script language="JavaScript" type="text/javascript" src="/javascript/charts/chart_dataUpdater@g7hnmbz4.js">;</script><script language="JavaScript" type="text/javascript" src="/javascript/charts/chart_drawer@g6uejwgw.js">;</script><script language="JavaScript" type="text/javascript" src="/javascript/charts/chart_graphDrawer@g6ndzfrk.js">;</script><script language="JavaScript" type="text/javascript" src="/javascript/charts/chart_axisDrawer@g7stfs5c.js">;</script><script language="JavaScript" type="text/javascript" src="/javascript/charts/chart_valuesHelper@g7stfs5c.js">;</script><link type="text/css" href="/resources/styles/ssecom-default@g6ca3lrk.css" rel="stylesheet"/><link type="text/css" href="/javascript/dojo/release/dojo/dijit/themes/dijit.css" rel="stylesheet"/><link type="text/css" href="/resources/styles/ssecom-dojocalendar@fxnbsbsg.css" rel="stylesheet"/></head><body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" onload="" background="/resources/images/layout/header_bg.gif
+          "><a name="page_top"/><table border="0" cellspacing="0" cellpadding="0" height="100%" width="100%"><tr valign="top" height="100%"><td languages="en,de,fr"><table border="0" cellpadding="0" cellspacing="0" height="100%"><tr><td valign="top"><table border="0" cellpadding="0" cellspacing="0" width="12" height="100%" id="left-bg"><tr><td height="121" width="12">&nbsp;</td></tr><tr><td height="198" background="/resources/images/layout/shadow_left_blue@g5gkkpvc.gif">&nbsp;</td></tr><tr><td height="100%" valign="top" background="/resources/images/layout/shadow_left_white@g5gkkpvc.gif">&nbsp;</td></tr></table></td><td><table border="0" cellpadding="0" cellspacing="0" height="100%" id="sublayout-default-content-table"><tr><td height="121" style="vertical-align:top;"><table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"><tr><td style="vertical-align:top; padding-left:54px; padding-top:22px;"><a href="/index_en.html" title="SIX Swiss Exchange homepage"><img src="/resources/images/layout/sse_logo@g5gkkpvc.gif" border="0"/></a></td><td style="text-align:right; vertical-align:top; padding-right:18px;"><image src="/resources/images/layout/subsite_title_participants_en.png" style="margin-top:19px;"/></td></tr><tr><td height="100%" width="100%">&nbsp;</td><td style="vertical-align: bottom;"><table border="0" cellpadding="0" cellspacing="0" height="40" width="100%"><tr style="vertical-align: bottom;"><td width="100%">&nbsp;</td><td class="meta-nav-border"><image src="/resources/images/layout/trans.gif" width="1"/></td><td nowrap="nowrap" onclick="
+                                  window.location.href='/participants/contact_en.html';
+                                " onmouseover="
+                                  this.className='meta-nav meta-nav-inactiv-over';
+                                " onmouseout="
+                                  this.className='meta-nav meta-nav-inactiv';
+                                " class="meta-nav meta-nav-inactiv"><span>Contact<a href="/participants/contact_en.html" style="display:none">Contact</a></span></td><td class="meta-nav-border"><image src="/resources/images/layout/trans.gif" width="1"/></td><td class="meta-nav meta-nav-button" id="meta-nav-lang-button" onmouseover="this.className='meta-nav meta-nav-button-over';                                            this.getElementsByTagName('div')[0].className = 'meta-nav-arrow meta-nav-arrow-over';                                            document.getElementById('meta-nav-lang-dropdown').style.display = 'block';                                            metaNavLanguage.init();">English<div class="meta-nav-arrow" name="meta-nav-button-arrow"/></td><td class="meta-nav-border" width="18"><image src="/resources/images/layout/trans.gif" width="18" height="37"/></td></tr></table></td></tr></table></td></tr><tr><td valign="top" style="border-bottom:#9A9B9C solid 1px; background-color:#FFFFFF;"><table border="0" id="sublayout-default-content-table2" cellpadding="0" cellspacing="0" height="100%" width="100%"><tr><td colspan="3" height="28"><table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"><tr><td style="background: #E6E6E4 url(/resources/images/layout/topnav_subsite_leftborder_bg.gif) no-repeat;"><img src="/resources/images/layout/trans@g5gkkpvc.gif" width="19" height="28"/></td><td width="100%" style="padding-left:7px; padding-top:6px; vertical-align: top;                          background-color:#E6E6E4; border-bottom:1px solid #D5D6D2;"><a href="/index_en.html" class="subsite-backlink"><img src="/resources/images/layout/trans@g5gkkpvc.gif" width="14" height="8" border="0"/>SIX Swiss Exchange</a></td><td width="1"><img src="/resources/images/layout/topnav_subsite_rightborder_bg@g5gkkpvc.gif" width="1" height="28"/></td></tr></table></td></tr><tr><td colspan="3"><table border="0" cellpadding="0" cellspacing="0" height="28" width="100%"><tr><td style="border-bottom:1px solid #9A9B9C; background-color: #E6E6E4;"><img src="/resources/images/layout/trans@g5gkkpvc.gif" width="19" height="27"/></td><td width="100%"><table border="0" cellpadding="0" cellspacing="0" height="28" width="100%"><tr><td nowrap="nowrap" onclick="window.location.href='/participants_en.html';" class="topnav_subsite_first" onmouseover="
+                                document.getElementById('topnav1').style.color='#D52B1E';
+                                this.style.backgroundImage='url(/resources/images/layout/trans.gif)';
+                                " onmouseout="
+                                document.getElementById('topnav1').style.color='#4D4F53';
+                                
+                                    this.style.backgroundImage='url(/resources/images/layout/topnav_bg.gif)';
+                                  "><a style="font-family:Arial; font-size:12px; color:#4D4F53; text-decoration:none" href="/participants_en.html" id="topnav1">Home Participants</a></td><td class="topnav" style="border-right:#9A9B9C solid 1px;" nowrap="nowrap" onmouseover="document.getElementById('topnav2').style.color='#D52B1E';                                 this.style.backgroundImage='url(/resources/images/layout/trans.gif)';" onmouseout="document.getElementById('topnav2').style.color='#4D4F53';                                 this.style.backgroundImage='url(/resources/images/layout/topnav_bg.gif)';" onclick="window.location.href='/participants/participation_en.html';"><a style="font-family:Arial; font-size:12px; color:#4D4F53; text-decoration:none" href="/participants/participation_en.html" id="topnav2">Participation</a></td><td class="topnav" style="border-right:#9A9B9C solid 1px;" nowrap="nowrap" onmouseover="document.getElementById('topnav3').style.color='#D52B1E';                                 this.style.backgroundImage='url(/resources/images/layout/trans.gif)';" onmouseout="document.getElementById('topnav3').style.color='#4D4F53';                                 this.style.backgroundImage='url(/resources/images/layout/topnav_bg.gif)';" onclick="window.location.href='/participants/trading_en.html';"><a style="font-family:Arial; font-size:12px; color:#4D4F53; text-decoration:none" href="/participants/trading_en.html" id="topnav3">Trading</a></td><td class="topnav" style="border-right:#9A9B9C solid 1px;" nowrap="nowrap" onmouseover="document.getElementById('topnav4').style.color='#D52B1E';                                 this.style.backgroundImage='url(/resources/images/layout/trans.gif)';" onmouseout="document.getElementById('topnav4').style.color='#4D4F53';                                 this.style.backgroundImage='url(/resources/images/layout/topnav_bg.gif)';" onclick="window.location.href='/participants/clearing_en.html';"><a style="font-family:Arial; font-size:12px; color:#4D4F53; text-decoration:none" href="/participants/clearing_en.html" id="topnav4">Clearing &amp; Settlement</a></td><td class="topnav_a" style="border-right:#9A9B9C solid 1px;" nowrap="nowrap" onclick="window.location.href='/participants/regulation_en.html';"><a style="font-family: Arial; font-size:12px; color:#D52B1E; text-decoration:none" href="/participants/regulation_en.html">Regulation</a></td><td class="topnav" style="border-right:#9A9B9C solid 1px;" nowrap="nowrap" onmouseover="document.getElementById('topnav6').style.color='#D52B1E';                                 this.style.backgroundImage='url(/resources/images/layout/trans.gif)';" onmouseout="document.getElementById('topnav6').style.color='#4D4F53';                                 this.style.backgroundImage='url(/resources/images/layout/topnav_bg.gif)';" onclick="window.location.href='/participants/services_en.html';"><a style="font-family:Arial; font-size:12px; color:#4D4F53; text-decoration:none" href="/participants/services_en.html" id="topnav6">Services</a></td><form name="search" method="get" action="/participants/search/site_search_en.html"><td class="topnav" width="100%" style="
+                        text-align:right;vertical-align:top;padding-top:4px;
+                        padding-right:9px;"><input id="topSearchInputField" type="text" value="Search for..." name="q" style="
+                          height:18px; border:1px; padding-top:3px; padding-left:6px;
+                          background:url(/resources/images/layout/search_bg.gif);
+                          color:#C3C3C4; font-face:Arial; font-size:11px;
+                          width:153px;" onfocus="if (this.value=='Search for...') {this.value='';this.style.color='#000000';};" onblur="if (this.value=='') {this.value='Search for...';this.style.color='#C3C3C4';};"/></td></form><script>
+                    timeout = setTimeout("toggleSearchDropdown();", 0);;
+                    dropDownCurrent = 0;
+                    dropDownNext = 0;
+
+                    function showSearchDropdown() {
+                      dropDownNext = 1;
+                      clearTimeout(timeout);
+                      timeout = setTimeout("toggleSearchDropdown();", 150);
+                    }
+
+                    function hideSearchDropdown() {
+                      dropDownNext = 0;
+                      clearTimeout(timeout);
+                      timeout = setTimeout("toggleSearchDropdown();", 300);
+                    }
+
+                    function toggleSearchDropdown() {
+                      if (dropDownNext == 1 && dropDownCurrent == 0 ) {
+                        posX = findPosX(document.getElementById('searcharrow'));
+                        document.getElementById('searchDropdown').style.left=posX-145;
+                        document.getElementById('searchDropdown').style.visibility='visible';
+                        document['srcharrow'].src='/resources/images/layout/search_arrow_a.gif';
+                        dropDownCurrent = 1;
+                      }
+                      if (dropDownNext==0 && dropDownCurrent == 1 && document['srcharrow'].src.indexOf('search_arrow_a')>0) {
+                        document.getElementById('searchDropdown').style.visibility='hidden';
+                        document['srcharrow'].src="/resources/images/layout/search_arrow.gif";
+                        dropDownCurrent = 0;
+                      }
+                    }
+
+                    function findPosX(obj) {
+                       var curleft = 0;
+                       if(obj.offsetParent) {
+                          while(obj.offsetParent) {
+                             curleft += obj.offsetLeft
+                             obj = obj.offsetParent;
+                          }
+                       }
+                       else if(obj.x)
+                         curleft = obj.x;
+                       return curleft;
+                    }
+
+                    function submitSearchForm(helpTxt) {
+                      dojo.query('input#topSearchInputField').forEach(
+                          function(scriptTag) {
+                            if (scriptTag.value == helpTxt) {
+                               scriptTag.value='';
+                            };
+                          }
+                      );
+                      document.search.submit();
+                    }
+                  </script></tr></table></td><td width="28"><img src="/resources/images/layout/button_search@g5gkkpvc.gif" style="cursor:pointer;" onmouseover="this.src='/resources/images/layout/button_search_a.gif';" onmouseout="this.src='/resources/images/layout/button_search.gif';" onclick="submitSearchForm('Search for...');"/></td></tr></table></td></tr><tr><td>&nbsp;</td><td><img src="/resources/images/trans@g5gkkl8o.gif" height="36" width="1" border="0"/></td><td><noscript>
+                        Javascript required to display<br/>
+                        page correctly !
+                      </noscript><div class="sidebar-js-date"><img src="/resources/images/layout/trans@g5gkkpvc.gif" width="2px"/><span id="js-date-part1">&nbsp;</span><span id="js-date-seconds">&nbsp;</span><span id="js-date-cet">&nbsp;</span></div><script type="text/javascript" language="javascript">
+      js_date_lang = 0;
+    </script></td></tr><tr><td valign="top" height="100%"><!--htdig_noindex--><table border="0" cellpadding="0" cellspacing="0" width="164" height="100%"><tr><td class="navigation-left"><div id="t_1_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/news_en.html">News</a></td></tr></table></div><div id="t_1_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/news_en.html">News</a></td></tr></table></div><div id="t_2_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('expanded','2_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon2_0_0_a').src='/resources/images/layout/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon2_0_0_a').src='/resources/images/layout/nav_arrow_down.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/layout/nav_arrow_down.gif" border="0"');
+                
+                  document.write('id="navicon2_0_0_a"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/participants/regulation/framework_en.html" style="padding:0px; margin:0px"><img src="/resources/images/layout/nav_arrow_down@g3vb9mmg.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/participants/regulation/framework_en.html" onmouseover="document.getElementById('navicon2_0_0_a').src='/resources/images/layout/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon2_0_0_a').src='/resources/images/layout/nav_arrow_down.gif';">Framework of Regulation</a></td></tr></table><div id="t_2_1_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/participants/regulation/framework/federal_law_en.html">Federal Law</a></td></tr></table></div><div id="t_2_1_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/participants/regulation/framework/federal_law_en.html">Federal Law</a></td></tr></table></div><div id="t_2_2_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/participants/regulation/framework/ordinances_en.html">Ordinances</a></td></tr></table></div><div id="t_2_2_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21">&nbsp;</td><td width="143"><a href="/participants/regulation/framework/ordinances_en.html">Ordinances</a></td></tr></table></div></div><div id="t_2_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('collapsed','2_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon2_0_0_').src='/resources/images/layout/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon2_0_0_').src='/resources/images/layout/nav_arrow_right.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/layout/nav_arrow_right.gif" border="0"');
+                
+                  document.write('id="navicon2_0_0_"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/participants/regulation/framework_en.html" style="padding:0px; margin:0px"><img src="/resources/images/layout/nav_arrow_right@g3vb9mmg.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/participants/regulation/framework_en.html" onmouseover="document.getElementById('navicon2_0_0_').src='/resources/images/layout/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon2_0_0_').src='/resources/images/layout/nav_arrow_right.gif';">Framework of Regulation</a></td></tr></table></div><div id="t_3_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/federal_acts_en.html">Federal Acts</a></td></tr></table></div><div id="t_3_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/federal_acts_en.html">Federal Acts</a></td></tr></table></div><div id="t_4_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/rules_regs_en.html">Rules</a></td></tr></table></div><div id="t_4_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/rules_regs_en.html">Rules</a></td></tr></table></div><div id="t_5_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/directives_en.html">Directives</a></td></tr></table></div><div id="t_5_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/directives_en.html">Directives</a></td></tr></table></div><div id="t_6_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('expanded','6_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon6_0_0_a').src='/resources/images/layout/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon6_0_0_a').src='/resources/images/layout/nav_arrow_down.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/layout/nav_arrow_down.gif" border="0"');
+                
+                  document.write('id="navicon6_0_0_a"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/participants/regulation/swx_messages/2010_en.html" style="padding:0px; margin:0px"><img src="/resources/images/layout/nav_arrow_down@g3vb9mmg.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/participants/regulation/swx_messages/2010_en.html" onmouseover="document.getElementById('navicon6_0_0_a').src='/resources/images/layout/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon6_0_0_a').src='/resources/images/layout/nav_arrow_down.gif';">SIX Swiss Exchange Messages</a></td></tr></table><div id="t_6_1_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21" onclick="
+              navAction('expanded','6_1_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon6_1_0_a').src='/resources/images/layout/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon6_1_0_a').src='/resources/images/layout/nav_arrow_down.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/layout/nav_arrow_down.gif" border="0"');
+                
+                  document.write('id="navicon6_1_0_a"');
+                
+              document.write('style="margin-top:2px; margin-left:11px"/>');
+            </script><noscript><a href="/participants/regulation/swxeurope/notices/market/2009_en.html" style="padding:0px; margin:0px"><img src="/resources/images/layout/nav_arrow_down@g3vb9mmg.gif" border="0" style="margin-top:2px; margin-left:11px"/></a></noscript></td><td width="143"><a href="/participants/regulation/swxeurope/notices/market/2009_en.html" onmouseover="document.getElementById('navicon6_1_0_a').src='/resources/images/layout/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon6_1_0_a').src='/resources/images/layout/nav_arrow_down.gif';">SWX Europe Notices</a></td></tr></table><div id="t_6_1_1__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/swxeurope/notices/market/2009_en.html">Market Notices</a></td></tr></table></div><div id="t_6_1_1__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/swxeurope/notices/market/2009_en.html">Market Notices</a></td></tr></table></div><div id="t_6_1_2__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/swxeurope/notices/membership/2009_en.html">Membership Notices</a></td></tr></table></div><div id="t_6_1_2__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/swxeurope/notices/membership/2009_en.html">Membership Notices</a></td></tr></table></div><div id="t_6_1_3__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/swxeurope/notices/uk_stock/2008_en.html">UK Stock Notices</a></td></tr></table></div><div id="t_6_1_3__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/swxeurope/notices/uk_stock/2008_en.html">UK Stock Notices</a></td></tr></table></div><div id="t_6_1_4__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/swxeurope/notices/stock/2009_en.html">Stock Notices</a></td></tr></table></div><div id="t_6_1_4__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/swxeurope/notices/stock/2009_en.html">Stock Notices</a></td></tr></table></div></div><div id="t_6_1_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21" onclick="
+              navAction('collapsed','6_1_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon6_1_0_').src='/resources/images/layout/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon6_1_0_').src='/resources/images/layout/nav_arrow_right.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/layout/nav_arrow_right.gif" border="0"');
+                
+                  document.write('id="navicon6_1_0_"');
+                
+              document.write('style="margin-top:2px; margin-left:11px"/>');
+            </script><noscript><a href="/participants/regulation/swxeurope/notices/market/2009_en.html" style="padding:0px; margin:0px"><img src="/resources/images/layout/nav_arrow_right@g3vb9mmg.gif" border="0" style="margin-top:2px; margin-left:11px"/></a></noscript></td><td width="143"><a href="/participants/regulation/swxeurope/notices/market/2009_en.html" onmouseover="document.getElementById('navicon6_1_0_').src='/resources/images/layout/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon6_1_0_').src='/resources/images/layout/nav_arrow_right.gif';">SWX Europe Notices</a></td></tr></table></div></div><div id="t_6_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('collapsed','6_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon6_0_0_').src='/resources/images/layout/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon6_0_0_').src='/resources/images/layout/nav_arrow_right.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/layout/nav_arrow_right.gif" border="0"');
+                
+                  document.write('id="navicon6_0_0_"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/participants/regulation/swx_messages/2010_en.html" style="padding:0px; margin:0px"><img src="/resources/images/layout/nav_arrow_right@g3vb9mmg.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/participants/regulation/swx_messages/2010_en.html" onmouseover="document.getElementById('navicon6_0_0_').src='/resources/images/layout/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon6_0_0_').src='/resources/images/layout/nav_arrow_right.gif';">SIX Swiss Exchange Messages</a></td></tr></table></div><div id="t_7_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/trading_guides_en.html">Trading Guides</a></td></tr></table></div><div id="t_7_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/trading_guides_en.html">Trading Guides</a></td></tr></table></div><div id="t_8_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/faqs_en.html">FAQs</a></td></tr></table></div><div id="t_8_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/faqs_en.html">FAQs</a></td></tr></table></div><div id="t_9_0_0__expanded"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('expanded','9_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon9_0_0_a').src='/resources/images/layout/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon9_0_0_a').src='/resources/images/layout/nav_arrow_down.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/layout/nav_arrow_down.gif" border="0"');
+                
+                  document.write('id="navicon9_0_0_a"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/participants/regulation/archive_en.html" style="padding:0px; margin:0px"><img src="/resources/images/layout/nav_arrow_down@g3vb9mmg.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/participants/regulation/archive_en.html" style="font-weight:bold;" onmouseover="document.getElementById('navicon9_0_0_a').src='/resources/images/layout/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon9_0_0_a').src='/resources/images/layout/nav_arrow_down.gif';">Archive</a></td></tr></table><div id="t_9_1_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21" onclick="
+              navAction('expanded','9_1_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon9_1_0_a').src='/resources/images/layout/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon9_1_0_a').src='/resources/images/layout/nav_arrow_down.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/layout/nav_arrow_down.gif" border="0"');
+                
+                  document.write('id="navicon9_1_0_a"');
+                
+              document.write('style="margin-top:2px; margin-left:11px"/>');
+            </script><noscript><a href="/participants/regulation/archive/from_2010_04_01/directives_en.html" style="padding:0px; margin:0px"><img src="/resources/images/layout/nav_arrow_down@g3vb9mmg.gif" border="0" style="margin-top:2px; margin-left:11px"/></a></noscript></td><td width="143"><a href="/participants/regulation/archive/from_2010_04_01/directives_en.html" onmouseover="document.getElementById('navicon9_1_0_a').src='/resources/images/layout/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon9_1_0_a').src='/resources/images/layout/nav_arrow_down.gif';">After 01.04.2010</a></td></tr></table><div id="t_9_1_1__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/archive/from_2010_04_01/directives_en.html">Directives</a></td></tr></table></div><div id="t_9_1_1__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/archive/from_2010_04_01/directives_en.html">Directives</a></td></tr></table></div></div><div id="t_9_1_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21" onclick="
+              navAction('collapsed','9_1_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon9_1_0_').src='/resources/images/layout/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon9_1_0_').src='/resources/images/layout/nav_arrow_right.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/layout/nav_arrow_right.gif" border="0"');
+                
+                  document.write('id="navicon9_1_0_"');
+                
+              document.write('style="margin-top:2px; margin-left:11px"/>');
+            </script><noscript><a href="/participants/regulation/archive/from_2010_04_01/directives_en.html" style="padding:0px; margin:0px"><img src="/resources/images/layout/nav_arrow_right@g3vb9mmg.gif" border="0" style="margin-top:2px; margin-left:11px"/></a></noscript></td><td width="143"><a href="/participants/regulation/archive/from_2010_04_01/directives_en.html" onmouseover="document.getElementById('navicon9_1_0_').src='/resources/images/layout/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon9_1_0_').src='/resources/images/layout/nav_arrow_right.gif';">After 01.04.2010</a></td></tr></table></div><div id="t_9_2_0__expanded"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21" onclick="
+              navAction('expanded','9_2_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon9_2_0_a').src='/resources/images/layout/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon9_2_0_a').src='/resources/images/layout/nav_arrow_down.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/layout/nav_arrow_down.gif" border="0"');
+                
+                  document.write('id="navicon9_2_0_a"');
+                
+              document.write('style="margin-top:2px; margin-left:11px"/>');
+            </script><noscript><a href="/participants/regulation/archive/until_2010_03_31/general_conditions_en.html" style="padding:0px; margin:0px"><img src="/resources/images/layout/nav_arrow_down@g3vb9mmg.gif" border="0" style="margin-top:2px; margin-left:11px"/></a></noscript></td><td width="143"><a href="/participants/regulation/archive/until_2010_03_31/general_conditions_en.html" style="font-weight:bold;" onmouseover="document.getElementById('navicon9_2_0_a').src='/resources/images/layout/nav_arrow_down_a.gif';" onmouseout="document.getElementById('navicon9_2_0_a').src='/resources/images/layout/nav_arrow_down.gif';">As of 31.03.2010</a></td></tr></table><div id="t_9_2_1__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/archive/until_2010_03_31/general_conditions_en.html">General Conditions</a></td></tr></table></div><div id="t_9_2_1__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/archive/until_2010_03_31/general_conditions_en.html">General Conditions</a></td></tr></table></div><div id="t_9_2_2__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/archive/until_2010_03_31/directives_en.html">Directives</a></td></tr></table></div><div id="t_9_2_2__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/archive/until_2010_03_31/directives_en.html">Directives</a></td></tr></table></div><div id="t_9_2_3__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/archive/until_2010_03_31/transitional_rule_book_en.html">Transitional Rule Book</a></td></tr></table></div><div id="t_9_2_3__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/archive/until_2010_03_31/transitional_rule_book_en.html">Transitional Rule Book</a></td></tr></table></div><div id="t_9_2_4__expanded"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6-active" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/archive/until_2010_03_31/trading_guides_en.html">Trading Guides</a></td></tr></table></div><div id="t_9_2_4__collapsed" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level6-active" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="28">&nbsp;</td><td width="136"><a href="/participants/regulation/archive/until_2010_03_31/trading_guides_en.html">Trading Guides</a></td></tr></table></div></div><div id="t_9_2_0__collapsed" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level5" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="21" onclick="
+              navAction('collapsed','9_2_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon9_2_0_').src='/resources/images/layout/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon9_2_0_').src='/resources/images/layout/nav_arrow_right.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/layout/nav_arrow_right.gif" border="0"');
+                
+                  document.write('id="navicon9_2_0_"');
+                
+              document.write('style="margin-top:2px; margin-left:11px"/>');
+            </script><noscript><a href="/participants/regulation/archive/until_2010_03_31/general_conditions_en.html" style="padding:0px; margin:0px"><img src="/resources/images/layout/nav_arrow_right@g3vb9mmg.gif" border="0" style="margin-top:2px; margin-left:11px"/></a></noscript></td><td width="143"><a href="/participants/regulation/archive/until_2010_03_31/general_conditions_en.html" style="font-weight:bold;" onmouseover="document.getElementById('navicon9_2_0_').src='/resources/images/layout/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon9_2_0_').src='/resources/images/layout/nav_arrow_right.gif';">As of 31.03.2010</a></td></tr></table></div></div><div id="t_9_0_0__collapsed" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14" onclick="
+              navAction('collapsed','9_0_0_')
+            " style="cursor:pointer;vertical-align:top;padding-top:2px;" onmouseover="document.getElementById('navicon9_0_0_').src='/resources/images/layout/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon9_0_0_').src='/resources/images/layout/nav_arrow_right.gif';"><script type="text/javascript" language="javascript">
+                  document.write('<img src="/resources/images/layout/nav_arrow_right.gif" border="0"');
+                
+                  document.write('id="navicon9_0_0_"');
+                
+              document.write('style="margin-top:2px; margin-left:4px"/>');
+            </script><noscript><a href="/participants/regulation/archive_en.html" style="padding:0px; margin:0px"><img src="/resources/images/layout/nav_arrow_right@g3vb9mmg.gif" border="0" style="margin-top:2px; margin-left:4px"/></a></noscript></td><td width="150"><a href="/participants/regulation/archive_en.html" style="font-weight:bold;" onmouseover="document.getElementById('navicon9_0_0_').src='/resources/images/layout/nav_arrow_right_a.gif';" onmouseout="document.getElementById('navicon9_0_0_').src='/resources/images/layout/nav_arrow_right.gif';">Archive</a></td></tr></table></div><div id="t_10_0_0__expanded" style="display:none"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/contact_en.html">Contact</a></td></tr></table></div><div id="t_10_0_0__collapsed"><table border="0" cellpadding="0" cellspacing="0" width="164"><tr class="nav-level4" onMouseOver="doHover(this)" onMouseOut="undoHover(this)"><td width="14">&nbsp;</td><td width="150"><a href="/participants/regulation/contact_en.html">Contact</a></td></tr></table></div></td></tr><tr><td>&nbsp;</td></tr><tr height="100%"><td>&nbsp;</td></tr></table><!--/htdig_noindex--></td><td width="596" valign="top" height="100%" class="main"><table border="0" cellpadding="0" cellspacing="0" width="596" height="100%"><tr><td valign="top" style="background-color:#FFFFFF;" height="400"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><h1>Trading Guides cancelled as of 31 March 2010</h1></td></tr></table>
+    
+      
+      <p class="para">
+        
+        
+          The trading guides provide participants with information on the rules in force governing trading.
+        
+        
+      </p>
+      
+      <div><table border="0" cellspacing="0" cellpadding="0" class="table-grid" width="100%"><tr><td width="100%"><img src="/resources/images/trans@g5gkkl8o.png" height="1" width="100%" border="0" hspace="0" vspace="0"/></td><td width="70"><img src="/resources/images/trans@g5gkkl8o.png" height="1" width="70" border="0" hspace="0" vspace="0"/></td><td width="70"><img src="/resources/images/trans@g5gkkl8o.png" height="1" width="70" border="0" hspace="0" vspace="0"/></td><td align="center" width="70"><img src="/resources/images/trans@g5gkkl8o.png" height="1" width="70" border="0" hspace="0" vspace="0"/></td></tr><tr class="row-head"><td class="first">
+            
+            Description
+            
+          </td><td>
+            
+            valid as of
+            
+          </td><td>
+            
+            valid until
+            
+          </td><td align="center">Download</td></tr><tr class="row-odd"><td class="first" align="left" valign="top">Business Day Overview</td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/business_day_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top">Market Model Overview</td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/market_model_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top">
+            
+            Product Guide - Equity Market
+            
+          </td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/product_guide_equities_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top">
+            
+            Product Guide - Fund Market
+            
+          </td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/product_guide_funds_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top">
+            
+            Product Guide - Bond Market
+            
+          </td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/product_guide_bonds_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top">
+            
+            Product Guide - Derivative Market
+            
+          </td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/product_guide_derivates_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top">Trading Interruption Overview</td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/trading_interruption_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top">Price Step (Tick Size) Overview</td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/price_steps_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top">Trade Type Code Overview</td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/guide_overview_ttc_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top">On Order Book Functionality</td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/on_order_book_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-odd"><td class="first" align="left" valign="top">Off Order Book Functionality</td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/off_order_book_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr><tr class="row-even"><td class="first" align="left" valign="top">Trading Guide&nbsp;<nobr>SIX Swiss Exchange</nobr></td><td align="left" valign="top">11.01.2010</td><td align="left" valign="top">31.03.2010</td><td align="center" valign="top"><a href="/download/participants/regulation/archive/trading_guides/trading_guide_2010_01_11_en.pdf" target="_blank"><img border="0" src="/resources/images/icons_inv/pdf@fyb7pz3k.png" title="PDF"/></a></td></tr></table><br/></div>
+      
+    
+  <br/></td></tr><tr><td valign="top" style="background-color:#FFFFFF;"><div style="height: 30px; float:right; margin-top:50px;"><div style="display: inline; margin-left: 4px;"><a href="#" id="print-view-icon" onclick="printPage()" onmouseover="document.getElementById('printbutton').src='/resources/images/layout/button_print_a.gif';" onmouseout="document.getElementById('printbutton').src='/resources/images/layout/button_print.gif';"><img src="/resources/images/layout/button_print@fy8szl8g.gif" border="0" id="printbutton" title="Print page"/></a></div></div></td></tr></table></td><td valign="top" style="background-color:#FFFFFF;"><div><noscript>
+      Javascript required to display<br/>
+      page correctly !
+    </noscript><table border="0" cellpadding="0" cellspacing="0" style="margin-bottom:20px" width="100%"><tr><td class="sidebar-permalinks"><a class="sidebar-permalink-external" href="http://www.six-group.com" target="_blank"><image src="/resources/images/layout/trans.gif" width="14" height="1" border="0"/>SIX Group</a></td></tr><tr><td class="sidebar-permalinks"><a class="sidebar-permalink-external" href="http://www.six-exchange-regulation.com" target="_blank"><image src="/resources/images/layout/trans.gif" width="14" height="1" border="0"/>SIX Exchange Regulation</a></td></tr><tr><td class="sidebar-permalinks"><a class="sidebar-permalink-external" href="http://www.connexor.ch" target="_blank"><image src="/resources/images/layout/trans.gif" width="14" height="1" border="0"/>Connexor</a></td></tr><tr><td class="sidebar-permalinks"><a class="sidebar-permalink-internal" href="/issuers_en.html"><image src="/resources/images/layout/trans.gif" width="14" height="1" border="0"/>Issuers</a></td></tr><tr><td style="border-top:#9a9b9c solid 1px;"><image src="/resources/images/layout/trans.gif" width="14" height="1" border="0"/></td></tr></table><div dojoType="swx.widget.TitlePane" id="sbHpLoginPane" saveState="true" duration="500" class="mpulse-sidebar" style="visibility:hidden" title="Login"><table width="100%" cellpadding="0" cellspacing="0"><tr><td class="sidebar-item"><a class="sidebar-item" href="/member_section/login.html">Member Section</a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="/participants/services/rsd_en.html">Trade Reporting (RSD)</a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" href="/issuers/services/connexor/ibt/login_en.html ">IBT</a></td></tr><tr><td class="sidebar-item"><a class="sidebar-item" target="_blank" href="https://www.six-exchange-regulation.com/admission/listing/ibl/login_en.html">IBL<img src="/resources/images/layout/trans@g5gkkpvc.gif" width="3" height="1" border="0"/><img src="/resources/images/layout/../icons_inv/new_window@g5gkkobs.png" border="0" width="11" height="9"/></a></td></tr></table></div><script type="text/javascript" language="javascript">
+      dojo.addOnLoad(function() {
+      dojo.style("sbHpLoginPane", "visibility", "visible");
+      });
+    </script><div dojoType="swx.widget.TitlePane" id="sbQuickLinksPane" saveState="true" duration="500" class="mpulse-sidebar" style="visibility:hidden" title="MyFavorites"><table width="100%" id="quicklinksTable" cellpadding="0" cellspacing="0"> </table></div><script type="text/javascript" language="javascript">
+      dojo.addOnLoad(function() {
+      dojo.style("sbQuickLinksPane", "visibility", "visible");
+      });
+    </script><br/></div></td></tr></table></td></tr><tr><td height="80" valign="top" bgcolor="#F3F3F3" style="border-top:#FFFFFF solid 1px;"><div class="footer" style="padding-top:9px; padding-left:12px;"><span style="padding-right:6px;"><a class="footer" href="/participants/sitemap_en.html">Sitemap</a></span><span style="border-left:#C7C2BA solid 1px;padding-right:6px;padding-left:6px;"><a class="footer" href="/disclaimer_en.html">Disclaimer</a></span><span style="border-left:#C7C2BA solid 1px;padding-right:6px;padding-left:6px;"><a class="footer" href="/technical_details_en.html">Technical details</a></span></div><div class="footer" style="padding-top:9px; padding-left:12px;">
+          &copy; 2010, SIX Swiss Exchange
+        </div></td></tr></table></td><td><table border="0" cellpadding="0" cellspacing="0" width="6" height="100%" id="right-bg"><tr><td height="121">&nbsp;</td></tr><tr><td height="198" background="/resources/images/layout/right_top_bg@g5gkkpvc.gif">&nbsp;</td></tr><tr><td valign="top" width="6" background="/resources/images/layout/right_bg@g5gkkpvc.gif" height="100%">&nbsp;</td></tr></table></td></tr></table><div id="meta-nav-lang-dropdown" style="display:none; position:absolute; z-index:1;"><table border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" cellpadding="0" cellspacing="0" style="background:#333333; width:105px;"><tr><td class="meta-nav-dropdown meta-nav-dropdown-inactive" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="window.location.href='/participants/regulation/archive/until_2010_03_31/trading_guides_de.html';">Deutsch</td></tr><tr><td class="meta-nav-dropdown meta-nav-dropdown-active">English</td></tr><tr><td class="meta-nav-dropdown meta-nav-dropdown-inactive" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="window.location.href='/participants/regulation/archive/until_2010_03_31/trading_guides_fr.html';">Fran&ccedil;ais</td></tr><tr><td class="meta-nav-dropdown meta-nav-dropdown-active">&nbsp;</td></tr></table></td><td width="5" background="/resources/images/layout/shadow_right@g5gkkpvc.gif" style="filter:Alpha(opacity=30);opacity:.3;"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="1" width="5"/></td></tr><tr><td background="/resources/images/layout/shadow_bottom@g5gkkpvc.gif" style="filter:Alpha(opacity=20);opacity:.2;"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="5" width="1"/></td><td background="/resources/images/layout/shadow_bottomright@g5gkkpvc.gif" style="filter:Alpha(opacity=20);opacity:.2;"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="5" width="1"/></td></tr></table></div><script language="JavaScript" type="text/javascript">
+        
+        var metaNavLangButton = document.getElementById('meta-nav-lang-button');
+        var metaNavLangDropdown = document.getElementById('meta-nav-lang-dropdown');
+        var metaNavLanguage = new metaNavSelector(metaNavLangButton, metaNavLangDropdown);
+      </script></td></tr></table><div id="searchDropdown" style="visibility:hidden;position:absolute;top:144px;left:900px" onmouseover="showSearchDropdown();return false;" onmouseout="hideSearchDropdown();return false;"><table border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" cellpadding="0" cellspacing="0" style="background:#333333;width:162px;"><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/search/site_search_en.html';">Text</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/search/quotes_en.html';">Products</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/shares/explorer_en.html';">Shares</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/bonds/explorer_en.html';">Bonds</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/funds/explorer_en.html';">ETFs &amp; funds</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/news/news_dates_en.html';">Dow-Jones News</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/news/management_transactions_en.html';">Management Transactions</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/news/major_shareholders_en.html';">Significant Shareholders</td></tr><tr><td class="searchDD" onmouseover="this.style.color='#D52B1E';" onmouseout="this.style.color='#FFFFFF';" onclick="dropDown=0;window.location.href='/news/official_notices/search_en.html';">Official Notices</td></tr><tr><td class="searchDD" style="cursor:cursor;">&nbsp;</td></tr></table></td><td width="5" background="/resources/images/layout/shadow_right@g5gkkpvc.gif" style="filter:Alpha(opacity=30);opacity:.3;"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="1" width="5"/></td></tr><tr><td background="/resources/images/layout/shadow_bottom@g5gkkpvc.gif" style="filter:Alpha(opacity=20);opacity:.2;"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="5" width="1"/></td><td background="/resources/images/layout/shadow_bottomright@g5gkkpvc.gif" style="filter:Alpha(opacity=20);opacity:.2;"><img src="/resources/images/layout/trans@g5gkkpvc.gif" height="5" width="1"/></td></tr></table></div><script type="text/javascript">
+            var isHttps = "https:" == document.location.protocol;
+            if (!isHttps) {
+              document.write(unescape("%3Cscript src='/resources/scripts/gatag.js' type='text/javascript'%3E%3C/script%3E"));
+              document.write(unescape("%3Cscript src='http://www.google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            }
+          </script><script type="text/javascript">
+            if (!isHttps) {
+              try {
+                var pageTracker = _gat._getTracker("UA-1241259-1");
+                pageTracker._trackPageview();
+              } catch(err) {}
+            }
+          </script></body></html>

@@ -1,0 +1,170 @@
+Title: 20120611 - CME Group
+
+URL Source: https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html
+
+Markdown Content:
+[](https://www.cmegroup.com/)
+
+Toggle Dropdown
+
+Create an Account
+
+[Watchlists](https://www.cmegroup.com/watchlists.html)[CME Customer Center](https://login.cmegroup.com/sso/navmenu.action)[CME Direct](https://cmedirect.cmegroup.com/)[Subscription Center](https://www.cmegroup.com/subscription-center.html)
+
+Log In
+
+*   [Markets](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#)    
+*   [Data](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#)    
+*   [Solutions](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#)    
+*   [Insights](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#)    
+*   [Education](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#)    
+
+*   # CME Globex Notice: June 11, 2012
+
+*       *           *   **To**
+        *   CME GlobEX Customers 
+
+    *           *   **From**
+        *   Global Account Management 
+
+    *           *   **#**
+        *   20120611
+
+    *           *   **Notice Date**
+        *   11 June 2012
+
+    *   Topics in this issue include: ![Image 1](http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-right.gif)[Critical System Updates](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#C) * [Changes to Source IPs for the Market Data Platform B Feed for Non-GLink Connections](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#IPS) - This Week * [Green Exchange Product Migration to NYMEX Available in New Release](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#GRE) - This Week * [FIX/FAST Operators Release](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#OPR) - July 1 * [CME Globex Performance Release](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#GPR) - Starting August 26 ![Image 2](http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-right.gif)[New Functionality](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#F) * [iLink Enhancement for Cancel Type Indicator](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#ILK) - July 1 * [iLink Enhancements for MexDer Markets via CME Globex](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#MEX) - July 23 ![Image 3](http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-right.gif)[Product Launches](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#PL) * [E-mini Yen Denominated Nikkei Stock Average Index Futures](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#YEN) - This Week * [Crude Oil vs. NYMEX Brent 25-Day (Platts) Intercommodity Spread](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#INT) - This Week * [Bursa Malaysia Derivative Options on Crude Palm Oil Futures (OCPO)](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#CPO) - July 15 ![Image 4](http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-right.gif)[Product Changes](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#PC) * [Delisting of NYMEX Brent 25-Day (Platts) vs. Crude Oil Intercommodity Spread](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#DNT) - This Week * [Expansion of Listings for Nikkei 225 Dollar Futures](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html#NIK) - This Week Critical System Updates[](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html) Changes to Source IPs for the Market Data Platform B Feed for Non-GLink Connections[](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html) Effective this **Sunday, June 17, 2012**, CME Group will be changing multicast source IPs for the B feed only for non-![Image 5](http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif)[GLink](https://www.cmegroup.com/globex/trading-cme-group-products/co-location-services.html) connections. If a firewall or network device is configured with the source IP information, please correct your configuration to use the entire range of eligible addresses. Port, multicast addresses, and source IPs for each Market Data Platform channel are available in the config.xml file on the![Image 6](http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif)[FTP site](ftp://ftp.cmegroup.com/fix/Production/) as outlined in the Core Functionality of the![Image 7](http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif)[FIX/FAST SDK](https://www.cmegroup.com/globex/files/SDKFFCore.pdf). Market data will be broadcast on all CME Group FIX/FAST channels in the production environment for customer testing this **Saturday, June 16**. Market data will be broadcast from the new B feed source IPs. * 8:30 - 9:00 a.m. CT: Connectivity testing * 9:00 - 10:00 a.m. CT: FIX/FAST market data replay As a reminder, CME Group requires that customers configure servers to connect to the Market Data Platform ports and multicast addresses for each desired channel. CME Group does not recommend restricting data flow via the source IPs, as these may change without notice. If you have any questions or concerns, please contact your![Image 8](http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif)[Global Account Manager](mailto:globalaccountmanagement@cmegroup.com). If you experience any connectivity issues, please contact the CME Global Command Center directly at 312.456.2391. * * * Green Exchange Product Migration to NYMEX Available in New Release[](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html) As previously announced, CME Group anticipates in the near future migrating all GreenX products to a CME Group exchange, delisting them from the Green Exchange and listing them on the NYMEX exchange. The date of this migration is dependent upon receipt of an order from the CFTC permitting such a migration. These products will use the same Symbol (tag 55) and SecurityGroup (tag 1151) as they do today, however the value in tag 207-SecurityExchange will be updated from **GREE**to **XNYM**. Market data for these products will continue to be available on the current FIX/FAST channels: * Channel 18 – NYMEX emissions futures (currently known as Green Exchange futures) * Channel 19 - NYMEX emissions options (currently known as Green Exchange options) These products will be available with the new tag 207 value XNYM for customer testing in New Release this **Monday, June 18**. The production launch date will be announced in the CME Globex Notices as soon as it is available. * * * ![Image 9: Update](http://www.cmegroup.com/globex/online-marketing/headers-graphs/flag-globex.gif) FIX/FAST Operators Release[](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html) Based on customer feedback, the removal of the operators from CME FX futures channels 11 and 60 in the production environment, previously scheduled for Sunday, June 3, has been postponed to **Sunday, July 1**. The life cycle of the FIX/FAST protocol, including streamlined FIX/FAST, is rapidly approaching its end as an industry standard in the United States. †The OPRA connected exchanges are eliminating FIX/FAST entirely by the end of this year. Given the increased availability of bandwidth as well as high speed connections such as co-location, compression has become less critical. In the short term, we are removing certain field operators (copy, default, delta and increment) from our data feed. In the longer term, CME Group continues to evaluate a next generation market data protocol. These operators will be removed from all production FIX/FAST and streamlined FIX/FAST channels on the Market Data Platform by **Sunday, November 4, 2012**. A detailed schedule of the remaining channels is now available![Image 10](http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif)[online](https://www.cmegroup.com/globex/files/operatorsreleaseschedule.pdf). New templates will be required for the impacted channels. The new templates are currently available in New Release and Production. CME Group recommends customer systems pull the templates from the CME Group ftp site every week, prior to Sunday startup. More information on template management is available in the![Image 11](http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif)[Client Systems Wiki](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Template+Overview+-+Template+Modification). These changes are currently available on all FIX/FAST channels in the New Release environment. As a result of this launch, bandwidth utilization over the Market Data Platform will ultimately increase. CME Group is contacting customers who may have over-subscription risk. †Please note: CME Group is not a member of the Options Pricing Reporting Authority (OPRA). * * * CME Globex Performance Release[](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html) New information is now available in the![Image 12](http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif)[Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Pending+Client+System+Impacts) on the move to single IP for iLink sessions in the production and disaster recovery environments. Information on the iLink launch date for the Disaster Recovery environment on November 4, 2012, is also available. CME Group is implementing iLink and FIX/FAST infrastructure upgrades to the CME Globex electronic trading platform that will result in reduced message response times and faster market data messaging. This release is expected to significantly reduce iLink round trip times and improve FIX/FAST performance. As a result, bandwidth utilization is expected to increase by 10-20%. This release also features iLink messaging changes. Detailed information on this launch, including impacts and launch schedules, is available in the![Image 13](http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif)[Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Pending+Client+System+Impacts). The FIX/FAST launch will be phased in over 5 weekends, **August 26 through October 7**, during which the source IPs for each channel will change. The iLink launch will feature an Early Adopter period, **October 7 through October 12**, and a production launch **Sunday, October 14**. All iLink sessions must migrate to new IPs and ports in order to access the new high performance production environment. Customers who wish to participate during the Early Adopter phase must select the sessions that will be migrated and inform their![Image 14](http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif)[Global Account Manager](mailto:globalaccountmanagement@cmegroup.com) no later than **Wednesday, October 3**. Please note: To minimize the risk of business interruptions, CME Group strongly recommends that customers participating during the early adopter phase direct **no more than 20% of their sessions** to the new IPs and ports. Customer certification is not required, but CME Group strongly recommends all system providers test these changes thoroughly in New Release. Good 'Till Cancelled and Good 'Till Date (GTC/GTD) orders will not be impacted. Please contact your![Image 15](http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif)[Global Account Manager](mailto:globalaccountmanagement@cmegroup.com) with any questions or concerns at 312 634 8700, in Europe at 44 203 379 3754, or in Asia at 65 6593 5574 for additional information. New Functionality[](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html) iLink Enhancement for Cancel Type Indicator[](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html) Effective **Sunday, July 1, 2012** (trade date Monday, July 2), iLink order routing will support a new FIX tag 378-ExecRestatementReason on the Execution Reports for order eliminations (tag 35-MsgType=**8**, tag 39-OrdStatus=**4**) messages. This tag will indicate the source of the elimination request. tag 378-ExecRestatementReason Tag FIX Name Req Valid Values Format Description 378 ExecRestatementReason N**8**=Exchange (GCC) **100**=Cancel on Disconnect **104**=Cancel from CME Globex Credit Controls (GC2) violation **105**=Cancel from FirmSoft **106**=Cancel from Risk Management API (RMI)Int (3)Used to identify originator of the order elimination. This tag will not be sent on eliminations triggered by an iLink Cancel Request. Tag 378-ExecRestatementReason is currently for customer testing in New Release. * * * ![Image 16: NEW](http://www.cmegroup.com/globex/online-marketing/headers-graphs/flag-new.gif)iLink Enhancements for MexDer Markets via CME Globex[](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html) Effective **Monday, July 23, 2012**, the MexDer, Mercado Mexicano de Derivados Risk Management Gateway (RMG) will be available to MexDer’s clearing firms for risk management of North- to- South order routing customers via CME Globex. The RMG provides MexDer clearing firms with a backstop risk management tool that allows for the administration of limits on the accumulation of exposure in MexDer markets. Please contact![Image 17](http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif)[MexDer](mailto:RMGMexDer@mexder.com.mx) for more information on the RMG. With this launch, iLink messaging will be impacted. The iLink messaging behavior changes will be available for customer testing in New Release on **Monday, July 2**. The![Image 18](http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif)[client impact assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/MexDer+Risk+Management+Gateway) provides detailed iLink message behavior changes for customer systems supporting MexDer products via Globex. A mock trading session will be held on **Saturday, July 21**. Please contact your![Image 19](http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif)[Global Account Manager](mailto:globalaccountmanagement@cmegroup.com) for further information. Product Launches[](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html) E-mini Yen Denominated Nikkei Stock Average Index Futures[](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html) Effective this **Sunday, June 17** (trade date June 18), the E-mini Yen Denominated Nikkei Stock Average Index futures (tag1151-SecurityGroup= **ENY**, tag 55-Symbol=**N1**) will be listed for trading on CME Globex. These futures are currently available for customer testing in New Release. These contacts are listed with, and subject to, the rules and regulations of CME. * * * Crude Oil vs. NYMEX Brent 25-Day (Platts) Intercommodity Spread[](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html) Effective this **Sunday, June 17**, (trade date Monday, June 18), the following intercommodity Crude Oil vs. NYMEX Brent 25-Day (Platts) futures spread will be listed for trading on CME Globex. This spread replaces the currently listed NYMEX Brent 25-Day (Platts) vs. Crude Oil intercommodity spread (tag 11510-SecurityGroup=**NBZ**, tag 55-Symbol=**IE**). Crude Oil vs. NYMEX Brent 25-Day (Platts) Intercommodity Spread Spread tag 1151-SecurityGroup tag 55-Symbol tag 762-SecuritySubType Crude Oil vs. NYMEX Brent 25-Day (Platts) Intercommodity Spread CL IE IS The new intercommodity spread is currently available for customer testing in New Release. * * * Bursa Malaysia Derivative Options on Crude Palm Oil Futures (OCPO)[](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html) Effective **Sunday, July 15** (trade date Monday, July 16), pending Malaysian Securities Commission approval, Bursa Malaysia Derivative will list options on Crude Palm Oil futures (tag 1151-SecurityGroup=**OCPO**) for trading on CME Globex. This product introduces a new format for tag 107-SecurityDesc (Example:**OCPOJUL120335000C**), as detailed below: Existing Format New Options on Crude Palm Oil Futures (OCPO) Format OKLI1205310153000C OCPOJUL120335000C * Bytes 1-4 – product code * Bytes 5-10 – instrument maturity in YYMMDD * Bytes 11-15 – strike price, left padded with 0 as needed * Bytes 16-17 – 00 for non-fractional strike price; fractional part in two decimal places for fractional strike price * Byte 18 – P for put option; C for call option* Bytes 1-4 – product code * Bytes 5-9 – instrument maturity in MMMYY * Bytes 10-14 – strike price, left padded with 0 as needed * Bytes 15-16 – 00 for non-fractional strike price; fractional part in two decimal places for fractional strike price * Byte 17 – P for put option; C for call option Options on Crude Palm Oil Futures (OCPO) Product tag 1151-SecurityGroup tag 55-Symbol (Outrights)tag 55-Symbol (UDS) Options on Crude Palm Oil Futures OCPO BP BZ The new option product and naming convention will be available for customer testing in New Release on Monday, June 18. Please note: tag 107-SecurityDesc will remain unchanged for all other Bursa Malaysia Derivative futures and options. Product Changes[](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html) Delisting of NYMEX Brent 25-Day (Platts) vs. Crude Oil Intercommodity Spread[](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html) Effective this **Sunday, June 17**, (trade date Monday, June 18), the NYMEX Brent 25-Day (Platts) vs. Crude Oil intercommodity spread (tag-1151 SecurityGroup=**NBZ**, tag 55-Symbol=**IE**) will be delisted from CME Globex. The new intercommodity Crude Oil vs. NYMEX Brent 25-Day (Platts) futures spread (tag 1151-SecurityGroup=**CL**, tag 55-Symbol=**IE**) will replace this spread. The delisting of this intercommodity spread is currently available for customer testing in New Release. * * * Expansion of Listings for Nikkei 225 Dollar Futures[](https://www.cmegroup.com/tools-information/lookups/advisories/electronic-trading/20120611.html) Effective this **Sunday, June 17** (trade date Monday, January 18), CME Group will expand the listing of Nikkei 225 Dollar futures (tag-1151 SecurityGroup=**NKD**, tag 55-Symbol=**NK**) on CME Globex by adding 2 additional quarterly contract months, for a total of 4 quarterly contracts. Currently, only 2 quarterly contracts are listed. The new future quarterly contracts are currently available for customer testing in New Release.
+
+###### company
+
+*   [About Us](https://www.cmegroup.com/company/about-us.html)
+*   [Corporate Citizenship](https://www.cmegroup.com/company/corporate-citizenship.html)
+*   [Media Room](https://www.cmegroup.com/media-room.html)
+*   [Careers](https://www.cmegroup.com/careers.html)
+*   [Investor Relations](http://investor.cmegroup.com/)
+*   [Subscription Center](https://www.cmegroup.com/subscription-center.html)
+*   [Contact Us](https://www.cmegroup.com/tools-information/contacts-list.html)
+
+###### international
+
+*   [Global Offices](https://www.cmegroup.com/company/history/global-offices.html)
+*   [Partner Exchanges](https://www.cmegroup.com/international)
+*   [Latin America](https://www.cmegroup.com/international/latin-america.html)
+*   [Europe, Middle East & Africa](https://www.cmegroup.com/international/emea.html)
+*   [Asia-Pacific](https://www.cmegroup.com/international/asia-pacific.html)
+
+###### MARKET REGULATION
+
+*   [Overview](https://www.cmegroup.com/market-regulation.html)
+*   [Rulebooks](https://www.cmegroup.com/market-regulation/rulebook.html)
+*   [Regulatory Guidance](https://www.cmegroup.com/rulebook/rulebook-harmonization.html)
+*   [Rule Filings](https://www.cmegroup.com/market-regulation/rule-filings.html)
+*   [Regulatory Outreach](https://www.cmegroup.com/market-regulation/outreach.html)
+
+###### OUR EXCHANGES
+
+*   [CME](https://www.cmegroup.com/company/cme.html)
+*   [CBOT](https://www.cmegroup.com/company/cbot.html)
+*   [NYMEX](https://www.cmegroup.com/company/nymex.html)
+*   [COMEX](https://www.cmegroup.com/company/comex.html)
+
+*   [![Image 20: YouTube](https://www.cmegroup.com/images/common/icons/youtube.svg)](https://www.youtube.com/user/cmegroup)
+*   [![Image 21: Twitter](https://www.cmegroup.com/images/common/icons/twitter.svg)](http://twitter.com/CMEGroup)
+*   [![Image 22: Facebook](https://www.cmegroup.com/images/common/icons/facebook.svg)](http://www.facebook.com/CMEGroup)
+*   [![Image 23: LinkedIn](https://www.cmegroup.com/images/common/icons/linkedin.svg)](http://www.linkedin.com/company/cme-group)
+*   [![Image 24: Instagram](https://www.cmegroup.com/images/common/icons/instagram.svg)](http://instagram.com/cmegroup)
+*   [![Image 25: Rss](https://www.cmegroup.com/images/common/icons/rss.svg)](http://www.cmegroup.com/rss/)
+
+English
+
+[English](https://www.cmegroup.com/)[中文(简体)](https://www.cmegroup.com/cn-s/)[中文(繁體)](https://www.cmegroup.com/cn-t/)[한국어](https://www.cmegroup.com/ko/)[日本語](https://www.cmegroup.com/ja/)[Português](https://www.cmegroup.com/pt/)[Español](https://www.cmegroup.com/es/)[Deutsch](https://www.cmegroup.com/de/)[Italiano](https://www.cmegroup.com/it/)[Français](https://www.cmegroup.com/fr/)
+
+Feedback
+
+CME Group is the world’s leading derivatives marketplace. The company is comprised of four Designated Contract Markets (DCMs).
+
+ Further information on each exchange's rules and product listings can be found by clicking on the links to [CME](https://www.cmegroup.com/company/cme.html), [CBOT](https://www.cmegroup.com/company/cbot.html), [NYMEX](https://www.cmegroup.com/company/nymex.html) and [COMEX](https://www.cmegroup.com/company/comex.html).
+
+© 2026 CME Group Inc. All rights reserved.
+
+[Disclaimer](https://www.cmegroup.com/disclaimer.html) |[Privacy Notice](https://www.cmegroup.com/privacy-policy.html) |[Cookie Notice](https://www.cmegroup.com/cookie-policy.html) |[Terms of Use](https://www.cmegroup.com/files/terms-of-use.pdf) |[Data Terms of Use](https://www.cmegroup.com/trading/market-data-explanation-disclaimer.html) |[Modern Slavery Act Transparency Statement](https://www.cmegroup.com/investor-relations/files/statement-on-modern-slavery.pdf) |[Report a Security Concern](https://www.cmegroup.com/report-a-security-concern.html "Report a Security Concern")
+
+By clicking “Accept All Cookies,” you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. 
+
+Cookies Settings Accept All Cookies
+
+![Image 27: Company Logo](https://cdn.cookielaw.org/logos/e84cf8f9-6c9e-4432-9e64-e7e43dc9299d/f42915b0-68e5-491a-a7f7-1db0d962ddff/60039567-c519-47ff-b267-f0cff5dd7a3c/CMEGroupLogo_Default.png)
+
+## Your Rights
+
+When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. The information does not usually directly identify you, but it can give you a more personalized web experience. Because we respect your right to privacy, except for strictly necessary cookies (which need to be enabled for the site to work), optional cookies are only enabled if you choose to accept them. Click on the different category headings to find out more and change our default settings. However, blocking some types of cookies may impact your experience of the site and the services we are able to offer.
+
+[Click here to learn more about cookie notices and consent.](https://cookiepedia.co.uk/giving-consent-to-cookies)
+
+[CME Group Privacy Center](https://www.cmegroup.com/privacy-policy.html)
+
+Allow All
+### Manage Consent Preferences
+
+#### Strictly Necessary Cookies
+
+Always Active
+
+These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.
+
+#### Performance Cookies
+
+- [x] Performance Cookies 
+
+These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous. If you do not allow these cookies we will not know when you have visited our site, and will not be able to monitor its performance.
+
+#### First-Party Functional Cookies
+
+- [x] First-Party Functional Cookies 
+
+These cookies enable the website to provide enhanced functionality and personalisation. They may be set by us. If you do not allow these cookies then some or all of these services may not function properly.
+
+#### Targeting Cookies
+
+- [x] Targeting Cookies 
+
+These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do not store directly personal information, but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising.
+
+#### Third-Party Functional Cookies
+
+- [x] Third-Party Functional Cookies 
+
+These cookies enable the website to provide enhanced functionality and personalisation. They may be set by third party providers whose services we have added to our pages. If you do not allow these cookies then some or all of these services may not function properly.
+
+### Cookie List
+
+Clear
+*   - [x] checkbox label label 
+
+Apply Cancel
+
+Consent Leg.Interest
+
+- [x] checkbox label label
+
+- [x] checkbox label label
+
+- [x] checkbox label label
+
+Reject All Confirm My Choices
+
+[![Image 28: Powered by Onetrust](https://cdn.cookielaw.org/logos/static/powered_by_logo.svg)](https://www.onetrust.com/solutions/consent-and-preferences/)
+
+![Image 29: pinterest sharing button](https://platform-cdn.sharethis.com/img/pinterest.svg)Pin
+
+![Image 30: facebook sharing button](https://platform-cdn.sharethis.com/img/facebook.svg)Share
+
+![Image 31: twitter sharing button](https://platform-cdn.sharethis.com/img/twitter.svg)Post
+
+![Image 32: print sharing button](https://platform-cdn.sharethis.com/img/print.svg)Print
+
+![Image 33: odnoklassniki sharing button](https://platform-cdn.sharethis.com/img/odnoklassniki.svg)Share
+
+![Image 34: arrow_left sharing button](https://platform-cdn.sharethis.com/img/arrow_left.svg)
+
+![Image 35: arrow_right sharing button](https://platform-cdn.sharethis.com/img/arrow_right.svg)

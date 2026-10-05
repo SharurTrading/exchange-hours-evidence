@@ -1,0 +1,3358 @@
+{
+ "task": "cme-2013-2015",
+ "documents": {
+  "D13NY": {
+   "file": "2013-new-years.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-new-years.pdf",
+   "replay_url": "https://web.archive.org/web/20130414194146id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-new-years.pdf",
+   "capture_utc": "2013-04-14T19:41:46Z",
+   "tier": "T1",
+   "doc_id_long": "2013-new-years@20130414194146"
+  },
+  "D13MLK": {
+   "file": "2013-martin-luther-king.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-martin-luther-king.pdf",
+   "replay_url": "https://web.archive.org/web/20121119001609id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-martin-luther-king.pdf",
+   "capture_utc": "2012-11-19T00:16:09Z",
+   "tier": "T1",
+   "doc_id_long": "2013-martin-luther-king@20121119001609"
+  },
+  "D13PD": {
+   "file": "2013-presidents-day.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-presidents-day.pdf",
+   "replay_url": "https://web.archive.org/web/20130309115337id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-presidents-day.pdf",
+   "capture_utc": "2013-03-09T11:53:37Z",
+   "tier": "T1",
+   "doc_id_long": "2013-presidents-day@20130309115337"
+  },
+  "D13GF": {
+   "file": "2013-good-friday.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-good-friday.pdf",
+   "replay_url": "https://web.archive.org/web/20130623195925id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-good-friday.pdf",
+   "capture_utc": "2013-06-23T19:59:25Z",
+   "tier": "T1",
+   "doc_id_long": "2013-good-friday@20130623195925"
+  },
+  "D13MD": {
+   "file": "2013-memorial-day.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-memorial-day.pdf",
+   "replay_url": "https://web.archive.org/web/20130623203604id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-memorial-day.pdf",
+   "capture_utc": "2013-06-23T20:36:04Z",
+   "tier": "T1",
+   "doc_id_long": "2013-memorial-day@20130623203604"
+  },
+  "D13J4": {
+   "file": "2013-4th-of-july.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-4th-of-july.pdf",
+   "replay_url": "https://web.archive.org/web/20130623205825id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-4th-of-july.pdf",
+   "capture_utc": "2013-06-23T20:58:25Z",
+   "tier": "T1",
+   "doc_id_long": "2013-4th-of-july@20130623205825"
+  },
+  "D13LD": {
+   "file": "2013-labor-day.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-labor-day.pdf",
+   "replay_url": "https://web.archive.org/web/20130902170841id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-labor-day.pdf",
+   "capture_utc": "2013-09-02T17:08:41Z",
+   "tier": "T1",
+   "doc_id_long": "2013-labor-day@20130902170841"
+  },
+  "D13COL": {
+   "file": "2013-columbus-day.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-columbus-day.pdf",
+   "replay_url": "https://web.archive.org/web/20121119001554id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-columbus-day.pdf",
+   "capture_utc": "2012-11-19T00:15:54Z",
+   "tier": "T1",
+   "doc_id_long": "2013-columbus-day@20121119001554"
+  },
+  "D13VET": {
+   "file": "2013-veterans-day.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-veterans-day.pdf",
+   "replay_url": "https://web.archive.org/web/20121119001630id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-veterans-day.pdf",
+   "capture_utc": "2012-11-19T00:16:30Z",
+   "tier": "T1",
+   "doc_id_long": "2013-veterans-day@20121119001630"
+  },
+  "D13TG": {
+   "file": "2013-thanksgiving.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-thanksgiving.pdf",
+   "replay_url": "https://web.archive.org/web/20140214062836id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-thanksgiving.pdf",
+   "capture_utc": "2014-02-14T06:28:36Z",
+   "tier": "T1",
+   "doc_id_long": "2013-thanksgiving@20140214062836"
+  },
+  "D13XM": {
+   "file": "2013-christmas.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-christmas.pdf",
+   "replay_url": "https://web.archive.org/web/20140412062428id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2013-christmas.pdf",
+   "capture_utc": "2014-04-12T06:24:28Z",
+   "tier": "T1",
+   "doc_id_long": "2013-christmas@20140412062428"
+  },
+  "D14NY": {
+   "file": "2014-new-years.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-new-years.pdf",
+   "replay_url": "https://web.archive.org/web/20131007205800id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-new-years.pdf",
+   "capture_utc": "2013-10-07T20:58:00Z",
+   "tier": "T1",
+   "doc_id_long": "2014-new-years@20131007205800"
+  },
+  "D14MLK": {
+   "file": "2014-martin-luther-king-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-martin-luther-king-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20140326160215id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-martin-luther-king-holiday-schedule.pdf",
+   "capture_utc": "2014-03-26T16:02:15Z",
+   "tier": "T1",
+   "doc_id_long": "2014-martin-luther-king-holiday-schedule@20140326160215"
+  },
+  "D14PD": {
+   "file": "2014-presidents-day-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-presidents-day-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20140214192332id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-presidents-day-holiday-schedule.pdf",
+   "capture_utc": "2014-02-14T19:23:32Z",
+   "tier": "T1",
+   "doc_id_long": "2014-presidents-day-holiday-schedule@20140214192332"
+  },
+  "D14GF": {
+   "file": "2014-good-friday-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-good-friday-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20140326152735id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-good-friday-holiday-schedule.pdf",
+   "capture_utc": "2014-03-26T15:27:35Z",
+   "tier": "T1",
+   "doc_id_long": "2014-good-friday-holiday-schedule@20140326152735"
+  },
+  "D14MD": {
+   "file": "2014-memorial-day-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-memorial-day-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20140708020155id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-memorial-day-holiday-schedule.pdf",
+   "capture_utc": "2014-07-08T02:01:55Z",
+   "tier": "T1",
+   "doc_id_long": "2014-memorial-day-holiday-schedule@20140708020155"
+  },
+  "D14J4": {
+   "file": "2014-4th-of-july-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-4th-of-july-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20140708015736id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-4th-of-july-holiday-schedule.pdf",
+   "capture_utc": "2014-07-08T01:57:36Z",
+   "tier": "T1",
+   "doc_id_long": "2014-4th-of-july-holiday-schedule@20140708015736"
+  },
+  "D14LD": {
+   "file": "2014-labor-day-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-labor-day-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20140912071608id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-labor-day-holiday-schedule.pdf",
+   "capture_utc": "2014-09-12T07:16:08Z",
+   "tier": "T1",
+   "doc_id_long": "2014-labor-day-holiday-schedule@20140912071608"
+  },
+  "D14COL": {
+   "file": "2014-columbus-day-holiday-schedule.xls",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-columbus-day-holiday-schedule.xls",
+   "replay_url": "https://web.archive.org/web/20140326160057id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-columbus-day-holiday-schedule.xls",
+   "capture_utc": "2014-03-26T16:00:57Z",
+   "tier": "T1",
+   "doc_id_long": "2014-columbus-day-holiday-schedule@20140326160057"
+  },
+  "D14VET": {
+   "file": "2014-veterans-day-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-veterans-day-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20141113193450id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-veterans-day-holiday-schedule.pdf",
+   "capture_utc": "2014-11-13T19:34:50Z",
+   "tier": "T1",
+   "doc_id_long": "2014-veterans-day-holiday-schedule@20141113193450"
+  },
+  "D14TG": {
+   "file": "2014-thanksgiving-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-thanksgiving-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20150121145456id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-thanksgiving-holiday-schedule.pdf",
+   "capture_utc": "2015-01-21T14:54:56Z",
+   "tier": "T1",
+   "doc_id_long": "2014-thanksgiving-holiday-schedule@20150121145456"
+  },
+  "D14XM": {
+   "file": "2014-christmas-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-christmas-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20150121141000id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2014-christmas-holiday-schedule.pdf",
+   "capture_utc": "2015-01-21T14:10:00Z",
+   "tier": "T1",
+   "doc_id_long": "2014-christmas-holiday-schedule@20150121141000"
+  },
+  "D15NY": {
+   "file": "2015-new-years-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-new-years-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20150121141043id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-new-years-holiday-schedule.pdf",
+   "capture_utc": "2015-01-21T14:10:43Z",
+   "tier": "T1",
+   "doc_id_long": "2015-new-years-holiday-schedule@20150121141043"
+  },
+  "D15MLK": {
+   "file": "2015-martin-luther-king-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-martin-luther-king-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20150121141012id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-martin-luther-king-holiday-schedule.pdf",
+   "capture_utc": "2015-01-21T14:10:12Z",
+   "tier": "T1",
+   "doc_id_long": "2015-martin-luther-king-holiday-schedule@20150121141012"
+  },
+  "D15PD": {
+   "file": "2015-presidents-day-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-presidents-day-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20150121192401id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-presidents-day-holiday-schedule.pdf",
+   "capture_utc": "2015-01-21T19:24:01Z",
+   "tier": "T1",
+   "doc_id_long": "2015-presidents-day-holiday-schedule@20150121192401"
+  },
+  "D15GF": {
+   "file": "2015-good-friday-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-good-friday-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20150905223230id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-good-friday-holiday-schedule.pdf",
+   "capture_utc": "2015-09-05T22:32:30Z",
+   "tier": "T1",
+   "doc_id_long": "2015-good-friday-holiday-schedule@20150905223230"
+  },
+  "D15MD": {
+   "file": "2015-memorial-day-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-memorial-day-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20150326113938id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-memorial-day-holiday-schedule.pdf",
+   "capture_utc": "2015-03-26T11:39:38Z",
+   "tier": "T1",
+   "doc_id_long": "2015-memorial-day-holiday-schedule@20150326113938"
+  },
+  "D15J4": {
+   "file": "2015-4th-of-july-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-4th-of-july-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20150905222733id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-4th-of-july-holiday-schedule.pdf",
+   "capture_utc": "2015-09-05T22:27:33Z",
+   "tier": "T1",
+   "doc_id_long": "2015-4th-of-july-holiday-schedule@20150905222733"
+  },
+  "D15LD": {
+   "file": "2015-labor-day-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-labor-day-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20150824023039id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-labor-day-holiday-schedule.pdf",
+   "capture_utc": "2015-08-24T02:30:39Z",
+   "tier": "T1",
+   "doc_id_long": "2015-labor-day-holiday-schedule@20150824023039"
+  },
+  "D15COL": {
+   "file": "2015-columbus-day-holiday-schedule.xls",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-columbus-day-holiday-schedule.xls",
+   "replay_url": "https://web.archive.org/web/20150326113300id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-columbus-day-holiday-schedule.xls",
+   "capture_utc": "2015-03-26T11:33:00Z",
+   "tier": "T1",
+   "doc_id_long": "2015-columbus-day-holiday-schedule@20150326113300"
+  },
+  "D15VET": {
+   "file": "2015-veterans-day-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-veterans-day-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20151122230920id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-veterans-day-schedule.pdf",
+   "capture_utc": "2015-11-22T23:09:20Z",
+   "tier": "T1",
+   "doc_id_long": "2015-veterans-day-schedule@20151122230920"
+  },
+  "D15TG": {
+   "file": "2015-thanksgiving-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-thanksgiving-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20160205162519id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-thanksgiving-holiday-schedule.pdf",
+   "capture_utc": "2016-02-05T16:25:19Z",
+   "tier": "T1",
+   "doc_id_long": "2015-thanksgiving-holiday-schedule@20160205162519"
+  },
+  "D15XM": {
+   "file": "2015-christmas-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-christmas-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20151123061520id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2015-christmas-holiday-schedule.pdf",
+   "capture_utc": "2015-11-23T06:15:20Z",
+   "tier": "T1",
+   "doc_id_long": "2015-christmas-holiday-schedule@20151123061520"
+  },
+  "D16NY": {
+   "file": "2016-new-years-holiday-schedule.pdf",
+   "original_url": "http://www.cmegroup.com/tools-information/holiday-calendar/files/2016-new-years-holiday-schedule.pdf",
+   "replay_url": "https://web.archive.org/web/20160108203007id_/http://www.cmegroup.com/tools-information/holiday-calendar/files/2016-new-years-holiday-schedule.pdf",
+   "capture_utc": "2016-01-08T20:30:07Z",
+   "tier": "T1",
+   "doc_id_long": "2016-new-years-holiday-schedule@20160108203007"
+  }
+ },
+ "holidays": [
+  {
+   "date": "2013-01-01",
+   "name": "New Year's Day (observed)",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx",
+     "status": "closed",
+     "verbatim": "Tuesday, Jan 1 / New Years Observed - Globex closed",
+     "document": "D13NY",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "closed",
+     "verbatim": "Tuesday, Jan 1 / New Years Observed - Globex closed / 1700 CT / 1800 ET - Regular CME Globex open for trade date Wednesday, Jan 2",
+     "document": "D13NY",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET (for trade date Wed Jan 2)"
+    },
+    {
+     "family": "grains_oilseeds+livestock+dairy+lumber",
+     "status": "closed",
+     "verbatim": "Tuesday, Jan 1 / New Years Observed - Globex closed",
+     "document": "D13NY",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2013-01-02",
+   "name": "New Year's Day (reopening day)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "late_open",
+     "verbatim": "Wednesday, Jan 2 / 0500 CT - CME Globex open for trade date Wednesday, Jan 2 / 0515 CT - USD Ibovespa Futures open for trade date Wednesday, Jan 2 / 1615 CT - Regular CME Globex close for trade date Wednesday, Jan 2",
+     "document": "D13NY",
+     "tier": "T1",
+     "open_instant": "0500 CT"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "late_open",
+     "verbatim": "Wednesday, Jan 2 / 0500 CT - CME Globex open for trade date Wednesday, Jan 2 / 1600 CT - Regular CME Globex close for trade date Wednesday, Jan 2",
+     "document": "D13NY",
+     "tier": "T1",
+     "open_instant": "0500 CT"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Wednesday, Jan 2 / 1615 CT / 1715 ET - Regular CME Globex close for trade date Wednesday, Jan 2",
+     "document": "D13NY",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "late_open",
+     "verbatim": "Wednesday, Jan 2 / 0930 CT - CME Globex Grain open for trade date Wednesday, Jan 2 / Regular Close - Per each product schedule for trade date Wednesday, Jan 2",
+     "document": "D13NY",
+     "tier": "T1",
+     "open_instant": "0930 CT"
+    },
+    {
+     "family": "livestock",
+     "status": "late_open",
+     "verbatim": "Wednesday, Jan 2 / CME Globex open for trade date Wednesday, Jan 2 / 0905 CT Livestock Futures & Options",
+     "document": "D13NY",
+     "tier": "T1",
+     "open_instant": "0905 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "late_open",
+     "verbatim": "Wednesday, Jan 2 / 0905 CT Dairy Futures & Options",
+     "document": "D13NY",
+     "tier": "T1",
+     "open_instant": "0905 CT"
+    },
+    {
+     "family": "lumber",
+     "status": "late_open",
+     "verbatim": "Wednesday, Jan 2 / 0900 CT Lumber Futures & Options",
+     "document": "D13NY",
+     "tier": "T1",
+     "open_instant": "0900 CT"
+    }
+   ]
+  },
+  {
+   "date": "2013-01-18",
+   "name": "Martin Luther King Jr. Day (Friday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Friday, Jan 18 / 1615 CT - Regular close",
+     "document": "D13MLK",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "CME & CBOT Interest Rate & FX Products / Friday, Jan 18 / 1515 CT - Early close",
+     "document": "D13MLK",
+     "tier": "T1",
+     "close_instant": "1515 CT"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Friday, Jan 18 / 1615 CT / 1715 ET - Regular close",
+     "document": "D13MLK",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Friday, Jan 18 / Regular close - Per each product schedule",
+     "document": "D13MLK",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Friday, Jan 18 / Regular close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D13MLK",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2013-01-21",
+   "name": "Martin Luther King Jr. Day",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "early_close",
+     "verbatim": "Monday, Jan 21 / 1030 CT - Trading halt / 1700 CT - Halted products resume trading",
+     "document": "D13MLK",
+     "tier": "T1",
+     "close_instant": "1030 CT",
+     "open_instant": "1700 CT"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Monday, Jan 21 / 1200 CT - Trading halt / 1700 CT - Halted products resume trading",
+     "document": "D13MLK",
+     "tier": "T1",
+     "close_instant": "1200 CT",
+     "open_instant": "1700 CT"
+    },
+    {
+     "family": "energy+metals",
+     "status": "early_close",
+     "verbatim": "Monday, Jan 21 / 1215 CT / 1315 ET - Trading halt / 1700 CT / 1800 ET - Halted products resume trading",
+     "document": "D13MLK",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET",
+     "open_instant": "1700 CT / 1800 ET"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "Sunday, Jan 20 / 1600 CT - Grain markets pre - open for trade date Tuesday, Jan 22 // Monday, Jan 21 / 1900 CT - Grain markets open",
+     "document": "D13MLK",
+     "tier": "T1",
+     "open_instant": "1900 CT (Mon Jan 21, for trade date Tue Jan 22)"
+    },
+    {
+     "family": "livestock",
+     "status": "closed",
+     "verbatim": "Livestock will remain closed until its scheduled opening 0905 CT on Tuesday",
+     "document": "D13MLK",
+     "tier": "T1",
+     "open_instant": "0905 CT Tue Jan 22"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy, Crude Palm Oil, GSCI, and Weather products will remain closed until 1700 CT on Monday",
+     "document": "D13MLK",
+     "tier": "T1",
+     "open_instant": "1700 CT Mon Jan 21 (for trade date Tue Jan 22)"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber will remain closed until its scheduled opening of 0900 CT on Tuesday",
+     "document": "D13MLK",
+     "tier": "T1",
+     "open_instant": "0900 CT Tue Jan 22"
+    }
+   ]
+  },
+  {
+   "date": "2013-02-15",
+   "name": "Presidents' Day (Friday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Friday, Feb 15 / 1615 CT - Regular close",
+     "document": "D13PD",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "CME & CBOT Interest Rate & FX Products / Friday, Feb 15 / 1515 CT - Early close",
+     "document": "D13PD",
+     "tier": "T1",
+     "close_instant": "1515 CT"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Friday, Feb 15 / 1615 CT / 1715 ET - Regular close",
+     "document": "D13PD",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Friday, Feb 15 / Regular close - Per each product schedule",
+     "document": "D13PD",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Friday, Feb 15 / Regular close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D13PD",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2013-02-18",
+   "name": "Presidents' Day",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "early_close",
+     "verbatim": "Monday, Feb 18 / 0615 CT - Regular open - USD - Ibovespa Futures open for trade date Tuesday, Feb 19 / 1030 CT - Trading halt / 1700 CT - Halted products resume trading",
+     "document": "D13PD",
+     "tier": "T1",
+     "close_instant": "1030 CT",
+     "open_instant": "1700 CT"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Monday, Feb 18 / 1200 CT - Trading halt / 1700 CT - Halted products resume trading",
+     "document": "D13PD",
+     "tier": "T1",
+     "close_instant": "1200 CT",
+     "open_instant": "1700 CT"
+    },
+    {
+     "family": "energy+metals",
+     "status": "early_close",
+     "verbatim": "Monday, Feb 18 / 1215 CT / 1315 ET - Trading halt / 1700 CT / 1800 ET - Halted products resume trading",
+     "document": "D13PD",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET",
+     "open_instant": "1700 CT / 1800 ET"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "Sunday, Feb 17 / 1600 CT - Grain markets pre-open for trade date Tuesday, Feb 19 // Monday, Feb 18 / 1900 CT - Grain markets open for trade date Tuesday, Feb 19",
+     "document": "D13PD",
+     "tier": "T1",
+     "open_instant": "1900 CT (Mon Feb 18, for trade date Tue Feb 19)"
+    },
+    {
+     "family": "livestock",
+     "status": "closed",
+     "verbatim": "Livestock will remain closed until its scheduled opening 0905 CT on Tuesday",
+     "document": "D13PD",
+     "tier": "T1",
+     "open_instant": "0905 CT Tue Feb 19"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy, Crude Palm Oil, GSCI, and Weather products will remain closed until 1700 CT on Monday",
+     "document": "D13PD",
+     "tier": "T1",
+     "open_instant": "1700 CT Mon Feb 18"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber will remain closed until its scheduled opening of 0900 CT on Tuesday",
+     "document": "D13PD",
+     "tier": "T1",
+     "open_instant": "0900 CT Tue Feb 19"
+    }
+   ]
+  },
+  {
+   "date": "2013-03-28",
+   "name": "Good Friday (Thursday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Thursday, March 28 / 1615 CT - Regular close",
+     "document": "D13GF",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "normal",
+     "verbatim": "Thursday, March 28 / 1600 CT - Regular close",
+     "document": "D13GF",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Thursday, March 28 / 1615 CT / 1715 ET - Regular close",
+     "document": "D13GF",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Thursday, March 28 / Regular close - Per each product schedule",
+     "document": "D13GF",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "early_close",
+     "verbatim": "Thursday, March 28 / 1355 - Early Close for Lumber, Dairy & Livestock",
+     "document": "D13GF",
+     "tier": "T1",
+     "close_instant": "1355 (zone not printed on this line; the document's other times are CT)"
+    }
+   ]
+  },
+  {
+   "date": "2013-03-29",
+   "name": "Good Friday",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals+grains_oilseeds+livestock+dairy+lumber",
+     "status": "closed",
+     "verbatim": "Friday, March 29 / CME Globex is closed",
+     "document": "D13GF",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2013-05-24",
+   "name": "Memorial Day (Friday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Friday, May 24 / 1615 CT - Regular close",
+     "document": "D13MD",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "CME & CBOT Interest Rate & FX Products / Friday, May 24 / 1515 CT - Early close",
+     "document": "D13MD",
+     "tier": "T1",
+     "close_instant": "1515 CT"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Friday, May 24 / 1615 CT / 1715 ET - Regular close",
+     "document": "D13MD",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Friday, May 24 / Regular close - Per each product schedule",
+     "document": "D13MD",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Friday, May 24 / Regular Close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D13MD",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2013-05-27",
+   "name": "Memorial Day",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "early_close",
+     "verbatim": "Monday, May 27 / 0715 CT - Regular open - USD - Ibovespa Futures open for trade date Tuesday, May 28 / 1030 CT - Trading halt / 1700 CT - Halted products resume trading",
+     "document": "D13MD",
+     "tier": "T1",
+     "close_instant": "1030 CT",
+     "open_instant": "1700 CT"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Monday, May 27 / 1200 CT - Trading halt / 1700 CT - Halted products resume trading",
+     "document": "D13MD",
+     "tier": "T1",
+     "close_instant": "1200 CT",
+     "open_instant": "1700 CT"
+    },
+    {
+     "family": "energy+metals",
+     "status": "early_close",
+     "verbatim": "Monday, May 27 / 1215 CT / 1315 ET - Trading halt / 1700 CT / 1800 ET - Halted products resume trading",
+     "document": "D13MD",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET",
+     "open_instant": "1700 CT / 1800 ET"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "Sunday, May 26 / 1600 CT - Grain markets pre-open for trade date Tuesday, May 28 // Monday, May 27 / 1900 CT - Grain markets open for trade date Tuesday, May 28",
+     "document": "D13MD",
+     "tier": "T1",
+     "open_instant": "1900 CT (Mon May 27, for trade date Tue May 28)"
+    },
+    {
+     "family": "livestock",
+     "status": "closed",
+     "verbatim": "Livestock will remain closed until its scheduled opening 0905 CT on Tuesday",
+     "document": "D13MD",
+     "tier": "T1",
+     "open_instant": "0905 CT Tue May 28"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy, Crude Palm Oil, GSCI, & Weather products will remain closed until 1700 CT on Monday",
+     "document": "D13MD",
+     "tier": "T1",
+     "open_instant": "1700 CT Mon May 27"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber will remain closed until its scheduled opening of 0900 CT on Tuesday",
+     "document": "D13MD",
+     "tier": "T1",
+     "open_instant": "0900 CT Tue May 28"
+    }
+   ]
+  },
+  {
+   "date": "2013-07-03",
+   "name": "Independence Day (Wednesday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "early_close",
+     "verbatim": "Wednesday, July 3 / 1215 CT - Early close / 1700 CT - Regular open for trade date Friday, July 5",
+     "document": "D13J4",
+     "tier": "T1",
+     "close_instant": "1215 CT",
+     "open_instant": "1700 CT"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "normal",
+     "verbatim": "Wednesday, July 3 / 1600 CT - Regular close / 1700 CT - Regular open for trade date Friday, July 5",
+     "document": "D13J4",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Wednesday, July 3 / 1615 CT / 1715 ET - Regular close / 1700 CT / 1800 ET - Regular open for trade date Friday, July 5",
+     "document": "D13J4",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "early_close",
+     "verbatim": "Wednesday, July 3 / 1200 CT - Early CBOT & KCBT close / 1215 CT - Early MGEX Wheat close / 1230 CT - Early CBOT Mini-Sized grain close / 1230 CT - Early MGEX Indices close / Note: Modified grain pre-opening between 1230/1300 CT - 1600 CT / 1645 CT - Products will be in a pre-open until their respective opens on Friday, July 5",
+     "document": "D13J4",
+     "tier": "T1",
+     "close_instant": "1200 CT (CBOT & KCBT); 1230 CT (CBOT Mini-Sized grain)"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Wednesday, July 3 / Regular Close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D13J4",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2013-07-04",
+   "name": "Independence Day",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "early_close",
+     "verbatim": "Thursday, July 4 / 0715 CT - Regular open - USD - Ibovespa Futures open for trade date Friday, July 5 / 1030 CT - Trading halt / 1700 CT - Halted products resume trading",
+     "document": "D13J4",
+     "tier": "T1",
+     "close_instant": "1030 CT",
+     "open_instant": "1700 CT"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Thursday, July 4 / 1200 CT - Trading halt / 1700 CT - Halted products resume trading",
+     "document": "D13J4",
+     "tier": "T1",
+     "close_instant": "1200 CT",
+     "open_instant": "1700 CT"
+    },
+    {
+     "family": "energy+metals",
+     "status": "early_close",
+     "verbatim": "Thursday, July 4 / 1215 CT / 1315 ET - Trading halt / 1700 CT / 1800 ET - Halted products resume trading",
+     "document": "D13J4",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET",
+     "open_instant": "1700 CT / 1800 ET"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "1645 CT - Products will be in a pre-open until their respective opens on Friday, July 5 // Friday, July 5 / 0830 CT - Grains open",
+     "document": "D13J4",
+     "tier": "T1",
+     "open_instant": "0830 CT Fri Jul 5"
+    },
+    {
+     "family": "livestock",
+     "status": "closed",
+     "verbatim": "Livestock will remain closed until its scheduled opening 0905 CT on Friday",
+     "document": "D13J4",
+     "tier": "T1",
+     "open_instant": "0905 CT Fri Jul 5"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy, Crude Palm Oil, GSCI, Dow Jones - UBS RS and Weather products will remain closed until 1700 CT on Thursday",
+     "document": "D13J4",
+     "tier": "T1",
+     "open_instant": "1700 CT Thu Jul 4"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber will remain closed until its scheduled opening of 0900 CT on Friday",
+     "document": "D13J4",
+     "tier": "T1",
+     "open_instant": "0900 CT Fri Jul 5"
+    }
+   ]
+  },
+  {
+   "date": "2013-07-05",
+   "name": "Independence Day (reopening day)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Friday, July 5 / 0715 CT - Regular open - USD - Ibovespa Futures / 1615 CT - Regular close",
+     "document": "D13J4",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "normal",
+     "verbatim": "Friday, July 5 / 1600 CT - Regular close",
+     "document": "D13J4",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Friday, July 5 / 1615 CT / 1715 ET - Regular close",
+     "document": "D13J4",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "late_open",
+     "verbatim": "Friday, July 5 / 0700 CT - MGEX Apple Juice - Regular open / 0830 CT - Grains open / Regular close - Per each product schedule",
+     "document": "D13J4",
+     "tier": "T1",
+     "open_instant": "0830 CT"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Friday, July 5 / Regular close - Per each product schedule",
+     "document": "D13J4",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2013-08-30",
+   "name": "Labor Day (Friday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Friday, Aug 30 / 1615 CT - Regular close",
+     "document": "D13LD",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "CME & CBOT Interest Rate & FX Products / Friday, Aug 30 / 1515 CT - Early close",
+     "document": "D13LD",
+     "tier": "T1",
+     "close_instant": "1515 CT"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Friday, Aug 30 / 1615 CT / 1715 ET - Regular close",
+     "document": "D13LD",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Friday, Aug 30 / Regular close - Per each product schedule",
+     "document": "D13LD",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Friday, Aug 30 / Regular Close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D13LD",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2013-09-02",
+   "name": "Labor Day",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "early_close",
+     "verbatim": "Monday, Sep 2 / 0715 CT - Regular open - USD - Ibovespa Futures open for trade date Tuesday, Sep 3 / 1030 CT - Trading halt / 1700 CT - Halted products resume trading",
+     "document": "D13LD",
+     "tier": "T1",
+     "close_instant": "1030 CT",
+     "open_instant": "1700 CT"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Monday, Sep 2 / 1200 CT - Trading halt / 1700 CT - Halted products resume trading",
+     "document": "D13LD",
+     "tier": "T1",
+     "close_instant": "1200 CT",
+     "open_instant": "1700 CT"
+    },
+    {
+     "family": "energy+metals",
+     "status": "early_close",
+     "verbatim": "Monday, Sep 2 / 1215 CT / 1315 ET - Trading halt / 1700 CT / 1800 ET - Halted products resume trading",
+     "document": "D13LD",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET",
+     "open_instant": "1700 CT / 1800 ET"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "Sunday, Sep 1 / 1600 CT - Grain markets pre - open for trade date Tuesday, Sep 3 // Monday, Sep 2 / 1900 CT - Grain markets open for trade date Tuesday, Sep 3",
+     "document": "D13LD",
+     "tier": "T1",
+     "open_instant": "1900 CT (Mon Sep 2, for trade date Tue Sep 3)"
+    },
+    {
+     "family": "livestock",
+     "status": "closed",
+     "verbatim": "Livestock will remain closed until its scheduled opening 0905 CT on Tuesday",
+     "document": "D13LD",
+     "tier": "T1",
+     "open_instant": "0905 CT Tue Sep 3"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy, Crude Palm Oil, GSCI, Dow Jones - UBS RS and Weather products will remain closed until 1700 CT on Monday",
+     "document": "D13LD",
+     "tier": "T1",
+     "open_instant": "1700 CT Mon Sep 2"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber will remain closed until its scheduled opening of 0900 CT on Tuesday",
+     "document": "D13LD",
+     "tier": "T1",
+     "open_instant": "0900 CT Tue Sep 3"
+    }
+   ]
+  },
+  {
+   "date": "2013-10-14",
+   "name": "Columbus Day",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals+grains_oilseeds+livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Globex Columbus Day Holiday Schedule / Products listed on Globex are unaffected and will run on a normal schedule",
+     "document": "D13COL",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2013-11-11",
+   "name": "Veterans Day",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals+grains_oilseeds+livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Globex Veterans Day Holiday Schedule / Products listed on Globex are unaffected and will run on a normal schedule",
+     "document": "D13VET",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2013-11-27",
+   "name": "Thanksgiving (Wednesday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Wednesday, Nov 27 / 1615 CT - Regular close / 1700 CT - Regular open for trade date Friday, Nov 29",
+     "document": "D13TG",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "normal",
+     "verbatim": "Wednesday, Nov 27 / 1600 CT - Regular close / 1700 CT - Regular open for trade date Friday, Nov 29",
+     "document": "D13TG",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Wednesday, Nov 27 / 1615 CT / 1715 ET - Regular close / 1700 CT / 1800 ET - Regular open for trade date Friday, Nov 29",
+     "document": "D13TG",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Wednesday, Nov 27 / Regular Close - Per each product schedule/ 1645 CT - Products will be in a pre-open until 0830 CT Friday, Nov 29",
+     "document": "D13TG",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Wednesday, Nov 27 / Regular close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D13TG",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2013-11-28",
+   "name": "Thanksgiving Day",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "early_close",
+     "verbatim": "Thursday, Nov 28 / 0515 CT - Regular open - USD - Ibovespa Futures open for trade date Friday, Nov 29 / 1030 CT - Trading halt / 1700 CT - Halted products resume trading",
+     "document": "D13TG",
+     "tier": "T1",
+     "close_instant": "1030 CT",
+     "open_instant": "1700 CT"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Thursday, Nov 28 / 1200 CT - Trading halt / 1700 CT - Halted products resume trading",
+     "document": "D13TG",
+     "tier": "T1",
+     "close_instant": "1200 CT",
+     "open_instant": "1700 CT"
+    },
+    {
+     "family": "energy+metals",
+     "status": "early_close",
+     "verbatim": "Thursday, Nov 28 / 1215 CT / 1315 ET - Trading halt / 1700 CT / 1800 ET - Halted products resume trading",
+     "document": "D13TG",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET",
+     "open_instant": "1700 CT / 1800 ET"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "1645 CT - Products will be in a pre-open until 0830 CT Friday, Nov 29",
+     "document": "D13TG",
+     "tier": "T1",
+     "open_instant": "0830 CT Fri Nov 29"
+    },
+    {
+     "family": "livestock",
+     "status": "closed",
+     "verbatim": "Livestock will remain closed until 0905 CT on Friday, Nov 29",
+     "document": "D13TG",
+     "tier": "T1",
+     "open_instant": "0905 CT Fri Nov 29"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy products will remain closed until their regularly scheduled open on Sunday, Dec 1",
+     "document": "D13TG",
+     "tier": "T1",
+     "open_instant": "Sunday, Dec 1"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Lumber will remain closed until 0900 CT on Friday, Nov 29",
+     "document": "D13TG",
+     "tier": "T1",
+     "open_instant": "0900 CT Fri Nov 29"
+    }
+   ]
+  },
+  {
+   "date": "2013-11-29",
+   "name": "Day after Thanksgiving",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "early_close",
+     "verbatim": "Friday, Nov 29 / 0515 CT - Regular open - USD - Ibovespa Futures / 0815 CT - Regular close - Big Equities (SP, MD, ND, SMP, ZD) / 1215 CT - Early close",
+     "document": "D13TG",
+     "tier": "T1",
+     "close_instant": "1215 CT (0815 CT for the Big Equities SP, MD, ND, SMP, ZD)"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Friday, Nov 29 / 1215 CT - Early close",
+     "document": "D13TG",
+     "tier": "T1",
+     "close_instant": "1215 CT"
+    },
+    {
+     "family": "energy+metals",
+     "status": "early_close",
+     "verbatim": "Friday, Nov 29 / 1245 CT / 1345 ET - Early close / TAM Products - Regular close - Per each product schedule / Exceptions: Copper TAS - Early close 1100 CT / 1200 ET; Silver TAS - Early close 1125 CT / 1225 ET; Gold TAS - Early close 1130 CT / 1230 ET; All Crude, Heating Oil, RBOB & Nat Gas TAS contracts close early at 12:30 CT / 1330 ET",
+     "document": "D13TG",
+     "tier": "T1",
+     "close_instant": "1245 CT / 1345 ET"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "early_close",
+     "verbatim": "Friday, Nov 29 / 0700 CT- MGEX Apple Juice - regular open / 0830 CT- Grains open / 1200 CT- Early CBOT & KCBT close / 1215 CT- Early MGEX Wheat & Apple Juice close / 1230 CT- Early CBOT Mini - Sized grain close / 1230 CT- Early MGEX Indices close",
+     "document": "D13TG",
+     "tier": "T1",
+     "close_instant": "1200 CT (CBOT & KCBT); 1230 CT (CBOT Mini-Sized grain)",
+     "open_instant": "0830 CT"
+    },
+    {
+     "family": "livestock",
+     "status": "early_close",
+     "verbatim": "Friday, Nov 29 / 1215 CT - Early close for Livestock Futures & Options, & Real Estate",
+     "document": "D13TG",
+     "tier": "T1",
+     "close_instant": "1215 CT",
+     "open_instant": "0905 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Dairy products will remain closed until their regularly scheduled open on Sunday, Dec 1",
+     "document": "D13TG",
+     "tier": "T1",
+     "open_instant": "Sunday, Dec 1"
+    },
+    {
+     "family": "lumber",
+     "status": "early_close",
+     "verbatim": "Friday, Nov 29 / 1200 CT - Early close for Lumber, Weather, Dow Jones UBS ER & RS, GSCI & CPO / 1202 CT - Early close for Lumber Options",
+     "document": "D13TG",
+     "tier": "T1",
+     "close_instant": "1200 CT (1202 CT for Lumber Options)",
+     "open_instant": "0900 CT"
+    }
+   ]
+  },
+  {
+   "date": "2013-12-24",
+   "name": "Christmas Eve",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Tuesday, Dec 24 / 1215 CT - Early close",
+     "document": "D13XM",
+     "tier": "T1",
+     "close_instant": "1215 CT"
+    },
+    {
+     "family": "energy+metals",
+     "status": "early_close",
+     "verbatim": "Tuesday, Dec 24 / 1245 CT / 1345 ET - Early close / TAM Products - Regular close - Per each product schedule / TAS Products: Copper TAS - Early Close 1100 CT / 1200 ET; Silver TAS - Early Close 1125 CT / 1225 ET; Gold TAS - Early Close 1130 CT / 1230 ET; All Crude, Heating Oil, RBOB, Nat Gas & Cotton TAS contracts close early at 12:30 CT / 1330 ET",
+     "document": "D13XM",
+     "tier": "T1",
+     "close_instant": "1245 CT / 1345 ET"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "early_close",
+     "verbatim": "Tuesday, Dec 24 / 1200 CT - Early CBOT & KCBT close / 1215 CT - Early MGEX Wheat & Apple Juice close / 1230 CT - Early CBOT Mini - Sized grain close / 1230 CT - Early MGEX Grain Indices close",
+     "document": "D13XM",
+     "tier": "T1",
+     "close_instant": "1200 CT (CBOT & KCBT); 1230 CT (CBOT Mini-Sized grain)"
+    },
+    {
+     "family": "livestock",
+     "status": "early_close",
+     "verbatim": "Tuesday, Dec 24 / 1215 CT - Early close for Livestock Futures & Options, Real Estate",
+     "document": "D13XM",
+     "tier": "T1",
+     "close_instant": "1215 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "early_close",
+     "verbatim": "Tuesday, Dec 24 / 1200 CT - Early close for Lumber, Dairy, Crude Palm Oil, Weather, Dow Jones UBS ER, RS and GSCI",
+     "document": "D13XM",
+     "tier": "T1",
+     "close_instant": "1200 CT"
+    },
+    {
+     "family": "lumber",
+     "status": "early_close",
+     "verbatim": "Tuesday, Dec 24 / 1200 CT - Early close for Lumber, Dairy, Crude Palm Oil, Weather, Dow Jones UBS ER, RS and GSCI / 1202 CT - Early close for Lumber Options",
+     "document": "D13XM",
+     "tier": "T1",
+     "close_instant": "1200 CT (1202 CT for Lumber Options)"
+    }
+   ]
+  },
+  {
+   "date": "2013-12-25",
+   "name": "Christmas Day",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx",
+     "status": "closed",
+     "verbatim": "Wednesday, Dec 25 / Christmas Day Observed - Globex closed",
+     "document": "D13XM",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "closed",
+     "verbatim": "Wednesday, Dec 25 / Christmas Day Observed - Globex closed / 1700 CT / 1800 ET - Regular open for trade date Thursday, Dec 26",
+     "document": "D13XM",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET (for trade date Thu Dec 26)"
+    },
+    {
+     "family": "grains_oilseeds+livestock+dairy+lumber",
+     "status": "closed",
+     "verbatim": "Wednesday, Dec 25 / Christmas Day Observed - Globex closed",
+     "document": "D13XM",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2013-12-26",
+   "name": "Christmas (reopening day)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "late_open",
+     "verbatim": "Thursday, Dec 26 / 0500 CT - Modified open / 0515 CT - Regular open - USD - Ibovespa Futures / 1615 CT - Regular close",
+     "document": "D13XM",
+     "tier": "T1",
+     "open_instant": "0500 CT"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "late_open",
+     "verbatim": "Thursday, Dec 26 / 0500 CT - Modified open / 1600 CT - Regular close",
+     "document": "D13XM",
+     "tier": "T1",
+     "open_instant": "0500 CT"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Thursday, Dec 26 / 1615 CT / 1715 ET - Regular close",
+     "document": "D13XM",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "late_open",
+     "verbatim": "Thursday, Dec 26 / 0700 CT- MGEX Apple Juice opens / 0830 CT - Grain markets open / Regular Close - Per each product schedule",
+     "document": "D13XM",
+     "tier": "T1",
+     "open_instant": "0830 CT"
+    },
+    {
+     "family": "livestock",
+     "status": "late_open",
+     "verbatim": "Thursday, Dec 26 / Modified openings noted below: ... 0905 CT Livestock Futures & Options",
+     "document": "D13XM",
+     "tier": "T1",
+     "open_instant": "0905 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "late_open",
+     "verbatim": "Thursday, Dec 26 / Modified openings noted below: ... 0905 CT Dairy Futures & Options",
+     "document": "D13XM",
+     "tier": "T1",
+     "open_instant": "0905 CT"
+    },
+    {
+     "family": "lumber",
+     "status": "late_open",
+     "verbatim": "Thursday, Dec 26 / Modified openings noted below: ... 0900 CT Lumber Futures & Options",
+     "document": "D13XM",
+     "tier": "T1",
+     "open_instant": "0900 CT"
+    }
+   ]
+  },
+  {
+   "date": "2013-12-31",
+   "name": "New Year's Eve (sourced from CME's 2014 New Year's schedule)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Tuesday, Dec 31 / 1615 CT - Regular close",
+     "document": "D14NY",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "normal",
+     "verbatim": "Tuesday, Dec 31 / 1600 CT - Regular close",
+     "document": "D14NY",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Tuesday, Dec 31 / 1615 CT / 1715 ET - Regular close",
+     "document": "D14NY",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Tuesday, Dec 31 / Regular close - Per each product schedule",
+     "document": "D14NY",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Tuesday, Dec 31 / Regular close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D14NY",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2014-01-01",
+   "name": "New Year's Day (observed)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "closed",
+     "verbatim": "Wednesday, Jan 1 / New Years Observed - Globex closed",
+     "document": "D14NY",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "closed",
+     "verbatim": "Wednesday, Jan 1 / New Year's Observed - Globex closed",
+     "document": "D14NY",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "closed",
+     "verbatim": "Wednesday, Jan 1 / New Years Observed - Globex closed / 1700 CT / 1800 ET - Regular open for trade date Thursday, Jan 2",
+     "document": "D14NY",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET (for trade date Thu Jan 2)"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "Wednesday, Jan 1 / New Year's Observed - Globex closed",
+     "document": "D14NY",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "closed",
+     "verbatim": "Wednesday, Jan 1 / New Years Observed - Globex closed",
+     "document": "D14NY",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2014-01-02",
+   "name": "New Year's Day (reopening day)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "late_open",
+     "verbatim": "Thursday, Jan 2 / 0500 CT - Modified open / 0515 CT - Regular open - USD - Ibovespa Futures / 1615 CT - Regular close",
+     "document": "D14NY",
+     "tier": "T1",
+     "open_instant": "0500 CT"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "late_open",
+     "verbatim": "Thursday, Jan 2 / 0500 CT - Modified open / 1600 CT - Regular close",
+     "document": "D14NY",
+     "tier": "T1",
+     "open_instant": "0500 CT"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Thursday, Jan 2 / 1615 CT / 1715 ET - Regular close",
+     "document": "D14NY",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "late_open",
+     "verbatim": "Thursday, Jan 2 / 0700 CT- MGEX Apple Juice open / 0830 CT - Grain markets open / Regular close - Per each product schedule",
+     "document": "D14NY",
+     "tier": "T1",
+     "open_instant": "0830 CT"
+    },
+    {
+     "family": "livestock",
+     "status": "late_open",
+     "verbatim": "Thursday, Jan 2 / Modified openings noted below: ... 0905 CT Livestock Futures & Options",
+     "document": "D14NY",
+     "tier": "T1",
+     "open_instant": "0905 CT"
+    },
+    {
+     "family": "dairy",
+     "status": "late_open",
+     "verbatim": "Thursday, Jan 2 / Modified openings noted below: ... 0905 CT Dairy Futures & Options",
+     "document": "D14NY",
+     "tier": "T1",
+     "open_instant": "0905 CT"
+    },
+    {
+     "family": "lumber",
+     "status": "late_open",
+     "verbatim": "Thursday, Jan 2 / Modified openings noted below: ... 0900 CT Lumber Futures & Options",
+     "document": "D14NY",
+     "tier": "T1",
+     "open_instant": "0900 CT"
+    }
+   ]
+  },
+  {
+   "date": "2014-01-17",
+   "name": "Martin Luther King Jr. Day (Friday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Friday, Jan 17 / 1615 CT / 1715 ET / 2215 UTC - Regular close",
+     "document": "D14MLK",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Interest Rate & FX Products / Friday, Jan 17 / 1515 CT / 1615 ET / 2215 UTC - Early close",
+     "document": "D14MLK",
+     "tier": "T1",
+     "close_instant": "1515 CT / 1615 ET / 2215 UTC (UTC as printed; 1515 CT is 2115 UTC - the document's UTC column is wrong on this line)"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Friday, Jan 17 / 1615 CT / 1715 ET / 2215 UTC - Regular close",
+     "document": "D14MLK",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Friday, Jan 17 / Regular close - Per each product schedule",
+     "document": "D14MLK",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Friday, Jan 17 / Regular close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D14MLK",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2014-01-20",
+   "name": "Martin Luther King Jr. Day",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "early_close",
+     "verbatim": "Monday, Jan 20 / 1030 CT / 1130 ET / 1630 UTC - Trading halt (pre-open) / 1700 CT / 1800 ET / 2300 UTC - Products resume trading",
+     "document": "D14MLK",
+     "tier": "T1",
+     "close_instant": "1030 CT / 1130 ET / 1630 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Monday, Jan 20 / 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open) / 1700 CT / 1800 ET / 2300 UTC - Products resume trading",
+     "document": "D14MLK",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "energy+metals",
+     "status": "early_close",
+     "verbatim": "Monday, Jan 20 / 1215 CT / 1315 ET / 1815 UTC - Trading halt (pre-open) / 1700 CT / 1800 ET / 2300 UTC - Products resume trading",
+     "document": "D14MLK",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1815 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "Sunday, Jan 19 / 1600 CT / 1700 ET / 2200 UTC - Pre-open for trade date Tuesday, Jan 21 // Monday, Jan 20 / 1900 CT / 2000 ET / 0100 UTC - Open for trade date Tuesday. Jan 21",
+     "document": "D14MLK",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2000 ET / 0100 UTC (Mon Jan 20, for trade date Tue Jan 21)"
+    },
+    {
+     "family": "livestock",
+     "status": "closed",
+     "verbatim": "Tuesday, Jan 22 [sic - Jan 21] / 905 CT / 1005 ET / 1505 UTC - Livestock markets open",
+     "document": "D14MLK",
+     "tier": "T1",
+     "open_instant": "0905 CT Tue Jan 21"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Monday, Jan 20 / 1700 CT / 1800 ET / 2300 UTC - Dairy markets open for trade date Tuesday, Jan 21",
+     "document": "D14MLK",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC Mon Jan 20"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Tuesday, Jan 22 [sic - Jan 21] / 900 CT / 1000 ET / 1500 UTC - Lumber market open",
+     "document": "D14MLK",
+     "tier": "T1",
+     "open_instant": "0900 CT Tue Jan 21"
+    }
+   ]
+  },
+  {
+   "date": "2014-02-14",
+   "name": "Presidents' Day (Friday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Friday, Feb 14 / 1615 CT / 1715 ET / 2215 UTC - Regular close",
+     "document": "D14PD",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Interest Rate & FX Products / Friday, Feb 14 / 1515 CT / 1615 ET / 2115 UTC - Early close",
+     "document": "D14PD",
+     "tier": "T1",
+     "close_instant": "1515 CT / 1615 ET / 2115 UTC"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Friday, Feb 14 / 1615 CT / 1715 ET / 2215 UTC - Regular close",
+     "document": "D14PD",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Friday, Feb 14 / Regular close - Per each product schedule",
+     "document": "D14PD",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Friday, Feb 14 / Regular close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D14PD",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2014-02-17",
+   "name": "Presidents' Day",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "early_close",
+     "verbatim": "Monday, Feb 17 / 1030 CT / 1130 ET / 1630 UTC - Trading halt (pre-open) / 1700 CT / 1800 ET / 2300 UTC - Products resume trading",
+     "document": "D14PD",
+     "tier": "T1",
+     "close_instant": "1030 CT / 1130 ET / 1630 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Monday, Feb 17 / 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open) / 1700 CT / 1800 ET / 2300 UTC - Products resume trading",
+     "document": "D14PD",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "energy+metals",
+     "status": "early_close",
+     "verbatim": "Monday, Feb 17 / 1215 CT / 1315 ET / 1815 UTC - Trading halt (pre-open) / 1700 CT / 1800 ET / 2300 UTC - Products resume trading",
+     "document": "D14PD",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1815 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "Sunday, Feb 16 / 1600 CT / 1700 ET / 2200 UTC - Pre-open for trade date Tuesday, Feb18 // Monday, Feb 17 / 1900 CT / 2000 ET / 0100 UTC - Open for trade date Tuesday, Feb 18",
+     "document": "D14PD",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2000 ET / 0100 UTC (Mon Feb 17, for trade date Tue Feb 18)"
+    },
+    {
+     "family": "livestock",
+     "status": "closed",
+     "verbatim": "Tuesday, Feb 18 / 905 CT / 1005 ET / 1505 UTC - Livestock markets open",
+     "document": "D14PD",
+     "tier": "T1",
+     "open_instant": "0905 CT Tue Feb 18"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Monday, Feb 17 / 1700 CT / 1800 ET / 2300 UTC - Dairy markets open for trade date Tuesday, Feb 18",
+     "document": "D14PD",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC Mon Feb 17"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Tuesday, Feb 18 / 900 CT / 1000 ET / 1500 UTC - Lumber market open",
+     "document": "D14PD",
+     "tier": "T1",
+     "open_instant": "0900 CT Tue Feb 18"
+    }
+   ]
+  },
+  {
+   "date": "2014-04-17",
+   "name": "Good Friday (Thursday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Thursday, April 17 / 1615 CT / 1715 ET / 2115 UTC - Regular close",
+     "document": "D14GF",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "normal",
+     "verbatim": "Thursday, April 17 / 1600 CT 1700 ET / 2100 UTC - Regular close",
+     "document": "D14GF",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Thursday, April 17 / 1615 CT / 1715 ET / 2115 UTC - Regular close",
+     "document": "D14GF",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Thursday, April 17 / Regular close - Per each product schedule",
+     "document": "D14GF",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "early_close",
+     "verbatim": "Livestock, Dairy & Lumber Products / Thursday, April 17 / 1355 CT / 1455 ET / 1855 UTC - Early Close",
+     "document": "D14GF",
+     "tier": "T1",
+     "close_instant": "1355 CT / 1455 ET / 1855 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2014-04-18",
+   "name": "Good Friday",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals+grains_oilseeds+livestock+dairy+lumber",
+     "status": "closed",
+     "verbatim": "Friday, April 18 / CME Globex is closed",
+     "document": "D14GF",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2014-05-23",
+   "name": "Memorial Day (Friday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Friday, May 23 / 1615 CT / 1715 ET / 2115 UTC - Regular close",
+     "document": "D14MD",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Interest Rate & FX Products / Friday, May 23 / 1515 CT / 1615 ET / 2015 UTC - Early close",
+     "document": "D14MD",
+     "tier": "T1",
+     "close_instant": "1515 CT / 1615 ET / 2015 UTC"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Friday, May 23 / 1615 CT / 1715 ET / 2115 UTC - Regular close",
+     "document": "D14MD",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Friday, May 23 / Regular close - Per each product schedule",
+     "document": "D14MD",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Friday, May 23 / Regular close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D14MD",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2014-05-26",
+   "name": "Memorial Day",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals",
+     "status": "early_close",
+     "verbatim": "Monday, May 26 / 1200 CT / 1300 ET / 1700 UTC - Trading halt (pre-open) / 1700 CT / 1800 ET / 2200 UTC - Products resume trading",
+     "document": "D14MD",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "Sunday, May 25 / 1600 CT / 1700 ET / 2100 UTC - Pre-open for trade date Tuesday, May 27 // Monday, May 26 / 1900 CT / 2000 ET / 0000 - Open for trade date Tuesday, May 27",
+     "document": "D14MD",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2000 ET (Mon May 26, for trade date Tue May 27)"
+    },
+    {
+     "family": "livestock",
+     "status": "closed",
+     "verbatim": "Tuesday, May 27 / 905 CT / 1005 ET / 1405 UTC - Livestock markets open",
+     "document": "D14MD",
+     "tier": "T1",
+     "open_instant": "0905 CT Tue May 27"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Monday, May 26 / 1700 CT / 1800 ET / 2200 UTC - Dairy markets pen [sic] for trade date Tuesday, May 27",
+     "document": "D14MD",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC Mon May 26"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Tuesday, May 27 / 900 CT / 1000 ET / 1400 UTC - Lumber market open",
+     "document": "D14MD",
+     "tier": "T1",
+     "open_instant": "0900 CT Tue May 27"
+    }
+   ]
+  },
+  {
+   "date": "2014-07-03",
+   "name": "Independence Day (Thursday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "early_close",
+     "verbatim": "Thursday, July 3 / 1215 CT / 1315 ET / 1715 UTC -Early close / 1700 CT / 1800 ET / 2200 UTC -Regular open for trade date Monday, July 7",
+     "document": "D14J4",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1715 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "normal",
+     "verbatim": "Thursday, July 3 / 1600 CT / 1700 ET / 2100 UTC - Regular close / 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Monday, July 7",
+     "document": "D14J4",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Thursday, July 3 / 1615 CT / 1715 ET / 2115 UTC - Regular close / 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Monday, July 7",
+     "document": "D14J4",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "early_close",
+     "verbatim": "Thursday, July 3 / 1200 CT / 1300 ET / 1700 UTC - Early close / 1215 CT / 1315 ET / 1715 UTC - Early MGEX Wheat & Apple Juice close / 1230 CT / 1330 ET / 1730 UTC - Early Mini-Sized grain close / 1230 CT / 1330 ET / 1730 UTC - Early MGEX Indices close",
+     "document": "D14J4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC (1230 CT for Mini-Sized grain)"
+    },
+    {
+     "family": "livestock",
+     "status": "early_close",
+     "verbatim": "Thursday, July 3 / 1215 CT / 1315 ET / 1715 UTC - Early close for Livestock Futures & Options",
+     "document": "D14J4",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1715 UTC"
+    },
+    {
+     "family": "dairy",
+     "status": "early_close",
+     "verbatim": "Thursday, July 3 / 1200 CT / 1300 ET / 1700 UTC - Early close for Dairy Futures & Options",
+     "document": "D14J4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC"
+    },
+    {
+     "family": "lumber",
+     "status": "early_close",
+     "verbatim": "Thursday, July 3 / 1200 CT / 1300 ET / 1700 UTC - Early close for Lumber / 1202 CT / 1302 ET / 1702 UTC - Early close for Lumber Options",
+     "document": "D14J4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC (1202 CT for Lumber Options)"
+    }
+   ]
+  },
+  {
+   "date": "2014-07-04",
+   "name": "Independence Day",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals",
+     "status": "early_close",
+     "verbatim": "Friday, July 4 / 1200 CT / 1300 ET / 1700 UTC - Early close (Day & GTD order elimination)",
+     "document": "D14J4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "Grain, Oilseed & MGEX Products / Friday, July 4 / All products closed",
+     "document": "D14J4",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products / Friday, July 4 / All products closed",
+     "document": "D14J4",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2014-07-07",
+   "name": "Independence Day (reopening day)",
+   "families": [
+    {
+     "family": "grains_oilseeds",
+     "status": "late_open",
+     "verbatim": "Monday, July 7 / 0700 CT / 0800 ET / 1200 UTC - MGEX Apple Juice opens / 0830 CT / 0930 ET / 1330 UTC - Grain, Oilseed & MGEX products open",
+     "document": "D14J4",
+     "tier": "T1",
+     "open_instant": "0830 CT / 0930 ET / 1330 UTC"
+    },
+    {
+     "family": "livestock",
+     "status": "modified",
+     "verbatim": "Monday, July 7 / 905 CT / 1005 ET / 1405 UTC - Livestock markets open",
+     "document": "D14J4",
+     "tier": "T1",
+     "open_instant": "0905 CT / 1005 ET / 1405 UTC"
+    },
+    {
+     "family": "dairy",
+     "status": "normal",
+     "verbatim": "Sunday, July 6 / 1700 CT / 1800 ET / 2200 UTC - Regular Dairy open",
+     "document": "D14J4",
+     "tier": "T1"
+    },
+    {
+     "family": "lumber",
+     "status": "modified",
+     "verbatim": "Monday, July 7 / 900 CT / 1000 ET / 1400 UTC - Lumber market open",
+     "document": "D14J4",
+     "tier": "T1",
+     "open_instant": "0900 CT / 1000 ET / 1400 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2014-08-29",
+   "name": "Labor Day (Friday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Friday, Aug 29 / 1615 CT / 1715 ET / 2115 UTC - Regular close",
+     "document": "D14LD",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Interest Rate & FX Products / Friday, Aug 29 / 1515 CT / 1615 ET / 2015 UTC - Early close",
+     "document": "D14LD",
+     "tier": "T1",
+     "close_instant": "1515 CT / 1615 ET / 2015 UTC"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Friday, Aug 29 / 1615 CT / 1715 ET / 2115 UTC - Regular close",
+     "document": "D14LD",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Friday, Aug 29 / Regular close - Per each product schedule",
+     "document": "D14LD",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Friday, Aug 29 / Regular Close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D14LD",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2014-09-01",
+   "name": "Labor Day",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals",
+     "status": "early_close",
+     "verbatim": "Monday, Sep 1 / 1200 CT / 1300 ET / 1700 UTC - Trading halt (pre-open) / 1700 CT / 1800 ET / 2200 UTC - Products resume trading",
+     "document": "D14LD",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "Sunday, Aug 31 / 1600 CT / 1700 ET / 2100 UTC - Pre-open for trade date Tuesday, Sep 2 // Monday, Sep 1 / 1900 CT / 2000 ET / 0000 UTC - Open for trade date Tuesday, Sep 2",
+     "document": "D14LD",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2000 ET / 0000 UTC (Mon Sep 1, for trade date Tue Sep 2)"
+    },
+    {
+     "family": "livestock",
+     "status": "closed",
+     "verbatim": "Tuesday, Sep 2 / 905 CT / 1005 ET / 1405 UTC - Livestock markets open",
+     "document": "D14LD",
+     "tier": "T1",
+     "open_instant": "0905 CT Tue Sep 2"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Monday, Sep 1 / 1700 CT / 1800 ET / 2200 UTC - Dairy markets open for trade date Tuesday, Sep 2",
+     "document": "D14LD",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC Mon Sep 1"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Tuesday, Sep 2 / 900 CT / 1000 ET / 1400 UTC - Lumber market open",
+     "document": "D14LD",
+     "tier": "T1",
+     "open_instant": "0900 CT Tue Sep 2"
+    }
+   ]
+  },
+  {
+   "date": "2014-10-13",
+   "name": "Columbus Day",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals+grains_oilseeds+livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Monday, October 13 / Globex Columbus Day Holiday Schedule / Products listed on Globex are uneffected [sic] and will run on a normal schedule",
+     "document": "D14COL",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2014-11-11",
+   "name": "Veterans Day",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals+grains_oilseeds+livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "In recognition of the Veterans Day holiday on Tuesday, November 11, 2014, CME Group trading floors will be closed for Interest Rate and FX products. Regular CME Globex trading hours will be in effect. // Trading Hours table: Electronic (CME Globex) - Normal Hours; Open Outcry - CLOSED for FX / INTEREST RATES, Normal Hours for COMMODITIES, EQUITIES, GSCI, WEATHER, REAL ESTATE, METALS",
+     "document": "D14VET",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2014-11-26",
+   "name": "Thanksgiving (Wednesday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Wednesday, Nov 26 / 1615 CT / 1715 ET / 2215 UTC - Regular close / 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Friday, Nov 28",
+     "document": "D14TG",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "normal",
+     "verbatim": "Wednesday, Nov 26 / 1600 CT / 1700 ET / 2200 UTC - Regular close / 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Friday, Nov 28",
+     "document": "D14TG",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Wednesday, Nov 26 / 1615 CT / 1715 ET / 2215 UTC - Regular close / 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Friday, Nov 28",
+     "document": "D14TG",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Wednesday, Nov 26 / Regular Close - Per each product schedule / 1645 CT / 1745 / 2245 UTC - Products will be in a pre-open until 0830 CT / 0930 ET / 1430 UTC Friday, Nov 28",
+     "document": "D14TG",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Wednesday, Nov 26 / Regular close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D14TG",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2014-11-27",
+   "name": "Thanksgiving Day",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals",
+     "status": "early_close",
+     "verbatim": "Thursday, Nov 27 / 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open) / 1700 CT / 1800 ET / 2300 UTC - Products resume trading",
+     "document": "D14TG",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "1645 CT / 1745 / 2245 UTC - Products will be in a pre-open until 0830 CT / 0930 ET / 1430 UTC Friday, Nov 28",
+     "document": "D14TG",
+     "tier": "T1",
+     "open_instant": "0830 CT Fri Nov 28"
+    },
+    {
+     "family": "livestock",
+     "status": "closed",
+     "verbatim": "Friday, Nov 28 / 800 CT / 900 ET / 1400 UTC - Livestock markets open",
+     "document": "D14TG",
+     "tier": "T1",
+     "open_instant": "0800 CT Fri Nov 28"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Note: Dairy products will remain closed until 1700 CT / 1800 ET / 2300 UTC Sunday, Nov 30",
+     "document": "D14TG",
+     "tier": "T1",
+     "open_instant": "1700 CT Sun Nov 30"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Friday, Nov 28 / 900 CT / 1000 ET / 1500 UTC - Lumber market open",
+     "document": "D14TG",
+     "tier": "T1",
+     "open_instant": "0900 CT Fri Nov 28"
+    }
+   ]
+  },
+  {
+   "date": "2014-11-28",
+   "name": "Day after Thanksgiving",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Friday, Nov 28 / 1215 CT / 1315 ET / 1815 UTC - Early close",
+     "document": "D14TG",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1815 UTC"
+    },
+    {
+     "family": "energy+metals",
+     "status": "early_close",
+     "verbatim": "Friday, Nov 28 / 1245 CT / 1345 ET / 1845 UTC - Early close",
+     "document": "D14TG",
+     "tier": "T1",
+     "close_instant": "1245 CT / 1345 ET / 1845 UTC"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "early_close",
+     "verbatim": "Friday, Nov 28 / 0700 CT / 0800 ET / 1400 UTC - MGEX Apple Juice - regular open / 0830 CT / 0930 ET / 1430 UTC - Grain, Oilseed & MGEX products open / 1200 CT / 1300 ET / 1800 UTC - Early close / 1215 CT / 1315 ET / 1815 UTC - Early MGEX Wheat & Apple Juice close / 1230 CT / 1330 ET / 1830 UTC - Early Mini-Sized grain close / 1230 CT / 1330 ET / 1830 UTC - Early MGEX Indices close",
+     "document": "D14TG",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC (1230 CT for Mini-Sized grain)",
+     "open_instant": "0830 CT / 0930 ET / 1430 UTC"
+    },
+    {
+     "family": "livestock",
+     "status": "early_close",
+     "verbatim": "Friday, Nov 28 / 800 CT / 900 ET / 1400 UTC - Livestock markets open / 1215 CT / 1315 ET / 1815 UTC - Early close for Livestock Futures & Options",
+     "document": "D14TG",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1815 UTC",
+     "open_instant": "0800 CT / 0900 ET / 1400 UTC"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Note: Dairy products will remain closed until 1700 CT / 1800 ET / 2300 UTC Sunday, Nov 30",
+     "document": "D14TG",
+     "tier": "T1",
+     "open_instant": "1700 CT Sun Nov 30"
+    },
+    {
+     "family": "lumber",
+     "status": "early_close",
+     "verbatim": "Friday, Nov 28 / 900 CT / 1000 ET / 1500 UTC - Lumber market open / 1200 CT / 1300 ET / 1800 UTC - Early close for Lumber / 1202 CT / 1302 ET / 1801 UTC - Early close for Lumber Options",
+     "document": "D14TG",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC (1202 CT for Lumber Options)",
+     "open_instant": "0900 CT / 1000 ET / 1500 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2014-12-24",
+   "name": "Christmas Eve",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Wednesday, Dec 24 / 1215 CT / 1315 ET / 1815 UTC - Early close",
+     "document": "D14XM",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1815 UTC"
+    },
+    {
+     "family": "energy+metals",
+     "status": "early_close",
+     "verbatim": "Wednesday, Dec 24 / 1245 CT / 1345 ET / 1845 UTC - Early close",
+     "document": "D14XM",
+     "tier": "T1",
+     "close_instant": "1245 CT / 1345 ET / 1845 UTC"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "early_close",
+     "verbatim": "Wednesday, Dec 24 / 1200 CT / 1300 ET / 1800 UTC - Early close / 1215 CT / 1315 ET / 1815 UTC - Early MGEX Wheat & Apple Juice close / 1230 CT / 1330 ET / 1830 UTC - Early Mini-Sized grain close / 1230 CT / 1330 ET / 1830 UTC - Early MGEX Indices close",
+     "document": "D14XM",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC (1230 CT for Mini-Sized grain)"
+    },
+    {
+     "family": "livestock",
+     "status": "early_close",
+     "verbatim": "Wednesday, Dec, Dec 24 / 1215 CT / 1315 ET / 1815 UTC - Early close for Livestock Futures & Options",
+     "document": "D14XM",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1815 UTC"
+    },
+    {
+     "family": "dairy",
+     "status": "early_close",
+     "verbatim": "Wednesday, Dec, Dec 24 / 1200 CT / 1300 ET / 1800 UTC - Early close for Dairy futures & Options",
+     "document": "D14XM",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC"
+    },
+    {
+     "family": "lumber",
+     "status": "early_close",
+     "verbatim": "Wednesday, Dec, Dec 24 / 1200 CT / 1300 ET / 1800 UTC - Early close for Lumber Futures / 1202 CT / 1302 ET / 1802 UTC - Early close for Lumber Options",
+     "document": "D14XM",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC (1202 CT for Lumber Options)"
+    }
+   ]
+  },
+  {
+   "date": "2014-12-25",
+   "name": "Christmas Day",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "closed",
+     "verbatim": "Thursday, Dec 25 / Christmas Day Observed - Globex close / 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Friday, Dec 26",
+     "document": "D14XM",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (for trade date Fri Dec 26)"
+    },
+    {
+     "family": "interest_rates+fx+energy+metals",
+     "status": "closed",
+     "verbatim": "Thursday, Dec 25 / Christmas Day Observed - Globex closed / 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Friday, Dec 26",
+     "document": "D14XM",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (for trade date Fri Dec 26)"
+    },
+    {
+     "family": "grains_oilseeds+livestock+dairy+lumber",
+     "status": "closed",
+     "verbatim": "Thursday, Dec 25 / Christmas Day Observed - Globex closed",
+     "document": "D14XM",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2014-12-26",
+   "name": "Christmas (reopening day)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Friday, Dec 26 / 1615 CT / 1715 ET / 2215 UTC - Regular close",
+     "document": "D14XM",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "normal",
+     "verbatim": "Friday, Dec 26 / 1600 CT / 1700 ET / 2200 UTC - Regular close",
+     "document": "D14XM",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Friday, Dec 26 / 1615 CT / 1715 ET / 2215 UTC -Regular close",
+     "document": "D14XM",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "late_open",
+     "verbatim": "Friday, Dec 26 / 0700 CT / 0800 ET / 1300 UTC - MGEX Apple Juice open / 0830 CT / 0930 ET / 1430 UTC - Grain, Oilseed & MGEX products open / Regular Close - Per each product schedule",
+     "document": "D14XM",
+     "tier": "T1",
+     "open_instant": "0830 CT / 0930 ET / 1430 UTC"
+    },
+    {
+     "family": "livestock",
+     "status": "modified",
+     "verbatim": "Friday, Dec 26 / 800 CT / 900 ET / 1400 UTC - Livestock markets open / Regular Close - Per each product schedule",
+     "document": "D14XM",
+     "tier": "T1",
+     "open_instant": "0800 CT / 0900 ET / 1400 UTC"
+    },
+    {
+     "family": "dairy",
+     "status": "late_open",
+     "verbatim": "Friday, Dec 26 / 905 CT / 1005 ET / 1505 UTC - Dairy markets open / Regular Close - Per each product schedule",
+     "document": "D14XM",
+     "tier": "T1",
+     "open_instant": "0905 CT / 1005 ET / 1505 UTC"
+    },
+    {
+     "family": "lumber",
+     "status": "modified",
+     "verbatim": "Friday, Dec 26 / 900 CT / 1000 ET / 1500 UTC - Lumber market open / Regular Close - Per each product schedule",
+     "document": "D14XM",
+     "tier": "T1",
+     "open_instant": "0900 CT / 1000 ET / 1500 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2014-12-31",
+   "name": "New Year's Eve (sourced from CME's 2015 New Year's schedule)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Wednesday, Dec 31 / 1615 CT / 1715 ET / 2215 UTC - Regular close",
+     "document": "D15NY",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "normal",
+     "verbatim": "Wednesday, Dec 31 / 1600 CT / 1700 ET / 2200 UTC - Regular close",
+     "document": "D15NY",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Wednesday, Dec 31 / 1615 CT / 1715 ET - Regular close",
+     "document": "D15NY",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Wednesday, Dec 31 / Regular close - Per each product schedule",
+     "document": "D15NY",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Wednesday, Dec 31 / Regular close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D15NY",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2015-01-01",
+   "name": "New Year's Day (observed)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "closed",
+     "verbatim": "Thursday, Jan 1 / New Years Observed - Globex closed / 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Friday, Jan 2",
+     "document": "D15NY",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (for trade date Fri Jan 2)"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "closed",
+     "verbatim": "Thursday, Jan 1 / New Year's Observed - Globex closed / 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Friday, Jan 2",
+     "document": "D15NY",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (for trade date Fri Jan 2)"
+    },
+    {
+     "family": "energy+metals",
+     "status": "closed",
+     "verbatim": "Thursday, Jan 1 / New Years Observed - Globex closed / 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Friday, Jan 2",
+     "document": "D15NY",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (for trade date Fri Jan 2)"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "Thursday, Jan 1 / New Year's Observed - Globex closed",
+     "document": "D15NY",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "closed",
+     "verbatim": "Thursday, Jan 1 / New Years Observed - Globex closed",
+     "document": "D15NY",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2015-01-02",
+   "name": "New Year's Day (reopening day)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Friday, Jan 2 / 1615 CT / 1715 ET / 2215 UTC - Regular close",
+     "document": "D15NY",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "normal",
+     "verbatim": "Friday, Jan 2 / 1600 CT / 1700 ET / 2200 UTC - Regular close",
+     "document": "D15NY",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Friday, Jan 2 / 1615 CT / 1715 ET / 2215 UTC -Regular close",
+     "document": "D15NY",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "late_open",
+     "verbatim": "Friday, Jan 2 / 0700 CT / 0800 ET / 1300 UTC - MGEX Apple Juice open / 0830 CT / 0930 ET / 1430 UTC - Grain, Oilseed & MGEX products open / Regular close - Per each product schedule",
+     "document": "D15NY",
+     "tier": "T1",
+     "open_instant": "0830 CT / 0930 ET / 1430 UTC"
+    },
+    {
+     "family": "livestock",
+     "status": "modified",
+     "verbatim": "Friday, Jan 2 / 800 CT / 900 ET / 1400 UTC - Livestock markets open / Regular close - Per each product schedule",
+     "document": "D15NY",
+     "tier": "T1",
+     "open_instant": "0800 CT / 0900 ET / 1400 UTC"
+    },
+    {
+     "family": "dairy",
+     "status": "late_open",
+     "verbatim": "Friday, Jan 2 / 905 CT / 1005 ET / 1505 UTC - Dairy markets open / Regular close - Per each product schedule",
+     "document": "D15NY",
+     "tier": "T1",
+     "open_instant": "0905 CT / 1005 ET / 1505 UTC"
+    },
+    {
+     "family": "lumber",
+     "status": "modified",
+     "verbatim": "Friday, Jan 2 / 900 CT / 1000 ET / 1500 UTC - Lumber market open / Regular close - Per each product schedule",
+     "document": "D15NY",
+     "tier": "T1",
+     "open_instant": "0900 CT / 1000 ET / 1500 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2015-01-16",
+   "name": "Martin Luther King Jr. Day (Friday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Friday, Jan 16 / 1615 CT / 1715 ET / 2215 UTC - Regular close",
+     "document": "D15MLK",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Interest Rate & FX Products / Friday, Jan 16 / 1515 CT / 1615 ET / 2115 UTC - Early close",
+     "document": "D15MLK",
+     "tier": "T1",
+     "close_instant": "1515 CT / 1615 ET / 2115 UTC"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Friday, Jan 16 / 1615 CT / 1715 ET / 2215 UTC - Regular close",
+     "document": "D15MLK",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Friday, Jan 16 / Regular close - Per each product schedule",
+     "document": "D15MLK",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Friday, Jan 16 / Regular close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D15MLK",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2015-01-19",
+   "name": "Martin Luther King Jr. Day",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals",
+     "status": "early_close",
+     "verbatim": "Monday, Jan 19 / 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open) / 1700 CT / 1800 ET / 2300 UTC - Products resume trading",
+     "document": "D15MLK",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "Sunday, Jan 18 / 1600 CT / 1700 ET / 2200 UTC - Pre-open for trade date Tuesday, Jan 20 // Monday, Jan 19 / 1900 CT / 2000 ET / 0100 UTC - Open for trade date Tuesday. Jan 20",
+     "document": "D15MLK",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2000 ET / 0100 UTC (Mon Jan 19, for trade date Tue Jan 20)"
+    },
+    {
+     "family": "livestock",
+     "status": "closed",
+     "verbatim": "Tuesday, Jan 20 / 905 CT / 1005 ET / 1505 UTC - Livestock markets open",
+     "document": "D15MLK",
+     "tier": "T1",
+     "open_instant": "0905 CT Tue Jan 20"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Monday, Jan 19 / 1700 CT / 1800 ET / 2300 UTC - Dairy markets open for trade date Tuesday, Jan 20",
+     "document": "D15MLK",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC Mon Jan 19"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Tuesday, Jan 20 / 900 CT / 1000 ET / 1500 UTC - Lumber market open",
+     "document": "D15MLK",
+     "tier": "T1",
+     "open_instant": "0900 CT Tue Jan 20"
+    }
+   ]
+  },
+  {
+   "date": "2015-02-13",
+   "name": "Presidents' Day (Friday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Friday, Feb 13 / 1615 CT / 1715 ET / 2215 UTC - Regular close",
+     "document": "D15PD",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Interest Rate & FX Products / Friday, Feb 13 / 1515 CT / 1615 ET / 2115 UTC - Early close",
+     "document": "D15PD",
+     "tier": "T1",
+     "close_instant": "1515 CT / 1615 ET / 2115 UTC"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Friday, Feb 13 / 1615 CT / 1715 ET / 2215 UTC - Regular close",
+     "document": "D15PD",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Friday, Feb 13 / Regular close - Per each product schedule",
+     "document": "D15PD",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Friday, Feb 13 / Regular close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D15PD",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2015-02-16",
+   "name": "Presidents' Day",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals",
+     "status": "early_close",
+     "verbatim": "Monday, Feb 16 / 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open) / 1700 CT / 1800 ET / 2300 UTC - Products resume trading",
+     "document": "D15PD",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "Sunday, Feb 15 / 1600 CT / 1700 ET / 2200 UTC - Pre-open for trade date Tuesday, Feb 17 // Monday, Feb 16 / 1900 CT / 2000 ET / 0100 UTC - Open for trade date Tuesday, Feb 17",
+     "document": "D15PD",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2000 ET / 0100 UTC (Mon Feb 16, for trade date Tue Feb 17)"
+    },
+    {
+     "family": "livestock",
+     "status": "closed",
+     "verbatim": "Tuesday, Feb 17 / 905 CT / 1005 ET / 1505 UTC - Livestock markets open",
+     "document": "D15PD",
+     "tier": "T1",
+     "open_instant": "0905 CT Tue Feb 17"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Monday, Feb 16 / 1700 CT / 1800 ET / 2300 UTC - Dairy markets open for trade date Tuesday, Feb 17",
+     "document": "D15PD",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC Mon Feb 16"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Tuesday, Feb 17 / 900 CT / 1000 ET / 1500 UTC - Lumber market open",
+     "document": "D15PD",
+     "tier": "T1",
+     "open_instant": "0900 CT Tue Feb 17"
+    }
+   ]
+  },
+  {
+   "date": "2015-04-02",
+   "name": "Good Friday (Thursday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Thursday, April 2 / 1615 CT / 1715 ET / 2115 UTC - Regular close / 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Friday, April 3",
+     "document": "D15GF",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "normal",
+     "verbatim": "Thursday, April 2 / 1600 CT / 1700 ET / 2100 UTC - Regular close / 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Friday, April 3",
+     "document": "D15GF",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Thursday, April 2 / 1615 CT / 1715 ET / 2115 UTC - Regular close",
+     "document": "D15GF",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Thursday, April 2 / Regular close - Per each product schedule",
+     "document": "D15GF",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "early_close",
+     "verbatim": "Livestock, Dairy & Lumber Products / Thursday, April 2 / 1355 CT / 1455 ET / 1855 UTC - Early Close",
+     "document": "D15GF",
+     "tier": "T1",
+     "close_instant": "1355 CT / 1455 ET / 1855 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2015-04-03",
+   "name": "Good Friday",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "early_close",
+     "verbatim": "Friday, April 3 / 0815 CT / 0915 ET / 1315 UTC - Early CME Globex close for trade date Friday April 3",
+     "document": "D15GF",
+     "tier": "T1",
+     "close_instant": "0815 CT / 0915 ET / 1315 UTC"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Friday, April 3 / 1015 CT / 1115 ET / 1515 UTC - Early CME Globex close for trade date Friday April 3",
+     "document": "D15GF",
+     "tier": "T1",
+     "close_instant": "1015 CT / 1115 ET / 1515 UTC"
+    },
+    {
+     "family": "energy+metals",
+     "status": "closed",
+     "verbatim": "Energy, Metals & DME Products / Friday, April 3 / CME Globex is closed",
+     "document": "D15GF",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "Grain, Oilseed & MGEX Products / Friday, April 3 / CME Globex is closed",
+     "document": "D15GF",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products / Friday, April 3 / CME Globex is closed",
+     "document": "D15GF",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2015-05-22",
+   "name": "Memorial Day (Friday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Friday, May 22 / 1615 CT / 1715 ET / 2115 UTC - Regular close",
+     "document": "D15MD",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Interest Rate & FX Products / Friday, May 22 / 1515 CT / 1615 ET / 2015 UTC - Early close",
+     "document": "D15MD",
+     "tier": "T1",
+     "close_instant": "1515 CT / 1615 ET / 2015 UTC"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Friday, May 22 / 1615 CT / 1715 ET / 2115 UTC - Regular close",
+     "document": "D15MD",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Friday, May 22 / Regular close - Per each product schedule",
+     "document": "D15MD",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Friday, May 22 / Regular close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D15MD",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2015-05-25",
+   "name": "Memorial Day",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals",
+     "status": "early_close",
+     "verbatim": "Monday, May 25 / 1200 CT / 1300 ET / 1700 UTC - Trading halt (pre-open) / 1700 CT / 1800 ET / 2200 UTC - Products resume trading",
+     "document": "D15MD",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "Sunday, May 24 / 1600 CT / 1700 ET / 2100 UTC - Pre-open for trade date Tuesday, May 26 // Monday, May 25 / 1900 CT / 2000 ET / 0000 - Open for trade date Tuesday, May 26",
+     "document": "D15MD",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2000 ET (Mon May 25, for trade date Tue May 26)"
+    },
+    {
+     "family": "livestock",
+     "status": "closed",
+     "verbatim": "Tuesday, May 26 / 0905 CT / 1005 ET / 1405 UTC - Livestock markets open",
+     "document": "D15MD",
+     "tier": "T1",
+     "open_instant": "0905 CT Tue May 26"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Monday, May 25 / 1700 CT / 1800 ET / 2200 UTC - Dairy markets open for trade date Tuesday, May 26",
+     "document": "D15MD",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC Mon May 25"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Tuesday, May 26 / 0900 CT / 1000 ET / 1400 UTC - Lumber market open",
+     "document": "D15MD",
+     "tier": "T1",
+     "open_instant": "0900 CT Tue May 26"
+    }
+   ]
+  },
+  {
+   "date": "2015-07-02",
+   "name": "Independence Day (Thursday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Thursday, July 2 / 1615 CT / 1715 ET / 2115 UTC - Regular close / 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Monday, July 6",
+     "document": "D15J4",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "normal",
+     "verbatim": "Thursday, July 2 / 1600 CT / 1700 ET / 2100 UTC - Regular close / 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Monday, July 6",
+     "document": "D15J4",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Thursday, July 2 / 1615 CT / 1715 ET / 2115 UTC - Regular close / 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Monday, July 6",
+     "document": "D15J4",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "early_close",
+     "verbatim": "Thursday, July 2 / 1200 CT / 1300 ET / 1700 UTC - Early close / 1215 CT / 1315 ET / 1715 UTC - Early MGEX Wheat & Apple Juice close / 1230 CT / 1330 ET / 1730 UTC - Early Mini-Sized grain close / 1230 CT / 1330 ET / 1730 UTC - Early MGEX Indices close",
+     "document": "D15J4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC (1230 CT for Mini-Sized grain)"
+    },
+    {
+     "family": "livestock",
+     "status": "early_close",
+     "verbatim": "Thursday, July 2 / 1215 CT / 1315 ET / 1715 UTC - Early close for Livestock Futures & Options",
+     "document": "D15J4",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1715 UTC"
+    },
+    {
+     "family": "dairy",
+     "status": "early_close",
+     "verbatim": "Thursday, July 2 / 1200 CT / 1300 ET / 1700 UTC - Early close for Dairy Futures & Options",
+     "document": "D15J4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC"
+    },
+    {
+     "family": "lumber",
+     "status": "early_close",
+     "verbatim": "Thursday, July 2 / 1200 CT / 1300 ET / 1700 UTC - Early close for Lumber / 1202 CT / 1302 ET / 1702 UTC - Early close for Lumber Options",
+     "document": "D15J4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC (1202 CT for Lumber Options)"
+    }
+   ]
+  },
+  {
+   "date": "2015-07-03",
+   "name": "Independence Day (observed Friday July 3; July 4 fell on a Saturday)",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals",
+     "status": "early_close",
+     "verbatim": "Friday, July 3 / 1200 CT / 1300 ET / 1700 UTC - Early close (Day & GTD order elimination)",
+     "document": "D15J4",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "Grain, Oilseed & MGEX Products / Friday, July 3 / All products closed",
+     "document": "D15J4",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products / Friday, July 3 / All products closed",
+     "document": "D15J4",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2015-09-04",
+   "name": "Labor Day (Friday before)",
+   "families": [
+    {
+     "family": "equity_index",
+     "status": "normal",
+     "verbatim": "Friday, Sep 4 / 1615 CT / 1715 ET / 2115 UTC - Regular close",
+     "document": "D15LD",
+     "tier": "T1"
+    },
+    {
+     "family": "interest_rates+fx",
+     "status": "normal",
+     "verbatim": "Interest Rate & FX Products / Friday, Sep 4 / 1600 CT / 1700 ET / 2100 UTC - Regular close",
+     "document": "D15LD",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Friday, Sep 4 / 1615 CT / 1715 ET / 2115 UTC - Regular close",
+     "document": "D15LD",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Friday, Sep 4 / Regular close - Per each product schedule",
+     "document": "D15LD",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Friday, Sep 4 / Regular Close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D15LD",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2015-09-07",
+   "name": "Labor Day",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals",
+     "status": "early_close",
+     "verbatim": "Monday, Sep 7 / 1200 CT / 1300 ET / 1700 UTC - Trading halt (pre-open) / 1700 CT / 1800 ET / 2200 UTC - Products resume trading",
+     "document": "D15LD",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "Sunday, Sep 6 / 1600 CT / 1700 ET / 2100 UTC - Pre-open for trade date Tuesday, Sep 8 // Monday, Sep 7 / 1900 CT / 2000 ET / 0000 UTC - Open for trade date Tuesday, Sep 8",
+     "document": "D15LD",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2000 ET / 0000 UTC (Mon Sep 7, for trade date Tue Sep 8)"
+    },
+    {
+     "family": "livestock",
+     "status": "closed",
+     "verbatim": "Tuesday, Sep 8 / 905 CT / 1005 ET / 1405 UTC - Livestock markets open",
+     "document": "D15LD",
+     "tier": "T1",
+     "open_instant": "0905 CT Tue Sep 8"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Monday, Sep 7 / 1700 CT / 1800 ET / 2200 UTC - Dairy markets open for trade date Tuesday, Sep 8",
+     "document": "D15LD",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC Mon Sep 7"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Tuesday, Sep 8 / 900 CT / 1000 ET / 1400 UTC - Lumber market open",
+     "document": "D15LD",
+     "tier": "T1",
+     "open_instant": "0900 CT Tue Sep 8"
+    }
+   ]
+  },
+  {
+   "date": "2015-10-12",
+   "name": "Columbus Day",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals+grains_oilseeds+livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Monday, October 12 / Globex Columbus Day Holiday Schedule / Products listed on Globex are unaffected and will run on a normal schedule",
+     "document": "D15COL",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2015-11-11",
+   "name": "Veterans Day",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals+grains_oilseeds+livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "In recognition of the Veterans Day holiday on Wednesday, November 11, 2015, CME Group trading floors will be closed for Interest Rate and FX products. Regular CME Globex trading hours will be in effect. // Trading Hours table: Electronic (CME Globex) - Normal Hours; Open Outcry - CLOSED for FX / INTEREST RATES, Normal Hours for COMMODITIES, EQUITIES, GSCI, WEATHER, REAL ESTATE, METALS",
+     "document": "D15VET",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2015-11-25",
+   "name": "Thanksgiving (Wednesday before)",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals",
+     "status": "normal",
+     "verbatim": "Wednesday, Nov 25 / 1600 CT / 1700 ET / 2200 UTC - Regular close / 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Friday, Nov 27",
+     "document": "D15TG",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Wednesday, Nov 25 / Regular Close - Per each product schedule / 1645 CT / 1745 / 2245 UTC - Products will be in a pre-open until 0830 CT / 0930 ET / 1430 UTC Friday, Nov 27",
+     "document": "D15TG",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "normal",
+     "verbatim": "Wednesday, Nov 25 / Regular close - Per each product schedule for: Livestock / Dairy / Lumber",
+     "document": "D15TG",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2015-11-26",
+   "name": "Thanksgiving Day",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals",
+     "status": "early_close",
+     "verbatim": "Thursday, Nov 26 / 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open) / 1700 CT / 1800 ET / 2300 UTC - Products resume trading",
+     "document": "D15TG",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "closed",
+     "verbatim": "1645 CT / 1745 / 2245 UTC - Products will be in a pre-open until 0830 CT / 0930 ET / 1430 UTC Friday, Nov 27",
+     "document": "D15TG",
+     "tier": "T1",
+     "open_instant": "0830 CT Fri Nov 27"
+    },
+    {
+     "family": "livestock",
+     "status": "closed",
+     "verbatim": "Friday, Nov 27 / 800 CT / 900 ET / 1400 UTC - Livestock markets open",
+     "document": "D15TG",
+     "tier": "T1",
+     "open_instant": "0800 CT Fri Nov 27"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Note: Dairy products will remain closed until 1700 CT / 1800 ET / 2300 UTC Sunday, Nov 29",
+     "document": "D15TG",
+     "tier": "T1",
+     "open_instant": "1700 CT Sun Nov 29"
+    },
+    {
+     "family": "lumber",
+     "status": "closed",
+     "verbatim": "Friday, Nov 27 / 900 CT / 1000 ET / 1500 UTC - Lumber market open",
+     "document": "D15TG",
+     "tier": "T1",
+     "open_instant": "0900 CT Fri Nov 27"
+    }
+   ]
+  },
+  {
+   "date": "2015-11-27",
+   "name": "Day after Thanksgiving",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Friday, Nov 27 / 1215 CT / 1315 ET / 1815 UTC - Early close",
+     "document": "D15TG",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1815 UTC"
+    },
+    {
+     "family": "energy+metals",
+     "status": "early_close",
+     "verbatim": "Friday, Nov 27 / 1245 CT / 1345 ET / 1845 UTC - Early close",
+     "document": "D15TG",
+     "tier": "T1",
+     "close_instant": "1245 CT / 1345 ET / 1845 UTC"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "early_close",
+     "verbatim": "Friday, Nov 27 / 0700 CT / 0800 ET / 1400 UTC - MGEX Apple Juice - regular open / 0830 CT / 0930 ET / 1430 UTC - Grain, Oilseed & MGEX products open / 1205 CT / 1305 ET / 1805 UTC - Early close / 1215 CT / 1315 ET / 1815 UTC - Early MGEX Wheat & Apple Juice close / 1230 CT / 1330 ET / 1830 UTC - Early Mini-Sized grain close / 1230 CT / 1330 ET / 1830 UTC - Early MGEX Indices close",
+     "document": "D15TG",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1305 ET / 1805 UTC (1230 CT for Mini-Sized grain)",
+     "open_instant": "0830 CT / 0930 ET / 1430 UTC"
+    },
+    {
+     "family": "livestock",
+     "status": "early_close",
+     "verbatim": "Friday, Nov 27 / 800 CT / 900 ET / 1400 UTC - Livestock markets open / 1215 CT / 1315 ET / 1815 UTC - Early close for Livestock Futures & Options",
+     "document": "D15TG",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1815 UTC",
+     "open_instant": "0800 CT / 0900 ET / 1400 UTC"
+    },
+    {
+     "family": "dairy",
+     "status": "closed",
+     "verbatim": "Note: Dairy products will remain closed until 1700 CT / 1800 ET / 2300 UTC Sunday, Nov 29",
+     "document": "D15TG",
+     "tier": "T1",
+     "open_instant": "1700 CT Sun Nov 29"
+    },
+    {
+     "family": "lumber",
+     "status": "early_close",
+     "verbatim": "Friday, Nov 27 / 900 CT / 1000 ET / 1500 UTC - Lumber market open / 1200 CT / 1300 ET / 1800 UTC - Early close for Lumber / 1202 CT / 1302 ET / 1801 UTC - Early close for Lumber Options",
+     "document": "D15TG",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC (1202 CT for Lumber Options)",
+     "open_instant": "0900 CT / 1000 ET / 1500 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2015-12-24",
+   "name": "Christmas Eve",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx",
+     "status": "early_close",
+     "verbatim": "Thursday, Dec 24 / 1215 CT / 1315 ET / 1815 UTC - Early close",
+     "document": "D15XM",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1815 UTC"
+    },
+    {
+     "family": "energy+metals",
+     "status": "early_close",
+     "verbatim": "Thursday, Dec 24 / 1245 CT / 1345 ET / 1845 UTC - Early close",
+     "document": "D15XM",
+     "tier": "T1",
+     "close_instant": "1245 CT / 1345 ET / 1845 UTC"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "early_close",
+     "verbatim": "Thursday, Dec 24 / 1205 CT / 1305 ET / 1805 UTC - Early close / 1215 CT / 1315 ET / 1815 UTC - Early MGEX Wheat & Apple Juice close / 1230 CT / 1330 ET / 1830 UTC - Early Mini-Sized grain close / 1230 CT / 1330 ET / 1830 UTC - Early MGEX Indices close",
+     "document": "D15XM",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1305 ET / 1805 UTC (1230 CT for Mini-Sized grain)"
+    },
+    {
+     "family": "livestock",
+     "status": "early_close",
+     "verbatim": "Thursday, Dec 24 / 1215 CT / 1315 ET / 1815 UTC - Early close for Livestock Futures & Options",
+     "document": "D15XM",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1815 UTC"
+    },
+    {
+     "family": "dairy",
+     "status": "early_close",
+     "verbatim": "Thursday, Dec 24 / 1200 CT / 1300 ET / 1800 UTC - Early close for Dairy futures & Options",
+     "document": "D15XM",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC"
+    },
+    {
+     "family": "lumber",
+     "status": "early_close",
+     "verbatim": "Thursday, Dec 24 / 1200 CT / 1300 ET / 1800 UTC - Early close for Lumber Futures / 1202 CT / 1302 ET / 1802 UTC - Early close for Lumber Options",
+     "document": "D15XM",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC (1202 CT for Lumber Options)"
+    }
+   ]
+  },
+  {
+   "date": "2015-12-25",
+   "name": "Christmas Day",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals+grains_oilseeds+livestock+dairy+lumber",
+     "status": "closed",
+     "verbatim": "Friday, Dec 25 / Christmas Day Observed - Globex closed",
+     "document": "D15XM",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2015-12-28",
+   "name": "Christmas (reopening day)",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx",
+     "status": "normal",
+     "verbatim": "Sunday, Dec 27 / 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Monday, Dec 28 // Monday, Dec 28 / 1600 CT / 1700 ET / 2200 UTC - Regular close",
+     "document": "D15XM",
+     "tier": "T1"
+    },
+    {
+     "family": "energy+metals",
+     "status": "normal",
+     "verbatim": "Sunday, Dec 27 / 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Monday, Dec 28 // Monday, Dec 28 / 1600 CT / 1700 ET / 2200 UTC -Regular close",
+     "document": "D15XM",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Sunday, Dec 27 / 1900 CT / 2000 ET / 0100 UTC - Regular open for trade date Monday, Dec 28 // Monday, Dec 28 / 0800 CT / 0900 ET / 1300 UTC - Grain, Oilseed & MGEX products pre-open / 0830 CT / 0930 ET / 1430 UTC - Grain, Oilseed & MGEX products reopen / Regular Close - Per each product schedule",
+     "document": "D15XM",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock",
+     "status": "normal",
+     "verbatim": "Monday, Dec 28 / 905 CT / 1005 ET / 1505 UTC - Livestock markets open / Regular Close - Per each product schedule",
+     "document": "D15XM",
+     "tier": "T1"
+    },
+    {
+     "family": "dairy",
+     "status": "normal",
+     "verbatim": "Sunday, Dec 27 / 1700 CT / 1800 ET / 2300 UTC - Dairy - Regular open for trade date Monday, Dec 28",
+     "document": "D15XM",
+     "tier": "T1"
+    },
+    {
+     "family": "lumber",
+     "status": "normal",
+     "verbatim": "Monday, Dec 28 / 900 CT / 1000 ET / 1500 UTC - Lumber market open / Regular Close - Per each product schedule",
+     "document": "D15XM",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2015-12-31",
+   "name": "New Year's Eve (sourced from CME's 2016 New Year's schedule)",
+   "families": [
+    {
+     "family": "equity_index+interest_rates+fx+energy+metals",
+     "status": "normal",
+     "verbatim": "Thursday, Dec 31 / 1600 CT / 1700 ET / 2200 UTC - Regular close",
+     "document": "D16NY",
+     "tier": "T1"
+    },
+    {
+     "family": "grains_oilseeds",
+     "status": "normal",
+     "verbatim": "Thursday, Dec 31 / Regular close - Per each product schedule",
+     "document": "D16NY",
+     "tier": "T1"
+    },
+    {
+     "family": "livestock+dairy+lumber",
+     "status": "early_close",
+     "verbatim": "Livestock, Dairy & Lumber Products / Thursday, Dec 31 / 1355 CT / 1455 ET / 1955 UTC - Early Close",
+     "document": "D16NY",
+     "tier": "T1",
+     "close_instant": "1355 CT / 1455 ET / 1955 UTC"
+    }
+   ]
+  }
+ ],
+ "coverage": "CME Group Globex holiday schedules for calendar years 2013, 2014 and 2015, complete for every U.S. holiday CME published a schedule for. 33 operator documents (31 PDFs + 2 XLS) retrieved at T1 from the Internet Archive id_ raw replay of cmegroup.com/tools-information/holiday-calendar/files/*, enumerated first by CDX prefix search. 71 affected trade dates x 9 product families = 634 rows. Families: equity_index, interest_rates, fx, energy, metals, grains_oilseeds, livestock, dairy, lumber. Holidays covered each year: New Year's Day (+ New Year's Eve and the reopening day), Martin Luther King Jr. Day (+ the Friday before), Presidents' Day (+ the Friday before), Good Friday (+ the Thursday before), Memorial Day (+ the Friday before), Independence Day (+ the day before and the reopening day; 2015 observed on Friday July 3), Labor Day (+ the Friday before), Columbus Day, Veterans Day, Thanksgiving (+ the Wednesday before and the day after), Christmas (+ Christmas Eve and the reopening day). Juneteenth is out of range (CME first scheduled it in 2022). Every instant is recorded exactly as CME printed it: CT alone for CME/CBOT sections in 2013, CT / ET for the NYMEX-COMEX-DME section in 2013, and CT / ET / UTC for every section from January 2014 onward.",
+ "missing": [
+  "globex_nikkei_225_dollar - no Nikkei-specific line exists on any CME Group holiday schedule for 2013, 2014 or 2015. 'grep -il nikkei' over all 33 extracted documents returns nothing; Nikkei 225 dollar futures are covered only by the undifferentiated 'CME & CBOT Equity Products' / 'Equity Products' heading. Channels tried: every 2013-2015 holiday PDF and XLS in the CDX enumeration, plus the 2013/2014/2015 holiday-calendar index pages. This is an absence in the operator's document, not a retrieval failure - the equity_index rows are the operator's statement for the Nikkei family.",
+  "globex_cryptocurrency, all 2013-2015 holidays - CME listed no cryptocurrency product before Bitcoin futures on 2017-12-18, so no crypto line exists to source. Nothing missing; the family simply did not exist.",
+  "Good Friday 2013, livestock/dairy/lumber early close - CME prints '1355 - Early Close for Lumber, Dairy & Livestock' with NO time zone on that line (every other time in the document is CT, and the 2014/2015 equivalents print '1355 CT / 1455 ET / 1855 UTC'). The zone is recorded as unstated rather than inferred from the later years.",
+  "2013 Columbus Day and 2013 Veterans Day - CME's PDFs say only 'Products listed on Globex are unaffected and will run on a normal schedule'; no per-family instants are printed, so the rows carry status 'normal' with that single sentence as the verbatim rather than group-level times. Same for the 2014 and 2015 Columbus Day XLS files.",
+  "Columbus Day 2014 and 2015 - CME published no PDF; only 2014-columbus-day-holiday-schedule.xls and 2015-columbus-day-holiday-schedule.xls exist in the archive (settlement-times PDFs exist but are not session language). Sourced from the XLS, read with xlrd; recorded, not missing, but the container is weaker than the PDFs.",
+  "2014 MLK schedule prints '1515 CT / 1615 ET / 2215 UTC' for the Friday Jan 17 Interest Rate & FX early close; 1515 CT is 2115 UTC. CME's UTC column is wrong on that one line. Recorded verbatim with the discrepancy flagged; the CT and ET values are corroborated by the identical 2014 Presidents' Day, Memorial Day and Labor Day lines, which print 2115/2015 UTC correctly.",
+  "Dairy, Lumber and Livestock reopening instants on the day after a full closure (e.g. 2014-12-26, 2015-01-02) are recorded as status 'modified' rather than 'late_open' for livestock and lumber, because CME prints the opening instant without labelling it early or late and those instants match the routine day-session opens the same documents print for ordinary Tuesdays. Dairy is 'late_open' because the same documents state dairy's routine open as 1700 CT on the prior evening.",
+  "Intraday phase topology - none of these documents describes what happens to a family's internal phases (e.g. the CBOT grain day-session break) on a holiday; only the scalar open/close/halt instants quoted here are sourced. Anything finer is a gap.",
+  "Open-outcry (trading floor) holiday hours - the Chicago and New York trading-floor holiday cards for 2013-2015 exist in the archive and were NOT retrieved or recorded, because this crate models Globex matching, not the floor."
+ ],
+ "saved_json": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2013-2015.json",
+ "evidence_dir": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2013-2015",
+ "holidays_grouped_note": "The 'holidays' array groups families that CME prints in one section and that carry an identical line: e.g. 'interest_rates+fx' is CME's single 'Interest Rate & FX Products' section, 'energy+metals' its 'Energy, Metals & DME Products' section (2013: 'NYMEX, COMEX & DME'), and 'livestock+dairy+lumber' its 'Livestock, Dairy & Lumber Products' section (2013: 'Other CME Group Products'). Where CME prints different instants per product the families are split out individually."
+}

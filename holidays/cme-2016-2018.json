@@ -1,0 +1,3396 @@
+{
+ "task": "cme-2016-2018 — CME Group Globex per-product-group holiday schedules for calendar years 2016, 2017 and 2018 (New Year's Day, Martin Luther King Jr. Day, Presidents' Day, Good Friday, Memorial Day, Independence Day, Labor Day, Thanksgiving and the day after, Christmas, plus the observed-day and adjacent early-close days CME publishes on the same documents). Juneteenth is not applicable: CME Group published no Juneteenth schedule before 2022.",
+ "coverage": "36 dated entries covering 27 holiday observances and 9 adjacent days that CME publishes on the same holiday document (2016-11-25, 2016-12-23, 2017-07-03, 2017-11-24, 2017-12-22, 2018-07-03, 2018-11-23, 2018-12-24, 2018-12-26). 375 family rows, every one at tier T1 from CME Group's own published Globex holiday schedule for that holiday. Families recorded as CME prints them: Equity Index, Nikkei 225 (dollar), Interest Rates, FX, Energy, Metals, Grains and Oilseeds, Livestock, Dairy, Lumber, and Cryptocurrency once CME lists it. CME prints Energy and Metals on one row, whose printed label changes over the range ('Energy, Metals & DME Products' in 2016 and early 2017, 'Energy, Metals, Softs & DME Products' from the late-2017 sheets, and 'Energy, Metal, Softs & DME Products' -- singular 'Metal' -- on the 2018 MLK sheet), so the two families carry the same verbatim and each entry quotes the label its own document prints; the 2016 New Year's PDF likewise prints 'Interest Rate & FX Products' as one block. No 2016-2018 CME holiday document prints a Nikkei-specific line: the Nikkei 225 (dollar) contracts are inside the 'Equity Products' row/block, and each Nikkei entry says so. Cryptocurrency first appears as a printed row ('Bitcoin') in CME's revisions dated 'Dec 5, 2017' -- on the 2017 Christmas sheet and on the 2018 New Year's sheet -- and on every 2018 sheet thereafter; before CME's 17 December 2017 Bitcoin futures launch the family did not exist and is not recorded. SOURCES. 2016: the nine per-holiday Globex PDFs, taken from CME's own annual bundle cmegroup.com/tools-information/holiday-calendar/files/2016-holiday-calendars.zip (archived 2017-06-28), which carries the final revisions ('Last updated 1/4/2016', '2/16/2016', '5/19/2016', '5/24/2016', '10/27/2016', '11/8/2016'); plus the standalone 2016 New Year's PDF ('Last updated 12/16/2015', archived 2016-01-08). The earlier standalone captures of the 2016 PDFs ('Last updated 10/28/2015') are also saved and differ (wrong UTC offsets, a Monday grain open later withdrawn, livestock open times, and the Dec 23 agricultural early closes added); the later revision is served in every case. 2017 and 2018: CME published only the Excel per-product-group sheet for most holidays (a PDF exists only for 2017 New Year's), so each 2017/2018 entry is read from that sheet's own dated column headers ('Regular Fri. Close', 'Regular Close', 'Early Close', 'PCP', 'Pre-opening', 'Open', 'Halt', 'Close'). For 2017 and 2018 the same annual-bundle channel used for 2016 is now used throughout: 2017-holiday-calendars.zip (archived 2021-01-26) and 2018-holiday-calendars.zip (archived 2026-08-30) carry CME's final revisions and supersede eight of the per-file captures (2017 Thanksgiving and Christmas; 2018 Good Friday, Memorial Day, Independence Day, Labor Day, Thanksgiving and Christmas). Where a bundle copy is byte-identical to the per-file capture (2018 MLK, 2018 Presidents' Day, 2018 New Year's) the per-file citation is kept. Where the archive holds two digests for the same sheet URL, the later capture is served and the earlier is saved beside it. ZONE. Every 2017/2018 verbatim ends '[sheet: All times are Central Time, ET +1]', which is a bracketed annotation of the sheet's own printed zone rule, not part of the quoted cell text; every cited 2017/2018 sheet was checked and all print 'All times are Central Time  ET +1'. The printed UTC offset on the same line is NOT constant and is therefore not carried: it is +6 on the winter sheets and +5 on the summer ones, and CME's own 2017 Labor Day sheet changed from +6 to +5 between revisions. The ET value in close_instant/open_instant is CT+1 by the sheet's own rule; the 2016 PDFs print CT, ET and UTC themselves and are quoted as printed, including CME's own defects (the 2016 MLK PDF's '17100 ET' typo, and the 2016 Memorial Day PDF's Monday line, which prints '0000' with no UTC label). The 2016 PDFs use an en dash in lines such as '1600 CT / 1700 ET / 2200 UTC - Regular close'; every verbatim in this file normalises that single character to an ASCII hyphen, uniformly and throughout; it likewise collapses runs of whitespace inside a quoted row label, drops a label's trailing parenthetical cross-reference (the Christmas sheets print 'Energy, Metals, Softs & DME  products   (see notes below)'), and drops the '**' footnote marker from column headers such as 'Pre-opening**'. RETRIEVAL. cmegroup.com returns 403 to this machine, so every artifact is the Internet Archive's raw `id_` replay of the original cmegroup.com URL. All bytes, an INDEX.md with each document's URL, capture time in UTC and sha256, and the CDX enumeration that found them are in /Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018 and, for the round-2 additions, in /Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2016-2018-fix . Retrieved 2026-09-12 (UTC). A 'document' value is the file name under https://www.cmegroup.com/tools-information/holiday-calendar/files/ followed by '@' and the UTC date of the Internet Archive capture that was read; a value of the form '<year>-holiday-calendars.zip#<file> @<date>' names the file inside CME's annual bundle captured on that date. Files named '...--<yyyymmdd>' in the store are the later of two differing captures of the same URL. ROUND 2 (2026-09-12 UTC). The round-1 result is kept verbatim at /Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.r1.json. It failed on source selection: it used CME's annual bundle for 2016 and never tried the 2017 or 2018 bundles, both of which are archived and both of which carry later CME revisions. Both bundles were retrieved, independently re-fetched and byte-compared, and every family row on every affected date was re-derived from their bytes. Changes: 2017-12-25 Cryptocurrency was 'unknown' with a 'missing' entry claiming the channels were exhausted -- the final revision prints a Bitcoin row, so the row is now sourced ('closed') and that 'missing' entry is deleted; the same revision prints a Bitcoin row for 2017-12-22, which is added; 2017-12-25 Grains and Oilseeds loses the Monday-evening 19:00 leg that CME withdrew in the same 'Dec 5, 2017' edit it made to the 2018 New Year's sheet, and its Tuesday pre-open moves 08:00 -> 06:00; 2018-07-03 Cryptocurrency moves from 'normal' (Regular Close 16:00) to 'early_close' (Early Close 12:15); 2018-12-25 Cryptocurrency's blank-cell caveat is deleted because the final revision fills the 'Globex Closed' cell in; a new 2018-12-26 entry records the Equity-only Wednesday 15:15/15:30 phase that only the final revision prints; 140 rows on 13 dates are re-keyed to the bundle documents; the disputed 2018-01-01 grain leg is resolved by reading the two intermediate revisions the round-1 task never fetched, which dates CME's withdrawal exactly; and two transcription slips are corrected against the PDF bytes (a 'UTC' token the 2016 Memorial Day PDF does not print, and 'Tuesday. Jan 19' on the 2016 MLK PDF). The evidence store was also corrected: the two 2016 New Year's documents the 2016-01-01 rows actually read are now listed in raw/cme-2016-2018/INDEX.md with URL, capture time and sha256, dl4_list.txt is listed under Enumeration, and raw/cme-2016-2018/cdx_trading_hours.json -- which was in fact the Internet Archive's 503 'Temporarily Offline' HTML page saved under a .json name -- is renamed cdx_trading_hours.FAILED.html and annotated as a failed fetch. Documents cited: 2016-holiday-calendars.zip#2016-4th-of-july-holiday-schedule.pdf @2017-06-28, 2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28, 2016-holiday-calendars.zip#2016-good-friday-holiday-schedule.pdf @2017-06-28, 2016-holiday-calendars.zip#2016-labor-day-holiday-schedule.pdf @2017-06-28, 2016-holiday-calendars.zip#2016-martin-luther-king-holiday-schedule.pdf @2017-06-28, 2016-holiday-calendars.zip#2016-memorial-day-holiday-schedule.pdf @2017-06-28, 2016-holiday-calendars.zip#2016-presidents-day-holiday-schedule.pdf @2017-06-28, 2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28, 2016-holiday-calendars.zip#2017-new-years-holiday-schedule.pdf @2017-06-28, 2016-new-years-holiday-schedule.pdf @2016-01-08, 2017-4th-of-july-holiday-schedule.xls @2017-10-25, 2017-good-friday-holiday-schedule.xls @2017-05-05, 2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26, 2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26, 2017-labor-day-holiday-schedule.xls @2017-10-25, 2017-martin-luther-king-holiday-schedule.xls @2017-06-28, 2017-memorial-day-holiday-schedule.xls @2017-10-25, 2017-presidents-day-holiday-schedule.xls @2017-06-28, 2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30, 2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30, 2018-holiday-calendars.zip#2018-good-friday-holiday-schedule.xls @2026-08-30, 2018-holiday-calendars.zip#2018-labor-day-holiday-schedule.xls @2026-08-30, 2018-holiday-calendars.zip#2018-memorial-day-holiday-schedule.xls @2026-08-30, 2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30, 2018-martin-luther-king-holiday-schedule.xls @2018-05-08, 2018-new-years-holiday-schedule.xls @2018-01-06, 2018-presidents-day-holiday-schedule.xls @2018-05-08.",
+ "holidays": [
+  {
+   "date": "2016-01-01",
+   "name": "New Year's Day (Friday; CME prints 'New Years Observed')",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "closed",
+     "verbatim": "Equity Products -- 'Thursday, Dec 31 1600 CT / 1700 ET / 2200 UTC - Regular close' ; 'Friday, Jan 1 New Years Observed - Globex closed' ; 'Sunday, Jan 3 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Monday, Jan 4'.",
+     "document": "2016-new-years-holiday-schedule.pdf @2016-01-08",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Sunday, Jan 3)"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "closed",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry.",
+     "document": "2016-new-years-holiday-schedule.pdf @2016-01-08",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Sunday, Jan 3)"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "closed",
+     "verbatim": "Interest Rate & FX Products -- 'Thursday, Dec 31 1600 CT / 1700 ET / 2200 UTC - Regular close' ; 'Friday, Jan 1 New Year's Observed - Globex closed' ; 'Sunday, Jan 3 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Monday, Jan 4'.",
+     "document": "2016-new-years-holiday-schedule.pdf @2016-01-08",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Sunday, Jan 3)"
+    },
+    {
+     "family": "FX",
+     "status": "closed",
+     "verbatim": "Interest Rate & FX Products -- 'Friday, Jan 1 New Year's Observed - Globex closed'.",
+     "document": "2016-new-years-holiday-schedule.pdf @2016-01-08",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Sunday, Jan 3)"
+    },
+    {
+     "family": "Energy",
+     "status": "closed",
+     "verbatim": "Energy, Metals & DME Products -- 'Thursday, Dec 31 1600 CT / 1700 ET / 2200 UTC - Regular close' ; 'Friday, Jan 1 New Years Observed - Globex closed' ; 'Sunday, Jan 3 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Monday, Jan 4'.",
+     "document": "2016-new-years-holiday-schedule.pdf @2016-01-08",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Sunday, Jan 3)"
+    },
+    {
+     "family": "Metals",
+     "status": "closed",
+     "verbatim": "No separate Metals line is printed; CME prints Metals with Energy on the line quoted in this date's 'Energy' entry.",
+     "document": "2016-new-years-holiday-schedule.pdf @2016-01-08",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Sunday, Jan 3)"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Grain, Oilseed & MGEX Products -- 'Thursday, Dec 31 Regular close - Per each product schedule' ; 'Friday, Jan 1 New Year's Observed - Globex closed' ; 'Sunday, Jan 3 1900 CT / 2000 ET / 0000 UTC - Open for trade date Monday, Jan 4'.",
+     "document": "2016-new-years-holiday-schedule.pdf @2016-01-08",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2000 ET / 0000 UTC (Sunday, Jan 3)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Thursday, Dec 31 1355 CT / 1455 ET / 1955 UTC - Early Close' ; 'Friday, Jan 1 New Years Observed - Globex closed' ; 'Monday, Jan 4 905 CT / 1005 ET / 1505 UTC - Livestock markets open'.",
+     "document": "2016-new-years-holiday-schedule.pdf @2016-01-08",
+     "tier": "T1",
+     "open_instant": "905 CT / 1005 ET / 1505 UTC (Monday, Jan 4)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Friday, Jan 1 New Years Observed - Globex closed' ; 'Sunday, Jan 3 1700 CT / 1800 ET / 2300 UTC - Dairy - Regular open for trade date Monday, Jan 4'.",
+     "document": "2016-new-years-holiday-schedule.pdf @2016-01-08",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Sunday, Jan 3)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Friday, Jan 1 New Years Observed - Globex closed' ; 'Monday, Jan 4 900 CT / 1000 ET / 1500 UTC - Lumber market open'.",
+     "document": "2016-new-years-holiday-schedule.pdf @2016-01-08",
+     "tier": "T1",
+     "open_instant": "900 CT / 1000 ET / 1500 UTC (Monday, Jan 4)"
+    }
+   ]
+  },
+  {
+   "date": "2016-01-18",
+   "name": "Martin Luther King Jr. Day",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Jan 15 1600 CT / 1700 ET / 2200 UTC - Regular close' ; 'Sunday, Jan 17 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Tuesday, Jan 19' ; 'Monday, Jan 18 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2300 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-martin-luther-king-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry.",
+     "document": "2016-holiday-calendars.zip#2016-martin-luther-king-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Jan 15 1600 CT / 1700 ET / 2200 UTC - Regular close' ; 'Sunday, Jan 17 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Tuesday, Jan 19' ; 'Monday, Jan 18 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2300 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-martin-luther-king-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Jan 15 1600 CT / 1700 ET / 2200 UTC - Regular close' ; 'Sunday, Jan 17 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Tuesday, Jan 19' ; 'Monday, Jan 18 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2300 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-martin-luther-king-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Jan 15 1600 CT / 1700 ET / 2200 UTC - Regular close' ; 'Sunday, Jan 17 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Tuesday, Jan 19' ; 'Monday, Jan 18 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2300 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-martin-luther-king-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals with Energy on the line quoted in this date's 'Energy' entry.",
+     "document": "2016-holiday-calendars.zip#2016-martin-luther-king-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Grain, Oilseed & MGEX Products -- 'Friday, Jan 15 Regular close - Per each product schedule' ; 'Sunday, Jan 17 1600 CT / 1700 ET / 2200 UTC - Pre-open for trade date Tuesday, Jan 19' ; 'Monday, Jan 18 1900 CT / 2000 ET / 0100 UTC - Open for trade date Tuesday. Jan 19'. No Monday, Jan 18 day session is printed.",
+     "document": "2016-holiday-calendars.zip#2016-martin-luther-king-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2000 ET / 0100 UTC (Monday, Jan 18)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Friday, Jan 15 Regular close - Per each product schedule' ; no Monday, Jan 18 livestock session is printed ; 'Tuesday, Jan 19 905 CT / 1005 ET / 1505 UTC - Livestock markets open'.",
+     "document": "2016-holiday-calendars.zip#2016-martin-luther-king-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "905 CT / 1005 ET / 1505 UTC (Tuesday, Jan 19)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Monday, Jan 18 1700 CT / 1800 ET / 2300 UTC - Dairy markets open for trade date Tuesday, Jan 19'.",
+     "document": "2016-holiday-calendars.zip#2016-martin-luther-king-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Monday, Jan 18)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Tuesday, Jan 19 900 CT / 1000 ET / 1500 UTC - Lumber market open'.",
+     "document": "2016-holiday-calendars.zip#2016-martin-luther-king-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "900 CT / 1000 ET / 1500 UTC (Tuesday, Jan 19)"
+    }
+   ]
+  },
+  {
+   "date": "2016-02-15",
+   "name": "Presidents' Day",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Feb 12 1600 CT / 1700 ET / 2200 UTC - Regular close' ; 'Sunday, Feb 14 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Tuesday, Feb 16' ; 'Monday, Feb 15 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2300 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-presidents-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry.",
+     "document": "2016-holiday-calendars.zip#2016-presidents-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Feb 12 1600 CT / 1700 ET / 2200 UTC - Regular close' ; 'Sunday, Feb 14 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Tuesday, Feb 16' ; 'Monday, Feb 15 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2300 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-presidents-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Feb 12 1600 CT / 1700 ET / 2200 UTC - Regular close' ; 'Sunday, Feb 14 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Tuesday, Feb 16' ; 'Monday, Feb 15 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2300 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-presidents-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Feb 12 1600 CT / 1700 ET / 2200 UTC - Regular close' ; 'Sunday, Feb 14 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Tuesday, Feb 16' ; 'Monday, Feb 15 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2300 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-presidents-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals with Energy on the line quoted in this date's 'Energy' entry.",
+     "document": "2016-holiday-calendars.zip#2016-presidents-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Grain, Oilseed & MGEX Products -- 'Friday, Feb 12 Regular close - Per each product schedule' ; 'Sunday, Feb 14 1600 CT / 1700 ET / 2200 UTC - Pre-open for trade date Tuesday, Feb 16' ; 'Monday, Feb 15 1900 CT / 2000 ET / 0100 UTC - Open for trade date Tuesday, Feb 16'. No Monday, Feb 15 day session is printed.",
+     "document": "2016-holiday-calendars.zip#2016-presidents-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2000 ET / 0100 UTC (Monday, Feb 15)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Friday, Feb 12 Regular close - Per each product schedule' ; no Monday, Feb 15 livestock session is printed ; 'Tuesday, Feb 16 905 CT / 1005 ET / 1505 UTC - Livestock markets open'.",
+     "document": "2016-holiday-calendars.zip#2016-presidents-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "905 CT / 1005 ET / 1505 UTC (Tuesday, Feb 16)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Monday, Feb 15 1700 CT / 1800 ET / 2300 UTC - Dairy markets open for trade date Tuesday, Feb 16'.",
+     "document": "2016-holiday-calendars.zip#2016-presidents-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Monday, Feb 15)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Tuesday, Feb 16 900 CT / 1000 ET / 1500 UTC - Lumber market open'.",
+     "document": "2016-holiday-calendars.zip#2016-presidents-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "900 CT / 1000 ET / 1500 UTC (Tuesday, Feb 16)"
+    }
+   ]
+  },
+  {
+   "date": "2016-03-25",
+   "name": "Good Friday",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "closed",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Product -- 'Thursday, March 24 1600 CT / 1700 ET / 2100 UTC - Regular close' ; 'Friday, March 25 CME Globex is closed' ; 'Sunday, March 27 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Monday, March 28'.",
+     "document": "2016-holiday-calendars.zip#2016-good-friday-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC (Sunday, March 27)"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "closed",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry.",
+     "document": "2016-holiday-calendars.zip#2016-good-friday-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC (Sunday, March 27)"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "closed",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Product -- 'Thursday, March 24 1600 CT / 1700 ET / 2100 UTC - Regular close' ; 'Friday, March 25 CME Globex is closed' ; 'Sunday, March 27 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Monday, March 28'.",
+     "document": "2016-holiday-calendars.zip#2016-good-friday-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC (Sunday, March 27)"
+    },
+    {
+     "family": "FX",
+     "status": "closed",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Product -- 'Thursday, March 24 1600 CT / 1700 ET / 2100 UTC - Regular close' ; 'Friday, March 25 CME Globex is closed' ; 'Sunday, March 27 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Monday, March 28'.",
+     "document": "2016-holiday-calendars.zip#2016-good-friday-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC (Sunday, March 27)"
+    },
+    {
+     "family": "Energy",
+     "status": "closed",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Product -- 'Thursday, March 24 1600 CT / 1700 ET / 2100 UTC - Regular close' ; 'Friday, March 25 CME Globex is closed' ; 'Sunday, March 27 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Monday, March 28'.",
+     "document": "2016-holiday-calendars.zip#2016-good-friday-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC (Sunday, March 27)"
+    },
+    {
+     "family": "Metals",
+     "status": "closed",
+     "verbatim": "No separate Metals line is printed; CME prints Metals with Energy on the line quoted in this date's 'Energy' entry.",
+     "document": "2016-holiday-calendars.zip#2016-good-friday-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC (Sunday, March 27)"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Grain, Oilseed & MGEX Products -- 'Thursday, March 24 Regular close - Per each product schedule' ; 'Friday, March 25 CME Globex is closed' ; 'Sunday, March 27 1900 CT / 2000 ET / 0000 UTC - Regular open for trade date Monday, March 28'.",
+     "document": "2016-holiday-calendars.zip#2016-good-friday-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2000 ET / 0000 UTC (Sunday, March 27)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Thursday, March 24 1305 CT / 1405 ET / 1805 UTC - Livestock Close' ; 'Friday, March 25 CME Globex is closed' ; 'Monday, March 28 830 CT / 930 ET / 1330 UTC - Livestock markets open'.",
+     "document": "2016-holiday-calendars.zip#2016-good-friday-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "830 CT / 930 ET / 1330 UTC (Monday, March 28)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Thursday, March 24 1355 CT / 1455 ET / 1855 UTC - Early Close - Dairy & Lumber' ; 'Friday, March 25 CME Globex is closed' ; 'Sunday, March 27 1700 CT / 1800 ET / 2200 UTC - Dairy markets open for trade date Monday, March 28'.",
+     "document": "2016-holiday-calendars.zip#2016-good-friday-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC (Sunday, March 27)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Thursday, March 24 1355 CT / 1455 ET / 1855 UTC - Early Close - Dairy & Lumber' ; 'Friday, March 25 CME Globex is closed' ; 'Monday, March 28 900 CT / 1000 ET / 1400 UTC - Lumber market open'.",
+     "document": "2016-holiday-calendars.zip#2016-good-friday-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "900 CT / 1000 ET / 1400 UTC (Monday, March 28)"
+    }
+   ]
+  },
+  {
+   "date": "2016-05-30",
+   "name": "Memorial Day",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, May 27 1600 CT / 1700 ET / 2100 UTC - Regular close' ; 'Sunday, May 29 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Tuesday, May 31' ; 'Monday, May 30 1200 CT / 1300 ET / 1700 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2200 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-memorial-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry.",
+     "document": "2016-holiday-calendars.zip#2016-memorial-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, May 27 1600 CT / 1700 ET / 2100 UTC - Regular close' ; 'Sunday, May 29 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Tuesday, May 31' ; 'Monday, May 30 1200 CT / 1300 ET / 1700 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2200 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-memorial-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, May 27 1600 CT / 1700 ET / 2100 UTC - Regular close' ; 'Sunday, May 29 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Tuesday, May 31' ; 'Monday, May 30 1200 CT / 1300 ET / 1700 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2200 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-memorial-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, May 27 1600 CT / 1700 ET / 2100 UTC - Regular close' ; 'Sunday, May 29 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Tuesday, May 31' ; 'Monday, May 30 1200 CT / 1300 ET / 1700 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2200 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-memorial-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals with Energy on the line quoted in this date's 'Energy' entry.",
+     "document": "2016-holiday-calendars.zip#2016-memorial-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Grain, Oilseed & MGEX Products -- 'Friday, May 27 Regular close - Per each product schedule' ; 'Sunday, May 29 1600 CT / 1700 ET / 2100 UTC - Pre-open for trade date Tuesday, May 31' ; 'Monday, May 30 1900 CT / 2000 ET / 0000 - Open for trade date Tuesday, May 31'. No Monday, May 30 day session is printed.",
+     "document": "2016-holiday-calendars.zip#2016-memorial-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2000 ET / 0000 (Monday, May 30; the document omits the UTC label printed on every other line)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Friday, May 27 Regular close - Per each product schedule' ; no Monday, May 30 livestock session is printed ; 'Tuesday, May 31 0830 CT / 0930 ET / 1330 UTC - Livestock markets open'.",
+     "document": "2016-holiday-calendars.zip#2016-memorial-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "0830 CT / 0930 ET / 1330 UTC (Tuesday, May 31)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Monday, May 30 1700 CT / 1800 ET / 2200 UTC - Dairy markets open for trade date Tuesday, May 31'.",
+     "document": "2016-holiday-calendars.zip#2016-memorial-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC (Monday, May 30)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Tuesday, May 31 0900 CT / 1000 ET / 1400 UTC - Lumber market open'.",
+     "document": "2016-holiday-calendars.zip#2016-memorial-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "0900 CT / 1000 ET / 1400 UTC (Tuesday, May 31)"
+    }
+   ]
+  },
+  {
+   "date": "2016-07-04",
+   "name": "Independence Day (Monday)",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, July 1 1600 CT / 1700 ET / 2100 UTC - Regular close' ; 'Sunday, July 3 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Tuesday, July 5' ; 'Monday, July 4 1200 CT / 1300 ET / 1700 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2200 UTC - Products resume trading' ; 'Tuesday, July 5 1600 CT / 1700 ET / 2200 UTC - Regular close'.",
+     "document": "2016-holiday-calendars.zip#2016-4th-of-july-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry.",
+     "document": "2016-holiday-calendars.zip#2016-4th-of-july-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, July 1 1600 CT / 1700 ET / 2100 UTC - Regular close' ; 'Sunday, July 3 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Tuesday, July 5' ; 'Monday, July 4 1200 CT / 1300 ET / 1700 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2200 UTC - Products resume trading' ; 'Tuesday, July 5 1600 CT / 1700 ET / 2200 UTC - Regular close'.",
+     "document": "2016-holiday-calendars.zip#2016-4th-of-july-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, July 1 1600 CT / 1700 ET / 2100 UTC - Regular close' ; 'Sunday, July 3 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Tuesday, July 5' ; 'Monday, July 4 1200 CT / 1300 ET / 1700 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2200 UTC - Products resume trading' ; 'Tuesday, July 5 1600 CT / 1700 ET / 2200 UTC - Regular close'.",
+     "document": "2016-holiday-calendars.zip#2016-4th-of-july-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, July 1 1600 CT / 1700 ET / 2100 UTC - Regular close' ; 'Sunday, July 3 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Tuesday, July 5' ; 'Monday, July 4 1200 CT / 1300 ET / 1700 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2200 UTC - Products resume trading' ; 'Tuesday, July 5 1600 CT / 1700 ET / 2200 UTC - Regular close'.",
+     "document": "2016-holiday-calendars.zip#2016-4th-of-july-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals with Energy on the line quoted in this date's 'Energy' entry.",
+     "document": "2016-holiday-calendars.zip#2016-4th-of-july-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Grain, Oilseed & MGEX Products -- 'Friday, July 1 Regular close - Per each product schedule' ; no Monday, July 4 session is printed ; 'Tuesday, July 5 0700 CT / 0800 ET / 1200 UTC - MGEX Apple Juice - Regular open' and '0830 CT / 0930 ET / 1330 UTC - CBT & MGEX Grain & Grain Index open'.",
+     "document": "2016-holiday-calendars.zip#2016-4th-of-july-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "0830 CT / 0930 ET / 1330 UTC (Tuesday, July 5)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Friday, July 1 Regular Close - Per each product schedule' ; 'Tuesday, July 5 830 CT / 930 ET / 1330 UTC - Livestock markets open'.",
+     "document": "2016-holiday-calendars.zip#2016-4th-of-july-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "830 CT / 930 ET / 1330 UTC (Tuesday, July 5)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Monday, July 4 1700 CT / 1800 ET / 2200 UTC - Dairy markets open for trade date Tuesday, July 5'.",
+     "document": "2016-holiday-calendars.zip#2016-4th-of-july-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC (Monday, July 4)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Tuesday, July 5 900 CT / 1000 ET / 1400 UTC - Lumber market open'.",
+     "document": "2016-holiday-calendars.zip#2016-4th-of-july-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "900 CT / 1000 ET / 1400 UTC (Tuesday, July 5)"
+    }
+   ]
+  },
+  {
+   "date": "2016-09-05",
+   "name": "Labor Day",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Sep 2 1600 CT / 1700 ET / 2100 UTC - Regular close' ; 'Sunday, Sep 4 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Tuesday, Sep 6' ; 'Monday, Sep 5 1200 CT / 1300 ET / 1700 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2200 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-labor-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry.",
+     "document": "2016-holiday-calendars.zip#2016-labor-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Sep 2 1600 CT / 1700 ET / 2100 UTC - Regular close' ; 'Sunday, Sep 4 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Tuesday, Sep 6' ; 'Monday, Sep 5 1200 CT / 1300 ET / 1700 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2200 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-labor-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Sep 2 1600 CT / 1700 ET / 2100 UTC - Regular close' ; 'Sunday, Sep 4 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Tuesday, Sep 6' ; 'Monday, Sep 5 1200 CT / 1300 ET / 1700 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2200 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-labor-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Sep 2 1600 CT / 1700 ET / 2100 UTC - Regular close' ; 'Sunday, Sep 4 1700 CT / 1800 ET / 2200 UTC - Regular open for trade date Tuesday, Sep 6' ; 'Monday, Sep 5 1200 CT / 1300 ET / 1700 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2200 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-labor-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals with Energy on the line quoted in this date's 'Energy' entry.",
+     "document": "2016-holiday-calendars.zip#2016-labor-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1700 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Grain, Oilseed & MGEX Products -- 'Friday, Sep 2 Regular close - Per each product schedule' ; 'Sunday, Sep 4 1600 CT / 1700 ET / 2100 UTC - Pre-open for trade date Tuesday, Sep 6' ; 'Monday, Sep 5 1900 CT / 2000 ET / 0000 UTC - Open for trade date Tuesday, Sep 6'. No Monday, Sep 5 day session is printed.",
+     "document": "2016-holiday-calendars.zip#2016-labor-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2000 ET / 0000 UTC (Monday, Sep 5)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Friday, Sep 2 Regular close - Per each product schedule' ; no Monday, Sep 5 livestock session is printed ; 'Tuesday, Sep 6 830 CT / 930 ET / 1330 UTC - Livestock markets open'.",
+     "document": "2016-holiday-calendars.zip#2016-labor-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "830 CT / 930 ET / 1330 UTC (Tuesday, Sep 6)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Monday, Sep 5 1700 CT / 1800 ET / 2200 UTC - Dairy markets open for trade date Tuesday, Sep 6'.",
+     "document": "2016-holiday-calendars.zip#2016-labor-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2200 UTC (Monday, Sep 5)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Tuesday, Sep 6 900 CT / 1000 ET / 1400 UTC - Lumber market open'.",
+     "document": "2016-holiday-calendars.zip#2016-labor-day-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "900 CT / 1000 ET / 1400 UTC (Tuesday, Sep 6)"
+    }
+   ]
+  },
+  {
+   "date": "2016-11-24",
+   "name": "Thanksgiving Day",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, & FX Products -- 'Wednesday, Nov 23 1600 CT / 1700 ET / 2200 UTC - Regular close' and '1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Friday, Nov 25' ; 'Thursday, Nov 24 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2300 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, & FX Products -- 'Wednesday, Nov 23 1600 CT / 1700 ET / 2200 UTC - Regular close' and '1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Friday, Nov 25' ; 'Thursday, Nov 24 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2300 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, & FX Products -- 'Wednesday, Nov 23 1600 CT / 1700 ET / 2200 UTC - Regular close' and '1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Friday, Nov 25' ; 'Thursday, Nov 24 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2300 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME Products -- 'Wednesday, Nov 23 1600 CT / 1700 ET / 2200 UTC - Regular close' and '1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Friday, Nov 25' ; 'Thursday, Nov 24 1200 CT / 1300 ET / 1800 UTC - Trading halt (pre-open)' and '1700 CT / 1800 ET / 2300 UTC - Products resume trading'.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals with Energy on the line quoted in this date's 'Energy' entry.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Grain, Oilseed & MGEX Products -- 'Wednesday, Nov 23 Regular Close - Per each product schedule' ; '1645 CT / 1745 / 2245 UTC - Products will be in a pre-open until 0830 CT / 0930 ET / 1430 UTC Friday, Nov 25'. No Thursday, Nov 24 session is printed.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "0830 CT / 0930 ET / 1430 UTC (Friday, Nov 25)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Wednesday, Nov 23 Regular close - Per each product schedule' ; no Thursday, Nov 24 session is printed ; 'Friday, Nov 25 830 CT / 930 ET / 1430 UTC - Livestock markets open'.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "830 CT / 930 ET / 1430 UTC (Friday, Nov 25)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Note: Dairy products will remain closed until 1700 CT / 1800 ET / 2300 UTC Sunday, Nov 29'. (The document's weekday/date pairing is internally inconsistent: in 2016 Nov 27 was the Sunday and Nov 29 a Tuesday; quoted exactly as printed.)",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Sunday; document prints 'Sunday, Nov 29')"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Wednesday, Nov 23 Regular close - Per each product schedule' ; 'Friday, Nov 25 900 CT / 1000 ET / 1500 UTC - Lumber market open'.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "900 CT / 1000 ET / 1500 UTC (Friday, Nov 25)"
+    }
+   ]
+  },
+  {
+   "date": "2016-11-25",
+   "name": "Day after Thanksgiving (early close)",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, & FX Products -- 'Friday, Nov 25 1215 CT / 1315 ET / 1815 UTC - Early close'.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1815 UTC"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1815 UTC"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, & FX Products -- 'Friday, Nov 25 1215 CT / 1315 ET / 1815 UTC - Early close'.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1815 UTC"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Equity, Interest Rate, & FX Products -- 'Friday, Nov 25 1215 CT / 1315 ET / 1815 UTC - Early close'.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1815 UTC"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Energy, Metals & DME Products -- 'Friday, Nov 25 1245 CT / 1345 ET / 1845 UTC - Early close'.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1245 CT / 1345 ET / 1845 UTC"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals with Energy on the line quoted in this date's 'Energy' entry.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1245 CT / 1345 ET / 1845 UTC"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "early_close",
+     "verbatim": "Grain, Oilseed & MGEX Products -- 'Friday, Nov 25 0700 CT / 0800 ET / 1400 UTC - MGEX Apple Juice - regular open' ; '0830 CT / 0930 ET / 1430 UTC - Grain, Oilseed & MGEX products open' ; '1205 CT / 1305 ET / 1805 UTC - Early close' ; '1215 CT / 1315 ET / 1815 UTC - Early MGEX Wheat & Apple Juice close' ; '1230 CT / 1330 ET / 1830 UTC - Early Mini-Sized grain close' ; '1230 CT / 1330 ET / 1830 UTC - Early MGEX Indices close'.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1305 ET / 1805 UTC",
+     "open_instant": "0830 CT / 0930 ET / 1430 UTC"
+    },
+    {
+     "family": "Livestock",
+     "status": "early_close",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Friday, Nov 25 830 CT / 930 ET / 1430 UTC - Livestock markets open' ; '1215 CT / 1315 ET / 1815 UTC - Early close for Livestock Futures & Options'.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1815 UTC",
+     "open_instant": "830 CT / 930 ET / 1430 UTC"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Note: Dairy products will remain closed until 1700 CT / 1800 ET / 2300 UTC Sunday, Nov 29' (printed weekday/date pairing is inconsistent; quoted as printed).",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1"
+    },
+    {
+     "family": "Lumber",
+     "status": "early_close",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Friday, Nov 25 900 CT / 1000 ET / 1500 UTC - Lumber market open' ; '1200 CT / 1300 ET / 1800 UTC - Early close for Lumber' ; '1202 CT / 1302 ET / 1801 UTC - Early close for Lumber Options'.",
+     "document": "2016-holiday-calendars.zip#2016-thanksgiving-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC (options 1202 CT / 1302 ET / 1801 UTC)",
+     "open_instant": "900 CT / 1000 ET / 1500 UTC"
+    }
+   ]
+  },
+  {
+   "date": "2016-12-23",
+   "name": "Friday before Christmas (early closes for agricultural and 'other' products)",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "normal",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Dec 23 1600 CT / 1700 ET / 2200 UTC - Regular close'.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1600 CT / 1700 ET / 2200 UTC"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "normal",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1600 CT / 1700 ET / 2200 UTC"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "normal",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Dec 23 1600 CT / 1700 ET / 2200 UTC - Regular close'.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1600 CT / 1700 ET / 2200 UTC"
+    },
+    {
+     "family": "FX",
+     "status": "normal",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Dec 23 1600 CT / 1700 ET / 2200 UTC - Regular close'.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1600 CT / 1700 ET / 2200 UTC"
+    },
+    {
+     "family": "Energy",
+     "status": "normal",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Dec 23 1600 CT / 1700 ET / 2200 UTC - Regular close'.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1600 CT / 1700 ET / 2200 UTC"
+    },
+    {
+     "family": "Metals",
+     "status": "normal",
+     "verbatim": "No separate Metals line is printed; CME prints Metals with Energy on the line quoted in this date's 'Energy' entry.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1600 CT / 1700 ET / 2200 UTC"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "early_close",
+     "verbatim": "Grain, Oilseed & MGEX Products -- 'Friday, Dec 23 1205 CT / 1305 ET / 1805 UTC - Early close' ; '1215 CT / 1315 ET / 1815 UTC - Early MGEX Wheat & Apple Juice close' ; '1230 CT / 1330 ET / 1830 UTC - Early Mini-Sized grain close' ; '1230 CT / 1330 ET / 1830 UTC - Early MGEX Indices close'.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1205 CT / 1305 ET / 1805 UTC"
+    },
+    {
+     "family": "Livestock",
+     "status": "early_close",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Friday, Dec 23 1215 CT / 1315 ET / 1815 UTC - Early close for Livestock Futures & Options'.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1215 CT / 1315 ET / 1815 UTC"
+    },
+    {
+     "family": "Dairy",
+     "status": "early_close",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Friday, Dec 23 1200 CT / 1300 ET / 1800 UTC - Early close for Lumber & Dairy'.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC"
+    },
+    {
+     "family": "Lumber",
+     "status": "early_close",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Friday, Dec 23 1200 CT / 1300 ET / 1800 UTC - Early close for Lumber & Dairy' ; '1202 CT / 1302 ET / 1801 UTC - Early close for Lumber Options'.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "close_instant": "1200 CT / 1300 ET / 1800 UTC (options 1202 CT / 1302 ET / 1801 UTC)"
+    }
+   ]
+  },
+  {
+   "date": "2016-12-26",
+   "name": "Christmas Day Observed (Monday; Dec 25 fell on Sunday)",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "closed",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Monday, Dec 26 Christmas Day Observed - Globex closed' ; 'Monday, Dec 26 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Tuesday, Dec 27' ; 'Tuesday, Dec 27 1600 CT / 1700 ET / 2200 UTC - Regular close'.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Monday, Dec 26)"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "closed",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Monday, Dec 26)"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "closed",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Monday, Dec 26 Christmas Day Observed - Globex closed' ; 'Monday, Dec 26 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Tuesday, Dec 27' ; 'Tuesday, Dec 27 1600 CT / 1700 ET / 2200 UTC - Regular close'.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Monday, Dec 26)"
+    },
+    {
+     "family": "FX",
+     "status": "closed",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Monday, Dec 26 Christmas Day Observed - Globex closed' ; 'Monday, Dec 26 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Tuesday, Dec 27' ; 'Tuesday, Dec 27 1600 CT / 1700 ET / 2200 UTC - Regular close'.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Monday, Dec 26)"
+    },
+    {
+     "family": "Energy",
+     "status": "closed",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Monday, Dec 26 Christmas Day Observed - Globex closed' ; 'Monday, Dec 26 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Tuesday, Dec 27' ; 'Tuesday, Dec 27 1600 CT / 1700 ET / 2200 UTC - Regular close'.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Monday, Dec 26)"
+    },
+    {
+     "family": "Metals",
+     "status": "closed",
+     "verbatim": "No separate Metals line is printed; CME prints Metals with Energy on the line quoted in this date's 'Energy' entry.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Monday, Dec 26)"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Grain, Oilseed & MGEX Products -- 'Monday, Dec 26 Christmas Day Observed - Globex closed' ; 'Monday, Dec 26 1900 CT / 2000 ET / 0100 UTC - Regular open for trade date Tuesday, Dec 27' ; 'Tuesday, Dec 27 0800 CT / 0900 ET / 1400 UTC - Grain, Oilseed & MGEX products pre-open' ; '0830 CT / 0930 ET / 1430 UTC - Grain, Oilseed & MGEX products reopen'.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2000 ET / 0100 UTC (Monday, Dec 26)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Monday, Dec 26 Christmas Day Observed - Globex closed'.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Monday, Dec 26 Christmas Day Observed - Globex closed' ; 'Monday, Dec 26 1700 CT / 1800 ET / 2300 UTC - Dairy - Regular open for trade date Tuesday, Dec 27'.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Monday, Dec 26)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Monday, Dec 26 Christmas Day Observed - Globex closed'.",
+     "document": "2016-holiday-calendars.zip#2016-christmas-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1"
+    }
+   ]
+  },
+  {
+   "date": "2017-01-02",
+   "name": "New Year's Day Observed (Monday; Jan 1 fell on Sunday)",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "closed",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Dec 30 1600 CT / 1700 ET / 2200 UTC - Regular close' ; 'Monday, Jan 2 New Years Observed - Globex closed' ; 'Monday, Jan 2 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Tuesday, Jan 3' ; 'Tuesday, Jan 3 1600 CT / 1700 ET / 2200 UTC - Regular close'.",
+     "document": "2016-holiday-calendars.zip#2017-new-years-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Monday, Jan 2)"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "closed",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry.",
+     "document": "2016-holiday-calendars.zip#2017-new-years-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Monday, Jan 2)"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "closed",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Dec 30 1600 CT / 1700 ET / 2200 UTC - Regular close' ; 'Monday, Jan 2 New Years Observed - Globex closed' ; 'Monday, Jan 2 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Tuesday, Jan 3' ; 'Tuesday, Jan 3 1600 CT / 1700 ET / 2200 UTC - Regular close'.",
+     "document": "2016-holiday-calendars.zip#2017-new-years-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Monday, Jan 2)"
+    },
+    {
+     "family": "FX",
+     "status": "closed",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Dec 30 1600 CT / 1700 ET / 2200 UTC - Regular close' ; 'Monday, Jan 2 New Years Observed - Globex closed' ; 'Monday, Jan 2 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Tuesday, Jan 3' ; 'Tuesday, Jan 3 1600 CT / 1700 ET / 2200 UTC - Regular close'.",
+     "document": "2016-holiday-calendars.zip#2017-new-years-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Monday, Jan 2)"
+    },
+    {
+     "family": "Energy",
+     "status": "closed",
+     "verbatim": "Equity, Interest Rate, FX, Energy, Metals & DME Products -- 'Friday, Dec 30 1600 CT / 1700 ET / 2200 UTC - Regular close' ; 'Monday, Jan 2 New Years Observed - Globex closed' ; 'Monday, Jan 2 1700 CT / 1800 ET / 2300 UTC - Regular open for trade date Tuesday, Jan 3' ; 'Tuesday, Jan 3 1600 CT / 1700 ET / 2200 UTC - Regular close'.",
+     "document": "2016-holiday-calendars.zip#2017-new-years-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Monday, Jan 2)"
+    },
+    {
+     "family": "Metals",
+     "status": "closed",
+     "verbatim": "No separate Metals line is printed; CME prints Metals with Energy on the line quoted in this date's 'Energy' entry.",
+     "document": "2016-holiday-calendars.zip#2017-new-years-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Monday, Jan 2)"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Grain, Oilseed & MGEX Products -- 'Friday, Dec 30 Regular close - Per each product schedule' ; 'Monday, Jan 2 New Year's Observed - Globex closed' ; 'Monday, Jan 2 1900 CT / 2000 ET / 0100 UTC - Open for trade date Tuesday, Jan 3' ; 'Tuesday, Jan 3 0800 CT / 0900 ET / 1400 UTC - Grain, Oilseed & MGEX products pre-open' ; '0830 CT / 0930 ET / 1430 UTC - Grain, Oilseed & MGEX products reopen'.",
+     "document": "2016-holiday-calendars.zip#2017-new-years-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1900 CT / 2000 ET / 0100 UTC (Monday, Jan 2)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Monday, Jan 2 New Years Observed - Globex closed' ; 'Tuesday, Jan 3 830 CT / 930 ET / 1430 UTC - Livestock markets open'.",
+     "document": "2016-holiday-calendars.zip#2017-new-years-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "830 CT / 930 ET / 1430 UTC (Tuesday, Jan 3)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Monday, Jan 2 1700 CT / 1800 ET / 2300 UTC - Dairy - Regular open for trade date Tuesday, Jan 3'.",
+     "document": "2016-holiday-calendars.zip#2017-new-years-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "1700 CT / 1800 ET / 2300 UTC (Monday, Jan 2)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Livestock, Dairy & Lumber Products -- 'Monday, Jan 2 New Years Observed - Globex closed' ; 'Tuesday, Jan 3 900 CT / 1000 ET / 1500 UTC - Lumber market open'.",
+     "document": "2016-holiday-calendars.zip#2017-new-years-holiday-schedule.pdf @2017-06-28",
+     "tier": "T1",
+     "open_instant": "900 CT / 1000 ET / 1500 UTC (Tuesday, Jan 3)"
+    }
+   ]
+  },
+  {
+   "date": "2017-01-16",
+   "name": "Martin Luther King Jr. Day",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Row 'Equity Products' -- Monday, January 16 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-martin-luther-king-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-martin-luther-king-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Row 'Interest Rate Products' -- Monday, January 16 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-martin-luther-king-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Row 'FX Products' -- Monday, January 16 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-martin-luther-king-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Row 'Energy, Metals & DME Products' -- Monday, January 16 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-martin-luther-king-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-martin-luther-king-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Row 'Grains and Oilseeds' -- Friday, January 13 'Regular Fri. Close' = 13:20, 'PCP' = 14:30-16:00 ; Sunday, January 15 'Pre-opening' = 16:00 ; Monday, January 16 'Open' = 19:00. No Monday day session is printed. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-martin-luther-king-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "open_instant": "19:00 CT / 20:00 ET (Monday, January 16)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Row 'Livestock' -- Friday, January 13 'Regular Fri. Close' = 13:05, 'PCP' = 14:30-16:00 ; no Monday, January 16 entry ; Tuesday, January 17 'Pre-opening' = 06:00, 'Open' = 08:30. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-martin-luther-king-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Tuesday, January 17)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- Friday, January 13 'Regular Fri. Close' = 13:55 ; Sunday, January 15 'Pre-opening' = 16:00 ; Monday, January 16 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-martin-luther-king-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, January 16)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Row 'Lumber' -- Friday, January 13 'Regular Fri. Close' = 13:55 ; no Monday, January 16 entry ; Tuesday, January 17 'Pre-opening' = 06:00, 'Open' = 09:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-martin-luther-king-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "open_instant": "09:00 CT / 10:00 ET (Tuesday, January 17)"
+    }
+   ]
+  },
+  {
+   "date": "2017-02-20",
+   "name": "Presidents' Day",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Row 'Equity Products' -- Monday, February 20 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-presidents-day-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-presidents-day-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Row 'Interest Rate Products' -- Monday, February 20 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-presidents-day-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Row 'FX Products' -- Monday, February 20 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-presidents-day-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Row 'Energy, Metals & DME Products' -- Monday, February 20 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-presidents-day-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-presidents-day-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Row 'Grains and Oilseeds' -- Friday, February 17 'Regular Fri. Close' = 13:20, 'PCP' = 14:30-16:00 ; Sunday, February 19 'Pre-opening' = 16:00 ; Monday, February 20 'Open' = 19:00. No Monday day session is printed. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-presidents-day-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "open_instant": "19:00 CT / 20:00 ET (Monday, February 20)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Row 'Livestock' -- Friday, February 17 'Regular Fri. Close' = 13:05, 'PCP' = 14:30-16:00 ; no Monday, February 20 entry ; Tuesday, February 21 'Pre-opening' = 06:00, 'Open' = 08:30. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-presidents-day-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Tuesday, February 21)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- Friday, February 17 'Regular Fri. Close' = 13:55 ; Sunday, February 19 'Pre-opening' = 16:00 ; Monday, February 20 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-presidents-day-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, February 20)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Row 'Lumber' -- Friday, February 17 'Regular Fri. Close' = 13:55 ; no Monday, February 20 entry ; Tuesday, February 21 'Pre-opening' = 06:00, 'Open' = 09:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-presidents-day-holiday-schedule.xls @2017-06-28",
+     "tier": "T1",
+     "open_instant": "09:00 CT / 10:00 ET (Tuesday, February 21)"
+    }
+   ]
+  },
+  {
+   "date": "2017-04-14",
+   "name": "Good Friday",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "closed",
+     "verbatim": "Row 'Equity Products' -- Thursday, April 13 'Regular Close' = 16:00 ; Friday, April 14 = 'Globex Closed' ; Sunday, April 16 'Pre-opening' = 16:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-good-friday-holiday-schedule.xls @2017-05-05",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday, April 16)"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "closed",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-good-friday-holiday-schedule.xls @2017-05-05",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday, April 16)"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "closed",
+     "verbatim": "Row 'Interest Rate Products' -- Thursday, April 13 'Regular Close' = 16:00 ; Friday, April 14 = 'Globex Closed' ; Sunday, April 16 'Pre-opening' = 16:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-good-friday-holiday-schedule.xls @2017-05-05",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday, April 16)"
+    },
+    {
+     "family": "FX",
+     "status": "closed",
+     "verbatim": "Row 'FX Products' -- Thursday, April 13 'Regular Close' = 16:00 ; Friday, April 14 = 'Globex Closed' ; Sunday, April 16 'Pre-opening' = 16:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-good-friday-holiday-schedule.xls @2017-05-05",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday, April 16)"
+    },
+    {
+     "family": "Energy",
+     "status": "closed",
+     "verbatim": "Row 'Energy, Metals & DME Products' -- Thursday, April 13 'Regular Close' = 16:00 ; Friday, April 14 = 'Globex Closed' ; Sunday, April 16 'Pre-opening' = 16:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-good-friday-holiday-schedule.xls @2017-05-05",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday, April 16)"
+    },
+    {
+     "family": "Metals",
+     "status": "closed",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-good-friday-holiday-schedule.xls @2017-05-05",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday, April 16)"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Row 'Grains and Oilseeds' -- Thursday, April 13 'Regular Close' = 13:20, 'PCP' = 14:30-16:00 ; Friday, April 14 = 'Globex Closed' ; Sunday, April 16 'Pre-opening' = 16:00, 'Open' = 19:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-good-friday-holiday-schedule.xls @2017-05-05",
+     "tier": "T1",
+     "open_instant": "19:00 CT / 20:00 ET (Sunday, April 16)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Row 'Livestock' -- Thursday, April 13 'Regular Close' = 13:05, 'PCP' = 14:30-16:00 ; Friday, April 14 = 'Globex Closed' ; Monday, April 17 'Pre-opening' = 06:00, 'Open' = 08:30. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-good-friday-holiday-schedule.xls @2017-05-05",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Monday, April 17)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- Thursday, April 13 'Early Thur. Close' = 13:55 ; Friday, April 14 = 'Globex Closed' ; Sunday, April 16 'Pre-opening' = 16:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-good-friday-holiday-schedule.xls @2017-05-05",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday, April 16)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Row 'Lumber' -- Thursday, April 13 'Early Thur. Close' = 13:55 ; Friday, April 14 = 'Globex Closed' ; Monday, April 17 'Pre-opening' = 06:00, 'Open' = 09:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-good-friday-holiday-schedule.xls @2017-05-05",
+     "tier": "T1",
+     "open_instant": "09:00 CT / 10:00 ET (Monday, April 17)"
+    }
+   ]
+  },
+  {
+   "date": "2017-05-29",
+   "name": "Memorial Day",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Row 'Equity Products' -- Monday, May 29 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-memorial-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-memorial-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Row 'Interest Rate Products' -- Monday, May 29 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-memorial-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Row 'FX Products' -- Monday, May 29 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-memorial-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Row 'Energy, Metals & DME Products' -- Monday, May 29 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-memorial-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-memorial-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Row 'Grains and Oilseeds' -- Friday, May 26 'Regular Fri. Close' = 13:20, 'PCP' = 14:30-16:00 ; Sunday, May 28 'Pre-opening' = 16:00 ; Monday, May 29 'Open' = 19:00. No Monday day session is printed. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-memorial-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "open_instant": "19:00 CT / 20:00 ET (Monday, May 29)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Row 'Livestock' -- Friday, May 26 'Regular Fri. Close' = 13:05, 'PCP' = 14:30-16:00 ; no Monday, May 29 entry ; Tuesday, May 30 'Pre-opening' = 06:00, 'Open' = 08:30. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-memorial-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Tuesday, May 30)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- Friday, May 26 'Regular Fri. Close' = 13:55 ; Sunday, May 28 'Pre-opening' = 16:00 ; Monday, May 29 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-memorial-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, May 29)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Row 'Lumber' -- Friday, May 26 'Regular Fri. Close' = 13:55 ; no Monday, May 29 entry ; Tuesday, May 30 'Pre-opening' = 06:00, 'Open' = 09:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-memorial-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "open_instant": "09:00 CT / 10:00 ET (Tuesday, May 30)"
+    }
+   ]
+  },
+  {
+   "date": "2017-07-03",
+   "name": "Day before Independence Day (Monday, July 3) - early close",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Row 'Equity Products' -- Monday, July 3 'Early Close' = 12:15 ; Monday, July 3 'Pre-opening' = 16:45, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "normal",
+     "verbatim": "Row 'Interest Rate Products' -- Monday, July 3 'Regular Close' = 16:00 ; Monday, July 3 'Pre-opening' = 16:45, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "FX",
+     "status": "normal",
+     "verbatim": "Row 'FX Products' -- Monday, July 3 'Regular Close' = 16:00 ; Monday, July 3 'Pre-opening' = 16:45, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Energy",
+     "status": "normal",
+     "verbatim": "Row 'Energy, Metals & DME Products' -- Monday, July 3 'Regular Close' = 16:00 ; Monday, July 3 'Pre-opening' = 16:45, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Metals",
+     "status": "normal",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "early_close",
+     "verbatim": "Row 'Grains and Oilseeds' -- Monday, July 3 'Early Close' = 12:05, 'PCP' = 12:30 - 16:00. (Row 'Mini-Sized Grains and Oilseeds' 'Early Close' = 12:30; row 'MGEX Apple Juice' = 12:15.) Note: 'July 3 Grain, Oilseed & Livestock TAS early 12:00 CT close.' [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:05 CT / 13:05 ET"
+    },
+    {
+     "family": "Livestock",
+     "status": "early_close",
+     "verbatim": "Row 'Livestock' -- Monday, July 3 'Early Close' = 12:15, 'PCP' = 12:45 - 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET"
+    },
+    {
+     "family": "Dairy",
+     "status": "early_close",
+     "verbatim": "Row 'Dairy' -- Monday, July 3 'Early Close' = 12:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET"
+    },
+    {
+     "family": "Lumber",
+     "status": "early_close",
+     "verbatim": "Row 'Lumber' -- Monday, July 3 'Early Close' = 12:00 ( options 12:02). [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET (options 12:02 CT / 13:02 ET)"
+    }
+   ]
+  },
+  {
+   "date": "2017-07-04",
+   "name": "Independence Day (Tuesday, July 4)",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Row 'Equity Products' -- Tuesday, July 4 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Row 'Interest Rate Products' -- Tuesday, July 4 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Row 'FX Products' -- Tuesday, July 4 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Row 'Energy, Metals & DME Products' -- Tuesday, July 4 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Row 'Grains and Oilseeds' -- Tuesday, July 4 = 'Markets Closed' ; Wednesday, July 5 'Pre-opening' = 06:00, 'Open' = 08:30. Note: 'July 4 No trading in Grain, Oilseed & Livestock TAS'. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Wednesday, July 5)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Row 'Livestock' -- Tuesday, July 4 = 'Markets Closed' ; Wednesday, July 5 'Pre-opening' = 06:00, 'Open' = 08:30. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Wednesday, July 5)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- Tuesday, July 4 = 'Markets Closed' ; Tuesday, July 4 'Pre-opening' = 16:45, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Tuesday, July 4)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Row 'Lumber' -- Tuesday, July 4 = 'Markets Closed' ; Wednesday, July 5 'Pre-opening' = 06:00, 'Open' = 09:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-4th-of-july-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "open_instant": "09:00 CT / 10:00 ET (Wednesday, July 5)"
+    }
+   ]
+  },
+  {
+   "date": "2017-09-04",
+   "name": "Labor Day",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Row 'Equity Products' -- Monday, September 4 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-labor-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-labor-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Row 'Interest Rate Products' -- Monday, September 4 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-labor-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Row 'FX Products' -- Monday, September 4 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-labor-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Row 'Energy, Metals & DME Products' -- Monday, September 4 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-labor-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-labor-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Row 'Grains and Oilseeds' -- Friday, September 1 'Regular Fri. Close' = 13:20, 'PCP' = 14:30-16:00 ; Sunday, September 3 'Pre-opening' = 16:00 ; Monday, September 4 'Open' = 19:00. No Monday day session is printed. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-labor-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "open_instant": "19:00 CT / 20:00 ET (Monday, September 4)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Row 'Livestock' -- Friday, September 1 'Regular Fri. Close' = 13:05, 'PCP' = 14:30-16:00 ; no Monday, September 4 entry ; Tuesday, September 5 'Pre-opening' = 06:00, 'Open' = 08:30. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-labor-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Tuesday, September 5)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- Friday, September 1 'Regular Fri. Close' = 13:55 ; Sunday, September 3 'Pre-opening' = 16:00 ; Monday, September 4 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-labor-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, September 4)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Row 'Lumber' -- Friday, September 1 'Regular Fri. Close' = 13:55 ; no Monday, September 4 entry ; Tuesday, September 5 'Pre-opening' = 06:00, 'Open' = 09:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-labor-day-holiday-schedule.xls @2017-10-25",
+     "tier": "T1",
+     "open_instant": "09:00 CT / 10:00 ET (Tuesday, September 5)"
+    }
+   ]
+  },
+  {
+   "date": "2017-11-23",
+   "name": "Thanksgiving Day",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Row 'Equity Products' -- Wednesday, November 22 'Regular Close' = 16:00, 'Pre-opening' = 16:45, 'Open' = 17:00 ; Thursday, November 23 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00 ; Friday, November 24 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Row 'Interest Rate Products' -- Wednesday, November 22 'Regular Close' = 16:00, 'Pre-opening' = 16:45, 'Open' = 17:00 ; Thursday, November 23 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00 ; Friday, November 24 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Row 'FX Products' -- Wednesday, November 22 'Regular Close' = 16:00, 'Pre-opening' = 16:45, 'Open' = 17:00 ; Thursday, November 23 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00 ; Friday, November 24 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Row 'Energy, Metals, Softs & DME Products' -- Wednesday, November 22 'Regular Close' = 16:00, 'Pre-opening' = 16:45, 'Open' = 17:00 ; Thursday, November 23 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00 ; Friday, November 24 'Close' = 12:45. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Row 'Grains and Oilseeds' -- Wednesday, November 22 'Regular Close' = 13:20, 'PCP' = 14:30-16:00, 'Pre-opening' = 16:45 ; no Thursday, November 23 session is printed ; Friday, November 24 'Open' = 08:30, 'Close' = 12:05. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Friday, November 24)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Row 'Livestock' -- Wednesday, November 22 'Regular Close' = 13:05, 'PCP' = 14:30-16:00 ; no Thursday, November 23 session is printed ; Friday, November 24 'Pre-opening' = 06:00, 'Open' = 08:30, 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Friday, November 24)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- Wednesday, November 22 'Regular Close' = 16:00 ; 'Dairy products will remain closed until their regularly scheduled open on Sunday Nov 26 @ 17:00'. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday Nov 26)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Row 'Lumber' -- Wednesday, November 22 'Regular Close' = 16:00 ; no Thursday, November 23 session is printed ; Friday, November 24 'Pre-opening' = 06:00, 'Open' = 09:00, 'Close' = 12:00 ( options 12:02). [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "open_instant": "09:00 CT / 10:00 ET (Friday, November 24)"
+    }
+   ]
+  },
+  {
+   "date": "2017-11-24",
+   "name": "Day after Thanksgiving (early close)",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Row 'Equity Products' -- Friday, November 24 'Close' = 12:15 (the session opened Thursday, November 23 17:00). [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET",
+     "open_instant": "17:00 CT / 18:00 ET (previous day)"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET",
+     "open_instant": "17:00 CT / 18:00 ET (previous day)"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Row 'Interest Rate Products' -- Friday, November 24 'Close' = 12:15 (the session opened Thursday, November 23 17:00). [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET",
+     "open_instant": "17:00 CT / 18:00 ET (previous day)"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Row 'FX Products' -- Friday, November 24 'Close' = 12:15 (the session opened Thursday, November 23 17:00). [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET",
+     "open_instant": "17:00 CT / 18:00 ET (previous day)"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Row 'Energy, Metals, Softs & DME Products' -- Friday, November 24 'Close' = 12:45. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:45 CT / 13:45 ET",
+     "open_instant": "17:00 CT / 18:00 ET (previous day)"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:45 CT / 13:45 ET",
+     "open_instant": "17:00 CT / 18:00 ET (previous day)"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "early_close",
+     "verbatim": "Row 'Grains and Oilseeds' -- Friday, November 24 'Open' = 08:30, 'Close' = 12:05. (Row 'Mini-Sized Grains and Oilseeds' 'Close' = 12:30 ; row 'MGEX Apple Juice' 'Close' = 12:15.) Note: 'Grain, Oilseed & Livestock TAS close early at 12:00 CT'. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:05 CT / 13:05 ET",
+     "open_instant": "08:30 CT / 09:30 ET"
+    },
+    {
+     "family": "Livestock",
+     "status": "early_close",
+     "verbatim": "Row 'Livestock' -- Friday, November 24 'Pre-opening' = 06:00, 'Open' = 08:30, 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET",
+     "open_instant": "08:30 CT / 09:30 ET"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- 'Dairy products will remain closed until their regularly scheduled open on Sunday Nov 26 @ 17:00'. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday Nov 26)"
+    },
+    {
+     "family": "Lumber",
+     "status": "early_close",
+     "verbatim": "Row 'Lumber' -- Friday, November 24 'Pre-opening' = 06:00, 'Open' = 09:00, 'Close' = 12:00 ( options 12:02). [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-thanksgiving-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET (options 12:02 CT / 13:02 ET)",
+     "open_instant": "09:00 CT / 10:00 ET"
+    }
+   ]
+  },
+  {
+   "date": "2017-12-22",
+   "name": "Friday before Christmas (early closes for agricultural and 'other' products)",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "normal",
+     "verbatim": "Row 'Equity Products' -- Friday, December 22 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "normal",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "normal",
+     "verbatim": "Row 'Interest Rate Products' -- Friday, December 22 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET"
+    },
+    {
+     "family": "FX",
+     "status": "normal",
+     "verbatim": "Row 'FX Products' -- Friday, December 22 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET"
+    },
+    {
+     "family": "Energy",
+     "status": "normal",
+     "verbatim": "Row 'Energy, Metals, Softs & DME products' -- Friday, December 22 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET"
+    },
+    {
+     "family": "Metals",
+     "status": "normal",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET"
+    },
+    {
+     "family": "Cryptocurrency",
+     "status": "normal",
+     "verbatim": "Row 'Bitcoin' -- Friday, December 22 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "early_close",
+     "verbatim": "Row 'Grains and Oilseeds' -- Friday, December 22 'Close' = 12:05. (Row 'Mini-Sized Grains and Oilseeds' = 12:30 ; 'MGEX Hard Red Spring Wheat' = 12:15 ; 'MGEX Apple Juice' = 12:15 ; 'MGEX Indices' = 12:30.) Note: 'Grain, Oilseed & Livestock TAS close early at 12:00 CT'. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:05 CT / 13:05 ET"
+    },
+    {
+     "family": "Livestock",
+     "status": "early_close",
+     "verbatim": "Row 'Livestock' -- Friday, December 22 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET"
+    },
+    {
+     "family": "Dairy",
+     "status": "early_close",
+     "verbatim": "Row 'Dairy' -- Friday, December 22 'Close' = 12:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET"
+    },
+    {
+     "family": "Lumber",
+     "status": "early_close",
+     "verbatim": "Row 'Lumber' -- Friday, December 22 'Close' = 12:00 ( options 12:02). [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET (options 12:02 CT / 13:02 ET)"
+    }
+   ]
+  },
+  {
+   "date": "2017-12-25",
+   "name": "Christmas Day (Monday)",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "closed",
+     "verbatim": "Row 'Equity Products' -- Monday, December 25 = 'Globex Closed' ; Monday, December 25 'Pre-opening' = 16:00, 'Open' = 17:00 ; Tuesday, December 26 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, December 25)"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "closed",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, December 25)"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "closed",
+     "verbatim": "Row 'Interest Rate Products' -- Monday, December 25 = 'Globex Closed' ; Monday, December 25 'Pre-opening' = 16:00, 'Open' = 17:00 ; Tuesday, December 26 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, December 25)"
+    },
+    {
+     "family": "FX",
+     "status": "closed",
+     "verbatim": "Row 'FX Products' -- Monday, December 25 = 'Globex Closed' ; Monday, December 25 'Pre-opening' = 16:00, 'Open' = 17:00 ; Tuesday, December 26 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, December 25)"
+    },
+    {
+     "family": "Energy",
+     "status": "closed",
+     "verbatim": "Row 'Energy, Metals, Softs & DME products' -- Monday, December 25 = 'Globex Closed' ; Monday, December 25 'Pre-opening' = 16:00, 'Open' = 17:00 ; Tuesday, December 26 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, December 25)"
+    },
+    {
+     "family": "Metals",
+     "status": "closed",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, December 25)"
+    },
+    {
+     "family": "Cryptocurrency",
+     "status": "closed",
+     "verbatim": "Row 'Bitcoin' -- Friday, December 22 'Close' = 16:00 ; Monday, December 25 = 'Globex Closed' ; Monday, December 25 'Pre-opening' = 16:00, 'Open' = 17:00 ; Tuesday, December 26 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, December 25)"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Row 'Grains and Oilseeds' -- Friday, December 22 'Close' = 12:05 ; Monday, December 25 = 'Globex Closed' ; Tuesday, December 26 'Pre-opening' = 06:00, 'Open' = 08:30, 'Close' = 13:20, 'PCP' = 14:30-16:00. No Monday-evening grain open is printed in this revision. (Row 'Mini-Sized Grains and Oilseeds' and 'MGEX Hard Red Spring Wheat' and 'MGEX Indices' likewise print no Monday leg and 'Pre-opening' = 06:00 on Tuesday, December 26.) [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Tuesday, December 26)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Row 'Livestock' -- Monday, December 25 = 'Globex Closed' ; Tuesday, December 26 'Pre-opening' = 06:00, 'Open' = 08:30, 'Close' = 13:05. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Tuesday, December 26)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- Monday, December 25 = 'Globex Closed' ; Monday, December 25 'Pre-opening' = 16:00, 'Open' = 17:00 ; Tuesday, December 26 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, December 25)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Row 'Lumber' -- Monday, December 25 = 'Globex Closed' ; Tuesday, December 26 'Pre-opening' = 06:00, 'Open' = 09:00, 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2017-holiday-calendars.zip#2017-christmas-holiday-schedule.xls @2021-01-26",
+     "tier": "T1",
+     "open_instant": "09:00 CT / 10:00 ET (Tuesday, December 26)"
+    }
+   ]
+  },
+  {
+   "date": "2018-01-01",
+   "name": "New Year's Day (Monday)",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "closed",
+     "verbatim": "Row 'Equity Products' -- Friday, December 29 'Close' = 16:00 ; Monday, January 1 = 'Globex Closed' ; Monday, January 1 'Pre-opening' = 16:00, 'Open' = 17:00 ; Tuesday, Jan 2 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-new-years-holiday-schedule.xls @2018-01-06",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, January 1)"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "closed",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-new-years-holiday-schedule.xls @2018-01-06",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, January 1)"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "closed",
+     "verbatim": "Row 'Interest Rate Products' -- Friday, December 29 'Close' = 16:00 ; Monday, January 1 = 'Globex Closed' ; Monday, January 1 'Pre-opening' = 16:00, 'Open' = 17:00 ; Tuesday, Jan 2 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-new-years-holiday-schedule.xls @2018-01-06",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, January 1)"
+    },
+    {
+     "family": "FX",
+     "status": "closed",
+     "verbatim": "Row 'FX Products' -- Friday, December 29 'Close' = 16:00 ; Monday, January 1 = 'Globex Closed' ; Monday, January 1 'Pre-opening' = 16:00, 'Open' = 17:00 ; Tuesday, Jan 2 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-new-years-holiday-schedule.xls @2018-01-06",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, January 1)"
+    },
+    {
+     "family": "Energy",
+     "status": "closed",
+     "verbatim": "Row 'Energy, Metals, Softs & DME Products' -- Friday, December 29 'Close' = 16:00 ; Monday, January 1 = 'Globex Closed' ; Monday, January 1 'Pre-opening' = 16:00, 'Open' = 17:00 ; Tuesday, Jan 2 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-new-years-holiday-schedule.xls @2018-01-06",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, January 1)"
+    },
+    {
+     "family": "Metals",
+     "status": "closed",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-new-years-holiday-schedule.xls @2018-01-06",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, January 1)"
+    },
+    {
+     "family": "Cryptocurrency",
+     "status": "closed",
+     "verbatim": "Row 'Bitcoin' -- Friday, December 29 'Close' = 16:00 ; Monday, January 1 = 'Globex Closed' ; Monday, January 1 'Pre-opening' = 16:00, 'Open' = 17:00 ; Tuesday, Jan 2 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-new-years-holiday-schedule.xls @2018-01-06",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, January 1)"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Row 'Grains and Oilseeds' -- Friday, December 29 'Close' = 13:20 PCP: 14:30-16:00 ; Monday, January 1 = 'Globex Closed' ; Tuesday, Jan 2 'Pre-opening' = 06:00, 'Open' = 08:30, 'Close' = 13:20, 'PCP' = 14:30-16:00. No Monday-evening grain open is printed in this revision (the three earlier revisions of the same URL -- 'Mar 22, 2017', 'June 1, 2017' and 'Sep 21, 2017' -- each printed 'Monday, January 1 Pre-opening = 16:00, Open = 19:00' and 'Tuesday, Jan 2  Pre-opening = 08:00'; CME withdrew the Monday leg in this 'Dec 5, 2017' revision). [sheet: All times are Central Time, ET +1]",
+     "document": "2018-new-years-holiday-schedule.xls @2018-01-06",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Tuesday, January 2)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Row 'Livestock' -- Friday, December 29 'Close' = 13:05 PCP: 14:30-16:00 ; Monday, January 1 = 'Globex Closed' ; Tuesday, Jan 2 'Pre-opening' = 06:00, 'Open' = 08:30, 'Close' = 13:05. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-new-years-holiday-schedule.xls @2018-01-06",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Tuesday, January 2)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- Friday, December 29 'Close' = 13:55 ; Monday, January 1 = 'Globex Closed' ; Monday, January 1 'Pre-opening' = 16:00, 'Open' = 17:00 ; Tuesday, Jan 2 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-new-years-holiday-schedule.xls @2018-01-06",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, January 1)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Row 'Lumber' -- Friday, December 29 'Close' = 13:55 ; Monday, January 1 = 'Globex Closed' ; Tuesday, Jan 2 'Pre-opening' = 06:00, 'Open' = 09:00, 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-new-years-holiday-schedule.xls @2018-01-06",
+     "tier": "T1",
+     "open_instant": "09:00 CT / 10:00 ET (Tuesday, January 2)"
+    }
+   ]
+  },
+  {
+   "date": "2018-01-15",
+   "name": "Martin Luther King Jr. Day",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Row 'Equity Products' -- Monday, January 15 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-martin-luther-king-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-martin-luther-king-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Row 'Interest Rate Products' -- Monday, January 15 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-martin-luther-king-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Row 'FX Products' -- Monday, January 15 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-martin-luther-king-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Row 'Energy, Metal, Softs & DME Products' -- Monday, January 15 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-martin-luther-king-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-martin-luther-king-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Row 'Bitcoin' -- Monday, January 15 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-martin-luther-king-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Row 'Grains and Oilseeds' -- Friday, January 12 'Regular Fri. Close' = 13:20, 'PCP' = 14:30-16:00 ; Sunday, January 14 'Pre-opening' = 16:00 ; Monday, January 15 'Open' = 19:00. No Monday day session is printed. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-martin-luther-king-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "open_instant": "19:00 CT / 20:00 ET (Monday, January 15)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Row 'Livestock' -- Friday, January 12 'Regular Fri. Close' = 13:05, 'PCP' = 14:30-16:00 ; no Monday, January 15 entry ; Tuesday, January 16 'Pre-opening' = 06:00, 'Open' = 08:30. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-martin-luther-king-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Tuesday, January 16)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- Friday, January 12 'Regular Fri. Close' = 13:55 ; Sunday, January 14 'Pre-opening' = 16:00 ; Monday, January 15 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-martin-luther-king-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, January 15)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Row 'Lumber' -- Friday, January 12 'Regular Fri. Close' = 13:55 ; no Monday, January 15 entry ; Tuesday, January 16 'Pre-opening' = 06:00, 'Open' = 09:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-martin-luther-king-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "open_instant": "09:00 CT / 10:00 ET (Tuesday, January 16)"
+    }
+   ]
+  },
+  {
+   "date": "2018-02-19",
+   "name": "Presidents' Day",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Row 'Equity Products' -- Monday, February 19 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-presidents-day-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-presidents-day-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Row 'Interest Rate Products' -- Monday, February 19 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-presidents-day-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Row 'FX Products' -- Monday, February 19 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-presidents-day-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Row 'Energy, Metals, Softs & DME Products' -- Monday, February 19 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-presidents-day-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-presidents-day-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Row 'Bitcoin' -- Monday, February 19 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-presidents-day-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Row 'Grains and Oilseeds' -- Friday, February 16 'Regular Fri. Close' = 13:20, 'PCP' = 14:30-16:00 ; Sunday, February 18 'Pre-opening' = 16:00 ; Monday, February 19 'Open' = 19:00 ; Tuesday, February 20 'Pre-opening' = 08:00, 'Open' = 08:30. No Monday day session is printed. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-presidents-day-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "open_instant": "19:00 CT / 20:00 ET (Monday, February 19)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Row 'Livestock' -- Friday, February 16 'Regular Fri. Close' = 13:05, 'PCP' = 14:30-16:00 ; no Monday, February 19 entry ; Tuesday, February 20 'Pre-opening' = 06:00, 'Open' = 08:30. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-presidents-day-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Tuesday, February 20)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- Friday, February 16 'Regular Fri. Close' = 13:55 ; Sunday, February 18 'Pre-opening' = 16:00 ; Monday, February 19 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-presidents-day-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, February 19)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Row 'Lumber' -- Friday, February 16 'Regular Fri. Close' = 13:55 ; no Monday, February 19 entry ; Tuesday, February 20 'Pre-opening' = 06:00, 'Open' = 09:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-presidents-day-holiday-schedule.xls @2018-05-08",
+     "tier": "T1",
+     "open_instant": "09:00 CT / 10:00 ET (Tuesday, February 20)"
+    }
+   ]
+  },
+  {
+   "date": "2018-03-30",
+   "name": "Good Friday",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "closed",
+     "verbatim": "Row 'Equity Products' -- Thursday, March 29 'Regular Close' = 16:00 ; Friday, March 30 = 'Globex Closed' ; Sunday, April 1 'Pre-opening' = 16:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-good-friday-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday, April 1)"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "closed",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-good-friday-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday, April 1)"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "closed",
+     "verbatim": "Row 'Interest Rate Products' -- Thursday, March 29 'Regular Close' = 16:00 ; Friday, March 30 = 'Globex Closed' ; Sunday, April 1 'Pre-opening' = 16:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-good-friday-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday, April 1)"
+    },
+    {
+     "family": "FX",
+     "status": "closed",
+     "verbatim": "Row 'FX Products' -- Thursday, March 29 'Regular Close' = 16:00 ; Friday, March 30 = 'Globex Closed' ; Sunday, April 1 'Pre-opening' = 16:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-good-friday-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday, April 1)"
+    },
+    {
+     "family": "Energy",
+     "status": "closed",
+     "verbatim": "Row 'Energy, Metals, Softs & DME Products' -- Thursday, March 29 'Regular Close' = 16:00 ; Friday, March 30 = 'Globex Closed' ; Sunday, April 1 'Pre-opening' = 16:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-good-friday-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday, April 1)"
+    },
+    {
+     "family": "Metals",
+     "status": "closed",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-good-friday-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday, April 1)"
+    },
+    {
+     "family": "Cryptocurrency",
+     "status": "closed",
+     "verbatim": "Row 'Bitcoin' -- Thursday, March 29 'Regular Close' = 16:00 ; Friday, March 30 = 'Globex Closed' ; Sunday, April 1 'Pre-opening' = 16:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-good-friday-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday, April 1)"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Row 'Grains and Oilseeds' -- Thursday, March 29 'Regular Close' = 13:20, 'PCP' = 14:30-16:00 ; Friday, March 30 = 'Globex Closed' ; Sunday, April 1 'Pre-opening' = 16:00, 'Open' = 19:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-good-friday-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "19:00 CT / 20:00 ET (Sunday, April 1)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Row 'Livestock' -- Thursday, March 29 'Regular Close' = 13:05, 'PCP' = 14:30-16:00 ; Friday, March 30 = 'Globex Closed' ; Monday, April 2 'Pre-opening' = 06:00, 'Open' = 08:30. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-good-friday-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Monday, April 2)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- Thursday, March 29 'Early Thur. Close' = 13:55 ; Friday, March 30 = 'Globex Closed' ; Sunday, April 1 'Pre-opening' = 16:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-good-friday-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday, April 1)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Row 'Lumber' -- Thursday, March 29 'Early Thur. Close' = 13:55 ; Friday, March 30 = 'Globex Closed' ; Monday, April 2 'Pre-opening' = 06:00, 'Open' = 09:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-good-friday-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "09:00 CT / 10:00 ET (Monday, April 2)"
+    }
+   ]
+  },
+  {
+   "date": "2018-05-28",
+   "name": "Memorial Day",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Row 'Equity Products' -- Monday, May 28 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-memorial-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-memorial-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Row 'Interest Rate Products' -- Monday, May 28 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-memorial-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Row 'FX Products' -- Monday, May 28 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-memorial-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Row 'Energy, Metals, Softs & DME Products' -- Monday, May 28 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-memorial-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-memorial-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Row 'Bitcoin' -- Monday, May 28 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-memorial-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Row 'Grains and Oilseeds' -- Friday, May 25 'Regular Fri. Close' = 13:20, 'PCP' = 14:30-16:00 ; Sunday, May 27 'Pre-opening' = 16:00 ; Monday, May 28 'Open' = 19:00. No Monday day session is printed. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-memorial-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "19:00 CT / 20:00 ET (Monday, May 28)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Row 'Livestock' -- Friday, May 25 'Regular Fri. Close' = 13:05, 'PCP' = 14:30-16:00 ; no Monday, May 28 entry ; Tuesday, May 29 'Pre-opening' = 06:00, 'Open' = 08:30. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-memorial-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Tuesday, May 29)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- Friday, May 25 'Regular Fri. Close' = 13:55 ; Sunday, May 27 'Pre-opening' = 16:00 ; Monday, May 28 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-memorial-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, May 28)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Row 'Lumber' -- Friday, May 25 'Regular Fri. Close' = 13:55 ; no Monday, May 28 entry ; Tuesday, May 29 'Pre-opening' = 06:00, 'Open' = 09:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-memorial-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "09:00 CT / 10:00 ET (Tuesday, May 29)"
+    }
+   ]
+  },
+  {
+   "date": "2018-07-03",
+   "name": "Day before Independence Day (Tuesday, July 3) - early close",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Row 'Equity Products' -- Tuesday, July 3 'Early Close' = 12:15 ; Tuesday, July 3 'Pre-opening' = 16:45, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "normal",
+     "verbatim": "Row 'Interest Rate Products' -- Tuesday, July 3 'Regular Close' = 16:00 ; Tuesday, July 3 'Pre-opening' = 16:45, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "FX",
+     "status": "normal",
+     "verbatim": "Row 'FX Products' -- Tuesday, July 3 'Regular Close' = 16:00 ; Tuesday, July 3 'Pre-opening' = 16:45, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Energy",
+     "status": "normal",
+     "verbatim": "Row 'Energy, Metals, Softs & DME Products' -- Tuesday, July 3 'Regular Close' = 16:00 ; Tuesday, July 3 'Pre-opening' = 16:45, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Metals",
+     "status": "normal",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Row 'Bitcoin' -- Tuesday, July 3 'Early Close' = 12:15 ; Tuesday, July 3 'Pre-opening' = 16:45, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "early_close",
+     "verbatim": "Row 'Grains and Oilseeds' -- Tuesday, July 3 'Early Close' = 12:05, 'PCP' = 12:30 - 16:00. (Row 'Mini-Sized Grains and Oilseeds' 'Early Close' = 12:30 ; row 'MGEX Hard Red Spring Wheat' 'Early Close' = 12:15 ; row 'MGEX Indices' 'Early Close' = 12:30. No 'MGEX Apple Juice' row is printed in this revision.) Note: 'July 3 Grain, Oilseed & Livestock TAS early 12:00 CT close.' [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:05 CT / 13:05 ET"
+    },
+    {
+     "family": "Livestock",
+     "status": "early_close",
+     "verbatim": "Row 'Livestock' -- Tuesday, July 3 'Early Close' = 12:15, 'PCP' = 12:45 - 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET"
+    },
+    {
+     "family": "Dairy",
+     "status": "early_close",
+     "verbatim": "Row 'Dairy' -- Tuesday, July 3 'Early Close' = 12:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET"
+    },
+    {
+     "family": "Lumber",
+     "status": "early_close",
+     "verbatim": "Row 'Lumber' -- Tuesday, July 3 'Early Close' = 12:00 ( options 12:02). [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET (options 12:02 CT / 13:02 ET)"
+    }
+   ]
+  },
+  {
+   "date": "2018-07-04",
+   "name": "Independence Day (Wednesday, July 4)",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Row 'Equity Products' -- Wednesday, July 4 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Row 'Interest Rate Products' -- Wednesday, July 4 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Row 'FX Products' -- Wednesday, July 4 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Row 'Energy, Metals, Softs & DME Products' -- Wednesday, July 4 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Row 'Bitcoin' -- Wednesday, July 4 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Row 'Grains and Oilseeds' -- Wednesday, July 4 = 'Markets Closed' ; Thursday, July 5 'Pre-opening' = 06:00, 'Open' = 08:30. Note: 'July 4 No trading in Grain, Oilseed & Livestock TAS'. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Thursday, July 5)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Row 'Livestock' -- Wednesday, July 4 = 'Markets Closed' ; Thursday, July 5 'Pre-opening' = 06:00, 'Open' = 08:30. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Thursday, July 5)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- Wednesday, July 4 = 'Markets Closed' ; Wednesday, July 4 'Pre-opening' = 16:45, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Wednesday, July 4)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Row 'Lumber' -- Wednesday, July 4 = 'Markets Closed' ; Thursday, July 5 'Pre-opening' = 06:00, 'Open' = 09:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-4th-of-july-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "09:00 CT / 10:00 ET (Thursday, July 5)"
+    }
+   ]
+  },
+  {
+   "date": "2018-09-03",
+   "name": "Labor Day",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Row 'Equity Products' -- Monday, September 3 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-labor-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-labor-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Row 'Interest Rate Products' -- Monday, September 3 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-labor-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Row 'FX Products' -- Monday, September 3 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-labor-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Row 'Energy, Metals, Softs & DME Products' -- Monday, September 3 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-labor-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-labor-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Row 'Bitcoin' -- Monday, September 3 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-labor-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Row 'Grains and Oilseeds' -- Friday, August 31 'Regular Fri. Close' = 13:20, 'PCP' = 14:30-16:00 ; Sunday, September 2 'Pre-opening' = 16:00 ; Monday, September 3 'Open' = 19:00. No Monday day session is printed. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-labor-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "19:00 CT / 20:00 ET (Monday, September 3)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Row 'Livestock' -- Friday, August 31 'Regular Fri. Close' = 13:05, 'PCP' = 14:30-16:00 ; no Monday, September 3 entry ; Tuesday, September 4 'Pre-opening' = 06:00, 'Open' = 08:30. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-labor-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Tuesday, September 4)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- Friday, August 31 'Regular Fri. Close' = 13:55 ; Sunday, September 2 'Pre-opening' = 16:00 ; Monday, September 3 'Open' = 17:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-labor-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Monday, September 3)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Row 'Lumber' -- Friday, August 31 'Regular Fri. Close' = 13:55 ; no Monday, September 3 entry ; Tuesday, September 4 'Pre-opening' = 06:00, 'Open' = 09:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-labor-day-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "09:00 CT / 10:00 ET (Tuesday, September 4)"
+    }
+   ]
+  },
+  {
+   "date": "2018-11-22",
+   "name": "Thanksgiving Day",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Row 'Equity Products' -- Wednesday, November 21 'Regular Close' = 16:00, 'Pre-opening' = 16:45, 'Open' = 17:00 ; Thursday, November 22 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00 ; Friday, November 23 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Row 'Interest Rate Products' -- Wednesday, November 21 'Regular Close' = 16:00, 'Pre-opening' = 16:45, 'Open' = 17:00 ; Thursday, November 22 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00 ; Friday, November 23 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Row 'FX Products' -- Wednesday, November 21 'Regular Close' = 16:00, 'Pre-opening' = 16:45, 'Open' = 17:00 ; Thursday, November 22 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00 ; Friday, November 23 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Row 'Energy, Metals, Softs & DME Products' -- Wednesday, November 21 'Regular Close' = 16:00, 'Pre-opening' = 16:45, 'Open' = 17:00 ; Thursday, November 22 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00 ; Friday, November 23 'Close' = 12:45. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Row 'Bitcoin' -- Wednesday, November 21 'Regular Close' = 16:00, 'Pre-opening' = 16:45, 'Open' = 17:00 ; Thursday, November 22 'Halt' = 12:00, 'Pre-opening' = 12:00, 'Open' = 17:00 ; Friday, November 23 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET",
+     "open_instant": "17:00 CT / 18:00 ET"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Row 'Grains and Oilseeds' -- Wednesday, November 21 'Regular Close' = 13:20, 'PCP' = 14:30-16:00, 'Pre-opening' = 16:45 ; no Thursday, November 22 session is printed ; Friday, November 23 'Open' = 08:30, 'Close' = 12:05. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Friday, November 23)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Row 'Livestock' -- Wednesday, November 21 'Regular Close' = 13:05, 'PCP' = 14:30-16:00 ; no Thursday, November 22 session is printed ; Friday, November 23 'Pre-opening' = 06:00, 'Open' = 08:30, 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Friday, November 23)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- Wednesday, November 21 'Regular Close' = 16:00 ; 'Dairy products will remain closed until their regularly scheduled open on Sunday Nov 26 @ 17:00'. (The printed weekday/date pairing is stale: in 2018 the following Sunday was Nov 25, not Nov 26; quoted exactly as printed.) [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday Nov 26)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Row 'Lumber' -- Wednesday, November 21 'Regular Close' = 16:00 ; no Thursday, November 22 session is printed ; Friday, November 23 'Pre-opening' = 06:00, 'Open' = 09:00, 'Close' = 12:00 ( options 12:02). [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "09:00 CT / 10:00 ET (Friday, November 23)"
+    }
+   ]
+  },
+  {
+   "date": "2018-11-23",
+   "name": "Day after Thanksgiving (early close)",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Row 'Equity Products' -- Friday, November 23 'Close' = 12:15 (the session opened Thursday, November 22 17:00). [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET",
+     "open_instant": "17:00 CT / 18:00 ET (previous day)"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET",
+     "open_instant": "17:00 CT / 18:00 ET (previous day)"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Row 'Interest Rate Products' -- Friday, November 23 'Close' = 12:15 (the session opened Thursday, November 22 17:00). [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET",
+     "open_instant": "17:00 CT / 18:00 ET (previous day)"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Row 'FX Products' -- Friday, November 23 'Close' = 12:15 (the session opened Thursday, November 22 17:00). [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET",
+     "open_instant": "17:00 CT / 18:00 ET (previous day)"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Row 'Energy, Metals, Softs & DME Products' -- Friday, November 23 'Close' = 12:45. [sheet: All times are Central Time, ET +1] The sheet's Notes block adds 'November 23: Early closes for Metals TAS contracts:' -- 'Copper TAS – Early close 1100 CT / 1200 ET' ; 'Silver TAS- Early close 1125 CT / 1225 ET' ; 'Gold TAS – Early close 1130 CT / 1230 ET' ; 'Platinum TAS - Early close -1105 CT / 1205 ET' ; 'Palladium TAS  - Early close -1100 CT / 1200 ET' ; 'Crude, Heating Oil, RBOB & Nat Gas TAS contracts close early at 12:30 CT / 1330 ET'. These are trade-type variants, not the family close.",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:45 CT / 13:45 ET",
+     "open_instant": "17:00 CT / 18:00 ET (previous day)"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1] The sheet's Notes block adds 'November 23: Early closes for Metals TAS contracts:' -- 'Copper TAS – Early close 1100 CT / 1200 ET' ; 'Silver TAS- Early close 1125 CT / 1225 ET' ; 'Gold TAS – Early close 1130 CT / 1230 ET' ; 'Platinum TAS - Early close -1105 CT / 1205 ET' ; 'Palladium TAS  - Early close -1100 CT / 1200 ET' ; 'Crude, Heating Oil, RBOB & Nat Gas TAS contracts close early at 12:30 CT / 1330 ET'. These are trade-type variants, not the family close.",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:45 CT / 13:45 ET",
+     "open_instant": "17:00 CT / 18:00 ET (previous day)"
+    },
+    {
+     "family": "Cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Row 'Bitcoin' -- Friday, November 23 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET",
+     "open_instant": "17:00 CT / 18:00 ET (previous day)"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "early_close",
+     "verbatim": "Row 'Grains and Oilseeds' -- Friday, November 23 'Open' = 08:30, 'Close' = 12:05. (Row 'Mini-Sized Grains and Oilseeds' 'Close' = 12:30 ; row 'MGEX Hard Red Spring Wheat' 'Close' = 12:15 ; row 'MGEX Indices' 'Close' = 12:30 ; row 'Rough Rice' 'Close' = 12:05. No 'MGEX Apple Juice' row is printed in this revision.) Note: 'Grain, Oilseed & Livestock TAS close early at 12:00 CT'. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:05 CT / 13:05 ET",
+     "open_instant": "08:30 CT / 09:30 ET"
+    },
+    {
+     "family": "Livestock",
+     "status": "early_close",
+     "verbatim": "Row 'Livestock' -- Friday, November 23 'Pre-opening' = 06:00, 'Open' = 08:30, 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET",
+     "open_instant": "08:30 CT / 09:30 ET"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- 'Dairy products will remain closed until their regularly scheduled open on Sunday Nov 26 @ 17:00'. (The printed weekday/date pairing is stale: in 2018 the following Sunday was Nov 25, not Nov 26; quoted exactly as printed.) [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Sunday Nov 26)"
+    },
+    {
+     "family": "Lumber",
+     "status": "early_close",
+     "verbatim": "Row 'Lumber' -- Friday, November 23 'Pre-opening' = 06:00, 'Open' = 09:00, 'Close' = 12:00 ( options 12:02). [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-thanksgiving-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET (options 12:02 CT / 13:02 ET)",
+     "open_instant": "09:00 CT / 10:00 ET"
+    }
+   ]
+  },
+  {
+   "date": "2018-12-24",
+   "name": "Christmas Eve (Monday) - early close",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "early_close",
+     "verbatim": "Row 'Equity Products' -- Monday, December 24 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "early_close",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "early_close",
+     "verbatim": "Row 'Interest Rate Products' -- Monday, December 24 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET"
+    },
+    {
+     "family": "FX",
+     "status": "early_close",
+     "verbatim": "Row 'FX Products' -- Monday, December 24 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET"
+    },
+    {
+     "family": "Energy",
+     "status": "early_close",
+     "verbatim": "Row 'Energy, Metals, Softs & DME products' -- Monday, December 24 'Close' = 12:45. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:45 CT / 13:45 ET"
+    },
+    {
+     "family": "Metals",
+     "status": "early_close",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:45 CT / 13:45 ET"
+    },
+    {
+     "family": "Cryptocurrency",
+     "status": "early_close",
+     "verbatim": "Row 'Bitcoin' -- Monday, December 24 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "early_close",
+     "verbatim": "Row 'Grains and Oilseeds' -- Monday, December 24 'Close' = 12:05. (Row 'Mini-Sized Grains and Oilseeds' = 12:30 ; 'MGEX Hard Red Spring Wheat' = 12:15 ; 'MGEX Indices' = 12:30 ; 'Rough Rice' = 12:05. No 'MGEX Apple Juice' row is printed in this revision.) Note: 'Grain, Oilseed & Livestock TAS close early at 12:00 CT'. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:05 CT / 13:05 ET"
+    },
+    {
+     "family": "Livestock",
+     "status": "early_close",
+     "verbatim": "Row 'Livestock' -- Monday, December 24 'Close' = 12:15. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:15 CT / 13:15 ET"
+    },
+    {
+     "family": "Dairy",
+     "status": "early_close",
+     "verbatim": "Row 'Dairy' -- Monday, December 24 'Close' = 12:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET"
+    },
+    {
+     "family": "Lumber",
+     "status": "early_close",
+     "verbatim": "Row 'Lumber' -- Monday, December 24 'Close' = 12:00 ( options 12:02). [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "12:00 CT / 13:00 ET (options 12:02 CT / 13:02 ET)"
+    }
+   ]
+  },
+  {
+   "date": "2018-12-25",
+   "name": "Christmas Day (Tuesday)",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "closed",
+     "verbatim": "Row 'Equity Products' -- Tuesday, December 25 = 'Globex Closed' ; Tuesday, December 25 'Pre-opening' = 16:00, 'Open' = 17:00 ; Wednesday, December 26 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Tuesday, December 25)"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "closed",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Tuesday, December 25)"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "closed",
+     "verbatim": "Row 'Interest Rate Products' -- Tuesday, December 25 = 'Globex Closed' ; Tuesday, December 25 'Pre-opening' = 16:00, 'Open' = 17:00 ; Wednesday, December 26 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Tuesday, December 25)"
+    },
+    {
+     "family": "FX",
+     "status": "closed",
+     "verbatim": "Row 'FX Products' -- Tuesday, December 25 = 'Globex Closed' ; Tuesday, December 25 'Pre-opening' = 16:00, 'Open' = 17:00 ; Wednesday, December 26 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Tuesday, December 25)"
+    },
+    {
+     "family": "Energy",
+     "status": "closed",
+     "verbatim": "Row 'Energy, Metals, Softs & DME products' -- Tuesday, December 25 = 'Globex Closed' ; Tuesday, December 25 'Pre-opening' = 16:00, 'Open' = 17:00 ; Wednesday, December 26 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Tuesday, December 25)"
+    },
+    {
+     "family": "Metals",
+     "status": "closed",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Tuesday, December 25)"
+    },
+    {
+     "family": "Cryptocurrency",
+     "status": "closed",
+     "verbatim": "Row 'Bitcoin' -- Monday, December 24 'Close' = 12:15 ; Tuesday, December 25 = 'Globex Closed' ; Tuesday, December 25 'Pre-opening' = 16:00, 'Open' = 17:00 ; Wednesday, December 26 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Tuesday, December 25)"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "closed",
+     "verbatim": "Row 'Grains and Oilseeds' -- Tuesday, December 25 = 'Globex Closed' ; Wednesday, December 26 'Pre-opening' = 06:00, 'Open' = 08:30, 'Close' = 13:20, 'PCP' = 14:30-16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Wednesday, December 26)"
+    },
+    {
+     "family": "Livestock",
+     "status": "closed",
+     "verbatim": "Row 'Livestock' -- Tuesday, December 25 = 'Globex Closed' ; Wednesday, December 26 'Pre-opening' = 06:00, 'Open' = 08:30, 'Close' = 13:05. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "08:30 CT / 09:30 ET (Wednesday, December 26)"
+    },
+    {
+     "family": "Dairy",
+     "status": "closed",
+     "verbatim": "Row 'Dairy' -- Tuesday, December 25 = 'Globex Closed' ; Tuesday, December 25 'Pre-opening' = 16:00, 'Open' = 17:00 ; Wednesday, December 26 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "17:00 CT / 18:00 ET (Tuesday, December 25)"
+    },
+    {
+     "family": "Lumber",
+     "status": "closed",
+     "verbatim": "Row 'Lumber' -- Tuesday, December 25 = 'Globex Closed' ; Wednesday, December 26 'Pre-opening' = 06:00, 'Open' = 09:00, 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "open_instant": "09:00 CT / 10:00 ET (Wednesday, December 26)"
+    }
+   ]
+  },
+  {
+   "date": "2018-12-26",
+   "name": "Day after Christmas (Wednesday) - regular trading day; CME prints an Equity-only afternoon pre-open/open phase on this date",
+   "families": [
+    {
+     "family": "Equity Index",
+     "status": "normal",
+     "verbatim": "Row 'Equity Products' -- Wednesday, December 26 'Pre-opening' = 15:15, 'Open' = 15:30, 'Close' = 16:00. (The same row prints Tuesday, December 25 'Pre-opening' = 16:00, 'Open' = 17:00, which is where the Wednesday, December 26 trade date begins; the Wednesday 15:15/15:30 pair is printed in the Wednesday, December 26 columns.) [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET",
+     "open_instant": "15:30 CT / 16:30 ET (Wednesday, December 26)"
+    },
+    {
+     "family": "Nikkei 225 (dollar)",
+     "status": "normal",
+     "verbatim": "No Nikkei-specific line is printed; Nikkei 225 (dollar) is governed by the Equity line quoted in this date's 'Equity Index' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET",
+     "open_instant": "15:30 CT / 16:30 ET (Wednesday, December 26)"
+    },
+    {
+     "family": "Interest Rates",
+     "status": "normal",
+     "verbatim": "Row 'Interest Rate Products' -- Wednesday, December 26 'Close' = 16:00. No Wednesday pre-opening or open is printed. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET"
+    },
+    {
+     "family": "FX",
+     "status": "normal",
+     "verbatim": "Row 'FX Products' -- Wednesday, December 26 'Close' = 16:00. No Wednesday pre-opening or open is printed. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET"
+    },
+    {
+     "family": "Energy",
+     "status": "normal",
+     "verbatim": "Row 'Energy, Metals, Softs & DME products' -- Wednesday, December 26 'Close' = 16:00. No Wednesday pre-opening or open is printed. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET"
+    },
+    {
+     "family": "Metals",
+     "status": "normal",
+     "verbatim": "No separate Metals line is printed; CME prints Metals on the Energy row quoted in this date's 'Energy' entry. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET"
+    },
+    {
+     "family": "Cryptocurrency",
+     "status": "normal",
+     "verbatim": "Row 'Bitcoin' -- Wednesday, December 26 'Close' = 16:00. No Wednesday pre-opening or open is printed. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET"
+    },
+    {
+     "family": "Grains and Oilseeds",
+     "status": "normal",
+     "verbatim": "Row 'Grains and Oilseeds' -- Wednesday, December 26 'Pre-opening' = 06:00, 'Open' = 08:30, 'Close' = 13:20, 'PCP' = 14:30-16:00. (Row 'Mini-Sized Grains and Oilseeds' = 06:00 / 08:30 / 13:45 ; 'MGEX Hard Red Spring Wheat' = 06:00 / 08:30 / 13:30 ; 'MGEX Indices' = 06:00 / 08:30 / 13:45.) [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "13:20 CT / 14:20 ET",
+     "open_instant": "08:30 CT / 09:30 ET (Wednesday, December 26)"
+    },
+    {
+     "family": "Livestock",
+     "status": "normal",
+     "verbatim": "Row 'Livestock' -- Wednesday, December 26 'Pre-opening' = 06:00, 'Open' = 08:30, 'Close' = 13:05, 'PCP' = 14:30-16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "13:05 CT / 14:05 ET",
+     "open_instant": "08:30 CT / 09:30 ET (Wednesday, December 26)"
+    },
+    {
+     "family": "Dairy",
+     "status": "normal",
+     "verbatim": "Row 'Dairy' -- Wednesday, December 26 'Close' = 16:00. No Wednesday pre-opening or open is printed. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET"
+    },
+    {
+     "family": "Lumber",
+     "status": "normal",
+     "verbatim": "Row 'Lumber' -- Wednesday, December 26 'Pre-opening' = 06:00, 'Open' = 09:00, 'Close' = 16:00. [sheet: All times are Central Time, ET +1]",
+     "document": "2018-holiday-calendars.zip#2018-christmas-holiday-schedule.xls @2026-08-30",
+     "tier": "T1",
+     "close_instant": "16:00 CT / 17:00 ET",
+     "open_instant": "09:00 CT / 10:00 ET (Wednesday, December 26)"
+    }
+   ]
+  }
+ ],
+ "missing": [
+  "2016 and 2017 holidays before 2017-12-17 — no Cryptocurrency row exists because the family did not yet trade. Not an evidence gap; recorded so no row is invented.",
+  "Nikkei-specific line — CME prints none on any 2016-2018 holiday schedule. The printed Equity exception rows are BTIC variants, S&P CNX Nifty, USD-denominated Ibovespa and FTSE rows only. Every Nikkei 225 (dollar) entry here is the Equity block's statement, flagged as such in its verbatim. What would close it: a CME Globex holiday document or SER that names the Nikkei 225 contracts separately.",
+  "2018-01-01 Grains and Oilseeds, Monday-evening leg -- RESOLVED in round 2, kept here because the earlier revisions are still in the store. The Internet Archive holds four distinct revisions of 2018-new-years-holiday-schedule.xls, not two: 2017-05-05T07:26:53Z ('Last Updated: Mar 22, 2017'), 2017-06-28T17:38:31Z and 2017-07-09T09:40:00Z (one digest, 'Last Updated: June 1, 2017'), 2017-10-25T11:11:43Z ('Last Updated: Sep 21, 2017') and 2018-01-06T22:57:26Z ('Last Updated: Dec 5, 2017'). All four were read in round 2. The first three each print 'Monday, January 1  Pre-opening = 16:00, Open = 19:00' for grains and 'Tuesday, Jan 2  Pre-opening = 08:00'; the Dec 5, 2017 revision prints no Monday-evening grain open and moves the Tuesday pre-open to 06:00. CME made the identical edit on the same date to 2017-christmas-holiday-schedule.xls. The removal is therefore a dated, deliberate CME change made between the 2017-10-25 and 2018-01-06 captures, not a transcription artifact or a disagreement between captures; the Dec 5, 2017 revision is served for 2018-01-01 and for 2017-12-25. Bytes for all four revisions are saved (the two intermediate ones under raw/cme-2016-2018-fix/docs/).",
+  "2016-11-24 / 2016-11-25 Dairy reopen day — the 2016 Thanksgiving PDF prints 'Dairy products will remain closed until 1700 CT / 1800 ET / 2300 UTC Sunday, Nov 29', but in 2016 Nov 27 was the Sunday and Nov 29 a Tuesday. The instant (1700 CT) is sourced; the calendar day is internally inconsistent in CME's own document and is quoted, not resolved.",
+  "2018-11-22 / 2018-11-23 Dairy reopen day — same defect in the 2018 Thanksgiving sheet: 'regularly scheduled open on Sunday Nov 26 @ 17:00', but in 2018 the following Sunday was Nov 25. Quoted as printed, not resolved.",
+  "2018 sheets -- RESOLVED in round 2. The round-1 claim that the channels were exhausted was wrong: CME Group's own annual bundle https://www.cmegroup.com/tools-information/holiday-calendar/files/2018-holiday-calendars.zip is archived at 2026-08-30T10:02:25Z (sha256 aa0ac87005319be45d91d2a91fef907757dd8e5f0c6e3fb19875329940d9c5a2) and carries CME's final 2018 Globex sheets. The round-1 CDX enumeration could not contain it because that enumeration was range-limited to 2014-2020. The bundle was retrieved, re-fetched and byte-compared in round 2, and every family row this task records was re-derived from it. Six of the eleven 2018 documents are superseded by it (4th-of-july, christmas, good-friday, labor-day, memorial-day, thanksgiving) and those rows are now keyed to the bundle; martin-luther-king and presidents-day bundle copies are byte-identical to the served 2018-05-08 captures and new-years is byte-identical to the copy inside the 2017 bundle, so those three keep their per-file citation. The same omission applied to 2017: 2017-holiday-calendars.zip (archived 2021-01-26T09:48:35Z, sha256 f0dd1b522fc8ff8838861129a9a3966f874339f9a7bd9dd65c132616c0e1c1b2) supersedes the 2017 Thanksgiving and 2017 Christmas sheets and is now served for both.",
+  "Columbus Day and Veterans Day — CME Group does publish a Globex schedule for both (e.g. 2016-columbus-day-holiday-schedule.xls, 2016/2017 veterans-day sheets, 2017/2018 columbus-day settlement-time PDFs, all enumerated in cdx_holiday_calendar.json and the 2016 bundle). They are outside the holiday list this task enumerates and were not worked up beyond enumeration.",
+  "Per-venue floor and CME ClearPort holiday schedules (2016/2017 chicago- and new-york-trading-floor PDFs, 2016/2017 clearport PDFs) were enumerated and saved but not worked up: they are not Globex electronic session hours.",
+  "The CME Clearing 'holiday advisory' memos for 2016-2018 were retrieved and saved as corroboration. They confirm which calendar day is the holiday but carry clearing-cycle and collateral processing detail, not per-product-group trading instants, so no row is keyed to them.",
+  "2018-12-26 Equity Products -- the 2018 Christmas sheet's final revision prints a Wednesday, December 26 'Pre-opening' = 15:15 and 'Open' = 15:30 for 'Equity Products' in the Wednesday columns, while the same row's session for trade date Wednesday, December 26 opens Tuesday, December 25 at 17:00. CME prints both and does not reconcile them; both are recorded on the new 2018-12-26 entry and quoted as printed. What would close it: a CME Globex notice or SER for December 26, 2018 equity index hours."
+ ],
+ "saved_json": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2016-2018.json",
+ "repairs": {
+  "applied_on": "2026-09-14",
+  "governed_by": "holidays/cme-2016-2018.verify.json (round 3)",
+  "items": [
+   "discrepancy 1 (load-bearing): 2018-07-03, 2018-11-23 and 2018-12-24 Grains and Oilseeds verbatims rewritten to the cells the cited annual-bundle revisions print; none of the three prints an 'MGEX Apple Juice' row, and the 2018 Thanksgiving and Christmas revisions add 'Rough Rice'",
+   "discrepancy 2 (minor): the coverage's normalisation sentence now declares the whitespace collapse, the dropped trailing parenthetical and the dropped '**' column-header marker",
+   "discrepancy 3 (minor): the 2018-11-23 Metals and Energy verbatims now quote the sheet's own Metals-TAS note"
+  ],
+  "unchanged": "no status, instant, document id or tier was changed by this repair"
+ }
+}

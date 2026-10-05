@@ -1,0 +1,42 @@
+[
+  {
+    "identity": "cfe",
+    "row": "| `cfe` | [cfe.rs](../../src/calendar/schedules/futures/us/cfe.rs) | [US-CFE](sources.md#us-cfe) | Primary | T1 | served | 2010-01-01 | 2026-08-22 | quarterly | Cboe Futures Exchange VIX futures, on the grid notice C2021102603 made effective 2021-12-06: RTH 08:30–15:00 CT, ETH 15:00–16:00 and 17:00–08:30. VIX-futures normal-week history is complete from the January-2010 floor, and the old-system pre-opens have exact sourced onsets. Randomized new-system queue starts use the conservative latest edges of 16:00:03/16:45:03 from 2018-02-25 and 16:00:06/16:45:06 from 2018-08-12. | [evidence](../evidence/cfe.md) |",
+    "evidence_file": "docs/evidence/cfe.md"
+  },
+  {
+    "identity": "coinbase_derivatives",
+    "row": "| `coinbase_derivatives` | [coinbase_derivatives.rs](../../src/calendar/schedules/futures/us/coinbase_derivatives.rs) | [US-COINBASE-DERIVATIVES](sources.md#us-coinbase-derivatives) | Partial / order-entry | T1 | served | — | 2026-09-11 | monthly | The Coinbase Derivatives venue default is the recurring 23x5 futures grid, Sunday–Friday 17:00–16:00 CT with a daily 16:00–17:00 break, stated by the four 2021-06-04 launch certifications and restated through filing #2026-24. Closed before FairX's exact 2021-06-28 08:00 CT launch, and no revision separates launch from today. The 16:50 CT Pre-Open is documented from 2021 without a time and first witnessed in a 2025 capture, so it enters at a knowledge-bound 2026-09-11 review row; the 24x7 family most CDE futures joined since #2026-24 is out of scope and claims no key. | [evidence](../evidence/coinbase_derivatives.md) |",
+    "evidence_file": "docs/evidence/coinbase_derivatives.md"
+  },
+  {
+    "identity": "eurex (Exchange)",
+    "row": "| `eurex` | [europe.rs](../../src/calendar/schedules/futures/international/europe.rs) | [EU-EUREX](sources.md#eu-eurex) | Primary | T1 | served | 2010-01-01 | 2026-08-22 | quarterly | FESX/FDAX/FDXM benchmark-index futures, not a venue-wide clock: from the sourced 2018-12-10 cutover, pre-trading and opening auction run 01:00–01:15 CET or 02:00–02:15 CEST before continuous trading to 22:00. The January-2010 baseline has 07:30–07:50 pre-trading and 07:50–22:00 continuous trading, pinned by Eurex's own archived 2009, 2013, 2015 and 2017 contract specifications. Circular 088/2018 states the day-level cutover and its redline preserves that predecessor grid. | [evidence](../evidence/eurex.md) |",
+    "evidence_file": "docs/evidence/eurex.md"
+  },
+  {
+    "identity": "eex",
+    "row": "| `eex` | [europe.rs](../../src/calendar/schedules/futures/international/europe.rs) | [EU-EEX](sources.md#eu-eex) | Primary | T1 | dormant | — | 2026-08-22 | on demand | EEX Nordic Zonal Power Futures only, not a venue-wide grid: closed before the sourced 2024-03-25 launch, then 08:00–18:00 CE(S)T Monday to Friday. The official EEX customer information gives both the launch day and the trading table, and the current derivatives timetable retains that grid. The Trading Conditions make product hours controlling and define exchange days as Monday–Friday, so any other EEX product needs its own profile. | [evidence](../evidence/eex.md) |",
+    "evidence_file": "docs/evidence/eex.md"
+  },
+  {
+    "identity": "iceus",
+    "row": "| `iceus` | [ice_us.rs](../../src/calendar/schedules/futures/us/ice_us.rs) | [ICE-DERIVATIVES](sources.md#ice-derivatives) | Primary | T1 | served | — | 2026-08-22 | quarterly | NYSE FANG+ Index Futures only, not a venue-wide ICE clock: the Sunday 18:00 and Monday–Thursday 20:00 opens each run through 18:00 the next day. Closed before the sourced 2017-11-07 launch-eve 19:30 Pre-Open and 20:00 matching start, both of which ICE's FANG+ launch notice 20170926 states. Current Pre-Open queues are Sunday 17:30–18:00 and Monday–Thursday 19:30–20:00, published by the product page and ICE's June-2026 master table. | [evidence](../evidence/iceus.md) |",
+    "evidence_file": "docs/evidence/iceus.md"
+  },
+  {
+    "identity": "cfe_vix",
+    "row": "| `cfe_vix` | [cfe.rs](../../src/calendar/schedules/futures/us/cfe.rs) | [US-CFE](sources.md#us-cfe) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | Reuses the complete CFE VIX history through the dated key API, including the exact old-system pre-open onsets. The current grid is the 2021-12-06 profile: RTH 08:30–15:00 CT with ETH 15:00–16:00 and 17:00–08:30. The sourced 2018-02-25 three-second and 2018-08-12 six-second conservative queue edges are carried unchanged from the exchange row. | [evidence](../evidence/cfe_vix.md) |",
+    "evidence_file": "docs/evidence/cfe_vix.md"
+  },
+  {
+    "identity": "eurex (MarketHoursKey)",
+    "row": "| `eurex` | [europe.rs](../../src/calendar/schedules/futures/international/europe.rs) | [EU-EUREX](sources.md#eu-eurex) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | FESX/FDAX/FDXM benchmark-index futures through the dated key API, on the same profile the Eurex exchange row carries. It reuses the sourced January-2010 baseline, the 2018-12-10 extension and the recurring CET/CEST phase selection. That selection is seasonal, so a caller must supply an instant rather than rely on a static current table. | [evidence](../evidence/eurex_key.md) |",
+    "evidence_file": "docs/evidence/eurex_key.md"
+  },
+  {
+    "identity": "ice_us",
+    "row": "| `ice_us` | [ice_us.rs](../../src/calendar/schedules/futures/us/ice_us.rs) | [ICE-DERIVATIVES](sources.md#ice-derivatives) | Primary | T1 | dormant | — | 2026-08-22 | on demand | NYSE FANG+ Index Futures only, through the dated key API on the same profile the iceus exchange row carries. Closed before the sourced 2017-11-07 launch-eve opening, which ICE's FANG+ launch notice 20170926 states. Current queues are Sunday 17:30–18:00 and Monday–Thursday 19:30–20:00 ET ahead of the 18:00 and 20:00 ET opens. | [evidence](../evidence/ice_us.md) |",
+    "evidence_file": "docs/evidence/ice_us.md"
+  }
+]

@@ -1,0 +1,25 @@
+retry 2010-new-years.pdf 0 <urlopen error [Errno 61] Connection refused>
+retry 2010-new-years.pdf 1 <urlopen error [Errno 61] Connection refused>
+retry 2010-new-years.pdf 2 <urlopen error [Errno 61] Connection refused>
+retry 2010-new-years.pdf 3 <urlopen error [Errno 61] Connection refused>
+retry 2010-new-years.pdf 4 <urlopen error [Errno 61] Connection refused>
+retry 2010-martin-luther-king.pdf 0 <urlopen error [Errno 61] Connection refused>
+retry 2010-martin-luther-king.pdf 1 <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)>
+retry 2010-martin-luther-king.pdf 2 <urlopen error [Errno 61] Connection refused>
+retry 2010-martin-luther-king.pdf 3 <urlopen error [Errno 61] Connection refused>
+retry 2010-martin-luther-king.pdf 4 <urlopen error [Errno 61] Connection refused>
+retry 2010-presidents-day.pdf 0 <urlopen error [Errno 61] Connection refused>
+retry 2010-presidents-day.pdf 1 <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)>
+retry 2010-presidents-day.pdf 2 <urlopen error [Errno 61] Connection refused>
+retry 2010-presidents-day.pdf 3 <urlopen error [Errno 61] Connection refused>
+retry 2010-presidents-day.pdf 4 <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)>
+retry 2010-memorial-day.pdf 0 <urlopen error [Errno 61] Connection refused>
+retry 2010-memorial-day.pdf 1 <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)>
+retry 2010-memorial-day.pdf 2 <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)>
+retry 2010-memorial-day.pdf 3 <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)>
+retry 2010-memorial-day.pdf 4 <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)>
+retry 2010-4th-of-july.pdf 0 <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)>
+retry 2010-4th-of-july.pdf 1 <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)>
+retry 2010-4th-of-july.pdf 2 <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)>
+retry 2010-4th-of-july.pdf 3 <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)>
+retry 2010-4th-of-july.pdf 4 <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)>

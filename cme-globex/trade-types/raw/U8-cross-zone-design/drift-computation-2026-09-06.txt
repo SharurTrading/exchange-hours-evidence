@@ -1,0 +1,70 @@
+TAM London CLL/BZL/HOL/RBL close       anchor 16:30 Europe/London
+      Chicago 10:30 (day offset +0)  on 241 weekdays of 2026
+      Chicago 11:30 (day offset +0)  on 20 weekdays of 2026
+
+TAM Gold GCD close                     anchor 15:02 Europe/London
+      Chicago 09:02 (day offset +0)  on 241 weekdays of 2026
+      Chicago 10:02 (day offset +0)  on 20 weekdays of 2026
+
+TAM Copper HGF close                   anchor 12:35 Europe/London
+      Chicago 06:35 (day offset +0)  on 241 weekdays of 2026
+      Chicago 07:35 (day offset +0)  on 20 weekdays of 2026
+
+BTIC Europe DVT/E3T close              anchor 16:30 Europe/London
+      Chicago 10:30 (day offset +0)  on 241 weekdays of 2026
+      Chicago 11:30 (day offset +0)  on 20 weekdays of 2026
+
+BTIC crypto London stop start          anchor 16:00 Europe/London
+      Chicago 10:00 (day offset +0)  on 241 weekdays of 2026
+      Chicago 11:00 (day offset +0)  on 20 weekdays of 2026
+
+FX BTIC 6EB halt start                 anchor 15:40 Europe/London
+      Chicago 09:40 (day offset +0)  on 241 weekdays of 2026
+      Chicago 10:40 (day offset +0)  on 20 weekdays of 2026
+
+FX BTIC 6EB halt end                   anchor 16:30 Europe/London
+      Chicago 10:30 (day offset +0)  on 241 weekdays of 2026
+      Chicago 11:30 (day offset +0)  on 20 weekdays of 2026
+
+TAM Singapore CLS/BZS close            anchor 16:30 Asia/Singapore
+      Chicago 02:30 (day offset +0)  on 91 weekdays of 2026
+      Chicago 03:30 (day offset +0)  on 170 weekdays of 2026
+
+TAM Shanghai CLC close                 anchor 15:00 Asia/Shanghai
+      Chicago 01:00 (day offset +0)  on 91 weekdays of 2026
+      Chicago 02:00 (day offset +0)  on 170 weekdays of 2026
+
+BTIC FTSE China 50 FTC close           anchor 16:00 Asia/Hong_Kong
+      Chicago 02:00 (day offset +0)  on 91 weekdays of 2026
+      Chicago 03:00 (day offset +0)  on 170 weekdays of 2026
+
+BTIC crypto APAC stop start            anchor 16:00 Asia/Hong_Kong
+      Chicago 02:00 (day offset +0)  on 91 weekdays of 2026
+      Chicago 03:00 (day offset +0)  on 170 weekdays of 2026
+
+BTIC Nikkei/TOPIX close                anchor 15:30 Asia/Tokyo
+      Chicago 00:30 (day offset +0)  on 91 weekdays of 2026
+      Chicago 01:30 (day offset +0)  on 170 weekdays of 2026
+
+=== US/UK DST misalignment windows ===
+2010: spring misaligned 2010-03-14 -> 2010-03-28 (13d); autumn misaligned 2010-10-31 -> 2010-11-07 (7d); total 20d
+2011: spring misaligned 2011-03-13 -> 2011-03-27 (13d); autumn misaligned 2011-10-30 -> 2011-11-06 (7d); total 20d
+2012: spring misaligned 2012-03-11 -> 2012-03-25 (13d); autumn misaligned 2012-10-28 -> 2012-11-04 (7d); total 20d
+2013: spring misaligned 2013-03-10 -> 2013-03-31 (20d); autumn misaligned 2013-10-27 -> 2013-11-03 (7d); total 27d
+2014: spring misaligned 2014-03-09 -> 2014-03-30 (20d); autumn misaligned 2014-10-26 -> 2014-11-02 (7d); total 27d
+2015: spring misaligned 2015-03-08 -> 2015-03-29 (20d); autumn misaligned 2015-10-25 -> 2015-11-01 (7d); total 27d
+2016: spring misaligned 2016-03-13 -> 2016-03-27 (13d); autumn misaligned 2016-10-30 -> 2016-11-06 (7d); total 20d
+2017: spring misaligned 2017-03-12 -> 2017-03-26 (13d); autumn misaligned 2017-10-29 -> 2017-11-05 (7d); total 20d
+2018: spring misaligned 2018-03-11 -> 2018-03-25 (13d); autumn misaligned 2018-10-28 -> 2018-11-04 (7d); total 20d
+2019: spring misaligned 2019-03-10 -> 2019-03-31 (20d); autumn misaligned 2019-10-27 -> 2019-11-03 (7d); total 27d
+2020: spring misaligned 2020-03-08 -> 2020-03-29 (20d); autumn misaligned 2020-10-25 -> 2020-11-01 (7d); total 27d
+2021: spring misaligned 2021-03-14 -> 2021-03-28 (13d); autumn misaligned 2021-10-31 -> 2021-11-07 (7d); total 20d
+2022: spring misaligned 2022-03-13 -> 2022-03-27 (13d); autumn misaligned 2022-10-30 -> 2022-11-06 (7d); total 20d
+2023: spring misaligned 2023-03-12 -> 2023-03-26 (13d); autumn misaligned 2023-10-29 -> 2023-11-05 (7d); total 20d
+2024: spring misaligned 2024-03-10 -> 2024-03-31 (20d); autumn misaligned 2024-10-27 -> 2024-11-03 (7d); total 27d
+2025: spring misaligned 2025-03-09 -> 2025-03-30 (20d); autumn misaligned 2025-10-26 -> 2025-11-02 (7d); total 27d
+2026: spring misaligned 2026-03-08 -> 2026-03-29 (20d); autumn misaligned 2026-10-25 -> 2026-11-01 (7d); total 27d
+2027: spring misaligned 2027-03-14 -> 2027-03-28 (13d); autumn misaligned 2027-10-31 -> 2027-11-07 (7d); total 20d
+2028: spring misaligned 2028-03-12 -> 2028-03-26 (13d); autumn misaligned 2028-10-29 -> 2028-11-05 (7d); total 20d
+2029: spring misaligned 2029-03-11 -> 2029-03-25 (13d); autumn misaligned 2029-10-28 -> 2029-11-04 (7d); total 20d
+2030: spring misaligned 2030-03-10 -> 2030-03-31 (20d); autumn misaligned 2030-10-27 -> 2030-11-03 (7d); total 27d

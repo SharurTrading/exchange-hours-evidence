@@ -1,0 +1,117 @@
+[
+  {
+    "identity": "unknown",
+    "row": "| `unknown` | [futures_profile.rs](../../src/calendar/futures_profile.rs) | [SYNTHETIC-24X7](sources.md#synthetic-24x7) | Synthetic | — | dormant | — | — | on demand | Deliberate UTC 24×7 fallback profile, not a venue and not an exchange fact. It is library policy: the profile is continuous, has no final daily close, and therefore returns no trade date. Do not read it as evidence for any real venue. | [evidence](../evidence/unknown.md) |",
+    "evidence_file": "docs/evidence/unknown.md"
+  },
+  {
+    "identity": "nasdaq",
+    "row": "| `nasdaq` | [equities.rs](../../src/calendar/schedules/equities/us/equities.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/history.rs) | [US-NASDAQ-EQUITIES](sources.md#us-nasdaq-equities) | Primary | T1 | dormant | 2013-03-18 | 2026-08-22 | on demand | The Nasdaq Stock Market normal week, 04:00–20:00 ET around the 09:30–16:00 core session. Date-aware lookups retain the sourced 2013-03-18 move of the pre-market open from 07:00 to 04:00, and the 07:00 grid below that day is carried rather than separately sourced. The announced Night Session is monitored but unencoded pending Equity Data Plan readiness and a later Nasdaq filing, so current and future snapshots stay 04:00–20:00. | [evidence](../evidence/nasdaq.md) |",
+    "evidence_file": "docs/evidence/nasdaq.md"
+  },
+  {
+    "identity": "nasdaq_bx",
+    "row": "| `nasdaq_bx` | [equities.rs](../../src/calendar/schedules/equities/us/equities.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/history.rs) | [US-NASDAQ-EQUITIES](sources.md#us-nasdaq-equities) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | Stable wire identity for the exchange the operator renamed Nasdaq Texas, publishing 07:00–19:00 ET system hours around the core session. An official 2009 Nasdaq circular fixes the 08:00–19:00 January-2010 baseline and Equity Trader Alert 2011-20 makes the production date of the 07:00 open Monday 2011-04-18. The rename is not a launch and does not move the wire name. | [evidence](../evidence/nasdaq_bx.md) |",
+    "evidence_file": "docs/evidence/nasdaq_bx.md"
+  },
+  {
+    "identity": "nasdaq_psx",
+    "row": "| `nasdaq_psx` | [equities.rs](../../src/calendar/schedules/equities/us/equities.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/history.rs) | [US-NASDAQ-EQUITIES](sources.md#us-nasdaq-equities) | Primary | T1 | dormant | — | 2026-08-22 | on demand | Nasdaq PSX on its current 08:00–17:00 ET system hours around the core session. The profile is closed before the operator-dated 2010-10-08 launch at 09:00–17:00, and SR-Phlx-2010-172 names 2010-12-13 as the implementation date for the 08:00 open. Nothing is carried below the launch. | [evidence](../evidence/nasdaq_psx.md) |",
+    "evidence_file": "docs/evidence/nasdaq_psx.md"
+  },
+  {
+    "identity": "cboe_bzx",
+    "row": "| `cboe_bzx` | [cboe.rs](../../src/calendar/schedules/equities/us/cboe.rs) | [US-CBOE-EQUITIES](sources.md#us-cboe-equities) | Primary | T1 | dormant | 2010-01-01 | 2026-08-24 | on demand | Cboe BZX on its current 02:30–20:00 ET envelope, of which 02:30–04:00 is order entry only. The January-2010 08:00–17:00 baseline, the 2014-12-02 06:00 queue onset, the 2016-05-25 matching start, the 2018-07-30 close extension and the 2025-05-01 02:30 queue change are all date-aware. The venue rulebook makes that envelope a rule boundary some dated SEC filing established, not a mutable operator setting. | [evidence](../evidence/cboe_bzx.md) |",
+    "evidence_file": "docs/evidence/cboe_bzx.md"
+  },
+  {
+    "identity": "cboe_byx",
+    "row": "| `cboe_byx` | [cboe.rs](../../src/calendar/schedules/equities/us/cboe.rs) | [US-CBOE-EQUITIES](sources.md#us-cboe-equities) | Primary | T1 | dormant | — | 2026-08-24 | on demand | Cboe BYX on its current 06:00–20:00 ET envelope, of which 06:00–07:00 is order entry only. The profile is closed before the sourced 2010-10-15 launch, and the 2014-12-01 queue onset, the 2016-05-23 matching start and the 2018-08-27 20:00 close are date-aware. This SRO operates no options facility. | [evidence](../evidence/cboe_byx.md) |",
+    "evidence_file": "docs/evidence/cboe_byx.md"
+  },
+  {
+    "identity": "cboe_edga",
+    "row": "| `cboe_edga` | [cboe.rs](../../src/calendar/schedules/equities/us/cboe.rs) | [US-CBOE-EQUITIES](sources.md#us-cboe-equities) | Partial / order-entry | T1 | dormant | — | 2026-08-22 | on demand | Cboe EDGA on its current 06:00–20:00 ET envelope, of which 06:00–07:00 is order entry only, closed before the sourced 2010-07-02 first-symbol launch. SR-EDGA-2014-20, approved by SEC Release 34-73592 on 2014-11-13, dates the 06:00 entry start, and Direct Edge's own specifications carry the 07:00 queue from launch day. The 06:00 move itself is undated between the specification editions of 2010-10-01 and 2011-02-03, so the 06:00–07:00 hour is withheld until the 2014 approval, which under-reports order acceptance rather than over-reporting it. | [evidence](../evidence/cboe_edga.md) |",
+    "evidence_file": "docs/evidence/cboe_edga.md"
+  },
+  {
+    "identity": "cboe_edgx",
+    "row": "| `cboe_edgx` | [cboe.rs](../../src/calendar/schedules/equities/us/cboe.rs) | [US-CBOE-EQUITIES](sources.md#us-cboe-equities) | Partial / order-entry | T1 | dormant | — | 2026-08-22 | on demand | Cboe EDGX on its current 02:30–20:00 ET envelope, of which 02:30–04:00 is order entry only, closed before the sourced 2010-07-02 launch. SR-EDGX-2014-18, approved by SEC Release 34-73468 on 2014-10-29, dates the 06:00 entry start, and the 2016-05-26, 2021-03-08 and 2021-09-07 queue changes are exact. The undated 06:00 move between the 2010-10-01 and 2011-02-03 specification editions leaves the 06:00–07:00 hour withheld until the 2014 approval, and the conditional future overnight phase stays unencoded. | [evidence](../evidence/cboe_edgx.md) |",
+    "evidence_file": "docs/evidence/cboe_edgx.md"
+  },
+  {
+    "identity": "nyse",
+    "row": "| `nyse` | [nyse.rs](../../src/calendar/schedules/equities/us/nyse.rs) | [US-NYSE-EQUITIES](sources.md#us-nyse-equities) | Partial / executable | T1 | dormant | ? | 2026-08-22 | on demand | The New York Stock Exchange Pillar cash-equity envelope, 06:30–16:00 ET with a 06:30–07:00 order-entry leg and an executable 07:00–09:30 Early Trading Session on Tapes B and C. The acceptance edge is NYSE rulebook text and NYSE's own filings date Pillar production to 2018-04-09 without condition, so the order-entry half is closed. What remains is executable: Crossing Session II of the Off-Hours Trading Facility ran 16:00–18:30 from before the January-2010 floor until 2024-01-31 and is modelled nowhere, so the row errs toward closed, and the pre-2018 Tape A acceptance edge is still unmodelled. | [evidence](../evidence/nyse.md) |",
+    "evidence_file": "docs/evidence/nyse.md"
+  },
+  {
+    "identity": "nyse_arca",
+    "row": "| `nyse_arca` | [nyse.rs](../../src/calendar/schedules/equities/us/nyse.rs) | [US-NYSE-EQUITIES](sources.md#us-nyse-equities) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | NYSE Arca on its current 02:30–20:00 ET accepted-order envelope, of which 02:30–04:00 is order entry only. The 30-minute acceptance edge is rulebook text on both sides of the January-2010 floor, so 03:30 is carried back to the floor with no cutover asserted, and the exchange's own Trader Update dates the move to 02:30 to 2021-09-13. The announced 23-hour Overnight Session under a temporary Pillar rule is monitored and unencoded pending Equity Data Plan readiness. | [evidence](../evidence/nyse_arca.md) |",
+    "evidence_file": "docs/evidence/nyse_arca.md"
+  },
+  {
+    "identity": "nyse_american",
+    "row": "| `nyse_american` | [nyse.rs](../../src/calendar/schedules/equities/us/nyse.rs) | [US-NYSE-EQUITIES](sources.md#us-nyse-equities) | Partial / executable | T1 | dormant | ? | 2026-08-22 | on demand | NYSE American on its Pillar envelope, 06:30–20:00 ET with a 06:30–07:00 order-entry leg, over a 09:30–16:00 core session before Pillar. The acceptance edge is rulebook text and the Commission dates the Pillar transition to 2017-07-24 without condition. The executable residue is the January-2010 off-hours crossing topology: NYSE Amex participated in the Off-Hours Trading Facility whose Crossing Session II ran until 2024-01-31, the crate models no post-16:00 phase, and the floor-era phase table and its amendment chain are unestablished. | [evidence](../evidence/nyse_american.md) |",
+    "evidence_file": "docs/evidence/nyse_american.md"
+  },
+  {
+    "identity": "nyse_national",
+    "row": "| `nyse_national` | [nyse.rs](../../src/calendar/schedules/equities/us/nyse.rs) | [US-NYSE-EQUITIES](sources.md#us-nyse-equities) | Partial / order-entry | T1 | dormant | 2010-08-02 | 2026-08-22 | on demand | NYSE National on its current 06:30–20:00 ET envelope, of which 06:30–07:00 is order entry only, over the legacy NSX grids, dormant intervals and the 2018-05-21 Pillar relaunch, all date-aware. The NSX rulebook and the exchange's own 2010 filing state the floor-era 08:00–18:30 table outright, so that baseline is carried below 2010-08-02. What is unestablished is whether legacy NSX ever had an order-acceptance phase distinct from its three trading sessions, and because the NSX circular archive is unrecoverable the residual risk is under-reporting a queue, never over-reporting one. | [evidence](../evidence/nyse_national.md) |",
+    "evidence_file": "docs/evidence/nyse_national.md"
+  },
+  {
+    "identity": "nyse_texas",
+    "row": "| `nyse_texas` | [nyse.rs](../../src/calendar/schedules/equities/us/nyse.rs) | [US-NYSE-EQUITIES](sources.md#us-nyse-equities) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | The continuing CHX and NYSE Chicago exchange, now NYSE Texas: 07:00–17:00 ET from the January-2010 floor and 06:30–20:00 with a 06:30–07:00 order-entry leg from the 2019-11-04 Pillar migration. The 2025 Texas conversion and rename were non-substantive and it did not launch in 2025. This SRO operates no options or bond facility. | [evidence](../evidence/nyse_texas.md) |",
+    "evidence_file": "docs/evidence/nyse_texas.md"
+  },
+  {
+    "identity": "memx_eq",
+    "row": "| `memx_eq` | [equities.rs](../../src/calendar/schedules/equities/us/equities.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/history.rs) | [US-MEMX](sources.md#us-memx) | Primary | T1 | dormant | — | 2026-08-22 | on demand | MEMX on its current 04:00–20:00 ET envelope around the core session, closed before the operator-dated 2020-09-21 live launch. The 2020-10-05 post-market shortening to 17:00, the 2023-02-01 restoration of the 20:00 close and the 2025-05-19 04:00 pre-market open are each dated by the operator. Nothing is carried below the launch. | [evidence](../evidence/memx_eq.md) |",
+    "evidence_file": "docs/evidence/memx_eq.md"
+  },
+  {
+    "identity": "miax_pearl_eq",
+    "row": "| `miax_pearl_eq` | [equities.rs](../../src/calendar/schedules/equities/us/equities.rs)<br>[history.rs](../../src/calendar/schedules/equities/us/history.rs) | [US-MIAX](sources.md#us-miax) | Primary | T1 | dormant | — | 2026-08-22 | on demand | MIAX Pearl Equities on its current 04:00–20:00 ET envelope, closed before the sourced 2020-09-29 live launch and carrying Regular Trading Hours only until Regulatory Circular 2025-02 added the Early and Late Trading Sessions on 2025-02-20. The operator's trade-hours table opens a Live Order Window at 03:30 that this profile does not carry as an order-entry phase, so the envelope under-reports order acceptance by half an hour and never over-reports it. That omission is on the system-coverage discrepancy list. | [evidence](../evidence/miax_pearl_eq.md) |",
+    "evidence_file": "docs/evidence/miax_pearl_eq.md"
+  },
+  {
+    "identity": "iex",
+    "row": "| `iex` | [ats.rs](../../src/calendar/schedules/equities/us/ats.rs) | [US-IEX](sources.md#us-iex) | Primary | T1 | dormant | — | 2026-08-22 | on demand | The Investors Exchange venue identity on its primary-sourced 08:00–17:00 ET System Hours, both wings executable. It is closed before the 2016-08-19 first production-symbol launch, and the symbol phase-in ended when the predecessor ATS ceased on 2016-09-02; that ATS is out of scope by identity. IEX Options is a facility of the same SRO and is modelled nowhere, with no unconditional launch day in the reviewed material. | [evidence](../evidence/iex.md) |",
+    "evidence_file": "docs/evidence/iex.md"
+  },
+  {
+    "identity": "ltse",
+    "row": "| `ltse` | [independent.rs](../../src/calendar/schedules/equities/us/independent.rs) | [US-LTSE](sources.md#us-ltse) | Primary | T1 | dormant | — | 2026-08-22 | on demand | The Long-Term Stock Exchange on 08:00–17:00 ET around a 09:30–16:00 Regular Market Session, closed before the SEC-recorded commencement of operations on 2020-08-28. One equities matching system covers all three published sessions. Nothing is carried below the launch. | [evidence](../evidence/ltse.md) |",
+    "evidence_file": "docs/evidence/ltse.md"
+  },
+  {
+    "identity": "24x",
+    "row": "| `24x` | [independent.rs](../../src/calendar/schedules/equities/us/independent.rs) | [US-24X](sources.md#us-24x) | Primary | T1 | dormant | — | 2026-08-22 | on demand | 24X on 04:00–20:00 ET around the core session, closed before the SEC-recorded commencement of trading on 2025-10-14. The condition-dependent 21:00–04:00 overnight session is not operative and carries no runtime revision. The operator's user manual publishes only the three daytime sessions. | [evidence](../evidence/24x.md) |",
+    "evidence_file": "docs/evidence/24x.md"
+  },
+  {
+    "identity": "txse",
+    "row": "| `txse` | [independent.rs](../../src/calendar/schedules/equities/us/independent.rs) | [US-TXSE](sources.md#us-txse) | Primary | T1 | dormant | — | 2026-08-22 | on demand | The Texas Stock Exchange on an 08:00–17:00 ET envelope whose off-core legs are both executable, closed through the July 2026 non-clearing test-symbol period. First live NMS production is 2026-07-10 on the operator's own launch alerts. The separately published UAT environment is a test facility and is excluded. | [evidence](../evidence/txse.md) |",
+    "evidence_file": "docs/evidence/txse.md"
+  },
+  {
+    "identity": "blue_ocean_ats",
+    "row": "| `blue_ocean_ats` | [ats.rs](../../src/calendar/schedules/equities/us/ats.rs) | [US-BLUE-OCEAN](sources.md#us-blue-ocean) | Primary | T1 | dormant | — | 2026-08-22 | on demand | Blue Ocean's production ATS new-order service, 20:00–04:00 ET Sunday through Thursday and matching continuously throughout, closed before the operator-dated 2021-10-05 launch. The earlier beta has no day-level start and is outside this production identity. The live Form ATS-N's sub-minute resting-book cleanup, the 18:15 test-order window and the 19:30 Reference Price are all outside the stated new-order scope. | [evidence](../evidence/blue_ocean_ats.md) |",
+    "evidence_file": "docs/evidence/blue_ocean_ats.md"
+  },
+  {
+    "identity": "finra_trf_carteret",
+    "row": "| `finra_trf_carteret` | [trfs.rs](../../src/calendar/schedules/equities/us/trfs.rs) | [US-FINRA-TRF](sources.md#us-finra-trf) | Primary | T1 | dormant | 2026-03-30 | 2026-08-22 | on demand | The FINRA/Nasdaq Trade Reporting Facility Carteret, a reporting facility with no order book, on 04:00–20:00 ET around 09:30–16:00 Regular Trading Hours. FINRA Regulatory Notice 25-15 dates the move from 08:00–20:00 to 2026-03-30, and the earlier grid is carried below that day from the same notice. The announced Sunday-through-Friday expansion stays unencoded while its implementation day depends on the SIP rollout. | [evidence](../evidence/finra_trf_carteret.md) |",
+    "evidence_file": "docs/evidence/finra_trf_carteret.md"
+  },
+  {
+    "identity": "finra_trf_chicago",
+    "row": "| `finra_trf_chicago` | [trfs.rs](../../src/calendar/schedules/equities/us/trfs.rs) | [US-FINRA-TRF](sources.md#us-finra-trf) | Primary | T1 | dormant | — | 2026-08-22 | on demand | The FINRA/Nasdaq Trade Reporting Facility Chicago, a reporting facility with no order book, on 04:00–20:00 ET around 09:30–16:00 Regular Trading Hours. It is closed before the sourced 2018-09-10 facility launch, which accepted test securities only through 2018-09-21, and Regulatory Notice 25-15 dates the 2026-03-30 change. The SIP-conditional overnight expansion remains unencoded. | [evidence](../evidence/finra_trf_chicago.md) |",
+    "evidence_file": "docs/evidence/finra_trf_chicago.md"
+  },
+  {
+    "identity": "finra_trf_nyse",
+    "row": "| `finra_trf_nyse` | [trfs.rs](../../src/calendar/schedules/equities/us/trfs.rs) | [US-FINRA-TRF](sources.md#us-finra-trf) | Primary | T1 | dormant | 2026-03-30 | 2026-08-22 | on demand | The FINRA/NYSE Trade Reporting Facility, a reporting facility with no order book, on 04:00–20:00 ET around 09:30–16:00 Regular Trading Hours. FINRA Regulatory Notice 25-15 dates the move from 08:00–20:00 to 2026-03-30, and the earlier grid is carried below that day from the same notice. The announced Sunday-through-Friday expansion stays unencoded while its implementation day depends on the SIP rollout. | [evidence](../evidence/finra_trf_nyse.md) |",
+    "evidence_file": "docs/evidence/finra_trf_nyse.md"
+  }
+]

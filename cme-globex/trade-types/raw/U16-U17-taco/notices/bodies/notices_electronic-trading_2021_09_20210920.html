@@ -1,0 +1,419 @@
+Title: 20210920 - CME Group
+
+URL Source: https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html
+
+Markdown Content:
+For the latest roadmap of CME Group technology initiatives:
+
+[See the Development Launch Schedule.](https://www.cmegroup.com/globex/develop-to-cme-globex/development-launches.html)
+
+## Critical System Updates
+
+### BTIC on Cryptocurrency Futures with Friday Trading- This Week
+
+Effective this **Sunday, September 26** (trade date Monday, September 27), pending completion of all regulatory review periods, the following BTIC on cryptocurrency futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| BTIC on Cryptocurrency Futures with Friday Trading |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| BTIC on Bitcoin Futures | BTB | BX | 318 |
+| BTIC on Micro Bitcoin Futures | MIB | BX | 318 |
+| BTIC on Ether Futures | ETB | RJ | 318 |
+
+The CME Globex trading hours for these futures will be as follows:
+
+*   Sunday - Friday 6:00 p.m. Eastern Time - 4:00 p.m. London Time (11:00 a.m./12:00 p.m. Eastern Time) for same day Reference Rate.
+*   Monday - Friday 4:30 p.m. London Time (11:30 a.m./12:30 p.m. ET) - 5:00 p.m. Eastern Time for next day Reference Rate.
+*   Friday 4:30 p.m. London Time (11:30 a.m./12:30 p.m. Eastern Time) - 5:00 p.m. ET for the following Business Day’s Reference Rate.
+*   Monday - Thursday 5:00 p.m. - 6:00 p.m. Eastern Time daily maintenance period.
+
+These products are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+### TACO and BTIC Amended Trading Schedule- This Week
+
+Effective this **Sunday, September 26** (trade date Monday, September 27), and pending all relevant CFTC regulatory review periods, the Basis Trade at Cash Open (“TACO”) and Basis Trade at Index Close (“BTIC”) will open for Monday’s trade date on the previous Friday afternoon.
+
+With this change and for the first time, CME Globex will support trading for a trade date over a weekend. The trade date for these products will not roll over on the weekend. This change will impact iLink 2 and iLink 3 order entry, MDP 3 market data, and CME STP and CME STP FIX.
+
+Please review the[Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/TACO+and+BTIC+Friday+Trading+Schedule)for information on functionality and messaging impacts.
+
+This change is currently available for customer testing in New Release.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+### iLink 3 FIXP Messaging Enhancements- October 3
+
+The previously announced launch of [iLink 3 FIXP](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+Binary+Order+Entry+-+Session+Layer) messaging enhancements has been postponed to **Sunday, October 3.**CME Group will implement enhancements to [iLink 3 FIXP](https://www.cmegroup.com/confluence/display/EPICSANDBOX/iLink+3+Binary+Order+Entry+-+Session+Layer) messages to be a more consistent customer experience. With this change, any error conditions for Negotiate and Establish with invalid UUID and/or NextSeqNo will lead to the FIXP session being terminated. Currently, we reject FIXP messages in some scenarios and terminate sessions in other scenarios.
+
+These enhancements will be reflected on the FIXP messages as follows:
+
+| **iLink 3 FIXP Messaging Enhancements** |
+| --- |
+| **Request from Client System to CME Globex** | **Response from CME Globex to Client System** |
+| FIXP Message | Error Conditions | **Current** | **New** |
+| [Negotiate](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Negotiate) | Missing UUID | [Negotiation Reject](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Negotiation+Reject) | [Terminate](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Terminate) |
+| UUID is not greater than the UUID used in the last successful Negotiate/Establish message | Negotiation Reject | Terminate |
+| [Establish](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Establish) | Missing UUID | [Establishment Reject](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Establishment+Reject) | Terminate |
+| UUID does not match with the UUID used in the previous Negotiate message | Establishment Reject | Terminate |
+| Missing NextSeqNo | Establishment Reject | Terminate |
+
+These changes are currently available in New Release for customer testing.
+
+| **ILINK 3 FIXP MESSAGING ENHANCEMENTS TIMELINE** |
+| --- |
+| MARKET SEGMENT ID | MARKET SEGMENT DESCRIPTION | PRODUCTION LAUNCH |
+| 76 | NYMEX Metals, Softs and Alternative Markets Futures; COMEX Futures | Sunday, October 3, 2021 |
+| 12 50 60 70 | Order Entry Service Gateway CME Interest Rate Options CME, CBOT and MGEX Commodity Options CME, CBOT and MGEX Commodity Futures | Sunday, October 17, 2021 |
+| 52 54 56 58 64 68 72 74 78 80 82 84 88 | CME FX Futures and Options II CME Equity Options - S&P Option NYMEX Emissions Options; NYMEX Energy, Metals, Softs and Alternative Market Options; COMEX Options; DME Options CBOT Interest Rate Options CME Equity Futures – E-mini S&P CME Equity Futures II; CBOT Equity Futures CBOT and CME Equity Options; excluding S&P BMD Futures and Options; NYMEX SEF NYMEX Emissions and Non-Crude Energy Futures DME Futures; NYMEX Crude and Crude Refined Energy Futures CME Interest Rate Futures CBOT Interest Rate Futures CME FX Futures and Options | Sunday, October 31, 2021 |
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+### Bursa Malaysia Derivatives (BMD) Night Trading Session - December 2021
+
+In December 2021 and pending final regulatory approval, Bursa Malaysia Derivatives (BMD) will add a night trading session for all active products on CME Globex. Due to the time difference between Malaysian time and Central time, the night trading session activities will begin the business day prior to actual trade date in Malaysian time.The new night trading session will be open for trading Monday - Thursday.
+
+There will be no Friday night trading session. There is no impact to the current Monday - Friday day trading sessions.
+
+| New Night Trading Session |
+| --- |
+| Product | **NEW** **Monday - Thursday Night Trading Session** |
+| Night Session Trading Hours | 21:00:00 hours to 23:30:00 hours (Malaysia time) |
+
+**Example of Monday-Thursday Trading Schedule**
+
+*   Trades executed during Monday night trading session will have a Tuesday trade date
+*   Trades executed during Tuesday night trading session will have a Wednesday trade date
+*   Trades executed during Wednesday night trading session will have a Thursday trade date
+*   Trades executed during Thursday night trading session will have a Friday trade date
+*   **Friday night trading session is not supported**
+
+**Example of a Night Trading Session**
+
+ This example shows the night trading session market phases using a Monday, August 9, 2021, night trading session, with trades executed for a Tuesday, August 10, 2021, trade date.
+
+| Monday Night Trading Session with a Tuesday Trade Date |
+| --- |
+| **Night Session Trading Market State** | **Malaysian Time (MYT)** |
+| Pre-Open | 20:45:00 |
+| No-cancel | 20:59:30 |
+| Open | 21:00:00 |
+| Pause | 23:30:00 |
+
+| **Products for Night Trading Session** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group |
+| Crude Palm Oil Futures | FCPO | BC |
+| FTSE Kuala Lumpur Composite Index Futures | FKLI | BE |
+| Gold Futures | FGLD | BG |
+| USD RBD Palm Olein futures | FPOL | BL |
+| MINI FTSE BURSE MALAYSIA MID 70 IDX | FM70 | BS |
+| Crude Palm Oil Options | OCPO | BP (UDS: BZ) |
+| FTSE Kuala Lumpur Composite Index Options | OKLI | BO (UDS: BU) |
+| FUPO BMD CRUDE PALM OIL | FUPO | BA |
+| Option on USD RBD Palm Olein Futures | OPOL | B8 |
+| CRUDE PALM KERNEL OIL FUTURES | FPKO | BK |
+| BMD Tin Futures | FTIN | BN |
+| East Malaysia Crude Palm Oil Futures | FEPO | BR |
+| 3 Month Kuala Lumpur Interbank Offered Rate Futures | FKB3 | BT |
+
+This change is currently available for customer testing in New Release.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+## Product Launches
+
+### BTIC on Cryptocurrency Futures with Friday Trading- This Week
+
+Effective this **Sunday, September 26** (trade date Monday, September 27), pending completion of all regulatory review periods, the following BTIC on cryptocurrency futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| BTIC on Cryptocurrency Futures with Friday Trading |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| BTIC on Bitcoin Futures | BTB | BX | 318 |
+| BTIC on Micro Bitcoin Futures | MIB | BX | 318 |
+| BTIC on Ether Futures | ETB | RJ | 318 |
+
+The CME Globex trading hours for these futures will be as follows:
+
+*   Sunday - Friday 6:00 p.m. Eastern Time - 4:00 p.m. London Time (11:00 a.m./12:00 p.m. Eastern Time) for same day Reference Rate.
+*   Monday - Friday 4:30 p.m. London Time (11:30 a.m./12:30 p.m. ET) - 5:00 p.m. Eastern Time for next day Reference Rate.
+*   Friday 4:30 p.m. London Time (11:30 a.m./12:30 p.m. Eastern Time) - 5:00 p.m. ET for the following Business Day’s Reference Rate.
+*   Monday - Thursday 5:00 p.m. - 6:00 p.m. Eastern Time daily maintenance period.
+
+These products are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+### Update Update - Petrol Intraday Index on Benchmark Administration Premium- September 27
+
+† Denotes update to the article
+
+Effective this**Monday, September 27**, CME Group will launch[Petroleum Intraday Index](https://www.cmegroup.com/market-data/cme-group-benchmark-administration.html#energy)on[Benchmark Administration Premium MDP](https://www.cmegroup.com/confluence/display/EPICSANDBOX/CME+Benchmark+Administration+Premium). The Intraday Index will be sent every 15 minutes.
+
+The messages for this index will be sent on the Benchmark Administration Premium Simple Binary Encoding (SBE) Multicast channel ID 261 via SBE template MDIncrementalRefreshSettle401. The Petroleum Intraday Index will be denoted with 731-SettlPriceType with a bit zero value of 0.
+
+The Intraday Index will include the following values:
+
+| Petrol Intraday Index on Benchmark Administration Premium |
+| --- |
+| TAG | FIX NAME | NEW VALID VALUES | DESCRIPTION |
+| 269 | MDEntryType | 3 = Index Value | Indicates the type of price |
+| 37500 | ClearingProductCode | CVX = †Indicative Petroleum Index | Clearing Product Code |
+| 167 | SecurityType | INDEX = Index Product | Identifies the type of instrument |
+| 731 | SettlPriceType | 00000000 – Intraday Index | Bitmap field of eight Boolean type indicators representing settlement price type: Bit 0: (least significant bit): 1=Final 0=I |
+
+Additional product and instrument reference information can be obtained via[Reference Data API](https://www.cmegroup.com/trading/market-tech-and-data-services/cme-reference-data-api.html).
+
+The Petroleum Index is currently available for customer testing in New Release.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+### BRIXX™ Retail Index Futures- October 3
+
+Effective**Sunday**,**October 3**(trade date Monday, October 4), BRIXX™ Retail Index futures and spreads will be listed for trading on CME Globex pending regulatory approval.
+
+| **BRIXX™ Retail Index Futures** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | FUTURE TAG 762- SECURITYSUBTYPE | Market Data Channel |
+| BRIXX™ Retail Index Futures | BXT | MF | SP (Calendar Spread) | 460 |
+
+These futures are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of MGEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+### Launch of E-mini Russell 2000 Monday and Wednesday Options- October 3
+
+Effective **Sunday, October 3** (trade date Monday, October 4), pending completion of all regulatory review periods, E-mini Russell 2000 Monday and Wednesday Options will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| Launch of E-mini Russell 2000 Monday and Wednesday Options |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| Monday Weekly Options on E-mini Russell 2000 Index Futures (European-Style) | R1A, R2A, R3A, R4A, R5A | Outright – R4; UDS – R5 | 319 |
+| Wednesday Weekly Options on E-mini Russell 2000 Index Futures (European-Style) | R1C, R2C, R3C, R4C, R5C | Outright – R4; UDS – R5 | 319 |
+
+These options will be available for customer testing in New Release on **Monday, September 20.**
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+### Bursa Malaysia Derivatives (BMD) East Malaysia Crude Palm Oil Futures- October 3
+
+Effective**Sunday, October 3** (trade date Monday, October 4),and pending final regulatory approval, Bursa Malaysia Derivatives (BMD)’s East Malaysia Crude Palm Oil futures contract and spreads will be made available for trading on CME Globex.
+
+| Bursa Malaysia Derivatives (BMD) East Malaysia Crude Palm Oil Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| East Malaysia Crude Palm Oil Futures | FEPO | BR | 430 |
+
+This change is currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of BMD.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+### Fixed Price Ratio Inter-Commodity Futures Spread- October 3
+
+Effective **Sunday, October 3**(trade date Monday, October 4), a new exchange-defined Fixed Price Ratio Inter-Commodity futures spreads will be made available for trading on CME Globex. The new spread will utilize a new strategy type (AE).
+
+The AE spread is the simultaneous purchase(sale) of two energy contracts of different leg quantity ratios where the spread will trade at a fixed price ratio of 1:1. The AE spread will allow customers to trade two energy contracts of varying leg ratios in a single package.
+
+Please review the [Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Fixed+Price+Ratio+Inter-Commodity+Futures+Spread+on+CME+Globex) for detailed spread construction and pricing examples.
+
+The contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+The spread is currently available for customer testing in New Release.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+### South American Soybean/CBOT Soybean Inter-Commodity Futures Spread- October 3
+
+Effective **Sunday, October 3** (trade date Monday, October 4), a new exchange-defined South American Soybean/CBOT Soybean Inter-Commodity futures spread will be made available for trading on CME Globex. This new spread will utilize a new strategy type (**BT**).
+
+The **BT** spread is the simultaneous purchase (sale) of a South American FOB Santos Soybeans Financially Settled (Platts) futures (SAS) and a CBOT Soybean futures (ZS) contract. The **BT** strategy type will allow customers to trade between the South American Soybean and benchmark CBOT Soybean contract in a single package.
+
+Please review the [Client Impact Assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/South+American+Soybean+-+CBOT+Soybean+Inter-Commodity+Futures+Spread) for detailed spread construction and pricing examples.
+
+The spread is currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+## Product Changes
+
+### Delisting and Removal of S&P 500 Futures and Options- This Week
+
+On **Monday, September 20**, the following S&P 500 futures and options were delisted, and effective close of business this Friday, September 24, these products will be removed from CME Globex.
+
+| Delisting and Removal of S&P 500 Futures and Options |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group |
+| S&P 500 Stock Price Index Futures | SP | SP |
+| Options on S&P 500 Stock Price Index Futures | SP | OS |
+| Options on S&P 500 Stock Price Index Futures - End-of-Month (European-Style) | EV | OS |
+| Weekly Options on S&P 500 Stock Price Index Futures - Week 1-Week 4 (European-Style) | EV1-EV4 | OS |
+| Monday Weekly Options on S&P 500 Stock Price Index Futures - Week 1-Week 5 (European-Style) | S1A-S5A | OS |
+| Wednesday Weekly Options on S&P 500 Stock Price Index Futures - Week 1-Week 5 (European-Style) | S1C-S5C | OS |
+| Options on S&P 500 Stock Price Index Futures - End-of-Month (European-Style) | YPC | BM |
+
+Please see [Special Executive Report-8828](https://www.cmegroup.com/notices/ser/2021/08/SER-8828.html) for additional details on position migrations.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+### Change to Strike Price Listing for Options on Bitcoin Futures- This Week
+
+Effective this **Sunday, September 26** (trade date Monday, September 27), the strike price listing rule will be changed for options on Bitcoin futures on CME Globex and for submission for clearing via CME ClearPort.
+
+| Change to Strike Price Listing for Options on Bitcoin Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Strike Price Listing | New Strike Price Listing |
+| Options on Bitcoin Futures | BTC | B2 | **All contract months:** 100000 point strike listed for all contract months 10000 point strike increments from 10000-600% above the ATM strike price 1000 point strike increments from 1000-400% above the ATM strike price Dynamic Strike creation in 25 point strike increments. **Nearest four contract months:** 500 point strike increments from 50% below to 50% above the ATM strike price. **Nearest three contract months:** 100 point strike increments from 30% below to 30% above the ATM strike price. **Nearest two contract months:** If underlying future price falls below 5000, 50 point strike increments from 20% below to 10% above the ATM strike price. | **All contract months:** Persistent strikes of: 500,000; 100,000; 50,000; 10,000; 5,000; 1,000. 50% up and 50% down at 1000 around settlement price if price is less than or equal to 100,000; 50% up and 50% down at 5000 around settlement price if price is greater than 100,000. **Nearest four contract months:** 50% up and 50% down at 500 around settlement price if price is less than or equal to 10,000. **Nearest three contract months:** 50% up and 50% down at 100 around settlement price if price is less than or equal to 5,000. **Nearest two contract months:** 50% up and 50% down at 50 below settlement price if price is less than or equal to 2,500. |
+
+These changes are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+### Change to Maximum Order Quantity for Micro Bitcoin Futures- This Week
+
+Effective this **Sunday, September 26** (trade date Monday, September 27), maximum order quantity, tag 1140-MaxTradeVol for Micro Bitcoin futures will be amended on CME Globex and for submission for clearing via CME ClearPort as follows:
+
+| Change to Maximum Order Quantity for Micro Bitcoin Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current tag 1140-MaxTradeVol | New tag 1140-MaxTradeVol |
+| Micro Bitcoin Futures | MBT | BF | 100 | 500 |
+| Calendar Spreads on Micro Bitcoin Futures | MBT | BF | 100 | 500 |
+
+These changes are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+### Change to Strike Price Listing for E-mini Russell 2000 Options- October 3
+
+Effective **Sunday, October 3** (trade date Monday, October 4), the strike price listing rule will be changed for E-mini Russell 2000 Options on CME Globex and for submission for clearing via CME ClearPort.
+
+| Change to Strike Price Listing for E-mini Russell 2000 Options |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | **Current Strike Price Listing Schedule** | **New Strike Price Listing Schedule** |
+| Options on E-mini Russell 2000 Index Futures | RTO | R4 | At all multiples of 25 index points within ±50% of quarterly Exercise Price Reference, centered on previous day's settlement price of the underlying futures At all multiples of 10 index points within ±20% of quarterly Exercise Price Reference, centered on previous day's settlement price of the underlying futures Once the option's underlying futures contract becomes second nearest to delivery, at all multiples of 5 index points within ±10% of quarterly Exercise Price Reference, centered on previous day's settlement price of the underlying futures | 50 index point integer multiples, when listed: +30% to -50% of the prior day's settlement price on the underlying future contract 10 index point integer multiples, 186 days prior to expiry (6-months prior to expiration): +10% to -25% of the prior day's settlement price on the underlying future contract 5 index point integer multiples, 35 days prior to expiry (or 5 Weeks): +5% to -15% of the prior day's settlement price on the underlying future contract Dynamic strikes allowed at 5 index point increments. |
+| Options on E-mini Russell 2000 Index Futures - End-of-Month | RTM | R4 | At all multiples of 25 index points within ±50% of quarterly Exercise Price Reference, centered on previous day’s settlement price of the underlying futures At all multiples of 10 index points within ±20% of quarterly Exercise Price Reference, centered on previous day’s settlement price of the underlying futures Once the option’s underlying futures contract becomes second nearest to delivery, at all multiples of 5 index points within ±10% of quarterly Exercise Price Reference, centered on previous day’s settlement price of the underlying futures | 50 index point integer multiples, when listed: +30% to -50% of the prior day’s settlement price on the underlying future contract 10 index point integer multiples, 186 days prior to expiry (6-months prior to expiration): +10% to -25% of the prior day’s settlement price on the underlying future contract 5 index point integer multiples, 35 days prior to expiry (or 5 Weeks): +5% to -15% of the prior day’s settlement price on the underlying future contract Dynamic strikes allowed at 5 index point increments. |
+| Weekly Options on E-mini Russell 2000 Index Futures - Week 1-4 | R1E-R4E | R4 | R1E, R2E and R4E (Week 1, 2 & 4) 5 index point integer multiples upon listing: +10% to -25% of the prior day’s settlement price on the underlying future contract R3E (Week 3) At all multiples of 25 index points within ±50% of quarterly Exercise Price Reference, centered on previous day’s settlement price of the underlying futures At all multiples of 10 index points within ±20% of quarterly Exercise Price Reference, centered on previous day’s settlement price of the underlying futures Once the option’s underlying futures contract becomes second nearest to delivery, at all multiples of 5 index points within ±10% of quarterly Exercise Price Reference, centered on previous day’s settlement price of the underlying futures | 50 index point integer multiples, when listed: +30% to -50% of the prior day’s settlement price on the underlying future contract 10 index point integer multiples, 186 days prior to expiry (6-months prior to expiration): +10% to -25% of the prior day’s settlement price on the underlying future contract 5 index point integer multiples, 35 days prior to expiry (or 5 Weeks): +5% to -15% of the prior day’s settlement price on the underlying future contract Dynamic strikes allowed at 5 index point increments. |
+
+These options are currently available for customer testing in New Release.
+
+For additional information, please refer to Special Executive Report[SER-8853](https://www.cmegroup.com/content/dam/cmegroup/notices/ser/2021/09/SER-8853.pdf).
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+### New New - Changes to Velocity Logic Circuit Breakers for Select Energy Products- October 3
+
+Effective**Sunday, October 3**(trade date Monday, October 4), all energy products leveraging velocity logic circuit breakers will have their settings modified from their current value to a 10% dynamically calculated variant.
+
+| Changes to Velocity Logic Circuit Breakers for Select Energy Products |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Dynamically Calculated Variant | New Dynamically Calculated Variant |
+| NY Harbor ULSD Futures | HO | CL | 15% of Dynamically Calculated Reference Price | 10% of Dynamically Calculated Reference Price |
+| E-mini Heating Oil Futures | QH | CL | 15% of Dynamically Calculated Reference Price |
+| RBOB Futures | RB | CL | 15% of Dynamically Calculated Reference Price |
+| E-mini RBOB Gasoline Futures | QU | CL | 15% of Dynamically Calculated Reference Price |
+| RBOB Gasoline Financial Futures | RT | CL | 7% of Dynamically Calculated Reference Price |
+| Henry Hub Natural Gas Futures | NG | NG | 15% of Dynamically Calculated Reference Price |
+| Gulf Coast LNG Export Futures | LNG | LN | 7% of Dynamically Calculated Reference Price |
+| E-mini Natural Gas Futures | QG | NG | 15% of Dynamically Calculated Reference Price |
+| Henry Hub Natural Gas Look-Alike Penultimate Financial Futures | HP | HX | 15% of Dynamically Calculated Reference Price |
+| Henry Hub Natural Gas Penultimate Financial Futures | NPG | HX | 7% of Dynamically Calculated Reference Price |
+| Henry Hub Natural Gas Look-Alike Last Day Financial Futures | HH | NG | 15% of Dynamically Calculated Reference Price |
+| Henry Hub Natural Gas Last Day Financial Futures | NN | NG | 15% of Dynamically Calculated Reference Price |
+| Henry Hub Natural Gas Last Day Financial Futures (Daily Units) | NNE | NG | 15% of Dynamically Calculated Reference Price |
+| Light Sweet Crude Oil Futures | CL | CL | 15% of Dynamically Calculated Reference Price |
+| E-mini Crude Oil Futures | QM | CL | 15% of Dynamically Calculated Reference Price |
+| Micro WTI Crude Oil futures | MCL | CL | 15% of Dynamically Calculated Reference Price |
+| Crude Oil Financial Futures | WS | CL | 15% of Dynamically Calculated Reference Price |
+| WTI Houston Crude Oil Futures | HCL | HC | 7% of Dynamically Calculated Reference Price |
+| Brent Last Day Financial Futures | BZ | OP | 15% of Dynamically Calculated Reference Price |
+
+For additional information, please refer to Special Executive Report[SER-8827](https://www.cmegroup.com/content/dam/cmegroup/notices/ser/2020/03/SER-8575.pdf).
+
+These settings for every CME Globex product are defined in the[CME Globex Product Reference](http://www.cmegroup.com/confluence/display/EPICSANDBOX/GCC+Product+Resources).
+
+These changes are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+### Changes to Non-Reviewable Ranges for E-mini and Micro E-mini Nasdaq-100 Futures- October 31
+
+Effective **Sunday, October 31** (trade date Monday, November 1), the Non-Reviewable Ranges will be modified for the following products:
+
+| Changes to Non-Reviewable Ranges for E-mini and Micro E-mini Nasdaq-100 Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Non-Reviewable Range | New Non-Reviewable Range |
+| E-mini Nasdaq-100 Index® Futures | NQ | NQ | 12 Index Points | 24 Index Points |
+| Micro E-mini Nasdaq-100 Index® Futures | MNQ | NQ | 12 Index Points | 24 Index Points |
+
+These futures will be available for customer testing in New Release on **Monday, October 4.**
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+## Events and Announcements
+
+### Disaster Recovery (DR) Testing- October 23
+
+CME Group is committed to the protection of its members, employees and stakeholders and has a long history of successfully managing risk. In keeping with those traditions, CME Group has a comprehensive business continuity program in place. To ensure customer readiness, CME Group will offer CME Globex & Clearing Disaster Recovery (DR) Failover testing, in conjunction with the Futures Industry Association (FIA) test on**Saturday, October 23**.
+
+The CME Globex & Clearing DR Failover test is designed to ensure customers can successfully failover to the CME Globex & Clearing DR environment, send orders and fallback to the production environment in case of an emergency.
+
+**Please Note:**There is no pre-test Message Queue (MQ) ping requirement for front-end connections to the CME Group.
+
+To register and access the mock testing script, please complete the registration process at[FIA's website.](https://portal.fia.org/Login.aspx)
+
+For inquiries regarding the registration process, please contact Steve Proctor at [sproctor@fia.org](mailto:sproctor@fia.org).
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+### CME SPAN 2 Margin Methodology- Q4 2021
+
+CME Group is targeting the initial launch of SPAN 2 Margin Methodology in Q4 2021, starting with a subset of [energy products](https://www.cmegroup.com/clearing/files/phase-1-energy-products-10-9.xlsx). Any firm that currently uses the CME SPAN methodology and trades impacted products will need to implement one of the following services for computing CME SPAN 2 margin requirements:
+
+*   CME Core – a CME Group hosted web application for Margin Calculation “CME CORE”
+*   Margin API – a CME Group hosted margin calculation API
+*   Deployable Margin Software – a CME Group java margin calculation library
+
+Please Note: A limited number of existing pre-trade execution margin calculation processes may continue to be supported.
+
+Firms using CME SPAN for pre-trade risk management can contact the [Post Trade Services team](mailto:PostTradeServices@cmegroup.com) for more information:
+
+| US | UK | APAC |
+| --- | --- | --- |
+| +1 312 580 5353 | +44 20 3379 3500 | +65 6593 5599 |
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)
+
+### New New - Messaging Efficiency Program Q4 2021 Benchmarks- Q4 2021
+
+The[Q4 2021 CME Globex Messaging Efficiency Program Product Group Benchmarks](http://www.cmegroup.com/globex/files/revisedmepbenchmarks.pdf)are now available. No changes were made to Q4 2021 existing Product Group Benchmarks vs. Q3 2021 Product Group Benchmarks.
+
+The CME Globex Messaging Efficiency Program creates fair business guidelines by which customers are billed a surcharge for overly high message rates.
+
+CME Globex firms who exceed the benchmark ratios in applicable product groups and are signed-up accordingly, receive email notifications of any potential surcharges. CME Globex firms who have access to the Firm Administrator Dashboard have the ability to view their messaging statistics on a T+1 basis.
+
+Please contact your[Global Account Manager](mailto:globalaccountmanagement@cmegroup.com)with any questions.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/09/20210920.html#top)

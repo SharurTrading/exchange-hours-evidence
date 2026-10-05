@@ -1,0 +1,127 @@
+{
+  "gate": "standalone-products-gates",
+  "verifier": "adversarial re-derivation pass",
+  "verified_on": "2026-09-12",
+  "matches": false,
+  "headline": "One load-bearing citation does not exist: the claimed 2025-08-11 Wayback capture of ContractSpecs productId 27 is a 302 redirect to the 2026-08-10 capture, saved twice under two dates. No era, boundary or keyed date changes; the dairy residual-risk statement and two citations must be corrected.",
+  "re_derived_clean": [
+    "SER-6805 (U-9): re-fetched live today, HTTP 200. 'Notice Date 27 August 2013', 'Effective Date 03 September 2013', 'This change will be effective for trade date of Tuesday, September 3, 2013' in session language ('CME Globex trading hours from 5:00 PM to 2:00 PM (next day) to 8:15 AM to 3:00 PM'). Matches the saved bytes exactly.",
+    "CME 13-344 self-contradiction confirmed from the bytes: letter body 'trade day, Tuesday, September 3, 2013'; appendix 'Special Executive Report S-XXX / August XX, 2013' with 'trade date of Monday, September 2, 2013'. The issued SER supersedes the unissued draft.",
+    "Housing bracket confirmed: housing-spec-20130412.html 'CME Globex (Electronic Platform) Mon/Thurs 5:00 p.m.-2:00 p.m. CT the next day'; housing-spec-20130910.html 'Monday - Friday 8:15 a.m. - 3:00 p.m. CT'.",
+    "CME 12-060 confirmed options-only, and it names the futures as 'already trading on CME Globex' with an unchanged schedule. Effective 'Sunday, April 1, 2012 for the trade date Monday, April 2, 2012'.",
+    "CME 17-001 confirmed: effective 'Sunday, February 5, 2017 for trade date Monday, February 6, 2017'; 419 = BOS CHI DEN LAV LAX MIA NYM SDG SFR WDC, 420 = CUS; 'CME Globex: Monday - Friday 8:15 a.m. - 3:00 p.m. CT'. Its Current-Venues column independently sources the futures pit ABSENCE (futures rows 'CME Globex'; options rows 'CME Globex, Trading Floor').",
+    "Housing fact card verbatim confirmed, including the Futures/Options column split and the 11 ticker symbols.",
+    "Real-estate trading-hours rows verbatim confirmed at 2011-10-29 (16:15 | 17:00-14:00 | 16:45 | 17:00-14:00 | 08:00-14:00) and 2014-11-19 (futures 8:00-8:15 | 8:15-15:00, no outcry; options same plus 8:00-14:00 outcry).",
+    "Live service re-fetched today for all eleven housing roots: BOS 800, CHI 801, CUS 802, DEN 803, LAV 804, LAX 805, MIA 806, NYM 807, SDG 808, SFR 809, WDC 1213, every one prodGroup HI, every weekday preopen@08:00 open@08:15 closed@15:00, no Saturday and no Sunday events. One key, eleven roots holds.",
+    "U-10 confirmed on all three legs from the bytes: 25-177 'CME Globex Pre-Open: Monday through Friday 8:00 a.m. - 8:30 a.m. CT / CME Globex: Monday 8:30 a.m. - Friday 2:30 p.m. CT'; live ContractSpecs 11100 'Monday - Friday 8:30 a.m. - 2:30 p.m.&nbsp;<br />\\nPre-Open 8:00 a.m.'; live service group UA, five separate preopen@08:00 open@08:30 closed@14:30 days, nothing Saturday or Sunday. Serving the five-day reading IS the sourced intersection.",
+    "U-11 dairy: eleven Class III Milk specification captures re-read from the bytes, all pairwise distinct by sha256. 2010-08-24 through 2019-10-18 all read 'Sundays at 5:00 p.m. through Friday at 1:55 p.m. with daily trading halts from 4:00 p.m. to 5:00 p.m.'; 2021-04-20 restates it modern. 'OPEN OUTCRY (Trading Floor) MON-FRI: 9:05 a.m. - 1:10 p.m.' present through 2015-03-26, absent from 2015-09-05.",
+    "U-0c closed: all six dairy roots re-fetched live today. Globex codes confirmed DC 27, CB 26, CSC 5201, DY 36, GDK 778, GNF 781; groups DC = {27, 5201, 778}, CB = {26}, DY = {36, 781}; all six day-for-day identical, Sunday preopen@16:00 open@17:00 (td Mon), Mon-Thu closed@16:00 (td same) preopen@16:45 open@17:00 (td next), Friday closed@13:55, nothing Saturday. Five daily closes, five trade dates - the shape claim is CME's own.",
+    "Dairy pre-floor notices verbatim confirmed: 09-236 (Sunday 17:00 open, effective 2009-11-15, names five of six modelled roots), Q2008-215 (Friday close 13:30 -> 13:55 effective 2008-10-24), 2007-03-07 press release (60-minute halt from 16:00). All pre-floor, so carry-back asserts no revision row.",
+    "JQ 1709 re-confirmed live: ProductName '-', ProductID 0, TradingHours '-', and all fourteen schedule days return empty event lists. Exclusion is on evidence.",
+    "U-12 confirmed: th_20100223_commodities.html row 'Dow Jones-UBS Commodity Index | (outcry empty) | 8:15-13:30 | (Sunday empty) |' under the four-column 2010 header; 2012-05-11 adds 16:15 / 16:45 pre-opens; 2014-10-30 and 2015-04-05 carry the same 8:15-13:30 under the Bloomberg name. The family is listed in-scope under its own name, so the boundary is the floor and not the rename.",
+    "AW identity chain confirmed: six DJ-UBS-named specification captures all read 'Trading Hours (All times listed are Central Time) CME Globex (Electronic Trading) MON-FRI 8:15am-1:30pm' with 'Symbols Clearing=70 Globex=AW'; four Bloomberg-named captures (2014-08-01, 2017-05-23, 2019-11-13, 2021-06-16) carry the same window and the AW code. The 2019 file I re-fetched byte-identical (sha256 0b4dbf0ca468...).",
+    "CBOT 14-070 (CFTC DCM id 29009) confirmed: filed 2014-02-28, effective 'Sunday, March 16, 2014 for trade date Monday, March 17, 2014', pins 'Rulebook Chapter: 29; Clearing Code: 70; CME Globex Code: AW' and separates DRS (29D). The document contains no 'a.m.', no 'p.m.' and no 'trading hours' - the dead-end verdict is correct.",
+    "BCOM family live: all eight ContractSpecs read 'Monday -&nbsp; Friday 8:15 a.m. - 1:30 p.m. CT'; BTIC pairs AW/AWT, BAG/BAT, BPE/BPT, BEN/BET, BGR/BGT, BME/BMT, BLI/BLT, BPR/BST confirmed; groups AW, 7A, 7H, 7E, 7G, 7M, 7L, 7R confirmed with identical grids and no Friday-evening preopen.",
+    "CBOT 25-093 hours cell verbatim confirmed, including the paste defect: the Globex row reads 'Monday - Friday 8:15 a.m. - 1:30 p.m. CT with no reporting Monday - Thursday 5:45 p.m. - 6:00 p.m. CT'. The no-reporting clause is a ClearPort clause sitting in the Globex row.",
+    "CME 25-215 verbatim confirmed (effective 2025-07-20 for trade date 2025-07-21; CCI; BTIC CCT; CME 414). Live: CCI on its own group FW, distinct from AW.",
+    "CME 22-248 verbatim confirmed, hours cell clean, 'Daily Settlement Time 3:00 p.m. CT', and 'which is aligned with the minimum block threshold of CME's existing lumber futures and options contracts'. Live spec SettlementMethod 'Deliverable', rulebook CME 63.",
+    "CME 25-082 verbatim confirmed, defect confirmed and larger than reported (see caveat C4). SYP live: CME 64, 'Financially Settled'.",
+    "SYP FAQ pair confirmed: 2025-03-27 'The first trade date is March 31, 2025' in the future tense; 2026-05-21 'launched ... with a first trade date of March 31, 2025' in the past tense. Both give 'Monday - Friday: 9:00 a.m. - 3:05 p.m. CT'.",
+    "LBR and SYP share group LU live, both preopen@06:00 open@09:00 closed@15:05 Mon-Fri, no Sunday, no Saturday.",
+    "CBOT 20-347 verbatim confirmed, cell clean. Live SAS group AS, preopen@08:00 open@08:30 paused@13:20 closed@13:30 pcp@14:30 closed@16:00, no Sunday and no overnight event. The paused-is-the-close reading is confirmed against the filing's stated 13:20 close.",
+    "CBOT 25-103 and 26-234 verbatim confirmed, both unconditional, 26-234's Current column reproduces Era 1. Live CVB group BW matches Era 2 to the minute.",
+    "Byte-identity claims verified by sha256: v2_specs_333/802/11100/11102/11180 all equal the 2026-09-06 specs_* files; v2_djubs_spec_20100822171752 = aw-djubs-spec-20100822 (5dd4e8dc...); v2_djubs_spec_20131031204130 = aw-djubs-spec-20131031 (373e3599...); v2_syp_faq_20250327 = syp_faq_20250327 (a2cf147f...).",
+    "Claims of absence tested: Wayback CDX returns no capture of /CmeWS/mvc/ContractSpecs/List/productId/ for 333, 802, 5201, 11073, 11100, 11102 or 11180; 10191 has 20260620060007 (the cited one).",
+    "The globex_livestock precedent cited for regular-vs-extended is real: livestock.rs puts the whole Globex envelope in regular, extended: &[], queues in order_entry, and models no pit. Its REGULAR_AT_2010_FLOOR is the same per-day five-session shape proposed for dairy.",
+    "The globex_grains contrast is real: grains.rs CBOT_EXTENDED_CURRENT is Sun+Mon-Thu 19:00 -> 07:45 with order_entry Sun 16:00-19:00, Mon-Fri 08:00-08:30, Mon-Fri 14:30-16:00, Mon-Thu 16:45-19:00 - exactly CVB Era 1's shape and exactly what SAS lacks.",
+    "None of the nine proposed key names collides with the fourteen globex_* keys already in market_hours_keys!."
+  ],
+  "discrepancies": [
+    {
+      "id": "D1",
+      "severity": "load-bearing",
+      "claim": "'CME ContractSpecs API productId 27 (Class III Milk), archived - captures 2025-08-11 and 2026-08-10' and the conclusion's 'two archived ContractSpecs responses (2025-08-11, 2026-08-10) bridge to today, so the grid is unbroken 2010-2026 with no revision'.",
+      "finding": "The 2025-08-11 capture does not exist. https://web.archive.org/web/20250811011838id_/https://www.cmegroup.com/CmeWS/mvc/ContractSpecs/List/productId/27 returns HTTP 302 with location https://web.archive.org/web/20260810165630id_/... , and Wayback's CDX index for that URL lists exactly one capture, 20260810165630. The two saved files v2_wb_cs_27_20250811011838.json and v2_wb_cs_27_20260810165630.json carry the identical sha256 07d0cf3b85f54f4e7029182f7269c164543a35c4ac786bb5dbdb125472064b5c, which is also the sha256 of the 2026-09-06 pass's cs_27_20260810.json. One capture, saved three times under two dates. INDEX-20260912.md line 99 records 'HTTP 200' for the 2025 URL because curl followed the redirect.",
+      "consequence": "No era, boundary or keyed date changes - the dairy key still holds one era carried to the January-2010 floor with no revision asserted. What changes is the stated strength: the dairy chain has exactly ONE dated third-party observation between the 2021-04-20 specification capture and today's live fetch, so the undated interval is 2021-04-20 -> 2026-08-10 (about five years four months), not 2021-04-20 -> 2025-08-11. The residual-risk sentence beside the row must name the real gap, and the 2025-08-11 citation must be struck before it is written into a source comment. Aggravating: this is the same 2025-08-11 timestamp family the handoff already flagged as not resolving (U-11 / U-0c), so it is a re-assertion of a known-bad citation rather than a new one.",
+      "fix": "Strike the 2025-08-11 row from the state and from INDEX-20260912.md; restate the bridge as 'archived capture 2026-08-10 plus the live 2026-09-12 fetch'; state the 2021-04-20..2026-08-10 interval as the carried, unwitnessed span beside the table."
+    },
+    {
+      "id": "D2",
+      "severity": "citation defect",
+      "claim": "SAS archived ContractSpecs capture, url given as https://web.archive.org/web/20260303233900id_/https://www.cmegroup.com/CmeWS/mvc/ContractSpecs/List/productId/8947",
+      "finding": "That URL 404s and CDX returns nothing for it. The artifact is real: the archived URL carries a query string, .../productId/8947?isProtected&_t=1716050714530, as INDEX.md line 174 records. I re-fetched the full URL: HTTP 200, 1229 bytes, sha256 8205828873acce070b17d0759b1a2a2de6ae899829fda14af61d89854a11d5b6 matching the index, content confirming 'Monday - Friday: &nbsp;8:30 a.m. - 1:20 p.m. CT<br />\\nPre-Open: Monday - Friday:&nbsp; 8:00 a.m. - 8:30 a.m. CT'.",
+      "consequence": "The SAS finding stands; only the citation as written does not resolve.",
+      "fix": "Carry the query string in the citation."
+    },
+    {
+      "id": "D3",
+      "severity": "quote error, not load-bearing",
+      "claim": "DJ-UBS specification state: 'Every capture: ... and (2010, 2011, 2012-05) \"Settlement Procedure Cash settled. See CBOT Rule 29104.\"'",
+      "finding": "The 29104 sentence is in v2_djubs_spec_20100822171752.html and v2_djubs_spec_20111031163321.html only. v2_djubs_spec_20120512051117.html reads 'Final Dow Jones-UBS CI Settlement Procedure (PDF)' and contains no '29104'. The hours sentence and 'Symbols Clearing=70 Globex=AW' are correct in all six captures.",
+      "consequence": "None for hours; the parenthetical must not be reproduced as written."
+    },
+    {
+      "id": "D4",
+      "severity": "attribution error, not load-bearing",
+      "claim": "BCOM live state: 'the filings' \"Monday - Friday 4:45 p.m.\" overstates the queue by one day'.",
+      "finding": "CBOT 25-093's pre-open line carries no day range at all: 'CME Globex Pre-Open: / 4:45 p.m. - 5:00 p.m. Central Time/CT'. The 'Monday - Friday 4:45 p.m.' wording belongs to CME 25-215 (CCI), a different product's filing.",
+      "consequence": "The substantive point is confirmed - CME's feed publishes no Friday-evening preopen for AW, the seven subindices, or CCI - but the sentence attributes wording to the wrong document."
+    },
+    {
+      "id": "D5",
+      "severity": "characterisation, minor",
+      "claim": "'25-215 ... the one filing in this gate whose hours cell is clean'.",
+      "finding": "25-215's cell has no paste bleed, but its pre-open line says 'Monday - Friday 4:45 p.m. - 8:15 a.m.' while CME's own service for CCI publishes no Friday-evening preopen. The encodable serves Mon-Thu 16:45 (the intersection) without recording that narrowing in dead_ends, unlike the Sunday-queue narrowing which is recorded.",
+      "consequence": "Add the Friday-evening queue to the withheld list for both globex_ftse_crb_index and globex_bloomberg_commodity_index."
+    },
+    {
+      "id": "D6",
+      "severity": "transcription, trivial",
+      "claim": "2010-02-23 commodities row quoted as 'Class III Milk Futures Class III Milk Options || 09:05-13:10 09:05-13:12 || Sun 17:00 - Fri 13:55 Daily Halts 16:00-17:00 Pre-Open at 16:15 ||'.",
+      "finding": "In the bytes the Sunday cell is separate: '... | 09:05-13:10 09:05-13:12 | Sun 17:00 - Fri 13:55 Daily Halts 16:00-17:00 | Pre-Open at 16:15 |'. The Butter and Dry Whey rows in the same quote are rendered with the correct cell count, so the Class III and Class IV rows read as if the pre-open sat in the weekday column.",
+      "consequence": "Cell contents right, column assignment misleading if read literally."
+    },
+    {
+      "id": "D7",
+      "severity": "index hygiene",
+      "claim": "INDEX.md provenance for aw_spec_20191113.html.",
+      "finding": "INDEX.md keeps a failed-attempt row for that file (HTTP 000, empty sha256) and no successful row. The file is genuine: I re-fetched https://web.archive.org/web/20191113070305id_/http://www.cmegroup.com/trading/agricultural/commodity-index/bloomberg-commodity-index_contract_specifications.html and got 78545 bytes, sha256 0b4dbf0ca4680f154dfdb12f9997871541233c995d73862665ed1fc865bb8c45, byte-identical to the stored file.",
+      "consequence": "Replace the 000 row with the real one so the artifact has a hash."
+    }
+  ],
+  "residual_caveats": [
+    {
+      "id": "C1",
+      "note": "Housing Era A's Sunday leg has a primary that omits it. housing-spec-20130412.html reads 'CME Globex (Electronic Platform) Mon/Thurs 5:00 p.m.-2:00 p.m. CT the next day' - no Sunday. The Sunday leg is sourced by the 2010-11-10 fact card ('Sundays through Thursdays') and, post-floor and decisively, by the 2011-10-29 hours page's separate Sunday column (pre-open 16:15, electronic 17:00-14:00). Serving Sun-Thu is right; the 2013 spec's omission is a primary that should be recorded beside the row rather than left unmentioned."
+    },
+    {
+      "id": "C2",
+      "note": "The fact card is undated and its own worked example cites 2006 index values, so its 2010-11-10 capture dates the observation, not the state. The result leans on it for 'Era A in session language at a post-floor instant'. The claim survives on the 2011-10-29 hours page. The fact card's real load is the futures-pit absence, and for that CME Submission 17-001 is the stronger source the result does not use: its Current-Venues column gives the 419/420 futures rows 'CME Globex' and the 419A/420A options rows 'CME Globex ..., Trading Floor'."
+    },
+    {
+      "id": "C3",
+      "note": "BCOM/subindex weekday queue end (the researcher's own follow-up 2). Serving 16:45 -> 08:15 takes one side of a conflict; the strict sourced intersection against 25-093's '4:45 p.m. - 5:00 p.m.' is 16:45 -> 17:00. Defensible because the same cell demonstrably carries a ClearPort clause in the Globex row, and because CME's feed for AW itself publishes preopen@16:45 with no intervening event before open@08:15. It is an order_entry window, the lesser kind. The parent should ratify explicitly."
+    },
+    {
+      "id": "C4",
+      "note": "SYP's 06:00-09:00 queue is served where the intersection with 25-082 is empty (25-082 gives Sunday 16:00-17:00 and 'Tuesday - Thursday' 16:45-17:00). Recorded in dead_ends. Note 25-082's defect is broader than the result states: its ClearPort line reads 'Sunday 5:00 p.m. - Friday 4:00 p.m. CT with no reporting Tuesday - Thursday from 4:00 p.m. - 5:00 p.m. CT', which also departs from CME's ClearPort template, so the whole cell is the pasted template, not just the Globex line. That strengthens the known-erroneous verdict."
+    },
+    {
+      "id": "C5",
+      "note": "Housing Era B keyed 2013-09-03 leaves Monday 2013-09-02 17:00-24:00 CT served by Era A as open when no session ran. The result records this and correctly notes a closed date cannot remove it (that evening leg carries trade date Tuesday 2013-09-03, which did trade under Era B). It should be labelled an EXECUTABLE-phase residual, the serious kind under AGENTS.md's executable-windows-are-the-priority rule. The alternative key, 2013-09-02, is worse: it would split the genuine Sunday-evening -> Monday session. 2013-09-03 is the right choice and matches 'a row that narrows an overnight open keeps its artifact's own date'."
+    },
+    {
+      "id": "C6",
+      "note": "Dairy corroboration already in the store and not cited. wb_trading_hours_20120511_commodities.html gives per-product dairy rows 'Class III Milk Futures | 16:15 | 17:00-16:00 | 16:45 | 17:00-13:55 | 09:05-13:10' (same for Class IV/Nonfat, Dry Whey, Cash-Settled Butter and Cheese); th_20141030_commodities.html and th_20150405_commodities.html give '| 16:00 | 17:00-16:00 | 16:45 | Mon-Thurs: 17:00-16:00 Fri: 17:00-13:55 | 09:05-13:10'. These state the five-daily-session shape, the 16:45 weekday queue and the 16:15 -> 16:00 Sunday move explicitly, in scope, for all six roots. They make the dairy case markedly stronger than the argument actually made (2010 page plus live feed), and they narrow the D1 evidence gap on the queue side. Cite them."
+    },
+    {
+      "id": "C7",
+      "note": "CVB Era 1's 07:45 -> 08:30 gap is same-trade-date and therefore Halt under the modeling conventions; the result classifies CVB's other gaps but not this one."
+    },
+    {
+      "id": "C8",
+      "note": "CME's own two channels disagree on the name of productId 802: ContractSpecs says 'CME Composite Housing Index Futures', the trading-hours service says 'CME Metro Area Housing Index Futures'. Both put it on group HI with the same grid. Harmless for hours, worth a word beside the eleven-root list."
+    }
+  ],
+  "verdict": "matches=false on D1. Every one of the four UNRESOLVED items (U-9, U-10, U-11, U-12) is genuinely closed and every quotation I checked against the bytes is accurate except D3, D4 and D6. Every effective date is unconditional and day-level, every session classification is in session language, and every Termination-of-Trading row is correctly held out. The nine encodable era lists, their boundaries and their keyed days all survive re-derivation, including the two wrap-keyed Sunday rows for CVB and the artifact-dated housing row. The gate fails only on evidence provenance: one cited archived capture does not exist and was counted twice, which overstates the dairy chain's post-2021 coverage by about a year and would ship a citation that 302s. Fix D1 and D2, fold in C6, and the gate is writable."
+}

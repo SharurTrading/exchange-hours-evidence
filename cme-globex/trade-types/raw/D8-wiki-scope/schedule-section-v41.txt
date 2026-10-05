@@ -1,0 +1,238 @@
+=== PAGE INTRO ===
+Starting at 4 p.m. Central Time on Friday, May 29, 2026, CME Group will expand cryptocurrency futures and options to 24/7 trading. Cryptocurrency futures and options will trade continuously on CME Globex with at least a two-hour weekly maintenance period occurring on the weekend. All holiday or weekend trading from Friday evening through Sunday evening will have a trade date of the following business day, with clearing, settlement and regulatory reporting processed the following business day. This topic outlines the necessary information for processing cryptocurrency 24/7 trading. Contents 1 6 false default list true
+
+=== h1 24/7 Trading .. h2 section with all seven h3 schedule tables ===
+[[H1]] 24/7 Trading
+This section describes technical front-end impacts for weekend trading with CME Group.
+[[H2]] CME Globex Maintenance Windows and Market Hours
+This section outlines schedule impacts for all clients trading cryptocurrency futures and options.
+Maintenance windows are subject to extension; updates will be communicated via the Globex Notice.
+schedSchedule and Maintenance
+-
+Current Cryptocurrency Futures and Options Schedule
+-
+Future Cryptocurrency Futures and Options Schedule
+-
+Day One Extended Maintenance
+-
+Future Cryptocurrency Futures and Options Schedule - 24/7 Crypto Trade at Settlement
+-
+24/7 Basis Trade at Index Close Crypto Asia-Pacific
+-
+24/7 BTIC London Session
+-
+24/7 BTIC Crypto New York
+Cryptocurrency Spot Quoted Futures (SQF) will remain on a 5 day schedule.
+[[H3]] Current Cryptocurrency Futures and Options Schedule
+[TABLE]
+ROW: |
+Day |
+Type |
+Close |
+Pre-Open/Open
+ROW: |
+Sunday |
+Sunday startup |
+- |
+4:00 to 5:00 p.m. CT
+ROW: |
+Monday through Friday |
+Daily Maintenance Window (with Trade Date roll) |
+4:00 to 4:45 p.m. CT |
+4:45 to 5:00 p.m. CT
+[/TABLE]
+back to schedule/maintenance
+[[H3]] Future Cryptocurrency Futures and Options Schedule
+[TABLE]
+ROW: |
+Day |
+Type |
+Close/Pause |
+Pre-Open/Open
+ROW: |
+Saturday |
+Extended Maintenance Window |
+Close: 2:00 a.m. to 3:45 a.m. CT |
+-
+Pre-open: 3:45 a.m. to 4:00 a.m. CT
+-
+No cancel: 3:59:30 a.m. to 4:00:00 a.m. CT
+-
+Open: 4:00 a.m. CT
+ROW: |
+Monday through Friday |
+Daily Maintenance Window (with Trade Date roll) |
+Close: 4:00:00 p.m. to 4:01:00 p.m. CT |
+-
+Pre-open: 4:01:00 p.m. to 4:01:30 p.m. CT
+-
+No cancel: 4:01:30 p.m. to 4:02:00 p.m. CT
+-
+Open: 4:02:00 p.m. CT
+[/TABLE]
+back to schedule/maintenance
+[[H3]] Day One Extended Maintenance
+For the first day of 24/7 cryptocurrency futures and options trading (Friday, May 29, 2026) the standard daily maintenance of two minutes will be extended to 30 minutes (4:00 p.m. to 4:30:00 p.m. CT). The first day schedule will be as follows:
+[TABLE]
+ROW: |
+Day |
+Type |
+Close/Pause |
+Pre-Open/Open
+ROW: |
+Friday, May 29, 2026 |
+Day One Extended Maintenance |
+Close: 4:00 p.m. to 4:02 p.m. CT |
+-
+Pre-open: Following the Close and concluded with a 30 second No Cancel period.
+-
+No cancel: 4:29:30 p.m. to 4:30:00 p.m. CT
+-
+Open: 4:30 p.m. CT
+[/TABLE]
+back to schedule/maintenance
+[[H3]] Future Cryptocurrency Futures and Options Schedule - 24/7 Crypto Trade at Settlement (TAS)
+[TABLE]
+ROW: |
+Day |
+Type |
+Close/Pause |
+Pre-Open/Open
+ROW: |
+Saturday |
+Extended Maintenance Window |
+Close: 2:00 a.m. to 3:45 a.m. CT |
+-
+Pause: 3:45:00 a.m. to 3:45:30 a.m. CT
+-
+Pre-open: 3:45:30 a.m. to 3:59:30 a.m. CT
+-
+No cancel: 3:59:30 a.m. to 4:00:00 a.m. CT
+-
+Open: 4:00 a.m. CT
+ROW: |
+Monday through Friday |
+Daily Maintenance Window (with Trade Date roll) |
+Close: 3:00:00 p.m. to 3:01:00 p.m. CT
+Pause: 3:01:00 p.m. to 3:01:30 p.m. CT |
+-
+Pause: 3:01:00 p.m. to 3:01:30 p.m. CT
+-
+Pre-open: 3:01:30 p.m. to 3:04:30 p.m. CT
+-
+No cancel: 3:04:30 p.m. to 3:05:00 p.m. CT
+-
+Open: 3:05:00 p.m. to 4:01:00 p.m. CT
+-
+Pause: 4:01:00 p.m. to 4:02:00 p.m. CT
+-
+Open: 4:02:00 p.m. CT
+[/TABLE]
+back to schedule/maintenance
+[[H3]] 24/7 Basis Trade at Index Close (BTIC) Crypto Asia-Pacific (APAC)
+Daylight savings time applies to BTIC and Crypto APAC contracts.
+[TABLE]
+ROW: |
+Day |
+Type |
+Close/Pause |
+Pre-Open/Open
+ROW: |
+Saturday |
+Extended Maintenance Window |
+Close: 2:00 a.m. to 3:45 a.m. CT |
+-
+Pre-open: 3:45:00 a.m. to 4:00:00 a.m. CT
+-
+No cancel: 3:59:30 a.m. to 4:00:00 a.m. CT
+-
+Open: 4:00 a.m. CT
+ROW: |
+Monday through Friday |
+Daily Maintenance Window (with Trade Date roll) |
+Close: 3:00:00 a.m. to 3:01:00 a.m. CT |
+-
+Pre-open: 3:01:00 a.m. to 3:04:30 a.m. CT
+-
+No cancel: 3:04:30 a.m. to 3:05:00 a.m. CT
+-
+Open: 3:05:00 a.m. to 4:01:00 p.m. CT
+-
+Pre-open: 4:01:00 p.m. to 4:01:30 p.m. CT
+-
+No cancel: 4:01:30 p.m. to 4:02:00 p.m. CT
+-
+Open: 4:02:00 p.m. CT
+[/TABLE]
+back to schedule/maintenance
+[[H3]] 24/7 BTIC Crypto London Session (LDN)
+British Summer Time (BST) applies to 24/7 BTIC Crypto London Session (LDN) contracts.
+[TABLE]
+ROW: |
+Day |
+Type |
+Close/Pause |
+Pre-Open/Open
+ROW: |
+Saturday |
+Extended Maintenance Window |
+Close: 2:00 a.m. to 3:45 a.m. CT |
+-
+Pre-open: 3:45:00 a.m. to 3:59:30 a.m. CT
+-
+No cancel: 3:59:30 a.m. to 4:00:00 a.m. CT
+-
+Open: 4:00 a.m. CT
+ROW: |
+Monday through Friday |
+Daily Maintenance Window (with Trade Date roll) |
+Close: 10:00:00 a.m. to 10:01:30 a.m. CT |
+-
+Pre-open: 10:01:30 a.m. to 10:04:30 a.m. CT
+-
+No cancel: 10:04:30 a.m. to 10:05:00 a.m. CT
+-
+Open: 10:05:00 a.m. to 4:01:00 p.m. CT
+-
+Pre-open: 4:01:00 p.m. to 4:01:30 p.m. CT
+-
+No cancel: 4:01:30 p.m. to 4:02:00 p.m. CT
+-
+Open: 4:02:00 p.m. CT
+[/TABLE]
+back to schedule/maintenance
+[[H3]] 24/7 BTIC Crypto New York (NY)
+[TABLE]
+ROW: |
+Day |
+Type |
+Close/Pause |
+Pre-Open/Open
+ROW: |
+Saturday |
+Extended Maintenance Window |
+Close: 2:00 a.m. to 3:45 a.m. CT |
+-
+Pre-open: 3:45:00 a.m. to 4:00:00 a.m. CT
+-
+No cancel: 3:59:30 a.m. to 4:00:00 a.m. CT
+-
+Open: 4:00 a.m. CT
+ROW: |
+Monday through Friday |
+Daily Maintenance Window (with Trade Date roll) |
+Close: 3:00:00 p.m. to 3:01:30 p.m. CT |
+-
+Pre-open: 3:01:30 p.m. to 3:04:30 p.m. CT
+-
+No cancel: 3:04:30 p.m. to 3:05:00 p.m. CT
+-
+Open: 3:05:00 p.m. to 4:01:00 p.m. CT
+-
+Pre-open: 4:01:00 p.m. to 4:01:30 p.m. CT
+-
+No cancel: 4:01:30 p.m. to 4:02:00 p.m. CT
+-
+Open: 4:02:00 p.m. CT
+[/TABLE]
+back to schedule/maintenance

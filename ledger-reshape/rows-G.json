@@ -1,0 +1,102 @@
+[
+  {
+    "identity": "lse",
+    "row": "| `lse` | [lse.rs](../../src/calendar/schedules/equities/europe/lse.rs) | [EU-LSE](sources.md#eu-lse)<br>[EU-FESE-SECONDARY](sources.md#eu-fese-secondary) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | London Stock Exchange SETS order book, with continuous trading 08:00:30–16:30 around the 12:00–12:02:30 intraday auction and a closing auction and Closing Price Crossing session through 16:40. The January-2010 baseline rests on the operator's 2009 compliance parameters and its September 2010 Millennium Exchange timetable, and the 2012-04-30 CPX launch and the 2016-03-21 midday auction are date-aware. Randomized uncrosses are modelled at their conservative latest edge, so regular trading never starts while an auction can still run. | [evidence](../evidence/lse.md) |",
+    "evidence_file": "docs/evidence/lse.md"
+  },
+  {
+    "identity": "xetra",
+    "row": "| `xetra` | [xetra.rs](../../src/calendar/schedules/equities/europe/xetra.rs) | [EU-XETRA](sources.md#eu-xetra)<br>[EU-FESE-SECONDARY](sources.md#eu-fese-secondary) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | Xetra cash equities, represented by the liquid DAX constituent-share segment, with continuous trading 09:00:30–17:30 around the 13:00 intraday auction and retail and Trade-at-Close phases running to 22:00. Deutsche Börse circulars 207/08 and 091/18 bracket the January-2010 DAX grid, and the 2020-11-24 Trade-at-Close launch and the 2025-12-01 Extended Xetra Retail cutover are date-aware. The early and late retail windows are participant-restricted, so they are classified extended rather than regular. | [evidence](../evidence/xetra.md) |",
+    "evidence_file": "docs/evidence/xetra.md"
+  },
+  {
+    "identity": "six",
+    "row": "| `six` | [six.rs](../../src/calendar/schedules/equities/europe/six.rs) | [EU-SIX](sources.md#eu-six)<br>[EU-FESE-SECONDARY](sources.md#eu-fese-secondary) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | SIX Swiss Exchange shares segments, with continuous trading 09:02–17:20, a closing auction to its latest 17:32 uncross and Trading-At-Last through 17:40. Operator archives fix the January-2010 grid, including the two-minute randomized opening and closing windows: Directive 1 effective 2007-09-07 and the Equity Market Product Guide valid from 2009-07-22. The 2020-06-22 Trading-At-Last launch is date-aware on the operator's own participant-readiness document for that maintenance release. | [evidence](../evidence/six.md) |",
+    "evidence_file": "docs/evidence/six.md"
+  },
+  {
+    "identity": "euronext_paris",
+    "row": "| `euronext_paris` | [euronext.rs](../../src/calendar/schedules/equities/europe/euronext.rs) | [EU-EURONEXT](sources.md#eu-euronext)<br>[EU-FESE-SECONDARY](sources.md#eu-fese-secondary) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | Euronext Paris core shares at the operator's published nominal boundaries: 07:30 pre-opening, 09:00–17:30 continuous trading, a closing auction to 17:35 and Trading-at-Last through 17:40. The legacy 07:15 pre-opening rests on Euronext's 2010 special-day appendix and its 2014 normal-hours appendix, and the 2023-03-20 move to 07:30 is date-aware on the operator's Optiq go-live guidelines. Per-security 0–30-second auction uncross timing is outside this exchange-level scope and does not change venue availability. | [evidence](../evidence/euronext_paris.md) |",
+    "evidence_file": "docs/evidence/euronext_paris.md"
+  },
+  {
+    "identity": "euronext_amsterdam",
+    "row": "| `euronext_amsterdam` | [euronext.rs](../../src/calendar/schedules/equities/europe/euronext.rs) | [EU-EURONEXT](sources.md#eu-euronext)<br>[EU-FESE-SECONDARY](sources.md#eu-fese-secondary) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | Euronext Amsterdam core shares at the operator's published nominal boundaries: 07:30 pre-opening, 09:00–17:30 continuous trading, a closing auction to 17:35 and Trading-at-Last through 17:40. The legacy 07:15 pre-opening rests on Euronext's 2010 special-day appendix and its 2014 normal-hours appendix, and the 2023-03-20 move to 07:30 is date-aware on the operator's Optiq go-live guidelines. Per-security 0–30-second auction uncross timing is outside this exchange-level scope and does not change venue availability. | [evidence](../evidence/euronext_amsterdam.md) |",
+    "evidence_file": "docs/evidence/euronext_amsterdam.md"
+  },
+  {
+    "identity": "euronext_brussels",
+    "row": "| `euronext_brussels` | [euronext.rs](../../src/calendar/schedules/equities/europe/euronext.rs) | [EU-EURONEXT](sources.md#eu-euronext)<br>[EU-FESE-SECONDARY](sources.md#eu-fese-secondary) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | Euronext Brussels core shares at the operator's published nominal boundaries: 07:30 pre-opening, 09:00–17:30 continuous trading, a closing auction to 17:35 and Trading-at-Last through 17:40. The legacy 07:15 pre-opening rests on Euronext's 2010 special-day appendix and its 2014 normal-hours appendix, and the 2023-03-20 move to 07:30 is date-aware on the operator's Optiq go-live guidelines. Per-security 0–30-second auction uncross timing is outside this exchange-level scope and does not change venue availability. | [evidence](../evidence/euronext_brussels.md) |",
+    "evidence_file": "docs/evidence/euronext_brussels.md"
+  },
+  {
+    "identity": "euronext_lisbon",
+    "row": "| `euronext_lisbon` | [euronext.rs](../../src/calendar/schedules/equities/europe/euronext.rs) | [EU-EURONEXT](sources.md#eu-euronext)<br>[EU-FESE-SECONDARY](sources.md#eu-fese-secondary) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | Euronext Lisbon core shares translate the same nominal Central-European schedule one civil hour earlier: 06:30 pre-opening, 08:00–16:30 continuous trading, a closing auction to 16:35 and Trading-at-Last through 16:40. The legacy 06:15 pre-opening rests on Euronext's 2010 special-day appendix and its 2014 normal-hours appendix, and the 2023-03-20 move to 06:30 is date-aware on the operator's Optiq go-live guidelines. Per-security randomized uncross timing is outside this exchange-level scope and does not change venue availability. | [evidence](../evidence/euronext_lisbon.md) |",
+    "evidence_file": "docs/evidence/euronext_lisbon.md"
+  },
+  {
+    "identity": "euronext_dublin",
+    "row": "| `euronext_dublin` | [dublin.rs](../../src/calendar/schedules/equities/europe/euronext/dublin.rs) | [EU-EURONEXT](sources.md#eu-euronext)<br>[EU-FESE-SECONDARY](sources.md#eu-fese-secondary) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | Euronext Dublin principal shares, 08:00:30–16:28 continuous with a closing auction to 16:30:30 and Trading-at-Last through 16:40 after a 06:30 pre-opening. The operator's archived pre-floor timetable, successive ISE order-book models and the official 2018 trading calendar establish the complete 06:30–17:15 legacy grid through the 2019-02-04 Optiq migration. That migration and the 2023-03-20 pre-opening shift are date-aware, and randomized uncrosses use the documented conservative latest-edge envelope. | [evidence](../evidence/euronext_dublin.md) |",
+    "evidence_file": "docs/evidence/euronext_dublin.md"
+  },
+  {
+    "identity": "euronext_milan",
+    "row": "| `euronext_milan` | [euronext.rs](../../src/calendar/schedules/equities/europe/euronext.rs)<br>[milan.rs](../../src/calendar/schedules/equities/europe/euronext/milan.rs) | [EU-EURONEXT](sources.md#eu-euronext)<br>[EU-FESE-SECONDARY](sources.md#eu-fese-secondary) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | Euronext Milan principal shares, the former Borsa Italiana MTA book, 09:00:30–17:30 continuous with a closing auction to 17:35:30 and Trading-at-Last through 17:40 after a 07:30 pre-opening. Borsa Italiana's hours release effective 2009-09-29 fixes the January-2010 baseline, and the 2013-09-30 Closing Price Cross launch, notice 17016's 2015-11-23 changes and the 2023-03-27 Optiq migration are date-aware. Randomized uncrosses use the documented conservative latest-edge envelope. | [evidence](../evidence/euronext_milan.md) |",
+    "evidence_file": "docs/evidence/euronext_milan.md"
+  },
+  {
+    "identity": "bme",
+    "row": "| `bme` | [bme.rs](../../src/calendar/schedules/equities/europe/bme.rs) | [EU-BME](sources.md#eu-bme)<br>[EU-FESE-SECONDARY](sources.md#eu-fese-secondary) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | BME principal-share cash equities: opening auction 08:30–09:00:30, continuous trading to 17:30, closing auction to 17:35:30 and Trading-at-Last through 17:45. Sociedad de Bolsas Circular 1/2001 establishes the same opening, continuous and closing-auction grid before the January-2010 floor, and the 2023-12-04 Trading-At-Last launch is date-aware on Operating Instruction 47/2023. Every modelled non-regular phase prints, so the profile carries no order-entry window and uses the sourced conservative 30-second auction edge. | [evidence](../evidence/bme.md) |",
+    "evidence_file": "docs/evidence/bme.md"
+  },
+  {
+    "identity": "nasdaq_stockholm",
+    "row": "| `nasdaq_stockholm` | [nasdaq_nordics.rs](../../src/calendar/schedules/equities/europe/nasdaq_nordics.rs) | [EU-NASDAQ-NORDIC](sources.md#eu-nasdaq-nordic)<br>[EU-FESE-SECONDARY](sources.md#eu-fese-secondary) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | Nasdaq Stockholm principal shares: the opening call runs from 08:00 to the five-second randomized 09:00:05 edge, continuous trading to 17:25, closing call to 17:30 and post-trading through 18:00. The operator's January-2010 Nordic market model supplies the baseline, and its INET migration notices state that the February-2010 migration did not materially change Nordic trading hours. The 2015-11-16 five-second randomized opening edge is date-aware on Nasdaq INET notice 61/15. | [evidence](../evidence/nasdaq_stockholm.md) |",
+    "evidence_file": "docs/evidence/nasdaq_stockholm.md"
+  },
+  {
+    "identity": "nasdaq_helsinki",
+    "row": "| `nasdaq_helsinki` | [nasdaq_nordics.rs](../../src/calendar/schedules/equities/europe/nasdaq_nordics.rs) | [EU-NASDAQ-NORDIC](sources.md#eu-nasdaq-nordic)<br>[EU-FESE-SECONDARY](sources.md#eu-fese-secondary) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | Nasdaq Helsinki principal shares, published one civil hour later locally: the opening call runs from 09:00 to the five-second randomized 10:00:05 edge, continuous trading to 18:25, closing call to 18:30 and post-trading through 19:00. The operator's January-2010 Nordic market model supplies the baseline, and its INET migration notices state that the February-2010 migration did not materially change Nordic trading hours. The 2015-11-16 five-second randomized opening edge is date-aware on Nasdaq INET notice 61/15. | [evidence](../evidence/nasdaq_helsinki.md) |",
+    "evidence_file": "docs/evidence/nasdaq_helsinki.md"
+  },
+  {
+    "identity": "nasdaq_copenhagen",
+    "row": "| `nasdaq_copenhagen` | [nasdaq_nordics.rs](../../src/calendar/schedules/equities/europe/nasdaq_nordics.rs) | [EU-NASDAQ-NORDIC](sources.md#eu-nasdaq-nordic)<br>[EU-FESE-SECONDARY](sources.md#eu-fese-secondary) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | Nasdaq Copenhagen principal shares on the shorter Nordic session: opening call from 08:00 to the randomized 09:00:05 edge, continuous trading to 16:55, closing call to 17:00, Trading@Closing Price to 17:10 and post-trading through 17:20. The operator's January-2010 Nordic market model supplies the baseline, and the 2015-11-16 randomized opening edge and the 2019-05-01 Trading@Closing Price launch are both date-aware. The current Nasdaq Nordic Market Model 2026:03 confirms all three principal-share grids. | [evidence](../evidence/nasdaq_copenhagen.md) |",
+    "evidence_file": "docs/evidence/nasdaq_copenhagen.md"
+  },
+  {
+    "identity": "vienna",
+    "row": "| `vienna` | [vienna.rs](../../src/calendar/schedules/equities/europe/vienna.rs) | [EU-VIENNA](sources.md#eu-vienna)<br>[EU-FESE-SECONDARY](sources.md#eu-fese-secondary) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | Vienna Stock Exchange ATX shares on Xetra T7, with a recurring third-Friday derivatives-settlement grid beside the ordinary-day grid, continuous trading from 09:00:30 to 17:30 and Trade-at-Close through 17:45. The exchange's detailed Xetra market-model specification effective 2009-01-02 establishes the January-2010 baseline, and the 2017-07-31 T7 migration, the 2019-05-02 closing-call extension and the 2020-12-01 Trade-at-Close launch are each primary-sourced. Those three era boundaries are dated constants in the owner module rather than a revisions table, because each era carries a separate settlement-day profile. | [evidence](../evidence/vienna.md) |",
+    "evidence_file": "docs/evidence/vienna.md"
+  },
+  {
+    "identity": "borsa_istanbul",
+    "row": "| `borsa_istanbul` | [bist.rs](../../src/calendar/schedules/equities/europe/bist.rs) | [EU-BIST](sources.md#eu-bist) | Primary | T1 | dormant | ? | 2026-08-22 | on demand | Borsa İstanbul Equity Market, with order collection 09:40–09:55, the opening print to 10:00, continuous trading to 18:00 and a closing envelope through 18:10. The Equity Market Procedure carries the current grid and every modelled 2012–2019 change has a dated official circular or announcement. The pre-2012-03-02 baseline grid cites no artifact of its own and no indexed citation carries a readable publication day, so the horizon is unresolved. | [evidence](../evidence/borsa_istanbul.md) |",
+    "evidence_file": "docs/evidence/borsa_istanbul.md"
+  },
+  {
+    "identity": "tsx",
+    "row": "| `tsx` | [tsx.rs](../../src/calendar/schedules/equities/americas/tsx.rs) | [AMER-TSX](sources.md#amer-tsx) | Primary | T1 | dormant | 2010-01-01 | 2026-08-22 | on demand | Toronto Stock Exchange cash equities: orders accepted from 07:00, continuous trading 09:30–16:00, the conditional Market-on-Close Price Movement Extension to 16:10 and Extended Trading at the last sale price 16:15–17:00. The conditional extension is represented by its maximum envelope because when it fires it is the delayed Market-on-Close cross and prints. Regulator records show both the extension and the last-sale session existed before the January-2010 floor and the exchange archive holds no later boundary change, so no dated revision is recorded. | [evidence](../evidence/tsx.md) |",
+    "evidence_file": "docs/evidence/tsx.md"
+  },
+  {
+    "identity": "jse",
+    "row": "| `jse` | [jse.rs](../../src/calendar/schedules/equities/africa_middle_east/jse.rs) | [AFRICA-JSE](sources.md#africa-jse) | Primary | T1 | dormant | 2012-05-25 | 2026-08-22 | on demand | JSE main and liquid ZA01 equity segment: opening auction 08:30–09:00, continuous trading to 16:50, closing auction to 17:00 and the Closing Price Cross 17:02–17:10. The current trading and information overview and the May 2026 session workbook shipped with the 2026-08-17 release without changing any ZA01 boundary, and six operator notices date every modelled 2012–2021 change. Product-specific ZA03 sessions are out of scope, the end-of-day auction remains disabled, and the pre-2012 baseline is carried below the notice that replaced it. | [evidence](../evidence/jse.md) |",
+    "evidence_file": "docs/evidence/jse.md"
+  },
+  {
+    "identity": "tadawul",
+    "row": "| `tadawul` | [tadawul.rs](../../src/calendar/schedules/equities/africa_middle_east/tadawul.rs) | [MIDEAST-TADAWUL](sources.md#mideast-tadawul) | Primary | T1 | dormant | ? | 2026-08-24 | on demand | Saudi Exchange Main Market cash equities, Sunday to Thursday: opening-auction orders 09:30–10:00, continuous trading to 15:00, closing auction to 15:10 and trade at last to 15:20, including the sourced temporary 2020 regime. The pre-2016 opening-auction order window is omitted because no dated primary source states it for the 11:00-open eras. The 2013 and 2016 rows rest on state news-agency releases rather than an operator document and the pre-2013 baseline cites no artifact of its own, so the horizon is unresolved. | [evidence](../evidence/tadawul.md) |",
+    "evidence_file": "docs/evidence/tadawul.md"
+  },
+  {
+    "identity": "b3",
+    "row": "| `b3` | [b3.rs](../../src/calendar/schedules/equities/americas/b3.rs) | [AMER-B3](sources.md#amer-b3) | Primary | T1 | dormant | 2010-01-01 | 2026-08-24 | on demand | B3 cash equities on the recurring pair of New York-referenced grids that circular 127/2015-DP introduced from 2015-12-21, selected date-aware from the Brazil and New York daylight-time relationship. Official circulars pin the January-2010 baseline and every old-grid switch through 2013-07-08. The 11:00-open 2010–2012 grids carry no pre-opening phase because that era's window is not primary-sourced, so it reads closed. | [evidence](../evidence/b3.md) |",
+    "evidence_file": "docs/evidence/b3.md"
+  },
+  {
+    "identity": "bmv",
+    "row": "| `bmv` | [bmv.rs](../../src/calendar/schedules/equities/americas/bmv.rs) | [AMER-BMV](sources.md#amer-bmv) | Primary | T1 | dormant | 2010-02-18 | 2026-08-22 | on demand | BMV cash equities on a normal grid and an hour-earlier grid selected date-aware from the operator's published New York alignment rule, which its 2010 autumn notice states prospectively from 2010-11-01. The date-aware grids retain the sourced executable HD/ID post-close tails: :06 through 2016-09-04, :10 from 2016-09-05, early :20 from 2023-05-29 and normal :20 from 2023-11-06. Operative manuals and the regulator annual record control over stale one-off daylight-time notices that repeated superseded :06 values. | [evidence](../evidence/bmv.md) |",
+    "evidence_file": "docs/evidence/bmv.md"
+  }
+]

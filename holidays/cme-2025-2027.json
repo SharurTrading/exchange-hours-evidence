@@ -1,0 +1,3038 @@
+{
+ "task": "cme-2025-2027: CME Group holiday schedules, calendar years 2025-2027, per product group",
+ "coverage": "CME Group holiday schedules for calendar years 2025, 2026 and 2027, per product group, from CME's own trading-hours channel. Evidence bytes, an INDEX.md with sha256 for every artifact, and the derived working files are under /Users/agedvagabond/Developer/exchange-hours-research/holidays/raw/cme-2025-2027/. Work done 2026-09-12 UTC.\n\nROUND 1 FIX (2026-09-12 UTC). This payload supersedes cme-2025-2027.r0.json, which is kept beside it; the round-0 bytes hash sha256 4cd4706a8e989cd0d59abe1279e4a03f3aee9b0b80c99476d2fe49466584bd50. New evidence retrieved in this round is under raw/cme-2025-2027-fix/ with its own INDEX.md. Seven things changed, each re-read from the saved bytes rather than taken on anyone's word:\n(1) THANKSGIVING 2025 RE-SOURCED. The round-0 claim that no capture of the 2025 windows later than 2024-12-20 exists is false for Thanksgiving. A fresh CDX run finds 45 captures of fromEventDate=2025-11-26&toEventDate=2025-11-28, 44 of them from the 2026-01-29 crawl, i.e. two months AFTER the holiday. The latest, 2026-01-29T01:23:09Z, was retrieved and is now D09; the 2024-12-20 publication is kept as D09P and is explicitly marked superseded. The two agree on every instant; they differ on eight product-dates, all on Friday 2025-11-28, where the finalised publication additionally prints a morning pre-open/open pair. The 2025-11-28 verbatim lines are re-quoted from D09.\n(2) 2025-07-03 EQUITY INDEX. ES closes 12:15 CT on Thursday 2025-07-03 in D07 while ZN, 6E, CL, GC and BTC all close 16:00 CT that day - an early final close at a stated instant, identical in shape to 2025-11-28. It was carried as status 'modified' with no close_instant; it is now early_close with close_instant 12:15 CT. This is the only Independence-Day-eve equity-index early close in the 2025 set.\n(3) STATUS VOCABULARY MADE SELF-CONSISTENT. The 17 rows noted [N3] - FX, and Cryptocurrency before it went 24/7, on Monday and Thursday holidays - were labelled 'normal' although they differ from CME's normal grid twice over: no 16:00 CT final close on the date, and the pre-open at 16:00 rather than 16:45, so the holiday carries no trade date of its own and the whole span rolls into the next business day. The converse single deviation ([N6], final close present but no evening re-open) was already 'modified'. The [N3] rows are now 'modified' too.\n(4) 2027-12-23 CRYPTOCURRENCY. Its event TIMES equal the normal Thursday grid, but the 16:01/16:02 re-open carries trade date 2027-12-27, skipping the closed Friday 2027-12-24 - on a normal Thursday it would carry the next calendar day (checked against the reference week, where only the Friday row rolls to Monday). Status 'normal' [N8] becomes 'modified' [N18].\n(5) N17 DEFINED, N18 ADDED. N17 was used on three rows and never defined. N17 = no day session on the holiday; only a 16:00 CT pre-open and a 17:00 CT open, both already carrying the next business day's trade date (verified against D01: on 2025-01-01 ES, ZN, CL, 6E, GC, BTC and CSC each publish exactly '16:00 preopen /TD 2025-01-02; 17:00 open /TD 2025-01-02', while ZC, LE and LBR publish nothing). N18 is defined in (4).\n(6) RE-FETCH PATH REPAIRED. The archived URLs in raw/cme-2025-2027/INDEX.md omit the '&isProtected&_t=<epoch>' suffix that is part of the archived URL, so following one literally returns a Wayback 404. raw/cme-2025-2027-fix/REFETCH.tsv now lists, for all 25 archived service artifacts, the exact one-step id_ replay URL, rebuilt from the fresh CDX rather than from the old working file. raw/cme-2025-2027-fix/MANIFEST-cme-2025-2027.sha256 additionally hashes all 180 files on disk under raw/cme-2025-2027/, not just the 72 load-bearing artifacts INDEX.md lists.\n(7) THE UNCHECKED SATURDAY RECORDED. CME's own 2025 Globex table states the Thanksgiving period as '27 - 29 November 2025', but no archived call of the service covers Saturday 2025-11-29. That gap is now an explicit missing[] entry, with the 2026 and 2027 equivalents queried live (D52, D53) as mitigation.\nEverything the verification did not dispute is unchanged: no other instant, verbatim, document id, tier or status was touched.\n\nSTATUS VOCABULARY, as used below. 'closed' - the family publishes no tradeable session on the date. 'early_close' - a session runs and ends earlier than the family's normal grid for that weekday, and close_instant carries the stated instant. 'modified' - the published event list differs from the normal grid in some way other than an earlier final close (a missing evening leg, a missing final close, a pre-open at a different time, a trade date that rolls past the holiday). 'normal' - the published event list and its trade dates equal the family's normal grid for that weekday. 'unknown' - only a publication known to be superseded survives for the date, and it is not carried.\n\nSOURCE. cmegroup.com refuses this machine directly (HTTP 403, 'This IP address is blocked due to suspected web scraping activity'), so live pages and service calls were read through the public reader https://r.jina.ai/<url> and history through the Wayback Machine with id_ replay. CME no longer publishes a per-holiday hours PDF or XLS: from the 2025 calendar year the holiday hours ARE the interactive table on https://www.cmegroup.com/trading-hours.html ('Please note that with the 2025 calendar year the CME Group will be providing downloadable holiday calendars for Globex and incorporating with Regular Trading hours into one location'), and every 'Holiday Schedule' link on the Holiday Calendar page points at that page. The per-holiday PDFs that do exist for 2025/2026 ('...-holiday-settlement-times-<year>.pdf', '<year>-...-clearing-advisory.pdf', 'otc-...pdf') carry settlement-price and clearing-cycle information only and state no trading hours; the MLK-2025 clearing advisory routes trading hours back to 'CME Group Holiday Calendar / CME Group Trading Hours'. Those two were retrieved and indexed to document that the channel was read and is not a session source (LAW-SESSION-NOT-EXPIRY).\n\nCHANNEL AND TIER. The rows below come from https://www.cmegroup.com/services/trading-hours-by-product?...&fromEventDate=&toEventDate= - the endpoint the trading-hours page itself calls to render its per-asset-class Holiday Hours table. That is the operator's own trading-hours service, so T2 under LAW-PRIMARY-SOURCES, not T1. It was validated against the T1 rendering: for Thanksgiving 2026 the page prints rows labelled Interest Rates / Equities / Energy / Grains / FX / Metals / Livestock / Dairy / Cryptocurrencies / Lumber and each printed row matches the service rows for ZN / ES / CL / ZC / 6E / GC / LE / CSC / BTC / LBR event for event (e.g. printed 'Friday 27 Nov 2026 | Interest Rates | TRADE DATE: Fri 27 Nov 12:15 closed' = service ZN eventDate 2026-11-27 12:15 closed, trade date 2026-11-27). The saved rendering is live/trading-hours-live.md.\n\nZONE. Verbatim from the page: 'Trading hours are subject to change and are in U.S. Central Time unless otherwise stated.' Every instant recorded below is therefore CT as printed; CME prints no ET column in this channel, so no ET value is asserted. The page's free-text Holiday Notes do print CT/ET pairs, but only for TAS/TAM trade-type variants (e.g. 'Gold TAS: Early close 11:30 CT / 12:30 ET'), which are not the family sessions.\n\nEVENT VOCABULARY, verbatim from the same page: PREOPEN 'Order Entry, modification, and cancel are allowed. No order matching.'; OPEN 'Start of continuous trading phase. Order matching begins.'; Paused 'Interruption of continuous trading. Only order cancellation is allowed. No order matching.'; pcp (POST CLOSE - PREOPEN) 'Allows GTC/GTD orders only placement, modification, and cancellation. No order matching.'; closed 'Final Close of the date. Day and GTD (current trade date) orders are eliminated.' This distinction matters: on the Monday holidays CME does NOT publish a 'closed' event at noon - it publishes a preopen, i.e. matching stops but the trade date does not end and the whole Sunday-evening-through-Monday span carries the following business day's trade date. Those rows are marked early_close with the instant, and the note says the event type is preopen.\n\nENUMERATION. Archive CDX was run first over cmegroup.com/tools-information/holiday-calendar*, cmegroup.com/trading-hours* and cmegroup.com/services/trading-hours* (results saved under cdx/). CME's forward holiday LIST (services/trading-hours-filters) starts at Labor Day 2026-09-07 and runs to New Year 2028-01-01, but the trading-hours-by-product service itself is NOT limited to that list: it still answers for past windows back to Thanksgiving 2025 (verified 2026-09-12 - every window from 2025-11-26 forward returns a schedule, while the eight windows New Year 2025 through Labor Day 2025 return the products with empty schedules, so its retention edge falls between Labor Day 2025 and Thanksgiving 2025). The 2025 and 2026-Jan..Jul rows were originally taken from Wayback captures of the same endpoint, 2026-09 onward from live retrieval, and the repair round of 2026-09-12 read the nine still-served past windows live (D54-D67). Where more than one capture of a window exists the most recent was used; the fresh CDX run of 2026-09-12 re-checked this window by window and the one window where it did not hold - Thanksgiving 2025 - was re-sourced (see D09/D09P below). CME's own forward holiday list (services/trading-hours-filters, saved as api/filters.json) supplied the holiday dates and each holiday's start/end period for 2026-09-07 through 2028-01-01.\n\nBASELINE. 'Status' is stated against CME's own non-holiday grid, taken from a clean reference week 2026-10-18..2026-10-24 pulled from the same service (live/normal/*.json), not from any pattern assumed by me. Each family row's verbatim carries the published event list AND that normal grid so the comparison is re-checkable. The per-date, per-product rows with baselines and deviation flags are in raw/cme-2025-2027/FINAL_ROWS.json; a readable review is FINAL_REVIEW.txt.\n\nGROUPS. The ten groups CME prints map to these products, which are exactly the ten the trading-hours page itself queries: Equity Index=ES (E-mini S&P 500), Interest Rates=ZN (10-Year T-Note), FX=6E (Euro FX), Energy=CL (Crude Oil), Metals=GC (Gold), Grains & Oilseeds=ZC (Corn), Livestock=LE (Live Cattle), Cryptocurrency=BTC (Bitcoin), Dairy=CSC (Cash-Settled Cheese), Lumber=LBR (Lumber). From Thanksgiving 2025 forward the Nikkei-specific line (NKD Nikkei/USD, NIY Nikkei/JPY), soybeans (ZS), wheat (ZW), lean hogs (HE) and Class III milk (DC) were pulled as a second id set (id=168,167,320,323,19,27); where they appear they track ES (Nikkei), ZC (ZS/ZW), LE (HE) and CSC (DC) event for event, with one exception worth naming: on Good Friday 2026 NKD/NIY close 08:15 CT with ES, not 10:15 CT with ZN/6E/BTC.\n\nSTRUCTURE OF THE ROWS. One holidays[] entry per CME holiday. Inside it, families[] carries one row per (product group set, date): the holiday's own date is given for every group including the ones that ran normally, and the adjacent dates in CME's own window (eve, day after, the Sunday evening leg, and the Saturday sessions) are given only where CME publishes something other than the normal grid. Groups that share an identical published event list on a date are listed together in one row. 'family' ends with '| date YYYY-MM-DD' naming the date the row governs. Note codes N1..N18 and EC are expanded in raw/cme-2025-2027/INDEX.md (N17 and N18 are defined in raw/cme-2025-2027-fix/INDEX.md and appended to the original INDEX.md): N17 = no day session on the holiday; only a 16:00 CT pre-open and a 17:00 CT open, both already carrying the next business day's trade date. N18 = the published event TIMES equal the family's normal grid for that weekday, but the re-open carries a trade date that skips the following closed holiday, so the date does carry a holiday trade-date roll. N19 = 24/7 Cryptocurrency grid on a FRIDAY holiday: the 16:00 CT final-close event is published but carries the following Monday's trade date, so the holiday's own trade date has no session and no settlement and the whole day rolls (distinct from N10, where on a Monday or Thursday holiday the 16:00 CT event is omitted altogether, and from N8, because on a normal Friday the 16:00 CT close carries that Friday's own trade date).\n\nWHAT THE DATA SHOWS, in outline. Monday/Thursday-Friday holidays (MLK, Presidents', Memorial, Labor, Juneteenth 2025, Thanksgiving) halt Equity Index and Interest Rates at 12:00 CT and Energy and Metals at 13:30 CT with a 17:00 CT reopen; FX and (pre-24/7) Cryptocurrency keep the ordinary 16:00-17:00 CT pause; Grains & Oilseeds have no day session and open 19:00 CT for the next trade date; Livestock, Lumber and (on some) Dairy do not trade at all. Good Friday 2025 and 2027 are a full Globex closure for every family (crypto excepted in 2027, which is 24/7 from 2026-05-29 and trades through). Good Friday 2026 is the exception CME itself flags, verbatim from the T1 operator page D50 (line 2498 of html/trading-hours-20250830.html): 'Due to the US Employment Situation Release on April 3, 2026, CME Group Equities, FX, Cryptocurrency and Interest Rate products will have unique Closes and Settlements for trade date April 3rd.' The same list continues, still D50: 'All other CME, CBT, NYMEX and COMEX products will have their settlements copied from April 2nd to April 3rd.' and 'No trading for Friday April 3th  trade date in observence of Good Friday.' (sic). D50 is T1 corroboration that Equities, FX, Cryptocurrency and Interest Rates traded that day and everything else did not, but it states no instants; the instants - Equities close 08:15 CT, Interest Rates, FX and Cryptocurrency 10:15 CT - come only from the T2 service document D14, which is what those rows cite. Independence Day (2025-07-04, 2026-07-03, 2027-07-05) and Juneteenth 2026/2027 run a 12:00 CT final close for the 24-hour groups with Grains, Livestock, Lumber and Dairy shut. The day after Thanksgiving is an early close at 12:15 CT (Equity Index, Interest Rates, Nikkei), 13:45 CT (FX, Energy, Metals, pre-24/7 Crypto) and 12:05 CT (Grains, Livestock, Lumber), with Dairy shut. Christmas Eve is 12:15 CT (Equity Index, Interest Rates, Nikkei), 12:45 CT (FX, Energy, Metals), 12:05 CT (Grains, Livestock, Lumber) and 12:00 CT (Dairy); Christmas Day and New Year's Day are full closures. New Year's Eve and the Thursday before Good Friday are a normal 16:00 CT final close with no evening reopen.\n\nTWO THINGS WORTH FLAGGING TO THE CRATE. (1) After the Friday holidays of 2026 and 2027 CME publishes a SATURDAY session for the 24-hour groups - 2026-06-20, 2026-07-04 and 2027-06-19 all carry 'open 05:00 CT / closed 17:00 CT' with the following Monday's trade date, against a normally empty Saturday. These are in the rows as status modified, note N11. Saturday 2026-04-04 after Good Friday 2026 does NOT carry one (checked against the service for window 2026-04-02..04). (2) From 2026-05-29 Cryptocurrency is 24/7, and how a holiday shows up depends on the weekday. On a MONDAY or THURSDAY holiday the 16:00 CT daily final close is omitted outright and only '16:01 preopen / 16:02 open' is published (note N10). On a FRIDAY holiday the 16:00 CT close IS printed, but it carries the FOLLOWING MONDAY's trade date rather than the holiday's own, so the holiday still has no settlement and no trade date of its own and the whole day rolls (note N19 - the six rows 2026-06-19, 2026-07-03, 2026-12-25, 2027-01-01, 2027-03-26 and 2027-06-18). Either way trading itself is continuous; what the holiday removes is the trade date, which is why those rows carry status 'closed' under DESIGN decisions D1 and D9. The Saturday case is different again and genuinely normal: 2028-01-01 prints '02:00 closed; 03:45 preopen; 04:00 open (trade date 2028-01-03)', which is the ordinary Saturday grid.\n\nNOT CME GLOBEX HOLIDAYS. Columbus Day and Veterans Day appear nowhere in CME's Globex holiday list (api/filters.json) even though CME publishes clearing advisories, settlement-times PDFs and OTC notices for them; Globex trades a normal session on both. They are therefore not recorded as holidays here.\n\nRESIDUAL RISK. Eight 2025 windows - New Year (2024-12-31..2025-01-02), MLK, Presidents' Day, Good Friday, Memorial Day, Juneteenth, Independence Day and Labor Day - rest on the single Wayback capture 2024-12-20T15:53:40Z of the service, and CME states on the same page 'This schedule is subject to change. Trading hours are usually finalized approximately two weeks prior to the holiday.' A fresh CDX enumeration of cmegroup.com/services/trading-hours-by-product* (raw/cme-2025-2027-fix/cdx/cdx_thbp_all_fix.json, 688 rows, retrieved 2026-09-12) confirms each of those eight windows has no capture later than 2024-12-20 (the New Year window has a second, earlier capture at 2024-07-08T16:14:39Z), so those rows are CME's published future as of 2024-12-20 rather than a post-finalisation statement. They are internally consistent with the 2026 and 2027 rows for the same holidays, which are sourced from later captures and from live retrieval. The three remaining 2025/26 windows DO have post-holiday captures and are sourced from them: Thanksgiving 2025 (45 captures, latest 2026-01-29T01:23:09Z = D09), Christmas 2025 (45 captures, latest 2026-01-29T01:23:09Z, content-identical to the 2026-01-29T01:21:59Z bytes already saved as D10 - re-fetched and compared in this round) and New Year 2026 (51 captures, latest 2026-07-22T11:42:22Z, content-identical schedule for schedule to D11's 2026-06-19T11:41:05Z bytes - re-fetched and compared in this round).\n\nDOCUMENT LEGEND. Each family row's 'document' is a code below; all are the CME Group trading-hours service (tier T2), read live through r.jina.ai or replayed from the Wayback Machine. Expand [THBP-A] to https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true and [THBP-B] to the same with id=168,167,320,323,19,27; expand WA:<ts>id_/ to https://web.archive.org/web/<ts>id_/ . Retrieved bytes for every code are saved under raw/cme-2025-2027/ and listed with sha256 in raw/cme-2025-2027/INDEX.md.\nD01 = WA:20241220155340id_/[THBP-A]&fromEventDate=2024-12-31&toEventDate=2025-01-02  [T2 archive capture 2024-12-20T15:53:40Z]\nD02 = WA:20241220155340id_/[THBP-A]&fromEventDate=2025-01-19&toEventDate=2025-01-21  [T2 archive capture 2024-12-20T15:53:40Z]\nD03 = WA:20241220155340id_/[THBP-A]&fromEventDate=2025-02-16&toEventDate=2025-02-18  [T2 archive capture 2024-12-20T15:53:40Z]\nD04 = WA:20241220155340id_/[THBP-A]&fromEventDate=2025-04-17&toEventDate=2025-04-19  [T2 archive capture 2024-12-20T15:53:40Z]\nD05 = WA:20241220155340id_/[THBP-A]&fromEventDate=2025-05-25&toEventDate=2025-05-27  [T2 archive capture 2024-12-20T15:53:40Z]\nD06 = WA:20241220155340id_/[THBP-A]&fromEventDate=2025-06-18&toEventDate=2025-06-20  [T2 archive capture 2024-12-20T15:53:40Z]\nD07 = WA:20241220155340id_/[THBP-A]&fromEventDate=2025-07-03&toEventDate=2025-07-05  [T2 archive capture 2024-12-20T15:53:40Z]\nD08 = WA:20241220155340id_/[THBP-A]&fromEventDate=2025-08-31&toEventDate=2025-09-02  [T2 archive capture 2024-12-20T15:53:40Z]\nD09 = WA:20260129012309id_/[THBP-A]&fromEventDate=2025-11-26&toEventDate=2025-11-28  [T2 archive capture 2026-01-29T01:23:09Z - the LATEST of the 45 captures of this window and a post-holiday statement; bytes saved as raw/cme-2025-2027-fix/arc/thbp_2025-11-26_2025-11-28_20260129012309.json]\nD09P = WA:20241220155340id_/[THBP-A]&fromEventDate=2025-11-26&toEventDate=2025-11-28  [T2 archive capture 2024-12-20T15:53:40Z - the SUPERSEDED pre-holiday publication this task originally quoted; retained at raw/cme-2025-2027/arc/thbp_2025-11-26_2025-11-28_20241220155340.json. It agrees with D09 event for event on 2025-11-26 and 2025-11-27 and on LE/CSC on 2025-11-28, and differs on eight product-dates, all on 2025-11-28: ES, ZN, 6E, CL, GC and BTC each gain '07:00 preopen; 07:30 open' ahead of the early close, ZC gains '07:00 preopen' before its 08:30 open and LBR gains a '07:00 preopen' alongside its 06:00 preopen. Every early-close instant - 12:15 CT, 13:45 CT, 12:05 CT - is identical in both publications.]\nD10 = WA:20260129012159id_/[THBP-A]&fromEventDate=2025-12-24&toEventDate=2025-12-26  [T2 archive capture 2026-01-29T01:21:59Z]\nD11 = WA:20260619114105id_/[THBP-A]&fromEventDate=2025-12-31&toEventDate=2026-01-02  [T2 archive capture 2026-06-19T11:41:05Z]\nD12 = WA:20260619114105id_/[THBP-A]&fromEventDate=2026-01-18&toEventDate=2026-01-20  [T2 archive capture 2026-06-19T11:41:05Z]\nD13 = WA:20260619114105id_/[THBP-A]&fromEventDate=2026-02-15&toEventDate=2026-02-17  [T2 archive capture 2026-06-19T11:41:05Z]\nD14 = WA:20260619114118id_/[THBP-A]&fromEventDate=2026-04-01&toEventDate=2026-04-03  [T2 archive capture 2026-06-19T11:41:18Z]\nD15 = WA:20260619114105id_/[THBP-A]&fromEventDate=2026-05-24&toEventDate=2026-05-26  [T2 archive capture 2026-06-19T11:41:05Z]\nD16 = WA:20260129012310id_/[THBP-A]&fromEventDate=2026-06-17&toEventDate=2026-06-19  [T2 archive capture 2026-01-29T01:23:10Z]\nD17 = WA:20260619113404id_/[THBP-A]&fromEventDate=2026-06-18&toEventDate=2026-06-20  [T2 archive capture 2026-06-19T11:34:04Z]\nD18 = WA:20260129012216id_/[THBP-A]&fromEventDate=2026-07-02&toEventDate=2026-07-04  [T2 archive capture 2026-01-29T01:22:16Z]\nD19 = WA:20260619114108id_/[THBP-A]&fromEventDate=2026-07-03&toEventDate=2026-07-05  [T2 archive capture 2026-06-19T11:41:08Z]\nD20 = [THBP-A]&fromEventDate=2026-09-06&toEventDate=2026-09-08  [T2 live retrieval 2026-09-12T04:30Z]\nD21 = [THBP-B]&fromEventDate=2026-09-06&toEventDate=2026-09-08  [T2 live retrieval 2026-09-12T04:30Z]\nD22 = [THBP-A]&fromEventDate=2026-11-25&toEventDate=2026-11-27  [T2 live retrieval 2026-09-12T04:30Z]\nD23 = [THBP-B]&fromEventDate=2026-11-25&toEventDate=2026-11-27  [T2 live retrieval 2026-09-12T04:30Z]\nD24 = [THBP-A]&fromEventDate=2026-12-22&toEventDate=2026-12-24  [T2 live retrieval 2026-09-12T04:30Z]\nD25 = [THBP-B]&fromEventDate=2026-12-24&toEventDate=2026-12-26  [T2 live retrieval 2026-09-12T04:30Z]\nD26 = [THBP-A]&fromEventDate=2026-12-24&toEventDate=2026-12-26  [T2 live retrieval 2026-09-12T04:30Z]\nD27 = [THBP-A]&fromEventDate=2026-12-29&toEventDate=2026-12-31  [T2 live retrieval 2026-09-12T04:30Z]\nD28 = [THBP-B]&fromEventDate=2026-12-31&toEventDate=2027-01-02  [T2 live retrieval 2026-09-12T04:30Z]\nD29 = [THBP-A]&fromEventDate=2026-12-31&toEventDate=2027-01-02  [T2 live retrieval 2026-09-12T04:30Z]\nD30 = [THBP-A]&fromEventDate=2027-01-17&toEventDate=2027-01-19  [T2 live retrieval 2026-09-12T04:30Z]\nD31 = [THBP-B]&fromEventDate=2027-01-17&toEventDate=2027-01-19  [T2 live retrieval 2026-09-12T04:30Z]\nD32 = [THBP-A]&fromEventDate=2027-02-14&toEventDate=2027-02-16  [T2 live retrieval 2026-09-12T04:30Z]\nD33 = [THBP-B]&fromEventDate=2027-02-14&toEventDate=2027-02-16  [T2 live retrieval 2026-09-12T04:30Z]\nD34 = [THBP-A]&fromEventDate=2027-03-25&toEventDate=2027-03-27  [T2 live retrieval 2026-09-12T04:30Z]\nD35 = [THBP-B]&fromEventDate=2027-03-25&toEventDate=2027-03-27  [T2 live retrieval 2026-09-12T04:30Z]\nD36 = [THBP-A]&fromEventDate=2027-05-30&toEventDate=2027-06-01  [T2 live retrieval 2026-09-12T04:30Z]\nD37 = [THBP-B]&fromEventDate=2027-05-30&toEventDate=2027-06-01  [T2 live retrieval 2026-09-12T04:30Z]\nD38 = [THBP-A]&fromEventDate=2027-06-17&toEventDate=2027-06-19  [T2 live retrieval 2026-09-12T04:30Z]\nD39 = [THBP-B]&fromEventDate=2027-06-17&toEventDate=2027-06-19  [T2 live retrieval 2026-09-12T04:30Z]\nD40 = [THBP-A]&fromEventDate=2027-07-04&toEventDate=2027-07-06  [T2 live retrieval 2026-09-12T04:30Z]\nD41 = [THBP-B]&fromEventDate=2027-07-04&toEventDate=2027-07-06  [T2 live retrieval 2026-09-12T04:30Z]\nD42 = [THBP-A]&fromEventDate=2027-09-05&toEventDate=2027-09-07  [T2 live retrieval 2026-09-12T04:30Z]\nD43 = [THBP-B]&fromEventDate=2027-09-05&toEventDate=2027-09-07  [T2 live retrieval 2026-09-12T04:30Z]\nD44 = [THBP-A]&fromEventDate=2027-11-24&toEventDate=2027-11-26  [T2 live retrieval 2026-09-12T04:30Z]\nD45 = [THBP-B]&fromEventDate=2027-11-24&toEventDate=2027-11-26  [T2 live retrieval 2026-09-12T04:30Z]\nD46 = [THBP-A]&fromEventDate=2027-12-22&toEventDate=2027-12-25  [T2 live retrieval 2026-09-12T04:30Z]\nD47 = [THBP-B]&fromEventDate=2027-12-22&toEventDate=2027-12-25  [T2 live retrieval 2026-09-12T04:30Z]\nD48 = [THBP-A]&fromEventDate=2027-12-30&toEventDate=2028-01-02  [T2 live retrieval 2026-09-12T04:30Z]\nD49 = [THBP-B]&fromEventDate=2027-12-30&toEventDate=2028-01-02  [T2 live retrieval 2026-09-12T04:30Z]\nD50 = WA:20250830021420id_/https://www.cmegroup.com/trading-hours.html  [T1 operator page, archive capture 2025-08-30T02:14:20Z; saved as raw/cme-2025-2027/html/trading-hours-20250830.html]\nD51 = https://www.cmegroup.com/trading-hours.html (read through r.jina.ai)  [T1 operator page, live retrieval 2026-09-12; saved as raw/cme-2025-2027/live/trading-hours-live.md]\nD52 = [THBP-A]&fromEventDate=2026-11-27&toEventDate=2026-11-29  [T2 live retrieval 2026-09-12T07:47Z; saved as raw/cme-2025-2027-fix/live/thbp_2026-11-27_2026-11-29.md (+ .json)]\nD53 = [THBP-A]&fromEventDate=2027-11-26&toEventDate=2027-11-28  [T2 live retrieval 2026-09-12T07:47Z; saved as raw/cme-2025-2027-fix/live/thbp_2027-11-26_2027-11-28.md (+ .json)]\nD54 = [THBP-B]&fromEventDate=2025-11-26&toEventDate=2025-11-29  [T2 live retrieval 2026-09-12T08:54:32Z; saved as raw/cme-2025-2027-repair/live/probeB_2025-11-26_2025-11-29.md]\nD55 = [THBP-B]&fromEventDate=2025-12-24&toEventDate=2025-12-26  [T2 live retrieval 2026-09-12T08:54:56Z; raw/cme-2025-2027-repair/live/probeB_2025-12-24_2025-12-26.md]\nD56 = [THBP-B]&fromEventDate=2025-12-31&toEventDate=2026-01-02  [T2 live retrieval 2026-09-12T08:54:57Z; raw/cme-2025-2027-repair/live/probeB_2025-12-31_2026-01-02.md]\nD57 = [THBP-B]&fromEventDate=2026-01-18&toEventDate=2026-01-20  [T2 live retrieval 2026-09-12T08:54:58Z; raw/cme-2025-2027-repair/live/probeB_2026-01-18_2026-01-20.md]\nD58 = [THBP-B]&fromEventDate=2026-02-15&toEventDate=2026-02-17  [T2 live retrieval 2026-09-12T08:54:58Z; raw/cme-2025-2027-repair/live/probeB_2026-02-15_2026-02-17.md]\nD59 = [THBP-B]&fromEventDate=2026-04-01&toEventDate=2026-04-03  [T2 live retrieval 2026-09-12T08:55:08Z; raw/cme-2025-2027-repair/live/probeB_2026-04-01_2026-04-03.md]\nD60 = [THBP-B]&fromEventDate=2026-05-24&toEventDate=2026-05-26  [T2 live retrieval 2026-09-12T08:55:09Z; raw/cme-2025-2027-repair/live/probeB_2026-05-24_2026-05-26.md]\nD61 = [THBP-B]&fromEventDate=2026-06-17&toEventDate=2026-06-19  [T2 live retrieval 2026-09-12T08:55:09Z; raw/cme-2025-2027-repair/live/probeB_2026-06-17_2026-06-19.md - retrieved for the Juneteenth 2026 eve window; no row keys to it, the holiday's B rows cite D62]\nD62 = [THBP-B]&fromEventDate=2026-06-18&toEventDate=2026-06-20  [T2 live retrieval 2026-09-12T08:55:10Z; raw/cme-2025-2027-repair/live/probeB_2026-06-18_2026-06-20.md]\nD63 = [THBP-B]&fromEventDate=2026-07-02&toEventDate=2026-07-04  [T2 live retrieval 2026-09-12T08:55:11Z; raw/cme-2025-2027-repair/live/probeB_2026-07-02_2026-07-04.md]\nD64 = [THBP-B]&fromEventDate=2026-07-03&toEventDate=2026-07-05  [T2 live retrieval 2026-09-12T08:55:11Z; raw/cme-2025-2027-repair/live/probeB_2026-07-03_2026-07-05.md]\nD65 = [THBP-A]&fromEventDate=2025-11-26&toEventDate=2025-11-29  [T2 live retrieval 2026-09-12T08:55:12Z; raw/cme-2025-2027-repair/live/probeA_2025-11-26_2025-11-29.md - the Thanksgiving 2025 window extended to the Saturday. It reproduces D09 event for event on 2025-11-26, 2025-11-27 and 2025-11-28 and adds the 2025-11-29 answer]\nD66 = [THBP-A]&fromEventDate=2026-06-17&toEventDate=2026-06-19  [T2 live retrieval 2026-09-12T08:55:13Z; raw/cme-2025-2027-repair/live/probeA_2026-06-17_2026-06-19.md - the post-24/7 publication for 2026-06-17 that supersedes D16, and an independent live reproduction of the 2026-06-19 rows]\nD67 = [THBP-A]&fromEventDate=2026-07-02&toEventDate=2026-07-04  [T2 live retrieval 2026-09-12T08:55:14Z; raw/cme-2025-2027-repair/live/probeA_2026-07-02_2026-07-04.md - the post-24/7 publication for 2026-07-02 that supersedes D18, and an independent live reproduction of the 2026-07-03 rows]\nD16P = WA:20260129012310id_/[THBP-A]&fromEventDate=2026-06-17&toEventDate=2026-06-19  [T2 archive capture 2026-01-29T01:23:10Z - the SUPERSEDED pre-24/7 publication for Cryptocurrency on 2026-06-17 that the round-1 payload quoted as D16 with status 'unknown'; retained at raw/cme-2025-2027/arc/ and no longer keys a row]\nD18P = WA:20260129012216id_/[THBP-A]&fromEventDate=2026-07-02&toEventDate=2026-07-04  [T2 archive capture 2026-01-29T01:22:16Z - the SUPERSEDED pre-24/7 publication for Cryptocurrency on 2026-07-02, formerly D18 with status 'unknown'; retained and no longer keys a row]\n\nThe per-row '[normal: ...]' baseline clause was factored out to keep this payload small; it is preserved per row in raw/cme-2025-2027/FINAL_ROWS.json and raw/cme-2025-2027/FINAL_REVIEW.txt. The normal grids, all taken from the reference week 2026-10-18..2026-10-24 (live/normal/*.json), are: Equity Index / Nikkei / Interest Rates / FX / Energy / Metals - Sun 16:00 pre-open, 17:00 open; Mon-Thu 16:00 closed, 16:45 pre-open, 17:00 open; Fri 16:00 closed; Sat none. Grains & Oilseeds - Sun 16:00 pre-open, 19:00 open; Mon-Thu 07:45 paused, 08:00 pre-open, 08:30 open, 13:20 paused, 13:30 closed, 14:30 pcp, 16:00 closed, 16:45 pre-open, 19:00 open; Fri the same through 16:00 closed. Livestock - Mon-Fri 08:00 pre-open, 08:30 open, 13:05 closed, 14:30 pcp, 16:00 closed. Lumber - Mon-Fri 06:00 pre-open, 09:00 open, 15:05 closed. Dairy - as the 24-hour groups Mon-Thu, Fri 13:55 closed. Cryptocurrency before 2026-05-29 - as the 24-hour groups; from 2026-05-29 - Mon-Fri 16:00 closed, 16:01 pre-open, 16:02 open, Sat 02:00 closed, 03:45 pre-open, 04:00 open, Sun none.\n\nREPAIR 2026-09-12 (UTC). This payload supersedes cme-2025-2027.r2.json, which is kept beside it. It repairs the four material findings of cme-2025-2027.verify.json (round 2). All four come from one refuted premise: the earlier rounds asserted that CME's trading-hours service 'carries only FORWARD holidays' and that 'past holidays are dropped'. It does not. Re-probed on 2026-09-12, services/trading-hours-by-product answers for every window back to Thanksgiving 2025 for BOTH product id sets; only the eight windows New Year 2025 through Labor Day 2025 fall past its retention edge and return the products with empty schedules. New evidence is under raw/cme-2025-2027-repair/ with its own INDEX.md carrying url, retrieval time (UTC) and sha256 for all 22 responses, plus MANIFEST.sha256 over every file on disk. Every one of the 158 (product, date) pairs the new and relabelled rows name was re-parsed from those bytes and matches event for event, including per-event trading dates. Four things changed:\n(1) NINE HOLIDAYS x THBP-B ADDED (54 rows). The Nikkei (NKD, NIY), soybean (ZS), wheat (ZW), lean-hog (HE) and Class III milk (DC) lines are now sourced for Thanksgiving 2025, Christmas 2025, New Year 2026, MLK 2026, Presidents' 2026, Good Friday 2026, Memorial 2026, Juneteenth 2026 and Independence 2026 from D54-D64, tier T2. Each new row mirrors the THBP-A row it follows, so the A and B halves of a holiday stay comparable. The load-bearing one: on Good Friday 2026 NKD and NIY publish '08:15 closed /TD 2026-04-03' - they track Equity Index, NOT the 10:15 CT of Interest Rates, FX and Cryptocurrency. The Nikkei and ZS/ZW/HE/DC missing[] entries are re-scoped to the eight remaining 2025 windows rather than deleted, with the eight retention-edge probes saved as evidence.\n(2) THE TWO 'unknown' CRYPTOCURRENCY ROWS CLOSED. Cryptocurrency on 2026-06-17 and 2026-07-02 were carried as status 'unknown' on a pre-24/7 archive capture the payload itself labelled superseded [N13]. Both dates are answered by the live service today. 2026-06-17 (Wednesday): '16:00 closed /TD 2026-06-17; 16:01 preopen /TD 2026-06-18; 16:02 open /TD 2026-06-18' - the post-24/7 Mon-Thu grid exactly, status 'normal' [N8], document D66. 2026-07-02 (Thursday): '16:00 closed /TD 2026-07-02; 16:01 preopen /TD 2026-07-06; 16:02 open /TD 2026-07-06' - the Thursday settles its own trade date but the re-open skips the closed Friday, status 'modified' [N18], document D67. The superseded captures are retained as D16P and D18P and key no row. The payload now carries no status='unknown' row.\n(3) SATURDAY 2025-11-29 ANSWERED, NOT RECORDED AS A GAP. CME's own 2025 Globex table states the Thanksgiving period as '27 - 29 November 2025', and no archived call of the service covers the Saturday - but the live service does. Queried for 2025-11-26..2025-11-29, it publishes a 2025-11-29 schedule for all ten THBP-A products and all six THBP-B products, every one of them empty. Two rows now record that answer with status 'closed' and 'no events published [N1]', citing D65 and D54. The same reads reproduce D09's 2025-11-26/27/28 rows event for event, which independently corroborates the round-1 re-sourcing of Thanksgiving 2025.\n(4) THE SIX FRIDAY CRYPTOCURRENCY ROWS RELABELLED. 2026-06-19, 2026-07-03, 2026-12-25, 2027-01-01, 2027-03-26 and 2027-06-18 were labelled status 'normal' [N8] because their event TIMES equal the normal Friday grid. Their trade dates do not: on a normal Friday BTC's 16:00 CT close carries that Friday's own trade date (reference week, Friday 2026-10-23: '16:00 closed /TD 2026-10-23; 16:01 preopen /TD 2026-10-26; 16:02 open /TD 2026-10-26'), whereas on all six holiday Fridays the 16:00 CT close carries the FOLLOWING MONDAY's trade date. So the holiday's own trade date has no session and no settlement: under DESIGN decision D1 (the table is keyed by the crate's venue-local trade date, never the operator's event date) and D9 (the Cryptocurrency family ships Closed rows on holiday trade dates, which delete no trading and instead make the business-date roll skip the date) all six are status 'closed', noted [N19], with no close_instant - the 16:00 CT event belongs to the following Monday's trade date, not to the holiday's. Verified from each row's own cited bytes: 2026-06-19 -> /TD 2026-06-22 (D17), 2026-07-03 -> /TD 2026-07-06 (D19), 2026-12-25 -> /TD 2026-12-28 (D26), 2027-01-01 -> /TD 2027-01-04 (D29), 2027-03-26 -> /TD 2027-03-29 (D34), 2027-06-18 -> /TD 2027-06-21 (D38); D66 and D67 independently reproduce the first two from a live read. 2028-01-01 Cryptocurrency is left alone: it is a Saturday and its '02:00 closed; 03:45 preopen; 04:00 open (trade date 2028-01-03)' is the normal Saturday grid exactly.\nAlso corrected, because the repair contradicts them: the ENUMERATION paragraph's 'the live service carries only FORWARD holidays' (verdict discrepancy 5, minor), the GROUPS paragraph's 'From Labor Day 2026 forward' for the second id set, and the 'TWO THINGS WORTH FLAGGING' item (2), which said the 16:00 CT close is omitted on holidays without distinguishing the Monday/Thursday case (where it is) from the Friday case (where it is printed with a rolled trade date) (verdict discrepancy 6, minor). Verdict discrepancy 7 (minor, an Equity-Index-only Good-Friday-2026 Saturday probe not named in INDEX.md) is NOT addressed in this round and remains open. Nothing else was touched: no other instant, verbatim, document id, tier or status changed, and the 2025 residual risk on the eight pre-Thanksgiving windows stands - the repair round's live probes confirm the channel cannot restate them.",
+ "holidays": [
+  {
+   "date": "2025-01-01",
+   "name": "New Year's Day 2025 (Wed 1 Jan)",
+   "families": [
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC); Cryptocurrency (BTC); Dairy (CSC) | date 2024-12-31",
+     "status": "modified",
+     "verbatim": "eventDate 2024-12-31: 16:00 closed (trade date 2024-12-31) [N6]",
+     "document": "D01",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2024-12-31",
+     "status": "modified",
+     "verbatim": "eventDate 2024-12-31: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2024-12-31) [N7]",
+     "document": "D01",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC); Cryptocurrency (BTC); Dairy (CSC) | date 2025-01-01",
+     "status": "closed",
+     "verbatim": "eventDate 2025-01-01: 16:00 preopen; 17:00 open (trade date 2025-01-02) [N17]",
+     "document": "D01",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC); Livestock (LE); Lumber (LBR) | date 2025-01-01",
+     "status": "closed",
+     "verbatim": "eventDate 2025-01-01: no events published [N1]",
+     "document": "D01",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-01-02",
+     "status": "modified",
+     "verbatim": "eventDate 2025-01-02: 06:00 preopen /TD 2025-01-02; 08:30 open /TD 2025-01-02; 13:20 paused /TD 2025-01-02; 13:30 closed /TD 2025-01-02; 14:30 pcp /TD 2025-01-02; 16:00 closed /TD 2025-01-02; 16:45 preopen /TD 2025-01-03; 19:00 open /TD 2025-01-03 [N12]",
+     "document": "D01",
+     "tier": "T2",
+     "open_instant": "08:30 CT"
+    }
+   ]
+  },
+  {
+   "date": "2025-01-20",
+   "name": "Martin Luther King Jr. Day 2025 (Mon 20 Jan)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-01-19",
+     "status": "closed",
+     "verbatim": "eventDate 2025-01-19: 16:00 preopen (trade date 2025-01-21) [N2]",
+     "document": "D02",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2025-01-19",
+     "status": "closed",
+     "verbatim": "eventDate 2025-01-19: 16:00 preopen (trade date 2025-01-21) [N2]",
+     "document": "D02",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2025-01-20",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-01-20: 12:00 preopen; 17:00 open (trade date 2025-01-21) [N15]",
+     "document": "D02",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "FX (6E); Cryptocurrency (BTC) | date 2025-01-20",
+     "status": "modified",
+     "verbatim": "eventDate 2025-01-20: 16:00 preopen; 17:00 open (trade date 2025-01-21) [N3]",
+     "document": "D02",
+     "tier": "T2"
+    },
+    {
+     "family": "Energy (CL); Metals (GC) | date 2025-01-20",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-01-20: 13:30 preopen; 17:00 open (trade date 2025-01-21) [N16]",
+     "document": "D02",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-01-20",
+     "status": "closed",
+     "verbatim": "eventDate 2025-01-20: 19:00 open (trade date 2025-01-21) [N5]",
+     "document": "D02",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Livestock (LE); Lumber (LBR) | date 2025-01-20",
+     "status": "closed",
+     "verbatim": "eventDate 2025-01-20: no events published [N1]",
+     "document": "D02",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2025-01-20",
+     "status": "closed",
+     "verbatim": "eventDate 2025-01-20: 17:00 open (trade date 2025-01-21) [N4]",
+     "document": "D02",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2025-02-17",
+   "name": "Presidents' Day 2025 (Mon 17 Feb)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-02-16",
+     "status": "closed",
+     "verbatim": "eventDate 2025-02-16: 16:00 preopen (trade date 2025-02-18) [N2]",
+     "document": "D03",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2025-02-16",
+     "status": "closed",
+     "verbatim": "eventDate 2025-02-16: 16:00 preopen (trade date 2025-02-18) [N2]",
+     "document": "D03",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2025-02-17",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-02-17: 12:00 preopen; 17:00 open (trade date 2025-02-18) [N15]",
+     "document": "D03",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "FX (6E); Cryptocurrency (BTC) | date 2025-02-17",
+     "status": "modified",
+     "verbatim": "eventDate 2025-02-17: 16:00 preopen; 17:00 open (trade date 2025-02-18) [N3]",
+     "document": "D03",
+     "tier": "T2"
+    },
+    {
+     "family": "Energy (CL); Metals (GC) | date 2025-02-17",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-02-17: 13:30 preopen; 17:00 open (trade date 2025-02-18) [N16]",
+     "document": "D03",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-02-17",
+     "status": "closed",
+     "verbatim": "eventDate 2025-02-17: 19:00 open (trade date 2025-02-18) [N5]",
+     "document": "D03",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Livestock (LE); Lumber (LBR) | date 2025-02-17",
+     "status": "closed",
+     "verbatim": "eventDate 2025-02-17: no events published [N1]",
+     "document": "D03",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2025-02-17",
+     "status": "closed",
+     "verbatim": "eventDate 2025-02-17: 17:00 open (trade date 2025-02-18) [N4]",
+     "document": "D03",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2025-04-18",
+   "name": "Good Friday 2025 (Fri 18 Apr)",
+   "families": [
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC); Cryptocurrency (BTC) | date 2025-04-17",
+     "status": "modified",
+     "verbatim": "eventDate 2025-04-17: 16:00 closed (trade date 2025-04-17) [N6]",
+     "document": "D04",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-04-17",
+     "status": "modified",
+     "verbatim": "eventDate 2025-04-17: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2025-04-17) [N7]",
+     "document": "D04",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Dairy (CSC) | date 2025-04-17",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-04-17: 13:55 closed (trade date 2025-04-17) [EC 13:55 CT, no evening re-open]",
+     "document": "D04",
+     "tier": "T2",
+     "close_instant": "13:55 CT"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC); Grains & Oilseeds (ZC); Livestock (LE); Cryptocurrency (BTC); Dairy (CSC); Lumber (LBR) | date 2025-04-18",
+     "status": "closed",
+     "verbatim": "eventDate 2025-04-18: no events published [N1]",
+     "document": "D04",
+     "tier": "T2"
+    }
+   ]
+  },
+  {
+   "date": "2025-05-26",
+   "name": "Memorial Day 2025 (Mon 26 May)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-05-25",
+     "status": "closed",
+     "verbatim": "eventDate 2025-05-25: 16:00 preopen (trade date 2025-05-27) [N2]",
+     "document": "D05",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2025-05-25",
+     "status": "closed",
+     "verbatim": "eventDate 2025-05-25: 16:00 preopen (trade date 2025-05-27) [N2]",
+     "document": "D05",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2025-05-26",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-05-26: 12:00 preopen; 17:00 open (trade date 2025-05-27) [N15]",
+     "document": "D05",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "FX (6E); Cryptocurrency (BTC) | date 2025-05-26",
+     "status": "modified",
+     "verbatim": "eventDate 2025-05-26: 16:00 preopen; 17:00 open (trade date 2025-05-27) [N3]",
+     "document": "D05",
+     "tier": "T2"
+    },
+    {
+     "family": "Energy (CL); Metals (GC) | date 2025-05-26",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-05-26: 13:30 preopen; 17:00 open (trade date 2025-05-27) [N16]",
+     "document": "D05",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-05-26",
+     "status": "closed",
+     "verbatim": "eventDate 2025-05-26: 19:00 open (trade date 2025-05-27) [N5]",
+     "document": "D05",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Livestock (LE); Lumber (LBR) | date 2025-05-26",
+     "status": "closed",
+     "verbatim": "eventDate 2025-05-26: no events published [N1]",
+     "document": "D05",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2025-05-26",
+     "status": "closed",
+     "verbatim": "eventDate 2025-05-26: 17:00 open (trade date 2025-05-27) [N4]",
+     "document": "D05",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2025-06-19",
+   "name": "Juneteenth 2025 (Thu 19 Jun)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-06-18",
+     "status": "modified",
+     "verbatim": "eventDate 2025-06-18: 07:45 paused /TD 2025-06-18; 08:00 preopen /TD 2025-06-18; 08:30 open /TD 2025-06-18; 13:20 paused /TD 2025-06-18; 13:30 closed /TD 2025-06-18; 14:30 pcp /TD 2025-06-18; 16:00 closed /TD 2025-06-18; 16:45 preopen /TD 2025-06-20 [N9]",
+     "document": "D06",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2025-06-18",
+     "status": "modified",
+     "verbatim": "eventDate 2025-06-18: 16:00 closed /TD 2025-06-18; 16:45 preopen /TD 2025-06-20 [N14]",
+     "document": "D06",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2025-06-19",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-06-19: 12:00 preopen; 17:00 open (trade date 2025-06-20) [N15]",
+     "document": "D06",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "FX (6E); Cryptocurrency (BTC) | date 2025-06-19",
+     "status": "modified",
+     "verbatim": "eventDate 2025-06-19: 16:00 preopen; 17:00 open (trade date 2025-06-20) [N3]",
+     "document": "D06",
+     "tier": "T2"
+    },
+    {
+     "family": "Energy (CL); Metals (GC) | date 2025-06-19",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-06-19: 13:30 preopen; 17:00 open (trade date 2025-06-20) [N16]",
+     "document": "D06",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-06-19",
+     "status": "closed",
+     "verbatim": "eventDate 2025-06-19: 19:00 open (trade date 2025-06-20) [N5]",
+     "document": "D06",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Livestock (LE); Lumber (LBR) | date 2025-06-19",
+     "status": "closed",
+     "verbatim": "eventDate 2025-06-19: no events published [N1]",
+     "document": "D06",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2025-06-19",
+     "status": "closed",
+     "verbatim": "eventDate 2025-06-19: 17:00 open (trade date 2025-06-20) [N4]",
+     "document": "D06",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2025-07-04",
+   "name": "Independence Day 2025 (Fri 4 Jul)",
+   "families": [
+    {
+     "family": "Equity Index (ES) | date 2025-07-03",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-07-03: 12:15 closed /TD 2025-07-03; 16:45 preopen /TD 2025-07-04; 17:00 open /TD 2025-07-04 [EC 12:15 CT (evening leg runs normally: 16:45 preopen, 17:00 open)]",
+     "document": "D07",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-07-03",
+     "status": "modified",
+     "verbatim": "eventDate 2025-07-03: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2025-07-03) [N7]",
+     "document": "D07",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Dairy (CSC) | date 2025-07-03",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-07-03: 12:00 closed (trade date 2025-07-03) [EC 12:00 CT, no evening re-open]",
+     "document": "D07",
+     "tier": "T2",
+     "close_instant": "12:00 CT"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC); Cryptocurrency (BTC) | date 2025-07-04",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-07-04: 12:00 closed (trade date 2025-07-04) [EC 12:00 CT]",
+     "document": "D07",
+     "tier": "T2",
+     "close_instant": "12:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC); Livestock (LE); Dairy (CSC); Lumber (LBR) | date 2025-07-04",
+     "status": "closed",
+     "verbatim": "eventDate 2025-07-04: no events published [N1]",
+     "document": "D07",
+     "tier": "T2"
+    }
+   ]
+  },
+  {
+   "date": "2025-09-01",
+   "name": "Labor Day 2025 (Mon 1 Sep)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-08-31",
+     "status": "closed",
+     "verbatim": "eventDate 2025-08-31: 16:00 preopen (trade date 2025-09-02) [N2]",
+     "document": "D08",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2025-08-31",
+     "status": "closed",
+     "verbatim": "eventDate 2025-08-31: 16:00 preopen (trade date 2025-09-02) [N2]",
+     "document": "D08",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2025-09-01",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-09-01: 12:00 preopen; 17:00 open (trade date 2025-09-02) [N15]",
+     "document": "D08",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "FX (6E); Cryptocurrency (BTC) | date 2025-09-01",
+     "status": "modified",
+     "verbatim": "eventDate 2025-09-01: 16:00 preopen; 17:00 open (trade date 2025-09-02) [N3]",
+     "document": "D08",
+     "tier": "T2"
+    },
+    {
+     "family": "Energy (CL); Metals (GC) | date 2025-09-01",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-09-01: 13:30 preopen; 17:00 open (trade date 2025-09-02) [N16]",
+     "document": "D08",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-09-01",
+     "status": "closed",
+     "verbatim": "eventDate 2025-09-01: 19:00 open (trade date 2025-09-02) [N5]",
+     "document": "D08",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Livestock (LE); Lumber (LBR) | date 2025-09-01",
+     "status": "closed",
+     "verbatim": "eventDate 2025-09-01: no events published [N1]",
+     "document": "D08",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2025-09-01",
+     "status": "closed",
+     "verbatim": "eventDate 2025-09-01: 17:00 open (trade date 2025-09-02) [N4]",
+     "document": "D08",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2025-11-27",
+   "name": "Thanksgiving 2025 (Thu 27 Nov) and the day after (Fri 28 Nov)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-11-26",
+     "status": "modified",
+     "verbatim": "eventDate 2025-11-26: 07:45 paused /TD 2025-11-26; 08:00 preopen /TD 2025-11-26; 08:30 open /TD 2025-11-26; 13:20 paused /TD 2025-11-26; 13:30 closed /TD 2025-11-26; 14:30 pcp /TD 2025-11-26; 16:00 closed /TD 2025-11-26; 16:45 preopen /TD 2025-11-28 [N9]",
+     "document": "D09",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2025-11-26",
+     "status": "modified",
+     "verbatim": "eventDate 2025-11-26: 07:45 paused /TD 2025-11-26; 08:00 preopen /TD 2025-11-26; 08:30 open /TD 2025-11-26; 13:20 paused /TD 2025-11-26; 13:30 closed /TD 2025-11-26; 14:30 pcp /TD 2025-11-26; 16:00 closed /TD 2025-11-26; 16:45 preopen /TD 2025-11-28 [N9]",
+     "document": "D54",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2025-11-26",
+     "status": "modified",
+     "verbatim": "eventDate 2025-11-26: 16:00 closed (trade date 2025-11-26) [N6]",
+     "document": "D09",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2025-11-26",
+     "status": "modified",
+     "verbatim": "eventDate 2025-11-26: 16:00 closed (trade date 2025-11-26) [N6]",
+     "document": "D54",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2025-11-27",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-11-27: 12:00 preopen; 17:00 open (trade date 2025-11-28) [N15]",
+     "document": "D09",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2025-11-27",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-11-27: 12:00 preopen; 17:00 open (trade date 2025-11-28) [N15]",
+     "document": "D54",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "FX (6E); Cryptocurrency (BTC) | date 2025-11-27",
+     "status": "modified",
+     "verbatim": "eventDate 2025-11-27: 16:00 preopen; 17:00 open (trade date 2025-11-28) [N3]",
+     "document": "D09",
+     "tier": "T2"
+    },
+    {
+     "family": "Energy (CL); Metals (GC) | date 2025-11-27",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-11-27: 13:30 preopen; 17:00 open (trade date 2025-11-28) [N16]",
+     "document": "D09",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC); Livestock (LE); Dairy (CSC); Lumber (LBR) | date 2025-11-27",
+     "status": "closed",
+     "verbatim": "eventDate 2025-11-27: no events published [N1]",
+     "document": "D09",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW); Livestock / Lean Hogs (HE); Dairy / Class III Milk (DC) | date 2025-11-27",
+     "status": "closed",
+     "verbatim": "eventDate 2025-11-27: no events published [N1]",
+     "document": "D54",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2025-11-28",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-11-28: 07:00 preopen; 07:30 open; 12:15 closed (trade date 2025-11-28) [EC 12:15 CT; the finalised publication also prints the 07:00 CT pre-open / 07:30 CT open that morning]",
+     "document": "D09",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2025-11-28",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-11-28: 07:00 preopen; 07:30 open; 12:15 closed (trade date 2025-11-28) [EC 12:15 CT]",
+     "document": "D54",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "FX (6E); Energy (CL); Metals (GC); Cryptocurrency (BTC) | date 2025-11-28",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-11-28: 07:00 preopen; 07:30 open; 13:45 closed (trade date 2025-11-28) [EC 13:45 CT; the finalised publication also prints the 07:00 CT pre-open / 07:30 CT open that morning]",
+     "document": "D09",
+     "tier": "T2",
+     "close_instant": "13:45 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-11-28",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-11-28: 07:00 preopen; 08:30 open; 12:05 closed (trade date 2025-11-28) [EC 12:05 CT (normal final close 16:00 CT)]",
+     "document": "D09",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2025-11-28",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-11-28: 07:00 preopen; 08:30 open; 12:05 closed (trade date 2025-11-28) [EC 12:05 CT (normal final close 16:00 CT)]",
+     "document": "D54",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Livestock (LE) | date 2025-11-28",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-11-28: 08:00 preopen; 08:30 open; 12:05 closed (trade date 2025-11-28) [EC 12:05 CT (normal final close 16:00 CT)]",
+     "document": "D09",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Livestock / Lean Hogs (HE) | date 2025-11-28",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-11-28: 08:00 preopen; 08:30 open; 12:05 closed (trade date 2025-11-28) [EC 12:05 CT (normal final close 16:00 CT)]",
+     "document": "D54",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Dairy (CSC) | date 2025-11-28",
+     "status": "closed",
+     "verbatim": "eventDate 2025-11-28: no events published [N1]",
+     "document": "D09",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2025-11-28",
+     "status": "closed",
+     "verbatim": "eventDate 2025-11-28: no events published [N1]",
+     "document": "D54",
+     "tier": "T2"
+    },
+    {
+     "family": "Lumber (LBR) | date 2025-11-28",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-11-28: 06:00 preopen; 07:00 preopen; 09:00 open; 12:05 closed (trade date 2025-11-28) [EC 12:05 CT (normal final close 15:05 CT)]",
+     "document": "D09",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC); Grains & Oilseeds (ZC); Livestock (LE); Dairy (CSC); Cryptocurrency (BTC); Lumber (LBR) | date 2025-11-29",
+     "status": "closed",
+     "verbatim": "eventDate 2025-11-29: no events published [N1]",
+     "document": "D65",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY); Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW); Livestock / Lean Hogs (HE); Dairy / Class III Milk (DC) | date 2025-11-29",
+     "status": "closed",
+     "verbatim": "eventDate 2025-11-29: no events published [N1]",
+     "document": "D54",
+     "tier": "T2"
+    }
+   ]
+  },
+  {
+   "date": "2025-12-25",
+   "name": "Christmas 2025 (Thu 25 Dec)",
+   "families": [
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2025-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-12-24: 12:15 closed (trade date 2025-12-24) [EC 12:15 CT, no evening re-open]",
+     "document": "D10",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2025-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-12-24: 12:15 closed (trade date 2025-12-24) [EC 12:15 CT, no evening re-open]",
+     "document": "D55",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "FX (6E); Energy (CL); Metals (GC); Cryptocurrency (BTC) | date 2025-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-12-24: 12:45 closed (trade date 2025-12-24) [EC 12:45 CT, no evening re-open]",
+     "document": "D10",
+     "tier": "T2",
+     "close_instant": "12:45 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-12-24: 07:45 paused; 08:00 preopen; 08:30 open; 12:05 closed (trade date 2025-12-24) [EC 12:05 CT (normal final close 19:00 CT)]",
+     "document": "D10",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2025-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-12-24: 07:45 paused; 08:00 preopen; 08:30 open; 12:05 closed (trade date 2025-12-24) [EC 12:05 CT (normal final close 19:00 CT)]",
+     "document": "D55",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Livestock (LE) | date 2025-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-12-24: 08:00 preopen; 08:30 open; 12:15 closed (trade date 2025-12-24) [EC 12:15 CT (normal final close 16:00 CT)]",
+     "document": "D10",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "Livestock / Lean Hogs (HE) | date 2025-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-12-24: 08:00 preopen; 08:30 open; 12:15 closed (trade date 2025-12-24) [EC 12:15 CT (normal final close 16:00 CT)]",
+     "document": "D55",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "Dairy (CSC) | date 2025-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-12-24: 12:00 closed (trade date 2025-12-24) [EC 12:00 CT, no evening re-open]",
+     "document": "D10",
+     "tier": "T2",
+     "close_instant": "12:00 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2025-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-12-24: 12:00 closed (trade date 2025-12-24) [EC 12:00 CT, no evening re-open]",
+     "document": "D55",
+     "tier": "T2",
+     "close_instant": "12:00 CT"
+    },
+    {
+     "family": "Lumber (LBR) | date 2025-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2025-12-24: 06:00 preopen; 09:00 open; 12:05 closed (trade date 2025-12-24) [EC 12:05 CT (normal final close 15:05 CT)]",
+     "document": "D10",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC); Cryptocurrency (BTC); Dairy (CSC) | date 2025-12-25",
+     "status": "closed",
+     "verbatim": "eventDate 2025-12-25: 16:00 preopen; 17:00 open (trade date 2025-12-26) [N17]",
+     "document": "D10",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY); Dairy / Class III Milk (DC) | date 2025-12-25",
+     "status": "closed",
+     "verbatim": "eventDate 2025-12-25: 16:00 preopen; 17:00 open (trade date 2025-12-26) [N17]",
+     "document": "D55",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC); Livestock (LE); Lumber (LBR) | date 2025-12-25",
+     "status": "closed",
+     "verbatim": "eventDate 2025-12-25: no events published [N1]",
+     "document": "D10",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW); Livestock / Lean Hogs (HE) | date 2025-12-25",
+     "status": "closed",
+     "verbatim": "eventDate 2025-12-25: no events published [N1]",
+     "document": "D55",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-12-26",
+     "status": "modified",
+     "verbatim": "eventDate 2025-12-26: 06:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2025-12-26) [N9]",
+     "document": "D10",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2025-12-26",
+     "status": "modified",
+     "verbatim": "eventDate 2025-12-26: 06:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2025-12-26) [N9]",
+     "document": "D55",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2026-01-01",
+   "name": "New Year's Day 2026 (Thu 1 Jan)",
+   "families": [
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC); Cryptocurrency (BTC); Dairy (CSC) | date 2025-12-31",
+     "status": "modified",
+     "verbatim": "eventDate 2025-12-31: 16:00 closed (trade date 2025-12-31) [N6]",
+     "document": "D11",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY); Dairy / Class III Milk (DC) | date 2025-12-31",
+     "status": "modified",
+     "verbatim": "eventDate 2025-12-31: 16:00 closed (trade date 2025-12-31) [N6]",
+     "document": "D56",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2025-12-31",
+     "status": "modified",
+     "verbatim": "eventDate 2025-12-31: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2025-12-31) [N7]",
+     "document": "D11",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2025-12-31",
+     "status": "modified",
+     "verbatim": "eventDate 2025-12-31: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2025-12-31) [N7]",
+     "document": "D56",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC); Cryptocurrency (BTC); Dairy (CSC) | date 2026-01-01",
+     "status": "closed",
+     "verbatim": "eventDate 2026-01-01: 16:00 preopen; 17:00 open (trade date 2026-01-02) [N17]",
+     "document": "D11",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY); Dairy / Class III Milk (DC) | date 2026-01-01",
+     "status": "closed",
+     "verbatim": "eventDate 2026-01-01: 16:00 preopen; 17:00 open (trade date 2026-01-02) [N17]",
+     "document": "D56",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC); Livestock (LE); Lumber (LBR) | date 2026-01-01",
+     "status": "closed",
+     "verbatim": "eventDate 2026-01-01: no events published [N1]",
+     "document": "D11",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW); Livestock / Lean Hogs (HE) | date 2026-01-01",
+     "status": "closed",
+     "verbatim": "eventDate 2026-01-01: no events published [N1]",
+     "document": "D56",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2026-01-02",
+     "status": "modified",
+     "verbatim": "eventDate 2026-01-02: 06:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2026-01-02) [N9]",
+     "document": "D11",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2026-01-02",
+     "status": "modified",
+     "verbatim": "eventDate 2026-01-02: 06:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2026-01-02) [N9]",
+     "document": "D56",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2026-01-19",
+   "name": "Martin Luther King Jr. Day 2026 (Mon 19 Jan)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2026-01-18",
+     "status": "closed",
+     "verbatim": "eventDate 2026-01-18: 16:00 preopen (trade date 2026-01-20) [N2]",
+     "document": "D12",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2026-01-18",
+     "status": "closed",
+     "verbatim": "eventDate 2026-01-18: 16:00 preopen (trade date 2026-01-20) [N2]",
+     "document": "D57",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2026-01-18",
+     "status": "closed",
+     "verbatim": "eventDate 2026-01-18: 16:00 preopen (trade date 2026-01-20) [N2]",
+     "document": "D12",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2026-01-18",
+     "status": "closed",
+     "verbatim": "eventDate 2026-01-18: 16:00 preopen (trade date 2026-01-20) [N2]",
+     "document": "D57",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2026-01-19",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-01-19: 12:00 preopen; 17:00 open (trade date 2026-01-20) [N15]",
+     "document": "D12",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2026-01-19",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-01-19: 12:00 preopen; 17:00 open (trade date 2026-01-20) [N15]",
+     "document": "D57",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "FX (6E); Cryptocurrency (BTC) | date 2026-01-19",
+     "status": "modified",
+     "verbatim": "eventDate 2026-01-19: 16:00 preopen; 17:00 open (trade date 2026-01-20) [N3]",
+     "document": "D12",
+     "tier": "T2"
+    },
+    {
+     "family": "Energy (CL); Metals (GC) | date 2026-01-19",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-01-19: 13:30 preopen; 17:00 open (trade date 2026-01-20) [N16]",
+     "document": "D12",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2026-01-19",
+     "status": "closed",
+     "verbatim": "eventDate 2026-01-19: 19:00 open (trade date 2026-01-20) [N5]",
+     "document": "D12",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2026-01-19",
+     "status": "closed",
+     "verbatim": "eventDate 2026-01-19: 19:00 open (trade date 2026-01-20) [N5]",
+     "document": "D57",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Livestock (LE); Lumber (LBR) | date 2026-01-19",
+     "status": "closed",
+     "verbatim": "eventDate 2026-01-19: no events published [N1]",
+     "document": "D12",
+     "tier": "T2"
+    },
+    {
+     "family": "Livestock / Lean Hogs (HE) | date 2026-01-19",
+     "status": "closed",
+     "verbatim": "eventDate 2026-01-19: no events published [N1]",
+     "document": "D57",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2026-01-19",
+     "status": "closed",
+     "verbatim": "eventDate 2026-01-19: 17:00 open (trade date 2026-01-20) [N4]",
+     "document": "D12",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2026-01-19",
+     "status": "closed",
+     "verbatim": "eventDate 2026-01-19: 17:00 open (trade date 2026-01-20) [N4]",
+     "document": "D57",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2026-02-16",
+   "name": "Presidents' Day 2026 (Mon 16 Feb)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2026-02-15",
+     "status": "closed",
+     "verbatim": "eventDate 2026-02-15: 16:00 preopen (trade date 2026-02-17) [N2]",
+     "document": "D13",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2026-02-15",
+     "status": "closed",
+     "verbatim": "eventDate 2026-02-15: 16:00 preopen (trade date 2026-02-17) [N2]",
+     "document": "D58",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2026-02-15",
+     "status": "closed",
+     "verbatim": "eventDate 2026-02-15: 16:00 preopen (trade date 2026-02-17) [N2]",
+     "document": "D13",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2026-02-15",
+     "status": "closed",
+     "verbatim": "eventDate 2026-02-15: 16:00 preopen (trade date 2026-02-17) [N2]",
+     "document": "D58",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2026-02-16",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-02-16: 12:00 preopen; 17:00 open (trade date 2026-02-17) [N15]",
+     "document": "D13",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2026-02-16",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-02-16: 12:00 preopen; 17:00 open (trade date 2026-02-17) [N15]",
+     "document": "D58",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "FX (6E); Cryptocurrency (BTC) | date 2026-02-16",
+     "status": "modified",
+     "verbatim": "eventDate 2026-02-16: 16:00 preopen; 17:00 open (trade date 2026-02-17) [N3]",
+     "document": "D13",
+     "tier": "T2"
+    },
+    {
+     "family": "Energy (CL); Metals (GC) | date 2026-02-16",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-02-16: 13:30 preopen; 17:00 open (trade date 2026-02-17) [N16]",
+     "document": "D13",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2026-02-16",
+     "status": "closed",
+     "verbatim": "eventDate 2026-02-16: 19:00 open (trade date 2026-02-17) [N5]",
+     "document": "D13",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2026-02-16",
+     "status": "closed",
+     "verbatim": "eventDate 2026-02-16: 19:00 open (trade date 2026-02-17) [N5]",
+     "document": "D58",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Livestock (LE); Lumber (LBR) | date 2026-02-16",
+     "status": "closed",
+     "verbatim": "eventDate 2026-02-16: no events published [N1]",
+     "document": "D13",
+     "tier": "T2"
+    },
+    {
+     "family": "Livestock / Lean Hogs (HE) | date 2026-02-16",
+     "status": "closed",
+     "verbatim": "eventDate 2026-02-16: no events published [N1]",
+     "document": "D58",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2026-02-16",
+     "status": "closed",
+     "verbatim": "eventDate 2026-02-16: 17:00 open (trade date 2026-02-17) [N4]",
+     "document": "D13",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2026-02-16",
+     "status": "closed",
+     "verbatim": "eventDate 2026-02-16: 17:00 open (trade date 2026-02-17) [N4]",
+     "document": "D58",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2026-04-03",
+   "name": "Good Friday 2026 (Fri 3 Apr)",
+   "families": [
+    {
+     "family": "Energy (CL); Metals (GC) | date 2026-04-02",
+     "status": "modified",
+     "verbatim": "eventDate 2026-04-02: 16:00 closed (trade date 2026-04-02) [N6]",
+     "document": "D14",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2026-04-02",
+     "status": "modified",
+     "verbatim": "eventDate 2026-04-02: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2026-04-02) [N7]",
+     "document": "D14",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2026-04-02",
+     "status": "modified",
+     "verbatim": "eventDate 2026-04-02: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2026-04-02) [N7]",
+     "document": "D59",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Dairy (CSC) | date 2026-04-02",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-04-02: 13:55 closed (trade date 2026-04-02) [EC 13:55 CT, no evening re-open]",
+     "document": "D14",
+     "tier": "T2",
+     "close_instant": "13:55 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2026-04-02",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-04-02: 13:55 closed (trade date 2026-04-02) [EC 13:55 CT, no evening re-open]",
+     "document": "D59",
+     "tier": "T2",
+     "close_instant": "13:55 CT"
+    },
+    {
+     "family": "Equity Index (ES) | date 2026-04-03",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-04-03: 08:15 closed (trade date 2026-04-03) [EC 08:15 CT]",
+     "document": "D14",
+     "tier": "T2",
+     "close_instant": "08:15 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2026-04-03",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-04-03: 08:15 closed (trade date 2026-04-03) [EC 08:15 CT; Nikkei tracks Equity Index at 08:15 CT, NOT the 10:15 CT of Interest Rates, FX and Cryptocurrency]",
+     "document": "D59",
+     "tier": "T2",
+     "close_instant": "08:15 CT"
+    },
+    {
+     "family": "Interest Rates (ZN); FX (6E); Cryptocurrency (BTC) | date 2026-04-03",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-04-03: 10:15 closed (trade date 2026-04-03) [EC 10:15 CT]",
+     "document": "D14",
+     "tier": "T2",
+     "close_instant": "10:15 CT"
+    },
+    {
+     "family": "Energy (CL); Metals (GC); Grains & Oilseeds (ZC); Livestock (LE); Dairy (CSC); Lumber (LBR) | date 2026-04-03",
+     "status": "closed",
+     "verbatim": "eventDate 2026-04-03: no events published [N1]",
+     "document": "D14",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW); Livestock / Lean Hogs (HE); Dairy / Class III Milk (DC) | date 2026-04-03",
+     "status": "closed",
+     "verbatim": "eventDate 2026-04-03: no events published [N1]",
+     "document": "D59",
+     "tier": "T2"
+    }
+   ]
+  },
+  {
+   "date": "2026-05-25",
+   "name": "Memorial Day 2026 (Mon 25 May)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2026-05-24",
+     "status": "closed",
+     "verbatim": "eventDate 2026-05-24: 16:00 preopen (trade date 2026-05-26) [N2]",
+     "document": "D15",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2026-05-24",
+     "status": "closed",
+     "verbatim": "eventDate 2026-05-24: 16:00 preopen (trade date 2026-05-26) [N2]",
+     "document": "D60",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2026-05-24",
+     "status": "closed",
+     "verbatim": "eventDate 2026-05-24: 16:00 preopen (trade date 2026-05-26) [N2]",
+     "document": "D15",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2026-05-24",
+     "status": "closed",
+     "verbatim": "eventDate 2026-05-24: 16:00 preopen (trade date 2026-05-26) [N2]",
+     "document": "D60",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2026-05-25",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-05-25: 12:00 preopen; 17:00 open (trade date 2026-05-26) [N15]",
+     "document": "D15",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2026-05-25",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-05-25: 12:00 preopen; 17:00 open (trade date 2026-05-26) [N15]",
+     "document": "D60",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "FX (6E); Cryptocurrency (BTC) | date 2026-05-25",
+     "status": "modified",
+     "verbatim": "eventDate 2026-05-25: 16:00 preopen; 17:00 open (trade date 2026-05-26) [N3]",
+     "document": "D15",
+     "tier": "T2"
+    },
+    {
+     "family": "Energy (CL); Metals (GC) | date 2026-05-25",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-05-25: 13:30 preopen; 17:00 open (trade date 2026-05-26) [N16]",
+     "document": "D15",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2026-05-25",
+     "status": "closed",
+     "verbatim": "eventDate 2026-05-25: 19:00 open (trade date 2026-05-26) [N5]",
+     "document": "D15",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2026-05-25",
+     "status": "closed",
+     "verbatim": "eventDate 2026-05-25: 19:00 open (trade date 2026-05-26) [N5]",
+     "document": "D60",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Livestock (LE); Lumber (LBR) | date 2026-05-25",
+     "status": "closed",
+     "verbatim": "eventDate 2026-05-25: no events published [N1]",
+     "document": "D15",
+     "tier": "T2"
+    },
+    {
+     "family": "Livestock / Lean Hogs (HE) | date 2026-05-25",
+     "status": "closed",
+     "verbatim": "eventDate 2026-05-25: no events published [N1]",
+     "document": "D60",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2026-05-25",
+     "status": "closed",
+     "verbatim": "eventDate 2026-05-25: 17:00 open (trade date 2026-05-26) [N4]",
+     "document": "D15",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2026-05-25",
+     "status": "closed",
+     "verbatim": "eventDate 2026-05-25: 17:00 open (trade date 2026-05-26) [N4]",
+     "document": "D60",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2026-06-19",
+   "name": "Juneteenth 2026 (Fri 19 Jun)",
+   "families": [
+    {
+     "family": "Cryptocurrency (BTC) | date 2026-06-17",
+     "status": "normal",
+     "verbatim": "eventDate 2026-06-17: 16:00 closed /TD 2026-06-17; 16:01 preopen /TD 2026-06-18; 16:02 open /TD 2026-06-18 [N8]",
+     "document": "D66",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2026-06-18",
+     "status": "modified",
+     "verbatim": "eventDate 2026-06-18: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2026-06-18) [N7]",
+     "document": "D17",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2026-06-18",
+     "status": "modified",
+     "verbatim": "eventDate 2026-06-18: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2026-06-18) [N7]",
+     "document": "D62",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Dairy (CSC) | date 2026-06-18",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-06-18: 13:55 closed (trade date 2026-06-18) [EC 13:55 CT, no evening re-open]",
+     "document": "D17",
+     "tier": "T2",
+     "close_instant": "13:55 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2026-06-18",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-06-18: 13:55 closed (trade date 2026-06-18) [EC 13:55 CT, no evening re-open]",
+     "document": "D62",
+     "tier": "T2",
+     "close_instant": "13:55 CT"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC) | date 2026-06-19",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-06-19: 12:00 closed (trade date 2026-06-22) [EC 12:00 CT]",
+     "document": "D17",
+     "tier": "T2",
+     "close_instant": "12:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2026-06-19",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-06-19: 12:00 closed (trade date 2026-06-22) [EC 12:00 CT]",
+     "document": "D62",
+     "tier": "T2",
+     "close_instant": "12:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC); Livestock (LE); Dairy (CSC); Lumber (LBR) | date 2026-06-19",
+     "status": "closed",
+     "verbatim": "eventDate 2026-06-19: no events published [N1]",
+     "document": "D17",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW); Livestock / Lean Hogs (HE); Dairy / Class III Milk (DC) | date 2026-06-19",
+     "status": "closed",
+     "verbatim": "eventDate 2026-06-19: no events published [N1]",
+     "document": "D62",
+     "tier": "T2"
+    },
+    {
+     "family": "Cryptocurrency (BTC) | date 2026-06-19",
+     "status": "closed",
+     "verbatim": "eventDate 2026-06-19: 16:00 closed /TD 2026-06-22; 16:01 preopen /TD 2026-06-22; 16:02 open /TD 2026-06-22 [N19]",
+     "document": "D17",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC) | date 2026-06-20",
+     "status": "modified",
+     "verbatim": "eventDate 2026-06-20: 05:00 open; 17:00 closed (trade date 2026-06-22) [N11]",
+     "document": "D17",
+     "tier": "T2",
+     "close_instant": "17:00 CT",
+     "open_instant": "05:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2026-06-20",
+     "status": "modified",
+     "verbatim": "eventDate 2026-06-20: 05:00 open; 17:00 closed (trade date 2026-06-22) [N11]",
+     "document": "D62",
+     "tier": "T2",
+     "close_instant": "17:00 CT",
+     "open_instant": "05:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-03",
+   "name": "Independence Day 2026 (observed Fri 3 Jul; 4 Jul falls on Saturday)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2026-07-02",
+     "status": "modified",
+     "verbatim": "eventDate 2026-07-02: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2026-07-02) [N7]",
+     "document": "D18",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2026-07-02",
+     "status": "modified",
+     "verbatim": "eventDate 2026-07-02: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2026-07-02) [N7]",
+     "document": "D63",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Cryptocurrency (BTC) | date 2026-07-02",
+     "status": "modified",
+     "verbatim": "eventDate 2026-07-02: 16:00 closed /TD 2026-07-02; 16:01 preopen /TD 2026-07-06; 16:02 open /TD 2026-07-06 [N18]",
+     "document": "D67",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Dairy (CSC) | date 2026-07-02",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-07-02: 13:55 closed (trade date 2026-07-02) [EC 13:55 CT, no evening re-open]",
+     "document": "D18",
+     "tier": "T2",
+     "close_instant": "13:55 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2026-07-02",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-07-02: 13:55 closed (trade date 2026-07-02) [EC 13:55 CT, no evening re-open]",
+     "document": "D63",
+     "tier": "T2",
+     "close_instant": "13:55 CT"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC) | date 2026-07-03",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-07-03: 12:00 closed (trade date 2026-07-06) [EC 12:00 CT]",
+     "document": "D19",
+     "tier": "T2",
+     "close_instant": "12:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2026-07-03",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-07-03: 12:00 closed (trade date 2026-07-06) [EC 12:00 CT]",
+     "document": "D64",
+     "tier": "T2",
+     "close_instant": "12:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC); Livestock (LE); Dairy (CSC); Lumber (LBR) | date 2026-07-03",
+     "status": "closed",
+     "verbatim": "eventDate 2026-07-03: no events published [N1]",
+     "document": "D19",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW); Livestock / Lean Hogs (HE); Dairy / Class III Milk (DC) | date 2026-07-03",
+     "status": "closed",
+     "verbatim": "eventDate 2026-07-03: no events published [N1]",
+     "document": "D64",
+     "tier": "T2"
+    },
+    {
+     "family": "Cryptocurrency (BTC) | date 2026-07-03",
+     "status": "closed",
+     "verbatim": "eventDate 2026-07-03: 16:00 closed /TD 2026-07-06; 16:01 preopen /TD 2026-07-06; 16:02 open /TD 2026-07-06 [N19]",
+     "document": "D19",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC) | date 2026-07-04",
+     "status": "modified",
+     "verbatim": "eventDate 2026-07-04: 05:00 open; 17:00 closed (trade date 2026-07-06) [N11]",
+     "document": "D19",
+     "tier": "T2",
+     "close_instant": "17:00 CT",
+     "open_instant": "05:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2026-07-04",
+     "status": "modified",
+     "verbatim": "eventDate 2026-07-04: 05:00 open; 17:00 closed (trade date 2026-07-06) [N11]",
+     "document": "D64",
+     "tier": "T2",
+     "close_instant": "17:00 CT",
+     "open_instant": "05:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-07",
+   "name": "Labor Day 2026 (Mon 7 Sep)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2026-09-06",
+     "status": "closed",
+     "verbatim": "eventDate 2026-09-06: 16:00 preopen (trade date 2026-09-08) [N2]",
+     "document": "D20",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2026-09-06",
+     "status": "closed",
+     "verbatim": "eventDate 2026-09-06: 16:00 preopen (trade date 2026-09-08) [N2]",
+     "document": "D21",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2026-09-06",
+     "status": "closed",
+     "verbatim": "eventDate 2026-09-06: 16:00 preopen (trade date 2026-09-08) [N2]",
+     "document": "D20",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2026-09-06",
+     "status": "closed",
+     "verbatim": "eventDate 2026-09-06: 16:00 preopen (trade date 2026-09-08) [N2]",
+     "document": "D21",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2026-09-07",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-09-07: 12:00 preopen; 17:00 open (trade date 2026-09-08) [N15]",
+     "document": "D20",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2026-09-07",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-09-07: 12:00 preopen; 17:00 open (trade date 2026-09-08) [N15]",
+     "document": "D21",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "FX (6E) | date 2026-09-07",
+     "status": "modified",
+     "verbatim": "eventDate 2026-09-07: 16:00 preopen; 17:00 open (trade date 2026-09-08) [N3]",
+     "document": "D20",
+     "tier": "T2"
+    },
+    {
+     "family": "Energy (CL); Metals (GC) | date 2026-09-07",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-09-07: 13:30 preopen; 17:00 open (trade date 2026-09-08) [N16]",
+     "document": "D20",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2026-09-07",
+     "status": "closed",
+     "verbatim": "eventDate 2026-09-07: 19:00 open (trade date 2026-09-08) [N5]",
+     "document": "D20",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2026-09-07",
+     "status": "closed",
+     "verbatim": "eventDate 2026-09-07: 19:00 open (trade date 2026-09-08) [N5]",
+     "document": "D21",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Livestock (LE); Lumber (LBR) | date 2026-09-07",
+     "status": "closed",
+     "verbatim": "eventDate 2026-09-07: no events published [N1]",
+     "document": "D20",
+     "tier": "T2"
+    },
+    {
+     "family": "Livestock / Lean Hogs (HE) | date 2026-09-07",
+     "status": "closed",
+     "verbatim": "eventDate 2026-09-07: no events published [N1]",
+     "document": "D21",
+     "tier": "T2"
+    },
+    {
+     "family": "Cryptocurrency (BTC) | date 2026-09-07",
+     "status": "modified",
+     "verbatim": "eventDate 2026-09-07: 16:01 preopen; 16:02 open (trade date 2026-09-08) [N10]",
+     "document": "D20",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2026-09-07",
+     "status": "closed",
+     "verbatim": "eventDate 2026-09-07: 17:00 open (trade date 2026-09-08) [N4]",
+     "document": "D20",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2026-09-07",
+     "status": "closed",
+     "verbatim": "eventDate 2026-09-07: 17:00 open (trade date 2026-09-08) [N4]",
+     "document": "D21",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-26",
+   "name": "Thanksgiving 2026 (Thu 26 Nov) and the day after (Fri 27 Nov)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2026-11-25",
+     "status": "modified",
+     "verbatim": "eventDate 2026-11-25: 07:45 paused /TD 2026-11-25; 08:00 preopen /TD 2026-11-25; 08:30 open /TD 2026-11-25; 13:20 paused /TD 2026-11-25; 13:30 closed /TD 2026-11-25; 14:30 pcp /TD 2026-11-25; 16:00 closed /TD 2026-11-25; 16:45 preopen /TD 2026-11-27 [N9]",
+     "document": "D22",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2026-11-25",
+     "status": "modified",
+     "verbatim": "eventDate 2026-11-25: 07:45 paused /TD 2026-11-25; 08:00 preopen /TD 2026-11-25; 08:30 open /TD 2026-11-25; 13:20 paused /TD 2026-11-25; 13:30 closed /TD 2026-11-25; 14:30 pcp /TD 2026-11-25; 16:00 closed /TD 2026-11-25; 16:45 preopen /TD 2026-11-27 [N9]",
+     "document": "D23",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2026-11-25",
+     "status": "modified",
+     "verbatim": "eventDate 2026-11-25: 16:00 closed (trade date 2026-11-25) [N6]",
+     "document": "D22",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2026-11-25",
+     "status": "modified",
+     "verbatim": "eventDate 2026-11-25: 16:00 closed (trade date 2026-11-25) [N6]",
+     "document": "D23",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2026-11-26",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-11-26: 12:00 preopen; 17:00 open (trade date 2026-11-27) [N15]",
+     "document": "D22",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2026-11-26",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-11-26: 12:00 preopen; 17:00 open (trade date 2026-11-27) [N15]",
+     "document": "D23",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "FX (6E) | date 2026-11-26",
+     "status": "modified",
+     "verbatim": "eventDate 2026-11-26: 16:00 preopen; 17:00 open (trade date 2026-11-27) [N3]",
+     "document": "D22",
+     "tier": "T2"
+    },
+    {
+     "family": "Energy (CL); Metals (GC) | date 2026-11-26",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-11-26: 13:30 preopen; 17:00 open (trade date 2026-11-27) [N16]",
+     "document": "D22",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC); Livestock (LE); Dairy (CSC); Lumber (LBR) | date 2026-11-26",
+     "status": "closed",
+     "verbatim": "eventDate 2026-11-26: no events published [N1]",
+     "document": "D22",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW); Livestock / Lean Hogs (HE); Dairy / Class III Milk (DC) | date 2026-11-26",
+     "status": "closed",
+     "verbatim": "eventDate 2026-11-26: no events published [N1]",
+     "document": "D23",
+     "tier": "T2"
+    },
+    {
+     "family": "Cryptocurrency (BTC) | date 2026-11-26",
+     "status": "modified",
+     "verbatim": "eventDate 2026-11-26: 16:01 preopen; 16:02 open (trade date 2026-11-27) [N10]",
+     "document": "D22",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2026-11-27",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-11-27: 12:15 closed (trade date 2026-11-27) [EC 12:15 CT]",
+     "document": "D22",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2026-11-27",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-11-27: 12:15 closed (trade date 2026-11-27) [EC 12:15 CT]",
+     "document": "D23",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "FX (6E); Energy (CL); Metals (GC) | date 2026-11-27",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-11-27: 13:45 closed (trade date 2026-11-27) [EC 13:45 CT]",
+     "document": "D22",
+     "tier": "T2",
+     "close_instant": "13:45 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2026-11-27",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-11-27: 08:30 open; 12:05 closed (trade date 2026-11-27) [EC 12:05 CT (normal final close 16:00 CT)]",
+     "document": "D22",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2026-11-27",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-11-27: 08:30 open; 12:05 closed (trade date 2026-11-27) [EC 12:05 CT (normal final close 16:00 CT)]",
+     "document": "D23",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Livestock (LE) | date 2026-11-27",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-11-27: 08:00 preopen; 08:30 open; 12:05 closed (trade date 2026-11-27) [EC 12:05 CT (normal final close 16:00 CT)]",
+     "document": "D22",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Livestock / Lean Hogs (HE) | date 2026-11-27",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-11-27: 08:00 preopen; 08:30 open; 12:05 closed (trade date 2026-11-27) [EC 12:05 CT (normal final close 16:00 CT)]",
+     "document": "D23",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Dairy (CSC) | date 2026-11-27",
+     "status": "closed",
+     "verbatim": "eventDate 2026-11-27: no events published [N1]",
+     "document": "D22",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2026-11-27",
+     "status": "closed",
+     "verbatim": "eventDate 2026-11-27: no events published [N1]",
+     "document": "D23",
+     "tier": "T2"
+    },
+    {
+     "family": "Lumber (LBR) | date 2026-11-27",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-11-27: 06:00 preopen; 09:00 open; 12:05 closed (trade date 2026-11-27) [EC 12:05 CT (normal final close 15:05 CT)]",
+     "document": "D22",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-25",
+   "name": "Christmas 2026 (Fri 25 Dec)",
+   "families": [
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2026-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-12-24: 12:15 closed (trade date 2026-12-24) [EC 12:15 CT, no evening re-open]",
+     "document": "D24",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2026-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-12-24: 12:15 closed (trade date 2026-12-24) [EC 12:15 CT, no evening re-open]",
+     "document": "D25",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "FX (6E); Energy (CL); Metals (GC) | date 2026-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-12-24: 12:45 closed (trade date 2026-12-24) [EC 12:45 CT, no evening re-open]",
+     "document": "D24",
+     "tier": "T2",
+     "close_instant": "12:45 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2026-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-12-24: 07:45 paused; 08:00 preopen; 08:30 open; 12:05 closed (trade date 2026-12-24) [EC 12:05 CT (normal final close 19:00 CT)]",
+     "document": "D24",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2026-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-12-24: 07:45 paused; 08:00 preopen; 08:30 open; 12:05 closed (trade date 2026-12-24) [EC 12:05 CT (normal final close 19:00 CT)]",
+     "document": "D25",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Livestock (LE) | date 2026-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-12-24: 08:00 preopen; 08:30 open; 12:05 closed (trade date 2026-12-24) [EC 12:05 CT (normal final close 16:00 CT)]",
+     "document": "D24",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Livestock / Lean Hogs (HE) | date 2026-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-12-24: 08:00 preopen; 08:30 open; 12:05 closed (trade date 2026-12-24) [EC 12:05 CT (normal final close 16:00 CT)]",
+     "document": "D25",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Dairy (CSC) | date 2026-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-12-24: 12:00 closed (trade date 2026-12-24) [EC 12:00 CT, no evening re-open]",
+     "document": "D24",
+     "tier": "T2",
+     "close_instant": "12:00 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2026-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-12-24: 12:00 closed (trade date 2026-12-24) [EC 12:00 CT, no evening re-open]",
+     "document": "D25",
+     "tier": "T2",
+     "close_instant": "12:00 CT"
+    },
+    {
+     "family": "Lumber (LBR) | date 2026-12-24",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-12-24: 06:00 preopen; 09:00 open; 12:05 closed (trade date 2026-12-24) [EC 12:05 CT (normal final close 15:05 CT)]",
+     "document": "D24",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC); Grains & Oilseeds (ZC); Livestock (LE); Dairy (CSC); Lumber (LBR) | date 2026-12-25",
+     "status": "closed",
+     "verbatim": "eventDate 2026-12-25: no events published [N1]",
+     "document": "D26",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY); Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW); Livestock / Lean Hogs (HE); Dairy / Class III Milk (DC) | date 2026-12-25",
+     "status": "closed",
+     "verbatim": "eventDate 2026-12-25: no events published [N1]",
+     "document": "D25",
+     "tier": "T2"
+    },
+    {
+     "family": "Cryptocurrency (BTC) | date 2026-12-25",
+     "status": "closed",
+     "verbatim": "eventDate 2026-12-25: 16:00 closed /TD 2026-12-28; 16:01 preopen /TD 2026-12-28; 16:02 open /TD 2026-12-28 [N19]",
+     "document": "D26",
+     "tier": "T2"
+    }
+   ]
+  },
+  {
+   "date": "2027-01-01",
+   "name": "New Year's Day 2027 (Fri 1 Jan)",
+   "families": [
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC) | date 2026-12-31",
+     "status": "modified",
+     "verbatim": "eventDate 2026-12-31: 16:00 closed (trade date 2026-12-31) [N6]",
+     "document": "D27",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2026-12-31",
+     "status": "modified",
+     "verbatim": "eventDate 2026-12-31: 16:00 closed (trade date 2026-12-31) [N6]",
+     "document": "D28",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2026-12-31",
+     "status": "modified",
+     "verbatim": "eventDate 2026-12-31: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2026-12-31) [N7]",
+     "document": "D27",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2026-12-31",
+     "status": "modified",
+     "verbatim": "eventDate 2026-12-31: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2026-12-31) [N7]",
+     "document": "D28",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Dairy (CSC) | date 2026-12-31",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-12-31: 13:55 closed (trade date 2026-12-31) [EC 13:55 CT, no evening re-open]",
+     "document": "D27",
+     "tier": "T2",
+     "close_instant": "13:55 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2026-12-31",
+     "status": "early_close",
+     "verbatim": "eventDate 2026-12-31: 13:55 closed (trade date 2026-12-31) [EC 13:55 CT, no evening re-open]",
+     "document": "D28",
+     "tier": "T2",
+     "close_instant": "13:55 CT"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC); Grains & Oilseeds (ZC); Livestock (LE); Dairy (CSC); Lumber (LBR) | date 2027-01-01",
+     "status": "closed",
+     "verbatim": "eventDate 2027-01-01: no events published [N1]",
+     "document": "D29",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY); Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW); Livestock / Lean Hogs (HE); Dairy / Class III Milk (DC) | date 2027-01-01",
+     "status": "closed",
+     "verbatim": "eventDate 2027-01-01: no events published [N1]",
+     "document": "D28",
+     "tier": "T2"
+    },
+    {
+     "family": "Cryptocurrency (BTC) | date 2027-01-01",
+     "status": "closed",
+     "verbatim": "eventDate 2027-01-01: 16:00 closed /TD 2027-01-04; 16:01 preopen /TD 2027-01-04; 16:02 open /TD 2027-01-04 [N19]",
+     "document": "D29",
+     "tier": "T2"
+    }
+   ]
+  },
+  {
+   "date": "2027-01-18",
+   "name": "Martin Luther King Jr. Day 2027 (Mon 18 Jan)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2027-01-17",
+     "status": "closed",
+     "verbatim": "eventDate 2027-01-17: 16:00 preopen (trade date 2027-01-19) [N2]",
+     "document": "D30",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2027-01-17",
+     "status": "closed",
+     "verbatim": "eventDate 2027-01-17: 16:00 preopen (trade date 2027-01-19) [N2]",
+     "document": "D31",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2027-01-17",
+     "status": "closed",
+     "verbatim": "eventDate 2027-01-17: 16:00 preopen (trade date 2027-01-19) [N2]",
+     "document": "D30",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2027-01-17",
+     "status": "closed",
+     "verbatim": "eventDate 2027-01-17: 16:00 preopen (trade date 2027-01-19) [N2]",
+     "document": "D31",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2027-01-18",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-01-18: 12:00 preopen; 17:00 open (trade date 2027-01-19) [N15]",
+     "document": "D30",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2027-01-18",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-01-18: 12:00 preopen; 17:00 open (trade date 2027-01-19) [N15]",
+     "document": "D31",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "FX (6E) | date 2027-01-18",
+     "status": "modified",
+     "verbatim": "eventDate 2027-01-18: 16:00 preopen; 17:00 open (trade date 2027-01-19) [N3]",
+     "document": "D30",
+     "tier": "T2"
+    },
+    {
+     "family": "Energy (CL); Metals (GC) | date 2027-01-18",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-01-18: 13:30 preopen; 17:00 open (trade date 2027-01-19) [N16]",
+     "document": "D30",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2027-01-18",
+     "status": "closed",
+     "verbatim": "eventDate 2027-01-18: 19:00 open (trade date 2027-01-19) [N5]",
+     "document": "D30",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2027-01-18",
+     "status": "closed",
+     "verbatim": "eventDate 2027-01-18: 19:00 open (trade date 2027-01-19) [N5]",
+     "document": "D31",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Livestock (LE); Lumber (LBR) | date 2027-01-18",
+     "status": "closed",
+     "verbatim": "eventDate 2027-01-18: no events published [N1]",
+     "document": "D30",
+     "tier": "T2"
+    },
+    {
+     "family": "Livestock / Lean Hogs (HE) | date 2027-01-18",
+     "status": "closed",
+     "verbatim": "eventDate 2027-01-18: no events published [N1]",
+     "document": "D31",
+     "tier": "T2"
+    },
+    {
+     "family": "Cryptocurrency (BTC) | date 2027-01-18",
+     "status": "modified",
+     "verbatim": "eventDate 2027-01-18: 16:01 preopen; 16:02 open (trade date 2027-01-19) [N10]",
+     "document": "D30",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2027-01-18",
+     "status": "closed",
+     "verbatim": "eventDate 2027-01-18: 17:00 open (trade date 2027-01-19) [N4]",
+     "document": "D30",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2027-01-18",
+     "status": "closed",
+     "verbatim": "eventDate 2027-01-18: 17:00 open (trade date 2027-01-19) [N4]",
+     "document": "D31",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2027-02-15",
+   "name": "Presidents' Day 2027 (Mon 15 Feb)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2027-02-14",
+     "status": "closed",
+     "verbatim": "eventDate 2027-02-14: 16:00 preopen (trade date 2027-02-16) [N2]",
+     "document": "D32",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2027-02-14",
+     "status": "closed",
+     "verbatim": "eventDate 2027-02-14: 16:00 preopen (trade date 2027-02-16) [N2]",
+     "document": "D33",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2027-02-14",
+     "status": "closed",
+     "verbatim": "eventDate 2027-02-14: 16:00 preopen (trade date 2027-02-16) [N2]",
+     "document": "D32",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2027-02-14",
+     "status": "closed",
+     "verbatim": "eventDate 2027-02-14: 16:00 preopen (trade date 2027-02-16) [N2]",
+     "document": "D33",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2027-02-15",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-02-15: 12:00 preopen; 17:00 open (trade date 2027-02-16) [N15]",
+     "document": "D32",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2027-02-15",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-02-15: 12:00 preopen; 17:00 open (trade date 2027-02-16) [N15]",
+     "document": "D33",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "FX (6E) | date 2027-02-15",
+     "status": "modified",
+     "verbatim": "eventDate 2027-02-15: 16:00 preopen; 17:00 open (trade date 2027-02-16) [N3]",
+     "document": "D32",
+     "tier": "T2"
+    },
+    {
+     "family": "Energy (CL); Metals (GC) | date 2027-02-15",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-02-15: 13:30 preopen; 17:00 open (trade date 2027-02-16) [N16]",
+     "document": "D32",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2027-02-15",
+     "status": "closed",
+     "verbatim": "eventDate 2027-02-15: 19:00 open (trade date 2027-02-16) [N5]",
+     "document": "D32",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2027-02-15",
+     "status": "closed",
+     "verbatim": "eventDate 2027-02-15: 19:00 open (trade date 2027-02-16) [N5]",
+     "document": "D33",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Livestock (LE); Lumber (LBR) | date 2027-02-15",
+     "status": "closed",
+     "verbatim": "eventDate 2027-02-15: no events published [N1]",
+     "document": "D32",
+     "tier": "T2"
+    },
+    {
+     "family": "Livestock / Lean Hogs (HE) | date 2027-02-15",
+     "status": "closed",
+     "verbatim": "eventDate 2027-02-15: no events published [N1]",
+     "document": "D33",
+     "tier": "T2"
+    },
+    {
+     "family": "Cryptocurrency (BTC) | date 2027-02-15",
+     "status": "modified",
+     "verbatim": "eventDate 2027-02-15: 16:01 preopen; 16:02 open (trade date 2027-02-16) [N10]",
+     "document": "D32",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2027-02-15",
+     "status": "closed",
+     "verbatim": "eventDate 2027-02-15: 17:00 open (trade date 2027-02-16) [N4]",
+     "document": "D32",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2027-02-15",
+     "status": "closed",
+     "verbatim": "eventDate 2027-02-15: 17:00 open (trade date 2027-02-16) [N4]",
+     "document": "D33",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2027-03-26",
+   "name": "Good Friday 2027 (Fri 26 Mar)",
+   "families": [
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC) | date 2027-03-25",
+     "status": "modified",
+     "verbatim": "eventDate 2027-03-25: 16:00 closed (trade date 2027-03-25) [N6]",
+     "document": "D34",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2027-03-25",
+     "status": "modified",
+     "verbatim": "eventDate 2027-03-25: 16:00 closed (trade date 2027-03-25) [N6]",
+     "document": "D35",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2027-03-25",
+     "status": "modified",
+     "verbatim": "eventDate 2027-03-25: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2027-03-25) [N7]",
+     "document": "D34",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2027-03-25",
+     "status": "modified",
+     "verbatim": "eventDate 2027-03-25: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2027-03-25) [N7]",
+     "document": "D35",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Dairy (CSC) | date 2027-03-25",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-03-25: 13:55 closed (trade date 2027-03-25) [EC 13:55 CT, no evening re-open]",
+     "document": "D34",
+     "tier": "T2",
+     "close_instant": "13:55 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2027-03-25",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-03-25: 13:55 closed (trade date 2027-03-25) [EC 13:55 CT, no evening re-open]",
+     "document": "D35",
+     "tier": "T2",
+     "close_instant": "13:55 CT"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC); Grains & Oilseeds (ZC); Livestock (LE); Dairy (CSC); Lumber (LBR) | date 2027-03-26",
+     "status": "closed",
+     "verbatim": "eventDate 2027-03-26: no events published [N1]",
+     "document": "D34",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY); Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW); Livestock / Lean Hogs (HE); Dairy / Class III Milk (DC) | date 2027-03-26",
+     "status": "closed",
+     "verbatim": "eventDate 2027-03-26: no events published [N1]",
+     "document": "D35",
+     "tier": "T2"
+    },
+    {
+     "family": "Cryptocurrency (BTC) | date 2027-03-26",
+     "status": "closed",
+     "verbatim": "eventDate 2027-03-26: 16:00 closed /TD 2027-03-29; 16:01 preopen /TD 2027-03-29; 16:02 open /TD 2027-03-29 [N19]",
+     "document": "D34",
+     "tier": "T2"
+    }
+   ]
+  },
+  {
+   "date": "2027-05-31",
+   "name": "Memorial Day 2027 (Mon 31 May)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2027-05-30",
+     "status": "closed",
+     "verbatim": "eventDate 2027-05-30: 16:00 preopen (trade date 2027-06-01) [N2]",
+     "document": "D36",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2027-05-30",
+     "status": "closed",
+     "verbatim": "eventDate 2027-05-30: 16:00 preopen (trade date 2027-06-01) [N2]",
+     "document": "D37",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2027-05-30",
+     "status": "closed",
+     "verbatim": "eventDate 2027-05-30: 16:00 preopen (trade date 2027-06-01) [N2]",
+     "document": "D36",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2027-05-30",
+     "status": "closed",
+     "verbatim": "eventDate 2027-05-30: 16:00 preopen (trade date 2027-06-01) [N2]",
+     "document": "D37",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2027-05-31",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-05-31: 12:00 preopen; 17:00 open (trade date 2027-06-01) [N15]",
+     "document": "D36",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2027-05-31",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-05-31: 12:00 preopen; 17:00 open (trade date 2027-06-01) [N15]",
+     "document": "D37",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "FX (6E) | date 2027-05-31",
+     "status": "modified",
+     "verbatim": "eventDate 2027-05-31: 16:00 preopen; 17:00 open (trade date 2027-06-01) [N3]",
+     "document": "D36",
+     "tier": "T2"
+    },
+    {
+     "family": "Energy (CL); Metals (GC) | date 2027-05-31",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-05-31: 13:30 preopen; 17:00 open (trade date 2027-06-01) [N16]",
+     "document": "D36",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2027-05-31",
+     "status": "closed",
+     "verbatim": "eventDate 2027-05-31: 19:00 open (trade date 2027-06-01) [N5]",
+     "document": "D36",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2027-05-31",
+     "status": "closed",
+     "verbatim": "eventDate 2027-05-31: 19:00 open (trade date 2027-06-01) [N5]",
+     "document": "D37",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Livestock (LE); Lumber (LBR) | date 2027-05-31",
+     "status": "closed",
+     "verbatim": "eventDate 2027-05-31: no events published [N1]",
+     "document": "D36",
+     "tier": "T2"
+    },
+    {
+     "family": "Livestock / Lean Hogs (HE) | date 2027-05-31",
+     "status": "closed",
+     "verbatim": "eventDate 2027-05-31: no events published [N1]",
+     "document": "D37",
+     "tier": "T2"
+    },
+    {
+     "family": "Cryptocurrency (BTC) | date 2027-05-31",
+     "status": "modified",
+     "verbatim": "eventDate 2027-05-31: 16:01 preopen; 16:02 open (trade date 2027-06-01) [N10]",
+     "document": "D36",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2027-05-31",
+     "status": "closed",
+     "verbatim": "eventDate 2027-05-31: 17:00 open (trade date 2027-06-01) [N4]",
+     "document": "D36",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2027-05-31",
+     "status": "closed",
+     "verbatim": "eventDate 2027-05-31: 17:00 open (trade date 2027-06-01) [N4]",
+     "document": "D37",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2027-06-18",
+   "name": "Juneteenth 2027 (observed Fri 18 Jun; 19 Jun falls on Saturday)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2027-06-17",
+     "status": "modified",
+     "verbatim": "eventDate 2027-06-17: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2027-06-17) [N7]",
+     "document": "D38",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2027-06-17",
+     "status": "modified",
+     "verbatim": "eventDate 2027-06-17: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2027-06-17) [N7]",
+     "document": "D39",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Dairy (CSC) | date 2027-06-17",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-06-17: 13:55 closed (trade date 2027-06-17) [EC 13:55 CT, no evening re-open]",
+     "document": "D38",
+     "tier": "T2",
+     "close_instant": "13:55 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2027-06-17",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-06-17: 13:55 closed (trade date 2027-06-17) [EC 13:55 CT, no evening re-open]",
+     "document": "D39",
+     "tier": "T2",
+     "close_instant": "13:55 CT"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC) | date 2027-06-18",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-06-18: 12:00 closed (trade date 2027-06-21) [EC 12:00 CT]",
+     "document": "D38",
+     "tier": "T2",
+     "close_instant": "12:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2027-06-18",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-06-18: 12:00 closed (trade date 2027-06-21) [EC 12:00 CT]",
+     "document": "D39",
+     "tier": "T2",
+     "close_instant": "12:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC); Livestock (LE); Dairy (CSC); Lumber (LBR) | date 2027-06-18",
+     "status": "closed",
+     "verbatim": "eventDate 2027-06-18: no events published [N1]",
+     "document": "D38",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW); Livestock / Lean Hogs (HE); Dairy / Class III Milk (DC) | date 2027-06-18",
+     "status": "closed",
+     "verbatim": "eventDate 2027-06-18: no events published [N1]",
+     "document": "D39",
+     "tier": "T2"
+    },
+    {
+     "family": "Cryptocurrency (BTC) | date 2027-06-18",
+     "status": "closed",
+     "verbatim": "eventDate 2027-06-18: 16:00 closed /TD 2027-06-21; 16:01 preopen /TD 2027-06-21; 16:02 open /TD 2027-06-21 [N19]",
+     "document": "D38",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC) | date 2027-06-19",
+     "status": "modified",
+     "verbatim": "eventDate 2027-06-19: 05:00 open; 17:00 closed (trade date 2027-06-21) [N11]",
+     "document": "D38",
+     "tier": "T2",
+     "close_instant": "17:00 CT",
+     "open_instant": "05:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2027-06-19",
+     "status": "modified",
+     "verbatim": "eventDate 2027-06-19: 05:00 open; 17:00 closed (trade date 2027-06-21) [N11]",
+     "document": "D39",
+     "tier": "T2",
+     "close_instant": "17:00 CT",
+     "open_instant": "05:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2027-07-05",
+   "name": "Independence Day 2027 (observed Mon 5 Jul; 4 Jul falls on Sunday)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2027-07-04",
+     "status": "closed",
+     "verbatim": "eventDate 2027-07-04: no events published [N1]",
+     "document": "D40",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2027-07-04",
+     "status": "closed",
+     "verbatim": "eventDate 2027-07-04: no events published [N1]",
+     "document": "D41",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2027-07-04",
+     "status": "closed",
+     "verbatim": "eventDate 2027-07-04: 16:00 preopen (trade date 2027-07-06) [N2]",
+     "document": "D40",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2027-07-04",
+     "status": "closed",
+     "verbatim": "eventDate 2027-07-04: 16:00 preopen (trade date 2027-07-06) [N2]",
+     "document": "D41",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES) | date 2027-07-05",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-07-05: 12:00 preopen; 17:00 open (trade date 2027-07-06) [N15]",
+     "document": "D40",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2027-07-05",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-07-05: 12:00 preopen; 17:00 open (trade date 2027-07-06) [N15]",
+     "document": "D41",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Interest Rates (ZN); Energy (CL); Metals (GC) | date 2027-07-05",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-07-05: 13:30 preopen; 17:00 open (trade date 2027-07-06) [N16]",
+     "document": "D40",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "FX (6E) | date 2027-07-05",
+     "status": "modified",
+     "verbatim": "eventDate 2027-07-05: 16:00 preopen; 17:00 open (trade date 2027-07-06) [N3]",
+     "document": "D40",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC); Livestock (LE); Lumber (LBR) | date 2027-07-05",
+     "status": "closed",
+     "verbatim": "eventDate 2027-07-05: no events published [N1]",
+     "document": "D40",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW); Livestock / Lean Hogs (HE) | date 2027-07-05",
+     "status": "closed",
+     "verbatim": "eventDate 2027-07-05: no events published [N1]",
+     "document": "D41",
+     "tier": "T2"
+    },
+    {
+     "family": "Cryptocurrency (BTC) | date 2027-07-05",
+     "status": "modified",
+     "verbatim": "eventDate 2027-07-05: 16:01 preopen; 16:02 open (trade date 2027-07-06) [N10]",
+     "document": "D40",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2027-07-05",
+     "status": "closed",
+     "verbatim": "eventDate 2027-07-05: 17:00 open (trade date 2027-07-06) [N4]",
+     "document": "D40",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2027-07-05",
+     "status": "closed",
+     "verbatim": "eventDate 2027-07-05: 17:00 open (trade date 2027-07-06) [N4]",
+     "document": "D41",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2027-07-06",
+     "status": "modified",
+     "verbatim": "eventDate 2027-07-06: 06:00 preopen /TD 2027-07-06; 08:30 open /TD 2027-07-06; 13:20 paused /TD 2027-07-06; 13:30 closed /TD 2027-07-06; 14:30 pcp /TD 2027-07-06; 16:00 closed /TD 2027-07-06; 16:45 preopen /TD 2027-07-07; 19:00 open /TD 2027-07-07 [N12]",
+     "document": "D40",
+     "tier": "T2",
+     "open_instant": "08:30 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2027-07-06",
+     "status": "modified",
+     "verbatim": "eventDate 2027-07-06: 06:00 preopen /TD 2027-07-06; 08:30 open /TD 2027-07-06; 13:20 paused /TD 2027-07-06; 13:30 closed /TD 2027-07-06; 14:30 pcp /TD 2027-07-06; 16:00 closed /TD 2027-07-06; 16:45 preopen /TD 2027-07-07; 19:00 open /TD 2027-07-07 [N12]",
+     "document": "D41",
+     "tier": "T2",
+     "open_instant": "08:30 CT"
+    }
+   ]
+  },
+  {
+   "date": "2027-09-06",
+   "name": "Labor Day 2027 (Mon 6 Sep)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2027-09-05",
+     "status": "closed",
+     "verbatim": "eventDate 2027-09-05: 16:00 preopen (trade date 2027-09-07) [N2]",
+     "document": "D42",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2027-09-05",
+     "status": "closed",
+     "verbatim": "eventDate 2027-09-05: 16:00 preopen (trade date 2027-09-07) [N2]",
+     "document": "D43",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2027-09-05",
+     "status": "closed",
+     "verbatim": "eventDate 2027-09-05: 16:00 preopen (trade date 2027-09-07) [N2]",
+     "document": "D42",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2027-09-05",
+     "status": "closed",
+     "verbatim": "eventDate 2027-09-05: 16:00 preopen (trade date 2027-09-07) [N2]",
+     "document": "D43",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2027-09-06",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-09-06: 12:00 preopen; 17:00 open (trade date 2027-09-07) [N15]",
+     "document": "D42",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2027-09-06",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-09-06: 12:00 preopen; 17:00 open (trade date 2027-09-07) [N15]",
+     "document": "D43",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "FX (6E) | date 2027-09-06",
+     "status": "modified",
+     "verbatim": "eventDate 2027-09-06: 16:00 preopen; 17:00 open (trade date 2027-09-07) [N3]",
+     "document": "D42",
+     "tier": "T2"
+    },
+    {
+     "family": "Energy (CL); Metals (GC) | date 2027-09-06",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-09-06: 13:30 preopen; 17:00 open (trade date 2027-09-07) [N16]",
+     "document": "D42",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2027-09-06",
+     "status": "closed",
+     "verbatim": "eventDate 2027-09-06: 19:00 open (trade date 2027-09-07) [N5]",
+     "document": "D42",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2027-09-06",
+     "status": "closed",
+     "verbatim": "eventDate 2027-09-06: 19:00 open (trade date 2027-09-07) [N5]",
+     "document": "D43",
+     "tier": "T2",
+     "open_instant": "19:00 CT"
+    },
+    {
+     "family": "Livestock (LE); Lumber (LBR) | date 2027-09-06",
+     "status": "closed",
+     "verbatim": "eventDate 2027-09-06: no events published [N1]",
+     "document": "D42",
+     "tier": "T2"
+    },
+    {
+     "family": "Livestock / Lean Hogs (HE) | date 2027-09-06",
+     "status": "closed",
+     "verbatim": "eventDate 2027-09-06: no events published [N1]",
+     "document": "D43",
+     "tier": "T2"
+    },
+    {
+     "family": "Cryptocurrency (BTC) | date 2027-09-06",
+     "status": "modified",
+     "verbatim": "eventDate 2027-09-06: 16:01 preopen; 16:02 open (trade date 2027-09-07) [N10]",
+     "document": "D42",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2027-09-06",
+     "status": "closed",
+     "verbatim": "eventDate 2027-09-06: 17:00 open (trade date 2027-09-07) [N4]",
+     "document": "D42",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2027-09-06",
+     "status": "closed",
+     "verbatim": "eventDate 2027-09-06: 17:00 open (trade date 2027-09-07) [N4]",
+     "document": "D43",
+     "tier": "T2",
+     "open_instant": "17:00 CT"
+    }
+   ]
+  },
+  {
+   "date": "2027-11-25",
+   "name": "Thanksgiving 2027 (Thu 25 Nov) and the day after (Fri 26 Nov)",
+   "families": [
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2027-11-24",
+     "status": "modified",
+     "verbatim": "eventDate 2027-11-24: 07:45 paused /TD 2027-11-24; 08:00 preopen /TD 2027-11-24; 08:30 open /TD 2027-11-24; 13:20 paused /TD 2027-11-24; 13:30 closed /TD 2027-11-24; 14:30 pcp /TD 2027-11-24; 16:00 closed /TD 2027-11-24; 16:45 preopen /TD 2027-11-26 [N9]",
+     "document": "D44",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2027-11-24",
+     "status": "modified",
+     "verbatim": "eventDate 2027-11-24: 07:45 paused /TD 2027-11-24; 08:00 preopen /TD 2027-11-24; 08:30 open /TD 2027-11-24; 13:20 paused /TD 2027-11-24; 13:30 closed /TD 2027-11-24; 14:30 pcp /TD 2027-11-24; 16:00 closed /TD 2027-11-24; 16:45 preopen /TD 2027-11-26 [N9]",
+     "document": "D45",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2027-11-24",
+     "status": "modified",
+     "verbatim": "eventDate 2027-11-24: 16:00 closed (trade date 2027-11-24) [N6]",
+     "document": "D44",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2027-11-24",
+     "status": "modified",
+     "verbatim": "eventDate 2027-11-24: 16:00 closed (trade date 2027-11-24) [N6]",
+     "document": "D45",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2027-11-25",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-11-25: 12:00 preopen; 17:00 open (trade date 2027-11-26) [N15]",
+     "document": "D44",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2027-11-25",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-11-25: 12:00 preopen; 17:00 open (trade date 2027-11-26) [N15]",
+     "document": "D45",
+     "tier": "T2",
+     "close_instant": "12:00 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "FX (6E) | date 2027-11-25",
+     "status": "modified",
+     "verbatim": "eventDate 2027-11-25: 16:00 preopen; 17:00 open (trade date 2027-11-26) [N3]",
+     "document": "D44",
+     "tier": "T2"
+    },
+    {
+     "family": "Energy (CL); Metals (GC) | date 2027-11-25",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-11-25: 13:30 preopen; 17:00 open (trade date 2027-11-26) [N16]",
+     "document": "D44",
+     "tier": "T2",
+     "close_instant": "13:30 CT",
+     "open_instant": "17:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC); Livestock (LE); Dairy (CSC); Lumber (LBR) | date 2027-11-25",
+     "status": "closed",
+     "verbatim": "eventDate 2027-11-25: no events published [N1]",
+     "document": "D44",
+     "tier": "T2"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW); Livestock / Lean Hogs (HE); Dairy / Class III Milk (DC) | date 2027-11-25",
+     "status": "closed",
+     "verbatim": "eventDate 2027-11-25: no events published [N1]",
+     "document": "D45",
+     "tier": "T2"
+    },
+    {
+     "family": "Cryptocurrency (BTC) | date 2027-11-25",
+     "status": "modified",
+     "verbatim": "eventDate 2027-11-25: 16:01 preopen; 16:02 open (trade date 2027-11-26) [N10]",
+     "document": "D44",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN) | date 2027-11-26",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-11-26: 12:15 closed (trade date 2027-11-26) [EC 12:15 CT]",
+     "document": "D44",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2027-11-26",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-11-26: 12:15 closed (trade date 2027-11-26) [EC 12:15 CT]",
+     "document": "D45",
+     "tier": "T2",
+     "close_instant": "12:15 CT"
+    },
+    {
+     "family": "FX (6E); Energy (CL); Metals (GC) | date 2027-11-26",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-11-26: 13:45 closed (trade date 2027-11-26) [EC 13:45 CT]",
+     "document": "D44",
+     "tier": "T2",
+     "close_instant": "13:45 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2027-11-26",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-11-26: 08:30 open; 12:05 closed (trade date 2027-11-26) [EC 12:05 CT (normal final close 16:00 CT)]",
+     "document": "D44",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2027-11-26",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-11-26: 08:30 open; 12:05 closed (trade date 2027-11-26) [EC 12:05 CT (normal final close 16:00 CT)]",
+     "document": "D45",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Livestock (LE) | date 2027-11-26",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-11-26: 08:00 preopen; 08:30 open; 12:05 closed (trade date 2027-11-26) [EC 12:05 CT (normal final close 16:00 CT)]",
+     "document": "D44",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Livestock / Lean Hogs (HE) | date 2027-11-26",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-11-26: 08:00 preopen; 08:30 open; 12:05 closed (trade date 2027-11-26) [EC 12:05 CT (normal final close 16:00 CT)]",
+     "document": "D45",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    },
+    {
+     "family": "Dairy (CSC) | date 2027-11-26",
+     "status": "closed",
+     "verbatim": "eventDate 2027-11-26: no events published [N1]",
+     "document": "D44",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2027-11-26",
+     "status": "closed",
+     "verbatim": "eventDate 2027-11-26: no events published [N1]",
+     "document": "D45",
+     "tier": "T2"
+    },
+    {
+     "family": "Lumber (LBR) | date 2027-11-26",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-11-26: 06:00 preopen; 09:00 open; 12:05 closed (trade date 2027-11-26) [EC 12:05 CT (normal final close 15:05 CT)]",
+     "document": "D44",
+     "tier": "T2",
+     "close_instant": "12:05 CT"
+    }
+   ]
+  },
+  {
+   "date": "2027-12-23",
+   "name": "Christmas 2027 (CME holiday date Thu 23 Dec; Globex closed Fri 24 Dec; 25 Dec falls on Saturday)",
+   "families": [
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC) | date 2027-12-23",
+     "status": "modified",
+     "verbatim": "eventDate 2027-12-23: 16:00 closed (trade date 2027-12-23) [N6]",
+     "document": "D46",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY) | date 2027-12-23",
+     "status": "modified",
+     "verbatim": "eventDate 2027-12-23: 16:00 closed (trade date 2027-12-23) [N6]",
+     "document": "D47",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds (ZC) | date 2027-12-23",
+     "status": "modified",
+     "verbatim": "eventDate 2027-12-23: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2027-12-23) [N7]",
+     "document": "D46",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW) | date 2027-12-23",
+     "status": "modified",
+     "verbatim": "eventDate 2027-12-23: 07:45 paused; 08:00 preopen; 08:30 open; 13:20 paused; 13:30 closed; 14:30 pcp; 16:00 closed (trade date 2027-12-23) [N7]",
+     "document": "D47",
+     "tier": "T2",
+     "close_instant": "16:00 CT"
+    },
+    {
+     "family": "Livestock (LE) | date 2027-12-23",
+     "status": "normal",
+     "verbatim": "eventDate 2027-12-23: 08:00 preopen; 08:30 open; 13:05 closed; 14:30 pcp; 16:00 closed (trade date 2027-12-23) [N8]",
+     "document": "D46",
+     "tier": "T2"
+    },
+    {
+     "family": "Livestock / Lean Hogs (HE) | date 2027-12-23",
+     "status": "normal",
+     "verbatim": "eventDate 2027-12-23: 08:00 preopen; 08:30 open; 13:05 closed; 14:30 pcp; 16:00 closed (trade date 2027-12-23) [N8]",
+     "document": "D47",
+     "tier": "T2"
+    },
+    {
+     "family": "Cryptocurrency (BTC) | date 2027-12-23",
+     "status": "modified",
+     "verbatim": "eventDate 2027-12-23: 16:00 closed /TD 2027-12-23; 16:01 preopen /TD 2027-12-27; 16:02 open /TD 2027-12-27 [N18]",
+     "document": "D46",
+     "tier": "T2"
+    },
+    {
+     "family": "Dairy (CSC) | date 2027-12-23",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-12-23: 13:55 closed (trade date 2027-12-23) [EC 13:55 CT, no evening re-open]",
+     "document": "D46",
+     "tier": "T2",
+     "close_instant": "13:55 CT"
+    },
+    {
+     "family": "Dairy / Class III Milk (DC) | date 2027-12-23",
+     "status": "early_close",
+     "verbatim": "eventDate 2027-12-23: 13:55 closed (trade date 2027-12-23) [EC 13:55 CT, no evening re-open]",
+     "document": "D47",
+     "tier": "T2",
+     "close_instant": "13:55 CT"
+    },
+    {
+     "family": "Lumber (LBR) | date 2027-12-23",
+     "status": "normal",
+     "verbatim": "eventDate 2027-12-23: 06:00 preopen; 09:00 open; 15:05 closed (trade date 2027-12-23) [N8]",
+     "document": "D46",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC); Grains & Oilseeds (ZC); Livestock (LE); Dairy (CSC); Lumber (LBR) | date 2027-12-24",
+     "status": "closed",
+     "verbatim": "eventDate 2027-12-24: no events published [N1]",
+     "document": "D46",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY); Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW); Livestock / Lean Hogs (HE); Dairy / Class III Milk (DC) | date 2027-12-24",
+     "status": "closed",
+     "verbatim": "eventDate 2027-12-24: no events published [N1]",
+     "document": "D47",
+     "tier": "T2"
+    }
+   ]
+  },
+  {
+   "date": "2028-01-01",
+   "name": "New Year's Day 2028 (Sat 1 Jan) - edge of scope, sourced with the 2027 year-end",
+   "families": [
+    {
+     "family": "Equity Index (ES); Interest Rates (ZN); FX (6E); Energy (CL); Metals (GC); Grains & Oilseeds (ZC); Livestock (LE); Dairy (CSC); Lumber (LBR) | date 2028-01-01",
+     "status": "normal",
+     "verbatim": "eventDate 2028-01-01: no events published [N8]",
+     "document": "D48",
+     "tier": "T2"
+    },
+    {
+     "family": "Equity Index / Nikkei 225 USD (NKD); Equity Index / Nikkei JPY (NIY); Grains & Oilseeds / Soybeans (ZS); Grains & Oilseeds / Wheat (ZW); Livestock / Lean Hogs (HE); Dairy / Class III Milk (DC) | date 2028-01-01",
+     "status": "normal",
+     "verbatim": "eventDate 2028-01-01: no events published [N8]",
+     "document": "D49",
+     "tier": "T2"
+    },
+    {
+     "family": "Cryptocurrency (BTC) | date 2028-01-01",
+     "status": "normal",
+     "verbatim": "eventDate 2028-01-01: 02:00 closed; 03:45 preopen; 04:00 open (trade date 2028-01-03) [N8]",
+     "document": "D48",
+     "tier": "T2"
+    }
+   ]
+  }
+ ],
+ "missing": [
+  "Nikkei 225 (NKD Nikkei/USD, NIY Nikkei/JPY) for the eight 2025 holidays through Labor Day 2025: New Year 2025 (window 2024-12-31..2025-01-02), MLK 2025, Presidents' Day 2025, Good Friday 2025, Memorial Day 2025, Juneteenth 2025, Independence Day 2025 and Labor Day 2025. RE-SCOPED IN THE REPAIR ROUND 2026-09-12: this entry previously also claimed every 2025/2026 holiday from Thanksgiving 2025 through Independence Day 2026, on the premise that CME's trading-hours service 'drops past holiday events'. That premise was a false generalisation from one probe of window 2025-01-19..2025-01-21. The service still answers for past windows: queried live on 2026-09-12 with the THBP-B id set (168,167,320,323,19,27), it returns a full schedule for all nine windows from Thanksgiving 2025 forward, and those rows are now in the payload as D54-D64. What remains missing is only the eight windows above, and the reason is a retention edge, not a dropped event class: each of the eight was queried live in the repair round and returns all six products with an empty schedule list (raw/cme-2025-2027-repair/live/edgeB_2024-12-31_2025-01-02.md and the seven siblings, 6 products / 0 events each, hashed in raw/cme-2025-2027-repair/INDEX.md). Other channels tried: Wayback CDX over cmegroup.com/services/trading-hours-by-product* for 2024-2027, which holds 688 distinct captured URLs and whose every 2025/early-2026 holiday window uses only CME's ten most-active product ids (316,133,425,300,58,437,22,8478,5201,10191), which do not include NKD/NIY - the THBP-B id set appears nowhere in the archive; Wayback CDX over cmegroup.com/tools-information/holiday-calendar* 2024-2027, where the 2025/ and 2026/ folders contain only settlement-times, clearing-advisory and OTC PDFs, none of which state trading hours; the archived trading-hours.html pages, whose holiday table is rendered client-side and so is absent from the captured HTML. What would close it: an archived call of the service over one of the eight windows carrying the THBP-B ids, or a CME notice restating those dates per asset class. For those eight dates Nikkei is unmodelled as a separate line; from Thanksgiving 2025 onward it IS sourced, and it tracks Equity Index (ES) on every date - including Good Friday 2026, where NKD/NIY close 08:15 CT with ES and NOT 10:15 CT with Interest Rates, FX and Cryptocurrency.",
+  "Soybeans (ZS), Chicago SRW Wheat (ZW), Lean Hogs (HE) and Class III Milk (DC) as separately named lines for the same eight 2025 holidays through Labor Day 2025, for the same reason and through the same channels as the Nikkei entry above. RE-SCOPED IN THE REPAIR ROUND 2026-09-12 on the same evidence: from Thanksgiving 2025 forward all four are sourced live (D54-D64) and are in the payload. For the eight remaining dates their families are still sourced by the product CME itself uses for the group - ZC for Grains & Oilseeds, LE for Livestock, CSC for Dairy - and on every date where all of them are available, ZS/ZW match ZC, HE matches LE and DC matches CSC event for event.",
+  "A post-finalisation operator statement for eight 2025 windows: New Year 2025 (window 2024-12-31..2025-01-02), MLK 2025, Presidents' Day 2025, Good Friday 2025, Memorial Day 2025, Juneteenth 2025, Independence Day 2025 and Labor Day 2025. For each of those the only capture of the service window is 2024-12-20T15:53:40Z (New Year also has an earlier 2024-07-08T16:14:39Z capture), i.e. a pre-holiday publication. Channels tried and re-run in this round: a fresh CDX enumeration of cmegroup.com/services/trading-hours-by-product* (raw/cme-2025-2027-fix/cdx/cdx_thbp_all_fix.json, 688 rows, 2026-09-12) window by window; the live service, re-probed in the repair round 2026-09-12 - it does answer for past windows back to Thanksgiving 2025, but all eight of these windows fall past its retention edge and return the products with empty schedules (raw/cme-2025-2027-repair/live/edgeB_*.md), so the channel cannot restate them; CDX over the holiday-calendar file folder for 2025 (settlement/clearing/OTC PDFs only, none stating trading hours); the archived trading-hours.html pages (the holiday table is rendered client-side and is absent from the captured HTML). NOT missing, and corrected in this round: Thanksgiving 2025 and Christmas 2025 both have 45 captures of their window and New Year 2026 has 51, the later ones taken in the 2026-01-29 and 2026-07-22 crawls, i.e. after the holiday. Thanksgiving 2025 is now sourced from the latest of them (D09, 2026-01-29T01:23:09Z); the round-0 claim that no post-2024-12-20 capture existed for it was wrong. What would still close the eight: a CME notice or advisory restating the finalised Globex hours for those dates, or any later archived call of services/trading-hours-by-product covering those windows.",
+  "A T1 (rather than T2) per-asset-class rendering for every holiday. The trading-hours page renders only the next upcoming holiday by default and its holiday selector could not be driven from the URL (tried ?holiday-date-from=/&holiday-date-to= against cmegroup.com/trading-hours.html, which returned the page without the table). The T1 rendering was captured for one holiday (Thanksgiving 2026) and used to validate the service rows group by group; the remaining holidays rest on the service itself.",
+  "CME ClearPort, BrokerTec, EBS, the Chicago/New York trading floors and the Spot Dairy auction have their own holiday calendars printed on the same page. They were not extracted - none of the eight served product-family keys or the ten venues in scope route to them - but they are present verbatim in html/trading-hours-20250830.html (2025) and live/trading-hours-live.md (2026/2027) if a later task needs them."
+ ],
+ "saved_json": "/Users/agedvagabond/Developer/exchange-hours-research/holidays/cme-2025-2027.json"
+}

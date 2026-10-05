@@ -1,0 +1,321 @@
+Title: CME Globex Notice: July 27, 2026 - CME Group
+
+URL Source: https://www.cmegroup.com/notices/electronic-trading/2026/07/20260727.html
+
+Markdown Content:
+## Critical Updates
+
+### New 24/7 Maintenance Window Schedule Extension - This Week
+
+Effective this**Saturday, August 1**, CME Group will temporarily extend the **Saturday** maintenance window schedule for 24/7 markets to 2:00 – 9:00 a.m. Central Time (CT).
+
+| Maintenance Window Schedule Extension |
+| --- |
+| Channel Name | Market Segment ID (tag 1300-MarketSegmentID) | MDP Channel Number |
+| CME Crypto Futures | 74 | 326 |
+| CME Crypto Options | 327 |
+| Event-based contracts | 329 |
+| Event Contracts II | 90 | 333 |
+
+Following this one-day extension, the **Saturday** window will revert to its standard schedule.
+
+### New MBP and MBOFD Market Recovery - August 9
+
+Starting **Sunday, August 9** (trade date Monday, August 10), CME Globex will enhance [MBP and MBOFD Market Recovery](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457672425/MDP+3.0+-+MBP+and+MBOFD+Market+Recovery) functionality.
+
+To better support client recovery, MDP and MDOFD market recovery will no longer reset [daily statistics](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457325864/MDP+3.0+-+Daily+Statistics) after a [channel reset message](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457422951/MDP+3.0+-+Market+Data+Incremental+Refresh+-+Channel+Reset) is sent. Consequently, client systems should not reset the last received daily statistics with a channel reset.
+
+Daily statistics values will be available in the market recovery feed after the channel reset is processed for instruments that have working orders or have traded during the current session. Refer to the [Channel Reset Guide](https://www.cmegroup.com/globex/files/mbp-mbofd-market-recovery-update.pdf) for a list of affected channels and timelines.
+
+These changes will be available for customer testing in New Release on **Thursday, August 6**.
+
+### CME MDP 3.0 Market Data Security Definition Updates - Starting August 15
+
+Starting**Saturday, August 15,**CME Group will continue populating existing fields in the [CME Market Data 3.0 Security Definition](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457672532/MDP+3.0+-+Security+Definition) 35-MsgType=d messages. The following fields and markets are impacted:
+
+*   **Tag 1682-MDSecurityTradingStatus** – Impacts listed derivatives, Brokertec, and EBS
+*   **Tag 37513-InstrumentGUID** – Impacts listed derivatives
+
+These changes are being phased-in across the New Release and Production environments for CME Globex listed derivatives, BrokerTec and EBS markets.
+
+Please review the [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/CME+MDP+3.0+Market+Data+Security+Definition+Updates) for full technical details and launch schedule.
+
+### Livestock Futures and Options Migration to New Market Segments and MDP Channels - August 16
+
+To prepare for [Livestock markets migration to Google Cloud in Q4 2026](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457216122/CME+Globex+on+Google+Cloud#Livestock-Listed-Derivatives-in-Production-Dallas), CME Group is launching new, dedicated Market Segments and Market Data Platform (MDP) Channels on-premise to segregate Livestock markets from the rest of the Agricultural complex.
+
+Effective **Sunday, August 16**, Livestock markets will trade on the new Market Segments and MDP Channels.
+
+Clients will need to connect to new multicast channels for market data, and the new Market Segment Gateways (MSGW) and Drop Copy for MSGW instances for access to Livestock listed derivative markets.
+
+After the Livestock markets close on the Friday before migration, all resting Good Till Cancel (GTC) and Good Till Date (GTD) orders on User-Defined Spreads (UDS) will be eliminated and all UDS will be allowed to expire. GTC and GTD orders on exchange defined instruments and spreads will be persisted and will migrate to the new Segments along with the instruments.
+
+These changes are currently available for customer testing in New Release.
+
+These new market segments will be available in the Sandbox-Dallas environment before the Production-Dallas launch. The launch date will be announced in future CME Globex Notices.
+
+Further details on these changes, including new networking information, are now available in the [Client Systems Wiki](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/Livestock+Futures+and+Options+Migration+to+Production-Dallas).
+
+### 10-Barrel WTI Crude Oil Futures with 24/7 Trading - August 30
+
+Effective **Sunday, August 30** (trade date Monday, August 31), pending completion of regulatory review periods, 10-Barrel WTI Crude Oil futures will be listed for trading on CME Globex. These new futures will support [24/7 Technical Market Functionality](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/24-7+Technical+Market+Functionality) and be tradable over the weekend.
+
+| 10-Barrel WTI Crude Oil Futures |
+| --- |
+| Product | MDP 3.0: Tag 6937-Asset | iLink/MDP 3.0: Tag 1151-Security Group | Included Spreads and Combos: Tag 762-SecuritySubType | Market Data Channel MDP 3.0 Tag 1180 - APPLID |
+| 10-Barrel WTI Crude Oil Futures | TCL | CS | SP - Standard Calendar | 325 |
+
+Please review the [client impact assessment](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/10-Barrel+WTI+Crude+Oil+Futures+On+24-7+Trading) for connectivity and configuration information, technical details and launch schedules.
+
+Market data [multicast IP and port details](https://www.cmegroup.com/solutions/market-access/globex/globex-resources.html#nmdmgmdp30c350) are available from the Connectivity and Configuration Details page.
+
+Please be advised that CME Group has introduced an additional 24/7 initiative. For comprehensive information regarding 1-Ounce Gold futures 24/7 trading, please review the [Globex Notice](https://www.cmegroup.com/notices/electronic-trading/2026/07/20260706.html#1gfet2t).
+
+Additionally, a [24/7 Trading for 1-Ounce Gold and 10-Barrel WTI Crude Oil Overview](https://www.cmegroup.com/globex/files/1-ounce-gold-and-10-barrel-crude-futures-expansion-to-24-7-trading.pdf) is available for high-level information on the initiatives.
+
+These futures are currently available for customer testing in New Release.
+
+### New Market Data Channel 335 for Equity Index and Alternative Product Launch - Q3 2026
+
+To support the expansion of the Equity Index and Alternative Products asset class, CME Group will launch a new market data multicast group in **Q3 2026**.
+
+This new multicast group will utilize Channel ID 335.
+
+While the product launch is scheduled for Q3 2026, please use your CME Group login to review[network specifications](https://www.cmegroup.com/solutions/market-access/globex/globex-resources.html#nmdc335) now to proactively manage firewall policies and network configurations.
+
+### Update CME Globex Migration to Google Cloud - Q4 2026
+
+† Denotes update to the article
+
+[Listed Derivative markets on the CME Globex platform](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457216122/CME+Globex+on+Google+Cloud#Scope) are migrating to Google Cloud’s Ultra Low Latency (ULL) Solution to deliver a more flexible, scalable, and resilient trading ecosystem for clients. By combining Google Cloud’s ULL infrastructure with industry-leading Globex execution capabilities, this transition will unlock expanded co-location options, real-time data analytics, and enhanced operational efficiency to better support your needs. Maintaining market integrity and operational continuity remains our highest priority; we are dedicated to supporting you throughout every phase of this migration with robust testing sandboxes, transparent roadmaps, and dedicated support to deliver a reliable transition.
+
+To provide clients with a real-world production environment on Google Cloud prior to the Chicago region launch, **[Livestock futures and options will migrate to a new Production-Dallas environment](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/1601568771/Livestock+Futures+and+Options+Migration+to+Production-Dallas) in the private zones of the Dallas region in****Q4 2026**. In the second half of 2028, Livestock futures and options will migrate to the Production-Chicago environment, in the private Google Cloud Chicago region.
+
+CME Group is also offering a Pilot Program for clients who achieve specific technical milestones in the Sandbox-Dallas environment. The first 50 participants to complete each obligation by the deadline and submit proof will earn a stipend. Details on this program are available in the [CME Globex Sandbox-Dallas Pilot Program Agreement](https://www.cmegroup.com/globex/files/sandbox-dallas-pilot-program.pdf).
+
+†Clients now have access to all in-scope [market segments](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457216122/CME+Globex+on+Google+Cloud#Market-Segments-in-Sandbox-Dallas) in the Sandbox-Dallas environment.
+
+†To support market access and the [Dual Zones Solution](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457216122/CME+Globex+on+Google+Cloud#%5BinlineExtension%5DDual-Zones-Solution), CME Group offers new discovery services via REST API for easing client network connectivity management. CME Group now offers the [CME Globex Discovery Service - Configuration API](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/CME+Globex+Discovery+Service+API+-+Configuration). Clients can use this REST API endpoint to programmatically retrieve IP address configurations for MDP channels, MSGW, and Drop Copy gateways in the Sandbox environment. The [CME Globex Discovery Service - Zone Schedule API](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/1684373519/CME+Globex+Discovery+Service+API+-+Zone+Schedule) is also available, to determine which zone is currently Active and when the next zone swap is scheduled to occur.
+
+Information on compute pricing for U4C Bare Metal and U4S Virtual Machine instances is available now from Google Cloud’s Account Teams. To support the migration and the testing of U4 machines specifically, Google Cloud customers may opt in to a Google Cloud incentive program that provides up to $30,000 in credits for U4 compute usage. More information on this program is available from your Account Team or contact [exchanges@google.com](mailto:exchanges@google.com).
+
+**Stay Informed**
+
+Ensure your team is subscribed to CME Globex Notices by [email](https://www.cmegroup.com/subscription-center.html?itm_source=globex&itm_medium=cmegroup&itm_campaign=google_cloud#category=Trading%20%26%20Technology) and [RSS feed](https://www.cmegroup.com/rss.html?itm_source=globex&itm_medium=cmegroup&itm_campaign=google_cloud) for ongoing updates.
+
+### Decommission of IKEv1 Client Internet Connections- January 1
+
+Effective **Friday,****January 1,**Internet Key Exchange version 1 (IKEv1) will no longer be supported for all client internet connections. This includes Client Internet Link, CME Certification Virtual Private Network (CERT VPN) and CL2 Cert VPN.
+
+Please view the [minimum requirements for CME Group internet connectivity](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457319416/Client+INTERNET+Link).
+
+An upgrade to Internet Key Exchange version 2 (IKEv2) requires coordination with our network team. Please contact CME Group Global Account Management at [CMEDHGroup@cmegroup.com](mailto:CMEDHGroup@cmegroup.com)for questions or an IKEv2 upgrade.
+
+### Position Reporting Under CFTC Part 17
+
+On April 30, 2024, the Commodity Futures Trading Commission ("CFTC") approved final rules to amend its [Large Trading Reporting Regulations for Futures and Options](https://www.cftc.gov/PressRoom/PressReleases/8902-24). The amendments were made to modernize CFTC's Large Trader Reporting process and align it with other reporting structures outlined in CFTC regulations.
+
+Since October 2024, CME Group has offered methods to retrieve its instrument listing containing the Unique Instrument Code (UIC) and other instrument data elements in compliance with the amended rule.
+
+Starting March 10, 2025, CME Group began accepting test files in the new Position Message FIXML format via SFTP. For details regarding submitting the new FIXML Position Message, file management, field validations, and example scenarios, please refer to the information in the[CME Group Client Systems Wiki](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457216877/Position+Reporting+Under+CFTC+Part+17).
+
+CFTC's final rules became effective upon publication in the Federal Register on June 3, 2024. Subject to the conditions of the January 27, 2026, no-action letter, reporting firms must comply with these CFTC regulations by **July 26, 2027.**
+
+A test environment for Large Trader Reporting is now available within the Firm Regulatory Portal (FRP UT). Users can access the testing portal at: [https://frp.uat.cmegroup.com](https://frp.uat.cmegroup.com/).
+
+A brief [video demonstration](https://www.cmegroup.com/articles/2026/large-trader-position-reporting-in-firm-regulatory-portal.html) is available to highlight the new look and functionality of the FRP UT.
+
+The Market Regulation Department will be publishing further guidance regarding Large Trader Reporting in subsequent Special Executive Reports as solutions become available.
+
+**Support Contacts**
+
+*   To request access to FRP UT, please contact the [Enterprise Application & System Entitlements (EASE) team](mailto:EASE@cmegroup.com).
+*   For questions or comments regarding FRP UT, please contact [LTR_Part17_Alerts@cmegroup.com](mailto:LTR_Part17_Alerts@cmegroup.com).
+*   For questions about trade practice rules, please contact [MarketReg.Outreach@cmegroup.com](mailto:MarketReg.Outreach@cmegroup.com).
+
+## Product Launches
+
+### RepoFunds Rate Select20 - August 3
+
+Effective**Monday**, **August 3**, CME Group Benchmark Administration Limited (CBA) will launch RepoFunds Rate Select20 Indices (RFR Select20) on the CME Benchmark Administration Premium market data channel.
+
+The RFR Select20 are a series of one-day repo indices designed to measure the on-day cost of secured funding based on sovereign debt of selected countries. The RFR Select20 indices leverage an enhanced filtering method relative to the primary RepoFunds Rate (RFR) benchmark indices to create a rate more representative of the general collateral rate.
+
+RFR France, Germany and Italy Select20 will be published by 5:00 p.m. Greenwich Mean Time (GMT)/British Summer Time (BST) on BrokerTec EU business days, and RFR Sterling Select20 will be published by 5:00 p.m. GMT/BST on BrokerTec UK Gilt business days.
+
+| RFR Select20 |
+| --- |
+| INDEX NAME | BENCHMARK PREMIUM TAG 37500 - CLEARING PRODUCT CODE | MARKET DATA CHANNEL MDP 3.0 TAG 1180 - ApplID |
+| RFR France Select20 | RFFR20 | 261 |
+| RFR Germany Select20 | RFDE20 | 261 |
+| RFR Italy Select20 | RFIT20 | 261 |
+| RFR Sterling Select20 | RFGB20 | 261 |
+
+The new RepoFunds Rate Select20 Indices are currently available for customer testing in New Release.
+
+### New Lithium Carbonate Option - August 16
+
+Effective **Sunday, August 16** (trade date Monday, August 17), pending completion of all regulatory review periods, Lithium Carbonate option will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| Lithium Carbonate Option |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | iLink/MDP 3.0 Tag 1151 - Security Group | MARKET DATA CHANNEL/MDP 3.0 TAG 1180 - APPLID |
+| Lithium Carbonate CIF CJK (Fastmarkets) Average Price Option | LCO | L4 (UDS: L5) | 361 |
+
+This option will be available for customer testing in New Release on **Sunday, August 9**.
+
+These contracts are listed with, and subject to, the rules and regulations of COMEX.
+
+### New Monday-Thursday Weekly Kansas City Wheat Options - August 23
+
+Effective **Sunday, August 23** (trade date Monday, August 24), pending completion of all regulatory review periods, Monday-Thursday Weekly Kansas City Wheat options will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| Monday-Thursday Weekly Kansas City Wheat Options |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | iLink/MDP 3.0 Tag 1151 - Security Group | MARKET DATA CHANNEL/MDP 3.0 TAG 1180 - APPLID |
+| KC HRW Wheat Monday Options - Weeks 1-5 | OM1-5 | OK (UDS: 1G) | 341 |
+| KC HRW Wheat Tuesday Options - Weeks 1-5 | OT1-5 | OK (UDS: 1G) | 341 |
+| KC HRW Wheat Wednesday Options - Weeks 1-5 | OW1-5 | OK (UDS: 1G) | 341 |
+| KC HRW Wheat Thursday Options - Weeks 1-5 | OH1-5 | OK (UDS: 1G) | 341 |
+
+These options will be available for customer testing in New Release on **Sunday, August 16**.
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+### Sorghum Futures - August 23
+
+Effective **Sunday, August 23** (trade date Monday, August 24), pending completion of all regulatory review periods, Sorghum futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| Sorghum Futures |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | iLink/MDP 3.0 Tag 1151 - Security Group | Included Spreads and Combos - Tag 762- SecuritySubType | MARKET DATA CHANNEL MDP 3.0 TAG 1180 - APPLID |
+| Sorghum Futures | MILO | UD | BC - Buy Buy Combo SP - Standard Calendar Spread | 340 |
+
+These futures will be available for customer testing in New Release on **Sunday, August 16**.
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+### New S&P UBS USD Liquid Leveraged Loan Index Futures - September 13
+
+Effective **Sunday, September 13** (trade date Monday, September 14), pending completion of all regulatory review periods, S&P UBS USD Liquid Leveraged Loan Index futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| S&P UBS USD Liquid Leveraged Loan Index Futures |
+| --- |
+| PRODUCT | MDP 3.0: TAG 6937-ASSET | iLink/MDP 3.0 Tag 1151 - Security Group | Included Spreads and Combos - Tag 762-SecuritySubType | MARKET DATA CHANNEL / MDP 3.0 TAG 1180 - APPLID |
+| S&P UBS USD Liquid Leveraged Loan Index Futures | LVE | L9 | RT- Reduced Tick Calendar Spread | 344 |
+| S&P UBS USD Liquid Leveraged Loan Index Futures Fixing | LVF | - | - | 252 |
+
+The corresponding fixing prices are sent on [CME Data Insights - Settlements and Valuations](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457089321/CME+Data+Insights+-+Settlements+and+Valuations) channels via [MDP 3.0 Market Data Incremental Refresh](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457226984/MDP+3.0+-+Market+Data+Incremental+Refresh) (tag 35-MsgType=X) message types with the following attributes:
+
+*   Tag 279- MDUpdateAction will be set to 0 = New
+*   Tag 269-MDEntryType will be set to 6 = Settlement Price _or_ 269-MDEntryType will be set to W = Fixing Price
+*   Tag 5796-Trading Reference will display the date for which the marker price was calculated
+
+These products will be available for customer testing in New Release on **Sunday, August 16**.
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+## Product Changes
+
+### New Delisting and Removal of Domestic Power Futures and Options - This Week
+
+On **Monday, July 27**, [Domestic Power futures and options](https://www.cmegroup.com/globex/files/delisting-removal-power-futures-options.pdf) were delisted. Effective close of business this **Friday, July 31**, these futures and options will be removed from CME Globex.
+
+These futures and options currently have no open interest.
+
+### Trading Hours Change for Black Sea Wheat (CVB) Futures and Options - This Week
+
+Effective this**Sunday, August 2** (trade date Monday, August 3), the trading hours for Black Sea Wheat (CVB) futures and options will be updated on CME Globex.
+
+| Trading Hours Change for Black Sea Wheat (CVB) Futures and Options |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink/MDP 3.0 Tag 1151 - Security Group | Current Trading Hours | New Trading Hours |
+| Black Sea Wheat (CVB) Financially Settled (Argus) Futures | CVB | BW | CME Globex Pre-Open Sunday: 4:00 p.m. – 7:00 p.m. Central Time (CT) Monday – Thursday: 4:45 p.m. – 7:00 p.m. CT Monday – Friday: 8:00 a.m. – 8:30 a.m. CT CME Globex: Sunday - Friday, 7:00 p.m. - 7:45 a.m. CT Monday - Friday, 8:30 a.m. - 1:20 p.m. CT | CME Globex Pre-open: Sunday: 4:00 p.m. – 7:00 p.m. CT Monday – Thursday: 4:45 p.m. – 7:00 p.m. CT CME Globex: Sunday - Friday 7:00 p.m. – 1:20 p.m. CT |
+| Options on Black Sea Wheat (CVB) Financially Settled (Argus) Futures | CVO | R0 (UDS:RK) | CME Globex Pre-Open Sunday: 4:00 p.m. – 7:00 p.m. CT Monday – Thursday: 4:45 p.m. – 7:00 p.m. CT Monday – Friday: 8:00 a.m. – 8:30 a.m. CT CME Globex: Sunday - Friday, 7:00 p.m. - 7:45 a.m. CT Monday - Friday, 8:30 a.m. - 1:20 p.m. CT | CME Globex Pre-open: Sunday: 4:00 p.m. – 7:00 p.m. CT Monday – Thursday: 4:45 p.m. – 7:00 p.m. CT CME Globex: Sunday - Friday 7:00 p.m. – 1:20 p.m. CT |
+
+These changes are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+### New Last Trade Date Amendment for KC HRW Wheat Friday Weekly Options: Week 1-5 - August 23
+
+Effective **Sunday, August 23**, the last trade date for the KC HRW Wheat Friday Weekly options will be amended as follows:
+
+| Last Trade Date Amendment for the KC HRW Wheat Friday Weekly Options: Week 1-5 |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink/MDP 3.0 tag 1151 - Security Group | Current Last Trade Date | New Last Trade Date |
+| KC HRW Wheat Friday Weekly Options: Week 1-5 | OE1,OE2,OE3,OE4,OE5 | KE | Trading terminates on Friday of the contract week. If that day is not a business day, move the LTD to the prior business day. | Trading terminates on Friday of the contract week. If that day is not a business day, do not list it. |
+
+These contracts will be available for customer testing in New Release on **Sunday, August 16**.
+
+These contracts are listed with, and subject to, the rules and regulations of CBOT.
+
+### Change to Maximum Order Quantity for Treasury Invoice Spreads - August 23
+
+Effective **Sunday, August 23** (trade date Monday, August 24), the [maximum order quantity for Treasury Invoice Spreads](https://www.cmegroup.com/globex/files/change-maximum-order-qty-treasury-invoice-spreads.pdf) will be changed.
+
+To facilitate this change, customers are asked to cancel all Good Till Cancel (GTC) and Good Till Date (GTD) orders after the close on **Friday, August 21**. After 16:00 CT on Friday, August 21, all remaining GT orders for these spreads will be cancelled or deleted by the CME Global Command Center (GCC)
+
+This change will be made available for customer testing in New Release on **Sunday, August 16**.
+
+These contracts are listed with, and subject to, the rules Oktoberfest CBOT.
+
+### New Listing Cycle Expansion for MXN/USD Futures Contract Months and FX Calendar Spreads - August 30
+
+Effective **Sunday, August 30** (trade date Monday, August 31), listing cycle for the MXN/USD future contract months and FX calendar spreads will be expanded on CME Globex.
+
+These changes will be available for customer testing in New Release on **Sunday, August 16**.
+
+| Listing Cycle Expansion for MXN/USD Futures Contract Months and FX Calendar Spreads |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink/MDP 3.0 Tag 1151 - Security Group | Tag 762-SecuritySubType | Current Listing Schedule | New Listing Schedule |
+| MXN/USD Futures | 6M | 6M | - | Monthly contracts listed for 13 consecutive months and 2 additional quarterly contracts (Mar, Jun, Sep, Dec). | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 20 consecutive quarters and serial contracts listed for 16 months. |
+| MXN/USD FX Calendar Spreads | 6M | 6M | SD | 10 1-quarter calendar spreads. 1 1-month calendar spread. 1 2-month calendar spread. 1 2-quarter calendar spread. 1 3-quarter calendar spread. 1 4-quarter calendar spread. | 4 1-month calendar spreads. 19 1-quarter calendar spreads. 4 2-quarter calendar spreads. 4 3-quarter calendar spreads. 4 4-quarter calendar spreads. 2 5-quarter calendar spreads. 2 6-quarter calendar spreads. 2 7-quarter calendar spreads. 1 8-quarter calendar spreads. 4 2-month calendar spreads. 2 3-month calendar spreads. 2 4-month calendar spreads. 2 5-month calendar spreads. 2 7-month calendar spreads. 2 8-month calendar spreads. 2 10-month calendar spreads. 1 11-month calendar spread. |
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+## Events and Announcements
+
+### CME STP FIX on Google Cloud - Production Internet Connectivity Migration Deadline- This Week
+
+As part of a phased migration of CME Straight Through Processing APIs to Google Cloud, [Production internet connectivity](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/CME+STP+FIX+API+on+Google+Cloud#Production-Environment) options for CME STP FIX API are **now available** .
+
+Close of business this**Friday, July 31**, all clients must complete migration and connect to CME STP FIX API Production using only the Google Cloud hostnames.
+
+CME STP FIX on Google Cloud is available in parallel to the current on-prem instance. When connecting in parallel to Google Cloud **and** on-prem instances, clients should ensure trades are not double-booked.
+
+A mandatory supplemental certification for message recovery is now available for CME STP FIX on Google Cloud.
+
+Please contact [Certification Support for Electronic Trading](mailto:cset@cmegroup.com) (CSET) with any questions in the U.S. at +1 312 930 2322, in Europe at +44 20 3379 3803 or in Asia at +65 6593 5593.
+
+### CME STP FIX on Google Cloud - Production Dedicated Connectivity Migration Deadline- This Week
+
+As part of a phased migration of CME Straight Through Processing APIs to Google Cloud, [Production dedicated connectivity](https://cmegroupclientsite.atlassian.net/wiki/display/EPICSANDBOX/CME+STP+FIX+API+on+Google+Cloud#Production-Environment) options for CME STP FIX API are **now available** .
+
+Close of business this **Friday, July 31**, all clients must complete migration and connect to CME STP FIX API Production using only the Google Cloud hostnames.
+
+CME STP FIX on Google Cloud is available in parallel to the current on-prem instance. When connecting in parallel to Google Cloud **and** on-prem instances, clients should ensure trades are not double-booked.
+
+A mandatory supplemental certification for message recovery is now available for CME STP FIX on Google Cloud.
+
+Please contact [Certification Support for Electronic Trading](mailto:cset@cmegroup.com) (CSET) with any questions in the U.S. at +1 312 930 2322, in Europe at +44 20 3379 3803 or in Asia at +65 6593 5593.
+
+### Messaging Efficiency Program Changes - August 3
+
+Effective on trade date **Monday, August 3,** the Messaging Efficiency Program (MEP) futures and options program benchmarks for product groups Gold Futures-GC and Silver Futures-SI will be increased to 45:1 and 60:1, respectively. This change will encourage responsible messaging while recognizing broader changes to market conditions.
+
+The Excessive Messaging Threshold (EMT) for both CME Globex firms and iLink session IDs remains in place for all futures and options on futures products that trade on CME Globex. Refer to pages 12-14 in the [CME Globex Messaging Efficiency Program](https://www.cmegroup.com/globex/files/2024-revised-mep.pdf) for EMT-related information.
+
+The [CME Globex Messaging Efficiency Program](https://www.cmegroup.com/globex/files/2024-revised-mep.pdf) creates fair business guidelines by which customers are billed a surcharge for overly high message rates.
+
+CME Globex firms who exceed the benchmark ratios in applicable product groups and are enrolled accordingly, receive email notifications of any potential surcharges. CME Globex firms who have access to the Firm Administrator Dashboard have the ability to view their messaging statistics on a T+1 basis.
+
+Please contact the [CME Global Command Center](mailto:gcc@cmegroup.com) with any questions in the U.S. at +1 800 438 8616, in Europe at +44 20 7623 4747, in Asia at +65 6532 5010 or Japan at +81 3 6733 7559.
+
+#### Stay Informed on Technology Changes
+
+Don't miss important updates about new features, products and technology changes. Subscribe using the method(s) that best fits your workflow:
+
+##### Receive email notices
+
+Stay informed, with notices delivered directly to your inbox.

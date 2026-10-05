@@ -1,0 +1,118 @@
+CFE Presidents’ Day Holiday Testing Opportunity
+Reference ID: C2019020402
+
+
+Overview
+To provide additional opportunities for holiday testing, the CFE Certification environment will be
+configured to observe a holiday trading session beginning Sunday, February 10, 2019. The test is designed
+to mimic the modified trading hours associated with the 2019 Presidents Day holiday. After the start of
+the CFE Certification trading environment on the morning of February 10, 2019, the simulated holiday
+trading session will commence for the business date of February 12, 2019. All times referenced in this
+notice are Chicago time.
+
+
+Simulated Holiday Trading Schedule
+VX and XBT Futures
+The CFE Certification schedule below will apply for the Monday, February 11, 2019, simulated holiday
+trading session in VX and XBT futures, including Trade at Settlement (TAS) transactions in VX futures (VXT):
+
+
+     Type of Trading Hours            Monday, February 11, 2019                 Tuesday, February 12, 2019
+           Extended                 5:00 p.m. (Sunday) to 10:30 a.m.          5:00 p.m. (Monday) to 8:30 a.m.
+                                          for VX, VXT, and XBT                              and
+                                                                                   3:30 p.m. to 4:00 p.m.
+                                                                                      for VX and XBT
+
+                                                                              5:00 p.m. (Monday) to 8:30 a.m.
+                                                                                          for VXT
+            Regular                               None                             8:30 a.m. to 3:15 p.m.
+                                          for VX, VXT, and XBT                        for VX and XBT
+
+                                                                                   8:30 a.m. to 3:13 p.m.
+                                                                                          for VXT
+
+
+
+A holiday trading session includes extended trading hours on the calendar day of the holiday and any
+extended trading hours for the holiday on the previous calendar day. Holiday trading sessions are not
+separate Business Days and are part of the next Business Day. Trading in VX and XBT futures is suspended
+between sessions of extended trading hours on the calendar day of a holiday.
+All Other Products
+
+Simulated trading in the certification environment will be closed for all CFE products other than VX and
+XBT futures on Monday, February 11, 2019.
+
+
+Submission Time Frames for the Simulated Presidents Day Holiday
+The chart below sets forth the applicable time frames for the submission of Orders (including Cancel
+Orders and Cancel Replace/Modify Orders) in VX and XBT futures, including VXT TAS transactions (unless
+otherwise indicated), in connection with the simulated Presidents Day holiday.
+
+        Calendar Day                     Time Frame               State of CFE’s    What May be Submitted to the
+                                                                  Cert. Trading       CFE Cert. Trading System
+                                                                     System
+            Friday                4:00 p.m. to system restart      Suspended                    Nothing
+       February 8, 2019        (which occurs sometime between
+                                           10:00 a.m.
+                                         to 10:15 a.m.
+                                on Sunday, February 10, 2019)
+           Sunday                System restart (which occurs       Suspended      Cancel Orders for persisted Good-
+      February 10, 2019               sometime between                                     ‘til-Canceled (GTC)
+                                   10:00 a.m. to 10:15 a.m.)                            and Good-‘til-Date (GTD)
+                                          to 4:00 p.m.                               Orders from prior trading date
+           Sunday                   4:00 p.m. to 5:00 p.m.*       Queuing Period   Orders (except Market, Immediate
+      February 10, 2019                                                              or Cancel (IOC), and Fill or Kill
+                                                                                            (FOK) Orders)**
+
+                                                                                         TAS Orders for VXT**
+          Monday                5:00 p.m. (Sunday, February 10,     Extended         Orders (except Market Orders)
+      February 11, 2019               2019) to 10:30 a.m.         Trading Hours
+                                                                                           TAS Orders for VXT
+          Monday                  10:30 a.m. to system restart      Suspended                   Nothing
+      February 11, 2019        (which occurs sometime between
+                                     4:05 p.m. to 4:45 p.m.)
+          Monday                  System restart (which occurs      Suspended      Cancel Orders for persisted
+      February 11, 2019         sometime between 4:05 p.m. to                       Day, GTC, and GTD Orders from
+                                     4:45 p.m.) to 4:45 p.m.                            holiday trading session
+          Monday                     4:45 p.m. to 5:00 p.m.       Queuing Period   Orders (except Market, IOC, and
+      February 11, 2019                                                                     FOK Orders)**
+
+                                                                                         TAS Orders for VXT**
+          Monday                    5:00 p.m. to 8:30 a.m.          Extended         Orders (except Market Orders)
+      February 11, 2019          (Tuesday, February 12, 2018)     Trading Hours
+                                                                                           TAS Orders for VXT
+
+*The queuing period at the beginning of a Business Day for VX and XBT non-TAS single leg contract
+expirations and non-TAS spreads commences at the referenced start time for the queuing period plus a
+randomized time period from zero to three seconds. The queuing period at the beginning of a Business
+Day for VX TAS single leg contract expirations and TAS spreads commences at the referenced start time
+for the queuing period plus a randomized time period from three to six seconds.
+**Orders permitted to be submitted to CFE’s trading system during these times are not executable until
+extended trading hours next commence.
+
+
+
+Session Disconnect from CFE Certification Environment on February 11, 2019
+At approximately 4:10 p.m. on Monday, February 11, 2019, a session disconnect from the CFE Certification
+environment will occur during the simulated 10:30 a.m. to 4:45 p.m. suspended state.
+
+This disconnect will not cause any orders to cancel due to Cancel on Disconnect. As a general rule, Cancel
+on Disconnect is not in effect between the scheduled end of trading for a given futures product and the
+next system restart. Trading Privilege Holders may refer to the FIX and BOE specifications for further
+information on how to configure cancel on disconnect settings.
+
+         Cboe Futures Exchange FIX Specification
+         Cboe Futures Exchange Binary Order Entry Specification
+
+
+
+Additional Information
+Please contact the CFE Trade Desk for support or with any questions.
+
+We appreciate your business and remain committed to powering your potential with Cboe products,
+technologies, and solutions.
+
+CFE Trade Desk
+312.786.8700
+cfetradedesk@cboe.com
+

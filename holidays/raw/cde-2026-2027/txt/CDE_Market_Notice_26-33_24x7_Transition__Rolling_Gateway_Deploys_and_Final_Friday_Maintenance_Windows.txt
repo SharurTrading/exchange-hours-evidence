@@ -1,0 +1,295 @@
+                                                  Market Notice
+
+
+To:​     ​         Coinbase Derivatives Clients
+
+From:​ ​           Derivatives Command Center
+
+Notice:​           26-33
+
+Date:​ ​           07/13/2026
+
+Subject: ​         24x7 Transition: Rolling Gateway Deploys and Final Friday Maintenance
+Windows
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+Summary
+Coinbase Derivatives, LLC ("CDE" or "Exchange") is completing its move to continuous (24x7)
+operation, after which the weekly 1-hour Friday maintenance window will be retired and rolling
+gateway restarts will occur during market hours.
+
+The revised weekly Friday maintenance windows (16:00–16:50 CT, removal effective 17:00 CT)
+are:
+    ●​ Integration (UAT): Friday, July 24, 2026
+    ●​ Production: Friday, September 11, 2026
+
+After each environment's final Friday window, TRUE_24X7 products will remain OPEN and
+trade continuously, subject only to the scheduled weekend maintenance windows.
+
+At the final Friday window in each environment, all products that currently support weekend
+trading (the weekend trading set, comprising all crypto futures plus Gold and Silver futures)
+transition to a TRUE_24X7 trading schedule and trade continuously thereafter, subject only to
+scheduled weekend maintenance windows (see market notices). Products that do not trade on
+weekends currently are unaffected. Transitioning products are listed at the end of this Market
+Notice.
+
+This Market Notice supersedes 26-13 and revises the Production date in 26-25. Sequence
+Reset on Logon (141=Y) is recommended but not required (see Connectivity
+Recommendations).
+
+
+
+
+Any questions please contact Derivatives Command Center at derivatives@coinbase.com or +1 (312) 469-0985
+     Key milestones by service
+          ●​ July 17 (Event 2.3): deploy start time shifts from ~15:00 CT to ~14:30 CT.
+          ●​ July 24 (Event 2.4): first event to include SBE Order Entry; clients should be prepared
+             to reconnect and recover from this date.
+          ●​ Aug 7 (Event 3.0): first event to include Drop Copy; use EventResendRequest to
+             recover missed ExecutionReports from this date forward.
+          ●​ Aug 28: TradingSessionID (336) is enabled in Production per Market Notice 26-32. The
+             value flip to TRUE_24X7 for 24x7-enabled instruments occurs at the final window on
+             Sept 11.
+          ●​ Sept 11 (Event 4.1 / GoLive): final Friday maintenance window. After this, rolling
+             deploys may occur any time during trading hours, and 24x7-enabled products (crypto,
+             gold and silver) trade continuously beginning Friday, Sept 18.
+
+                                         In Scope
+
+  EventID           Market             Order Entry            Drop Copy                  Target Date (Times CT)
+                     Data
+
+    2.3               Yes           Partial - FIX Only             No           Friday, July 10, 2026 ~15:00
+
+    2.3               Yes           Partial - FIX Only             No           Friday, July 17, 2026 ~14:30
+
+
+    2.4               Yes           Full - FIX & SBE               No           Friday, July 24, 2026 ~14:30
+
+
+Saturday Quarterly Maintenance (see 26-30)                                      Saturday, July 25, 2026 9AM to 12PM
+
+    2.5               Yes                   Full                   No           Friday, July 31, 2026 ~14:30
+
+    3.0               Yes                   Full                   Yes          Friday, Aug 7, 2026 ~14:30
+
+    3.1               Yes                   Full                   Yes          Friday, Aug 14, 2026 ~14:30
+
+    3.2               Yes                   Full                   Yes          Friday, Aug 21, 2026 ~14:30
+
+    3.3               Yes                   Full                   Yes          Friday, Aug 28, 2026 ~14:30
+
+    3.4               Yes                   Full                   Yes          Friday, Sept 4, 2026 ~14:30
+
+    4.0               Yes                   Full                   Yes          Friday, Sept 11, 2026 ~14:30
+
+4.1 (GoLive)    Final Friday maintenance window. All                            Friday, Sept 11, 2026 16:00-16:50
+                24x7-enabled products (crypto futures plus
+                Gold and Silver) flip to TRUE_24X7 and trade
+                continuously.
+
+Saturday Quarterly Maintenance                                                  Saturday, Sept 12, 2026 AM, time TBC
+
+
+
+     Any questions please contact Derivatives Command Center at derivatives@coinbase.com or +1 (312) 469-0985
+Client Runbook & Impacted Services
+Unless noted, guidance applies to both Internet and Cross Connect (data center) sessions, for
+whichever gateway side (A or B) a session is subscribed to. These recommendations apply to
+the rolling deployments above and to any unplanned service event on an A or B gateway.
+
+    ●​ Sequence Reset on Logon: If your FIX engine reconnects to the opposite side during a
+       restart window, the session is established as a new sequence-number epoch. We
+       recommend sending ResetSeqNumFlag=Y (Tag 141) on all logons to handle this cleanly.
+       Applies to FIX/SBE Order Entry and FIX Market Data. Recommended, not required.
+    ●​ Order Entry (FIX and SBE): Clients on a single gateway side experience a momentary
+       disconnect then automatic reconnect. Your engine should handle this via standard
+       session logon recovery.
+    ●​ Market Data – FIX: Feeds may briefly interrupt during the restart of upstream sequencer
+       and replication services. Reconnect and re-send a MarketDataRequest to receive the full
+       snapshot. No data from the gap window is retransmitted automatically.
+    ●​ Market Data – UDP: Expect a brief delay in sequence numbers as gateways restart.
+       UDP sequence-number gapping is not expected.
+    ●​ Drop Copy: Beginning with Event 3.0 (Aug 7, 2026), Drop Copy sessions are included
+       in the rolling restart. On reconnect, use EventResendRequest to recover missed
+       ExecutionReports and dedupe via ExecID and PossResend. Before Event 3.0, Drop
+       Copy is not impacted.
+    ●​ REST API: Momentary outages are possible. If a request times out, resend it.
+    ●​ No client-facing impact: Post-Trade and Reporting pipelines resume automatically
+       from their last checkpoint with no data loss. The CDE Portal is unaffected.
+
+
+Connectivity Recommendations
+    ●​ Sequence Reset on Logon is optional but strongly recommended, particularly for
+       clients on Internet gateways that rely on aggregate-port failover. Sending 141=Y on
+       every logon ensures a clean epoch when your session lands on the opposite side after a
+       restart.
+    ●​ Monotonic sequence numbers and long-lived sessions: Under continuous operation,
+       sessions are expected to live indefinitely. A session whose outbound sequence number
+       approaches the FIX protocol maximum (the signed 32-bit limit, roughly 2.1 billion) will be
+       disconnected by the exchange to force a reset. Clients who never reset (141=N) should
+       perform a periodic sequence reset to avoid an unexpected disconnect. Clients sending
+       141=Y on logon are not affected.
+    ●​ Internet connectivity: If you connect to an A-side or B-side feed-specific port, switch to
+       the aggregate ports for automatic load-balanced failover.
+    ●​ Failover: A session that does not fail over to the opposite side remains disconnected
+       until the impacted gateway completes its restart, then reconnects automatically.
+       Configure your engine to initiate logon immediately on TCP reconnect.
+
+
+
+Any questions please contact Derivatives Command Center at derivatives@coinbase.com or +1 (312) 469-0985
+    ●​ Order Entry recovery (FIX): Persist the last processed ExecID, and after reconnect use
+       DCM's replay flow: LastExecIdRequest then EventResendRequest. Client processing
+       should be idempotent and dedupe via ExecID and PossResend.
+    ●​ Order Entry recovery (SBE): Same as FIX, except treat all events within the replay
+       window as possibly duplicated and dedupe via the unique ExecID.
+
+
+Seamless Deploys (Upcoming Enhancement)
+CDE is rolling out seamless gateway deployments. During a seamless takeover, the incoming
+gateway instance assumes ownership of the outgoing instance's active orders, so the takeover
+does not trigger cancel-on-disconnect for those orders. This is expected to reduce per-gateway
+client-visible downtime from approximately 60 seconds today to approximately 3 seconds.
+
+Seamless deployments do not change the Connectivity Recommendations above. Clients
+should still reconnect and, where applicable, reset sequence numbers on logon. Availability will
+be announced by Market Notice per environment.
+
+
+Open Orders and Positions
+    ●​ If CancelOnDisconnect is enabled (session or user level), resting orders are canceled on
+       disconnect. If not enabled, they remain on the book during and after the rolling deploy.
+       With seamless deploys, resting orders are preserved across the takeover regardless.
+    ●​ Positions and balances are fully consistent before and after the restart. No reconciliation
+       action is required.
+
+
+Deployment Tracking (Status Page)
+https://status.cde.coinbase.com/ is updated before each deployment, during any unexpected
+issues, and at the conclusion of the deployment.
+
+
+Example Architecture and Recommended Behavior
+ API                                   Connectivity                  Best Practices
+ FIX Order Entry                       Internet (Agg Port)           1. Connect via aggregate port for auto
+                                                                     load-balanced failover.
+                                                                     2. Send 141=Y on every logon
+                                                                     (recommended).
+                                                                     3. Auto-reconnect immediately on disconnect.
+                                                                     4. Persist last ExecID locally.
+                                                                     5. On reconnect: Logon →
+                                                                     LastExecIdRequest → EventResendRequest
+                                                                     → await EventResendComplete.
+                                                                     6. Dedupe via ExecID + PossResend.
+
+
+
+Any questions please contact Derivatives Command Center at derivatives@coinbase.com or +1 (312) 469-0985
+ FIX Order Entry                       Cross Connect (A/B)           1. Dual connectivity to A and B sides.
+                                                                     2. Reset seq on every logon (recommended).
+                                                                     3. Track seq numbers on both A and B.
+                                                                     4. Fail over to the other side on disconnect.
+                                                                     5. Same ExecID-based recovery as above.
+
+ FIX Market Data                       Internet (Agg Port)           1. Connect via aggregate port for auto
+                                                                     failover.
+                                                                     2. Send 141=Y on every logon
+                                                                     (recommended).
+                                                                     3. Auto-reconnect immediately.
+                                                                     4. On reconnect: Logon → re-send all
+                                                                     MarketDataRequest subscriptions.
+                                                                     5. Full snapshot received on reconnect; no
+                                                                     gap-fill.
+
+ FIX Market Data                       Cross Connect (A/B)           1. Dual connectivity to A and B sides.
+                                                                     2. Reset seq on every logon (recommended).
+                                                                     3. Track seq numbers on both sides.
+                                                                     4. Fail over on disconnect.
+                                                                     5. Re-send all MarketDataRequest
+                                                                     subscriptions after logon.
+                                                                     6. Full snapshot received; no gap-fill.
+
+ SBE Order Entry                       Cross Connect (A/B)           1. Dual connectivity to A and B sides.
+                                                                     2. Reset seq on every logon (recommended).
+                                                                     3. Track seq numbers on both sides.
+                                                                     4. Fail over on disconnect.
+                                                                     5. Recover via ExecID-based replay.
+                                                                     6. Treat replay window as possibly duplicated;
+                                                                     dedupe via ExecID.
+
+ UDP Market Data                       Cross Connect (A/B)           1. Dual feed from A and B sides if possible.
+                                                                     2. No logon or seq reset (connectionless).
+                                                                     3. Expect brief delay during restart; no
+                                                                     gapping expected.
+                                                                     4. Tolerate brief feed pause without treating it
+                                                                     as data loss.
+
+
+
+
+Any questions please contact Derivatives Command Center at derivatives@coinbase.com or +1 (312) 469-0985
+Products Transitioning to TRUE_24X7
+The following 48 products currently support weekend trading and will transition to a TRUE_24X7
+schedule at the final Friday window in each environment. All other products retain their current
+trading hours and are unaffected.
+
+ Product                      Symbol                       Product ID
+ 1k Shib Fut                  SHB                          1776
+ 1k Shib Perp                 SHP                          7566
+ AAVE Perp                    AVE                          11368
+ Avalanche Fut                AVA                          1764
+ Avalanche Perp               AVP                          7698
+ BitCash Fut                  BCH                          1334
+ Bitcoin Cash Perp            BCP                          8886
+ Bitcoin Fut                  BTI                          916
+ BNB Fut                      BNF                          13609
+ BNB Perp                     BNB                          13933
+ Cardano Fut                  ADA                          2839
+ Cardano Perp                 ADP                          8754
+ Chainlink Fut                LNK                          1770
+ Chainlink Perp               LNP                          8622
+ Coin50 PSF                   C50                          11814
+ Doge Fut                     DOG                          1368
+ Dogecoin Perp                DOP                          7830
+ Ethena Perp                  ENA                          11072
+ Ether Fut                    ETI                          925
+ Gold Futures                 GOL                          1587
+ Hedera Fut                   HED                          2516
+ Hedera Perp                  HEP                          8490
+ HYPE Fut                     HYF                          13445
+ HYPE Perp                    HYP                          13773
+ Litecoin Fut                 LC                           1326
+ Litecoin Perp                LCP                          8358
+ nano Bitcoin Fut             BIT                          409
+ nano Bitcoin Perp            BIP                          3986
+ nano Ether Fut               ET                           538
+ nano Ether Perp              ETP                          3988
+ nano Solana Fut              SOL                          2504
+ nano Solana Perp             SLP                          4642
+ nano XRP Fut                 XRP                          3114
+ nano XRP Perp                XPP                          4731
+ NEAR Perp                    NER                          10924
+
+
+Any questions please contact Derivatives Command Center at derivatives@coinbase.com or +1 (312) 469-0985
+ ONDO Perp                    OND                          11220
+ PAXG PSF                     PAU                          11962
+ Pepe PSF                     PEP                          11518
+ Polkadot Fut                 DOT                          1758
+ Polkadot Perp                POP                          8226
+ Silver Futures               SLR                          2141
+ Solana Fut                   SLC                          2510
+ Stellar Fut                  XLM                          2135
+ Stellar Perp                 XLP                          7962
+ SUI Fut                      SUI                          5501
+ SUI Perp                     SUP                          8094
+ XRP Fut                      XRL                          3108
+ Zcash Perp                   ZEC                          11666
+
+
+
+
+Any questions please contact Derivatives Command Center at derivatives@coinbase.com or +1 (312) 469-0985
+

@@ -1,0 +1,1362 @@
+    Checking exchange-hours v1.0.0 (/private/tmp/wt-evidence-lse-six)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 4.96s
+   Compiling exchange-hours v1.0.0 (/private/tmp/wt-evidence-lse-six)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.27s
+────────────
+ Nextest run ID e8bfc608-5e09-448a-bfaa-d872721e4086 with nextest profile: default
+    Starting 1276 tests across 24 binaries
+        PASS [   0.011s] (   1/1276) exchange-hours::apac_equities suite::current::asx_current_baseline
+        PASS [   0.011s] (   2/1276) exchange-hours::apac_equities suite::current::korea_current_baseline
+        PASS [   0.011s] (   3/1276) exchange-hours::apac_equities suite::current::tmx_australia_current_baseline
+        PASS [   0.011s] (   4/1276) exchange-hours::apac_equities suite::current::sgx_securities_current_baseline
+        PASS [   0.011s] (   5/1276) exchange-hours::apac_equities suite::current::india_current_baselines
+        PASS [   0.011s] (   6/1276) exchange-hours::apac_equities suite::current::southeast_asia_current_baselines
+        PASS [   0.012s] (   7/1276) exchange-hours::apac_equities suite::current::mainland_china_current_baselines
+        PASS [   0.013s] (   8/1276) exchange-hours::apac_equities suite::current::taiwan_current_baseline
+        PASS [   0.014s] (   9/1276) exchange-hours::apac_equities suite::current::tokyo_current_baseline
+        PASS [   0.015s] (  10/1276) exchange-hours::apac_equities suite::bulk::apac_bulk_and_canonical_names_cover_every_new_venue
+        PASS [   0.015s] (  11/1276) exchange-hours::apac_equities suite::current::hong_kong_current_baseline
+        PASS [   0.016s] (  12/1276) exchange-hours::apac_equities suite::current::nzx_current_baseline
+        PASS [   0.010s] (  13/1276) exchange-hours::apac_equities suite::history_east_asia::hkex_pre_2011_grid_is_the_hours_page_print
+        PASS [   0.009s] (  14/1276) exchange-hours::apac_equities suite::history_oceania_japan::oceania_and_japan_cutovers
+        PASS [   0.011s] (  15/1276) exchange-hours::apac_equities suite::history_east_asia::hong_kong_cutovers
+        PASS [   0.011s] (  16/1276) exchange-hours::apac_equities suite::history_east_asia::mainland_china_cutovers
+        PASS [   0.011s] (  17/1276) exchange-hours::apac_equities suite::history_india::india_cutovers
+        PASS [   0.011s] (  18/1276) exchange-hours::apac_equities suite::history_oceania_japan::tmx_australia_cutovers
+        PASS [   0.013s] (  19/1276) exchange-hours::apac_equities suite::history_oceania_japan::nzx_pre_2020_grid_is_the_2010_page_print
+        PASS [   0.012s] (  20/1276) exchange-hours::apac_equities suite::history_singapore_korea_taiwan::korea_and_taiwan_cutovers
+        PASS [   0.013s] (  21/1276) exchange-hours::apac_equities suite::history_southeast_asia::bursa_january_2010_baseline_matches_current_grid
+        PASS [   0.018s] (  22/1276) exchange-hours::apac_equities suite::history_oceania_japan::asx_pre_sr15_grid_is_the_phase_page_print
+        PASS [   0.016s] (  23/1276) exchange-hours::apac_equities suite::history_singapore_korea_taiwan::sgx_securities_cutovers
+        PASS [   0.011s] (  24/1276) exchange-hours::apac_equities suite::history_southeast_asia::thailand_cutover
+        PASS [   0.017s] (  25/1276) exchange-hours::apac_equities suite::history_southeast_asia::indonesia_cutovers
+        PASS [   0.013s] (  26/1276) exchange-hours::apac_equities suite::history_southeast_asia::vietnam_cutover_and_oldest_profile
+        PASS [   0.014s] (  27/1276) exchange-hours::apac_equities suite::history_southeast_asia::thailand_dr_night_launch_and_trade_date
+        PASS [   0.015s] (  28/1276) exchange-hours::apac_equities suite::history_southeast_asia::thailand_monthly_candles_group_the_after_midnight_close_by_trade_date
+        PASS [   0.014s] (  29/1276) exchange-hours::calendar_policies a_closed_friday_scan_falls_forward_to_sunday
+        PASS [   0.017s] (  30/1276) exchange-hours::apac_equities suite::history_southeast_asia::philippines_cutovers
+        PASS [   0.014s] (  31/1276) exchange-hours::calendar_policies calendar_identity_distinguishes_exchanges_from_product_families
+        PASS [   0.013s] (  32/1276) exchange-hours::calendar_policies closed_set_trade_date_removes_its_day_and_after_midnight_tail
+        PASS [   0.013s] (  33/1276) exchange-hours::calendar_policies closed_trade_date_removes_the_prior_evening_but_not_the_next_trade_date
+        PASS [   0.016s] (  34/1276) exchange-hours::calendar_policies cme_good_friday_closed_reference_case_uses_caller_data
+        PASS [   0.010s] (  35/1276) exchange-hours::calendar_policies next_session_scan_includes_day_fourteen_and_excludes_day_fifteen
+        PASS [   0.016s] (  36/1276) exchange-hours::calendar_policies invalid_policy_seconds_fail_closed_for_that_trade_date
+        PASS [   0.020s] (  37/1276) exchange-hours::calendar_policies early_close_clamps_sessions_candles_and_state
+        PASS [   0.018s] (  38/1276) exchange-hours::calendar_policies late_open_clips_every_earlier_phase_of_the_trade_date
+        PASS [   0.012s] (  39/1276) exchange-hours::calendar_policies policy_does_not_invent_trade_dates_for_an_always_open_profile
+        PASS [   0.026s] (  40/1276) exchange-hours::calendar_policies cme_christmas_eve_and_post_thanksgiving_close_at_12_15
+        PASS [   0.023s] (  41/1276) exchange-hours::calendar_policies cme_mlk_and_presidents_day_close_at_noon_then_reopen_at_five
+        PASS [   0.012s] (  42/1276) exchange-hours::calendar_value_traits coverage_metadata_stays_a_copy_send_sync_static_value
+        PASS [   0.015s] (  43/1276) exchange-hours::calendar_policies trade_dates_and_states_cover_the_globex_day
+        PASS [   0.022s] (  44/1276) exchange-hours::calendar_policies policy_scans_are_bounded_and_hours_at_is_unmodified
+        PASS [   0.030s] (  45/1276) exchange-hours::calendar_policies no_policy_preserves_the_complete_calendar_surface
+        PASS [   0.018s] (  46/1276) exchange-hours::calendar_value_traits exchange_calendar_remains_a_copy_send_sync_static_value
+        PASS [   0.018s] (  47/1276) exchange-hours::calendar_value_traits policy_calendar_remains_copy_send_and_sync
+        PASS [   0.013s] (  48/1276) exchange-hours::coverage_metadata a_date_before_the_floor_is_before_floor_for_every_identity
+        PASS [   0.009s] (  49/1276) exchange-hours::coverage_metadata a_declared_phase_gap_is_era_aware_and_reported_for_the_span_it_answers
+        PASS [   0.010s] (  50/1276) exchange-hours::coverage_metadata a_no_holiday_assertion_is_distinct_from_a_missing_table
+        PASS [   0.022s] (  51/1276) exchange-hours::coverage_metadata a_date_shaped_gap_carries_no_closing_condition
+        PASS [   0.013s] (  52/1276) exchange-hours::coverage_metadata an_identity_with_no_holiday_table_reports_no_table
+        PASS [   0.012s] (  53/1276) exchange-hours::coverage_metadata calendar_query_errors_are_distinguishable_by_a_caller
+        PASS [   0.012s] (  54/1276) exchange-hours::coverage_metadata cfe_2025_holiday_rows_report_covered
+        PASS [   0.127s] (  55/1276) exchange-hours::calendar_policies early_close_on_the_last_trade_date_clamps_weekly_and_monthly_bars
+        PASS [   0.080s] (  56/1276) exchange-hours::coverage_metadata iceus_2025_holiday_rows_report_covered
+        PASS [   0.017s] (  57/1276) exchange-hours::coverage_metadata sourced_normal_week_reports_the_ledger_horizon
+        PASS [   0.028s] (  58/1276) exchange-hours::coverage_metadata the_five_day_pre_open_gap_names_exactly_the_five_day_era
+        PASS [   0.017s] (  59/1276) exchange-hours::coverage_metadata the_floor_is_a_local_date_not_a_utc_instant
+        PASS [   0.017s] (  60/1276) exchange-hours::coverage_metadata the_post_close_label_gap_applies_only_to_the_dates_that_carry_the_queue
+        PASS [   0.017s] (  61/1276) exchange-hours::coverage_metadata the_support_floor_is_local_first_of_january_2010
+        PASS [   0.395s] (  62/1276) exchange-hours::calendar_policies closed_crypto_monday_rolls_weekend_into_the_following_business_day
+        PASS [   0.018s] (  63/1276) exchange-hours::coverage_metadata without_holidays_selects_the_normal_week_contract
+        PASS [   0.018s] (  64/1276) exchange-hours::coverage_query_errors a_caller_exception_provider_does_not_improve_the_builtin_ledger
+        PASS [   0.018s] (  65/1276) exchange-hours::coverage_query_errors a_caller_policy_cannot_bypass_the_identity_floor
+        PASS [   0.026s] (  66/1276) exchange-hours::coverage_query_errors a_closed_identity_answers_closed_rather_than_refusing
+        PASS [   0.451s] (  67/1276) exchange-hours::coverage_metadata a_date_scoped_declaration_zeroes_no_identity_over_2025_2027
+        PASS [   0.017s] (  68/1276) exchange-hours::coverage_query_errors a_covered_scope_still_answers_its_supported_dates
+        PASS [   0.019s] (  69/1276) exchange-hours::coverage_query_errors a_query_before_the_floor_refuses_the_local_date_it_needs
+        PASS [   0.019s] (  70/1276) exchange-hours::coverage_query_errors a_detached_caller_snapshot_answers_before_the_floor
+        PASS [   0.017s] (  71/1276) exchange-hours::coverage_query_errors a_refusal_is_never_a_false_or_a_none
+        PASS [   0.017s] (  72/1276) exchange-hours::coverage_query_errors a_returned_session_is_never_truncated_at_a_date_boundary
+        PASS [   0.469s] (  73/1276) exchange-hours::coverage_metadata detaching_the_holiday_table_neither_hides_nor_manufactures_a_phase_gap
+        PASS [   0.019s] (  74/1276) exchange-hours::coverage_query_errors an_always_open_identity_has_no_daily_close_to_find
+        PASS [   0.019s] (  75/1276) exchange-hours::coverage_query_errors a_withheld_phase_refuses_the_order_entry_query_but_not_the_session_query
+        PASS [   0.031s] (  76/1276) exchange-hours::coverage_query_errors every_migrated_query_refuses_the_same_pre_floor_date
+        PASS [   0.024s] (  77/1276) exchange-hours::coverage_query_errors the_floor_answers_from_its_own_first_local_day
+        PASS [   0.027s] (  78/1276) exchange-hours::coverage_query_errors the_documented_static_accessors_are_unaffected
+        PASS [   0.567s] (  79/1276) exchange-hours::coverage_metadata a_complete_scope_reports_one_complete_span_and_a_trailing_gap
+        PASS [   0.023s] (  80/1276) exchange-hours::coverage_query_errors the_support_floor_constant_is_the_documented_date
+        PASS [   0.025s] (  81/1276) exchange-hours::coverage_query_errors the_free_fixed_adapters_still_answer_before_the_floor
+        PASS [   0.028s] (  82/1276) exchange-hours::coverage_query_errors the_floor_is_a_local_date_so_two_zones_refuse_at_different_utc_instants
+        PASS [   0.018s] (  83/1276) exchange-hours::coverage_query_errors without_holidays_answers_the_normal_week_it_claims
+        PASS [   0.019s] (  84/1276) exchange-hours::equities_holidays suite::hkex::a_pre_2025_ordinary_weekday_trades_to_the_end_exclusive_close
+        PASS [   0.020s] (  85/1276) exchange-hours::equities_holidays suite::hkex::an_ordinary_weekday_trades_to_the_end_exclusive_cas_edge
+        PASS [   0.023s] (  86/1276) exchange-hours::equities_holidays suite::hkex::coverage_opens_at_the_2010_floor_and_stops_at_the_2027_schedule
+        PASS [   0.033s] (  87/1276) exchange-hours::equities_holidays suite::hkex::every_printed_2010_row_ships_with_the_era_half_day_close
+        PASS [   0.029s] (  88/1276) exchange-hours::equities_holidays suite::hkex::every_printed_2016_closure_ships_and_2016_names_no_half_day
+        PASS [   0.036s] (  89/1276) exchange-hours::equities_holidays suite::hkex::every_printed_2011_row_ships_and_the_lunar_eve_is_the_era_half_day
+        PASS [   0.035s] (  90/1276) exchange-hours::equities_holidays suite::hkex::every_printed_2012_row_ships_including_labour_day
+        PASS [   0.027s] (  91/1276) exchange-hours::equities_holidays suite::hkex::every_printed_2017_row_ships_with_the_cas_era_half_day
+        PASS [   0.024s] (  92/1276) exchange-hours::equities_holidays suite::hkex::every_printed_2026_row_ships
+        PASS [   0.030s] (  93/1276) exchange-hours::equities_holidays suite::hkex::every_printed_2027_row_ships
+        PASS [   0.034s] (  94/1276) exchange-hours::equities_holidays suite::hkex::every_printed_2025_row_ships
+        PASS [   0.013s] (  95/1276) exchange-hours::equities_holidays suite::hkex::queries_before_the_2010_floor_are_refused
+        PASS [   0.020s] (  96/1276) exchange-hours::equities_holidays suite::hkex::mutating_a_shipped_row_fails_a_test
+        PASS [   0.017s] (  97/1276) exchange-hours::equities_holidays suite::hkex::the_2018_2024_page_editions_ship_their_rows
+        PASS [   0.021s] (  98/1276) exchange-hours::equities_holidays suite::hkex::the_2012_2015_half_day_eves_close_at_the_phase_two_morning_edge
+        PASS [   0.014s] (  99/1276) exchange-hours::equities_holidays suite::hkex::the_lunar_new_year_block_reopens_on_the_first_open_day
+        PASS [   0.013s] ( 100/1276) exchange-hours::equities_holidays suite::six::a_pre_2025_ordinary_weekday_trades_and_the_unaudited_spans_refuse
+        PASS [   0.013s] ( 101/1276) exchange-hours::equities_holidays suite::six::an_ordinary_weekday_trades_to_the_end_exclusive_close
+        PASS [   0.012s] ( 102/1276) exchange-hours::equities_holidays suite::six::coverage_opens_at_the_2012_backfill_and_stops_at_the_2027_schedule
+        PASS [   0.026s] ( 103/1276) exchange-hours::equities_holidays suite::six::every_printed_2012_cell_ships
+        PASS [   0.027s] ( 104/1276) exchange-hours::equities_holidays suite::six::every_printed_2024_cell_ships
+        PASS [   0.030s] ( 105/1276) exchange-hours::equities_holidays suite::six::every_printed_2026_cell_ships
+        PASS [   0.011s] ( 106/1276) exchange-hours::equities_holidays suite::six::mutating_a_shipped_row_fails_a_test
+        PASS [   0.035s] ( 107/1276) exchange-hours::equities_holidays suite::six::every_printed_2025_cell_ships
+        PASS [   0.017s] ( 108/1276) exchange-hours::equities_holidays suite::six::queries_before_the_2010_floor_are_refused
+        PASS [   0.033s] ( 109/1276) exchange-hours::equities_holidays suite::six::every_printed_2027_cell_ships
+        PASS [   0.018s] ( 110/1276) exchange-hours::equities_holidays suite::six::the_2016_grid_marks_seven_weekday_holidays_and_no_weekend_fall
+        PASS [   0.022s] ( 111/1276) exchange-hours::equities_holidays suite::six::the_2022_grid_marks_six_weekday_holidays
+        PASS [   0.009s] ( 112/1276) exchange-hours::equities_holidays suite::xetra::an_ordinary_weekday_trades_to_the_end_exclusive_late_retail_close
+        PASS [   0.013s] ( 113/1276) exchange-hours::equities_holidays suite::xetra::a_pre_2025_ordinary_weekday_trades_to_the_end_exclusive_auction_edge
+        PASS [   0.020s] ( 114/1276) exchange-hours::equities_holidays suite::six::the_christmas_block_reopens_on_the_first_open_day
+        PASS [   0.017s] ( 115/1276) exchange-hours::equities_holidays suite::xetra::coverage_opens_at_the_2010_floor_and_stops_at_the_2027_schedule
+        PASS [   0.017s] ( 116/1276) exchange-hours::equities_holidays suite::xetra::every_printed_2010_closure_ships_as_a_settlement_day_closure
+        PASS [   0.014s] ( 117/1276) exchange-hours::equities_holidays suite::xetra::mutating_a_shipped_row_fails_a_test
+        PASS [   0.027s] ( 118/1276) exchange-hours::equities_holidays suite::xetra::from_2022_whit_monday_and_unity_day_trade_as_ordinary_days
+        PASS [   0.044s] ( 119/1276) exchange-hours::equities_holidays suite::xetra::every_printed_2025_closure_ships_and_no_early_close_is_invented
+        PASS [   0.017s] ( 120/1276) exchange-hours::equities_holidays suite::xetra::queries_before_the_2010_floor_are_refused
+        PASS [   0.040s] ( 121/1276) exchange-hours::equities_holidays suite::xetra::every_printed_2027_closure_ships
+        PASS [   0.023s] ( 122/1276) exchange-hours::equities_holidays suite::xetra::the_2011_sentence_names_three_closures_and_no_unity_day
+        PASS [   0.024s] ( 123/1276) exchange-hours::equities_holidays suite::xetra::the_2016_closures_ship_and_the_weekend_eves_key_no_row
+        PASS [   0.034s] ( 124/1276) exchange-hours::equities_holidays suite::xetra::the_2014_german_edition_closes_unity_day_and_the_settlement_eves
+        PASS [   0.026s] ( 125/1276) exchange-hours::equities_holidays suite::xetra::the_christmas_block_reopens_on_the_first_open_day
+        PASS [   0.053s] ( 126/1276) exchange-hours::equities_holidays suite::xetra::the_2026_closures_and_the_three_named_trading_holidays_ship
+        PASS [   0.015s] ( 127/1276) exchange-hours::fixed_snapshot_collapse_fence the_collapse_covers_the_whole_fixed_predicate_surface
+        PASS [   0.016s] ( 128/1276) exchange-hours::futures_family_boundaries suite::cme_bitcoin_event_contracts::bitcoin_event_contracts_key_round_trips_through_its_canonical_name
+        PASS [   0.017s] ( 129/1276) exchange-hours::futures_family_boundaries suite::cme_bitcoin_event_contracts::neither_the_event_contract_nor_the_cryptocurrency_key_can_stand_in
+        PASS [   0.017s] ( 130/1276) exchange-hours::futures_family_boundaries suite::cme_bitcoin_event_contracts::the_joined_weekend_block_survives_both_dst_transitions
+        PASS [   0.868s] ( 131/1276) exchange-hours::coverage_metadata a_declared_phase_gap_applies_only_to_the_dates_its_shape_resolves
+        PASS [   0.018s] ( 132/1276) exchange-hours::futures_family_boundaries suite::cme_bitcoin_event_contracts::the_notice_dated_saturday_extensions_move_only_that_saturdays_reopen
+        PASS [   0.020s] ( 133/1276) exchange-hours::futures_family_boundaries suite::cme_bitcoin_event_contracts::the_transition_day_closes_under_the_old_grid_and_reopens_under_the_new
+        PASS [   0.031s] ( 134/1276) exchange-hours::futures_family_boundaries suite::cme_bitcoin_event_contracts::the_weekday_close_is_the_intersection_and_the_disputed_hour_is_withheld
+        PASS [   0.036s] ( 135/1276) exchange-hours::futures_family_boundaries suite::cme_bitcoin_event_contracts::the_shared_era_is_the_event_contract_grid_by_reference
+        PASS [   0.021s] ( 136/1276) exchange-hours::futures_family_boundaries suite::cme_bitcoin_event_contracts::the_weekend_block_is_joined_and_carries_mondays_trade_date
+        PASS [   0.019s] ( 137/1276) exchange-hours::futures_family_boundaries suite::cme_event_contracts::a_termination_of_trading_time_is_not_a_session_close
+        PASS [   0.021s] ( 138/1276) exchange-hours::futures_family_boundaries suite::cme_event_contracts::day_policy_overlays_a_closed_date_and_an_early_close
+        PASS [   0.018s] ( 139/1276) exchange-hours::futures_family_boundaries suite::cme_event_contracts::event_contracts_key_round_trips_through_its_canonical_name
+        PASS [   0.024s] ( 140/1276) exchange-hours::futures_family_boundaries suite::cme_event_contracts::event_contracts_serve_the_published_grid_with_end_exclusive_closes
+        PASS [   0.032s] ( 141/1276) exchange-hours::futures_family_boundaries suite::cme_event_contracts::the_bitcoin_root_leaving_scope_does_not_move_this_key
+        PASS [   0.037s] ( 142/1276) exchange-hours::futures_family_boundaries suite::cme_event_contracts::the_family_opens_for_the_first_time_on_2022_09_18
+        PASS [   0.040s] ( 143/1276) exchange-hours::futures_family_boundaries suite::cme_event_contracts::the_march_2023_bitcoin_listing_is_not_a_clock_revision
+        PASS [   0.030s] ( 144/1276) exchange-hours::futures_family_boundaries suite::cme_event_contracts::the_week_reopens_on_sunday_evening_with_no_friday_evening_leg
+        PASS [   0.029s] ( 145/1276) exchange-hours::futures_family_boundaries suite::cme_event_contracts::the_wrapping_leg_survives_both_dst_transitions
+        PASS [   0.013s] ( 146/1276) exchange-hours::futures_family_boundaries suite::cme_event_contracts::the_wrapping_leg_takes_its_closing_trade_date
+        PASS [   0.018s] ( 147/1276) exchange-hours::futures_family_boundaries suite::cme_event_contracts::three_keys_share_one_envelope_today_and_no_history_at_all
+        PASS [   0.012s] ( 148/1276) exchange-hours::futures_family_boundaries suite::cme_families::livestock_morning_queue_spans_its_sourced_matching_grid
+        PASS [   0.018s] ( 149/1276) exchange-hours::futures_family_boundaries suite::cme_families::current_snapshots_agree_with_dated_selectors_today
+        PASS [   0.010s] ( 150/1276) exchange-hours::futures_family_boundaries suite::cme_families::overnight_order_entry_and_closed_gaps_match_the_published_phase_machine
+        PASS [   0.010s] ( 151/1276) exchange-hours::futures_family_boundaries suite::cme_families::sunday_pre_open_carries_back_at_its_narrowest_sourced_edge
+        PASS [   0.013s] ( 152/1276) exchange-hours::futures_family_boundaries suite::cme_families::the_floor_week_answers_from_the_sourced_grid
+        PASS [   0.010s] ( 153/1276) exchange-hours::futures_family_boundaries suite::cme_metals_tas::each_key_is_closed_before_its_launch_and_opens_on_the_launch_evening
+        PASS [   0.018s] ( 154/1276) exchange-hours::futures_family_boundaries suite::cme_metals_tas::copper_and_palladium_are_not_interchangeable_on_their_shared_close
+        PASS [   0.013s] ( 155/1276) exchange-hours::futures_family_boundaries suite::cme_metals_tas::the_2011_stagger_moves_only_the_queue_onset
+        PASS [   0.014s] ( 156/1276) exchange-hours::futures_family_boundaries suite::cme_metals_tas::the_2012_notice_restores_the_shared_queue_onsets
+        PASS [   0.017s] ( 157/1276) exchange-hours::futures_family_boundaries suite::cme_metals_tas::the_metals_tas_keys_round_trip_through_their_canonical_names
+        PASS [   0.021s] ( 158/1276) exchange-hours::futures_family_boundaries suite::cme_metals_tas::the_close_is_end_exclusive_and_the_daily_gap_is_closed_not_maintenance
+        PASS [   0.016s] ( 159/1276) exchange-hours::futures_family_boundaries suite::cme_metals_tas::the_sunday_quarter_hour_is_withheld_on_comex_and_served_on_the_pgm_keys
+        PASS [   0.017s] ( 160/1276) exchange-hours::futures_family_boundaries suite::cme_metals_tas::the_tas_keys_are_not_the_metals_outright_key
+        PASS [   0.018s] ( 161/1276) exchange-hours::futures_family_boundaries suite::cme_metals_tas::the_whole_window_is_extended_and_the_pre_open_is_order_entry
+        PASS [   0.018s] ( 162/1276) exchange-hours::futures_family_boundaries suite::cme_metals_tas::there_is_no_friday_evening_reopen_and_the_weekend_is_closed
+        PASS [   0.010s] ( 163/1276) exchange-hours::futures_family_boundaries suite::cme_mini_grains::mini_grains_serves_the_published_grid_with_end_exclusive_closes
+        PASS [   0.019s] ( 164/1276) exchange-hours::futures_family_boundaries suite::cme_mini_grains::mini_grains_key_round_trips_through_its_canonical_name
+        PASS [   0.026s] ( 165/1276) exchange-hours::futures_family_boundaries suite::cme_mini_grains::mini_grains_and_the_standard_grain_grid_disagree_outside_the_converged_eras
+        PASS [   0.013s] ( 166/1276) exchange-hours::futures_family_boundaries suite::cme_mini_grains::the_2013_reduction_restores_the_mini_premium
+        PASS [   0.017s] ( 167/1276) exchange-hours::futures_family_boundaries suite::cme_mini_grains::the_grid_converges_to_the_standard_close_from_2022_10_02
+        PASS [   0.012s] ( 168/1276) exchange-hours::futures_family_boundaries suite::cme_mini_grains::the_minis_diverge_to_1430_from_2012_09_16
+        PASS [   0.017s] ( 169/1276) exchange-hours::futures_family_boundaries suite::cme_mini_grains::the_minis_join_the_21_hour_session_from_2012_05_20
+        PASS [   0.014s] ( 170/1276) exchange-hours::futures_family_boundaries suite::cme_mini_grains::the_morning_queue_starts_at_0800_from_2011_12_27
+        PASS [   0.017s] ( 171/1276) exchange-hours::futures_family_boundaries suite::cme_mini_grains::the_morning_queue_returns_to_0800_from_2013_08_18
+        PASS [   1.156s] ( 172/1276) exchange-hours::calendar_policies session_state_and_trade_date_are_consistent_for_every_key
+        PASS [   0.013s] ( 173/1276) exchange-hours::futures_family_boundaries suite::cme_mini_grains::the_overnight_leg_survives_both_dst_transitions
+        PASS [   0.014s] ( 174/1276) exchange-hours::futures_family_boundaries suite::cme_mini_grains::the_pcp_reanchors_to_134530_from_2010_04_19
+        PASS [   0.011s] ( 175/1276) exchange-hours::futures_family_boundaries suite::cme_nikkei::nkd_2015_revision_is_keyed_to_the_session_opening_day
+        PASS [   0.017s] ( 176/1276) exchange-hours::futures_family_boundaries suite::cme_mini_grains::the_week_reopens_on_sunday_evening_after_the_weekend_close
+        PASS [   0.016s] ( 177/1276) exchange-hours::futures_family_boundaries suite::cme_mini_grains::the_wrapping_grid_needs_no_trade_date_exception
+        PASS [   0.010s] ( 178/1276) exchange-hours::futures_family_boundaries suite::cme_nikkei::nkd_close_tracks_its_sourced_revisions
+        PASS [   0.015s] ( 179/1276) exchange-hours::futures_family_boundaries suite::cme_nikkei::nkd_halt_revision_and_removal_are_keyed_to_their_sunday_opening_days
+        PASS [   0.013s] ( 180/1276) exchange-hours::futures_family_boundaries suite::cme_nikkei::presidents_day_2010_trades_the_nkd_instants_not_the_equity_pattern
+        PASS [   0.014s] ( 181/1276) exchange-hours::futures_family_boundaries suite::cme_nikkei::the_old_grid_and_changeover_are_keyed_at_venue_local_midnights
+        PASS [   0.023s] ( 182/1276) exchange-hours::futures_family_boundaries suite::cme_nikkei::nkd_serves_the_published_normal_week_pre_open_as_order_entry
+        PASS [   0.012s] ( 183/1276) exchange-hours::futures_family_boundaries suite::cme_rough_rice::day_policy_overlays_a_closed_date_and_an_early_close
+        PASS [   0.009s] ( 184/1276) exchange-hours::futures_family_boundaries suite::cme_rough_rice::rough_rice_extended_hours_shrink_to_1900_2100_from_2018_01_21
+        PASS [   0.015s] ( 185/1276) exchange-hours::futures_family_boundaries suite::cme_rough_rice::rough_rice_and_the_grain_grid_disagree_after_the_divergence
+        PASS [   0.011s] ( 186/1276) exchange-hours::futures_family_boundaries suite::cme_rough_rice::rough_rice_has_no_friday_evening_session_or_queue
+        PASS [   0.011s] ( 187/1276) exchange-hours::futures_family_boundaries suite::cme_rough_rice::rough_rice_serves_the_published_grid_with_end_exclusive_closes
+        PASS [   0.009s] ( 188/1276) exchange-hours::futures_family_boundaries suite::cme_rough_rice::the_evening_leg_and_the_next_regular_session_are_one_halted_trade_date
+        PASS [   0.015s] ( 189/1276) exchange-hours::futures_family_boundaries suite::cme_rough_rice::rough_rice_key_round_trips_through_its_canonical_name
+        PASS [   0.012s] ( 190/1276) exchange-hours::futures_family_boundaries suite::cme_silver_100oz::silver_100oz_key_round_trips_through_its_canonical_name
+        PASS [   0.017s] ( 191/1276) exchange-hours::futures_family_boundaries suite::cme_silver_100oz::neither_the_energy_nor_the_cryptocurrency_key_can_stand_in
+        PASS [   0.014s] ( 192/1276) exchange-hours::futures_family_boundaries suite::cme_silver_100oz::the_bridge_day_closes_under_the_old_grid_and_reopens_at_1630
+        PASS [   0.017s] ( 193/1276) exchange-hours::futures_family_boundaries suite::cme_silver_100oz::the_247_week_matches_the_class_template
+        PASS [   0.017s] ( 194/1276) exchange-hours::futures_family_boundaries suite::cme_silver_100oz::the_joined_weekend_block_survives_both_dst_transitions
+        PASS [   0.018s] ( 195/1276) exchange-hours::futures_family_boundaries suite::cme_silver_100oz::the_notice_dated_saturday_extensions_move_only_that_saturdays_reopen
+        PASS [   0.017s] ( 196/1276) exchange-hours::futures_family_boundaries suite::cme_silver_100oz::the_weekend_block_is_joined_and_carries_mondays_trade_date
+        PASS [   0.015s] ( 197/1276) exchange-hours::futures_family_boundaries suite::cme_spot_quoted::day_policy_overlays_a_closed_date_and_a_subgroup_early_close
+        PASS [   0.018s] ( 198/1276) exchange-hours::futures_family_boundaries suite::cme_spot_quoted::neither_the_equity_index_nor_the_cryptocurrency_key_can_stand_in
+        PASS [   0.016s] ( 199/1276) exchange-hours::futures_family_boundaries suite::cme_spot_quoted::spot_quoted_key_round_trips_through_its_canonical_name
+        PASS [   0.010s] ( 200/1276) exchange-hours::futures_family_boundaries suite::cme_spot_quoted::spot_quoted_serves_the_published_grid_with_end_exclusive_closes
+        PASS [   0.039s] ( 201/1276) exchange-hours::futures_family_boundaries suite::cme_silver_100oz::the_shared_era_is_the_energy_metals_grid_by_reference
+        PASS [   0.012s] ( 202/1276) exchange-hours::futures_family_boundaries suite::cme_spot_quoted::the_december_2025_member_listing_is_not_a_clock_revision
+        PASS [   0.020s] ( 203/1276) exchange-hours::futures_family_boundaries suite::cme_spot_quoted::the_week_reopens_on_sunday_evening_with_no_friday_evening_leg
+        PASS [   0.015s] ( 204/1276) exchange-hours::futures_family_boundaries suite::cme_spot_quoted::the_wrapping_leg_survives_both_dst_transitions
+        PASS [   0.026s] ( 205/1276) exchange-hours::futures_family_boundaries suite::cme_spot_quoted::the_weather_envelope_match_hides_two_unrelated_histories
+        PASS [   0.029s] ( 206/1276) exchange-hours::futures_family_boundaries suite::cme_spot_quoted::the_family_opens_for_the_first_time_on_2025_06_29
+        PASS [   0.013s] ( 207/1276) exchange-hours::futures_family_boundaries suite::cme_spot_quoted::the_wrapping_leg_takes_its_closing_trade_date
+        PASS [   0.013s] ( 208/1276) exchange-hours::futures_family_boundaries suite::cme_weather::an_overlay_cannot_lend_coverage_to_a_dormant_identity
+        PASS [   0.018s] ( 209/1276) exchange-hours::futures_family_boundaries suite::cme_weather::the_globex_close_moves_from_1515_to_1600_on_2025_04_13
+        PASS [   0.014s] ( 210/1276) exchange-hours::futures_family_boundaries suite::cme_weather::the_sunday_queue_carries_its_sourced_intersection_until_the_review_row
+        PASS [   0.026s] ( 211/1276) exchange-hours::futures_family_boundaries suite::cme_weather::envelope_match_is_not_family_identity
+        PASS [   0.011s] ( 212/1276) exchange-hours::futures_family_boundaries suite::cme_weather::the_wrapping_leg_survives_both_dst_transitions
+        PASS [   0.022s] ( 213/1276) exchange-hours::futures_family_boundaries suite::cme_weather::the_week_reopens_on_sunday_evening_with_no_friday_evening_leg
+        PASS [   0.024s] ( 214/1276) exchange-hours::futures_family_boundaries suite::cme_weather::the_wrapping_leg_takes_its_closing_trade_date
+        PASS [   0.017s] ( 215/1276) exchange-hours::futures_family_boundaries suite::cme_weather::weather_serves_the_published_grid_with_end_exclusive_closes
+        PASS [   0.021s] ( 216/1276) exchange-hours::futures_family_boundaries suite::cme_weather::weather_key_round_trips_through_its_canonical_name
+        PASS [   0.021s] ( 217/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::a_shortened_day_keeps_its_trade_date_and_the_evening_takes_the_next
+        PASS [   0.020s] ( 218/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::coverage_runs_from_the_earliest_surviving_artifact_to_the_published_horizon
+        PASS [   0.021s] ( 219/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::christmas_day_removes_the_whole_cfe_trading_day
+        PASS [   0.020s] ( 220/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::detaching_the_table_restores_the_normal_week
+        PASS [   0.019s] ( 221/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::every_2025_closure_is_a_date_its_notice_gives_no_session
+        PASS [   0.039s] ( 222/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::every_2025_early_close_matches_the_notice_that_states_it
+        PASS [   0.049s] ( 223/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::every_pre_2025_closure_is_a_date_its_document_gives_no_session
+        PASS [   0.021s] ( 224/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::good_friday_2021_and_2023_end_the_overnight_leg_at_the_regular_open
+        PASS [   0.017s] ( 225/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::good_friday_2025_is_a_closure_where_2026_is_an_early_close
+        PASS [   0.014s] ( 226/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::good_friday_ends_the_cfe_trading_day_at_the_regular_open
+        PASS [   0.065s] ( 227/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::every_pre_2025_half_day_closes_at_1215_central
+        PASS [   0.018s] ( 228/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::juneteenth_enters_the_set_in_2022_and_2021_traded_unadjusted
+        PASS [   0.020s] ( 229/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::new_years_day_deletes_the_prior_evening_and_keeps_its_own
+        PASS [   0.010s] ( 230/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::the_2017_rules_page_rows_key_the_2017_calendar
+        PASS [   0.022s] ( 231/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::martin_luther_king_day_closes_the_overnight_leg_at_1030_central
+        PASS [   0.018s] ( 232/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::the_session_after_christmas_eve_is_the_sunday_evening_reopening
+        PASS [   0.116s] ( 233/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::every_pre_2025_floating_holiday_stops_the_overnight_leg_at_1030_central
+        PASS [   0.025s] ( 234/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::the_mourning_day_is_extended_only_and_ends_at_0830_central
+        PASS [   0.026s] ( 235/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::the_prior_evening_leg_exists_exactly_when_its_trade_date_trades
+        PASS [   0.013s] ( 236/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::the_window_ships_only_closures_early_closes_and_one_replacement
+        PASS [   0.013s] ( 237/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::the_withheld_2017_july_3_date_is_unsourced_not_normal
+        PASS [   0.026s] ( 238/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::the_thanksgiving_and_christmas_half_days_close_at_1215_central
+        PASS [   0.016s] ( 239/1276) exchange-hours::futures_family_boundaries suite::holidays_eurex::detaching_the_table_restores_the_normal_week
+        PASS [   0.016s] ( 240/1276) exchange-hours::futures_family_boundaries suite::holidays_eurex::each_trading_calendar_edition_keys_its_own_year
+        PASS [   0.018s] ( 241/1276) exchange-hours::futures_family_boundaries suite::holidays_eurex::new_years_day_is_closed_and_the_second_of_january_is_not
+        PASS [   0.018s] ( 242/1276) exchange-hours::futures_family_boundaries suite::holidays_eurex::the_2015_whit_monday_is_the_one_extra_trading_only_closure
+        PASS [   0.023s] ( 243/1276) exchange-hours::futures_family_boundaries suite::holidays_eurex::the_christmas_closures_delete_their_trading_days
+        PASS [   0.050s] ( 244/1276) exchange-hours::futures_family_boundaries suite::holidays_eurex::every_eurex_identity_ships_the_same_hundred_and_eight_closures
+        PASS [   0.025s] ( 245/1276) exchange-hours::futures_family_boundaries suite::holidays_eurex::the_2025_closures_and_the_ordinary_week_around_them
+        PASS [   0.725s] ( 246/1276) exchange-hours::fixed_snapshot_collapse_fence every_market_hours_key_refuses_pre_floor_while_its_fixed_snapshot_answers_parity
+        PASS [   0.014s] ( 247/1276) exchange-hours::futures_family_boundaries suite::holidays_eurex::the_indicative_2027_calendar_does_not_ship
+        PASS [   0.018s] ( 248/1276) exchange-hours::futures_family_boundaries suite::holidays_eurex::the_christmas_eve_closure_takes_the_evening_leg_off_its_trade_date
+        PASS [   0.016s] ( 249/1276) exchange-hours::futures_family_boundaries suite::holidays_eurex::trading_resumes_on_the_first_open_day_after_the_christmas_block
+        PASS [   0.020s] ( 250/1276) exchange-hours::futures_family_boundaries suite::holidays_eurex::the_window_reaches_the_floor_and_refuses_below_it
+        PASS [   0.019s] ( 251/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::a_closed_trade_date_has_no_session_and_no_trade_date
+        PASS [   0.014s] ( 252/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::an_early_close_ends_a_day_that_opened_the_previous_evening
+        PASS [   0.019s] ( 253/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::a_closure_removes_the_previous_evenings_wrap
+        PASS [   0.018s] ( 254/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::a_trade_date_merge_keeps_the_sunday_evening_block
+        PASS [   0.012s] ( 255/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::era_2019_2021_unsourced_rows_change_no_answer
+        PASS [   0.015s] ( 256/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::era_2019_2021_rows_are_the_audited_date_kind_and_tier_set
+        PASS [   0.017s] ( 257/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::an_early_close_stands_without_a_closed_neighbour
+        PASS [   0.012s] ( 258/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::era_2019_2021_window_is_declared_in_order_and_bounds_every_row
+        PASS [   0.013s] ( 259/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::era_2019_2021_window_edges_answer_as_the_module_declares
+        PASS [   0.021s] ( 260/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::era_2022_2024_early_closes_are_twelve_forty_five_central
+        PASS [   0.035s] ( 261/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::era_2022_2024_closures_keep_the_five_day_weekend_roll
+        PASS [   0.027s] ( 262/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::era_2022_2024_sweeps_every_row_kind_tier_and_instant
+        PASS [   0.012s] ( 263/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::era_2022_2024_unsourced_rows_change_no_answer
+        PASS [   0.014s] ( 264/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::era_2022_2024_window_sits_second_and_the_pre_2019_interval_is_unaudited
+        PASS [   0.017s] ( 265/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::the_coverage_window_has_two_hard_edges
+        PASS [   0.017s] ( 266/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::the_eight_24x7_merged_rows_state_the_operators_own_blocks
+        PASS [   0.087s] ( 267/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::era_2019_2021_sweeps_every_shipped_row_kind_and_instant
+        PASS [   0.018s] ( 268/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::the_family_keys_no_late_open_row
+        PASS [   0.025s] ( 269/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::the_five_day_era_keeps_the_holidays_own_trade_dates
+        PASS [   0.017s] ( 270/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::the_merged_rows_join_a_strictly_ascending_table
+        PASS [   0.041s] ( 271/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::the_merged_evening_legs_carry_the_operators_trade_date
+        PASS [   0.017s] ( 272/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::the_nine_merged_rows_state_the_operators_own_blocks
+        PASS [   0.025s] ( 273/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::the_merged_spans_close_on_their_own_trade_date
+        PASS [   0.018s] ( 274/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::the_thanksgiving_merge_pauses_before_its_early_close
+        PASS [   0.040s] ( 275/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::the_ordinary_24x7_windows_are_unchanged
+        PASS [   0.124s] ( 276/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::the_24x7_holidays_sixteen_hundred_minute_is_traded
+        PASS [   0.034s] ( 277/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::without_holidays_restores_the_normal_week_answer
+        PASS [   0.020s] ( 278/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::a_saturday_rows_sunday_legs_are_sourced_from_a_window_that_prints_them
+        PASS [   0.019s] ( 279/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::a_saturday_session_row_keeps_the_ordinary_sunday_queue
+        PASS [   0.076s] ( 280/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_cryptocurrency::the_twenty_four_seven_era_rolls_the_trade_date_without_deleting_a_day
+        PASS [   0.027s] ( 281/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::a_saturday_session_row_states_the_complete_trade_date
+        PASS [   0.021s] ( 282/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::christmas_2025_removes_the_whole_trade_date
+        PASS [   0.021s] ( 283/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_2013_2015_rows_are_the_audited_date_kind_and_tier_set
+        PASS [   0.014s] ( 284/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_2013_2015_window_edges_answer_as_the_module_declares
+        PASS [   0.019s] ( 285/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_2013_2015_window_is_declared_in_order_and_bounds_every_row
+        PASS [   0.012s] ( 286/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_2019_2021_rows_are_the_audited_date_kind_and_tier_set
+        PASS [   0.016s] ( 287/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_2019_2021_unsourced_rows_change_no_answer
+        PASS [   0.015s] ( 288/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_2019_2021_window_edges_answer_as_the_module_declares
+        PASS [   0.047s] ( 289/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_2013_2015_sweeps_every_shipped_row_kind_and_instant
+        PASS [   0.017s] ( 290/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_2019_2021_window_is_declared_in_order_and_bounds_every_row
+        PASS [   0.022s] ( 291/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_2022_2024_close_instants_are_the_energy_venues_not_the_financial_ones
+        PASS [   0.053s] ( 292/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_2019_2021_sweeps_every_shipped_row_kind_and_instant
+        PASS [   0.030s] ( 293/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_2022_2024_closures_remove_the_trading_day_and_the_prior_evening_wrap
+        PASS [   0.018s] ( 294/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_2022_2024_unsourced_rows_change_no_answer
+        PASS [   0.018s] ( 295/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_2022_2024_window_sits_fifth_and_the_2013_2015_era_is_audited
+        PASS [   0.016s] ( 296/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_dates_without_rows_are_audited_normal
+        PASS [   0.018s] ( 297/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_early_closes_end_the_wrapped_trading_day_at_the_stated_instant
+        PASS [   0.013s] ( 298/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_ships_no_late_open_and_reopens_at_the_normal_1700_ct
+        PASS [   0.024s] ( 299/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_window_edges_answer_as_the_module_declares
+        PASS [   0.019s] ( 300/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::no_late_open_row_ships_in_the_published_window
+        PASS [   0.022s] ( 301/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::juneteenth_2026_clips_the_friday_and_keys_the_thursday_leg_to_the_monday
+        PASS [   0.071s] ( 302/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::era_2022_2024_sweeps_every_row_kind_tier_and_instant
+        PASS [   0.023s] ( 303/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::the_2025_black_friday_early_close_is_end_exclusive_on_its_own_trade_date
+        PASS [   0.029s] ( 304/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::the_2025_thanksgiving_early_close_stops_matching_at_13_30_and_reopens_at_17_00
+        PASS [   0.029s] ( 305/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::the_2025_thanksgiving_friday_serves_its_0700_pre_open_as_order_entry_only
+        PASS [   0.025s] ( 306/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::the_christmas_eve_evening_leg_is_removed_and_the_next_open_is_the_holiday_evening
+        PASS [   0.012s] ( 307/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::the_coverage_window_bounds_every_answer_the_table_gives
+        PASS [   0.019s] ( 308/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::wave2_closures_remove_the_trade_date_and_ship_no_late_open
+        PASS [   0.029s] ( 309/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::trade_dates_follow_the_rows_rather_than_the_civil_day
+        PASS [   0.046s] ( 310/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::wave2_early_closes_end_the_wrapped_trading_day_at_the_printed_instant
+        PASS [   0.036s] ( 311/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::a_saturday_rows_sunday_legs_are_sourced_from_a_window_that_prints_them
+        PASS [   0.059s] ( 312/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_energy::without_holidays_restores_the_normal_week_answer
+        PASS [   0.036s] ( 313/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::christmas_2025_is_a_closed_trade_date_with_no_session_of_its_own
+        PASS [   0.018s] ( 314/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_2013_2015_rows_are_the_audited_date_kind_and_tier_set
+        PASS [   0.031s] ( 315/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_2012_07_03_early_close_ends_the_trade_date_at_1215_central
+        PASS [   0.020s] ( 316/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_2013_2015_window_edges_answer_as_the_module_declares
+        PASS [   0.012s] ( 317/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_2013_2015_window_is_declared_in_order_and_bounds_every_row
+        PASS [   0.017s] ( 318/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_2019_2021_rows_are_the_audited_date_kind_and_tier_set
+        PASS [   0.013s] ( 319/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_2019_2021_unsourced_rows_change_no_answer
+        PASS [   0.009s] ( 320/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_2019_2021_window_edges_answer_as_the_module_declares
+        PASS [   0.012s] ( 321/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_2019_2021_window_is_declared_in_order_and_bounds_every_row
+        PASS [   0.011s] ( 322/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_2022_2024_early_closes_clip_the_day_phase_not_the_overnight_one
+        PASS [   0.043s] ( 323/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_2022_2024_closures_remove_the_trading_day_and_the_prior_evening_wrap
+        PASS [   0.011s] ( 324/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_2022_2024_unsourced_rows_change_no_answer
+        PASS [   0.014s] ( 325/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_2022_2024_window_sits_fifth_and_the_2013_2015_era_is_audited
+        PASS [   0.017s] ( 326/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_dates_without_rows_are_audited_normal
+        PASS [   0.026s] ( 327/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_early_closes_end_the_wrapped_trading_day_at_the_stated_instant
+        PASS [   0.164s] ( 328/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_2013_2015_sweeps_every_shipped_row_kind_and_instant
+        PASS [   0.018s] ( 329/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_window_edges_answer_as_the_module_declares
+        PASS [   0.040s] ( 330/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_late_opens_land_on_the_trade_date_itself
+        PASS [   0.019s] ( 331/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::good_friday_2026_closes_equity_index_at_0815_central
+        PASS [   0.149s] ( 332/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_2022_2024_sweeps_every_row_kind_tier_and_instant
+        PASS [   0.187s] ( 333/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::era_2019_2021_sweeps_every_shipped_row_kind_and_instant
+        PASS [   0.026s] ( 334/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::holiday_rows_move_the_trade_date_only_where_the_operator_does
+        PASS [   0.018s] ( 335/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::martin_luther_king_day_2025_clips_the_sunday_evening_trading_day
+        PASS [   0.017s] ( 336/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::no_late_open_row_ships_in_the_2025_2027_window
+        PASS [   0.017s] ( 337/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::the_2025_thanksgiving_friday_serves_its_0700_pre_open_as_order_entry_only
+        PASS [   0.758s] ( 338/1276) exchange-hours::futures_family_boundaries suite::holidays_cfe_vix::the_venue_and_the_key_answer_from_the_same_table
+        PASS [   0.013s] ( 339/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::the_christmas_2025_closure_removes_the_previous_evenings_wrap
+        PASS [   0.017s] ( 340/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::the_coverage_window_is_exactly_2010_through_2027
+        PASS [   0.015s] ( 341/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::the_day_after_thanksgiving_2025_closes_at_1215_central
+        PASS [   0.016s] ( 342/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::wave2_closures_remove_the_trade_date_and_the_prior_evening_leg
+        PASS [   0.023s] ( 343/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::wave2_2018_12_26_opens_late_at_1530_central
+        PASS [   0.030s] ( 344/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::the_equity_index_states_its_saturday_sessions_on_the_trade_date
+        PASS [   0.018s] ( 345/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::wave2_window_edges_and_unaudited_neighbours_answer_as_declared
+        PASS [   0.016s] ( 346/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::a_saturday_session_row_states_its_queue_and_evening_open
+        PASS [   0.014s] ( 347/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::christmas_2026_closes_the_whole_trade_date_and_its_previous_evening
+        PASS [   0.020s] ( 348/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::a_saturday_session_row_states_the_whole_trade_date
+        PASS [   0.015s] ( 349/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_2013_2015_rows_are_the_audited_date_kind_and_tier_set
+        PASS [   0.047s] ( 350/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::wave2_early_closes_end_the_wrapped_trading_day_at_the_printed_instant
+        PASS [   0.018s] ( 351/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_2013_2015_window_edges_answer_as_the_module_declares
+        PASS [   0.018s] ( 352/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_2013_2015_window_is_declared_in_order_and_bounds_every_row
+        PASS [   0.018s] ( 353/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_2019_2021_rows_are_the_audited_date_kind_and_tier_set
+        PASS [   0.015s] ( 354/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_2019_2021_unsourced_rows_change_no_answer
+        PASS [   0.014s] ( 355/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_2019_2021_window_edges_answer_as_the_module_declares
+        PASS [   0.056s] ( 356/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_2013_2015_sweeps_every_shipped_row_kind_and_instant
+        PASS [   0.018s] ( 357/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_2019_2021_window_is_declared_in_order_and_bounds_every_row
+        PASS [   0.020s] ( 358/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_2022_2024_early_close_instants_are_the_familys_own
+        PASS [   0.032s] ( 359/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_2022_2024_closures_remove_the_trading_day_and_the_prior_evening_wrap
+        PASS [   0.059s] ( 360/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_2019_2021_sweeps_every_shipped_row_kind_and_instant
+        PASS [   0.029s] ( 361/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_2022_2024_sweeps_every_row_kind_tier_and_instant
+        PASS [   0.016s] ( 362/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_2022_2024_unsourced_rows_change_no_answer
+        PASS [   0.018s] ( 363/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_2022_2024_window_sits_fifth_and_the_2013_2015_era_is_audited
+        PASS [   0.017s] ( 364/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_dates_without_rows_are_audited_normal
+        PASS [   0.013s] ( 365/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_good_friday_2011_is_a_full_closure
+        PASS [   0.018s] ( 366/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_early_closes_end_the_wrapped_trading_day_at_the_stated_instant
+        PASS [   0.013s] ( 367/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_window_edges_answer_as_the_module_declares
+        PASS [   0.018s] ( 368/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::era_late_opens_land_on_the_trade_date_itself
+        PASS [   0.016s] ( 369/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::good_friday_2026_closes_at_1015_ct_while_2025_and_2027_are_shut
+        PASS [   0.020s] ( 370/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::the_2025_merged_trade_dates_carry_the_operator_label
+        PASS [   0.016s] ( 371/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::the_2025_thanksgiving_friday_closes_at_1345_ct
+        PASS [   0.015s] ( 372/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::the_2025_thanksgiving_friday_serves_its_0700_pre_open_as_order_entry_only
+        PASS [   0.013s] ( 373/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::the_family_ships_no_late_open_and_reopens_at_the_normal_1700_ct
+        PASS [   0.011s] ( 374/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::the_table_answers_inside_its_window_and_nowhere_else
+        PASS [   0.014s] ( 375/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::the_holiday_rows_keep_the_trade_dates_the_operator_prints
+        PASS [   0.022s] ( 376/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::the_christmas_2025_closure_removes_the_eves_evening_wrap
+        PASS [   0.014s] ( 377/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::wave2_closures_remove_the_trade_date_and_ship_no_late_open
+        PASS [   0.014s] ( 378/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::wave2_early_closes_end_the_wrapped_trading_day_at_the_printed_instant
+        PASS [   0.020s] ( 379/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::boxing_day_2025_opens_late_at_0830_central
+        PASS [   0.053s] ( 380/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_fx::without_holidays_restores_the_normal_week
+        PASS [   0.024s] ( 381/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::christmas_2025_closes_its_trade_date_and_the_prior_evening_leg
+        PASS [   0.017s] ( 382/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::christmas_eve_2025_is_open_one_second_before_the_early_close
+        PASS [   0.022s] ( 383/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::christmas_eve_2025_closes_at_1205_central
+        PASS [   0.016s] ( 384/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::coverage_window_is_declared_and_does_not_extend
+        PASS [   0.016s] ( 385/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_2013_2015_rows_are_the_audited_date_kind_and_tier_set
+        PASS [   0.032s] ( 386/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::day_after_thanksgiving_2025_states_both_of_its_published_queues
+        PASS [   0.098s] ( 387/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::a_merged_trade_date_serves_the_pre_open_its_eve_publishes
+        PASS [   0.016s] ( 388/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_2013_2015_window_edges_answer_as_the_module_declares
+        PASS [   0.122s] ( 389/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::a_closure_eve_states_the_complete_day_and_keeps_its_post_close_queue
+        PASS [   0.013s] ( 390/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_2013_2015_window_is_declared_in_order_and_bounds_every_row
+        PASS [   0.019s] ( 391/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_2019_2021_rows_are_the_audited_date_kind_and_tier_set
+        PASS [   0.036s] ( 392/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_2019_2021_day_after_closure_shapes_are_the_derived_dates
+        PASS [   0.018s] ( 393/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_2019_2021_unsourced_rows_change_no_answer
+        PASS [   0.014s] ( 394/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_2019_2021_window_is_declared_in_order_and_bounds_every_row
+        PASS [   0.018s] ( 395/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_2019_2021_window_edges_answer_as_the_module_declares
+        PASS [   0.085s] ( 396/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_2013_2015_sweeps_every_shipped_row_kind_and_instant
+        PASS [   0.015s] ( 397/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_2022_2023_sheet_sourced_closures
+        PASS [   0.019s] ( 398/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_2022_12_27_opens_normally_because_the_holiday_carried_the_evening_leg
+        PASS [   0.377s] ( 399/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_equity_index::without_holidays_restores_the_normal_week_across_the_christmas_2025_week
+        PASS [   0.013s] ( 400/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_2022_2024_unsourced_rows_change_no_answer
+        PASS [   0.035s] ( 401/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_2022_2024_days_after_thanksgiving_open_late_and_close_early
+        PASS [   0.013s] ( 402/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_dates_without_rows_are_audited_normal_under_both_grids
+        PASS [   0.017s] ( 403/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_2022_2024_window_sits_fifth_and_the_2013_2015_era_is_audited
+        PASS [   0.133s] ( 404/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_2019_2021_sweeps_every_shipped_row_kind_and_instant
+        PASS [   0.065s] ( 405/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_2022_2024_sweeps_every_row_kind_tier_and_instant
+        PASS [   0.028s] ( 406/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_early_closes_end_the_day_session_at_1200_central
+        PASS [   0.028s] ( 407/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_late_open_and_early_close_2012_11_23_is_one_0930_to_1200_block
+        PASS [   0.012s] ( 408/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_window_edges_answer_as_the_module_declares
+        PASS [   0.016s] ( 409/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::mlk_2025_removes_the_trade_date_not_the_evening_leg_that_begins_the_next
+        PASS [   0.014s] ( 410/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::next_session_after_christmas_eve_2025_is_the_friday_day_open
+        PASS [   0.030s] ( 411/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_late_opens_land_where_the_normal_first_open_puts_them
+        PASS [   0.027s] ( 412/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::holiday_rows_move_the_trade_date_the_way_cme_prints_it
+        PASS [   0.108s] ( 413/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::era_2022_2024_closures_remove_the_trading_day_and_the_prior_evening_wrap
+        PASS [   0.024s] ( 414/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::the_post_close_queue_carries_the_trade_date_of_the_session_it_feeds
+        PASS [   0.017s] ( 415/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::wave2_day_after_thanksgiving_opens_late_and_closes_early
+        PASS [   0.023s] ( 416/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::wave2_early_closes_and_the_late_open_land_on_the_printed_instants
+        PASS [   0.013s] ( 417/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::wave2_every_early_close_instant_is_the_printed_one
+        PASS [   0.014s] ( 418/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::wave2_ships_twenty_seven_closures_and_no_unsourced_row
+        PASS [   0.043s] ( 419/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::the_day_after_a_closure_states_the_operators_pre_open
+        PASS [   0.014s] ( 420/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::a_closed_friday_hands_the_next_open_to_sunday_evening
+        PASS [   0.014s] ( 421/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::a_closed_trade_date_removes_the_whole_christmas_trading_day
+        PASS [   0.025s] ( 422/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::a_closure_removes_the_prior_evening_wrap
+        PASS [   0.066s] ( 423/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::the_pre_eve_post_close_queue_answers_on_every_closure_eve_run_up
+        PASS [   0.019s] ( 424/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::a_saturday_session_row_states_its_queue_and_evening_open
+        PASS [   0.040s] ( 425/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_grains::without_holidays_reproduces_the_normal_week
+        PASS [   0.022s] ( 426/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::a_saturday_session_row_states_the_whole_trade_date
+        PASS [   0.016s] ( 427/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_2010_2012_noon_halts_and_merged_trade_dates_are_the_audited_set
+        PASS [   0.019s] ( 428/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_2013_2015_rows_are_the_audited_date_kind_and_tier_set
+        PASS [   0.011s] ( 429/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_2019_2021_rows_are_the_audited_date_kind_and_tier_set
+        PASS [   0.018s] ( 430/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_2013_2015_window_is_declared_in_order_and_bounds_every_row
+        PASS [   0.022s] ( 431/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_2013_2015_window_edges_answer_as_the_module_declares
+        PASS [   0.016s] ( 432/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_2019_2021_unsourced_rows_change_no_answer
+        PASS [   0.014s] ( 433/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_2019_2021_window_is_declared_in_order_and_bounds_every_row
+        PASS [   0.019s] ( 434/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_2019_2021_window_edges_answer_as_the_module_declares
+        PASS [   0.016s] ( 435/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_2022_2023_sheet_sourced_early_closes
+        PASS [   0.018s] ( 436/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_2022_2024_close_instants_are_the_financial_ones_not_the_energy_venue
+        PASS [   0.063s] ( 437/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_2013_2015_sweeps_every_shipped_row_kind_and_instant
+        PASS [   0.028s] ( 438/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_2022_2024_closures_remove_the_trading_day_and_the_prior_evening_wrap
+        PASS [   0.014s] ( 439/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_2022_2024_unsourced_rows_change_no_answer
+        PASS [   0.060s] ( 440/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_2019_2021_sweeps_every_shipped_row_kind_and_instant
+        PASS [   0.017s] ( 441/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_2022_2024_window_sits_fifth_and_the_2013_2015_era_is_audited
+        PASS [   0.013s] ( 442/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_early_closes_end_the_wrapped_trading_day_at_the_stated_instant
+        PASS [   0.011s] ( 443/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_window_edges_answer_as_the_module_declares
+        PASS [   0.023s] ( 444/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_late_opens_land_on_the_trade_date_itself
+        PASS [   0.016s] ( 445/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::no_late_open_ships_and_the_post_closure_reopen_is_the_normal_open
+        PASS [   0.021s] ( 446/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::every_distinct_early_close_instant_is_fenced_on_both_sides
+        PASS [   0.014s] ( 447/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::the_2025_thanksgiving_friday_serves_its_0700_pre_open_as_order_entry_only
+        PASS [   0.013s] ( 448/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::the_coverage_window_bounds_what_the_table_answers
+        PASS [   0.013s] ( 449/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::the_thanksgiving_saturday_row_changes_no_answer
+        PASS [   0.061s] ( 450/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::era_2022_2024_sweeps_every_row_kind_tier_and_instant
+        PASS [   0.017s] ( 451/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::the_day_after_thanksgiving_clips_a_session_opened_the_previous_evening
+        PASS [   0.020s] ( 452/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::trade_dates_follow_the_shortened_and_the_deleted_days
+        PASS [   0.018s] ( 453/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::wave2_closures_remove_the_trade_date_and_ship_no_late_open
+        PASS [   0.011s] ( 454/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::without_holidays_restores_the_normal_week_answer
+        PASS [   0.016s] ( 455/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::wave2_window_edges_and_unaudited_neighbours_answer_as_declared
+        PASS [   0.014s] ( 456/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::a_closed_trade_date_removes_the_whole_civil_day
+        PASS [   0.012s] ( 457/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::a_closure_removes_the_previous_days_post_close_queue
+        PASS [   0.028s] ( 458/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_interest_rates::wave2_early_closes_end_the_wrapped_trading_day_at_the_printed_instant
+        PASS [   0.018s] ( 459/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::an_early_close_ends_the_trading_day_at_the_stated_instant
+        PASS [   0.013s] ( 460/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_2013_2015_rows_are_the_audited_date_kind_and_tier_set
+        PASS [   0.016s] ( 461/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::each_early_close_carries_its_own_sourced_instant
+        PASS [   0.008s] ( 462/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_2013_2015_window_edges_answer_as_the_module_declares
+        PASS [   0.012s] ( 463/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_2016_2018_window_is_declared_in_order_and_bounds_every_row
+        PASS [   0.018s] ( 464/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_2013_2015_window_is_declared_in_order_and_bounds_every_row
+        PASS [   0.016s] ( 465/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_2016_2018_rows_are_the_audited_date_kind_and_tier_set
+        PASS [   0.018s] ( 466/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_2016_2018_window_edges_answer_as_the_module_declares
+        PASS [   0.011s] ( 467/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_2019_2021_rows_are_the_audited_date_kind_and_tier_set
+        PASS [   0.037s] ( 468/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_2013_2015_sweeps_every_shipped_row_kind_and_instant
+        PASS [   0.011s] ( 469/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_2019_2021_window_edges_answer_as_the_module_declares
+        PASS [   0.017s] ( 470/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_2019_2021_unsourced_rows_change_no_answer
+        PASS [   0.013s] ( 471/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_2019_2021_window_is_declared_in_order_and_bounds_every_row
+        PASS [   0.011s] ( 472/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_2022_2024_early_closes_end_the_flat_day_at_the_printed_instant
+        PASS [   0.014s] ( 473/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_2022_2024_sweeps_every_row_kind_tier_and_instant
+        PASS [   0.011s] ( 474/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_2022_2024_unsourced_rows_change_no_answer
+        PASS [   0.010s] ( 475/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_2022_2024_window_sits_fifth_and_the_lower_waves_are_declared
+        PASS [   0.040s] ( 476/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_2019_2021_sweeps_every_shipped_row_kind_and_instant
+        PASS [   0.016s] ( 477/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_good_friday_2010_is_a_full_closure
+        PASS [   0.036s] ( 478/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_2022_2024_closures_remove_the_whole_civil_day
+        PASS [   0.009s] ( 479/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_window_edges_answer_as_the_module_declares
+        PASS [   0.015s] ( 480/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_late_opens_land_on_the_trade_date_itself
+        PASS [   0.025s] ( 481/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::era_early_closes_end_the_wrapped_trading_day_at_the_stated_instant
+        PASS [   0.011s] ( 482/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::the_sourced_saturday_row_changes_no_answer
+        PASS [   0.011s] ( 483/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::the_table_answers_only_inside_its_coverage_window
+        PASS [   0.019s] ( 484/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::the_rows_reach_the_trade_date
+        PASS [   0.019s] ( 485/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::the_table_ships_the_audited_kind_distribution
+        PASS [   0.010s] ( 486/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::a_closure_removes_the_previous_evening_wrap
+        PASS [   0.014s] ( 487/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_livestock::without_holidays_restores_the_normal_week
+        PASS [   0.014s] ( 488/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::a_closed_trade_date_deletes_its_whole_trading_day
+        PASS [   0.021s] ( 489/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::an_early_close_is_shut_at_its_cutoff_and_moves_the_session_bounds
+        PASS [   0.019s] ( 490/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_2010_window_ships_the_six_sheets_rows_and_follows_the_equity_index_line
+        PASS [   0.027s] ( 491/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::an_early_close_is_open_one_second_before_its_cutoff
+        PASS [   0.029s] ( 492/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::a_day_after_a_closure_serves_its_1600_pre_open
+        PASS [   0.028s] ( 493/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::a_saturday_rows_sunday_legs_are_sourced_from_a_window_that_prints_them
+        PASS [   0.014s] ( 494/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_2011_2015_rows_follow_the_equity_index_line
+        PASS [   0.021s] ( 495/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_2019_2021_rows_are_the_audited_date_kind_and_tier_set
+        PASS [   0.024s] ( 496/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_2019_2021_unsourced_rows_change_no_answer
+        PASS [   0.020s] ( 497/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_2019_2021_window_edges_answer_as_the_module_declares
+        PASS [   0.046s] ( 498/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_2011_2015_sweeps_every_row_kind_tier_and_instant
+        PASS [   0.021s] ( 499/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_2019_2021_window_is_declared_in_order_and_bounds_every_row
+        PASS [   0.021s] ( 500/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_2022_2024_closures_remove_the_trading_day_and_the_prior_evening_wrap
+        PASS [   2.852s] ( 501/1276) exchange-hours::coverage_metadata withheld_dates_are_unresolved_gaps_inside_an_audited_window
+        PASS [   0.018s] ( 502/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_2022_2024_unsourced_rows_cite_the_document_that_withheld_the_instant
+        PASS [   0.015s] ( 503/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_2022_2024_window_sits_third_and_the_floor_era_answers
+        PASS [   0.012s] ( 504/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_christmas_2015_deletes_only_the_legs_the_operator_deleted
+        PASS [   0.020s] ( 505/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_2022_2024_unsourced_rows_change_no_answer
+        PASS [   0.016s] ( 506/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_new_year_2012_closure_hands_over_to_the_late_open
+        PASS [   0.016s] ( 507/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_new_year_2015_ships_no_late_open_and_reopens_at_1700
+        PASS [   0.020s] ( 508/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_good_friday_2011_deletes_the_trade_date_and_the_prior_evening_leg
+        PASS [   0.080s] ( 509/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_2019_2021_sweeps_every_shipped_row_kind_and_instant
+        PASS [   0.020s] ( 510/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_martin_luther_king_2011_ends_the_wrapped_leg_at_the_1030_halt
+        PASS [   0.060s] ( 511/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::era_2022_2024_sweeps_every_row_kind_tier_and_instant
+        PASS [   0.017s] ( 512/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::every_block_row_spells_the_envelope_the_regular_session_it_is
+        PASS [   0.015s] ( 513/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::good_friday_2026_closes_at_the_equity_index_instant_not_the_rates_instant
+        PASS [   0.016s] ( 514/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::holiday_coverage_bounds_what_the_table_answers_for
+        PASS [   0.020s] ( 515/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::the_2025_rows_inferred_from_the_equity_index_line_clip_the_same_way
+        PASS [   0.018s] ( 516/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::the_2025_thanksgiving_friday_serves_its_0700_pre_open_as_order_entry_only
+        PASS [   0.028s] ( 517/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::every_shipped_early_close_instant_is_fenced_on_both_sides
+        PASS [   0.012s] ( 518/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::the_good_friday_2025_closure_skips_to_the_sunday_open
+        PASS [   0.013s] ( 519/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::the_old_grid_era_answers_from_the_modelled_grid_with_one_row
+        PASS [   0.015s] ( 520/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::the_published_saturday_sessions_ship_as_rows_on_the_following_monday
+        PASS [   0.022s] ( 521/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::the_five_unwitnessed_2025_merged_dates_answer_the_holiday_not_the_next_business_day
+        PASS [   0.010s] ( 522/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::the_year_end_closures_delete_only_the_legs_the_operator_deleted
+        PASS [   0.016s] ( 523/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::the_table_ships_no_late_open_and_holds_exactly_its_audited_rows
+        PASS [   0.022s] ( 524/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::the_trade_date_follows_the_clipped_close
+        PASS [   0.014s] ( 525/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::wave2_early_close_and_late_open_bounds_are_end_and_start_exclusive
+        PASS [   0.015s] ( 526/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::wave2_rows_follow_the_equity_index_line
+        PASS [   0.013s] ( 527/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::wave2_window_edges_answer_as_declared
+        PASS [   0.028s] ( 528/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::the_published_sunday_pre_open_queues_are_fenced_at_their_bounds
+        PASS [   0.010s] ( 529/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::an_unsourced_row_is_reported_and_changes_no_answer
+        PASS [   0.014s] ( 530/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::a_shortened_index_day_keeps_its_trade_date
+        PASS [   0.013s] ( 531/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::easter_monday_moves_the_sugar_coffee_and_cocoa_open_to_0730_new_york
+        PASS [   0.019s] ( 532/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::detaching_the_table_restores_the_normal_week
+        PASS [   0.011s] ( 533/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::fcoj_and_cotton_are_not_part_of_the_easter_monday_late_open
+        PASS [   0.017s] ( 534/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::every_ice_table_covers_the_2025_floor_through_the_2027_calendars_last_entry
+        PASS [   0.013s] ( 535/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::good_friday_gives_the_index_families_a_late_open_and_an_early_close
+        PASS [   0.017s] ( 536/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::memorial_day_removes_the_whole_softs_trading_day
+        PASS [   0.016s] ( 537/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::the_2025_index_early_closes_take_their_own_instants
+        PASS [   0.014s] ( 538/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::the_2025_mourning_notice_closes_fang_at_0930_and_the_venue_withholds_the_date
+        PASS [   0.042s] ( 539/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::cotton_carries_its_own_monday_late_open_row
+        PASS [   0.017s] ( 540/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::the_2025_london_bank_holidays_delay_the_three_softs_opens
+        PASS [   0.012s] ( 541/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::the_2025_ordinary_week_around_the_rows_still_trades
+        PASS [   0.015s] ( 542/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::the_2025_thanksgiving_friday_states_each_softs_family_separately
+        PASS [   0.015s] ( 543/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::the_2026_thanksgiving_notice_states_each_familys_instants
+        PASS [   0.068s] ( 544/1276) exchange-hours::futures_family_boundaries suite::holidays_globex_nikkei_225_dollar::without_holidays_restores_the_normal_week
+        PASS [   0.027s] ( 545/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::the_2025_softs_closures_remove_the_whole_trading_day
+        PASS [   0.017s] ( 546/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::the_index_families_take_their_own_early_close_instants
+        PASS [   0.025s] ( 547/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::the_2026_dst_end_week_opens_the_softs_late_at_three_instants
+        PASS [   0.010s] ( 548/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::the_two_unretrieved_2025_notices_are_withheld_not_answered
+        PASS [   0.010s] ( 549/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::the_venue_ships_only_the_dates_every_family_agrees_on
+        PASS [   0.013s] ( 550/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::the_new_years_closure_removes_the_prior_evening_for_the_index_families
+        PASS [   0.014s] ( 551/1276) exchange-hours::futures_family_boundaries suite::holidays_ice_us::the_venue_table_is_the_intersection_of_the_five_tables_its_keys_select
+        PASS [   0.012s] ( 552/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index::sgx_equity_index_serves_the_sourced_window_then_the_verified_grid
+        PASS [   0.020s] ( 553/1276) exchange-hours::futures_family_boundaries suite::ice::ice_sugar_open_tracks_its_sourced_revisions
+        PASS [   0.017s] ( 554/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index::sgx_equity_index_grids_do_not_collapse_onto_each_other
+        PASS [   0.012s] ( 555/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index::sgx_equity_index_t_plus_one_opens_fifteen_minutes_earlier_from_2025_04_07
+        PASS [   0.011s] ( 556/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index_eras::state_a_begins_on_the_monday_after_the_capture_for_the_three_carried_families
+        PASS [   0.011s] ( 557/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index_eras::taiwan_starts_on_its_launch_day_and_ntr_on_its_first_listing
+        PASS [   0.016s] ( 558/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index::sgx_taiwan_history_starts_on_its_stated_launch_day
+        PASS [   0.013s] ( 559/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index_eras::the_2013_row_on_the_china_key
+        PASS [   0.014s] ( 560/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index_eras::the_2013_table_takes_effect_on_the_monday_and_creates_the_overnight_close
+        PASS [   0.018s] ( 561/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index_eras::the_2013_row_on_the_japan_key
+        PASS [   0.019s] ( 562/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index_eras::the_2013_row_on_the_singapore_key
+        PASS [   0.016s] ( 563/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index_eras::the_2019_11_11_rows_carry_the_content_api_routines_on_all_five_keys
+        PASS [   0.011s] ( 564/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index_eras::the_floor_edges_are_exact_on_the_china_key
+        PASS [   0.018s] ( 565/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index_eras::the_floor_edges_are_exact_on_the_japan_key
+        PASS [   0.018s] ( 566/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index_eras::the_floor_edges_are_exact_on_the_singapore_key
+        PASS [   0.016s] ( 567/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index_eras::the_floor_grids_are_the_2009_and_2013_intersection_carried_to_the_floor_and_below
+        PASS [   0.017s] ( 568/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index_eras::the_japan_t_session_lengthens_on_2024_11_04
+        PASS [   0.012s] ( 569/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index_eras::the_simsci_move_is_dated_to_2019_06_10_by_the_change_log
+        PASS [   0.012s] ( 570/1276) exchange-hours::global_equities suite::current::bme_current_auction_and_trading_at_last_envelope
+        PASS [   0.018s] ( 571/1276) exchange-hours::futures_family_boundaries suite::sgx_equity_index_eras::the_t_plus_one_close_extends_to_05_15_on_2019_11_11_on_four_keys
+        PASS [   0.016s] ( 572/1276) exchange-hours::global_equities suite::bulk::global_bulk_and_names_are_stable
+        PASS [   0.017s] ( 573/1276) exchange-hours::global_equities suite::current::borsa_istanbul_current_baseline
+        PASS [   0.015s] ( 574/1276) exchange-hours::global_equities suite::current::jse_current_baseline
+        PASS [   0.016s] ( 575/1276) exchange-hours::global_equities suite::current::tadawul_current_baseline_and_workweek
+        PASS [   0.018s] ( 576/1276) exchange-hours::global_equities suite::current::lse_sets_current_auction_envelope
+        PASS [   0.018s] ( 577/1276) exchange-hours::global_equities suite::current::tsx_current_baseline
+        PASS [   0.016s] ( 578/1276) exchange-hours::global_equities suite::current::vienna_atx_current_auction_envelope
+        PASS [   0.017s] ( 579/1276) exchange-hours::global_equities suite::history::bme_trading_at_last_cutover
+        PASS [   0.017s] ( 580/1276) exchange-hours::global_equities suite::history::borsa_istanbul_cutovers
+        PASS [   0.010s] ( 581/1276) exchange-hours::global_equities suite::history::borsa_istanbul_pre_2012_grid_is_the_imkb_page_print
+        PASS [   0.013s] ( 582/1276) exchange-hours::global_equities suite::history::euronext_milan_cutovers
+        PASS [   0.017s] ( 583/1276) exchange-hours::global_equities suite::history::euronext_core_pre_open_cutovers
+        PASS [   0.015s] ( 584/1276) exchange-hours::global_equities suite::history::euronext_dublin_cutovers
+        PASS [   0.017s] ( 585/1276) exchange-hours::global_equities suite::history::jse_cutovers
+        PASS [   0.013s] ( 586/1276) exchange-hours::global_equities suite::history::six_trading_at_last_cutover
+        PASS [   0.015s] ( 587/1276) exchange-hours::global_equities suite::history::nasdaq_nordic_cutovers
+        PASS [   0.016s] ( 588/1276) exchange-hours::global_equities suite::history::lse_cutovers
+        PASS [   0.017s] ( 589/1276) exchange-hours::global_equities suite::history::tadawul_cutovers
+        PASS [   0.015s] ( 590/1276) exchange-hours::global_equities suite::history::vienna_third_friday_settlement_grid_is_date_aware
+        PASS [   0.016s] ( 591/1276) exchange-hours::global_equities suite::history::tadawul_pre_2013_grid_is_the_trading_times_print
+        PASS [   0.017s] ( 592/1276) exchange-hours::global_equities suite::history::vienna_trade_at_close_cutover
+        PASS [   0.012s] ( 593/1276) exchange-hours::global_equities suite::history::vienna_xetra_t7_migration_and_closing_extension
+        PASS [   0.011s] ( 594/1276) exchange-hours::global_equities suite::history::xetra_cutovers
+        PASS [   0.009s] ( 595/1276) exchange-hours::global_equities suite::holidays::asx::an_ordinary_weekday_answers_and_closes_end_exclusively
+        PASS [   0.013s] ( 596/1276) exchange-hours::global_equities suite::holidays::asx::sourced_dates_answer_while_the_carried_region_still_refuses
+        PASS [   0.016s] ( 597/1276) exchange-hours::global_equities suite::holidays::asx::every_shipped_row_matches_the_sheets_per_year
+        PASS [   0.023s] ( 598/1276) exchange-hours::global_equities suite::holidays::asx::a_representative_closure_answers_in_each_published_year
+        PASS [   0.010s] ( 599/1276) exchange-hours::global_equities suite::holidays::asx::the_window_refuses_before_the_floor_and_the_sheet_has_no_forward_gap
+        PASS [   0.023s] ( 600/1276) exchange-hours::global_equities suite::holidays::asx::the_close_early_days_clip_at_the_sheets_own_1410
+        PASS [   0.014s] ( 601/1276) exchange-hours::global_equities suite::holidays::b3_window_ordinary_weekdays_and_coverage_endpoints
+        PASS [   0.019s] ( 602/1276) exchange-hours::global_equities suite::holidays::b3_weekend_legs_and_sao_paulo_holidays_are_audited_normal
+        PASS [   0.039s] ( 603/1276) exchange-hours::global_equities suite::holidays::b3_ash_wednesday_opens_late_at_1300_sao_paulo
+        PASS [   0.019s] ( 604/1276) exchange-hours::global_equities suite::holidays::b3_window_ships_only_closures_and_one_late_open_shape
+        PASS [   0.014s] ( 605/1276) exchange-hours::global_equities suite::holidays::borsa_istanbul_window_ordinary_weekday_and_coverage_endpoints
+        PASS [   0.018s] ( 606/1276) exchange-hours::global_equities suite::holidays::borsa_istanbul_window_ships_only_closures_and_half_days
+        PASS [   0.016s] ( 607/1276) exchange-hours::global_equities suite::holidays::euronext_paris::an_ordinary_weekday_answers_with_the_end_exclusive_close
+        PASS [   0.037s] ( 608/1276) exchange-hours::global_equities suite::holidays::euronext_paris::closures_per_year_match_the_operators_printed_columns
+        PASS [   0.126s] ( 609/1276) exchange-hours::global_equities suite::holidays::b3_closures_per_year_match_the_operators_printed_calendars
+        PASS [   0.019s] ( 610/1276) exchange-hours::global_equities suite::holidays::euronext_paris::every_shipped_row_matches_the_sheets_per_year
+        PASS [   0.013s] ( 611/1276) exchange-hours::global_equities suite::holidays::euronext_paris::other_markets_rows_never_clip_paris
+        PASS [   0.016s] ( 612/1276) exchange-hours::global_equities suite::holidays::euronext_paris::the_2025_half_days_close_at_the_appendix_printed_1405_cet
+        PASS [   0.016s] ( 613/1276) exchange-hours::global_equities suite::holidays::euronext_paris::the_2026_half_days_are_announced_but_unstated
+        PASS [   0.117s] ( 614/1276) exchange-hours::global_equities suite::holidays::each_half_day_closes_at_the_printed_1300_istanbul
+        PASS [   0.027s] ( 615/1276) exchange-hours::global_equities suite::holidays::euronext_paris::the_page_stated_pre_2025_half_days_close_at_1405_cet
+        PASS [   0.028s] ( 616/1276) exchange-hours::global_equities suite::holidays::euronext_paris::the_pre_2025_eras_answer_through_the_identity_backed_surface
+        PASS [   0.012s] ( 617/1276) exchange-hours::global_equities suite::holidays::euronext_paris::the_unresolved_eve_shadows_the_following_christmas_derivation
+        PASS [   0.022s] ( 618/1276) exchange-hours::global_equities suite::holidays::euronext_paris::the_recovered_decade_eves_close_at_their_printed_instants
+        PASS [   0.165s] ( 619/1276) exchange-hours::global_equities suite::holidays::borsa_istanbul_closures_per_year_match_the_operators_printed_tables
+        PASS [   0.011s] ( 620/1276) exchange-hours::global_equities suite::holidays::euronext_paris::the_window_bounds_and_the_pre_floor_refusal
+        PASS [   0.012s] ( 621/1276) exchange-hours::global_equities suite::holidays::lse::an_ordinary_weekday_answers_with_the_end_exclusive_close
+        PASS [   0.017s] ( 622/1276) exchange-hours::global_equities suite::holidays::every_table_detaches_to_the_normal_week
+        PASS [   0.016s] ( 623/1276) exchange-hours::global_equities suite::holidays::lse::every_shipped_row_matches_the_sheet_per_year
+        PASS [   0.020s] ( 624/1276) exchange-hours::global_equities suite::holidays::lse::the_former_capture_gaps_answer_from_the_lseg_channel
+        PASS [   0.037s] ( 625/1276) exchange-hours::global_equities suite::holidays::lse::the_half_days_close_at_the_printed_1230_london_time
+        PASS [   0.037s] ( 626/1276) exchange-hours::global_equities suite::holidays::lse::the_pre_2025_eras_answer_through_the_identity_backed_surface
+        PASS [   0.058s] ( 627/1276) exchange-hours::global_equities suite::holidays::lse::closures_per_year_match_the_operators_printed_table
+        PASS [   0.032s] ( 628/1276) exchange-hours::global_equities suite::holidays::lse::the_pre_2025_half_days_close_at_the_printed_1230_london_time
+        PASS [   0.017s] ( 629/1276) exchange-hours::global_equities suite::holidays::lse::the_rolling_table_gap_dates_claim_nothing
+        PASS [   0.015s] ( 630/1276) exchange-hours::global_equities suite::holidays::lse::the_window_bounds_and_the_pre_floor_refusal
+        PASS [   0.020s] ( 631/1276) exchange-hours::global_equities suite::holidays::nzx::a_representative_closure_answers_in_each_published_year
+        PASS [   0.011s] ( 632/1276) exchange-hours::global_equities suite::holidays::nzx::every_shipped_row_matches_the_sheets_per_year
+        PASS [   0.015s] ( 633/1276) exchange-hours::global_equities suite::holidays::nzx::an_ordinary_weekday_answers_and_closes_end_exclusively
+        PASS [   0.021s] ( 634/1276) exchange-hours::global_equities suite::holidays::nzx::an_abbreviated_day_restates_the_operators_own_grid
+        PASS [   0.013s] ( 635/1276) exchange-hours::global_equities suite::holidays::nzx::the_window_refuses_on_both_sides_of_the_operators_horizon
+        PASS [   0.018s] ( 636/1276) exchange-hours::global_equities suite::holidays::nzx::the_pre_2025_abbreviated_days_restate_their_era_grid
+        PASS [   0.025s] ( 637/1276) exchange-hours::global_equities suite::holidays::nzx::the_2020_abbreviated_day_answers_with_the_900_pre_open
+        PASS [   0.021s] ( 638/1276) exchange-hours::global_equities suite::holidays::sgx_securities::a_representative_closure_answers_in_each_published_year
+        PASS [   0.012s] ( 639/1276) exchange-hours::global_equities suite::holidays::sgx_securities::an_ordinary_weekday_answers_with_its_lunch_gap_and_end_exclusive_close
+        PASS [   0.014s] ( 640/1276) exchange-hours::global_equities suite::holidays::sgx_securities::every_shipped_row_matches_the_sheets_per_year
+        PASS [   0.010s] ( 641/1276) exchange-hours::global_equities suite::holidays::sgx_securities::the_pre_2025_half_days_restate_the_printed_1236_grid
+        PASS [   0.024s] ( 642/1276) exchange-hours::global_equities suite::holidays::sgx_securities::the_half_days_restate_the_operators_printed_grid
+        PASS [   0.020s] ( 643/1276) exchange-hours::global_equities suite::holidays::sgx_securities::the_pre_2025_rows_answer_the_session_queries
+        PASS [   0.016s] ( 644/1276) exchange-hours::global_equities suite::holidays::sgx_securities::the_window_refuses_past_the_operators_published_horizon
+        PASS [   0.013s] ( 645/1276) exchange-hours::global_equities suite::holidays::tadawul_trading_resumes_on_the_printed_days
+        PASS [   0.017s] ( 646/1276) exchange-hours::global_equities suite::holidays::tadawul_window_ordinary_weekday_and_coverage_endpoints
+        PASS [   0.017s] ( 647/1276) exchange-hours::global_equities suite::holidays::tadawul_window_ships_only_closures
+        PASS [   0.037s] ( 648/1276) exchange-hours::global_equities suite::holidays::tadawul_closures_per_year_match_the_operators_printed_entries
+        PASS [   0.018s] ( 649/1276) exchange-hours::global_equities suite::holidays::tsx::an_ordinary_weekday_answers_with_the_end_exclusive_close
+        PASS [   0.023s] ( 650/1276) exchange-hours::global_equities suite::holidays::tsx::christmas_eve_closes_at_the_printed_1300_toronto_time
+        PASS [   0.016s] ( 651/1276) exchange-hours::global_equities suite::holidays::tsx::every_shipped_row_matches_the_sheet_per_year
+        PASS [   0.033s] ( 652/1276) exchange-hours::global_equities suite::holidays::tsx::closures_per_year_match_the_operators_printed_lists
+        PASS [   0.023s] ( 653/1276) exchange-hours::global_equities suite::holidays::tsx::the_page_stated_pre_2025_eves_close_at_1300_toronto_time
+        PASS [   0.024s] ( 654/1276) exchange-hours::global_equities suite::holidays::tsx::the_us_holiday_list_is_settlement_only_and_never_clips
+        PASS [   0.015s] ( 655/1276) exchange-hours::golden_grids shipped_grids_match_the_golden_file
+        PASS [   0.017s] ( 656/1276) exchange-hours::global_equities suite::holidays::tsx::the_window_bounds_and_the_pre_floor_refusal
+        PASS [   0.022s] ( 657/1276) exchange-hours::holiday_tables a_caller_replacement_resolves_the_day_before_a_clip_applies
+        PASS [   0.054s] ( 658/1276) exchange-hours::global_equities suite::holidays::tsx::the_pre_2025_lists_answer_through_the_identity_backed_surface
+        PASS [   0.033s] ( 659/1276) exchange-hours::holiday_tables a_closed_trade_date_removes_the_previous_evenings_wrap
+        PASS [   0.022s] ( 660/1276) exchange-hours::holiday_tables a_known_normal_record_suppresses_nothing_below_it
+        PASS [   0.046s] ( 661/1276) exchange-hours::holiday_tables a_friday_order_entry_window_answers_the_same_with_and_without_an_empty_layer
+        PASS [   0.022s] ( 662/1276) exchange-hours::holiday_tables a_late_open_and_an_early_close_compose_on_one_trade_date
+        PASS [   0.023s] ( 663/1276) exchange-hours::holiday_tables a_late_open_resolves_on_both_of_its_branches
+        PASS [   0.016s] ( 664/1276) exchange-hours::holiday_tables an_early_close_clips_a_trading_day_that_opened_the_previous_evening
+        PASS [   0.015s] ( 665/1276) exchange-hours::holiday_tables an_identity_without_a_table_reports_no_row_anywhere
+        PASS [   0.034s] ( 666/1276) exchange-hours::holiday_tables every_shipped_table_answers_only_inside_its_own_window
+        PASS [   0.062s] ( 667/1276) exchange-hours::holiday_tables an_out_of_range_boundary_is_unavailable_and_never_rolls_a_trade_date
+        PASS [   0.016s] ( 668/1276) exchange-hours::holiday_tables policy_calendar_mirrors_the_builtin_accessors
+        PASS [   0.018s] ( 669/1276) exchange-hours::holiday_tables the_gate_window_reaches_the_neighbouring_trade_dates
+        PASS [   0.015s] ( 670/1276) exchange-hours::holiday_tables without_holidays_is_idempotent_and_keeps_the_identity
+        PASS [   0.532s] ( 671/1276) exchange-hours::holiday_tables attaching_an_irrelevant_exception_provider_changes_no_answer
+        PASS [   0.018s] ( 672/1276) exchange-hours::no_session_contract no_session_bounds_and_next_session_are_none
+        PASS [   0.016s] ( 673/1276) exchange-hours::no_session_contract no_session_candle_start_is_none_not_a_panic
+        PASS [   0.017s] ( 674/1276) exchange-hours::no_session_contract no_session_daily_candle_end_is_none
+        PASS [   0.017s] ( 675/1276) exchange-hours::no_session_contract no_session_intraday_candles_are_none_but_seconds_stays_an_offset
+        PASS [   0.016s] ( 676/1276) exchange-hours::no_session_contract no_session_profile_is_closed_and_never_in_maintenance
+        PASS [   0.013s] ( 677/1276) exchange-hours::no_session_contract no_session_weekly_and_monthly_candle_end_terminate_with_none
+        PASS [   0.016s] ( 678/1276) exchange-hours::no_session_contract zero_intervals_have_no_bar_on_any_profile
+        PASS [   0.021s] ( 679/1276) exchange-hours::order_entry_phase a_closed_trade_date_removes_the_queue_that_feeds_it
+        PASS [   3.802s] ( 680/1276) exchange-hours::fixed_snapshot_collapse_fence every_venue_refuses_pre_floor_while_its_fixed_snapshot_answers_parity
+        PASS [   0.374s] ( 681/1276) exchange-hours::order_entry_phase accepting_orders_is_a_superset_of_open
+        PASS [   0.349s] ( 682/1276) exchange-hours::order_entry_phase open_and_order_entry_only_are_mutually_exclusive
+        PASS [   0.018s] ( 683/1276) exchange-hours::order_entry_phase order_entry_queries_reselect_on_the_session_opening_day_across_a_revision
+        PASS [   5.192s] ( 684/1276) exchange-hours::coverage_metadata scopes_without_2025_holiday_coverage_report_outside_range
+        PASS [   0.027s] ( 685/1276) exchange-hours::order_entry_phase the_sunday_evening_queue_answers_through_every_entry_point_it_describes
+        PASS [   0.018s] ( 686/1276) exchange-hours::rule_validation a_dst_gap_cannot_invert_a_session_or_calendar_candle
+        PASS [   0.016s] ( 687/1276) exchange-hours::rule_validation a_fall_back_session_spans_both_copies_of_the_repeated_hour
+        PASS [   0.017s] ( 688/1276) exchange-hours::rule_validation a_partially_skipped_close_lands_on_the_first_real_second
+        PASS [   0.016s] ( 689/1276) exchange-hours::rule_validation a_partially_skipped_rule_opens_at_the_first_real_second
+        PASS [   0.016s] ( 690/1276) exchange-hours::rule_validation a_rule_collapsed_by_a_dst_gap_is_not_a_session_or_candle
+        PASS [   0.022s] ( 691/1276) exchange-hours::rule_validation a_wholly_skipped_civil_date_has_an_empty_closed_window
+        PASS [   0.018s] ( 692/1276) exchange-hours::rule_validation a_wrapping_session_uses_the_latest_fall_back_close
+        PASS [   0.016s] ( 693/1276) exchange-hours::rule_validation equal_endpoints_span_one_local_day_across_dst_transitions
+        PASS [   0.019s] ( 694/1276) exchange-hours::rule_validation error_display_names_the_violated_bound
+        PASS [   0.017s] ( 695/1276) exchange-hours::rule_validation new_accepts_a_same_day_rule
+        PASS [   0.017s] ( 696/1276) exchange-hours::rule_validation new_accepts_a_wrap_rule
+        PASS [   0.017s] ( 697/1276) exchange-hours::rule_validation new_accepts_equal_endpoints_as_a_complete_local_day
+        PASS [   0.013s] ( 698/1276) exchange-hours::rule_validation new_accepts_the_full_day_sentinel_close
+        PASS [   0.016s] ( 699/1276) exchange-hours::rule_validation new_rejects_an_all_disabled_mask
+        PASS [   0.017s] ( 700/1276) exchange-hours::rule_validation new_rejects_an_out_of_range_close
+        PASS [   0.018s] ( 701/1276) exchange-hours::rule_validation new_rejects_an_out_of_range_open
+        PASS [   0.019s] ( 702/1276) exchange-hours::rule_validation validate_rechecks_a_literal_or_deserialized_rule
+        PASS [   0.018s] ( 703/1276) exchange-hours::schedule_documentation suite::assurance_prose_restates_exchange_counts_from_the_ledger
+        PASS [   0.019s] ( 704/1276) exchange-hours::schedule_documentation suite::conditional_future_revisions_remain_unencoded_pending_confirmation
+        PASS [   0.013s] ( 705/1276) exchange-hours::schedule_documentation suite::coverage_inventory::a_row_recording_a_tracked_gap_does_not_claim_completeness
+        PASS [   0.445s] ( 706/1276) exchange-hours::order_entry_phase the_calendar_never_accepts_orders_the_fixed_profile_rejects
+        PASS [   0.020s] ( 707/1276) exchange-hours::schedule_documentation suite::coverage_inventory::inventory_membership_is_exactly_the_served_ledger_rows
+        PASS [   0.130s] ( 708/1276) exchange-hours::schedule_documentation suite::coverage_inventory::inventory_revisions_cells_match_the_shipped_tables
+        PASS [   0.019s] ( 709/1276) exchange-hours::schedule_documentation suite::coverage_inventory::inventory_sample_date_is_inside_every_scopes_audit
+        PASS [   0.054s] ( 710/1276) exchange-hours::schedule_documentation suite::coverage_inventory::inventory_windows_and_date_counts_match_the_shipped_tables
+        PASS [   1.719s] ( 711/1276) exchange-hours::order_entry_phase an_order_entry_window_is_never_reported_as_an_open_session
+        PASS [   0.027s] ( 712/1276) exchange-hours::schedule_documentation suite::coverage_inventory::the_ice_us_module_shape_prose_derives_from_the_shipped_tables
+        PASS [   0.020s] ( 713/1276) exchange-hours::schedule_documentation suite::coverage_inventory::the_iceus_findings_paragraphs_derive_their_counts_from_the_shipped_tables
+        PASS [   0.016s] ( 714/1276) exchange-hours::schedule_documentation suite::coverage_inventory::the_knowledge_bound_day_is_covered_and_the_day_before_it_is_not
+        PASS [   0.020s] ( 715/1276) exchange-hours::schedule_documentation suite::coverage_inventory::the_sunday_quarter_hour_gap_ends_at_the_knowledge_bound_row
+        PASS [   0.018s] ( 716/1276) exchange-hours::schedule_documentation suite::coverage_inventory::the_sunday_quarter_hour_is_declared_exactly_where_the_profiles_withhold_it
+        PASS [   0.017s] ( 717/1276) exchange-hours::schedule_documentation suite::databento::supplied_venue_inventory_has_expected_family_counts_and_unique_identities
+        PASS [   0.030s] ( 718/1276) exchange-hours::schedule_documentation suite::databento::supplied_venue_inventory_maps_every_distinct_label_to_a_real_exchange
+        PASS [   0.014s] ( 719/1276) exchange-hours::schedule_documentation suite::date_exception_contract_distinguishes_boundaries_coverage_and_finality
+        PASS [   0.017s] ( 720/1276) exchange-hours::schedule_documentation suite::every_exchange_owner_link_resolves
+        PASS [   0.896s] ( 721/1276) exchange-hours::schedule_documentation suite::coverage_inventory::inventory_completeness_verdicts_match_the_metadata
+        PASS [   0.041s] ( 722/1276) exchange-hours::schedule_documentation suite::every_ledger_source_link_has_a_registry_anchor
+        PASS [   0.014s] ( 723/1276) exchange-hours::schedule_documentation suite::evidence_files::a_parenthesised_comment_parses_to_the_same_rows_as_none
+        PASS [   0.022s] ( 724/1276) exchange-hours::schedule_documentation suite::every_market_hours_key_owner_and_source_link_resolves
+        PASS [   0.036s] ( 725/1276) exchange-hours::schedule_documentation suite::evidence_files::a_venue_saturday_session_row_cites_the_window_that_prints_its_sunday_legs
+        PASS [   0.064s] ( 726/1276) exchange-hours::schedule_documentation suite::evidence_files::every_artifact_carries_one_document_id
+        PASS [   0.379s] ( 727/1276) exchange-hours::schedule_documentation suite::evidence_files::a_replacement_rows_printed_instants_are_the_block_bounds_it_ships
+        PASS [   0.287s] ( 728/1276) exchange-hours::schedule_documentation suite::evidence_files::every_cited_document_id_is_resolved_exactly_once
+        PASS [   0.044s] ( 729/1276) exchange-hours::schedule_documentation suite::evidence_files::every_dated_constant_day_appears_in_its_evidence_file
+        PASS [   0.054s] ( 730/1276) exchange-hours::schedule_documentation suite::evidence_files::every_declared_dated_boundary_day_appears_in_its_evidence_file
+        PASS [   3.085s] ( 731/1276) exchange-hours::holiday_tables without_holidays_is_the_identity_without_a_table_and_a_detachment_with_one
+        PASS [   0.017s] ( 732/1276) exchange-hours::schedule_documentation suite::evidence_files::every_documents_digest_is_the_research_store_bytes
+        PASS [   0.060s] ( 733/1276) exchange-hours::schedule_documentation suite::evidence_files::every_document_id_resolves_to_one_artifact_repository_wide
+        PASS [   0.061s] ( 734/1276) exchange-hours::schedule_documentation suite::evidence_files::every_documents_row_digest_is_a_sha256_digest
+        PASS [   0.032s] ( 735/1276) exchange-hours::schedule_documentation suite::evidence_files::every_evidence_file_has_the_required_sections
+        PASS [   0.053s] ( 736/1276) exchange-hours::schedule_documentation suite::evidence_files::every_documents_row_pairs_one_label_url_and_capture
+        PASS [   0.024s] ( 737/1276) exchange-hours::schedule_documentation suite::evidence_files::every_evidence_file_is_linked_by_exactly_one_row
+        PASS [   0.025s] ( 738/1276) exchange-hours::schedule_documentation suite::evidence_files::every_evidence_file_names_its_ledger_row
+        PASS [   0.060s] ( 739/1276) exchange-hours::schedule_documentation suite::evidence_files::every_evidence_holiday_line_is_well_formed
+        PASS [   0.037s] ( 740/1276) exchange-hours::schedule_documentation suite::evidence_files::every_handwritten_cutover_date_appears_in_its_evidence_file
+        PASS [   0.143s] ( 741/1276) exchange-hours::schedule_documentation suite::evidence_files::every_evidence_revision_line_exists_in_source
+        PASS [   0.250s] ( 742/1276) exchange-hours::schedule_documentation suite::evidence_files::every_evidence_holiday_line_exists_in_its_module
+        PASS [   0.233s] ( 743/1276) exchange-hours::schedule_documentation suite::evidence_files::every_holiday_module_header_names_its_declared_windows
+        PASS [   0.250s] ( 744/1276) exchange-hours::schedule_documentation suite::evidence_files::every_holiday_table_states_its_coverage_window
+        PASS [   0.023s] ( 745/1276) exchange-hours::schedule_documentation suite::evidence_files::every_ledger_row_links_an_existing_evidence_file
+        PASS [   0.131s] ( 746/1276) exchange-hours::schedule_documentation suite::evidence_files::every_revision_row_day_appears_in_its_evidence_file
+        PASS [   0.131s] ( 747/1276) exchange-hours::schedule_documentation suite::evidence_files::every_revisions_block_declares_its_evidence_files
+        PASS [   0.627s] ( 748/1276) exchange-hours::schedule_documentation suite::evidence_files::every_holiday_row_appears_in_its_evidence_file
+        PASS [   0.038s] ( 749/1276) exchange-hours::schedule_documentation suite::evidence_files::modules_carry_no_narrative
+        PASS [   0.045s] ( 750/1276) exchange-hours::schedule_documentation suite::evidence_files::the_dated_boundary_fence_reads_every_shipped_instant_constant
+        PASS [   0.045s] ( 751/1276) exchange-hours::schedule_documentation suite::evidence_files::the_dated_constant_fence_reads_every_shipped_constant
+        PASS [   0.135s] ( 752/1276) exchange-hours::schedule_documentation suite::evidence_files::revision_rows_and_evidence_bullets_match_as_multisets
+        PASS [   0.019s] ( 753/1276) exchange-hours::schedule_documentation suite::evidence_files::the_documents_stamp_parsers_read_every_shipped_grammar
+        PASS [   0.016s] ( 754/1276) exchange-hours::schedule_documentation suite::exchange_rows_have_complete_review_metadata
+        PASS [   0.026s] ( 755/1276) exchange-hours::schedule_documentation suite::family_aggregates::the_2025_2027_rows_block_derives_from_the_shipped_tables
+        PASS [   0.026s] ( 756/1276) exchange-hours::schedule_documentation suite::family_aggregates::the_documents_intro_counts_derive_from_the_documents_tables
+        PASS [   0.056s] ( 757/1276) exchange-hours::schedule_documentation suite::family_aggregates::the_wave_paragraphs_derive_from_the_shipped_tables
+        PASS [   0.059s] ( 758/1276) exchange-hours::schedule_documentation suite::family_aggregates::the_whole_table_sentences_derive_from_the_shipped_tables
+        PASS [   0.019s] ( 759/1276) exchange-hours::schedule_documentation suite::horizons::exchange_horizons_match_the_declared_sourcing
+        PASS [   0.028s] ( 760/1276) exchange-hours::schedule_documentation suite::horizons::market_hours_key_horizons_match_the_declared_sourcing
+        PASS [   0.029s] ( 761/1276) exchange-hours::schedule_documentation suite::horizons::the_coverage_inventory_repeats_the_ledger_horizons
+        PASS [   0.030s] ( 762/1276) exchange-hours::schedule_documentation suite::market_hours_key_selection_contract_is_explicit
+        PASS [   0.047s] ( 763/1276) exchange-hours::schedule_documentation suite::market_hours_key_rows_have_complete_review_metadata
+        PASS [   0.018s] ( 764/1276) exchange-hours::schedule_documentation suite::readme_and_review_dates_match_the_repository_cutoff
+        PASS [   0.039s] ( 765/1276) exchange-hours::schedule_documentation suite::readme_and_audit_quantify_assurance_from_the_ledger
+        PASS [   0.044s] ( 766/1276) exchange-hours::schedule_documentation suite::readme_states_the_holiday_coverage_count_from_the_ledger
+        PASS [   0.041s] ( 767/1276) exchange-hours::schedule_documentation suite::readme_states_the_service_tier_split_from_the_ledger
+        PASS [   0.025s] ( 768/1276) exchange-hours::schedule_documentation suite::readme_test_inventory_counts_match_the_ledger
+        PASS [   0.020s] ( 769/1276) exchange-hours::schedule_documentation suite::source_registry::every_real_source_set_has_two_clickable_monitoring_channels
+        PASS [   0.029s] ( 770/1276) exchange-hours::schedule_documentation suite::source_registry::every_source_set_is_referenced_by_a_ledger_row
+        PASS [   0.035s] ( 771/1276) exchange-hours::schedule_documentation suite::the_gap_kind_split_is_quoted_consistently_everywhere
+        PASS [   0.017s] ( 772/1276) exchange-hours::schedule_documentation suite::trade_type_keys::cme_source_set_prose_counts_match_the_ledger
+        PASS [   0.021s] ( 773/1276) exchange-hours::schedule_documentation suite::trade_type_keys::every_executable_gap_row_is_named_in_the_prose
+        PASS [   0.019s] ( 774/1276) exchange-hours::schedule_documentation suite::trade_type_keys::golden_header_identity_counts_match_the_ledger
+        PASS [   0.015s] ( 775/1276) exchange-hours::schedule_documentation suite::trade_type_keys::ledger_covers_every_market_hours_key_variant
+        PASS [   0.018s] ( 776/1276) exchange-hours::schedule_documentation suite::verification_ledger_has_every_exchange_once_and_in_order
+        PASS [   0.018s] ( 777/1276) exchange-hours::schedule_documentation suite::verification_ledger_has_every_market_hours_key_once_and_in_order
+        PASS [   0.018s] ( 778/1276) exchange-hours::seasonal_calendars suite::b3::b3_explicit_2010_to_2012_grids_and_cutovers_are_preserved
+        PASS [   0.026s] ( 779/1276) exchange-hours::seasonal_calendars suite::b3::b3_reference_grid_cutover_and_historical_offset_regimes_are_exact
+        PASS [   0.025s] ( 780/1276) exchange-hours::seasonal_calendars suite::b3::b3_selects_current_short_and_northern_winter_long_grids
+        PASS [   0.021s] ( 781/1276) exchange-hours::seasonal_calendars suite::bmv::bmv_2010_sources_switch_at_local_midnight
+        PASS [   0.024s] ( 782/1276) exchange-hours::seasonal_calendars suite::bmv::bmv_reference_rule_recurs_across_us_clock_transitions
+        PASS [   0.036s] ( 783/1276) exchange-hours::seasonal_calendars suite::bmv::bmv_closing_price_extensions_follow_the_operative_manuals
+        PASS [   0.026s] ( 784/1276) exchange-hours::seasonal_calendars suite::candles_and_weekends::launch_day_candle_starts_do_not_require_a_prelaunch_close
+        PASS [   0.028s] ( 785/1276) exchange-hours::seasonal_calendars suite::candles_and_weekends::seasonal_calendars_keep_weekends_and_closes_end_exclusive
+        PASS [   0.021s] ( 786/1276) exchange-hours::seasonal_calendars suite::candles_and_weekends::seasonal_daily_candles_use_the_profile_for_each_trading_day
+        PASS [   0.081s] ( 787/1276) exchange-hours::seasonal_calendars suite::chrono_edges::date_aware_key_queries_are_total_at_chrono_bounds
+        PASS [   0.017s] ( 788/1276) exchange-hours::seasonal_calendars suite::chrono_edges::dynamic_period_walks_keep_the_last_close_near_chrono_maximum
+        PASS [   0.016s] ( 789/1276) exchange-hours::seasonal_calendars suite::chrono_edges::maximum_hour_resolution_clamps_without_losing_a_bar
+        PASS [   0.018s] ( 790/1276) exchange-hours::seasonal_calendars suite::chrono_edges::negative_offset_scan_keeps_the_first_session_at_chrono_minimum
+        PASS [   0.017s] ( 791/1276) exchange-hours::seasonal_calendars suite::chrono_edges::synthetic_always_open_utc_profile_has_exact_chrono_edge_sessions
+        PASS [   0.035s] ( 792/1276) exchange-hours::seasonal_calendars suite::contracts::date_aware_cross_query_fence_holds_for_every_exchange
+        PASS [   0.193s] ( 793/1276) exchange-hours::seasonal_calendars suite::chrono_edges::date_aware_queries_are_total_at_chrono_bounds
+        PASS [   0.036s] ( 794/1276) exchange-hours::seasonal_calendars suite::contracts::every_fixed_venue_calendar_matches_the_current_market_hours_surface
+        PASS [   0.031s] ( 795/1276) exchange-hours::seasonal_calendars suite::contracts::fixed_venue_calendars_match_market_hours_queries
+        PASS [   1.278s] ( 796/1276) exchange-hours::schedule_documentation suite::evidence_files::every_instant_a_venue_summary_cites_is_one_its_families_state
+        PASS [   0.014s] ( 797/1276) exchange-hours::seasonal_calendars suite::contracts::seasonal_exchange_names_have_stable_serde_forms
+        PASS [   0.011s] ( 798/1276) exchange-hours::seasonal_calendars suite::international::endex_calendar_scans_reselect_both_mismatch_entries_and_exits
+        PASS [   0.012s] ( 799/1276) exchange-hours::seasonal_calendars suite::international::eurex_calendar_scans_reselect_the_fixed_utc_asian_start
+        PASS [   0.014s] ( 800/1276) exchange-hours::seasonal_calendars suite::international::murban_calendar_scans_refuse_where_the_identity_has_no_answer
+        PASS [   0.009s] ( 801/1276) exchange-hours::seasonal_calendars suite::transition_scans::date_aware_scan_reselects_bmv_grid_over_spring_and_fall_weekends
+        PASS [   0.010s] ( 802/1276) exchange-hours::seasonal_calendars suite::transition_scans::resolved_snapshot_is_exact_at_its_instant_but_not_across_a_transition
+        PASS [   0.010s] ( 803/1276) exchange-hours::session_exceptions a_block_opening_on_its_trade_date_may_not_wrap_past_it
+        PASS [   0.017s] ( 804/1276) exchange-hours::session_exceptions a_block_meeting_the_next_trade_dates_open_replaces_it
+        PASS [   0.016s] ( 805/1276) exchange-hours::session_exceptions a_block_opening_two_days_early_still_governs_its_own_instant
+        PASS [   0.016s] ( 806/1276) exchange-hours::session_exceptions a_caller_replacement_suppresses_the_built_in_row_for_that_trade_date
+        PASS [   0.020s] ( 807/1276) exchange-hours::session_exceptions a_closed_record_removes_the_whole_trading_day
+        PASS [   0.017s] ( 808/1276) exchange-hours::session_exceptions a_day_policy_clips_a_replaced_trading_day
+        PASS [   0.018s] ( 809/1276) exchange-hours::session_exceptions a_day_policy_clips_a_replaced_trading_day_above_the_floor
+        PASS [   0.017s] ( 810/1276) exchange-hours::session_exceptions a_day_policy_closure_beats_a_replacement_record
+        PASS [   0.090s] ( 811/1276) exchange-hours::session_exceptions a_closed_crypto_monday_still_rolls_the_weekend_to_the_next_business_date
+        PASS [   0.018s] ( 812/1276) exchange-hours::session_exceptions a_day_policy_late_open_delays_a_replaced_trading_day
+        PASS [   0.017s] ( 813/1276) exchange-hours::session_exceptions a_policy_calendar_refuses_a_provider_scoped_to_another_identity
+        PASS [   0.017s] ( 814/1276) exchange-hours::session_exceptions a_profile_without_a_daily_close_ignores_the_replacement_layer
+        PASS [   0.018s] ( 815/1276) exchange-hours::session_exceptions a_provider_scoped_to_another_identity_is_refused
+        PASS [   0.016s] ( 816/1276) exchange-hours::session_exceptions a_record_outside_the_coverage_window_is_rejected
+        PASS [   0.019s] ( 817/1276) exchange-hours::session_exceptions a_replaced_day_restates_its_order_entry_topology
+        PASS [   0.018s] ( 818/1276) exchange-hours::session_exceptions a_replaced_day_with_no_regular_block_closes_regular_trading_only
+        PASS [   0.017s] ( 819/1276) exchange-hours::session_exceptions a_replacement_block_that_opens_in_a_dst_gap_moves_to_the_first_real_instant
+        PASS [   0.019s] ( 820/1276) exchange-hours::session_exceptions a_replacement_block_covers_both_passes_of_a_dst_fold
+        PASS [   0.015s] ( 821/1276) exchange-hours::session_exceptions a_scalar_early_close_cannot_express_the_nasdaq_half_day
+        PASS [   0.026s] ( 822/1276) exchange-hours::session_exceptions a_trade_date_may_span_three_opening_days_with_pauses_between_them
+        PASS [   0.019s] ( 823/1276) exchange-hours::session_exceptions an_added_session_on_a_normally_empty_day_carries_its_own_trade_date
+        PASS [   0.015s] ( 824/1276) exchange-hours::session_exceptions an_all_closed_window_terminates_every_forward_scan
+        PASS [   0.017s] ( 825/1276) exchange-hours::session_exceptions an_empty_provider_changes_no_answer_on_a_withheld_date
+        PASS [   0.018s] ( 826/1276) exchange-hours::session_exceptions an_empty_replacement_must_be_recorded_as_closed_instead
+        PASS [   0.326s] ( 827/1276) exchange-hours::seasonal_calendars suite::contracts::historical_profiles_preserve_each_venue_timezone
+        PASS [   0.011s] ( 828/1276) exchange-hours::session_exceptions an_empty_table_is_valid_and_asserts_an_audited_normal_window
+        PASS [   0.011s] ( 829/1276) exchange-hours::session_exceptions attaching_a_second_provider_replaces_the_first
+        PASS [   0.023s] ( 830/1276) exchange-hours::session_exceptions an_order_entry_record_does_not_name_the_trade_date_of_the_session_it_does_not_displace
+        PASS [   0.017s] ( 831/1276) exchange-hours::session_exceptions block_domain_violations_are_rejected
+        PASS [   0.017s] ( 832/1276) exchange-hours::session_exceptions blocks_may_share_an_opening_instant_when_their_kinds_differ
+        PASS [   0.018s] ( 833/1276) exchange-hours::session_exceptions cme_thanksgiving_2015_pauses_and_reopens_inside_one_trade_date
+        PASS [   0.025s] ( 834/1276) exchange-hours::session_exceptions cme_thanksgiving_thursday_carries_no_trade_date
+        PASS [   0.017s] ( 835/1276) exchange-hours::session_exceptions coverage_separates_an_audited_normal_date_from_an_unaudited_one
+        PASS [   0.127s] ( 836/1276) exchange-hours::session_exceptions an_attached_but_recordless_layer_changes_no_answer
+        PASS [   0.020s] ( 837/1276) exchange-hours::session_exceptions every_query_family_gives_the_same_account_of_a_replaced_day
+        PASS [   0.018s] ( 838/1276) exchange-hours::session_exceptions every_validation_error_renders_a_distinct_message
+        PASS [   0.015s] ( 839/1276) exchange-hours::session_exceptions hours_at_still_returns_the_unmodified_sourced_profile
+        PASS [   0.013s] ( 840/1276) exchange-hours::session_exceptions inverted_coverage_bounds_are_rejected
+        PASS [   0.018s] ( 841/1276) exchange-hours::session_exceptions malformed_block_sets::are_rejected_with_a_named_violation
+        PASS [   0.012s] ( 842/1276) exchange-hours::session_exceptions may_affect_answers_whether_a_record_is_keyed_inside_the_window
+        PASS [   0.017s] ( 843/1276) exchange-hours::session_exceptions nasdaq_regular_only_early_close_keeps_extended_trading_open
+        PASS [   0.012s] ( 844/1276) exchange-hours::session_exceptions out_of_order_and_duplicate_records_are_rejected
+        PASS [   0.016s] ( 845/1276) exchange-hours::session_exceptions out_of_order_blocks_are_rejected
+        PASS [   0.016s] ( 846/1276) exchange-hours::session_exceptions records_and_blocks_expose_only_their_selected_state
+        PASS [   6.736s] ( 847/1276) exchange-hours::futures_family_boundaries suite::preopen_no_movement::a_queue_never_widens_is_open_or_session_bounds_on_every_identity_for_a_sampled_week
+        PASS [   0.018s] ( 848/1276) exchange-hours::session_invariants suite::historical_fences::cutovers_flip_exactly_at_the_venue_local_midnight
+        PASS [   0.020s] ( 849/1276) exchange-hours::session_invariants suite::historical_fences::day_level_cutovers_never_split_a_running_session
+        PASS [   1.167s] ( 850/1276) exchange-hours::session_invariants suite::current_fences::is_open_agrees_with_session_bounds_for_every_venue_and_instant
+        PASS [   0.015s] ( 851/1276) exchange-hours::session_invariants suite::historical_fences::intraday_cutovers_flip_at_the_exact_utc_instant
+        PASS [   0.016s] ( 852/1276) exchange-hours::session_invariants suite::identity::all_exchanges_matches_the_crates_own_list
+        PASS [   0.017s] ( 853/1276) exchange-hours::session_invariants suite::identity::every_exchange_name_round_trips_through_serde_display_and_from_str
+        PASS [   0.018s] ( 854/1276) exchange-hours::session_invariants suite::identity::from_str_rejects_unrecognized_names_instead_of_defaulting
+        PASS [   0.021s] ( 855/1276) exchange-hours::session_invariants suite::identity::serde_rejects_ordinal_exchange_indices
+        PASS [   0.016s] ( 856/1276) exchange-hours::session_invariants suite::identity::serde_rejects_the_retired_intelligentcross_wire_name
+        PASS [   0.019s] ( 857/1276) exchange-hours::session_invariants suite::properties::always_open_venues_stay_open_without_maintenance
+        PASS [   1.619s] ( 858/1276) exchange-hours::session_invariants suite::current_fences::closed_instants_agree_with_the_next_session_for_every_venue
+        PASS [   0.047s] ( 859/1276) exchange-hours::session_invariants suite::properties::dst_transition_queries_are_stable_and_total
+        PASS [   0.029s] ( 860/1276) exchange-hours::session_invariants suite::properties::next_session_after_walk_strictly_advances_opens
+        PASS [   0.016s] ( 861/1276) exchange-hours::session_invariants suite::rule_tables::every_equal_endpoint_rule_is_an_intentional_complete_day_session
+        PASS [   0.018s] ( 862/1276) exchange-hours::session_invariants suite::rule_tables::every_shipped_rule_table_satisfies_the_session_rule_domain
+        PASS [   0.214s] ( 863/1276) exchange-hours::static_day_policy a_policy_record_far_from_the_queried_days_leaves_every_answer_unchanged
+        PASS [   0.020s] ( 864/1276) exchange-hours::static_day_policy binary_search_is_exact_and_missing_dates_keep_normal_values
+        PASS [   0.042s] ( 865/1276) exchange-hours::static_day_policy closed_crypto_monday_uses_the_identity_specific_rollover
+        PASS [   0.018s] ( 866/1276) exchange-hours::static_day_policy combined_override_clips_a_wrapped_globex_trade_date
+        PASS [   0.017s] ( 867/1276) exchange-hours::static_day_policy constructors_are_const_and_expose_only_their_selected_state
+        PASS [   0.012s] ( 868/1276) exchange-hours::static_day_policy empty_policy_is_valid_and_total_at_chrono_date_extremes
+        PASS [   0.017s] ( 869/1276) exchange-hours::static_day_policy may_affect_answers_whether_a_record_is_keyed_inside_the_window
+        PASS [   0.017s] ( 870/1276) exchange-hours::static_day_policy validation_enforces_each_ssm_domain_without_comparing_wrapped_boundaries
+        PASS [   0.017s] ( 871/1276) exchange-hours::static_day_policy validation_rejects_the_first_ordering_violation
+        PASS [   0.101s] ( 872/1276) exchange-hours::surface_agreement every_documented_divergence_is_still_real
+        PASS [   0.750s] ( 873/1276) exchange-hours::surface_agreement only_documented_families_diverge_on_order_acceptance
+        PASS [   1.270s] ( 874/1276) exchange-hours::surface_agreement the_dated_surface_is_never_more_permissive_than_the_fixed_one
+        PASS [   0.405s] ( 875/1276) exchange-hours::surface_agreement the_two_surfaces_now_agree_on_whether_a_trade_can_print
+        PASS [   0.017s] ( 876/1276) exchange-hours::unsupported_market_hours_keys ambiguous_family_names_are_rejected_instead_of_substituted
+        PASS [   0.018s] ( 877/1276) exchange-hours::unsupported_market_hours_keys sgx_equity_index_grids_are_genuinely_distinct
+        PASS [   0.017s] ( 878/1276) exchange-hours::unsupported_market_hours_keys sourced_family_names_resolve_through_parse_and_serde
+        PASS [   0.015s] ( 879/1276) exchange-hours::venue_sessions suite::always_open_and_cross_venue::always_open_distinct_from_futures
+        PASS [   0.018s] ( 880/1276) exchange-hours::venue_sessions suite::always_open_and_cross_venue::always_open_no_daily_or_weekend_close
+        PASS [   0.021s] ( 881/1276) exchange-hours::venue_sessions suite::always_open_and_cross_venue::always_open_no_maintenance
+        PASS [   0.019s] ( 882/1276) exchange-hours::venue_sessions suite::always_open_and_cross_venue::binance_futures_always_open
+        PASS [   0.012s] ( 883/1276) exchange-hours::venue_sessions suite::always_open_and_cross_venue::binance_futures_opens_at_its_exact_sourced_launch_instant
+        PASS [   0.011s] ( 884/1276) exchange-hours::venue_sessions suite::always_open_and_cross_venue::futures_venues_closed_saturday
+        PASS [   0.010s] ( 885/1276) exchange-hours::venue_sessions suite::always_open_and_cross_venue::futures_venues_sunday_has_sessions
+        PASS [   0.009s] ( 886/1276) exchange-hours::venue_sessions suite::always_open_and_cross_venue::futures_venues_sunday_morning_closed
+        PASS [   0.009s] ( 887/1276) exchange-hours::venue_sessions suite::always_open_and_cross_venue::sgx_saturday_partial_trading_from_friday_wrap
+        PASS [   0.011s] ( 888/1276) exchange-hours::venue_sessions suite::bounds_and_serde::cbot_session_bounds_day_session
+        PASS [   0.009s] ( 889/1276) exchange-hours::venue_sessions suite::bounds_and_serde::cme_next_session_after_friday_close
+        PASS [   0.009s] ( 890/1276) exchange-hours::venue_sessions suite::bounds_and_serde::cme_session_bounds_monday_rth
+        PASS [   0.017s] ( 891/1276) exchange-hours::venue_sessions suite::bounds_and_serde::exchange_serde_snake_case_binance_futures
+        PASS [   0.014s] ( 892/1276) exchange-hours::venue_sessions suite::bounds_and_serde::exchange_serde_snake_case_cboe_options_c1
+        PASS [   0.010s] ( 893/1276) exchange-hours::venue_sessions suite::bounds_and_serde::exchange_serde_snake_case_ice_europe_commodities
+        PASS [   0.009s] ( 894/1276) exchange-hours::venue_sessions suite::bounds_and_serde::exchange_serde_snake_case_nasdaq_bx
+        PASS [   0.009s] ( 895/1276) exchange-hours::venue_sessions suite::candle_starts_and_profile_adapters::candle_start_daily_uses_the_overnight_session_open
+        PASS [   0.015s] ( 896/1276) exchange-hours::venue_sessions suite::candle_starts_and_profile_adapters::candle_start_monthly_can_open_in_the_preceding_civil_month
+        PASS [   0.012s] ( 897/1276) exchange-hours::venue_sessions suite::candle_starts_and_profile_adapters::candle_start_resolves_the_post_dst_globex_open
+        PASS [   0.021s] ( 898/1276) exchange-hours::venue_sessions suite::candle_starts_and_profile_adapters::hours_for_market_hours_key_drives_calendar_boundaries
+        PASS [   0.017s] ( 899/1276) exchange-hours::venue_sessions suite::candle_starts_and_profile_adapters::hours_for_market_hours_key_matches_session_profile
+        PASS [   0.019s] ( 900/1276) exchange-hours::venue_sessions suite::candle_starts_and_profile_adapters::market_hours_derives_eq
+        PASS [   0.019s] ( 901/1276) exchange-hours::venue_sessions suite::candle_starts_and_profile_adapters::normal_week_open_seconds_unions_overlapping_session_rules
+        PASS [   0.016s] ( 902/1276) exchange-hours::venue_sessions suite::cboe_options::every_listed_options_identity_is_covered_by_a_current_group
+        PASS [   0.013s] ( 903/1276) exchange-hours::venue_sessions suite::cboe_options::listed_equity_options_include_each_current_order_acceptance_edge
+        PASS [   0.017s] ( 904/1276) exchange-hours::venue_sessions suite::cboe_options::partial_options_history_does_not_invent_a_queue_onset
+        PASS [   0.019s] ( 905/1276) exchange-hours::venue_sessions suite::cboe_options::post_floor_options_venues_are_closed_before_their_launches
+        PASS [   0.019s] ( 906/1276) exchange-hours::venue_sessions suite::cboe_options::pre_floor_options_venues_retain_the_sourced_2010_grid
+        PASS [   0.019s] ( 907/1276) exchange-hours::venue_sessions suite::cboe_options::queue_carry_back_matches_each_venue_s_evidence_class
+        PASS [   0.015s] ( 908/1276) exchange-hours::venue_sessions suite::cde_smfe::coinbase_derivatives_first_session_opens_at_the_launch
+        PASS [   0.018s] ( 909/1276) exchange-hours::venue_sessions suite::cde_smfe::coinbase_derivatives_is_closed_until_its_launch_instant
+        PASS [   0.015s] ( 910/1276) exchange-hours::venue_sessions suite::cde_smfe::coinbase_derivatives_monday_evening_session_survives_the_day_switch
+        PASS [   0.014s] ( 911/1276) exchange-hours::venue_sessions suite::cde_smfe::coinbase_derivatives_pre_open_starts_at_the_knowledge_bound_row
+        PASS [   0.012s] ( 912/1276) exchange-hours::venue_sessions suite::cde_smfe::coinbase_derivatives_weekly_grid_is_unchanged_since_launch
+        PASS [   0.018s] ( 913/1276) exchange-hours::venue_sessions suite::cde_smfe::small_exchange_is_closed_before_its_2020_launch
+        PASS [   0.017s] ( 914/1276) exchange-hours::venue_sessions suite::cde_smfe::small_exchange_is_closed_once_nothing_is_listed
+        PASS [   0.018s] ( 915/1276) exchange-hours::venue_sessions suite::cde_smfe::small_exchange_narrows_to_the_s5c_grid_from_2024_11_04
+        PASS [   0.013s] ( 916/1276) exchange-hours::venue_sessions suite::cme_cbot::cbot_1320_close_started_with_the_2015_07_06_trade_date
+        PASS [   0.009s] ( 917/1276) exchange-hours::venue_sessions suite::cme_cbot::cbot_2010_floor_uses_the_published_split_sessions
+        PASS [   0.010s] ( 918/1276) exchange-hours::venue_sessions suite::cme_cbot::cbot_2012_matching_revision_omits_order_phases_without_sourced_onsets
+        PASS [   0.013s] ( 919/1276) exchange-hours::venue_sessions suite::cme_cbot::cbot_2013_profile_kept_the_1315_close
+        PASS [   0.012s] ( 920/1276) exchange-hours::venue_sessions suite::cme_cbot::cbot_day_session_close
+        PASS [   0.014s] ( 921/1276) exchange-hours::venue_sessions suite::cme_cbot::cbot_day_session_open
+        PASS [   0.013s] ( 922/1276) exchange-hours::venue_sessions suite::cme_cbot::cbot_friday_no_overnight
+        PASS [   0.009s] ( 923/1276) exchange-hours::venue_sessions suite::cme_cbot::cbot_monday_overnight_reopen
+        PASS [   0.009s] ( 924/1276) exchange-hours::venue_sessions suite::cme_cbot::cbot_morning_preopen_follows_the_overnight_gap
+        PASS [   0.009s] ( 925/1276) exchange-hours::venue_sessions suite::cme_cbot::cbot_overnight_close_before_day
+        PASS [   0.008s] ( 926/1276) exchange-hours::venue_sessions suite::cme_cbot::cbot_overnight_wrap_into_monday
+        PASS [   0.008s] ( 927/1276) exchange-hours::venue_sessions suite::cme_cbot::cbot_saturday_closed
+        PASS [   0.008s] ( 928/1276) exchange-hours::venue_sessions suite::cme_cbot::cbot_sunday_overnight_open
+        PASS [   0.013s] ( 929/1276) exchange-hours::venue_sessions suite::cme_cbot::cbot_weekend_boundary
+        PASS [   0.014s] ( 930/1276) exchange-hours::venue_sessions suite::cme_cbot::cme_daily_maintenance_gap
+        PASS [   4.920s] ( 931/1276) exchange-hours::session_invariants suite::properties::calendar_queries_are_total_and_consistent_over_random_instants
+        PASS [   0.019s] ( 932/1276) exchange-hours::venue_sessions suite::cme_cbot::cme_friday_no_overnight
+        PASS [   0.018s] ( 933/1276) exchange-hours::venue_sessions suite::cme_cbot::cme_full_normal_week_open_flags
+        PASS [   0.019s] ( 934/1276) exchange-hours::venue_sessions suite::cme_cbot::cme_monday_globex_reopen
+        PASS [   0.023s] ( 935/1276) exchange-hours::venue_sessions suite::cme_cbot::cme_monday_overnight_wrap
+        PASS [   0.016s] ( 936/1276) exchange-hours::venue_sessions suite::cme_cbot::cme_monday_rth_close
+        PASS [   0.016s] ( 937/1276) exchange-hours::venue_sessions suite::cme_cbot::cme_monday_rth_open
+        PASS [   5.505s] ( 938/1276) exchange-hours::session_invariants suite::historical_fences::historical_profiles_hold_the_cross_query_fence
+        PASS [   0.016s] ( 939/1276) exchange-hours::venue_sessions suite::cme_cbot::cme_monday_short_window_open
+        PASS [   0.015s] ( 940/1276) exchange-hours::venue_sessions suite::cme_cbot::cme_saturday_closed
+        PASS [   0.017s] ( 941/1276) exchange-hours::venue_sessions suite::cme_cbot::cme_post_halt_session_changed_on_2012_11_18
+        PASS [   0.018s] ( 942/1276) exchange-hours::venue_sessions suite::cme_cbot::cme_sunday_preopen_boundary
+        PASS [   0.023s] ( 943/1276) exchange-hours::venue_sessions suite::cme_cbot::cme_sunday_globex_open
+        PASS [   0.017s] ( 944/1276) exchange-hours::venue_sessions suite::cme_cbot::cme_weekend_boundary
+        PASS [   0.018s] ( 945/1276) exchange-hours::venue_sessions suite::cme_families::cme_weekday_preopen_changed_on_the_sourced_2010_day
+        PASS [   0.018s] ( 946/1276) exchange-hours::venue_sessions suite::cme_families::cryptocurrency_current_profile_preserves_exact_open_state
+        PASS [   0.034s] ( 947/1276) exchange-hours::venue_sessions suite::cme_families::cryptocurrency_history_covers_launch_24_7_and_temporary_maintenance
+        PASS [   0.241s] ( 948/1276) exchange-hours::venue_sessions suite::cme_families::cryptocurrency_models_the_later_saturday_extensions
+        PASS [   0.018s] ( 949/1276) exchange-hours::venue_sessions suite::cme_families::dated_cme_calendars_expose_the_undated_phase_limit_without_inventing_cutovers
+        PASS [   0.018s] ( 950/1276) exchange-hours::venue_sessions suite::cme_families::equity_pause_was_removed_on_the_sourced_2021_opening_day
+        PASS [   0.027s] ( 951/1276) exchange-hours::venue_sessions suite::cme_families::family_calendars_reselect_the_new_cme_histories
+        PASS [   0.017s] ( 952/1276) exchange-hours::venue_sessions suite::cme_families::fixed_current_cme_families_include_operator_published_order_phases
+        PASS [   6.812s] ( 953/1276) exchange-hours::session_exceptions no_identity_is_open_where_it_reports_no_trade_date
+        PASS [   0.021s] ( 954/1276) exchange-hours::venue_sessions suite::cme_families::grains_keep_exact_sourced_order_phase_revisions
+        PASS [   0.017s] ( 955/1276) exchange-hours::venue_sessions suite::cme_families::grains_queues_and_pcp_begin_on_the_sourced_2013_opening_day
+        PASS [   0.020s] ( 956/1276) exchange-hours::venue_sessions suite::cme_families::interest_rates_current_profile_is_the_extended_17_to_16_grid
+        PASS [   0.018s] ( 957/1276) exchange-hours::venue_sessions suite::cme_families::interest_rates_keep_central_wall_clock_across_dst
+        PASS [   0.019s] ( 958/1276) exchange-hours::venue_sessions suite::cme_families::interest_rates_open_changed_on_the_sourced_2011_opening_day
+        PASS [   0.017s] ( 959/1276) exchange-hours::venue_sessions suite::cme_families::livestock_current_profile_is_the_weekday_day_session
+        PASS [   0.015s] ( 960/1276) exchange-hours::venue_sessions suite::cme_families::livestock_dated_pcp_begins_on_the_sourced_2016_day
+        PASS [   0.012s] ( 961/1276) exchange-hours::venue_sessions suite::cme_families::livestock_dated_preopen_begins_at_the_sourced_2020_revision
+        PASS [   0.016s] ( 962/1276) exchange-hours::venue_sessions suite::cme_families::livestock_history_keeps_both_sourced_reductions
+        PASS [   0.022s] ( 963/1276) exchange-hours::venue_sessions suite::commodities::comex_and_nymex_close_change_applies_to_the_2015_09_21_trade_date
+        PASS [   0.017s] ( 964/1276) exchange-hours::venue_sessions suite::commodities::comex_daily_maintenance
+        PASS [   0.012s] ( 965/1276) exchange-hours::venue_sessions suite::commodities::comex_friday_close
+        PASS [   0.017s] ( 966/1276) exchange-hours::venue_sessions suite::commodities::comex_monday_reopen
+        PASS [   0.016s] ( 967/1276) exchange-hours::venue_sessions suite::commodities::comex_monday_trading
+        PASS [   0.013s] ( 968/1276) exchange-hours::venue_sessions suite::commodities::comex_saturday_closed
+        PASS [   0.017s] ( 969/1276) exchange-hours::venue_sessions suite::commodities::comex_sunday_open
+        PASS [   0.018s] ( 970/1276) exchange-hours::venue_sessions suite::commodities::comex_weekend_boundary
+        PASS [   0.017s] ( 971/1276) exchange-hours::venue_sessions suite::commodities::nymex_daily_maintenance
+        PASS [   0.017s] ( 972/1276) exchange-hours::venue_sessions suite::commodities::nymex_friday_close_and_weekend
+        PASS [   0.020s] ( 973/1276) exchange-hours::venue_sessions suite::commodities::nymex_sunday_open
+        PASS [   0.012s] ( 974/1276) exchange-hours::venue_sessions suite::equity_corrections::bme_and_vienna_run_post_close_phases
+        PASS [   0.015s] ( 975/1276) exchange-hours::venue_sessions suite::equity_corrections::bzx_0230_queue_started_with_the_2025_early_session_expansion
+        PASS [   0.019s] ( 976/1276) exchange-hours::venue_sessions suite::equity_corrections::bzx_edgx_and_arca_accept_orders_at_0230_today
+        PASS [   0.016s] ( 977/1276) exchange-hours::venue_sessions suite::equity_corrections::current_nyse_and_cboe_queues_precede_their_active_early_sessions
+        PASS [   0.016s] ( 978/1276) exchange-hours::venue_sessions suite::equity_corrections::edgx_exact_2021_queue_changes_are_date_aware
+        PASS [   0.019s] ( 979/1276) exchange-hours::venue_sessions suite::equity_corrections::edgx_unconfirmed_overnight_session_is_not_encoded
+        PASS [   0.018s] ( 980/1276) exchange-hours::venue_sessions suite::equity_corrections::euronext_central_books_use_nominal_exchange_boundaries
+        PASS [   0.020s] ( 981/1276) exchange-hours::venue_sessions suite::equity_corrections::euronext_dublin_uses_the_distinct_cet_close_in_its_venue_zone
+        PASS [   0.025s] ( 982/1276) exchange-hours::venue_sessions suite::equity_corrections::euronext_lisbon_keeps_its_zone_but_follows_the_cet_book
+        PASS [   0.017s] ( 983/1276) exchange-hours::venue_sessions suite::equity_corrections::memx_0400_premarket_started_2025_05_19
+        PASS [   0.041s] ( 984/1276) exchange-hours::venue_sessions suite::equity_corrections::lse_closing_price_crossing_runs_to_1640
+        PASS [   0.024s] ( 985/1276) exchange-hours::venue_sessions suite::equity_corrections::memx_is_closed_before_its_2020_09_21_launch
+        PASS [   0.021s] ( 986/1276) exchange-hours::venue_sessions suite::equity_corrections::memx_postmarket_close_changed_in_2020_and_2023
+        PASS [   0.026s] ( 987/1276) exchange-hours::venue_sessions suite::equity_corrections::miax_pearl_extended_sessions_started_2025_02_20
+        PASS [   0.034s] ( 988/1276) exchange-hours::venue_sessions suite::equity_corrections::miax_pearl_is_closed_before_its_2020_09_29_launch
+        PASS [   0.022s] ( 989/1276) exchange-hours::venue_sessions suite::equity_corrections::nasdaq_copenhagen_closes_1655_with_optional_trade_at_close
+        PASS [   0.021s] ( 990/1276) exchange-hours::venue_sessions suite::equity_corrections::nasdaq_helsinki_trades_1000_to_1825_local_eet
+        PASS [   0.026s] ( 991/1276) exchange-hours::venue_sessions suite::equity_corrections::nasdaq_stockholm_continuous_ends_1725
+        PASS [   0.015s] ( 992/1276) exchange-hours::venue_sessions suite::equity_corrections::nyse_national_dormancy_and_relaunch_use_sourced_dates
+        PASS [   0.025s] ( 993/1276) exchange-hours::venue_sessions suite::equity_corrections::nyse_accepts_orders_from_0630_before_its_core_session
+        PASS [   0.026s] ( 994/1276) exchange-hours::venue_sessions suite::equity_corrections::xetra_extended_retail_has_a_sourced_current_cutover
+        PASS [   0.803s] ( 995/1276) exchange-hours::venue_sessions suite::cme_families::cryptocurrency_calendar_joins_weekend_pieces_and_assigns_monday_trade_date
+        PASS [   0.031s] ( 996/1276) exchange-hours::venue_sessions suite::eurex_ice::eurex_asian_hours
+        PASS [   0.011s] ( 997/1276) exchange-hours::venue_sessions suite::eurex_ice::eurex_asian_start_tracks_fixed_midnight_utc
+        PASS [   0.022s] ( 998/1276) exchange-hours::venue_sessions suite::eurex_ice::eurex_before_asian_hours
+        PASS [   0.026s] ( 999/1276) exchange-hours::venue_sessions suite::eurex_ice::eurex_friday_close
+        PASS [   0.027s] (1000/1276) exchange-hours::venue_sessions suite::eurex_ice::eurex_had_no_asian_session_before_2018_12_10
+        PASS [   0.016s] (1001/1276) exchange-hours::venue_sessions suite::eurex_ice::eurex_no_maintenance_gap
+        PASS [   0.016s] (1002/1276) exchange-hours::venue_sessions suite::eurex_ice::eurex_regular_hours
+        PASS [   0.020s] (1003/1276) exchange-hours::venue_sessions suite::eurex_ice::eurex_regular_close
+        PASS [   0.013s] (1004/1276) exchange-hours::venue_sessions suite::eurex_ice::eurex_weekend_closed
+        PASS [   0.019s] (1005/1276) exchange-hours::venue_sessions suite::eurex_ice::ice_canada_canola_2011_opening_change_uses_actual_opening_day
+        PASS [   0.018s] (1006/1276) exchange-hours::venue_sessions suite::eurex_ice::ice_canada_canola_2012_close_extension_and_2013_restoration
+        PASS [   0.019s] (1007/1276) exchange-hours::venue_sessions suite::eurex_ice::ice_canada_canola_2016_close_extension_and_2018_transfer
+        PASS [   0.017s] (1008/1276) exchange-hours::venue_sessions suite::eurex_ice::ice_canada_canola_january_2010_baseline
+        PASS [   0.018s] (1009/1276) exchange-hours::venue_sessions suite::eurex_ice::iceeu_close
+        PASS [   0.021s] (1010/1276) exchange-hours::venue_sessions suite::eurex_ice::iceeu_before_open
+        PASS [   0.018s] (1011/1276) exchange-hours::venue_sessions suite::eurex_ice::iceeu_monday_open
+        PASS [   0.014s] (1012/1276) exchange-hours::venue_sessions suite::eurex_ice::iceeu_trading_hours
+        PASS [   0.022s] (1013/1276) exchange-hours::venue_sessions suite::eurex_ice::iceeu_weekend_closed
+        PASS [   0.012s] (1014/1276) exchange-hours::venue_sessions suite::eurex_ice::iceus_daily_close
+        PASS [   0.015s] (1015/1276) exchange-hours::venue_sessions suite::eurex_ice::iceus_daily_break
+        PASS [   0.014s] (1016/1276) exchange-hours::venue_sessions suite::eurex_ice::iceus_overnight_wrap
+        PASS [   0.018s] (1017/1276) exchange-hours::venue_sessions suite::eurex_ice::iceus_friday_close
+        PASS [   0.019s] (1018/1276) exchange-hours::venue_sessions suite::eurex_ice::iceus_weekend_closed
+        PASS [   0.023s] (1019/1276) exchange-hours::venue_sessions suite::eurex_ice::iceus_sunday_open
+        PASS [   0.019s] (1020/1276) exchange-hours::venue_sessions suite::eurex_ice::maintenance_covers_the_whole_break_not_just_its_tail
+        PASS [   0.020s] (1021/1276) exchange-hours::venue_sessions suite::eurex_ice::maintenance_starts_at_the_close_instant
+        PASS [   0.017s] (1022/1276) exchange-hours::venue_sessions suite::eurex_ice::pre_open_and_overnight_windows_are_not_maintenance
+        PASS [   0.015s] (1023/1276) exchange-hours::venue_sessions suite::finra_trfs::finra_trf_carteret_baseline_cutover_and_session_kinds
+        PASS [   0.020s] (1024/1276) exchange-hours::venue_sessions suite::finra_trfs::finra_trf_chicago_is_closed_before_its_sourced_launch
+        PASS [   0.022s] (1025/1276) exchange-hours::venue_sessions suite::finra_trfs::finra_trf_chicago_baseline_cutover_and_session_kinds
+        PASS [   0.014s] (1026/1276) exchange-hours::venue_sessions suite::finra_trfs::finra_trf_nyse_baseline_cutover_and_session_kinds
+        PASS [   0.019s] (1027/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::a_closure_on_a_non_session_day_changes_nothing
+        PASS [   0.014s] (1028/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::a_venue_closure_removes_the_trading_day_it_names
+        PASS [   0.054s] (1029/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::a_closed_venue_row_is_a_unanimous_closure
+        PASS [   0.016s] (1030/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::every_venue_answers_only_inside_its_own_window
+        PASS [   0.024s] (1031/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::an_unsourced_venue_row_is_reported_and_clips_nothing
+        PASS [   0.018s] (1032/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::every_venue_window_is_the_union_of_its_families_windows
+        PASS [   0.211s] (1033/1276) exchange-hours::venue_sessions suite::eurex_ice::iceus_fang_profile_is_closed_before_its_sourced_launch
+        PASS [   0.036s] (1034/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::the_energy_venues_carry_the_family_table_unchanged
+        PASS [   0.022s] (1035/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::wave2_venue_era_counts_match_the_families_they_route
+        PASS [   0.025s] (1036/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::wave2_venue_rows_are_closed_on_the_nine_and_unsourced_on_the_rest
+        PASS [   0.022s] (1037/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::wave3_closures_are_the_dates_every_family_states_closed
+        PASS [   0.020s] (1038/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::wave3_energy_early_close_instants_are_the_familys_own
+        PASS [   0.118s] (1039/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::the_venue_table_is_the_intersection_of_its_families
+        PASS [   0.020s] (1040/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::wave3_unsourced_rows_clip_nothing
+        PASS [   0.021s] (1041/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::wave3_unsourced_shapes_are_the_families_own_answers
+        PASS [   0.022s] (1042/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::wave3_venue_era_counts_match_the_families_they_route
+        PASS [   0.022s] (1043/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::wave3_venue_rows_cite_a_family_row_on_the_same_date
+        PASS [   0.025s] (1044/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::wave4_closures_are_the_dates_every_family_states_closed
+        PASS [   0.021s] (1045/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::wave4_unsourced_shapes_are_the_families_own_answers
+        PASS [   0.025s] (1046/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::wave4_venue_era_counts_match_the_families_they_route
+        PASS [   0.020s] (1047/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::wave4_venue_rows_cite_a_family_row_on_the_same_date
+        PASS [   0.036s] (1048/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::wave5_venue_era_counts_match_the_families_they_route
+        PASS [   0.080s] (1049/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::wave5_venue_era_early_closes_are_end_exclusive
+        PASS [   0.026s] (1050/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::wave5_venue_era_unsourced_rows_are_disagreements_not_closures
+        PASS [   0.028s] (1051/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::without_holidays_restores_the_normal_week_for_every_venue
+        PASS [   0.034s] (1052/1276) exchange-hours::venue_sessions suite::holidays_coinbase_derivatives::a_friday_holiday_removes_the_thursday_evening_leg
+        PASS [   0.026s] (1053/1276) exchange-hours::venue_sessions suite::holidays_coinbase_derivatives::a_later_closing_group_does_not_widen_the_venue_row
+        PASS [   0.032s] (1054/1276) exchange-hours::venue_sessions suite::holidays_coinbase_derivatives::a_normal_trading_day_notice_ships_no_row
+        PASS [   0.284s] (1055/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::wave4_venue_table_is_the_families_intersection_over_the_new_era
+        PASS [   0.018s] (1056/1276) exchange-hours::venue_sessions suite::holidays_coinbase_derivatives::an_early_close_ends_the_trading_day_at_the_earliest_printed_instant
+        PASS [   0.017s] (1057/1276) exchange-hours::venue_sessions suite::holidays_coinbase_derivatives::coverage_runs_from_the_launch_day_to_the_last_notice
+        PASS [   0.014s] (1058/1276) exchange-hours::venue_sessions suite::holidays_coinbase_derivatives::detaching_the_table_restores_the_normal_week
+        PASS [   0.017s] (1059/1276) exchange-hours::venue_sessions suite::holidays_coinbase_derivatives::the_earliest_row_in_the_window_removes_its_own_evening_leg
+        PASS [   0.019s] (1060/1276) exchange-hours::venue_sessions suite::holidays_coinbase_derivatives::martin_luther_king_day_removes_the_whole_trading_day
+        PASS [   0.018s] (1061/1276) exchange-hours::venue_sessions suite::holidays_coinbase_derivatives::the_two_unreadable_thanksgiving_dates_clip_nothing
+        PASS [   0.020s] (1062/1276) exchange-hours::venue_sessions suite::holidays_coinbase_derivatives::the_session_after_the_friday_before_a_monday_holiday_is_that_mondays_evening
+        PASS [   0.018s] (1063/1276) exchange-hours::venue_sessions suite::holidays_coinbase_derivatives::the_window_carries_exactly_the_notices_published_in_order
+        PASS [   0.018s] (1064/1276) exchange-hours::venue_sessions suite::holidays_nasdaq::every_scalar_early_close_is_the_printed_one_oclock
+        PASS [   0.014s] (1065/1276) exchange-hours::venue_sessions suite::holidays_nasdaq::pre_horizon_rows_fence_data_and_date_aware_queries_answer
+        PASS [   0.028s] (1066/1276) exchange-hours::venue_sessions suite::holidays_nasdaq::the_2012_era_scalar_rows
+        PASS [   0.028s] (1067/1276) exchange-hours::venue_sessions suite::holidays_nasdaq::the_2025_2026_rows
+        PASS [   0.014s] (1068/1276) exchange-hours::venue_sessions suite::holidays_nasdaq::the_mourning_day_is_withheld_not_claimed_normal
+        PASS [   0.017s] (1069/1276) exchange-hours::venue_sessions suite::holidays_nasdaq::the_two_tba_early_closes_are_withheld
+        PASS [   0.019s] (1070/1276) exchange-hours::venue_sessions suite::holidays_nasdaq::the_sandy_monday_is_sourced_and_the_tuesday_is_withheld
+        PASS [   0.021s] (1071/1276) exchange-hours::venue_sessions suite::holidays_nasdaq::the_window_ends_where_the_operator_stops_publishing
+        PASS [   0.021s] (1072/1276) exchange-hours::venue_sessions suite::holidays_nyse::a_normal_week_day_audited_in_2019_has_no_row
+        PASS [   0.020s] (1073/1276) exchange-hours::venue_sessions suite::holidays_nyse::a_pre_floor_date_is_refused_not_claimed_normal
+        PASS [   0.023s] (1074/1276) exchange-hours::venue_sessions suite::holidays_nyse::every_early_close_in_the_table_is_the_printed_one_oclock
+        PASS [   0.010s] (1075/1276) exchange-hours::venue_sessions suite::holidays_nyse::pre_horizon_holiday_rows_fence_data_and_the_sourced_grid_answers
+        PASS [   0.018s] (1076/1276) exchange-hours::venue_sessions suite::holidays_nyse::the_2010_era_closures_and_the_printed_november_early_close
+        PASS [   0.017s] (1077/1276) exchange-hours::venue_sessions suite::holidays_nyse::the_2012_2013_eras_on_the_multi_year_artifact
+        PASS [   0.020s] (1078/1276) exchange-hours::venue_sessions suite::holidays_nyse::the_2015_observed_independence_day_deletes_july_3
+        PASS [   2.817s] (1079/1276) exchange-hours::venue_sessions suite::cme_cbot::cme_equity_close_moved_with_the_2015_09_20_sunday_session
+        PASS [   0.023s] (1080/1276) exchange-hours::venue_sessions suite::holidays_nyse::the_2021_2022_era_rows
+        PASS [   0.019s] (1081/1276) exchange-hours::venue_sessions suite::holidays_nyse::the_juneteenth_grid_starts_in_2022_not_2021
+        PASS [   0.031s] (1082/1276) exchange-hours::venue_sessions suite::holidays_nyse::the_2025_2026_2027_rows
+        PASS [   0.030s] (1083/1276) exchange-hours::venue_sessions suite::holidays_nyse::the_2028_rows
+        PASS [   0.022s] (1084/1276) exchange-hours::venue_sessions suite::holidays_nyse::the_window_covers_to_2028_12_31_and_refuses_after_it
+        PASS [   0.021s] (1085/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::coverage_runs_exactly_over_each_operators_published_window
+        PASS [   0.021s] (1086/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::detaching_the_table_restores_the_normal_week
+        PASS [   0.032s] (1087/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::nse_printed_closures_2019_2022_ship_a_row_per_year
+        PASS [   0.028s] (1088/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::nse_printed_closures_2023_2024_ship_a_row_per_year
+        PASS [   0.042s] (1089/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::nse_printed_closures_2010_2017_ship_a_row_per_year
+        PASS [   0.022s] (1090/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::ordinary_weekdays_inside_the_window_trade_end_exclusively
+        PASS [   0.026s] (1091/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::nse_printed_closures_ship_a_row_per_year
+        PASS [   0.069s] (1092/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::sse_printed_closures_2011_2014_ship_a_row_per_year
+        PASS [   0.089s] (1093/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::sse_printed_closures_2015_2019_ship_a_row_per_year
+        PASS [   0.018s] (1094/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::the_muhurat_dates_are_unsourced_neither_closed_nor_normal
+        PASS [   0.069s] (1095/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::sse_printed_closures_2025_2026_ship_a_row_per_year
+        PASS [   0.020s] (1096/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::the_only_unsourced_rows_are_the_muhurat_dates
+        PASS [   0.127s] (1097/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::sse_printed_closures_2020_2024_ship_a_row_per_year
+        PASS [   0.018s] (1098/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::the_unrecovered_2012_and_2018_years_refuse
+        PASS [   0.017s] (1099/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::the_wire_names_resolve_to_the_three_calendars
+        PASS [   0.022s] (1100/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::the_window_counts_are_the_printed_lists_counts
+        PASS [   0.035s] (1101/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::tse_printed_closures_2010_2014_ship_a_row_per_year
+        PASS [   0.042s] (1102/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::tse_printed_closures_2015_2019_ship_a_row_per_year
+        PASS [   0.041s] (1103/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::tse_printed_closures_2020_2024_ship_a_row_per_year
+        PASS [   0.017s] (1104/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::weekends_inside_the_window_stay_weekends_except_where_withheld
+        PASS [   0.018s] (1105/1276) exchange-hours::venue_sessions suite::international_products::eex_nordic_zonal_power_is_closed_before_launch
+        PASS [   0.017s] (1106/1276) exchange-hours::venue_sessions suite::international_products::ice_abu_dhabi_murban_launch_and_us_reference_clock
+        PASS [   0.017s] (1107/1276) exchange-hours::venue_sessions suite::international_products::ice_endex_ttf_extension_and_reference_clock
+        PASS [   0.049s] (1108/1276) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::tse_printed_closures_ship_a_row_per_year
+        PASS [   0.018s] (1109/1276) exchange-hours::venue_sessions suite::intraday_and_monthly_candles::calendar_resolution_monthly_serde_round_trip
+        PASS [   0.020s] (1110/1276) exchange-hours::venue_sessions suite::international_products::ice_ftse_100_migration_and_open_extensions
+        PASS [   0.022s] (1111/1276) exchange-hours::venue_sessions suite::intraday_and_monthly_candles::candle_end_monthly_mid_month_is_idempotent_within_month
+        PASS [   0.017s] (1112/1276) exchange-hours::venue_sessions suite::intraday_and_monthly_candles::candle_end_monthly_on_final_trading_day_returns_that_close
+        PASS [   0.017s] (1113/1276) exchange-hours::venue_sessions suite::intraday_and_monthly_candles::candle_end_monthly_returns_last_close_of_month
+        PASS [   0.014s] (1114/1276) exchange-hours::venue_sessions suite::intraday_and_monthly_candles::candle_end_monthly_year_boundary
+        PASS [   0.013s] (1115/1276) exchange-hours::venue_sessions suite::intraday_and_monthly_candles::intraday_bar_ends_at_the_daily_close_not_the_reopen
+        PASS [   0.014s] (1116/1276) exchange-hours::venue_sessions suite::intraday_and_monthly_candles::intraday_bar_queried_inside_maintenance_anchors_at_the_reopen
+        PASS [   0.021s] (1117/1276) exchange-hours::venue_sessions suite::intraday_and_monthly_candles::daily_candles_ignore_phase_handoffs_that_remain_open
+        PASS [   0.016s] (1118/1276) exchange-hours::venue_sessions suite::kind_aware_candles::candle_start_with_both_matches_candle_start
+        PASS [   0.018s] (1119/1276) exchange-hours::venue_sessions suite::kind_aware_candles::adjacent_different_session_kinds_remain_distinct_bounds
+        PASS [   0.014s] (1120/1276) exchange-hours::venue_sessions suite::kind_aware_candles::candle_start_with_extended_kind_anchors_the_trading_day_at_the_globex_open
+        PASS [   0.016s] (1121/1276) exchange-hours::venue_sessions suite::kind_aware_candles::candle_start_with_regular_kind_anchors_the_trading_day_at_rth
+        PASS [   0.021s] (1122/1276) exchange-hours::venue_sessions suite::named_profiles::dated_market_hours_keys_reuse_cme_group_and_cfe_histories
+        PASS [   0.025s] (1123/1276) exchange-hours::venue_sessions suite::named_profiles::all_market_hours_keys_return_profiles
+        PASS [   0.021s] (1124/1276) exchange-hours::venue_sessions suite::named_profiles::dated_market_hours_keys_reuse_international_product_launches
+        PASS [   0.013s] (1125/1276) exchange-hours::venue_sessions suite::named_profiles::every_market_hours_key_uses_its_canonical_string_in_every_serde_format
+        PASS [   0.013s] (1126/1276) exchange-hours::venue_sessions suite::named_profiles::futures_session_profile_always_open_has_one_all_days_rule
+        PASS [   0.018s] (1127/1276) exchange-hours::venue_sessions suite::named_profiles::futures_session_profile_globex_energy_uses_wrap_session
+        PASS [   0.022s] (1128/1276) exchange-hours::venue_sessions suite::named_profiles::futures_session_profile_globex_equity_index_respects_daily_break
+        PASS [   0.026s] (1129/1276) exchange-hours::venue_sessions suite::named_profiles::futures_session_profile_globex_fx_matches_current_major_cme_fx_grid
+        PASS [   0.017s] (1130/1276) exchange-hours::venue_sessions suite::named_profiles::market_hours_key_all_matches_the_independent_expected_list
+        PASS [   0.018s] (1131/1276) exchange-hours::venue_sessions suite::named_profiles::market_hours_key_from_str_rejects_noncanonical_names
+        PASS [   0.019s] (1132/1276) exchange-hours::venue_sessions suite::named_profiles::market_hours_key_serde_rejects_ordinal_indices
+        PASS [   0.018s] (1133/1276) exchange-hours::venue_sessions suite::named_profiles::synthetic_key_without_an_in_scope_revision_returns_the_current_snapshot
+        PASS [   0.024s] (1134/1276) exchange-hours::venue_sessions suite::nasdaq::nasdaq_0400_premarket_started_on_2013_03_18
+        PASS [   0.020s] (1135/1276) exchange-hours::venue_sessions suite::nasdaq::nasdaq_below_bound_dates_answer_from_the_sourced_floor
+        PASS [   0.019s] (1136/1276) exchange-hours::venue_sessions suite::nasdaq::nasdaq_bx_current_snapshot_uses_texas_0700_to_1900_hours
+        PASS [   0.026s] (1137/1276) exchange-hours::venue_sessions suite::nasdaq::nasdaq_psx_launch_and_0800_expansion_use_sourced_dates
+        PASS [   0.028s] (1138/1276) exchange-hours::venue_sessions suite::nasdaq::nasdaq_psx_current_snapshot_uses_0800_to_1700_hours
+        PASS [   0.022s] (1139/1276) exchange-hours::venue_sessions suite::nasdaq::nasdaq_unconfirmed_night_session_is_not_encoded
+        PASS [   0.020s] (1140/1276) exchange-hours::venue_sessions suite::sgx_cfe::cfe_daily_maintenance
+        PASS [   0.020s] (1141/1276) exchange-hours::venue_sessions suite::sgx_cfe::cfe_friday_close
+        PASS [   0.023s] (1142/1276) exchange-hours::venue_sessions suite::sgx_cfe::cfe_afternoon_extension_launched_on_2013_10_28
+        PASS [   0.023s] (1143/1276) exchange-hours::venue_sessions suite::sgx_cfe::cfe_morning_extension_began_on_2010_12_10
+        PASS [   0.030s] (1144/1276) exchange-hours::venue_sessions suite::sgx_cfe::cfe_morning_extension_launched_on_2013_11_04
+        PASS [   0.032s] (1145/1276) exchange-hours::venue_sessions suite::sgx_cfe::cfe_morning_extension_moved_to_0700_on_2011_09_26
+        PASS [   0.025s] (1146/1276) exchange-hours::venue_sessions suite::sgx_cfe::cfe_nearly_24_hour_week_launched_on_2014_06_22
+        PASS [   0.027s] (1147/1276) exchange-hours::venue_sessions suite::sgx_cfe::cfe_post_settlement_window
+        PASS [   0.028s] (1148/1276) exchange-hours::venue_sessions suite::sgx_cfe::cfe_pre_open_queues_are_extended
+        PASS [   0.015s] (1149/1276) exchange-hours::venue_sessions suite::sgx_cfe::cfe_rth
+        PASS [   0.026s] (1150/1276) exchange-hours::venue_sessions suite::sgx_cfe::cfe_queue_envelope_widened_on_2018_08_12
+        PASS [   0.025s] (1151/1276) exchange-hours::venue_sessions suite::sgx_cfe::cfe_rth_close
+        PASS [   0.022s] (1152/1276) exchange-hours::venue_sessions suite::sgx_cfe::cfe_sunday_overnight
+        PASS [   0.025s] (1153/1276) exchange-hours::venue_sessions suite::sgx_cfe::cfe_system_migration_restored_daily_gap_on_2018_02_25
+        PASS [   0.013s] (1154/1276) exchange-hours::venue_sessions suite::sgx_cfe::sgx_day_close
+        PASS [   0.016s] (1155/1276) exchange-hours::venue_sessions suite::sgx_cfe::sgx_day_session
+        PASS [   0.015s] (1156/1276) exchange-hours::venue_sessions suite::sgx_cfe::sgx_friday_t1_wrap_into_saturday
+        PASS [   0.019s] (1157/1276) exchange-hours::venue_sessions suite::sgx_cfe::sgx_day_open
+        PASS [   0.015s] (1158/1276) exchange-hours::venue_sessions suite::sgx_cfe::sgx_saturday_after_t1_close
+        PASS [   0.015s] (1159/1276) exchange-hours::venue_sessions suite::sgx_cfe::sgx_gap_before_day
+        PASS [   0.017s] (1160/1276) exchange-hours::venue_sessions suite::sgx_cfe::sgx_sora_is_closed_before_its_sourced_launch
+        PASS [   0.013s] (1161/1276) exchange-hours::venue_sessions suite::sgx_cfe::sgx_sunday_closed
+        PASS [   0.012s] (1162/1276) exchange-hours::venue_sessions suite::sgx_cfe::sgx_t1_wrap_close
+        PASS [   0.018s] (1163/1276) exchange-hours::venue_sessions suite::sgx_cfe::sgx_t1_wrap
+        PASS [   0.012s] (1164/1276) exchange-hours::venue_sessions suite::sgx_cfe::sgx_t1_wrap_into_tuesday
+        PASS [   0.014s] (1165/1276) exchange-hours::venue_sessions suite::sunday_wraps::cme_sunday_morning_closed_before_globex_open
+        PASS [   0.010s] (1166/1276) exchange-hours::venue_sessions suite::sunday_wraps::comex_sunday_morning_closed_before_globex_open
+        PASS [   0.016s] (1167/1276) exchange-hours::venue_sessions suite::sunday_wraps::iceus_equal_endpoint_rule_is_one_continuous_sunday_session
+        PASS [   0.019s] (1168/1276) exchange-hours::venue_sessions suite::sunday_wraps::nymex_sunday_morning_closed_before_globex_open
+        PASS [   0.020s] (1169/1276) exchange-hours::venue_sessions suite::sunday_wraps::iceus_sunday_morning_closed_before_open
+        PASS [   0.012s] (1170/1276) exchange-hours::venue_sessions suite::sunday_wraps::sunday_morning_is_open_agrees_with_session_bounds
+        PASS [   0.017s] (1171/1276) exchange-hours::venue_sessions suite::sunday_wraps::wrap_venues_reopen_at_their_published_sunday_open
+        PASS [   0.017s] (1172/1276) exchange-hours::venue_sessions suite::us_equity_history::blue_ocean_new_order_window_is_stable_from_launch
+        PASS [   0.015s] (1173/1276) exchange-hours::venue_sessions suite::us_equity_history::bzx_and_byx_2014_order_queues_use_the_exact_operator_dates
+        PASS [   0.017s] (1174/1276) exchange-hours::venue_sessions suite::us_equity_history::bzx_and_byx_2018_late_close_changes_are_distinct
+        PASS [   0.014s] (1175/1276) exchange-hours::venue_sessions suite::us_equity_history::bzx_january_2010_baseline_is_0800_to_1700
+        PASS [   0.018s] (1176/1276) exchange-hours::venue_sessions suite::us_equity_history::bzx_and_byx_2016_matching_start_moves_the_0700_hour_into_extended
+        PASS [   0.014s] (1177/1276) exchange-hours::venue_sessions suite::us_equity_history::edga_and_edgx_0600_queue_starts_on_the_2014_rule_approval_days
+        PASS [   0.017s] (1178/1276) exchange-hours::venue_sessions suite::us_equity_history::cboe_exchange_launches_are_not_backfilled
+        PASS [   0.019s] (1179/1276) exchange-hours::venue_sessions suite::us_equity_history::nasdaq_bx_uses_the_operator_stated_2011_cutover
+        PASS [   0.014s] (1180/1276) exchange-hours::venue_sessions suite::us_equity_history::nyse_arca_grid_is_supported_at_the_2010_audit_floor
+        PASS [   0.016s] (1181/1276) exchange-hours::venue_sessions suite::us_equity_history::nyse_american_extended_trading_begins_with_pillar
+        PASS [   0.012s] (1182/1276) exchange-hours::venue_sessions suite::us_equity_history::nyse_arca_queue_moves_from_0330_to_0230_on_the_trader_update_day
+        PASS [   0.009s] (1183/1276) exchange-hours::venue_sessions suite::us_equity_history::nyse_core_session_is_the_floor_era_statement
+        PASS [   0.013s] (1184/1276) exchange-hours::venue_sessions suite::us_equity_history::nyse_early_session_and_queue_begin_with_the_2018_utp_pillar_launch
+        PASS [   0.014s] (1185/1276) exchange-hours::venue_sessions suite::us_equity_history::nyse_national_full_legacy_and_dormant_timeline_is_preserved
+        PASS [   0.014s] (1186/1276) exchange-hours::venue_sessions suite::us_equity_history::nyse_texas_preserves_chx_history_through_the_pillar_migration
+        PASS [   0.011s] (1187/1276) exchange-hours::venue_sessions suite::us_independent_exchanges::independent_us_exchange_wires_and_bulk_order_are_stable
+        PASS [   0.013s] (1188/1276) exchange-hours::venue_sessions suite::us_independent_exchanges::independent_us_exchange_launches_are_not_backfilled
+        PASS [   0.016s] (1189/1276) exchange-hours::venue_sessions suite::us_independent_exchanges::independent_us_exchanges_publish_their_current_envelopes
+        PASS [   0.013s] (1190/1276) exchange-hours::venue_sessions suite::us_independent_exchanges::twenty_four_x_conditional_overnight_session_is_not_encoded
+        PASS [   0.015s] (1191/1276) exchange-hours::venue_sessions suite::verified_corrections::blue_ocean_has_no_sessions_before_its_production_launch
+        PASS [   0.011s] (1192/1276) exchange-hours::venue_sessions suite::verified_corrections::blue_ocean_uses_the_ats_n_new_order_close
+        PASS [   0.016s] (1193/1276) exchange-hours::venue_sessions suite::verified_corrections::cfe_before_the_2021_cutover_classifies_the_order_queue_as_order_entry
+        PASS [   0.019s] (1194/1276) exchange-hours::venue_sessions suite::verified_corrections::blue_ocean_runs_sunday_through_thursday_only
+        PASS [   0.017s] (1195/1276) exchange-hours::venue_sessions suite::verified_corrections::cfe_has_no_queuing_gap_between_1515_and_1530
+        PASS [   0.012s] (1196/1276) exchange-hours::venue_sessions suite::verified_corrections::cfe_post_settlement_runs_on_friday_too
+        PASS [   0.014s] (1197/1276) exchange-hours::venue_sessions suite::verified_corrections::cfe_rth_transitions_seamlessly_into_post_settlement_at_1500
+        PASS [   0.015s] (1198/1276) exchange-hours::venue_sessions suite::verified_corrections::iex_exchange_identity_begins_at_the_2016_08_19_launch
+        PASS [   0.014s] (1199/1276) exchange-hours::venue_sessions suite::verified_corrections::iex_extended_hours_differ_from_the_generic_us_equities_profile
+        PASS [   0.012s] (1200/1276) exchange-hours::venue_sessions suite::verified_corrections::iex_postmarket_closes_at_1700_not_2000
+        PASS [   0.016s] (1201/1276) exchange-hours::venue_sessions suite::verified_corrections::iex_premarket_opens_at_0800_not_0400
+        PASS [   0.017s] (1202/1276) exchange-hours::venue_sessions suite::verified_corrections::six_closing_auction_and_trading_at_last_then_post_trading
+        PASS [   0.016s] (1203/1276) exchange-hours::venue_sessions suite::verified_corrections::six_continuous_trading_ends_at_1720
+        PASS [   0.014s] (1204/1276) exchange-hours::venue_sessions suite::verified_corrections::six_does_not_share_the_xetra_schedule
+        PASS [   0.013s] (1205/1276) exchange-hours::venue_sessions suite::verified_corrections::six_randomized_open_uses_the_latest_two_minute_edge
+        PASS [   0.088s] (1206/1276) exchange-hours::bench/calendar_queries cold_axis/without_holidays/regular
+        PASS [   0.110s] (1207/1276) exchange-hours::bench/calendar_queries cold_axis/none/closed_weekend
+        PASS [   0.119s] (1208/1276) exchange-hours::bench/calendar_queries cold_axis/none/regular
+        PASS [   0.044s] (1209/1276) exchange-hours::bench/calendar_queries globex_equity_index/candle_end_daily
+        PASS [   0.044s] (1210/1276) exchange-hours::bench/calendar_queries globex_equity_index/daily_window
+        PASS [   0.050s] (1211/1276) exchange-hours::bench/calendar_queries globex_equity_index/is_open
+        PASS [   0.032s] (1212/1276) exchange-hours::bench/calendar_queries globex_equity_index/is_open/closed_weekend
+        PASS [   0.041s] (1213/1276) exchange-hours::bench/calendar_queries globex_equity_index/is_open/adjacent
+        PASS [   0.032s] (1214/1276) exchange-hours::bench/calendar_queries globex_equity_index/is_open/holiday
+        PASS [   0.031s] (1215/1276) exchange-hours::bench/calendar_queries globex_equity_index/is_open/overnight
+        PASS [   0.034s] (1216/1276) exchange-hours::bench/calendar_queries globex_equity_index/is_open/maintenance
+        PASS [   0.037s] (1217/1276) exchange-hours::bench/calendar_queries globex_equity_index/session_state/regular
+        PASS [   0.045s] (1218/1276) exchange-hours::bench/calendar_queries globex_equity_index/session_bounds
+        PASS [   0.049s] (1219/1276) exchange-hours::bench/calendar_queries globex_equity_index/session_state/closed_weekend
+        PASS [   0.025s] (1220/1276) exchange-hours::bench/calendar_queries globex_equity_index/session_state_closed
+        PASS [   0.023s] (1221/1276) exchange-hours::bench/calendar_queries globex_equity_index/trade_date
+        PASS [   0.024s] (1222/1276) exchange-hours::bench/calendar_queries overlay_layers/day_policy_elsewhere/daily_window
+        PASS [   0.045s] (1223/1276) exchange-hours::bench/calendar_queries overlay_layers/day_policy_elsewhere/is_open/adjacent
+        PASS [   0.035s] (1224/1276) exchange-hours::bench/calendar_queries overlay_layers/day_policy_elsewhere/is_open/closed_weekend
+        PASS [   0.099s] (1225/1276) exchange-hours::bench/calendar_queries overlay_layers/day_policy_elsewhere/is_open/holiday
+        PASS [   0.043s] (1226/1276) exchange-hours::bench/calendar_queries overlay_layers/day_policy_elsewhere/is_open/maintenance
+        PASS [   0.050s] (1227/1276) exchange-hours::bench/calendar_queries overlay_layers/day_policy_elsewhere/is_open/overnight
+        PASS [   0.339s] (1228/1276) exchange-hours::bench/calendar_queries hot_path_year/without_holidays
+        PASS [   0.046s] (1229/1276) exchange-hours::bench/calendar_queries overlay_layers/day_policy_elsewhere/is_open/regular
+        PASS [   0.050s] (1230/1276) exchange-hours::bench/calendar_queries overlay_layers/day_policy_on_date/is_open/adjacent
+        PASS [   0.047s] (1231/1276) exchange-hours::bench/calendar_queries overlay_layers/day_policy_on_date/is_open/closed_weekend
+        PASS [   0.038s] (1232/1276) exchange-hours::bench/calendar_queries overlay_layers/day_policy_on_date/is_open/holiday
+        PASS [   0.036s] (1233/1276) exchange-hours::bench/calendar_queries overlay_layers/day_policy_on_date/is_open/maintenance
+        PASS [   0.021s] (1234/1276) exchange-hours::bench/calendar_queries overlay_layers/day_policy_on_date/is_open/regular
+        PASS [   0.027s] (1235/1276) exchange-hours::bench/calendar_queries overlay_layers/day_policy_on_date/is_open/overnight
+        PASS [   0.034s] (1236/1276) exchange-hours::bench/calendar_queries overlay_layers/exceptions_gated/daily_window
+        PASS [   0.039s] (1237/1276) exchange-hours::bench/calendar_queries overlay_layers/exceptions_gated/is_open/adjacent
+        PASS [   0.051s] (1238/1276) exchange-hours::bench/calendar_queries overlay_layers/exceptions_gated/is_open/holiday
+        PASS [   0.066s] (1239/1276) exchange-hours::bench/calendar_queries overlay_layers/exceptions_gated/is_open/closed_weekend
+        PASS [   0.050s] (1240/1276) exchange-hours::bench/calendar_queries overlay_layers/exceptions_gated/is_open/maintenance
+        PASS [   0.051s] (1241/1276) exchange-hours::bench/calendar_queries overlay_layers/exceptions_gated/is_open/overnight
+        PASS [   0.036s] (1242/1276) exchange-hours::bench/calendar_queries overlay_layers/exceptions_gated/is_open/regular
+        PASS [   0.041s] (1243/1276) exchange-hours::bench/calendar_queries overlay_layers/exceptions_in_coverage/is_open/adjacent
+        PASS [   0.032s] (1244/1276) exchange-hours::bench/calendar_queries overlay_layers/exceptions_in_coverage/is_open/closed_weekend
+        PASS [   0.030s] (1245/1276) exchange-hours::bench/calendar_queries overlay_layers/exceptions_in_coverage/is_open/holiday
+        PASS [   0.047s] (1246/1276) exchange-hours::bench/calendar_queries overlay_layers/exceptions_in_coverage/is_open/maintenance
+        PASS [   0.056s] (1247/1276) exchange-hours::bench/calendar_queries overlay_layers/exceptions_in_coverage/is_open/overnight
+        PASS [   0.052s] (1248/1276) exchange-hours::bench/calendar_queries overlay_layers/exceptions_in_coverage/is_open/regular
+        PASS [   0.046s] (1249/1276) exchange-hours::bench/calendar_queries overlay_layers/none/daily_window
+        PASS [   0.035s] (1250/1276) exchange-hours::bench/calendar_queries overlay_layers/none/is_open/adjacent
+        PASS [   0.023s] (1251/1276) exchange-hours::bench/calendar_queries overlay_layers/none/is_open/closed_weekend
+        PASS [   0.033s] (1252/1276) exchange-hours::bench/calendar_queries overlay_layers/none/is_open/holiday
+        PASS [   0.043s] (1253/1276) exchange-hours::bench/calendar_queries overlay_layers/none/is_open/maintenance
+        PASS [   0.034s] (1254/1276) exchange-hours::bench/calendar_queries overlay_layers/none/is_open/overnight
+        PASS [   0.056s] (1255/1276) exchange-hours::bench/calendar_queries overlay_layers/none/is_open/regular
+        PASS [   0.059s] (1256/1276) exchange-hours::bench/calendar_queries overlay_layers/without_holidays/is_open/adjacent
+        PASS [   0.060s] (1257/1276) exchange-hours::bench/calendar_queries overlay_layers/without_holidays/is_open/closed_weekend
+        PASS [   0.021s] (1258/1276) exchange-hours::bench/calendar_queries overlay_layers/without_holidays/is_open/maintenance
+        PASS [   0.055s] (1259/1276) exchange-hours::bench/calendar_queries overlay_layers/without_holidays/is_open/holiday
+        PASS [   0.022s] (1260/1276) exchange-hours::bench/calendar_queries overlay_layers/without_holidays/is_open/overnight
+        PASS [   0.031s] (1261/1276) exchange-hours::bench/calendar_queries overlay_layers/without_holidays/is_open/regular
+        PASS [   0.024s] (1262/1276) exchange-hours::bench/calendar_queries query_surface/holiday_on/hit
+        PASS [   0.048s] (1263/1276) exchange-hours::bench/calendar_queries query_surface/holiday_on/miss
+        PASS [   0.052s] (1264/1276) exchange-hours::bench/calendar_queries query_surface/is_closed_trade_date
+        PASS [   0.037s] (1265/1276) exchange-hours::bench/calendar_queries query_surface/session_bounds/overnight
+        PASS [   0.038s] (1266/1276) exchange-hours::bench/calendar_queries query_surface/trade_date/overnight
+        PASS [  13.779s] (1267/1276) exchange-hours::schedule_documentation suite::coverage_inventory::the_declared_phase_level_gaps_match_the_inventory
+        PASS [   1.563s] (1268/1276) exchange-hours::bench/calendar_queries hot_path_year/none
+        PASS [   4.995s] (1269/1276) exchange-hours::venue_sessions suite::holidays_cme_venues::the_cbot_withheld_dates_are_four_markers_plus_only_disputes
+        PASS [  25.187s] (1270/1276) exchange-hours::coverage_metadata every_identity_reports_bounded_consistent_metadata
+        PASS [  35.553s] (1271/1276) exchange-hours::coverage_metadata a_covered_date_is_never_refused_by_a_query_naming_another_covered_date
+        PASS [  43.097s] (1272/1276) exchange-hours::calendar_policies all_key_calendars_match_dated_snapshots_over_two_years
+        PASS [  41.896s] (1273/1276) exchange-hours::holiday_tables every_shipped_session_occurrence_is_dated_by_its_own_open_or_the_next_day
+        SLOW [> 60.000s] (─────────) exchange-hours::coverage_metadata a_complete_scope_answers_every_day_inside_its_span
+        SLOW [> 60.000s] (─────────) exchange-hours::futures_family_boundaries suite::preopen_no_movement::a_queue_never_widens_is_open_or_session_bounds_on_the_preopen_keys_windows
+        SLOW [> 60.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        SLOW [>120.000s] (─────────) exchange-hours::coverage_metadata a_complete_scope_answers_every_day_inside_its_span
+        SLOW [>120.000s] (─────────) exchange-hours::futures_family_boundaries suite::preopen_no_movement::a_queue_never_widens_is_open_or_session_bounds_on_the_preopen_keys_windows
+        SLOW [>120.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        PASS [ 149.638s] (1274/1276) exchange-hours::futures_family_boundaries suite::preopen_no_movement::a_queue_never_widens_is_open_or_session_bounds_on_the_preopen_keys_windows
+        SLOW [>180.000s] (─────────) exchange-hours::coverage_metadata a_complete_scope_answers_every_day_inside_its_span
+        SLOW [>180.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        PASS [ 196.108s] (1275/1276) exchange-hours::coverage_metadata a_complete_scope_answers_every_day_inside_its_span
+        SLOW [>240.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        SLOW [>300.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        SLOW [>360.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        SLOW [>420.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        SLOW [>480.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        SLOW [>540.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        SLOW [>600.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        SLOW [>660.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        SLOW [>720.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        SLOW [>780.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        SLOW [>840.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        SLOW [>900.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        SLOW [>960.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        SLOW [>1020.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        SLOW [>1080.000s] (─────────) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+        PASS [1110.313s] (1276/1276) exchange-hours::holiday_tables the_coverage_gate_is_sound_for_every_shipped_row
+────────────
+     Summary [1114.286s] 1276 tests run: 1276 passed (3 slow), 0 skipped
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.09s
+   Doc-tests exchange_hours
+
+running 3 tests
+test src/calendar/exceptions/static_table.rs - calendar::exceptions::static_table::StaticSessionExceptions (line 104) ... ok
+test src/lib.rs - (line 18) ... ok
+test src/calendar/policy/static_policy.rs - calendar::policy::static_policy::StaticDayPolicy (line 145) ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+all doctests ran in 0.82s; merged doctests compilation took 0.45s
+ Documenting exchange-hours v1.0.0 (/private/tmp/wt-evidence-lse-six)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.82s
+   Generated /private/tmp/wt-evidence-lse-six-target/doc/exchange_hours/index.html
+warning[license-not-encountered]: license was not encountered
+   ┌─ /private/tmp/wt-evidence-lse-six/deny.toml:12:6
+   │
+12 │     "Apache-2.0 WITH LLVM-exception",
+   │      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ unmatched license allowance
+
+warning[license-not-encountered]: license was not encountered
+   ┌─ /private/tmp/wt-evidence-lse-six/deny.toml:13:6
+   │
+13 │     "BSD-2-Clause",
+   │      ━━━━━━━━━━━━ unmatched license allowance
+
+warning[license-not-encountered]: license was not encountered
+   ┌─ /private/tmp/wt-evidence-lse-six/deny.toml:14:6
+   │
+14 │     "BSD-3-Clause",
+   │      ━━━━━━━━━━━━ unmatched license allowance
+
+warning[license-not-encountered]: license was not encountered
+   ┌─ /private/tmp/wt-evidence-lse-six/deny.toml:18:6
+   │
+18 │     "CC0-1.0",
+   │      ━━━━━━━ unmatched license allowance
+
+warning[license-not-encountered]: license was not encountered
+   ┌─ /private/tmp/wt-evidence-lse-six/deny.toml:15:6
+   │
+15 │     "ISC",
+   │      ━━━ unmatched license allowance
+
+warning[license-not-encountered]: license was not encountered
+   ┌─ /private/tmp/wt-evidence-lse-six/deny.toml:16:6
+   │
+16 │     "Zlib",
+   │      ━━━━ unmatched license allowance
+
+advisories ok, bans ok, licenses ok, sources ok
+    Checking exchange-hours v1.0.0 (/private/tmp/wt-evidence-lse-six)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.48s
+chain exit: 0

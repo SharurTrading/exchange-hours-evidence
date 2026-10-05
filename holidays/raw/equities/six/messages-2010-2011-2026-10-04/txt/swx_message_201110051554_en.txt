@@ -1,0 +1,98 @@
+SIX Swiss Exchange Message no. 58/2011
+
+Subject          Launch of SWXess Maintenance Release 1.2
+Category         SWXess Trading Platform
+Authorised by    Christoph Landis; Head Operations
+                 Adrian Isler; Head Market Operations
+Pages            2
+Date             05.10.2011                                                                             Information
+
+
+In SIX Swiss Exchange Message no. 57/2011 of 29 September 2011, we announced the postponement
+of SWXess Maintenance Release 1.2 (SMR 1.2) into the production environment.
+This message provides information about the new rollout plan for SMR 1.2, which introduces a second
+partition of the On Book Matcher (OBM).
+
+Date                                     Activity
+29-30 October 2011                       Migration to SMR 1.2 in the production environment
+31 October 2011                          First trading day with SMR 1.2 in the production environment
+
+
+Migration to SMR 1.2
+The following changes accompanying SMR 1.2 will go live on 31 October 2011:
+          Allocation of order-driven trading segments to the new “Equities” partition
+          Harmonization of trading in rights and separate trading lines
+          Interface modifications
+
+Please refer to SIX Swiss Exchange Message no. 43/2011 of 3 August 2011 for detailed information on
+the migration to SMR 1.2.
+
+Post-trade processing
+SIX Swiss Exchange has identified errors in post-trade processing and has already implemented a
+solution to correct them. We would like to give participants the opportunity to fully test the post-trade
+processing end-to-end in the member test environment.
+Participants are kindly requested to complete their testing by 21 October 2011. In particular, we
+recommend to validate that clearing and settlement is instructed in accordance with your requirements
+and displayed correctly in the member own applications for all trading segments after the migration to
+SMR 1.2.
+We advise participants to pay special attention to testing the post-trade processing in the following trading
+segments, which are being migrated to the new “Equities” partition:
+          Mid-/Small-Cap Shares
+          Secondary Listed Shares
+          Investment Funds
+          Rights
+
+Please contact us if you need assistance with the end-to-end testing of the post-trade processing.
+
+
+
+
+                                                                                                                      1|2
+
+SIX Swiss Exchange Ltd        T +41 58 399 5454
+Selnaustrasse 30              F +41 58 499 5455
+P.O. Box 1758                 www.six-swiss-exchange.com
+CH-8021 Zurich
+SIX Swiss Exchange                                                                                            05.10.2011
+SIX Swiss Exchange Message no. 58/2011
+
+
+
+
+Amendments to Directive 3: Trading
+As previously communicated, «Directive 3: Trading» has been amended to reflect the changes to
+counterparty disclosure resulting from the harmonization of trading in separate trading lines and rights.
+The amended Directive 3: Trading will take effect on 31 October 2011 and is now available on the SIX
+Swiss Exchange website.
+
+
+More information on the migration to SMR 1.2 and the accompanying technical changes can be found in
+the Member Section.
+
+Document                                 Link
+MSC messages                             https://www.six-swiss-exchange.com/member_section/it/messages.html
+Manuals                                  https://www.six-swiss-exchange.com/member_section/it/manuals.html
+
+
+
+With the successful introduction of SMR 1.2, we look forward to providing participants with increased
+transaction capacity and lower latency in equity trading on the SWXess trading platform.
+
+
+If you have any questions, please do not hesitate to contact Member Services:
+
+Telephone:          +41 58 399 2473
+E-mail              member.services@six-group.com
+
+
+If you have any technical questions, please do not hesitate to contact your local Support Center:
+
+                    Zurich                            London                               Geneva
+Telephone:          +41 58 399 2400                   +44 207 7864 4364                    +41 58 399 5642
+E-mail              lsz@six-group.com                 lsl@six-group.com                    lsg@six-group.com
+
+
+
+
+                                                                                                                    2|2
+

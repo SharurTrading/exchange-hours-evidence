@@ -1,0 +1,239 @@
+Title: 20211206 - CME Group
+
+URL Source: https://www.cmegroup.com/notices/electronic-trading/2021/12/20211206.html
+
+Markdown Content:
+For the latest roadmap of CME Group technology initiatives:
+
+[See the Development Launch Schedule.](https://www.cmegroup.com/globex/develop-to-cme-globex/development-launches.html)
+
+## Critical System Updates
+
+### Update Update - Three-Month SOFR Futures vs Eurodollar Futures on CME Globex- January 9
+
+† Denotes update to the article
+
+Effective**Sunday, January 9, 2022** (trade date Monday, January 10), an outright futures contract that represents the differential between the Three-Month SOFR futures vs Eurodollar futures contracts will be listed for trading on CME Globex commencing with the September 2023 contract month.
+
+| THREE-MONTH SOFR FUTURES VS EURODOLLAR FUTURES ON CME GLOBEX |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | **Tag 167 - SecurityType tag 167** | TAG 969 - MINPRICEINCREMENT | MDP 3.0 CHANNEL |
+| Three-Month SOFR Futures (SR3) vs Eurodollar Futures (GE) | SED | SS | FUT | 0.001 | 312 |
+
+**Please Note:** Implieds will **NOT** be enabled.
+
+Trades in the SED future will be decomposed in CME Clearing to trades in the Three-Month SOFR future and Eurodollar futures as described below.
+
+Buying the SED future will result in Clearing a buy of Three-Month SOFR futures and sell of Eurodollar futures.
+
+**Security Definition Example:**SEDU3
+
+**Example:**Buying the SED Future
+
+Buy 1 September 2023 Three-Month SOFR Futures
+
+ Sell 1 September 2023 Eurodollar Futures
+
+The Three-Month SOFR futures (Clearing product code SR3) vs Eurodollar (Clearing product code ED) futures traded as SED will be cleared as outright trades and will be priced as follows:
+
+*   The ED price will be determined as prior-day settlement,
+*   The SR3 price will be determined as the prior-day Eurodollar settlement price, plus ISDA (International Swaps and Derivatives Association) spread adjustment rounded to four decimals (0.2616), plus the SED futures trade price.
+
+For additional information on the SED outright futures please refer to the [Special Executive Report SER-8881](https://www.cmegroup.com/content/dam/cmegroup/notices/ser/2021/11/SER-8881.pdf).
+
+† Further information on these trades is published in the [Clearing House Notice](https://www.cmegroup.com/content/dam/cmegroup/notices/clearing/2021/11/Chadv21-417.pdf).
+
+† Clients can retrieve additional product and instrument information from the[Reference Data API](https://www.cmegroup.com/confluence/display/EPICSANDBOX/CME+Reference+Data+API+Version+2).
+
+These futures are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/12/20211206.html#top)
+
+### EC Calendar Spread Leg Pricing Methodology Change- January 23
+
+On **Sunday, January 23, 2022** (for trade date Monday, January 24), to provide a more consistent leg pricing experience, the leg pricing methodology for the [SecuritySubType=**EC**](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Spreads+and+Combinations+Available+on+CME+Globex#SpreadsandCombinationsAvailableonCMEGlobex-ECTASCalendarSpread)is being modified to use leg1 (the nearest expiration) as the anchor with prior day’s settlement price when the spread trades at zero, positive or negative price. Currently, when the spread trades at a positive price, the leg2 (the deferred expiration)acts as the anchor leg.
+
+In addition, a new BTIC on Adjusted Interest Rate FTSE-100 Total Return Index futures calendar spread will be listed for trading on CME Globex.
+
+Please review the [client impact assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/EC+Calendar+Spread+Leg+Pricing+Enhancement)for additional details.
+
+These changes are currently available for customer testing in New Release.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/12/20211206.html#top)
+
+## Product Launches
+
+### Freight Route TC11 (Baltic) Futures- This Week
+
+Effective this **Sunday, December 12** (trade date Monday, December 13), pending completion of all regulatory review periods, the following Freight Route TC11 (Baltic) futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| Freight Route TC11 (Baltic) Future |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| Freight Route South Korea to Singapore TC11 (Baltic) Futures | TC1 | FT | 386 |
+| Freight Route South Korea to Singapore TC11 (Baltic) BALMO Futures | T1B | FT | 386 |
+
+These Freight Route TC11 (Baltic) futures are currently available for customer testing in New Release.
+
+These futures are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/12/20211206.html#top)
+
+### Update Update - Inter-commodity Spread on Shanghai Gold (USD) Futures and Gold Futures- This Week
+
+† Denotes update to the article
+
+†Effective this**Sunday, December 12**(trade date Monday, December 13), the inter-commodity futures spread on Shanghai Gold (USD) futures and Gold futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| INTER-COMMODITY SPREAD ON SHANGHAI GOLD (USD) Futures AND GOLD FUTURES |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | FUTURE TAG 762- SECURITYSUBTYPE | Market Data Channel |
+| Inter-commodity Spread on Shanghai Gold (USD) Futures and Gold Futures | SGU | AG | AE (Fixed Price Ratio Inter-Commodity Futures Spread) | 360 |
+
+†These inter-commodity futures spreads are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/12/20211206.html#top)
+
+### EC Calendar Spread Leg Pricing Methodology Change- January 23
+
+On **Sunday, January 23, 2022** (for trade date Monday, January 24), to provide a more consistent leg pricing experience, the leg pricing methodology for the [SecuritySubType=**EC**](https://www.cmegroup.com/confluence/display/EPICSANDBOX/Spreads+and+Combinations+Available+on+CME+Globex#SpreadsandCombinationsAvailableonCMEGlobex-ECTASCalendarSpread)is being modified to use leg1 (the nearest expiration) as the anchor with prior day’s settlement price when the spread trades at zero, positive or negative price. Currently, when the spread trades at a positive price, the leg2 (the deferred expiration)acts as the anchor leg.
+
+In addition, a new BTIC on Adjusted Interest Rate FTSE-100 Total Return Index futures calendar spread will be listed for trading on CME Globex.
+
+Please review the [client impact assessment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/EC+Calendar+Spread+Leg+Pricing+Enhancement) for additional details.
+
+These changes are currently available for customer testing in New Release.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/12/20211206.html#top)
+
+### Japanese Power (Day-Ahead) Tokyo Base-Load Average Price Option- January 23
+
+Effective **Sunday, January 23, 2022** (trade date Monday, January 24), pending completion of all regulatory review periods, Japanese Power (Day-Ahead) Tokyo Base-Load Average Price option will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| Japanese Power (Day-Ahead) Tokyo Base-Load Average Price Option |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| Japanese Power (Day-Ahead) Tokyo Base-Load Average Price Option | JTO | PH (UDS: PG) | 386 |
+
+This Japanese Power (Day-Ahead) Tokyo Base-Load Average Price option will be available for customer testing in New Release on **Monday, January 10, 2022**.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/12/20211206.html#top)
+
+## Product Changes
+
+### Delisting the Micro Japanese Yen/U.S. Dollar (JPY/USD) Futures- This Week
+
+Effective this **Thursday, December 9,** pending completion of all regulatory review periods, no additional contract months of the Micro Japanese Yen/U.S. Dollar (JPY/USD) futures contract will be listed on CME Globex. The last listed month of the contract will be March 2022.
+
+The permanent delisting for the Micro JPY/USD futures contract will be Tuesday, March 15, 2022.
+
+| **Delisting the Micro Japanese Yen/U.S. Dollar (JPY/USD) Futures** |
+| --- |
+| Futures Name | FIX/FAST AND ILINK: TAG 1151-SECURITY GROUP MDP 3.0: TAG 6937-ASSET | FIX/FAST AND ILINK: TAG 55-SYMBOL MDP 3.0 TAG 1151 - SECURITY GROUP | **LAST LISTED CONTRACT MONTH** |
+| Micro Japanese Yen/U.S. Dollar (JPY/USD) Futures | MJY | 6J | March 2022 |
+
+**Please Note:**The December 2021 and March 2022 contracts will trade till expiry.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/12/20211206.html#top)
+
+### Update Update - Changes to Shanghai Gold (USD) Futures- This Week
+
+Effective this **Sunday, December 12**(trade date Monday, December 13), the following amendments will be made on the[Security Definition (tag 35-MsgType=d) message](https://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Security+Definition)of the Shanghai Gold(USD) futures:
+
+*   The minimum price increment tag 969-MinPriceIncrement will be amended from the current value of 10.000000000 to 1.000000000.
+*   The decimal price locator tag 9787-DisplayFactor will be amended from the current value of 0.010000000 to 0.100000000
+
+The[daily settlement and clearing price increment](https://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Settlement+Price)for the Shanghai Gold(USD) futures published on the[Market Data Incremental Refresh (tag 35-MsgType=X)](https://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Market+Data+Incremental+Refresh)messages will remain unchanged.
+
+| Changes to Shanghai Gold (USD) Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | CURRENT TAG 969-MINPRICEINCREMENT | NEW TAG 969-MINPRICEINCREMENT | CURRENT TAG 9787-DISPLAYFACTOR | NEW TAG 9787-DISPLAYFACTOR |
+| Shanghai Gold(USD) Futures | SGU | AG | 10.000000000 | 1.000000000 | 0.010000000 | 0.100000000 |
+
+These changes are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/12/20211206.html#top)
+
+### New New - Changes to CME and CBOT Agricultural Options- This Week
+
+Effective this **Sunday, December 12**(trade date Monday, December 13), the following changes will be implemented on [Agriculture Options](https://www.cmegroup.com/content/dam/cmegroup/notices/ser/2021/12/SER-8855.pdf) on CME Globex.
+
+*   Implement dynamic strike prices eligibility. Currently market participants may request additional strike prices above or below Exchange listed strikes for trading, these are typically available on the next trading day for CBOT grain and oilseed options and CME livestock options.
+*   Allow more granular variable minimum strike increments **tag 202-Strike Price**on the[MDP 3.0 Security Definition](https://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Security+Definition)(tag 35-MsgType=**d**) message, beyond 25% above and below the ATM strike price for the nearest 3 months as reflected [here](https://www.cmegroup.com/trading/files/strike-price/strike-price-listing-and-exercise-procedures-table-cme-cbot.xlsx).
+
+For additional information, please refer to the [Special Executive Report SER-8855](https://www.cmegroup.com/content/dam/cmegroup/notices/ser/2021/12/SER-8855.pdf).
+
+These changes are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME and CBOT.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/12/20211206.html#top)
+
+### New New - Expansion to Strike Price Listing and Increased Listing Cycle Schedule for Options on E-mini Nasdaq-100 Index Futures- January 23, 2022
+
+Effective **Sunday, January 23, 2022**(trade date Monday, January 24), the following changes will be made to the E-mini Nasdaq-100 Options on CME Globex:
+
+*   Expansion of strike price listing for all E-mini Nasdaq-100 Options
+*   Increased listing schedule for E-mini Nasdaq-100 Weekly Options (Friday expiries).
+
+For additional information on these changes, please refer to the [Special Executive Report SER-8895](https://www.cmegroup.com/content/dam/cmegroup/notices/ser/2021/12/SER-8895.pdf).
+
+| Expansion to Strike Price Listing for Options on E-mini Nasdaq-100 Index Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | **Current Strike Price Listing Procedures** | **New Strike Price Listing Procedures** |
+| Options on E-mini Nasdaq-100 Futures | NQ | QZ | 100 index point integer multiples upon listing: +30% to -50% of the prior day’s settlement price on the underlying future contract 10 index point integer multiples for the nearest expiration: +10% to -20% of the prior day’s settlement price on the underlying future contract. | 500-point increment: -50% to +30% (when listed) 100-point increment: -40% to +20% (‹186 DTE) 50-point increment: -25% to +10% (‹96 DTE) 10-point increment: -10% to +5% (‹35 DTE) Dynamic strikes allowed at 5 index point increments. |
+| Options on E-mini Nasdaq-100 Index Futures - End-of-Month (European-Style) | QNE | NW | 100 index point integer multiples upon listing: +30% to -50% of the prior day’s settlement price on the underlying future contract 10 index point integer multiples for the nearest three expirations: +10% to -20% of the prior day’s settlement price on the underlying future contract |
+| Wednesday Weekly Options on E-mini Nasdaq-100 Index Futures - Week 1-5 (European-Style) Monday Weekly Options on E-mini Nasdaq-100 Index Futures - Week 1-5 (European-Style) | Q1A-Q5A & Q1C-Q5C | NW | Strikes listed within +10% to -20% of the prior day’s settlement price of the underlying future contract in 10 index point increments. |
+| Weekly Options on E-mini Nasdaq-100 Index Futures - Week 1-4 (European-Style); | QN1-QN4 | NW | Weeks 1, 2 and 4: +10% to -20% of the prior day’s settlement price of the underlying future contract in 10 index point increments Week 3: +30% and -50% of the prior day’s settlement price of the underlying future contract in 100 index point increments and +10% and -20% in 10 index point increments |
+
+| Increased Listing Cycle **Schedule** for Weekly Options on E-mini Nasdaq-100 Index Futures |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Listing Cycle | New Listing Cycle |
+| Weekly Options on E-mini Nasdaq-100 Index Futures - Week 1-4 (European-Style); | QN1-QN4 | NW | 2 weekly contracts of week 3; no listings provided for March, June, Sept, or Dec. | 3 consecutive contracts of Week 3, including Mar, Jun, Sep, and Dec. These options will expire into the next named quarterly month (i.e., QN3H2 will expire into positions in the NQM2 Future) |
+
+These changes will be available for customer testing in New Release on **Monday, December 13.**
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/12/20211206.html#top)
+
+## Events and Announcements
+
+### CME SPAN 2 Margin Methodology- H1 2022
+
+CME Group is targeting the initial launch of SPAN 2 Margin Methodology in H1 2022, starting with a subset of [energy products](https://www.cmegroup.com/clearing/files/phase-1-energy-products-10-9.xlsx). Any firm that currently uses the CME SPAN methodology and trades impacted products will need to implement one of the following services for computing CME SPAN 2 margin requirements:
+
+*   CME Core – a CME Group hosted web application for Margin Calculation “CME CORE”
+*   Margin API – a CME Group hosted margin calculation API
+*   Deployable Margin Software – a CME Group java margin calculation library
+
+**Please Note:**A limited number of existing pre-trade execution margin calculation processes may continue to be supported.
+
+Firms using CME SPAN for pre-trade risk management can contact the [Post Trade Services team](mailto:PostTradeServices@cmegroup.com) for more information:
+
+| US | UK | APAC |
+| --- | --- | --- |
+| +1 312 580 5353 | +44 20 3379 3500 | +65 6593 5599 |
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/12/20211206.html#top)
+
+### CME Globex Messaging Efficiency Program 2022 Holiday Calendar
+
+As noted in the [CME Globex Messaging Efficiency Program](http://www.cmegroup.com/globex/files/revisedmep.pdf) (MEP) document, the MEP is not applied on certain dates before/on/after U.S. recognized holidays. To obtain dates as to when CME Globex Messaging Efficiency Program Ratios for all Product Groups included in the MEP will not be enforced, please refer to the [CME Globex Messaging Efficiency Program Holiday Calendar](http://www.cmegroup.com/globex/files/mepholidaycalendar.pdf).
+
+**Please Note:** The Holiday Calendar does not pertain to the Excessive Messaging Threshold (EMT) which is in effect during **all trade dates and hours in which the Globex platform is open**.
+
+If you have any questions, please contact the[CME Global Command Center](mailto:gcc@cmegroup.com) in the U.S. at +1 800 438 8616, in Europe at +44 20 7623 4747 or in Asia at +65 6532 5010.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/12/20211206.html#top)

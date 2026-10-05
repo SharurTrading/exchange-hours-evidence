@@ -1,0 +1,1827 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="keywords" content="globex, notices, advisory, news" />
+<meta name="channel" content="tools-information" />
+<meta name="pageName" content="Important FIX/FAST Migration Guidelines" />
+<meta name="description" content="Important FIX/FAST Migration Guidelines" />
+<meta name="newSectionPath" content="/cmegroup/tools-information/lookups/advisories/electronic-trading/" />
+<meta name="search1" id="keywords" content="globex, notices, advisory, news, 20081110">
+<meta name="search2" id="description" content="Important FIX/FAST Migration Guidelines">
+<meta name="search3" id="category" content="Globex">
+<meta name="search4" id="userGroup" content="">
+<meta name="search5" id="topic" content="Functionality">
+<meta name="search6" id="noticeDate" content="11/10/08">
+<meta name="search7" id="noticeNumber" content="20081110">
+<meta name="search8" id="categorytopic" content="GlobexFunctionality">
+<meta name="search9" id="body" content="&lt;!-- Table 1 --&gt;<br/>
+&lt;table style=&quot;padding-bottom: 40px&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; width=&quot;640&quot;&gt;<br/>
+    &lt;tbody&gt;<br/>
+        &lt;tr&gt;<br/>
+            &lt;!-- Header content Border top and bottom 1px --&gt;<br/>
+            &lt;td style=&quot;padding-right: 20px; border-top: #d9d9d9 1px solid; padding-left: 20px; padding-bottom: 3px; font: bold 12pt Arial, Helvetica, sans-serif; color: #1e3764; padding-top: 3px; border-bottom: #d9d9d9 1px solid&quot;&gt;Special CME Globex Notice: Important FIX/FAST Migration Guidelines&lt;/td&gt;<br/>
+        &lt;/tr&gt;<br/>
+        &lt;tr&gt;<br/>
+            &lt;!-- table 1 content --&gt;<br/>
+            &lt;td style=&quot;padding-right: 20px; padding-left: 20px; padding-bottom: 0px; font: 9pt Arial, Helvetica, sans-serif; color: #000000; padding-top: 10px&quot;&gt;<br/>
+            &lt;p&gt;As a reminder, the deadline for migrating to the FIX/FAST protocol is &lt;strong&gt;November 14, 2008&lt;/strong&gt;. CME Group wishes to advise CME Globex users of the following steps that should be taken to fully leverage the efficiencies associated with the FIX/FAST protocol and the expanded bandwidth recommendations that were previously announced. The following steps are strongly advised:&lt;/p&gt;<br/>
+            &lt;ul&gt;<br/>
+                &lt;li&gt;CME Globex users should take technical precautions to ensure against exceeding the bandwidth of the physical connection (megabits per second or Mbps). Steps should also be taken not to exceed the throughput of the router (number of packets per second or PPS) which manages the connection.&lt;/li&gt;<br/>
+                &lt;li&gt;To prevent bandwidth and/or router capacity contention and possible degradation in the distribution of market data, customers utilizing 40 Mbps connections should not listen to both futures and options in full parallel with FIX/FAST and RLC protocols.&lt;/li&gt;<br/>
+            &lt;/ul&gt;<br/>
+            &lt;p style=&quot;font: bold 10pt Arial&quot;&gt;Given our current market data rates:&lt;/p&gt;<br/>
+            &lt;ul&gt;<br/>
+                &lt;li style=&quot;font: bold 9pt Arial; color: #1e3764&quot;&gt;Customers with 40Mbps connections who are listening to both futures and options on RLC will have bandwidth and router capacity problems before the end of 2008. Postponing migration to FIX/FAST will only exacerbate capacity issues.&lt;/li&gt;<br/>
+                &lt;li&gt;Customers on 40Mbps connections listening to both futures and options and trying to run FIX/FAST in full parallel with RLC will have bandwidth and router capacity problems. These customers are advised to use alternative migration strategies such as channel by channel or by channel groupings.&lt;/li&gt;<br/>
+                &lt;li&gt;Customers with client-managed routers that cannot handle the PPS rates for the data to which they are listening will likely experience dropped packets (this may impact LNet, Jackson Direct or any CME Globex Hub customers) if they do not follow our recommendations. Please review the below information for additional guidance on PPS rates.&lt;/li&gt;<br/>
+            &lt;/ul&gt;<br/>
+            &lt;p&gt;More information on client-managed router recommendations and best practices is available&amp;nbsp;&lt;img height=&quot;11&quot; width=&quot;11&quot; alt=&quot;&quot; src=&quot;http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif&quot; /&gt;&amp;nbsp;&lt;a style=&quot;font: bold 10pt Arial; color: #0a6ebe; text-decoration: none&quot; target=&quot;new&quot; href=&quot;http://www.cmegroup.com/globex/files/2009RouterGuidance.pdf&quot;&gt;online&lt;/a&gt;.&lt;/p&gt;<br/>
+            &lt;p&gt;&lt;span style=&quot;font: bold 10pt Arial; color: #c60&quot;&gt;Market Data Bandwidth and Router Capacity&lt;/span&gt;&lt;br /&gt;<br/>
+            CME Group has previously provided guidance on bandwidth projections; the recommendation for those customers listening to both futures and options is to move to 100Mbps connections (or dual 40Mbps if 100Mbps is not available in the customer's service area).&lt;/p&gt;<br/>
+            &lt;div style=&quot;border-right: #00508f 1px solid; padding-right: 0px; border-top: #00508f 1px solid; padding-left: 10px; background: #00508f; padding-bottom: 0px; border-left: #00508f 1px solid; width: 100%; padding-top: 3px; border-bottom: #00508f 1px solid; height: 30px; url: http://www.cmegroup.com/images/bannerBlueBg.gif; repeat-x: &quot;&gt;<br/>
+            &lt;p style=&quot;font: bold 14px Arial; color: #fff&quot;&gt;CME Group Market Data Bandwidth Projections&lt;/p&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;table style=&quot;padding-right: 3px; border-top: #ccc 1px solid; padding-left: 3px; padding-bottom: 3px; padding-top: 3px; border-bottom: #ccc 1px solid&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; width=&quot;100%&quot;&gt;<br/>
+                &lt;thead&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 0px; padding-left: 3px; padding-bottom: 8px; font: bold 11px Arial; color: #454545; padding-top: 8px; border-bottom: #ccc 1px solid; text-align: left&quot;&gt;Feed Format&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left&quot;&gt;2008 Year-end Projected Bandwidth (Mbps)&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left&quot;&gt;2009 Year-end Projected Bandwidth (Mbps)&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                &lt;/thead&gt;<br/>
+                &lt;tbody&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;RLC&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;47Mbps&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;&amp;mdash;&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;FIX/FAST&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;16Mbps&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;31Mbps&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;ITC2.1&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;39Mbps&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;68Mbps&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                &lt;/tbody&gt;<br/>
+            &lt;/table&gt;<br/>
+            &lt;p&gt;Note: 2008 estimates are slightly lower than previous estimates because 3-deep options have been postponed until 2009. 2009 estimates include 3-deep options and 10-deep futures. These FIX/FAST estimates do not include Market Recovery (snapshot channel) bandwidth, which is now estimated at 7.2Mbps for both futures and options.&lt;/p&gt;<br/>
+            &lt;p&gt;CME Globex Hub, Client DIRECTLink and Client INTERNETLink customers are increasingly asking CME Group to provide router recommendations for their client-managed connections. In terms of PPS router capacity, CME recommends router models which support significantly higher than the below rates (or combined rates, if running in parallel) to allow for growth:&lt;/p&gt;<br/>
+            &lt;div style=&quot;border-right: #00508f 1px solid; padding-right: 0px; border-top: #00508f 1px solid; padding-left: 10px; background: #00508f; padding-bottom: 0px; border-left: #00508f 1px solid; width: 100%; padding-top: 3px; border-bottom: #00508f 1px solid; height: 30px; url: http://www.cmegroup.com/images/bannerBlueBg.gif; repeat-x: &quot;&gt;<br/>
+            &lt;p style=&quot;font: bold 14px Arial; color: #fff&quot;&gt;CME Group Market Data Packets Per Second (PPS) Projections&lt;/p&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;table style=&quot;padding-right: 3px; border-top: #ccc 1px solid; padding-left: 3px; padding-bottom: 3px; padding-top: 3px; border-bottom: #ccc 1px solid&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; width=&quot;100%&quot;&gt;<br/>
+                &lt;thead&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 0px; padding-left: 3px; padding-bottom: 8px; font: bold 11px Arial; color: #454545; padding-top: 8px; border-bottom: #ccc 1px solid; text-align: left&quot;&gt;Feed Format&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left&quot;&gt;2008 Year-end Projected Packet Rates (PPS)&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left&quot;&gt;2009 Year-end Projected Packet Rates (PPS)&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                &lt;/thead&gt;<br/>
+                &lt;tbody&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;RLC&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;14,000&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;&amp;mdash;&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;FIX/FAST&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;14,000&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;58,000&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;ITC2.1&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;35,000&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;64,000&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                &lt;/tbody&gt;<br/>
+            &lt;/table&gt;<br/>
+            &lt;p&gt;Any customers who have upgraded to 100Mbps already have routers with a capacity of 15M PPS as tested by CME Group. CME Group is currently in the process of upgrading the routers for customers connected with 40Mbps or less; this migration is expected to take at a minimum 6 months, but will require all customers' full participation and cooperation to achieve in a timely manner.&lt;/p&gt;<br/>
+            &lt;p&gt;&lt;span style=&quot;font: bold 10pt Arial; color: #c60&quot;&gt;FIX/FAST Market Recovery &amp;amp; Instrument Definition Channel Rates&lt;/span&gt;&lt;br /&gt;<br/>
+            Please note, FIX/FAST customers must also take into consideration the PPS for the Market Recovery (snapshot) stream and Instrument Definition replay loops. Effective &lt;strong&gt;November 9&lt;/strong&gt;, to minimize any risk to customer systems by these recovery throughput rates (PPS) CME Group will scale down the throughput rates to those listed below:&lt;/p&gt;<br/>
+            &lt;div style=&quot;border-right: #00508f 1px solid; padding-right: 0px; border-top: #00508f 1px solid; padding-left: 10px; background: #00508f; padding-bottom: 0px; border-left: #00508f 1px solid; width: 100%; padding-top: 3px; border-bottom: #00508f 1px solid; height: 30px; url: http://www.cmegroup.com/images/bannerBlueBg.gif; repeat-x: &quot;&gt;<br/>
+            &lt;p style=&quot;font: bold 14px Arial; color: #fff&quot;&gt;CME Group Market Recovery Channel Rates (PPS)&lt;/p&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;table style=&quot;padding-right: 3px; border-top: #ccc 1px solid; padding-left: 3px; padding-bottom: 3px; padding-top: 3px; border-bottom: #ccc 1px solid&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; width=&quot;100%&quot;&gt;<br/>
+                &lt;thead&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 0px; padding-left: 3px; padding-bottom: 8px; font: bold 11px Arial; color: #454545; padding-top: 8px; border-bottom: #ccc 1px solid; text-align: left&quot;&gt;Market Recovery Channels by Exchange (PPS)&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left&quot;&gt;Total Futures&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left&quot;&gt;Total Futures &amp;amp; Options&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left&quot;&gt;Average Futures&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left&quot;&gt;Average Futures &amp;amp; Options&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                &lt;/thead&gt;<br/>
+                &lt;tbody&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;CME (4 Futures, 5 Options)&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;900&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;2,980&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;225&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;331&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;NYMEX (3 Futures, 3 Options)&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;2,300&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;3,100&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;767&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;517&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;CBOT (3 Futures, 3 Options)&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;310&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;1,510&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;103&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;252&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;KCBT (1 Future, 1 Option)&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;100&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;200&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;100&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;100&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;MGEX (1 Future, 1 Option)&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;60&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;160&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;60&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;80&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;Total of All Market Recovery Channels&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;Prior to Nov 9&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;24,680&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;After Nov 9&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;8,050&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                &lt;/tbody&gt;<br/>
+            &lt;/table&gt;<br/>
+            &lt;br /&gt;<br/>
+            &lt;br /&gt;<br/>
+            &lt;div style=&quot;border-right: #00508f 1px solid; padding-right: 0px; border-top: #00508f 1px solid; padding-left: 10px; background: #00508f; padding-bottom: 0px; border-left: #00508f 1px solid; width: 100%; padding-top: 3px; border-bottom: #00508f 1px solid; height: 30px; url: http://www.cmegroup.com/images/bannerBlueBg.gif; repeat-x: &quot;&gt;<br/>
+            &lt;p style=&quot;font: bold 14px Arial; color: #fff&quot;&gt;CME Group Instrument Definition Channel Rates (PPS)&lt;/p&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;table style=&quot;padding-right: 3px; border-top: #ccc 1px solid; padding-left: 3px; padding-bottom: 3px; padding-top: 3px; border-bottom: #ccc 1px solid&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; width=&quot;100%&quot;&gt;<br/>
+                &lt;thead&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 0px; padding-left: 3px; padding-bottom: 8px; font: bold 11px Arial; color: #454545; padding-top: 8px; border-bottom: #ccc 1px solid; text-align: left&quot;&gt;Instrument Definition Channels by Exchange (PPS)&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left&quot;&gt;Total Futures&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left&quot;&gt;Total Futures &amp;amp; Options&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left&quot;&gt;Average Futures&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left&quot;&gt;Average Futures &amp;amp; Options&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                &lt;/thead&gt;<br/>
+                &lt;tbody&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;CME (4 Futures, 5 Options)&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;1,200&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;8,500&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;300&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;944&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;NYMEX (3 Futures, 3 Options)&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;1,500&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;4,600&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;500&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;767&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;CBOT (3 Futures, 3 Options)&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;300&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;2,400&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;100&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;400&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;KCBT (1 Future, 1 Option)&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;100&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;200&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;100&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;100&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;MGEX (1 Future, 1 Option)&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;100&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;1,100&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;100&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;550&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                    &lt;tr&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;Total of All Instrument Definition Channels&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;Prior to Nov 9&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;20,930&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;After Nov 9&lt;/td&gt;<br/>
+                        &lt;td style=&quot;padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left&quot;&gt;16,900&lt;/td&gt;<br/>
+                    &lt;/tr&gt;<br/>
+                &lt;/tbody&gt;<br/>
+            &lt;/table&gt;<br/>
+            &lt;p&gt;&lt;span style=&quot;font: bold 10pt Arial; color: #c60&quot;&gt;Other Important Reminders&lt;/span&gt;&lt;/p&gt;<br/>
+            &lt;ul&gt;<br/>
+                &lt;li&gt;No static joins<br/>
+                &lt;ul&gt;<br/>
+                    &lt;li&gt;Do not statically join the Security Definition replay loops&lt;/li&gt;<br/>
+                    &lt;li&gt;Do not statically join the Snapshot recovery channels&lt;/li&gt;<br/>
+                &lt;/ul&gt;<br/>
+                &lt;/li&gt;<br/>
+                &lt;li&gt;Restart price servers only on the weekend or during the market pause at 4:00 pm &amp;ndash; 5:00 pm Central time&lt;/li&gt;<br/>
+                &lt;li&gt;Potential firewall issues: if there is one in the network path, it must be sized appropriately for the traffic demands&lt;/li&gt;<br/>
+                &lt;li&gt;For customers using NATing (Network Address Translation), the router performing NAT must be capable of handling the traffic&lt;/li&gt;<br/>
+                &lt;li&gt;&lt;strong&gt;Deadlines&lt;/strong&gt;<br/>
+                &lt;ul&gt;<br/>
+                    &lt;li&gt;November 14 to avoid surcharges per site; i.e., direct network connection receiving market data (not per firm)&lt;/li&gt;<br/>
+                    &lt;li&gt;December 26 for the final RLC decommissioning. Please note: the end of year decommissioning cannot be postponed due to internal system dependencies.&lt;/li&gt;<br/>
+                &lt;/ul&gt;<br/>
+                &lt;/li&gt;<br/>
+            &lt;/ul&gt;<br/>
+            &lt;p&gt;&lt;span style=&quot;font: bold 10pt Arial; color: #c60&quot;&gt;For More Information&lt;/span&gt;&lt;br /&gt;<br/>
+            Refer to the&amp;nbsp;&lt;img height=&quot;11&quot; width=&quot;11&quot; alt=&quot;&quot; src=&quot;http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif&quot; /&gt;&amp;nbsp;&lt;a style=&quot;font: bold 10pt Arial; color: #0a6ebe; text-decoration: none&quot; href=&quot;http://www.cmegroup.com/globex/files/FIXFASTguidelines.pdf&quot; target=&quot;new&quot;&gt;FIX/FAST Migration Guidelines slides&lt;/a&gt; from the last customer forum.&lt;/p&gt;<br/>
+            &lt;p&gt;Please refer any questions to your&amp;nbsp;&lt;img height=&quot;11&quot; width=&quot;11&quot; alt=&quot;&quot; src=&quot;http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif&quot; /&gt;&amp;nbsp;&lt;a style=&quot;font: bold 10pt Arial; color: #0a6ebe; text-decoration: none&quot; target=&quot;new&quot; href=&quot;mailto:globexaccountmanagement@cmegroup.com&quot;&gt;CME Globex Account Manager&lt;/a&gt; at 312.634.8700; or in London at +44 30 7796 7100; or in Asia at +852 3101 7696.&lt;/p&gt;<br/>
+            &lt;/td&gt;<br/>
+        &lt;/tr&gt;<br/>
+    &lt;/tbody&gt;<br/>
+&lt;/table&gt;">
+
+<title>Important FIX/FAST Migration Guidelines</title>
+<link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/daughter.css" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/productpages.css" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/styles2.css" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/newstyle.css" rel="stylesheet" type="text/css" />
+
+
+<!-- scripts -->
+<script type="text/javascript" src="/javascript/mootools-release-1.11.js"></script>
+<script type="text/javascript" src="/javascript/moo.datePicker.js"></script>
+<script type="text/javascript" src="/javascript/moo.dropdownjump.js"></script>
+<script type="text/javascript" src="/javascript/moo.misc.js"></script>
+<script type="text/javascript" src="/javascript/LeftNav.js"></script>
+<script type="text/javascript" src="/javascript/datafeedFutures.js"></script>
+<script type="text/javascript" src="/javascript/datafeedOptions.js"></script>
+<script type="text/javascript" src="/javascript/datafeedTopProducts.js"></script>
+<script type="text/javascript" src="/javascript/datafeedVolumes.js"></script>
+<script type="text/javascript" src="/javascript/datafeedUtils.js"></script>
+<script type="text/javascript" src="/javascript/domready.js"></script>
+<script type="text/javascript" src="/javascript/cmeUtil.js"></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6562664-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<!-- /scripts -->
+
+
+
+
+
+
+</head>
+<body>
+
+<!--BEGIN CONTAINER-->
+<div id="Container">
+<!--BEGIN CONTAINER-->
+
+<!--BEGIN HEADER-->
+<div id="Header">
+	<div id="headerLeft" style="visibility: visable;width:360px;height:50px;float:left;height:100%;">
+		<a href="/" style="display:table-cell;width:198px;height:50px;float:left;background:url('/images/cmeGroupLogo.gif') no-repeat;"></a><!-- headerLeft -->		
+	</div>	
+	<form name='search' method='get' action='http://search.cmegroup.com/search' id='search'>
+	<div id="headerCenter" style="visibility: visable;width:289px;float:left;text-align:left;height:47px;"><!-- headerSearch -->
+		<div style="clear:both;line-height:5px;height:5px;display:block;padding:0px;margin:0px;">&nbsp;</div>
+		<span class="titleOrangeBold11">Search CMEGroup.com</span>
+		<div style="clear:both;line-height:5px;height:5px;display:block;padding:0px;margin:0px;">&nbsp;</div>
+		<label style="" for="searchField">
+		<input type="text" name="q" id="searchField" style="width:244px;height:15px;padding-right:0px;float:left;border-right:0px;" />
+		<input type="image" src="/images/btn.search.gif" alt="Search for" style="border:0px;margin:0px;padding:0px;float:left;"/>
+		</label>
+	</div>
+		<input type='hidden' name='site' value='cmegroup' />
+		<input type='hidden' name='output' value='xml_no_dtd' />
+		<input type='hidden' name='client' value='cmegroup' />
+		<input type='hidden' name='num' value='20' />
+		<input type='hidden' name='proxystylesheet' value='cmegroup' />
+
+	</form>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<div id="headerRight" style="visibility: visable;width:299px;float:left;height:47px;"><!-- headerRight -->
+		<div style="display:table-cell;float:right;clear:both;">English | <a href="/international/">Worldwide<img style="vertical-align: top;" src="/images/blue-world.jpg"/></a></div>
+		<div style="display:table-cell;width:100%;float:right;clear:both;padding-top:8px;text-align:right;">
+			<a href="http://www.cme.com/" target="esignal">CME.com</a> | 
+			<a href="http://www.cbot.com/" target="esignal">CBOT.com</a> |
+			<a href="http://www.nymex.com/" target="MyCME">NYMEX.com</a> | 
+<!--oobegin -->
+	<script language="javascript" type="text/javascript" charset="windows-1252" src="/onlineopinionS3tS/oo_engine.js"></script>
+	<script language="javascript" type="text/javascript" charset="windows-1252"> 
+	O_GoT('<img src="/onlineopinionS3tS/sm_0575b9_oo.gif" border="0" title="Feedback" style="margin-right:5px;">Feedback');
+</script>
+<!--ooend-->
+
+		</div>
+	</div>
+</div>
+<!--END HEADER-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--BEGIN BREADCRUMB-->
+<div class="breadcrumb">
+
+
+	
+	
+	
+		
+		
+			Tools and Information
+		
+		
+	
+
+	
+	
+	
+		
+		
+		
+			&raquo;&nbsp;<a href="/tools-information/lookups/">Look-ups</a>
+		
+	
+
+	
+	
+	
+		
+		
+		
+			&raquo;&nbsp;<a href="/tools-information/lookups/advisories/">Advisories</a>
+		
+	
+
+	
+	
+	
+		
+		
+		
+			&raquo;&nbsp;<a href="/tools-information/lookups/advisories/electronic-trading/">Electronic Trading Advisories</a>
+		
+	
+
+
+
+&raquo;
+Important FIX/FAST Migration Guidelines
+
+</div>
+<!--END BREADCRUMB-->
+
+<!--BEGIN CONTENT-->
+<!--<div id="BelowHeader">-->
+<div style="display:table-cell;float:left;width:100%;">
+<!--BEGIN CONTENT-->
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+<!--BEGIN LEFT NAVIGATION-->
+<!--<div id="LeftColumn1">-->
+<div style="display:table-cell;float:left;width:211px;margin-right:10px;"> 
+
+
+
+	
+
+	
+		
+		
+			
+			
+		
+	
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="newLeftNav" id="newLeftNav">
+<div id="newLeftNavImgTrans"></div>
+<div id="newLeftNavImg"><img src="/images/ajax-loader.gif"></div>
+
+
+
+	
+	
+	
+	
+		
+		
+	
+
+		
+	
+	
+		<div class="TopLink marginBottom">
+			<div class="MainLinkTop">Products</div>
+
+		
+			
+			
+			
+			
+		
+			<div class="SubLink" id="sublink_0" rel="/trading/commodities/leftnav/main.html" onmouseover="javascript:CreateHover(this,'/trading/commodities/leftnav/main.html');" onmouseout="javascript:RemoveHover(this);"><a class="Asublink" href="/trading/commodities/">Commodity Products</a>
+				<div class="daughterWindow"></div>
+			</div>
+			
+		
+
+		
+			
+			
+			
+			
+		
+			<div class="SubLink" id="sublink_1" rel="/trading/economic-events/leftnav/main.html" onmouseover="javascript:CreateHover(this,'/trading/economic-events/leftnav/main.html');" onmouseout="javascript:RemoveHover(this);"><a class="Asublink" href="/trading/economic-events/">Economic Event Products</a>
+				<div class="daughterWindow"></div>
+			</div>
+			
+		
+
+		
+			
+			
+			
+			
+		
+			<div class="SubLink" id="sublink_2" rel="/trading/energy-metals/leftnav/main.html" onmouseover="javascript:CreateHover(this,'/trading/energy-metals/leftnav/main.html');" onmouseout="javascript:RemoveHover(this);"><a class="Asublink" href="/trading/energy-metals/">Energy Products</a>
+				<div class="daughterWindow"></div>
+			</div>
+			
+		
+
+		
+			
+			
+			
+			
+		
+			<div class="SubLink" id="sublink_3" rel="/trading/equity-index/leftnav/main.html" onmouseover="javascript:CreateHover(this,'/trading/equity-index/leftnav/main.html');" onmouseout="javascript:RemoveHover(this);"><a class="Asublink" href="/trading/equity-index/">Equity Index Products</a>
+				<div class="daughterWindow"></div>
+			</div>
+			
+		
+
+		
+			
+			
+			
+			
+		
+			<div class="SubLink" id="sublink_4" rel="/trading/fx/leftnav/main.html" onmouseover="javascript:CreateHover(this,'/trading/fx/leftnav/main.html');" onmouseout="javascript:RemoveHover(this);"><a class="Asublink" href="/trading/fx/">FX Products</a>
+				<div class="daughterWindow"></div>
+			</div>
+			
+		
+
+		
+			
+			
+			
+			
+		
+			<div class="SubLink" id="sublink_5" rel="/trading/interest-rates/leftnav/main.html" onmouseover="javascript:CreateHover(this,'/trading/interest-rates/leftnav/main.html');" onmouseout="javascript:RemoveHover(this);"><a class="Asublink" href="/trading/interest-rates/">Interest Rate Products</a>
+				<div class="daughterWindow"></div>
+			</div>
+			
+		
+
+		
+			
+			
+			
+			
+		
+			<div class="SubLink" id="sublink_6" rel="/trading/metals/leftnav/main.html" onmouseover="javascript:CreateHover(this,'/trading/metals/leftnav/main.html');" onmouseout="javascript:RemoveHover(this);"><a class="Asublink" href="/trading/metals/">Metals Products</a>
+				<div class="daughterWindow"></div>
+			</div>
+			
+		
+
+		
+			
+			
+			
+			
+		
+			<div class="SubLink" id="sublink_7" rel="/trading/real-estate/leftnav/main.html" onmouseover="javascript:CreateHover(this,'/trading/real-estate/leftnav/main.html');" onmouseout="javascript:RemoveHover(this);"><a class="Asublink" href="/trading/real-estate/">Real Estate Products</a>
+				<div class="daughterWindow"></div>
+			</div>
+			
+		
+
+		
+			
+			
+			
+			
+		
+			<div class="SubLink" id="sublink_8" rel="/trading/weather/leftnav/main.html" onmouseover="javascript:CreateHover(this,'/trading/weather/leftnav/main.html');" onmouseout="javascript:RemoveHover(this);"><a class="Asublink" href="/trading/weather/">Weather Products</a>
+				<div class="daughterWindow"></div>
+			</div>
+			
+		
+
+		
+		</div>
+	
+
+	
+	
+	
+	
+		
+		
+	
+
+		
+		
+		<div class="MainHoverSection">
+		
+			<div class="MainLink MainLinkArrow marginBottom" id="MainLink_0" rel="/cmegroup/market-data/leftnav/main.html" onmouseover="javascript:CreateHover(this,'/cmegroup/market-data/leftnav/main.html');" onmouseout="javascript:RemoveHover(this);"><a style="color:#454545;" href="/market-data/" title="">Market Data Services</a>
+				<div class="daughterWindow"></div>
+			</div>
+			
+		
+	
+	
+
+	
+	
+	
+	
+		
+		
+	
+
+		
+		
+			<div class="MainLink MainLinkArrow marginBottom" id="MainLink_1" rel="/cmegroup/education/leftnav/main.html" onmouseover="javascript:CreateHover(this,'/cmegroup/education/leftnav/main.html');" onmouseout="javascript:RemoveHover(this);"><a style="color:#454545;" href="/education/" title="">Trading Knowledge Center</a>
+				<div class="daughterWindow"></div>
+			</div>
+			
+		
+	
+	
+
+	
+	
+	
+	
+		
+		
+	
+
+		
+		
+			<div class="MainLink MainLinkArrow marginBottom" id="MainLink_2" rel="/cmegroup/globex/leftnav/main.html" onmouseover="javascript:CreateHover(this,'/cmegroup/globex/leftnav/main.html');" onmouseout="javascript:RemoveHover(this);"><a style="color:#454545;" href="/globex/" title="Electronic Trading">Electronic Trading</a>
+				<div class="daughterWindow"></div>
+			</div>
+			
+		
+	
+	
+
+	
+	
+	
+	
+		
+		
+	
+
+		
+		
+			<div class="MainLink MainLinkArrow marginBottom" id="MainLink_3" rel="/cmegroup/clearing/leftnav/main.html" onmouseover="javascript:CreateHover(this,'/cmegroup/clearing/leftnav/main.html');" onmouseout="javascript:RemoveHover(this);"><a style="color:#454545;" href="/clearing/" title="">Clearing</a>
+				<div class="daughterWindow"></div>
+			</div>
+			
+		
+	
+	
+
+	
+	
+	
+	
+		
+		
+	
+
+		
+		
+			<div class="MainLink MainLinkArrow marginBottom" id="MainLink_4" rel="/cmegroup/market-regulation/leftnav/main.html" onmouseover="javascript:CreateHover(this,'/cmegroup/market-regulation/leftnav/main.html');" onmouseout="javascript:RemoveHover(this);"><a style="color:#454545;" href="/market-regulation/" title="">Market Regulation</a>
+				<div class="daughterWindow"></div>
+			</div>
+			
+		
+	
+	
+
+	
+	
+	
+	
+		
+		
+	
+
+		
+		
+			<div class="MainLink MainLinkArrow marginBottom" id="MainLink_5" rel="/cmegroup/tools-information/leftnav/main.html" onmouseover="javascript:CreateHover(this,'/cmegroup/tools-information/leftnav/main.html');" onmouseout="javascript:RemoveHover(this);"><a style="color:#454545;" href="/tools-information/" title="">Tools & Information</a>
+				<div class="daughterWindow"></div>
+			</div>
+			
+		
+	
+	
+
+	
+	
+	
+	
+		
+		
+	
+
+		
+		
+			<div class="MainLink MainLinkArrow marginBottom" id="MainLink_6" rel="/cmegroup/company/leftnav/main.html" onmouseover="javascript:CreateHover(this,'/cmegroup/company/leftnav/main.html');" onmouseout="javascript:RemoveHover(this);"><a style="color:#454545;" href="/company/" title="About CME Group">About CME Group</a>
+				<div class="daughterWindow"></div>
+			</div>
+			
+		
+	
+	
+
+	
+	
+	
+	
+		
+		
+	
+
+		
+		
+			<div class="MainLink MainLinkArrow marginBottom" id="MainLink_7" rel="/cmegroup/investor-relations/leftnav/main.html" onmouseover="javascript:CreateHover(this,'/cmegroup/investor-relations/leftnav/main.html');" onmouseout="javascript:RemoveHover(this);"><a style="color:#454545;" href="/investor-relations/" title="">Investor Relations</a>
+				<div class="daughterWindow"></div>
+			</div>
+			
+		
+	
+	
+
+
+		</div>
+
+</div>
+
+
+
+
+
+
+	
+
+	
+		
+		
+			
+			
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+<div class=" padTop5" >
+
+		<div class="widgetBoxTop">Contact Us</div>
+<div class="padLeft10 marginTop10">
+	<div><p><strong>CME Group/Chicago HQ   </strong><br /> Main Switchboard<br /> Local: 312-930-1000 <br /> Toll Free: 866-716-7274</p><p>&nbsp;</p> <p><strong>Customer Service    </strong><br />   Product inquiries, website issues,   and specific questions<br />   <strong>Phone:</strong> 800-331-3332<br />   <strong>E-mail:</strong><a href="mailto:info@cmegroup.com">info@cmegroup.com</a></p><p>&nbsp;</p> <p><strong>More CME Group Direct Lines</strong><br />   <a href="http://www.cmegroup.com/tools-information/contacts-list.html" target="_blank">Click for phone list by department </a></p></div>
+	<p></p>
+</div>
+</div>
+</div>
+
+
+</div>
+<!--END LEFT NAVIGATION-->
+
+
+
+
+
+
+
+
+
+
+<!--BEGIN CENTER CONTENT-->	
+<div id="CenterColumn1">
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="width:506px;">
+
+
+
+
+	
+	
+		
+		
+		
+	
+
+	
+	
+		
+		
+		
+		
+		
+	
+	
+ 		<div class=" " ><a href="/" ><img src="/images/marketDataBanner.jpg" border="0" alt="" /></a></div>
+	
+	
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="LandingTitleShort">Important FIX/FAST Migration Guidelines</div>
+
+	<!--Begin Content Section-->
+	<div id="t1226725808056" style="display:none"></div>
+	<div class="contentBox">
+		<div class="contentBlock">
+
+		<div class="padBottom10">
+		<div class="leftFloat" style="width:75px;font-weight:bold;">To:</div>
+		<div style="margin-left:100px;">CME Globex Customers</div>
+		<div class="clear"></div>
+		</div>
+
+		<div class="padBottom10">
+		<div class="leftFloat" style="width:75px;font-weight:bold;">From:</div>
+		<div style="margin-left:100px;">CME Globex Account Management</div>
+		<div class="clear"></div>
+		</div>
+
+		<div class="padBottom10">
+		<div class="leftFloat" style="width:75px;font-weight:bold;">Advisory #:</div>
+		<div style="margin-left:100px;">20081110</div>	
+		<div class="clear"></div>
+		</div>	
+		
+		<div class="padBottom10">
+		<div class="leftFloat" style="width:75px;font-weight:bold;">Notice Date:</div>
+		<div style="margin-left:100px;">November 10, 2008</div>	
+		<div class="clear"></div>
+		</div>
+
+		<div class="padBottom10">
+		<div class="leftFloat" style="width:75px;font-weight:bold;">Effective Date:</div>
+		<div style="margin-left:100px;">December 31, 1969</div>	
+		<div class="clear"></div>
+		</div>	
+		
+		<div class="clear"></div>
+		<div class="horizontallyRuled">
+			<!-- Table 1 -->
+<table style="padding-bottom: 40px" cellspacing="0" cellpadding="0" width="640">
+    <tbody>
+        <tr>
+            <!-- Header content Border top and bottom 1px -->
+            <td style="padding-right: 20px; border-top: #d9d9d9 1px solid; padding-left: 20px; padding-bottom: 3px; font: bold 12pt Arial, Helvetica, sans-serif; color: #1e3764; padding-top: 3px; border-bottom: #d9d9d9 1px solid">Special CME Globex Notice: Important FIX/FAST Migration Guidelines</td>
+        </tr>
+        <tr>
+            <!-- table 1 content -->
+            <td style="padding-right: 20px; padding-left: 20px; padding-bottom: 0px; font: 9pt Arial, Helvetica, sans-serif; color: #000000; padding-top: 10px">
+            <p>As a reminder, the deadline for migrating to the FIX/FAST protocol is <strong>November 14, 2008</strong>. CME Group wishes to advise CME Globex users of the following steps that should be taken to fully leverage the efficiencies associated with the FIX/FAST protocol and the expanded bandwidth recommendations that were previously announced. The following steps are strongly advised:</p>
+            <ul>
+                <li>CME Globex users should take technical precautions to ensure against exceeding the bandwidth of the physical connection (megabits per second or Mbps). Steps should also be taken not to exceed the throughput of the router (number of packets per second or PPS) which manages the connection.</li>
+                <li>To prevent bandwidth and/or router capacity contention and possible degradation in the distribution of market data, customers utilizing 40 Mbps connections should not listen to both futures and options in full parallel with FIX/FAST and RLC protocols.</li>
+            </ul>
+            <p style="font: bold 10pt Arial">Given our current market data rates:</p>
+            <ul>
+                <li style="font: bold 9pt Arial; color: #1e3764">Customers with 40Mbps connections who are listening to both futures and options on RLC will have bandwidth and router capacity problems before the end of 2008. Postponing migration to FIX/FAST will only exacerbate capacity issues.</li>
+                <li>Customers on 40Mbps connections listening to both futures and options and trying to run FIX/FAST in full parallel with RLC will have bandwidth and router capacity problems. These customers are advised to use alternative migration strategies such as channel by channel or by channel groupings.</li>
+                <li>Customers with client-managed routers that cannot handle the PPS rates for the data to which they are listening will likely experience dropped packets (this may impact LNet, Jackson Direct or any CME Globex Hub customers) if they do not follow our recommendations. Please review the below information for additional guidance on PPS rates.</li>
+            </ul>
+            <p>More information on client-managed router recommendations and best practices is available&nbsp;<img height="11" width="11" alt="" src="http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif" />&nbsp;<a style="font: bold 10pt Arial; color: #0a6ebe; text-decoration: none" target="new" href="http://www.cmegroup.com/globex/files/2009RouterGuidance.pdf">online</a>.</p>
+            <p><span style="font: bold 10pt Arial; color: #c60">Market Data Bandwidth and Router Capacity</span><br />
+            CME Group has previously provided guidance on bandwidth projections; the recommendation for those customers listening to both futures and options is to move to 100Mbps connections (or dual 40Mbps if 100Mbps is not available in the customer's service area).</p>
+            <div style="border-right: #00508f 1px solid; padding-right: 0px; border-top: #00508f 1px solid; padding-left: 10px; background: #00508f; padding-bottom: 0px; border-left: #00508f 1px solid; width: 100%; padding-top: 3px; border-bottom: #00508f 1px solid; height: 30px; url: http://www.cmegroup.com/images/bannerBlueBg.gif; repeat-x: ">
+            <p style="font: bold 14px Arial; color: #fff">CME Group Market Data Bandwidth Projections</p>
+            </div>
+            <table style="padding-right: 3px; border-top: #ccc 1px solid; padding-left: 3px; padding-bottom: 3px; padding-top: 3px; border-bottom: #ccc 1px solid" cellspacing="0" cellpadding="0" width="100%">
+                <thead>
+                    <tr>
+                        <td style="padding-right: 0px; padding-left: 3px; padding-bottom: 8px; font: bold 11px Arial; color: #454545; padding-top: 8px; border-bottom: #ccc 1px solid; text-align: left">Feed Format</td>
+                        <td style="padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left">2008 Year-end Projected Bandwidth (Mbps)</td>
+                        <td style="padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left">2009 Year-end Projected Bandwidth (Mbps)</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">RLC</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">47Mbps</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">&mdash;</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">FIX/FAST</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">16Mbps</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">31Mbps</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">ITC2.1</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">39Mbps</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">68Mbps</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Note: 2008 estimates are slightly lower than previous estimates because 3-deep options have been postponed until 2009. 2009 estimates include 3-deep options and 10-deep futures. These FIX/FAST estimates do not include Market Recovery (snapshot channel) bandwidth, which is now estimated at 7.2Mbps for both futures and options.</p>
+            <p>CME Globex Hub, Client DIRECTLink and Client INTERNETLink customers are increasingly asking CME Group to provide router recommendations for their client-managed connections. In terms of PPS router capacity, CME recommends router models which support significantly higher than the below rates (or combined rates, if running in parallel) to allow for growth:</p>
+            <div style="border-right: #00508f 1px solid; padding-right: 0px; border-top: #00508f 1px solid; padding-left: 10px; background: #00508f; padding-bottom: 0px; border-left: #00508f 1px solid; width: 100%; padding-top: 3px; border-bottom: #00508f 1px solid; height: 30px; url: http://www.cmegroup.com/images/bannerBlueBg.gif; repeat-x: ">
+            <p style="font: bold 14px Arial; color: #fff">CME Group Market Data Packets Per Second (PPS) Projections</p>
+            </div>
+            <table style="padding-right: 3px; border-top: #ccc 1px solid; padding-left: 3px; padding-bottom: 3px; padding-top: 3px; border-bottom: #ccc 1px solid" cellspacing="0" cellpadding="0" width="100%">
+                <thead>
+                    <tr>
+                        <td style="padding-right: 0px; padding-left: 3px; padding-bottom: 8px; font: bold 11px Arial; color: #454545; padding-top: 8px; border-bottom: #ccc 1px solid; text-align: left">Feed Format</td>
+                        <td style="padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left">2008 Year-end Projected Packet Rates (PPS)</td>
+                        <td style="padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left">2009 Year-end Projected Packet Rates (PPS)</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">RLC</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">14,000</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">&mdash;</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">FIX/FAST</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">14,000</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">58,000</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">ITC2.1</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">35,000</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">64,000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Any customers who have upgraded to 100Mbps already have routers with a capacity of 15M PPS as tested by CME Group. CME Group is currently in the process of upgrading the routers for customers connected with 40Mbps or less; this migration is expected to take at a minimum 6 months, but will require all customers' full participation and cooperation to achieve in a timely manner.</p>
+            <p><span style="font: bold 10pt Arial; color: #c60">FIX/FAST Market Recovery &amp; Instrument Definition Channel Rates</span><br />
+            Please note, FIX/FAST customers must also take into consideration the PPS for the Market Recovery (snapshot) stream and Instrument Definition replay loops. Effective <strong>November 9</strong>, to minimize any risk to customer systems by these recovery throughput rates (PPS) CME Group will scale down the throughput rates to those listed below:</p>
+            <div style="border-right: #00508f 1px solid; padding-right: 0px; border-top: #00508f 1px solid; padding-left: 10px; background: #00508f; padding-bottom: 0px; border-left: #00508f 1px solid; width: 100%; padding-top: 3px; border-bottom: #00508f 1px solid; height: 30px; url: http://www.cmegroup.com/images/bannerBlueBg.gif; repeat-x: ">
+            <p style="font: bold 14px Arial; color: #fff">CME Group Market Recovery Channel Rates (PPS)</p>
+            </div>
+            <table style="padding-right: 3px; border-top: #ccc 1px solid; padding-left: 3px; padding-bottom: 3px; padding-top: 3px; border-bottom: #ccc 1px solid" cellspacing="0" cellpadding="0" width="100%">
+                <thead>
+                    <tr>
+                        <td style="padding-right: 0px; padding-left: 3px; padding-bottom: 8px; font: bold 11px Arial; color: #454545; padding-top: 8px; border-bottom: #ccc 1px solid; text-align: left">Market Recovery Channels by Exchange (PPS)</td>
+                        <td style="padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left">Total Futures</td>
+                        <td style="padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left">Total Futures &amp; Options</td>
+                        <td style="padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left">Average Futures</td>
+                        <td style="padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left">Average Futures &amp; Options</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">CME (4 Futures, 5 Options)</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">900</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">2,980</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">225</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">331</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">NYMEX (3 Futures, 3 Options)</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">2,300</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">3,100</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">767</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">517</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">CBOT (3 Futures, 3 Options)</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">310</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">1,510</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">103</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">252</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">KCBT (1 Future, 1 Option)</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">100</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">200</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">100</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">100</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">MGEX (1 Future, 1 Option)</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">60</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">160</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">60</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">80</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">Total of All Market Recovery Channels</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">Prior to Nov 9</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">24,680</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">After Nov 9</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">8,050</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <br />
+            <div style="border-right: #00508f 1px solid; padding-right: 0px; border-top: #00508f 1px solid; padding-left: 10px; background: #00508f; padding-bottom: 0px; border-left: #00508f 1px solid; width: 100%; padding-top: 3px; border-bottom: #00508f 1px solid; height: 30px; url: http://www.cmegroup.com/images/bannerBlueBg.gif; repeat-x: ">
+            <p style="font: bold 14px Arial; color: #fff">CME Group Instrument Definition Channel Rates (PPS)</p>
+            </div>
+            <table style="padding-right: 3px; border-top: #ccc 1px solid; padding-left: 3px; padding-bottom: 3px; padding-top: 3px; border-bottom: #ccc 1px solid" cellspacing="0" cellpadding="0" width="100%">
+                <thead>
+                    <tr>
+                        <td style="padding-right: 0px; padding-left: 3px; padding-bottom: 8px; font: bold 11px Arial; color: #454545; padding-top: 8px; border-bottom: #ccc 1px solid; text-align: left">Instrument Definition Channels by Exchange (PPS)</td>
+                        <td style="padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left">Total Futures</td>
+                        <td style="padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left">Total Futures &amp; Options</td>
+                        <td style="padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left">Average Futures</td>
+                        <td style="padding-right: 0px; padding-left: 10px; padding-bottom: 0px; font: bold 11px Arial; color: #454545; padding-top: 0px; border-bottom: #ccc 1px solid; text-align: left">Average Futures &amp; Options</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">CME (4 Futures, 5 Options)</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">1,200</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">8,500</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">300</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">944</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">NYMEX (3 Futures, 3 Options)</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">1,500</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">4,600</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">500</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">767</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">CBOT (3 Futures, 3 Options)</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">300</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">2,400</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">100</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">400</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">KCBT (1 Future, 1 Option)</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">100</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">200</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">100</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">100</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">MGEX (1 Future, 1 Option)</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">100</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">1,100</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">100</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">550</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">Total of All Instrument Definition Channels</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">Prior to Nov 9</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">20,930</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">After Nov 9</td>
+                        <td style="padding-right: 10px; padding-left: 10px; padding-bottom: 5px; font: bold 11px Arial; padding-top: 5px; border-bottom: #ccc 1px solid; background-color: #f7f7f7; text-align: left">16,900</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><span style="font: bold 10pt Arial; color: #c60">Other Important Reminders</span></p>
+            <ul>
+                <li>No static joins
+                <ul>
+                    <li>Do not statically join the Security Definition replay loops</li>
+                    <li>Do not statically join the Snapshot recovery channels</li>
+                </ul>
+                </li>
+                <li>Restart price servers only on the weekend or during the market pause at 4:00 pm &ndash; 5:00 pm Central time</li>
+                <li>Potential firewall issues: if there is one in the network path, it must be sized appropriately for the traffic demands</li>
+                <li>For customers using NATing (Network Address Translation), the router performing NAT must be capable of handling the traffic</li>
+                <li><strong>Deadlines</strong>
+                <ul>
+                    <li>November 14 to avoid surcharges per site; i.e., direct network connection receiving market data (not per firm)</li>
+                    <li>December 26 for the final RLC decommissioning. Please note: the end of year decommissioning cannot be postponed due to internal system dependencies.</li>
+                </ul>
+                </li>
+            </ul>
+            <p><span style="font: bold 10pt Arial; color: #c60">For More Information</span><br />
+            Refer to the&nbsp;<img height="11" width="11" alt="" src="http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif" />&nbsp;<a style="font: bold 10pt Arial; color: #0a6ebe; text-decoration: none" href="http://www.cmegroup.com/globex/files/FIXFASTguidelines.pdf" target="new">FIX/FAST Migration Guidelines slides</a> from the last customer forum.</p>
+            <p>Please refer any questions to your&nbsp;<img height="11" width="11" alt="" src="http://www.cmegroup.com/globex/online-marketing/headers-graphs/arrow-up-right.gif" />&nbsp;<a style="font: bold 10pt Arial; color: #0a6ebe; text-decoration: none" target="new" href="mailto:globexaccountmanagement@cmegroup.com">CME Globex Account Manager</a> at 312.634.8700; or in London at +44 30 7796 7100; or in Asia at +852 3101 7696.</p>
+            </td>
+        </tr>
+    </tbody>
+</table></div>
+	</div>
+
+</div>
+<!--END CENTER CONTENT-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+<!--BEGIN RIGHT NAVIGATION-->
+<div id="RightColumn1">
+
+
+
+	
+
+
+	
+		
+		
+			
+			
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/cmegroup/company/risk.html" target="_blank"><img BORDER="0" src="/cmegroup/images/Rise_Above_Risk_201x73.JPG"></a>
+
+
+
+
+
+	<div class="padTop5"></div>
+	
+
+
+	
+		
+		
+			
+			
+		
+		
+	
+		
+		
+			
+			
+		
+		
+	
+		
+		
+			
+			
+		
+		
+	
+		
+		
+			
+			
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+window.addEvent('domready', function(){
+var title = "Important FIX/FAST Migration Guidelines";
+var viewAllLink = "/market-data/real-time-quotes/overview.html";
+var viewAllText = "Get Real-time Quotes";
+var freeQuotesLink = "/market-data/datamine-historical-data/datamine.html";
+var freeQuotesDesc = "??? freeQuotesLink[1]/Description ???";
+
+$('widget_title').innerHTML = title;
+$('widget_href_link1').href = viewAllLink;
+$('widget_href_value_link1').innerHTML = viewAllText;
+$('widget_href_link2').href = freeQuotesLink;
+
+});
+</script>
+<div style="width:200px;">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	addDOMLoadEvent(prodGroupOnDomReady);
+    var domain = "/CmeWS/md";
+     //Global Variables
+ var numOfAjaxCalls = 0;
+ var refrshInterval = 30000;
+ var dash = "-";
+ var timer = null;
+ var timer2 = null;
+ var contractCDs = null;
+ var exchange = "";
+ var foi = "";
+ var productCd = "";
+ var deepCopy = "false";
+ var venue = "G";
+ var expiredMonths = new Array();
+ var expiredMonthsNdx = new Array();
+ var underlyingContract = "";
+ var selectedExpMonth = "";
+ var selectedStrikeRange = "";
+ var hideHiLoLimit = "N";
+ var hideOpen  = "N";
+ var hideClose = "N";
+ var hideVolume= "N";
+ var IsFloor = null;
+
+ //AJAX Call
+ function sendRequest(onsuccess, onTimer){
+ 	if ( document.getElementById('contractCDs') != null && 
+ 	     document.getElementById('contractCDs').innerHTML != null )
+	     contractCDs = document.getElementById('contractCDs').innerHTML + underlyingContract;
+ 	if ( productCd != null && productCd.length > 0 && 
+ 	     foi != null && foi.length > 0 &&
+ 	     venue != null && venue.length > 0 &&
+ 	     contractCDs != null && contractCDs.length > 0 ){
+	    var currentTime = new Date();
+	    var restful     = domain + "/MDServer/V1/Venue/" + venue + "/Exchange/" + 
+	    				  exchange + "/FOI/" + foi + "/Product/" + productCd + 
+	    				  "?currentTime=" + currentTime.getTime()  + "&contractCDs=" + contractCDs;
+	    numOfAjaxCalls++;
+	   	if (onsuccess==undefined)
+		   if (contractCDs.length>=1000){
+	   		cmeExecJSONPost(restful,processResponse);
+		   }else{
+	   		cmeExecJSON(restful,processResponse);
+		    }
+	   	else
+		   if (contractCDs.length>=1000){
+	   		cmeExecJSONPost(restful,onsuccess);
+		   }else{
+	   		cmeExecJSON(restful,onsuccess);
+     	           }
+
+	    //For Debug purposes
+	    changeIfNeeded2("RESTful",restful);
+	    changeIfNeeded2("NumOfAjaxCalls","Number of Ajax calls this client executed so far: <font color=#FF0000>" + numOfAjaxCalls + "</font>");
+	    changeIfNeeded2("RESTfulPreText","<b>RESTful URL which has been Executed in the background:</b><br>");
+	   	onTimer();
+ 	}
+ } 
+ 
+ function sendRequestforProds(onsuccess, onTimer){
+ 	if ( productCd != null && productCd.length > 0 && 
+ 	     contractCDs != null && contractCDs.length > 0 ){
+	    var currentTime = new Date();
+	    var restful     = domain + "/MDServer/V1/Venue/" + venue + "/Exchange/" + 
+	    				  exchange + "/FOI/" + foi + "/Product/" + productCd + 
+	    				  "?currentTime=" + currentTime.getTime()  + "&contractCDs=" + contractCDs;
+	    numOfAjaxCalls++;
+	   	if (onsuccess==undefined)
+	   		cmeExecJSON(restful,processResponse);
+	   	else
+	   		cmeExecJSON(restful,onsuccess);
+	    //For Debug purposes
+	    changeIfNeeded2("RESTful",restful);
+	    changeIfNeeded2("NumOfAjaxCalls","Number of Ajax calls this client executed so far: <font color=#FF0000>" + numOfAjaxCalls + "</font>");
+	    changeIfNeeded2("RESTfulPreText","<b>RESTful URL which has been Executed in the background:</b><br>");
+	   	onTimer();
+ 	}
+ }
+ 
+ function datafeedMDTime(){
+  if ( timer == null )
+   	    timer = window.setInterval("sendRequest(processResponse,datafeedMDTime)",refrshInterval);
+ }
+ 
+ function productMDTime(){
+  if ( timer == null )
+   	    timer = window.setInterval("sendRequestforProds(processProdGroupResponse,productMDTime)",refrshInterval);
+ } 
+ 
+ //AJAX Call
+ function filterOptionsContracts(){
+    currentTime 			= new Date();
+    filteroutCallPut 		= "";
+    selectedExpMonth 		= getSelectedValueNdx("ExpMonths");
+    selectedStrikeRange 	= getSelectedValueNdx("StrikeRange");
+    if ( document.getElementById("CallCheckBox").checked == false)
+    	filteroutCallPut ="C";
+    if ( document.getElementById("PutCheckBox").checked == false)
+    	filteroutCallPut += "P";
+    	
+    //build RESTful URI
+    var restful     = context + 
+    				 "/mvc/xsltTransformer.do?xlstDoc=/XSLT/md/MDFuturesContractsTable.xsl&"+
+                     "url=/da/Products/V1/ProductInfo/Venue/" + venue + "/Exchange/" + exchange + 
+                     "/FOI/OPT/Product/" + productCd + "&currentTime=" + currentTime.getTime() +
+                     "&filteroutCallPut=" + filteroutCallPut +"&expMonth=" + selectedExpMonth +
+                     "&strikeRange=" 	+ selectedStrikeRange 	+ 
+                     "&hideHiLoLimit=" 	+ hideHiLoLimit 		+   "&hideClose=" 	+ hideClose     +
+                     "&hideOpen=" 		+ hideOpen				+   "&hideVolume=" 	+ hideVolume;
+                        cmeAJAX(restful,"mdTable",cmeLoading,optOnDomReady);
+ }
+
+  //clear refreshing the screen
+ function checkout(){
+	clearInterval(timer);
+	timer=null;	
+	timer2=null;	
+ }
+ function processResponse(tmp){
+  	processMDResponse(tmp);
+ }
+
+ var optRegExp1 = new RegExp('(;)|(\s)*','gi');
+ function optOnDomReady(){
+	if( contractCDs != null){
+		//contractCDs = contractCDs.replace(optRegExp1,'');
+		if ( contractCDs.length > 0 ){
+		    if(  typeof hideColumns == 'function')
+				hideColumns();
+  			sendRequest(processResponse,datafeedMDTime);
+		}
+	}
+	else{
+		setTimeout("optOnDomReady()",1000);
+	}
+	populateDropTownListWithIndex("ExpMonths",expiredMonthsNdx,expiredMonths,selectedExpMonth);
+ }
+ function futOnDomReady(){
+	if( contractCDs != null ){
+		if ( contractCDs.length > 0 ){
+	  		sendRequest(processResponse,datafeedMDTime);
+		}
+	}
+	else{
+		setTimeout("futOnDomReady()",1000);
+	}
+ }
+ function prodGroupOnDomReady(){
+  	sendRequestforProds(processProdGroupResponse,productMDTime)
+ }
+  
+
+</script>
+
+
+
+ 
+
+
+
+
+
+<table xmlns:xs="http://www.w3.org/2001/XMLSchema" id="mdProductsTable" class="WidgetProductTable">
+   <tr>
+      <td colspan="100" class="RightTitleBar">Delayed Quotes: <span id="widget_title"></span></td>
+   </tr>
+   <tr>
+      <th class="border_Bottom widgetTH text_align_left">Product</th>
+      <th class="border_Bottom widgetTH">Month</th>
+      <th class="border_Bottom widgetTH">Last</th>
+      <th class="border_Bottom widgetTH">Change</th>
+   </tr>
+   <tr id="ZCH9">
+      <td class="border_Top widgetTD"><a traget="_blank" href="/cmegroup/trading/commodities/grain-and-oilseed/corn.html">Corn</a></td>
+      <td class="border_Top widgetTD">Mar 09</td>
+      <td class="border_Top widgetTD text_align_right">-</td>
+      <td class="border_Top widgetTD text_align_right">-</td>
+   </tr>
+   <tr id="ESZ8">
+      <td class="border_Top widgetTD"><a traget="_blank" href="/cmegroup/trading/equity-index/us-index/e-mini-sandp500.html">E-mini S&amp;P 500 (Dollar)</a></td>
+      <td class="border_Top widgetTD">Dec 08</td>
+      <td class="border_Top widgetTD text_align_right">-</td>
+      <td class="border_Top widgetTD text_align_right">-</td>
+   </tr>
+   <tr id="6EZ8">
+      <td class="border_Top widgetTD"><a traget="_blank" href="/cmegroup/trading/fx/fx/euro-fx.html">EUR/USD</a></td>
+      <td class="border_Top widgetTD">Dec 08</td>
+      <td class="border_Top widgetTD text_align_right">-</td>
+      <td class="border_Top widgetTD text_align_right">-</td>
+   </tr>
+   <tr id="ZQJ9">
+      <td class="border_Top widgetTD"><a traget="_blank" href="/cmegroup/trading/interest-rates/stir/30-day-federal-fund.html">30-Day Federal Funds</a></td>
+      <td class="border_Top widgetTD">Apr 09</td>
+      <td class="border_Top widgetTD text_align_right">-</td>
+      <td class="border_Top widgetTD text_align_right">-</td>
+   </tr>
+   <tr>
+      <td colspan="100" class="border_Top widgetTD">
+         <div class="widgetArroaLink"><a id="widget_href_link1" href=""><span id="widget_href_value_link1">VIEW ALL DELAYED QUOTES</span></a></div>
+      </td>
+   </tr>
+   <tr>
+      <td colspan="100" class="border_Top">
+         <div style="text-align:right;font:10px arial;">Delayed at least 20 minutes<br><div id="prgptimestamp"></div>
+         </div>
+      </td>
+   </tr>
+   <tr>
+      <td colspan="100"><a id="widget_href_link2" href="">
+            <div class="widgetButton"></div></a></td>
+   </tr>
+</table><script xmlns:xs="http://www.w3.org/2001/XMLSchema" type="text/javascript">
+		    productCd 		= "NA";
+		    foi			="FO";
+		    exchange			="XALL";
+          	contractCDs		= "ZCH9,ESZ8,6EZ8,ZQJ9";
+          	</script>
+
+
+
+
+
+
+
+<!--
+<table class="WidgetProductTable">
+<tr>
+<td colspan="100"><a href=""><div class="widgetButton"></div></a></td>
+</tr>
+</table>
+-->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">.tableHeader1 {	font-weight:bold;	text-align:center;	color:#454545;	border-bottom: 1px solid #CCC;}.thGray1, .tdGray4 {background-color:#f7f7f7;}.tdGray2 {background-color:#e6e6e6;}.tdGray3 {background-color:#EEE;}.tdGray4 {border-top: 1px solid #CCC;}.grayBoxBg {	background-color:#f7f7f7;	padding:10px;	margin-bottom:7px;}</style><div class="widgetBoxTop">CME Group Market Volume</div>			<div class="grayBoxBg" style="padding:0px;font-size:10px; line-height:10px;margin-bottom:5px;">				<table border="0" cellspacing="0" cellpadding="0" width="203" class="lineUnder">					<tr>						<td class="tableHeader1">Trade Date</td>						<td class="tableHeader1" style="font-size:11px;" width="66" nowrap>12/08/08</td>						<td class="tableHeader1" style="font-size:11px;" width="66" nowrap>12/05/08</td>					</tr>					<tr>						<td class="thGray1" nowrap>Est.<br>Electronic</td>						<td class="tdGray2" style="text-align:center">873,432</td>						<td class="tdGray3" style="text-align:center">9,655,724</td>					</tr>					<tr>						<td class="tdGray4" nowrap>Est.<br>Open Outcry</td>						<td class="tdGray2" style="text-align:center">Closed</td>						<td class="tdGray3" style="text-align:center">1,787,171</td>					</tr>					<tr>						<td class="tdGray4" style="border-bottom:2px solid #f7f7f7;">Est. Clearport Clearing</td>						<td class="tdGray2" style="text-align:center; border-bottom:2px solid #f7f7f7;"><p>3,151</p></td>						<td class="tdGray3" style="text-align:center; border-bottom:2px solid #f7f7f7;"><p>391,000</p></td>					</tr>					<tr>						<td class="tdGray4">Est. Totals</td>						<td class="tdGray2" style="text-align:center">876,583</td>						<td class="tdGray3" style="text-align:center">11,833,895</td>					</tr>				</table>				<p style="padding:2px 10px 7px 10px; text-align:right;">Delayed at least 10 minutes</p>			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+<div class=" padTop5" >
+
+		<div class="widgetBoxTop">Quick Links</div>
+<div class="padLeft10 marginTop10">
+	<ul class="arrow">
+		<li class="arrowUpList"><a href="/tools-information/advisorySearch.html" >Advisory Notices</a></li>
+			<li class="arrowUpList"><a href="/market-regulation/rulebook/index.html" >Rulebooks</a></li>
+			<li class="arrowUpList"><a href="http://www.cmegroup.com/CmeWeb/html.wrap/wrappedpages/clearing/contracts/CurrentCashSettles.htm" >Cash Settled Futures</a></li>
+			<li class="arrowUpList"><a href="/tools-information/calendars/index.html" >Events Calendar</a></li>
+			<li class="arrowUpList"><a href="/tools-information/holiday-calendar/index.html" >Holiday Calendar</a></li>
+			<li class="arrowUpList"><a href="/clearing/cme-clearing-overview/safeguards.html" >Financial Safeguards</a></li>
+			<li class="arrowUpList"><a href="/market-data/quotes-charts/free-real-time-quotes/index.html" >Free Real-Time Quotes</a></li>
+			<li class="arrowUpList"><a href="/tools-information/vendorSymbol.html" >Vendor Codes Lookup</a></li>
+			<li class="arrowUpList"><a href="/globex/files/FuturesSpreadsonCMEGlobex.pdf" target="_blank">Future Spreads on CME Globex</a></li>
+			<li class="arrowUpList"><a href="/globex/files/OptionsSpreadsonCMEGlobex.pdf" target="_blank">Options Strategies on CME Globex</a></li>
+			</ul>
+	<p></p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<div class=" padTop5" >
+			<a href="/company/history/magazine/Fall2008/index.html" ><img src="/images/bnr_BlairMagazineB.gif" width="201" height="201" border="0" alt="" /></a>
+			<br /><br />
+		</div>
+	
+
+				
+
+
+
+
+<div>&nbsp;</div>
+</div>
+<!--END RIGHT NAVIGATION-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+<!--END CONTENT-->
+</div>
+<!--END CONTENT-->
+<!--BEGIN FOOTER-->
+<div id="Footer">
+	<span class="footerLeft">&copy;2008 CME Group Inc.<span>
+	<span class="footerRight"><a href="/site-map.html">Site Map</a> | <a href="/disclaimer.html">Disclaimer</a> | <a href="/privacy-policy.html">Privacy Policy</a></span>
+	
+<script language="JavaScript" src="/javascript/extracomFooter.js" type="text/javascript"></script> 
+	
+<script type="text/Javascript" language="JavaScript">var s_code=s.t();if(s_code)document.write(s_code)</script>
+
+</div> 
+<script type="text/javascript" src="/javascript/daughter-window.js"></script>
+<script type="text/javascript" src="/javascript/dhtml-reports.js"></script>
+<script type="text/javascript" src="/javascript/moo.flyOut.js"></script>
+<script type="text/javascript" src="/javascript/moo.modal.js"></script>
+<script type="text/javascript" src="/javascript/moo.sortableTable.js"></script>
+<script type="text/javascript" src="/javascript/paging.js"></script>
+<script type="text/javascript" src="/javascript/sorttable.js"></script>
+<!--END FOOTER-->
+
+
+
+<!--END CONTAINER-->
+</div>
+<!--END CONTAINER-->
+</body>
+</html>

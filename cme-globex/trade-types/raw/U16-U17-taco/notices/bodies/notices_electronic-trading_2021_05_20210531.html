@@ -1,0 +1,322 @@
+Title: 20210531 - CME Group
+
+URL Source: https://www.cmegroup.com/notices/electronic-trading/2021/05/20210531.html
+
+Markdown Content:
+For the latest roadmap of CME Group technology initiatives:
+
+[See the Development Launch Schedule.](https://www.cmegroup.com/globex/develop-to-cme-globex/development-launches.html)
+
+## Critical System Updates
+
+### Update Update - CME Globex Performance Enhancements- This Week
+
+† Denotes update to the article
+
+Starting this **Sunday, June 6**, CME Group will implement infrastructure and hardware upgrades to futures and options markets on the CME Globex platform. In internal testing, these enhancements improved performance on CME Globex more than 20% for both iLink 2 and iLink 3 order entry and MDP 3.0.
+
+| MARKET SEGMENT DESCRIPTION | MARKET SEGMENT ID | PERFORMANCE ENHANCEMENT DATE |
+| --- | --- | --- |
+| CME Globex Commodity Futures | **†**70 | June 6 |
+| CBOT Globex Commodity Futures | **†**70 | June 6 |
+| MGEX Globex Futures | **†**70 | June 6 |
+| CME Globex FX Futures II | 52 | June 27 |
+| CME Globex FX Options II |
+| DME Globex Options | 56 | June 27 |
+| NYMEX Globex Crude & Crude Refined Options |
+| NYMEX Globex Nat Gas & other Non-Crude Energy Options |
+| NYMEX Globex Metals, Softs & Alternative Markets Options |
+| COMEX Globex Options |
+| CME Globex Equity Futures excluding ES | 68 | June 27 |
+| CBOT Globex Equity Index Futures |
+| CME Globex Equity Options excluding ES | 72 | June 27 |
+| CBOT Globex Equity Index Options |
+| NYMEX Globex Emissions Futures | 78 | June 27 |
+| NYMEX Globex Nat Gas & other Non-Crude Energy Futures |
+| CME Globex Equity Options (ES) | 54 | July 11 |
+| CME Globex Equity Options - Micro E-mini |
+| CME Equity Futures | 64 | July 11 |
+| CME Globex Commodity Futures | 70 | July 11 |
+| CBOT Globex Commodity Futures |
+| MGEX Globex Futures |
+| CME Globex Interest Rate Futures | 82 | July 11 |
+| CBOT Interest Rate Futures II |
+| CME Globex FX Futures | 88 | July 11 |
+| CME Globex FX Options |
+| CBOT Interest Rate Options | 58 | July 25 |
+| CME Globex Commodity Options | 60 | July 25 |
+| CBOT Globex Commodity Options |
+| MGEX Globex Options |
+| BMD Globex Futures | 74 | July 25 |
+| BMD Globex Options |
+| DME Globex Futures | 80 | July 25 |
+| NYMEX Globex Crude & Crude Refined Futurse |
+| CBOT Interest Rate Futures | 84 | July 25 |
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/05/20210531.html#top)
+
+### Launch of AIR TRF Funding Values on CME Data Insights: Settlements and Valuations- This Week
+
+Effective this**Sunday, June 6** (for trade date Monday, June 7), CME Group will launch Adjusted Interest Rate (AIR) TRF Funding Values. The messages will be sent on the Data Insights: Settlements and Valuations channel id 251, via SBE template MDIncrementalRefreshSettle401. The Daily Financing Rate will be denoted as 269-MDEntryType=**h** and the Accrued Financing Rate will be denoted as 269-MDEntryType=**i**. The applicable trade date for the Values will be included in tag 5796-TradingReferenceDate.
+
+| Tag | FIX Name | New Valid Values | Description |
+| --- | --- | --- | --- |
+| 269 | MDEntryType | * h = Daily Financing Rate * i = Accrued Financing Rate | Market Data Entry Type. |
+| 731 | SettlPriceType | * 00000000=Preliminary * 00000001=Final | A Bitmap indicator which specifies whether these are the final or preliminary air Funding Status values for the specified business date. Bit 0: (least significant bit):0=Preliminary 1=Final |
+
+The Funding Values will be sent according to the following approximate schedule:
+
+| Value | Sending Time (Central time) | Tag 269-MDEntryType | Tag 731-SettlPriceType |
+| --- | --- | --- | --- |
+| Final Daily Funding Values for British Pound-denominated contracts | 0430 | h | 00000001 |
+| Final Accrued Funding Value for British Pound-denominated contracts | 0430 | i | 00000001 |
+| Final Daily Funding Values for USD-denominated contracts | 0830 | h | 00000001 |
+| Final Accrued Funding Value for USD-denominated contracts | 0830 | i | 00000001 |
+| Preliminary Daily Funding Value for GBP-denominated contracts | 1045 | h | 00000000 |
+| Preliminary Accrued Funding Value for British Pound-denominated contracts | 1045 | i | 00000000 |
+| Preliminary Daily Funding Values for USD-denominated contracts | 1600 1640 (republish) | h | 00000000 |
+| Preliminary Accrued Funding Value for USD-denominated contracts | 1600 1640 (republish) | h | 00000000 |
+
+The AIR TRF Funding Values are currently available for customer testing in New Release.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/05/20210531.html#top)
+
+### Future Spreads Launching on CME Smart Stream on GCP JSON- This Week
+
+Effective this **Sunday, June 6** (trade date Monday, June 7), CME Smart Stream on Google Cloud Platform (GCP) JSON will launch support for future spreads trades. To support this change, a new CME MDP attribute named _“_ securityType” will be added with the values of either FUT_OUTRIGHT or FUT_SPREAD.
+
+**Please Note: This update is for trades only, and will not impact book and statistic messages.**
+
+Future spreads on CME Smart Stream on GCP JSON are currently available for customer testing in New Release.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/05/20210531.html#top)
+
+### CME FX Link Enhancements: New Zealand Dollar/US Dollar Spot FX Impact- June 27
+
+Effective**Sunday, June 27**(trade date Monday, June 28), to align spreads trading between CME FX futures and the OTC FX market for the New Zealand Dollar (NZD) Futures, CME Group will update the following features:
+
+*   Change to tag 1151-Security Group
+*   Differentiated tag 75-TradeDate and tag 64-SettleDate(Value date) roll schedules between the New Zealand Dollar futures and its untradeable OTC Spot FX leg instrument published in the Security Definition (35=d) message.
+
+| **CME FX Link Enhancements: New Zealand Dollar/US Dollar Spot FX Impact** |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | Current iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | New iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group |
+| New Zealand Dollar/US Dollar Spot FX | NZDUSD | 02 (Zero-2) | 10 |
+
+Additional information on Trade and Value Date processing is available on [Client System Wiki](https://www.cmegroup.com/confluence/display/EPICSANDBOX/CME+FX+Link+Spread#CMEFXLinkSpread-TradeandValueDateforNewZealandDollar/USDollarSpotFX).
+
+These changes are currently available for customer testing in New Release.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/05/20210531.html#top)
+
+## Product Launches
+
+### Adjusted Interest Rate FTSE-100 Total Return Index Futures- This Week
+
+Effective this**Sunday, June 6**(trade date Monday, June 7), pending completion of all regulatory review periods, Adjusted Interest Rate FTSE-100 Total Return Index futures and its BTIC will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+The AIR TRF Funding Values for these instruments will be available in the [CME Reference Data API](https://www.cmegroup.com/confluence/display/EPICSANDBOX/CME+Reference+Data+API+Version+2#CMEReferenceDataAPIVersion2-InstrumentAttributes) and [CME Data Insights: Settlements and Valuations](https://www.cmegroup.com/en/notices/electronic-trading/2021/05/20210510.html#airtrf).
+
+| **Adjusted Interest Rate FTSE-100 Total Return Index Futures** |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel | ITC Code |
+| Adjusted Interest Rate FTSE-100 Total Return Index Futures | AFR | FL | 318 | N/A |
+| BTIC on Adjusted Interest Rate FTSE-100 Total Return Index Futures | AFT | FI | 318 | N/A |
+
+These futures are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/05/20210531.html#top)
+
+### Ethylene Futures- This Week
+
+Effective this **Sunday, June 6** (trade date Monday, June 7), pending completion of all regulatory review periods, Ethylene futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| New Ethylene Futures |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| Mont Belvieu Ethylene EPC (OPIS PCW) Futures | MBH | ZZ | 386 |
+| Mont Belvieu Ethylene EPC (OPIS PCW) BALMO Futures | MBJ | ZZ | 386 |
+
+These futures are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/05/20210531.html#top)
+
+### New New - Micro USD/JPY, USD/CAD and USD/CHF Futures with OTC Quoting Convention- June 27
+
+Effective**Sunday, June 27**(trade date Monday, June 28), pending completion of all regulatory review periods, Micro USD/JPY, Micro USD/CAD and Micro USD/CHF futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| Micro USD/JPY, USD/CAD and USD/CHF Futures with OTC Quoting Convention |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel |
+| Micro USD/JPY Futures | M6J | 6J | 320 |
+| Micro USD/CAD Futures | M6C | 6C | 320 |
+| Micro USD/CHF Futures | M6S | 6S | 320 |
+
+These products will be available for customer testing in New Release on**Monday, June 7**.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/05/20210531.html#top)
+
+### New New - E-mini S&P 500 Quarterly PM European Style Options- June 27
+
+Effective **Sunday, June 27** (trade date Monday, June 28), pending completion of all regulatory review periods, E-mini S&P 500 Quarterly PM European Style options will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| **E-mini S&P 500 Quarterly PM European Style Options** |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel | ITC Code |
+| Options on E-mini Standard and Poor's 500 Stock Price Index Futures - Quarterly PM (European-Style) | EYC | CM (UDS: CN) | 311 | N/A |
+
+These options will be available for customer testing in New Release on **Monday, June 7.**
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/05/20210531.html#top)
+
+### New New - Micro WTI Crude Oil Futures- July 11
+
+Effective **Sunday, July 11** (trade date Monday, July 12), pending completion of all regulatory review periods, Micro WTI Crude Oil futures will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| Micro WTI Crude Oil Futures |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Market Data Channel | ITC Code |
+| Micro WTI Crude Oil Futures | MCL | CL | 382 | n/a |
+
+These Micro WTI Crude Oil futures will be available for customer testing in New Release on **Monday, June 28.**
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/05/20210531.html#top)
+
+## Product Changes
+
+### Listing Cycle Expansion for Cobalt Metal (Fastmarkets) Futures- This Week
+
+Effective this **Sunday, June 6** (trade date Monday, June 7), the listing cycle for the following Cobalt Metal (Fastmarkets) futures will be expanded on CME Globex.
+
+| **Listing Cycle Expansion for Cobalt Metal (Fastmarkets) Futures** |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current Listing Schedule | New Listing Schedule |
+| Cobalt Metal (Fastmarkets) Futures | COB | CA | Monthly contracts listed for the current year and the next calendar year. | Monthly contracts listed for the current year and the next 2 calendar years. |
+
+These futures are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of COMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/05/20210531.html#top)
+
+### Listing Japanese Power Strips and Spreads- This Week
+
+Effective this **Sunday, June 6** (trade date Monday, June 7), the Japanese Power strips and spreads will be listed for all available contract months on CME Globex.
+
+| **Listing Japanese Power Strips and Spreads** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | **Tag 762- SecuritySubType** |
+| Japanese Power (Day-Ahead) Tokyo Peak-Load Futures; | JPT | PW | SP, SA, SB |
+| Japanese Power (Day-Ahead) Tokyo Base-Load Futures | JBT | PW | SP, SA, SB |
+| Japanese Power (Day-Ahead) Kansai Peak-Load Futures | JPK | PW | SP, SA, SB |
+| Japanese Power (Day-Ahead) Kansai Base-Load Futures | JBK | PW | SP, SA, SB |
+
+These spreads are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/05/20210531.html#top)
+
+### Listing Cycle Expansion for E-mini S&P 500 Futures and Options Products- This Week
+
+Effective this **Sunday, June 6** (trade date Monday, June 7), the listing cycle for the following E-mini S&P 500 futures and options will be expanded on CME Globex.
+
+| **Listing Cycle Expansion for E-mini S&P 500 Futures and Options Products** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | **Current Listing Schedule** | **New Listing Schedule** |
+| E-mini Standard and Poor's 500 Stock Price Index Futures | ES | ES | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 5 consecutive quarters | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 9 consecutive quarters and 3 additional Dec contracts |
+| BTIC on E-mini Standard and Poor's 500 Stock Price Index Futures | EST | SB | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 5 consecutive quarters | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 9 consecutive quarters and 3 additional Dec |
+| TACO on E-mini Standard and Poor's 500 Stock Price Index Futures | ESQ | 3T | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 5 consecutive quarters | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 9 consecutive quarters and 3 additional Dec contracts |
+| E-mini Standard and Poor's 500 Stock Price Index Options | ES | EW | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 4 consecutive quarters | Quarterly contracts (Mar, Jun, Sep, Dec) listed for 9 consecutive quarters and 3 additional Dec contracts |
+| Weekly E-mini S&P 500 Stock Price Index Options (Week 3) | EW3 | EW | 3 consecutive Week 3 contracts | 9 consecutive Week 3 contracts |
+
+These products are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/05/20210531.html#top)
+
+### Change to Strike Price Listing for E-mini S&P 500 Futures and Options Products- This Week
+
+Effective this **Sunday, June 6**(trade date Monday, June 7), the strike price listing rule will be changed for the below E-mini S&P 500 options products listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| **Change to Strike Price Listing for E-mini S&P 500 Futures and Options Products** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | **Current** | **New** |
+| E-mini Standard and Poor's 500 Stock Price Index Options | ES | ES | * 100 index point integer multiples, when listed: +30% to -50% of the prior day’s settlement price on the underlying future contract * 50 index point integer multiples, when listed: +20% to -40% of the prior day’s settlement price on the underlying future contract * 10 index point integer multiples, when the underlying future is the second closest contract: +10% to -25% of the prior day’s settlement price on the underlying future contract * 5 index point integer multiples, 35 days prior to expiry (or 5 Weeks): +5% to -15% of the prior day’s settlement price on the underlying future contract | * 100 index point integer multiples, when listed: +30% to -50% of the prior day’s settlement price on the underlying future contract * 50 index point integer multiples, 366 days prior to expiry: +20% to -40% of the prior day’s settlement price on the underlying future contract * 10 index point integer multiples, 186 days prior to expiry: +10% to -25% of the prior day’s settlement price on the underlying future contract * 5 index point integer multiples, 35 days prior to expiry (or 5 Weeks): +5% to -15% of the prior day’s settlement price on the underlying future contract |
+| Weekly E-mini S&P 500 Stock Price Index Options (Week 3) | EW3 | EW | * 100 index point integer multiples, when listed: +30% to -50% of the prior day’s settlement price on the underlying future contract * 50 index point integer multiples, when listed: +20% to -40% of the prior day’s settlement price on the underlying future contract * 10 index point integer multiples, when the underlying future is the second closest contract: +10% to -25% of the prior day’s settlement price on the underlying future contract * 5 index point integer multiples, 35 days prior to expiry (or 5 Weeks): +5% to -15% of the prior day’s settlement price on the underlying future contract | * 100 index point integer multiples, when listed: +30% to -50% of the prior day’s settlement price on the underlying future contract * 50 index point integer multiples, 366 days prior to expiry: +20% to -40% of the prior day’s settlement price on the underlying future contract * 10 index point integer multiples, 186 days prior to expiry: +10% to -25% of the prior day’s settlement price on the underlying future contract * 5 index point integer multiples, 35 days prior to expiry (or 5 Weeks): +5% to -15% of the prior day’s settlement price on the underlying future contract |
+| End-of-Month E-mini S&P 500 Stock Price Index Options | EW | EW | * 100 index point integer multiples, when listed: +30% to -50% of the prior day’s settlement price on the underlying future contract * 50 index point integer multiples, when listed: +20% to -40% of the prior day’s settlement price on the underlying future contract * 10 index point integer multiples, when the underlying future is the second closest contract: +10% to -25% of the prior day’s settlement price on the underlying future contract * 5 index point integer multiples, 35 days prior to expiry (or 5 Weeks): +5% to -15% of the prior day’s settlement price on the underlying future contract | * 100 index point integer multiples, when listed: +30% to -50% of the prior day’s settlement price on the underlying future contract * 50 index point integer multiples, when listed: +20% to -40% of the prior day’s settlement price on the underlying future contract * 10 index point integer multiples, 186 days prior to expiry: +10% to -25% of the prior day’s settlement price on the underlying future contract * 5 index point integer multiples, 35 days prior to expiry (or 5 Weeks): +5% to -15% of the prior day’s settlement price on the underlying future contract |
+
+These options are currently available for customer testing in New Release.
+
+These contracts are listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/05/20210531.html#top)
+
+### Change to Strike Price Listing for Crude Oil and Brent Crude Oil Weekly Options- June 27
+
+Effective **Sunday, June 27** (trade date Monday, June 28), the strike price listing rule will be changed for Crude Oil and Brent Crude Oil Weekly options and will be listed for trading on CME Globex and for submission for clearing via CME ClearPort.
+
+| **Change to Strike Price Listing for Crude Oil and Brent Crude Oil Weekly Options** |
+| --- |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | Current | New |
+| Crude Oil Weekly Option | LO1-LO5 | LO | Minimum 20 strikes at $0.50 per barrel strike increment above and below the at-the-money strike then 10 strikes at $2.50 per barrel strike increment above and below the highest and lowest $0.50 per barrel increment strikes plus dynamic strikes at $0.50 per barrel strike increment. | Minimum 20 strikes at $0.25 per barrel strike increment above and below the at-the-money strike, then 10 strikes at $0.50 per barrel strike increment on the nearest 0.50 interval above and below the highest and lowest $0.25 per barrel increment strikes, then 10 strikes at $2.50 per barrel strike increment on the nearest 2.50 interval above and below the highest and lowest $0.50 per barrel increment strikes plus dynamic strikes at $0.25 per barrel strike increment. |
+| Brent Crude Oil Weekly Option | BW1-BW5 | OT | Minimum 20 strikes at $0.50 per barrel strike increment above and below the at-the-money strike then 10 strikes at $2.50 per barrel strike increment above and below the highest and lowest $0.50 per barrel increment strikes plus dynamic strikes at $0.50 per barrel strike increment. | Minimum 20 strikes at $0.25 per barrel strike increment above and below the at-the-money strike, then 10 strikes at $0.50 per barrel strike increment on the nearest 0.50 interval above and below the highest and lowest $0.25 per barrel increment strikes, then 10 strikes at $2.50 per barrel strike increment on the nearest 2.50 interval above and below the highest and lowest $0.50 per barrel increment strikes plus dynamic strikes at $0.25 per barrel strike increment. |
+
+These Crude Oil and Brent Crude Oil Weekly Options will be available for customer testing in New Release on**Monday, June 21**.
+
+These contracts are listed with, and subject to, the rules and regulations of NYMEX.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/05/20210531.html#top)
+
+### New New - Change to E-mini NASDAQ Biotechnology Futures- August 15
+
+Effective**Sunday, August 15**(trade date Monday, August 16), CME Group will make the following changes to the minimum price increment tag 969-MinPriceIncrement and unit of measure quantity 1147- UnitOfMeasureQty for E-mini NASDAQ Biotechnology futures.
+
+| Change to E-mini NASDAQ Biotechnology Futures |
+| --- |
+|  |
+| Product | MDP 3.0: tag 6937-Asset | iLink: tag 55-Symbol MDP 3.0 tag 1151 - Security Group | CURRENT TAG 969 - MINPRICEINCREMENT | NEW TAG 969 - MINPRICEINCREMENT | CURRENT TAG 1147 - UNITOFMEASUREQTY | NEW TAG 1147 - UNITOFMEASUREQTY |
+| E-mini NASDAQ Biotechnology Futures | BIO | BQ | 10.000000000 | 50.000000000 | 50.000000000 | 25.000000000 |
+
+This change will be available for customer testing in New Release on **Monday, August 2.**
+
+This contract is listed with, and subject to, the rules and regulations of CME.
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/05/20210531.html#top)
+
+## Events and Announcements
+
+### CME SPAN 2 Margin Methodology- Q4 2021
+
+CME Group is targeting the initial launch of SPAN 2 Margin Methodology in Q4 2021, starting with a subset of [energy products](https://www.cmegroup.com/clearing/files/phase-1-energy-products-10-9.xlsx). Any firm that currently uses the CME SPAN methodology and trades impacted products will need to implement one of the following services for computing CME SPAN 2 margin requirements:
+
+*   CME Core – a CME Group hosted web application for Margin Calculation “CME CORE”
+*   Margin API – a CME Group hosted margin calculation API
+*   Deployable Margin Software – a CME Group java margin calculation library
+
+Please Note: A limited number of existing pre-trade execution margin calculation processes may continue to be supported.
+
+Firms using CME SPAN for pre-trade risk management can contact the [Post Trade Services team](mailto:PostTradeServices@cmegroup.com) for more information:
+
+| US | UK | APAC |
+| --- | --- | --- |
+| +1 312 580 5353 | +44 20 3379 3500 | +65 6593 5599 |
+
+[Back to Top](https://www.cmegroup.com/notices/electronic-trading/2021/05/20210531.html#top)

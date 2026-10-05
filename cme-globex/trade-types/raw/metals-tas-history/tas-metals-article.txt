@@ -1,0 +1,138 @@
+Title: Trading at Settlement (TAS) for Metals Futures - CME Group
+
+URL Source: https://www.cmegroup.com/education/articles-and-reports/trade-at-settlement-for-metals.html
+
+Published Time: Tue, 25 Aug 2026 15:44:02 GMT
+
+Markdown Content:
+![Image 1](https://www.cmegroup.com/content/dam/cmegroup/education/images/articles/2019/trade-at-settlement-for-metals_984x137.jpg?width=750&format=jpg)
+
+![Image 2: Read Time](https://www.cmegroup.com/aemedge/icons/list.svg)[![Image 3: Bookmark Icon](https://www.cmegroup.com/aemedge/icons/bookmark-outlined.svg)![Image 4: Bookmark Icon](https://www.cmegroup.com/aemedge/icons/bookmark-filled.svg)](https://www.cmegroup.com/education/articles-and-reports/trade-at-settlement-for-metals.html)
+
+# Trading at Settlement (TAS) for Metals Futures
+
+##### Liquid TAS markets for Metals contracts
+
+Trading at Settlement (TAS) allows you to buy or sell an eligible futures contract during the trading day up to 10 ticks higher or lower than the current day’s settlement price.
+
+Metals futures traders frequently incorporate TAS transactions into their trading strategies, executed for outright, spread or block trades. At CME Group, TAS metals trades are available for execution on Globex and can be submitted for clearing to ClearPort as a block trade.
+
+## Recent Trends
+
+TAS trading has been increasing consistently, especially during the past year, as the mechanism permits commercial and financial traders to lock in a settlement price along the forward curve. TAS can also be used to hedge the average monthly price.
+
+Each Metals futures contract has a specific listing of TAS eligible contract months. A month becomes the spot (delivery) month on the second last business day of the month prior to the contract month. The same methodology is followed for all Metals TAS products. TAS is also available for spread transactions between TAS eligible contract months.
+
+CONTRACT Contract code Summary When the contract month becomes the spot month……these contract months are TAS-eligible
+GOLD FUTURES/MICRO GOLD FUTURES/ E-MINI GOLD FUTURES/1-OUNCE GOLD FUTURES GCT/MGT/QOT/1OT TAS transactions are permitted in the first, second, third, fourth and fifth active contract months.
+
+The active contract months are February, April, June, August, October, and December.February April, June, August, October, December
+April June, August, October, December, February
+June August, October, December, February, April
+August October. December, February, April, June
+October December, February, April, June, August
+December February, April, June, August October
+SILVER FUTURES/MICRO SILVER FUTURES SIT/MST TAS transactions are permitted in the first, second, third, fourth, and fifth active contract months.
+
+The active contract months are March, May, July, September, and December.March May, July, September, December, March
+May July, September, December, March, May
+July September, December, March, May, July
+September December, March, May, July, September
+December March, May, July, September, December
+PLATINUM FUTURES PLT TAS transactions are permitted in the first and second active contract months.
+
+The active contract months are January, April, July, and October.January April, July
+April July, October
+July October, January
+October January, April
+PALLADIUM FUTURES PAT TAS transactions are permitted in the first and second active contract months.
+
+The active contract months are March, June, September, and December.June September, December
+September December, March
+December March, June
+March June, September
+COPPER FUTURES/MICRO COPPER FUTURES HGT/MHT TAS transactions are permitted in the first, second, third, fourth, and fifth active contract months.
+
+The active contract months are March, May, July, September, and December.
+
+**For Copper futures, TAS is also eligible in the spot month, known as TAS zero or TAS flat (Code: HG0). Spot month TAS trades are only permitted at the settlement price.**March May, July, September, December, March
+May July, September, December, March, May
+July September, December, March, May, July
+September December, March, May, July, September
+December March, May, July, September, December
+
+## Example of a TAS transaction
+
+For Gold futures, the minimum price fluctuation or tick size is 10 cents per troy ounce. A trader can enter the following TAS order, relative to the current day’s as yet unknown Gold futures settlement price:
+
+*   At a price of zero to trade at the Gold futures settlement price.
+*   At a price between +1 to +10 to trade at the Gold futures settlement price plus one to 10 ticks, i.e., the settlement price plus $0.10 to $1.00 per troy ounce.
+*   At a price between -1 to -10 to trade at the Gold Futures settlement price minus one to 10 ticks, i.e., the settlement price minus $0.10 to $1.00 per troy ounce.
+
+For Copper futures, the minimum price fluctuation or tick size is $.0005 per pound. A trader can enter the following TAS order, relative to the current day’s as yet unknown Copper futures settlement price:
+
+*   At a price of zero to trade at the Copper futures settlement price.
+*   At a price between +5 to +50 to trade at the Copper futures settlement price plus one (5) to 10 (50) ticks, i.e., the settlement price plus $0.0005 to $0.0050 per pound.
+*   At a price between -5 to -50 to trade at the Copper futures settlement price minus one (5) to 10 (50) ticks, i.e., the settlement price minus $0.0005 to $0.0050 per pound.
+
+What do values represent when trading TAS?
+
+In Gold futures, Silver futures, Micro Gold futures, Micro Silver futures, Platinum futures and Palladium futures TAS products, one tick is represented by the numerical 1, and are tradable in a range of -10/+10.
+
+In E-mini Gold futures and 1-Ounce Gold futures TAS products, one tick is represented by the numerical 25, and are tradeable in a range of -100/+100.
+
+In Copper futures and Micro Copper futures TAS products, one tick is represented by the numerical 5, and is tradeable in a range of -50/+50. Spot Copper TAS is only tradeable at TAS zero (TAS flat).
+
+#### Minimum TAS Fluctuations (Tick Size)
+
+Future Minimum TAS Increment Translated Tick
+Gold/ Micro Gold 1$ 0.10
+E-mini Gold/1-Ounce Gold 25$ 0.25
+Silver/Micro Silver 1$ 0.001
+Platinum 1$ 0.10
+Palladium 1$ 0.10
+Copper/Micro Copper 5$ 0.0005
+
+#### Example: 2 Minimum Ticks Over Settlement
+
+Future Traded TAS Value Translated Tick
+Gold/Micro Gold 2$ 0.20
+E-mini Gold/1-Ounce Gold 50$ 0.50
+Silver/Micro Silver 2$ 0.002
+Platinum 2$ 0.20
+Palladium 2$ 0.20
+Copper/Micro Copper 10$ 0.0010
+
+## TAS Block Trades
+
+TAS-eligible Metals futures contracts can be executed as a block trade and assigned the current day’s settlement price, or any valid price increment +/-10 ticks.
+
+Minimum block threshold for TAS (in contracts)
+Gold/Micro Gold/E-mini Gold/1-Ounce Gold Silver/Micro Silver Platinum Palladium Copper Micro Copper
+If the contract month was previously TAS eligible:
+25 25 10 10*   First and second active months: 20
+*   Third and fourth active months: 5
+*   Spot month: 5 20
+
+TAS block trades may be reported to the Exchange electronically via CME Direct/ClearPort, or by email to the CME Global Command Center (GCC) – ClearPort Facilitation Desk [GCC@cmegroup.com](mailto:GCC@cmegroup.com).
+
+When submitting a TAS block via CME Direct/ClearPort, the price information is entered as a price differential within the allowable range (i.e., plus or minus 10 ticks) from the settlement price. For example, the price differential to be entered in CME Direct/ClearPort for a TAS Gold futures block trade should be in the -$1.00 to +$1.00 per troy ounce range, which represents +/- 10 ticks.
+
+TAS transactions can be used for many trading practices, including to manage exposure to average settlement prices.
+
+On October 15, a copper producer agreed to sell 500,000 pounds (20 lots) of copper cathodes at the monthly average of the December Copper (HG) futures settlement price during the month of November.
+
+*   Cost of production all in: $3.00 per pound
+*   Current December HG Price: $4.41 per pound
+
+The producer sells 20 lots of December HG futures at $4.41 per pound to secure the profit of $1.41 per pound, creating a short position of 20 lots of December HG.
+
+Beginning on November 1, as the pricing for the contract begins, the producer buys one lot of December HG TAS every day during the month of November to obtain the monthly settlement average. This daily buy-back reduces the short position until it reaches zero on the last trading day of November.
+
+If the average settlement price of December HG remains unchanged throughout the month of November, the profit of $1.41 remains intact. If the average settlement price of December HG rallies to $4.46 per pound, the futures hedge loses $.05 per pound, but the physical sale is $0.05 higher, which preserves the profit of $1.41 per pound. If the average price of December HG sells off to $4.39 per pound, the physical sale is $0.02 per pound lower, but the futures hedge nets $0.02 per pound, so the original profit of $1.41 is preserved.
+
+For ease of explanation, this example does not reference factors such as bid-offer spread, brokerage and exchange fees or margin requirements.
+
+/fragments/authors/cme-group
+
+/fragments/disclaimers/hypothetical-interpretation

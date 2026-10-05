@@ -1,0 +1,32 @@
+Q1 states 2010-2030:
+   Europe/London [5.0, 6.0]
+   Asia/Singapore [13.0, 14.0]
+   Asia/Shanghai [13.0, 14.0]
+   Asia/Hong_Kong [13.0, 14.0]
+   Asia/Tokyo [14.0, 15.0]
+   America/New_York [1.0]
+total 2026 weekdays: 261
+Q2/Q3 (independent absolute-instant derivation):
+  CLL/BZL/HOL/RBL    Europe/London    16:30 -> 10:30 d+0 x241, 11:30 d+0 x20
+  CLS/BZS            Asia/Singapore   16:30 -> 02:30 d+1 x91, 03:30 d+1 x170
+  CLC                Asia/Shanghai    15:00 -> 01:00 d+1 x91, 02:00 d+1 x170
+  GCD                Europe/London    15:02 -> 09:02 d+0 x241, 10:02 d+0 x20
+  HGF                Europe/London    12:35 -> 06:35 d+0 x241, 07:35 d+0 x20
+  DVT/E3T            Europe/London    16:30 -> 10:30 d+0 x241, 11:30 d+0 x20
+  FTC                Asia/Hong_Kong   16:00 -> 02:00 d+1 x91, 03:00 d+1 x170
+  Nikkei BTIC        Asia/Tokyo       15:30 -> 00:30 d+1 x91, 01:30 d+1 x170
+  crypto London      Europe/London    16:00 -> 10:00 d+0 x241, 11:00 d+0 x20
+  crypto APAC        Asia/Hong_Kong   16:00 -> 02:00 d+1 x91, 03:00 d+1 x170
+  6EB start          Europe/London    15:40 -> 09:40 d+0 x241, 10:40 d+0 x20
+  6EB end            Europe/London    16:30 -> 10:30 d+0 x241, 11:30 d+0 x20
+  NY control         America/New_York 16:00 -> 15:00 d+0 x261
+2026 misalign UK/US calendar days: 28
+2026 misalign WEEKdays: 20
+  2026 US exact 2026-03-08 08:00 UTC = 2026-03-08 03:00 CDT Sun
+  2026 US exact 2026-11-01 07:00 UTC = 2026-11-01 01:00 CST Sun
+  2026 UK exact 2026-03-29 01:00 UTC = 2026-03-28 20:00 CDT Sat
+  2026 UK exact 2026-10-25 01:00 UTC = 2026-10-24 20:00 CDT Sat
+  2027 US exact 2027-03-14 08:00 UTC = 2027-03-14 03:00 CDT Sun
+  2027 US exact 2027-11-07 07:00 UTC = 2027-11-07 01:00 CST Sun
+  2027 UK exact 2027-03-28 01:00 UTC = 2027-03-27 20:00 CDT Sat
+  2027 UK exact 2027-10-31 01:00 UTC = 2027-10-30 20:00 CDT Sat

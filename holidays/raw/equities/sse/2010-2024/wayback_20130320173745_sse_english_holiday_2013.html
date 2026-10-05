@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Holiday Schedule</title>
+
+		<script>var col_id=504</script>
+		<link href="/css/layout.css;pv1c9de9155249c267" rel="stylesheet" type="text/css" />
+<link href="/css/style.css;pv8b9fd74e6eaf23fe" rel="stylesheet" type="text/css" />
+
+<link href="/css/en_main_menu_blue.css;pvddf25efe31c69798" rel="stylesheet" type="text/css" />
+
+
+		<script type="text/javascript" src="/js/flgz/sse_date_select.js"></script>
+
+<script type="text/javascript" src="/js/common/jquery-1.7.2.min.js;pv77f6d22d31ac6be2"></script>
+<script type="text/javascript" src="/js/common/common.js;pv51c25bd4e2e4fd4e"></script>
+<script type="text/javascript" src="/js/common/publicRs.js;pvc838d0debaa90ecd"></script>
+<script type="text/javascript" src="/js/common/validate.js;pv16e8e9a3146d4001"></script>
+<script type="text/javascript" src="/js/common/DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="/js/2map.js;pv158824aaeebcdef5"></script>
+<script type="text/javascript" src="/js/2left.js;pv56b8f572a9368d4c"></script>
+<script type="text/javascript" src="/js/flgz/pubjs.js;pv39d562b44109ce7c"></script>
+<script type="text/javascript" src="/js/flgz/zqjs.js;pvf8f0e816d41a82c1"></script>
+<script type="text/javascript" src="/js/flgz/sse_suggest.js;pvb7ea2112614a8b6d"></script>
+<ScRiPt type="text/javascript" src="/js/2mainmenu.js;pv0062ebb74a619c0f"> </script>
+<script type="text/javascript" src="/js/common/systemDate_global.js"></script>
+
+<script>
+if(col_id == '667')
+{
+	mainflash_id = '0201';
+	$(document).ready(function (){writenonnav(mainflash_id);});
+}
+else
+{
+	
+	readtree();
+	$(document).ready(function (){initTree();writenonnav(mainflash_id);});
+}
+readtree();
+function readtree(arrayName)
+{
+	var arrayName = "LeftMenu";
+	findid(arrayName);
+}
+
+function findid(arrayName)
+{
+	  	var category = eval(arrayName);
+
+		for(var i=0; i <category.length; i++) {
+		  	var subcolum = category[i][3];
+			var flash = category[i][1];
+			var len = category[i][1].length;
+			var col = category[i][2];
+			var nodisplay = category[i][6];
+		  	if(subcolum == 0){
+		  	}else if (subcolum == 1){ 
+		    	arrayName = "LeftMenu_"+category[i][1];
+		        findid(arrayName);
+			}
+			if(nodisplay != "")
+			{
+			parts = nodisplay.split(",");
+			for( var j=0; j<parts.length;j++)
+			{
+				if(parts[j] == col_id)
+				{
+					flash_id = flash;
+					if(flash_id.length == "4")
+					{
+						fcol_id = col;
+						readtree_m();
+					}
+					var f_arrayName = "LeftMenu_"+flash_id.substr(0,2);
+					findid_f(f_arrayName);
+				}	
+				
+			}
+			
+			}
+			if((col_id == col) && (flash != "02"))
+			{
+			  flash_id = flash;	
+			  if(flash_id.length == "4")
+			  {
+				fcol_id = col;
+				readtree_m();
+		          }
+			  var f_arrayName = "LeftMenu_"+flash_id.substr(0,2);
+			  findid_f(f_arrayName);
+			}
+
+		}
+
+}
+
+function findid_f(f_arrayName)
+{
+		var f = eval(f_arrayName);
+		for (var j=0;j<f.length;j++)
+		{
+			var subcolum_f = f[j][3];
+			if(subcolum_f == 0)
+			{
+		  	}
+			else if (subcolum_f == 1)
+			{ 
+		    	f_arrayName = "LeftMenu_"+f[j][1];
+		        findid_f(f_arrayName);
+			}
+
+			if((f[j][1] == flash_id.substr(0,4)))
+			{
+					fcol_id = f[j][2];
+					readtree_m();
+			}
+		}
+		
+}
+function readtree_m(arrayName_m)
+{
+	var arrayName_m = "MainMenu";
+	findid_m(arrayName_m);
+}
+function findid_m(arrayName_m)
+{
+	var tree_m = eval(arrayName_m);
+	for(var i=0; i <tree_m.length; i++)
+	 {
+		var subcolum_m = tree_m[i][3];
+		var flash_m = tree_m[i][1];
+		var len_m = tree_m[i][1].length;
+		var col_m = tree_m[i][2];
+		
+		if(subcolum_m == 0)
+		{
+		}
+		else if (subcolum_m == 1)
+		{ 
+			arrayName_m = "MainMenu_"+tree_m[i][1];
+			findid_m(arrayName_m);
+			
+		}
+		if((fcol_id == col_m) && (flash_m != "02"))
+		{
+			mainflash_id = flash_m;//alert(mainflash_id);
+		}
+		
+	}
+	
+}
+</script>
+
+<!-- <script type="text/javascript" src="/js/flgz/ssesuggestdata.js"></script>
+<script type="text/javascript" src="/js/flgz/flashnavigation_main_new.js;pv78b8e79bdf457409"></script>
+<script type="text/javascript" src="/js/flgz/sse_eng.js"></script>
+<script type="text/javascript" src="/js/flgz/sse_popup.js"></script>-->
+		
+<script language="javascript">
+	function doSubmitSearch()
+	{
+		var thisForm = document.frmsearch;
+		if (thisForm.KeyWord.value == '' || thisForm.KeyWord.value == null || thisForm.KeyWord.value == 'undefined')
+		{
+			alert("Please input keywords");
+			return false;
+		}
+		return true;
+	}
+</script>
+
+<script>
+
+function setTab(m,n){
+
+ var tli=document.getElementById("menu"+m).getElementsByTagName("li");
+
+ var mli=document.getElementById("main"+m).getElementsByTagName("ul");
+
+ for(i=0;i<tli.length;i++){
+
+  tli[i].className=i==n?"hover":"";
+
+  mli[i].style.display=i==n?"block":"none";
+
+ }
+
+}
+
+</script>
+
+<script language="javascript">
+	function doSubmitfooter()
+	{	
+			var code = document.frmfooter.code.value;
+			if (code == '')
+			{
+				alert("Please input keywords");
+				document.frmfooter.code.focus();
+				return false;
+			}
+			if(code.length != 6){
+				alert("Please input right keywords");
+				document.frmfooter.code.focus();
+				return false;
+			}
+					
+			var number_chars = "0123456789";
+			for (var i=0;i<code.length;i++)
+			{
+				if (number_chars.indexOf(code.charAt(i))==-1) {
+					alert("Please input right keywords");
+					document.frmfooter.code.focus();
+					return false;
+				}
+			}
+			
+				var code1 = code + ".SS";	
+				document.frmfooter.action="/sseportal/webapp/ennew/SSEEnnewrightSearchCmd?code="+code1;
+				//document.frmfooter.submit();
+				return true;
+	}
+
+</script>
+
+<script>
+<!--
+/*����ʾ��ʽ*/
+function setTab(m,n){
+ var tli=document.getElementById("menu"+m).getElementsByTagName("li");
+ var mli=document.getElementById("main"+m).getElementsByTagName("ul");
+ for(i=0;i<tli.length;i++){
+  tli[i].className=i==n?"hover":"";
+  mli[i].style.display=i==n?"block":"none";
+ }
+}
+//-->
+</script>	
+
+	</head>
+
+	<body>
+<div id="wrapper">
+  <div class="clearfix" id="main">	
+		<div id="head"><!-- 页头开始  -->
+			<div class="top_logo">
+	<a href="/home/"><img width="300" height="110" src="/images/blankimage.gif;pv36aad1bee098e12d"/></a>
+</div>
+<div class="headbox_right">
+	<ul class="headbox_right_top">
+		<li><a href="/home/" target="_blank">Home</a> |</li>
+		<li><a href="/aboutsse/support/sitemap/" target="_blank">Site Map</a> |</li>
+		<li><a href="/aboutsse/support/contact/" target="_blank">Contact</a>  </li>
+		<li><a class="right_en" href="http://www.sse.com.cn/" target="_blank"></a></li>
+       </ul>
+       
+       <script type="text/javascript">
+             var goBtnSearch = function(){
+                 var keywords = $("#enTopTextInput").val();
+                 if(keywords=="search in the site"){
+                    alert("please input keywords.");
+                    return;
+                 }
+                 if(!unionvalidator.empty("keywords",keywords)){
+						return;
+				 }else{
+                 window.open("/aboutsse/support/search_result.shtml?keywords="+keywords);
+}
+             };
+       </script>
+
+	<div class="headbox_right_bottom">
+<input id="enTopTextInput" class="entop_search" type="text" border="0" maxlength="120" value="search in the site" size="19"  onkeypress="utils.keypress2TriggerClickEvent(event,'enterPressSearch')" onblur="if(this.value==''){this.value='search in the site';}" onfocus="if(this.value=='search in the site'){this.value='';}" />
+<a href="javascript:void(0);" id="enterPressSearch" onclick="goBtnSearch()"><input  type="image" border="0" alt="" src="/images/en_go.jpg"></a>
+	</div>	
+</div>
+
+		</div><!-- 页头结束  -->
+		
+		<div id="page_nav"><!--中间主导航开始 -->
+	    	<div id="main_navi"></div><script src="/js/flgz/flashnavigation_main_new.js;pv78b8e79bdf457409"></script>
+
+	    </div><!--中间主导航结束-->
+	    
+	    <div id="page_path">
+	    	<div id= "path"></div> 
+<script language="JavaScript" src="/js/flgz/path.js;pv410b2f586106909c"></script>
+
+	    </div>
+		
+		<div id="main_page"><!--页中开始 -->
+			<div id="left_page">
+				<script src="/js/flgz/leftMenu_qm_css.js;pv52565ed7ca1719ac"></script>
+
+<link href="/css/left_menu_blue_layout.css;pv74f8e128b26610b0" rel="stylesheet" type="text/css">
+<link href="/css/left_menu_blue_css.css;pvbbfb118de3e424fb" rel="stylesheet" type="text/css">
+
+<script src="/js/flgz/leftMenu_qm_css.js;pv52565ed7ca1719ac"></script>
+<div onmousemove="funLeftMenuMove(event,this);">
+<div id="left_navi_top"><img class="img" src="/images/white_spacer.gif;pv158f3d0337219d60"/></div>
+<div id="left_navi" onmouseout="funLeftMenuOut(event,this);" onmouseover="funLeftMenuInner(event,this);">
+<script src="/js/flgz/leftMenu_new_css.js;pv09b4122f7912cd03"></script></div>
+</div>
+<script type="text/javascript">
+	qm_create(0,true,0,500,'all',false,false,false,false);
+</script>
+
+<script language="javascript">
+	function doSubmitfooter() {
+		var thisForm = document.frmfooter;
+		if (thisForm.KeyWord.value == '' || thisForm.KeyWord.value == null
+				|| thisForm.KeyWord.value == 'undefined') {
+			alert("Please input keywords");
+			return false;
+		}
+		return true;
+	}
+	var  goLeftBtnSearch = function(){
+                 var keywords = $("#leftTextInput").val();
+                
+	         if(!unionvalidator.empty("keywords",keywords)){
+			return;
+		 }else{
+                  window.open("/aboutsse/support/search_result.shtml?keywords="+keywords);
+}
+             };
+	
+</script>
+<div class="bzjs">
+                 <span><strong>search:</strong></span>
+		<input type="text" size="14" maxlength="120" border="0" id="leftTextInput" onkeypress="utils.keypress2TriggerClickEvent(event,'LeftEnterPressSearch')"/>
+		<a href="javascript:void(0);" id="LeftEnterPressSearch" onclick="goLeftBtnSearch()"><img src="/images/en_go.jpg;pv22de7f3cbd30a909"/></a>
+
+</div>
+			</div>
+						
+			<div id="right_page">
+                                <span class="page_title">Holiday Schedule</span>
+				
+<div id="content">
+
+   <div class="block_l1">
+<h1>Holiday Schedule of Shanghai Stock Exchange for 2013
+</h1>
+<table width="100%" cellspacing="5" cellpadding="0" border="0">    <tbody>        <tr>            <td>&nbsp;</td>            <td width="100%">1/1/2013 - 3/1/2013 New Year Holiday<br />            <br />            11/2 - 15/2  Chinese New Year Holiday<br />            <br />            4/4 - 5/4 Ching Ming Festival<br />            <br />            29/4 - 1/5  Labour Holiday<br />            <br />            10/6 - 12/6 Tuen Ng Festival<br />            <br />            19/9 - 20/9 Mid-Autumn  Festival<br />            <br />            1/10 - 7/10 National Day <br />            <br />            &nbsp;</td>        </tr>        <tr>            <td>&nbsp;</td>            <td>* Please be reminded that the above dates are inclusive and all Saturdays  and Sundays are non-trading days.</td>        </tr>    </tbody></table>
+
+
+
+</div>
+
+
+</div>
+ 
+			</div>
+			
+		</div><!--页中结束 -->
+</div>
+</div>
+
+<!-- 页尾开始  -->			
+<div id="footer">
+	<div class="footer_bj">
+	<span class="bottom_font">
+		<a href="/aboutsse/support/contact/">Contact Us</a>|
+		<a href="/aboutsse/support/feedback/">Feedback</a>|
+		<a href="/aboutsse/support/sitemap/">Site Map</a> |
+		<a href="/aboutsse/support/links/">Links</a>|
+		<a href="/aboutsse/support/disclaimer/">Disclaimer</a>
+	</span>
+	<span class="bottom_font">
+		© 2010 Shanghai Stock Exchange. All Rights Reserved.  Feedback Mailbox:
+		<a href="/aboutsse/support/feedback/">webmaster@secure.sse.com.cn </a>
+	</span>
+</div>
+</div>
+<!--页尾结束 -->
+	
+	</body>
+</html>
