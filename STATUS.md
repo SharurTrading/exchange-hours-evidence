@@ -9950,3 +9950,62 @@ git for everything in the evidence repo — $0 cost, no bandwidth quota, every
 byte in the pack (strictly better auditability), partial clone + sparse
 checkout for targeted access. The LFS bullet in the issue body superseded by
 comment.
+
+**PR #287 REVIEW 2026-10-05 UTC (BLOCK — one prose-count defect; all four negation legs verified, head `6c0077a`, base origin/main `a144b5b`):**
+the eurex no-changes verification that retires the #157 `tba` declaration
+(moves the tally to 26/7). Reviewer re-derived every leg from the bytes, in a
+detached worktree at the head. Leg 1: the 2020-10-26 Wayback capture prints the
+01-June German carve-out row verbatim; the 2025-09-13 state hashes to the
+Documents table and shows 54 day-rows (claim reproduces), zero German rows,
+Swiss/Norwegian/Danish only on 09 June, no 03-October row in June/September
+states with the March KOSPI row confirming the withdrawal; the reviewer fetched
+the live page 2026-10-05 — text-identical to the saved 2026-09-26/10-04/10-05
+captures, zero German table rows, 25-May row verbatim (six non-German scopes),
+no 03-October row, `tba`/`to be announced` 0. Leg 2: reviewer re-enumerated the
+2026 circular listing live (100 items, item-for-item vs the saved listing, the
+one set difference an NBSP), numbered series 001..064/2026 gap-free, zero
+German-scope titles; 105/2025's "German index futures (e.g. the product FDAX)"
+not-affected statement verbatim. Leg 3: CfT 1.2 and Exchange Rules § 60(2)
+re-extracted verbatim by the reviewer's own pdftotext (editions "As of
+27.07.2026" / 2026-07-07); 080/2014 Board language verbatim; the evidence file
+explicitly disclaims an invented "only by circular" rule. Leg 4: all 13
+edition digests reproduce; 2019/2020/2021 carve-outs dated 10 June+3 October /
+1 June / 24 May verbatim; 2014/2016/2017/2018 dated German lines verbatim;
+2010-2013/2015/2022-2024 no German-scope line; 2025 `tba.` and 2026 `to be
+announced` re-extracted. Retirement: zero `PhaseGap::new` in sourcing.rs, no
+eurex.rs row changes (no fabricated row; LAW-NO-FABRICATED-DATES holds).
+Reviewer's own runtime probe: 2025-06-09/2025-10-03/2026-05-25/2026-10-03
+ordinary and Covered on both `eurex` and `eurex_fixed_income`; 729 days of
+2025-01-01..2026-12-30 Covered; 2026-12-31 refuses on #151; 2027 refuses.
+Tally re-derived by the reviewer's own parser: 26 complete / 7 incomplete of
+33 inventory rows. Mutation (fabricated 2026-05-25 German row, reverted) fails
+THREE fences (open-days fence, inventory window/date-count fence, and
+evidence-file row fence), stronger than the two claimed. Chain at head:
+fmt/clippy clean, nextest 1281/1281, doc tests 3/3, rustdoc -D warnings, cargo
+deny, cargo +1.95 check — all green.
+
+**THE BLOCKING DEFECT:** the evidence file states the live 2026 Holiday
+regulations day-by-day table has "51 day-rows"; the reviewer re-derived **49**
+three independent ways (strong-tag date cells, `<tr>` count in the day table,
+row parse) across all three saved captures and a fresh live fetch, with no
+alternative counting basis yielding 51. Value in the change 51, value in the
+source 49. Location: `docs/evidence/eurex.md` "The #157 verification" item 1
+(the 2025 parallel "54 rows" reproduces exactly, confirming the intended
+basis). The same 51 repeats in the PR body and in the store INDEX
+(`holidays/raw/eurex/negation-2026-10-05/INDEX.md`, "51-row table"). The
+substance the count decorates — no German clause on any row of either year —
+is unaffected and verified; per the charter's prose rule a wrong count blocks
+until fixed, and the fix is one number, accepted by re-running the affected
+checks on the pushed commit.
+
+Advisories: (1) "Full-text scans of the live page find `German` 0" is true of
+page text; raw bytes carry two `German` occurrences in the head's hreflang link
+title. (2) Pre-existing sentence (unchanged on main, tension surfaced by this
+PR's own re-check): the circulars paragraph's "zero holiday or reminder items
+over 2025-01-01..2026-10-04" vs the leg-2 re-check's one Swiss "holiday" match
+in Oct-Dec 2025 and the sweep's own capture printing two 2025 `holiday`-query
+items (Swiss + KRX, neither German-scope); "zero German-scope" would settle it.
+(3) The mutation actually fails three fences, not the two claimed
+(understatement in the PR body and commit message).
+
+Review comment: https://github.com/SharurTrading/exchange-hours-rs/pull/287#issuecomment-5986709059
