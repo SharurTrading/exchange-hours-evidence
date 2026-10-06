@@ -41,3 +41,20 @@ Live checks 2026-09-30 ~02:20 UTC: `/exchanges/download/.../trading_calendar_201
 and `..._2018.pdf` return 301 to the products-services home page;
 `dam/...trading-guides/trading-calendar-2019.pdf` and `-2018.pdf` return 404.
 Full sha256s in `SHA256SUMS.txt`.
+
+Correction 2026-10-05 UTC (issue #212 closes): the three "Settlement data,
+not trading closures" rulings above are re-adjudicated. A re-read of the saved
+bytes separates each page's legend into its cell pairs: the `#ccddff` swatch
+is bound to the label `SIX Swiss Exchange Market holiday`, distinct from the
+`chf.gif` = `Currency holiday` flag instrument, and on 24 and 31 December 2010
+the shading fires on rows carrying no chf flag — dates the pages' own prose
+calls normal settlement days. The identical fill in the Currency Holiday
+Calendar 2019 (`six-shares-grid-2019.wayback-20191115200708id_.pdf`, this
+directory) shades exactly the twelve 2019 dates the 28 May 2018 guide's grids
+print as closures. The settlement instrument is the flag columns; the
+`#ccddff` layer is the exchange's own market-holiday statement, and its
+exhaustive marks (7 + 6 weekday rows, no other background on any row, no
+Sat/Sun rows) key the 13 `Closed` rows shipped for 2010-2011. Parser and full
+output: `../tsc-market-holiday-derivation-20261005.txt`. The original rulings
+above stand as the record of what the first read concluded; this note is the
+correction.

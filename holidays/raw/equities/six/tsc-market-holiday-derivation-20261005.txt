@@ -1,0 +1,89 @@
+TSC market-holiday derivation — re-run 2026-10-05 UTC
+=====================================================
+
+Purpose: re-adjudicate the three saved Trading-and-Settlement-Calendar pages
+the 2026-09-30 pass had classified wholesale as "Settlement data, not trading
+closures" (cdx-retry-2026-09-30/INDEX.md). The re-read separates the pages'
+legend entries structurally: every legend is one table of cell pairs, a
+swatch/icon cell followed by its label cell.
+
+Inputs (sha256 re-verified 2026-10-05 UTC against SHA256SUMS.txt):
+  cdx-retry-2026-09-30/six-grid-2010.wayback-20100131011433id_.html  7193224d…
+  2010-2024/extra_six-shares-settlement-grid-page-2010_capture-20100411051901Z.html
+  cdx-retry-2026-09-30/six-grid-2011.wayback-20101115080111id_.html  6ec1cb92…
+  2010-2024/extra_six-currency-holiday-calendar-2019_capture-20191115200708Z.pdf
+                                                                     5ac21f0f…
+
+Method: python3 over the saved bytes (no network). A date row is a <tr> whose
+cells contain dd.mm.yyyy; its background colour is read off the date cell's
+own style attribute; flags are the /resources/images/icons/<cur>@*.gif images
+in the row. PDF fills come from PyMuPDF get_drawings(); a fill row is the set
+of #ccddff rects at one y, dated by the dd.mm.yyyy word inside them; the
+2019 PDF's 13th rect is the legend swatch beside the words "SIX Swiss
+Exchange Market holiday" (18x12 pt at x=29), not a date row.
+
+Legend mapping (cell pairs, identical in all three HTML pages and the 2019 PDF):
+  #ccddff swatch  -> "SIX Swiss Exchange Market holiday"
+  chf.gif icon    -> "Currency holiday"
+
+Output:
+== TSC-2010 capture 20100131011433: 78 date rows, 7 #ccddff, other backgrounds none
+== TSC-2010 capture 20100131011433: 78 date rows, 7 #ccddff, other backgrounds none
+   SHADED Fri 2010-01-01 chf_flag=True row_flags=20
+   SHADED Fri 2010-04-02 chf_flag=True row_flags=13
+   SHADED Mon 2010-04-05 chf_flag=True row_flags=15
+   SHADED Thu 2010-05-13 chf_flag=True row_flags=5
+   SHADED Mon 2010-05-24 chf_flag=True row_flags=7
+   SHADED Fri 2010-12-24 chf_flag=False row_flags=5
+   SHADED Fri 2010-12-31 chf_flag=False row_flags=3
+   shaded rows without a chf (Currency holiday) flag: ['2010-12-24', '2010-12-31']
+   Sat/Sun rows in grid: 0
+   weekend-fall dates present as rows: none
+   witness Mon 2010-01-04 bg=#ffffff chf_flag=False row_flags=1
+   witness Wed 2010-01-06 bg=#ffffff chf_flag=False row_flags=1
+== TSC-2010 capture 20100411051901 (corroboration): 78 date rows, 7 #ccddff, other backgrounds none
+   SHADED Fri 2010-01-01 chf_flag=True row_flags=20
+   SHADED Fri 2010-04-02 chf_flag=True row_flags=13
+   SHADED Mon 2010-04-05 chf_flag=True row_flags=15
+   SHADED Thu 2010-05-13 chf_flag=True row_flags=5
+   SHADED Mon 2010-05-24 chf_flag=True row_flags=7
+   SHADED Fri 2010-12-24 chf_flag=False row_flags=5
+   SHADED Fri 2010-12-31 chf_flag=False row_flags=3
+   shaded rows without a chf (Currency holiday) flag: ['2010-12-24', '2010-12-31']
+   Sat/Sun rows in grid: 0
+   weekend-fall dates present as rows: none
+   witness Mon 2010-01-04 bg=#ffffff chf_flag=False row_flags=1
+   witness Wed 2010-01-06 bg=#ffffff chf_flag=False row_flags=1
+== TSC-2011 capture 20101115080111: 81 date rows, 6 #ccddff, other backgrounds none
+   SHADED Fri 2011-04-22 chf_flag=True row_flags=14
+   SHADED Mon 2011-04-25 chf_flag=True row_flags=15
+   SHADED Thu 2011-06-02 chf_flag=True row_flags=5
+   SHADED Mon 2011-06-13 chf_flag=True row_flags=7
+   SHADED Mon 2011-08-01 chf_flag=True row_flags=4
+   SHADED Mon 2011-12-26 chf_flag=True row_flags=18
+   shaded rows without a chf (Currency holiday) flag: []
+   Sat/Sun rows in grid: 0
+   weekend-fall dates present as rows: none
+   witness Mon 2011-01-03 bg=#ffffff chf_flag=False row_flags=5
+== CHC-2019 (Currency Holiday Calendar 2019, Last update: 00:40:02 15 November 2019):
+   #ccddff rects: 13 (12 dated rows + 1 legend swatch)
+   dated: 2019-01-01, 2019-01-02, 2019-04-19, 2019-04-22, 2019-05-01, 2019-05-30, 2019-06-10, 2019-08-01, 2019-12-24, 2019-12-25, 2019-12-26, 2019-12-31
+   crate 2019 rows (SIX-TG-2018): 2019-01-01, 2019-01-02, 2019-04-19, 2019-04-22, 2019-05-01, 2019-05-30, 2019-06-10, 2019-08-01, 2019-12-24, 2019-12-25, 2019-12-26, 2019-12-31
+   CALIBRATION 12/12 EXACT (crate-only [], pdf-only [])
+
+Correction 2026-10-05 UTC: the first (format-error) run appended one partial
+line before failing; the record was re-appended whole below it, so the
+duplicated "== TSC-2010 capture 20100131011433" summary line near the top is
+an artifact of that crashed run, not a second observation. The complete
+output is the block from the second "== TSC-2010" line down.
+
+Verdict: the legend binds #ccddff to "SIX Swiss Exchange Market holiday" —
+an entry distinct from the Currency holiday flag instrument — the shading is
+exhaustive at 7 (2010, both captures agreeing) and 6 (2011) weekday marks with
+no other background on any row, the eleven named weekend falls appear as no
+row at all (the grids carry no Sat/Sun rows), the eves shade with no bank
+flag, and the CHC-2019 calibration is exact at 12/12 against the closures the
+SIX-TG-2018 grids print. The prior wholesale "settlement data" classification
+of these pages is corrected: the settlement instrument is the flag columns;
+the #ccddff layer is the exchange's own market-holiday statement and keys the
+13 rows shipped for #212.

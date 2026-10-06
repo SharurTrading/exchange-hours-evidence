@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/themes/custom/rulebook/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Page not found | Rulebooks</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EUAiZj3eIhVwccU5gSuHHnfhQrY-nPIEDiN-kUrpO6s.css?delta=0&amp;language=en&amp;theme=rulebook&amp;include=eJxNxzEOwCAIAMAPtXHqe4goMQQKRnDw91172zWhzunrgal7sMGsTYCtkyWgepPyz7W2ErpLGepY9Y48yjauOJH0FqxBH23bIN4" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_3rZWdGn8izvOQlsHwu6nC-CZEZ-XCWTxzLH7eQQZHVI.css?delta=1&amp;language=en&amp;theme=rulebook&amp;include=eJxNxzEOwCAIAMAPtXHqe4goMQQKRnDw91172zWhzunrgal7sMGsTYCtkyWgepPyz7W2ErpLGepY9Y48yjauOJH0FqxBH23bIN4" />
+
+    
+  </head>
+  <body>
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="font-opensans max-md:text-sm max-w-[1600px] mx-auto">
+     <div class="pdf-header">
+      <img src="/themes/custom/rulebook/dist/static/sgx-group-logo.svg" alt="SGX Rulebooks" style="250px" />
+      <span></span>
+  </div>
+  <!-- header menu -->
+  <header class="
+    w-11/12 m-auto flex justify-between py-4 mt-4
+    max-md:bg-sgx-white max-md:mt-0 max-md:w-full max-md:flex-col max-md:px-4 max-md:py-0
+    max-md:fixed max-md:top-0 max-md:left-0 max-md:right-0 max-md:z-10
+    max-md:border-b max-md:border-b-sgx-blue">
+    <div class="w-[20%] max-md:w-full max-md:flex max-md:justify-between">
+      <rulebook-menu-button class="rulebook-menu-button"></rulebook-menu-button>
+      <a href="/" class="flex items-center">
+        <div class="sgx-logo"></div>
+      </a>
+    </div>
+    <div class="w-[80%] max-md:hidden">
+      <div>
+  
+    
+      <div class="flex justify-end gap-4 max-md:justify-end max-md:gap-1">
+              <div class="font-bold text-sgx-blue">
+                <a href="mailto:asksgx@sgx.com">
+                    <i class="fa-regular fa-comment"></i>
+                    Feedback
+                </a>
+              </div>
+          </div>
+  </div>
+
+      <div class="max-md:w-full"></div>
+    </div>
+  </header>
+  <!-- end header menu -->
+
+  <main role="main" class="rulebook-main rulebook-main--browse max-md:pt-[4rem]">
+    <!-- title and search section -->
+       <div class="flex w-full justify-between items-center mb-4 max-md:flex-col max-md:mb-2 max-md:px-0 sub-header">
+    <div id="block-rulebook-site-branding">
+  
+    
+    <div class="flex items-center">
+          <div class="text-3xl site-name max-md:text-2xl">
+        <a href="/" title="Home" rel="home">Rulebooks</a>
+      </div>
+      </div>
+</div>
+<div class="custom-search-form rulebook-search-form-wide max-md:w-full" data-drupal-selector="custom-search-form" id="block-rulebook-customsearchblock">
+  
+    
+  <div class="rulebook-search-form-wide-container">
+            <form action="/index.html" method="post" id="custom-search-form" accept-charset="UTF-8" class="rulebook-search-block-form">
+    <div class="js-form-item form-item form-type-search js-form-type-search form-item-search-query js-form-item-search-query form-no-label py-1 px-1">
+        <input class="rulebook-search-input form-select shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  data-drupal-selector="edit-search-query" type="search" id="edit-search-query" name="search_query" value="" size="15" maxlength="128" class="form-search required" required="required" aria-required="true"
+  placeholder="&#xf002;"
+/>
+        </div>
+
+
+    <input
+      class="form-select shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      type="hidden"
+       autocomplete="off" data-drupal-selector="form-ddudkuzd9l7qgbgaokulltcx73-as6x-k7j0z2ry7sw" type="hidden" name="form_build_id" value="form-DduDkuzD9l7QgbGAOkuLltCx73_as6x_K7J0Z2RY7sw"
+    />
+
+
+    <input
+      class="form-select shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      type="hidden"
+       data-drupal-selector="edit-custom-search-form" type="hidden" name="form_id" value="custom_search_form"
+    />
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><span class="rulebook-input--submit">
+  <input class="outline-none flex justify-center bg-sgx-light-blue py-1.5 text-white mt-6
+    hover:bg-sgx-light-blue/75 min-w-[80px] rounded ml-1 max-md:ml-0" type="submit"  data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Search" class="button js-form-submit form-submit"/>
+</span>
+</div>
+
+  </form>
+
+ 
+      </div>
+  
+</div>
+
+  </div>
+
+    <!-- end title and search section -->
+    <!-- main menu section -->
+    <div>
+        <div class="rulebook-primary-menu text-sgx-blue text-lg flex w-full justify-between items-center
+    max-md:flex-col max-md:gap-4">
+    <nav role="navigation" aria-labelledby="block-rulebook-main-menu-menu" id="block-rulebook-main-menu">
+            
+  <h2 class="visually-hidden" id="block-rulebook-main-menu-menu">Main navigation</h2>
+  
+  
+        
+        <rulebook-primary-menu>
+                <ul class="flex">
+                                              <li> 
+          <a href="/node/9193" target="_self" class="flex justify-center items-center px-2">
+              <span class="px-2">Rulebooks</span> 
+          </a>
+                </li>
+                                          <li> 
+          <a href="/rulebook/mainboard-rules" target="_self" class="flex justify-center items-center px-2">
+              <span class="px-2">Browse Contents</span> 
+          </a>
+                </li>
+                                          <li> 
+          <a href="/latest-updates" target="_self" class="flex justify-center items-center px-2">
+              <span class="px-2">View Updates</span> 
+          </a>
+                </li>
+          </ul>
+    </rulebook-primary-menu>
+  
+
+
+  </nav>
+
+  </div>
+
+    </div>
+    <!-- end main menu section -->
+    
+    <div class="flex max-md:flex-col rulebook-main-content">
+      <rulebook-content-menu class="w-[25%]">
+        <div class="flex justify-between">
+          <div class="p-4 text-bold">
+            <i class="fa-regular fa-books mr-2"></i>
+            SGX Rulebooks
+          </div>
+          <button class="rulebook-content-menu--x hidden max-md:block">
+            <i class="fa-regular fa-x mr-4"></i>
+          </button>
+        </div>
+        
+      </rulebook-content-menu>
+      <div class="w-[75%] max-md:w-full">
+        <div>
+          
+        </div>
+          <div>
+    <div data-drupal-messages-fallback class="hidden"></div><div id="block-rulebook-content">
+  
+    
+      The requested page could not be found.
+  </div>
+
+  </div>
+
+      </div>
+    </div>
+    
+  </main>
+  <!-- end main content -->
+
+  <!-- footer -->
+  <footer class="border-t-2 border-sgx-blue min-h-32 flex items-center">
+    <div class="flex justify-between items-center w-4/5 m-auto py-4
+      max-md:w-11/12 max-md:flex-col-reverse">
+      <div class="w-[70%] max-md:w-full">
+          <div class="sgx-rulebook-footer-links" >
+    <nav role="navigation" aria-labelledby="block-rulebook-footer-menu" id="block-rulebook-footer">
+            
+  <h2 class="visually-hidden" id="block-rulebook-footer-menu">Footer</h2>
+  
+
+        
+              <ul>
+              <li>
+        <a href="https://www.sgx.com/contact-us">Contact Us</a>
+              </li>
+          <li>
+        <a href="/contact" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+          <li>
+        <a href="https://www.sgx.com/cookie-policy">Cookie Policy</a>
+              </li>
+          <li>
+        <a href="https://www.sgx.com/cyber-security">Cyber Security</a>
+              </li>
+          <li>
+        <a href="https://www.sgx.com/terms-use#SGX%20Privacy%20Policy">Privacy Policy</a>
+              </li>
+          <li>
+        <a href="https://www.sgx.com/terms-use">Terms of Use</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+    <p class="text-xs pt-4">
+      © Singapore Exchange Limited. All Rights Reserved.
+    </p>
+  </div>
+
+      </div>
+      <div class="w-[30%] max-md:w-full">
+         <div class="sgx-rulebook-footer-socials" >
+    <div class="sgx-rulebook-footer-socials-label">
+      Stay Connected! Follow us on
+    </div>
+    <nav role="navigation" aria-labelledby="block-rulebook-socialmedia-menu" id="block-rulebook-socialmedia">
+            
+  <h2 class="visually-hidden" id="block-rulebook-socialmedia-menu">Social Media</h2>
+  
+
+        
+              <ul>
+              
+      
+     <li> 
+        <a href="https://www.facebook.com/sgxmygateway" target="_self">
+                           <i class="fa-brands fa-facebook"></i>
+              <span class="hidden">Facebook</span> 
+                     </a>
+            </li>
+          
+      
+     <li> 
+        <a href="https://www.linkedin.com/company/sgx" target="_self">
+                           <i class="fa-brands fa-linkedin"></i>
+              <span class="hidden">LinkedIn</span> 
+                     </a>
+            </li>
+          
+      
+     <li> 
+        <a href="https://twitter.com/SGXGroup" target="_self">
+                           <i class="fa-brands fa-x-twitter"></i>
+              <span class="hidden">Twitter</span> 
+                     </a>
+            </li>
+          
+      
+     <li> 
+        <a href="https://www.youtube.com/user/sgxchannel" target="_self">
+                           <i class="fa-brands fa-youtube"></i>
+              <span class="hidden">YouTube</span> 
+                     </a>
+            </li>
+        </ul>
+  
+
+
+    <rulebook-wechat></rulebook-wechat> 
+</nav>
+
+  </div>
+
+      </div>
+    </div>
+  </footer>
+  <!-- end of footer -->
+</div>
+  </div>
+
+    
+    <script src="/sites/default/files/js/js_dVV9jOO6dEqly5VgY5Il2tuDvCc7JDfCMCH32b8IYjY.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=rulebook&amp;include=eJwrKs1JTcrPz9bPSixLLE4uyiwoAQBNlwfK"></script>
+
+  </body>
+</html>

@@ -10009,3 +10009,213 @@ items (Swiss + KRX, neither German-scope); "zero German-scope" would settle it.
 (understatement in the PR body and commit message).
 
 Review comment: https://github.com/SharurTrading/exchange-hours-rs/pull/287#issuecomment-5986709059
+
+**REPO RULESETS ACTIVE 2026-10-05 (maintainer): all pushes to main on both
+repos require a PR.** The flow was already PR-based for the crate; the
+evidence repo's initial import goes branch + PR (the #288 agent notified
+mid-task; the INDEX/SHA256SUMS diff becomes the reviewable ingest log the
+design intended). Coordinator handles merges.
+
+**AGENT STOPPED BY MAINTAINER 2026-10-05 (the #212 verification agent):**
+while working the e-Helvetica angle it moved from the public SPA surface to
+probing the search backend (`search.e-helvetica.nb.admin.ch`, API v1,
+anonymous credentials) — admin-infrastructure probing is out of bounds; the
+e-Helvetica channel is human-GUI-only by policy. Coordinator stopped it on
+the maintainer's flag. Worktree state at stop: clean, nothing committed,
+nothing pushed (branch never created remotely). Policy going forward:
+e-Helvetica is the ask-list's human-GUI route ONLY; agents never touch its
+backend/API/admin surfaces. The #212 legitimate angles (the 2012 edition's
+prior-years language, the guides-index descriptions, the era page bodies)
+re-dispatch separately under explicit prohibitions.
+
+**#289 MERGED (6debb73) — #288 CLOSED 2026-10-05:** the evidence repo live
+(SharurTrading/exchange-hours-evidence, public, plain git, ~230 MiB pack),
+CI digest enforcement non-vacuous on docs/evidence/ PRs, and `cargo xtask
+verify-evidence --all` verifying 2,860 Documents rows / 42 files / 792
+distinct digests. The initial bulk import was grandfathered (pre-ruleset
+direct push, byte-verified after); all future ingest is branch+PR.
+NOTE: the org-owner token bypasses the rulesets — closing the bypass for
+admin pushes is a maintainer-side ruleset adjustment if wanted.
+
+## 2026-10-05T03:28Z UTC — gate-1.0-acceptance.md refreshed at main `6debb73`: the declaration extinction is total (0 declared-gap records in the walk; 0 `PhaseGap::new` in src/), #157 closed by the #287 verification, the waiver list is exactly #112/#212/#213
+
+Post-convention gate refresh (store-side document task; no crate change — see the data-frozen check below). Supersedes the same-day morning refresh at `a144b5b`.
+
+**Data-frozen check: NOT frozen.** `git diff a144b5b..origin/main --stat -- src/ docs/schedules/` moves 6 files (coverage.rs 67, sourcing.rs 101, eurex.rs 14, coverage-2025.md, verification.md, sources.md) — the #287 eurex no-changes verification and #286's records — so the protocol required a fresh walk, not a document-only refresh.
+
+**Fresh walk** (probe pattern reconstructed from the 2026-10-02 STATUS entry; temp integration test through the public constructors only, deleted after; invariants held on every scope): 33 served scopes (25 Exchanges + 8 keys, ledger-tier-resolved; wire-name collisions `eurex`/`sgx` by tier) × 2010-01-01..2027-12-31 = 216,942 scope-days, executed 2026-10-05 03:08 UTC at `6debb73` in worktree `/private/tmp/wt-gate-refresh2` (branch `gate-refresh-convention`, clean, nothing committed — no crate PR). Raw: `gate-probe-2026-10-05-6debb73.tsv` in this store.
+
+**Headline: 179,513/216,942 (82.7%) Covered; 37,429 refuse, all typed (36,904 OutsideCoveredRange + 525 UnresolvedGap); gate window 31,164/36,135 (86.2%).** Refusal mass: windows 29,725 / carried 5,968 / #151 resolution reach 1,211 (326 in 2025+) / withheld 525 (1:1 rows). **The declared-gap census is ZERO** — no NormalWeekPhaseWithheld, UnpublishedClosureDates, PostCloseQueueTradeDateLabel or SpecialSessionUnrepresentable record anywhere in the walk; `grep -rn "PhaseGap::new" src/` = 0; every `phase_gaps` list empty; the four reasons remain enum vocabulary; the coverage_inventory fence pins 26 complete / 7 incomplete. The #284/#285 count classes (the seven quarter-hour scopes' 5,126 Sundays, crypto's 2,699-day era, the grains regime 322) answer `Covered`, and #287 moved eurex 5,479→6,208 (+729; the walk's only data movement — every other served row is byte-identical to the a144b5b walk after column normalization), gate window 0→729, complete through 2026-12-30 with the 2026-12-31 horizon-boundary reach the only in-window refusal.
+
+**Issue states verified on the tracker 2026-10-05 UTC:** open issues are EXACTLY **#112** (Coinbase desk copy of notice 22-10, absent from the operator's own CMS), **#212** (SIX 2010-2011, named-bytes closer, verification in progress on the era grid pages' legend after the e-Helvetica stop — that channel is human-GUI-only by policy), **#213** (SGX — the rulebook-incorporation angle closed negative by #286, the MOM state side pre-validated and held, the operator artifact the sole closer). **#157 CLOSED (completed) 2026-10-05T02:01Z by #287** and leaves the waiver list; #79/#123/#259 closed by #284's convention; #155 by the horizon ruling; #200 narrowed to the monthly watch; #162 closed as data (#278); **#118 closed out-of-scope (consumer routing) and #119 obsolete 2026-10-04/05** — no plan trackers remain; #288 closed by #289 (the evidence repo, CI digest enforcement and `cargo xtask verify-evidence --all` over 2,860 Documents rows / 42 files / 792 digests are LIVE and cited as the gate's auditability mechanism).
+
+**Defect found in the morning refresh, corrected here:** its headline and sums were fresh (178,784 / 82.4% reproduce from its TSV) but nine per-identity rows (cme, comex, nymex, globex_equity_index/energy/fx/interest_rates/grains/cryptocurrency) and its refusal-mass-by-reason paragraph were carried from the pre-convention walk — they counted the #79/#123/#259 declarations #284 had already retired; its own TSV shows zero declared-gap records at `a144b5b` and cme at 6,014 covered, not the 5,348 its table printed. The refresh re-derives every row and class from the fresh walk; anyone citing the morning numbers should cite `6debb73` instead.
+
+Gate classification (derived, ruling-adjusted): **24 of 33 scopes answer every date inside their operator's published window** (nyse fully; the rest but for the horizon-boundary edge); **9 carry named in-window gaps** (≈300 refusal days: nasdaq 5, cme 113, cbot 139, nzx 5, nse_india 7, sgx_securities 1, lse 18, euronext_paris 7, nikkei 4), each with a live closer in the doc's waiver tables. The ask-list's live asks are down to four (SGX §4, SIX §3, CME desk §6, Coinbase 22-10).
+
+**GATE REFRESH CORRECTION 2026-10-05 (the resume agent's walk):** data was
+NOT frozen at the morning refresh — #287's eurex move landed after it, and
+the morning doc carried nine stale per-identity rows + an extinct 8,147
+declared-gap class. Fresh walk at `6debb73`: **179,513/216,942 (82.7%)
+covered; 2025+ 86.2%; declared-gap census ZERO** (grep + walk confirmed);
+refusal mass: windows 29,725 / carried 5,968 / reach 1,211 / withheld 525.
+**24 of 33 scopes answer every date inside their operator's published
+window; 9 carry named in-window gaps (~300 days total).** Waiver list:
+#112/#212/#213 only — #157 closed by #287. Raw:
+`gate-probe-2026-10-05-6debb73.tsv`.
+
+**CONTRIBUTOR-MYSTERY RESOLVED 2026-10-05:** "maintainerAnton" in the repo's
+Insights graph is the 2009 squat account login `maintainer` (display name
+Anton, id 82028) — credited because PR #274's squash commit (e9759d59)
+carried `Co-authored-by: SharurTrading <maintainer@users.noreply.github.com>`,
+and that legacy-format noreply address belongs to the squatter. Not a hack,
+no access, one cosmetic co-attribution; history rewrite not worth the
+force-push ban breach. Prevention recorded: never invent noreply addresses.
+
+**HISTORY REWORD 2026-10-05 (maintainer-directed): the misattributed
+co-author trailer removed from main.** The squash commit for #274 carried
+`Co-authored-by: SharurTrading <maintainer@users.noreply.github.com>` —
+a legacy-format noreply address owned by the 2009 squat account `maintainer`
+(display "Anton"), which credited the stranger in the Insights graph.
+Rewrite: e9759d59 reworded (trailer stripped) + 11 descendants cherry-picked
+byte-identically (diff old-main..new-main EMPTY). SHA map: 6debb73→73898ca,
+0adb0b4→0b19c6c, f183ede→e175831, a144b5b→(same-lineage), 0c18811→…,
+46a8cf1→…, d15471d→…, 250e166→…, e3bdd3b→…, 3982387→…, 5a4b7fb→…, e9759d5
+→(reworded). PRs #290/#291 rebased onto the new main (heads 5f3bcc9 /
+0a315c6). Local main updated; release/1.0.0 unaffected (forked pre-rewrite).
+CI re-validating the new lineage. Historical SHA citations in earlier
+records refer to the pre-rewrite lineage (content identical).
+
+**TERMINAL STATE 2026-10-05 (main `a24d4ef`, all work merged):** local
+full-chain verification GREEN on the maintainer's bypass-merged main (fmt,
+clippy, nextest 1282/1282, doc tests, rustdoc, deny, MSRV 1.95, the
+evidence digest fence non-vacuous against the public evidence repo). Final
+gate walk: **180,245/216,942 (83.1%) covered 2010-2027; 86.2% in 2025+**;
+SIX complete floor→published-horizon (#290's TSC rows; the legend
+discriminator calibrated 12/12). Raw: `gate-probe-2026-10-05-a24d4ef.tsv`.
+**OPEN ISSUES: ONE — #112** (Coinbase desk copy of notice 22-10; the
+bridging route closed negative by #291, the desk ask sharpened to request
+the Friday early-close cell). Every other issue of the 2026-09/10 programme
+is closed: as data, by convention, by ruling, or with an exhaustive
+recorded negative + named external closer. The release is a RELEASING.md
+act on the maintainer's call; the weekly watch (next 2026-10-11) carries
+the forward horizons.
+
+## 2026-10-05T05:4xZ UTC — second-retrieval review of PR #290 (six 2010-2011 TSC market-holiday rows, closes #212): BLOCK — one blocking defect, a CHANGELOG window-count error; every data row, the legend mapping, the no-flag discriminator and the 12/12 CHC-2019↔TG-2018 calibration re-derived and confirmed at head `a353b8d3cf8f5b8867f339450836ec2d78eda290`
+
+Worktree `/private/tmp/wt-review-290` (detached at the head; left in place). The
+PR merged externally mid-review (squash `6357b0a`, parent `73898ca`; tree
+diff vs the reviewed head EMPTY; rebased head `5f3bcc9` also tree-identical),
+so the verdict applies verbatim to what shipped.
+
+Recomputed with this review's own tools (regex/DOM-lite HTML parser; PyMuPDF
+drawings + word-coverage; `shasum -a 256`; `pdftotext`; full cargo chain):
+
+- Legend: `#ccddff` swatch → `SIX Swiss Exchange Market holiday` and
+  `chf@fyb8oms8.gif` → `Currency holiday` in all three HTML witnesses' raw
+  bytes AND independently in the CHC-2019 PDF legend. Both prose sentences
+  verbatim in all four documents.
+- Grids: 2010 = 78 rows / exactly 7 shaded (both captures identical
+  mark-for-mark on all 78 `(date,fill,chf)` triples); 2011 = 81 / exactly 6;
+  0 Sat/Sun rows; none of the 11 weekend falls appears as a row;
+  2010-12-24 and 2010-12-31 are the only shaded-no-CHF rows; no
+  CHF-flag-without-shading row exists.
+- Calibration: CHC-2019 has exactly 13 `#ccddff` strips = 12 full-width date
+  rows + the 18×12 pt legend swatch (x≈29.3, no date text); the 12 dates
+  equal the TG-2018 guide's independently re-derived 2019 dark cells — 12/12,
+  no false positive or negative. (The guide's 2018 set also matches the
+  module's `SIX-TG-2018` rows.)
+- Module: 171 rows, all Closed/T1, sorted, weekdays only, coverage contiguous
+  2010-01-01..2027-12-31 over **five** spans; the 13 TSC rows equal the
+  re-derived shaded sets. All six touched Documents digests reproduce. TGI
+  witness content claims verified (DE name-only; EN `valid as of` 11.01.2010;
+  FR `&agrave; compter du` 11.01.2010). The 2012-edition angle re-checked:
+  its only "2011" is the `valid as 1st February 2011` line.
+- Chain at head: fmt/clippy/nextest 1282/1282/doc-tests/rustdoc/deny and
+  `+1.95 check` all green. Runtime probe (temp test, deleted): 13 dates
+  Closed/T1, ordinary weekdays open, 2012-01-02 seam closed, 2009-12-31
+  `BeforeSupportFloor`. Mutation 2011-08-01→08-02 fails exactly three fences;
+  tree restored.
+- Store: `cdx-retry-2026-09-30/INDEX.md` correction paragraph present with
+  the reasoning; `tsc-market-holiday-derivation-20261005.txt` matches this
+  review's independent outputs.
+
+**Defect (blocking class — wrong count):** `CHANGELOG.md` `[Unreleased]` →
+**Fixed**, six entry: "grow from 158 rows over five windows to 171 rows over
+six" — the module went from **four** windows to **five** (the PR's own test
+message, evidence file, coverage-2025.md and the ledger all say five; the
+previous six entry calls the same 158-row state "four windows"). Row counts
+158→171 correct. One-line fix. Nothing else failed any check.
+
+**Environmental note:** this review's worktree was deleted mid-run by an
+external process (a Codex CLI agent is active on the machine; the chain log
+records `Could not locate working directory` after nextest had passed
+1282/1282) — corroborating the PR author's recovered-tree report. Worktree
+recreated at the same commit; remaining chain steps re-run clean.
+
+Report posted: https://github.com/SharurTrading/exchange-hours-rs/pull/290#issuecomment-5988356243
+
+**ZERO SUBSTANTIVE OPEN ISSUES 2026-10-05 (main `c807a39`): #112 CLOSED by
+#298** — the flanking-intersection closure (the maintainer's recurring-
+arrangement principle; Thursday Closed + Friday early_close 12:15 CT, cited
+to the later flank CDE-MN-23-16 with the derivation in prose; the
+digest-uniqueness fence correctly rejected the composite-id first draft).
+The only open issue is #296 (the flanking-intersection ARCHITECTURE — the
+engine generalization, its own tracked work). The release cut + disclaimer
+are merged; the tag awaits the carried-class PRs and the maintainer's go.
+
+**#299 MERGED (CI green; retro-review queued for the quota window): the
+CME-side carried spans retired.** Seven families verified no-changes
+(cbot/grains to 2010-03-15's table; comex/nymex/energy to 2012-05-11's
+capture; fx to 2012-05-03's; silver likewise) — horizons at the floor,
+~3,700 days answering. The equities half (asx/sgx/paris/istanbul/tadawul/
+nzx, ~2,400 days) queued behind the 17:52 UTC quota reset.
+
+**#300 FILED (maintainer bar 2026-10-06): 100% accuracy before v1.0.0** — the
+tracking umbrella: the intersection-engine generalization (#296's design,
+implemented) + every remaining gap to data / verified-no-changes / ruling.
+Checklist in the issue. The in-flight agents (the equities carried-half, the
+#212 TSC verification) feed its checkboxes. Note the bar redefines "best
+effort": provenance stays best-effort, ACCURACY is 100% — every answer right,
+every refusal naming its exact closer.
+
+**#302 MERGED 2026-10-06: the README coverage passage states the
+sourced-or-verified-carried behavior** (the 2026-10-05/06 no-changes
+verifications' shape: every date inside a scope's published horizon
+answers — sourced or verified carried; the flanking intersection serves
+undated changeovers; typed errors where evidence runs out; the 28/95
+Basis-gap count sentence fence-verified). Badges verified
+registry-derived (auto-flip to 1.0.0 post-publish). PR #293's changelog
+window-count fix also landed earlier the same day.
+
+## 2026-10-06 UTC — domain-lineage sweep (the maintainer's operator-domains directive; worktree `wt-domain-lineage` at origin/main 8953c69, branch `domain-lineage-sweep`)
+
+Per-venue verdicts, artifacts under `holidays/raw/<venue>/domain-lineage-2026-10-06/` (each with INDEX.md + SHA256SUMS.txt):
+
+- **nse_india — FOUND.** Five Muhurat CM circulars recovered and encoded as
+  `ReplacementBlocks` rows (2020-11-14 CMTR46230, 2022-10-24 CMTR54023,
+  2023-11-12 CMTR59124, 2024-11-01 CMTR64628, 2025-10-21 CMTR70319; each a
+  Wayback `id_` replay, 2022-2025 byte-identical to the `nse-muhurat/`
+  working copies). Nine Muhurat dates stay `Unsourced`; per-year negatives
+  recorded (2011's CMTR19187 named by the operator's own circ_latest capture
+  but uncaptured; FAOP19189 F&O twin captured but keys no CM row; 2026 not
+  yet issued/captured). PR opened.
+- **tadawul — FOUND.** The Arabic Trading Times page's 2010-01-12 keying
+  capture shares Wayback digest `WWEWH2B6…` with 2009-09-12 and 2009-11-12;
+  both `id_` replays re-fetched and sha256-verified byte-identical to the
+  stored artifact (8d5a8681…). Horizon moves to the 2010-01-01 floor; the
+  11-day carried region is sourced. Same change carries the sgx/iceus/six
+  negatives into their evidence files.
+- **sgx_securities — NEGATIVE.** ses.com.sg (2000-era only), info.sgx.com
+  (Lotus apps; its Trading Calendar 2009.pdf is a derivatives-scoped genre
+  witness, fetched), sgx.com/others/ (zero captures). #213 stays open, ask
+  sharpened to a securities-market artifact.
+- **iceus — NEGATIVE.** nybot.com zero 200-captures 2009-2013; theice.com
+  productguide spec pages first 2011-11, products/*.jhtml first 2012-06; the
+  marketdata special-hours calendar pages are client-side shells; CFTC
+  submission 12-1 (2012-01-10) fetched — it is the already-carried 2012-01-30
+  change. The Aug-2011 terminal answer stands.
+- **six — NEGATIVE.** Every href the 2010 guides-index and archive-index
+  captures link probed by exact URL: only the TTC overview (2017) has a 200
+  capture; the 11-January-2010 guide edition stays uncaptured; the TSC rows
+  stand.
