@@ -1,0 +1,382 @@
+<html>
+<head>
+<title>SGX - Singapore Exchange Ltd - Powered by Complinet</title>
+<link rel="stylesheet" TYPE="text/css" HREF="css/style.css">
+<!--[if IE 7]>
+<link rel="stylesheet" TYPE="text/css" HREF="css/style-ie7.css">
+<![endif]-->
+
+
+
+<script language="javascript">
+imgopen = new Image();
+imgopen.src = '//synd/sgx/images/rnav_plus.gif';
+imgclose = new Image();
+imgclose.src = '//synd/sgx/images/rnav_minus.gif';
+
+function toggle(p) {
+	//alert(document.getElementById('catbox'+p).style.display);
+        o = (document.getElementById('catbox'+p).style.display != 'none') ;
+        document.getElementById('catbox'+p).style.display = o ? 'none' : 'block' ;
+        document.getElementById('img'+p).src = o ? imgopen.src : imgclose.src ;
+
+}
+
+<!-- Are you sure you want to go to Complinet?
+function confirmLink() 
+{
+    var agree = confirm("You are leaving the SGX Website. To return to the SGX rules, please click cancel");
+    return (agree) ? true : false;
+}
+// -->
+
+ </script>
+</head>
+<body marginwidth=0 marginheight=0 leftmargin=0 topmargin=0 >
+<div id="page-wrapper">
+
+<table cellpadding="0" cellspacing="0" border="0" width="1000">
+<tr>
+    <td colspan="3">
+        <link rel="stylesheet" TYPE="text/css" HREF="/share/css/header-new.css">
+<link rel="stylesheet" TYPE="text/css" HREF="css/header-new.css">
+<div id='header-new'>
+    <ul>
+        <li id="hn-sgx-logo">
+            <a href="http://www.sgx.com" title="Singapore Exchange">
+                Singapore Exchange
+            </a>
+        </li>
+        <li id="hn-sqxnet">
+            <a href="http://www.sgxnet.sgx.com" title="Sgxnet">
+                Sgxnet
+            </a>
+        </li>
+        <li id="hn-about-us">
+            <a href="http://www.sgx.com/wps/portal/corporate/cp-en/about_sgx" title="About Us">
+                About Us
+            </a>
+        </li>
+        <li id="hn-investor">
+            <a href="http://www.sgx.com/wps/portal/marketplace/mp-en/investor_centre" title="Investor Relations">
+                Investor Relations
+            </a>
+        </li>
+        <li id="hn-careers">
+            <a href="http://www.sgx.com/wps/portal/corporate/cp-en/about_sgx/careers" title="Careers">
+                Careers
+            </a>
+        </li>
+        <li id="hn-contact">
+            <a href="http://www.sgx.com/wps/portal/corporate/cp-en/home/contact_us" title="Contact Us">
+                Contact Us
+            </a>
+        </li>
+        <li id="hn-faq">
+            <a href="http://www.sgx.com" title="FAQ">
+                FAQ
+            </a>
+        </li>
+        <li id="hn-english">
+            <a href="http://www.sgx.com" title="English">
+                English
+            </a>
+        </li> 
+        <li id="hn-chinese">
+            <a href="http://www.sgx.com/wps/portal/corporate/cp-ch/home/" title="Chinese">
+                Chinese
+            </a>
+        </li> 
+        <li id="hn-search">
+			&nbsp;
+        </li>                    
+    </ul>    
+</div>    </td>
+</tr>
+<tr>
+    <td colspan="3">&nbsp;</td>
+</tr>
+<tr>
+    <td width="300" valign="top">
+           
+                <!--<ul id="sgx-side-navigation">
+                    <li>
+                        <a href="#" title="#">
+                            MarketPlace Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="#">    
+                            Prices, Indices, Statistics 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="#">  
+                            Listed Companies 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="#">  
+                            Investor Centre
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="#">  
+                            Market Professionals
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="#">  
+                            Trading on SGX 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="#">  
+                            Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="#">  
+                            Quick Links
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="#">  
+                            SGX Corporate Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="#">  
+                            The Central Depository (Pte) Limited
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="#">  
+                            Search
+                        </a>
+                    </li>
+                </ul>-->
+     			<div id="search">
+					<div id="boxheader" class="front-page-search-panel-header">
+                    	Search the SGX Rulebooks
+                    </div>
+					<div id="box" class="front-page-search-panel">               
+                    <form name='form1' method='get' action='en/search/search.html'>
+						
+						<label for="and_words">
+							Quick Search	
+						</label>
+					  <input type=text size='20' name='and_words' id='and_words' value="Enter criteria here" onFocus="if
+(this.value==this.defaultValue) this.value='';" class="quick-search-input"/>
+<a href="javascript:document.form1.submit();" class="go" title="Go">Go</a>
+					  <input name='start' type='hidden' value='0' />
+
+					  <input name='rbid' type='hidden' value='3271' />
+					  <input name='submitted' type='hidden' value='1' />
+					  <input name='allbox' type='hidden' value='1' />
+					  <input name='sortorder' type='hidden' value='0' />
+					  <input name='numresults' type='hidden' value='20' />
+				    </form>
+					
+                    
+					<form name='form2' method='get' action='/en/search/search.html'>
+						<label for="rulenumber">
+							Rule Number
+						</label>
+                        
+					  <input type=text size='20' name='rulenumber' id='rulenumber' value="Enter Rule Number here" onFocus="if
+(this.value==this.defaultValue) this.value='';" class="quick-search-input"/>
+<a href="javascript:document.form2.submit();" title="Go" class="go">Go</a> 
+					  <input name='submitted' type='hidden' value='1' />
+					  <input name='rns' type='hidden' value='1' />
+					  <input name='sortorder' type='hidden' value='2' />
+
+					  <input name='numresults' type='hidden' value='20' />
+					  <input name='rbid' type='hidden' value='3271' />
+                      <input name='start' type='hidden' value='0' />
+				   	  <input name='rns_chapter[]' type='hidden' value='3271000411' />
+					  <input name='rns_chapter[]' type='hidden' value='3271000424' />
+				  	  <input name='rns_chapter[]' type='hidden' value='3271000466' />
+				  	  <input name='rns_chapter[]' type='hidden' value='3271000635' />
+				  	  <input name='rns_chapter[]' type='hidden' value='3271000927' />
+                    </form>
+					
+                    <p style="clear:both"><a href="/en/search/search.html?rbid=3271" title="Advanced search">Advanced search</a></p>
+			</div>
+			<br/>
+				<div id="updates">
+                	<a href="/en/nav/updates.html?rbid=3271" title="View Updates">View Updates</a>
+                </div>
+                <div id="updates">
+                	<a href="mailto:rules@sgx.com" title="Send us some feedback">Feedback</a>
+                </div>
+                
+                
+				<div id="complinet">
+                    <a href="http://www.complinet.com" onClick="return confirmLink()" title="Complinet website" target="_blank">
+                        <img src="images/complinet_powered.gif" border="0">
+                    </a>
+                </div>         
+
+</td>
+<td width="30">&nbsp;&nbsp;&nbsp;</td>
+<td width="650" valign="top" style="padding-top:10px">
+    <h1>SGX Rulebooks</h1>
+    
+    <p>There are altogether 7 Rulebooks issued by the SGX. These Rulebooks contain the various rules governing the listing, clearing, trading and depository services that the industry needs to comply with. The Rulebooks are often updated and revised to keep pace with market developments.</p>
+    
+<p>The diagram below shows the relationship between the rulebooks and the activities undertaken by SGX. For relationship between Rulebooks and Statutory requirements, <a href="http://www.sgx.com/wps/portal/corporate/cp-en/regulation/rulebooks_manuals/mainboard_rules/order_of_precedence">click here</a>.</p>
+
+    <div id="menu-imagemap">
+        <dl>
+            <dt class="vt">
+                <a href="#" title="Rulebooks">
+                    Rulebooks
+                </a>
+            </dt>
+            <dt class="top dt-first">
+                <a href="#" title="Securities">
+                    Securities
+                </a>
+            </dt>
+            <dd class="mid first">
+                <a href="#" title="Listing - SGX-ST Listing Manual">
+                    Listing
+                    <span>
+                        SGX-ST Listing Manual
+                    </span>
+                </a>
+            </dd>
+            <dd class="mid second">
+                <a href="/en/display/display_main.html?rbid=3271&element_id=889" title="Trading - SGX-ST Rules">
+                    Trading
+                    <span>
+                        SGX-ST Rules
+                    </span>
+                </a>
+            </dd>
+            <dd class="mid third">
+                <a href="/en/display/display_main.html?rbid=3271&element_id=889" title="Clearing / settlement - CDP Clearing Rules" class="mid-a">
+                    Clearing / settlement
+                    <span>
+                        CDP Clearing Rules
+                    </span>
+                </a>
+                <a href="/en/display/display_main.html?rbid=3271&element_id=2" title="DVP Rules" class="mid-b">
+                    <span>
+                        DVP Rules
+                    </span>
+                </a>
+            </dd>               
+            <dd class="mid forth">
+                <a href="/en/display/display_main.html?rbid=3271&element_id=3835" title="Depository - CDP Rules">
+                    Depository
+                    <span>
+                        CDP Rules
+                    </span>
+                </a>
+            </dd>     
+            <dd class="bot first">
+                <a href="/en/display/display_main.html?rbid=3271&element_id=4830" title="Listing - Mainboard Rules">
+                    Listing
+                    <span>
+                        Mainboard Rules
+                    </span>
+                </a>
+            </dd>        
+            <dd class="bot second">
+                <a href="/en/display/display_main.html?rbid=3271&element_id=3176" title="Listing - Catalist Rules">
+                    Listing
+                    <span>
+                        Catalist Rules
+                    </span>
+                </a>
+            </dd> 
+            <dt class="top dt-second">
+                <a href="#" title="Derivatives">
+                    Derivatives
+                </a>
+            </dt>       
+            <dd class="mid fifth">
+                <a href="/en/display/display_main.html?rbid=3271&element_id=2587" title="Listing / Trading - Future Trading Rules">
+                    Listing / Trading
+                    <span>
+                        Future Trading Rules
+                    </span>
+                </a>
+            </dd>                
+            <dd class="mid sixth">
+                <a href="/en/display/display_main.html?rbid=3271&element_id=1903" title="Clearing - SGX-DC Clearing Rules">
+                    Clearing
+                    <span>
+                        SGX-DC Clearing Rules
+                    </span>
+                </a>
+            </dd>
+            <dd class="bot fifth">
+                <a href="/en/display/display_main.html?rbid=3271&element_id=3826" title="Arbitration - SIAC DT Arbitration Rules">
+                    Arbitration
+                    <span>
+                        SIAC DT Arbitration Rules
+                    </span>
+                </a>
+            </dd>        
+            <dd class="bot sixth">
+                <a href="/en/display/display_main.html?rbid=3271&element_id=3817" title="Arbitration - SIAC DC Arbitration Rules">
+                    Arbitration
+                    <span>
+                        SIAC DC Arbitration Rules
+                    </span>
+                </a>
+            </dd> 
+        </dl>
+    </div>
+    <h2> Directives, Practice Notes and Circulars</h2>
+	<p>In addition to the Rulebooks, the Exchange deploys the following documents to communicate with its participants and members.</p>
+ 	<ol>
+         <li><strong>Directives</strong>. Directives are binding notices directing Members to take corrective or other actions in the interests of a fair and orderly market or in light of investor protection concerns.</li>
+        <li><strong>Practice Notes</strong>. Practice Notes are non-binding guidelines that seek to explain the application and interpretation of a Rule.</li>
+        <li><strong>Circulars</strong>. Circulars are binding notices issued by the Exchange regarding regulatory and nonregulatory matters pertaining to the Market.</li>
+    </ol>
+</td>
+</tr>
+</table>
+
+<div id="footer">&nbsp;<!--
+<a href="#">Contact Us</a> | <a href="">Terms of Use</a><br />All Rights Reserved. Copyright &copy; 2003 Singapore Exchange Ltd. Company Reg. No. 199904940D-->
+<a href='http://www.sgx.com/wps/portal/marketplace/mp-en/home/contact_us'>Contact Us</a> | <a href='http://www.sgx.com/wps/portal/marketplace/mp-en/home/terms_of_use'>Terms of Use</a>
+</div>
+<meta name="DCSext.naps" content="" />
+<meta name="DCSext.group_id" content="" /><!-- START OF SmartSource Data Collector TAG -->
+<!-- Copyright (c) 1996-2006 WebTrends Inc.  All rights reserved. -->
+<!-- $DateTime: 2006/03/01 12:51:54 $ -->
+<script type="text/javascript"><!--
+var gDomain="sdc.complinet.com";
+var gDcsId="dcswxcnr3bicr9q4vau70hrcf_5u2g";
+var gFpc="WT_FPC";
+var gConvert=true;
+if ((typeof(gConvert)!="undefined")&&gConvert&&(document.cookie.indexOf(gFpc+"=")==-1)&&(document.cookie.indexOf("WTLOPTOUT=")==-1)){
+    document.write("<SCR"+"IPT TYPE='text/javascript' SRC='"+"http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+gDomain+"/"+gDcsId+"/wtid.js"+"'><\/SCR"+"IPT>");
+}
+//-->
+</script>
+<script src="/share/global/webtrends_stats/sdcTrackingCode.js" type="text/javascript"></script>
+<noscript>
+	<div>
+		<img alt="" id="DCSIMG" width="1" height="1" src="http://sdc.complinet.com/dcswxcnr3bicr9q4vau70hrcf_5u2g/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" />
+	</div>
+</noscript>
+<!-- END OF SmartSource Data Collector TAG -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2818883-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script><br>
+</div>
+</body>
+</html>

@@ -142,7 +142,11 @@ confirm the observed CNY pair, which the 2023 ICS leaves unshifted.
 
 - 2011: 3 Feb, 4 Feb, 22 Apr, 2 May, 17 May, 9 Aug, 30 Aug, 26 Oct, 7 Nov,
   26 Dec (10 dates: CNY Thu+Fri; Labour/HRH/Christmas Sundays -> Mondays
-  2 May / 7 Nov / 26 Dec).
+  2 May / 7 Nov / 26 Dec). The gazetted list is 12 dates, not 11 — the
+  press release (2010-04-24, pre-Writ) prints 11, and the in-year page
+  (retrieved 2026-10-05, below) adds GE2011 Polling Day Saturday 7 May 2011,
+  which closes no weekday; the same page confirms Deepavali 26 Oct 2011
+  "as previously announced".
 - 2012: 2 Jan, 23 Jan, 24 Jan, 6 Apr, 1 May, 9 Aug, 20 Aug, 26 Oct, 13 Nov,
   25 Dec (10).
 - 2013: 1 Jan, 11 Feb, 12 Feb, 29 Mar, 1 May, 24 May, 8 Aug, 9 Aug, 15 Oct,
@@ -151,10 +155,17 @@ confirm the observed CNY pair, which the 2023 ICS leaves unshifted.
 - 2020: 1 Jan, 27 Jan, 10 Apr, 1 May, 7 May, 25 May, 10 Jul (Polling Day),
   31 Jul, 10 Aug, 25 Dec (10).
 - 2021: 1 Jan, 12 Feb, 2 Apr, 13 May, 26 May, 20 Jul, 9 Aug, 4 Nov (8).
-- 2022: 1 Feb, 2 Feb, 15 Apr, 2 May, 16 May, 9 Aug, 24 Oct, 26 Dec (8).
-- 2023: 2 Jan, *23 Jan*, *24 Jan*, 7 Apr, 1 May, 29 Jun, 9 Aug, 13 Nov,
-  25 Dec (9; the observed CNY pair Mon 23 + Tue 24 per the Holidays Act
-  next-day shift).
+- 2022: 1 Feb, 2 Feb, 15 Apr, 2 May (Labour Day in-lieu Monday), **3 May
+  (Hari Raya Puasa — corrected 2026-10-05: the 2021-04-21 ICS pre-announced
+  2 May; MOM's in-year page prints 3 May)**, 16 May (Vesak in-lieu Monday),
+  **11 Jul (Hari Raya Haji in-lieu Monday — corrected 2026-10-05: missing
+  from this aid; the 10 July Sunday holiday shifts to the Monday, per MOM's
+  in-year page sentence)**, 9 Aug, 24 Oct, 26 Dec (10, was 8).
+- 2023: 2 Jan, *23 Jan*, *24 Jan*, 7 Apr, 1 May, 29 Jun, **1 Sep (Polling
+  Day, PE2023 — corrected 2026-10-05: missing from this aid; the 2022-05-19
+  ICS predates the Writ)**, 9 Aug, 13 Nov, 25 Dec (10, was 9; the observed
+  CNY pair Mon 23 + Tue 24 per the Holidays Act next-day shift is confirmed
+  by MOM's in-year page sentence).
 - 2024: 1 Jan, 12 Feb, 29 Mar, 10 Apr, 1 May, 22 May, 17 Jun, 9 Aug, 31 Oct,
   25 Dec (10).
 
@@ -168,3 +179,124 @@ equivalent from inside the span, e.g. a member notice or a readable calendar
 page). The state-side dates are held and validated above; the operator leg
 alone would complete the composite. The archive.today 2012-09-10 snapshot
 remains the one human-side lead for the 2011-2013 span.
+
+## 5. The MOM-channel completeness record — 2026-10-05 UTC (sixth pass)
+
+The desk-ask leg the maintainer set on 2026-10-05: the state channel is now
+complete for both gap spans — every gap year has its full gazetted list held
+from the state's own dated bytes, with the in-year pages that witness
+corrections the pre-announcement feeds lacked — so the ask to SGX's data desk
+reduces to the single operator-leg artifact. Retrieval instants 2026-10-05
+03:53-04:35 UTC; six new artifacts, digests appended to `SHA256SUMS.txt`
+(now 41, all verified).
+
+### The in-year state pages, retrieved
+
+All `web.archive.org/web/<ts>id_/` verbatim replays of
+`www.mom.gov.sg/employment-practices/public-holidays`; each page prints three
+year tabs, so adjacent captures re-witness each other's years (the 2022 and
+2023 tabs were compared across captures and are identical row for row).
+
+| File | Capture (UTC) | Tabs held | Page last-updated stamp |
+|---|---|---|---|
+| `mom_public_holidays_2021_inyear_capture-20211202194832.html` | 2021-12-02 | 2020, 2021, 2022 | 06 April 2021 (2021 tab) |
+| `mom_public_holidays_2022_inyear_capture-20221209222837.html` | 2022-12-09 | 2021, 2022, 2023 | 28 September 2022 (2022 tab) |
+| `mom_public_holidays_2023_inyear_capture-20231209020041.html` | 2023-12-09 | 2022, 2023, 2024 | 24 May 2023 (2023 tab) |
+| `mom_public_holidays_2024_inyear_capture-20241209073548.html` | 2024-12-09 | 2023, 2024, 2025 | 05 August 2024 (2024 tab) |
+| `mom_public_holidays_2011_inyear_capture-20111229112222.html` | 2011-12-29 | 2011, 2012 | 18 August 2011 |
+| `mom_public_holidays_2012_inyear_capture-20121115142156.html` | 2012-11-15 | 2012, 2013 | 11 July 2012 |
+
+The old-era page path
+`employment-practices/employment-rights-conditions/leave-and-holiday/Pages/PublicHolidays<year>.aspx`
+renders its table server-side and the 2011 and 2012 replays above carry it in
+full; the `PublicHolidays2013.aspx` in-2013
+replays (2013-09-02, 2013-09-20, 2013-10-06, 2013-11-11) were probed and are
+table-less shells in their served bytes — 2013's in-year witnesses remain the
+two successor-URL captures already in section 2 (2013-01-24 pre-correction,
+2013-11-03 post-HAB-correction).
+
+### Per-year completeness — 2020-2024 (all held, corrections recorded)
+
+Weekday closures per year, from the state's own pages (gazetted dates +
+MOM's printed substitution sentences), each confirmed by two captures or by
+capture + ICS:
+
+- **2020 — complete (10 weekday closures).** 1 Jan, 27 Jan (CNY in-lieu),
+  10 Apr, 1 May, 7 May, 25 May (Puasa in-lieu), 10 Jul (Polling Day, GE2020,
+  s.35 Parliamentary Elections Act sentence printed), 31 Jul, 10 Aug
+  (National Day in-lieu), 25 Dec. Deepavali 14 Nov (Sat) and CNY 26 Jan
+  (Sun) close no weekday. Witnessed by the in-2020 page (2020-06-27, held
+  since the fifth pass) and the 2020 tab of the 2021-12-02 capture.
+- **2021 — complete (8).** 1 Jan, 12 Feb, 2 Apr, 13 May, 26 May, 20 Jul,
+  9 Aug, 4 Nov. Saturdays 1 May (Labour), 25 Dec (Christmas) and 13 Feb (CNY
+  second day) close no weekday; the page prints `Saturday, 21 August 2021 is
+  not a public holiday.` (no election holiday that year). Witnessed by the
+  2021-12-02 and 2022-12-09 captures.
+- **2022 — complete (10).** 1 Feb, 2 Feb, 15 Apr, 2 May (Labour in-lieu),
+  **3 May (Puasa — the 2021-04-21 ICS pre-announced 2 May; the in-year page
+  prints 3 May and the in-lieu Monday 2 May)**, 16 May (Vesak in-lieu),
+  **11 Jul (Hari Raya Haji in-lieu — a Sunday holiday shifting to Monday,
+  absent from both the ICS and the fifth pass's working aid)**, 9 Aug,
+  24 Oct, 26 Dec (Christmas in-lieu). Witnessed by the 2022-12-09 and
+  2023-12-09 captures, identical.
+- **2023 — complete (10).** 2 Jan (New Year in-lieu), 23 Jan + 24 Jan (the
+  observed CNY pair; the page's own sentence: `Tuesday, 24 January 2023,
+  will be a public holiday.`), 7 Apr, 1 May, 29 Jun, 9 Aug, **1 Sep (Polling
+  Day, PE2023 — absent from the 2022-05-19 ICS, which predates the Writ)**,
+  13 Nov (Deepavali in-lieu, page sentence printed), 25 Dec. Witnessed by
+  the 2023-12-09 and 2024-12-09 captures, identical.
+- **2024 — complete (10).** 1 Jan, 12 Feb (CNY in-lieu, page sentence
+  printed), 29 Mar, 10 Apr, 1 May, 22 May, 17 Jun (the page prints the
+  in-lieu Monday as the Hari Raya Haji date itself), 9 Aug, 31 Oct, 25 Dec.
+  Witnessed by the 2024-12-09 capture; the ICS (2023-06-08) agrees date for
+  date once the CNY in-lieu sentence is applied.
+
+No year 2020-2024 carries any exchange-specific extra or any gazetted weekday
+closure the exchange would have had to ignore: each list is the standard
+11-12 gazetted dates (10 on weekdays after the substitutions), matching the
+structure the crate's sourced 2014-2019 sheets show.
+
+### 2011-2013 retrievability — what survives
+
+- **2011:** the press release (2010-04-24) + ICS (2010-07-09) from the fifth
+  pass, plus the **in-year page (2011-12-29 capture, last updated
+  18 August 2011)**, which prints the full 2011 table, the footnote
+  `Deepavali will be on 26 October 2011 as previously announced` (the
+  almanac confirmation), and **GE2011 Polling Day, Saturday 7 May 2011**,
+  with the s.35 Parliamentary Elections Act footnote — the gazetted 2011
+  list is 12 dates and closes 10 weekdays, exactly the aid's set.
+- **2012:** pre-announcement page (2011-04-08) + ICS (2011-04-11) + the
+  **in-year page (2012-11-15 capture, last updated 11 July 2012)**, whose
+  footnote reads `Deepavali will be on 13 November 2012 as previously
+  announced` — plus the in-2013 re-print (2013-01-25) from the fifth pass.
+  Ten gazetted dates, ten weekday closures, unchanged from the aid.
+- **2013:** the two successor-URL in-year captures (2013-01-24 with
+  Deepavali pending; 2013-11-03 with the HAB correction to Saturday
+  2 November 2013 and `4 November 2013 (Monday) will not be a public
+  holiday`) — the 2013 weekday set (10, CNY observed Mon 11 + Tue 12 per the
+  page's own Sunday-substitution sentence) is unchanged. The
+  `PublicHolidays2013.aspx` replays are shells (above).
+- **The gazette-notification-number channel does not survive retrievably.**
+  Probed 2026-10-05 UTC: `sso.agc.gov.sg` as-published S-number guesses for
+  the GE2011 polling-day notification return Page Not Found shells; the
+  `egazette.com.sg` portal's Wayback footprint for 2011-2013 is session-gated
+  browse pages (302s) and 404 PDFs; no 2011-2013 gazette issue PDF survives
+  in the probes. The MOM channel above is the state's surviving record, and
+  it is complete on its own terms.
+
+### The sharpened desk ask
+
+The SGX-ST securities calendar page was a JS shell for non-archive clients in
+2020-2024 (its content-api query for the retired path served `route:null`;
+the current page's own captures begin 2026), and the page family's 2010-2013
+era has no capture after May 2009. The state side is complete: MOM's gazetted
+lists for 2011-2013 and 2020-2024 are held here, from the state's own dated
+bytes, corrected to the in-year record, and the derivation
+`gazetted date + MOM substitution sentence, weekdays only` reproduces the
+crate's every sourced year (2014-2019) exactly. What closes #213 is one
+**operator** artifact dated inside either span showing the securities market
+adopted those dates — any of: an export or screenshot of the securities
+Trading Hours & Calendar page for 2020, 2021, 2022, 2023 or 2024; an annual
+SGX securities trading-schedule notice; or a member notice printing the
+year's closures or half days. With the desk's artifact, rows key immediately
+from this store against the derivation already validated.

@@ -51,3 +51,35 @@ Third forward re-check wave (after the 2026-09-26 `cde-2026-2027/` round and the
   (2022-12-26 `Closed`) already ship from the archived copy.
 
 `SHA256SUMS.txt` beside this file lists every artifact's digest.
+
+## 2026-10-05 (UTC) — the sibling full-text read closes the bridging route (#112)
+
+Task angle for issue #112: read the retrieved siblings' full texts completely for bridging
+language — a sentence carrying a default schedule 22-10 could composite against, or a
+cross-reference witnessing 22-10's contents. Negative on both, corpus-wide:
+
+- Full reads: 22-11, 26-33.3, 26-37 (this directory's `txt/`), and from `../../cde-2021-2025/txt/`
+  the holiday family 21-06, 22-07, 22-08, 23-16, 24-21, 25-37 plus 26-27.1. A phrase scan over all
+  56 stored text dumps (53 + these 3) for `except as`, `all other hours/dates`, `unchanged`,
+  `standard schedule`, `supersed*`, `amend(s) notice`, `see also`, `previously issued/published`,
+  `regular hours apply`, `default schedule` finds no other candidate sentence: the only
+  cross-references in the whole corpus are 26-27.1's "Amendment: This notice supersedes Market
+  Notice 26-27 …" and 26-33.3's "This notice amends Market Notice 26-33.2 and Market Notice
+  26-25 (published 05/20/2026)." — the operator states amendment lineages explicitly, and 22-11
+  carries no such sentence toward 22-10.
+- The nearest things to bridging sentences point inside the same notice or at the separate 24x7
+  listing: 23-16 "Please see below description of Coinbase Derivatives hours of operations and
+  settlement information.", 24-21 "Please see the table below for the detailed Coinbase
+  Derivatives hours of operation and settlement information around the holiday schedule.",
+  25-37 "Additional details on 24x7 hours can be found here." Every holiday notice is a
+  self-contained three-trade-date grid; none references a standard hours document.
+- No other 2022-11-era item exists: the live listing's posted dates carry no row between 22-08
+  (11/10/2022) and the 12/12/2022 trio 22-07/22-10/22-11.
+- Template note (predictable, NOT evidence): the shared template makes 22-10's missing section
+  predictable in form — three trade dates, "Closed for holiday" on Thursday 11/24, and in all four
+  observed Thanksgiving years the same notice also states the Friday-after early close (21-06
+  Equity 12:15 CT / Energy 12:45 CT; 23-16 Equity 12:15 CT / Crypto+Energy 12:45 CT; 24-21 all
+  groups 13:45 CT; 25-37 Energy & Metal 13:45 CT / Equity 12:15 CT). The desk ask therefore
+  requests the Friday 11/25 close cell too, not the Thursday closure alone.
+
+Recorded in the repo's `docs/evidence/coinbase_derivatives.md` #112 bullet the same date.

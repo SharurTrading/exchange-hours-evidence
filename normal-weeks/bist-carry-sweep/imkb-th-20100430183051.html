@@ -1,0 +1,441 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+	İşlem Saatleri
+</title>
+
+ <script src="/JavaScript/getElementsBySelector.js" type="text/javascript"></script>
+ <script type="text/javascript">
+   function zebraTable(selector, zebraClass){
+    var el = document.getElementsBySelector(selector);
+    if (el == false) return;	
+    var zebra = false;
+	for (var i = 0; i < el.length; i++) {
+        if (zebra == true) el[i].className = zebraClass;
+		(zebra == true) ? zebra = false : zebra = true;
+        }
+    }
+ </script>
+
+   <script src="/JavaScript/print.js" type="text/javascript"></script>
+   <script type="text/javascript" src="/JavaScript/common.js"></script>
+   <script type="text/javascript" src="/JavaScript/jquery/jquery-1.4.2.min.js"></script>
+   <script type="text/javascript" src="/JavaScript/jquery/jquery.jclock.js"></script>
+   <script type="text/javascript" src="/JavaScript/jquery/top_up-min.js?libs=''"></script>
+
+   <script type="text/javascript">
+     function addTitleToAnchor(element,titlevalue)
+     {
+       var toptioned = jQuery(element).attr("toptions");
+       var toptionsvalue = "";
+       if (toptioned)
+         toptionsvalue = jQuery(element).attr("toptions") + ", ";
+       if (!toptionsvalue.containsString("title="))  
+         jQuery(element).attr("toptions",toptionsvalue + "title= " + titlevalue);
+     }
+     
+     jQuery(document).ready(function () {
+       zebraTable('table.zebra tbody tr', 'zebra');
+       TopUp.defaultPreset({layout: "quicklook", shaded: 1});
+       jQuery(".top_up_container a").not(".no_top_up").addClass("top_up");
+       jQuery("a.top_up").filter(function(){var hrf = jQuery(this).attr("href"); return(hrf.endsWithString(".flv",true))}).attr("toptions","width=320, height=240");
+       jQuery("a.top_up").each(function(){
+          var titled = jQuery(this).attr("title");
+          if (titled)
+            addTitleToAnchor(this,jQuery(this).attr("title"));
+          else
+          {
+            var imgalted = jQuery(this).find("img[alt]");
+            if (imgalted)
+              addTitleToAnchor(this,imgalted.attr("alt"));
+          }
+       }); 
+       jQuery("#clock").jclock({format: '%d %m %Y %H:%M:%S'});
+    });
+  </script>
+
+<link href="../../App_Themes/imkbTheme/default.css" type="text/css" rel="stylesheet" /><link href="../../App_Themes/imkbTheme/Panelbar/styles.css" type="text/css" rel="stylesheet" /><link href="../../App_Themes/imkbTheme/TabStrip/styles1.css" type="text/css" rel="stylesheet" /><link href="../../App_Themes/imkbTheme/Telerik/Grid.Telerik.css" type="text/css" rel="stylesheet" /><meta name="Generator" content="Sitefinity 3.6.1920.2:2" /><link href="/Sitefinity/ControlTemplates/Search/searchCommonLayout.css" type="text/css" rel="stylesheet" media="screen"></link><link href="/WebResource.axd?d=amYphA-0bPK6q7TUfp4lRhfNYzJQ2FPpMyJO7CL6Be2RQT-3IpQ3emdqJw56-kOz38BtycR_5N65G73e9FwsqqCxydyqPEEOYiTmyBjqfpY5nfRdAEU44A2&amp;t=633758219960000000" type="text/css" rel="stylesheet" media="screen"></link><link href="/WebResource.axd?d=amYphA-0bPKIe71d4fLOxF9IH8-SO_ha4_9ZItGp8u7yUs6w61c_T4Q3z7w7ETEmgtHcJcEjfZcsW1AJ_HPlpg2&amp;t=633758219960000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=amYphA-0bPKIe71d4fLOxF9IH8-SO_ha4_9ZItGp8u52omC6l2quKi52axHUcgdq0&amp;t=633758219960000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=amYphA-0bPKIe71d4fLOxF9IH8-SO_ha4_9ZItGp8u4GYrgsD9Jb2RGYgFu1wP5f28GOrtSVNZg1&amp;t=633758219960000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=amYphA-0bPKIe71d4fLOxF9IH8-SO_ha4_9ZItGp8u42Dfe9EBNCcwhKp4oeGm9o2VwO4WIX42c1&amp;t=633758219960000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=amYphA-0bPKIe71d4fLOxF9IH8-SO_ha4_9ZItGp8u56SFDB9DNbex0L0dO96XZAMYQn8vvslcyJF11w73uYiT0FbtV2pRIV0&amp;t=633758219960000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /></head>
+
+
+<body>
+
+    <form name="aspnetForm" method="post" action="TransactionHours.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MQ9kFgJmD2QWAgIDEGRkFgwCAw8WBB4HRW5hYmxlZGceCEludGVydmFsAqD+CmQCBw8PFgIeF0VuYWJsZUFqYXhTa2luUmVuZGVyaW5naGRkAgkPZBYCZg9kFgJmD2QWAmYPZBYCZg8QZGQWAWYWBGYPZBYCZg9kFgJmDw8WBh4EVGV4dAUIVMO8cmvDp2UeC05hdmlnYXRlVXJsBWVqYXZhc2NyaXB0Omxhbmd1YWdlQmFyc1snY3RsMDBfY3BoTGFuZ19jdGwwMF9mbGFnTGlzdF9jdGwwMF9sYW5ndWFnZUxpc3QnXS5TdWJtaXQoJ3d3dy5pbWtiLmdvdi50cicpOx4ISW1hZ2VVcmwFJH4vSW1hZ2VzL3d3dy5pbWtiLmdvdi50clNlbGVjdGVkLmdpZmRkAgEPZBYCZg9kFgJmDw8WBh8DBQdFbmdsaXNoHwQFYWphdmFzY3JpcHQ6bGFuZ3VhZ2VCYXJzWydjdGwwMF9jcGhMYW5nX2N0bDAwX2ZsYWdMaXN0X2N0bDAwX2xhbmd1YWdlTGlzdCddLlN1Ym1pdCgnd3d3LmlzZS5vcmcnKTsfBQUYfi9JbWFnZXMvd3d3LmlzZS5vcmcuZ2lmZGQCCw9kFgJmD2QWGAIBDw8WAh8DBRtYVTEwMCA1OC45NTksMTAmbmJzcDsmbmJzcDtkZAIDDw8WBh8DBQcgMC40NCAlHglGb3JlQ29sb3IKTx4EXyFTQgIEZGQCBQ8PFgQeDUFsdGVybmF0ZVRleHRlHwUFLS9BcHBfVGhlbWVzL2lta2JUaGVtZS9pbWFnZXMvRW5kZWtzQXJ0aWRhLmdpZhYCHgNhbHQFBlhVMTAwIGQCBw8PFgIfAwUbWFUwMzAgNzMuNDY5LDY3Jm5ic3A7Jm5ic3A7ZGQCCQ8PFgYfAwUHIDAuNTEgJR8GCk8fBwIEZGQCCw8PFgQfCGUfBQUtL0FwcF9UaGVtZXMvaW1rYlRoZW1lL2ltYWdlcy9FbmRla3NBcnRpZGEuZ2lmFgIfCQUGWFUwMzAgZAINDw8WAh8DBRtYVU1BTCA5MC40OTAsOTImbmJzcDsmbmJzcDtkZAIPDw8WBh8DBQcgMC4yNyAlHwYKTx8HAgRkZAIRDw8WBB8IZR8FBS0vQXBwX1RoZW1lcy9pbWtiVGhlbWUvaW1hZ2VzL0VuZGVrc0FydGlkYS5naWYWAh8JBQZYVU1BTCBkAhMPDxYCHwMFG1hVU0lOIDQ0LjY5OSwxNyZuYnNwOyZuYnNwO2RkAhUPDxYGHwMFByAwLjI3ICUfBgpPHwcCBGRkAhcPDxYEHwhlHwUFLS9BcHBfVGhlbWVzL2lta2JUaGVtZS9pbWFnZXMvRW5kZWtzQXJ0aWRhLmdpZhYCHwkFBlhVU0lOIGQCEQ9kFgJmD2QWAgICDxQrAAIUKwACFCsAAg8WBB4LXyFEYXRhQm91bmRnHwJoZA8UKwAEFCsAAg8WDB8DBRlIaXNzZSBTZW5ldGxlcmkgUGl5YXNhc8SxHwQFGn4vTWFya2V0cy9TdG9ja01hcmtldC5hc3B4HgVWYWx1ZQUZSGlzc2UgU2VuZXRsZXJpIFBpeWFzYXPEsR4HVG9vbFRpcGUeCFNlbGVjdGVkZx4IRXhwYW5kZWRnZBAWCGYCAQICAgMCBAIFAgYCBxYIFCsAAg8WCh8DBQxFbWlyIFRpcGxlcmkfBAUlfi9NYXJrZXRzL1N0b2NrTWFya2V0L09yZGVyVHlwZXMuYXNweB8LBQxFbWlyIFRpcGxlcmkfDGUfDWhkZBQrAAIPFgofAwUPRml5YXQgTWFyamxhcsSxHwQFJ34vTWFya2V0cy9TdG9ja01hcmtldC9QcmljZU1hcmdpbnMuYXNweB8LBQ9GaXlhdCBNYXJqbGFyxLEfDGUfDWhkZBQrAAIPFgofAwUYTWFrc2ltdW0gTG90IE1pa3RhcmxhcsSxHwQFKX4vTWFya2V0cy9TdG9ja01hcmtldC9NYXhpbXVtTG90U2l6ZS5hc3B4HwsFGE1ha3NpbXVtIExvdCBNaWt0YXJsYXLEsR8MZR8NaGRkFCsAAg8WCh8DBRRMb3QgQWx0xLEgxLDFn2xlbWxlch8EBS1+L01hcmtldHMvU3RvY2tNYXJrZXQvT2RkTG90VHJhbnNhY3Rpb25zLmFzcHgfCwUUTG90IEFsdMSxIMSwxZ9sZW1sZXIfDGUfDWhkZBQrAAIPFgofAwUjS3JlZGlsaSDEsMWfbGVtIHZlIEHDp8SxxJ9hIFNhdMSxxZ8fBAUvfi9NYXJrZXRzL1N0b2NrTWFya2V0L1RyYW5zYWN0aW9uc09uQ3JlZGl0LmFzcHgfCwUjS3JlZGlsaSDEsMWfbGVtIHZlIEHDp8SxxJ9hIFNhdMSxxZ8fDGUfDWhkZBQrAAIPFgofAwUOQm9yc2EgUGF5bGFyxLEfBAUnfi9NYXJrZXRzL1N0b2NrTWFya2V0L0V4Y2hhbmdlRmVlcy5hc3B4HwsFDkJvcnNhIFBheWxhcsSxHwxlHw1oZGQUKwACDxYMHwMFEMSwxZ9sZW0gU2FhdGxlcmkfBAUrfi9NYXJrZXRzL1N0b2NrTWFya2V0L1RyYW5zYWN0aW9uSG91cnMuYXNweB8LBRDEsMWfbGVtIFNhYXRsZXJpHwxlHw1oHw5nZGQUKwACDxYKHwMFD1Rha2FzIEVzYXNsYXLEsR8EBS9+L01hcmtldHMvU3RvY2tNYXJrZXQvU2V0dGxlbWVudFByaW5jaXBsZXMuYXNweB8LBQ9UYWthcyBFc2FzbGFyxLEfDGUfDWhkZA8WCGZmZmZmZmZmFgEFc1RlbGVyaWsuV2ViLlVJLlJhZFRyZWVOb2RlLCBUZWxlcmlrLldlYi5VSSwgVmVyc2lvbj0yMDA5LjEuNDEwLjM1LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDQUKwACDxYKHwMFGFRhaHZpbCB2ZSBCb25vIFBpeWFzYXPEsR8EBSJ+L01hcmtldHMvQm9uZHNhbmRCaWxsc01hcmtldC5hc3B4HwsFGFRhaHZpbCB2ZSBCb25vIFBpeWFzYXPEsR8MZR8NaGQQFgJmAgEWAhQrAAIPFgofAwUaS2VzaW4gQWzEsW0tU2F0xLFtIFBhemFyxLEfBAVCfi9NYXJrZXRzL0JvbmRzYW5kQmlsbHNNYXJrZXQvT3V0cmlnaHRQdXJjaGFzZXNhbmRTYWxlc01hcmtldC5hc3B4HwsFGktlc2luIEFsxLFtLVNhdMSxbSBQYXphcsSxHwxlHw1oZBAWCGYCAQICAgMCBAIFAgYCBxYIFCsAAg8WCh8DBRVFbWlyIHZlIEZpeWF0IFRpcGxlcmkfBAVVfi9NYXJrZXRzL0JvbmRzYW5kQmlsbHNNYXJrZXQvT3V0cmlnaHRQdXJjaGFzZXNhbmRTYWxlc01hcmtldC9PcmRlcmFuZFByaWNlVHlwZXMuYXNweB8LBRVFbWlyIHZlIEZpeWF0IFRpcGxlcmkfDGUfDWhkZBQrAAIPFgofAwUPRW1pciBLdXJhbGxhcsSxHwQFTX4vTWFya2V0cy9Cb25kc2FuZEJpbGxzTWFya2V0L091dHJpZ2h0UHVyY2hhc2VzYW5kU2FsZXNNYXJrZXQvT3JkZXJSdWxlcy5hc3B4HwsFD0VtaXIgS3VyYWxsYXLEsR8MZR8NaGRkFCsAAg8WCh8DBRRFbWlyIELDvHnDvGtsw7xrbGVyaR8EBUx+L01hcmtldHMvQm9uZHNhbmRCaWxsc01hcmtldC9PdXRyaWdodFB1cmNoYXNlc2FuZFNhbGVzTWFya2V0L09yZGVyU2l6ZS5hc3B4HwsFFEVtaXIgQsO8ecO8a2zDvGtsZXJpHwxlHw1oZGQUKwACDxYKHwMFDkJvcnNhIFBheWxhcsSxHwQFT34vTWFya2V0cy9Cb25kc2FuZEJpbGxzTWFya2V0L091dHJpZ2h0UHVyY2hhc2VzYW5kU2FsZXNNYXJrZXQvRXhjaGFuZ2VGZWVzLmFzcHgfCwUOQm9yc2EgUGF5bGFyxLEfDGUfDWhkZBQrAAIPFgofAwUQxLDFn2xlbSBTYWF0bGVyaR8EBVN+L01hcmtldHMvQm9uZHNhbmRCaWxsc01hcmtldC9PdXRyaWdodFB1cmNoYXNlc2FuZFNhbGVzTWFya2V0L1RyYW5zYWN0aW9uSG91cnMuYXNweB8LBRDEsMWfbGVtIFNhYXRsZXJpHwxlHw1oZGQUKwACDxYKHwMFEFZhbMO2ciBTw7xyZWxlcmkfBAVNfi9NYXJrZXRzL0JvbmRzYW5kQmlsbHNNYXJrZXQvT3V0cmlnaHRQdXJjaGFzZXNhbmRTYWxlc01hcmtldC9WYWx1ZURhdGVzLmFzcHgfCwUQVmFsw7ZyIFPDvHJlbGVyaR8MZR8NaGRkFCsAAg8WCh8DBRhQaXlhc2EgS2F0xLFsxLFtY8SxbGFyxLEfBAVVfi9NYXJrZXRzL0JvbmRzYW5kQmlsbHNNYXJrZXQvT3V0cmlnaHRQdXJjaGFzZXNhbmRTYWxlc01hcmtldC9NYXJrZXRQYXJ0aWNpcGFudHMuYXNweB8LBRhQaXlhc2EgS2F0xLFsxLFtY8SxbGFyxLEfDGUfDWhkZBQrAAIPFgofAwUTUGl5YXNhIFlhcMSxY8SxbMSxax8EBU9+L01hcmtldHMvQm9uZHNhbmRCaWxsc01hcmtldC9PdXRyaWdodFB1cmNoYXNlc2FuZFNhbGVzTWFya2V0L01hcmtldG1ha2luZy5hc3B4HwsFE1BpeWFzYSBZYXDEsWPEsWzEsWsfDGUfDWhkZA8WCGZmZmZmZmZmFgEFc1RlbGVyaWsuV2ViLlVJLlJhZFRyZWVOb2RlLCBUZWxlcmlrLldlYi5VSSwgVmVyc2lvbj0yMDA5LjEuNDEwLjM1LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDQUKwACDxYKHwMFGFJlcG8gLSBUZXJzIFJlcG8gUGF6YXLEsR8EBTh+L01hcmtldHMvQm9uZHNhbmRCaWxsc01hcmtldC9SZXBvUmV2ZXJzZVJlcG9NYXJrZXQuYXNweB8LBRhSZXBvIC0gVGVycyBSZXBvIFBhemFyxLEfDGUfDWhkEBYHZgIBAgICAwIEAgUCBhYHFCsAAg8WCh8DBQxFbWlyIFRpcGxlcmkfBAVLfi9NYXJrZXRzL0JvbmRzYW5kQmlsbHNNYXJrZXQvUmVwb1JldmVyc2VSZXBvTWFya2V0L09yZGVyYW5kUHJpY2VUeXBlcy5hc3B4HwsFDEVtaXIgVGlwbGVyaR8MZR8NaGRkFCsAAg8WCh8DBQ9FbWlyIEt1cmFsbGFyxLEfBAVDfi9NYXJrZXRzL0JvbmRzYW5kQmlsbHNNYXJrZXQvUmVwb1JldmVyc2VSZXBvTWFya2V0L09yZGVyUnVsZXMuYXNweB8LBQ9FbWlyIEt1cmFsbGFyxLEfDGUfDWhkZBQrAAIPFgofAwUURW1pciBCw7x5w7xrbMO8a2xlcmkfBAVCfi9NYXJrZXRzL0JvbmRzYW5kQmlsbHNNYXJrZXQvUmVwb1JldmVyc2VSZXBvTWFya2V0L09yZGVyU2l6ZS5hc3B4HwsFFEVtaXIgQsO8ecO8a2zDvGtsZXJpHwxlHw1oZGQUKwACDxYKHwMFDkJvcnNhIFBheWxhcsSxHwQFSX4vTWFya2V0cy9Cb25kc2FuZEJpbGxzTWFya2V0L1JlcG9SZXZlcnNlUmVwb01hcmtldC9FeGNoYW5nZUZlZXNyZXBvLmFzcHgfCwUOQm9yc2EgUGF5bGFyxLEfDGUfDWhkZBQrAAIPFgofAwUQxLDFn2xlbSBTYWF0bGVyaR8EBU1+L01hcmtldHMvQm9uZHNhbmRCaWxsc01hcmtldC9SZXBvUmV2ZXJzZVJlcG9NYXJrZXQvVHJhbnNhY3Rpb25Ib3Vyc3JlcG8uYXNweB8LBRDEsMWfbGVtIFNhYXRsZXJpHwxlHw1oZGQUKwACDxYKHwMFEFZhbMO2ciBTw7xyZWxlcmkfBAVHfi9NYXJrZXRzL0JvbmRzYW5kQmlsbHNNYXJrZXQvUmVwb1JldmVyc2VSZXBvTWFya2V0L1ZhbHVlRGF0ZXNyZXBvLmFzcHgfCwUQVmFsw7ZyIFPDvHJlbGVyaR8MZR8NaGRkFCsAAg8WCh8DBRhQaXlhc2EgS2F0xLFsxLFtY8SxbGFyxLEfBAVPfi9NYXJrZXRzL0JvbmRzYW5kQmlsbHNNYXJrZXQvUmVwb1JldmVyc2VSZXBvTWFya2V0L01hcmtldHBhcnRpY2lwYW50c3JlcG8uYXNweB8LBRhQaXlhc2EgS2F0xLFsxLFtY8SxbGFyxLEfDGUfDWhkZA8WB2ZmZmZmZmYWAQVzVGVsZXJpay5XZWIuVUkuUmFkVHJlZU5vZGUsIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMDkuMS40MTAuMzUsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNA8WAmZmFgEFc1RlbGVyaWsuV2ViLlVJLlJhZFRyZWVOb2RlLCBUZWxlcmlrLldlYi5VSSwgVmVyc2lvbj0yMDA5LjEuNDEwLjM1LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDQUKwACDxYKHwMFJFlhYmFuY8SxIE1lbmt1bCBLxLF5bWV0bGVyIFBpeWFzYXPEsR8EBSZ+L01hcmtldHMvRm9yZWlnblNlY3VyaXRpZXNNYXJrZXQuYXNweB8LBSRZYWJhbmPEsSBNZW5rdWwgS8SxeW1ldGxlciBQaXlhc2FzxLEfDGUfDWhkEBYEZgIBAgICAxYEFCsAAg8WCh8DBQ5Cb3JzYSBQYXlsYXLEsR8EBTN+L01hcmtldHMvRm9yZWlnblNlY3VyaXRpZXNNYXJrZXQvRXhjaGFuZ2VGZWVzLmFzcHgfCwUOQm9yc2EgUGF5bGFyxLEfDGUfDWhkZBQrAAIPFgofAwUQxLDFn2xlbSBTYWF0bGVyaR8EBTd+L01hcmtldHMvRm9yZWlnblNlY3VyaXRpZXNNYXJrZXQvVHJhbnNhY3Rpb25Ib3Vycy5hc3B4HwsFEMSwxZ9sZW0gU2FhdGxlcmkfDGUfDWhkZBQrAAIPFgofAwUPVGFrYXMgRXNhc2xhcsSxHwQFO34vTWFya2V0cy9Gb3JlaWduU2VjdXJpdGllc01hcmtldC9TZXR0bGVtZW50UHJpbmNpcGxlcy5hc3B4HwsFD1Rha2FzIEVzYXNsYXLEsR8MZR8NaGRkFCsAAg8WCh8DBRhQaXlhc2EgS2F0xLFsxLFtY8SxbGFyxLEfBAU5fi9NYXJrZXRzL0ZvcmVpZ25TZWN1cml0aWVzTWFya2V0L01hcmtldFBhcnRpY2lwYW50cy5hc3B4HwsFGFBpeWFzYSBLYXTEsWzEsW1jxLFsYXLEsR8MZR8NaGRkDxYEZmZmZhYBBXNUZWxlcmlrLldlYi5VSS5SYWRUcmVlTm9kZSwgVGVsZXJpay5XZWIuVUksIFZlcnNpb249MjAwOS4xLjQxMC4zNSwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj0xMjFmYWU3ODE2NWJhM2Q0FCsAAg8WCh8DBRRSZXNtaSBUYXRpbCBHw7xubGVyaR8EBR9+L01hcmtldHMvT2ZmaWNpYWxIb2xpZGF5cy5hc3B4HwsFFFJlc21pIFRhdGlsIEfDvG5sZXJpHwxlHw1oZGQPFCsBBGZmZmYWAQVzVGVsZXJpay5XZWIuVUkuUmFkVHJlZU5vZGUsIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMDkuMS40MTAuMzUsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNGRkFghmDw8WDB8DBRlIaXNzZSBTZW5ldGxlcmkgUGl5YXNhc8SxHwQFGn4vTWFya2V0cy9TdG9ja01hcmtldC5hc3B4HwsFGUhpc3NlIFNlbmV0bGVyaSBQaXlhc2FzxLEfDGUfDWcfDmdkFhBmDw8WCh8DBQxFbWlyIFRpcGxlcmkfBAUlfi9NYXJrZXRzL1N0b2NrTWFya2V0L09yZGVyVHlwZXMuYXNweB8LBQxFbWlyIFRpcGxlcmkfDGUfDWhkZAIBDw8WCh8DBQ9GaXlhdCBNYXJqbGFyxLEfBAUnfi9NYXJrZXRzL1N0b2NrTWFya2V0L1ByaWNlTWFyZ2lucy5hc3B4HwsFD0ZpeWF0IE1hcmpsYXLEsR8MZR8NaGRkAgIPDxYKHwMFGE1ha3NpbXVtIExvdCBNaWt0YXJsYXLEsR8EBSl+L01hcmtldHMvU3RvY2tNYXJrZXQvTWF4aW11bUxvdFNpemUuYXNweB8LBRhNYWtzaW11bSBMb3QgTWlrdGFybGFyxLEfDGUfDWhkZAIDDw8WCh8DBRRMb3QgQWx0xLEgxLDFn2xlbWxlch8EBS1+L01hcmtldHMvU3RvY2tNYXJrZXQvT2RkTG90VHJhbnNhY3Rpb25zLmFzcHgfCwUUTG90IEFsdMSxIMSwxZ9sZW1sZXIfDGUfDWhkZAIEDw8WCh8DBSNLcmVkaWxpIMSwxZ9sZW0gdmUgQcOnxLHEn2EgU2F0xLHFnx8EBS9+L01hcmtldHMvU3RvY2tNYXJrZXQvVHJhbnNhY3Rpb25zT25DcmVkaXQuYXNweB8LBSNLcmVkaWxpIMSwxZ9sZW0gdmUgQcOnxLHEn2EgU2F0xLHFnx8MZR8NaGRkAgUPDxYKHwMFDkJvcnNhIFBheWxhcsSxHwQFJ34vTWFya2V0cy9TdG9ja01hcmtldC9FeGNoYW5nZUZlZXMuYXNweB8LBQ5Cb3JzYSBQYXlsYXLEsR8MZR8NaGRkAgYPDxYMHwMFEMSwxZ9sZW0gU2FhdGxlcmkfBAUrfi9NYXJrZXRzL1N0b2NrTWFya2V0L1RyYW5zYWN0aW9uSG91cnMuYXNweB8LBRDEsMWfbGVtIFNhYXRsZXJpHwxlHw1oHw5nZGQCBw8PFgofAwUPVGFrYXMgRXNhc2xhcsSxHwQFL34vTWFya2V0cy9TdG9ja01hcmtldC9TZXR0bGVtZW50UHJpbmNpcGxlcy5hc3B4HwsFD1Rha2FzIEVzYXNsYXLEsR8MZR8NaGRkAgEPDxYKHwMFGFRhaHZpbCB2ZSBCb25vIFBpeWFzYXPEsR8EBSJ+L01hcmtldHMvQm9uZHNhbmRCaWxsc01hcmtldC5hc3B4HwsFGFRhaHZpbCB2ZSBCb25vIFBpeWFzYXPEsR8MZR8NaGQWBGYPDxYKHwMFGktlc2luIEFsxLFtLVNhdMSxbSBQYXphcsSxHwQFQn4vTWFya2V0cy9Cb25kc2FuZEJpbGxzTWFya2V0L091dHJpZ2h0UHVyY2hhc2VzYW5kU2FsZXNNYXJrZXQuYXNweB8LBRpLZXNpbiBBbMSxbS1TYXTEsW0gUGF6YXLEsR8MZR8NaGQWEGYPDxYKHwMFFUVtaXIgdmUgRml5YXQgVGlwbGVyaR8EBVV+L01hcmtldHMvQm9uZHNhbmRCaWxsc01hcmtldC9PdXRyaWdodFB1cmNoYXNlc2FuZFNhbGVzTWFya2V0L09yZGVyYW5kUHJpY2VUeXBlcy5hc3B4HwsFFUVtaXIgdmUgRml5YXQgVGlwbGVyaR8MZR8NaGRkAgEPDxYKHwMFD0VtaXIgS3VyYWxsYXLEsR8EBU1+L01hcmtldHMvQm9uZHNhbmRCaWxsc01hcmtldC9PdXRyaWdodFB1cmNoYXNlc2FuZFNhbGVzTWFya2V0L09yZGVyUnVsZXMuYXNweB8LBQ9FbWlyIEt1cmFsbGFyxLEfDGUfDWhkZAICDw8WCh8DBRRFbWlyIELDvHnDvGtsw7xrbGVyaR8EBUx+L01hcmtldHMvQm9uZHNhbmRCaWxsc01hcmtldC9PdXRyaWdodFB1cmNoYXNlc2FuZFNhbGVzTWFya2V0L09yZGVyU2l6ZS5hc3B4HwsFFEVtaXIgQsO8ecO8a2zDvGtsZXJpHwxlHw1oZGQCAw8PFgofAwUOQm9yc2EgUGF5bGFyxLEfBAVPfi9NYXJrZXRzL0JvbmRzYW5kQmlsbHNNYXJrZXQvT3V0cmlnaHRQdXJjaGFzZXNhbmRTYWxlc01hcmtldC9FeGNoYW5nZUZlZXMuYXNweB8LBQ5Cb3JzYSBQYXlsYXLEsR8MZR8NaGRkAgQPDxYKHwMFEMSwxZ9sZW0gU2FhdGxlcmkfBAVTfi9NYXJrZXRzL0JvbmRzYW5kQmlsbHNNYXJrZXQvT3V0cmlnaHRQdXJjaGFzZXNhbmRTYWxlc01hcmtldC9UcmFuc2FjdGlvbkhvdXJzLmFzcHgfCwUQxLDFn2xlbSBTYWF0bGVyaR8MZR8NaGRkAgUPDxYKHwMFEFZhbMO2ciBTw7xyZWxlcmkfBAVNfi9NYXJrZXRzL0JvbmRzYW5kQmlsbHNNYXJrZXQvT3V0cmlnaHRQdXJjaGFzZXNhbmRTYWxlc01hcmtldC9WYWx1ZURhdGVzLmFzcHgfCwUQVmFsw7ZyIFPDvHJlbGVyaR8MZR8NaGRkAgYPDxYKHwMFGFBpeWFzYSBLYXTEsWzEsW1jxLFsYXLEsR8EBVV+L01hcmtldHMvQm9uZHNhbmRCaWxsc01hcmtldC9PdXRyaWdodFB1cmNoYXNlc2FuZFNhbGVzTWFya2V0L01hcmtldFBhcnRpY2lwYW50cy5hc3B4HwsFGFBpeWFzYSBLYXTEsWzEsW1jxLFsYXLEsR8MZR8NaGRkAgcPDxYKHwMFE1BpeWFzYSBZYXDEsWPEsWzEsWsfBAVPfi9NYXJrZXRzL0JvbmRzYW5kQmlsbHNNYXJrZXQvT3V0cmlnaHRQdXJjaGFzZXNhbmRTYWxlc01hcmtldC9NYXJrZXRtYWtpbmcuYXNweB8LBRNQaXlhc2EgWWFwxLFjxLFsxLFrHwxlHw1oZGQCAQ8PFgofAwUYUmVwbyAtIFRlcnMgUmVwbyBQYXphcsSxHwQFOH4vTWFya2V0cy9Cb25kc2FuZEJpbGxzTWFya2V0L1JlcG9SZXZlcnNlUmVwb01hcmtldC5hc3B4HwsFGFJlcG8gLSBUZXJzIFJlcG8gUGF6YXLEsR8MZR8NaGQWDmYPDxYKHwMFDEVtaXIgVGlwbGVyaR8EBUt+L01hcmtldHMvQm9uZHNhbmRCaWxsc01hcmtldC9SZXBvUmV2ZXJzZVJlcG9NYXJrZXQvT3JkZXJhbmRQcmljZVR5cGVzLmFzcHgfCwUMRW1pciBUaXBsZXJpHwxlHw1oZGQCAQ8PFgofAwUPRW1pciBLdXJhbGxhcsSxHwQFQ34vTWFya2V0cy9Cb25kc2FuZEJpbGxzTWFya2V0L1JlcG9SZXZlcnNlUmVwb01hcmtldC9PcmRlclJ1bGVzLmFzcHgfCwUPRW1pciBLdXJhbGxhcsSxHwxlHw1oZGQCAg8PFgofAwUURW1pciBCw7x5w7xrbMO8a2xlcmkfBAVCfi9NYXJrZXRzL0JvbmRzYW5kQmlsbHNNYXJrZXQvUmVwb1JldmVyc2VSZXBvTWFya2V0L09yZGVyU2l6ZS5hc3B4HwsFFEVtaXIgQsO8ecO8a2zDvGtsZXJpHwxlHw1oZGQCAw8PFgofAwUOQm9yc2EgUGF5bGFyxLEfBAVJfi9NYXJrZXRzL0JvbmRzYW5kQmlsbHNNYXJrZXQvUmVwb1JldmVyc2VSZXBvTWFya2V0L0V4Y2hhbmdlRmVlc3JlcG8uYXNweB8LBQ5Cb3JzYSBQYXlsYXLEsR8MZR8NaGRkAgQPDxYKHwMFEMSwxZ9sZW0gU2FhdGxlcmkfBAVNfi9NYXJrZXRzL0JvbmRzYW5kQmlsbHNNYXJrZXQvUmVwb1JldmVyc2VSZXBvTWFya2V0L1RyYW5zYWN0aW9uSG91cnNyZXBvLmFzcHgfCwUQxLDFn2xlbSBTYWF0bGVyaR8MZR8NaGRkAgUPDxYKHwMFEFZhbMO2ciBTw7xyZWxlcmkfBAVHfi9NYXJrZXRzL0JvbmRzYW5kQmlsbHNNYXJrZXQvUmVwb1JldmVyc2VSZXBvTWFya2V0L1ZhbHVlRGF0ZXNyZXBvLmFzcHgfCwUQVmFsw7ZyIFPDvHJlbGVyaR8MZR8NaGRkAgYPDxYKHwMFGFBpeWFzYSBLYXTEsWzEsW1jxLFsYXLEsR8EBU9+L01hcmtldHMvQm9uZHNhbmRCaWxsc01hcmtldC9SZXBvUmV2ZXJzZVJlcG9NYXJrZXQvTWFya2V0cGFydGljaXBhbnRzcmVwby5hc3B4HwsFGFBpeWFzYSBLYXTEsWzEsW1jxLFsYXLEsR8MZR8NaGRkAgIPDxYKHwMFJFlhYmFuY8SxIE1lbmt1bCBLxLF5bWV0bGVyIFBpeWFzYXPEsR8EBSZ+L01hcmtldHMvRm9yZWlnblNlY3VyaXRpZXNNYXJrZXQuYXNweB8LBSRZYWJhbmPEsSBNZW5rdWwgS8SxeW1ldGxlciBQaXlhc2FzxLEfDGUfDWhkFghmDw8WCh8DBQ5Cb3JzYSBQYXlsYXLEsR8EBTN+L01hcmtldHMvRm9yZWlnblNlY3VyaXRpZXNNYXJrZXQvRXhjaGFuZ2VGZWVzLmFzcHgfCwUOQm9yc2EgUGF5bGFyxLEfDGUfDWhkZAIBDw8WCh8DBRDEsMWfbGVtIFNhYXRsZXJpHwQFN34vTWFya2V0cy9Gb3JlaWduU2VjdXJpdGllc01hcmtldC9UcmFuc2FjdGlvbkhvdXJzLmFzcHgfCwUQxLDFn2xlbSBTYWF0bGVyaR8MZR8NaGRkAgIPDxYKHwMFD1Rha2FzIEVzYXNsYXLEsR8EBTt+L01hcmtldHMvRm9yZWlnblNlY3VyaXRpZXNNYXJrZXQvU2V0dGxlbWVudFByaW5jaXBsZXMuYXNweB8LBQ9UYWthcyBFc2FzbGFyxLEfDGUfDWhkZAIDDw8WCh8DBRhQaXlhc2EgS2F0xLFsxLFtY8SxbGFyxLEfBAU5fi9NYXJrZXRzL0ZvcmVpZ25TZWN1cml0aWVzTWFya2V0L01hcmtldFBhcnRpY2lwYW50cy5hc3B4HwsFGFBpeWFzYSBLYXTEsWzEsW1jxLFsYXLEsR8MZR8NaGRkAgMPDxYKHwMFFFJlc21pIFRhdGlsIEfDvG5sZXJpHwQFH34vTWFya2V0cy9PZmZpY2lhbEhvbGlkYXlzLmFzcHgfCwUUUmVzbWkgVGF0aWwgR8O8bmxlcmkfDGUfDWhkZAIXD2QWAmYPZBYCZg9kFgJmD2QWAgICDxYCHgtfIUl0ZW1Db3VudAIBFgJmD2QWAgIBDxYCHw8CAxYGAgEPZBYCAgEPFgIfAwVMPGEgaHJlZj0iLi4vLi4vR1QzMC9HVDMwLmFzcHgiPlTDvHJraXllIFl1bmFuaXN0YW4gT3J0YWsgRW5kZWtzaSBHVC0zMDwvYT4NCmQCAg9kFgICAQ8WAh8DBWg8YSBocmVmPSIuLi8uLi9Hcm93aW5nQ29tcGFuaWVzTWFya2V0L0dyb3dpbmdDb21wYW5pZXNNYXJrZXQuYXNweCI+R2VsacWfZW4gxLDFn2xldG1lbGVyIFBpeWFzYXPEsTwvYT4NCmQCAw9kFgICAQ8WAh8DBUc8YSBocmVmPSIuLi8uLi9NYXJrZXRNYWtlci9NYXJrZXRNYWtlci5hc3B4Ij5QaXlhc2EgWWFwxLFjxLFsxLFrPC9hPiANCmQYBwUvY3RsMDAkY3BoSGFsa2FBcnpWaWRlb0Jhbm5lciR0bV9HZW5lcmljQ29udGVudDQPFCsAAWRkBSZjdGwwMCRjcGhTYWdCYW5uZXIxJHRtX0dlbmVyaWNDb250ZW50MQ8UKwABBQ9HZW5lcmljX0NvbnRlbnRkBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAwUgY3RsMDAkY3BoTWVudSRjdGwwMCRSYWRUYWJzdHJpcDEFWGN0bDAwJGNwaFN1Ym1lbnUkdG1fc2l0ZWZpbml0eV91c2VyY29udHJvbHNfbmF2aWdhdGlvbjM1X3NpdGV0cmVldmlld19hc2N4MSRSYWRUcmVldmlldzEFNWN0bDAwJGNwaEFyYW1hJHRtX1NlYXJjaEJveDEkY3RsMDAkY3RsMDAkc2VhcmNoQnV0dG9uBSBjdGwwMCRjcGhDb250ZW50JEdlbmVyaWNDb250ZW50MQ8UKwABBQ9HZW5lcmljX0NvbnRlbnRkBSdjdGwwMCRjcGhJbWtiWWVuaWxpa2xlciR0bV9MaXN0RGlzcGxheTEPFCsAAxQpWFN5c3RlbS5HdWlkLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkBKCsEJGQxZjg4NGMxLTliYjctNDlhZS05MTg2LTA3NDcwOWJjZDliZgUKU2l0ZWZpbml0eQspigFUZWxlcmlrLkxpc3RzLldlYkNvbnRyb2xzLkxpc3REaXNwbGF5K0xpc3REaXNwbGF5TW9kZSwgVGVsZXJpay5MaXN0cywgVmVyc2lvbj0zLjYuMTkyMC4yLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWRmZWFlZTBlMzk3OGFjNzkAZAUkY3RsMDAkY3BoU2FnQm9sdW0kdG1fR2VuZXJpY0NvbnRlbnQzDxQrAAFkZAUmY3RsMDAkY3BoU2FnQmFubmVyMiR0bV9HZW5lcmljQ29udGVudDIPFCsAAQUPR2VuZXJpY19Db250ZW50ZDDDlUSHYKkwWpS0w38JdcrJHbcW" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+var CulturString_add_link_text='Hızlı Erişime Ekle';var CulturString_add_img_tooltip='Sayfayı Ekle';var CulturString_rem_img_tooltip='Sayfayı Kaldır';//]]>
+</script>
+
+<script src="/JavaScript/dojo/dojo.js" type="text/javascript"></script>
+<script src="/JavaScript/quickLinks.js" type="text/javascript"></script>
+<script src="/JavaScript/JScript.js" type="text/javascript"></script>
+<script src="/WebResource.axd?d=amYphA-0bPKvHPsAxnZetHx8cEjtiIQaEemUaKFFkGdOkGpFVYsfQI3wxO55JU9ov8aovwjR9wtdlsobx1wC5gK2ozH34P-10&amp;t=633758219960000000" type="text/javascript"></script>
+<script src="/WebResource.axd?d=amYphA-0bPK2CO0QBQ2nSHkZpVAfkC2GblL6U9GxcJdVBSexBx9XrHMTaN52GJ5JfypX7vLeXjk1&amp;t=633758219960000000" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=ySaYsYT65k9fIrcMiyri9sRmxhCxaZQm7zeIYY4i_E5-NoCNtfOLguSasN7jGcDeJcaqjkguHw4OxkGKZ1YJsU0-jv86PqbE0&amp;t=6610d99a" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=ySaYsYT65k9fIrcMiyri9sRmxhCxaZQm7zeIYY4i_E5-NoCNtfOLguSasN7jGcDeJcaqjkguHw5ANJZlCzxhC19pDpoqgvWW0&amp;t=6610d99a" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=lcMagBepDm3uqEhp4ZZIkOfRuU_Z1n_24IMfgjw79puiRGCI0X9_3XYgvubs5myx0&amp;t=4efa241b" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=lcMagBepDm3uqEhp4ZZIkOfRuU_Z1n_23WPnJeX5XRrOvxpExhC2_vq3NYmi9puU0&amp;t=4efa241b" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=lcMagBepDm3uqEhp4ZZIkOfRuU_Z1n_24IMfgjw79puf2l8UGjkwO_EmXvihxLjzakm2VGj2gPI1&amp;t=4efa241b" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=lcMagBepDm3uqEhp4ZZIkOfRuU_Z1n_24IMfgjw79puf2l8UGjkwO_IaU6lmOAQQv3ko4RTDOjo1&amp;t=4efa241b" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=lcMagBepDm3uqEhp4ZZIkOfRuU_Z1n_24IMfgjw79psXsG92Z1esIJ26l1wV6Yju05Q7Iix9lPcqQx2WZRTYBMEqAOibW8yF0&amp;t=4efa241b" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=lcMagBepDm3uqEhp4ZZIkOfRuU_Z1n_24IMfgjw79pvL6v08v7j3YeUU9qmXdOPgHeblIN2cxskgsdS9hpefHu1GFMJCOV3P0&amp;t=4efa241b" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=lcMagBepDm3uqEhp4ZZIkOfRuU_Z1n_2jocbnsA1OcMOCGrOznfQsT-GpNwzVUKi7UCMNQVlw4gUQ8Kv3LcuQg2&amp;t=4efa241b" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=lcMagBepDm3uqEhp4ZZIkOfRuU_Z1n_2jocbnsA1OcPlll9E_MgZlYJIBHLlb3NiKIepNo8tx92UFRzWNmy01g2&amp;t=4efa241b" type="text/javascript"></script>
+  
+        <span id="ctl00_Timer1" style="display:none;"></span>
+        <!-- 2009.1.410.35 --><div id="ctl00_RadAjaxManager1SU">
+	<span id="ctl00_RadAjaxManager1" style="display:none;"></span>
+</div>
+        <div id="ctl00_RadAjaxLoadingPanel1" class="RadAjax RadAjax_Telerik " style="display:none;height:75px;width:75px;text-align:center;">
+	<div class="raDiv">
+		
+            
+	</div><div class="raColor raTransp">
+
+	</div>
+</div>
+<div id="topShortCutContainerLeft"></div>
+<div class="width bannerTop">
+  <div id="topShortCutContainer">
+    <div class="topLinks_Bg">
+      <div id="topLinks">
+        <ul>
+          <li class="first"><a href="/glossary/a-f/isedictionary_a.aspx">İMKB SÖZLÜĞÜ</a></li>
+          <li><a href="/library/library.aspx">KÜTÜPHANE</a></li>
+          <li class="last"><a href="/Publications.aspx">YAYINLAR</a></li>
+        </ul>
+      </div>
+      <div id="language">
+      <ul id="ctl00_cphLang_ctl00_flagList_ctl00_languageList">
+	<li><a id="ctl00_cphLang_ctl00_flagList_ctl00_ctl01_listItem" class="sfSelected" href="javascript:languageBars['ctl00_cphLang_ctl00_flagList_ctl00_languageList'].Submit('www.imkb.gov.tr');"><img src="../../Images/www.imkb.gov.trSelected.gif" alt="Türkçe" border="0" /></a></li><li><a id="ctl00_cphLang_ctl00_flagList_ctl00_ctl03_listItem" href="javascript:languageBars['ctl00_cphLang_ctl00_flagList_ctl00_languageList'].Submit('www.ise.org');"><img src="../../Images/www.ise.org.gif" alt="English" border="0" /></a></li>
+</ul>
+	  </div>
+    </div>
+  </div>
+  
+ <div class="clear"></div> 
+  <div id="header">
+  <div class="left"><img src="/App_Themes/imkbTheme/images/logo.gif"  alt="İMKB"/></div>
+  <div class="center">
+    
+
+
+<div id="ticker">
+<ul>
+<li><div id="ctl00_ctl00_cphTicker_ctl00_lblUlusal100Panel">
+	<span id="ctl00_cphTicker_ctl00_lblUlusal100">XU100 58.959,10&nbsp;&nbsp;</span>
+</div> 
+    <div id="ctl00_ctl00_cphTicker_ctl00_lblUlusal100DegisimPanel">
+	<span id="ctl00_cphTicker_ctl00_lblUlusal100Degisim"><font color="Green"> 0.44 %</font></span>
+</div>
+    <div id="ctl00_ctl00_cphTicker_ctl00_imageUlusal100Panel">
+	<img id="ctl00_cphTicker_ctl00_imageUlusal100" alt="XU100 " src="/App_Themes/imkbTheme/images/EndeksArtida.gif" border="0" />
+</div></li>
+<li><div id="ctl00_ctl00_cphTicker_ctl00_lblUlusal030Panel">
+	<span id="ctl00_cphTicker_ctl00_lblUlusal030">XU030 73.469,67&nbsp;&nbsp;</span>
+</div> 
+    <div id="ctl00_ctl00_cphTicker_ctl00_lblUlusal030DegisimPanel">
+	<span id="ctl00_cphTicker_ctl00_lblUlusal030Degisim"><font color="Green"> 0.51 %</font></span>
+</div>
+    <div id="ctl00_ctl00_cphTicker_ctl00_imageUlusal030Panel">
+	<img id="ctl00_cphTicker_ctl00_imageUlusal030" alt="XU030 " src="/App_Themes/imkbTheme/images/EndeksArtida.gif" border="0" />
+</div></li>
+<li><div id="ctl00_ctl00_cphTicker_ctl00_lblUlusalMaliPanel">
+	<span id="ctl00_cphTicker_ctl00_lblUlusalMali">XUMAL 90.490,92&nbsp;&nbsp;</span>
+</div> 
+    <div id="ctl00_ctl00_cphTicker_ctl00_lblUlusalMaliDegisimPanel">
+	<span id="ctl00_cphTicker_ctl00_lblUlusalMaliDegisim"><font color="Green"> 0.27 %</font></span>
+</div>
+    <div id="ctl00_ctl00_cphTicker_ctl00_imageUlusalMaliPanel">
+	<img id="ctl00_cphTicker_ctl00_imageUlusalMali" alt="XUMAL " src="/App_Themes/imkbTheme/images/EndeksArtida.gif" border="0" />
+</div></li>
+<li><div id="ctl00_ctl00_cphTicker_ctl00_lblUlusalSinaiPanel">
+	<span id="ctl00_cphTicker_ctl00_lblUlusalSinai">XUSIN 44.699,17&nbsp;&nbsp;</span>
+</div> 
+    <div id="ctl00_ctl00_cphTicker_ctl00_lblUlusalSinaiDegisimPanel">
+	<span id="ctl00_cphTicker_ctl00_lblUlusalSinaiDegisim"><font color="Green"> 0.27 %</font></span>
+</div>
+    <div id="ctl00_ctl00_cphTicker_ctl00_imageUlusalSinaiPanel">
+	<img id="ctl00_cphTicker_ctl00_imageUlusalSinai" alt="XUSIN " src="/App_Themes/imkbTheme/images/EndeksArtida.gif" border="0" />
+</div></li>
+ </ul>
+</div>
+    <!--<ul>
+  <li>XU-100 25,750  %1,5</li>
+  <li>XU-100 25,750  %1,5</li>
+  <li>XU-100 25,750  %1,5</li>
+  <li>XU-100 25,750  %1,5</li>
+  </ul>--></div>
+  <div class="right" style="height:20px"><h3 class="date bold">
+  <span id="clock">
+
+</span>
+  </h3></div>
+  </div>
+</div>
+
+
+
+  <div id="menu">
+  <div class="width"><div id="ctl00_cphMenu_ctl00_RadTabstrip1" class="RadTabStrip RadTabStrip_TabStrip RadTabStripTop_TabStrip " SkinsPath="~/App_Themes/imkbTheme">
+	<div class="rtsLevel rtsLevel1">
+		<ul class="rtsUL"><li class="rtsLI rtsFirst"><a class="rtsLink rtsBefore" href="../../Home.aspx"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Ana Sayfa</span></span></span></a></li><li class="rtsLI"><a class="rtsLink rtsSelected" href="../../Markets.aspx"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Piyasalar</span></span></span></a></li><li class="rtsLI"><a class="rtsLink rtsAfter" href="../../Data/StocksData.aspx"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Veriler</span></span></span></a></li><li class="rtsLI"><a class="rtsLink" href="../../Companies/CompaniesGeneralInfo.aspx"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Şirketler</span></span></span></a></li><li class="rtsLI"><a class="rtsLink" href="../../Members/MembersGeneralInfo.aspx"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Üyeler</span></span></span></a></li><li class="rtsLI"><a class="rtsLink" href="../../Training/EducationatISE.aspx"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Eğitim</span></span></span></a></li><li class="rtsLI"><a class="rtsLink" href="../../Regulations/Bylaws.aspx"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Düzenlemeler</span></span></span></a></li><li class="rtsLI rtsLast"><a class="rtsLink" href="../../AboutUs/AboutUsMain.aspx"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Hakkımızda</span></span></span></a></li></ul>
+	</div><input id="ctl00_cphMenu_ctl00_RadTabstrip1_ClientState" name="ctl00_cphMenu_ctl00_RadTabstrip1_ClientState" type="hidden" />
+</div>
+</div>
+  </div>
+  
+  
+  <div id="contentBg"><div id="breadCrumb"><span id="ctl00_cphBreadCrumb_tm_Breadcrumb1"><a href="#ctl00_cphBreadCrumb_tm_Breadcrumb1_SkipLink"><img alt="Skip Navigation Links" height="0" width="0" src="/WebResource.axd?d=18zNODjVxwD407YDhP5wGg2&amp;t=633853837961718750" border="0" /></a><span></span><span></span><span><a href="/Markets.aspx">Piyasalar</a></span><span> &gt; </span><span><a href="/Markets/StockMarket.aspx">Hisse Senetleri Piyasası</a></span><span> &gt; </span><span>İşlem Saatleri</span><a id="ctl00_cphBreadCrumb_tm_Breadcrumb1_SkipLink"></a></span></div></div>
+  
+<div class="width"><!--Content-->
+
+<div id="subMenu" class="floatLeft">
+<div id="ctl00_cphSubmenu_tm_sitefinity_usercontrols_navigation35_sitetreeview_ascx1_RadTreeview1" class="RadTreeView RadTreeView_Default ">
+	<ul class="rtUL rtLines">
+		<li class="rtLI rtFirst"><div class="rtTop rtSelected">
+			<span class="rtSp"></span><span class="rtMinus"></span><a class="rtIn" href="../StockMarket.aspx">Hisse Senetleri Piyasası</a>
+		</div><ul class="rtUL">
+			<li class="rtLI"><div class="rtTop">
+				<span class="rtSp"></span><a class="rtIn" href="OrderTypes.aspx">Emir Tipleri</a>
+			</div></li><li class="rtLI"><div class="rtMid">
+				<span class="rtSp"></span><a class="rtIn" href="PriceMargins.aspx">Fiyat Marjları</a>
+			</div></li><li class="rtLI"><div class="rtMid">
+				<span class="rtSp"></span><a class="rtIn" href="MaximumLotSize.aspx">Maksimum Lot Miktarları</a>
+			</div></li><li class="rtLI"><div class="rtMid">
+				<span class="rtSp"></span><a class="rtIn" href="OddLotTransactions.aspx">Lot Altı İşlemler</a>
+			</div></li><li class="rtLI"><div class="rtMid">
+				<span class="rtSp"></span><a class="rtIn" href="TransactionsOnCredit.aspx">Kredili İşlem ve Açığa Satış</a>
+			</div></li><li class="rtLI"><div class="rtMid">
+				<span class="rtSp"></span><a class="rtIn" href="ExchangeFees.aspx">Borsa Payları</a>
+			</div></li><li class="rtLI"><div class="rtMid">
+				<span class="rtSp"></span><a class="rtIn" href="TransactionHours.aspx">İşlem Saatleri</a>
+			</div></li><li class="rtLI rtLast"><div class="rtBot">
+				<span class="rtSp"></span><a class="rtIn" href="SettlementPrinciples.aspx">Takas Esasları</a>
+			</div></li>
+		</ul></li><li class="rtLI"><div class="rtMid">
+			<span class="rtSp"></span><span class="rtPlus"></span><a class="rtIn" href="../BondsandBillsMarket.aspx">Tahvil ve Bono Piyasası</a>
+		</div><ul class="rtUL" style="display:none;">
+			<li class="rtLI"><div class="rtTop">
+				<span class="rtSp"></span><span class="rtPlus"></span><a class="rtIn" href="../BondsandBillsMarket/OutrightPurchasesandSalesMarket.aspx">Kesin Alım-Satım Pazarı</a>
+			</div><ul class="rtUL" style="display:none;">
+				<li class="rtLI"><div class="rtTop">
+					<span class="rtSp"></span><a class="rtIn" href="../BondsandBillsMarket/OutrightPurchasesandSalesMarket/OrderandPriceTypes.aspx">Emir ve Fiyat Tipleri</a>
+				</div></li><li class="rtLI"><div class="rtMid">
+					<span class="rtSp"></span><a class="rtIn" href="../BondsandBillsMarket/OutrightPurchasesandSalesMarket/OrderRules.aspx">Emir Kuralları</a>
+				</div></li><li class="rtLI"><div class="rtMid">
+					<span class="rtSp"></span><a class="rtIn" href="../BondsandBillsMarket/OutrightPurchasesandSalesMarket/OrderSize.aspx">Emir Büyüklükleri</a>
+				</div></li><li class="rtLI"><div class="rtMid">
+					<span class="rtSp"></span><a class="rtIn" href="../BondsandBillsMarket/OutrightPurchasesandSalesMarket/ExchangeFees.aspx">Borsa Payları</a>
+				</div></li><li class="rtLI"><div class="rtMid">
+					<span class="rtSp"></span><a class="rtIn" href="../BondsandBillsMarket/OutrightPurchasesandSalesMarket/TransactionHours.aspx">İşlem Saatleri</a>
+				</div></li><li class="rtLI"><div class="rtMid">
+					<span class="rtSp"></span><a class="rtIn" href="../BondsandBillsMarket/OutrightPurchasesandSalesMarket/ValueDates.aspx">Valör Süreleri</a>
+				</div></li><li class="rtLI"><div class="rtMid">
+					<span class="rtSp"></span><a class="rtIn" href="../BondsandBillsMarket/OutrightPurchasesandSalesMarket/MarketParticipants.aspx">Piyasa Katılımcıları</a>
+				</div></li><li class="rtLI rtLast"><div class="rtBot">
+					<span class="rtSp"></span><a class="rtIn" href="../BondsandBillsMarket/OutrightPurchasesandSalesMarket/Marketmaking.aspx">Piyasa Yapıcılık</a>
+				</div></li>
+			</ul></li><li class="rtLI rtLast"><div class="rtBot">
+				<span class="rtSp"></span><span class="rtPlus"></span><a class="rtIn" href="../BondsandBillsMarket/RepoReverseRepoMarket.aspx">Repo - Ters Repo Pazarı</a>
+			</div><ul class="rtUL" style="display:none;">
+				<li class="rtLI"><div class="rtTop">
+					<span class="rtSp"></span><a class="rtIn" href="../BondsandBillsMarket/RepoReverseRepoMarket/OrderandPriceTypes.aspx">Emir Tipleri</a>
+				</div></li><li class="rtLI"><div class="rtMid">
+					<span class="rtSp"></span><a class="rtIn" href="../BondsandBillsMarket/RepoReverseRepoMarket/OrderRules.aspx">Emir Kuralları</a>
+				</div></li><li class="rtLI"><div class="rtMid">
+					<span class="rtSp"></span><a class="rtIn" href="../BondsandBillsMarket/RepoReverseRepoMarket/OrderSize.aspx">Emir Büyüklükleri</a>
+				</div></li><li class="rtLI"><div class="rtMid">
+					<span class="rtSp"></span><a class="rtIn" href="../BondsandBillsMarket/RepoReverseRepoMarket/ExchangeFeesrepo.aspx">Borsa Payları</a>
+				</div></li><li class="rtLI"><div class="rtMid">
+					<span class="rtSp"></span><a class="rtIn" href="../BondsandBillsMarket/RepoReverseRepoMarket/TransactionHoursrepo.aspx">İşlem Saatleri</a>
+				</div></li><li class="rtLI"><div class="rtMid">
+					<span class="rtSp"></span><a class="rtIn" href="../BondsandBillsMarket/RepoReverseRepoMarket/ValueDatesrepo.aspx">Valör Süreleri</a>
+				</div></li><li class="rtLI rtLast"><div class="rtBot">
+					<span class="rtSp"></span><a class="rtIn" href="../BondsandBillsMarket/RepoReverseRepoMarket/Marketparticipantsrepo.aspx">Piyasa Katılımcıları</a>
+				</div></li>
+			</ul></li>
+		</ul></li><li class="rtLI"><div class="rtMid">
+			<span class="rtSp"></span><span class="rtPlus"></span><a class="rtIn" href="../ForeignSecuritiesMarket.aspx">Yabancı Menkul Kıymetler Piyasası</a>
+		</div><ul class="rtUL" style="display:none;">
+			<li class="rtLI"><div class="rtTop">
+				<span class="rtSp"></span><a class="rtIn" href="../ForeignSecuritiesMarket/ExchangeFees.aspx">Borsa Payları</a>
+			</div></li><li class="rtLI"><div class="rtMid">
+				<span class="rtSp"></span><a class="rtIn" href="../ForeignSecuritiesMarket/TransactionHours.aspx">İşlem Saatleri</a>
+			</div></li><li class="rtLI"><div class="rtMid">
+				<span class="rtSp"></span><a class="rtIn" href="../ForeignSecuritiesMarket/SettlementPrinciples.aspx">Takas Esasları</a>
+			</div></li><li class="rtLI rtLast"><div class="rtBot">
+				<span class="rtSp"></span><a class="rtIn" href="../ForeignSecuritiesMarket/MarketParticipants.aspx">Piyasa Katılımcıları</a>
+			</div></li>
+		</ul></li><li class="rtLI rtLast"><div class="rtBot">
+			<span class="rtSp"></span><a class="rtIn" href="../OfficialHolidays.aspx">Resmi Tatil Günleri</a>
+		</div></li>
+	</ul><input id="ctl00_cphSubmenu_tm_sitefinity_usercontrols_navigation35_sitetreeview_ascx1_RadTreeview1_ClientState" name="ctl00_cphSubmenu_tm_sitefinity_usercontrols_navigation35_sitetreeview_ascx1_RadTreeview1_ClientState" type="hidden" />
+</div>
+</div>
+
+<div id="contentSmall" class="floatLeft">
+<!--<div id="contentPhotoSmall"><img src="/App_Themes/imkbTheme/images/contentPhoto-2.jpg" /></div>-->
+<img alt="" src="http://www.imkb.gov.tr/Libraries/Sayfa_Görselleri/piyasalar_1_1.sflb.ashx? sfref=" /> <p> </p> <table id="table1" bordercolor="#9c0000" width="522" border="0"> <tbody> <tr> <td style="border-bottom-width: 3px; border-bottom-color: #9c0000;"> <div style="border-bottom: #9c0000 2px solid;"><strong><span style="color: #9c0000; font-family: arial;">İŞLEM SAATLERİ</span></strong></div> </td> </tr> </tbody> </table> <br /> <table id="table1" cellspacing="0" cellpadding="0" border="1"> <tbody> <tr> </tr> </tbody> </table> <table class="css hover zebra" cellspacing="0" cellpading="0"> <tbody> <tr class="title"> <td valign="top"><strong>Hisse Senetleri Piyasası İşlem Saatleri</strong></td> <td valign="top"> </td> </tr> <tr> <td valign="top">Ulusal Pazar, Kurumsal Ürünler Pazarı, İkinci Ulusal Pazar, Yeni Ekonomi Pazarı ve Fon Pazarı</td> <td valign="top"> </td> </tr> <tr> <td valign="top">1. Seans</td> <td valign="top">09:30<span class="telerik-reTable-1"></span>-12:30</td> </tr> <tr> <td valign="top">Açılış Seansı</td> <td valign="top">09:30-09:50</td> </tr> <tr> <td valign="top">i) Emir Toplama<br /> </td> <td valign="top">09:30-09:45</td> </tr> <tr> <td valign="top">ii) Açılış Fiyatının Belirlenmesi ve Açılış İşlemleri</td> <td valign="top">09:45-09:50</td> </tr> <tr> <td valign="top">Sürekli Müzayede Seansı </td> <td valign="top">09:50-12:30</td> </tr> <tr> <td valign="top"> </td> <td valign="top"> </td> </tr> <tr> <td valign="top">2. Seans</td> <td valign="top">14:00-17:30</td> </tr> <tr> <td valign="top">Açılış Seansı</td> <td valign="top">14:00-14:20</td> </tr> <tr> <td valign="top"> <p>i)Emir Toplama</p> <p>ii) Açılış Fiyatının Belirlenmesi ve Açılış İşlemleri</p> <p>Sürekli Müzayede Seansı        </p> </td> <td valign="top"> <p>14:00-14:15</p> <p>14:15-14:20</p> <p>14:20-17:30</p> </td> </tr> <tr> <td valign="top"> <p>Toptan Satışlar Pazarı</p> <p>Resmi Müzayede İşlemleri</p> <p>Birincil Piyasa İşlemleri</p> </td> <td valign="top"> <p> </p> <p>11:00-12:00</p> </td> </tr> <tr> <td valign="top"> <p>Gözaltı Pazarı </p> </td> <td valign="top">14:00-15:00</td> </tr> </tbody> </table>
+
+</div>
+
+<div id="rightColumn" class="floatRight">
+
+<div class="box">
+<div class="header"><h3 class="search">ARAMA</h3></div>
+<div class="textContainer">
+
+<fieldset class="sf_searchBox">
+    
+    <div class="curved margintop4pixel floatLeft">
+    <input name="ctl00$cphArama$tm_SearchBox1$ctl00$ctl00$queryText" type="text" maxlength="90" id="ctl00_cphArama_tm_SearchBox1_ctl00_ctl00_queryText" class="textboxcurved" />
+    </div>
+    
+    <div class="floatLeft">
+    <!--<input name="ctl00$cphArama$tm_SearchBox1$ctl00$ctl00$searchButton_" type="button" id="ctl00_cphArama_tm_SearchBox1_ctl00_ctl00_searchButton_" class="sf_searchSubmit" alt="Ara" />-->
+    <input type="image" name="ctl00$cphArama$tm_SearchBox1$ctl00$ctl00$searchButton" id="ctl00_cphArama_tm_SearchBox1_ctl00_ctl00_searchButton" class="sf_searchSubmitMe" src="/App_Themes/imkbTheme/images/searchButton.gif" border="0" />
+    </div>
+</fieldset>
+</div>
+</div>
+
+
+<div class="box">
+<div class="header"><h3 class="imkbYenilik">İMKB'DE YENİLİKLER</h3></div>
+<div class="textContainer">
+<div id="ctl00_cphImkbYenilikler_tm_ListDisplay1">
+	
+
+
+        
+        
+                <ul class="sf_simpleList">
+            
+                <li>
+                    <a href="../../GT30/GT30.aspx">Türkiye Yunanistan Ortak Endeksi GT-30</a>
+
+                </li>
+            
+                <li>
+                    <a href="../../GrowingCompaniesMarket/GrowingCompaniesMarket.aspx">Gelişen İşletmeler Piyasası</a>
+
+                </li>
+            
+                <li>
+                    <a href="../../MarketMaker/MarketMaker.aspx">Piyasa Yapıcılık</a> 
+
+                </li>
+            
+                </ul>
+            
+    
+</div>
+</div>
+</div>
+
+<div class="banner firstBanner">
+<p><a href="http://www.halkaarzseferberligi.com/zirveler/istanbul/hosgeldiniz/anasayfa.aspx" target="_blank" shape="rect"><img alt="" style="width: 200px; height: 82px;" src="http://www.imkb.gov.tr/Libraries/Sayfa_Görselleri/halka_arz_logo_son.sflb.ashx" /></a> </p> <p> </p> <p><a href="http://www.imkb.gov.tr/announcements/newsdetail/10-04-21/-2978762075.aspx" shape="rect"><img width="200" height="54" alt="" width="200" height="54" src="http://www.imkb.gov.tr/Libraries/Sayfa_Görselleri/imkb_makale_yarismasi_tur_yeni.sflb.ashx" /></a></p>
+
+</div>
+
+<!--Bannerlar-->
+<div class="banner firstBanner">
+<a class="top_up" href="/25yil/video/sondonem.flv" title="25. Yil Son Dönem"><img src="/App_Themes/imkbTheme/images/25yil.png"/></a>
+<a href="/25yil/index.html"><img src="/App_Themes/imkbTheme/images/borsatarihi.png" alt="Video"/></a>
+</div>
+
+<div class="banner firstBanner">
+<div class="banner firstBanner"> <a href="/video/sonhalkaarz.flv" class="top_up" title="Halka Arz Töreni"> <img src="/video/images/sonhalkaarz.png" alt="Video"/></a> <a href="/videoarsiv.aspx"><img src="/App_Themes/imkbTheme/images/video-2.jpg" alt="Video"/></a> </div>
+</div>
+
+<div class="banner firstBanner">
+<a href="/PublicDisclosurePlatform/PublicDisclosurePlatform.aspx?sflang=tr"><img alt="" src="/App_Themes/imkbtheme/images/bannerkap1.gif" /></a> 
+
+</div>
+
+<!--Bannerlar-->
+
+
+<div class="box">
+<div class="header"><h3 class="iconFavoriSayfalarim">HIZLI ERİŞİM</h3></div>
+<div class="textContainer">
+
+
+
+
+<div dojoType="swx.widget.TitlePane" id="sbQuickLinksPane" saveState="true" duration="500" class="mpulse-sidebar" style="visibility:hidden" title="">
+    <table class="ip-sidebar" width="100%" id="quicklinksTable" cellpadding="0" cellspacing="5">
+        <tr><td></td></tr>
+    </table>
+</div>
+      
+</div>
+</div>
+
+
+<!--<div class="banner"><a href="/ifm/ifm.aspx"><img alt="" src="/App_Themes/imkbtheme/images/bannerifm.jpg" /></a> 
+</div>-->
+</div>
+
+</div>  <!--Content END-->
+
+
+<div class="clear"></div>
+
+
+<div class="width marginTop-30">
+<img src="/App_Themes/imkbTheme/images/bottomLine.gif"  alt=""/>
+
+
+
+<div id="footer">
+
+<div class="floatLeft">
+<ul>
+<li><a href="/ContactUs.aspx">Bize Ulaşın</a></li>
+<li><a href="/AccessToInformation.aspx">Bilgi Edinme</a></li>
+<li><a href="/relatedwebsites.aspx?sflang=tr">İlgili Kuruluşlar</a></li>
+<li><a href="/tenders/tenderannouncements.aspx">İhale Duyuruları</a></li>
+<li><a href="/copyright.aspx">Telif Hakkı ve Çekince İhbarı Bildirimi</a></li>
+</ul>
+</div>
+<div class="floatRight"><a href="javascript:Clickheretoprint()"><img src="/App_Themes/imkbTheme/images/footerPrint.gif" class="marginRight-5 noborder" alt="PRINT"/></a></div>
+<div class="clear"></div>
+<div id="footerText" class="fontSmallXx">
+© 2009 İstanbul Menkul Kıymetler Borsası </div>
+</div>
+</div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+LanguageBar.Create("aspnetForm","ctl00_cphLang_ctl00_flagList_ctl00_languageList","/","tr","","none","DomainName");
+Telerik.Web.UI.RadTreeView._preInitialize("ctl00_cphSubmenu_tm_sitefinity_usercontrols_navigation35_sitetreeview_ascx1_RadTreeview1","0");SearchBox.Create('../../searchresults/searchresults.aspx', 'AllWords', 'Site Index', 'ctl00_cphArama_tm_SearchBox1_ctl00_ctl00_queryText', 'ctl00_cphArama_tm_SearchBox1_ctl00_ctl00_searchButton');Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(Sys.UI._Timer, {"enabled":true,"interval":180000,"uniqueID":"ctl00$Timer1"}, null, null, $get("ctl00_Timer1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxManager, {"_updatePanels":"","ajaxSettings":[{InitControlID : "",UpdatedControls : [{ControlID:"",PanelID:""},{ControlID:"",PanelID:""}]},{InitControlID : "",UpdatedControls : [{ControlID:"",PanelID:""}]},{InitControlID : "ctl00_Timer1",UpdatedControls : [{ControlID:"ctl00_cphTicker_ctl00_lblUlusal100",PanelID:""}]},{InitControlID : "ctl00_Timer1",UpdatedControls : [{ControlID:"ctl00_cphTicker_ctl00_lblUlusal030",PanelID:""}]},{InitControlID : "ctl00_Timer1",UpdatedControls : [{ControlID:"ctl00_cphTicker_ctl00_lblUlusalMali",PanelID:""}]},{InitControlID : "ctl00_Timer1",UpdatedControls : [{ControlID:"ctl00_cphTicker_ctl00_lblUlusalSinai",PanelID:""}]},{InitControlID : "ctl00_Timer1",UpdatedControls : [{ControlID:"ctl00_cphTicker_ctl00_imageUlusal100",PanelID:""}]},{InitControlID : "ctl00_Timer1",UpdatedControls : [{ControlID:"ctl00_cphTicker_ctl00_imageUlusal030",PanelID:""}]},{InitControlID : "ctl00_Timer1",UpdatedControls : [{ControlID:"ctl00_cphTicker_ctl00_imageUlusalMali",PanelID:""}]},{InitControlID : "ctl00_Timer1",UpdatedControls : [{ControlID:"ctl00_cphTicker_ctl00_imageUlusalSinai",PanelID:""}]},{InitControlID : "ctl00_Timer1",UpdatedControls : [{ControlID:"ctl00_cphTicker_ctl00_lblUlusal100Degisim",PanelID:""}]},{InitControlID : "ctl00_Timer1",UpdatedControls : [{ControlID:"ctl00_cphTicker_ctl00_lblUlusal030Degisim",PanelID:""}]},{InitControlID : "ctl00_Timer1",UpdatedControls : [{ControlID:"ctl00_cphTicker_ctl00_lblUlusalMaliDegisim",PanelID:""}]},{InitControlID : "ctl00_Timer1",UpdatedControls : [{ControlID:"ctl00_cphTicker_ctl00_lblUlusalSinaiDegisim",PanelID:""}]}],"clientEvents":{OnRequestStart:"",OnResponseEnd:""},"defaultLoadingPanelID":"","enableAJAX":true,"enableHistory":true,"links":[],"styles":[],"uniqueID":"ctl00$RadAjaxManager1","updatePanelsRenderMode":0}, null, null, $get("ctl00_RadAjaxManager1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxLoadingPanel, {"initialDelayTime":0,"isSticky":false,"minDisplayTime":0,"skin":"Telerik","transparency":0,"uniqueID":"ctl00$RadAjaxLoadingPanel1","zIndex":90000}, null, null, $get("ctl00_RadAjaxLoadingPanel1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadTabStrip, {"_selectedIndex":1,"_skin":"TabStrip","attributes":{"SkinsPath":"~/App_Themes/imkbTheme"},"clientStateFieldID":"ctl00_cphMenu_ctl00_RadTabstrip1_ClientState","selectedIndexes":["1"],"tabData":[{},{},{},{},{},{},{},{}]}, null, null, $get("ctl00_cphMenu_ctl00_RadTabstrip1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadTreeView, {"_scrollPosition":0,"_selectedValue":"Hisse Senetleri Piyasası","_skin":"Default","_uniqueId":"ctl00$cphSubmenu$tm_sitefinity_usercontrols_navigation35_sitetreeview_ascx1$RadTreeview1","clientStateFieldID":"ctl00_cphSubmenu_tm_sitefinity_usercontrols_navigation35_sitetreeview_ascx1_RadTreeview1_ClientState","collapseAnimation":"{\"duration\":200}","expandAnimation":"{\"duration\":200}","nodeData":[{"value":"Hisse Senetleri Piyasası","expanded":1,"items":[{"value":"Emir Tipleri"},{"value":"Fiyat Marjları"},{"value":"Maksimum Lot Miktarları"},{"value":"Lot Altı İşlemler"},{"value":"Kredili İşlem ve Açığa Satış"},{"value":"Borsa Payları"},{"value":"İşlem Saatleri"},{"value":"Takas Esasları"}],"selected":1},{"value":"Tahvil ve Bono Piyasası","items":[{"value":"Kesin Alım-Satım Pazarı","items":[{"value":"Emir ve Fiyat Tipleri"},{"value":"Emir Kuralları"},{"value":"Emir Büyüklükleri"},{"value":"Borsa Payları"},{"value":"İşlem Saatleri"},{"value":"Valör Süreleri"},{"value":"Piyasa Katılımcıları"},{"value":"Piyasa Yapıcılık"}]},{"value":"Repo - Ters Repo Pazarı","items":[{"value":"Emir Tipleri"},{"value":"Emir Kuralları"},{"value":"Emir Büyüklükleri"},{"value":"Borsa Payları"},{"value":"İşlem Saatleri"},{"value":"Valör Süreleri"},{"value":"Piyasa Katılımcıları"}]}]},{"value":"Yabancı Menkul Kıymetler Piyasası","items":[{"value":"Borsa Payları"},{"value":"İşlem Saatleri"},{"value":"Takas Esasları"},{"value":"Piyasa Katılımcıları"}]},{"value":"Resmi Tatil Günleri"}],"selectedIndexes":["0"],"singleExpandPath":true}, null, null, $get("ctl00_cphSubmenu_tm_sitefinity_usercontrols_navigation35_sitetreeview_ascx1_RadTreeview1"));
+});
+//]]>
+</script>
+</form>
+	
+</body>
+ 
+</html>

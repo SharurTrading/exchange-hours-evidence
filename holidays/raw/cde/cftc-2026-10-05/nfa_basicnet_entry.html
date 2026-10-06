@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 8]> <html class="lt-ie9 lt-ie8 " lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9 " lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"><!--<![endif]-->
+<head><meta charset="utf-8" /><title>
+	BASIC | NFA
+</title><meta content="width=device-width, initial-scale=1" name="viewport" /><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="0" />
+    <link href="./basic-icons/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="./basic-img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="./basic-img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="./manifest.json" rel="manifest" />
+    <link href="./basic-img/icons/favicon.ico" rel="shortcut icon" />
+    <link color="#5bbad5" href="/cms/icons/safari-pinned-tab.svg" rel="mask-icon" />
+    <meta content="#ffffff" name="theme-color" />
+
+    <script src="../cms/includes/js/hostedSearchPage.js?v=639251826472535412"></script>
+    <script class="coveo-script" src="https://static.cloud.coveo.com/searchui/v2.10106/js/CoveoJsSearch.Lazy.min.js"></script>
+    <script src="https://static.cloud.coveo.com/searchui/v2.10106/js/templates/templates.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700" rel="stylesheet" />
+    <link href="./cms/includes/css/icon-fonts.min.css?v=639251826472535412" rel="stylesheet" type="text/css" />
+    <link href="./cms/includes/css/bootstrap.min.css?v=639251826472535412" rel="stylesheet" />
+    <link href="./cms/includes/css/theme.min.css?v=639251826472535412" rel="stylesheet" type="text/css" />
+    <link href="./cms/includes/css/slick.min.css?v=639251826472535412" rel="stylesheet" type="text/css" />
+    <link href="./cms/includes/css/slick-theme.min.css?v=639251826472535412" rel="stylesheet" type="text/css" />
+    <link href="./basic-css/basic-search.css?v=639251826472535412" rel="stylesheet" />
+    <!-- *************************************************************** begin headCSSIncludes *******************-->
+    
+    <link href="basic-css/iThing.min.css?v=639251826472535412" rel="stylesheet" type="text/css" />
+    <style>
+        .basic-content {
+            display:none;
+        }
+    </style>
+
+    <!-- *************************************************************** end headCSSIncludes *******************-->
+    
+    <link href="./basic-css/basic.css?v=639251826472535412" rel="stylesheet" />
+    
+    <!-- *************************************************************** begin headJSIncludes *******************-->
+    
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/cms/includes/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="cms/includes/js/jquery.min.js?v=639251826472535412" type="text/javascript"></script>
+    <script src="cms/includes/js/jquery-ui.min.js?v=639251826472535412" type="text/javascript"></script>
+    <script src="cms/includes/js/bootstrap.bundle.min.js?v=639251826472535412" type="text/javascript"></script>
+    <script src="basic-js/basic-rpc-client.js?v=639251826472535412" type="text/javascript"></script>
+    <script src="cms/includes/js/nfacommon.min.js?v=639251826472535412" type="text/javascript"></script>
+    <script src="cms/includes/js/servermessage.js?v=639251826472535412" type="text/javascript"></script>
+
+    <script src="../cms/includes/js/servermessage.js?v=639251826472535412" type="text/javascript"></script>
+    <!-- *************************************************************** end headJSIncludes *******************-->
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WCKZQ9D');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!---->
+    <!-- *************************************************************** begin headMetaData *******************-->
+    
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- *************************************************************** end headMetaData *******************-->
+<meta name="description" content="Basic Search" /><meta name="keywords" content="NFA Member Search" /></head>
+<body class="interior-body">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WCKZQ9D" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="row-offcanvas row-offcanvas-left">
+        <div class="navbar-fixed-top">
+            <header class="main-header" role="banner">
+                <div id="headerLogoDiv">
+                    <div class="container clearfix">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a class="site-logo" href="/index.html">
+                                    <img alt="National Futures Association" src="./cms/images/logo.png">
+                                </a>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="header-top table-row">
+                                    <div class="column">
+                                        <ul class="secondary-nav column">
+                                            <li><a href="/electronic-filing-systems/index.html">Electronic Filing Systems</a>
+                                            </li>
+                                            <li><a href="/rulebook/index.aspx">NFA Rulebook</a>
+                                            </li>
+                                            <li><a name="ORS" id="ORS" href="#ORS">Online Registration System</a>
+                                            </li>
+                                        </ul>
+                                        <script type="text/javascript">
+                                            document.getElementById("ORS").onclick = function() {
+                                                open_app('/ORS/');
+                                            }
+                                        </script>
+                                    </div>
+                                    <div class="column">
+                                        <!-- BEGIN COVEO SEARCH INTEGRATION -->
+                                            <link href="../cms/includes/css/coveoFullSearch-custom.css?v=639251826472535412" rel="stylesheet" type="text/css"/>
+                                            <div role="form" style="padding-top: 4px;">
+                                                <div id="searchbox">
+                                                    <div class="CoveoAnalytics" data-expression="@source==NFA" data-search-hub="Global-Search"></div>
+                                                    <div class="CoveoSearchbox" id="searchID"></div>
+                                                </div>
+                                            </div>
+                                        <script src="/cms/includes/js/coveoapiKeys.js?v=639251826472535412"></script>
+                                        <script src="/cms/includes/js/coveo-contentLoader-v2.js?v=639251826472535412"></script>
+
+                                        <!-- END COVEO SEARCH INTEGRATION -->
+                                    </div>
+                                </div>
+                                <div class="header-buttons">
+                                    <ul>
+                                        <li>
+                                            <a class="btn" href="basic-search-landing.aspx">
+                                                <img style="width: 70px;" alt="Basic Search Logo" src="./basic-img/company-logo/basic-logo-white-e9dbaa5a.svg">
+                                            </a>
+                                            <li><a class="btn" href="/ComplaintNET/Complaint.aspx">File a Complaint</a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div id="navDiv">
+                <div class="nav-section">
+                    <div class="container clearfix">
+                        <!-- MAIN NAV -->
+                        <nav class="navbar navbar-default" role="navigation">
+                            <div class="container-fluid">
+                            <button class="navbar-toggle" type="button" data-toggle="offcanvas"  data-bs-target="#navbar"> <span class="visually-hidden">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>	
+                            </button>
+                            <div class="sidebar-offcanvas" id="navbar">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li> <a href="/about/index.html"><span>About</span></a>	
+                                    </li>
+                                    <li > <a  href="/news/indexNews.asp"><span>News &amp; Notices</span></a>	
+                                    </li>
+                                    <li > <a  href="/members/index.html"><span>Members</span></a>	
+                                    </li>
+                                    <li > <a  href="/registration-membership/index.html"><span>Registration</span></a>	
+                                    </li>
+                                    <li > <a  href="/investors/index.html"><span>Investors</span></a>	
+                                    </li>
+                                    <li > <a  href="/careers/index.html"><span>Careers</span></a>	
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- MAIN NAV end -->
+                    </div>
+                </div>
+            </div>
+            <div id="animationLoader">
+                <p>Loading</p>
+                <div id="load_spinner"></div>
+            </div>
+        </div>
+        <main class="main-content" id="main-content" role="main" tabindex="-1">
+            <div class="nfa-server-alert-urgent hidden"></div>
+            <div class="nfa-server-alert-info hidden"></div>
+            <div class="basic-wrapper">
+                <div id="headerDiv">
+                    <div class="container">
+                        <div class="bar" id="Div1">
+                            <div class="page-tools" id="PrintPageNew">
+                                
+                                 <form class="quick-search">
+                                     <span class="validation">
+                                          <span class="validation-search quick firm">Please enter a firm name.</span>
+                                          <span class="validation-search quick nfaid">Please enter an NFA or Pool ID.</span>
+                                          <span class="validation-search quick individual">Please enter a last name.</span>
+                                          <span class="validation-search quick pool">Please enter a pool name.</span>
+                                      </span>
+                                     <div style="display:none">
+                                         <input type="hidden" name="search_return_url_param" id="search_return_url_param" />
+                                    </div>
+                                    <select id="quick_search_dd">
+                                      <option value="firm" pholder="Firm Name">Firm</option>
+                                      <option value="nfaid" pholder="NFA ID">NFA ID</option>
+                                      <option value="individual" pholder="Last Name (required)">Individual</option>
+                                      <option value="pool" pholder="Pool Name">Pool</option>
+                                    </select>
+                                     
+                                    <div class="search-bar">
+                                      <input type="hidden" name="search_main_param" id="search_main_param" />
+                                      <input type="hidden" name="search_secondary_param" id="search_secondary_param" />
+                                      <input type="hidden" name="search_type_param" id="search_type_param" />
+                                      <input id="fname_in_qsearch" type="text" placeholder="First Name" style="display:none;margin-right:5px;" /><input id="input_in_qsearch" type="search" placeholder="Firm Name">
+                                    </div>
+                                </form>
+                                <button id="qsearch_btn" class="btn btn-primary"></button>
+                                <img class="search-bar-logo-right logo" alt="Basic Search Logo" src="./basic-img/company-logo/basic-logo-color-e2254905.svg">
+                                <a onclick="window.print(); return false;" href="#"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon-print" aria-hidden="true" focusable="false"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-print" /> </svg>Print                            </a>
+                            </div>
+                            <div class="breadcrumbs" id="Breadcrumbs">
+                                <a href="/index.html">Home</a>
+                                <span class="icon-bracket-right"></span>
+                                <a href="./">BASIC</a>
+                                <span class="icon-bracket-right"></span>
+                                <span class="nfa-breadcrumb-insert"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+    <section class="main-search">
+        <div class="container">
+            <div class="search-block primary">
+              <div class="search-block-inner">
+                <a href="./"><img class="logo"  alt="Basic Search Logo" src="basic-img/company-logo/basic-logo-color-e2254905.svg"></a>
+                <!-- Nav tabs -->
+                <ul id="landing_search_tabs" class="nav nav-tabs" role="tablist">
+                  <li class="active" role="presentation" pholder="Firm Name"><a role="tab" aria-controls="firm" href="#home" data-toggle="tab">Firm</a></li>
+                  <li role="presentation" pholder="NFA ID"><a role="tab" aria-controls="nfaid" href="#profile" data-toggle="tab">NFA ID</a></li>
+                  <li role="presentation" pholder="Last Name"><a role="tab" aria-controls="individual" href="#profile" data-toggle="tab">Individual</a></li>
+                  <li role="presentation" pholder="Pool Name"><a role="tab" aria-controls="pool" href="#messages" data-toggle="tab">Pool</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="firm" role="tabpanel">
+                    <div class="search-bar">
+                      <input type="search" placeholder="Firm Name">
+                    </div>
+                    <button class="btn btn-primary">Search</button>
+                  </div>
+                  <div class="tab-pane" id="nfaid" role="tabpanel">
+                    <div class="search-bar">
+                      <input type="search" placeholder="NFA ID">
+                    </div>
+                      <button class="btn btn-primary">Search</button>
+                  </div>
+                  <div class="tab-pane" id="individual" role="tabpanel">
+                    <div class="search-bar is-active"><!--updated-->
+                      <input id="fname_in_lsearch_tabs" class="individual" type="text" placeholder="First Name" style="display:inline-block;margin-right:5px;" /> <input class="individual" type="search" placeholder="Last Name (required)">
+                    </div>
+                      <button class="btn btn-primary">Search</button>
+                  </div>
+                  <div class="tab-pane" id="pool" role="tabpanel">
+                    <div class="search-bar">
+                      <input type="search" placeholder="Pool Name">
+                    </div>
+                      <button class="btn btn-primary">Search</button>
+                  </div>
+                </div>
+                  <div class="validation">
+                      <span class="validation-search landing firm">Please enter a firm name.</span>
+                      <span class="validation-search landing nfaid">Please enter an NFA or Pool ID.</span>
+                      <span class="validation-search landing individual">Please enter a name.</span>
+                      <span class="validation-search landing pool">Please enter a pool name.</span>
+                  </div>
+                <p class="ppolicy"><small>Conducting a BASIC search indicates you have accepted the <a href="basic-terms.aspx" target="_blank" rel="noopener noreferrer">Terms and Conditions of Use</a> &amp; <a href="../disclaimer-and-privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Statement</a>.</small></p>
+              </div>
+            </div>
+            <div class="text-block">
+              <p>
+                  BASIC is a free tool that NFA Members and investors can use to research the background of derivatives industry professionals. Whether you are an investor thinking about opening a futures account or an NFA Member contemplating a new business relationship, BASIC can be a valuable resource.
+              </p>
+              <p>
+                  To learn more about the derivatives industry, visit <a href="https://www.futuresfundamentals.org" target="_blank">FuturesFundamentals.org</a>, a one-stop educational resource designed to simplify and explain complex market topics.
+              </p>
+              <p>
+                  Entities you search for in BASIC may currently hold, or may have previously held, licenses to offer additional financial services beyond those regulated by NFA. For information on a firm or individual's securities licenses, registrations and professional background, please also search FINRA's <a href="https://brokercheck.finra.org/" target="_blank">BrokerCheck&reg;</a> to research brokers and brokerage firms.
+              </p>
+              <p>
+                  BrokerCheck&reg; is a registered trademark of the Financial Industry Regulatory Authority, Inc. and is not affiliated with NFA.
+              </p>
+            </div>
+        </div>
+    </section>
+
+                
+                
+                <div class="basic-content">
+                    <main class="content-with-sidebar">
+                        <div class="container">
+                            <aside class="side-bar" id="vitalsHolder">
+                                <img  alt="Basic Search Logo" src="./basic-img/company-logo/basic-logo-white-e9dbaa5a.svg" class="logo">
+                            </aside>
+                            <div id="mainContainer" class="col-md-9 col-md-offset-3 main-text" >
+                                <div id="notNFAHolder"></div>
+                                <div id="barredHolder"></div>
+                                <div id="notDoingBuisnessHolder"></div>
+                                <!-- *************************************************************** begin basicMainContent *******************-->
+                                
+                                
+                                <!-- *************************************************************** end basicMainContent *******************-->
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </main>
+    <div id="footerDiv">
+        <footer class="main-footer" role="contentinfo">
+            <div class="footer-top">
+                <div class="container clearfix">
+                    <ul>
+                        <li>
+                            <a href="/contact-nfa/index.html">Contact NFA</a>
+                        </li>
+                        <li>
+                            <a href="/ComplaintNET/Complaint.aspx">File a Complaint</a>
+                        </li>
+                        <li>
+                            <a href="/arbitration/index.html">Arbitration Services</a>
+                        </li>
+                        <li>
+                            <a href="/market-regulation/index.html">Market Regulation Services</a>
+                        </li>
+                        <li>
+                            <a href="/faqs/index.html">FAQs</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="/index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="/site-index.html">Site Index</a>
+                        </li>
+                        <li>
+                            <a href="/disclaimer-and-privacy-policy.html">Disclaimer and Privacy Policy</a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="social-icons">
+                        <h3>Connect With Us</h3>
+                        <a class="icon-twitter" href="https://twitter.com/NFA_News" target="_blank" rel="noopener noreferrer"><span class="visuallyHidden">Twitter</span></a>
+                        <a class="icon-rss" href="/news/rss.asp"><span class="visuallyHidden">Rss</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p>Â©<span id="copyRightSpn"> 2026</span>  National Futures Association. All Rights Reserved. NFA and NATIONAL FUTURES ASSOCIATION are registered trademarks of National Futures Association.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>        
+    </div>
+
+    <!-- insert required js template files -->
+    <script src="./basic-templates/template-alert-banner.js?v=639251826472535412" type="text/javascript"></script>
+    <script src="./basic-templates/template-not-nfa.js?v=639251826472535412" type="text/javascript"></script>
+    <script src="./basic-templates/template-barred.js?v=639251826472535412" type="text/javascript"></script>
+    <script src="./basic-templates/template-not-doing-business-banner.js?v=639251826472535412" type="text/javascript"></script>
+    <script src="./basic-js/basic-rpc-client.js?v=639251826472535412" type="text/javascript"></script>
+    <script src="./cms/includes/js/all.js?v=639251826472535412"></script>
+    <script src="./basic-js/basic-search.js?v=639251826472535412"></script>
+    <script>
+        $.nfa.basic.search.registerQuickSearch({
+            sdd: $("#quick_search_dd"),
+            fns: $("#fname_in_qsearch"),
+            qsearchbtn: $("#qsearch_btn")
+        });
+        $.nfa.basic.search.initQuickSearch();
+    </script>
+
+    <!-- *************************************************************** begin basicFooterJSIncludes *******************-->
+        
+    <script>
+        // the default "loading..." is on by default. If not using it, just hide it.
+        $("#animationLoader").hide();
+
+        // the search page does not utilize the left sidebar, so we hide it here.
+        $("#vitalsHolder").hide();
+        $("#mainContainer").removeClass(); // clear the classes of the main container
+        $("#mainContainer").css("min-height", "0px"); // remove hard coded min-height 0f 2000px. Search doesn't need it.
+        //$("#mainContainer").addClass("col-md-12"); // add class to have content area span across full available within structure
+
+        // hide the bread-crumb search
+        $("form.quick-search").hide();
+
+        $("#qsearch_btn").hide();
+
+        // hide the basic-search logo
+        $(".page-tools img.search-bar-logo-right.logo").hide();
+
+        // breadcrumbs
+        var crumb = "BASIC Search";
+        // insert page level breadcrumb
+        $(".nfa-breadcrumb-insert").html(crumb);
+    </script>
+    
+    <script>
+        //$.nfa.basic.search.registerQuickSearch({
+        //    sdd: $("#quick_search_dd"),
+        //    fns: $("#fname_in_qsearch")
+        //});
+        //$.nfa.basic.search.initQuickSearch();
+
+        $.nfa.basic.search.registerLandingSearch({
+            lst: $("#landing_search_tabs"),
+            fns: $("#fname_in_lsearch_tabs")
+        });
+
+        $.nfa.basic.search.initLandingSearch();
+    </script>
+
+    <!-- *************************************************************** end basicFooterJSIncludes *******************-->
+ 
+
+    <!-- *************************************************************** begin basicTemplates *******************-->
+        
+
+
+    <!-- *************************************************************** end basicTemplates *******************-->
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a45a2cf31e4a6904',t:'MTc5MTE3OTcwNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
