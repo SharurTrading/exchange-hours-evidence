@@ -1,0 +1,553 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us"> 
+<head id="ctl00_ctl00_Head1"><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="content-language" content="en-us" /><title>
+	CFE Circular on Expansion of Extended Trading Hours for VIX Futures and Risks Relating to Extended Trading Hours
+</title><meta name="author" /><meta name="copyright" content="© 2008 CBOE. All rights reserved." /> 
+  <style type="text/css" media="screen">@import url("/css/defaultEx.css");</style> 
+  <style type="text/css" media="screen">@import url("/css/default-cboeEx.css");</style> 
+  <style type="text/css" media="screen">@import url("/css/menuEx.css");</style> 
+  <!--[if IE]>
+  <style type="text/css" media="screen">@import url("/css/default-ieEx.css");</style>
+  <![endif]-->  
+
+  
+  <script type="text/javascript" src="/js/modal.js"></script> 
+  <!-- jQuery (1.2.6), http://jquery.com/ --> 
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/js/scripts/superfish.js"></script><!-- main nav --> 
+  <script type="text/javascript" src="/js/scripts/flexcroll.js"></script><!-- div scroller --> 
+  <script type="text/javascript" src="/js/scripts/jquery.cluetip.js"></script><!-- tooltip --> 
+ 
+  <script type="text/javascript" src="/js/scripts/jquery.easing.js"></script> 
+  <script type="text/javascript" src="/js/scripts/jquery.accordion.js"></script><!-- accordion menu --> 
+  <script type="text/javascript" src="/js/scripts/jquery.cycle.all.js"></script><!-- content cycler --> 
+  <script type="text/javascript" src="/js/scripts/scripts.js"></script> 
+  <script src='/js/scripts/jquery.simplemodal.js' type='text/javascript'></script>
+
+  <!-- swfObject (2.1), http://code.google.com/p/swfobject/ --> 
+  <script type="text/javascript" src="/js/scripts/swfobject.js"></script> 
+  
+  <!-- custom UI scripts --> 
+  <script type="text/javascript" src="/js/scripts/customEx.js"></script> 
+  
+  <script type="text/javascript" src="/js/display.js"></script>
+  
+  <!-- Commom method to do some validation -->
+  <script type="text/javascript" src="/js/CBOEValidation.js"></script>
+
+<script LANGUAGE="JavaScript">
+  var isIntranet = 'False' == 'True' ? true : false;
+  var isHTTPS = 'https://cfe.cboe.com' == '' ? false : true;
+  var bLoggedIn = false;
+  
+  function AddQuickLink(){
+    window.location = "/UserAdmin/AddQuickLink.aspx?URL=/framed/pdfframed.aspx&TITLE=" + escape(document.title);
+  }
+ 
+</script>
+
+
+</head>
+
+<body class="fixed twocolumn short">
+
+  <form name="aspnetForm" method="post" action="pdfframed.aspx?content=%2fpublish%2fCFEregcirc%2fCFERG14-018.pdf&amp;section=SEC_ABOUT_CFE&amp;title=CFE+Circular+on+Expansion+of+Extended+Trading+Hours+for+VIX+Futures+and+Risks+Relating+to+Extended+Trading+Hours" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMzI3MzEzMjQ0D2QWAmYPZBYCZg9kFgICBQ9kFgICAw9kFgQCCA9kFgICAw8WAh4EVGV4dAWvIzxkaXYgY2xhc3M9ImxpbmtzIj48aDI+QWJvdXQgQ0ZFPC9oMj48cD48dWw+PHA+PGxpPjxhIGhyZWY9Ii9hYm91dGNmZS9sZWdhbC9ydWxlcy5hc3B4IiB0YXJnZXQ9Il90b3AiPkxlZ2FsICYgUmVndWxhdG9yeTwvYT48L2xpPjxsaT48YSBocmVmPSIvYWJvdXRjZmUvcmVsZWFzZXMuYXNweCIgdGFyZ2V0PSJfdG9wIj5QcmVzcyBSZWxlYXNlczwvYT48L2xpPjxsaT48YSBocmVmPSIvYWJvdXRjZmUvdHBmb3Jtcy5hc3B4IiB0YXJnZXQ9Il90b3AiPkZvcm1zICYgRmVlczwvYT48L2xpPjxsaT48YSBocmVmPSIvYWJvdXRjZmUvdm9sYXRpbGl0eW5ld3NsZXR0ZXIuYXNweCIgdGFyZ2V0PSJfdG9wIj5DRkUgTmV3c2xldHRlciBBcmNoaXZlPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9hYm91dGNmZS9FeHBpcmF0aW9uQ2FsZW5kYXIuYXNweCIgdGFyZ2V0PSJfdG9wIj5Ib2xpZGF5IENhbGVuZGFyPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9hYm91dGNmZS9jb250YWN0cy5hc3B4IiB0YXJnZXQ9Il90b3AiPkNvbnRhY3RzPC9hPjwvbGk+PC9wPjwvdWw+PC9wPjwvZGl2PjxkaXYgY2xhc3M9ImxpbmtzIj48aDI+UHJvZHVjdHM8L2gyPjxwPjx1bD48cD48bGk+PGEgaHJlZj0iL1Byb2R1Y3RzL1Byb2R1Y3RzX1ZJWC5hc3B4IiB0YXJnZXQ9Il90b3AiPlZYLUNCT0UgVm9sYXRpbGl0eSBJbmRleCAoVklYKSBGdXR1cmVzPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9Qcm9kdWN0cy9Qcm9kdWN0c19WWFNULmFzcHgiIHRhcmdldD0iX3RvcCI+VlNXLUNCT0UgU2hvcnQtVGVybSBWb2xhdGlsaXR5IEluZGV4IChWWFNUKSBGdXR1cmVzPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9Qcm9kdWN0cy9Qcm9kdWN0c19WVS5hc3B4IiB0YXJnZXQ9Il90b3AiPlZVLUNCT0UgUnVzc2VsbCAyMDAwIFZvbGF0aWxpdHkgSW5kZXggKFJWWCkgRnV0dXJlczwvYT48L2xpPjxsaT48YSBocmVmPSIvUHJvZHVjdHMvUHJvZHVjdHNfVk4uYXNweCIgdGFyZ2V0PSJfdG9wIj5WTi1DQk9FIE5hc2RhcS0xMDAgVm9sYXRpbGl0eSBJbmRleCAoVlhOKSBGdXR1cmVzPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9Qcm9kdWN0cy9Qcm9kdWN0c19WQS5hc3B4IiB0YXJnZXQ9Il90b3AiPlZB4oCTUyZQIDUwMCBWYXJpYW5jZSBGdXR1cmVzPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9Qcm9kdWN0cy9Qcm9kdWN0c19WWEVNLmFzcHgiIHRhcmdldD0iX25ldyI+VlhFTS1DQk9FIEVtZXJnaW5nIE1hcmtldHMgRVRGIFZvbGF0aWxpdHkgSW5kZXggKFZYRUVNKSBTZWN1cml0eSBGdXR1cmVzPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9Qcm9kdWN0cy9Qcm9kdWN0c19WWEVXLmFzcHgiIHRhcmdldD0iX25ldyI+VlhFVy1DQk9FIEJyYXppbCBFVEYgVm9sYXRpbGl0eSBJbmRleCAoVlhFV1opIFNlY3VyaXR5IEZ1dHVyZXM8L2E+PC9saT48bGk+PGEgaHJlZj0iL1Byb2R1Y3RzL1Byb2R1Y3RzX1ZYVFlOLmFzcHgiIHRhcmdldD0iX3RvcCI+VlhUWS1DQk9FIDEwLXllYXIgVS5TLiBUcmVhc3VyeSBOb3RlIFZvbGF0aWxpdHkgSW5kZXggKFZYVFlOKSBGdXR1cmVzPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9Qcm9kdWN0cy9Qcm9kdWN0c19HVlouYXNweCIgdGFyZ2V0PSJfdG9wIj5HVi1DQk9FIEdvbGQgRVRGIFZvbGF0aWxpdHkgSW5kZXggKEdWWikgU2VjdXJpdHkgRnV0dXJlczwvYT48L2xpPjxsaT48YSBocmVmPSIvUHJvZHVjdHMvUHJvZHVjdHNfT1YuYXNweCIgdGFyZ2V0PSJfbmV3Ij5PVi1DQk9FIENydWRlIE9pbCBFVEYgVm9sYXRpbGl0eSBJbmRleCAoT1ZYKSBTZWN1cml0eSBGdXR1cmVzPC9hPjwvbGk+PC9wPjwvdWw+PC9wPjwvZGl2PjxkaXYgY2xhc3M9ImxpbmtzIj48aDI+TWFya2V0IERhdGE8L2gyPjxwPjx1bD48cD48bGk+PGEgaHJlZj0iL0RhdGEvU2V0dGxlbWVudC5hc3B4IiB0YXJnZXQ9Il90b3AiPlNldHRsZW1lbnQ8L2E+PC9saT48bGk+PGEgaHJlZj0iL2RhdGEvZGFpbHl2eGZ1dHVyZXNlb2R2YWx1ZXMvZGVmYXVsdC5hc3B4IiB0YXJnZXQ9Il90b3AiPlZJWCBGdXR1cmVzIERhaWx5IFNldHRsZW1lbnQgUHJpY2VzPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9wdWJsaXNoL0NGRUVPRFNldHRsZVJlcG9ydC9FT0RTZXR0bGVtZW50UmVwb3J0LnhscyIgdGFyZ2V0PSJfbmV3Ij5FT0QgU2V0dGxlbWVudCBSZXBvcnQ8L2E+PC9saT48bGk+PGEgaHJlZj0iL2RhdGEvQ0ZFTWt0U3RhdC5hc3B4IiB0YXJnZXQ9Il90b3AiPkRhaWx5IE1hcmtldCBTdGF0aXN0aWNzPC9hPjwvbGk+PGxpPjxhIGhyZWY9Imh0dHBzOi8vd3d3LmNib2Uub3JnL01EWC9DRkUvQ0ZFTWFpbi5hc3B4IiB0YXJnZXQ9Il9uZXciPkNGRSBSZWFsLVRpbWUgTWFya2V0IERhdGE8L2E+PC9saT48bGk+PGEgaHJlZj0iL0RhdGEvSGlzdG9yaWNhbERhdGEuYXNweCIgdGFyZ2V0PSJfdG9wIj5IaXN0b3JpY2FsIERhdGE8L2E+PC9saT48bGk+PGEgaHJlZj0iaHR0cDovL3d3dy5tYXJrZXRkYXRhZXhwcmVzcy5jb20iIHRhcmdldD0iX25ldyI+TWFya2V0IERhdGEgRXhwcmVzczwvYT48L2xpPjwvcD48L3VsPjwvcD48L2Rpdj48ZGl2IGNsYXNzPSJsaW5rcyI+PGgyPkNCT0UuY29tIERlbGF5ZWQgUXVvdGVzPC9oMj48cD48dWw+PHA+PGxpPjxhIGhyZWY9Imh0dHA6Ly93d3cuY2JvZS5jb20vRGVsYXllZFF1b3RlL1NTRlF1b3RlLmFzcHgiIHRhcmdldD0iX25ldyI+Q0JPRS5jb20gRGVsYXllZCBRdW90ZXM8L2E+PC9saT48bGk+PGEgaHJlZj0iaHR0cDovL3d3dy5jYm9lLmNvbS9Na3RRdW90ZS9SVFF1b3RlUmVnLmFzcHgiIHRhcmdldD0iX25ldyI+Q0JPRS5jb20gU3RyZWFtaW5nIFJlYWwtVGltZSBRdW90ZXM8L2E+PC9saT48L3A+PC91bD48L3A+PC9kaXY+PGRpdiBjbGFzcz0ibGlua3MiPjxoMj5UcmFkZSBDRkU8L2gyPjxwPjx1bD48cD48bGk+PGEgaHJlZj0iL3RyYWRlY2ZlL2Jyb2tlcnMuYXNweCIgdGFyZ2V0PSJfdG9wIj5Ccm9rZXJzPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii90cmFkZWNmZS9jb25uZWN0aXZpdHkuYXNweCIgdGFyZ2V0PSJfdG9wIj5Db25uZWN0aXZpdHk8L2E+PC9saT48bGk+PGEgaHJlZj0iL3RyYWRlY2ZlL0VUSC5hc3B4IiB0YXJnZXQ9Il90b3AiPkV4dGVuZGVkIFRyYWRpbmcgSG91cnM8L2E+PC9saT48bGk+PGEgaHJlZj0iL2Fib3V0Y2ZlL2xvbmRvbmh1Yi5hc3B4IiB0YXJnZXQ9Il90b3AiPkNGRS9DQk9FIExvbmRvbiBIdWI8L2E+PC9saT48bGk+PGEgaHJlZj0iaHR0cHM6Ly93d3cuY2JvZS5vcmcvaHlicmlkL3ZlbmRvcmMuYXNweCIgdGFyZ2V0PSJfbmV3Ij5JbmRlcGVuZGVudCBTb2Z0d2FyZSBWZW5kb3JzIChJU1ZzKTwvYT48L2xpPjxsaT48YSBocmVmPSIvdHJhZGVjZmUvcXVvdGV2ZW5kb3JzLmFzcHgiIHRhcmdldD0iX3RvcCI+UXVvdGUgVmVuZG9yIFN5bWJvbHM8L2E+PC9saT48bGk+PGEgaHJlZj0iL3RyYWRlY2ZlL3RyYWRpbmdwZXJtaXRzLmFzcHgiIHRhcmdldD0iX3RvcCI+VHJhZGluZyBQZXJtaXRzPC9hPjwvbGk+PC9wPjwvdWw+PC9wPjwvZGl2PjxkaXYgY2xhc3M9ImxpbmtzIj48aDI+RWR1Y2F0aW9uPC9oMj48cD48dWw+PHA+PGxpPjxhIGhyZWY9Ii9lZHVjYXRpb24vZWR1Y2F0aW9uX3ZpeC5hc3B4IiB0YXJnZXQ9Il90b3AiPlZvbGF0aWxpdHkgSW5kZXggKFZJWCkgRnV0dXJlczwvYT48L2xpPjxsaT48YSBocmVmPSIvZWR1Y2F0aW9uL2VkdWNhdGlvbl92eHR5bi5hc3B4IiB0YXJnZXQ9Il90b3AiPkNCT0UvQ0JPVCAxMC15ZWFyIFUuUy4gVHJlYXN1cnkgTm90ZSBWb2xhdGlsaXR5IEluZGV4IChWWFRZTikgRnV0dXJlczwvYT48L2xpPjxsaT48YSBocmVmPSJodHRwOi8vd3d3LmNib2UuY29tL21pY3JvL3ZpeC9WSVhGdXR1cmVzT3B0aW9uc1VNYXNzRnVsbC5wZGYiIHRhcmdldD0iX25ldyI+VS1NYXNzIFZvbGF0aWxpdHkgQ2FzZSBTdHVkeTwvYT48L2xpPjxsaT48YSBocmVmPSJodHRwOi8vY2ZlLmNib2UuY29tL3Byb2R1Y3RzL0dWWldoaXRlUGFwZXIucGRmIiB0YXJnZXQ9Il9uZXciPkdWWiBGdXR1cmVzOiBUcmFkaW5nIHRoZSBWb2xhdGlsaXR5IG9mIEdvbGQgV2hpdGUgUGFwZXI8L2E+PC9saT48bGk+PGEgaHJlZj0iaHR0cDovL2NmZS5jYm9lLmNvbS9wcm9kdWN0cy9WWE5fV1AucGRmIiB0YXJnZXQ9Il9uZXciPkNCT0UgTkFTREFRLTEwMCBWb2xhdGlsaXR5IEluZGV4IEZ1dHVyZXMgV2hpdGUgUGFwZXI8L2E+PC9saT48bGk+PGEgaHJlZj0iL0VkdWNhdGlvbi9RdWlja1JlZmVyZW5jZUd1aWRlcy5hc3B4IiB0YXJnZXQ9Il9uZXciPkNGRSBRdWljayBSZWZlcmVuY2UgR3VpZGVzPC9hPjwvbGk+PGxpPjxhIGhyZWY9Imh0dHBzOi8vd3d3LmNib2UuY29tL1VzZXJBZG1pbi9FZGl0RW1haWxBbGVydHMuYXNweCIgdGFyZ2V0PSJfbmV3Ij5DRkUgRW1haWwgQWxlcnQgU2lnbi11cCB2aWEgbXlDQk9FPC9hPjwvbGk+PC9wPjwvdWw+PC9wPjwvZGl2PjxkaXYgY2xhc3M9ImxpbmtzIj48aDI+TWFyZ2luczwvaDI+PHA+PHVsPjxwPjxsaT48YSBocmVmPSIvbWFyZ2lucy9jdXJkb2MvZGVmYXVsdC5hc3B4IiB0YXJnZXQ9Il90b3AiPkNGRSBNYXJnaW5zPC9hPjwvbGk+PC9wPjwvdWw+PC9wPjwvZGl2PmQCCQ8PFgIeB1Zpc2libGVoZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFQ2N0bDAwJGN0bDAwJEFsbENvbnRlbnQkdWNIZWFkZXIkQ0JPRUhlYWRlclNlYXJjaEJveCRidG5IZWFkZXJTZWFyY2jhO8glaY8SPvKZ0Lo0SPqVjXG81A==" />
+
+<SCRIPT language="JavaScript">
+    <!--
+    var axel = Math.random() + "";
+    var ord = axel * 1000000000000000000;
+    //-->
+    </SCRIPT>
+<style>
+.sf-menu li#nv-aboutcfe { display: block; height: 27px; width: 70px; background: url(/images/nav/CFE-spr-about_cfeNEW.gif) 0 -0px no-repeat; }
+.aboutcfe .sf-menu li#nv-aboutcfe:hover, .sf-menu li#nv-aboutcfe:hover, .sf-menu li#nv-aboutcfe.sfHover { background-position: 0 -54px; }
+.aboutcfe .sf-menu li#nv-aboutcfe { background-position: 0 -27px; }
+.sf-menu li#nv-cfe_products { display: block; height: 27px; width: 69px; background: url(/images/nav/CFE-spr-productsNEW.gif) 0 -0px no-repeat; }
+.cfe_products .sf-menu li#nv-cfe_products:hover, .sf-menu li#nv-cfe_products:hover, .sf-menu li#nv-cfe_products.sfHover { background-position: 0 -54px; }
+.cfe_products .sf-menu li#nv-cfe_products { background-position: 0 -27px; }
+.sf-menu li#nv-marketdata { display: block; height: 27px; width: 79px; background: url(/images/nav/CFE-spr-market_dataNEW.gif) 0 -0px no-repeat; }
+.marketdata .sf-menu li#nv-marketdata:hover, .sf-menu li#nv-marketdata:hover, .sf-menu li#nv-marketdata.sfHover { background-position: 0 -54px; }
+.marketdata .sf-menu li#nv-marketdata { background-position: 0 -27px; }
+.sf-menu li#nv-cfe_quotes { display: block; height: 27px; width: 54px; background: url(/images/nav/CFE-spr-quotesNEW.gif) 0 -0px no-repeat; }
+.cfe_quotes .sf-menu li#nv-cfe_quotes:hover, .sf-menu li#nv-cfe_quotes:hover, .sf-menu li#nv-cfe_quotes.sfHover { background-position: 0 -54px; }
+.cfe_quotes .sf-menu li#nv-cfe_quotes { background-position: 0 -27px; }
+.sf-menu li#nv-tradecfe { display: block; height: 27px; width: 79px; background: url(/images/nav/CFE-spr-trade_cfeNEW.gif) 0 -0px no-repeat; }
+.tradecfe .sf-menu li#nv-tradecfe:hover, .sf-menu li#nv-tradecfe:hover, .sf-menu li#nv-tradecfe.sfHover { background-position: 0 -54px; }
+.tradecfe .sf-menu li#nv-tradecfe { background-position: 0 -27px; }
+.sf-menu li#nv-educfe { display: block; height: 27px; width: 75px; background: url(/images/nav/CFE-spr-educationNEW.gif) 0 -0px no-repeat; }
+.educfe .sf-menu li#nv-educfe:hover, .sf-menu li#nv-educfe:hover, .sf-menu li#nv-educfe.sfHover { background-position: 0 -54px; }
+.educfe .sf-menu li#nv-educfe { background-position: 0 -27px; }
+.sf-menu li#nv-marginscfe { display: block; height: 27px; width: 75px; background: url(/images/nav/CFE-spr-marginsNEW.gif) 0 -0px no-repeat; }
+.marginscfe .sf-menu li#nv-marginscfe:hover, .sf-menu li#nv-marginscfe:hover, .sf-menu li#nv-marginscfe.sfHover { background-position: 0 -54px; }
+.marginscfe .sf-menu li#nv-marginscfe { background-position: 0 -27px; }
+
+</style>
+<script type="text/javascript">
+		  // <![CDATA[
+		  var zone = 'other/pdfframed';
+		  var tiles = { 
+        0 : 2,
+1 : 3,
+2 : 4	
+      };
+		  // ]]>
+		  var tile = tiles[0];
+		</script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2D8F790F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwK3rMZKApSZ7dMOArre+a0Mj/K8crO0VrHnnLo/xZ/8byd8y9I=" />
+<!-- begin ad tag --> 
+<script language="javascript">
+  if (isHTTPS == false) {
+    document.write('<IFRAME SRC="http://ad.doubleclick.net/adi/cboe.dart/;sz=1x1;ord=' + ord + '?" WIDTH="1" HEIGHT="1" MARGINWIDTH="0" MARGINHEIGHT="0" HSPACE="0" VSPACE="0" FRAMEBordER="0" SCROLLING=no BordERCOLOR="#000000">');
+    document.write('<SC' + 'RIPT LANGUAGE="JavaScript" SRC="http://ad.doubleclick.net/adj/cboe.dart/;sz=1x1;abr=!ie;ord=' + ord + '?" ><\/SC' + 'RIPT>');
+    document.write('</IFRAME>');
+  }
+</script> 
+<NOSCRIPT> 
+<A HREF="http://ad.doubleclick.net/jump/cboe.dart/;sz=1x1;ord2=123456789?" TARGET="_blank"> 
+<IMG SRC="http://ad.doubleclick.net/ad/cboe.dart/;sz=1x1;ord2=123456789?" WIDTH="1" HEIGHT="1" BordER="0" ALT=""></A> 
+</NOSCRIPT> 
+<!-- end ad tag -->
+      <div id="blanket" style="display:none;"></div>
+      
+
+      <!-- begin masthead --> 
+      <div id="masthead" class="aboutcfe"     
+        <span id="ctl00_ctl00_AllContent_spanHeaderAd">
+          <div id="header-ad">
+            <p><img src="#" width="0" height="90" style="float:right;"/>
+
+<script language="javascript">
+  document.write('    <IFRAME class="adRef" src="http://ad.doubleclick.net/adi/cboe.dart/other/pdfframed;pos=468top;sz=728x90;tile=1;ord=' + ord + '" width="728" height="90" valign="middle" align="center" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no">');
+  document.write('</iframe>');
+</script>
+
+
+<NOSCRIPT>
+  <A HREF="http://ad.doubleclick.net/jump/cboe.dart/;pos=468top;sz=728x90;tile=1;ord=123456789?">
+  <IMG SRC="http://ad.doubleclick.net/ad/cboe.dart/;pos=468top;sz=728x90;tile=1;ord=123456789?" width="728" height="90" border="0" alt="AD"></A>
+</NOSCRIPT></p>
+          </div>
+        </span>
+        
+<div id="header"> 
+	<div class="toprow"> 
+		<p id="logo"><a href="/"><img src="/images/new/CFE_logoHeader.png" height="90px" width="300px" alt="CFE - Home" style="margin-top: -4px;" /></a></p>
+		<div class="rightcol"> 
+			
+   <div class="tr3" style="width:341px;"><!-- change class to active ON state of tab, tr1, tr2, tr3, tr4, tr5 --> 
+       <div class="tr_options"><a target="_new" href="http://www.cboe.com"></a></div>
+       <div class="tr_optionsc"><a target="_new" href="http://www.cboe.com/C2"></a></div>  
+       <div class="tr_futures"><a target="_top" href="http://cfe.cboe.com" class="active"></a></div> 
+       <!--<div class="tr_stocks"><a target="_new" href="http://www.cbsx.com"></a></div> --> 
+       <div class="tr_member"><a target="_new" href="https://www.cboe.org"></a></div> 
+      
+    </div>
+    
+<script language="javascript">
+    function triggerMyCBOE() {
+        if (bLoggedIn == false) {
+            triggerModalLogin('/home/myCBOE.aspx')        
+        }
+        else {
+            window.location = '/home/myCBOE.aspx';
+        }
+    }  
+</script> 
+    </div>
+    <div class="clearleft"></div> 
+  </div><!-- .toprow -->        
+  <div class="btmrow">
+    <div class="clearright mrt10">
+      <a href="http://www.cboe.com/aboutcboe/systemstatus/default.aspx" target="_new">SYSTEM STATUS</a> | 
+      <a href="/aboutcfe/contacts.aspx" target="_new">CONTACT</a>&nbsp;
+      <a href="http://www.twitter.com/cboe" target="_new" class="twitter-tooltip" title="<img src='/images/tooltip_twitter.gif' />"><img src="/images/icon_twitter.gif" alt="Twitter" width="16" height="16" /></a>
+    </div>
+    <div class="clearboth"></div>
+    <div style="float: left;">
+      <!-- start main nav -->
+      
+<ul class="sf-menu"> 
+  <span id="ctl00_ctl00_AllContent_ucHeader_ucCBOEMenu_m_labMenu">
+<li id="nv-aboutcfe"><a href="/AboutCFE/" target="_top">About CFE</a>
+<ul> 
+<li class="first"><a href="/aboutcfe/legal/rules.aspx" target="_top">Legal & Regulatory</a></li>
+<li><a href="/aboutcfe/releases.aspx"target="_top">Press Releases</a></li>
+<li><a href="/aboutcfe/tpforms.aspx"target="_top">Forms & Fees</a></li>
+<li><a href="/aboutcfe/volatilitynewsletter.aspx"target="_top">CFE Newsletter Archive</a></li>
+<li><a href="/aboutcfe/ExpirationCalendar.aspx"target="_top">Holiday Calendar</a></li>
+<li class="bottom"><a href="/aboutcfe/contacts.aspx"target="_top">Contacts</a></li>
+</ul> 
+</li>
+
+<li id="nv-cfe_products"><a href="/Products/" target="_top">Products</a>
+<ul> 
+<li class="first"><a href="/Products/Products_VIX.aspx" target="_top">VX-CBOE Volatility Index (VIX) Futures</a></li>
+<li><a href="/Products/Products_VXST.aspx"target="_top">VSW-CBOE Short-Term Volatility Index (VXST) Futures</a></li>
+<li><a href="/Products/Products_VU.aspx"target="_top">VU-CBOE Russell 2000 Volatility Index (RVX) Futures</a></li>
+<li><a href="/Products/Products_VN.aspx"target="_top">VN-CBOE Nasdaq-100 Volatility Index (VXN) Futures</a></li>
+<li><a href="/Products/Products_VA.aspx"target="_top">VA–S&P 500 Variance Futures</a></li>
+<li><a href="/Products/Products_VXEM.aspx"target="_new">VXEM-CBOE Emerging Markets ETF Volatility Index (VXEEM) Security Futures</a></li>
+<li><a href="/Products/Products_VXEW.aspx"target="_new">VXEW-CBOE Brazil ETF Volatility Index (VXEWZ) Security Futures</a></li>
+<li><a href="/Products/Products_VXTYN.aspx"target="_top">VXTY-CBOE 10-year U.S. Treasury Note Volatility Index (VXTYN) Futures</a></li>
+<li><a href="/Products/Products_GVZ.aspx"target="_top">GV-CBOE Gold ETF Volatility Index (GVZ) Security Futures</a></li>
+<li class="bottom"><a href="/Products/Products_OV.aspx"target="_new">OV-CBOE Crude Oil ETF Volatility Index (OVX) Security Futures</a></li>
+</ul> 
+</li>
+
+<li id="nv-marketdata"><a href="/Data/" target="_top">Market Data</a>
+<ul> 
+<li class="first"><a href="/Data/Settlement.aspx" target="_top">Settlement</a></li>
+<li><a href="/data/dailyvxfutureseodvalues/default.aspx"target="_top">VIX Futures Daily Settlement Prices</a></li>
+<li><a href="/publish/CFEEODSettleReport/EODSettlementReport.xls"target="_new">EOD Settlement Report</a></li>
+<li><a href="/data/CFEMktStat.aspx"target="_top">Daily Market Statistics</a></li>
+<li><a href="https://www.cboe.org/MDX/CFE/CFEMain.aspx"target="_new">CFE Real-Time Market Data</a></li>
+<li><a href="/Data/HistoricalData.aspx"target="_top">Historical Data</a></li>
+<li class="bottom"><a href="http://www.marketdataexpress.com"target="_new">Market Data Express</a></li>
+</ul> 
+</li>
+
+<li id="nv-cfe_quotes"><a href="/MktQuote/" target="_top">CBOE.com Delayed Quotes</a>
+<ul> 
+<li class="first"><a href="http://www.cboe.com/DelayedQuote/SSFQuote.aspx" target="_new">CBOE.com Delayed Quotes</a></li>
+<li class="bottom"><a href="http://www.cboe.com/MktQuote/RTQuoteReg.aspx"target="_new">CBOE.com Streaming Real-Time Quotes</a></li>
+</ul> 
+</li>
+
+<li id="nv-tradecfe"><a href="/tradecfe/" target="_top">Trade CFE</a>
+<ul> 
+<li class="first"><a href="/tradecfe/brokers.aspx" target="_top">Brokers</a></li>
+<li><a href="/tradecfe/connectivity.aspx"target="_top">Connectivity</a></li>
+<li><a href="/tradecfe/ETH.aspx"target="_top">Extended Trading Hours</a></li>
+<li><a href="/aboutcfe/londonhub.aspx"target="_top">CFE/CBOE London Hub</a></li>
+<li><a href="https://www.cboe.org/hybrid/vendorc.aspx"target="_new">Independent Software Vendors (ISVs)</a></li>
+<li><a href="/tradecfe/quotevendors.aspx"target="_top">Quote Vendor Symbols</a></li>
+<li class="bottom"><a href="/tradecfe/tradingpermits.aspx"target="_top">Trading Permits</a></li>
+</ul> 
+</li>
+
+<li id="nv-educfe"><a href="/education/" target="_top">Education</a>
+<ul> 
+<li class="first"><a href="/education/education_vix.aspx" target="_top">Volatility Index (VIX) Futures</a></li>
+<li><a href="/education/education_vxtyn.aspx"target="_top">CBOE/CBOT 10-year U.S. Treasury Note Volatility Index (VXTYN) Futures</a></li>
+<li><a href="http://www.cboe.com/micro/vix/VIXFuturesOptionsUMassFull.pdf"target="_new">U-Mass Volatility Case Study</a></li>
+<li><a href="http://cfe.cboe.com/products/GVZWhitePaper.pdf"target="_new">GVZ Futures: Trading the Volatility of Gold White Paper</a></li>
+<li><a href="http://cfe.cboe.com/products/VXN_WP.pdf"target="_new">CBOE NASDAQ-100 Volatility Index Futures White Paper</a></li>
+<li><a href="/Education/QuickReferenceGuides.aspx"target="_new">CFE Quick Reference Guides</a></li>
+<li class="bottom"><a href="https://www.cboe.com/UserAdmin/EditEmailAlerts.aspx"target="_new">CFE Email Alert Sign-up via myCBOE</a></li>
+</ul> 
+</li>
+
+<li id="nv-marginscfe"><a href="/margins/CurDoc/Default.aspx" target="_top">Margins</a>
+</li></span>
+</ul>
+
+      <!-- end main nav -->
+    </div>
+    <div class="floatleft">
+      <!-- searchbox -->
+      
+<script language="javascript" type="text/javascript">
+<!--
+  function CheckSearchBox() {
+    var strSearch = document.all.ctl00_ctl00_AllContent_ucHeader_CBOEHeaderSearchBox_txtHeaderSearch.value
+    if(strSearch == 'Search' || strSearch.replace(/^\s+|\s+$/g, "") == '')
+    {
+      return false;
+    }
+    else
+    {
+      return true;
+    }
+  }
+// -->
+</script>
+        <div id="searchbox">
+          <div class="rttablft mlft3">
+          </div>
+          <div class="rttabmid">
+            <input name="ctl00$ctl00$AllContent$ucHeader$CBOEHeaderSearchBox$txtHeaderSearch" type="text" id="ctl00_ctl00_AllContent_ucHeader_CBOEHeaderSearchBox_txtHeaderSearch" value="Search" onfocus="if(this.value=='Search') {this.value='';}" onblur="if(this.value=='') {this.value='Search';}" onkeypress="javascript:return fnTrapKD(event, document.getElementById('ctl00_ctl00_AllContent_ucHeader_CBOEHeaderSearchBox_btnHeaderSearch'))" />
+          </div>
+          <div class="rttabmid">
+            <input type="image" name="ctl00$ctl00$AllContent$ucHeader$CBOEHeaderSearchBox$btnHeaderSearch" id="ctl00_ctl00_AllContent_ucHeader_CBOEHeaderSearchBox_btnHeaderSearch" class="button" src="/images/nav/btn_go.jpg" onclick="javascript:return CheckSearchBox();" border="0" />
+          </div>
+          <div class="rttabrt">
+            <img src="/images/nav/nav_rtcap.gif" alt="" /></div>
+          <div style="clear: both;">
+          </div>
+        </div>
+
+
+      <!-- #searchbox -->
+    </div>
+    <!-- .floatleft -->
+  </div>
+  <!-- .btmrow -->
+	
+</div><!-- #header --> 
+
+        <div id="page-bar">
+          <div class="title">About CFE</div>
+        </div><!-- #page-bar -->
+      </div><!-- end masthead --> 
+    <div id="scaffold" class="aboutcfe" style="width: 1153px;">
+      <!-- begin main content --> 
+      <div id="content">
+	  	<!-- begin main column --> 
+        <div class="column" id="main" style="width:290px;">  
+          <div id="primary">
+             <div id="primary-header"> 
+              <h1>
+  CFE Circular on Expansion of Extended Trading Hours for VIX Futures and Risks Relating to Extended Trading Hours</h1>
+              
+              <div id="primary-controller"></div>
+            </div><!-- #primary-header --> 
+            <div id="primary-main"> 
+              
+  <div style="width:760px; height:160px">
+  
+          <p>
+            The following CBOE document is in Adobe Acrobat format. You will need the Adobe
+            Reader in order to view these file types.
+  		  <br><br>
+  		  <a class="arrow-up" href="http://www.adobe.com/products/acrobat/readstep2.html">Click here to download
+            and install a copy now</a>.
+            <br>
+  		  <a class="arrow-up" href="#" onClick="javascript:history.go(-1);return false;">Click here to go back to the previous page</a>.
+  		  <br>
+  		  <a class="arrow-up" href="/publish/CFEregcirc/CFERG14-018.pdf" target="_blank">Open PDF document in a new window</a>
+          </p>
+  
+  
+          <script language="javascript">
+            if (history.length <= 1) {
+              $('#divPrevPage').css('display', 'none');
+            }
+          </script>
+  </div>
+  <div>
+      <iframe id="pdfFrame" height="1000" width="790" frameborder="0" scrolling="auto"
+        src="/publish/CFEregcirc/CFERG14-018.pdf"></iframe>
+  </div>
+  <br />
+
+            </div> 
+          </div><!-- #primary --> 
+        </div><!-- end main column --> 
+        <!-- begin right column -->
+        <div class="column" id="right"> 
+            
+
+  <!-- AdPaginator.ascx --> 
+  <!-- start ad unit module --> 
+  
+		<div  class="active" id="module_ad"> 
+			
+						<div class="paginate" id="paginate1">
+							<div class="arrow" id="prev1"><img src="/images/mods/unit_back.gif" alt="Prev" width="8" height="9" /></div>
+							<div class="units"></div>
+							<div class="arrow" id="next1"><img src="/images/mods/unit_next.gif" alt="Next" width="8" height="9" /></div>
+						</div>
+
+						<div class="content ad cycler" id="cycler1">
+					    
+						<div class="flash_ad x300_250"> 
+							<script language="javascript">
+							  document.write('<IFRAME src="http://ad.doubleclick.net/adi/cboe.dart/' + zone + ';sz=300x250;tile=' + tile + ';ord=' + ord + '" width="300" height="250" valign="top" align="right" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no">');
+							  document.write('<A href="http://ad.doubleclick.net/jump/cboe.dart/' + zone + ';sz=300x250;tile=' + tile + ';ord=' + ord + '" target="_new">');
+							  document.write('<IMG src="http://ad.doubleclick.net/ad/cboe.dart/' + zone + ';sz=300x250;tile=' + tile + ';ord=' + ord + '" width="300" height="250" border="0" alt="AD"></A></IFRAME>');
+							</script> 
+							<NOSCRIPT> 
+								<A HREF="http://ad.doubleclick.net/jump/cboe.dart/;sz=300x250;tile=12;ord=123456789?"> 
+								<IMG SRC="http://ad.doubleclick.net/ad/cboe.dart/;sz=300x250;tile=12;ord=123456789?" width="300" height="250" border="0" alt="AD"></A> 
+							</NOSCRIPT> 
+						</div> 
+<div class="flash_ad x300_250" style="display: none;"></div> 
+<div class="flash_ad x300_250" style="display: none;"></div> 
+						</div>
+
+    </div>			
+  <!-- end ad unit module --> 
+
+            
+
+    <iframe id="ifCBOESnapShot" src="/controls/modules/CFESnapShot.aspx" frameborder="0" width="300" height="450"></iframe>
+           
+    
+<!-- activate a div by calling this method with an index -->
+<script type="text/javascript">
+  function doLogout() {
+    var szSection = 'SEC_ABOUT_CFE';
+    if (szSection != 'SEC_HOME' && szSection != 'SEC_MYCBOE') {
+      window.location.href = "/UserAdmin/DoLogout.aspx?LOSec=" + szSection;
+    } else {
+      window.location.href = "/UserAdmin/DoLogout.aspx";
+    }
+  }
+
+</script>
+    <!-- END MYCBOE MODULE --> 
+
+        </div> <!-- end right column --> 
+      </div><!-- end main content --> 
+      <div class="spacer"></div> 
+      <!-- begin ad container --> 
+      <span id="ctl00_ctl00_AllContent_spanFooterAds">
+        
+<!-- begin ad container --> <br /><br />
+         <div class="ad-container-bot">
+              <div class="ad-728">
+
+<script language="javascript">
+  document.write('    <IFRAME class="adRef" src="http://ad.doubleclick.net/adi/cboe.dart/other/pdfframed;sz=728x90;tile=5;ord=' + ord + '" width="728" height="90" valign="middle" align="center" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no">');
+  document.write('</iframe>');
+  </script>
+  
+  
+  <NOSCRIPT>
+    <A HREF="http://ad.doubleclick.net/jump/cboe.dart/;sz=728x90;tile=5;ord=123456789?">
+    <IMG SRC="http://ad.doubleclick.net/ad/cboe.dart/;sz=728x90;tile=5;ord=123456789?" width="728" height="90" border="0" alt="AD"></A>
+  </NOSCRIPT></div>
+              <div class="ad-120" style="background: url(/images/template/bg-header-ad-tag.png) no-repeat right">
+
+<script language="javascript">
+  document.write('    <IFRAME class="adRef" src="http://ad.doubleclick.net/adi/cboe.dart/other/pdfframed;pos=120one;sz=120x90;tile=6;ord=' + ord + '" width="120" height="90" valign="top" align="center" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no">');
+  document.write('</iframe>');
+</script>
+
+
+<NOSCRIPT>
+  <A HREF="http://ad.doubleclick.net/jump/cboe.dart/;pos=120one;sz=120x90;tile=6;ord=123456789?">
+  <IMG SRC="http://ad.doubleclick.net/ad/cboe.dart/;pos=120one;sz=120x90;tile=6;ord=123456789?" width="120" height="90" border="0" alt="AD"></A>
+</NOSCRIPT></div>
+         </div><br /> <!-- end ad container --> 
+
+
+      <!-- end ad container --> 
+      </span>
+    <!-- begin LowerNav -->
+		
+
+
+<div id="special_offers">
+		<div class="box">
+		  
+
+
+<table cellspacing="5" cellpadding="10" border="0" width="100%">
+<tr>
+   
+   <!-- Left Column  -->
+   
+     <td valign="top" width="100%">
+	      <p class="specialink"><b>SPECIAL OFFERS</b></p>
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+          <tr>
+            <td valign="top" style="border-right:solid 1px #b7b7b7; font-size:12px; font-family: arial;color: #06C; padding-right: 15px;">
+        
+        	<br />           
+                       
+            <a href="https://ad.doubleclick.net/jump/N3941.cboe.com/B8269156.111716244;sz=1x1;ord=[timestamp]?" target="_blank" style="text-decoration:underline;margin: 0px 10px 0px 0px;font-weight:normal;">Trade options, stocks, futures + forex on a single platform. thinkorswim by TD Ameritrade. <IMG SRC="https://ad.doubleclick.net/ad/N3941.cboe.com/B8269156.111716244;sz=1x1;ord=[timestamp]?" BORDER=0 WIDTH=1 HEIGHT=1 ALT="Advertisement"></a>
+            <br /><br />
+                       
+            <a href="https://itunes.apple.com/us/app/options+/id385472312?mt=8" target="_blank" style="text-decoration:underline;margin: 0px 10px 0px 0px;font-weight:normal;">OPTIONS+ is the new mobile options calculator for iPhone users. Download it today.</a>
+            <br /><br />
+            
+            <a href="http://ad.doubleclick.net/ddm/clk/288816648;115779012;t" target="_blank" style="text-decoration:underline;margin: 0px 10px 0px 0px;font-weight:normal;">Get up to $500. Trade commission free for 90 days. Free tools for advanced traders.<IMG SRC="http://ad.doubleclick.net/ad/N6715.2793.CBOE/B7869643.115779012;sz=1x1;ord=[timestamp]?" BORDER=0 WIDTH=1 HEIGHT=1 ALT="Advertisement"></a>
+            <br /><br />            
+            
+        </td>
+            <!-- Right Column  -->
+	          <td width="10">&nbsp;</td>
+      	    <!-- Third Column Column  -->
+      	    <td valign="top" style="font-size:12px; font-family: arial;color: #06C;" > 
+			<br />
+            <a href="https://www.interactivebrokers.com/mkt/?src=cboe33&url=%2Fen%2Findex.php%3Ff%3D1340" target="_blank" style="text-decoration:underline;margin: 0px 10px 0px 0px;font-weight:normal;">Lower your costs to maximize your return.</a>
+            <br /><br />
+            
+            <a href="http://ad.doubleclick.net/ddm/clk/288816648;115779012;t" target="_blank" style="text-decoration:underline;margin: 0px 10px 0px 0px;font-weight:normal;">Commission Free Trades. Get up to $500 - trade commission free for 90 days & advanced tools.<IMG SRC="http://ad.doubleclick.net/ad/N6715.2793.CBOE/B7869643.115779012;sz=1x1;ord=[timestamp]?" BORDER=0 WIDTH=1 HEIGHT=1 ALT="Advertisement"></a>
+            <br /><br />
+
+		  	<a href="https://ad.doubleclick.net/jump/N3941.cboe.com/B8269156.111716244;sz=1x1;ord=[timestamp]?" target="_blank" style="text-decoration:underline;margin: 0px 10px 0px 0px;font-weight:normal;">Trade options, stocks, futures + forex on a single platform. thinkorswim by TD Ameritrade. <IMG SRC="https://ad.doubleclick.net/ad/N3941.cboe.com/B8269156.111716244;sz=1x1;ord=[timestamp]?" BORDER=0 WIDTH=1 HEIGHT=1 ALT="Advertisement"></a>
+            <br /><br />
+            
+            <a href="http://www.cboeoptionshub.com/cboeapps" target="_blank" style="text-decoration:underline;margin: 0px 10px 0px 0px;font-weight:normal;">Download CBOE's new iOS app featuring detailed quotes & option chains, CBOETV, interactive courses, and more.</a>
+            <br /><br />
+        
+        </td>
+    </tr>
+</table>
+
+
+</td>
+
+
+
+</tr>
+</table>
+
+
+
+  
+    	</div>
+    </div>
+<div id="lowernav_container">
+<div id="lowernav">
+  <div class="links"><h2>About CFE</h2><p><ul><p><li><a href="/aboutcfe/legal/rules.aspx" target="_top">Legal & Regulatory</a></li><li><a href="/aboutcfe/releases.aspx" target="_top">Press Releases</a></li><li><a href="/aboutcfe/tpforms.aspx" target="_top">Forms & Fees</a></li><li><a href="/aboutcfe/volatilitynewsletter.aspx" target="_top">CFE Newsletter Archive</a></li><li><a href="/aboutcfe/ExpirationCalendar.aspx" target="_top">Holiday Calendar</a></li><li><a href="/aboutcfe/contacts.aspx" target="_top">Contacts</a></li></p></ul></p></div><div class="links"><h2>Products</h2><p><ul><p><li><a href="/Products/Products_VIX.aspx" target="_top">VX-CBOE Volatility Index (VIX) Futures</a></li><li><a href="/Products/Products_VXST.aspx" target="_top">VSW-CBOE Short-Term Volatility Index (VXST) Futures</a></li><li><a href="/Products/Products_VU.aspx" target="_top">VU-CBOE Russell 2000 Volatility Index (RVX) Futures</a></li><li><a href="/Products/Products_VN.aspx" target="_top">VN-CBOE Nasdaq-100 Volatility Index (VXN) Futures</a></li><li><a href="/Products/Products_VA.aspx" target="_top">VA–S&P 500 Variance Futures</a></li><li><a href="/Products/Products_VXEM.aspx" target="_new">VXEM-CBOE Emerging Markets ETF Volatility Index (VXEEM) Security Futures</a></li><li><a href="/Products/Products_VXEW.aspx" target="_new">VXEW-CBOE Brazil ETF Volatility Index (VXEWZ) Security Futures</a></li><li><a href="/Products/Products_VXTYN.aspx" target="_top">VXTY-CBOE 10-year U.S. Treasury Note Volatility Index (VXTYN) Futures</a></li><li><a href="/Products/Products_GVZ.aspx" target="_top">GV-CBOE Gold ETF Volatility Index (GVZ) Security Futures</a></li><li><a href="/Products/Products_OV.aspx" target="_new">OV-CBOE Crude Oil ETF Volatility Index (OVX) Security Futures</a></li></p></ul></p></div><div class="links"><h2>Market Data</h2><p><ul><p><li><a href="/Data/Settlement.aspx" target="_top">Settlement</a></li><li><a href="/data/dailyvxfutureseodvalues/default.aspx" target="_top">VIX Futures Daily Settlement Prices</a></li><li><a href="/publish/CFEEODSettleReport/EODSettlementReport.xls" target="_new">EOD Settlement Report</a></li><li><a href="/data/CFEMktStat.aspx" target="_top">Daily Market Statistics</a></li><li><a href="https://www.cboe.org/MDX/CFE/CFEMain.aspx" target="_new">CFE Real-Time Market Data</a></li><li><a href="/Data/HistoricalData.aspx" target="_top">Historical Data</a></li><li><a href="http://www.marketdataexpress.com" target="_new">Market Data Express</a></li></p></ul></p></div><div class="links"><h2>CBOE.com Delayed Quotes</h2><p><ul><p><li><a href="http://www.cboe.com/DelayedQuote/SSFQuote.aspx" target="_new">CBOE.com Delayed Quotes</a></li><li><a href="http://www.cboe.com/MktQuote/RTQuoteReg.aspx" target="_new">CBOE.com Streaming Real-Time Quotes</a></li></p></ul></p></div><div class="links"><h2>Trade CFE</h2><p><ul><p><li><a href="/tradecfe/brokers.aspx" target="_top">Brokers</a></li><li><a href="/tradecfe/connectivity.aspx" target="_top">Connectivity</a></li><li><a href="/tradecfe/ETH.aspx" target="_top">Extended Trading Hours</a></li><li><a href="/aboutcfe/londonhub.aspx" target="_top">CFE/CBOE London Hub</a></li><li><a href="https://www.cboe.org/hybrid/vendorc.aspx" target="_new">Independent Software Vendors (ISVs)</a></li><li><a href="/tradecfe/quotevendors.aspx" target="_top">Quote Vendor Symbols</a></li><li><a href="/tradecfe/tradingpermits.aspx" target="_top">Trading Permits</a></li></p></ul></p></div><div class="links"><h2>Education</h2><p><ul><p><li><a href="/education/education_vix.aspx" target="_top">Volatility Index (VIX) Futures</a></li><li><a href="/education/education_vxtyn.aspx" target="_top">CBOE/CBOT 10-year U.S. Treasury Note Volatility Index (VXTYN) Futures</a></li><li><a href="http://www.cboe.com/micro/vix/VIXFuturesOptionsUMassFull.pdf" target="_new">U-Mass Volatility Case Study</a></li><li><a href="http://cfe.cboe.com/products/GVZWhitePaper.pdf" target="_new">GVZ Futures: Trading the Volatility of Gold White Paper</a></li><li><a href="http://cfe.cboe.com/products/VXN_WP.pdf" target="_new">CBOE NASDAQ-100 Volatility Index Futures White Paper</a></li><li><a href="/Education/QuickReferenceGuides.aspx" target="_new">CFE Quick Reference Guides</a></li><li><a href="https://www.cboe.com/UserAdmin/EditEmailAlerts.aspx" target="_new">CFE Email Alert Sign-up via myCBOE</a></li></p></ul></p></div><div class="links"><h2>Margins</h2><p><ul><p><li><a href="/margins/curdoc/default.aspx" target="_top">CFE Margins</a></li></p></ul></p></div>
+  <div class="links">
+    <h2>CBOE:CFE</h2>
+      <p>
+        400 South LaSalle St. Chicago, IL 60605<br /><br />
+          Copyright ©2015 CBOE Futures Exchange. All rights reserved.
+      </p>        
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+  </div>
+  
+<!-- the end javascript goes here -->
+
+  <div id="footer">
+    <div class="strip">
+    </div>
+  </div>
+  
+
+<script language="javascript" type="text/javascript">
+<!--
+function fnTrapKD(e, btn){
+  var key;
+  if (e.keyCode) {
+    // for IE, e.keyCode or window.event.keyCode can be used
+    key = e.keyCode;
+  }
+  else if (e.which) {
+    // netscape
+    key = e.which;
+  }
+  if (key == 13) {
+     btn.click();
+     //stop event capturing phase
+     e.returnValue=false;
+     e.cancel = true;
+     //stop event bubbling phase
+     e.cancelBubble = true;
+     if (e.stopPropagation) e.stopPropagation();
+     return false;
+  } 
+}
+-->
+</script></form>
+</body>
+</html>
