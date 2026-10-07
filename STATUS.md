@@ -10219,3 +10219,228 @@ Per-venue verdicts, artifacts under `holidays/raw/<venue>/domain-lineage-2026-10
   captures link probed by exact URL: only the TTC overview (2017) has a 200
   capture; the 11-January-2010 guide edition stays uncaptured; the TSC rows
   stand.
+
+## 2026-10-06T04:xxZ UTC — second-retrieval review of PR #303 (five NSE Muhurat circulars as ReplacementBlocks; tadawul horizon to the floor; sgx/iceus/six domain-lineage negatives): **ACCEPT-WITH-ADVISORIES** — zero data defects; two advisory prose defects, both in `docs/evidence/tadawul.md`; head `db114ab28c23ad5acadb5be072d5a4a842b62eeb` (single commit on merged 8953c69; origin/main has moved to b8ee5b7, no overlap with the touched files)
+
+Worktree `wt-review-303` at the head commit; own target dir; full chain green
+(fmt, clippy -D warnings, nextest 1284/1284, doc tests 3, rustdoc -D warnings,
+cargo deny, cargo +1.95 check — pipefail).
+
+Recomputed, with what tool, from which inputs:
+
+- **Five circulars re-fetched from the Wayback `id_` replays myself** (curl,
+  2026-10-06): sha256 of each refetch equals the stored
+  `holidays/raw/equities/nse_india/domain-lineage-2026-10-06/` artifact AND the
+  evidence file's Documents digest (CMTR46230 dc545416…, CMTR54023 01e579ea…,
+  CMTR59124 09f80430…, CMTR64628 dd1b8bc3…, CMTR70319 19b7d880…); store
+  SHA256SUMS.txt -c clean over all 21 files. pdftotext per circular; per-row
+  reading: 98/2020 (2020-11-02) → "Saturday, November 14, 2020", Block deal
+  17:45-18:00, Pre Open* 18:00-18:08 (`* Random closure in last one minute`),
+  Normal Market 18:15-19:15, Closing 19:25-19:35; 124/2022 (2022-10-11) →
+  "Monday, October 24, 2022", identical; 139/2023 (2023-10-27) → "Sunday,
+  November 12, 2023", identical; 147/2024 (2024-10-19) → "Friday, November 01,
+  2024", Block deal 17:30-17:45, Pre Open* 17:45-18:00 with footnote "Random
+  closure in last one minute of the order entry period (17:45 to 17:53 hours)"
+  → leg stops 17:52, Normal Market 18:00-19:00, Closing 19:10-19:20; 124/2025
+  (2025-09-22) → "Tuesday, October 21, 2025", Block deal 13:15-13:30, Pre
+  Open* 13:30-13:45 with footnote "any time between last one minute i.e. 13:37
+  to 13:38 hours" → leg stops 13:37, Normal Market 13:45-14:45, Closing
+  14:55-15:05. Every shipped bound printed or the earliest closure second
+  (conservative direction: boundary at the earliest second a trade could
+  print, never later — the family's existing 09:00→09:07 normal-week
+  convention, verified in nse.rs INDIA_ORDER_ENTRY_PREOPEN/INDIA_PREOPEN_MATCH
+  and evidence line "09:07-09:15 stays extended"). Trade Modification
+  cut-off, Special Pre-open (IPO/relisted) and Call Auction Illiquid windows
+  checked to sit inside the encoded envelope; correctly not encoded.
+  NSE-MUHURAT-PAGE-2020 read from bytes: "Updated on: 12/11/2020", same five
+  CM windows, names CMTR46230-46233.
+- **Census re-derived with my own parser** over the shipped nse_india table:
+  9 Unsourced (the exact nine: 2010-11-05, 2011-10-26, 2013-11-03, 2014-10-23,
+  2015-11-11, 2016-10-30, 2017-10-19, 2019-10-27, 2026-11-08), 5
+  ReplacementBlocks (2020-11-14, 2022-10-24, 2023-11-12, 2024-11-01,
+  2025-10-21), 202 Closed = 216 rows; 14→9 confirmed; the count list in
+  coverage_inventory is derived-compared
+  (`inventory_windows_and_date_counts_match_the_shipped_tables`).
+- **Tadawul chain reproduced**: both 2009 `id_` replays re-fetched; sha256
+  8d5a8681… each, cmp-clean against the stored 2010-01-12 keying artifact;
+  sha1-base32 of my refetched bytes = WWEWH2B6OSMIFYF4KWN4PBQSQHQFOVDO (hash
+  type matches the CDX digest form); my own CDX query shows the digest shared
+  by 20090912225534, 20091112163947, 20100112091155, 20100314071045,
+  20100513204249. Byte-proven, not digest-coincidence. Runtime probe on head
+  AND parent 8953c69: floor days (2010-01-02) answer OutsideCoveredRange
+  identically both sides — the change is sourcing-metadata only, and the PR
+  claims exactly that (no runtime claim).
+- **Negatives verified against bytes**: 2011 circ_latest capture names
+  NSE/CMTR/19187 "Muhurat Trading session on account of Diwali" (2026-10-20
+  i.e. 2011-10-20); FAOP19189 prints the F&O segment's 16:45/18:00 for
+  2011-10-26 (keys no CM row); FAOP25325 is the 2013-12-20 F&O holiday-list
+  circular 096/2013; circ_cml2010 (2010-11-25 capture) carries no
+  Muhurat/Diwali; the three ruled-out working copies match their recorded
+  subjects (CMTR45837 DR-site mock bidding, CMTR64626 dynamic price bands,
+  COM70362 the commodity-derivatives Muhurat twin, same 13:45-14:45 Normal
+  Market); nybot dump recount with my own parser: 218 rows, all 301/302, zero
+  200-status in 2009-2013; sgx Trading Calendar 2009 PDF is derivatives-scoped.
+- **Mutation**: 2025 Normal Market close 14:45→14:46 fails
+  `the_published_muhurat_sessions_ship_as_replacement_blocks` (the "14:45
+  sharp is closed" assertion, holidays_tse_sse_nse.rs:1548); restored,
+  venue_sessions 326/326 green. **Runtime probe** (temp test, deleted): all
+  five replacement days answer the encoded blocks with end-exclusive closes
+  and correct states (OrderEntry / OpenRegular / OpenExtended); the nine
+  withheld dates refuse UnresolvedGap on coverage, is_open and
+  is_closed_trade_date; 2021-11-04 answers the ordinary grid.
+
+Defects (both advisory, both `docs/evidence/tadawul.md`, Normal week section):
+
+1. Sentence "The 2026-10-06 domain-lineage sweep found the 2026-10-06 note
+   below:" is garbled — a broken edit artifact with no object; the facts that
+   follow verify. Grammar only, no wrong value.
+2. "the Arabic page's capture chain brackets the era at both ends (the next
+   surviving capture `20140603012846` …)" — the phrase is inherited from the
+   English-page chain; on the Arabic page the CDX shows intervening surviving
+   captures (2013-07-23, 2013-12-29, 2014-05-16) before 2014-06-03, all also
+   after the 2013-06-29 change, so the bracketing substance holds and "next
+   surviving" is imprecise. Minor: the Documents row's coverage cell still
+   reads "2010-01-12 .. 2013-06-28" while the sourced region now starts at the
+   floor — the cell's own "horizon witness to the floor" note disambiguates.
+
+No blocking defect. Review posted on the PR.
+
+**#303 MERGED (fdb23c4) — #212 CLOSED.** The SIX TSC legend discriminator
+held under the full second retrieval: the reviewer re-derived the legend
+binding in all three witness pages plus the 2019 PDF, the 7/6 shaded-date
+sets, the strict-superset check (shading ⊃ settlement flags, 12-24/12-31
+the only shaded-no-CHF rows), and the 12/12 calibration. Advisory prose
+fixes (the sweep sentence, the Arabic-page capture chain) pushed as
+dbafada before merge. **The withheld Muhurat census 14→9; the carried
+class extinct; zero coverage declarations; ZERO NormalWeekCarried
+refusals in the CME-side families.** Remaining open: #112 (desk/terminal),
+#213 (operator artifact; MOM dates held+validated), #301's re-review
+(quota), #296 (engine umbrella). Gate walk re-runs at fdb23c4 for the
+final numbers.
+
+**GATE REFRESHED 2026-10-06 (main `fdb23c4`, the carried-class wave merged):
+183,864/216,942 (84.8%) covered; 2025+ 86.3%; 24/33 complete at published
+horizons (from the a24d4ef walk's per-identity table, six families updated
+by #301's horizons-at-floor); refusal classes: windows/carried/edges as
+classified. Raw: `gate-probe-2026-10-06-fdb23c4.tsv`. NOTE the per-identity
+table in the doc is the a24d4ef walk's for six equities families whose
+horizons #301 moved post-walk — their +2,386 days are in the domain total.
+#301 re-review pending (quota).** The #290 review also completed
+post-merge: ACCEPT on every data row, legend mapping, discriminator,
+12/12 calibration; one CHANGELOG window-count defect fixed via #293.
+
+## 2026-10-06T06:xxZ UTC — second-retrieval review of PR #301 (the equities-side carried spans verify to no changes — six horizons move to the floor): **ACCEPT-WITH-ADVISORIES** — zero data defects; one merge-hygiene advisory (in-flight overlap) and two cosmetic notes; head `4da18151b37c851453d2a602f7d651f51f5e3839` (single commit on merged 8953c69/#299; origin/main has since moved to fdb23c4/#303)
+
+The prior review attempt died on quota mid-review before posting; this was the actual second retrieval, worked in detached worktree `/private/tmp/wt-review-301b` at the head commit (left in place, not merged, not pushed). Review comment: https://github.com/SharurTrading/exchange-hours-rs/pull/301#issuecomment-6010339342
+
+What was recomputed, with what tools, from which inputs:
+
+- **Per-family bytes (the crux), own extraction from the store bytes**: asx — `SHA256SUMS.txt` clean; 2009-02-01 + 2010-01-06 education pages and 2011-03-25 Market-phases page re-derive the identical staggered grid (groups 10:00:00/10:02:15/10:04:30/10:06:45/10:09:00 ±15s with the operator's 9:59:45–10:00:15 gloss, Normal 10am–4pm, Pre CSPA 4:00–4:10, CSPA 4:10–4:12), and **all ten** sampled `mp-*` captures 2011-04-10..2013-09-02 carry the same lines (python re/html extraction); the two 2009 shells are real page-not-found captures; `mr-2010-12-03-asx-trade-launch.pdf` (pdftotext) is dated 3 Dec 2010 and silent on hours. sgx — `sgx_st_rules_2011-08-01.pdf` digest-matches its SHA256SUMS; text extraction shows "Proposed amendment to Practice Note 8.2.1", issue date 1 August 2011, morning 09:00–12:30 / afternoon 14:00–17:00, Pre-Open 08:30–08:59, Non-Cancel 08:59–09:00, Adjust 12:30–13:59 with 13:59–14:00 match, Pre-Close 17:00–17:05, Non-Cancel 17:05–17:06 — compared phase-by-phase against the shipped `SGX_SEC_PROFILE_PRE_2011_08_01` rows: identical; the 2009-05-14 print restates the same grid. paris — PAR_20101126_06372_EUR dated 26/11/2010 (in-window) prints "Pre-opening at 07:15 CET for any Euronext Cash Market" + 09:00 for every Paris equity segment; the 2011 press release dated 10 November 2010 states the 5.35 pm CET close; both PDFs digest-match. bist — annual report timeline's 2009 block holds 19 Ekim (2. seans extension) and 13 Kasım (afternoon opening call), 2010's only hours entry is 30 Nisan (after the span); 2010-03-25 vs 2010-04-30 captures print identical equity grids; 2009-08-26/09-08 bracket below (14:00–17:00, no call). tadawul — tt-en-2008-11-19.html prints 11:00 am–03:30 pm Sat–Wed, identical to shipped `REGULAR_OLD_SAT_WED`. nzx — the 2009-12-04 print states the identical grid and keys 1 Jan + 4 Jan 2010 closures; region contains no trade date.
+- **Counts**: 1354+577+357+83+11+4 = **2386 days** (inclusive span arithmetic, python) — matches the claim. Sourcing arms parsed from sourcing.rs: all six `horizon!(2010, 1, 1)`; verification.md and coverage-2025.md Horizon cells re-parsed at 2010-01-01 with the from-values matching the pre-change arms; revision columns unchanged.
+- **No shipped rows changed**: `git diff 8953c69..4da1815 -- src/calendar/schedules/` = sourcing.rs only.
+- **Mutation**: asx 2011-04-26 `Closed` → 04-27 fails `the_no_changes_sweep_retired_the_equities_side_carried_eras` at tests/coverage_metadata.rs:723; reverted, green. The flipped asx/paris fences assert the answer.
+- **Runtime probe** (temp public-surface test, deleted after): all six `normal_week_sourced_from == SUPPORT_FLOOR`; asx 2010-06-15 open, 2010-12-24 open 11:00 / closed 14:10 end-exclusive / open 14:09, 2010-04-26 closed, **2010-04-06 ordinary open (no sheet row — the directive's "Easter Tuesday 2010-04-06 closed" expectation does not match the shipped sheet; the Easter Tuesday closure row is 2011-04-26)**; paris 2010-12-23 open, 2010-01-01/04-02 closed; sgx 2010-06-15 and 2011-06-15 refuse `OutsideCoveredRange`/`NoHolidayCoverage` (#213 intact); bist 2010-02-16 `NoHolidayCoverage`; tadawul 2010-01-06/01-11 `NoHolidayCoverage`, 2009-12-30 `BeforeSupportFloor`; nzx 2010-01-04 closed (own row), 2010-01-05 open.
+- **Full chain at head**: fmt OK; clippy -D warnings OK; nextest **1284/1284**; doc tests 3/3; rustdoc -D warnings OK; cargo deny exit 0; cargo +1.95 check exit 0; digest-fence test OK; `cargo xtask verify-evidence --all` = 2866 Documents rows / 42 files / 798 digests, all resolve.
+- **Advisories**: (1) origin/main moved to fdb23c4 (#303) after this head — `git merge-tree` content conflicts in CHANGELOG.md, tadawul.md, coverage-2025.md, verification.md, sourcing.rs; #303 already moved the same tadawul arm to the same floor via a different witness (byte-identical 2009 Arabic captures), so the rebase keeps one arm and merges both witness records; (2) cosmetic: the Practice Note PDF exists twice in the store under different digests (live vs Wayback retrievals of the same edition); (3) the 2010-04-06 probe-list correction above.
+
+Verdict: **ACCEPT-WITH-ADVISORIES** at `4da18151b37c851453d2a602f7d651f51f5e3839`. Not merged, not pushed; worktree left in place.
+
+**SECOND TRAILER INSTANCE FIXED 2026-10-06 (maintainer-flagged):** the
+#303 squash (fdb23c4) carried the same
+`Co-authored-by: SharurTrading <maintainer@users.noreply.github.com>`
+trailer — auto-added by GitHub's squash because the branch commit db114ab
+was AUTHORED with that email (the domain-lineage agent's environment had
+`user.email = maintainer@users.noreply.github.com` in its git config).
+Main reworded: 2985495 (trailer stripped; content byte-identical to
+fdb23c4). The agent's environment is gone; all surviving worktrees
+verified clean (kevinjamesmonaghan@outlook.com). Prevention: agents
+verify `git config user.email` before committing; e-Helvetica and admin
+probes remain forbidden; the org-owner ruleset bypass is the
+maintainer's call.
+
+## 2026-10-06T08:55Z UTC — retrospective second-retrieval review of PR #299 (the CME-side carried spans verify to no changes — seven horizons move to the floor), squash commit `8953c696700da1b4399f43923e0bc424fc1b12d4`, merged 2026-10-05T10:29:16Z: **BLOCK (retrospective — one blocking prose count defect; every shipped value, quotation, digest and the negative sweep result itself verify)** — worked in detached worktree `/private/tmp/wt-review-299` at the head commit (left in place); isolated `CARGO_TARGET_DIR=/private/tmp/wt-review-299/target`
+
+What was recomputed, with what tools, from which inputs:
+
+- **Full Verification chain at head**: fmt OK; clippy -D warnings OK; nextest **1283/1283** (slowest `the_coverage_gate_is_sound_for_every_shipped_row` 690s); doc tests 3/3; rustdoc -D warnings OK; cargo deny exit 0; cargo +1.95 check exit 0.
+- **Derived rows (python re-derivation from sourcing.rs at head vs parent)**: exactly seven horizon arms moved to `horizon!(2010, 1, 1)` — `Cbot` and `GlobexGrains` from 2010-03-15, `Comex`/`Nymex`/`GlobexEnergy`/`GlobexSilver100Oz` from 2012-05-11, `GlobexFx` from 2012-05-03 — i.e. carried spans 2010-01-01..2010-03-14 (×2), ..2012-05-10 (×4), ..2012-05-02 (×1), matching the commit message, PR table and the six served coverage-2025 Horizon cells (silver is dormant, verification.md only). No date/Holidays/count columns moved anywhere (confirmed by reading the six coverage-2025 rows and seven verification rows whole). Reviewed-on cells moved to 2026-10-05 exactly where evidence was re-checked; nothing future-dated (LAW-UTC-DATES clean; merge instant 10:29:16Z).
+- **Store sweep records**: `normal-weeks/wave-c2-2012-notices/` 25/25 digests in `SHA256SUMS.txt` reproduce (`shasum -a 256 -c`); `wave-c1/sha256s.txt` 258/259 reproduce, the listed `20100726.html` is the empty-file digest and the file is deliberately absent (documented zero-byte replay; INDEX's "244 on disk" is one above today's 243 — store-hygiene note only). Verbatim quotes re-found in the bytes (python re/html extraction): 20100315 "matches the underlying futures' current afternoon pre-open" + "2:30 p.m. - 4 p.m."; 20101018 "match the current schedule for NYMEX, COMEX and DME products" + "4:45 p.m. Central time"; TAS notices 20101025/20101227/20110110/20110117 "TAS products will pre-open at their normal time, 16:15 CT"; 20120409 "16:15:00 on Sunday and 16:45:00 Monday through Thursday"; 20090608 "expanded from 6 a.m. Central time to 7:15 a.m. CT" + RTH "9:30 a.m. to 1:15 p.m. weekdays"; fx-20090502/fx-20110918 "17:00-16:00 next day"; metals-20110902/energy-20100502 zero Pre-Open rows vs metals-20120501 Sunday 16:15 CT; the 2012-06-07 bracket capture (`holidays/raw/cme-bracket-rereads/wb_20120607015831_trading_hours_index.html`) prints NYMEX/COMEX Sunday Pre-Open "17:00 ET (16:00 CT)" and FX "16:00" — the first own-value capture, as claimed. 20100503 carries the FX-options halt elimination "from 7:15 a.m. - 2:00 p.m. Central time" effective Monday, May 10, four outright markets (BR/CKO/HFO/PLZ); 20100104-0118 carry the "FIX tag 55-Symbol Consolidation for FX Options" (Jan 24); 20110919/20110926 carry "Termination of Trading Time for BRL/USD Futures & Options"; the Dec09-Mar10 grain items are exactly the KCBT/MGEX platform-enhancement launches (functionality/launch dates, no served-family session times) and the 20100315 market-state table. Dec 2009..Mar 2010 notice coverage: 20091214, 20091228, 20100104..20100315 (13 files) — "every archived" holds.
+- **Mutation**: `GlobexFx` horizon flipped back to 2012-05-03 → `the_no_changes_sweep_retired_the_cme_side_carried_eras` fails at tests/coverage_metadata.rs:596 (`normal_week_sourced_from` floor assertion); reverted, tree clean.
+- **BLOCKING DEFECT (prose count)**: "the 242 readable 2010-2011 notices" / "The 242 readable notices of 2010-2011" in `docs/evidence/comex.md:696`, `docs/evidence/nymex.md:696`, `docs/evidence/globex_energy.md:57`, `docs/evidence/globex_fx.md:802`. Per the store's own `wave-c1/INDEX.md`, the 2010-2011 leg is **114 notices held, 113 readable** (on disk 52+61=113, all readable; 20100726 the unread replay); **242 is the readable count of the whole 2008-2011 series** (244 listed − 2 zero-byte). The store's own `carried-no-changes-2026-10-05.md` uses the same loose label ("2010-2011 notices: ... 242 readable files"), which is where the number was lifted from. The negative sweep result stands regardless: every month of 2010 and 2011 has readable notices, and wave-c2 covers 2012-01-02..2012-05-28 (25/26, 20120221 named). Blocking per the review protocol (wrong count in prose); fix is a four-line correction + the store note's label. Issue opened.
+- **Advisories**: (1) no CHANGELOG entry — the changelog was reset at 1.0.0 by #294 earlier the same day and no `[Unreleased]` section exists at head; the entry must land at the next cut (LAW-WATCH). (2) LAW-FOLLOW-UPS-ARE-ISSUES letter: the commit message/PR body name the equities-half follow-up with no issue number and no issue existed at merge (10:29Z); cured in substance the same UTC day (umbrella #300 opened 23:19Z tracks it; the half itself merged as #301). (3) PR body's pointer describes wave-c1 as "2009-12..2010-03 weekly Globex notices" (the cbot leg's subset); the directory holds the full 2008-2011 series — the evidence files are precise.
+
+Verdict: **BLOCK (retrospective)** at `8953c696700da1b4399f43923e0bc424fc1b12d4` — one blocking prose count defect (D1 above); zero data defects; all seven horizon moves, the sweep negatives, every quotation and digest verified. Review posted on the PR; blocking issue opened for the four-file correction.
+
+## 2026-10-06T09:26Z UTC — second-retrieval review of PR #301 (rebased head a38dc9be9a3f77f1d1fa993900120f3f8ac0abd3, branch carried-equities-no-changes): **BLOCK (two blocking defects; every shipped value, quotation, digest and the six horizon moves themselves verify)** — worked in detached worktree `/private/tmp/wt-review-301` at the head commit (left in place; the stale 4da1815 worktree was removed and re-created at a38dc9b); isolated `CARGO_TARGET_DIR=/private/tmp/wt-review-301/target`, MSRV in `/private/tmp/wt-review-301-msrv`
+
+What was recomputed, with what tools, from which inputs:
+
+- **Full Verification chain at head a38dc9b**: fmt OK; clippy -D warnings OK; nextest **1285/1285**; doc tests 3/3; rustdoc -D warnings OK; cargo deny exit 0; `cargo +1.95 check --all-targets` exit 0. CI (quality, msrv 1.95, digest fence + verify-evidence --all) verified green via API **on the exact head sha** (check-run head_sha match).
+- **Derived rows (grep diff of sourcing.rs arms, head vs parent 2985495)**: exactly five horizon arms moved to `horizon!(2010, 1, 1)` — `Asx` from 2013-09-16, `Nzx` from 2010-01-05, `SgxSecurities` from 2011-08-01, `EuronextParis` from 2010-12-24, `BorsaIstanbul` from 2010-03-25; `Tadawul` already at the floor (moved by #303). Matches the PR's six claims (five here + tadawul's records reconciliation) arm for arm; verification.md Horizon cells and coverage-2025 Horizon cells agree; no other row's date/Holidays/count column moved in either document (both diffs read whole). Reviewed-on cells: five at 2026-10-05, tadawul 2026-10-06 — nothing future-dated.
+- **Store sweep records, re-derived from the bytes**: `normal-weeks/asx-carry-sweep/` 19/19 digests OK; `thasx-res-2009-02-01`/`-2010-01-06` print the staggered grid verbatim (7:00–10:00 pre-open; groups 10:00:00/10:02:15/10:04:30/10:06:45/10:09:00 am; gloss "9:59:45 am and 10:00:15 am"; Normal Trading 10:00 am–4:00 pm); all 11 era captures (mktphases-2011-03-25 + ten mp-*) carry "randomly generated by ASX Trade"; the two 2009 shells are "cannot be found" pages as disclosed. NZX `nzx_key_dates_trading_hours.wayback-20091204184203id_.html` digest `f5a8c3f6…` matches its Documents row and prints Pre-open 9.00–10.00am / Normal Trading 10.00am–4.45pm / Pre-close 4.45–5.00 / Adjust 5.00–5.30 and keys "New Year's Day: Friday, 1 Jan Closed" + "New Year's Day Holiday: Mon, 4 [Jan Closed]". SGX `gazette-2026-10/` 41/41 OK; `sgx_st_rules_2011-08-01.pdf` text = "Proposed amendment to Practice Note 8.2.1", Issue Date 1 August 2011, "morning trading session from 09:00 to 12:30 hours and the afternoon trading session from 14:00 to 17:00 hours", instants 08:30/08:59/12:30/13:59/14:00/17:00 present; `normal-weeks/sgx-securities-carry-sweep/` 12/12 OK with the disclosed shells (Requested Page Not Found, 503, RegCo shell). Euronext `2010-2024/` 29/29 OK; `european-cash-markets-…-2010` = PAR_20101126_06372_EUR dated 26/11/2010 with "Pre-opening at 07:15 CET for any Euronext Cash Market" and 09:00 opens; 2011 PR dated 10 November 2010 with "5.35 pm CET". BIST `bist-carry-sweep/` 6/6 OK; annual-report timeline (layout mode): 2009 column "19 Ekim 2. seans saatinin uzatılması" and "13 Kasım Kurumsal Ürünler Pazarının açılması / 2. seansta da Açılış Seansı uygulaması"; 2010 column "30 Nisan Seans saatleri değişikliği"; 2009-08-26/09-08 captures print 2. Seans 14:00–17:00; the 2010-03-25 and 2010-04-30 captures' equity grids are text-identical (577-char common run; divergence only in Flash-embed page furniture). Tadawul `tadawul-carry-sweep/` 1/1 OK, `tt-en-2008-11-19.html` verbatim "Trading Session : 11:00 am – 03:30 pm" / "Trading Days : Saturday through Wednesday except official holidays."; `holidays/raw/equities/tadawul/domain-lineage-2026-10-06/` 3/3 OK, both 2009 replays = `8d5a8681…44262` matching the Documents row.
+- **Mutation**: `Asx` horizon flipped back to `horizon!(2013, 9, 16)` → `the_no_changes_sweep_retired_the_equities_side_carried_eras` fails at tests/coverage_metadata.rs:688; reverted, tree clean. The six-identity fence holds.
+- **BLOCKING DEFECT 1 (evidence regression, rebase accident)**: head **deletes** the "Fourth pass, 2026-10-06 UTC — the predecessor domains" bullet that #303 (the merge-base commit 2985495) added to `docs/evidence/sgx_securities.md`, while keeping #303's iceus and six domain-lineage records. The store holds the artifacts (`holidays/raw/equities/sgx_securities/domain-lineage-2026-10-06/`: INDEX.md "Verdict: NEGATIVE", SHA256SUMS.txt 5/5 verified, CDX dumps, `sgx_info_TradingCalendar2009.wayback-20090126233130.pdf`), main cites the directory, and nothing in the head tree references it any more (grep across docs/src/tests). Merge would erase a merged, artifact-backed search record from the #213 gap narrative (LAW-EVIDENCE-FILES regression). Fix: restore the bullet verbatim from main.
+- **BLOCKING DEFECT 2 (prose date, wrong by one day for one of six)**: `docs/schedules/coverage-2025.md` line 101 — "On the same UTC date the verification's equities half moved six more served rows' Horizon cells to the floor — … `tadawul` from 2010-01-12 …". Tadawul's Horizon cell did not move on 2026-10-05: this PR's own diff leaves it at 2010-01-01, and its move is recorded (row basis + #303) under the **2026-10-06 UTC** domain-lineage sweep, with verification.md's tadawul Reviewed-on 2026-10-06. Five cells moved on the directive date; tadawul's moved 2026-10-06. Blocking per the review protocol (wrong date in prose); fix is one clause.
+- **Advisories**: (1) `docs/evidence/borsa_istanbul.md` calls 19 Ekim and 13 Kasım 2009 the timeline's "only session-hours entries before the carried region's end"; the printed 2009 column also carries "1 Ekim — Gözaltı Pazarında seans süresi değişikliği" (the halt market's own session duration, pre-floor, out of the equity envelope) — the envelope-relevant reading holds and nothing changed inside the span, but "only" is stronger than the print without that scoping; likewise "2010's single entry" reads correctly only under the session-hours ellipsis. (2) The Practice Note PDF exists twice in the store under different digests (gazette-2026-10 vs carry-sweep retrievals of the same edition); the evidence file cites the copy whose digest matches its own SHA256SUMS. (3) Prior review of 4da1815 (ACCEPT-WITH-ADVISORIES, posted 05:59Z) remains on the PR; its advisories 1 (rebase) and the tadawul dual-witness record were discharged by this rebase.
+
+Verdict: **BLOCK** at `a38dc9be9a3f77f1d1fa993900120f3f8ac0abd3` — two blocking defects (D1 restore the #303 fourth-pass record; D2 correct the coverage-2025 tadawul date), zero data defects; all six horizon moves, the sweep negatives, every quotation and digest verified. Review to be posted on the PR; blocking issue opened.
+
+## 2026-10-06T12:45Z UTC — session record: #301 rebase, out-of-band merge, fix-forwards #305/#307
+
+Sequence recorded so the two BLOCK verdicts above have their dispositions:
+
+- **#301 rebased onto main** (after #299/#302/#303 merged) as single commit `a38dc9b` in
+  `/private/tmp/wt-carried-eq` — the original branch's verification.md/coverage-2025.md/CHANGELOG
+  grafts were re-merged, and the tadawul record reconciled to carry BOTH sweeps (2026-10-05
+  no-changes + 2026-10-06 domain-lineage). Full chain + MSRV green locally; CI green; force-pushed.
+- **The maintainer merged #301 out of band** at 2026-10-06T09:22:54Z (squash `6c39e3b`) while the
+  review above was in flight; the BLOCK verdict landed post-merge and both defects were fixed
+  forward on main.
+- **#299's count defect → #304 → PR #305** (merged `0658bab`): the 2010-2011 leg's own counts
+  (114 held / 113 readable) recount-verified from `wave-c1/INDEX.md` + on-disk zero-byte checks;
+  `globex_fx`'s INDEX citation corrected per replay (`wave-c2-2012-notices` for `20120221`).
+  #304 CLOSED COMPLETED.
+- **#301's two defects → #306 → PR #307** (merged `fed7dc3`): sgx fourth-pass domain-lineage
+  bullet restored verbatim (the directory had no remaining citation on main) and coverage-2025's
+  intro sentence now dates tadawul's Horizon move to 2026-10-06, listing five moved cells.
+  #306 CLOSED COMPLETED.
+- **Housekeeping after the fixes**: local branches deleted (tree-merged or superseded originals):
+  carried-equities, carried-equities-no-changes, carried-equities-v2, carried-no-changes,
+  cde-cftc-112, cde-flank-112, six-negation-212b, six-tsc-212, changelog-window-count,
+  sweep-count-fix-304, fix-306-review-defects; stale worktrees wt-290-fix, wt-carried,
+  wt-review-290, wt-review-301b, wt-domain-lineage removed. Kept: wt-review-299, wt-review-301
+  (verdict contexts above), wt-gate-final2 (one untracked `tests/gate_probe.rs`), and unmerged
+  branches cde-bridging-112, domain-lineage-sweep, sgx-mom-completeness, tadawul-advisories-303,
+  release/1.0.0 (orphaned rewrite-era branch at `309eae6`, not in main's history — flagged for
+  the maintainer; the real release cut follows RELEASING.md from main).
+- **main** = `fed7dc3`, zero open PRs. Open issues unchanged: #112, #157 (residuals), #213,
+  #300 remainder. Weekly watch next 2026-10-11 UTC.
+
+## 2026-10-06T13:1xZ UTC — cadence ruling: horizon-watch is MONTHLY (was weekly)
+
+Maintainer ruling 2026-10-06 UTC: the coordinator's horizon-watch pass moves
+from weekly to monthly. Next watch **2026-11-06 UTC** (one month past the
+2026-10-05/06 verification wave). Covers: 2027 edition publications, the
+Coinbase Thanksgiving notice (~10/30, may close #112), and any operator
+publications since the wave. The charter's per-identity LAW-WATCH ledger
+cadences are a separate mechanism and unchanged. (Amends the "weekly watch
+next 2026-10-11" line in the 12:45Z session record above — that pass is
+cancelled by this ruling.)
+
+## 2026-10-06T15:0xZ UTC — review of PR #308 (the #296 coverage bridge), head 26b07d7
+
+Verdict: **ACCEPT**. Coordinator-reviewed (dispatched reviewer died on the
+1308 quota limit pre-post; this is the coordinator's own second retrieval).
+Derived independently in wt-review-308 + a main-side scratch worktree:
+exactly 3 bridged spans (sgx 2020-01-02..2024-12-31 = 1,826; nse 2012 = 366;
+nse 2018 = 365) totalling 2,557 days, nothing bridged across all 95
+exchanges + all keys; main-vs-head gap-class diff shows NoHolidayCoverage
+−2,557 and ResolutionEdge 35→27 (exactly the 8 named dates); honesty probes
+(session answers from the sourced week, Ok(false) beside the disclosed
+residual, OutsideCoveredRange metadata, Tier-3 baseline rendering) all pass;
+mutation on the sgx window edge fails the literal-pinned span fence; CI
+green at the head (quality 17m26s + msrv + digest fence). Advisory recorded:
+the bridged-Muhurat sharp edge (nse 2012-11-13 answers the normal week
+beside the residual; a witnessed recurring arrangement can shrink it later).
+Worktree /private/tmp/wt-review-308 retained with the review probes
+(tests/bridge_review_probe.rs, bridge_review_counts.rs, untracked).

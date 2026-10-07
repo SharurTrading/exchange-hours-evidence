@@ -1,6 +1,6 @@
 # 1.0.0 release gate — maintainer acceptance under the raised bar
 
-Refreshed 2026-10-05 UTC at main `6debb73` (SharurTrading/exchange-hours-rs);
+Refreshed 2026-10-06 UTC at main `fdb23c4` (SharurTrading/exchange-hours-rs);
 coverage walk executed 2026-10-05 03:08 UTC after the eurex no-changes
 verification merged (#287) and the evidence-audit infrastructure landed
 (#289). Supersedes every earlier refresh, including the same-day morning
@@ -37,17 +37,17 @@ scope: the verdict counts sum to the walk, and the `gaps()` spans partition
 exactly the refused days — both held for all scopes. A census walked
 `holiday_on(date)` over 2009-01-01..2029-12-31 for the shipped-table row
 counts and the `Unsourced` row counts the metadata reports. Raw output:
-`gate-probe-2026-10-05-6debb73.tsv` beside this file. No number below is
+`gate-probe-2026-10-06-fdb23c4.tsv` beside this file. No number below is
 copied from any document; every count is this walk's output.
 
 ## Headline
 
-- **Full supported domain, 2010-01-01..2027-12-31:** 180,245 of 216,942
-  scope-days (83.1%) answer `Covered`; 36,697 refuse, and every refusal is
+- **Full supported domain, 2010-01-01..2027-12-31:** 183,864 of 216,942
+  scope-days (84.8%) answer `Covered`; 33,078 refuse, and every refusal is
   the typed error contract (`OutsideCoveredRange` 36,904 + `UnresolvedGap`
   525), never an open/closed claim.
-- **Gate window, 2025-01-01..2027-12-31:** 31,164 of 36,135 scope-days
-  (86.2%) answer `Covered`; 4,971 refuse.
+- **Gate window, 2025-01-01..2027-12-31:** 31,169 of 36,135 scope-days
+  (86.3%) answer `Covered`; 4,966 refuse.
 - **The declaration census is ZERO.** The walk's gap census contains no
   declared-gap record of any shape — no `NormalWeekPhaseWithheld` (#79/#123/
   #259, retired by the 2026-10-04 sourced-intersection residual convention),
@@ -78,9 +78,10 @@ copied from any document; every count is this walk's output.
   publication). **Nine carry named in-window gaps** — ≈300 refusal days in
   all, each with a live closer (below).
 - Progression: 72.4% (2026-10-02) → 78.7% (2026-10-03 waves) → 82.4%
-  (`a144b5b`, the convention wave) → 82.7% (`6debb73`, +729 eurex days) →
-  **83.1%** (`a24d4ef`, +730 SIX days, #290).
-  Gate window: 84.2% → **86.2%**.
+  (`a144b5b`) → 82.7% (`6debb73`, +729 eurex days) → 83.1% (`a24d4ef`,
+  +730 SIX days, #290) → **84.8%** (`fdb23c4`, the carried-class wave:
+  the CME-side seven families' horizons at the floor + the SIX TSC rows
+  + the equities carried-half). Gate window: 84.2% → **86.3%**.
 
 ## Per-identity coverage table (2010-01-01..2027-12-31 through the public surface)
 
