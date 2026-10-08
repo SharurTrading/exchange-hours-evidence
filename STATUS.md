@@ -10427,7 +10427,7 @@ cadences are a separate mechanism and unchanged. (Amends the "weekly watch
 next 2026-10-11" line in the 12:45Z session record above — that pass is
 cancelled by this ruling.)
 
-## 2026-10-06T15:0xZ UTC — review of PR #308 (the #296 coverage bridge), head 26b07d7
+## 2026-10-07T14:5xZ UTC — review of PR #308 (the #296 coverage bridge), head 26b07d7
 
 Verdict: **ACCEPT**. Coordinator-reviewed (dispatched reviewer died on the
 1308 quota limit pre-post; this is the coordinator's own second retrieval).
@@ -10444,3 +10444,307 @@ the bridged-Muhurat sharp edge (nse 2012-11-13 answers the normal week
 beside the residual; a witnessed recurring arrangement can shrink it later).
 Worktree /private/tmp/wt-review-308 retained with the review probes
 (tests/bridge_review_probe.rs, bridge_review_counts.rs, untracked).
+
+## 2026-10-07T16:5xZ UTC — review of PR #309 (below-window retrievals: cfe 2014-2016 + nse 2012), head b1fc7c0
+
+Verdict: **BLOCKED — one prose count defect; every row, quote and derived
+count verified**. Reviewer worktree `/private/tmp/wt-review-309` (detached at
+the head; full chain + MSRV 1.95 + `verify-evidence --all` re-run there: 1,297
+tests passed, 2,904 Documents rows / 822 digests resolve).
+
+Retrieved rows, exhaustive: all 28 touched cfe rows (20 new-window rows over
+CBOE-PR-2014-CHRISTMAS-NEW-YEAR, CBOE-PR-2015-PRESIDENTS, CFE-IC15-011/-023/
+-028/-039, CBOE-PR-2015-THANKSGIVING, CBOE-PR-2015-CHRISTMAS-NEW-YEAR,
+CBOE-PR-2016-MLK; 7 new LateOpen + the 2017-11-24 kind change over the
+rules-page captures and the 2018 MLK/Presidents notices) and all 18 touched
+nse rows (14 closures + 2012-11-13 withheld over NSE-CIRC-2011-66
+CMTR19539; 2010-11-05/2015-11-11/2016-10-30 Unsourced→ReplacementBlocks over
+CMTR16062/CMTR31047/CMTR33424). Every cited sha256 recomputes from the store
+bytes (`cfe-2010-2026/SHA256SUMS.txt`, `muhurat-recovery-2026-10-06/
+SHA256SUMS.txt`); every quoted session language found verbatim via
+pdftotext -layout, including the two stated corrections: the 2014 release's
+CFE Thursday 12/25 column indeed prints no `Closed` cell (the row says so),
+and the four IC15 replay capture stamps match `cdx_infocirc_full.txt` exactly.
+
+Derived rows recomputed with independent parsers/probes: cfe 140 rows / 1
+Unsourced (2017-07-03) over the three windows; nse_india 231 rows / 7
+Unsourced over the two windows; the seven withheld dates exactly 2011-10-26,
+2012-11-13, 2013-11-03, 2014-10-23, 2017-10-19, 2019-10-27, 2026-11-08 (all
+answer `WithheldDate` through the coverage API); 2012 closures answer Closed
+and 2012-11-13 answers UnresolvedGap; Muhurat days answer open at their
+printed instants (2010-11-05 18:30 IST, 2015-11-11 18:00 IST). Bridged sweep
+over Exchange::ALL: exactly cfe 2015-01-03..2015-02-14 (43) + 2016-01-21..
+2017-04-09 (445) + nse 2018 (365) + sgx 2020-01-02..2024-12-31 (1,826) =
+2,679 days, nothing else — matches CHANGELOG. 20+8=28 touched cfe rows (net
++27, 113→140); coverage-2025 cells (cfe 140/1, nse 231/7), ledger rows,
+sources.md ir.cboe.com channel, date_level_incompleteness 9→7 all consistent.
+Mutations: nse 2012-10-24 date flip fails both evidence fences; cfe 2015-04-03
+08:15→08:30 fails the_2015_spring_rows fence.
+
+Blocking defect: `src/calendar/schedules/holidays/nse_india.rs` module doc
+says "**Six rows are `Unsourced`** … — six dates plus the 2026 banner date"
+and "the six `Unsourced` Muhurat dates" — the true count is **seven** (the
+sentence's own list has seven items; every other record says seven). Filed as
+SharurTrading/exchange-hours-rs#310. Advisory: (1) cfe.md/cfe_vix.md 2015-01-01 row leads with "`Closed`
+(the release's January 1 column)" though the CFE row of that column prints
+the resume leg, not `Closed` (CBOE/C2 print it) — under-qualified relative to
+the corrected 2014-12-25 row; all CFE-specific quotes verbatim, value right.
+(2) CBOE-PR-2017-MEMORIAL Documents row (digest verifies) is named by no
+derivation or prose in either file. (3) Inherited, not introduced: the
+cfe.rs December-eve enumeration omits 2025-07-03, 2025-12-24, 2026-12-24.
+
+## 2026-10-07T17:2xZ UTC — below-window retrievals MERGED (#309, a0dae16); count fix (#310 closed)
+
+The completion agent's PR (head b1fc7c0) reviewed by a second-retrieval
+agent: all 46 touched rows verified (digests reproduce, quotes verbatim via
+pdftotext, the two salvaged-draft corrections confirmed against bytes),
+derived counts match (cfe 140/1, nse 231/7, bridged union 2,679 = cfe 488 +
+nse 365 + sgx 1,826), mutations fenced. One blocking prose count defect
+(nse module doc "six" vs its own seven-item list) → issue #310 → fixed on
+branch (f3b66d0), checks re-run green, squash-merged as a0dae16, #310
+closed. Evidence mirror parity PR #3 merged (5290869) before CI could pass
+— the store had lost the zero-byte 20100726 replay; restored both sides.
+Worktrees wt-below-window and evi-ingest removed; wt-review-309 retained.
+#300 tracker updated (comment 6043017833).
+
+## 2026-10-08T0x:xxZ UTC — one-flank bridge Tier-2 (PR #311, 4df870e) reviewed; one PR-body count defect (#312)
+
+Second-retrieval review in detached worktree /private/tmp/wt-review-311 at
+4df870ed3d1eda34a506d8600fedc02b07f7d063, isolated target dirs. Chain green
+(fmt, clippy -D warnings, nextest 1,301/1,301, doctests 3, rustdoc -D
+warnings, deny, MSRV +1.95). Own census over Exchange::ALL + MarketHoursKey::ALL
+(gaps() + midpoint is_closed_trade_date probes): exactly 16 one-flank
+identities, endpoints and per-identity counts match the claim, total 31,759
+as enumerated (table-deduplicated; per-identity 58,664); endpoints
+cross-checked against the tables' coverage: window literals. Fabrication
+probe clean: coinbase (pre-2021-06-28 13:00Z), globex_crypto (pre-2017-12-17),
+iceus/ice_us (pre-2017-11-07 FANG+ launch) all answer CLOSED in the lifted
+spans from sourced launch closures; binance_futures pre-launch answers
+Covered+closed (audited data, not lifted); trading identities answer real
+sessions (cotton's Monday-morning closed verified from its 21:00→14:20 wrap).
+Asymmetry verified: sgx 2013-12-31 UnresolvedGap with rendered Tuesday
+baseline, seven session queries answer, 2014-01-02 Ok(false), 2022-06-08
+two-flank Ok(false); above-last (2028) refuses everywhere; gate consulted
+only by trade_date_classification behind the caller-record read;
+OneFlankAbove unconstructible; no public API change. Mutation sgx window
+2014→2013 fails both named fences; reverted. Defects: one blocking-class PR
+BODY prose count ("nine affected basis cells" in verification.md — the diff
+updates eight rows: b3, borsa, cfe, coinbase, globex_crypto, sgx, sse,
+tadawul; the "nine inventory cells" coverage-2025 claim is correct) filed as
+SharurTrading/exchange-hours-rs#312; advisory: "identity-span days" label vs
+58,664 per-identity total (enumeration internally consistent, CHANGELOG
+names the dedup), and the ICE US family ledger rows left unchanged with the
+disclosure in the inventory cells + evidence bullets. PR report posted
+(comment 6050902459). Merge after the PR-body one-word fix.
+
+## 2026-10-07T18:3xZ UTC — Tier-2 RESOLVED and MERGED (#311, 4f31101); open issues = #300 only
+
+The maintainer approved the coordinator's Tier-2 ruling (below-first spans:
+sessions answer, holiday classification refuses typed with the Tier-3
+baseline, no new verdict kind, above-last stays under the publication
+horizon). Implemented as PR #311 (head 4df870e, 16 identities, 31,759
+table-deduplicated / 58,664 per-identity days lifted), reviewed
+independently: span census reproduces exactly, the fabrication probe is
+clean (coinbase/crypto pre-launch dates answer CLOSED from the sourced
+launch closures, never open), the asymmetry fence is mutation-pinned, chain
+green. One PR-body word defect ("nine" → "eight" basis cells) fixed in the
+body; #312 closed. Squash-merged as 4f31101. Open issues: #300 alone
+(#112/#157/#213 closed). Remaining on #300: the declared-date-without-time
+audit and the final walk at 100%-of-published-window. wt-tier2 and the
+branch removed; wt-review-311 retained.
+
+## 2026-10-08T02:46–03:5xZ UTC — #300's final two acceptance items executed at main `4f31101` (detached worktree `/private/tmp/wt-final-gate`, isolated target, nothing pushed or committed): the declared-date-without-time audit and the final walk at 100%-of-published-window — **both complete, zero defects**
+
+(Note on dates: the dispatch brief said "today is 2026-10-07 UTC"; the work actually
+executed 2026-10-08T02:46Z–03:5xZ, so this record and the walk TSV carry the true UTC
+date per LAW-UTC-DATES. Raw walk output: `gate-probe-2026-10-08-4f31101.tsv` in this
+store — same format as the earlier gate-probe TSVs plus `INWIN` lines and
+`exchange:`/`key:` scope namespacing, because `eurex` and `sgx` exist on both enums.)
+
+**ITEM 1 — the declared-date-without-time audit: COMPLETE. Convention satisfied on
+every audited row; zero defects.** The convention audited (AGENTS.md keying rules +
+the 2026-10-05 ruling recorded on #300): a DECLARED day-level date keys a change FROM
+that date forward — the local opening day of the first session it governs, never a day
+later, never an invented instant — even when the operator published no intraday
+timing; a day-level boundary never splits a running session; a declared-untimed
+arrangement is disclosed beside its row with a named closer.
+
+Method: systematic sweep of all 293 `revisions!` rows across the 71 schedule modules
+(mechanical extraction, then flag-pass for declared/launch/capture-style citations —
+26 rows flagged), plus the two knowledge-bound rows (`globex_weather` 2026-09-05,
+`coinbase_derivatives` 2026-09-11), plus the named candidate classes (the nikkei and
+cryptocurrency merged-date assignments, the five-then-eight Muhurat ReplacementBlocks,
+eurex's dated German-scope rows, the CME event-contract 24/7 rows), plus the
+sibling-phrase sweep of every evidence file ("declared", "announced", "without a
+time", "no intraday", "keyed from", "notified subsequently", "undated"). Structural
+fact the audit rests on: every `Revision` row takes effect at venue-local midnight of
+its `effective` day by construction (`timeline.rs`), and `select_revision` partitions
+on the venue-local date, so a row can never key a day late or at an invented instant —
+the audit verified the DATE each row carries against the operator's declared day, the
+no-split property, and the evidence disclosure.
+
+Audited rows (35 groups), all YES on (a) declared-day keying / (b) no session split /
+(c) untimed-nature disclosed with closer:
+
+| identity | row/date | declared basis | verdict | evidence |
+|---|---|---|---|---|
+| exchange:small_exchange | 2024-11-04 | SMFE info hub (last old-grid capture 2024-11-03) + cert SMFE 2024-010; move undated inside 2024-11-04..21 → sourced intersection keyed to the Monday; only 07:00–08:30/15:00–16:00 CT withheld | yes | small_exchange.md (gap note + closer: an SMFE artifact stating the new hours on a day-level date) |
+| exchange:small_exchange | 2020-05-18 | SMFE 2020-003..005 launch certifications (trades executed; public opening 2020-06-01 came after) | yes | small_exchange.md |
+| exchange:small_exchange | 2025-03-24 | SMFE 2025-001 delisting at the 2025-03-21 close | yes | small_exchange.md |
+| keys:globex_gold_tas, globex_silver_tas | 2010-04-11 | Submission 10-070/SER S-5166 "on Globex on April 11 (for trade date April 12)" — declared day, no intraday time; keyed to the local Sunday opening day; pre-launch a sourced closure | yes | globex_gold_tas.md, globex_silver_tas.md |
+| key:globex_copper_tas | 2011-01-23 | SER-5542 "effective Sunday, January 23, 2011 for trade date Monday, January 24" | yes | globex_copper_tas.md |
+| keys:gold/silver/copper TAS | 2011-04-10, 2012-04-15 | RA1104-4 stagger; notice 20120409 restoration — dated notices, Sunday openings | yes | globex_{gold,silver,copper}_tas.md |
+| key:globex_platinum_tas / globex_palladium_tas | 2017-05-21 / 2018-11-18 | notices 20170508 / 20181112, Sunday opening days | yes | globex_platinum_tas.md, globex_palladium_tas.md |
+| key:globex_nikkei_225_dollar | five 2025 merged trade dates | ES-line sibling-product witness; rows keyed to the operator's own printed `tradingDate` fields at T2 on both sides of the boundary | yes | globex_nikkei_225_dollar.md ("the five merged trade dates") |
+| key:globex_nikkei_225_dollar | 2022-05-30 | merged `Nikkei & BTIC` workbook line → `Unsourced`, not an invented early close; closer: a document separating the lines | yes | globex_nikkei_225_dollar.md |
+| key:globex_cryptocurrency | 8 merged-date `ReplacementBlocks` rows (2025-01-21 … 2027-12-27) | keyed to the operator's printed merged trade dates (T2); the Monday rows' Friday/Saturday restatement residual disclosed with closer (a Friday-start retrieval) | yes | globex_cryptocurrency.md |
+| exchange:nse_india | 8 Muhurat `ReplacementBlocks` (2010-11-05, 2015-11-11, 2016-10-30, 2020-11-14, 2022-10-24, 2023-11-12, 2024-11-01, 2025-10-21) | circulars state day + full schedule; keyed to the stated days themselves (two weekend sessions included) | yes | nse_india.md |
+| exchange:nse_india | 7 withheld dates (2011-10-26, 2012-11-13, 2013-11-03, 2014-10-23, 2017-10-19, 2019-10-27, 2026-11-08) | operator declares the DATE, "timings shall be notified subsequently" → typed `Unsourced` on the declared day itself (never answering the audited-normal weekend the announcement contradicts); closer: the year's Muhurat circular | yes | nse_india.md |
+| exchange:nse_india | 2021 | Muhurat announced against no date → no row keyed, residual risk recorded | yes | nse_india.md |
+| exchange:eurex | dated German-scope rows (2014-10-03, 2018-05-21, 2019-06-10, 2019-10-03, …) | Trading Calendar editions print scope+date; keyed to the printed dates; the `tba` era verified to no closures (#157 retired 2026-10-05) | yes | eurex.md |
+| key:globex_event_contracts | 2022-09-18 | SER-8968R "Effective Sunday, September 18, 2022, for trade date Monday, September 19"; keyed to the Sunday opening day | yes | globex_event_contracts.md |
+| key:globex_event_contracts_btc | 2023-03-12 | SER-9092 Sunday opening day | yes | globex_event_contracts_btc.md |
+| key:globex_event_contracts_btc | 2026-05-29 (+05-30) | SER-9740R "Effective Friday, May 29, 2026"; the wiki's stated 16:00 CT instant modelled as the exact-instant cutover inside the transition day (Thursday's leg still closes Friday 16:00; the 24/7 leg opens 16:02) — no split; 24/7 intersection grid from 2026-05-30 with the one-hour conflict disclosed (closer: one CME statement of the weekday window) | yes | globex_event_contracts_btc.md |
+| key:globex_event_contracts_btc | 2026-08-01, 2026-08-29, 2026-09-19 | notices 20260727/20260824/20260831 — dated one-day Saturday extensions each followed by a restoration row; the September one forward-dated on the operator's statement | yes | globex_event_contracts_btc.md |
+| key:globex_weather | 2026-09-05 (knowledge bound) | adds only the sourced-intersection Sunday quarter-hour; onset day no source states; "makes no onset claim, its date never moves forward"; closer: a CME artifact stating the onset day | yes | globex_weather.md |
+| exchange:coinbase_derivatives | 2026-09-11 (knowledge bound) | Pre-Open documented from 2021 WITHOUT a time; enters at the first witnessed review; onset residual disclosed; the 16:50 start first witnessed 2025 | yes | coinbase_derivatives.md |
+| exchange:blue_ocean_ats | 2021-10-05 | operator launch announcement; keyed to the declared day | yes | blue_ocean_ats.md |
+| exchange:borsa_istanbul | 2015-11-30, 2016-03-28, 2016-11-14 | announcements 13472/13446/13376 with declared days | yes | borsa_istanbul.md |
+| exchange:iceus (+ key:ice_us) | 2017-11-07, 2017-11-08 | FANG+ launch notice 20170926: launch-eve profile keyed to the opening day, full grid from the stated trade date — nothing earlier | yes | ice_us.md |
+| exchange:txse | 2026-07-10 | production launch alert | yes | txse.md |
+| exchange:euronext_milan | 2013-09-30 | CPX launch notice (Monday stated) | yes | euronext_milan.md |
+| exchange:nasdaq_copenhagen | 2019-05-01 | Trading@Closing Price announcement | yes | nasdaq_copenhagen.md |
+| exchange:nyse_national | 2015-12-22 | NSX SEC Form 1 relaunch filing | yes | nyse_national.md |
+| exchange:nzx | 2020-04-06 | announcement 350919 (pre-open 09:00→08:30) | yes | nzx.md |
+| exchange:pse | 2012-01-02 | New Trading Hours announcement | yes | pse.md |
+| exchange:sgx_securities | 2017-11-13, 2019-06-03 | announcements 2017-07-18 / 2019-05-14 with declared days | yes | sgx_securities.md |
+| exchange:sgx | 2024-07-29 | SORA launch announcement | yes | sgx.md |
+| key:sgx_equity_index_taiwan | 2020-07-20 | launch day T1 from the release; grid T2 from the content API | yes | sgx_equity_index_taiwan.md |
+| keys:sgx_equity_index_japan/china/ntr_usd | 2013-08-26, 2017-07-10, 2018-04-16 | capture-witnessed states keyed to the following MONDAY because the rows lengthen wrapping overnight closes (mid-week keys would misreport the eve leg); undated moves served as intersections with the disclosed costs and closers | yes | sgx_equity_index_{japan,china,ntr_usd}.md |
+| options history launches | cboe_bzx_options 2010-02-26; miax_options 2012-12-07; miax_pearl_options 2017-02-06; miax_emerald_options 2019-03-01; miax_pearl_eq 2020-09-29 | launch alerts/releases keyed over the pre-launch closure — no earlier session exists to split | yes | per-identity evidence files |
+
+(d) Runtime probes through the public surface (temp test, deleted after; all four
+passed): `small_exchange` 2024-11-04 answers the intersection grid on the Monday and
+the old grid on the prior Friday; `globex_gold_tas` answers the launch Sunday open at
+17:30 CT with the 16:15–17:00 queue accepting orders and the pre-launch Saturday
+closed; `sgx_equity_index_japan` answers the pre-boundary Friday to its 22:55 close
+and the new wrap only from the keyed Monday (02:00 close); `nse_india` 2016-10-30
+answers the declared Sunday Muhurat session on the declared day itself (open 18:30
+IST, closed either side). Also verified in evidence: nyse's Sandy rows key each side
+on its own unconditional release (the conditional first-release 10-30 wording
+superseded, never relied on), and globex_cryptocurrency's 2027-12-24 row keys from
+the trade date the operator prints beside the re-open.
+
+**ITEM 2 — the final gate walk at 4f31101 (100%-of-published-window): COMPLETE.
+No blocking finding; the metadata honesty check passes.** Method: the store's
+established reviewers' pattern (temp integration test through the public constructors
+only, deleted after; invariants held). Walked 2010-01-01..2027-12-31 = **874,342
+scope-days over all 133 shipped identities** (96 Exchanges + 37 keys, resolved by
+`as_str()`; `eurex`/`sgx` disambiguated); `gaps()` spans asserted to partition the
+refused days exactly on every scope; `holiday_on` census 2009–2029 per identity;
+open-ended spans capped at the walk end; window end set explicitly. Executed
+2026-10-08T02:46–03:03 UTC. Raw: `gate-probe-2026-10-08-4f31101.tsv`.
+
+Headline numbers:
+
+- **The 33 served scopes, inside their published windows (the ledger `Holidays` cells,
+  clipped to the walk): 186,328 of 187,992 dates answer — 99.11%.** In-window refused
+  days are EXACTLY the two honest classes: **516 `WithheldDate`** (the typed
+  in-window withholding — cme 184, cbot 202, iceus 41, globex_nikkei 20, nse_india 7
+  Muhurat, lse 5, nasdaq 4, comex/nymex/energy/fx/equity-index/livestock/crypto 6
+  each, grains/interest-rates 4 each, euronext_paris 2, cfe 1; identical to the
+  tables' `Unsourced` row counts, each with its document id) and **1,148
+  `ResolutionEdge`** (#151 — 1,105 adjacent to a withheld span, same closer as the
+  withheld date they reach; 34 at a window's upper edge where the next-session reach
+  crosses the publication horizon, closer: the operator's next published calendar on
+  the monthly watch; 3 at the permanent support floor, globex_nikkei_225_dollar
+  2010-01-01..03 — structural, no external artifact). Every in-window refusal names
+  its closer; none refuses with a reason that names none.
+- Per-scope in-window: `nyse` answers **100%** of its window; every other served
+  scope is ≥86.39% and all but cme (91.48%), cbot (91.24%) and iceus (86.39%) are
+  ≥98.5%. 2025-01-01..2027-12-31 inside the windows: 31,644 days, 473 refused (320
+  edge + 153 withheld) = **98.51%**.
+- **`NormalWeekCarried`: ZERO records on every served scope** (the five served
+  carried spans retired with #299/#301/#303 — at fdb23c4 the walk showed 28 records,
+  five of them served). The 23 remaining records are EXACTLY the 23 dormant
+  identities' ledger-declared horizons (nyse_american ..2017-07-23, nyse_national
+  ..2010-08-01, finra×2 ..2026-03-29, set_thailand ..2024-03-24, idx, pse, szse, krx,
+  euronext amsterdam/brussels/lisbon ..2010-12-24, jse ..2012-05-25, bmv, the five
+  ICE softs ..2011-08-01, ice_us_dollar_index ..2011-02-07, globex_mini_grains,
+  globex_rough_rice ..2010-03-15, globex_weather ..2010-02-06) — each span's last day
+  +1 equals its ledger Horizon cell; LAW-SERVICE-TIERS keeps dormant rows at their
+  last-reviewed state. Recorded as an observation for the acceptance bullet's wording
+  ("zero NormalWeekCarried refusals" holds on the served scopes; the dormant spans
+  are the charter's declared dormant shape, not a retired class failing).
+- Outside the windows on served scopes: **24,459 `HolidayWindowsBridged` days** (the
+  below-first-window and interior spans answering their session questions under the
+  Tier-1 + Tier-2 ruling — sgx 2020–2024 interior 1,826, cfe 2010–2014 + interiors
+  488 in-window-union terms, nse 2018 365, coinbase pre-launch 4,196, iceus pre-2025
+  5,479, tadawul pre-2021 4,018, globex_crypto pre-2019 3,287, borsa pre-2012 791,
+  sse/b3 2010 363/365, sgx pre-2014 1,461 among them) and **4,491 `NoHolidayCoverage`
+  days** above the last audited window (the publication horizon — the watch lands
+  them). No `BeforeSupportFloor` day exists in the walk (the floor is its start).
+- **Declared-gap vocabulary: unused.** No identity declares any phase gap
+  (`sourcing.rs` `phase_gaps` empty on every arm — `NormalWeekPhaseWithheld`,
+  `SpecialSessionUnrepresentable`, `PostCloseQueueTradeDateLabel`,
+  `UnpublishedClosureDates` appear in no gap record anywhere); the 87 `horizon!` arms
+  restate their ledger cells behind the existing fences. NoHolidayTable records
+  belong to dormant identities that ship no table (claimed nowhere).
+- All-identity totals for the record: 229,900/874,342 (26.3%) Covered — the dormant
+  majority ships claimed-nothing coverage, as the ledger records.
+
+**CLOSE-OUT — full verification chain at head `4f31101ea4e6c0540490b20da496d41988880628`
+(clean tree, temporary probes deleted before the run): fmt OK; clippy `-D warnings` OK;
+nextest 1,301/1,301 (slowest `the_coverage_gate_is_sound_for_every_shipped_row`
+754.0s); doc tests 3/3; rustdoc `-D warnings` OK; `cargo deny check` exit 0 (one
+unmatched-license-allowance note, pre-existing); `cargo +1.95 check --all-targets`
+exit 0.** Chain ran 2026-10-08T03:28–03:43Z in the same worktree.
+
+#300 disposition: both remaining acceptance items complete — "the declared-date-
+without-time audit complete" and "the final gate walk: 100% of published-window dates
+either answer or refuse with an external-artifact closer" both hold at `4f31101` on
+the walk's evidence. Status comment posted on #300 with this summary. Worktree
+`/private/tmp/wt-final-gate` discarded; the durable records are this entry and
+`gate-probe-2026-10-08-4f31101.tsv`.
+
+## 2026-10-08T04:1xZ UTC — THE 1.0.0 RELEASE CUT MERGED (#313, dba5ea4); awaiting tag+publish
+
+The final gate passed clean first: the declared-date audit (35/35 row-groups
+satisfy the declared-date convention) and the final walk at 4f31101
+(gate-probe-2026-10-08-4f31101.tsv: 874,342 scope-days; in-window
+186,328/187,992 = 99.11%; the 1,664 in-window refusals are 516 WithheldDate
++ 1,148 ResolutionEdge, each with its exact external closer;
+NormalWeekCarried ZERO on served scopes; no refusal lacks a closer). Both
+remaining #300 acceptance items complete; #300 commented (6051750835).
+
+The release PR #313 (head 3edf0aa, branch release/1.0.0; the PR body's first-draft hash 40ab602 was corrected in the body — the amend after the target-msrv fix changed the hash): CHANGELOG only —
+the accumulated [Unreleased] entries folded per the 1.0-only convention
+(#294); the published changelog reads "1.0.0 — 2026-10-08 / Initial
+release." Cargo.toml/Cargo.lock already 1.0.0. Validation on the clean
+tree: full gates green (1,301 tests), MSRV green, cargo publish --dry-run
+succeeds, package = 469 files (#294's 467 + two new evidence docs). GOTCHA
+for future cuts: `git add -A` in a worktree with an in-tree MSRV target dir
+sweeps 699 build files into the commit — keep extra target dirs outside the
+worktree (the first commit was amended; the pushed head is clean). The
+stale orphan release/1.0.0 branch (309eae6) was replaced by the real cut.
+CI green (quality 18m08s + msrv; digest fence N/A for a changelog-only PR).
+MERGED as dba5ea4. **The release act is the maintainer's: tag v1.0.0 on
+dba5ea4, cargo publish, yank 0.2.1/0.2.2; badges auto-update;
+SharurPlatform repins.**
+
+## 2026-10-08T05:0xZ UTC — PRE-TAG READINESS SWEEP: ALL GREEN; #300 CLOSED
+
+The maintainer's final check ("do 1 more check that everything is ready"),
+verified at the exact merge commit dba5ea4:
+- main = dba5ea4, CI green on it; zero open PRs; #300 CLOSED (body swept to
+  terminal states — all 15 boxes checked with resolution refs; the last open
+  issue is gone).
+- No v1.0.0 tag exists; crates.io holds no 1.0.0 (max 0.2.2, 0.1.0/0.2.0
+  yanked). Cargo.toml + Cargo.lock = 1.0.0 at dba5ea4.
+- CHANGELOG at dba5ea4 = "1.0.0 — 2026-10-08 / Initial release." exactly;
+  no Scheduled markers in any ledger row (the single grep hit is the
+  legend's definition — RELEASING step 5 vacuous).
+- cargo publish --dry-run --locked succeeds AT dba5ea4; the built archive
+  carries version 1.0.0, the folded changelog, and 469 files (141 under
+  docs/). Branch release/1.0.0 deleted (local+remote) post-merge.
+READY: the maintainer tags v1.0.0 on dba5ea4 and runs cargo publish.
