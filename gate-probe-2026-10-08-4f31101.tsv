@@ -1,0 +1,1915 @@
+SCOPE	exchange:unknown	6574	0	0	1095	0	0	0	0
+GAP	exchange:nasdaq	ResolutionEdge	-	2010-11-25	2010-11-25
+GAP	exchange:nasdaq	WithheldDate	-	2010-11-26	2010-11-26
+GAP	exchange:nasdaq	ResolutionEdge	-	2010-11-27	2010-11-28
+GAP	exchange:nasdaq	ResolutionEdge	-	2011-11-24	2011-11-24
+GAP	exchange:nasdaq	WithheldDate	-	2011-11-25	2011-11-25
+GAP	exchange:nasdaq	ResolutionEdge	-	2011-11-26	2011-11-27
+GAP	exchange:nasdaq	ResolutionEdge	-	2012-10-27	2012-10-29
+GAP	exchange:nasdaq	WithheldDate	-	2012-10-30	2012-10-30
+GAP	exchange:nasdaq	ResolutionEdge	-	2012-10-31	2012-10-31
+GAP	exchange:nasdaq	ResolutionEdge	-	2025-01-08	2025-01-08
+GAP	exchange:nasdaq	WithheldDate	-	2025-01-09	2025-01-09
+GAP	exchange:nasdaq	ResolutionEdge	-	2025-01-10	2025-01-12
+GAP	exchange:nasdaq	ResolutionEdge	-	2026-12-31	2026-12-31
+GAP	exchange:nasdaq	NoHolidayCoverage	-	2027-01-01	open
+SCOPE	exchange:nasdaq	6190	380	4	724	370	1	194	4
+GAP	exchange:nasdaq_bx	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:nasdaq_bx	0	6574	0	0	1095	0	0	0
+GAP	exchange:nasdaq_psx	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:nasdaq_psx	0	6574	0	0	1095	0	0	0
+GAP	exchange:cboe_bzx	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:cboe_bzx	0	6574	0	0	1095	0	0	0
+GAP	exchange:cboe_byx	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:cboe_byx	0	6574	0	0	1095	0	0	0
+GAP	exchange:cboe_edga	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:cboe_edga	0	6574	0	0	1095	0	0	0
+GAP	exchange:cboe_edgx	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:cboe_edgx	0	6574	0	0	1095	0	0	0
+GAP	exchange:nyse	ResolutionEdge	-	2028-12-30	2028-12-31
+GAP	exchange:nyse	NoHolidayCoverage	-	2029-01-01	open
+SCOPE	exchange:nyse	6574	0	0	1095	0	0	217	0
+GAP	exchange:nyse_arca	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:nyse_arca	0	6574	0	0	1095	0	0	0
+GAP	exchange:nyse_american	NormalWeekCarried	-	2010-01-01	2017-07-23
+GAP	exchange:nyse_american	NoHolidayTable	-	2017-07-24	open
+SCOPE	exchange:nyse_american	0	6574	0	0	1095	0	0	0
+GAP	exchange:nyse_national	NormalWeekCarried	-	2010-01-01	2010-08-01
+GAP	exchange:nyse_national	NoHolidayTable	-	2010-08-02	open
+SCOPE	exchange:nyse_national	0	6574	0	0	1095	0	0	0
+GAP	exchange:nyse_texas	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:nyse_texas	0	6574	0	0	1095	0	0	0
+GAP	exchange:memx_eq	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:memx_eq	0	6574	0	0	1095	0	0	0
+GAP	exchange:miax_pearl_eq	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:miax_pearl_eq	0	6574	0	0	1095	0	0	0
+GAP	exchange:iex	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:iex	0	6574	0	0	1095	0	0	0
+GAP	exchange:ltse	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:ltse	0	6574	0	0	1095	0	0	0
+GAP	exchange:24x	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:24x	0	6574	0	0	1095	0	0	0
+GAP	exchange:txse	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:txse	0	6574	0	0	1095	0	0	0
+GAP	exchange:blue_ocean_ats	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:blue_ocean_ats	0	6574	0	0	1095	0	0	0
+GAP	exchange:finra_trf_carteret	NormalWeekCarried	-	2010-01-01	2026-03-29
+GAP	exchange:finra_trf_carteret	NoHolidayTable	-	2026-03-30	open
+SCOPE	exchange:finra_trf_carteret	0	6574	0	0	1095	0	0	0
+GAP	exchange:finra_trf_chicago	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:finra_trf_chicago	0	6574	0	0	1095	0	0	0
+GAP	exchange:finra_trf_nyse	NormalWeekCarried	-	2010-01-01	2026-03-29
+GAP	exchange:finra_trf_nyse	NoHolidayTable	-	2026-03-30	open
+SCOPE	exchange:finra_trf_nyse	0	6574	0	0	1095	0	0	0
+GAP	exchange:cboe_options_c1	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:cboe_options_c1	0	6574	0	0	1095	0	0	0
+GAP	exchange:cboe_c2_options	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:cboe_c2_options	0	6574	0	0	1095	0	0	0
+GAP	exchange:cboe_bzx_options	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:cboe_bzx_options	0	6574	0	0	1095	0	0	0
+GAP	exchange:cboe_edgx_options	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:cboe_edgx_options	0	6574	0	0	1095	0	0	0
+GAP	exchange:nyse_arca_options	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:nyse_arca_options	0	6574	0	0	1095	0	0	0
+GAP	exchange:nyse_american_options	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:nyse_american_options	0	6574	0	0	1095	0	0	0
+GAP	exchange:nasdaq_phlx	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:nasdaq_phlx	0	6574	0	0	1095	0	0	0
+GAP	exchange:nasdaq_ise	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:nasdaq_ise	0	6574	0	0	1095	0	0	0
+GAP	exchange:nasdaq_nom	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:nasdaq_nom	0	6574	0	0	1095	0	0	0
+GAP	exchange:nasdaq_mrx	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:nasdaq_mrx	0	6574	0	0	1095	0	0	0
+GAP	exchange:nasdaq_gemx	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:nasdaq_gemx	0	6574	0	0	1095	0	0	0
+GAP	exchange:nasdaq_bx_options	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:nasdaq_bx_options	0	6574	0	0	1095	0	0	0
+GAP	exchange:miax_options	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:miax_options	0	6574	0	0	1095	0	0	0
+GAP	exchange:miax_emerald_options	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:miax_emerald_options	0	6574	0	0	1095	0	0	0
+GAP	exchange:miax_pearl_options	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:miax_pearl_options	0	6574	0	0	1095	0	0	0
+GAP	exchange:miax_sapphire_options	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:miax_sapphire_options	0	6574	0	0	1095	0	0	0
+GAP	exchange:box_options	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:box_options	0	6574	0	0	1095	0	0	0
+GAP	exchange:memx_options	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:memx_options	0	6574	0	0	1095	0	0	0
+GAP	exchange:cme	ResolutionEdge	-	2010-01-16	2010-01-17
+GAP	exchange:cme	WithheldDate	-	2010-01-18	2010-01-18
+GAP	exchange:cme	ResolutionEdge	-	2010-01-19	2010-01-19
+GAP	exchange:cme	ResolutionEdge	-	2010-02-13	2010-02-14
+GAP	exchange:cme	WithheldDate	-	2010-02-15	2010-02-15
+GAP	exchange:cme	ResolutionEdge	-	2010-02-16	2010-02-16
+GAP	exchange:cme	ResolutionEdge	-	2010-04-01	2010-04-01
+GAP	exchange:cme	WithheldDate	-	2010-04-02	2010-04-02
+GAP	exchange:cme	ResolutionEdge	-	2010-04-03	2010-04-03
+GAP	exchange:cme	ResolutionEdge	-	2010-05-29	2010-05-30
+GAP	exchange:cme	WithheldDate	-	2010-05-31	2010-05-31
+GAP	exchange:cme	ResolutionEdge	-	2010-06-01	2010-06-01
+GAP	exchange:cme	ResolutionEdge	-	2010-07-03	2010-07-04
+GAP	exchange:cme	WithheldDate	-	2010-07-05	2010-07-05
+GAP	exchange:cme	ResolutionEdge	-	2010-07-06	2010-07-06
+GAP	exchange:cme	ResolutionEdge	-	2010-09-04	2010-09-05
+GAP	exchange:cme	WithheldDate	-	2010-09-06	2010-09-06
+GAP	exchange:cme	ResolutionEdge	-	2010-09-07	2010-09-07
+GAP	exchange:cme	ResolutionEdge	-	2010-11-24	2010-11-24
+GAP	exchange:cme	WithheldDate	-	2010-11-25	2010-11-25
+GAP	exchange:cme	WithheldDate	-	2010-11-26	2010-11-26
+GAP	exchange:cme	ResolutionEdge	-	2010-11-27	2010-11-27
+GAP	exchange:cme	ResolutionEdge	-	2011-01-15	2011-01-16
+GAP	exchange:cme	WithheldDate	-	2011-01-17	2011-01-17
+GAP	exchange:cme	ResolutionEdge	-	2011-01-18	2011-01-18
+GAP	exchange:cme	ResolutionEdge	-	2011-02-19	2011-02-20
+GAP	exchange:cme	WithheldDate	-	2011-02-21	2011-02-21
+GAP	exchange:cme	ResolutionEdge	-	2011-02-22	2011-02-22
+GAP	exchange:cme	ResolutionEdge	-	2011-05-28	2011-05-29
+GAP	exchange:cme	WithheldDate	-	2011-05-30	2011-05-30
+GAP	exchange:cme	ResolutionEdge	-	2011-05-31	2011-05-31
+GAP	exchange:cme	ResolutionEdge	-	2011-07-02	2011-07-03
+GAP	exchange:cme	WithheldDate	-	2011-07-04	2011-07-04
+GAP	exchange:cme	ResolutionEdge	-	2011-07-05	2011-07-05
+GAP	exchange:cme	ResolutionEdge	-	2011-09-03	2011-09-04
+GAP	exchange:cme	WithheldDate	-	2011-09-05	2011-09-05
+GAP	exchange:cme	ResolutionEdge	-	2011-09-06	2011-09-06
+GAP	exchange:cme	ResolutionEdge	-	2011-11-23	2011-11-23
+GAP	exchange:cme	WithheldDate	-	2011-11-24	2011-11-24
+GAP	exchange:cme	WithheldDate	-	2011-11-25	2011-11-25
+GAP	exchange:cme	ResolutionEdge	-	2011-11-26	2011-11-26
+GAP	exchange:cme	ResolutionEdge	-	2011-12-26	2011-12-26
+GAP	exchange:cme	WithheldDate	-	2011-12-27	2011-12-27
+GAP	exchange:cme	ResolutionEdge	-	2011-12-28	2011-12-28
+GAP	exchange:cme	ResolutionEdge	-	2012-01-02	2012-01-02
+GAP	exchange:cme	WithheldDate	-	2012-01-03	2012-01-03
+GAP	exchange:cme	ResolutionEdge	-	2012-01-04	2012-01-04
+GAP	exchange:cme	ResolutionEdge	-	2012-01-14	2012-01-15
+GAP	exchange:cme	WithheldDate	-	2012-01-16	2012-01-16
+GAP	exchange:cme	ResolutionEdge	-	2012-01-17	2012-01-17
+GAP	exchange:cme	ResolutionEdge	-	2012-02-18	2012-02-19
+GAP	exchange:cme	WithheldDate	-	2012-02-20	2012-02-20
+GAP	exchange:cme	ResolutionEdge	-	2012-02-21	2012-02-21
+GAP	exchange:cme	ResolutionEdge	-	2012-04-05	2012-04-05
+GAP	exchange:cme	WithheldDate	-	2012-04-06	2012-04-06
+GAP	exchange:cme	ResolutionEdge	-	2012-04-07	2012-04-07
+GAP	exchange:cme	ResolutionEdge	-	2012-05-26	2012-05-27
+GAP	exchange:cme	WithheldDate	-	2012-05-28	2012-05-28
+GAP	exchange:cme	ResolutionEdge	-	2012-05-29	2012-05-29
+GAP	exchange:cme	ResolutionEdge	-	2012-07-02	2012-07-02
+GAP	exchange:cme	WithheldDate	-	2012-07-03	2012-07-03
+GAP	exchange:cme	WithheldDate	-	2012-07-04	2012-07-04
+GAP	exchange:cme	ResolutionEdge	-	2012-07-05	2012-07-05
+GAP	exchange:cme	ResolutionEdge	-	2012-09-01	2012-09-02
+GAP	exchange:cme	WithheldDate	-	2012-09-03	2012-09-03
+GAP	exchange:cme	ResolutionEdge	-	2012-09-04	2012-09-04
+GAP	exchange:cme	ResolutionEdge	-	2012-11-21	2012-11-21
+GAP	exchange:cme	WithheldDate	-	2012-11-22	2012-11-22
+GAP	exchange:cme	WithheldDate	-	2012-11-23	2012-11-23
+GAP	exchange:cme	ResolutionEdge	-	2012-11-24	2012-11-24
+GAP	exchange:cme	ResolutionEdge	-	2012-12-22	2012-12-23
+GAP	exchange:cme	WithheldDate	-	2012-12-24	2012-12-24
+GAP	exchange:cme	ResolutionEdge	-	2012-12-25	2012-12-25
+GAP	exchange:cme	WithheldDate	-	2012-12-26	2012-12-26
+GAP	exchange:cme	ResolutionEdge	-	2012-12-27	2012-12-27
+GAP	exchange:cme	ResolutionEdge	-	2013-01-01	2013-01-01
+GAP	exchange:cme	WithheldDate	-	2013-01-02	2013-01-02
+GAP	exchange:cme	ResolutionEdge	-	2013-01-03	2013-01-03
+GAP	exchange:cme	ResolutionEdge	-	2013-01-19	2013-01-20
+GAP	exchange:cme	WithheldDate	-	2013-01-21	2013-01-21
+GAP	exchange:cme	ResolutionEdge	-	2013-01-22	2013-01-22
+GAP	exchange:cme	ResolutionEdge	-	2013-02-16	2013-02-17
+GAP	exchange:cme	WithheldDate	-	2013-02-18	2013-02-18
+GAP	exchange:cme	ResolutionEdge	-	2013-02-19	2013-02-19
+GAP	exchange:cme	ResolutionEdge	-	2013-05-25	2013-05-26
+GAP	exchange:cme	WithheldDate	-	2013-05-27	2013-05-27
+GAP	exchange:cme	ResolutionEdge	-	2013-05-28	2013-05-28
+GAP	exchange:cme	ResolutionEdge	-	2013-07-02	2013-07-02
+GAP	exchange:cme	WithheldDate	-	2013-07-03	2013-07-03
+GAP	exchange:cme	WithheldDate	-	2013-07-04	2013-07-04
+GAP	exchange:cme	ResolutionEdge	-	2013-07-05	2013-07-06
+GAP	exchange:cme	ResolutionEdge	-	2013-08-31	2013-09-01
+GAP	exchange:cme	WithheldDate	-	2013-09-02	2013-09-02
+GAP	exchange:cme	ResolutionEdge	-	2013-09-03	2013-09-03
+GAP	exchange:cme	ResolutionEdge	-	2013-11-27	2013-11-27
+GAP	exchange:cme	WithheldDate	-	2013-11-28	2013-11-28
+GAP	exchange:cme	WithheldDate	-	2013-11-29	2013-11-29
+GAP	exchange:cme	ResolutionEdge	-	2013-11-30	2013-11-30
+GAP	exchange:cme	ResolutionEdge	-	2013-12-23	2013-12-23
+GAP	exchange:cme	WithheldDate	-	2013-12-24	2013-12-24
+GAP	exchange:cme	ResolutionEdge	-	2013-12-25	2013-12-25
+GAP	exchange:cme	WithheldDate	-	2013-12-26	2013-12-26
+GAP	exchange:cme	ResolutionEdge	-	2013-12-27	2013-12-28
+GAP	exchange:cme	ResolutionEdge	-	2014-01-01	2014-01-01
+GAP	exchange:cme	WithheldDate	-	2014-01-02	2014-01-02
+GAP	exchange:cme	ResolutionEdge	-	2014-01-03	2014-01-04
+GAP	exchange:cme	ResolutionEdge	-	2014-01-18	2014-01-19
+GAP	exchange:cme	WithheldDate	-	2014-01-20	2014-01-20
+GAP	exchange:cme	ResolutionEdge	-	2014-01-21	2014-01-21
+GAP	exchange:cme	ResolutionEdge	-	2014-02-15	2014-02-16
+GAP	exchange:cme	WithheldDate	-	2014-02-17	2014-02-17
+GAP	exchange:cme	ResolutionEdge	-	2014-02-18	2014-02-18
+GAP	exchange:cme	ResolutionEdge	-	2014-05-24	2014-05-25
+GAP	exchange:cme	WithheldDate	-	2014-05-26	2014-05-26
+GAP	exchange:cme	ResolutionEdge	-	2014-05-27	2014-05-27
+GAP	exchange:cme	ResolutionEdge	-	2014-07-02	2014-07-02
+GAP	exchange:cme	WithheldDate	-	2014-07-03	2014-07-03
+GAP	exchange:cme	WithheldDate	-	2014-07-04	2014-07-04
+GAP	exchange:cme	ResolutionEdge	-	2014-07-05	2014-07-05
+GAP	exchange:cme	ResolutionEdge	-	2014-08-30	2014-08-31
+GAP	exchange:cme	WithheldDate	-	2014-09-01	2014-09-01
+GAP	exchange:cme	ResolutionEdge	-	2014-09-02	2014-09-02
+GAP	exchange:cme	ResolutionEdge	-	2014-11-26	2014-11-26
+GAP	exchange:cme	WithheldDate	-	2014-11-27	2014-11-27
+GAP	exchange:cme	WithheldDate	-	2014-11-28	2014-11-28
+GAP	exchange:cme	ResolutionEdge	-	2014-11-29	2014-11-29
+GAP	exchange:cme	ResolutionEdge	-	2014-12-23	2014-12-23
+GAP	exchange:cme	WithheldDate	-	2014-12-24	2014-12-24
+GAP	exchange:cme	ResolutionEdge	-	2014-12-25	2014-12-25
+GAP	exchange:cme	ResolutionEdge	-	2015-01-17	2015-01-18
+GAP	exchange:cme	WithheldDate	-	2015-01-19	2015-01-19
+GAP	exchange:cme	ResolutionEdge	-	2015-01-20	2015-01-20
+GAP	exchange:cme	ResolutionEdge	-	2015-02-14	2015-02-15
+GAP	exchange:cme	WithheldDate	-	2015-02-16	2015-02-16
+GAP	exchange:cme	ResolutionEdge	-	2015-02-17	2015-02-17
+GAP	exchange:cme	ResolutionEdge	-	2015-04-02	2015-04-02
+GAP	exchange:cme	WithheldDate	-	2015-04-03	2015-04-03
+GAP	exchange:cme	ResolutionEdge	-	2015-04-04	2015-04-04
+GAP	exchange:cme	ResolutionEdge	-	2015-05-23	2015-05-24
+GAP	exchange:cme	WithheldDate	-	2015-05-25	2015-05-25
+GAP	exchange:cme	ResolutionEdge	-	2015-05-26	2015-05-26
+GAP	exchange:cme	ResolutionEdge	-	2015-07-02	2015-07-02
+GAP	exchange:cme	WithheldDate	-	2015-07-03	2015-07-03
+GAP	exchange:cme	ResolutionEdge	-	2015-07-04	2015-07-04
+GAP	exchange:cme	ResolutionEdge	-	2015-09-05	2015-09-06
+GAP	exchange:cme	WithheldDate	-	2015-09-07	2015-09-07
+GAP	exchange:cme	ResolutionEdge	-	2015-09-08	2015-09-08
+GAP	exchange:cme	ResolutionEdge	-	2015-11-25	2015-11-25
+GAP	exchange:cme	WithheldDate	-	2015-11-26	2015-11-26
+GAP	exchange:cme	WithheldDate	-	2015-11-27	2015-11-27
+GAP	exchange:cme	ResolutionEdge	-	2015-11-28	2015-11-28
+GAP	exchange:cme	ResolutionEdge	-	2015-12-23	2015-12-23
+GAP	exchange:cme	WithheldDate	-	2015-12-24	2015-12-24
+GAP	exchange:cme	ResolutionEdge	-	2015-12-25	2015-12-26
+GAP	exchange:cme	ResolutionEdge	-	2016-01-16	2016-01-17
+GAP	exchange:cme	WithheldDate	-	2016-01-18	2016-01-18
+GAP	exchange:cme	ResolutionEdge	-	2016-01-19	2016-01-19
+GAP	exchange:cme	ResolutionEdge	-	2016-02-13	2016-02-14
+GAP	exchange:cme	WithheldDate	-	2016-02-15	2016-02-15
+GAP	exchange:cme	ResolutionEdge	-	2016-02-16	2016-02-16
+GAP	exchange:cme	ResolutionEdge	-	2016-05-28	2016-05-29
+GAP	exchange:cme	WithheldDate	-	2016-05-30	2016-05-30
+GAP	exchange:cme	ResolutionEdge	-	2016-05-31	2016-05-31
+GAP	exchange:cme	ResolutionEdge	-	2016-07-02	2016-07-03
+GAP	exchange:cme	WithheldDate	-	2016-07-04	2016-07-04
+GAP	exchange:cme	ResolutionEdge	-	2016-07-05	2016-07-05
+GAP	exchange:cme	ResolutionEdge	-	2016-09-03	2016-09-04
+GAP	exchange:cme	WithheldDate	-	2016-09-05	2016-09-05
+GAP	exchange:cme	ResolutionEdge	-	2016-09-06	2016-09-06
+GAP	exchange:cme	ResolutionEdge	-	2016-11-23	2016-11-23
+GAP	exchange:cme	WithheldDate	-	2016-11-24	2016-11-24
+GAP	exchange:cme	WithheldDate	-	2016-11-25	2016-11-25
+GAP	exchange:cme	ResolutionEdge	-	2016-11-26	2016-11-26
+GAP	exchange:cme	ResolutionEdge	-	2017-01-14	2017-01-15
+GAP	exchange:cme	WithheldDate	-	2017-01-16	2017-01-16
+GAP	exchange:cme	ResolutionEdge	-	2017-01-17	2017-01-17
+GAP	exchange:cme	ResolutionEdge	-	2017-02-18	2017-02-19
+GAP	exchange:cme	WithheldDate	-	2017-02-20	2017-02-20
+GAP	exchange:cme	ResolutionEdge	-	2017-02-21	2017-02-21
+GAP	exchange:cme	ResolutionEdge	-	2017-05-27	2017-05-28
+GAP	exchange:cme	WithheldDate	-	2017-05-29	2017-05-29
+GAP	exchange:cme	ResolutionEdge	-	2017-05-30	2017-05-30
+GAP	exchange:cme	ResolutionEdge	-	2017-07-01	2017-07-02
+GAP	exchange:cme	WithheldDate	-	2017-07-03	2017-07-03
+GAP	exchange:cme	WithheldDate	-	2017-07-04	2017-07-04
+GAP	exchange:cme	ResolutionEdge	-	2017-07-05	2017-07-05
+GAP	exchange:cme	ResolutionEdge	-	2017-09-02	2017-09-03
+GAP	exchange:cme	WithheldDate	-	2017-09-04	2017-09-04
+GAP	exchange:cme	ResolutionEdge	-	2017-09-05	2017-09-05
+GAP	exchange:cme	ResolutionEdge	-	2017-11-22	2017-11-22
+GAP	exchange:cme	WithheldDate	-	2017-11-23	2017-11-23
+GAP	exchange:cme	WithheldDate	-	2017-11-24	2017-11-24
+GAP	exchange:cme	ResolutionEdge	-	2017-11-25	2017-11-25
+GAP	exchange:cme	ResolutionEdge	-	2018-01-13	2018-01-14
+GAP	exchange:cme	WithheldDate	-	2018-01-15	2018-01-15
+GAP	exchange:cme	ResolutionEdge	-	2018-01-16	2018-01-16
+GAP	exchange:cme	ResolutionEdge	-	2018-02-17	2018-02-18
+GAP	exchange:cme	WithheldDate	-	2018-02-19	2018-02-19
+GAP	exchange:cme	ResolutionEdge	-	2018-02-20	2018-02-20
+GAP	exchange:cme	ResolutionEdge	-	2018-05-26	2018-05-27
+GAP	exchange:cme	WithheldDate	-	2018-05-28	2018-05-28
+GAP	exchange:cme	ResolutionEdge	-	2018-05-29	2018-05-29
+GAP	exchange:cme	ResolutionEdge	-	2018-07-02	2018-07-02
+GAP	exchange:cme	WithheldDate	-	2018-07-03	2018-07-03
+GAP	exchange:cme	WithheldDate	-	2018-07-04	2018-07-04
+GAP	exchange:cme	ResolutionEdge	-	2018-07-05	2018-07-05
+GAP	exchange:cme	ResolutionEdge	-	2018-09-01	2018-09-02
+GAP	exchange:cme	WithheldDate	-	2018-09-03	2018-09-03
+GAP	exchange:cme	ResolutionEdge	-	2018-09-04	2018-09-04
+GAP	exchange:cme	ResolutionEdge	-	2018-11-21	2018-11-21
+GAP	exchange:cme	WithheldDate	-	2018-11-22	2018-11-22
+GAP	exchange:cme	WithheldDate	-	2018-11-23	2018-11-23
+GAP	exchange:cme	ResolutionEdge	-	2018-11-24	2018-11-24
+GAP	exchange:cme	ResolutionEdge	-	2018-12-22	2018-12-23
+GAP	exchange:cme	WithheldDate	-	2018-12-24	2018-12-24
+GAP	exchange:cme	ResolutionEdge	-	2018-12-25	2018-12-25
+GAP	exchange:cme	WithheldDate	-	2018-12-26	2018-12-26
+GAP	exchange:cme	ResolutionEdge	-	2018-12-27	2018-12-27
+GAP	exchange:cme	ResolutionEdge	-	2019-01-19	2019-01-20
+GAP	exchange:cme	WithheldDate	-	2019-01-21	2019-01-21
+GAP	exchange:cme	ResolutionEdge	-	2019-01-22	2019-01-22
+GAP	exchange:cme	ResolutionEdge	-	2019-02-16	2019-02-17
+GAP	exchange:cme	WithheldDate	-	2019-02-18	2019-02-18
+GAP	exchange:cme	ResolutionEdge	-	2019-02-19	2019-02-19
+GAP	exchange:cme	ResolutionEdge	-	2019-05-25	2019-05-26
+GAP	exchange:cme	WithheldDate	-	2019-05-27	2019-05-27
+GAP	exchange:cme	ResolutionEdge	-	2019-05-28	2019-05-28
+GAP	exchange:cme	ResolutionEdge	-	2019-06-18	2019-06-18
+GAP	exchange:cme	WithheldDate	-	2019-06-19	2019-06-19
+GAP	exchange:cme	ResolutionEdge	-	2019-06-20	2019-06-20
+GAP	exchange:cme	ResolutionEdge	-	2019-07-02	2019-07-02
+GAP	exchange:cme	WithheldDate	-	2019-07-03	2019-07-03
+GAP	exchange:cme	WithheldDate	-	2019-07-04	2019-07-04
+GAP	exchange:cme	ResolutionEdge	-	2019-07-05	2019-07-06
+GAP	exchange:cme	ResolutionEdge	-	2019-08-31	2019-09-01
+GAP	exchange:cme	WithheldDate	-	2019-09-02	2019-09-02
+GAP	exchange:cme	ResolutionEdge	-	2019-09-03	2019-09-03
+GAP	exchange:cme	ResolutionEdge	-	2019-11-27	2019-11-27
+GAP	exchange:cme	WithheldDate	-	2019-11-28	2019-11-28
+GAP	exchange:cme	WithheldDate	-	2019-11-29	2019-11-29
+GAP	exchange:cme	ResolutionEdge	-	2019-11-30	2019-11-30
+GAP	exchange:cme	ResolutionEdge	-	2019-12-23	2019-12-23
+GAP	exchange:cme	WithheldDate	-	2019-12-24	2019-12-24
+GAP	exchange:cme	ResolutionEdge	-	2019-12-25	2019-12-25
+GAP	exchange:cme	ResolutionEdge	-	2020-01-18	2020-01-19
+GAP	exchange:cme	WithheldDate	-	2020-01-20	2020-01-20
+GAP	exchange:cme	ResolutionEdge	-	2020-01-21	2020-01-21
+GAP	exchange:cme	ResolutionEdge	-	2020-02-15	2020-02-16
+GAP	exchange:cme	WithheldDate	-	2020-02-17	2020-02-17
+GAP	exchange:cme	ResolutionEdge	-	2020-02-18	2020-02-18
+GAP	exchange:cme	ResolutionEdge	-	2020-05-23	2020-05-24
+GAP	exchange:cme	WithheldDate	-	2020-05-25	2020-05-25
+GAP	exchange:cme	ResolutionEdge	-	2020-05-26	2020-05-26
+GAP	exchange:cme	ResolutionEdge	-	2020-06-18	2020-06-18
+GAP	exchange:cme	WithheldDate	-	2020-06-19	2020-06-19
+GAP	exchange:cme	ResolutionEdge	-	2020-06-20	2020-06-20
+GAP	exchange:cme	ResolutionEdge	-	2020-07-02	2020-07-02
+GAP	exchange:cme	WithheldDate	-	2020-07-03	2020-07-03
+GAP	exchange:cme	ResolutionEdge	-	2020-07-04	2020-07-04
+GAP	exchange:cme	ResolutionEdge	-	2020-09-05	2020-09-06
+GAP	exchange:cme	WithheldDate	-	2020-09-07	2020-09-07
+GAP	exchange:cme	ResolutionEdge	-	2020-09-08	2020-09-08
+GAP	exchange:cme	ResolutionEdge	-	2020-11-25	2020-11-25
+GAP	exchange:cme	WithheldDate	-	2020-11-26	2020-11-26
+GAP	exchange:cme	WithheldDate	-	2020-11-27	2020-11-27
+GAP	exchange:cme	ResolutionEdge	-	2020-11-28	2020-11-28
+GAP	exchange:cme	ResolutionEdge	-	2020-12-23	2020-12-23
+GAP	exchange:cme	WithheldDate	-	2020-12-24	2020-12-24
+GAP	exchange:cme	ResolutionEdge	-	2020-12-25	2020-12-26
+GAP	exchange:cme	ResolutionEdge	-	2021-01-16	2021-01-17
+GAP	exchange:cme	WithheldDate	-	2021-01-18	2021-01-18
+GAP	exchange:cme	ResolutionEdge	-	2021-01-19	2021-01-19
+GAP	exchange:cme	ResolutionEdge	-	2021-02-13	2021-02-14
+GAP	exchange:cme	WithheldDate	-	2021-02-15	2021-02-15
+GAP	exchange:cme	ResolutionEdge	-	2021-02-16	2021-02-16
+GAP	exchange:cme	ResolutionEdge	-	2021-04-01	2021-04-01
+GAP	exchange:cme	WithheldDate	-	2021-04-02	2021-04-02
+GAP	exchange:cme	ResolutionEdge	-	2021-04-03	2021-04-03
+GAP	exchange:cme	ResolutionEdge	-	2021-05-29	2021-05-30
+GAP	exchange:cme	WithheldDate	-	2021-05-31	2021-05-31
+GAP	exchange:cme	ResolutionEdge	-	2021-06-01	2021-06-01
+GAP	exchange:cme	ResolutionEdge	-	2021-06-18	2021-06-18
+GAP	exchange:cme	WithheldDate	-	2021-06-19	2021-06-19
+GAP	exchange:cme	ResolutionEdge	-	2021-06-20	2021-06-20
+GAP	exchange:cme	ResolutionEdge	-	2021-07-03	2021-07-04
+GAP	exchange:cme	WithheldDate	-	2021-07-05	2021-07-05
+GAP	exchange:cme	ResolutionEdge	-	2021-07-06	2021-07-06
+GAP	exchange:cme	ResolutionEdge	-	2021-09-04	2021-09-05
+GAP	exchange:cme	WithheldDate	-	2021-09-06	2021-09-06
+GAP	exchange:cme	ResolutionEdge	-	2021-09-07	2021-09-07
+GAP	exchange:cme	ResolutionEdge	-	2021-11-24	2021-11-24
+GAP	exchange:cme	WithheldDate	-	2021-11-25	2021-11-25
+GAP	exchange:cme	WithheldDate	-	2021-11-26	2021-11-26
+GAP	exchange:cme	ResolutionEdge	-	2021-11-27	2021-11-27
+GAP	exchange:cme	ResolutionEdge	-	2022-01-15	2022-01-16
+GAP	exchange:cme	WithheldDate	-	2022-01-17	2022-01-17
+GAP	exchange:cme	ResolutionEdge	-	2022-01-18	2022-01-18
+GAP	exchange:cme	ResolutionEdge	-	2022-02-19	2022-02-20
+GAP	exchange:cme	WithheldDate	-	2022-02-21	2022-02-21
+GAP	exchange:cme	ResolutionEdge	-	2022-02-22	2022-02-22
+GAP	exchange:cme	ResolutionEdge	-	2022-05-28	2022-05-29
+GAP	exchange:cme	WithheldDate	-	2022-05-30	2022-05-30
+GAP	exchange:cme	ResolutionEdge	-	2022-05-31	2022-05-31
+GAP	exchange:cme	ResolutionEdge	-	2022-06-18	2022-06-19
+GAP	exchange:cme	WithheldDate	-	2022-06-20	2022-06-20
+GAP	exchange:cme	ResolutionEdge	-	2022-06-21	2022-06-21
+GAP	exchange:cme	ResolutionEdge	-	2022-07-02	2022-07-03
+GAP	exchange:cme	WithheldDate	-	2022-07-04	2022-07-04
+GAP	exchange:cme	ResolutionEdge	-	2022-07-05	2022-07-05
+GAP	exchange:cme	ResolutionEdge	-	2022-09-03	2022-09-04
+GAP	exchange:cme	WithheldDate	-	2022-09-05	2022-09-05
+GAP	exchange:cme	ResolutionEdge	-	2022-09-06	2022-09-06
+GAP	exchange:cme	ResolutionEdge	-	2022-11-23	2022-11-23
+GAP	exchange:cme	WithheldDate	-	2022-11-24	2022-11-24
+GAP	exchange:cme	WithheldDate	-	2022-11-25	2022-11-25
+GAP	exchange:cme	ResolutionEdge	-	2022-11-26	2022-11-26
+GAP	exchange:cme	ResolutionEdge	-	2023-01-14	2023-01-15
+GAP	exchange:cme	WithheldDate	-	2023-01-16	2023-01-16
+GAP	exchange:cme	ResolutionEdge	-	2023-01-17	2023-01-17
+GAP	exchange:cme	ResolutionEdge	-	2023-02-18	2023-02-19
+GAP	exchange:cme	WithheldDate	-	2023-02-20	2023-02-20
+GAP	exchange:cme	ResolutionEdge	-	2023-02-21	2023-02-21
+GAP	exchange:cme	ResolutionEdge	-	2023-04-06	2023-04-06
+GAP	exchange:cme	WithheldDate	-	2023-04-07	2023-04-07
+GAP	exchange:cme	ResolutionEdge	-	2023-04-08	2023-04-08
+GAP	exchange:cme	ResolutionEdge	-	2023-05-27	2023-05-28
+GAP	exchange:cme	WithheldDate	-	2023-05-29	2023-05-29
+GAP	exchange:cme	ResolutionEdge	-	2023-05-30	2023-05-30
+GAP	exchange:cme	ResolutionEdge	-	2023-06-17	2023-06-18
+GAP	exchange:cme	WithheldDate	-	2023-06-19	2023-06-19
+GAP	exchange:cme	ResolutionEdge	-	2023-06-20	2023-06-20
+GAP	exchange:cme	ResolutionEdge	-	2023-07-01	2023-07-02
+GAP	exchange:cme	WithheldDate	-	2023-07-03	2023-07-03
+GAP	exchange:cme	WithheldDate	-	2023-07-04	2023-07-04
+GAP	exchange:cme	ResolutionEdge	-	2023-07-05	2023-07-05
+GAP	exchange:cme	ResolutionEdge	-	2023-09-02	2023-09-03
+GAP	exchange:cme	WithheldDate	-	2023-09-04	2023-09-04
+GAP	exchange:cme	ResolutionEdge	-	2023-09-05	2023-09-05
+GAP	exchange:cme	ResolutionEdge	-	2023-11-22	2023-11-22
+GAP	exchange:cme	WithheldDate	-	2023-11-23	2023-11-23
+GAP	exchange:cme	WithheldDate	-	2023-11-24	2023-11-24
+GAP	exchange:cme	ResolutionEdge	-	2023-11-25	2023-11-25
+GAP	exchange:cme	ResolutionEdge	-	2024-01-13	2024-01-14
+GAP	exchange:cme	WithheldDate	-	2024-01-15	2024-01-15
+GAP	exchange:cme	ResolutionEdge	-	2024-01-16	2024-01-16
+GAP	exchange:cme	ResolutionEdge	-	2024-02-17	2024-02-18
+GAP	exchange:cme	WithheldDate	-	2024-02-19	2024-02-19
+GAP	exchange:cme	ResolutionEdge	-	2024-02-20	2024-02-20
+GAP	exchange:cme	ResolutionEdge	-	2024-05-25	2024-05-26
+GAP	exchange:cme	WithheldDate	-	2024-05-27	2024-05-27
+GAP	exchange:cme	ResolutionEdge	-	2024-05-28	2024-05-28
+GAP	exchange:cme	ResolutionEdge	-	2024-06-18	2024-06-18
+GAP	exchange:cme	WithheldDate	-	2024-06-19	2024-06-19
+GAP	exchange:cme	ResolutionEdge	-	2024-06-20	2024-06-20
+GAP	exchange:cme	ResolutionEdge	-	2024-07-02	2024-07-02
+GAP	exchange:cme	WithheldDate	-	2024-07-03	2024-07-03
+GAP	exchange:cme	WithheldDate	-	2024-07-04	2024-07-04
+GAP	exchange:cme	ResolutionEdge	-	2024-07-05	2024-07-06
+GAP	exchange:cme	ResolutionEdge	-	2024-08-31	2024-09-01
+GAP	exchange:cme	WithheldDate	-	2024-09-02	2024-09-02
+GAP	exchange:cme	ResolutionEdge	-	2024-09-03	2024-09-03
+GAP	exchange:cme	ResolutionEdge	-	2024-11-27	2024-11-27
+GAP	exchange:cme	WithheldDate	-	2024-11-28	2024-11-28
+GAP	exchange:cme	WithheldDate	-	2024-11-29	2024-11-29
+GAP	exchange:cme	ResolutionEdge	-	2024-11-30	2024-11-30
+GAP	exchange:cme	ResolutionEdge	-	2024-12-23	2024-12-23
+GAP	exchange:cme	WithheldDate	-	2024-12-24	2024-12-24
+GAP	exchange:cme	ResolutionEdge	-	2024-12-25	2024-12-25
+GAP	exchange:cme	ResolutionEdge	-	2025-01-18	2025-01-19
+GAP	exchange:cme	WithheldDate	-	2025-01-20	2025-01-20
+GAP	exchange:cme	WithheldDate	-	2025-01-21	2025-01-21
+GAP	exchange:cme	ResolutionEdge	-	2025-01-22	2025-01-22
+GAP	exchange:cme	ResolutionEdge	-	2025-02-15	2025-02-16
+GAP	exchange:cme	WithheldDate	-	2025-02-17	2025-02-17
+GAP	exchange:cme	WithheldDate	-	2025-02-18	2025-02-18
+GAP	exchange:cme	ResolutionEdge	-	2025-02-19	2025-02-19
+GAP	exchange:cme	ResolutionEdge	-	2025-05-24	2025-05-25
+GAP	exchange:cme	WithheldDate	-	2025-05-26	2025-05-26
+GAP	exchange:cme	WithheldDate	-	2025-05-27	2025-05-27
+GAP	exchange:cme	ResolutionEdge	-	2025-05-28	2025-05-28
+GAP	exchange:cme	ResolutionEdge	-	2025-06-18	2025-06-18
+GAP	exchange:cme	WithheldDate	-	2025-06-19	2025-06-19
+GAP	exchange:cme	WithheldDate	-	2025-06-20	2025-06-20
+GAP	exchange:cme	ResolutionEdge	-	2025-06-21	2025-06-21
+GAP	exchange:cme	ResolutionEdge	-	2025-07-02	2025-07-02
+GAP	exchange:cme	WithheldDate	-	2025-07-03	2025-07-03
+GAP	exchange:cme	WithheldDate	-	2025-07-04	2025-07-04
+GAP	exchange:cme	ResolutionEdge	-	2025-07-05	2025-07-05
+GAP	exchange:cme	ResolutionEdge	-	2025-08-30	2025-08-31
+GAP	exchange:cme	WithheldDate	-	2025-09-01	2025-09-01
+GAP	exchange:cme	WithheldDate	-	2025-09-02	2025-09-02
+GAP	exchange:cme	ResolutionEdge	-	2025-09-03	2025-09-03
+GAP	exchange:cme	ResolutionEdge	-	2025-11-26	2025-11-26
+GAP	exchange:cme	WithheldDate	-	2025-11-27	2025-11-27
+GAP	exchange:cme	WithheldDate	-	2025-11-28	2025-11-28
+GAP	exchange:cme	ResolutionEdge	-	2025-11-29	2025-11-29
+GAP	exchange:cme	ResolutionEdge	-	2025-12-23	2025-12-23
+GAP	exchange:cme	WithheldDate	-	2025-12-24	2025-12-24
+GAP	exchange:cme	ResolutionEdge	-	2025-12-25	2025-12-25
+GAP	exchange:cme	ResolutionEdge	-	2026-01-17	2026-01-18
+GAP	exchange:cme	WithheldDate	-	2026-01-19	2026-01-19
+GAP	exchange:cme	WithheldDate	-	2026-01-20	2026-01-20
+GAP	exchange:cme	ResolutionEdge	-	2026-01-21	2026-01-21
+GAP	exchange:cme	ResolutionEdge	-	2026-02-14	2026-02-15
+GAP	exchange:cme	WithheldDate	-	2026-02-16	2026-02-16
+GAP	exchange:cme	WithheldDate	-	2026-02-17	2026-02-17
+GAP	exchange:cme	ResolutionEdge	-	2026-02-18	2026-02-18
+GAP	exchange:cme	ResolutionEdge	-	2026-04-02	2026-04-02
+GAP	exchange:cme	WithheldDate	-	2026-04-03	2026-04-03
+GAP	exchange:cme	ResolutionEdge	-	2026-04-04	2026-04-04
+GAP	exchange:cme	ResolutionEdge	-	2026-05-23	2026-05-24
+GAP	exchange:cme	WithheldDate	-	2026-05-25	2026-05-25
+GAP	exchange:cme	WithheldDate	-	2026-05-26	2026-05-26
+GAP	exchange:cme	ResolutionEdge	-	2026-05-27	2026-05-27
+GAP	exchange:cme	ResolutionEdge	-	2026-06-18	2026-06-18
+GAP	exchange:cme	WithheldDate	-	2026-06-19	2026-06-19
+GAP	exchange:cme	ResolutionEdge	-	2026-06-20	2026-06-20
+GAP	exchange:cme	ResolutionEdge	-	2026-06-21	2026-06-21
+GAP	exchange:cme	WithheldDate	-	2026-06-22	2026-06-22
+GAP	exchange:cme	ResolutionEdge	-	2026-06-23	2026-06-23
+GAP	exchange:cme	ResolutionEdge	-	2026-07-02	2026-07-02
+GAP	exchange:cme	WithheldDate	-	2026-07-03	2026-07-03
+GAP	exchange:cme	ResolutionEdge	-	2026-07-04	2026-07-04
+GAP	exchange:cme	ResolutionEdge	-	2026-07-05	2026-07-05
+GAP	exchange:cme	WithheldDate	-	2026-07-06	2026-07-06
+GAP	exchange:cme	ResolutionEdge	-	2026-07-07	2026-07-07
+GAP	exchange:cme	ResolutionEdge	-	2026-09-05	2026-09-06
+GAP	exchange:cme	WithheldDate	-	2026-09-07	2026-09-07
+GAP	exchange:cme	WithheldDate	-	2026-09-08	2026-09-08
+GAP	exchange:cme	ResolutionEdge	-	2026-09-09	2026-09-09
+GAP	exchange:cme	ResolutionEdge	-	2026-11-25	2026-11-25
+GAP	exchange:cme	WithheldDate	-	2026-11-26	2026-11-26
+GAP	exchange:cme	WithheldDate	-	2026-11-27	2026-11-27
+GAP	exchange:cme	ResolutionEdge	-	2026-11-28	2026-11-28
+GAP	exchange:cme	ResolutionEdge	-	2026-12-23	2026-12-23
+GAP	exchange:cme	WithheldDate	-	2026-12-24	2026-12-24
+GAP	exchange:cme	ResolutionEdge	-	2026-12-25	2026-12-26
+GAP	exchange:cme	ResolutionEdge	-	2027-01-16	2027-01-17
+GAP	exchange:cme	WithheldDate	-	2027-01-18	2027-01-18
+GAP	exchange:cme	WithheldDate	-	2027-01-19	2027-01-19
+GAP	exchange:cme	ResolutionEdge	-	2027-01-20	2027-01-20
+GAP	exchange:cme	ResolutionEdge	-	2027-02-13	2027-02-14
+GAP	exchange:cme	WithheldDate	-	2027-02-15	2027-02-15
+GAP	exchange:cme	WithheldDate	-	2027-02-16	2027-02-16
+GAP	exchange:cme	ResolutionEdge	-	2027-02-17	2027-02-17
+GAP	exchange:cme	ResolutionEdge	-	2027-05-29	2027-05-30
+GAP	exchange:cme	WithheldDate	-	2027-05-31	2027-05-31
+GAP	exchange:cme	WithheldDate	-	2027-06-01	2027-06-01
+GAP	exchange:cme	ResolutionEdge	-	2027-06-02	2027-06-02
+GAP	exchange:cme	ResolutionEdge	-	2027-06-17	2027-06-17
+GAP	exchange:cme	WithheldDate	-	2027-06-18	2027-06-18
+GAP	exchange:cme	ResolutionEdge	-	2027-06-19	2027-06-19
+GAP	exchange:cme	ResolutionEdge	-	2027-06-20	2027-06-20
+GAP	exchange:cme	WithheldDate	-	2027-06-21	2027-06-21
+GAP	exchange:cme	ResolutionEdge	-	2027-06-22	2027-06-22
+GAP	exchange:cme	ResolutionEdge	-	2027-07-03	2027-07-04
+GAP	exchange:cme	WithheldDate	-	2027-07-05	2027-07-05
+GAP	exchange:cme	WithheldDate	-	2027-07-06	2027-07-06
+GAP	exchange:cme	ResolutionEdge	-	2027-07-07	2027-07-07
+GAP	exchange:cme	ResolutionEdge	-	2027-09-04	2027-09-05
+GAP	exchange:cme	WithheldDate	-	2027-09-06	2027-09-06
+GAP	exchange:cme	WithheldDate	-	2027-09-07	2027-09-07
+GAP	exchange:cme	ResolutionEdge	-	2027-09-08	2027-09-08
+GAP	exchange:cme	ResolutionEdge	-	2027-11-24	2027-11-24
+GAP	exchange:cme	WithheldDate	-	2027-11-25	2027-11-25
+GAP	exchange:cme	WithheldDate	-	2027-11-26	2027-11-26
+GAP	exchange:cme	ResolutionEdge	-	2027-11-27	2027-11-27
+GAP	exchange:cme	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	exchange:cme	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	exchange:cme	6014	376	184	981	69	45	231	184
+GAP	exchange:cbot	ResolutionEdge	-	2010-04-01	2010-04-01
+GAP	exchange:cbot	WithheldDate	-	2010-04-02	2010-04-02
+GAP	exchange:cbot	ResolutionEdge	-	2010-04-03	2010-04-03
+GAP	exchange:cbot	ResolutionEdge	-	2010-11-25	2010-11-25
+GAP	exchange:cbot	WithheldDate	-	2010-11-26	2010-11-26
+GAP	exchange:cbot	ResolutionEdge	-	2010-11-27	2010-11-27
+GAP	exchange:cbot	ResolutionEdge	-	2010-12-30	2010-12-30
+GAP	exchange:cbot	WithheldDate	-	2010-12-31	2010-12-31
+GAP	exchange:cbot	ResolutionEdge	-	2011-01-01	2011-01-01
+GAP	exchange:cbot	ResolutionEdge	-	2011-11-24	2011-11-24
+GAP	exchange:cbot	WithheldDate	-	2011-11-25	2011-11-25
+GAP	exchange:cbot	ResolutionEdge	-	2011-11-26	2011-11-26
+GAP	exchange:cbot	ResolutionEdge	-	2011-12-26	2011-12-26
+GAP	exchange:cbot	WithheldDate	-	2011-12-27	2011-12-27
+GAP	exchange:cbot	ResolutionEdge	-	2011-12-28	2011-12-28
+GAP	exchange:cbot	ResolutionEdge	-	2012-01-02	2012-01-02
+GAP	exchange:cbot	WithheldDate	-	2012-01-03	2012-01-03
+GAP	exchange:cbot	ResolutionEdge	-	2012-01-04	2012-01-04
+GAP	exchange:cbot	ResolutionEdge	-	2012-04-05	2012-04-05
+GAP	exchange:cbot	WithheldDate	-	2012-04-06	2012-04-06
+GAP	exchange:cbot	ResolutionEdge	-	2012-04-07	2012-04-07
+GAP	exchange:cbot	ResolutionEdge	-	2012-05-26	2012-05-27
+GAP	exchange:cbot	WithheldDate	-	2012-05-28	2012-05-28
+GAP	exchange:cbot	ResolutionEdge	-	2012-05-29	2012-05-29
+GAP	exchange:cbot	ResolutionEdge	-	2012-07-02	2012-07-02
+GAP	exchange:cbot	WithheldDate	-	2012-07-03	2012-07-03
+GAP	exchange:cbot	WithheldDate	-	2012-07-04	2012-07-04
+GAP	exchange:cbot	WithheldDate	-	2012-07-05	2012-07-05
+GAP	exchange:cbot	ResolutionEdge	-	2012-07-06	2012-07-07
+GAP	exchange:cbot	ResolutionEdge	-	2012-09-01	2012-09-02
+GAP	exchange:cbot	WithheldDate	-	2012-09-03	2012-09-03
+GAP	exchange:cbot	ResolutionEdge	-	2012-09-04	2012-09-04
+GAP	exchange:cbot	ResolutionEdge	-	2012-11-21	2012-11-21
+GAP	exchange:cbot	WithheldDate	-	2012-11-22	2012-11-22
+GAP	exchange:cbot	WithheldDate	-	2012-11-23	2012-11-23
+GAP	exchange:cbot	ResolutionEdge	-	2012-11-24	2012-11-24
+GAP	exchange:cbot	ResolutionEdge	-	2012-12-22	2012-12-23
+GAP	exchange:cbot	WithheldDate	-	2012-12-24	2012-12-24
+GAP	exchange:cbot	ResolutionEdge	-	2012-12-25	2012-12-25
+GAP	exchange:cbot	WithheldDate	-	2012-12-26	2012-12-26
+GAP	exchange:cbot	ResolutionEdge	-	2012-12-27	2012-12-27
+GAP	exchange:cbot	ResolutionEdge	-	2013-01-01	2013-01-01
+GAP	exchange:cbot	WithheldDate	-	2013-01-02	2013-01-02
+GAP	exchange:cbot	ResolutionEdge	-	2013-01-03	2013-01-03
+GAP	exchange:cbot	ResolutionEdge	-	2013-01-19	2013-01-20
+GAP	exchange:cbot	WithheldDate	-	2013-01-21	2013-01-21
+GAP	exchange:cbot	ResolutionEdge	-	2013-01-22	2013-01-22
+GAP	exchange:cbot	ResolutionEdge	-	2013-02-16	2013-02-17
+GAP	exchange:cbot	WithheldDate	-	2013-02-18	2013-02-18
+GAP	exchange:cbot	ResolutionEdge	-	2013-02-19	2013-02-19
+GAP	exchange:cbot	ResolutionEdge	-	2013-05-25	2013-05-26
+GAP	exchange:cbot	WithheldDate	-	2013-05-27	2013-05-27
+GAP	exchange:cbot	ResolutionEdge	-	2013-05-28	2013-05-28
+GAP	exchange:cbot	ResolutionEdge	-	2013-07-02	2013-07-02
+GAP	exchange:cbot	WithheldDate	-	2013-07-03	2013-07-03
+GAP	exchange:cbot	WithheldDate	-	2013-07-04	2013-07-04
+GAP	exchange:cbot	WithheldDate	-	2013-07-05	2013-07-05
+GAP	exchange:cbot	ResolutionEdge	-	2013-07-06	2013-07-06
+GAP	exchange:cbot	ResolutionEdge	-	2013-08-31	2013-09-01
+GAP	exchange:cbot	WithheldDate	-	2013-09-02	2013-09-02
+GAP	exchange:cbot	ResolutionEdge	-	2013-09-03	2013-09-03
+GAP	exchange:cbot	ResolutionEdge	-	2013-11-27	2013-11-27
+GAP	exchange:cbot	WithheldDate	-	2013-11-28	2013-11-28
+GAP	exchange:cbot	WithheldDate	-	2013-11-29	2013-11-29
+GAP	exchange:cbot	ResolutionEdge	-	2013-11-30	2013-11-30
+GAP	exchange:cbot	ResolutionEdge	-	2013-12-23	2013-12-23
+GAP	exchange:cbot	WithheldDate	-	2013-12-24	2013-12-24
+GAP	exchange:cbot	ResolutionEdge	-	2013-12-25	2013-12-25
+GAP	exchange:cbot	WithheldDate	-	2013-12-26	2013-12-26
+GAP	exchange:cbot	ResolutionEdge	-	2013-12-27	2013-12-28
+GAP	exchange:cbot	ResolutionEdge	-	2014-01-01	2014-01-01
+GAP	exchange:cbot	WithheldDate	-	2014-01-02	2014-01-02
+GAP	exchange:cbot	ResolutionEdge	-	2014-01-03	2014-01-04
+GAP	exchange:cbot	ResolutionEdge	-	2014-01-18	2014-01-19
+GAP	exchange:cbot	WithheldDate	-	2014-01-20	2014-01-20
+GAP	exchange:cbot	ResolutionEdge	-	2014-01-21	2014-01-21
+GAP	exchange:cbot	ResolutionEdge	-	2014-02-15	2014-02-16
+GAP	exchange:cbot	WithheldDate	-	2014-02-17	2014-02-17
+GAP	exchange:cbot	ResolutionEdge	-	2014-02-18	2014-02-18
+GAP	exchange:cbot	ResolutionEdge	-	2014-05-24	2014-05-25
+GAP	exchange:cbot	WithheldDate	-	2014-05-26	2014-05-26
+GAP	exchange:cbot	ResolutionEdge	-	2014-05-27	2014-05-27
+GAP	exchange:cbot	ResolutionEdge	-	2014-07-02	2014-07-02
+GAP	exchange:cbot	WithheldDate	-	2014-07-03	2014-07-03
+GAP	exchange:cbot	WithheldDate	-	2014-07-04	2014-07-04
+GAP	exchange:cbot	ResolutionEdge	-	2014-07-05	2014-07-05
+GAP	exchange:cbot	ResolutionEdge	-	2014-07-06	2014-07-06
+GAP	exchange:cbot	WithheldDate	-	2014-07-07	2014-07-07
+GAP	exchange:cbot	ResolutionEdge	-	2014-07-08	2014-07-08
+GAP	exchange:cbot	ResolutionEdge	-	2014-08-30	2014-08-31
+GAP	exchange:cbot	WithheldDate	-	2014-09-01	2014-09-01
+GAP	exchange:cbot	ResolutionEdge	-	2014-09-02	2014-09-02
+GAP	exchange:cbot	ResolutionEdge	-	2014-11-26	2014-11-26
+GAP	exchange:cbot	WithheldDate	-	2014-11-27	2014-11-27
+GAP	exchange:cbot	WithheldDate	-	2014-11-28	2014-11-28
+GAP	exchange:cbot	ResolutionEdge	-	2014-11-29	2014-11-29
+GAP	exchange:cbot	ResolutionEdge	-	2014-12-23	2014-12-23
+GAP	exchange:cbot	WithheldDate	-	2014-12-24	2014-12-24
+GAP	exchange:cbot	ResolutionEdge	-	2014-12-25	2014-12-25
+GAP	exchange:cbot	WithheldDate	-	2014-12-26	2014-12-26
+GAP	exchange:cbot	ResolutionEdge	-	2014-12-27	2014-12-27
+GAP	exchange:cbot	ResolutionEdge	-	2015-01-01	2015-01-01
+GAP	exchange:cbot	WithheldDate	-	2015-01-02	2015-01-02
+GAP	exchange:cbot	ResolutionEdge	-	2015-01-03	2015-01-03
+GAP	exchange:cbot	ResolutionEdge	-	2015-01-17	2015-01-18
+GAP	exchange:cbot	WithheldDate	-	2015-01-19	2015-01-19
+GAP	exchange:cbot	ResolutionEdge	-	2015-01-20	2015-01-20
+GAP	exchange:cbot	ResolutionEdge	-	2015-02-14	2015-02-15
+GAP	exchange:cbot	WithheldDate	-	2015-02-16	2015-02-16
+GAP	exchange:cbot	ResolutionEdge	-	2015-02-17	2015-02-17
+GAP	exchange:cbot	ResolutionEdge	-	2015-04-02	2015-04-02
+GAP	exchange:cbot	WithheldDate	-	2015-04-03	2015-04-03
+GAP	exchange:cbot	ResolutionEdge	-	2015-04-04	2015-04-04
+GAP	exchange:cbot	ResolutionEdge	-	2015-05-23	2015-05-24
+GAP	exchange:cbot	WithheldDate	-	2015-05-25	2015-05-25
+GAP	exchange:cbot	ResolutionEdge	-	2015-05-26	2015-05-26
+GAP	exchange:cbot	ResolutionEdge	-	2015-07-01	2015-07-01
+GAP	exchange:cbot	WithheldDate	-	2015-07-02	2015-07-02
+GAP	exchange:cbot	WithheldDate	-	2015-07-03	2015-07-03
+GAP	exchange:cbot	ResolutionEdge	-	2015-07-04	2015-07-04
+GAP	exchange:cbot	ResolutionEdge	-	2015-09-05	2015-09-06
+GAP	exchange:cbot	WithheldDate	-	2015-09-07	2015-09-07
+GAP	exchange:cbot	ResolutionEdge	-	2015-09-08	2015-09-08
+GAP	exchange:cbot	ResolutionEdge	-	2015-11-25	2015-11-25
+GAP	exchange:cbot	WithheldDate	-	2015-11-26	2015-11-26
+GAP	exchange:cbot	WithheldDate	-	2015-11-27	2015-11-27
+GAP	exchange:cbot	ResolutionEdge	-	2015-11-28	2015-11-28
+GAP	exchange:cbot	ResolutionEdge	-	2015-12-23	2015-12-23
+GAP	exchange:cbot	WithheldDate	-	2015-12-24	2015-12-24
+GAP	exchange:cbot	ResolutionEdge	-	2015-12-25	2015-12-26
+GAP	exchange:cbot	ResolutionEdge	-	2016-01-16	2016-01-17
+GAP	exchange:cbot	WithheldDate	-	2016-01-18	2016-01-18
+GAP	exchange:cbot	ResolutionEdge	-	2016-01-19	2016-01-19
+GAP	exchange:cbot	ResolutionEdge	-	2016-02-13	2016-02-14
+GAP	exchange:cbot	WithheldDate	-	2016-02-15	2016-02-15
+GAP	exchange:cbot	ResolutionEdge	-	2016-02-16	2016-02-16
+GAP	exchange:cbot	ResolutionEdge	-	2016-05-28	2016-05-29
+GAP	exchange:cbot	WithheldDate	-	2016-05-30	2016-05-30
+GAP	exchange:cbot	ResolutionEdge	-	2016-05-31	2016-05-31
+GAP	exchange:cbot	ResolutionEdge	-	2016-07-02	2016-07-03
+GAP	exchange:cbot	WithheldDate	-	2016-07-04	2016-07-04
+GAP	exchange:cbot	ResolutionEdge	-	2016-07-05	2016-07-05
+GAP	exchange:cbot	ResolutionEdge	-	2016-09-03	2016-09-04
+GAP	exchange:cbot	WithheldDate	-	2016-09-05	2016-09-05
+GAP	exchange:cbot	ResolutionEdge	-	2016-09-06	2016-09-06
+GAP	exchange:cbot	ResolutionEdge	-	2016-11-23	2016-11-23
+GAP	exchange:cbot	WithheldDate	-	2016-11-24	2016-11-24
+GAP	exchange:cbot	WithheldDate	-	2016-11-25	2016-11-25
+GAP	exchange:cbot	ResolutionEdge	-	2016-11-26	2016-11-26
+GAP	exchange:cbot	ResolutionEdge	-	2016-12-22	2016-12-22
+GAP	exchange:cbot	WithheldDate	-	2016-12-23	2016-12-23
+GAP	exchange:cbot	ResolutionEdge	-	2016-12-24	2016-12-24
+GAP	exchange:cbot	ResolutionEdge	-	2017-01-14	2017-01-15
+GAP	exchange:cbot	WithheldDate	-	2017-01-16	2017-01-16
+GAP	exchange:cbot	ResolutionEdge	-	2017-01-17	2017-01-17
+GAP	exchange:cbot	ResolutionEdge	-	2017-02-18	2017-02-19
+GAP	exchange:cbot	WithheldDate	-	2017-02-20	2017-02-20
+GAP	exchange:cbot	ResolutionEdge	-	2017-02-21	2017-02-21
+GAP	exchange:cbot	ResolutionEdge	-	2017-05-27	2017-05-28
+GAP	exchange:cbot	WithheldDate	-	2017-05-29	2017-05-29
+GAP	exchange:cbot	ResolutionEdge	-	2017-05-30	2017-05-30
+GAP	exchange:cbot	ResolutionEdge	-	2017-07-01	2017-07-02
+GAP	exchange:cbot	WithheldDate	-	2017-07-03	2017-07-03
+GAP	exchange:cbot	WithheldDate	-	2017-07-04	2017-07-04
+GAP	exchange:cbot	ResolutionEdge	-	2017-07-05	2017-07-05
+GAP	exchange:cbot	ResolutionEdge	-	2017-09-02	2017-09-03
+GAP	exchange:cbot	WithheldDate	-	2017-09-04	2017-09-04
+GAP	exchange:cbot	ResolutionEdge	-	2017-09-05	2017-09-05
+GAP	exchange:cbot	ResolutionEdge	-	2017-11-22	2017-11-22
+GAP	exchange:cbot	WithheldDate	-	2017-11-23	2017-11-23
+GAP	exchange:cbot	WithheldDate	-	2017-11-24	2017-11-24
+GAP	exchange:cbot	ResolutionEdge	-	2017-11-25	2017-11-25
+GAP	exchange:cbot	ResolutionEdge	-	2017-12-21	2017-12-21
+GAP	exchange:cbot	WithheldDate	-	2017-12-22	2017-12-22
+GAP	exchange:cbot	ResolutionEdge	-	2017-12-23	2017-12-23
+GAP	exchange:cbot	ResolutionEdge	-	2018-01-13	2018-01-14
+GAP	exchange:cbot	WithheldDate	-	2018-01-15	2018-01-15
+GAP	exchange:cbot	ResolutionEdge	-	2018-01-16	2018-01-16
+GAP	exchange:cbot	ResolutionEdge	-	2018-02-17	2018-02-18
+GAP	exchange:cbot	WithheldDate	-	2018-02-19	2018-02-19
+GAP	exchange:cbot	ResolutionEdge	-	2018-02-20	2018-02-20
+GAP	exchange:cbot	ResolutionEdge	-	2018-05-26	2018-05-27
+GAP	exchange:cbot	WithheldDate	-	2018-05-28	2018-05-28
+GAP	exchange:cbot	ResolutionEdge	-	2018-05-29	2018-05-29
+GAP	exchange:cbot	ResolutionEdge	-	2018-07-02	2018-07-02
+GAP	exchange:cbot	WithheldDate	-	2018-07-03	2018-07-03
+GAP	exchange:cbot	WithheldDate	-	2018-07-04	2018-07-04
+GAP	exchange:cbot	ResolutionEdge	-	2018-07-05	2018-07-05
+GAP	exchange:cbot	ResolutionEdge	-	2018-09-01	2018-09-02
+GAP	exchange:cbot	WithheldDate	-	2018-09-03	2018-09-03
+GAP	exchange:cbot	ResolutionEdge	-	2018-09-04	2018-09-04
+GAP	exchange:cbot	ResolutionEdge	-	2018-11-21	2018-11-21
+GAP	exchange:cbot	WithheldDate	-	2018-11-22	2018-11-22
+GAP	exchange:cbot	WithheldDate	-	2018-11-23	2018-11-23
+GAP	exchange:cbot	ResolutionEdge	-	2018-11-24	2018-11-24
+GAP	exchange:cbot	ResolutionEdge	-	2018-12-22	2018-12-23
+GAP	exchange:cbot	WithheldDate	-	2018-12-24	2018-12-24
+GAP	exchange:cbot	ResolutionEdge	-	2018-12-25	2018-12-25
+GAP	exchange:cbot	WithheldDate	-	2018-12-26	2018-12-26
+GAP	exchange:cbot	ResolutionEdge	-	2018-12-27	2018-12-27
+GAP	exchange:cbot	ResolutionEdge	-	2019-01-01	2019-01-01
+GAP	exchange:cbot	WithheldDate	-	2019-01-02	2019-01-02
+GAP	exchange:cbot	ResolutionEdge	-	2019-01-03	2019-01-03
+GAP	exchange:cbot	ResolutionEdge	-	2019-01-19	2019-01-20
+GAP	exchange:cbot	WithheldDate	-	2019-01-21	2019-01-21
+GAP	exchange:cbot	ResolutionEdge	-	2019-01-22	2019-01-22
+GAP	exchange:cbot	ResolutionEdge	-	2019-02-16	2019-02-17
+GAP	exchange:cbot	WithheldDate	-	2019-02-18	2019-02-18
+GAP	exchange:cbot	ResolutionEdge	-	2019-02-19	2019-02-19
+GAP	exchange:cbot	ResolutionEdge	-	2019-05-25	2019-05-26
+GAP	exchange:cbot	WithheldDate	-	2019-05-27	2019-05-27
+GAP	exchange:cbot	ResolutionEdge	-	2019-05-28	2019-05-28
+GAP	exchange:cbot	ResolutionEdge	-	2019-06-18	2019-06-18
+GAP	exchange:cbot	WithheldDate	-	2019-06-19	2019-06-19
+GAP	exchange:cbot	ResolutionEdge	-	2019-06-20	2019-06-20
+GAP	exchange:cbot	ResolutionEdge	-	2019-07-02	2019-07-02
+GAP	exchange:cbot	WithheldDate	-	2019-07-03	2019-07-03
+GAP	exchange:cbot	WithheldDate	-	2019-07-04	2019-07-04
+GAP	exchange:cbot	WithheldDate	-	2019-07-05	2019-07-05
+GAP	exchange:cbot	ResolutionEdge	-	2019-07-06	2019-07-06
+GAP	exchange:cbot	ResolutionEdge	-	2019-08-31	2019-09-01
+GAP	exchange:cbot	WithheldDate	-	2019-09-02	2019-09-02
+GAP	exchange:cbot	ResolutionEdge	-	2019-09-03	2019-09-03
+GAP	exchange:cbot	ResolutionEdge	-	2019-11-27	2019-11-27
+GAP	exchange:cbot	WithheldDate	-	2019-11-28	2019-11-28
+GAP	exchange:cbot	WithheldDate	-	2019-11-29	2019-11-29
+GAP	exchange:cbot	ResolutionEdge	-	2019-11-30	2019-11-30
+GAP	exchange:cbot	ResolutionEdge	-	2019-12-23	2019-12-23
+GAP	exchange:cbot	WithheldDate	-	2019-12-24	2019-12-24
+GAP	exchange:cbot	ResolutionEdge	-	2019-12-25	2019-12-25
+GAP	exchange:cbot	WithheldDate	-	2019-12-26	2019-12-26
+GAP	exchange:cbot	ResolutionEdge	-	2019-12-27	2019-12-28
+GAP	exchange:cbot	ResolutionEdge	-	2020-01-01	2020-01-01
+GAP	exchange:cbot	WithheldDate	-	2020-01-02	2020-01-02
+GAP	exchange:cbot	ResolutionEdge	-	2020-01-03	2020-01-04
+GAP	exchange:cbot	ResolutionEdge	-	2020-01-18	2020-01-19
+GAP	exchange:cbot	WithheldDate	-	2020-01-20	2020-01-20
+GAP	exchange:cbot	ResolutionEdge	-	2020-01-21	2020-01-21
+GAP	exchange:cbot	ResolutionEdge	-	2020-02-15	2020-02-16
+GAP	exchange:cbot	WithheldDate	-	2020-02-17	2020-02-17
+GAP	exchange:cbot	ResolutionEdge	-	2020-02-18	2020-02-18
+GAP	exchange:cbot	ResolutionEdge	-	2020-05-23	2020-05-24
+GAP	exchange:cbot	WithheldDate	-	2020-05-25	2020-05-25
+GAP	exchange:cbot	ResolutionEdge	-	2020-05-26	2020-05-26
+GAP	exchange:cbot	ResolutionEdge	-	2020-06-18	2020-06-18
+GAP	exchange:cbot	WithheldDate	-	2020-06-19	2020-06-19
+GAP	exchange:cbot	ResolutionEdge	-	2020-06-20	2020-06-20
+GAP	exchange:cbot	ResolutionEdge	-	2020-07-01	2020-07-01
+GAP	exchange:cbot	WithheldDate	-	2020-07-02	2020-07-02
+GAP	exchange:cbot	WithheldDate	-	2020-07-03	2020-07-03
+GAP	exchange:cbot	ResolutionEdge	-	2020-07-04	2020-07-04
+GAP	exchange:cbot	ResolutionEdge	-	2020-09-05	2020-09-06
+GAP	exchange:cbot	WithheldDate	-	2020-09-07	2020-09-07
+GAP	exchange:cbot	ResolutionEdge	-	2020-09-08	2020-09-08
+GAP	exchange:cbot	ResolutionEdge	-	2020-11-25	2020-11-25
+GAP	exchange:cbot	WithheldDate	-	2020-11-26	2020-11-26
+GAP	exchange:cbot	WithheldDate	-	2020-11-27	2020-11-27
+GAP	exchange:cbot	ResolutionEdge	-	2020-11-28	2020-11-28
+GAP	exchange:cbot	ResolutionEdge	-	2020-12-23	2020-12-23
+GAP	exchange:cbot	WithheldDate	-	2020-12-24	2020-12-24
+GAP	exchange:cbot	ResolutionEdge	-	2020-12-25	2020-12-26
+GAP	exchange:cbot	ResolutionEdge	-	2021-01-16	2021-01-17
+GAP	exchange:cbot	WithheldDate	-	2021-01-18	2021-01-18
+GAP	exchange:cbot	ResolutionEdge	-	2021-01-19	2021-01-19
+GAP	exchange:cbot	ResolutionEdge	-	2021-02-13	2021-02-14
+GAP	exchange:cbot	WithheldDate	-	2021-02-15	2021-02-15
+GAP	exchange:cbot	ResolutionEdge	-	2021-02-16	2021-02-16
+GAP	exchange:cbot	ResolutionEdge	-	2021-04-01	2021-04-01
+GAP	exchange:cbot	WithheldDate	-	2021-04-02	2021-04-02
+GAP	exchange:cbot	ResolutionEdge	-	2021-04-03	2021-04-03
+GAP	exchange:cbot	ResolutionEdge	-	2021-05-29	2021-05-30
+GAP	exchange:cbot	WithheldDate	-	2021-05-31	2021-05-31
+GAP	exchange:cbot	ResolutionEdge	-	2021-06-01	2021-06-01
+GAP	exchange:cbot	ResolutionEdge	-	2021-06-18	2021-06-18
+GAP	exchange:cbot	WithheldDate	-	2021-06-19	2021-06-19
+GAP	exchange:cbot	ResolutionEdge	-	2021-06-20	2021-06-20
+GAP	exchange:cbot	ResolutionEdge	-	2021-07-03	2021-07-04
+GAP	exchange:cbot	WithheldDate	-	2021-07-05	2021-07-05
+GAP	exchange:cbot	WithheldDate	-	2021-07-06	2021-07-06
+GAP	exchange:cbot	ResolutionEdge	-	2021-07-07	2021-07-07
+GAP	exchange:cbot	ResolutionEdge	-	2021-09-04	2021-09-05
+GAP	exchange:cbot	WithheldDate	-	2021-09-06	2021-09-06
+GAP	exchange:cbot	ResolutionEdge	-	2021-09-07	2021-09-07
+GAP	exchange:cbot	ResolutionEdge	-	2021-11-24	2021-11-24
+GAP	exchange:cbot	WithheldDate	-	2021-11-25	2021-11-25
+GAP	exchange:cbot	WithheldDate	-	2021-11-26	2021-11-26
+GAP	exchange:cbot	ResolutionEdge	-	2021-11-27	2021-11-27
+GAP	exchange:cbot	ResolutionEdge	-	2022-01-15	2022-01-16
+GAP	exchange:cbot	WithheldDate	-	2022-01-17	2022-01-17
+GAP	exchange:cbot	ResolutionEdge	-	2022-01-18	2022-01-18
+GAP	exchange:cbot	ResolutionEdge	-	2022-02-19	2022-02-20
+GAP	exchange:cbot	WithheldDate	-	2022-02-21	2022-02-21
+GAP	exchange:cbot	ResolutionEdge	-	2022-02-22	2022-02-22
+GAP	exchange:cbot	ResolutionEdge	-	2022-05-28	2022-05-29
+GAP	exchange:cbot	WithheldDate	-	2022-05-30	2022-05-30
+GAP	exchange:cbot	ResolutionEdge	-	2022-05-31	2022-05-31
+GAP	exchange:cbot	ResolutionEdge	-	2022-06-18	2022-06-19
+GAP	exchange:cbot	WithheldDate	-	2022-06-20	2022-06-20
+GAP	exchange:cbot	ResolutionEdge	-	2022-06-21	2022-06-21
+GAP	exchange:cbot	ResolutionEdge	-	2022-07-02	2022-07-03
+GAP	exchange:cbot	WithheldDate	-	2022-07-04	2022-07-04
+GAP	exchange:cbot	WithheldDate	-	2022-07-05	2022-07-05
+GAP	exchange:cbot	ResolutionEdge	-	2022-07-06	2022-07-06
+GAP	exchange:cbot	ResolutionEdge	-	2022-09-03	2022-09-04
+GAP	exchange:cbot	WithheldDate	-	2022-09-05	2022-09-05
+GAP	exchange:cbot	ResolutionEdge	-	2022-09-06	2022-09-06
+GAP	exchange:cbot	ResolutionEdge	-	2022-11-23	2022-11-23
+GAP	exchange:cbot	WithheldDate	-	2022-11-24	2022-11-24
+GAP	exchange:cbot	WithheldDate	-	2022-11-25	2022-11-25
+GAP	exchange:cbot	ResolutionEdge	-	2022-11-26	2022-11-26
+GAP	exchange:cbot	ResolutionEdge	-	2023-01-14	2023-01-15
+GAP	exchange:cbot	WithheldDate	-	2023-01-16	2023-01-16
+GAP	exchange:cbot	ResolutionEdge	-	2023-01-17	2023-01-17
+GAP	exchange:cbot	ResolutionEdge	-	2023-02-18	2023-02-19
+GAP	exchange:cbot	WithheldDate	-	2023-02-20	2023-02-20
+GAP	exchange:cbot	ResolutionEdge	-	2023-02-21	2023-02-21
+GAP	exchange:cbot	ResolutionEdge	-	2023-04-06	2023-04-06
+GAP	exchange:cbot	WithheldDate	-	2023-04-07	2023-04-07
+GAP	exchange:cbot	ResolutionEdge	-	2023-04-08	2023-04-08
+GAP	exchange:cbot	ResolutionEdge	-	2023-05-27	2023-05-28
+GAP	exchange:cbot	WithheldDate	-	2023-05-29	2023-05-29
+GAP	exchange:cbot	ResolutionEdge	-	2023-05-30	2023-05-30
+GAP	exchange:cbot	ResolutionEdge	-	2023-06-17	2023-06-18
+GAP	exchange:cbot	WithheldDate	-	2023-06-19	2023-06-19
+GAP	exchange:cbot	ResolutionEdge	-	2023-06-20	2023-06-20
+GAP	exchange:cbot	ResolutionEdge	-	2023-07-03	2023-07-03
+GAP	exchange:cbot	WithheldDate	-	2023-07-04	2023-07-04
+GAP	exchange:cbot	WithheldDate	-	2023-07-05	2023-07-05
+GAP	exchange:cbot	ResolutionEdge	-	2023-07-06	2023-07-06
+GAP	exchange:cbot	ResolutionEdge	-	2023-09-02	2023-09-03
+GAP	exchange:cbot	WithheldDate	-	2023-09-04	2023-09-04
+GAP	exchange:cbot	ResolutionEdge	-	2023-09-05	2023-09-05
+GAP	exchange:cbot	ResolutionEdge	-	2023-11-22	2023-11-22
+GAP	exchange:cbot	WithheldDate	-	2023-11-23	2023-11-23
+GAP	exchange:cbot	WithheldDate	-	2023-11-24	2023-11-24
+GAP	exchange:cbot	ResolutionEdge	-	2023-11-25	2023-11-25
+GAP	exchange:cbot	ResolutionEdge	-	2023-12-25	2023-12-25
+GAP	exchange:cbot	WithheldDate	-	2023-12-26	2023-12-26
+GAP	exchange:cbot	ResolutionEdge	-	2023-12-27	2023-12-27
+GAP	exchange:cbot	ResolutionEdge	-	2024-01-01	2024-01-01
+GAP	exchange:cbot	WithheldDate	-	2024-01-02	2024-01-02
+GAP	exchange:cbot	ResolutionEdge	-	2024-01-03	2024-01-03
+GAP	exchange:cbot	ResolutionEdge	-	2024-01-13	2024-01-14
+GAP	exchange:cbot	WithheldDate	-	2024-01-15	2024-01-15
+GAP	exchange:cbot	ResolutionEdge	-	2024-01-16	2024-01-16
+GAP	exchange:cbot	ResolutionEdge	-	2024-02-17	2024-02-18
+GAP	exchange:cbot	WithheldDate	-	2024-02-19	2024-02-19
+GAP	exchange:cbot	ResolutionEdge	-	2024-02-20	2024-02-20
+GAP	exchange:cbot	ResolutionEdge	-	2024-05-25	2024-05-26
+GAP	exchange:cbot	WithheldDate	-	2024-05-27	2024-05-27
+GAP	exchange:cbot	ResolutionEdge	-	2024-05-28	2024-05-28
+GAP	exchange:cbot	ResolutionEdge	-	2024-06-18	2024-06-18
+GAP	exchange:cbot	WithheldDate	-	2024-06-19	2024-06-19
+GAP	exchange:cbot	ResolutionEdge	-	2024-06-20	2024-06-20
+GAP	exchange:cbot	ResolutionEdge	-	2024-07-03	2024-07-03
+GAP	exchange:cbot	WithheldDate	-	2024-07-04	2024-07-04
+GAP	exchange:cbot	WithheldDate	-	2024-07-05	2024-07-05
+GAP	exchange:cbot	ResolutionEdge	-	2024-07-06	2024-07-06
+GAP	exchange:cbot	ResolutionEdge	-	2024-08-31	2024-09-01
+GAP	exchange:cbot	WithheldDate	-	2024-09-02	2024-09-02
+GAP	exchange:cbot	ResolutionEdge	-	2024-09-03	2024-09-03
+GAP	exchange:cbot	ResolutionEdge	-	2024-11-27	2024-11-27
+GAP	exchange:cbot	WithheldDate	-	2024-11-28	2024-11-28
+GAP	exchange:cbot	WithheldDate	-	2024-11-29	2024-11-29
+GAP	exchange:cbot	ResolutionEdge	-	2024-11-30	2024-11-30
+GAP	exchange:cbot	ResolutionEdge	-	2024-12-23	2024-12-23
+GAP	exchange:cbot	WithheldDate	-	2024-12-24	2024-12-24
+GAP	exchange:cbot	ResolutionEdge	-	2024-12-25	2024-12-25
+GAP	exchange:cbot	WithheldDate	-	2024-12-26	2024-12-26
+GAP	exchange:cbot	ResolutionEdge	-	2024-12-27	2024-12-28
+GAP	exchange:cbot	ResolutionEdge	-	2025-01-01	2025-01-01
+GAP	exchange:cbot	WithheldDate	-	2025-01-02	2025-01-02
+GAP	exchange:cbot	ResolutionEdge	-	2025-01-03	2025-01-04
+GAP	exchange:cbot	ResolutionEdge	-	2025-01-18	2025-01-19
+GAP	exchange:cbot	WithheldDate	-	2025-01-20	2025-01-20
+GAP	exchange:cbot	WithheldDate	-	2025-01-21	2025-01-21
+GAP	exchange:cbot	ResolutionEdge	-	2025-01-22	2025-01-22
+GAP	exchange:cbot	ResolutionEdge	-	2025-02-15	2025-02-16
+GAP	exchange:cbot	WithheldDate	-	2025-02-17	2025-02-17
+GAP	exchange:cbot	WithheldDate	-	2025-02-18	2025-02-18
+GAP	exchange:cbot	ResolutionEdge	-	2025-02-19	2025-02-19
+GAP	exchange:cbot	ResolutionEdge	-	2025-04-16	2025-04-16
+GAP	exchange:cbot	WithheldDate	-	2025-04-17	2025-04-17
+GAP	exchange:cbot	ResolutionEdge	-	2025-04-18	2025-04-19
+GAP	exchange:cbot	ResolutionEdge	-	2025-05-24	2025-05-25
+GAP	exchange:cbot	WithheldDate	-	2025-05-26	2025-05-26
+GAP	exchange:cbot	WithheldDate	-	2025-05-27	2025-05-27
+GAP	exchange:cbot	ResolutionEdge	-	2025-05-28	2025-05-28
+GAP	exchange:cbot	ResolutionEdge	-	2025-06-17	2025-06-17
+GAP	exchange:cbot	WithheldDate	-	2025-06-18	2025-06-18
+GAP	exchange:cbot	WithheldDate	-	2025-06-19	2025-06-19
+GAP	exchange:cbot	WithheldDate	-	2025-06-20	2025-06-20
+GAP	exchange:cbot	ResolutionEdge	-	2025-06-21	2025-06-21
+GAP	exchange:cbot	ResolutionEdge	-	2025-07-02	2025-07-02
+GAP	exchange:cbot	WithheldDate	-	2025-07-03	2025-07-03
+GAP	exchange:cbot	WithheldDate	-	2025-07-04	2025-07-04
+GAP	exchange:cbot	ResolutionEdge	-	2025-07-05	2025-07-05
+GAP	exchange:cbot	ResolutionEdge	-	2025-08-30	2025-08-31
+GAP	exchange:cbot	WithheldDate	-	2025-09-01	2025-09-01
+GAP	exchange:cbot	WithheldDate	-	2025-09-02	2025-09-02
+GAP	exchange:cbot	ResolutionEdge	-	2025-09-03	2025-09-03
+GAP	exchange:cbot	ResolutionEdge	-	2025-11-25	2025-11-25
+GAP	exchange:cbot	WithheldDate	-	2025-11-26	2025-11-26
+GAP	exchange:cbot	WithheldDate	-	2025-11-27	2025-11-27
+GAP	exchange:cbot	WithheldDate	-	2025-11-28	2025-11-28
+GAP	exchange:cbot	ResolutionEdge	-	2025-11-29	2025-11-29
+GAP	exchange:cbot	ResolutionEdge	-	2025-12-23	2025-12-23
+GAP	exchange:cbot	WithheldDate	-	2025-12-24	2025-12-24
+GAP	exchange:cbot	ResolutionEdge	-	2025-12-25	2025-12-25
+GAP	exchange:cbot	WithheldDate	-	2025-12-26	2025-12-26
+GAP	exchange:cbot	ResolutionEdge	-	2025-12-27	2025-12-27
+GAP	exchange:cbot	ResolutionEdge	-	2025-12-30	2025-12-30
+GAP	exchange:cbot	WithheldDate	-	2025-12-31	2025-12-31
+GAP	exchange:cbot	ResolutionEdge	-	2026-01-01	2026-01-01
+GAP	exchange:cbot	WithheldDate	-	2026-01-02	2026-01-02
+GAP	exchange:cbot	ResolutionEdge	-	2026-01-03	2026-01-03
+GAP	exchange:cbot	ResolutionEdge	-	2026-01-17	2026-01-18
+GAP	exchange:cbot	WithheldDate	-	2026-01-19	2026-01-19
+GAP	exchange:cbot	WithheldDate	-	2026-01-20	2026-01-20
+GAP	exchange:cbot	ResolutionEdge	-	2026-01-21	2026-01-21
+GAP	exchange:cbot	ResolutionEdge	-	2026-02-14	2026-02-15
+GAP	exchange:cbot	WithheldDate	-	2026-02-16	2026-02-16
+GAP	exchange:cbot	WithheldDate	-	2026-02-17	2026-02-17
+GAP	exchange:cbot	ResolutionEdge	-	2026-02-18	2026-02-18
+GAP	exchange:cbot	ResolutionEdge	-	2026-04-01	2026-04-01
+GAP	exchange:cbot	WithheldDate	-	2026-04-02	2026-04-02
+GAP	exchange:cbot	WithheldDate	-	2026-04-03	2026-04-03
+GAP	exchange:cbot	ResolutionEdge	-	2026-04-04	2026-04-04
+GAP	exchange:cbot	ResolutionEdge	-	2026-05-23	2026-05-24
+GAP	exchange:cbot	WithheldDate	-	2026-05-25	2026-05-25
+GAP	exchange:cbot	WithheldDate	-	2026-05-26	2026-05-26
+GAP	exchange:cbot	ResolutionEdge	-	2026-05-27	2026-05-27
+GAP	exchange:cbot	ResolutionEdge	-	2026-06-17	2026-06-17
+GAP	exchange:cbot	WithheldDate	-	2026-06-18	2026-06-18
+GAP	exchange:cbot	WithheldDate	-	2026-06-19	2026-06-19
+GAP	exchange:cbot	ResolutionEdge	-	2026-06-20	2026-06-20
+GAP	exchange:cbot	ResolutionEdge	-	2026-07-01	2026-07-01
+GAP	exchange:cbot	WithheldDate	-	2026-07-02	2026-07-02
+GAP	exchange:cbot	WithheldDate	-	2026-07-03	2026-07-03
+GAP	exchange:cbot	ResolutionEdge	-	2026-07-04	2026-07-04
+GAP	exchange:cbot	ResolutionEdge	-	2026-09-05	2026-09-06
+GAP	exchange:cbot	WithheldDate	-	2026-09-07	2026-09-07
+GAP	exchange:cbot	WithheldDate	-	2026-09-08	2026-09-08
+GAP	exchange:cbot	ResolutionEdge	-	2026-09-09	2026-09-09
+GAP	exchange:cbot	ResolutionEdge	-	2026-11-24	2026-11-24
+GAP	exchange:cbot	WithheldDate	-	2026-11-25	2026-11-25
+GAP	exchange:cbot	WithheldDate	-	2026-11-26	2026-11-26
+GAP	exchange:cbot	WithheldDate	-	2026-11-27	2026-11-27
+GAP	exchange:cbot	ResolutionEdge	-	2026-11-28	2026-11-28
+GAP	exchange:cbot	ResolutionEdge	-	2026-12-23	2026-12-23
+GAP	exchange:cbot	WithheldDate	-	2026-12-24	2026-12-24
+GAP	exchange:cbot	ResolutionEdge	-	2026-12-25	2026-12-26
+GAP	exchange:cbot	ResolutionEdge	-	2026-12-30	2026-12-30
+GAP	exchange:cbot	WithheldDate	-	2026-12-31	2026-12-31
+GAP	exchange:cbot	ResolutionEdge	-	2027-01-01	2027-01-02
+GAP	exchange:cbot	ResolutionEdge	-	2027-01-16	2027-01-17
+GAP	exchange:cbot	WithheldDate	-	2027-01-18	2027-01-18
+GAP	exchange:cbot	WithheldDate	-	2027-01-19	2027-01-19
+GAP	exchange:cbot	ResolutionEdge	-	2027-01-20	2027-01-20
+GAP	exchange:cbot	ResolutionEdge	-	2027-02-13	2027-02-14
+GAP	exchange:cbot	WithheldDate	-	2027-02-15	2027-02-15
+GAP	exchange:cbot	WithheldDate	-	2027-02-16	2027-02-16
+GAP	exchange:cbot	ResolutionEdge	-	2027-02-17	2027-02-17
+GAP	exchange:cbot	ResolutionEdge	-	2027-03-24	2027-03-24
+GAP	exchange:cbot	WithheldDate	-	2027-03-25	2027-03-25
+GAP	exchange:cbot	ResolutionEdge	-	2027-03-26	2027-03-27
+GAP	exchange:cbot	ResolutionEdge	-	2027-05-29	2027-05-30
+GAP	exchange:cbot	WithheldDate	-	2027-05-31	2027-05-31
+GAP	exchange:cbot	WithheldDate	-	2027-06-01	2027-06-01
+GAP	exchange:cbot	ResolutionEdge	-	2027-06-02	2027-06-02
+GAP	exchange:cbot	ResolutionEdge	-	2027-06-16	2027-06-16
+GAP	exchange:cbot	WithheldDate	-	2027-06-17	2027-06-17
+GAP	exchange:cbot	WithheldDate	-	2027-06-18	2027-06-18
+GAP	exchange:cbot	ResolutionEdge	-	2027-06-19	2027-06-19
+GAP	exchange:cbot	ResolutionEdge	-	2027-07-03	2027-07-04
+GAP	exchange:cbot	WithheldDate	-	2027-07-05	2027-07-05
+GAP	exchange:cbot	WithheldDate	-	2027-07-06	2027-07-06
+GAP	exchange:cbot	ResolutionEdge	-	2027-07-07	2027-07-07
+GAP	exchange:cbot	ResolutionEdge	-	2027-09-04	2027-09-05
+GAP	exchange:cbot	WithheldDate	-	2027-09-06	2027-09-06
+GAP	exchange:cbot	WithheldDate	-	2027-09-07	2027-09-07
+GAP	exchange:cbot	ResolutionEdge	-	2027-09-08	2027-09-08
+GAP	exchange:cbot	ResolutionEdge	-	2027-11-23	2027-11-23
+GAP	exchange:cbot	WithheldDate	-	2027-11-24	2027-11-24
+GAP	exchange:cbot	WithheldDate	-	2027-11-25	2027-11-25
+GAP	exchange:cbot	WithheldDate	-	2027-11-26	2027-11-26
+GAP	exchange:cbot	ResolutionEdge	-	2027-11-27	2027-11-27
+GAP	exchange:cbot	ResolutionEdge	-	2027-12-22	2027-12-22
+GAP	exchange:cbot	WithheldDate	-	2027-12-23	2027-12-23
+GAP	exchange:cbot	ResolutionEdge	-	2027-12-24	2027-12-25
+GAP	exchange:cbot	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	exchange:cbot	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	exchange:cbot	5998	374	202	955	82	58	249	202
+GAP	exchange:comex	ResolutionEdge	-	2019-06-18	2019-06-18
+GAP	exchange:comex	WithheldDate	-	2019-06-19	2019-06-19
+GAP	exchange:comex	ResolutionEdge	-	2019-06-20	2019-06-22
+GAP	exchange:comex	ResolutionEdge	-	2020-06-18	2020-06-18
+GAP	exchange:comex	WithheldDate	-	2020-06-19	2020-06-19
+GAP	exchange:comex	ResolutionEdge	-	2020-06-20	2020-06-20
+GAP	exchange:comex	ResolutionEdge	-	2021-06-18	2021-06-18
+GAP	exchange:comex	WithheldDate	-	2021-06-19	2021-06-19
+GAP	exchange:comex	ResolutionEdge	-	2021-06-20	2021-06-20
+GAP	exchange:comex	ResolutionEdge	-	2023-01-13	2023-01-15
+GAP	exchange:comex	WithheldDate	-	2023-01-16	2023-01-16
+GAP	exchange:comex	ResolutionEdge	-	2023-01-17	2023-01-17
+GAP	exchange:comex	ResolutionEdge	-	2023-02-17	2023-02-19
+GAP	exchange:comex	WithheldDate	-	2023-02-20	2023-02-20
+GAP	exchange:comex	ResolutionEdge	-	2023-02-21	2023-02-21
+GAP	exchange:comex	ResolutionEdge	-	2023-04-06	2023-04-06
+GAP	exchange:comex	WithheldDate	-	2023-04-07	2023-04-07
+GAP	exchange:comex	ResolutionEdge	-	2023-04-08	2023-04-08
+GAP	exchange:comex	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	exchange:comex	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	exchange:comex	6549	19	6	1094	1	0	223	6
+GAP	exchange:nymex	ResolutionEdge	-	2019-06-18	2019-06-18
+GAP	exchange:nymex	WithheldDate	-	2019-06-19	2019-06-19
+GAP	exchange:nymex	ResolutionEdge	-	2019-06-20	2019-06-22
+GAP	exchange:nymex	ResolutionEdge	-	2020-06-18	2020-06-18
+GAP	exchange:nymex	WithheldDate	-	2020-06-19	2020-06-19
+GAP	exchange:nymex	ResolutionEdge	-	2020-06-20	2020-06-20
+GAP	exchange:nymex	ResolutionEdge	-	2021-06-18	2021-06-18
+GAP	exchange:nymex	WithheldDate	-	2021-06-19	2021-06-19
+GAP	exchange:nymex	ResolutionEdge	-	2021-06-20	2021-06-20
+GAP	exchange:nymex	ResolutionEdge	-	2023-01-13	2023-01-15
+GAP	exchange:nymex	WithheldDate	-	2023-01-16	2023-01-16
+GAP	exchange:nymex	ResolutionEdge	-	2023-01-17	2023-01-17
+GAP	exchange:nymex	ResolutionEdge	-	2023-02-17	2023-02-19
+GAP	exchange:nymex	WithheldDate	-	2023-02-20	2023-02-20
+GAP	exchange:nymex	ResolutionEdge	-	2023-02-21	2023-02-21
+GAP	exchange:nymex	ResolutionEdge	-	2023-04-06	2023-04-06
+GAP	exchange:nymex	WithheldDate	-	2023-04-07	2023-04-07
+GAP	exchange:nymex	ResolutionEdge	-	2023-04-08	2023-04-08
+GAP	exchange:nymex	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	exchange:nymex	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	exchange:nymex	6549	19	6	1094	1	0	223	6
+GAP	exchange:cfe	HolidayWindowsBridged	-	2010-01-01	2010-01-03
+GAP	exchange:cfe	HolidayWindowsBridged	-	2010-01-04	2014-12-21
+GAP	exchange:cfe	HolidayWindowsBridged	-	2014-12-22	2014-12-23
+GAP	exchange:cfe	HolidayWindowsBridged	-	2015-01-03	2015-01-04
+GAP	exchange:cfe	HolidayWindowsBridged	-	2015-01-05	2015-02-12
+GAP	exchange:cfe	HolidayWindowsBridged	-	2015-02-13	2015-02-14
+GAP	exchange:cfe	HolidayWindowsBridged	-	2016-01-21	2016-01-23
+GAP	exchange:cfe	HolidayWindowsBridged	-	2016-01-24	2017-04-07
+GAP	exchange:cfe	HolidayWindowsBridged	-	2017-04-08	2017-04-09
+GAP	exchange:cfe	ResolutionEdge	-	2017-07-01	2017-07-02
+GAP	exchange:cfe	WithheldDate	-	2017-07-03	2017-07-03
+GAP	exchange:cfe	ResolutionEdge	-	2017-07-04	2017-07-04
+GAP	exchange:cfe	ResolutionEdge	-	2026-12-31	2026-12-31
+GAP	exchange:cfe	NoHolidayCoverage	-	2027-01-01	open
+SCOPE	exchange:cfe	3898	2675	1	729	366	0	140	1
+GAP	exchange:coinbase_derivatives	HolidayWindowsBridged	-	2010-01-01	2020-05-20
+GAP	exchange:coinbase_derivatives	HolidayWindowsBridged	-	2020-05-21	2021-06-27
+GAP	exchange:coinbase_derivatives	ResolutionEdge	-	2026-09-07	2026-09-07
+GAP	exchange:coinbase_derivatives	NoHolidayCoverage	-	2026-09-08	open
+SCOPE	exchange:coinbase_derivatives	1897	4677	0	614	481	0	58	0
+GAP	exchange:small_exchange	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:small_exchange	0	6574	0	0	1095	0	0	0
+GAP	exchange:eurex	ResolutionEdge	-	2026-12-31	2026-12-31
+GAP	exchange:eurex	NoHolidayCoverage	-	2027-01-01	open
+SCOPE	exchange:eurex	6208	366	0	729	366	0	116	0
+GAP	exchange:eex	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:eex	0	6574	0	0	1095	0	0	0
+GAP	exchange:iceus	HolidayWindowsBridged	-	2010-01-01	2024-12-29
+GAP	exchange:iceus	HolidayWindowsBridged	-	2024-12-30	2024-12-31
+GAP	exchange:iceus	ResolutionEdge	-	2025-01-08	2025-01-08
+GAP	exchange:iceus	WithheldDate	-	2025-01-09	2025-01-09
+GAP	exchange:iceus	ResolutionEdge	-	2025-01-10	2025-01-11
+GAP	exchange:iceus	ResolutionEdge	-	2025-01-17	2025-01-19
+GAP	exchange:iceus	WithheldDate	-	2025-01-20	2025-01-20
+GAP	exchange:iceus	ResolutionEdge	-	2025-01-21	2025-01-21
+GAP	exchange:iceus	ResolutionEdge	-	2025-02-14	2025-02-16
+GAP	exchange:iceus	WithheldDate	-	2025-02-17	2025-02-17
+GAP	exchange:iceus	ResolutionEdge	-	2025-02-18	2025-02-18
+GAP	exchange:iceus	ResolutionEdge	-	2025-04-18	2025-04-20
+GAP	exchange:iceus	WithheldDate	-	2025-04-21	2025-04-21
+GAP	exchange:iceus	ResolutionEdge	-	2025-04-22	2025-04-22
+GAP	exchange:iceus	ResolutionEdge	-	2025-05-02	2025-05-04
+GAP	exchange:iceus	WithheldDate	-	2025-05-05	2025-05-05
+GAP	exchange:iceus	ResolutionEdge	-	2025-05-06	2025-05-06
+GAP	exchange:iceus	ResolutionEdge	-	2025-05-23	2025-05-25
+GAP	exchange:iceus	WithheldDate	-	2025-05-26	2025-05-26
+GAP	exchange:iceus	ResolutionEdge	-	2025-05-27	2025-05-27
+GAP	exchange:iceus	ResolutionEdge	-	2025-06-18	2025-06-18
+GAP	exchange:iceus	WithheldDate	-	2025-06-19	2025-06-19
+GAP	exchange:iceus	ResolutionEdge	-	2025-06-20	2025-06-21
+GAP	exchange:iceus	ResolutionEdge	-	2025-07-02	2025-07-02
+GAP	exchange:iceus	WithheldDate	-	2025-07-03	2025-07-03
+GAP	exchange:iceus	WithheldDate	-	2025-07-04	2025-07-04
+GAP	exchange:iceus	ResolutionEdge	-	2025-07-05	2025-07-05
+GAP	exchange:iceus	ResolutionEdge	-	2025-08-22	2025-08-24
+GAP	exchange:iceus	WithheldDate	-	2025-08-25	2025-08-25
+GAP	exchange:iceus	ResolutionEdge	-	2025-08-26	2025-08-26
+GAP	exchange:iceus	ResolutionEdge	-	2025-08-29	2025-08-31
+GAP	exchange:iceus	WithheldDate	-	2025-09-01	2025-09-01
+GAP	exchange:iceus	ResolutionEdge	-	2025-09-02	2025-09-02
+GAP	exchange:iceus	ResolutionEdge	-	2025-11-26	2025-11-26
+GAP	exchange:iceus	WithheldDate	-	2025-11-27	2025-11-27
+GAP	exchange:iceus	WithheldDate	-	2025-11-28	2025-11-28
+GAP	exchange:iceus	ResolutionEdge	-	2025-11-29	2025-11-29
+GAP	exchange:iceus	ResolutionEdge	-	2025-12-23	2025-12-23
+GAP	exchange:iceus	WithheldDate	-	2025-12-24	2025-12-24
+GAP	exchange:iceus	ResolutionEdge	-	2025-12-25	2025-12-25
+GAP	exchange:iceus	WithheldDate	-	2025-12-26	2025-12-26
+GAP	exchange:iceus	ResolutionEdge	-	2025-12-27	2025-12-27
+GAP	exchange:iceus	ResolutionEdge	-	2026-01-16	2026-01-18
+GAP	exchange:iceus	WithheldDate	-	2026-01-19	2026-01-19
+GAP	exchange:iceus	ResolutionEdge	-	2026-01-20	2026-01-20
+GAP	exchange:iceus	ResolutionEdge	-	2026-02-13	2026-02-15
+GAP	exchange:iceus	WithheldDate	-	2026-02-16	2026-02-16
+GAP	exchange:iceus	ResolutionEdge	-	2026-02-17	2026-02-17
+GAP	exchange:iceus	ResolutionEdge	-	2026-04-02	2026-04-02
+GAP	exchange:iceus	WithheldDate	-	2026-04-03	2026-04-03
+GAP	exchange:iceus	ResolutionEdge	-	2026-04-04	2026-04-04
+GAP	exchange:iceus	ResolutionEdge	-	2026-04-05	2026-04-05
+GAP	exchange:iceus	WithheldDate	-	2026-04-06	2026-04-06
+GAP	exchange:iceus	ResolutionEdge	-	2026-04-07	2026-04-07
+GAP	exchange:iceus	ResolutionEdge	-	2026-05-22	2026-05-24
+GAP	exchange:iceus	WithheldDate	-	2026-05-25	2026-05-25
+GAP	exchange:iceus	ResolutionEdge	-	2026-05-26	2026-05-26
+GAP	exchange:iceus	ResolutionEdge	-	2026-06-18	2026-06-18
+GAP	exchange:iceus	WithheldDate	-	2026-06-19	2026-06-19
+GAP	exchange:iceus	ResolutionEdge	-	2026-06-20	2026-06-20
+GAP	exchange:iceus	ResolutionEdge	-	2026-07-02	2026-07-02
+GAP	exchange:iceus	WithheldDate	-	2026-07-03	2026-07-03
+GAP	exchange:iceus	ResolutionEdge	-	2026-07-04	2026-07-04
+GAP	exchange:iceus	ResolutionEdge	-	2026-07-05	2026-07-05
+GAP	exchange:iceus	WithheldDate	-	2026-07-06	2026-07-06
+GAP	exchange:iceus	ResolutionEdge	-	2026-07-07	2026-07-07
+GAP	exchange:iceus	ResolutionEdge	-	2026-09-04	2026-09-06
+GAP	exchange:iceus	WithheldDate	-	2026-09-07	2026-09-07
+GAP	exchange:iceus	ResolutionEdge	-	2026-09-08	2026-09-08
+GAP	exchange:iceus	ResolutionEdge	-	2026-10-23	2026-10-25
+GAP	exchange:iceus	WithheldDate	-	2026-10-26	2026-10-26
+GAP	exchange:iceus	WithheldDate	-	2026-10-27	2026-10-27
+GAP	exchange:iceus	WithheldDate	-	2026-10-28	2026-10-28
+GAP	exchange:iceus	WithheldDate	-	2026-10-29	2026-10-29
+GAP	exchange:iceus	WithheldDate	-	2026-10-30	2026-10-30
+GAP	exchange:iceus	ResolutionEdge	-	2026-10-31	2026-10-31
+GAP	exchange:iceus	ResolutionEdge	-	2026-11-25	2026-11-25
+GAP	exchange:iceus	WithheldDate	-	2026-11-26	2026-11-26
+GAP	exchange:iceus	WithheldDate	-	2026-11-27	2026-11-27
+GAP	exchange:iceus	ResolutionEdge	-	2026-11-28	2026-11-28
+GAP	exchange:iceus	ResolutionEdge	-	2026-12-25	2026-12-27
+GAP	exchange:iceus	WithheldDate	-	2026-12-28	2026-12-28
+GAP	exchange:iceus	ResolutionEdge	-	2026-12-29	2026-12-29
+GAP	exchange:iceus	ResolutionEdge	-	2027-01-15	2027-01-17
+GAP	exchange:iceus	WithheldDate	-	2027-01-18	2027-01-18
+GAP	exchange:iceus	ResolutionEdge	-	2027-01-19	2027-01-19
+GAP	exchange:iceus	ResolutionEdge	-	2027-02-12	2027-02-14
+GAP	exchange:iceus	WithheldDate	-	2027-02-15	2027-02-15
+GAP	exchange:iceus	ResolutionEdge	-	2027-02-16	2027-02-16
+GAP	exchange:iceus	ResolutionEdge	-	2027-03-25	2027-03-25
+GAP	exchange:iceus	WithheldDate	-	2027-03-26	2027-03-26
+GAP	exchange:iceus	ResolutionEdge	-	2027-03-27	2027-03-27
+GAP	exchange:iceus	ResolutionEdge	-	2027-05-28	2027-05-30
+GAP	exchange:iceus	WithheldDate	-	2027-05-31	2027-05-31
+GAP	exchange:iceus	ResolutionEdge	-	2027-06-01	2027-06-01
+GAP	exchange:iceus	ResolutionEdge	-	2027-06-17	2027-06-17
+GAP	exchange:iceus	WithheldDate	-	2027-06-18	2027-06-18
+GAP	exchange:iceus	ResolutionEdge	-	2027-06-19	2027-06-19
+GAP	exchange:iceus	ResolutionEdge	-	2027-07-02	2027-07-04
+GAP	exchange:iceus	WithheldDate	-	2027-07-05	2027-07-05
+GAP	exchange:iceus	ResolutionEdge	-	2027-07-06	2027-07-06
+GAP	exchange:iceus	ResolutionEdge	-	2027-09-03	2027-09-05
+GAP	exchange:iceus	WithheldDate	-	2027-09-06	2027-09-06
+GAP	exchange:iceus	ResolutionEdge	-	2027-09-07	2027-09-07
+GAP	exchange:iceus	ResolutionEdge	-	2027-11-24	2027-11-24
+GAP	exchange:iceus	WithheldDate	-	2027-11-25	2027-11-25
+GAP	exchange:iceus	ResolutionEdge	-	2027-11-26	2027-11-27
+GAP	exchange:iceus	ResolutionEdge	-	2027-12-24	2027-12-26
+GAP	exchange:iceus	WithheldDate	-	2027-12-27	2027-12-27
+GAP	exchange:iceus	ResolutionEdge	-	2027-12-28	2027-12-28
+GAP	exchange:iceus	ResolutionEdge	-	2028-01-03	2028-01-03
+GAP	exchange:iceus	NoHolidayCoverage	-	2028-01-04	open
+SCOPE	exchange:iceus	946	5587	41	946	108	41	48	41
+GAP	exchange:iceeu	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:iceeu	0	6574	0	0	1095	0	0	0
+GAP	exchange:ice_europe_commodities	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:ice_europe_commodities	0	6574	0	0	1095	0	0	0
+GAP	exchange:ice_europe_financials	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:ice_europe_financials	0	6574	0	0	1095	0	0	0
+GAP	exchange:ice_endex	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:ice_endex	0	6574	0	0	1095	0	0	0
+GAP	exchange:ice_abu_dhabi	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:ice_abu_dhabi	0	6574	0	0	1095	0	0	0
+GAP	exchange:ice_canada	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:ice_canada	0	6574	0	0	1095	0	0	0
+GAP	exchange:sgx	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:sgx	0	6574	0	0	1095	0	0	0
+GAP	exchange:asx	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	exchange:asx	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	exchange:asx	6573	1	0	1094	1	0	174	0
+GAP	exchange:tmx_australia	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:tmx_australia	0	6574	0	0	1095	0	0	0
+GAP	exchange:nzx	ResolutionEdge	-	2026-12-31	2027-01-04
+GAP	exchange:nzx	NoHolidayCoverage	-	2027-01-05	open
+SCOPE	exchange:nzx	6208	366	0	729	366	0	216	0
+GAP	exchange:tse	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	exchange:tse	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	exchange:tse	6573	1	0	1094	1	0	295	0
+GAP	exchange:nse_india	ResolutionEdge	-	2011-10-25	2011-10-25
+GAP	exchange:nse_india	WithheldDate	-	2011-10-26	2011-10-26
+GAP	exchange:nse_india	ResolutionEdge	-	2011-10-27	2011-10-27
+GAP	exchange:nse_india	ResolutionEdge	-	2012-11-10	2012-11-12
+GAP	exchange:nse_india	WithheldDate	-	2012-11-13	2012-11-13
+GAP	exchange:nse_india	ResolutionEdge	-	2012-11-14	2012-11-14
+GAP	exchange:nse_india	ResolutionEdge	-	2013-11-02	2013-11-02
+GAP	exchange:nse_india	WithheldDate	-	2013-11-03	2013-11-03
+GAP	exchange:nse_india	ResolutionEdge	-	2013-11-04	2013-11-04
+GAP	exchange:nse_india	ResolutionEdge	-	2014-10-22	2014-10-22
+GAP	exchange:nse_india	WithheldDate	-	2014-10-23	2014-10-23
+GAP	exchange:nse_india	ResolutionEdge	-	2014-10-24	2014-10-26
+GAP	exchange:nse_india	ResolutionEdge	-	2017-10-18	2017-10-18
+GAP	exchange:nse_india	WithheldDate	-	2017-10-19	2017-10-19
+GAP	exchange:nse_india	ResolutionEdge	-	2017-10-20	2017-10-22
+GAP	exchange:nse_india	HolidayWindowsBridged	-	2018-01-01	2018-01-02
+GAP	exchange:nse_india	HolidayWindowsBridged	-	2018-01-03	2018-12-28
+GAP	exchange:nse_india	HolidayWindowsBridged	-	2018-12-29	2018-12-31
+GAP	exchange:nse_india	ResolutionEdge	-	2019-10-26	2019-10-26
+GAP	exchange:nse_india	WithheldDate	-	2019-10-27	2019-10-27
+GAP	exchange:nse_india	ResolutionEdge	-	2019-10-28	2019-10-28
+GAP	exchange:nse_india	ResolutionEdge	-	2026-11-07	2026-11-07
+GAP	exchange:nse_india	WithheldDate	-	2026-11-08	2026-11-08
+GAP	exchange:nse_india	ResolutionEdge	-	2026-11-09	2026-11-10
+GAP	exchange:nse_india	ResolutionEdge	-	2026-12-31	2026-12-31
+GAP	exchange:nse_india	NoHolidayCoverage	-	2027-01-01	open
+SCOPE	exchange:nse_india	5815	752	7	725	369	1	231	7
+GAP	exchange:bse_india	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:bse_india	0	6574	0	0	1095	0	0	0
+GAP	exchange:hkex	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	exchange:hkex	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	exchange:hkex	6573	1	0	1094	1	0	289	0
+GAP	exchange:sgx_securities	HolidayWindowsBridged	-	2010-01-01	2010-01-03
+GAP	exchange:sgx_securities	HolidayWindowsBridged	-	2010-01-04	2013-12-27
+GAP	exchange:sgx_securities	HolidayWindowsBridged	-	2013-12-28	2013-12-31
+GAP	exchange:sgx_securities	HolidayWindowsBridged	-	2020-01-02	2020-01-02
+GAP	exchange:sgx_securities	HolidayWindowsBridged	-	2020-01-03	2020-01-05
+GAP	exchange:sgx_securities	HolidayWindowsBridged	-	2020-01-06	2024-12-27
+GAP	exchange:sgx_securities	HolidayWindowsBridged	-	2024-12-28	2024-12-31
+GAP	exchange:sgx_securities	ResolutionEdge	-	2026-12-31	2026-12-31
+GAP	exchange:sgx_securities	NoHolidayCoverage	-	2027-01-01	open
+SCOPE	exchange:sgx_securities	2921	3653	0	729	366	0	95	0
+GAP	exchange:bursa_malaysia	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:bursa_malaysia	0	6574	0	0	1095	0	0	0
+GAP	exchange:set_thailand	NormalWeekCarried	-	2010-01-01	2024-03-24
+GAP	exchange:set_thailand	NoHolidayTable	-	2024-03-25	open
+SCOPE	exchange:set_thailand	0	6574	0	0	1095	0	0	0
+GAP	exchange:idx	NormalWeekCarried	-	2010-01-01	2010-08-30
+GAP	exchange:idx	NoHolidayTable	-	2010-08-31	open
+SCOPE	exchange:idx	0	6574	0	0	1095	0	0	0
+GAP	exchange:pse	NormalWeekCarried	-	2010-01-01	2011-09-30
+GAP	exchange:pse	NoHolidayTable	-	2011-10-01	open
+SCOPE	exchange:pse	0	6574	0	0	1095	0	0	0
+GAP	exchange:hose	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:hose	0	6574	0	0	1095	0	0	0
+GAP	exchange:sse	HolidayWindowsBridged	-	2010-01-01	2010-01-03
+GAP	exchange:sse	HolidayWindowsBridged	-	2010-01-04	2010-12-29
+GAP	exchange:sse	HolidayWindowsBridged	-	2010-12-30	2010-12-31
+GAP	exchange:sse	ResolutionEdge	-	2026-12-31	2026-12-31
+GAP	exchange:sse	NoHolidayCoverage	-	2027-01-01	open
+SCOPE	exchange:sse	5843	731	0	729	366	0	284	0
+GAP	exchange:szse	NormalWeekCarried	-	2010-01-01	2016-05-08
+GAP	exchange:szse	NoHolidayTable	-	2016-05-09	open
+SCOPE	exchange:szse	0	6574	0	0	1095	0	0	0
+GAP	exchange:krx	NormalWeekCarried	-	2010-01-01	2016-07-31
+GAP	exchange:krx	NoHolidayTable	-	2016-08-01	open
+SCOPE	exchange:krx	0	6574	0	0	1095	0	0	0
+GAP	exchange:twse	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:twse	0	6574	0	0	1095	0	0	0
+GAP	exchange:lse	ResolutionEdge	-	2025-04-17	2025-04-17
+GAP	exchange:lse	WithheldDate	-	2025-04-18	2025-04-18
+GAP	exchange:lse	ResolutionEdge	-	2025-04-19	2025-04-20
+GAP	exchange:lse	WithheldDate	-	2025-04-21	2025-04-21
+GAP	exchange:lse	ResolutionEdge	-	2025-04-22	2025-04-22
+GAP	exchange:lse	ResolutionEdge	-	2025-05-03	2025-05-04
+GAP	exchange:lse	WithheldDate	-	2025-05-05	2025-05-05
+GAP	exchange:lse	ResolutionEdge	-	2025-05-06	2025-05-06
+GAP	exchange:lse	ResolutionEdge	-	2025-05-24	2025-05-25
+GAP	exchange:lse	WithheldDate	-	2025-05-26	2025-05-26
+GAP	exchange:lse	ResolutionEdge	-	2025-05-27	2025-05-27
+GAP	exchange:lse	ResolutionEdge	-	2025-08-23	2025-08-24
+GAP	exchange:lse	WithheldDate	-	2025-08-25	2025-08-25
+GAP	exchange:lse	ResolutionEdge	-	2025-08-26	2025-08-26
+GAP	exchange:lse	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	exchange:lse	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	exchange:lse	6555	14	5	1076	14	5	184	5
+GAP	exchange:xetra	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	exchange:xetra	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	exchange:xetra	6573	1	0	1094	1	0	127	0
+GAP	exchange:six	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	exchange:six	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	exchange:six	6573	1	0	1094	1	0	171	0
+GAP	exchange:euronext_paris	ResolutionEdge	-	2026-12-23	2026-12-23
+GAP	exchange:euronext_paris	WithheldDate	-	2026-12-24	2026-12-24
+GAP	exchange:euronext_paris	ResolutionEdge	-	2026-12-25	2026-12-27
+GAP	exchange:euronext_paris	ResolutionEdge	-	2026-12-30	2026-12-30
+GAP	exchange:euronext_paris	WithheldDate	-	2026-12-31	2026-12-31
+GAP	exchange:euronext_paris	NoHolidayCoverage	-	2027-01-01	open
+SCOPE	exchange:euronext_paris	6202	370	2	723	370	2	108	2
+GAP	exchange:euronext_amsterdam	NormalWeekCarried	-	2010-01-01	2010-12-23
+GAP	exchange:euronext_amsterdam	NoHolidayTable	-	2010-12-24	open
+SCOPE	exchange:euronext_amsterdam	0	6574	0	0	1095	0	0	0
+GAP	exchange:euronext_brussels	NormalWeekCarried	-	2010-01-01	2010-12-23
+GAP	exchange:euronext_brussels	NoHolidayTable	-	2010-12-24	open
+SCOPE	exchange:euronext_brussels	0	6574	0	0	1095	0	0	0
+GAP	exchange:euronext_lisbon	NormalWeekCarried	-	2010-01-01	2010-12-23
+GAP	exchange:euronext_lisbon	NoHolidayTable	-	2010-12-24	open
+SCOPE	exchange:euronext_lisbon	0	6574	0	0	1095	0	0	0
+GAP	exchange:euronext_dublin	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:euronext_dublin	0	6574	0	0	1095	0	0	0
+GAP	exchange:euronext_milan	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:euronext_milan	0	6574	0	0	1095	0	0	0
+GAP	exchange:bme	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:bme	0	6574	0	0	1095	0	0	0
+GAP	exchange:nasdaq_stockholm	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:nasdaq_stockholm	0	6574	0	0	1095	0	0	0
+GAP	exchange:nasdaq_helsinki	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:nasdaq_helsinki	0	6574	0	0	1095	0	0	0
+GAP	exchange:nasdaq_copenhagen	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:nasdaq_copenhagen	0	6574	0	0	1095	0	0	0
+GAP	exchange:vienna	NoHolidayTable	-	2010-01-01	open
+SCOPE	exchange:vienna	0	6574	0	0	1095	0	0	0
+GAP	exchange:borsa_istanbul	HolidayWindowsBridged	-	2010-01-01	2010-01-03
+GAP	exchange:borsa_istanbul	HolidayWindowsBridged	-	2010-01-04	2012-02-28
+GAP	exchange:borsa_istanbul	HolidayWindowsBridged	-	2012-02-29	2012-03-01
+GAP	exchange:borsa_istanbul	ResolutionEdge	-	2026-12-31	2026-12-31
+GAP	exchange:borsa_istanbul	NoHolidayCoverage	-	2027-01-01	open
+SCOPE	exchange:borsa_istanbul	5417	1157	0	729	366	0	177	0
+GAP	exchange:tsx	ResolutionEdge	-	2026-12-31	2026-12-31
+GAP	exchange:tsx	NoHolidayCoverage	-	2027-01-01	open
+SCOPE	exchange:tsx	6208	366	0	729	366	0	181	0
+GAP	exchange:jse	NormalWeekCarried	-	2010-01-01	2012-05-24
+GAP	exchange:jse	NoHolidayTable	-	2012-05-25	open
+SCOPE	exchange:jse	0	6574	0	0	1095	0	0	0
+GAP	exchange:tadawul	HolidayWindowsBridged	-	2010-01-01	2010-01-01
+GAP	exchange:tadawul	HolidayWindowsBridged	-	2010-01-02	2020-12-29
+GAP	exchange:tadawul	HolidayWindowsBridged	-	2020-12-30	2020-12-31
+GAP	exchange:tadawul	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	exchange:tadawul	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	exchange:tadawul	2555	4019	0	1094	1	0	78	0
+GAP	exchange:b3	HolidayWindowsBridged	-	2010-01-01	2010-01-03
+GAP	exchange:b3	HolidayWindowsBridged	-	2010-01-04	2010-12-29
+GAP	exchange:b3	HolidayWindowsBridged	-	2010-12-30	2010-12-31
+GAP	exchange:b3	ResolutionEdge	-	2026-12-31	2026-12-31
+GAP	exchange:b3	NoHolidayCoverage	-	2027-01-01	open
+SCOPE	exchange:b3	5843	731	0	729	366	0	224	0
+GAP	exchange:bmv	NormalWeekCarried	-	2010-01-01	2010-02-17
+GAP	exchange:bmv	NoHolidayTable	-	2010-02-18	open
+SCOPE	exchange:bmv	0	6574	0	0	1095	0	0	0
+SCOPE	exchange:binance_futures	6574	0	0	1095	0	0	0	0
+GAP	key:globex_equity_index	ResolutionEdge	-	2019-06-18	2019-06-18
+GAP	key:globex_equity_index	WithheldDate	-	2019-06-19	2019-06-19
+GAP	key:globex_equity_index	ResolutionEdge	-	2019-06-20	2019-06-20
+GAP	key:globex_equity_index	ResolutionEdge	-	2020-06-18	2020-06-18
+GAP	key:globex_equity_index	WithheldDate	-	2020-06-19	2020-06-19
+GAP	key:globex_equity_index	ResolutionEdge	-	2020-06-20	2020-06-20
+GAP	key:globex_equity_index	ResolutionEdge	-	2021-06-18	2021-06-18
+GAP	key:globex_equity_index	WithheldDate	-	2021-06-19	2021-06-19
+GAP	key:globex_equity_index	ResolutionEdge	-	2021-06-20	2021-06-20
+GAP	key:globex_equity_index	ResolutionEdge	-	2023-01-14	2023-01-15
+GAP	key:globex_equity_index	WithheldDate	-	2023-01-16	2023-01-16
+GAP	key:globex_equity_index	ResolutionEdge	-	2023-01-17	2023-01-17
+GAP	key:globex_equity_index	ResolutionEdge	-	2023-02-18	2023-02-19
+GAP	key:globex_equity_index	WithheldDate	-	2023-02-20	2023-02-20
+GAP	key:globex_equity_index	ResolutionEdge	-	2023-02-21	2023-02-21
+GAP	key:globex_equity_index	ResolutionEdge	-	2023-04-06	2023-04-06
+GAP	key:globex_equity_index	WithheldDate	-	2023-04-07	2023-04-07
+GAP	key:globex_equity_index	ResolutionEdge	-	2023-04-08	2023-04-08
+GAP	key:globex_equity_index	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	key:globex_equity_index	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	key:globex_equity_index	6553	15	6	1094	1	0	231	6
+GAP	key:globex_energy	ResolutionEdge	-	2019-06-18	2019-06-18
+GAP	key:globex_energy	WithheldDate	-	2019-06-19	2019-06-19
+GAP	key:globex_energy	ResolutionEdge	-	2019-06-20	2019-06-22
+GAP	key:globex_energy	ResolutionEdge	-	2020-06-18	2020-06-18
+GAP	key:globex_energy	WithheldDate	-	2020-06-19	2020-06-19
+GAP	key:globex_energy	ResolutionEdge	-	2020-06-20	2020-06-20
+GAP	key:globex_energy	ResolutionEdge	-	2021-06-18	2021-06-18
+GAP	key:globex_energy	WithheldDate	-	2021-06-19	2021-06-19
+GAP	key:globex_energy	ResolutionEdge	-	2021-06-20	2021-06-20
+GAP	key:globex_energy	ResolutionEdge	-	2023-01-13	2023-01-15
+GAP	key:globex_energy	WithheldDate	-	2023-01-16	2023-01-16
+GAP	key:globex_energy	ResolutionEdge	-	2023-01-17	2023-01-17
+GAP	key:globex_energy	ResolutionEdge	-	2023-02-17	2023-02-19
+GAP	key:globex_energy	WithheldDate	-	2023-02-20	2023-02-20
+GAP	key:globex_energy	ResolutionEdge	-	2023-02-21	2023-02-21
+GAP	key:globex_energy	ResolutionEdge	-	2023-04-06	2023-04-06
+GAP	key:globex_energy	WithheldDate	-	2023-04-07	2023-04-07
+GAP	key:globex_energy	ResolutionEdge	-	2023-04-08	2023-04-08
+GAP	key:globex_energy	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	key:globex_energy	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	key:globex_energy	6549	19	6	1094	1	0	223	6
+GAP	key:globex_silver_100oz	NoHolidayTable	-	2010-01-01	open
+SCOPE	key:globex_silver_100oz	0	6574	0	0	1095	0	0	0
+GAP	key:globex_grains	ResolutionEdge	-	2019-06-18	2019-06-18
+GAP	key:globex_grains	WithheldDate	-	2019-06-19	2019-06-19
+GAP	key:globex_grains	ResolutionEdge	-	2019-06-20	2019-06-20
+GAP	key:globex_grains	ResolutionEdge	-	2020-06-18	2020-06-18
+GAP	key:globex_grains	WithheldDate	-	2020-06-19	2020-06-19
+GAP	key:globex_grains	ResolutionEdge	-	2020-06-20	2020-06-20
+GAP	key:globex_grains	ResolutionEdge	-	2021-06-18	2021-06-18
+GAP	key:globex_grains	WithheldDate	-	2021-06-19	2021-06-19
+GAP	key:globex_grains	ResolutionEdge	-	2021-06-20	2021-06-20
+GAP	key:globex_grains	ResolutionEdge	-	2023-01-14	2023-01-15
+GAP	key:globex_grains	WithheldDate	-	2023-01-16	2023-01-16
+GAP	key:globex_grains	ResolutionEdge	-	2023-01-17	2023-01-17
+GAP	key:globex_grains	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	key:globex_grains	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	key:globex_grains	6560	10	4	1094	1	0	249	4
+GAP	key:globex_mini_grains	NormalWeekCarried	-	2010-01-01	2010-04-04
+GAP	key:globex_mini_grains	NoHolidayTable	-	2010-04-05	open
+SCOPE	key:globex_mini_grains	0	6574	0	0	1095	0	0	0
+GAP	key:globex_fx	ResolutionEdge	-	2019-06-18	2019-06-18
+GAP	key:globex_fx	WithheldDate	-	2019-06-19	2019-06-19
+GAP	key:globex_fx	ResolutionEdge	-	2019-06-20	2019-06-22
+GAP	key:globex_fx	ResolutionEdge	-	2020-06-18	2020-06-18
+GAP	key:globex_fx	WithheldDate	-	2020-06-19	2020-06-19
+GAP	key:globex_fx	ResolutionEdge	-	2020-06-20	2020-06-20
+GAP	key:globex_fx	ResolutionEdge	-	2021-06-18	2021-06-18
+GAP	key:globex_fx	WithheldDate	-	2021-06-19	2021-06-19
+GAP	key:globex_fx	ResolutionEdge	-	2021-06-20	2021-06-20
+GAP	key:globex_fx	ResolutionEdge	-	2023-01-13	2023-01-15
+GAP	key:globex_fx	WithheldDate	-	2023-01-16	2023-01-16
+GAP	key:globex_fx	ResolutionEdge	-	2023-01-17	2023-01-17
+GAP	key:globex_fx	ResolutionEdge	-	2023-02-17	2023-02-19
+GAP	key:globex_fx	WithheldDate	-	2023-02-20	2023-02-20
+GAP	key:globex_fx	ResolutionEdge	-	2023-02-21	2023-02-21
+GAP	key:globex_fx	ResolutionEdge	-	2023-04-06	2023-04-06
+GAP	key:globex_fx	WithheldDate	-	2023-04-07	2023-04-07
+GAP	key:globex_fx	ResolutionEdge	-	2023-04-08	2023-04-08
+GAP	key:globex_fx	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	key:globex_fx	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	key:globex_fx	6549	19	6	1094	1	0	214	6
+GAP	key:globex_interest_rates	ResolutionEdge	-	2019-06-18	2019-06-18
+GAP	key:globex_interest_rates	WithheldDate	-	2019-06-19	2019-06-19
+GAP	key:globex_interest_rates	ResolutionEdge	-	2019-06-20	2019-06-22
+GAP	key:globex_interest_rates	ResolutionEdge	-	2020-06-18	2020-06-18
+GAP	key:globex_interest_rates	WithheldDate	-	2020-06-19	2020-06-19
+GAP	key:globex_interest_rates	ResolutionEdge	-	2020-06-20	2020-06-20
+GAP	key:globex_interest_rates	ResolutionEdge	-	2021-06-18	2021-06-18
+GAP	key:globex_interest_rates	WithheldDate	-	2021-06-19	2021-06-19
+GAP	key:globex_interest_rates	ResolutionEdge	-	2021-06-20	2021-06-20
+GAP	key:globex_interest_rates	ResolutionEdge	-	2023-01-13	2023-01-15
+GAP	key:globex_interest_rates	WithheldDate	-	2023-01-16	2023-01-16
+GAP	key:globex_interest_rates	ResolutionEdge	-	2023-01-17	2023-01-17
+GAP	key:globex_interest_rates	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	key:globex_interest_rates	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	key:globex_interest_rates	6557	13	4	1094	1	0	265	4
+GAP	key:globex_livestock	ResolutionEdge	-	2019-06-18	2019-06-18
+GAP	key:globex_livestock	WithheldDate	-	2019-06-19	2019-06-19
+GAP	key:globex_livestock	ResolutionEdge	-	2019-06-20	2019-06-20
+GAP	key:globex_livestock	ResolutionEdge	-	2020-06-18	2020-06-18
+GAP	key:globex_livestock	WithheldDate	-	2020-06-19	2020-06-19
+GAP	key:globex_livestock	ResolutionEdge	-	2020-06-20	2020-06-21
+GAP	key:globex_livestock	ResolutionEdge	-	2021-06-18	2021-06-18
+GAP	key:globex_livestock	WithheldDate	-	2021-06-19	2021-06-19
+GAP	key:globex_livestock	ResolutionEdge	-	2021-06-20	2021-06-20
+GAP	key:globex_livestock	ResolutionEdge	-	2023-01-14	2023-01-15
+GAP	key:globex_livestock	WithheldDate	-	2023-01-16	2023-01-16
+GAP	key:globex_livestock	ResolutionEdge	-	2023-01-17	2023-01-17
+GAP	key:globex_livestock	ResolutionEdge	-	2023-02-18	2023-02-19
+GAP	key:globex_livestock	WithheldDate	-	2023-02-20	2023-02-20
+GAP	key:globex_livestock	ResolutionEdge	-	2023-02-21	2023-02-21
+GAP	key:globex_livestock	ResolutionEdge	-	2023-04-06	2023-04-06
+GAP	key:globex_livestock	WithheldDate	-	2023-04-07	2023-04-07
+GAP	key:globex_livestock	ResolutionEdge	-	2023-04-08	2023-04-09
+GAP	key:globex_livestock	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	key:globex_livestock	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	key:globex_livestock	6551	17	6	1094	1	0	211	6
+GAP	key:globex_cryptocurrency	HolidayWindowsBridged	-	2010-01-01	2018-12-27
+GAP	key:globex_cryptocurrency	HolidayWindowsBridged	-	2018-12-28	2018-12-31
+GAP	key:globex_cryptocurrency	ResolutionEdge	-	2019-06-18	2019-06-18
+GAP	key:globex_cryptocurrency	WithheldDate	-	2019-06-19	2019-06-19
+GAP	key:globex_cryptocurrency	ResolutionEdge	-	2019-06-20	2019-06-22
+GAP	key:globex_cryptocurrency	ResolutionEdge	-	2020-06-18	2020-06-18
+GAP	key:globex_cryptocurrency	WithheldDate	-	2020-06-19	2020-06-19
+GAP	key:globex_cryptocurrency	ResolutionEdge	-	2020-06-20	2020-06-20
+GAP	key:globex_cryptocurrency	ResolutionEdge	-	2021-06-18	2021-06-18
+GAP	key:globex_cryptocurrency	WithheldDate	-	2021-06-19	2021-06-19
+GAP	key:globex_cryptocurrency	ResolutionEdge	-	2021-06-20	2021-06-20
+GAP	key:globex_cryptocurrency	ResolutionEdge	-	2023-01-13	2023-01-15
+GAP	key:globex_cryptocurrency	WithheldDate	-	2023-01-16	2023-01-16
+GAP	key:globex_cryptocurrency	ResolutionEdge	-	2023-01-17	2023-01-17
+GAP	key:globex_cryptocurrency	ResolutionEdge	-	2023-02-17	2023-02-19
+GAP	key:globex_cryptocurrency	WithheldDate	-	2023-02-20	2023-02-20
+GAP	key:globex_cryptocurrency	ResolutionEdge	-	2023-02-21	2023-02-21
+GAP	key:globex_cryptocurrency	ResolutionEdge	-	2023-04-06	2023-04-06
+GAP	key:globex_cryptocurrency	WithheldDate	-	2023-04-07	2023-04-07
+GAP	key:globex_cryptocurrency	ResolutionEdge	-	2023-04-08	2023-04-08
+GAP	key:globex_cryptocurrency	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	key:globex_cryptocurrency	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	key:globex_cryptocurrency	3262	3306	6	1094	1	0	90	6
+GAP	key:cfe_vix	HolidayWindowsBridged	-	2010-01-01	2010-01-03
+GAP	key:cfe_vix	HolidayWindowsBridged	-	2010-01-04	2014-12-21
+GAP	key:cfe_vix	HolidayWindowsBridged	-	2014-12-22	2014-12-23
+GAP	key:cfe_vix	HolidayWindowsBridged	-	2015-01-03	2015-01-04
+GAP	key:cfe_vix	HolidayWindowsBridged	-	2015-01-05	2015-02-12
+GAP	key:cfe_vix	HolidayWindowsBridged	-	2015-02-13	2015-02-14
+GAP	key:cfe_vix	HolidayWindowsBridged	-	2016-01-21	2016-01-23
+GAP	key:cfe_vix	HolidayWindowsBridged	-	2016-01-24	2017-04-07
+GAP	key:cfe_vix	HolidayWindowsBridged	-	2017-04-08	2017-04-09
+GAP	key:cfe_vix	ResolutionEdge	-	2017-07-01	2017-07-02
+GAP	key:cfe_vix	WithheldDate	-	2017-07-03	2017-07-03
+GAP	key:cfe_vix	ResolutionEdge	-	2017-07-04	2017-07-04
+GAP	key:cfe_vix	ResolutionEdge	-	2026-12-31	2026-12-31
+GAP	key:cfe_vix	NoHolidayCoverage	-	2027-01-01	open
+SCOPE	key:cfe_vix	3898	2675	1	729	366	0	140	1
+GAP	key:eurex	ResolutionEdge	-	2026-12-31	2026-12-31
+GAP	key:eurex	NoHolidayCoverage	-	2027-01-01	open
+SCOPE	key:eurex	6208	366	0	729	366	0	116	0
+GAP	key:ice_us	HolidayWindowsBridged	-	2010-01-01	2024-12-29
+GAP	key:ice_us	HolidayWindowsBridged	-	2024-12-30	2024-12-31
+GAP	key:ice_us	ResolutionEdge	-	2025-07-02	2025-07-02
+GAP	key:ice_us	WithheldDate	-	2025-07-03	2025-07-03
+GAP	key:ice_us	WithheldDate	-	2025-07-04	2025-07-04
+GAP	key:ice_us	ResolutionEdge	-	2025-07-05	2025-07-05
+GAP	key:ice_us	ResolutionEdge	-	2025-12-23	2025-12-23
+GAP	key:ice_us	WithheldDate	-	2025-12-24	2025-12-24
+GAP	key:ice_us	ResolutionEdge	-	2025-12-25	2025-12-25
+GAP	key:ice_us	WithheldDate	-	2025-12-26	2025-12-26
+GAP	key:ice_us	ResolutionEdge	-	2025-12-27	2025-12-27
+GAP	key:ice_us	ResolutionEdge	-	2026-01-16	2026-01-18
+GAP	key:ice_us	WithheldDate	-	2026-01-19	2026-01-19
+GAP	key:ice_us	ResolutionEdge	-	2026-01-20	2026-01-20
+GAP	key:ice_us	ResolutionEdge	-	2026-02-13	2026-02-15
+GAP	key:ice_us	WithheldDate	-	2026-02-16	2026-02-16
+GAP	key:ice_us	ResolutionEdge	-	2026-02-17	2026-02-17
+GAP	key:ice_us	ResolutionEdge	-	2026-12-25	2026-12-27
+GAP	key:ice_us	WithheldDate	-	2026-12-28	2026-12-28
+GAP	key:ice_us	ResolutionEdge	-	2026-12-29	2026-12-29
+GAP	key:ice_us	ResolutionEdge	-	2027-01-15	2027-01-17
+GAP	key:ice_us	WithheldDate	-	2027-01-18	2027-01-18
+GAP	key:ice_us	ResolutionEdge	-	2027-01-19	2027-01-19
+GAP	key:ice_us	ResolutionEdge	-	2027-02-12	2027-02-14
+GAP	key:ice_us	WithheldDate	-	2027-02-15	2027-02-15
+GAP	key:ice_us	ResolutionEdge	-	2027-02-16	2027-02-16
+GAP	key:ice_us	ResolutionEdge	-	2027-03-25	2027-03-25
+GAP	key:ice_us	WithheldDate	-	2027-03-26	2027-03-26
+GAP	key:ice_us	ResolutionEdge	-	2027-03-27	2027-03-27
+GAP	key:ice_us	ResolutionEdge	-	2027-05-28	2027-05-30
+GAP	key:ice_us	WithheldDate	-	2027-05-31	2027-05-31
+GAP	key:ice_us	ResolutionEdge	-	2027-06-01	2027-06-01
+GAP	key:ice_us	ResolutionEdge	-	2027-06-17	2027-06-17
+GAP	key:ice_us	WithheldDate	-	2027-06-18	2027-06-18
+GAP	key:ice_us	ResolutionEdge	-	2027-06-19	2027-06-19
+GAP	key:ice_us	ResolutionEdge	-	2027-07-02	2027-07-04
+GAP	key:ice_us	WithheldDate	-	2027-07-05	2027-07-05
+GAP	key:ice_us	ResolutionEdge	-	2027-07-06	2027-07-06
+GAP	key:ice_us	ResolutionEdge	-	2027-09-03	2027-09-05
+GAP	key:ice_us	WithheldDate	-	2027-09-06	2027-09-06
+GAP	key:ice_us	ResolutionEdge	-	2027-09-07	2027-09-07
+GAP	key:ice_us	ResolutionEdge	-	2027-11-24	2027-11-24
+GAP	key:ice_us	WithheldDate	-	2027-11-25	2027-11-25
+GAP	key:ice_us	ResolutionEdge	-	2027-11-26	2027-11-27
+GAP	key:ice_us	ResolutionEdge	-	2027-12-24	2027-12-26
+GAP	key:ice_us	WithheldDate	-	2027-12-27	2027-12-27
+GAP	key:ice_us	ResolutionEdge	-	2027-12-28	2027-12-28
+GAP	key:ice_us	ResolutionEdge	-	2028-01-03	2028-01-03
+GAP	key:ice_us	NoHolidayCoverage	-	2028-01-04	open
+SCOPE	key:ice_us	1031	5527	16	1031	48	16	38	16
+GAP	key:ice_us_sugar	NormalWeekCarried	-	2010-01-01	2011-07-31
+GAP	key:ice_us_sugar	HolidayWindowsBridged	-	2011-08-01	2011-08-01
+GAP	key:ice_us_sugar	HolidayWindowsBridged	-	2011-08-02	2024-12-27
+GAP	key:ice_us_sugar	HolidayWindowsBridged	-	2024-12-28	2024-12-31
+GAP	key:ice_us_sugar	ResolutionEdge	-	2028-01-01	2028-01-03
+GAP	key:ice_us_sugar	NoHolidayCoverage	-	2028-01-04	open
+SCOPE	key:ice_us_sugar	1095	5479	0	1095	0	0	39	0
+GAP	key:ice_us_coffee	NormalWeekCarried	-	2010-01-01	2011-07-31
+GAP	key:ice_us_coffee	HolidayWindowsBridged	-	2011-08-01	2011-08-01
+GAP	key:ice_us_coffee	HolidayWindowsBridged	-	2011-08-02	2024-12-27
+GAP	key:ice_us_coffee	HolidayWindowsBridged	-	2024-12-28	2024-12-31
+GAP	key:ice_us_coffee	ResolutionEdge	-	2028-01-01	2028-01-03
+GAP	key:ice_us_coffee	NoHolidayCoverage	-	2028-01-04	open
+SCOPE	key:ice_us_coffee	1095	5479	0	1095	0	0	39	0
+GAP	key:ice_us_cocoa	NormalWeekCarried	-	2010-01-01	2011-07-31
+GAP	key:ice_us_cocoa	HolidayWindowsBridged	-	2011-08-01	2011-08-01
+GAP	key:ice_us_cocoa	HolidayWindowsBridged	-	2011-08-02	2024-12-27
+GAP	key:ice_us_cocoa	HolidayWindowsBridged	-	2024-12-28	2024-12-31
+GAP	key:ice_us_cocoa	ResolutionEdge	-	2028-01-01	2028-01-03
+GAP	key:ice_us_cocoa	NoHolidayCoverage	-	2028-01-04	open
+SCOPE	key:ice_us_cocoa	1095	5479	0	1095	0	0	39	0
+GAP	key:ice_us_cotton	NormalWeekCarried	-	2010-01-01	2011-07-31
+GAP	key:ice_us_cotton	HolidayWindowsBridged	-	2011-08-01	2011-08-01
+GAP	key:ice_us_cotton	HolidayWindowsBridged	-	2011-08-02	2024-12-26
+GAP	key:ice_us_cotton	HolidayWindowsBridged	-	2024-12-27	2024-12-31
+GAP	key:ice_us_cotton	ResolutionEdge	-	2027-12-31	2028-01-03
+GAP	key:ice_us_cotton	NoHolidayCoverage	-	2028-01-04	open
+SCOPE	key:ice_us_cotton	1094	5480	0	1094	1	0	33	0
+GAP	key:ice_us_orange_juice	NormalWeekCarried	-	2010-01-01	2011-07-31
+GAP	key:ice_us_orange_juice	HolidayWindowsBridged	-	2011-08-01	2011-08-01
+GAP	key:ice_us_orange_juice	HolidayWindowsBridged	-	2011-08-02	2024-12-27
+GAP	key:ice_us_orange_juice	HolidayWindowsBridged	-	2024-12-28	2024-12-31
+GAP	key:ice_us_orange_juice	ResolutionEdge	-	2028-01-01	2028-01-03
+GAP	key:ice_us_orange_juice	NoHolidayCoverage	-	2028-01-04	open
+SCOPE	key:ice_us_orange_juice	1095	5479	0	1095	0	0	32	0
+GAP	key:ice_us_dollar_index	NormalWeekCarried	-	2010-01-01	2011-02-06
+GAP	key:ice_us_dollar_index	HolidayWindowsBridged	-	2011-02-07	2011-02-07
+GAP	key:ice_us_dollar_index	HolidayWindowsBridged	-	2011-02-08	2024-12-29
+GAP	key:ice_us_dollar_index	HolidayWindowsBridged	-	2024-12-30	2024-12-31
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2025-07-02	2025-07-02
+GAP	key:ice_us_dollar_index	WithheldDate	-	2025-07-03	2025-07-03
+GAP	key:ice_us_dollar_index	WithheldDate	-	2025-07-04	2025-07-04
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2025-07-05	2025-07-05
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2025-12-23	2025-12-23
+GAP	key:ice_us_dollar_index	WithheldDate	-	2025-12-24	2025-12-24
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2025-12-25	2025-12-25
+GAP	key:ice_us_dollar_index	WithheldDate	-	2025-12-26	2025-12-26
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2025-12-27	2025-12-27
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2026-01-16	2026-01-18
+GAP	key:ice_us_dollar_index	WithheldDate	-	2026-01-19	2026-01-19
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2026-01-20	2026-01-20
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2026-02-13	2026-02-15
+GAP	key:ice_us_dollar_index	WithheldDate	-	2026-02-16	2026-02-16
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2026-02-17	2026-02-17
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2026-12-25	2026-12-27
+GAP	key:ice_us_dollar_index	WithheldDate	-	2026-12-28	2026-12-28
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2026-12-29	2026-12-29
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-01-15	2027-01-17
+GAP	key:ice_us_dollar_index	WithheldDate	-	2027-01-18	2027-01-18
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-01-19	2027-01-19
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-02-12	2027-02-14
+GAP	key:ice_us_dollar_index	WithheldDate	-	2027-02-15	2027-02-15
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-02-16	2027-02-16
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-03-25	2027-03-25
+GAP	key:ice_us_dollar_index	WithheldDate	-	2027-03-26	2027-03-26
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-03-27	2027-03-27
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-05-28	2027-05-30
+GAP	key:ice_us_dollar_index	WithheldDate	-	2027-05-31	2027-05-31
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-06-01	2027-06-01
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-06-17	2027-06-17
+GAP	key:ice_us_dollar_index	WithheldDate	-	2027-06-18	2027-06-18
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-06-19	2027-06-19
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-07-02	2027-07-04
+GAP	key:ice_us_dollar_index	WithheldDate	-	2027-07-05	2027-07-05
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-07-06	2027-07-06
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-09-03	2027-09-05
+GAP	key:ice_us_dollar_index	WithheldDate	-	2027-09-06	2027-09-06
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-09-07	2027-09-07
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-11-24	2027-11-24
+GAP	key:ice_us_dollar_index	WithheldDate	-	2027-11-25	2027-11-25
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-11-26	2027-11-27
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-12-24	2027-12-26
+GAP	key:ice_us_dollar_index	WithheldDate	-	2027-12-27	2027-12-27
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2027-12-28	2027-12-28
+GAP	key:ice_us_dollar_index	ResolutionEdge	-	2028-01-03	2028-01-03
+GAP	key:ice_us_dollar_index	NoHolidayCoverage	-	2028-01-04	open
+SCOPE	key:ice_us_dollar_index	1031	5527	16	1031	48	16	31	16
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2010-01-01	2010-01-03
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2019-06-18	2019-06-18
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2019-06-19	2019-06-19
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2019-06-20	2019-06-22
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2020-06-18	2020-06-18
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2020-06-19	2020-06-19
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2020-06-20	2020-06-20
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2021-06-18	2021-06-18
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2021-06-19	2021-06-19
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2021-06-20	2021-06-20
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2022-05-27	2022-05-29
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2022-05-30	2022-05-30
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2022-05-31	2022-05-31
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2023-01-13	2023-01-15
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2023-01-16	2023-01-16
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2023-01-17	2023-01-17
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2023-02-17	2023-02-19
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2023-02-20	2023-02-20
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2023-02-21	2023-02-21
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2023-04-06	2023-04-06
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2023-04-07	2023-04-07
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2023-04-08	2023-04-08
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-01-12	2024-01-14
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2024-01-15	2024-01-15
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-01-16	2024-01-16
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-02-16	2024-02-18
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2024-02-19	2024-02-19
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-02-20	2024-02-20
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-03-28	2024-03-28
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2024-03-29	2024-03-29
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-03-30	2024-03-30
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-05-24	2024-05-26
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2024-05-27	2024-05-27
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-05-28	2024-05-28
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-06-18	2024-06-18
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2024-06-19	2024-06-19
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-06-20	2024-06-22
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-07-02	2024-07-02
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2024-07-03	2024-07-03
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2024-07-04	2024-07-04
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-07-05	2024-07-06
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-08-30	2024-09-01
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2024-09-02	2024-09-02
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-09-03	2024-09-03
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-11-27	2024-11-27
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2024-11-28	2024-11-28
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2024-11-29	2024-11-29
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-11-30	2024-11-30
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-12-23	2024-12-23
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2024-12-24	2024-12-24
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2024-12-25	2024-12-25
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-12-26	2024-12-28
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2024-12-30	2024-12-30
+GAP	key:globex_nikkei_225_dollar	WithheldDate	-	2024-12-31	2024-12-31
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2025-01-01	2025-01-04
+GAP	key:globex_nikkei_225_dollar	ResolutionEdge	-	2027-12-31	2027-12-31
+GAP	key:globex_nikkei_225_dollar	NoHolidayCoverage	-	2028-01-01	open
+SCOPE	key:globex_nikkei_225_dollar	6492	62	20	1090	5	0	232	20
+GAP	key:eurex_fixed_income	ResolutionEdge	-	2026-12-31	2026-12-31
+GAP	key:eurex_fixed_income	NoHolidayCoverage	-	2027-01-01	open
+SCOPE	key:eurex_fixed_income	6208	366	0	729	366	0	108	0
+GAP	key:sgx_equity_index_japan	NoHolidayTable	-	2010-01-01	open
+SCOPE	key:sgx_equity_index_japan	0	6574	0	0	1095	0	0	0
+GAP	key:sgx_equity_index_china	NoHolidayTable	-	2010-01-01	open
+SCOPE	key:sgx_equity_index_china	0	6574	0	0	1095	0	0	0
+GAP	key:sgx_equity_index_singapore	NoHolidayTable	-	2010-01-01	open
+SCOPE	key:sgx_equity_index_singapore	0	6574	0	0	1095	0	0	0
+GAP	key:sgx_equity_index_taiwan	NoHolidayTable	-	2010-01-01	open
+SCOPE	key:sgx_equity_index_taiwan	0	6574	0	0	1095	0	0	0
+GAP	key:sgx_equity_index_ntr_usd	NoHolidayTable	-	2010-01-01	open
+SCOPE	key:sgx_equity_index_ntr_usd	0	6574	0	0	1095	0	0	0
+GAP	key:globex_rough_rice	NormalWeekCarried	-	2010-01-01	2010-03-14
+GAP	key:globex_rough_rice	NoHolidayTable	-	2010-03-15	open
+SCOPE	key:globex_rough_rice	0	6574	0	0	1095	0	0	0
+GAP	key:globex_weather	NormalWeekCarried	-	2010-01-01	2010-02-05
+GAP	key:globex_weather	NoHolidayTable	-	2010-02-06	open
+SCOPE	key:globex_weather	0	6574	0	0	1095	0	0	0
+GAP	key:globex_spot_quoted	NoHolidayTable	-	2010-01-01	open
+SCOPE	key:globex_spot_quoted	0	6574	0	0	1095	0	0	0
+GAP	key:globex_event_contracts	NoHolidayTable	-	2010-01-01	open
+SCOPE	key:globex_event_contracts	0	6574	0	0	1095	0	0	0
+GAP	key:globex_event_contracts_btc	NoHolidayTable	-	2010-01-01	open
+SCOPE	key:globex_event_contracts_btc	0	6574	0	0	1095	0	0	0
+GAP	key:globex_gold_tas	NoHolidayTable	-	2010-01-01	open
+SCOPE	key:globex_gold_tas	0	6574	0	0	1095	0	0	0
+GAP	key:globex_silver_tas	NoHolidayTable	-	2010-01-01	open
+SCOPE	key:globex_silver_tas	0	6574	0	0	1095	0	0	0
+GAP	key:globex_copper_tas	NoHolidayTable	-	2010-01-01	open
+SCOPE	key:globex_copper_tas	0	6574	0	0	1095	0	0	0
+GAP	key:globex_platinum_tas	NoHolidayTable	-	2010-01-01	open
+SCOPE	key:globex_platinum_tas	0	6574	0	0	1095	0	0	0
+GAP	key:globex_palladium_tas	NoHolidayTable	-	2010-01-01	open
+SCOPE	key:globex_palladium_tas	0	6574	0	0	1095	0	0	0
+GAP	key:sgx	NoHolidayTable	-	2010-01-01	open
+SCOPE	key:sgx	0	6574	0	0	1095	0	0	0
+SCOPE	key:always_open	6574	0	0	1095	0	0	0	0
+INWIN	exchange:nasdaq	2010-01-01	2026-12-31	covered=6190	refused=19	ResolutionEdge=15,WithheldDate=4
+INWIN	exchange:nyse	2010-01-01	2028-12-31	covered=6574	refused=0	
+INWIN	exchange:cme	2010-01-01	2012-12-31	covered=1006	refused=90	ResolutionEdge=62,WithheldDate=28
+INWIN	exchange:cme	2013-01-01	2015-12-31	covered=1000	refused=95	ResolutionEdge=65,WithheldDate=30
+INWIN	exchange:cme	2016-01-01	2018-12-31	covered=1017	refused=79	ResolutionEdge=54,WithheldDate=25
+INWIN	exchange:cme	2019-01-01	2021-12-31	covered=1005	refused=91	ResolutionEdge=63,WithheldDate=28
+INWIN	exchange:cme	2022-01-01	2024-12-31	covered=1005	refused=91	ResolutionEdge=63,WithheldDate=28
+INWIN	exchange:cme	2025-01-01	2027-12-31	covered=981	refused=114	ResolutionEdge=69,WithheldDate=45
+INWIN	exchange:cbot	2010-01-01	2012-12-31	covered=1051	refused=45	ResolutionEdge=29,WithheldDate=16
+INWIN	exchange:cbot	2013-01-01	2015-12-31	covered=991	refused=104	ResolutionEdge=69,WithheldDate=35
+INWIN	exchange:cbot	2016-01-01	2018-12-31	covered=1011	refused=85	ResolutionEdge=58,WithheldDate=27
+INWIN	exchange:cbot	2019-01-01	2021-12-31	covered=993	refused=103	ResolutionEdge=69,WithheldDate=34
+INWIN	exchange:cbot	2022-01-01	2024-12-31	covered=997	refused=99	ResolutionEdge=67,WithheldDate=32
+INWIN	exchange:cbot	2025-01-01	2027-12-31	covered=955	refused=140	ResolutionEdge=82,WithheldDate=58
+INWIN	exchange:comex	2010-01-01	2012-12-31	covered=1096	refused=0	
+INWIN	exchange:comex	2013-01-01	2015-12-31	covered=1095	refused=0	
+INWIN	exchange:comex	2016-01-01	2018-12-31	covered=1096	refused=0	
+INWIN	exchange:comex	2019-01-01	2021-12-31	covered=1085	refused=11	ResolutionEdge=8,WithheldDate=3
+INWIN	exchange:comex	2022-01-01	2024-12-31	covered=1083	refused=13	ResolutionEdge=10,WithheldDate=3
+INWIN	exchange:comex	2025-01-01	2027-12-31	covered=1094	refused=1	ResolutionEdge=1
+INWIN	exchange:nymex	2010-01-01	2012-12-31	covered=1096	refused=0	
+INWIN	exchange:nymex	2013-01-01	2015-12-31	covered=1095	refused=0	
+INWIN	exchange:nymex	2016-01-01	2018-12-31	covered=1096	refused=0	
+INWIN	exchange:nymex	2019-01-01	2021-12-31	covered=1085	refused=11	ResolutionEdge=8,WithheldDate=3
+INWIN	exchange:nymex	2022-01-01	2024-12-31	covered=1083	refused=13	ResolutionEdge=10,WithheldDate=3
+INWIN	exchange:nymex	2025-01-01	2027-12-31	covered=1094	refused=1	ResolutionEdge=1
+INWIN	exchange:cfe	2014-12-24	2015-01-02	covered=10	refused=0	
+INWIN	exchange:cfe	2015-02-15	2016-01-20	covered=340	refused=0	
+INWIN	exchange:cfe	2017-04-10	2026-12-31	covered=3548	refused=5	ResolutionEdge=4,WithheldDate=1
+INWIN	exchange:coinbase_derivatives	2021-06-28	2026-09-07	covered=1897	refused=1	ResolutionEdge=1
+INWIN	exchange:eurex	2010-01-01	2026-12-31	covered=6208	refused=1	ResolutionEdge=1
+INWIN	exchange:iceus	2025-01-01	2028-01-03	covered=946	refused=149	ResolutionEdge=108,WithheldDate=41
+INWIN	exchange:asx	2010-01-01	2027-12-31	covered=6573	refused=1	ResolutionEdge=1
+INWIN	exchange:nzx	2010-01-01	2027-01-04	covered=6208	refused=5	ResolutionEdge=5
+INWIN	exchange:tse	2010-01-01	2027-12-31	covered=6573	refused=1	ResolutionEdge=1
+INWIN	exchange:nse_india	2010-01-01	2017-12-31	covered=2901	refused=21	ResolutionEdge=16,WithheldDate=5
+INWIN	exchange:nse_india	2019-01-01	2026-12-31	covered=2914	refused=8	ResolutionEdge=6,WithheldDate=2
+INWIN	exchange:hkex	2010-01-01	2024-12-31	covered=5479	refused=0	
+INWIN	exchange:hkex	2025-01-01	2027-12-31	covered=1094	refused=1	ResolutionEdge=1
+INWIN	exchange:sgx_securities	2014-01-01	2019-12-31	covered=2191	refused=0	
+INWIN	exchange:sgx_securities	2020-01-01	2020-01-01	covered=1	refused=0	
+INWIN	exchange:sgx_securities	2025-01-01	2026-12-31	covered=729	refused=1	ResolutionEdge=1
+INWIN	exchange:sse	2011-01-01	2026-12-31	covered=5843	refused=1	ResolutionEdge=1
+INWIN	exchange:lse	2010-01-01	2027-12-31	covered=6555	refused=19	ResolutionEdge=14,WithheldDate=5
+INWIN	exchange:xetra	2010-01-01	2024-12-31	covered=5479	refused=0	
+INWIN	exchange:xetra	2025-01-01	2027-12-31	covered=1094	refused=1	ResolutionEdge=1
+INWIN	exchange:six	2010-01-01	2011-12-31	covered=730	refused=0	
+INWIN	exchange:six	2012-01-01	2017-12-31	covered=2192	refused=0	
+INWIN	exchange:six	2018-01-01	2019-12-31	covered=730	refused=0	
+INWIN	exchange:six	2020-01-01	2024-12-31	covered=1827	refused=0	
+INWIN	exchange:six	2025-01-01	2027-12-31	covered=1094	refused=1	ResolutionEdge=1
+INWIN	exchange:euronext_paris	2010-01-01	2026-12-31	covered=6202	refused=7	ResolutionEdge=5,WithheldDate=2
+INWIN	exchange:borsa_istanbul	2012-03-02	2026-12-31	covered=5417	refused=1	ResolutionEdge=1
+INWIN	exchange:tsx	2010-01-01	2016-12-31	covered=2557	refused=0	
+INWIN	exchange:tsx	2017-01-01	2026-12-31	covered=3651	refused=1	ResolutionEdge=1
+INWIN	exchange:tadawul	2021-01-01	2027-12-31	covered=2555	refused=1	ResolutionEdge=1
+INWIN	exchange:b3	2011-01-01	2024-12-31	covered=5114	refused=0	
+INWIN	exchange:b3	2025-01-01	2026-12-31	covered=729	refused=1	ResolutionEdge=1
+INWIN	key:globex_equity_index	2010-01-01	2012-12-31	covered=1096	refused=0	
+INWIN	key:globex_equity_index	2013-01-01	2015-12-31	covered=1095	refused=0	
+INWIN	key:globex_equity_index	2016-01-01	2018-12-31	covered=1096	refused=0	
+INWIN	key:globex_equity_index	2019-01-01	2021-12-31	covered=1087	refused=9	ResolutionEdge=6,WithheldDate=3
+INWIN	key:globex_equity_index	2022-01-01	2024-12-31	covered=1085	refused=11	ResolutionEdge=8,WithheldDate=3
+INWIN	key:globex_equity_index	2025-01-01	2027-12-31	covered=1094	refused=1	ResolutionEdge=1
+INWIN	key:globex_energy	2010-01-01	2012-12-31	covered=1096	refused=0	
+INWIN	key:globex_energy	2013-01-01	2015-12-31	covered=1095	refused=0	
+INWIN	key:globex_energy	2016-01-01	2018-12-31	covered=1096	refused=0	
+INWIN	key:globex_energy	2019-01-01	2021-12-31	covered=1085	refused=11	ResolutionEdge=8,WithheldDate=3
+INWIN	key:globex_energy	2022-01-01	2024-12-31	covered=1083	refused=13	ResolutionEdge=10,WithheldDate=3
+INWIN	key:globex_energy	2025-01-01	2027-12-31	covered=1094	refused=1	ResolutionEdge=1
+INWIN	key:globex_grains	2010-01-01	2012-12-31	covered=1096	refused=0	
+INWIN	key:globex_grains	2013-01-01	2015-12-31	covered=1095	refused=0	
+INWIN	key:globex_grains	2016-01-01	2018-12-31	covered=1096	refused=0	
+INWIN	key:globex_grains	2019-01-01	2021-12-31	covered=1087	refused=9	ResolutionEdge=6,WithheldDate=3
+INWIN	key:globex_grains	2022-01-01	2024-12-31	covered=1092	refused=4	ResolutionEdge=3,WithheldDate=1
+INWIN	key:globex_grains	2025-01-01	2027-12-31	covered=1094	refused=1	ResolutionEdge=1
+INWIN	key:globex_fx	2010-01-01	2012-12-31	covered=1096	refused=0	
+INWIN	key:globex_fx	2013-01-01	2015-12-31	covered=1095	refused=0	
+INWIN	key:globex_fx	2016-01-01	2018-12-31	covered=1096	refused=0	
+INWIN	key:globex_fx	2019-01-01	2021-12-31	covered=1085	refused=11	ResolutionEdge=8,WithheldDate=3
+INWIN	key:globex_fx	2022-01-01	2024-12-31	covered=1083	refused=13	ResolutionEdge=10,WithheldDate=3
+INWIN	key:globex_fx	2025-01-01	2027-12-31	covered=1094	refused=1	ResolutionEdge=1
+INWIN	key:globex_interest_rates	2010-01-01	2012-12-31	covered=1096	refused=0	
+INWIN	key:globex_interest_rates	2013-01-01	2015-12-31	covered=1095	refused=0	
+INWIN	key:globex_interest_rates	2016-01-01	2018-12-31	covered=1096	refused=0	
+INWIN	key:globex_interest_rates	2019-01-01	2021-12-31	covered=1085	refused=11	ResolutionEdge=8,WithheldDate=3
+INWIN	key:globex_interest_rates	2022-01-01	2024-12-31	covered=1091	refused=5	ResolutionEdge=4,WithheldDate=1
+INWIN	key:globex_interest_rates	2025-01-01	2027-12-31	covered=1094	refused=1	ResolutionEdge=1
+INWIN	key:globex_livestock	2010-01-01	2012-12-31	covered=1096	refused=0	
+INWIN	key:globex_livestock	2013-01-01	2015-12-31	covered=1095	refused=0	
+INWIN	key:globex_livestock	2016-01-01	2018-12-31	covered=1096	refused=0	
+INWIN	key:globex_livestock	2019-01-01	2021-12-31	covered=1086	refused=10	ResolutionEdge=7,WithheldDate=3
+INWIN	key:globex_livestock	2022-01-01	2024-12-31	covered=1084	refused=12	ResolutionEdge=9,WithheldDate=3
+INWIN	key:globex_livestock	2025-01-01	2027-12-31	covered=1094	refused=1	ResolutionEdge=1
+INWIN	key:globex_cryptocurrency	2019-01-01	2021-12-31	covered=1085	refused=11	ResolutionEdge=8,WithheldDate=3
+INWIN	key:globex_cryptocurrency	2022-01-01	2024-12-31	covered=1083	refused=13	ResolutionEdge=10,WithheldDate=3
+INWIN	key:globex_cryptocurrency	2025-01-01	2027-12-31	covered=1094	refused=1	ResolutionEdge=1
+INWIN	key:globex_nikkei_225_dollar	2010-01-01	2012-12-31	covered=1093	refused=3	ResolutionEdge=3
+INWIN	key:globex_nikkei_225_dollar	2013-01-01	2015-12-31	covered=1095	refused=0	
+INWIN	key:globex_nikkei_225_dollar	2016-01-01	2018-12-31	covered=1096	refused=0	
+INWIN	key:globex_nikkei_225_dollar	2019-01-01	2021-12-31	covered=1085	refused=11	ResolutionEdge=8,WithheldDate=3
+INWIN	key:globex_nikkei_225_dollar	2022-01-01	2024-12-31	covered=1033	refused=63	ResolutionEdge=46,WithheldDate=17
+INWIN	key:globex_nikkei_225_dollar	2025-01-01	2027-12-31	covered=1090	refused=5	ResolutionEdge=5
