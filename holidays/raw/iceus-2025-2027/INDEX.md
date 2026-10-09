@@ -66,3 +66,10 @@ can be re-checked without a PDF tool; the `.txt` mtime is the extraction time, n
   (`…/ICE_Futures_US_ExNotDelayedOpensMay4_20260319.pdf`) but it is not archived; the live host was rate-limited.
 - **2026 Thanksgiving / Christmas Eve / Boxing Day and all 2027 per-holiday notices.** Not published yet; see
   section C of `iceus-2025-notices.md`.
+| `cdx/live_probe_2026-10-09.txt` | live `HEAD` probes of 150 candidate notice filenames on
+  https://www.ice.com/publicdocs/futures_us/exchange_notices/ | 2026-10-09 (UTC) | see file header | — | 0 hits: every candidate 404, including the 33 Christmas names the
+  2026-09-26 wave left 429-inconclusive (now resolved negative) and twice-weekly issue-date
+  sweeps for the 2026 MLK / Presidents Day / Boxing Day / Christmas notices; the known-good
+  2025 MLK notice name probed 200 immediately before the sweep as the channel control. The
+  live channel joins Wayback and Common Crawl as closed for the 2025 Independence Day and
+  Christmas / Boxing Day notices and for the 2026 MLK / Presidents Day / Boxing Day notices. |
