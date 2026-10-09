@@ -1,0 +1,19 @@
+# 2026-10-09 (UTC) Common Crawl sweep — the untried second archive for the remaining markers
+# Queries against https://index.commoncrawl.org/<collection>-index (URL-escaped prefixes, output=json):
+#
+# NEGATIVE:
+#   cmegroup.com/services/trading-hours*        CC-MAIN-2023-06 (two 502/504s then a clean
+#     'No Captures'), CC-MAIN-2023-14, CC-MAIN-2023-50 — the trading-hours service XHR was
+#     never crawled, so no January-2023 MLK or THBP-B window exists in CC.
+#   nseindia.com/content/cmtr* (hosts nseindia.com, www.nseindia.com, nsearchives.nseindia.com)
+#     CC-MAIN-2012, CC-MAIN-2014-10, CC-MAIN-2017-43, CC-MAIN-2019-35 — zero captures; the
+#     capital-market circular PDFs were never crawled.
+#   api.londonstockexchange.com/*  CC-MAIN-2025-05, CC-MAIN-2025-13, CC-MAIN-2025-30 — zero
+#     captures (2025-23 does not exist as a collection); the business-days API was never crawled.
+# UNRESOLVED:
+#   CC-MAIN-2013-20 nseindia.com/content/cmtr* — 504 Gateway Time-out, not retried to completion.
+# UNTRIED (not a negative):
+#   web.archive.org CDX for ice.com/futures-us/trading-hours — the Wayback Machine returned
+#   'Temporarily Offline' on every attempt 2026-10-09; the operator's own trading-hours page
+#   remains a live channel whose archived mid-2025 / December-2025 snapshots could state the
+#   2025 Independence Day and Christmas arrangements.
