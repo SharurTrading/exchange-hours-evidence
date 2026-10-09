@@ -10748,3 +10748,62 @@ verified at the exact merge commit dba5ea4:
   carries version 1.0.0, the folded changelog, and 469 files (141 under
   docs/). Branch release/1.0.0 deleted (local+remote) post-merge.
 READY: the maintainer tags v1.0.0 on dba5ea4 and runs cargo publish.
+
+## 2026-10-09 UTC — the globex clock-rule wave: crate #315, store #5
+
+The maintainer's sourcing directive ("handle all unsourced holidays if
+possible, globex futures first") shipped in one crate PR and one store PR.
+Crate #315 (branch `globex-holidays-clock-rule`, head 975fa76; squash
+e30b13f): the four CME venue holiday tables became the verbatim mirrors of
+their profile clocks under the same-day charter amendment completing
+#153/#242 — cbot<-globex_grains, cme<-globex_equity_index,
+comex/nymex<-globex_energy — retiring the ~390 cross-family dispute rows;
+the eight globex families' Juneteenth markers (2019/2020/2021-06-19)
+deleted as audited normal on the operator's own consolidated annual
+bundles, deliberately overturning the #224 upholding; 2023-02-20 and
+2023-04-07 worked up at T1 from the operator's own summary sheets
+`files/presidents-day.pdf` and `files/good-friday.pdf`; each CME venue now
+withholds exactly one date (2023-01-16, inherited from its clock) and the
+nikkei markers stand with a new zero-capture THBP-B CDX negative. Full
+gates green (1,297 tests), digest fence green. Store #5 (branch
+`ifus-live-probe-2026-10-09`, head f2ae4fe; squash 05d1b9b): the
+`holidays/raw/iceus-2025-2027/cdx/live_probe_2026-10-09.txt` artifact —
+150 live-HEAD filename probes, 0 hits, resolving the 33 429-inconclusive
+Christmas candidates — recorded in the directory INDEX. Merged: crate
+e30b13f, store 05d1b9b; main CI green on both.
+
+## 2026-10-09 UTC — the follow-up negatives: crate #316, LSE/IFUS records in #315's second commit
+
+#316 (head 67c70e4-precursor on `unsourced-followups-2`; squash 60bfefe):
+the Euronext end-of-year appendix re-check — the live holiday page still
+links only the 2025 edition, so the 2026-12-24 / 2026-12-31 markers stand
+until the operator publishes the 2026 appendix. #315's second commit
+(975fa76) recorded the same-day LSE business-days API single-capture
+re-check (one 2025 capture) and the IFUS live-channel negative. Merged:
+60bfefe; main CI green.
+
+## 2026-10-09 UTC — the Nasdaq four close as data; the NSE Muhurat re-check closes negative: crate #317, store #6
+
+Crate #317 (branch `unsourced-followups-3`, post-rebase head 67c70e4;
+squash f756036) and store #6 (branch
+`nasdaq-alerts-nse-recheck-2026-10-09`, head dcd7d48; squash e6a5064).
+Recovered: all four Nasdaq markers, keyed to the operator's own Equity
+Trader Alerts at T1 — ETA2010-73 and ETA2011-54 (the post-Thanksgiving
+early closes, 2025-11-26/2011-11-25 at 13:00 ET per the alerts' Early
+Closing Schedules), ETA2012-45 (Hurricane Sandy closure 2012-10-30; zero
+Wayback captures — the reason four prior attempts closed negative; read
+live), ETA2025-1 (the 2025-01-09 National Day of Mourning closure, Wayback
+replay 20250122151135). Nasdaq reads complete to 2026-12-31. GOTCHA: the
+trader-news `id=ETA2024-86` URL serves alert 2024-85's bytes — cite
+ETA2025-1, never the id-addressed 2024-86 capture. Closed negative: the
+seven NSE Muhurat markers — the 2026-10-06 pass's two apex-host CDX files
+were error pages and its sweep never completed; the completed sweep holds
+no CMTR/19187 and none of the Diwali-window stragglers, and the operator's
+own live circulars listing (414 CM circulars 2026-09-22..10-09) shows the
+2026-11-08 Muhurat notification has not issued. Full gates green (1,298
+tests), digest fence green against store main after the merge-order fix
+(merge the store PR first — the crate's documents-digest CI job checks out
+the store's main). Merged: crate f756036, store e6a5064; main CI green on
+all three crate heads. Watch items that self-close on publication: the
+Euronext 2026 end-of-year appendix, the NSE 2026-11-08 Muhurat
+notification, the ICE 2026 Boxing Day notice, and the 2027 IFUS notices.
