@@ -10859,3 +10859,27 @@ also negative), the ICE 2026-12-28 Boxing Day notice (unissued at the Oct 5
 listing), the 2027 IFUS notices (publication horizon), NSE Muhurat (archive
 and CC exhausted; 2026-11-08 unissued), LSE 2025 five dates (both archives
 negative), Euronext 2026-12-24/31 (appendix unpublished).
+
+## 2026-10-10 UTC — the OANDA book wave 1 capture
+
+The maintainer's OANDA-listed market coverage programme opens: SharurPlatform#1046 (the
+consumer-side instrument→identity map) and oanda-rs#30 (venue identity) are its follow-ups. This
+capture holds the operator's own statement of its UK book: the hours-of-operation page
+(OANDA Europe Limited, FCA 542574) as both the maintainer-saved PDF rendering and the raw HTML,
+plus the holiday-trading-hours page whose dated sections run 2025-01-01..2026-10-30 (all times
+ET). The programme's mapping rule, settled with the maintainer: OANDA's own book — FX ex-TRY
+(Sun 17:05–Fri 16:59 ET, 6-minute 16:59–17:05 break, NZD pairs +06:59–07:05 Auckland), TRY
+(Mon 08:00–Fri 17:00 CET), XAU/XAG (18:05–16:59 ET), and the fourteen US-anchored continuous
+listings (17:01–15:59 CT ≡ 18:01–16:59 ET, no daily maintenance) — gets `oanda_*` book keys,
+because those books trade straight through the daily halts of the futures clocks they hedge on;
+the break-matching listings (grains, sugar, the European/APAC index CFDs) map to their
+exchange/futures clocks in later waves. The `***` rows are anchor evidence, not served values:
+Australia 200's close (06:59 Sydney) is pinned to the US close in UTC, and the Frankfurt-printed
+opens (01:16) are pinned at fixed UTC, printed at the standard offset. The holiday page's FX
+rows are three trade-date closures — 2025-01-01, 2025-12-25, 2026-01-01 ("open at 17:05" on the
+holiday, i.e. the holiday trade date's session does not trade and the reopen lands at the next
+session's normal open; 2025-12-31's "close at 16:59" states the no-reopen) — and its TRY silence
+ships as no table with the interpretation question recorded in the crate evidence file. Digests:
+PDF `d8a853cd621313feec96eb1ee0f45b81b7674dea2e0e6cb50b175e78347153d7`, hours HTML
+`60f6143dd5d678b1a34a9937aa938d2884380a33bf3542a4c72f8f03fa3607b7`, holiday HTML
+`c7137ce3da4cc19d0431955feedc10fb6b9731214ad3cfc7966160e72f8559da`.
