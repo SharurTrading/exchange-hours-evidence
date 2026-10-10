@@ -10831,3 +10831,31 @@ a January 2023 window answers HTTP 500) and Channel D (the LSE business-days pag
 captures are client-side shells stating no dates). Channel E: the ICE monitoring entry point moved
 to `ice.com/holiday-hours` (its IFUS calendar re-fetched byte-identical). Store branch head 3055629
 (five commits incl. the four artifact directories); crate branch `unsourced-followups-4`.
+
+## 2026-10-09 UTC (second entry) — the notices-service wave: crate #319, store #9
+
+The maintainer's pushback ("there would be evidence online") was right. The
+ICE notices listing's backing service — `POST websitenotices?searchCollections
+=futures_us_exchange_notice&year=<YYYY>`, T2 — names every notice the
+archive-only sweeps missed, and its back catalogue (188 notices for 2025)
+yielded the 2025 Independence Day and Christmas notices and the 2026 MLK and
+Presidents Day notices at T1: sixteen family dates closed (FANG+ 13:15/13:00
+and Dollar Index regular/13:00 across the 2025 July Fourth days, the
+Christmas Eve triple 13:05/13:15/13:45 CT-equivalents in NY, the 2025-12-26
+softs late open, FANG+ 13:00 on the 2026 MLK and Presidents days) plus
+Cotton's 2025-07-07 late open as new rows; `iceus` moves to 49 rows with 42
+withheld and issue #168 closes. CFE's 2017 marker closed positive from
+CFEIC17-022 (June 16, 2017) recovered out of Common Crawl CC-MAIN-2017-34 —
+`cfe` now withholds nothing. Closed negative with records: cmegroup.cn (no
+holiday page in the archive), the lseg.com old-site business-days page
+(2024-2025 captures are client-side shells). The ICE monitoring entry point
+moved to `ice.com/holiday-hours`; sources.md updated. Crate #319 (branch
+`unsourced-followups-4`, post-rebase head f40cd22; squash bf93f9f); store #9
+(branch `ifus-notices-service-2026-10-09`, head 108507a; squash e6a5064's
+successor — merged first, the documents-digest job checks out store main).
+Full gates green (1,299 tests), digest fence 2,949 Documents rows. Remaining
+markers: 2023-01-16 (every CME family and venue — cmegroup.cn channel now
+also negative), the ICE 2026-12-28 Boxing Day notice (unissued at the Oct 5
+listing), the 2027 IFUS notices (publication horizon), NSE Muhurat (archive
+and CC exhausted; 2026-11-08 unissued), LSE 2025 five dates (both archives
+negative), Euronext 2026-12-24/31 (appendix unpublished).
