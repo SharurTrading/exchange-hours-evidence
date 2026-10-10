@@ -10807,3 +10807,27 @@ the store's main). Merged: crate f756036, store e6a5064; main CI green on
 all three crate heads. Watch items that self-close on publication: the
 Euronext 2026 end-of-year appendix, the NSE 2026-11-08 Muhurat
 notification, the ICE 2026 Boxing Day notice, and the 2027 IFUS notices.
+
+## 2026-10-10 UTC — the notices listing service answers: the four IFUS notices close as data; CFEIC17-022 closes the 2017 CFE marker; two channels close negative: crate `unsourced-followups-4`, store `ifus-notices-service-2026-10-09`
+
+Channel A: the ICE notices page's backing service is
+`POST /api/sitesearchservice/v1/search/websitenotices?searchCollections=futures_us_exchange_notice&year=<YYYY>`
+(read out of the page's JS bundle; plain curl with a browser UA answers) — the whole back catalogue,
+188 exchange notices for 2025, including the four the archive-only sweeps could never reach. The
+2025 Independence Day notice (May 8, 2025: FANG+ 13:15 on Jul 3 / 13:00 on Jul 4; Dollar Index
+regular then 13:00; Cotton late open 8:00 am Jul 7), the 2025 Christmas notice (Oct 31, 2025: softs
+13:05 / FANG+ 13:15 / Dollar Index 13:45 on Dec 24; softs late open 7:30 am and index families
+regular on Dec 26), and the 2026 MLK (Dec 3, 2025) and Presidents Day (Dec 23, 2025) notices — the
+latter two falsifying the earlier no-notice-exists records — were retrieved live; the 2026-12-28
+marker stays (no 2026 Christmas notice issued as of the listing's Oct 5 latest). Channel C:
+`cfecirculars.com` is dead (NXDOMAIN, zero archive captures), but the operator's own circulars
+index survives in the Wayback Machine and names **CFEIC17-022 "Modified Trading Hours for
+Independence Day Holiday" (June 16, 2017)**, whose bytes came from Common Crawl CC-MAIN-2017-34
+(crawl 2017-08-18; origin Last-Modified Jun 16) and state "Trading in all CFE products will close
+at 12:15 p.m. on Monday, July 3, 2017" — the cfe.rs marker closes. Closed negative: Channel B (the
+2023-01-16 CME marker — cmegroup.cn has no holiday page anywhere in the archive, cmegroup.fr is
+parked EuroDNS, education/advisories paths empty, the one further archived service capture querying
+a January 2023 window answers HTTP 500) and Channel D (the LSE business-days page's two 2024-2025
+captures are client-side shells stating no dates). Channel E: the ICE monitoring entry point moved
+to `ice.com/holiday-hours` (its IFUS calendar re-fetched byte-identical). Store branch head 3055629
+(five commits incl. the four artifact directories); crate branch `unsourced-followups-4`.
