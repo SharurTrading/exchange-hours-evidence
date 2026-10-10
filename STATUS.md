@@ -10832,7 +10832,7 @@ captures are client-side shells stating no dates). Channel E: the ICE monitoring
 to `ice.com/holiday-hours` (its IFUS calendar re-fetched byte-identical). Store branch head 3055629
 (five commits incl. the four artifact directories); crate branch `unsourced-followups-4`.
 
-## 2026-10-09 UTC (second entry) — the notices-service wave: crate #319, store #9
+## 2026-10-10 UTC — the notices-service wave: crate #319, store #9
 
 The maintainer's pushback ("there would be evidence online") was right. The
 ICE notices listing's backing service — `POST websitenotices?searchCollections
