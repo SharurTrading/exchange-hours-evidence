@@ -10991,3 +10991,67 @@ tracker cites the circulars, and the NYSE Liffe historical-notice zips
 12:15 Christmas half days and the sterling-product closures). 2015-2020
 schedule editions and the 2010 full-year notice are the recorded archive gaps.
 Digests: SHA256SUMS.txt in each normal-weeks directory.
+
+## 2026-10-11 UTC — OANDA pre-publication audit and starred-selector qualification
+
+Source audit of release head `e17d5b88963548e7d1b747abb1773a4f4a712483`
+(library identical to main `5c156277`): **reject the claim of an entire completed
+OANDA implementation**. The supplied UK hours PDF reproduces
+`d8a853cd621313feec96eb1ee0f45b81b7674dea2e0e6cb50b175e78347153d7`;
+the holiday capture reproduces
+`c7137ce3da4cc19d0431955feedc10fb6b9731214ad3cfc7966160e72f8559da`.
+
+The source defects and correction are tracked in exchange-hours-rs#329,
+#330, #331, #332 and #333, with corrective PR #334. Missing MLK 2025 closes,
+rounded holiday reopens, the clipped Holy Thursday 17:00 close, Brent's lost
+Sunday opening in Monday bounds, and non-chronological replacement searches
+are corrected in the candidate. US Treasury CFDs gain their own key because
+Good Friday 2026 closes bonds at 11:14 ET and indices at 09:14; Carter's bond
+close is 13:15 ET. The US-anchored listing count is **fifteen**, not fourteen:
+six index listings (both Japan 225 currencies), four Treasury listings and
+five commodity listings. The current candidate has seven OANDA keys; the
+original release head contained six. Pending-order storage while markets are
+closed is explicitly scoped as a broker facility, not a timed session queue.
+The PDF does not authorize additional hedge-futures maintenance halts.
+
+Validation at correction head `d5f2d0742e4249069e61c01cf84af87627aaf89f`:
+1335 integration tests passed, plus the required formatting, strict clippy,
+doctest/rustdoc, dependency, MSRV and publish-dry-run checks. The inspected
+package contains 466 files and 141 evidence documents. The original six book
+normal-week grids also passed 4140 independently generated Python zoneinfo
+UTC-boundary probes over 20 selected 2025/2026 weeks. A one-minute mutation
+of the new bond close is caught by its public regression. The informational
+benchmark and old-engine comparison showed no material session-state regression.
+An isolated private consumer snapshot passed 4000 workspace tests (21 existing
+skips) and strict workspace clippy after NZD replacement-holiday and Treasury
+routing corrections; the active checkout was preserved (SharurMinus#331).
+
+The additional operator artifact captured here is the **undated** static
+product guide at <https://www.oanda.com/assets/documents/252/Hours_of_Operation.pdf>,
+retrieved 2026-10-11 UTC, SHA256
+`778ea39e0f71005015a111963061cd86f8d7fce7b589af0279316992239244ba`, saved as
+`normal-weeks/oanda-star-selector-audit-2026-10-11/oanda-static-hours-252.pdf`.
+Its Australia 200 row explicitly uses **US DST**: the earlier Sydney night
+ends at 07:00 during US DST and 08:00 otherwise. No operator effective day or
+current selector cutover is stated. The current generic `***` clause alone
+therefore does not prove a universal fixed-UTC clock or a Sydney-only selector.
+This qualifies the earlier capture note's fixed-UTC assertion; the current
+Australian CFD selector remains an operator-evidence condition in #332.
+The guide's earlier German and other grids are context, not current rows.
+
+Final candidate `e04163cd8c6993d1c0ddba6dc9d61e742317efb1` adds this source
+qualification without changing runtime data. Its final clean-commit recheck
+passed all 1335 integration tests (871.002 seconds), formatting, strict clippy,
+doctest/rustdoc, dependency checks, MSRV 1.95, publish dry-run and package
+inspection; the captured-store fence verified 2970 Documents rows across
+47 files and 838 distinct digests. The isolated consumer snapshot at this
+exact candidate passed 4000 tests (21 existing skips) and strict workspace
+clippy. CI's main-backed digest fence still requires reviewed evidence PR #19
+to merge; its missing new artifact is not a waiver of that fence. The original release PR #328 stays draft. Complete
+instrument coverage is still not certified: the six planned derivatives
+identities are absent, historical normal-week and holiday gaps remain,
+TRY has no audited holiday table, the other book tables stop at 2026-10-30,
+and the recorded Carter/Brent/reopen uncertainties remain. Closing conditions
+are recorded in #332 and the evidence files; neither passing tests nor a
+future build plan discharges them. This audit is not an independent approval
+of the correction authored in PR #334.
