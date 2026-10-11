@@ -305,11 +305,6 @@
     "bytes": 3851178
   },
   {
-    "path": "holidays/raw/bme-cash-2010-2026/retrieval.json",
-    "sha256": "0e25c017c765793cf97792eed574c2def8bdb76c2a7af6416c4d9df7dcfa58c1",
-    "bytes": 10402
-  },
-  {
     "path": "normal-weeks/oanda-history-audit-2026-10-11/corp-news-2012-cdx.json",
     "sha256": "695e363caf6a6db6e440c129959e5c1fc059aaaebfc1f596bd9fba26a2508c17",
     "bytes": 72585
@@ -503,5 +498,15 @@
     "path": "normal-weeks/oanda-history-audit-2026-10-11/weekend-2012-mirror.html",
     "sha256": "e66a5c3106fbdcfde1786548458b0dd53eb2b25c8e46ec335bb6372b3805d736",
     "bytes": 208652
+  },
+  {
+    "path": "holidays/raw/bme-cash-2010-2026/2023-tal-rules.pdf",
+    "sha256": "bb91f0bf4edfdb67e3a39c2e940f183d3db89363b44fcff6c4923a1d23511fc9",
+    "bytes": 144521
+  },
+  {
+    "path": "holidays/raw/bme-cash-2010-2026/retrieval.json",
+    "sha256": "f284b7b0075ee3e7b19c58a37bd47239db49501156bf92ff56677313f91cf7cd",
+    "bytes": 10727
   }
 ]
