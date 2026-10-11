@@ -1,0 +1,517 @@
+[
+  {
+    "date": "2010-01-01",
+    "kind": "Closed",
+    "document": "EURONEXT-PR-2010",
+    "source_excerpts": [
+      "pt on the following days: - Friday 1 January 2010 (New Year's Day) - Friday 2 April 2010 (Good Friday) - Monday 5 April 2010 (Easter Monday) On Friday 24 December 2010 and Friday 31 December 2010, cash markets will close at 1.00 "
+    ]
+  },
+  {
+    "date": "2010-12-24",
+    "kind": "early_close(50_700)",
+    "document": "EURONEXT-EOY-2010",
+    "source_excerpts": [
+      "his particular instance, on Friday 24th December 2010 and on Friday 31st December 2010, the markets will be closed at 14:00 CET. The continuous trading will be changed here in after. NYSE Euronext European Cash Markets deelt u mede d"
+    ],
+    "instant_source": " J0      Equities AEX     C 09:00 09:00 - 13:55 14:00 14:00 - 14:05            6% 3% 10% 120 s Co",
+    "derived_close_ssm": 50700,
+    "instant_agrees": true
+  },
+  {
+    "date": "2010-12-31",
+    "kind": "early_close(50_700)",
+    "document": "EURONEXT-EOY-2010",
+    "source_excerpts": [
+      "y 24th December 2010 and on Friday 31st December 2010, the markets will be closed at 14:00 CET. The continuous trading will be changed here in after. NYSE Euronext European Cash Markets deelt u mede dat, in dit uitzonderlijke geval, "
+    ],
+    "instant_source": " J0      Equities AEX     C 09:00 09:00 - 13:55 14:00 14:00 - 14:05            6% 3% 10% 120 s Co",
+    "derived_close_ssm": 50700,
+    "instant_agrees": true
+  },
+  {
+    "date": "2011-04-22",
+    "kind": "Closed",
+    "document": "EURONEXT-PR-2011",
+    "source_excerpts": [
+      "pt on the following days: \u2022 Friday 22 April 2011 (Good Friday) \u2022 Monday 25 April 2011 (Easter Monday) \u2022 Monday 26 December 2011 On Friday 23 December 2011 and Friday 30 December 2011 trading on the Cash markets will close at 5.3"
+    ]
+  },
+  {
+    "date": "2011-12-23",
+    "kind": "early_close(63_300)",
+    "document": "EURONEXT-PR-2011",
+    "source_excerpts": [
+      " Monday 26 December 2011 On Friday 23 December 2011 and Friday 30 December 2011 trading on the Cash markets will close at 5.35 pm CET. In line with the underlying cash markets, contracts on the Derivatives market will be available "
+    ],
+    "instant_source": "at 5.35 pm CET",
+    "derived_close_ssm": 63300,
+    "instant_agrees": true
+  },
+  {
+    "date": "2011-12-30",
+    "kind": "early_close(63_300)",
+    "document": "EURONEXT-PR-2011",
+    "source_excerpts": [
+      "Friday 23 December 2011 and Friday 30 December 2011 trading on the Cash markets will close at 5.35 pm CET. In line with the underlying cash markets, contracts on the Derivatives market will be available for trading as follows: \u2022 FT"
+    ],
+    "instant_source": "at 5.35 pm CET",
+    "derived_close_ssm": 63300,
+    "instant_agrees": true
+  },
+  {
+    "date": "2012-04-06",
+    "kind": "Closed",
+    "document": "EURONEXT-TC-2012",
+    "source_excerpts": [
+      "LSO ON THE FOLLOWING DATES: Friday 6 April 2012 ........................................................................................................................Good Friday Monday 9 April 2012 ..........................."
+    ]
+  },
+  {
+    "date": "2012-12-24",
+    "kind": "early_close(50_400)",
+    "document": "EURONEXT-TC-2012",
+    "source_excerpts": [
+      "oxing Day On Christmas Eve, Monday 24 December 2012, and New Year's Eve, Monday 31 December 2012, the markets will close at 14:00 CET. Page 1 of 1"
+    ],
+    "instant_source": "will close at 14:00 CET",
+    "derived_close_ssm": 50400,
+    "instant_agrees": true
+  },
+  {
+    "date": "2012-12-26",
+    "kind": "Closed",
+    "document": "EURONEXT-TC-2012",
+    "source_excerpts": [
+      "...........Christmas Day Wednesday 26 December 2012 .....................................................................................................Boxing Day On Christmas Eve, Monday 24 December 2012, and New Year's Eve, Mond"
+    ]
+  },
+  {
+    "date": "2012-12-31",
+    "kind": "early_close(50_400)",
+    "document": "EURONEXT-TC-2012",
+    "source_excerpts": [
+      "r 2012, and New Year's Eve, Monday 31 December 2012, the markets will close at 14:00 CET. Page 1 of 1"
+    ],
+    "instant_source": "will close at 14:00 CET",
+    "derived_close_ssm": 50400,
+    "instant_agrees": true
+  },
+  {
+    "date": "2013-05-01",
+    "kind": "Closed",
+    "document": "EURONEXT-IF-2013",
+    "source_excerpts": [
+      "l 2013 (Easter Monday) \u2022 Wednesday 1 May 2013 (Labour Day) \u2022 Wednesday 25 December 2013 (Christmas Day) \u2022 Thursday 26 December 2013 (Boxing Day) On Tuesday 24 December 2013 and Tuesday 31 December 2013, trading on the Cash Ma"
+    ]
+  },
+  {
+    "date": "2013-12-24",
+    "kind": "early_close(50_400)",
+    "document": "EURONEXT-IF-2013",
+    "source_excerpts": [
+      "ember 2013 (Boxing Day) On Tuesday 24 December 2013 and Tuesday 31 December 2013, trading on the Cash Markets will close at 14:00 CET. As some other markets have not yet published their trading schedules for next year, more detaile"
+    ],
+    "instant_source": "will close at 14:00 CET",
+    "derived_close_ssm": 50400,
+    "instant_agrees": true
+  },
+  {
+    "date": "2013-12-31",
+    "kind": "early_close(50_400)",
+    "document": "EURONEXT-IF-2013",
+    "source_excerpts": [
+      "esday 24 December 2013 and Tuesday 31 December 2013, trading on the Cash Markets will close at 14:00 CET. As some other markets have not yet published their trading schedules for next year, more detailed information on NYSE Arca Eu"
+    ],
+    "instant_source": "will close at 14:00 CET",
+    "derived_close_ssm": 50400,
+    "instant_agrees": true
+  },
+  {
+    "date": "2014-01-01",
+    "kind": "Closed",
+    "document": "EURONEXT-HH-2014-01-12",
+    "source_excerpts": [
+      " Cash Markets are closed Wednesday 1 January 2014 New Year's Day Friday 18 April 2014 Good Friday Monday 21 April 2014 Easter Monday Thursday 1 May 2014 Labour Day Thursday 25 December 2014 Christmas Day Friday 26 December 2014 B"
+    ]
+  },
+  {
+    "date": "2014-12-24",
+    "kind": "early_close(50_700)",
+    "document": "EURONEXT-HH-2014-01-12",
+    "source_excerpts": [
+      "ember 2014 Boxing Day On Wednesday 24 December 2014 and Wednesday 31 December 2014, trading on the Cash markets will be half day trading, with all instruments closing by 14:05 CET. Contracts on the Derivatives markets will close at"
+    ],
+    "instant_source": "closing by 14:05 CET",
+    "derived_close_ssm": 50700,
+    "instant_agrees": true
+  },
+  {
+    "date": "2014-12-25",
+    "kind": "Closed",
+    "document": "EURONEXT-HH-2014-01-12",
+    "source_excerpts": [
+      "day 1 May 2014 Labour Day Thursday 25 December 2014 Christmas Day Friday 26 December 2014 Boxing Day On Wednesday 24 December 2014 and Wednesday 31 December 2014, trading on the Cash markets will be half day trading, with all instr"
+    ]
+  },
+  {
+    "date": "2014-12-31",
+    "kind": "early_close(50_700)",
+    "document": "EURONEXT-HH-2014-01-12",
+    "source_excerpts": [
+      "day 24 December 2014 and Wednesday 31 December 2014, trading on the Cash markets will be half day trading, with all instruments closing by 14:05 CET. Contracts on the Derivatives markets will close at various times, commencing at m"
+    ],
+    "instant_source": "closing by 14:05 CET",
+    "derived_close_ssm": 50700,
+    "instant_agrees": true
+  },
+  {
+    "date": "2015-04-06",
+    "kind": "Closed",
+    "document": "EURONEXT-HH-2015-03-22",
+    "source_excerpts": [
+      "ay 3 April 2015 Good Friday Monday 6 April 2015 Easter Monday Friday 1 May 2015 Labour Day Friday 25 December 2015 Christmas Day Thursday 31 December 2015 New Year's Eve On Thursday 24 December 2015 (Christmas Eve), trading on "
+    ]
+  },
+  {
+    "date": "2015-12-24",
+    "kind": "early_close(50_700)",
+    "document": "EURONEXT-HH-2015-03-22",
+    "source_excerpts": [
+      "er 2015 New Year's Eve On Thursday 24 December 2015 (Christmas Eve), trading on the Cash markets will be half day trading with all instruments closing by 14:05 CET. Contracts on the Derivatives markets will close at various times, "
+    ],
+    "instant_source": "closing by 14:05 CET",
+    "derived_close_ssm": 50700,
+    "instant_agrees": true
+  },
+  {
+    "date": "2016-01-01",
+    "kind": "Closed",
+    "document": "EURONEXT-HH-2016-03-04",
+    "source_excerpts": [
+      "on the following days: 2016 Friday 1 January 2016 New Year's Day Friday 25 March 2016 Good Friday Monday 28 March 2016 Easter Monday Monday 26 December 2016 Boxing Day On Friday 23 December 2016 and on Friday 30 December 2016, tr"
+    ]
+  },
+  {
+    "date": "2017-04-17",
+    "kind": "Closed",
+    "document": "EURONEXT-HH-2017-08-05",
+    "source_excerpts": [
+      "14 April 2017 (Good Friday) Monday 17 April 2017 (Easter Monday) Monday 1 May 2017 (Labour Day) Monday 25 December 2017 (Christmas Day) Tuesday 26 December 2017 (Boxing Day) On Friday 22 December 2017 and on Friday 29 December 2"
+    ]
+  },
+  {
+    "date": "2018-03-30",
+    "kind": "Closed",
+    "document": "EURONEXT-HH-2018-08-26",
+    "source_excerpts": [
+      "nuary 2018 (New Year\u2019s Day) Friday 30 March 2018 (Good Friday) Monday 2 April 2018 (Easter Monday) Tuesday 1 May 2018 (Labour Day) Tuesday 25 December 2018 (Christmas Day) Wednesday 26 December 2018 (Boxing Day) On Monday 24 Dec"
+    ]
+  },
+  {
+    "date": "2018-12-24",
+    "kind": "early_close(50_700)",
+    "document": "EURONEXT-HH-2018-08-26",
+    "source_excerpts": [
+      "cember 2018 (Boxing Day) On Monday 24 December 2018 (Christmas Eve) and on Monday 31 December 2018 (New Year\u2019s Eve), trading on the Cash markets will be half day trading, with all instruments closing by 14:05 CET. Contracts on the "
+    ],
+    "instant_source": "closing by 14:05 CET",
+    "derived_close_ssm": 50700,
+    "instant_agrees": true
+  },
+  {
+    "date": "2018-12-26",
+    "kind": "Closed",
+    "document": "EURONEXT-HH-2018-08-26",
+    "source_excerpts": [
+      "ber 2018 (Christmas Day) Wednesday 26 December 2018 (Boxing Day) On Monday 24 December 2018 (Christmas Eve) and on Monday 31 December 2018 (New Year\u2019s Eve), trading on the Cash markets will be half day trading, with all instruments"
+    ]
+  },
+  {
+    "date": "2018-12-31",
+    "kind": "early_close(50_700)",
+    "document": "EURONEXT-HH-2018-08-26",
+    "source_excerpts": [
+      "2018 (Christmas Eve) and on Monday 31 December 2018 (New Year\u2019s Eve), trading on the Cash markets will be half day trading, with all instruments closing by 14:05 CET. Contracts on the Derivatives markets will close at various times"
+    ],
+    "instant_source": "closing by 14:05 CET",
+    "derived_close_ssm": 50700,
+    "instant_agrees": true
+  },
+  {
+    "date": "2019-05-01",
+    "kind": "Closed",
+    "document": "EURONEXT-HH-2019-03-25",
+    "source_excerpts": [
+      "ril 2019 (Easter Monday) Wednesday 1 May 2019 (Labour Day) Wednesday 25 December 2019 (Christmas Day) Thursday 26 December 2019 (Boxing Day). On Tuesday 24 December 2019 (Christmas Eve) and on Tuesday 31 December 2019 (New Ye"
+    ]
+  },
+  {
+    "date": "2019-12-24",
+    "kind": "early_close(50_700)",
+    "document": "EURONEXT-HH-2019-03-25",
+    "source_excerpts": [
+      "mber 2019 (Boxing Day). On Tuesday 24 December 2019 (Christmas Eve) and on Tuesday 31 December 2019 (New Year\u2019s Eve), trading on the Cash Markets, including Euronext Dublin, will be half day trading, with all instruments closing by"
+    ],
+    "instant_source": "closing by 14:05 CET",
+    "derived_close_ssm": 50700,
+    "instant_agrees": true
+  },
+  {
+    "date": "2019-12-31",
+    "kind": "early_close(50_700)",
+    "document": "EURONEXT-HH-2019-03-25",
+    "source_excerpts": [
+      "019 (Christmas Eve) and on Tuesday 31 December 2019 (New Year\u2019s Eve), trading on the Cash Markets, including Euronext Dublin, will be half day trading, with all instruments closing by 14:05 CET. Contracts on the Derivatives Markets"
+    ],
+    "instant_source": "closing by 14:05 CET",
+    "derived_close_ssm": 50700,
+    "instant_agrees": true
+  },
+  {
+    "date": "2020-01-01",
+    "kind": "Closed",
+    "document": "EURONEXT-HH-2019-12-10",
+    "source_excerpts": [
+      "t on the following days: Wednesday 1 January 2020 (New Year\u2019s Day) Friday 10 April 2020 (Good Friday) Monday 13 April 2020 (Easter Monday) Friday 1 May 2020 (Labour Day) Friday 25 December 2020 (Christmas Day). On Thursday 24 Dec"
+    ]
+  },
+  {
+    "date": "2020-12-24",
+    "kind": "early_close(50_700)",
+    "document": "EURONEXT-HH-2019-12-10",
+    "source_excerpts": [
+      " 2020 (Christmas Day). On Thursday 24 December 2020 (Christmas Eve) and on Thursday 31 December 2020 (New Year\u2019s Eve), trading will be half day trading with closing times as follows: On the Euronext Amsterdam, Brussels, Lisbon and "
+    ],
+    "instant_source": "closing by 14:05 CET",
+    "derived_close_ssm": 50700,
+    "instant_agrees": true
+  },
+  {
+    "date": "2020-12-25",
+    "kind": "Closed",
+    "document": "EURONEXT-HH-2019-12-10",
+    "source_excerpts": [
+      "day 1 May 2020 (Labour Day) Friday 25 December 2020 (Christmas Day). On Thursday 24 December 2020 (Christmas Eve) and on Thursday 31 December 2020 (New Year\u2019s Eve), trading will be half day trading with closing times as follows: On"
+    ]
+  },
+  {
+    "date": "2020-12-31",
+    "kind": "early_close(50_700)",
+    "document": "EURONEXT-HH-2019-12-10",
+    "source_excerpts": [
+      "20 (Christmas Eve) and on Thursday 31 December 2020 (New Year\u2019s Eve), trading will be half day trading with closing times as follows: On the Euronext Amsterdam, Brussels, Lisbon and Paris Cash Markets, all instruments will close by"
+    ],
+    "instant_source": "closing by 14:05 CET",
+    "derived_close_ssm": 50700,
+    "instant_agrees": true
+  },
+  {
+    "date": "2021-12-24",
+    "kind": "early_close(50_700)",
+    "document": "EURONEXT-HH-2020-12-05",
+    "source_excerpts": [
+      "ednesday before Easter). On Friday 24 December 2021 (Christmas Eve) and on Friday 31 December 2021 (New Year\u2019s Eve), trading will be half day trading with the exception of Oslo B\u00f8rs, which will be closed for the entire day . Closin"
+    ],
+    "instant_source": "close by 14:05 CET",
+    "derived_close_ssm": 50700,
+    "instant_agrees": true
+  },
+  {
+    "date": "2021-12-31",
+    "kind": "early_close(50_700)",
+    "document": "EURONEXT-HH-2020-12-05",
+    "source_excerpts": [
+      "2021 (Christmas Eve) and on Friday 31 December 2021 (New Year\u2019s Eve), trading will be half day trading with the exception of Oslo B\u00f8rs, which will be closed for the entire day . Closing hours for other markets will be as follows: O"
+    ],
+    "instant_source": "close by 14:05 CET",
+    "derived_close_ssm": 50700,
+    "instant_agrees": true
+  },
+  {
+    "date": "2023-04-07",
+    "kind": "Closed",
+    "document": "EURONEXT-HH-2023-11-27",
+    "source_excerpts": [
+      "AH* Closed Full Day Trading Friday 7 April 2023 (Good Friday) Closed Closed Closed Closed Closed Closed Closed Monday 10 April 2023 (Easter Monday) Closed Closed Closed Closed Closed Closed Closed Monday 24 and Tuesday 25 April"
+    ]
+  },
+  {
+    "date": "2024-01-01",
+    "kind": "Closed",
+    "document": "EURONEXT-HH-2023-11-27",
+    "source_excerpts": [
+      "lin Lisbon Milan Oslo Paris Monday 1 January (New Year\u2019s Day) Closed Closed Closed Closed Closed Closed Closed Tuesday 2 January 2024 (Substitute for New Year's Day) Full Day Trading Full Day Trading Full Day Trading Full Day "
+    ]
+  },
+  {
+    "date": "2024-12-24",
+    "kind": "early_close(50_700)",
+    "document": "EURONEXT-EOY-2024",
+    "source_excerpts": [
+      {
+        "B111": "RM",
+        "C111": "J0",
+        "D111": "Amsterdam",
+        "E111": "Equities",
+        "F111": "Equities AEX",
+        "G111": "Equities",
+        "H111": "C",
+        "I111": "09:00 Random",
+        "J111": "09:00 Random  -  13:55\nContinuous Random",
+        "K111": "14:00 Random",
+        "L111": "14:00  -  14:05\nContinuous TAL Random",
+        "M111": "0.59722222222222221",
+        "N111": "LTP",
+        "O111": "0.06",
+        "P111": "0.03",
+        "Q111": "0.08",
+        "R111": "0.7",
+        "S111": "180 s",
+        "T111": "R",
+        "U111": "39999999",
+        "V111": "19999999",
+        "W111": "39999999",
+        "X111": "19999999"
+      }
+    ],
+    "instant_source": "14:00  -  14:05\nContinuous TAL Random",
+    "derived_close_ssm": 50700,
+    "instant_agrees": true
+  },
+  {
+    "date": "2024-12-25",
+    "kind": "Closed",
+    "document": "EURONEXT-HH-2023-11-27",
+    "source_excerpts": [
+      "losed Half Day Trading** Wednesday 25 December 2024 (Christmas) Closed Closed Closed Closed Closed Closed Closed Thursday 26 December 2024 (St Stephens Day / Boxing Day) Closed Closed Closed Closed Closed Closed Closed Friday 27 De"
+    ]
+  },
+  {
+    "date": "2024-12-31",
+    "kind": "early_close(50_700)",
+    "document": "EURONEXT-EOY-2024",
+    "source_excerpts": [
+      {
+        "B111": "RM",
+        "C111": "J0",
+        "D111": "Amsterdam",
+        "E111": "Equities",
+        "F111": "Equities AEX",
+        "G111": "Equities",
+        "H111": "C",
+        "I111": "09:00 Random",
+        "J111": "09:00 Random  -  13:55\nContinuous Random",
+        "K111": "14:00 Random",
+        "L111": "14:00  -  14:05\nContinuous TAL Random",
+        "M111": "0.59722222222222221",
+        "N111": "LTP",
+        "O111": "0.06",
+        "P111": "0.03",
+        "Q111": "0.08",
+        "R111": "0.7",
+        "S111": "180 s",
+        "T111": "R",
+        "U111": "39999999",
+        "V111": "19999999",
+        "W111": "39999999",
+        "X111": "19999999"
+      }
+    ],
+    "instant_source": "14:00  -  14:05\nContinuous TAL Random",
+    "derived_close_ssm": 50700,
+    "instant_agrees": true
+  },
+  {
+    "date": "2025-04-21",
+    "kind": "Closed",
+    "document": "EURONEXT-HH-2025-12-06",
+    "source_excerpts": [
+      "Closed Closed Closed Closed Monday 21 April 2025 (Easter Monday) Closed Closed Closed Closed Closed Closed Closed Friday 25 April 2025 Full Trading Day Full Trading Day Full Trading Day Full Trading Day *No TAH Full Trading Day "
+    ]
+  },
+  {
+    "date": "2025-12-24",
+    "kind": "early_close(50_700)",
+    "document": "EURONEXT-EOY-2025",
+    "source_excerpts": [
+      {
+        "B108": "RM",
+        "C108": "J0",
+        "D108": "Amsterdam",
+        "E108": "Equities",
+        "F108": "Equities AEX",
+        "G108": "Equities",
+        "H108": "C",
+        "I108": "09:00 Random",
+        "J108": "09:00 Random  -  13:55\nContinuous Random",
+        "K108": "14:00 Random",
+        "L108": "14:00  -  14:05\nContinuous TAL Random",
+        "M108": "0.59722222222222221",
+        "N108": "LTP",
+        "O108": "0.06",
+        "P108": "0.03",
+        "Q108": "0.08",
+        "R108": "0.7",
+        "S108": "SCRP",
+        "T108": "180 s",
+        "U108": "R",
+        "V108": "39999999",
+        "W108": "19999999",
+        "X108": "39999999",
+        "Y108": "19999999"
+      }
+    ],
+    "instant_source": "14:00  -  14:05\nContinuous TAL Random",
+    "derived_close_ssm": 50700,
+    "instant_agrees": true
+  },
+  {
+    "date": "2025-12-31",
+    "kind": "early_close(50_700)",
+    "document": "EURONEXT-EOY-2025",
+    "source_excerpts": [
+      {
+        "B108": "RM",
+        "C108": "J0",
+        "D108": "Amsterdam",
+        "E108": "Equities",
+        "F108": "Equities AEX",
+        "G108": "Equities",
+        "H108": "C",
+        "I108": "09:00 Random",
+        "J108": "09:00 Random  -  13:55\nContinuous Random",
+        "K108": "14:00 Random",
+        "L108": "14:00  -  14:05\nContinuous TAL Random",
+        "M108": "0.59722222222222221",
+        "N108": "LTP",
+        "O108": "0.06",
+        "P108": "0.03",
+        "Q108": "0.08",
+        "R108": "0.7",
+        "S108": "SCRP",
+        "T108": "180 s",
+        "U108": "R",
+        "V108": "39999999",
+        "W108": "19999999",
+        "X108": "39999999",
+        "Y108": "19999999"
+      }
+    ],
+    "instant_source": "14:00  -  14:05\nContinuous TAL Random",
+    "derived_close_ssm": 50700,
+    "instant_agrees": true
+  },
+  {
+    "date": "2026-12-24",
+    "kind": "Unsourced",
+    "document": "EURONEXT-IF-2026",
+    "source_excerpts": []
+  },
+  {
+    "date": "2026-12-31",
+    "kind": "Unsourced",
+    "document": "EURONEXT-IF-2026",
+    "source_excerpts": []
+  }
+]

@@ -1,0 +1,163 @@
+{
+  "head": "3e0e5b9a9a15357cc461b54269ff39e831af0281",
+  "files": {
+    "CHANGELOG.md": [
+      "CHANGELOG.md"
+    ],
+    "README.md": [
+      "README.md"
+    ],
+    "evidence": [
+      "docs/evidence/bme.md",
+      "docs/evidence/euronext_amsterdam.md",
+      "docs/evidence/lse.md",
+      "docs/evidence/oanda.md",
+      "docs/evidence/oanda_brent.md",
+      "docs/evidence/oanda_fx.md",
+      "docs/evidence/oanda_metals.md",
+      "docs/evidence/oanda_try_fx.md",
+      "docs/evidence/oanda_us_bond_cfd.md",
+      "docs/evidence/oanda_us_commodity_cfd.md",
+      "docs/evidence/oanda_us_index_cfd.md"
+    ],
+    "inventory plan": [
+      "docs/schedules/coverage-2025.md"
+    ],
+    "ledger": [
+      "docs/schedules/verification.md"
+    ],
+    "data/registration": [
+      "src/calendar/schedules/equities/europe/bme.rs",
+      "src/calendar/schedules/holidays/bme.rs",
+      "src/calendar/schedules/holidays/euronext_amsterdam.rs",
+      "src/calendar/schedules/holidays/lse.rs",
+      "src/calendar/schedules/holidays/mod.rs",
+      "src/calendar/schedules/holidays/oanda_brent.rs",
+      "src/calendar/schedules/holidays/oanda_fx.rs",
+      "src/calendar/schedules/holidays/oanda_metals.rs",
+      "src/calendar/schedules/holidays/oanda_us_bond_cfd.rs",
+      "src/calendar/schedules/holidays/oanda_us_commodity_cfd.rs",
+      "src/calendar/schedules/holidays/oanda_us_index_cfd.rs",
+      "src/calendar/schedules/holidays/routing.rs"
+    ],
+    "tests/golden": [
+      "tests/bme_holidays.rs",
+      "tests/euronext_amsterdam_holidays.rs",
+      "tests/global_equities/current.rs",
+      "tests/global_equities/holidays.rs",
+      "tests/golden/normal_week_grids.txt",
+      "tests/oanda_publication.rs",
+      "tests/schedule_documentation/coverage_inventory.rs",
+      "tests/schedule_documentation/mod.rs",
+      "tests/venue_sessions/oanda_book.rs"
+    ]
+  },
+  "source_bytes": {
+    "lse": {
+      "src/calendar/schedules/holidays/lse.rs": {
+        "reviewed": "ea5b5c773bfd2f6d4f8d0e442901cc2115520d6cfce479c9aea5380758b6addb",
+        "final": "ea5b5c773bfd2f6d4f8d0e442901cc2115520d6cfce479c9aea5380758b6addb",
+        "equal": true
+      },
+      "docs/evidence/lse.md": {
+        "reviewed": "fee2367c2fbbf3f79cef6d320f1a83627cdc2993f0b4d28f6fdfddfa93240e66",
+        "final": "fee2367c2fbbf3f79cef6d320f1a83627cdc2993f0b4d28f6fdfddfa93240e66",
+        "equal": true
+      }
+    },
+    "euronext_amsterdam": {
+      "src/calendar/schedules/holidays/euronext_amsterdam.rs": {
+        "reviewed": "2b4493df5ed12f770fc26a8c93c00dc708f812a46ee106fe44712276320f7b14",
+        "final": "2b4493df5ed12f770fc26a8c93c00dc708f812a46ee106fe44712276320f7b14",
+        "equal": true
+      },
+      "docs/evidence/euronext_amsterdam.md": {
+        "reviewed": "6faa2db64a4fb8d68bfa33be65cbe10122b4cafb547685c94bf4d3d8736d549b",
+        "final": "6faa2db64a4fb8d68bfa33be65cbe10122b4cafb547685c94bf4d3d8736d549b",
+        "equal": true
+      }
+    }
+  },
+  "counts": {
+    "lse": {
+      "total": 184,
+      "kinds": {
+        "Closed": 148,
+        "early_close": 36
+      }
+    },
+    "euronext_amsterdam": {
+      "total": 108,
+      "kinds": {
+        "Closed": 83,
+        "early_close": 23,
+        "Unsourced": 2
+      }
+    },
+    "bme": {
+      "total": 106,
+      "kinds": {
+        "Closed": 86,
+        "ReplacementBlocks": 18,
+        "Unsourced": 2
+      }
+    },
+    "oanda_fx": {
+      "total": 4,
+      "kinds": {
+        "Closed": 4
+      }
+    },
+    "oanda_metals": {
+      "total": 46,
+      "kinds": {
+        "Closed": 7,
+        "early_close": 20,
+        "ReplacementBlocks": 19
+      }
+    },
+    "oanda_us_index_cfd": {
+      "total": 52,
+      "kinds": {
+        "Closed": 7,
+        "Unsourced": 4,
+        "early_close": 24,
+        "ReplacementBlocks": 15,
+        "late_open": 2
+      }
+    },
+    "oanda_us_bond_cfd": {
+      "total": 50,
+      "kinds": {
+        "Closed": 7,
+        "Unsourced": 5,
+        "early_close": 23,
+        "ReplacementBlocks": 13,
+        "late_open": 2
+      }
+    },
+    "oanda_us_commodity_cfd": {
+      "total": 41,
+      "kinds": {
+        "Closed": 7,
+        "early_close": 20,
+        "ReplacementBlocks": 12,
+        "late_open": 2
+      }
+    },
+    "oanda_brent": {
+      "total": 47,
+      "kinds": {
+        "Closed": 7,
+        "Unsourced": 17,
+        "early_close": 18,
+        "ReplacementBlocks": 5
+      }
+    }
+  },
+  "prior_head": "5a460904bc7a4d2b76f6867aae4347dceccd5d6a",
+  "changed_since_prior_head": [
+    "docs/schedules/coverage-2025.md"
+  ],
+  "all_production_evidence_test_bytes_equal": true
+}

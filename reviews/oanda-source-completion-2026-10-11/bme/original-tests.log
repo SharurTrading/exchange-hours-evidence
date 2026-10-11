@@ -1,0 +1,11 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/bme-independent-build)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.50s
+     Running tests/bme_holidays.rs (target/debug/deps/bme_holidays-72b9410968c1f57d)
+
+running 3 tests
+test cash_calendar_has_no_invented_substitutes_and_keeps_2026_unknown ... ok
+test each_annual_cash_calendar_closes_its_own_good_friday ... ok
+test detailed_half_days_replace_regular_and_auction_phases ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+

@@ -1,0 +1,24 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-final-mutation-review)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.15s
+     Running tests/euronext_amsterdam_holidays.rs (target/debug/deps/euronext_amsterdam_holidays-54483702457cf604)
+
+running 1 test
+test annual_closures_and_half_day_eras_use_amsterdams_operator_scope ... FAILED
+
+failures:
+
+---- annual_closures_and_half_day_eras_use_amsterdams_operator_scope stdout ----
+
+thread 'annual_closures_and_half_day_eras_use_amsterdams_operator_scope' (7645648) panicked at tests/euronext_amsterdam_holidays.rs:59:9:
+assertion `left == right` failed
+  left: EarlyClose { close_ssm: 50400 }
+ right: EarlyClose { close_ssm: 50700 }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    annual_closures_and_half_day_eras_use_amsterdams_operator_scope
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 2 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `--test euronext_amsterdam_holidays`

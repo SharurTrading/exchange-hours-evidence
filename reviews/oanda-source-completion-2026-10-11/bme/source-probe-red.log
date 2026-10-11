@@ -1,0 +1,25 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/bme-independent-build)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.92s
+     Running tests/independent_source_probe.rs (target/debug/deps/independent_source_probe-3d50fef4124c16f6)
+
+running 2 tests
+test independently_parsed_annual_closures ... ok
+test independent_source_phase_boundaries ... FAILED
+
+failures:
+
+---- independent_source_phase_boundaries stdout ----
+
+thread 'independent_source_phase_boundaries' (7516958) panicked at tests/independent_source_probe.rs:97:78:
+assertion `left == right` failed: 2012-12-24 07:30:00 UTC
+  left: Ok(true)
+ right: Ok(false)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    independent_source_phase_boundaries
+
+test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--test independent_source_probe`

@@ -1,0 +1,57 @@
+{
+  "head": "3e0e5b9a9a15357cc461b54269ff39e831af0281",
+  "sha256": {
+    "src/calendar/schedules/holidays/oanda_us_index_cfd.rs": "c02900908130bd6b27f3f119b47c53d9789b163de55631708845a7cbefce98b7",
+    "src/calendar/schedules/holidays/oanda_us_bond_cfd.rs": "ae75711de0a242a1903aca420d74e9b869a84e0df2c7e404eae4d3796a732229",
+    "src/calendar/schedules/holidays/oanda_us_commodity_cfd.rs": "0d9aa882466b8495c2c619055e38705fbbdfbfe549e6a12f0b19b3a42ded96a5",
+    "src/calendar/schedules/holidays/oanda_brent.rs": "d730a71ddf118c24031ed1b44851b81354be7fa81f6baa91773a3bda173aee0f",
+    "docs/evidence/oanda_us_index_cfd.md": "4390ad850fbf712a1a152583be8ca642015636aa60d7b5d10a89e1b71e52444e",
+    "docs/evidence/oanda_us_bond_cfd.md": "3252e46d60a86480881c8728cd9524f78b9dcd37f4bf740a1af77ed19b46b34b",
+    "docs/evidence/oanda_us_commodity_cfd.md": "4545f80e4cce99cfe7301d364b0cef124e7fc2977fc34e01f7215e9f558d6c25",
+    "docs/evidence/oanda_brent.md": "50cd1b6a884cee79a003cbb296943091a4f9fb4d2d8a0fc2e329567ffc50c8f6",
+    "src/calendar/schedules/futures/international/oanda.rs": "39c2cfb1046ed2e7fb00a7fd1e639d8746687f8cdd8c7f2d3276832c2a72ea3b",
+    "docs/schedules/verification.md": "b880987920e822fee8a175f54d1f32bde7390c674d2c8785307a9e9b617b3f21",
+    "tests/oanda_publication.rs": "d75cf024c5f3fa9f5d58494c79f0972f3bf93fd806120a3a8ffdc04bc6454690",
+    "README.md": "3b52bd146f5629cf73ef2a31802481180679db6e6fce35a21ba8bb1ee8a38b42",
+    "CHANGELOG.md": "764ca8fbf794174368d9d7641c983e8a757d70182deee918a626a15cc82bf736"
+  },
+  "bme_byte_identical_to_reviewed_author_3dc4df6": {
+    "src/calendar/schedules/equities/europe/bme.rs": "b956262d430610139fb0caa626d22d787b8a8a1d3a5fd96b88d65f0239be4db6",
+    "src/calendar/schedules/holidays/bme.rs": "c2a63ed7ca6f1d9e8b8bc127ede7a3326438842132919ac4828d08a0146d5db0",
+    "docs/evidence/bme.md": "7cbb5310fe02fd8c6bb77c94942cf538669fcff72c3d4bb50f8c02aab62bb275",
+    "tests/bme_holidays.rs": "c52ab4580229223deb0bfd238a348977992457e0cbdbffde8dcac80c4d6a2584",
+    "tests/global_equities/current.rs": "6743b73ac023d59ad9dbb12c86e0eff171b181542bb01be88711a301b2af2bef"
+  },
+  "bme_golden_author": "b026e527e7fb35fcb45cba53d9427c129ddaa92f",
+  "bme_golden": "bme | tz Europe/Madrid | week_open_seconds 156000\nbme | regular  | MoTuWeThFr---- | 09:00:30-17:30:00\nbme | extended | MoTuWeThFr---- | 09:00:00-09:00:30\nbme | extended | MoTuWeThFr---- | 17:35:00-17:45:00\nbme | order-en | MoTuWeThFr---- | 08:30:00-09:00:00\nbme | order-en | MoTuWeThFr---- | 17:30:00-17:35:00",
+  "row_counts": {
+    "oanda_brent": {
+      "Closed": 7,
+      "Unsourced": 17,
+      "early_close": 18,
+      "ReplacementBlocks": 5
+    },
+    "oanda_us_bond_cfd": {
+      "Closed": 7,
+      "Unsourced": 5,
+      "early_close": 23,
+      "ReplacementBlocks": 13,
+      "late_open": 2
+    },
+    "oanda_us_commodity_cfd": {
+      "Closed": 7,
+      "early_close": 20,
+      "ReplacementBlocks": 12,
+      "late_open": 2
+    },
+    "oanda_us_index_cfd": {
+      "Closed": 7,
+      "Unsourced": 4,
+      "early_close": 24,
+      "ReplacementBlocks": 15,
+      "late_open": 2
+    }
+  },
+  "previous_reviewed_head": "5a460904bc7a4d2b76f6867aae4347dceccd5d6a",
+  "scoped_files_byte_identical_to_previous_reviewed_head": true
+}

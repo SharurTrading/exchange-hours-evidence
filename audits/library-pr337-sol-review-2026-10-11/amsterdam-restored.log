@@ -1,0 +1,11 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-final-mutation-review)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.12s
+     Running tests/euronext_amsterdam_holidays.rs (target/debug/deps/euronext_amsterdam_holidays-54483702457cf604)
+
+running 3 tests
+test announced_2026_half_days_remain_typed_gaps ... ok
+test amsterdam_does_not_inherit_dublin_substitute_half_days ... ok
+test annual_closures_and_half_day_eras_use_amsterdams_operator_scope ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
