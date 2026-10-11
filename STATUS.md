@@ -10883,3 +10883,17 @@ ships as no table with the interpretation question recorded in the crate evidenc
 PDF `d8a853cd621313feec96eb1ee0f45b81b7674dea2e0e6cb50b175e78347153d7`, hours HTML
 `60f6143dd5d678b1a34a9937aa938d2884380a33bf3542a4c72f8f03fa3607b7`, holiday HTML
 `c7137ce3da4cc19d0431955feedc10fb6b9731214ad3cfc7966160e72f8559da`.
+
+Wayback appendix (same UTC day): the uk-en hours page survives in the Wayback Machine from
+2021-03-03. The 2021 capture is server-rendered and carries the Metals and Index CFD tables but
+no Forex table; the 2022-05-18 capture prints the FX grid at `Sun-Fri: 17:03 - 16:58` with the
+16:58-17:03 five-minute break and the NZD 06:58 Auckland break; the 2024-02-21 capture prints
+the current `17:05 - 16:59` grid with the six-minute break — so the FX book's changeover is
+undated and the crate's `oanda_fx` horizon sits at the 2024-02-21 witness with the 2022 grid
+recorded as the activation obligation. The 2021 capture also fixes three later-wave facts: the
+metals book ran `18:00 - 17:00` then (not today's 18:05 - 16:59), Japan 225 observed the CME
+halt (`18:00 - 16:15; 16:30 - 17:00` New York), and the index CFDs printed exchange-exact times
+(Australia 200 `09:50 - 16:30; 17:10 - 07:00*`) before the page moved to one-minute insets.
+Digests: 2021 `ec5987239f2c79dd29fcfc40abe5a0d58c6e4ed446fa7dea653f1791b186cbed`, 2022
+`8dd71db7accc2a40faeb531f0c5c29db0eb289c9ef45a69bc14b75148257cbea`, 2024
+`aab9b3032c1d53e6155009fce6a5156983c2d21a2f0bd768f1860f465b8b6a63`.
