@@ -1,0 +1,29 @@
+{
+  "head": "a0d1479b7d8d5ef391cb918598c94d160d12e41a",
+  "carter_captures": [
+    {
+      "capture": "20250326184653",
+      "sha256": "467313685d4d64a4b95e5112a58d0fa04583f0abe988b1478d41fddf8b04cf1c",
+      "carter_context": "ities have late opening at 8 pm Thursday 9th January 2025 - Carter's Day of Mourning US index close early at 9:30 and reopen at 18:00 US bonds close early at 13:15 and reopen at 18:00 Commodities close early at 13:15 and reopen at 20:00 Thursday 2nd January 2025 Commodities open late 9:31 Wednesday 1st January 2025 UK100/GBP is closed DE30/EUR is closed US indices open late 18:04 Brent Crude ",
+      "eastern_time_present": true
+    },
+    {
+      "capture": "20260217213704",
+      "sha256": "33988f4e6cd9603250923da1660ce71dc3ee1e1a66610b7734b1ad0cbfbaa0c9",
+      "carter_context": "ities have late opening at 8 pm Thursday 9th January 2025 - Carter's Day of Mourning US index close early at 9:30 and reopen at 18:00 US bonds close early at 13:15 and reopen at 18:00 Commodities close early at 13:15 and reopen at 20:00 Thursday 2nd January 2025 Commodities open late 9:31 Wednesday 1st January 2025 UK100/GBP is closed DE30/EUR is closed US indices open late 18:04 Brent Crude ",
+      "eastern_time_present": true
+    }
+  ],
+  "carter_utc": {
+    "close": "2025-01-09T14:30:00+00:00",
+    "following_trade_date_open": "2025-01-09T23:00:00+00:00",
+    "following_trade_date_close": "2025-01-10T21:59:00+00:00"
+  },
+  "current_pdf_sha256": "d8a853cd621313feec96eb1ee0f45b81b7674dea2e0e6cb50b175e78347153d7",
+  "named_zone_samples": {
+    "sydney_summer_marked_close": "2026-10-12T20:59:00+00:00",
+    "sydney_winter_marked_close": "2027-05-31T20:59:00+00:00",
+    "frankfurt_summer_marked_open": "2026-03-30T00:16:00+00:00",
+    "frankfurt_winter_marked_open": "2026-03-09T00:16:00+00:00"
+  }
+}

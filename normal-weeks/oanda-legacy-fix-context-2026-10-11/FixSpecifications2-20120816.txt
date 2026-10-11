@@ -1,0 +1,3026 @@
+                       OANDA FIX Rules of Engagement
+Specifications for OANDA fxTrade and fxTrade Practice FIX Server version 2.3.20
+                                   Supporting FIX Protocol versions 4.2 and 4.4
+
+                                              Last updated: November 25, 2011
+                                                OANDA FIX Rules of Engagement
+
+
+
+Table of Contents
+Introduction ...................................................................................................................................... 3
+   What’s New ................................................................................................................................. 3
+   What is FIX? ................................................................................................................................ 3
+   How FIX Messages Work ............................................................................................................ 3
+   Requirements .............................................................................................................................. 4
+   OANDA Compliance to the FIX Protocol..................................................................................... 4
+   Supported Message Types ......................................................................................................... 5
+   About the Examples Shown in this Document ............................................................................ 6
+OANDA FIX Server General Guidelines .......................................................................................... 7
+   Technical Support ....................................................................................................................... 7
+   Clock Synchronization ................................................................................................................. 7
+   Connection-Oriented Sessions ................................................................................................... 7
+   Separate Rates and Orders Connections ................................................................................... 7
+   24-Hour Trading Sessions .......................................................................................................... 8
+   Supported Order Types ............................................................................................................... 8
+   Mapping of FIX Orders to OANDA Transaction Tickets.............................................................. 9
+   Market Depth ............................................................................................................................... 9
+   Account Management ............................................................................................................... 10
+Headers and Trailers ..................................................................................................................... 11
+Administrative Messages ............................................................................................................... 13
+   Logon (Outbound, Inbound) <A> .............................................................................................. 13
+   News (Inbound) <B> ................................................................................................................. 14
+   Logout (Outbound, Inbound) <5> .............................................................................................. 16
+Client Requests (Outbound) .......................................................................................................... 18
+   New Order – Single (Outbound) <D> ........................................................................................ 18
+   Order Cancel / Replace Request (Outbound, Inbound) <G> .................................................... 23
+   Order Cancel Request (Outbound) <F> .................................................................................... 26
+   Order Status Request (Outbound) <H> .................................................................................... 28
+   Market Data Request (Outbound) <V> ..................................................................................... 30
+Server Responses (Inbound) ......................................................................................................... 34
+   Execution Report (Inbound) <8> ............................................................................................... 34
+   Order Cancel Reject (Inbound) <9> .......................................................................................... 37
+   Reject (Inbound) <3>................................................................................................................. 41
+   Business Message Reject (Inbound) <j> .................................................................................. 42
+   Market Data - Snapshot/Full Refresh <W> ............................................................................... 42
+   Market Data - Incremental Refresh <X> ................................................................................... 43
+   Market Data Request Reject <Y> ............................................................................................. 46
+Appendix: FIX Data Types ............................................................................................................. 48
+Appendix: FIX Message Types ...................................................................................................... 49
+Addendum: Additional Features for Institutional Clients................................................................ 50
+   Limitation to Immediate-fill Order Types ................................................................................... 50
+   Varying Liquidity ........................................................................................................................ 50
+   Value Date ................................................................................................................................. 50
+   Conversion Rate Reporting ....................................................................................................... 52
+
+
+
+
+                                                                       -2-
+                               OANDA FIX Rules of Engagement
+
+
+
+
+Introduction
+This document describes the behavior of the current version of OANDA FIX Server, and tells you
+how to interact with and place trades through this service.
+
+What’s New
+Note: Typically, new versions of the server are deployed first on fxTrade Practice and then
+deployed to fxTrade the week afterward.
+
+Version 2.3:
+
+       Version 2.3 provides faster market data to clients
+
+       Clients are encouraged to migrate their setup to the industry-typical separate rates and
+        orders connections.
+
+
+What is FIX?
+The Financial Information eXchange ("FIX") Protocol is a series of messaging specifications for
+the electronic communication of financial data, including trade-related messages. It is a globally
+accepted standard of messaging specifications developed through the collaboration of banks,
+brokers, exchanges, institutional investors, and information technology providers from around the
+world.
+
+OANDA fxTrade supports versions 4.2 and 4.4 of the FX protocol. You are urged to download
+and consult the official FIX 4.2 and FIX 4.4 specifications and the recommended best practices
+document at http://www.fixprotocol.org/. (Note this web site only supports certain browsers, such
+as Internet Explorer Version 5.)
+
+
+How FIX Messages Work
+The client machine sends FIX messages to the OANDA server (in this document, these are
+referred to as outbound messages, meaning messages sent "out" from the client to the server).
+Then the server responds back to the client machine with inbound messages, meaning
+messages sent from the server "in" to the client.
+
+
+
+
+FIX sessions must be initiated through logon messages (and the logon session is maintained as
+long as the client machine sends heartbeat messages at pre-determined intervals).
+
+
+
+
+                                               -3-
+                               OANDA FIX Rules of Engagement
+
+
+Encryption
+The OANDA FIX Server only accepts SSL-encrypted connections for communications security.
+Customers using FIX engines that do not provide SSL connectivity can use stunnel, a tunneling
+proxy software package that will SSL-encrypt your communications to the OANDA FIX Server.
+
+The following diagram shows an overview of how FIX messages are encrypted using stunnel and
+then transmitted between the client and the server:
+
+
+
+
+Requirements
+To send FIX messages to the OANDA server:
+
+   You must have an API License agreement with OANDA.
+
+   You need to install and configure SSL encryption tunneling software (such as stunnel) on
+    your system if your FIX engine is not already SSL-capable. Configuration details are provided
+    when you sign up.
+
+   You need to use your own FIX engine to connect to our server.
+
+
+OANDA Compliance to the FIX Protocol
+The OANDA fxTrade FIX Server is designed to closely follow the official FIX Protocol Ltd FIX 4.2
+and FIX 4.4 specifications and the published FIX Protocol Best Practices as closely as is
+practical. Any differences or items of note are identified in this document.
+
+Readers are urged to consult the official specifications and best practices documents, found at
+the FIX Protocol Ltd website at http://fixprotocol.org/.
+
+
+
+
+                                               -4-
+                                 OANDA FIX Rules of Engagement
+
+
+
+
+Supported Message Types
+The OANDA FIX Server supports the following FIX outbound and inbound messages.
+
+Outbound Messages (from client to server)
+Supported Message <MsgType>             Server Responses
+(from Client)
+
+Logon <A>                               Logon <A>, Reject <3>
+
+Logout <5>                              Logout <5>
+
+Heartbeat <0>                           Heartbeat <0>
+
+New Order - Single <D>                  Execution Report <8>
+
+Order Cancel Request <F>                Execution Report <8>, Order Cancel Reject <9>
+
+Order Cancel / Replace Request <G>      Execution Report <8>, Order Cancel Reject <9>
+
+Order Status Request <H>                Execution Report <8>
+
+Market Data Request <V>                 Market Data - Snapshot / Full Refresh <W>,
+                                        Market Data - Incremental Refresh <X>,
+                                        Market Data Request Reject <Y>
+
+Inbound Messages (from server to client)
+Supported Message <MsgType>             In Response To Client Messages:
+(from Server)
+
+Logon <A>                               Logon <A>
+
+News <B>                                Logon <A>
+
+Logout <5>                              Logout <5>
+
+Heartbeat <0>                           Heartbeat <0>
+
+Execution Report <8>                    New Order - Single <D>, Order Cancel Request <F>,
+                                        Order Cancel / Replace Request <G>,
+                                        Order Status Request <H>
+Order Cancel Reject <9>                 Order Cancel Request <F>,
+                                        Order Cancel / Replace Request <G>
+
+Reject <3>                              Any client message with incorrect syntax
+
+Business Message Reject <j>             Any client message that does not meet business requirements
+                                        (but has correct syntax).
+Market Data - Snapshot/Full Refresh     Market Data Request <V>
+<W>
+
+Market Data - Incremental Refresh <X>   Market Data Request <V>
+
+Market Data Request Reject <Y>          Market Data Request <V>
+
+
+
+
+                                               -5-
+                               OANDA FIX Rules of Engagement
+
+
+About the Examples Shown in this Document
+The examples shown in this document have been formatted for readability, and do not reflect the
+ordering or formatting required by the official FIX Protocol specification. In particular, the
+examples have been turned into tables and include field names that are not used.
+
+For instance, the code for first example shown in the document, “Client outbound request (with
+valid logon)”, would be coded as follows (with SOH represented here by a space):
+
+   8=FIX.4.4 9=91 35=A 34=1 49=testusr4109 52=20101124-20:27:25.000 56=OANDA 98=0 108=300
+   141=Y 554=Passw0rd 10=133
+
+
+
+
+                                              -6-
+                                OANDA FIX Rules of Engagement
+
+
+
+
+OANDA FIX Server General Guidelines
+Technical Support
+You can contact the OANDA FIX API team at api@oanda.com for questions or technical support.
+
+So that we can help you more quickly, please include the following with your support requests:
+
+       The complete version string reported in the News <B> message sent right after a logon
+        response.
+
+       Detailed text files of the timestamped local logs of the FIX messaging demonstrating the
+        issue or concern.
+
+
+Clock Synchronization
+Note that timing issues may arise if clocks are out of synchronization. The OANDA Server is
+configured to Reject <3> with SessionRejectReason <373> = 10 "SendingTime <52> accuracy
+problem" any message received with a SendingTime that is older than 15 seconds.
+
+If you receive this message, verify with your system administrator that your client FIX engine host
+clock is synchronized via a properly-configured NTP service.
+
+
+Connection-Oriented Sessions
+The current OANDA FIX Server follows an internet service style, connection-oriented behavior.
+Each connection establishes its own separate session for the lifetime of the connection.
+
+Some ramifications of connection-oriented sessions include:
+
+       The OANDA Server acts as an acceptor only.
+
+       ResetSeqNumFlag <141> = Y is required on all Logon <A> messages
+        Message replay is not supported (Resend Request <2> and Sequence Reset <4>).
+
+       Order fills while disconnected are not communicated automatically on the next
+        connection. Instead, use the Order Status Request <H> on reconnection to query
+        information on any order including orders outstanding whose status may have been
+        updated while disconnected
+
+
+Separate Rates and Orders Connections
+The version 2 servers support multiple connections per customer.
+
+All connections use the customer's OANDA login username as the SenderCompID <49> value.
+
+A rates session is established by specifying TargetSubID <57> = RATES for all messages on this
+connection. These connections will be routed to dedicated market data servers delivering the
+fastest price updates, and no order processing is available here.
+
+An orders session is established by omitting any TargetSubID <57> tag for all messages on the
+connection. All orders must be submitted on an order server connection.
+
+
+
+                                               -7-
+                                 OANDA FIX Rules of Engagement
+
+
+
+Customers using an order server connection to receive market data are advised that this
+capability will be phased out shortly.
+
+Simultaneous connections from both FIX 4.2 and a FIX 4.4 sessions are supported. Note that
+some message formats are different (for example, Execution Report) and some order types are
+not specifiable (for example, OrdType=J on FIX 4.2 sessions).
+
+Asynchronous order notifications (fills and expiries on DAY and GTD orders) are broadcast on the
+current order server connection for the user.
+
+
+24-Hour Trading Sessions
+ The OANDA System runs a continuous 24-hour trading session. Customers are able to trade
+currencies at any time during the trading week.
+
+DAY orders expire at 5:00 p.m. North American Eastern time (UTC -0500 or UTC -0400 during
+Daylight Savings Time) if placed at least 5 minutes before 5:00 p.m. DAY orders placed after the
+4:55 p.m. cutoff time expire 5:00 p.m. the next calendar day.
+
+Trading is not available during system maintenance, which is typically on Fridays performed after
+market close, starting at 5 p.m. North American Eastern time.
+
+
+Supported Order Types
+Immediately Executed Order Types
+Market Orders
+Market orders are orders to buy or sell a particular quantity of a currency pair at the prevailing
+price at the time the order was received at the OANDA servers. OANDA FIX Market Orders are
+placed with no TimeInForce <59> or Price <44> tags.
+
+Fill-or-Kill (FOK) Orders, Immediate-or-Cancel (IOC) Orders
+Orders placed with TimeInForce FOK are executed immediately if the price and quantity
+stipulations are met at the time the order is received. If they are not met, the order is cancelled in
+full. Orders placed TimeInForce IOC are executed immediately if the price stipulation is met, up to
+the available quantity for execution, and the remaining quantity is cancelled. Because FOK and
+IOC orders are always limit or stop orders, the Price <44> or StopPx <99> tags are required, as
+appropriate.
+
+Price-Conditional Order Types
+Standard Limit Orders
+A standard limit order requests a trade of some quantity of a currency pair, at the requested price
+or better. If the prevailing market price is already better than the request price at the time the
+order is received, the order fills immediately. Otherwise, the order waits for execution until the
+price stipulation is met or the order expires.
+
+Standard limit orders requesting Fill-or-Kill (FOK) or Immediate-or-Cancel (IOC) behave as
+described in the previous section.
+
+Standard Stop Orders
+A standard stop order requests a trade of some quantity of a currency pair, at the requested price
+or worse. If the prevailing market price is already worse than the request price, the order fills
+
+
+
+                                                -8-
+                                 OANDA FIX Rules of Engagement
+
+
+immediately. Otherwise, the order waits for execution until the price stipulation is met or the order
+expires.
+
+Standard stop orders requesting Fill-or-Kill (FOK) or Immediate-or-Cancel (IOC) behave as
+described in the previous section.
+
+Market-if-Touched Orders
+(This order type is called a “limit order” in OANDA’s other APIs and graphical interfaces.)
+
+A market-if-touched order requests a trade of some quantity of a currency pair when the
+requested price is touched. If the prevailing market price is exactly the request price at the time
+the order is recieved, the order fills immediately. Otherwise, the order waits for execution until the
+market price touches/crosses the request price or the order expires.
+
+Market-if-touched orders execute at OANDA-published prices; if a waiting market-if-touched order
+triggers due to the market price crossing the request price, the fill will occur at the first market
+price after the request price is crossed.
+
+       Market-if-touched orders cannot be requested FOK or IOC.
+       Market-if-touched orders can only be placed on FIX.4.4 sessions.
+.
+
+Mapping of FIX Orders to OANDA Transaction Tickets
+The FIX server processes orders submitted via the FIX protocol, but the resulting actions take
+place on the OANDA server and follow the OANDA protocols in updating your OANDA account.
+These protocols and order models are different from each other, so the OANDA transaction
+tickets returned by the FIX server may be different from your original FIX requests.
+
+Actions performed via FIX requests generally result in OANDA transaction tickets in your account,
+but the mapping is not always one-to-one. In particular:
+
+       The ClOrdID <11> used in the FIX interface is not recorded in your transaction history.
+
+       There may be multiple tickets implementing one FIX request. To assist in tracking your
+        orders, Execution Reports include text in the Text <58> field of the form
+        OANDA transaction ID(s): [list], where [list] is a comma-separated list of
+        ticket number ranges. For example, tickets 21, 22, 23, 26, 27, and 30 will be shown as
+        21-23,26-27,30. The string "none" is used if no OANDA tickets correspond to the
+        order.
+
+       Limit and Stop Fill or Kill (FOK) and Immediate or Cancel (IOC) orders viewed via the
+        fxTrade Practice and fxTrade GUI applets may appear instead as BuyMarket and
+        SellMarket transactions.
+
+
+Market Depth
+The OANDA fxTrade trading system imposes a maximum trade size for individual trades. The
+end result is that the system behaves as if there is only one level of market depth, with the
+maximum trade size as the quantity available.
+
+The maximum trade size is specified in the MDEntrySize tag in Market Data Snapshot / Full
+Refresh <W> and Market Data Incremental Refresh <X> messages. Before placing orders,
+customers are urged to consult the most recently published MDEntrySize for each currency pair
+to verify the quantity is available for execution.
+
+
+
+                                                 -9-
+                                  OANDA FIX Rules of Engagement
+
+
+
+At time of writing, the maximum trade sizes for the OANDA trading system are the following
+(although these maximums may not be available at all times due to limited liquidity):
+
+    Pair                            Maximum Units
+    XAG/USD                                100 000
+    XAU/USD                                  5 000
+    All other tradeable pairs           10 000 000
+
+(Users are welcome to place multiple trades to trade higher quantities.)
+
+Orders submitted with OrderQty larger than the quantity available for execution are handled
+differently depending on the order type:
+
+
+    Order Type         Result                           Notes
+
+    FOK orders         OrdStatus=CANCELED               Not filled at all
+                       CumQty=0
+
+    IOC orders         OrdStatus=CANCELED               Partially filled up to the
+                       CumQty=[quantity available]      quantity available
+
+    all others         Rejected                         Order rejected outright
+
+
+
+
+Account Management
+   The OANDA FIX Server does not support any account status requests. To review your
+    account balance, open positions, margin exposure, P/L numbers, and so on, please log in to
+    the graphical interface or access them through the fxTrade website.
+
+   All orders submitted through the FIX interface should be modified or canceled through the
+    FIX interface. We currently do not support order entry through FIX and modification or
+    adjustments through the GUI.
+
+   The OANDA FIX Server does not provide any drop copy execution reports for orders entered
+    via the graphical or proprietary API interfaces.
+
+   Adjustments or corrections to trades filled incorrectly due to price spikes are not reported by
+    the FIX Server. Notification of these corrections is done through email.
+
+
+
+
+                                               - 10 -
+                               OANDA FIX Rules of Engagement
+
+
+
+
+Headers and Trailers
+All FIX messages must begin with header fields and end with a trailing <10> field.
+
+Header Fields
+The following fields must be present at the beginning of all FIX messages:
+
+TAG       FieldName       Req’d     Req’d by         Type                  Comments
+                          by FIX    OANDA           (Value)
+
+8       BeginString       Y         Y             string,      Identifies beginning of new message
+                                                  “FIX.4.2”    and protocol version. Must always be
+                                                  or           the first field in a FIX message, and
+                                                  “FIX.4.4”    always unencrypted.
+
+9       BodyLength        Y         Y             int          Message length, in bytes, forwarded
+                                                               to the CheckSum <10> field. Must
+                                                               always be the second field in a
+                                                               message, and always unencrypted.
+
+35      MsgType           Y         Y             string       Defines the specific message type
+                                                               (MsgType). Must always be the third
+                                                               field in a message, and always
+                                                               unencrypted.
+
+                                                               See the next section for a list of
+                                                               supported message types.
+
+49      SenderCompID      Y         Y             string       Assigned value used to identify the
+                                                               sender of the message.
+
+                                                               For outbound messages: your
+                                                               OANDA login user ID
+                                                               (Inbound messages will have the
+                                                               value, “OANDA”)
+
+56      TargetCompID      Y         Y             string       Assigned value used to identify the
+                                                               message destination.
+
+                                                               For outbound messages: “OANDA”
+                                                               (Inbound messages will contain your
+                                                               login user ID)
+
+34      MsgSeqNum         Y         Y              int         Integer message sequence number.
+
+52      SendingTime       Y         Y             UTC          Time of message transmission
+                                                  Timestamp    (always expressed in UTC (Universal
+                                                               Time Coordinated, also known as
+                                                               ‘GMT’)
+
+57      TargetSubID       N         N             string       For outbound sessions that are
+                                                               intended only for rates subscriptions
+                                                               and snapshots.
+                                                               It is highly recommended the value
+                                                               "RATES" be used, to allow routing of
+                                                               that session to resources best
+
+
+
+                                               - 11 -
+                               OANDA FIX Rules of Engagement
+
+
+
+                                                             capable of providing the lowest
+                                                             latency access to OANDA's rates.
+
+
+
+
+Trailer Field
+The following field must conclude all FIX messages.
+
+                                   Req’d       Type
+                         Req’d
+TAG      FieldName                 by          (Value)       Comments
+                         by FIX
+                                   OANDA
+
+10       CheckSum        Y         Y           3-character   Three byte, simple checksum serves
+                                               string        (with the trailing <SOH>) as the end-
+                                                             of-message delimiter. Always
+                                                             defined as three characters.
+
+
+
+
+                                             - 12 -
+                                  OANDA FIX Rules of Engagement
+
+
+
+
+Administrative Messages
+Logon (Outbound, Inbound) <A>
+The Logon <A> message authenticates a user and starts a session. It must be the first message
+sent by any application requesting to initiate a FIX session.
+
+Upon receipt of a Logon message, the OANDA server will authenticate the party requesting
+connection and issue a Logon message as acknowledgment that the connection request has
+been accepted. This acknowledgment Logon can be used by the initiator to validate that the
+connection was established with the correct party.
+
+If the server cannot authenticate the logon request, it will return a Logout <5> or Reject <3>
+message, or may not respond at all in some cases as a precaution against Denial of Service
+(DoS) attacks.
+
+
+
+
+Notes
+
+        ResetSeqNumFlag=Y must be used on logon.
+
+        The HeartBtInt <108> field declares the timeout interval for generating heartbeat
+         messages (the same interval is used by both sides). This field must be included in the
+         logon request, and echoed back in the logon message from the OANDA server. The
+         HeartBtInt value must be at least 30 seconds. We recommended a HeartBtInt value of
+         300 seconds (5 minutes).
+
+Fields <A>
+
+TAG      FieldName            Req'd      Req'd          Type       Comments
+                              by FIX     by             (Value)
+                                         OANDA
+
+         Standard Header      Y          Y                         See Header Fields.
+
+                                                                   MsgType = A
+
+98       EncryptMethod        Y          Y              char       Method of encryption. (Always
+                                                        “0”        unencrypted)
+
+
+
+
+                                               - 13 -
+                                  OANDA FIX Rules of Engagement
+
+
+
+
+                                                                   Valid values:
+                                                                   0 = None / other
+
+108     HeartBtInt            Y          Y             int         Heartbeat <0> interval (seconds).
+
+                                                                   Heartbeat <0> messages are
+                                                                   transmitted automatically by the
+                                                                   FIX software at this time interval.
+
+                                                                   Recommended value: 300
+
+        Logon Password                                             See below.
+
+141     ResetSeqNumFlag       N          Y             Boolean     Indicates that both sides of the FIX
+                                                                   session should reset sequence
+                                                                   numbers.
+
+                                                                   Valid values:
+                                                                   Y = Yes, reset sequence numbers
+
+        Standard Trailer      Y          Y                         See Trailer Fields
+
+
+For FIX 4.2 sessions, the fields used to supply the logon password are:
+
+95      RawDataLength         N          Y             length      Number of bytes in raw data field.
+
+96      RawData               N          Y             data        Unformatted raw data, contains
+                                                                   the logon password.
+
+
+For FIX 4.4 sessions, the field used to supply the logon password is:
+
+554     Password              N          Y             string      The logon password.
+
+
+Note that for FIX.4.4 sessions, the Username <553> tag is not used. Any value supplied in tag
+553 will be ignored. Instead, the SenderCompID is used to determine the login username.
+
+On a successful logon, the server sends a News <B> message with information about the
+OANDA FIX server.
+
+
+News (Inbound) <B>
+The News <B> message is returned by the server and provides important information concerning
+changed behavior or upcoming releases.
+
+The version number shown in this message is presented as numbers only, separated by dots (for
+example, "version: 2.2"). Version updates may involve amendments to this Rules of Engagement
+document, and thus may require changes to customer programs.
+
+
+
+
+                                              - 14 -
+                                 OANDA FIX Rules of Engagement
+
+
+
+
+Fields <B>
+TAG      FieldName           Req'd     Type              Comments
+                             by        (Value)
+                             FIX
+
+         Standard Header     Y                           See Header Fields.
+
+                                                         MsgType = B
+
+148      Headline            Y         string            “OANDA FIX Server Information”
+
+33       LinesOfText         Y         int               Indicates the number of Text <58> tags following.
+
+58       Text                Y         string            Uses the following format:
+                                                         keyword: value
+
+                                                         Keywords:
+                                                           “version”—shows the current version of the
+                                                            OANDA FIX server
+                                                           “notice”—provides important information that
+                                                            should be noted
+                                                           “warning”—explicitly flags issues such as
+                                                            backwards compatibility concerns
+
+
+         Standard Trailer    Y                           See Trailer Field.
+
+
+Examples
+Client outbound request (with valid logon):
+
+     +-HEADER
+      |     8 BeginString    = FIX.4.4
+      |    35 MsgType        = Logon (A)
+      |    34 MsgSeqNum      = 1
+      |    49 SenderCompID   = testusr4109
+      |    52 SendingTime    = 20101124-20:27:25.000
+      |    56 TargetCompID   = OANDA
+      +-BODY
+      |    98 EncryptMethod = NONE_OTHER (0)
+      |   108 HeartBtInt     = 300
+      |   141 ResetSeqNumFlag = Y
+      |   554 Password       = Passw0rd
+      +-TRAILER
+      |    10 CheckSum       = 133
+      +========
+
+Server inbound response:
+The server sends a logon response and a news message.
+
+     +-HEADER
+      |     8 BeginString    = FIX.4.4
+      |     9 BodyLength     = 74
+      |    35 MsgType        = Logon (A)
+      |    34 MsgSeqNum      = 1
+      |    49 SenderCompID   = OANDA
+      |    52 SendingTime    = 20101124-20:27:25
+      |    56 TargetCompID   = testusr4109
+      +-BODY
+
+
+
+
+                                                - 15 -
+                                 OANDA FIX Rules of Engagement
+
+
+    |    98 EncryptMethod = NONE_OTHER (0)
+    |   108 HeartBtInt     = 300
+    |   141 ResetSeqNumFlag = Y
+    +-TRAILER
+    |    10 CheckSum       = 216
+    +========
+
+    +-HEADER
+    |     8 BeginString    = FIX.4.4
+    |     9 BodyLength     = 124
+    |    35 MsgType        = News (B)
+    |    34 MsgSeqNum      = 2
+    |    49 SenderCompID   = OANDA
+    |    52 SendingTime    = 20101124-20:27:25
+    |    56 TargetCompID   = testusr4109
+    +-BODY
+    |    33 LinesOfText    = 1
+    |   148 Headline       = OANDA FIX Server Information
+    +-LinesOfText-Member-0
+    |    58 Text           = version: 2.2
+    +-TRAILER
+    |    10 CheckSum       = 255
+    +========
+
+
+Client outbound request (with wrong password):
+
+    +-HEADER
+    |     8 BeginString    = FIX.4.2
+    |    35 MsgType        = Logon (A)
+    |    34 MsgSeqNum      = 7
+    |    49 SenderCompID   = testusr
+    |    52 SendingTime    = 20090605-14:37:48.000
+    |    56 TargetCompID   = OANDA
+    +-BODY
+    |    95 RawDataLength = 10
+    |    96 RawData        = wrongwrong
+    |    98 EncryptMethod = NONE_OTHER (0)
+    |   108 HeartBtInt     = 300
+    |   141 ResetSeqNumFlag = YES_RESET_SEQUENCE_NUMBERS (Y)
+    +-TRAILER
+    |    10 CheckSum       = 240
+    +========
+
+Server inbound response:
+
+The server will not respond at all, as a security precaution.
+
+
+Logout (Outbound, Inbound) <5>
+The Logout <5> message initiates or confirms the termination of a FIX session. A session
+disconnected without the exchange of Logout messages should be interpreted as an abnormal
+condition (such as network failure).
+
+Before closing the session, the client should wait for the OANDA server to respond with a
+confirming Logout message. This allows the server to complete any final operations.
+
+
+
+
+                                                - 16 -
+                               OANDA FIX Rules of Engagement
+
+
+
+
+Fields <5>
+TAG     FieldName      Req'd by      Req’d     Type     Comments
+                       FIX           by
+                                     OANDA
+
+        Standard       Y             Y                  See Header Fields.
+        Header
+                                                        MsgType = 5
+
+58      Text           N                       string   Explanatory text returned by the server (for
+                       (Inbound)                        example, "Rejected")
+
+        Standard       Y             Y                  See Trailer Fields.
+        Trailer
+
+
+Example
+Client Outbound Request:
+
+     +-HEADER
+      |     8 BeginString    = FIX.4.4
+      |    35 MsgType        = Logout (5)
+      |    34 MsgSeqNum      = 2
+      |    49 SenderCompID   = testusr4109
+      |    52 SendingTime    = 20101124-20:31:07.000
+      |    56 TargetCompID   = OANDA
+      +-BODY
+      +-TRAILER
+      |    10 CheckSum       = 019
+      +========
+
+Server Inbound Response:
+
+     +-HEADER
+      |     8 BeginString    = FIX.4.4
+      |     9 BodyLength     = 88
+      |    35 MsgType        = Logout (5)
+      |    34 MsgSeqNum      = 3
+      |    49 SenderCompID   = OANDA
+      |    52 SendingTime    = 20101124-20:31:07
+      |    56 TargetCompID   = testusr4109
+      +-BODY
+      |    58 Text           = Thank you for choosing OANDA.
+      +-TRAILER
+      |    10 CheckSum       = 008
+      +========
+
+
+
+
+                                             - 17 -
+                               OANDA FIX Rules of Engagement
+
+
+
+
+Client Requests (Outbound)
+New Order – Single (Outbound) <D>
+New Order - Single <D> is used on the client side to submit forex orders to OANDA. It can only
+be issued after a Login <A> session is established.
+
+The OANDA server will respond to a New Order - Single request with an Execution Report <8>.
+This message will provide information on the execution of the order, whether successful or not.
+
+
+
+
+Fields <D>
+
+TAG    FieldName       Req'd by      Req’d by       Type      Comments
+                       FIX           OANDA
+
+       Standard        Y             Y                        See Header Fields.
+       Header
+                                                              MsgType = D
+
+11     ClOrdID         Y             Y              string    Unique order identifier assigned by the
+                                                              client.
+
+1      Account         N             Y              string    The OANDA fxTrade or fxTrade
+                                                              Practice account number. Required
+                                                              for outbound order or trade requests to
+                                                              the OANDA server where indicated in
+                                                              this document.
+
+21     HandlInst       Y (FIX 4.2)   Y (FIX 4.2)    “1”       Instructions for order handling on
+                       N (FIX 4.4)   N (FIX 4.4)              Broker trading floor. In FIX 4.4, the
+                                                              absence of this field is interpreted as
+                                                              value 1.
+                                                              Valid values:
+                                                              1 = Automated execution order,
+                                                              private, no Broker intervention
+
+55     Symbol          Y             Y              string    Must be a valid ISO currency pair, with
+                                                              forward slash. For example,
+                                                              EUR/USD.
+
+54     Side            Y             Y              char      Side of order.
+                                                              Valid values:
+                                                              1 = Buy
+                                                              2 = Sell
+
+
+
+                                                - 18 -
+                         OANDA FIX Rules of Engagement
+
+
+
+60    TransactTime   Y       Y             UTC        Time of execution/order creation,
+                                           Time       expressed in UTC (Universal Time
+                                           stamp      Coordinated, also known as 'GMT').
+
+                                                      The timestamp in this field allows the
+                                                      OANDA server to apply business rules
+                                                      to determine if the order is potentially
+                                                      "stale" (for example, in the event of
+                                                      communication problems).
+
+38    OrderQty       N       Y             qty        Number of units ordered.
+
+40    OrdType        Y       Y             char       Order type.
+                                                      Valid values:
+                                                      1 = Market
+                                                      2 = Limit
+                                                      3 = Stop
+                                                      J = Market-if-Touched (FIX 4.4 only)
+
+44    Price          N       Y for limit   price      Price.
+                             and
+                             market-if-
+                             touched
+                             orders only
+
+99    StopPx         N       Y for stop    price      Stop price.
+                             orders only
+
+59    TimeInForce    N       N             char       For limit, stop, and market-if-touched
+                                                      orders, not market orders.
+
+                                                      Specifies how long the order remains
+                                                      in effect. Absence of this field is
+                                                      interpreted as DAY.
+                                                      Valid values:
+                                                      0 = Day
+                                                      3 = Immediate or Cancel (IOC)
+                                                      4 = Fill or Kill (FOK)
+                                                      6 = GTD. (GTD orders further require
+                                                      one of ExpireDate <432> or
+                                                      ExpireTime <126>.)
+
+                                                      IOC and FOK are only valid for limit
+                                                      and stop orders.
+
+432   ExpireDate     N                     LocalMkt   For GTD orders, requests expire at
+                                           Date       local 5pm ET (EDT or EST) on the
+                                                      date indicated.
+
+
+126   ExpireTime     N                     UTC        For GTD orders, requests expiry at the
+                                           Time       exact UTC date and time indicated.
+                                           stamp
+
+      Standard       Y       Y                        See Trailer Fields
+      Trailer
+
+
+
+
+                                       - 19 -
+                               OANDA FIX Rules of Engagement
+
+
+Examples
+Client outbound request:
+For a limit buy order, 7500 units XAU/USD, limit price 1500, Immediate or Cancel:
+
+   +-HEADER
+    |     8 BeginString      = FIX.4.4
+    |     9 BodyLength       = 138
+    |    35 MsgType          = NewOrderSingle (D)
+    |    34 MsgSeqNum        = 2
+    |    49 SenderCompID     = testusr4109
+    |    52 SendingTime      = 20101125-14:53:25.000
+    |    56 TargetCompID     = OANDA
+    +-BODY
+    |     1 Account          = 562121
+    |    11 ClOrdID          = limit_ioc_buy_gold_overlimit
+    |    21 HandlInst        = AUTOMATED_EXECUTION_ORDER_PRIVATE (1)
+    |    38 OrderQty         = 7500
+    |    40 OrdType          = LIMIT (2)
+    |    44 Price            = 1500
+    |    54 Side             = BUY (1)
+    |    55 Symbol           = XAU/USD
+    |    59 TimeInForce      = IMMEDIATE_OR_CANCEL (3)
+    |    60 TransactTime     = 20101125-14:52:49
+    +-TRAILER
+    |    10 CheckSum         = 157
+    +========
+
+Server inbound response:
+OrderQty exceeds maximum trade size for symbol; only 5000 units filled:
+
+   +-HEADER
+    |     8 BeginString    = FIX.4.4
+    |     9 BodyLength     = 352
+    |    35 MsgType        = ExecutionReport (8)
+    |    34 MsgSeqNum      = 3
+    |    49 SenderCompID   = OANDA
+    |    52 SendingTime    = 20101125-14:53:26
+    |    56 TargetCompID   = testusr4109
+    +-BODY
+    |     1 Account        = 562121
+    |     6 AvgPx          = 1373.517
+    |    11 ClOrdID        = limit_ioc_buy_gold_overlimit
+    |    14 CumQty         = 5000
+    |    17 ExecID         = T176342045
+    |    21 HandlInst      = AUTOMATED_EXECUTION_ORDER_PRIVATE (1)
+    |    31 LastPx         = 1373.517
+    |    32 LastQty        = 5000
+    |    37 OrderID        = 3561
+    |    38 OrderQty       = 7500
+    |    39 OrdStatus      = CANCELED (4)
+    |    40 OrdType        = LIMIT (2)
+    |    44 Price          = 1500
+    |    54 Side           = BUY (1)
+    |    55 Symbol         = XAU/USD
+    |    58 Text           = OrderQty <38> = 7500 exceeds maximum trade size for symbol.
+   OANDA transaction ID(s): 176342045.
+    |    59 TimeInForce    = IMMEDIATE_OR_CANCEL (3)
+    |    60 TransactTime   = 20101125-14:53:25
+    |   150 ExecType       = TRADE (F)
+    |   151 LeavesQty      = 0
+    |   461 CFICode        = MRCXXX
+    +-TRAILER
+    |    10 CheckSum       = 060
+    +========
+
+
+
+
+                                             - 20 -
+                              OANDA FIX Rules of Engagement
+
+
+Client outbound request:
+For a market-if-touched buy order, 5 units USD/CAD, price 1.5
+
+   +-HEADER
+    |     8 BeginString     = FIX.4.4
+    |     9 BodyLength      = 113
+    |    35 MsgType         = NewOrderSingle (D)
+    |    34 MsgSeqNum       = 2
+    |    49 SenderCompID    = testusr4109
+    |    52 SendingTime     = 20101126-20:19:53.000
+    |    56 TargetCompID    = OANDA
+    +-BODY
+    |     1 Account         = 562121
+    |    11 ClOrdID         = mit_buy
+    |    21 HandlInst       = AUTOMATED_EXECUTION_ORDER_PRIVATE (1)
+    |    38 OrderQty        = 5
+    |    40 OrdType         = MARKET_IF_TOUCHED (J)
+    |    44 Price           = 1.5
+    |    54 Side            = BUY (1)
+    |    55 Symbol          = USD/CAD
+    |    59 TimeInForce     = DAY (0)
+    |    60 TransactTime    = 20101126-20:19:38
+    +-TRAILER
+    |    10 CheckSum        = 013
+    +========
+
+Server inbound response:
+
+    +-HEADER
+    |     8 BeginString     = FIX.4.4
+    |     9 BodyLength      = 259
+    |    35 MsgType         = ExecutionReport (8)
+    |    34 MsgSeqNum       = 3
+    |    49 SenderCompID    = OANDA
+    |    52 SendingTime     = 20101126-20:19:53
+    |    56 TargetCompID    = testusr4109
+    +-BODY
+    |     1 Account         = 562121
+    |     6 AvgPx           = 0
+    |    11 ClOrdID         = mit_buy
+    |    14 CumQty          = 0
+    |    17 ExecID          = T176342075
+    |    21 HandlInst       = AUTOMATED_EXECUTION_ORDER_PRIVATE (1)
+    |    37 OrderID         = 3576
+    |    38 OrderQty        = 5
+    |    39 OrdStatus       = NEW (0)
+    |    40 OrdType         = MARKET_IF_TOUCHED (J)
+    |    44 Price           = 1.5
+    |    54 Side            = BUY (1)
+    |    55 Symbol          = USD/CAD
+    |    58 Text            = OANDA transaction ID(s): 176342075.
+    |    59 TimeInForce     = DAY (0)
+    |    60 TransactTime    = 20101126-20:19:53
+    |   126 ExpireTime      = 20101126-22:00:00
+    |   150 ExecType        = NEW (0)
+    |   151 LeavesQty       = 5
+    |   461 CFICode         = MRCXXX
+    +-TRAILER
+    |    10 CheckSum        = 029
+    +========
+
+
+
+
+                                             - 21 -
+                              OANDA FIX Rules of Engagement
+
+
+Client outbound request:
+For a limit buy order, 10 units EUR/USD, price 1.25, GTD ExpiryTime 20090725-12:34:56 (UTC):
+
+    +-HEADER
+    |     8 BeginString     = FIX.4.2
+    |     9 BodyLength      = 141
+    |    35 MsgType         = NewOrderSingle (D)
+    |    34 MsgSeqNum       = 171
+    |    49 SenderCompID    = testusr9
+    |    52 SendingTime     = 20091020-14:03:08.000
+    |    56 TargetCompID    = OANDA
+    +-BODY
+    |     1 Account         = 9
+    |    11 ClOrdID         = new_std_limit_order
+    |    21 HandlInst       = AUTOMATED_EXECUTION_ORDER_PRIVATE_NO_BROKER_INTERVENTION (1)
+    |    38 OrderQty        = 10
+    |    40 OrdType         = LIMIT (2)
+    |    44 Price           = 1.25
+    |    54 Side            = BUY (1)
+    |    55 Symbol          = EUR/USD
+    |    59 TimeInForce     = GOOD_TILL_DATE (6)
+    |    60 TransactTime    = 20091020-14:02:36
+    |   126 ExpireTime      = 20091025-12:34:56
+    +-TRAILER
+    |    10 CheckSum        = 029
+    +========
+
+Server inbound response:
+
+    +-HEADER
+    |     8 BeginString     = FIX.4.2
+    |     9 BodyLength      = 277
+    |    35 MsgType         = ExecutionReport (8)
+    |    34 MsgSeqNum       = 172
+    |    49 SenderCompID    = OANDA
+    |    52 SendingTime     = 20091020-14:03:09.024
+    |    56 TargetCompID    = testusr9
+    +-BODY
+    |     1 Account         = 9
+    |     6 AvgPx           = 0
+    |    11 ClOrdID         = new_std_limit_order
+    |    14 CumQty          = 0
+    |    17 ExecID          = T175433116
+    |    20 ExecTransType   = NEW (0)
+    |    21 HandlInst       = AUTOMATED_EXECUTION_ORDER_PRIVATE_NO_BROKER_INTERVENTION (1)
+    |    31 LastPx          = 0
+    |    32 LastShares      = 0
+    |    37 OrderID         = 8726
+    |    38 OrderQty        = 10
+    |    39 OrdStatus       = NEW (0)
+    |    40 OrdType         = LIMIT (2)
+    |    44 Price           = 1.25
+    |    54 Side            = BUY (1)
+    |    55 Symbol          = EUR/USD
+    |    58 Text            = OANDA transaction ID(s): 175433116.
+    |    59 TimeInForce     = GOOD_TILL_DATE (6)
+    |    60 TransactTime    = 20091020-14:03:08
+    |   126 ExpireTime      = 20091025-12:34:56
+    |   150 ExecType        = NEW (0)
+    |   151 LeavesQty       = 10
+    +-TRAILER
+    |    10 CheckSum        = 056
+    +========
+
+
+
+
+                                           - 22 -
+                                OANDA FIX Rules of Engagement
+
+
+
+
+Order Cancel / Replace Request (Outbound, Inbound) <G>
+Also known as an Order Modification Request.
+
+Use Order Cancel/Replace Request <G> to change the parameters of an existing limit, stop, or
+market-if-touched message. The server returns an execution report.
+
+
+
+
+At present, the Order Cancel / Replace can be used to change the price / stop price, order expiry
+time, and order quantity for existing limit, stop, and market-if-touched orders with an expiry time.
+
+The provided ClOrdID, Symbol, and Side fields are used to find the subject order. If multiple
+orders match the criteria, an OrderID field is needed to disambiguate.
+
+Any request issued with a different Symbol and/or Side field will not result in the expected order
+match, and will be rejected due to the order being unknown.
+
+Fields <G>
+TAG    FieldName       Req'd by       Req’d by       Type     Comments
+                       FIX            OANDA
+
+       Standard        Y              Y                       See Header Fields.
+       Header                                                 MsgType = G
+
+
+37     OrderID         N              N              string   Unique identifier for the order as assigned
+                                                              by the OANDA server
+
+
+41     OrigClOrdID     Y              Y              string   Used to identify the previous order in
+                                                              cancel and cancel/replace requests.
+
+
+11     ClOrdID         Y              Y              string   Unique order identifier assigned by the
+                                                              client.
+
+
+1      Account         N              Y              string   The OANDA fxTrade or fxTrade Practice
+                                                              account number. Required for outbound
+                                                              order or trade requests to the OANDA
+                                                              server where indicated in this document.
+
+21     HandlInst       Y (FIX 4.2)    Y (FIX 4.2)    char     Instructions for order handling on Broker
+                       N (FIX 4.4)    N (FIX 4.4)             trading floor. In FIX 4.4, the absence of
+                                                              this field is interpreted as value 1.
+                                                              Valid values:
+
+
+
+                                                 - 23 -
+                         OANDA FIX Rules of Engagement
+
+
+
+                                                    1 = Automated execution order, private, no
+                                                    Broker intervention
+
+
+55    Symbol         Y       Y             string   Must be a valid ISO currency pair, with
+                                                    forward slash. For example, EUR/USD.
+
+
+54    Side           Y       Y             char     Side of order
+                                                    Valid values:
+                                                    1 = Buy
+                                                    2 = Sell
+
+60    TransactTime   Y       Y             UTC      Time of execution/order creation,
+                                           Time     expressed in UTC (Coordinated Universal
+                                           stamp    Time, also known as 'GMT').
+
+                                                    The timestamp in this field allows the
+                                                    OANDA server to apply business rules to
+                                                    determine if the order is potentially "stale"
+                                                    (for example, in the event of
+                                                    communication problems).
+
+38    OrderQty       N       Y             qty      Number of units ordered.
+
+40    OrdType        Y       Y             char     Order type.
+                                                    Valid values:
+                                                    2 = Limit
+                                                    3 = Stop
+                                                    J = Market-if-Touched (FIX 4.4 only)
+
+44    Price          N       Y for limit   price    Price for currency pair.
+                             and
+                             market-if-
+                             touched
+                             orders only
+
+99    StopPx         N       Y for stop    price    Stop price for currency pair.
+                             orders only
+
+
+59    TimeInForce    N       N             char     Specifies how long the order remains in
+                                                    effect. Absence of this field is interpreted
+                                                    as DAY.
+
+                                                    Valid Values:
+                                                    0 = Day
+                                                    6 = GTD. (GTD orders further require one
+                                                    of ExpireDate <432> or ExpireTime
+                                                    <126>.)
+
+432   ExpireDate     N                     Local    For GTD orders, requests expiry at local
+                                           Mkt      5pm ET (EDT or EST) on the date
+                                           Date     indicated.
+
+
+126   ExpireTime     N                     UTC      For GTD orders, requests expiry at the
+                                           Time     exact UTC date and time indicated.
+                                           stamp
+
+
+
+
+                                      - 24 -
+                                OANDA FIX Rules of Engagement
+
+
+
+       Standard        Y             Y                      See Trailer Fields
+       Trailer
+
+
+Example
+Client outbound request:
+For a modify previous limit buy order, changing the price to 1.28, changing the quantity to 15,
+TimeInForce was omitted in request so expiry is now DAY:
+
+    +-HEADER
+    |     8 BeginString      = FIX.4.2
+    |     9 BodyLength       = 140
+    |    35 MsgType          = OrderCancelReplaceRequest (G)
+    |    34 MsgSeqNum        = 172
+    |    49 SenderCompID     = testusr9
+    |    52 SendingTime      = 20091020-14:04:48.000
+    |    56 TargetCompID     = OANDA
+    +-BODY
+    |     1 Account          = 9
+    |    11 ClOrdID          = modify_std_limit_order
+    |    21 HandlInst        = AUTOMATED_EXECUTION_ORDER_PRIVATE_NO_BROKER_INTERVENTION (1)
+    |    38 OrderQty         = 15
+    |    40 OrdType          = LIMIT (2)
+    |    41 OrigClOrdID      = new_std_limit_order
+    |    44 Price            = 1.28
+    |    54 Side             = BUY (1)
+    |    55 Symbol           = EUR/USD
+    |    60 TransactTime     = 20091020-14:04:33
+    +-TRAILER
+    |    10 CheckSum         = 210
+    +========
+
+Server inbound response:
+
+    +-HEADER
+    |     8 BeginString      = FIX.4.2
+    |     9 BodyLength       = 312
+    |    35 MsgType          = ExecutionReport (8)
+    |    34 MsgSeqNum        = 173
+    |    49 SenderCompID     = OANDA
+    |    52 SendingTime      = 20091020-14:04:48.929
+    |    56 TargetCompID     = testusr9
+    +-BODY
+    |     1 Account          = 9
+    |     6 AvgPx            = 0
+    |    11 ClOrdID          = modify_std_limit_order
+    |    14 CumQty           = 0
+    |    17 ExecID           = T175433117
+    |    20 ExecTransType    = NEW (0)
+    |    21 HandlInst        = AUTOMATED_EXECUTION_ORDER_PRIVATE_NO_BROKER_INTERVENTION (1)
+    |    31 LastPx           = 0
+    |    32 LastShares       = 0
+    |    37 OrderID          = 8726
+    |    38 OrderQty         = 15
+    |    39 OrdStatus        = REPLACED (5)
+    |    40 OrdType          = LIMIT (2)
+    |    41 OrigClOrdID      = new_std_limit_order
+    |    44 Price            = 1.28
+    |    54 Side             = BUY (1)
+    |    55 Symbol           = EUR/USD
+    |    58 Text             = OANDA transaction ID(s): 175433116-175433117.
+    |    59 TimeInForce      = GOOD_TILL_DATE (6)
+    |    60 TransactTime     = 20091020-14:04:48
+    |   126 ExpireTime       = 20091020-21:00:00
+    |   150 ExecType         = REPLACE (5)
+    |   151 LeavesQty        = 15
+    +-TRAILER
+
+
+
+
+                                               - 25 -
+                                  OANDA FIX Rules of Engagement
+
+
+      |    10 CheckSum        = 225
+      +========
+
+
+
+Order Cancel Request (Outbound) <F>
+The Order Cancel Request <F> message requests the cancellation of an order.
+
+The Order Cancel Request will only be accepted (and an Execution Report <8> returned) if the
+order hasn't already been executed and can be pulled back successfully. Otherwise, an Order
+Cancel Reject <9> message is returned.
+
+
+
+
+The OANDA server supports full cancellations only. The OrderQty tag is conditionally required by
+the FIX specification, but is not required on the OANDA Server. Any OrderQty value supplied in a
+request will be ignored; the full order will be canceled. To reduce the quantity of an order, use the
+Order Cancel / Replace <G> message instead.
+
+Fields <F>
+TAG     FieldName        Req'd     Req’d by    Type      Comments
+                         by FIX    OANDA
+
+        Standard         Y         Y                     See Header Fields.
+        Header
+                                                         MsgType = F
+
+37      OrderID          N         N           string    Unique identifier for the order as assigned by
+                                                         the OANDA server.
+
+41      OrigClOrdID      Y         Y           string    Used to identify the previous order in cancel
+                                                         and cancel/replace requests.
+
+11      ClOrdID          Y         Y           string    Unique order identifier assigned by the client.
+
+1       Account          N         Y           string    The OANDA fxTrade or fxTrade Practice
+                                                         account number Required for outbound order
+                                                         or trade requests to the OANDA server where
+                                                         indicated in this document.
+
+55      Symbol           Y         Y           string    Must be a valid ISO currency pair, with forward
+                                                         slash. For example, EUR/USD.
+
+54      Side             Y         Y           char      Side of order.
+                                                         Valid values:
+
+
+
+
+                                                - 26 -
+                                OANDA FIX Rules of Engagement
+
+
+
+                                                        1 = Buy
+                                                        2 = Sell
+
+60     TransactTime    Y          Y          UTC        Time of execution/order creation, expressed in
+                                             Time       UTC (Universal Time Coordinated, also known
+                                             stamp      as 'GMT').
+
+                                                        The timestamp in this field allows the OANDA
+                                                        server to apply business rules to determine if
+                                                        the order is potentially "stale" (for example, in
+                                                        the event of communication problems).
+
+       Standard        Y          Y                     See Trailer Fields
+       Trailer
+
+
+Example
+Client outbound request:
+Canceling the previous limit order:
+     +-HEADER
+     |     8 BeginString      = FIX.4.2
+     |     9 BodyLength       = 119
+     |    35 MsgType          = OrderCancelRequest (F)
+     |    34 MsgSeqNum        = 173
+     |    49 SenderCompID     = testusr9
+     |    52 SendingTime      = 20091020-14:05:34.000
+     |    56 TargetCompID     = OANDA
+     +-BODY
+     |     1 Account          = 9
+     |    11 ClOrdID          = cancel_std_limit_order
+     |    41 OrigClOrdID      = modify_std_limit_order
+     |    54 Side             = BUY (1)
+     |    55 Symbol           = EUR/USD
+     |    60 TransactTime     = 20091020-14:05:32
+     +-TRAILER
+     |    10 CheckSum         = 207
+     +========
+
+Server inbound response:
+     +-HEADER
+     |     8 BeginString      = FIX.4.2
+     |     9 BodyLength       = 314
+     |    35 MsgType          = ExecutionReport (8)
+     |    34 MsgSeqNum        = 174
+     |    49 SenderCompID     = OANDA
+     |    52 SendingTime      = 20091020-14:05:35.405
+     |    56 TargetCompID     = testusr9
+     +-BODY
+     |     1 Account          = 9
+     |     6 AvgPx            = 0
+     |    11 ClOrdID          = cancel_std_limit_order
+     |    14 CumQty           = 0
+     |    17 ExecID           = T175433118
+     |    20 ExecTransType    = NEW (0)
+     |    21 HandlInst        = AUTOMATED_EXECUTION_ORDER_PRIVATE_NO_BROKER_INTERVENTION (1)
+     |    31 LastPx           = 0
+     |    32 LastShares       = 0
+     |    37 OrderID          = 8726
+     |    38 OrderQty         = 15
+     |    39 OrdStatus        = CANCELED (4)
+     |    40 OrdType          = LIMIT (2)
+     |    41 OrigClOrdID      = modify_std_limit_order
+     |    44 Price            = 1.28
+     |    54 Side             = BUY (1)
+     |    55 Symbol           = EUR/USD
+     |    58 Text             = OANDA transaction ID(s): 175433116-175433118.
+
+
+
+                                             - 27 -
+                                 OANDA FIX Rules of Engagement
+
+
+      |    59 TimeInForce     = GOOD_TILL_DATE (6)
+      |    60 TransactTime    = 20091020-14:05:35
+      |   126 ExpireTime      = 20091020-21:00:00
+      |   150 ExecType        = CANCELED (4)
+      |   151 LeavesQty       = 0
+      +-TRAILER
+      |    10 CheckSum        = 185
+      +========
+
+
+
+Order Status Request (Outbound) <H>
+Information on previous orders is available through the Order Status Request <H> message. An
+Execution Report message reply supplies information for the requested order.
+
+Status information on an order is available for at least one month after the order’s completion (fill,
+expiry, cancellation).
+
+
+
+
+Fields <H>
+TAG     FieldName       Req'd by      Req’d by         Type     Comments
+                        FIX           OANDA
+
+        Standard        Y             Y                         See Header Fields.
+        Header
+                                                                MsgType = H
+
+37      OrderID         N             N                string   Unique identifier for the order as assigned
+                                                                by the OANDA server.
+
+11      ClOrdID         Y             Y                string   Unique order identifier assigned by the
+                                                                client.
+
+55      Symbol          Y (FIX 4.2)   Y (always)       string   Must be a valid ISO currency pair, with
+                        N (FIX 4.4)                             forward slash. For example, EUR/USD.
+
+54      Side            Y             Y                char     Side of order.
+                                                                Valid values:
+                                                                1 = Buy
+                                                                2 = Sell
+
+        Standard        Y             Y                         See Trailer Fields
+        Trailer
+
+
+
+
+                                                   - 28 -
+                             OANDA FIX Rules of Engagement
+
+
+
+Example
+Client outbound request for a previous order:
+
+   +-HEADER
+   |     8 BeginString     = FIX.4.2
+   |     9 BodyLength      = 68
+   |    35 MsgType         = OrderStatusRequest (H)
+   |    34 MsgSeqNum       = 174
+   |    49 SenderCompID    = testusr9
+   |    52 SendingTime     = 20091020-14:06:18.000
+   |    56 TargetCompID    = OANDA
+   +-BODY
+   |    11 ClOrdID         = cancel_std_limit_order
+   |    54 Side            = BUY (1)
+   |    55 Symbol          = EUR/USD
+   +-TRAILER
+   |    10 CheckSum        = 044
+   +========
+
+Server inbound response:
+
+  +-HEADER
+   |     8 BeginString     = FIX.4.2
+   |     9 BodyLength      = 269
+   |    35 MsgType         = ExecutionReport (8)
+   |    34 MsgSeqNum       = 175
+   |    49 SenderCompID    = OANDA
+   |    52 SendingTime     = 20091020-14:06:18.948
+   |    56 TargetCompID    = testusr9
+   +-BODY
+   |     1 Account         = 9
+   |     6 AvgPx           = 0
+   |    11 ClOrdID         = cancel_std_limit_order
+   |    14 CumQty          = 0
+   |    17 ExecID          = 0
+   |    20 ExecTransType   = STATUS (3)
+   |    21 HandlInst       = AUTOMATED_EXECUTION_ORDER_PRIVATE_NO_BROKER_INTERVENTION (1)
+   |    37 OrderID         = 8726
+   |    38 OrderQty        = 15
+   |    39 OrdStatus       = CANCELED (4)
+   |    40 OrdType         = LIMIT (2)
+   |    44 Price           = 1.28
+   |    54 Side            = BUY (1)
+   |    55 Symbol          = EUR/USD
+   |    58 Text            = OANDA transaction ID(s): 175433116-175433118.
+   |    59 TimeInForce     = GOOD_TILL_DATE (6)
+   |    60 TransactTime    = 20091020-14:05:35
+   |   126 ExpireTime      = 20091020-21:00:00
+   |   150 ExecType        = CANCELED (4)
+   |   151 LeavesQty       = 0
+   +-TRAILER
+   |    10 CheckSum        = 108
+   +========
+
+
+
+
+                                          - 29 -
+                                OANDA FIX Rules of Engagement
+
+
+
+
+Market Data Request (Outbound) <V>
+FIX clients can access OANDA’s real-time price information using a Market Data Request <V>,
+which is a general request for market data on specific forex rates.
+
+
+
+
+Types of Market Data Requests
+The Snapshot (SubscriptionRequestType = 0) is best for one-time requests. If you require rates
+to be continuously updated, we recommend the subscription request (Snapshot+updates,
+(SubscriptionRequestType = 1) rather than using rapid snapshot polling.
+
+SubscriptionRequestType = 0, Snapshot
+
+If a Market Data Request message is valid and successful, the OANDA server returns one or
+more Market Data - Snapshot/Full Refresh <W> messages containing one or more market data
+entries. If it's not valid or is otherwise unsuccessful, the OANDA server returns a Market Data
+Request Reject <Y>.
+
+For best performance, we recommend submitting all desired symbols (that is, currency pairs) with
+a single market data request. We also recommend requesting both Buy and Sell side data in the
+same request instead of submitting separate requests per side. If you request multiple symbols, a
+Market Data Snapshot reply will be returned for each symbol.
+
+SubscriptionRequestType = 1, Snapshot + Updates (Subscribe)
+
+When a subscription is requested, an initial snapshot is returned followed by Market Data -
+Incremental Refresh <X> messages continuously updating the rates as they change. These
+incremental refresh messages will continue arriving until the subscription is canceled or the
+session is disconnected or otherwise ended.
+
+MDUpdateType <265> = 1 must be specified for subscriptions, or else a Market Data Reject <Y>
+MDReqRejReason = 6 (Unsupported MDUpdateType) is returned. If it is rejected, the entire new
+subscription is rejected and none of the requested symbols are subscribed.
+
+The MDReqID must be unique among subscriptions; duplicates are detected, and a Market Data
+Reject <Y> MDReqRejReason = 1 (Duplicate MDReqID) message is returned. If rejected, the
+entire new subscription is rejected and none of the requested symbols are subscribed.
+
+If any symbol requested in a subscription is already the subject of another subscription, the entire
+subscription is rejected via Market Data Reject <Y> with Text <58> indicating the duplicate
+
+
+                                               - 30 -
+                                 OANDA FIX Rules of Engagement
+
+
+symbols. If rejected, the entire new subscription is rejected; none of the requested symbols are
+subscribed.
+
+For best performance, OANDA recommends you place one single subscription with all the
+symbols you are interested in, with both bid and offer requests.
+
+OANDA reserves the right to optimize or modify subscription behavior in the future.
+
+SubscriptionRequestType = 2, Disable Previous Snapshot + Update Request
+(Unsubscribe)
+
+An unsubscribe request must provide the MDReqID of an existing active subscription. The entire
+subscription is removed; all symbols of the referenced request are unsubscribed.
+
+MDEntryTypes and Symbols are ignored in unsubscribe requests. If it is supported by your client
+FIX engine, we recommend you set NoMDEntryTypes <267> = 0 and NoRelatedSym <146> = 0
+and omit any MDEntryType / Symbol tags completely (but this is not mandatory).
+
+The exact format of snapshot and incremental refresh messages is described in the Server
+Responses section later in this document.
+
+Fields <V>
+TAG    FieldName                   Req'd    Req’d by     Type     Comments
+                                   by FIX   OANDA
+
+       Standard Header             Y        Y                     See Header Fields.
+
+                                                                  MsgType = V
+
+262    MDReqID                     Y        Y            string   Unique identifier for Market Data
+                                                                  Request .
+
+                                                                  Must be unique, or the ID of
+                                                                  previous Market Data Request to
+                                                                  disable if SubscriptionRequestType
+                                                                  = Disable previous Snapshot +
+                                                                  Updates Request (2).
+
+263    SubscriptionRequestType     Y        Y            char     Indicates to the other party what
+                                                                  type of response is expected.
+
+                                                                  Valid values:
+                                                                  0 = Snapshot (only asks for current
+                                                                  information)
+                                                                  1 = Snapshot + Updates (Subscribe)
+                                                                  (asks for current information and
+                                                                  subscribes for incremental updates)
+                                                                  2 = Disable previous Snapshot +
+                                                                  Updates Request (Unsubscribe)
+                                                                  (cancels a previous subscription)
+
+264    MarketDepth                 Y        Y            int      Depth of market for Book Snapshot
+
+                                                                  Valid values:
+                                                                  1 = Top of Book
+
+
+
+
+                                                - 31 -
+                               OANDA FIX Rules of Engagement
+
+
+
+265     MDUpdateType             N        Y for        int      Specifies the type of Market Data
+                                          subscripti            update.
+                                          ons                   Valid values:
+                                                                1 = Incremental refresh
+
+                                                                Market data full refreshes are not
+                                                                supported.
+
+                                                                This tag must be omitted for
+                                                                snapshot-only and unsubscribe
+                                                                requests.
+
+267     NoMDEntryTypes           Y        Y            int      Specifies the number of repeating
+                                                                MDEntryType <269> entries.
+
+269     MDEntryType              Y        Y            char     Entries that the firm requesting the
+                                                                Market Data is interested in
+                                                                receiving. There can be multiple
+                                                                fields, as defined by field 267.
+
+                                                                Valid values:
+                                                                0 = Bid
+                                                                1 = Offer
+
+146     NoRelatedSym             Y        Y            int      Specifies the number of repeating
+                                                                Symbol <55> tags.
+
+55      Symbol                   Y        Y            string   Must be a valid ISO currency pair,
+                                                                with forward slash. For example,
+                                                                EUR/USD.
+
+        Standard Trailer         Y        Y                     See Trailer Fields
+
+
+Example
+Client outbound request for a single symbol:
+
+      +-HEADER
+      |     8 BeginString    = FIX.4.2
+      |     9 BodyLength     = 81
+      |    35 MsgType        = MarketDataRequest (V)
+      |    34 MsgSeqNum      = 2
+      |    49 SenderCompID   = testusr9
+      |    52 SendingTime    = 20100119-17:17:02.377
+      |    56 TargetCompID   = OANDA
+      +-BODY
+      |   146 NoRelatedSym   = 1
+      |   262 MDReqID        = foo
+      |   263 SubscriptionRequestType = SNAPSHOT (0)
+      |   264 MarketDepth    = 1
+      |   267 NoMDEntryTypes = 2
+      +-NoRelatedSym-Member-0
+      |    55 Symbol         = EUR/USD
+      +-NoMDEntryTypes-Member-0
+      |   269 MDEntryType    = BID (0)
+      +-NoMDEntryTypes-Member-1
+      |   269 MDEntryType    = OFFER (1)
+      +-TRAILER
+      |    10 CheckSum       = 028
+      +========
+
+
+
+
+                                              - 32 -
+                             OANDA FIX Rules of Engagement
+
+
+Server inbound response:
+
++-HEADER
+ |     8 BeginString    = FIX.4.2
+ |     9 BodyLength     = 195
+ |    35 MsgType        = MarketDataSnapshotFullRefresh (W)
+ |    34 MsgSeqNum      = 3
+ |    49 SenderCompID   = OANDA
+ |    52 SendingTime    = 20100119-17:17:02.379
+ |    56 TargetCompID   = testusr9
+ +-BODY
+ |    55 Symbol         = EUR/USD
+ |   262 MDReqID        = foo
+ |   268 NoMDEntries    = 2
+ +-NoMDEntries-Member-0
+ |   269 MDEntryType    = BID (0)
+ |   270 MDEntryPx      = 1.42706
+ |   271 MDEntrySize    = 10000000
+ |   272 MDEntryDate    = 20100119
+ |   273 MDEntryTime    = 17:17:02
+ +-NoMDEntries-Member-1
+ |   269 MDEntryType    = OFFER (1)
+ |   270 MDEntryPx      = 1.42715
+ |   271 MDEntrySize    = 10000000
+ |   272 MDEntryDate    = 20100119
+ |   273 MDEntryTime    = 17:17:02
+ +-TRAILER
+ |    10 CheckSum       = 215
+ +========
+
+
+
+
+                                          - 33 -
+                                  OANDA FIX Rules of Engagement
+
+
+
+
+Server Responses (Inbound)
+Execution Report (Inbound) <8>
+The Execution Report <8> message is returned by the OANDA server to report that a client order
+was executed or rejected. For example, this message could:
+
+        confirm receipt of an order (New Order - Single <D>)
+        confirm changes to an existing order were made (Order Cancel Request <F>, Order
+         Cancel / Replace Request <G>)
+        reject new orders
+
+Rejected order modifications or cancellations are communicated via Order Cancel Reject <9>.
+
+Note that the format of an Execution Report message varies by FIX version. In FIX 4.2, each
+execution report contains three fields that are used to communicate both the current state of the
+order and the purpose of the message: OrdStatus <39>, ExecType <150> and
+ExecTransType <20>. In FIX 4.4, each execution report contains two fields that are used to
+communicate both the current state of the order (OrdStatus <39>) and the purpose of the
+message (ExecType <150>).
+
+In execution reports, the TimeInForce <59> tag that is reported for a long-duration order will be
+reported as DAY in response to a request where TimeInForce=DAY was specified. In general,
+order expiry times will be reported using TimeInForce=GTD with the exact UTC expiry time
+reported via ExpireTime <126>.
+
+The Text <58> field provides supplemental information about the order execution. It consists of
+phrases or sentences separated with a period and space. Execution reports also list the OANDA
+transaction IDs (transaction tickets) that correspond to the FIX order as discussed in the section
+"Mapping of FIX Orders to OANDA Transaction tickets".
+
+An Execution Report for a Market-if-Touched order appearing on a FIX 4.2 session will be
+reported as OrdType <40> = 2 with a Text <58> annotation “OrdType=J”.
+
+
+Fields <8>
+TAG      FieldName            Req'd      Type        Comments
+                              by FIX
+
+         Standard Header      Y                      See Header Fields.
+                                                     MsgType = 8
+
+37       OrderID              Y          string      Unique identifier for the order as assigned by the
+                                                     OANDA server.
+
+11       ClOrdID              N          string      Unique order identifier assigned by the client.
+
+41       OrigClOrdID          N          string      ClOrdID <11> of the previous order (NOT the initial
+                                                     order of the day) assigned by the client, used to
+                                                     identify the previous order in cancel and
+                                                     cancel/replace requests.
+
+17       ExecID                Y         string      Execution ID as assigned by the OANDA server.
+
+
+
+
+                                                  - 34 -
+                           OANDA FIX Rules of Engagement
+
+
+
+20    ExecTransType    Y          char        Identifies transaction type.
+      (FIX 4.2 only)
+                                              Valid values:
+                                              0 = New
+
+150   ExecType         Y          char        Describes the specific Execution Report (for
+                                              example, Pending Cancel) while OrdStatus <39>
+                                              will always identify the current order status (for
+                                              example, Partially Filled).
+
+                                              Valid values:
+                                              0 = New
+                                              2 = Fill (FIX 4.2 only)
+                                              4 = Canceled
+                                              5 = Replace
+                                              8 = Rejected
+                                              C = Expired
+                                              F = Trade (FIX 4.4 only)
+
+39    OrdStatus        Y          char        Identifies the current status of the order.
+
+                                              Valid values:
+                                              0 = New
+                                              2 = Filled
+                                              4 = Canceled
+                                              5 = Replaced (FIX 4.2 only)
+                                              8 = Rejected
+                                              C = Expired
+
+103   OrdRejReason     N          int         Code to identify reason for order rejection.
+
+                                              Valid values:
+                                              0 = Broker option
+                                              1 = Unknown symbol
+                                              2 = Exchange closed
+                                              3 = Order exceeds limit
+                                              4 = Too late to enter
+                                              5 = Unknown Order
+                                              6 = Duplicate Order (e.g. duplicate ClOrdID <11>)
+                                              8 = Stale Order
+                                              99 = Other (FIX 4.4 only)
+
+1     Account          N          string      The OANDA fxTrade or fxTrade Practice account
+                                              number. Required for outbound order or trade
+                                              requests to the OANDA server where indicated in
+                                              this document.
+
+21    HandlInst        Y (FIX     “1”         Instructions for order handling on the broker trading
+                       4.2)                   floor. In FIX 4.4, the absence of this field is
+                       N (FIX                 interpreted as value 1.
+                       4.4)
+                                              Valid values:
+                                              1 = Automated execution order, private, no broker
+                                              intervention
+
+55    Symbol           Y          string      Must be a valid ISO currency pair, with forward
+                                              slash. For example, EUR/USD.
+
+
+
+
+                                           - 35 -
+                                 OANDA FIX Rules of Engagement
+
+
+
+461   CFICode                N          string      ISO 10962-compliant CFI code
+      (FIX 4.4 only)                                Valid values:
+                                                    MRCXXX
+
+54    Side                   Y          char        Side of order
+                                                    Valid values:
+                                                    1 = Buy
+                                                    2 = Sell
+
+38    OrderQty               N          qty         Number of units ordered.
+
+40    OrdType                N          char        Order type.
+                                                    Valid values:
+                                                    1 = Market
+                                                    2 = Limit
+                                                    3 = Stop
+                                                    J = Market-if-Touched
+
+                                                    Note Execution Reports for Market-if-Touched
+                                                    orders on FIX 4.2 sessions will report OrdType=2
+                                                    with a supplementary Text <58> token.
+
+44    Price                  N          Price       Present if specified in the order.
+
+99    StopPx                 N          Price       Present if specified in the order.
+
+59    TimeInForce            N          char        Present if specified in the order.
+                                                    Valid Values:
+                                                    0 = Day
+                                                    3 = Immediate or Cancel (IOC)
+                                                    4 = Fill or Kill (FOK)
+                                                    6 = GTD
+
+126   ExpireTime             N          UTC         Provided to indicate the expiry time of an entry,
+                                        Time        limit, or stop order.
+                                        stamp
+
+32    LastShares (FIX 4.2)   N          qty         Units bought/sold on this (last) fill.
+      LastQty (FIX 4.4)
+
+31    LastPx                 N          price       Price of this (last) fill.
+
+151   LeavesQty              Y          qty         Amount open for further execution. If the OrdStatus
+                                                    is Canceled, Expired, or Rejected (in which case
+                                                    the order is no longer active) then LeavesQty could
+                                                    be 0, otherwise LeavesQty = OrderQty - CumQty.
+
+14    CumQty                 Y          qty         Total number of units filled.
+
+6     AvgPx                  Y          price       Calculated average price of all fills on this order.
+
+      TransactTime           N          UTC         Time the transaction represented by this Execution
+                                        Time        Report occurred.
+60
+                                        Stamp
+
+
+
+
+                                                 - 36 -
+                                   OANDA FIX Rules of Engagement
+
+
+
+58     Text                    N           string       Text message providing supplemental information
+                                                        on the order. Market-if-Touched order messages
+                                                        on FIX 4.2 sessions will contain token
+                                                        OrdType=J. Also, the resulting OANDA
+                                                        transaction IDs are listed here.
+
+       Standard Trailer        Y                        See Trailer Fields
+
+
+
+
+Order Cancel Reject (Inbound) <9>
+The Order Cancel Reject <9> message is issued by the OANDA server in response to Cancel
+Request <F> or Cancel/Replace Request <G> messages which cannot be honored.
+
+Requests to change price or quantity are executed only when an outstanding quantity exists.
+Filled orders cannot be changed.
+
+Fields <9>
+TAG    FieldName           Req'd       Type         Comments
+                           by
+                           FIX
+
+       Standard Header     Y                        See Header Fields.
+
+                                                    MsgType = 9
+
+37     OrderID             N           string       Unique identifier for the order as assigned by the
+                                                    OANDA server.
+
+11     ClOrdID             Y           string       Unique order identifier assigned by the client.
+
+41     OrigClOrdID         Y           string       ClOrdID which could not be canceled/replaced.
+                                                    ClOrdID of the previous order (NOT the initial order of
+                                                    the day) when canceling or replacing an order.
+
+39     OrdStatus           Y           char         OrdStatus value after this cancel reject is applied.
+
+                                                    Valid values:
+                                                    0 = New
+                                                    2 = Filled
+                                                    4 = Canceled
+                                                    8 = Rejected
+                                                    C = Expired
+
+1      Account             N           string       The OANDA fxTrade or fxTrade Practice account
+                                                    number. Required for outbound order or trade requests
+                                                    to the OANDA server where indicated in this document.
+
+434    CxlRejResponseTo    Y           char         Identifies the type of request that the Cancel Reject is
+                                                    in response to.
+
+                                                    Valid values:
+                                                    1 - Order Cancel Request <F>
+                                                    2 - Order Cancel/Replace Request <G>
+
+
+
+
+                                                    - 37 -
+                                 OANDA FIX Rules of Engagement
+
+
+
+102    CxlRejReason          N        int      Code to identify reason for cancel rejection.
+
+                                               Valid values:
+                                               0 = Too late to cancel
+                                               1 = Unknown order
+                                               2 = Broker / Exchange Option
+                                               6 = Duplicate ClOrdID received (FIX 4.4 only)
+                                               99 = Other (FIX 4.4 only)
+
+58     Text                  N        string   Could note an Invalid field. See list below.
+
+       Standard Trailer      Y                 See Trailer Fields
+
+
+
+
+Possible Values for Text Field (58)
+Depending on the situation, one or more of the following messages will appear in the Text (58)
+field. This is not an exhaustive list.
+
+Note: The text field (58) also includes OANDA transaction tickets—see the earlier section,
+“Mapping of FIX Orders to OANDA Transaction Tickets.”
+
+TYPE                Format                     Selected Examples                      Example
+Situation                                                                             Explanation
+
+ERROR:              [tag] required.            OrigClOrdID <41> required.
+required tag                                   OrderQty <38> required.
+missing                                        Account <1> required.
+
+ERROR:              [tag] = [value] not        Side <54> = 4 not supported.
+the tag value       supported.
+supplied is not                                OrdType <40> = P not
+supported                                      supported.
+
+ERROR: tag          [tag] value invalid.       OrderQty <38> value invalid.           for example, if
+value not valid                                                                       -100 units are
+                                                                                      requested
+
+                                               Account <1> value invalid.             for example, if
+                                                                                      account
+                                                                                      "johnny's" is
+                                                                                      given when a
+                                                                                      numeric value is
+                                                                                      required
+
+ERROR:              [tag] format error.        OrderID <37> format error.             for example, if
+tag value not in                                                                      order ID "three" is
+correct format                                                                        given when a
+                                                                                      numeric value is
+                                                                                      required
+
+                                               ExpireTime <126> format error.         for example, if a
+                                                                                      wrong date
+                                                                                      format "January
+                                                                                      15th" is used
+
+
+
+                                                - 38 -
+                                  OANDA FIX Rules of Engagement
+
+
+ERROR:               [tag] not valid when     Price <44> not valid when          user tries to
+tag specified but    [tag2] = [value2].       OrdType <40> = 1.                  specify a limit
+is not valid for                                                                 price for a market
+the specific                                                                     order
+request                                       StopPx <99> not valid when         user tries to
+                                              OrdType <40> = 1.                  specify a stop
+                                                                                 price for a market
+                                                                                 order
+                                              StopPx <99> not valid when         user tries to
+                                              OrdType <40> = 2.                  specify a stop
+                                                                                 price for a limit
+                                                                                 order
+ERROR:               [tag] required when      Price <44> required when           the limit price is
+tag required for     [tag2] = [value2].       OrdType <40> = 2.                  not supplied for a
+specific request                                                                 limit order
+type is missing                               StopPx <99> required when          the stop price is
+                                              OrdType <40> = 3.                  not supplied for a
+                                                                                 stop order
+
+                                              One of ExpireDate <432>,           the specific order
+                                              ExpireTime <126> required          lifetime is not
+                                              when TimeInForce <59> = 6.         supplied
+
+ERROR:               [tag] = [value] not      TimeInForce <59> = 3 not           user asks for IOC
+tag value            supported when [tag2]    supported when OrdType <40>        execution on a
+supplied not         = [value2].              = J.                               market-if-touched
+supported for                                                                    order
+specific request
+
+WARNING:                                      Order received after 16:55 ET;
+day order placed                              order will expire next day 17:00
+too close to day                              ET (21:00 UTC).
+expiration time
+
+ERROR:               Account <1> = [value]    Account <1> = 15 access
+an attempt to        access denied.           denied.
+trade on an
+account without
+permission
+
+ERROR:                [tag] = [value] not     Symbol <55> = gold/dollar not
+value supplied is    valid.                   valid.
+not a valid value
+
+ERROR:               Account <1> = [value]
+trade fails due to   insufficient funds.
+NSF
+
+ERROR:               Symbol <55> = [value]
+trading halted on    trading halted.
+symbol
+
+NOTICE or            OrderQty <38> =
+ERROR:               [value] exceeds
+trade size           available quantity for
+
+
+
+                                               - 39 -
+                                 OANDA FIX Rules of Engagement
+
+
+exceeds             symbol.
+maximum
+
+ERROR:              Multiple orders             Multiple orders matched: 15(2),   There are two
+request on          matched:                    19(1), 25(3).                     formats:
+existing order      [orderid](ordertype),
+results in          [orderid](ordertype).                                         A comma-
+multiple                                        Multiple orders matched:          separated list:
+candidate           OR                          buymore,15,2; buymore,19,1;       "b(c)"
+matched orders                                  buymore,25,3.
+                    Multiple orders match                                         Or, a semicolon-
+(resubmit           (ClOrdID,OrderID,Ord                                          separated list:
+request with        Type):                                                        "a,b,c"
+specific OrderID)   [clordid],[orderid],[ordt                                     (where b is the
+                    ype];[repeats].                                               orderid, c is the
+                                                                                  ordtype).
+
+
+ERROR:              [tag] value incorrect.      Symbol <55> value incorrect.
+exact order
+orderid provided,                               Side <54> value incorrect.
+but some values
+specified do not
+match order
+particulars
+
+ERROR:              [tag] changes not           TimeInForce <59> changes not
+user tries to       permitted.                  permitted.
+change fixed
+order parameters                                Symbol <55> changes not
+                                                permitted.
+
+                                                Side <54> changes not
+                                                permitted.
+
+                                                OrdType <40> changes not
+                                                permitted.
+
+ERROR:              [tag] = [value] out of      ExpireDate <432> = 21000115
+order duration      range; Order lifetime       out of range; Order lifetime
+out of range        minimum 5 minutes,          minimum 5 minutes, maximum
+                    maximum 30 calendar         30 calendar days.
+                    days.
+
+NOTICE:             [tag] = [value] not met     Price <44> = 1.01 not met
+FOK/IOC error       (market [type] =            (market offer = 1.00).
+was canceled        [price]).
+due to price                                    StopPx <99> = 1.01 not met
+stipulation not                                 (market bid = 1.00).
+met
+
+
+
+
+                                                 - 40 -
+                              OANDA FIX Rules of Engagement
+
+
+Reject (Inbound) <3>
+The Reject <3> message is issued by the OANDA server when a message is received but cannot
+be properly processed due to a syntax error or other coding logic violation. For example, the
+string " MsgType <35>=&" would successfully pass de-encryption, CheckSum <10> and
+BodyLength <9> checks, but would be rejected by the OANDA server with a Reject message.
+
+The reason for the rejection may be given in the SessionRejectReason <373> tag, with further
+explanation given in the Text <58> field.
+
+Fields <3>
+TAG     FieldName        Req'd     Type     Comments
+                         by FIX
+
+        Standard         Y                  See Header Fields.
+        Header                              MsgType = 3
+
+45      RefSeqNum        Y         int      MsgSeqNum of rejected message
+
+371     RefTagID         N         int      The tag number of the FIX field being referenced.
+
+372     RefMsgType       N         string   The MsgType of the FIX message being referenced.
+
+373     SessionReject    N         int      Code to identify the reason for a session-level Reject
+        Reason                              message.
+
+                                            Possible values:
+                                            0        Invalid tag number
+                                            1        Required tag missing
+                                            2        Tag not defined for this message type
+                                            3        Undefined Tag
+                                            4        Tag specified without a value
+                                            5        Value incorrect (out of range) for this tag
+                                            6        Incorrect data format for value
+                                            7        Decryption problem
+                                            8        Signature <89> problem
+                                            9        CompID problem
+                                            10       SendingTime <52> accuracy problem
+                                            11       Invalid MsgType <35>
+
+                                            (Note other session-level rule violations may exist in
+                                            which case SessionRejectReason <373> is not specified)
+
+58      Text             N         string   Where possible, this message explains the reason for
+                                            rejection
+
+        Standard         Y
+                                            See Trailer Fields
+        Trailer
+
+
+
+
+                                              - 41 -
+                               OANDA FIX Rules of Engagement
+
+
+
+
+Business Message Reject (Inbound) <j>
+The Business Message Reject <j> message rejects a client request message that fulfills session-
+level rules but fails to meet business requirements and cannot be rejected via any other means.
+
+Fields <j>
+
+TAG    FieldName                Req'd    Type        Comments
+                                by
+                                FIX
+
+       Standard Header          Y                    See Header Fields.
+
+                                                     MsgType = j (lower case)
+
+45     RefSeqNum                N        int         MsgSeqNum of rejected message
+
+372    RefMsgType               Y        string      The MsgType of the FIX message being
+                                                     referenced.
+
+379    BusinessRejectRefID      N        string      The value of the business-level "ID" field on the
+                                                     message being referenced. Required unless the
+                                                     corresponding ID field (see list above) was not
+                                                     specified.
+
+380    BusinessRejectReason     Y        int         Code to identify reason for a Business Message
+                                                     Reject message.
+
+                                                     Valid values:
+                                                     1 = Unkown ID
+                                                     3 = Unsupported Message Type
+                                                     4 = Application Not Available
+                                                     5 = Conditionally Required Field Missing
+
+58     Text                     N        string      Where possible, message to explain reason for
+                                                     rejection
+
+       Standard Trailer         Y                    See Trailer Fields
+
+
+
+
+Market Data - Snapshot/Full Refresh <W>
+Market Data - Snapshot/Full Refresh <W> messages respond to Market Data Request <V>
+messages. Snapshot <W> messages provide the Market Data Request <V> information via their
+MDReqID tag.
+
+If multiple symbols were requested in one <V> message, multiple <W> responses are returned
+because each <W> message only provides information for one symbol.
+
+Indicative prices (for non-tradable pairs) report MDEntrySize=0 and Text="Indicative".
+
+
+
+
+                                                  - 42 -
+                               OANDA FIX Rules of Engagement
+
+
+
+
+Fields <W>
+
+TAG    FieldName      Req'd    Type           Comments
+                      by
+                      FIX
+
+       Standard       Y                       See Header Fields.
+       Header
+                                              MsgType = W
+
+262    MDReqID        N        string         Unique identifier for Market Data Request <V>
+
+55     Symbol         Y        string         Must be a valid ISO currency pair, with forward slash.
+                                              For example, EUR/USD.
+
+268    NoMDEntries    Y        int            Number of entries following
+
+269    MDEntryType    Y        char           Type Market Data entry. Must be the first field in this
+                                              repeating group.
+
+                                              Valid values:
+                                              0 = Bid
+                                              1 = Offer
+
+270    MDEntryPx      Y        price          Price of the Market Data Entry
+
+271    MDEntrySize    N        int            Number of units available (or the maximum trade
+                                              size) at the time the market data snapshot was
+                                              generated
+
+272    MDEntryDate    N        UTCDate        UTC date of rate data
+
+273    MDEntryTime    N        UTCTimeOnly    UTC time of rate data
+
+58     Text           N        String         Indicative prices are marked "Indicative".
+
+       Standard       Y
+                                              See Trailer Fields
+       Trailer
+
+
+Example
+For an example of a full refresh message, see the previous market data <V> example.
+
+
+Market Data - Incremental Refresh <X>
+On a Market Data Request <V> subscription request, after the snapshot for the requested
+symbols is sent, Incremental Refresh <X> messages are sent on rate updates. If the rate is
+unchanged, no message is sent.
+
+The OANDA rates system always updates the bid and offer rates simultaneously; if both bid and
+offer are subscribed to, they will always be provided together in the incremental refresh.
+
+
+
+
+                                             - 43 -
+                                    OANDA FIX Rules of Engagement
+
+
+The tags MDEntrySize and MDEntryDate may or may not appear in incremental refresh
+messages; if they are absent, the most recent previously-indicated value for the symbol still
+applies.
+
+Notes on Multiple Subscriptions
+
+The <X> message supports multiple market data entries, so each <X> message may provide rate
+updates on multiple symbols, possibly from multiple subscriptions.
+
+     For one subscription: If an incremental refresh <X> message contains rate data for symbols
+      that all belong to one subscription, its MDReqID tag indicates the requesting subscription.
+
+     For multiple subscriptions: If the message contains data for symbols from multiple
+      subscriptions, each MD entry will include a Text field with the string "MDReqID=<id>", where
+      “<id>" indicates the requesting subscription.
+
+OANDA reserves the right to optimize or modify subscription behavior in the future.
+
+
+Fields <X>
+
+TAG      FieldName      Req'd    Type           Comments
+                        by
+                        FIX
+
+         Standard       Y                       See Header Fields.
+         Header                                 MsgType = X
+
+262      MDReqID        N        string         Conditionally provided if this message is in response
+                                                to a single Market Data Request <V>. See the section
+                                                on multiple subscriptions above.
+
+268      NoMDEntries    Y        int            Number of entries following
+
+         Entries                                There can be multiple entries based on the
+                                                NoMDEntries field. (See the MD entries table below
+                                                for details on fields.)
+
+         Standard       Y
+                                                See Trailer Fields
+         Trailer
+
+
+
+MD Entries
+Multiple MD entries may be returned (the number of entries is defined in the NoMDEntries field).
+
+TAG      FieldName          Req'd      Type        Comments
+                            by
+                            FIX
+
+279      MDUpdateAction     Y          char        Valid values:
+                                                   1 = Change
+
+
+
+
+                                                - 44 -
+                               OANDA FIX Rules of Engagement
+
+
+
+269     MDEntryType      N       char            Type of Market Data entry.
+
+                                                 Valid values:
+                                                 0 = Bid
+                                                 1 = Offer
+
+55      Symbol           N       string          A valid ISO currency pair, must include the forward
+                                                 slash. For example, “EUR/USD”.
+
+270     MDEntryPx        N       price           Price of the Market Data Entry.
+
+271     MDEntrySize      N       Int             Number of units available (or the maximum trade
+                                                 size) at the time the market data snapshot was
+                                                 generated
+
+272     MDEntryDate      N       UTCDate         UTC date of rate data
+
+273     MDEntryTime      N       UTCTimeOnl      UTC time of rate data
+                                 y
+
+58      Text             N       String          Indicative prices are marked "Indicative".
+
+58      Text             N       string          If there are multiple subscriptions, indicates the
+                                                 MDReqID. See the section on multiple
+                                                 subscriptions above.
+
+
+
+Examples:
+Sample incremental refresh message, in response to a subscription MDReqID=foo, giving data
+for two symbols (request and initial snapshot response not shown):
+
+      +-HEADER
+      |     8 BeginString    = FIX.4.2
+      |     9 BodyLength     = 315
+      |    35 MsgType        = MarketDataIncrementalRefresh (X)
+      |    34 MsgSeqNum      = 229
+      |    49 SenderCompID   = OANDA
+      |    52 SendingTime    = 20090618-15:03:56.000
+      |    56 TargetCompID   = testusr
+      +-BODY
+      |   262 MDReqID        = foo
+      |   268 NoMDEntries    = 4
+      +-NoMDEntries-Member-0
+      |   279 MDUpdateAction = CHANGE (1)
+      |   269 MDEntryType    = BID (0)
+      |    55 Symbol         = USD/CAD
+      |   270 MDEntryPx      = 1.12654
+      |   272 MDEntryDate    = 20090618
+      |   273 MDEntryTime    = 15:03:56
+      +-NoMDEntries-Member-1
+      |   279 MDUpdateAction = CHANGE (1)
+      |   269 MDEntryType    = OFFER (1)
+      |    55 Symbol         = USD/CAD
+      |   270 MDEntryPx      = 1.12694
+      |   272 MDEntryDate    = 20090618
+      |   273 MDEntryTime    = 15:03:56
+      +-NoMDEntries-Member-2
+      |   279 MDUpdateAction = CHANGE (1)
+      |   269 MDEntryType    = BID (0)
+      |    55 Symbol         = EUR/USD
+      |   270 MDEntryPx      = 1.39651
+
+
+
+
+                                              - 45 -
+                                  OANDA FIX Rules of Engagement
+
+
+    |   272 MDEntryDate    = 20090618
+    |   273 MDEntryTime    = 15:03:56
+    +-NoMDEntries-Member-3
+    |   279 MDUpdateAction = CHANGE (1)
+    |   269 MDEntryType    = OFFER (1)
+    |    55 Symbol         = EUR/USD
+    |   270 MDEntryPx      = 1.39663
+    |   272 MDEntryDate    = 20090618
+    |   273 MDEntryTime    = 15:03:56
+    +-TRAILER
+    |    10 CheckSum       = 253
+    +========
+
+Sample incremental refresh message, with symbols requested from two different subscription
+requests, MDReqID=foo and MDReqID=bar:
+
+    +-HEADER
+    |     8 BeginString    = FIX.4.2
+    |     9 BodyLength     = 366
+    |    35 MsgType        = MarketDataIncrementalRefresh (X)
+    |    34 MsgSeqNum      = 26
+    |    49 SenderCompID   = OANDA
+    |    52 SendingTime    = 20090618-15:08:15.000
+    |    56 TargetCompID   = testusr
+    +-BODY
+    |   268 NoMDEntries    = 4
+    +-NoMDEntries-Member-0
+    |   279 MDUpdateAction = CHANGE (1)
+    |   269 MDEntryType    = BID (0)
+    |    55 Symbol         = GBP/CHF
+    |   270 MDEntryPx      = 1.76829
+    |   272 MDEntryDate    = 20090618
+    |   273 MDEntryTime    = 15:08:15
+    |    58 Text           = MDReqID=bar
+    +-NoMDEntries-Member-1
+    |   279 MDUpdateAction = CHANGE (1)
+    |   269 MDEntryType    = OFFER (1)
+    |    55 Symbol         = GBP/CHF
+    |   270 MDEntryPx      = 1.76882
+    |   272 MDEntryDate    = 20090618
+    |   273 MDEntryTime    = 15:08:15
+    |    58 Text           = MDReqID=bar
+    +-NoMDEntries-Member-2
+    |   279 MDUpdateAction = CHANGE (1)
+    |   269 MDEntryType    = BID (0)
+    |    55 Symbol         = USD/CAD
+    |   270 MDEntryPx      = 1.12607
+    |   272 MDEntryDate    = 20090618
+    |   273 MDEntryTime    = 15:08:15
+    |    58 Text           = MDReqID=foo
+    +-NoMDEntries-Member-3
+    |   279 MDUpdateAction = CHANGE (1)
+    |   269 MDEntryType    = OFFER (1)
+    |    55 Symbol         = USD/CAD
+    |   270 MDEntryPx      = 1.12647
+    |   272 MDEntryDate    = 20090618
+    |   273 MDEntryTime    = 15:08:15
+    |    58 Text           = MDReqID=foo
+    +-TRAILER
+    |    10 CheckSum       = 008
+    +========
+
+
+
+Market Data Request Reject <Y>
+The Market Data Request Reject <Y> is used when the broker cannot honor the Market Data Request <V>,
+due to business or technical reasons. Brokers may choose to limit various parameters, such as the size of
+requests, whether just the top of book or the entire book may be displayed, and whether Full or Incremental
+updates must be used.
+
+
+
+                                                   - 46 -
+                               OANDA FIX Rules of Engagement
+
+
+Fields
+                           Req'd   Type
+TAG     FieldName          by                Comments
+                           FIX
+
+        Standard Header    Y                 See Header Fields.
+                                             MsgType = Y
+
+262     MDReqID            Y       string    Unique identifier for Market Data Request <V>
+
+281     MDReqRejReason     N       char      Reason for the rejection of a Market Data request.
+                                             Valid values:
+                                             0 = Unknown symbol
+                                             4 = Unsupported SubscriptionRequestType
+
+58      Text               N       string    Explanatory text from the server.
+
+        Standard Trailer   Y                 See Trailer Fields
+
+
+Example
+Sample client request with invalid symbol:
+      +-HEADER
+      |     8 BeginString    = FIX.4.2
+      |     9 BodyLength     = 88
+      |    35 MsgType        = MarketDataRequest (V)
+      |    34 MsgSeqNum      = 28
+      |    49 SenderCompID   = testusr
+      |    52 SendingTime    = 20090605-16:23:59.000
+      |    56 TargetCompID   = OANDA
+      +-BODY
+      |   146 NoRelatedSym   = 1
+      |   262 MDReqID        = 6
+      |   263 SubscriptionRequestType = SNAPSHOT (0)
+      |   264 MarketDepth    = 1
+      |   267 NoMDEntryTypes = 2
+      +-NoRelatedSym-Member-0
+      |    55 Symbol         = Dubloon/Buckazoid
+      +-NoMDEntryTypes-Member-0
+      |   269 MDEntryType    = BID (0)
+      +-NoMDEntryTypes-Member-1
+      |   269 MDEntryType    = OFFER (1)
+      +-TRAILER
+      |    10 CheckSum       = 115
+      +========
+
+Server inbound response:
+
+      +-HEADER
+      |     8 BeginString    = FIX.4.2
+      |     9 BodyLength     = 92
+      |    35 MsgType        = MarketDataRequestReject (Y)
+      |    34 MsgSeqNum      = 29
+      |    49 SenderCompID   = OANDA
+      |    52 SendingTime    = 20090605-16:23:59.000
+      |    56 TargetCompID   = testusr
+      +-BODY
+      |    58 Text           = InvalidPairException
+      |   262 MDReqID        = 6
+      |   281 MDReqRejReason = UNKNOWN_SYMBOL (0)
+      +-TRAILER
+      |    10 CheckSum       = 121
+      +========
+
+
+
+                                             - 47 -
+                                OANDA FIX Rules of Engagement
+
+
+
+
+Appendix: FIX Data Types
+Type: char
+        Single character value, can include any alphanumeric character or punctuation except
+        the delimiter. All char fields are case sensitive (i.e. m != M).
+
+Type: data
+        (Boolean) Raw data with no format or content restrictions. Data fields are always
+        immediately preceded by a length field. The length field should specify the number of
+        bytes of the value of the data field (up to but not including the terminating SOH). Caution:
+        the value of one of these fields may contain the delimiter (SOH) character. Note that the
+        value specified for this field should be followed by the delimiter (SOH) character as all
+        fields are terminated with an "SOH".
+
+Type: int
+        Sequence of digits without commas or decimals and optional sign character (ASCII
+        characters "-" and "0" - "9" ). The sign character utilizes one byte (i.e. positive int is
+        "99999" while negative int is "-99999"). Note that int values may contain leading zeros
+        (e.g. "00023" = "23"). Examples: 723 in field 21 would be mapped int as |21=723|, -723 in
+        field 12 would be mapped int as |12=-723|.
+
+Type: length
+        A positive integer denoting the number of bytes of the value of a data field.
+
+Type: LocalMktDate
+        Date of Local Market, in YYYYMMDD format, where YYYY = 0000-9999, MM = 01-12,
+        DD = 01-31. Contrast with UTCTimestamp.
+Type: price
+        A positive floating value, with up to five decimal places.
+
+Type: string
+        An alpha-numeric free-format string of characters that can include any character or
+        punctuation except the delimiter. All char fields are case sensitive.
+
+Type: UTCDate
+       YYYYMMDD portion of UTCTimestamp.
+
+Type: UTCTimeOnly
+       HH:MM:SS portion of UTCTimestamp.
+
+Type: UTCTimestamp
+       A time/date combination represented in UTC (Universal Time Coordinated, also known
+       as "GMT") in either YYYYMMDD-HH:MM:SS (whole seconds) or YYYYMMDD-
+       HH:MM:SS.sss (milliseconds) format. The colons, dash, and period are required.
+       Contrast with LocalMktDate.
+
+
+
+
+                                               - 48 -
+                              OANDA FIX Rules of Engagement
+
+
+
+
+Appendix: FIX Message Types
+(This list shows all FIX message types. Message types supported by OANDA fxTrade are
+bolded.)
+
+0 = Heartbeat (automatically handled by the FIX engine software)
+1 = Test Request
+2 = Resend Request (automatically handled by the FIX engine software)
+3 = Reject
+4 = Sequence Reset (automatically handled by the FIX engine software)
+5 = Logout
+6 = Indication of Interest
+7 = Advertisement
+8 = Execution Report
+9 = Order Cancel Reject
+A = Logon
+B = News (sent by the OANDA server following successful logon)
+C = Email
+D = New Order - Single
+E = Order - List
+F = Order Cancel Request
+G = Order Cancel/Replace Request
+H = Order Status Request
+J = Allocation
+K = List Cancel Request
+L = List Execute
+M = List Status Request
+N = List Status
+P = Allocation ACK
+Q = Don't Know Trade (DK)
+R = Quote Request
+S = Quote
+T = Settlement Instructions
+V = Market Data Request
+W = Market Data - Snapshot/Full Refresh
+X = Market Data - Incremental Refresh
+Y = Market Data Request Reject
+Z = Quote Cancel
+a = Quote Status Request
+b = Quote Acknowledgement
+c = Security Definition Request
+d = Security Definition
+e = Security Status Request
+f = Security Status
+g = Trading Session Status Request
+h = Trading Session Status
+i = Mass Quote
+j = Business Message Reject
+k = Bid Request
+l = Bid Response (lowercase L)
+m = List Strike Price
+
+
+
+
+                                            - 49 -
+                                 OANDA FIX Rules of Engagement
+
+
+
+
+Addendum: Additional Features for Institutional Clients
+OANDA institutional clients can access additional features on the OANDA FIX Server. Your sales
+or account representative will advise if one or more of the following features is available for your
+FIX access.
+
+
+Limitation to Immediate-fill Order Types
+Some clients are limited to those order types that provide an immediate fill notification:
+
+         market orders
+         limit orders submitted FOK or IOC
+         stop orders submitted FOK or IOC
+
+These order types receive expedient processing by the transaction systems, and are ideal for
+customers who require faster response times.
+
+Varying Liquidity
+Users are advised to check the MDEntrySize <271> tag in Market Data Snapshot <W> and
+Incremental Refresh <X> messages. This value indicates the maximum quantity that can be
+traded per trade for the symbol indicated.
+
+At times, this value will be zero, indicating that no quantity is available for execution. Any trades
+submitted at times of zero quantity available will receive OrdStatus <39> = CANCELED for
+FOK/IOC orders, REJECTED for all other order types..
+
+Value Date
+This feature is called "Value Date" but involves tags named "Settlement Date".
+
+Certain users will receive the tag FutSettDate <64> (FIX.4.2) / SettlDate <64> (FIX.4.4) in both
+Market Data Snapshot <W> and Incremental Refresh <X> messages. The value in this tag is in
+LocalMktDate (New York) time, and indicates when the position will be settled in the user's
+account with their Prime Broker, should the user place a trade on this symbol at the time
+indicated by SendingTime <52> value of the FIX message.
+
+Tag <64> is not normally a valid tag for <W> and <X> messages, so the client’s FIX engine
+must be modified to accept this tag in <W> and <X> messages. Otherwise, the engine may
+reject the messages due to structural validation failure. An entry for tag <64> should be inserted
+after any instance of tag <287> in <W> and <X> messages in the FIX data dictionary (that is, as
+part of a NoMDEntries group item).
+
+                       Market Data Snapshot / Full Refresh <W> -- Fields
+
+TAG          FieldName           Req'd      Type              Comments
+                                 by FIX
+             Standard Header     Y                            Standard header fields; MsgType = W
+
+262          MDReqID             N          string            Unique identifier for Market Data
+                                                              Request <V>
+
+
+
+                                                 - 50 -
+                                OANDA FIX Rules of Engagement
+
+
+55          Symbol              Y            string         Must be a valid ISO currency pair, with
+                                                            forward slash
+
+268         NoMDEntries         Y            int            Number of entries following
+
+->    269   MDEntryType         Y            char           Type of Market Data entry. Must be
+                                                            the first field in this repeating group.
+
+->    270   MDEntryPx           Y            price          Price of the Market Data Entry
+
+->    271   MDEntrySize         N            int            Number of units available (the
+                                                            maximum trade size)
+
+->    272   MDEntryDate         N            UTCDate        UTC date of rate data
+
+->    273   MDEntryTime         N            UTCTimeOnly    UTC time of rate data
+
+->    64    SettlDate           N            LocalMktDate   New York time
+
+            Standard Trailer    Y                           standard trailer fields
+
+
+
+
+                          Market Data Incremental Refresh <X> -- Fields
+
+TAG           FieldName             Req'd      Type             Comments
+                                    by FIX
+
+              Standard Header       Y                           Standard header fields; MsgType =
+                                                                X
+
+262           MDReqID               N          String           Unique identifier for Market Data
+                                                                Request <V>
+
+268           NoMDEntries           Y          int              Number of entries following
+
+->    279     MDUpdateAction        Y          char             Must be first field in this repeating
+                                                                group
+
+->    269     MDEntryType           N          char             Type of Market Data entry
+
+
+->    55      Symbol                Y          String           ISO currency pair with forward
+                                                                slash
+
+
+->    270     MDEntryPx             Y          price            Price of the Market Data Entry
+
+->    271     MDEntrySize           N          int              Number of units available (the
+                                                                maximum trade size)
+->    272     MDEntryDate           N          UTCDate          UTC date of rate data
+
+
+
+
+                                                   - 51 -
+                                      OANDA FIX Rules of Engagement
+
+
+->       273       MDEntryTime         N            UTCTimeOnly      UTC time of rate data
+
+
+->       64        SettlDate           N            LocalMktDate     New York time
+
+
+->       58        Text                N            String           Indicates MDReqID if this message
+                                                                     updates market data from multiple
+                                                                     subscriptions.
+
+                   Standard Trailer    Y                             standard trailer fields
+
+Tag <64> is added to Execution Report <8> messages to indicate the LocalMktDate (New York)
+time when the position will be settled in the user's account with their Prime Broker.
+
+
+Conversion Rate Reporting
+Certain users will receive information on the approximate home currency conversion rate
+applicable on their account at the time a trade is transacted. This rate is provided as a bid/offer
+pair, expressed as home/quote where "home" represents the account home currency, and
+"quote" is the quote currency of the pair traded (CCY2 in "CCY1/CCY2").
+
+No conversion rate information is provided if:
+
+             the information cannot be determined
+             the quote currency is the home currency (meaning the conversion rates are 1.0)
+
+                                       Execution Report <8> Fields
+
+TAG            FieldName                   Req'd      Type                Comments
+                                           by FIX
+
+               Standard Header             Y                              standard header fields;
+                                                                          MsgType = 8
+
+                                        (usual execution report fields)
+
+20000          ConversionRateSymbol        N          string              Currency pair, expressed as
+                                                                          home/quote.
+
+20001          ConversionRateBid           N          price
+
+20002          ConversionRateOffer         N          price
+
+
+20003          ConversionRateTime          N          UTCTimestamp        Timestamp of the approximate
+                                                                          rates.
+
+               Standard Trailer            Y                              standard trailer fields
+
+Note that these conversion rate tags are not standard FIX protocol tags. These tags are
+defined in the unregistered user-defined tags range, and the user's FIX engine must be modified
+to accept these tags in the Execution Report <8> message. Otherwise, the engine may reject
+the messages due to structural validation failure.
+
+
+
+                                                      - 52 -
+

@@ -1,0 +1,36 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-independent-pr335-final-mutation)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.18s
+────────────
+ Nextest run ID 30dd16c6-6122-44f4-909e-64deb8534b18 with nextest profile: default
+    Starting 1 test across 1 binary (12 tests skipped)
+        FAIL [   0.014s] (1/1) exchange-hours::oanda_publication carters_close_and_reopen_follow_the_dated_twenty_four_hour_context
+  stdout ───
+
+    running 1 test
+    test carters_close_and_reopen_follow_the_dated_twenty_four_hour_context ... FAILED
+
+    failures:
+
+    failures:
+        carters_close_and_reopen_follow_the_dated_twenty_four_hour_context
+
+    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 12 filtered out; finished in 0.00s
+
+  stderr ───
+
+    thread 'carters_close_and_reopen_follow_the_dated_twenty_four_hour_context' (6889091) panicked at tests/oanda_publication.rs:216:5:
+    assertion `left == right` failed
+      left: Ok(true)
+     right: Ok(false)
+    note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+  Cancelling due to test failure
+────────────
+     Summary [   0.015s] 1 test run: 0 passed, 1 failed, 12 skipped
+        FAIL [   0.014s] (1/1) exchange-hours::oanda_publication carters_close_and_reopen_follow_the_dated_twenty_four_hour_context
+error: test run failed

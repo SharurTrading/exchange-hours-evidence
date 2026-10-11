@@ -1,0 +1,27 @@
+{
+  "head": "a0d1479b7d8d5ef391cb918598c94d160d12e41a",
+  "reviewed_on": "2026-10-11 UTC",
+  "verdict": "PASS within documented dormant/Partial correction scope; not complete OANDA coverage or release certification",
+  "full_chain_exit_code": 0,
+  "fmt": "pass",
+  "clippy_all_targets_warnings_denied": "pass",
+  "nextest_all_targets": {
+    "passed": 1337,
+    "skipped": 0,
+    "elapsed_seconds": 987.508
+  },
+  "doctests_passed": 3,
+  "rustdoc_warnings_denied": "pass",
+  "cargo_deny": "pass; existing unmatched-license-allowance warnings",
+  "msrv_1_95_all_targets": "pass",
+  "public_publication_regressions_passed": 13,
+  "documents_rows": 2972,
+  "documents_files": 47,
+  "documents_digests": 840,
+  "mutation": "Carter 09:30 -> 09:31 failed the public end-exclusive close test; restored and worktree removed",
+  "worktree": "/tmp/oanda-independent-pr335-review-final",
+  "worktree_clean": true,
+  "full_target": "/tmp/oanda-independent-mutation-target",
+  "full_target_note": "Reused for earlier verification builds, separate from the Carter mutation target; exact-head library compiled for this run, no concurrent source mutations",
+  "cache_investigation_issue": 336
+}

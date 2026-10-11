@@ -11173,3 +11173,44 @@ operator text. Captures remain observations rather than unconditional cutover
 dates. Complete runtime OANDA scope/history/selector coverage remains #332.
 The report, independent checker and exact-head result are recorded in
 `audits/oanda-pr20-independent-2026-10-11/`.
+
+
+## 2026-10-11 UTC — independent review of library PR #335
+
+Pass within the documented dormant/Partial correction scope at exact head
+`a0d1479b7d8d5ef391cb918598c94d160d12e41a`. All 31 index rows and the Carter
+contextual 09:30 close/January 10 literal 18:00 reopening agree with the UK
+operator bytes. The current PDF's named local exchange columns establish
+Sydney/Frankfurt selectors for *** marked endpoints; the older guide's US-season
+Australian rule belongs to its different grid. Earlier selector uncertainty
+notes remain historical records, not current-selector withholding. The
+old/current effective day remains unsourced. Exact index scope is now four US
+indices; Japan 225's clock equality and selected matching holidays do not
+prove its general holiday scope (#332). Stale Good Friday/source/Treasury
+cross-references are corrected on pushed heads.
+
+Independent counts reproduce 144 rows across five CFD/metals books (31 index,
+30 Treasury, 27 commodity, 32 metals, 24 Brent), 141 ledger identities and
+437 matching normalized current operator holiday events. The final clean-head
+full charter chain and MSRV pass: 1,337 integration tests in 987.508 seconds,
+zero skipped, three doctests. Thirteen public regressions pass; 2,972 Documents
+rows across 47 files and 840 digests verify. The one-minute Carter mutation
+fails its public regression and was restored.
+
+A clean suite initially reused a mutation target and retained stale mutation
+behavior; a fresh target passes 13/13, and the full chain compiled the exact
+clean head in a separate target that never received this Carter mutation.
+The reused full target is not claimed globally fresh. The bad/fresh logs,
+conditions and mitigation are retained for exchange-hours-rs#336; no exact
+root cause or upstream defect is asserted. Historical/product/holiday gaps
+and six absent runtime families remain #332; this is not whole-OANDA or
+release certification. Read-only consumer checks reproduced the Japan refusal
+and seven internal cases on an uncommitted snapshot, not a consumer release verdict.
+
+The additionally retained legacy FIX specification is operator context:
+November 25, 2011 document update, August 2012 archive observation, continuous
+trading-week currencies and typical Friday 17:00 Eastern maintenance. DAY-order
+expiry is distinct. It proves no complete UK 2010 baseline or effective cutover.
+Original bytes, four exact CDX results, retrieval metadata and nine hashes are
+under `normal-weeks/oanda-legacy-fix-context-2026-10-11/`. No broker contact
+occurred. Review artifacts are under `audits/oanda-pr335-independent-2026-10-11/`.

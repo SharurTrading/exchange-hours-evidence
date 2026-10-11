@@ -1,0 +1,30 @@
+[
+  {
+    "name": "fxtrade-hours",
+    "url": "https://web.archive.org/cdx/search/cdx?url=fxtrade.oanda.com%2F%2Ahours%2A&output=json&filter=statuscode%3A200&collapse=digest&fl=timestamp%2Coriginal%2Cdigest&limit=1000&to=2020",
+    "returncode": 0,
+    "stderr": "",
+    "retrieved_on": "2026-10-11 UTC"
+  },
+  {
+    "name": "fxtradeuk-hours",
+    "url": "https://web.archive.org/cdx/search/cdx?url=fxtrade.oanda.co.uk%2F%2Ahours%2A&output=json&filter=statuscode%3A200&collapse=digest&fl=timestamp%2Coriginal%2Cdigest&limit=1000&to=2020",
+    "returncode": 0,
+    "stderr": "",
+    "retrieved_on": "2026-10-11 UTC"
+  },
+  {
+    "name": "oanda-market-hours",
+    "url": "https://web.archive.org/cdx/search/cdx?url=www.oanda.com%2F%2Amarket-hours%2A&output=json&filter=statuscode%3A200&collapse=digest&fl=timestamp%2Coriginal%2Cdigest&limit=1000&to=2020",
+    "returncode": 0,
+    "stderr": "",
+    "retrieved_on": "2026-10-11 UTC"
+  },
+  {
+    "name": "fixspec",
+    "url": "https://web.archive.org/cdx/search/cdx?url=fxtrade.oanda.com%2Fimages%2FFixSpecifications2.pdf&output=json&filter=statuscode%3A200&collapse=digest&fl=timestamp%2Coriginal%2Cdigest&limit=1000&to=2020",
+    "returncode": 0,
+    "stderr": "",
+    "retrieved_on": "2026-10-11 UTC"
+  }
+]
