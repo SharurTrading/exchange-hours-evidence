@@ -10883,3 +10883,24 @@ ships as no table with the interpretation question recorded in the crate evidenc
 PDF `d8a853cd621313feec96eb1ee0f45b81b7674dea2e0e6cb50b175e78347153d7`, hours HTML
 `60f6143dd5d678b1a34a9937aa938d2884380a33bf3542a4c72f8f03fa3607b7`, holiday HTML
 `c7137ce3da4cc19d0431955feedc10fb6b9731214ad3cfc7966160e72f8559da`.
+
+## 2026-10-11 UTC — the HKEX index-futures hunt
+
+Complete evidence base for the `hkex_index_futures` build. Normal week: the live
+derivatives trading-hours page (Updated 20 Jul 2026) states HSI/HHI/minis at
+9:15–12:00 and 13:00–16:30 with Pre-Market Opening Periods 8:45–9:15 and
+12:30–13:00, and the AHT session 5:00 p.m.–03:00 a.m. (no AHT on the last
+trading day; half-day close 12:30 p.m.) — the product page restates it. Dated
+history: After-Hours Futures Trading launched **Monday 8 April 2013** (circular
+DMD/022/13 of 14 Feb 2013, SFC-approved, T+1 Session 5:00–11:00 p.m., no T+1 on
+HK public holidays / half-day securities days / UK+US bank holidays; the
+post-launch review restates it), the day session ran 9:45–12:30 & 14:30–16:15
+before the operator-dated two-phase extension (Phase 1 effective 7 March 2011 →
+9:15–12:00 & 13:30–16:15; Phase 2 on 5 March 2012 by DMD/004/12 → afternoon
+13:00–16:15, pre-market 12:30–13:00), and the later cutovers (close 16:15→16:30,
+AHT 23:00→23:45→17:15→17:00, end→03:00) are bracketed by product-page snapshots
+2014-09..2026 with their exact circulars uncaptured — a recorded gap. Holidays:
+the `tradcal` wall-calendar PDFs cover 2010–2017 and the derivatives Trading
+Calendar and Holiday Schedule pages cover 2017–2027 (per-year lists verbatim in
+the artifacts), with the no-afternoon-and-after-hours half-day-eve convention
+stated per year. Digests in `normal-weeks/hkex-futures-2026-10-11/SHA256SUMS.txt`.
