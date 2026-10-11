@@ -1,0 +1,27 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/bme-independent-build)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.87s
+     Running tests/bme_holidays.rs (target/debug/deps/bme_holidays-72b9410968c1f57d)
+
+running 4 tests
+test cash_calendar_has_no_invented_substitutes_and_keeps_2026_unknown ... ok
+test detailed_half_days_replace_regular_and_auction_phases ... FAILED
+test normal_auction_calls_accept_orders_without_trading_in_both_eras ... ok
+test each_annual_cash_calendar_closes_its_own_good_friday ... ok
+
+failures:
+
+---- detailed_half_days_replace_regular_and_auction_phases stdout ----
+
+thread 'detailed_half_days_replace_regular_and_auction_phases' (7520649) panicked at tests/bme_holidays.rs:80:13:
+assertion `left == right` failed
+  left: Ok(true)
+ right: Ok(false)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    detailed_half_days_replace_regular_and_auction_phases
+
+test result: FAILED. 3 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--test bme_holidays`

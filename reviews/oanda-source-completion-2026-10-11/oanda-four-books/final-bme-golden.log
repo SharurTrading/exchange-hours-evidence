@@ -1,0 +1,9 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-four-book-review)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.05s
+     Running tests/golden_grids.rs (target/debug/deps/golden_grids-d68b686feda0a338)
+
+running 1 test
+test shipped_grids_match_the_golden_file ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+

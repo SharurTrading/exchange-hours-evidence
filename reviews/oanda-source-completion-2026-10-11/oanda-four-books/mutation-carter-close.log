@@ -1,0 +1,24 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-four-book-review)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.25s
+     Running tests/oanda_publication.rs (target/debug/deps/oanda_publication-98792124ec613ac8)
+
+running 1 test
+test carters_close_and_reopen_follow_the_dated_twenty_four_hour_context ... FAILED
+
+failures:
+
+---- carters_close_and_reopen_follow_the_dated_twenty_four_hour_context stdout ----
+
+thread 'carters_close_and_reopen_follow_the_dated_twenty_four_hour_context' (7584993) panicked at tests/oanda_publication.rs:217:5:
+assertion `left == right` failed
+  left: Ok(true)
+ right: Ok(false)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    carters_close_and_reopen_follow_the_dated_twenty_four_hour_context
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 18 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--test oanda_publication`

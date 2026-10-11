@@ -1,0 +1,35 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-four-book-review)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.12s
+     Running tests/golden_grids.rs (target/debug/deps/golden_grids-d68b686feda0a338)
+
+running 1 test
+test shipped_grids_match_the_golden_file ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/oanda_publication.rs (target/debug/deps/oanda_publication-98792124ec613ac8)
+
+running 20 tests
+test archived_2024_pre_witness_reopens_do_not_invent_final_closes ... ok
+test brent_monday_bounds_include_the_sunday_open_in_both_dst_regimes ... ok
+test brent_uk_holiday_silence_preserves_typed_refusals_in_each_year ... ok
+test an_incomplete_memorial_reopen_refuses_the_following_trade_date ... ok
+test bonds_do_not_inherit_the_index_only_independence_eve_arrangement ... ok
+test carters_close_and_reopen_follow_the_dated_twenty_four_hour_context ... ok
+test brent_2025_reopens_at_2000_et_including_friday_early_close ... ok
+test holy_thursday_2025_replacement_extends_to_the_printed_1700_close ... ok
+test mlk_2025_closes_at_the_operators_printed_instant ... ok
+test bonds_have_their_own_good_friday_and_carter_day_closes ... ok
+test split_session_search_selects_the_nearest_reopen_before_a_later_normal_open ... ok
+test archived_2024_brent_preserves_explicit_thanksgiving_and_missing_reopens ... ok
+test archived_2024_independence_eve_names_indices_without_changing_bonds ... ok
+test archived_2024_christmas_keeps_1804_reopens_and_the_missing_bond_close_explicit ... ok
+test previous_session_search_uses_the_last_replacement_close_for_gap_state ... ok
+test archived_2024_us_commodities_keep_their_own_opening_and_literal_holidays ... ok
+test new_year_2025_reopens_at_1804_on_the_following_trade_date ... ok
+test spot_metals_holiday_reopens_use_the_literal_group_and_gold_silver_exception ... ok
+test archived_2024_us_holidays_preserve_literal_reopens_and_friday_close ... ok
+test us_2025_reopens_preserve_the_printed_1800_and_next_day_early_closes ... ok
+
+test result: ok. 20 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+

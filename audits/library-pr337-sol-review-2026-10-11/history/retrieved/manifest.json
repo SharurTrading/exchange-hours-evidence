@@ -1,0 +1,38 @@
+[
+  {
+    "id": "OANDA-UK-HOURS-2021-DEC-WAYBACK",
+    "url": "https://web.archive.org/web/20211208123011id_/https://www.oanda.com/uk-en/trading/hours-of-operation/",
+    "utc": "2026-10-11T23:34:19.873393+00:00",
+    "exit": 0,
+    "sha256": "63e6d54029b72e0ef1ec32f92b8c3412bd24edf05df9fda9fa2b4dce98cb78fb",
+    "expected": "63e6d54029b72e0ef1ec32f92b8c3412bd24edf05df9fda9fa2b4dce98cb78fb",
+    "stderr": ""
+  },
+  {
+    "id": "OANDA-UK-HOURS-2023-JUN-WAYBACK",
+    "url": "https://web.archive.org/web/20230605093523id_/https://www.oanda.com/uk-en/trading/hours-of-operation/",
+    "utc": "2026-10-11T23:34:20.074304+00:00",
+    "exit": 0,
+    "sha256": "98ddc07cf38727b2a861fd1f48c503b1b597054cbec9d1dde4b3dde1801ffb56",
+    "expected": "98ddc07cf38727b2a861fd1f48c503b1b597054cbec9d1dde4b3dde1801ffb56",
+    "stderr": ""
+  },
+  {
+    "id": "OANDA-OEL-EXECUTION-2023",
+    "url": "https://docs.oanda.com/cd3a6fc6-6583-4a44-ad53-c866f886ad2a/OEL_Order_Execution_Policy_23.10.2023.pdf",
+    "utc": "2026-10-11T23:34:18.720821+00:00",
+    "exit": 0,
+    "sha256": "2291d3cc6ea6ad38aa03cd76233e1d295002e43863c4aabad580d7f7ca210d60",
+    "expected": "2291d3cc6ea6ad38aa03cd76233e1d295002e43863c4aabad580d7f7ca210d60",
+    "stderr": ""
+  },
+  {
+    "id": "OANDA-WEEKEND-2012-ORIGINAL",
+    "url": "https://web.archive.org/web/20121019131147id_/http://www.oanda.com/corp/news/pr/oanda070412",
+    "utc": "2026-10-11T23:34:19.897471+00:00",
+    "exit": 0,
+    "sha256": "1e692187c57d512ee1b68f10d32ab3185e121093a8efdd14f9bc25a2919e9b12",
+    "expected": "1e692187c57d512ee1b68f10d32ab3185e121093a8efdd14f9bc25a2919e9b12",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,9 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-lse-exact-review)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.73s
+     Running tests/global_equities.rs (target/debug/deps/global_equities-e4691ce78a02809c)
+
+running 1 test
+test suite::holidays::lse::public_operator_table_mirror_closes_the_five_2025_dates ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 86 filtered out; finished in 0.01s
+

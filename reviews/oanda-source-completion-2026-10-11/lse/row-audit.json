@@ -1,0 +1,1216 @@
+[
+  {
+    "date": "2010-01-01",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2010-01-30",
+    "window": "2010-01-01 .. 2011-01-03",
+    "url": "https://web.archive.org/web/20100130065529id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "f1d64609b54a52ed2496fd105819c055789bb583e7d5c7577f1351691ab2a25e",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20100130065529id_.html",
+    "source_rows": [
+      [
+        "2010",
+        "New Year",
+        "Friday 1 January"
+      ]
+    ],
+    "source_agrees": true,
+    "derivation": "year header carried through operator closure grid; star is reporting availability, not executable trading"
+  },
+  {
+    "date": "2010-08-30",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2010-01-30",
+    "window": "2010-01-01 .. 2011-01-03",
+    "url": "https://web.archive.org/web/20100130065529id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "f1d64609b54a52ed2496fd105819c055789bb583e7d5c7577f1351691ab2a25e",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20100130065529id_.html",
+    "source_rows": [
+      [
+        "",
+        "Summer",
+        "Monday 30 August*"
+      ]
+    ],
+    "source_agrees": true,
+    "derivation": "year header carried through operator closure grid; star is reporting availability, not executable trading"
+  },
+  {
+    "date": "2010-12-24",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2010-01-30",
+    "window": "2010-01-01 .. 2011-01-03",
+    "url": "https://web.archive.org/web/20100130065529id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "f1d64609b54a52ed2496fd105819c055789bb583e7d5c7577f1351691ab2a25e",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20100130065529id_.html",
+    "source_rows": [],
+    "source_agrees": true,
+    "source_prose": [
+      "On 24 December and 31 December 2010 all Exchange markets will close from 12:30 London time onwards"
+    ]
+  },
+  {
+    "date": "2010-12-31",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2010-01-30",
+    "window": "2010-01-01 .. 2011-01-03",
+    "url": "https://web.archive.org/web/20100130065529id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "f1d64609b54a52ed2496fd105819c055789bb583e7d5c7577f1351691ab2a25e",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20100130065529id_.html",
+    "source_rows": [],
+    "source_agrees": true,
+    "source_prose": [
+      "On 24 December and 31 December 2010 all Exchange markets will close from 12:30 London time onwards"
+    ]
+  },
+  {
+    "date": "2011-01-03",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2010-10-07",
+    "window": "2010-01-01 .. 2011-12-30",
+    "url": "https://web.archive.org/web/20101007091122id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "ac99b16b81d82eba2c0557e727077f071fa477140293fe24ff1a2e434b886974",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20101007091122id_.html",
+    "source_rows": [
+      [
+        "2011",
+        "New Year",
+        "Monday 3 January*"
+      ]
+    ],
+    "source_agrees": true,
+    "derivation": "year header carried through operator closure grid; star is reporting availability, not executable trading"
+  },
+  {
+    "date": "2011-05-30",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2010-10-07",
+    "window": "2010-01-01 .. 2011-12-30",
+    "url": "https://web.archive.org/web/20101007091122id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "ac99b16b81d82eba2c0557e727077f071fa477140293fe24ff1a2e434b886974",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20101007091122id_.html",
+    "source_rows": [
+      [
+        "",
+        "Spring",
+        "Monday 30 May*"
+      ]
+    ],
+    "source_agrees": true,
+    "derivation": "year header carried through operator closure grid; star is reporting availability, not executable trading"
+  },
+  {
+    "date": "2011-12-23",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2010-10-07",
+    "window": "2010-01-01 .. 2011-12-30",
+    "url": "https://web.archive.org/web/20101007091122id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "ac99b16b81d82eba2c0557e727077f071fa477140293fe24ff1a2e434b886974",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20101007091122id_.html",
+    "source_rows": [],
+    "source_agrees": true,
+    "source_prose": [
+      "On Friday 23 December and Friday 30 December 2011 all Exchange markets will close from 12:30 London time onwards"
+    ]
+  },
+  {
+    "date": "2011-12-30",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2010-10-07",
+    "window": "2010-01-01 .. 2011-12-30",
+    "url": "https://web.archive.org/web/20101007091122id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "ac99b16b81d82eba2c0557e727077f071fa477140293fe24ff1a2e434b886974",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20101007091122id_.html",
+    "source_rows": [],
+    "source_agrees": true,
+    "source_prose": [
+      "On Friday 23 December and Friday 30 December 2011 all Exchange markets will close from 12:30 London time onwards"
+    ]
+  },
+  {
+    "date": "2012-06-04",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2011-12-27",
+    "window": "2011-12-26 .. 2012-12-31",
+    "url": "https://web.archive.org/web/20111227075826id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "2ca2bf1e08277cb0314229ea354f1532261e9dcba60eccb50c63c5632af36316",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20111227075826id_.html",
+    "source_rows": [
+      [
+        "",
+        "Spring",
+        "Monday 4 June*"
+      ]
+    ],
+    "source_agrees": true,
+    "derivation": "year header carried through operator closure grid; star is reporting availability, not executable trading"
+  },
+  {
+    "date": "2012-12-24",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2011-12-27",
+    "window": "2011-12-26 .. 2012-12-31",
+    "url": "https://web.archive.org/web/20111227075826id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "2ca2bf1e08277cb0314229ea354f1532261e9dcba60eccb50c63c5632af36316",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20111227075826id_.html",
+    "source_rows": [],
+    "source_agrees": true,
+    "source_prose": [
+      "On Monday 24 December and Monday 31 December 2012 all Exchange markets will close from 12.30 London time onwards"
+    ]
+  },
+  {
+    "date": "2012-12-26",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2011-12-27",
+    "window": "2011-12-26 .. 2012-12-31",
+    "url": "https://web.archive.org/web/20111227075826id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "2ca2bf1e08277cb0314229ea354f1532261e9dcba60eccb50c63c5632af36316",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20111227075826id_.html",
+    "source_rows": [
+      [
+        "",
+        "Boxing Day",
+        "Wednesday 26 December*"
+      ]
+    ],
+    "source_agrees": true,
+    "derivation": "year header carried through operator closure grid; star is reporting availability, not executable trading"
+  },
+  {
+    "date": "2012-12-31",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2011-12-27",
+    "window": "2011-12-26 .. 2012-12-31",
+    "url": "https://web.archive.org/web/20111227075826id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "2ca2bf1e08277cb0314229ea354f1532261e9dcba60eccb50c63c5632af36316",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20111227075826id_.html",
+    "source_rows": [],
+    "source_agrees": true,
+    "source_prose": [
+      "On Monday 24 December and Monday 31 December 2012 all Exchange markets will close from 12.30 London time onwards"
+    ]
+  },
+  {
+    "date": "2013-05-06",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2013-01-01",
+    "window": "2012-12-24 .. 2013-12-31",
+    "url": "https://web.archive.org/web/20130101122127id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "9defbe1e5f0ac1a1e4d4c2aa36b1c24bfdbde0da21e75be6afbba6da505eb5ba",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20130101122127id_.html",
+    "source_rows": [
+      [
+        "Monday 6 May 2013",
+        "Early May Bank Holiday",
+        "NON-trading day & NON-settlement day in EUI",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2013-12-24",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2013-01-01",
+    "window": "2012-12-24 .. 2013-12-31",
+    "url": "https://web.archive.org/web/20130101122127id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "9defbe1e5f0ac1a1e4d4c2aa36b1c24bfdbde0da21e75be6afbba6da505eb5ba",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20130101122127id_.html",
+    "source_rows": [
+      [
+        "Tuesday 24 December 2013",
+        "Christmas Eve",
+        "Markets closing process commences from 12:30 London time. Standard settlement day",
+        "Not Available after 13:15 London time"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2013-12-26",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2013-01-01",
+    "window": "2012-12-24 .. 2013-12-31",
+    "url": "https://web.archive.org/web/20130101122127id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "9defbe1e5f0ac1a1e4d4c2aa36b1c24bfdbde0da21e75be6afbba6da505eb5ba",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20130101122127id_.html",
+    "source_rows": [
+      [
+        "Thursday 26 December 2013",
+        "Boxing Day",
+        "NON-trading day & NON-settlement day in EUI",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2013-12-31",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2013-01-01",
+    "window": "2012-12-24 .. 2013-12-31",
+    "url": "https://web.archive.org/web/20130101122127id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "9defbe1e5f0ac1a1e4d4c2aa36b1c24bfdbde0da21e75be6afbba6da505eb5ba",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20130101122127id_.html",
+    "source_rows": [
+      [
+        "Tuesday 31 December 2013",
+        "New Years Eve",
+        "Markets closing process commences from 12:30 London time. Standard settlement day",
+        "Not Available after 13:15 London time"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2014-05-05",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2014-01-15",
+    "window": "2013-12-24 .. 2015-01-01",
+    "url": "https://web.archive.org/web/20140115110512id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "14cfffbe01cc2d618aa9c0df5b04dd8f0b9e4ac781944e3b3389bf443ec50931",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20140115110512id_.html",
+    "source_rows": [
+      [
+        "Monday 5 May 2014",
+        "Early May Bank Holiday",
+        "NON-trading day & NON-settlement day in EUI",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2014-12-24",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2014-01-15",
+    "window": "2013-12-24 .. 2015-01-01",
+    "url": "https://web.archive.org/web/20140115110512id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "14cfffbe01cc2d618aa9c0df5b04dd8f0b9e4ac781944e3b3389bf443ec50931",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20140115110512id_.html",
+    "source_rows": [
+      [
+        "Wednesday 24 December 2014",
+        "Christmas Eve",
+        "Markets closing process commences from 12:30 London time. Standard settlement day",
+        "Not Available after 13:15 London time"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2014-12-26",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2014-01-15",
+    "window": "2013-12-24 .. 2015-01-01",
+    "url": "https://web.archive.org/web/20140115110512id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "14cfffbe01cc2d618aa9c0df5b04dd8f0b9e4ac781944e3b3389bf443ec50931",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20140115110512id_.html",
+    "source_rows": [
+      [
+        "Friday 26 December 2014",
+        "Boxing Day",
+        "NON-trading day & NON-settlement day in EUI",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2014-12-31",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2014-01-15",
+    "window": "2013-12-24 .. 2015-01-01",
+    "url": "https://web.archive.org/web/20140115110512id_/http://www.londonstockexchange.com/about-the-exchange/company-overview/business-days/business-days.htm",
+    "sha256": "14cfffbe01cc2d618aa9c0df5b04dd8f0b9e4ac781944e3b3389bf443ec50931",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.htm.wayback-20140115110512id_.html",
+    "source_rows": [
+      [
+        "Wednesday 31 December 2014",
+        "New Year's",
+        "Markets closing process commences from 12:30 London time. Standard settlement day",
+        "Not Available after 13:15 London time"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2015-05-04",
+    "kind": "Closed",
+    "id": "LSE-LSEGBUSDAYS-2015-01-03",
+    "window": "2014-12-24 .. 2016-01-01",
+    "url": "https://web.archive.org/web/20150103045430id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "ce4ae71a9f28650fd18be394c52a8aa8d79b052038aadeebf82c94a9cc42ec6d",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20150103045430.html",
+    "source_rows": [
+      [
+        "Monday 4 May 2015",
+        "Early May Bank Holiday",
+        "NON-trading day & NON-settlement day in EUI",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2015-12-24",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-LSEGBUSDAYS-2015-01-03",
+    "window": "2014-12-24 .. 2016-01-01",
+    "url": "https://web.archive.org/web/20150103045430id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "ce4ae71a9f28650fd18be394c52a8aa8d79b052038aadeebf82c94a9cc42ec6d",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20150103045430.html",
+    "source_rows": [
+      [
+        "Thursday 24 December 2015",
+        "Christmas Eve",
+        "Markets closing process commences from 12:30 London time. Standard settlement day",
+        "Not available after 13:15 London Time"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2015-12-28",
+    "kind": "Closed",
+    "id": "LSE-LSEGBUSDAYS-2015-01-03",
+    "window": "2014-12-24 .. 2016-01-01",
+    "url": "https://web.archive.org/web/20150103045430id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "ce4ae71a9f28650fd18be394c52a8aa8d79b052038aadeebf82c94a9cc42ec6d",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20150103045430.html",
+    "source_rows": [
+      [
+        "Monday 28 December 2015",
+        "Boxing Day (holiday)",
+        "NON-trading day & NON-settlement day in EUI",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2015-12-31",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-LSEGBUSDAYS-2015-01-03",
+    "window": "2014-12-24 .. 2016-01-01",
+    "url": "https://web.archive.org/web/20150103045430id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "ce4ae71a9f28650fd18be394c52a8aa8d79b052038aadeebf82c94a9cc42ec6d",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20150103045430.html",
+    "source_rows": [
+      [
+        "Thursday 31 December 2015",
+        "New Year's Eve",
+        "Markets closing process commences from 12:30 London time. Standard settlement day",
+        "Not available after 13:15 London Time"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2016-05-02",
+    "kind": "Closed",
+    "id": "LSE-LSEGBUSDAYS-2015-12-21",
+    "window": "2015-12-24 .. 2017-01-02",
+    "url": "https://web.archive.org/web/20151221080205id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "b9a2f41338f4218302c8eed80d830ab9b78ff3eb296bc088bdf7a40a4688cb68",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20151221080205.html",
+    "source_rows": [
+      [
+        "Monday 2 May 2016",
+        "Early May Bank Holiday",
+        "NON-trading day & NON-settlement day in EUI",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2016-12-23",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-LSEGBUSDAYS-2015-12-21",
+    "window": "2015-12-24 .. 2017-01-02",
+    "url": "https://web.archive.org/web/20151221080205id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "b9a2f41338f4218302c8eed80d830ab9b78ff3eb296bc088bdf7a40a4688cb68",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20151221080205.html",
+    "source_rows": [
+      [
+        "Friday 23 December 2016",
+        "Christmas",
+        "Markets closing process commences from 12:30 London time. Standard settlement day",
+        "Not available after 13:15 London Time"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2016-12-27",
+    "kind": "Closed",
+    "id": "LSE-LSEGBUSDAYS-2015-12-21",
+    "window": "2015-12-24 .. 2017-01-02",
+    "url": "https://web.archive.org/web/20151221080205id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "b9a2f41338f4218302c8eed80d830ab9b78ff3eb296bc088bdf7a40a4688cb68",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20151221080205.html",
+    "source_rows": [
+      [
+        "Tuesday 27 December 2016",
+        "Christmas Holiday",
+        "NON-trading day & NON-settlement day in EUI",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2016-12-30",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-LSEGBUSDAYS-2015-12-21",
+    "window": "2015-12-24 .. 2017-01-02",
+    "url": "https://web.archive.org/web/20151221080205id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "b9a2f41338f4218302c8eed80d830ab9b78ff3eb296bc088bdf7a40a4688cb68",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20151221080205.html",
+    "source_rows": [
+      [
+        "Friday 30 December 2016",
+        "New Year",
+        "Markets closing process commences from 12:30 London time. Standard settlement day",
+        "Not available after 13:15 London Time"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2017-05-01",
+    "kind": "Closed",
+    "id": "LSE-LSEGBUSDAYS-2016-11-22",
+    "window": "2016-12-23 .. 2018-01-01",
+    "url": "https://web.archive.org/web/20161122160354id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "28d39168f2563b922e08b814ae3d22a7e999cdc29eba01278059561395c8ffff",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20161122160354.html",
+    "source_rows": [
+      [
+        "Monday 1 May 2017",
+        "Early May Bank Holiday",
+        "NON-trading day & NON-settlement day in EUI",
+        "Not available"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2017-12-22",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-LSEGBUSDAYS-2016-11-22",
+    "window": "2016-12-23 .. 2018-01-01",
+    "url": "https://web.archive.org/web/20161122160354id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "28d39168f2563b922e08b814ae3d22a7e999cdc29eba01278059561395c8ffff",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20161122160354.html",
+    "source_rows": [
+      [
+        "Friday 22 December 2017",
+        "Christmas",
+        "Markets closing process commences from 12:30 London time. Standard settlement day",
+        "Not available after 13:15 London Time"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2017-12-26",
+    "kind": "Closed",
+    "id": "LSE-LSEGBUSDAYS-2016-11-22",
+    "window": "2016-12-23 .. 2018-01-01",
+    "url": "https://web.archive.org/web/20161122160354id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "28d39168f2563b922e08b814ae3d22a7e999cdc29eba01278059561395c8ffff",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20161122160354.html",
+    "source_rows": [
+      [
+        "Tuesday 26 December 2017",
+        "Boxing Day",
+        "NON-trading day & NON-settlement day in EUI",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2017-12-29",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-LSEGBUSDAYS-2016-11-22",
+    "window": "2016-12-23 .. 2018-01-01",
+    "url": "https://web.archive.org/web/20161122160354id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "28d39168f2563b922e08b814ae3d22a7e999cdc29eba01278059561395c8ffff",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20161122160354.html",
+    "source_rows": [
+      [
+        "Friday 29 December 2017",
+        "New Year",
+        "Markets closing process commences from 12:30 London time. Standard settlement day",
+        "Not available after 13:15 London Time"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2018-05-07",
+    "kind": "Closed",
+    "id": "LSE-LSEGBUSDAYS-2017-12-02",
+    "window": "2017-12-22 .. 2019-01-01",
+    "url": "https://web.archive.org/web/20171202110229id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "bf71ef582ca25a3f8ff0e2930d863d5acb67317762795b707372bceb07c0cb0c",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20171202110229.html",
+    "source_rows": [
+      [
+        "Monday 7 May 2018",
+        "Early May Bank Holiday",
+        "NON-trading day. Also NON-settlement day in EUI",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2018-12-24",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-LSEGBUSDAYS-2017-12-02",
+    "window": "2017-12-22 .. 2019-01-01",
+    "url": "https://web.archive.org/web/20171202110229id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "bf71ef582ca25a3f8ff0e2930d863d5acb67317762795b707372bceb07c0cb0c",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20171202110229.html",
+    "source_rows": [
+      [
+        "Monday 24 December 2018",
+        "Christmas Eve",
+        "Markets closing process commences from 12:30 London time. Standard settlement day",
+        "Trade report submission ends at 13:15 London time"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2018-12-26",
+    "kind": "Closed",
+    "id": "LSE-LSEGBUSDAYS-2017-12-02",
+    "window": "2017-12-22 .. 2019-01-01",
+    "url": "https://web.archive.org/web/20171202110229id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "bf71ef582ca25a3f8ff0e2930d863d5acb67317762795b707372bceb07c0cb0c",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20171202110229.html",
+    "source_rows": [
+      [
+        "Wednesday 26 December 2018",
+        "Boxing Day",
+        "NON-trading day. Also NON-settlement day in EUI",
+        "Not available"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2018-12-31",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-LSEGBUSDAYS-2017-12-02",
+    "window": "2017-12-22 .. 2019-01-01",
+    "url": "https://web.archive.org/web/20171202110229id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "bf71ef582ca25a3f8ff0e2930d863d5acb67317762795b707372bceb07c0cb0c",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20171202110229.html",
+    "source_rows": [
+      [
+        "Monday 31 December 2018",
+        "New Year's Eve",
+        "Markets closing process commences from 12:30 London time. Standard settlement day",
+        "Trade report submission ends at 13:15 London time"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2019-05-06",
+    "kind": "Closed",
+    "id": "LSE-LSEGBUSDAYS-2018-10-01",
+    "window": "2018-08-27 .. 2019-05-27",
+    "url": "https://web.archive.org/web/20181001173859id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "ec2fd1ace6e7747a965c74c7fe23b3b9f872303c51bec85cc04b63b586b20c08",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20181001173859.html",
+    "source_rows": [
+      [
+        "Monday 6 May 2019",
+        "Early May Bank Holiday",
+        "NON-trading day. Also NON-settlement day in EUI",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2019-12-24",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-LSEGBUSDAYS-2019-03-26",
+    "window": "2019-04-19 .. 2020-01-01",
+    "url": "https://web.archive.org/web/20190326054958id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "e8ef57a5bee4b009da09ea3772e6b49be73198b52b9fdad4f263a0af5e8f8632",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20190326054958.html",
+    "source_rows": [
+      [
+        "Tuesday 24 December 2019",
+        "Christmas Eve",
+        "Markets closing process commences from 12:30 London time. Standard settlement day",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2019-12-26",
+    "kind": "Closed",
+    "id": "LSE-LSEGBUSDAYS-2019-03-26",
+    "window": "2019-04-19 .. 2020-01-01",
+    "url": "https://web.archive.org/web/20190326054958id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "e8ef57a5bee4b009da09ea3772e6b49be73198b52b9fdad4f263a0af5e8f8632",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20190326054958.html",
+    "source_rows": [
+      [
+        "Thursday 26 December 2019",
+        "Boxing Day",
+        "NON-trading day, Also GBX/ GBP NON-settlement day in EUI",
+        "Not available"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2019-12-31",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-LSEGBUSDAYS-2019-03-26",
+    "window": "2019-04-19 .. 2020-01-01",
+    "url": "https://web.archive.org/web/20190326054958id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "e8ef57a5bee4b009da09ea3772e6b49be73198b52b9fdad4f263a0af5e8f8632",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20190326054958.html",
+    "source_rows": [
+      [
+        "Tuesday 31 December 2019",
+        "New Year's Eve",
+        "Markets closing process commences from 12:30 London time. Standard settlement day",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2020-05-08",
+    "kind": "Closed",
+    "id": "LSE-LSEGBUSDAYS-2019-06-14",
+    "window": "2019-08-26 .. 2020-05-25",
+    "url": "https://web.archive.org/web/20190614074153id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "a7745f884c79ab3683a219645f306950a782fb07d8f26e4fe9bb102eb6d99a09",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20190614074153.html",
+    "source_rows": [
+      [
+        "Friday 8 May 2020",
+        "Early May Bank Holiday (VE Day)",
+        "NON-trading day. Also GBX/ GBP NON-settlement day in EUI",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2020-12-24",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-LSEGBUSDAYS-2019-12-19",
+    "window": "2019-12-24 .. 2021-01-01",
+    "url": "https://web.archive.org/web/20191219013737id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "d86ab5d9ce39a8d552e9f2a7a70d93c159ebc8fd4871729294b0e5135bd9a0d4",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20191219013737.html",
+    "source_rows": [
+      [
+        "Thursday 24 December 2020",
+        "Christmas Eve",
+        "Markets closing process commences from 12:30 London time. Standard settlement day",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2020-12-28",
+    "kind": "Closed",
+    "id": "LSE-LSEGBUSDAYS-2019-12-19",
+    "window": "2019-12-24 .. 2021-01-01",
+    "url": "https://web.archive.org/web/20191219013737id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "d86ab5d9ce39a8d552e9f2a7a70d93c159ebc8fd4871729294b0e5135bd9a0d4",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20191219013737.html",
+    "source_rows": [
+      [
+        "Monday 28 December 2020",
+        "Boxing Day (substitute)",
+        "NON-trading day. Also GBX/ GBP NON-settlement day in EUI",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2020-12-31",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-LSEGBUSDAYS-2019-12-19",
+    "window": "2019-12-24 .. 2021-01-01",
+    "url": "https://web.archive.org/web/20191219013737id_/http://www.lseg.com/areas-expertise/our-markets/london-stock-exchange/equities-markets/trading-services/business-days",
+    "sha256": "d86ab5d9ce39a8d552e9f2a7a70d93c159ebc8fd4871729294b0e5135bd9a0d4",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/evidence-thread/lseg-busdays-captures/lseg-busdays-20191219013737.html",
+    "source_rows": [
+      [
+        "Thursday 31 December 2020",
+        "New Year's Eve",
+        "Markets closing process commences from 12:30 London time. Standard settlement day",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2021-05-03",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2020-12-21",
+    "window": "2020-12-24 .. 2022-01-03",
+    "url": "https://web.archive.org/web/20201221145636id_/https://www.londonstockexchange.com/trade/trading-access/business-days",
+    "sha256": "d1bf0e7da56dbd525afa6d28f2ec2306e2864902aaa26bd820cf4b727a14ba19",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.wayback-20201221145636id_.html",
+    "source_rows": [
+      [
+        "Monday 3 May 2021",
+        "Early May Bank Holiday",
+        "NON-trading day. Also GBX/ GBP NON-settlement day in EUI",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2021-12-24",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2020-12-21",
+    "window": "2020-12-24 .. 2022-01-03",
+    "url": "https://web.archive.org/web/20201221145636id_/https://www.londonstockexchange.com/trade/trading-access/business-days",
+    "sha256": "d1bf0e7da56dbd525afa6d28f2ec2306e2864902aaa26bd820cf4b727a14ba19",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.wayback-20201221145636id_.html",
+    "source_rows": [
+      [
+        "Friday 24 December 2021",
+        "Christmas Eve",
+        "Markets closing process commences from 12:30 London time. Standard settlement day.",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2021-12-28",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2020-12-21",
+    "window": "2020-12-24 .. 2022-01-03",
+    "url": "https://web.archive.org/web/20201221145636id_/https://www.londonstockexchange.com/trade/trading-access/business-days",
+    "sha256": "d1bf0e7da56dbd525afa6d28f2ec2306e2864902aaa26bd820cf4b727a14ba19",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.wayback-20201221145636id_.html",
+    "source_rows": [
+      [
+        "Tuesday 28 December 2021",
+        "Boxing Day (Substitute)",
+        "NON-trading day. Also GBX/ GBP NON-settlement day in EUI",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2021-12-31",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2020-12-21",
+    "window": "2020-12-24 .. 2022-01-03",
+    "url": "https://web.archive.org/web/20201221145636id_/https://www.londonstockexchange.com/trade/trading-access/business-days",
+    "sha256": "d1bf0e7da56dbd525afa6d28f2ec2306e2864902aaa26bd820cf4b727a14ba19",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.wayback-20201221145636id_.html",
+    "source_rows": [
+      [
+        "Friday 31 December 2021",
+        "New Year's Eve",
+        "Markets closing process commences from 12:30 London time. Standard settlement day.",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2022-05-02",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2022-01-24",
+    "window": "2021-08-30 .. 2023-01-02",
+    "url": "https://web.archive.org/web/20220124140748id_/https://www.londonstockexchange.com/trade/trading-access/business-days",
+    "sha256": "d50c450a10954da7f44639241f215d3bc1ff9dafcff970eb7eb24409795f83b2",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.wayback-20220124140748id_.html",
+    "source_rows": [
+      [
+        "Monday 2 May 2022",
+        "Early May Bank Holiday",
+        "NON-trading day. Also GBX/ GBP NON-settlement day in EUI",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2022-12-23",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2022-01-24",
+    "window": "2021-08-30 .. 2023-01-02",
+    "url": "https://web.archive.org/web/20220124140748id_/https://www.londonstockexchange.com/trade/trading-access/business-days",
+    "sha256": "d50c450a10954da7f44639241f215d3bc1ff9dafcff970eb7eb24409795f83b2",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.wayback-20220124140748id_.html",
+    "source_rows": [
+      [
+        "Friday 23 December 2022",
+        "Christmas Holiday half day",
+        "Markets closing process commences from 12:30 London time. Standard settlement day.",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2022-12-26",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2022-01-24",
+    "window": "2021-08-30 .. 2023-01-02",
+    "url": "https://web.archive.org/web/20220124140748id_/https://www.londonstockexchange.com/trade/trading-access/business-days",
+    "sha256": "d50c450a10954da7f44639241f215d3bc1ff9dafcff970eb7eb24409795f83b2",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.wayback-20220124140748id_.html",
+    "source_rows": [
+      [
+        "Monday 26 December 2022",
+        "Boxing Day",
+        "NON-trading day. Also GBX/ GBP NON-settlement day in EUI",
+        "Not available"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2022-12-30",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2022-01-24",
+    "window": "2021-08-30 .. 2023-01-02",
+    "url": "https://web.archive.org/web/20220124140748id_/https://www.londonstockexchange.com/trade/trading-access/business-days",
+    "sha256": "d50c450a10954da7f44639241f215d3bc1ff9dafcff970eb7eb24409795f83b2",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.wayback-20220124140748id_.html",
+    "source_rows": [
+      [
+        "Friday 30 December 2022",
+        "New Year Holiday half day",
+        "Markets closing process commences from 12:30 London time. Standard settlement day.",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2023-04-10",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-API-2023-04-10",
+    "window": "2023-04-07 .. 2024-01-01",
+    "url": "https://web.archive.org/web/20230410163738id_/https://api.londonstockexchange.com/api/v1/pages?path=securities-trading%2Ftrading-access%2Fbusiness-days&parameters=",
+    "sha256": "e4db7c06f9263f60ededc8fea5fecd6b58269d38928a0567b5e6950292f856e5",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.api.wayback-20230410163738id_.json",
+    "source_rows": [
+      [
+        "Monday 10 April 2023",
+        "Easter Monday",
+        "NON-trading day. Also GBX/ GBP NON-settlement day in EUI",
+        "Not available"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2023-12-22",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-API-2023-04-10",
+    "window": "2023-04-07 .. 2024-01-01",
+    "url": "https://web.archive.org/web/20230410163738id_/https://api.londonstockexchange.com/api/v1/pages?path=securities-trading%2Ftrading-access%2Fbusiness-days&parameters=",
+    "sha256": "e4db7c06f9263f60ededc8fea5fecd6b58269d38928a0567b5e6950292f856e5",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.api.wayback-20230410163738id_.json",
+    "source_rows": [
+      [
+        "Friday 22 December 2023",
+        "Christmas Holiday half day",
+        "Markets closing process commences from 12:30 London time. Standard settlement day.",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2023-12-29",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-API-2023-04-10",
+    "window": "2023-04-07 .. 2024-01-01",
+    "url": "https://web.archive.org/web/20230410163738id_/https://api.londonstockexchange.com/api/v1/pages?path=securities-trading%2Ftrading-access%2Fbusiness-days&parameters=",
+    "sha256": "e4db7c06f9263f60ededc8fea5fecd6b58269d38928a0567b5e6950292f856e5",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2010-2024/business-days.api.wayback-20230410163738id_.json",
+    "source_rows": [
+      [
+        "Friday 29 December 2023",
+        "New Year Holiday half day",
+        "Markets closing process commences from 12:30 London time. Standard settlement day.",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2024-03-29",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2024-02-07",
+    "window": "2024-03-29 .. 2025-01-01",
+    "url": "https://web.archive.org/web/20240207115235id_/https://api.londonstockexchange.com/api/v1/pages?path=equities-trading/business-days&parameters=",
+    "sha256": "4730c509be75be779d106ccad036eae4f515bc6524613951126b33491b40a90b",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2025-2027/business-days.api.wayback-20240207115235id_.json",
+    "source_rows": [
+      [
+        "Friday 29 March 2024",
+        "Good Friday",
+        "NON-trading day. Also GBX/ GBP NON-settlement day in EUI",
+        "Not available"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2024-12-24",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2024-02-07",
+    "window": "2024-03-29 .. 2025-01-01",
+    "url": "https://web.archive.org/web/20240207115235id_/https://api.londonstockexchange.com/api/v1/pages?path=equities-trading/business-days&parameters=",
+    "sha256": "4730c509be75be779d106ccad036eae4f515bc6524613951126b33491b40a90b",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2025-2027/business-days.api.wayback-20240207115235id_.json",
+    "source_rows": [
+      [
+        "Tuesday 24 December 2024",
+        "Christmas Holiday half day",
+        "Markets closing process commences from 12:30 London time. Standard settlement day.",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2024-12-31",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2024-02-07",
+    "window": "2024-03-29 .. 2025-01-01",
+    "url": "https://web.archive.org/web/20240207115235id_/https://api.londonstockexchange.com/api/v1/pages?path=equities-trading/business-days&parameters=",
+    "sha256": "4730c509be75be779d106ccad036eae4f515bc6524613951126b33491b40a90b",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2025-2027/business-days.api.wayback-20240207115235id_.json",
+    "source_rows": [
+      [
+        "Tuesday 31 December 2024",
+        "New Year Holiday half day",
+        "Markets closing process commences from 12:30 London time. Standard settlement day.",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2025-04-18",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2025-PUBLIC-MIRROR",
+    "window": "2025-04-18 .. 2025-12-31",
+    "url": "https://ekoninfochecker.efri.uniri.hr/wp-content/uploads/2025/07/Karla-Mijic-1.pdf",
+    "sha256": "f1b0cb2dd0280e0c6e7c69f201558cc337c6aa6b12a93fb7a695abce5709434f",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/lse-public-mirror-2026-10-11/Karla-Mijic-1.pdf",
+    "method": "visual page14"
+  },
+  {
+    "date": "2025-04-21",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2025-PUBLIC-MIRROR",
+    "window": "2025-04-18 .. 2025-12-31",
+    "url": "https://ekoninfochecker.efri.uniri.hr/wp-content/uploads/2025/07/Karla-Mijic-1.pdf",
+    "sha256": "f1b0cb2dd0280e0c6e7c69f201558cc337c6aa6b12a93fb7a695abce5709434f",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/lse-public-mirror-2026-10-11/Karla-Mijic-1.pdf",
+    "method": "visual page14"
+  },
+  {
+    "date": "2025-05-05",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2025-PUBLIC-MIRROR",
+    "window": "2025-04-18 .. 2025-12-31",
+    "url": "https://ekoninfochecker.efri.uniri.hr/wp-content/uploads/2025/07/Karla-Mijic-1.pdf",
+    "sha256": "f1b0cb2dd0280e0c6e7c69f201558cc337c6aa6b12a93fb7a695abce5709434f",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/lse-public-mirror-2026-10-11/Karla-Mijic-1.pdf",
+    "method": "visual page14"
+  },
+  {
+    "date": "2025-05-26",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2025-PUBLIC-MIRROR",
+    "window": "2025-04-18 .. 2025-12-31",
+    "url": "https://ekoninfochecker.efri.uniri.hr/wp-content/uploads/2025/07/Karla-Mijic-1.pdf",
+    "sha256": "f1b0cb2dd0280e0c6e7c69f201558cc337c6aa6b12a93fb7a695abce5709434f",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/lse-public-mirror-2026-10-11/Karla-Mijic-1.pdf",
+    "method": "visual page14"
+  },
+  {
+    "date": "2025-08-25",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2025-PUBLIC-MIRROR",
+    "window": "2025-04-18 .. 2025-12-31",
+    "url": "https://ekoninfochecker.efri.uniri.hr/wp-content/uploads/2025/07/Karla-Mijic-1.pdf",
+    "sha256": "f1b0cb2dd0280e0c6e7c69f201558cc337c6aa6b12a93fb7a695abce5709434f",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/lse-public-mirror-2026-10-11/Karla-Mijic-1.pdf",
+    "method": "visual page14"
+  },
+  {
+    "date": "2025-12-24",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2025-12-18",
+    "window": "2025-12-24 .. 2027-12-31",
+    "url": "https://web.archive.org/web/20251218172240id_/https://api.londonstockexchange.com/api/v1/pages?path=equities-trading/business-days&parameters=",
+    "sha256": "e7d81b189bd75137b2e51136b2d6979d780dd3d50b95c111ef5acbdd38d49a11",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2025-2027/business-days.api.wayback-20251218172240id_.json",
+    "source_rows": [
+      [
+        "Wednesday 24 December 2025",
+        "Christmas Holiday half day",
+        "Markets closing process commences from 12:30 London time. Standard settlement day.",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2025-12-31",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2025-12-18",
+    "window": "2025-12-24 .. 2027-12-31",
+    "url": "https://web.archive.org/web/20251218172240id_/https://api.londonstockexchange.com/api/v1/pages?path=equities-trading/business-days&parameters=",
+    "sha256": "e7d81b189bd75137b2e51136b2d6979d780dd3d50b95c111ef5acbdd38d49a11",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2025-2027/business-days.api.wayback-20251218172240id_.json",
+    "source_rows": [
+      [
+        "Wednesday 31 December 2025",
+        "New Year's Holiday half day",
+        "Markets closing process commences from 12:30 London time. Standard settlement day.",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2026-04-03",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2025-12-18",
+    "window": "2025-12-24 .. 2027-12-31",
+    "url": "https://web.archive.org/web/20251218172240id_/https://api.londonstockexchange.com/api/v1/pages?path=equities-trading/business-days&parameters=",
+    "sha256": "e7d81b189bd75137b2e51136b2d6979d780dd3d50b95c111ef5acbdd38d49a11",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2025-2027/business-days.api.wayback-20251218172240id_.json",
+    "source_rows": [
+      [
+        "Friday 3 April 2026",
+        "Good Friday",
+        "NON-trading day. Also GBX/ GBP NON-settlement day in EUI",
+        "Not available"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2026-12-24",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2025-12-18",
+    "window": "2025-12-24 .. 2027-12-31",
+    "url": "https://web.archive.org/web/20251218172240id_/https://api.londonstockexchange.com/api/v1/pages?path=equities-trading/business-days&parameters=",
+    "sha256": "e7d81b189bd75137b2e51136b2d6979d780dd3d50b95c111ef5acbdd38d49a11",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2025-2027/business-days.api.wayback-20251218172240id_.json",
+    "source_rows": [
+      [
+        "Thursday 24 December 2026",
+        "Christmas Holiday half day",
+        "Markets closing process commences from 12:30 London time. Standard settlement day.",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2026-12-31",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2025-12-18",
+    "window": "2025-12-24 .. 2027-12-31",
+    "url": "https://web.archive.org/web/20251218172240id_/https://api.londonstockexchange.com/api/v1/pages?path=equities-trading/business-days&parameters=",
+    "sha256": "e7d81b189bd75137b2e51136b2d6979d780dd3d50b95c111ef5acbdd38d49a11",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2025-2027/business-days.api.wayback-20251218172240id_.json",
+    "source_rows": [
+      [
+        "Thursday 31 December 2026",
+        "New Year's Holiday half day",
+        "Markets closing process commences from 12:30 London time. Standard settlement day.",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2027-03-26",
+    "kind": "Closed",
+    "id": "LSE-BUSDAYS-2025-12-18",
+    "window": "2025-12-24 .. 2027-12-31",
+    "url": "https://web.archive.org/web/20251218172240id_/https://api.londonstockexchange.com/api/v1/pages?path=equities-trading/business-days&parameters=",
+    "sha256": "e7d81b189bd75137b2e51136b2d6979d780dd3d50b95c111ef5acbdd38d49a11",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2025-2027/business-days.api.wayback-20251218172240id_.json",
+    "source_rows": [
+      [
+        "Friday 26 March 2027",
+        "Good Friday",
+        "NON-trading day. Also GBX/ GBP NON-settlement day in EUI",
+        "Not available"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2027-12-24",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2025-12-18",
+    "window": "2025-12-24 .. 2027-12-31",
+    "url": "https://web.archive.org/web/20251218172240id_/https://api.londonstockexchange.com/api/v1/pages?path=equities-trading/business-days&parameters=",
+    "sha256": "e7d81b189bd75137b2e51136b2d6979d780dd3d50b95c111ef5acbdd38d49a11",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2025-2027/business-days.api.wayback-20251218172240id_.json",
+    "source_rows": [
+      [
+        "Friday 24 December 2027",
+        "Christmas Holiday half day",
+        "Markets closing process commences from 12:30 London time. Standard settlement day.",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  },
+  {
+    "date": "2027-12-31",
+    "kind": "early_close(HALF_DAY_12_30)",
+    "id": "LSE-BUSDAYS-2025-12-18",
+    "window": "2025-12-24 .. 2027-12-31",
+    "url": "https://web.archive.org/web/20251218172240id_/https://api.londonstockexchange.com/api/v1/pages?path=equities-trading/business-days&parameters=",
+    "sha256": "e7d81b189bd75137b2e51136b2d6979d780dd3d50b95c111ef5acbdd38d49a11",
+    "file": "/tmp/oanda-evidence-recovery/holidays/raw/equities/lse/2025-2027/business-days.api.wayback-20251218172240id_.json",
+    "source_rows": [
+      [
+        "Friday 31 December 2027",
+        "New Year's Holiday half day",
+        "Markets closing process commences from 12:30 London time. Standard settlement day.",
+        "Available as normal"
+      ]
+    ],
+    "source_agrees": true
+  }
+]

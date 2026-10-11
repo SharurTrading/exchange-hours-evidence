@@ -11217,3 +11217,31 @@ expiry is distinct. It proves no complete UK 2010 baseline or effective cutover.
 Original bytes, four exact CDX results, retrieval metadata and nine hashes are
 under `normal-weeks/oanda-legacy-fix-context-2026-10-11/`. No broker contact
 occurred. Review artifacts are under `audits/oanda-pr335-independent-2026-10-11/`.
+
+
+## Independent OANDA four-book and BME review — 2026-10-11 UTC
+
+Posted by an AI agent running as `gpt-6.1-sol` (`Codex`), using the maintainer's GitHub login.
+
+Source review accepted for exact library head `3e0e5b9a9a15357cc461b54269ff39e831af0281`, PR337. Independent OANDA scope: index52 +bond50 +UScommodity41 +Brent47 =190 fully reviewed rows. FX/metals authored by this reviewer are excluded. Fresh primary Carter/normal-hours captures reproduce cited digests; live holiday sections match the cited capture. Six Brent silence withholdings and sourcing/count prose findings are fixed. Public mutation fails as expected; restored20 publication tests and golden check pass on finalhead;74 documentation/digest fences and affected strict clippy passed on source-identical5a4609. Full combined quality/MSRV belongs to the separate integrator gate.
+
+BME source/evidence/test files remain byte-identical to accepted author `3dc4df688adc7a59ed5bb085723e6ffd7f70d120`; golden-only author `b026e527e7fb35fcb45cba53d9427c129ddaa92f` matches the independently sourced156000 executable weekly seconds. The earlier integrated README count finding is resolved.
+
+Detailed report, independent source parser/per-row proof, retrieval manifest, exact hashes and logs: `/tmp/oanda-four-book-report/`. Earlier full BME source review and27 independent PDF downloads: `/tmp/bme-independent-review/`.
+
+All scoped file hashes are byte-identical to preceding5a4609. Only four unrelated coverage-inventory prose counts changed; independent source parser and public mutation/restoration were repeated on final3e0e5b9. Final combined quality/MSRV remains the other reviewer gate.
+
+
+
+## 2026-10-11 UTC — Sol independent review of library PR #337
+
+Posted by an AI agent running as `gpt-6.1-sol` (`Codex`), using the maintainer's GitHub login.
+
+PASS at `3e0e5b9a9a15357cc461b54269ff39e831af0281` for independently reviewed LSE/Amsterdam, FX/metals/TRY history, combined integration/counts and full exact-head gates. Own index/bond/commodity/Brent writer data is excluded from this agent's independent source verdict; separate reviewers cover it. BME source review is independently owned by the history reviewer. The corrected Amsterdam subject/scope prose, BME executable golden union and four inventory count cells reproduce their sources/tables. Remaining genuine source gaps are preserved under #332; no whole-OANDA/release-completeness verdict is claimed.
+
+Fresh detached worktree, explicit `CARGO_PROFILE_TEST_OPT_LEVEL=1`: full Verification chain passes all1352 nextest tests and3 doctests; default-profile MSRV1.95 passes. Actual `EXCHANGE_HOURS_RESEARCH` is `/tmp/oanda-evidence-recovery`; all3048 Documents rows/49 files/888 distinct digests reproduce. Publish dry-run and470-file package listing pass;327 source/evidence/user-record members match the head. LSE/Amsterdam exact-head mutations fail intended assertions and restored tests pass. All worktrees are clean. Archive SHA256: `859f3a483924812d90cbe129d9a6c6948536bac8f834e6c6f69339b2b6adc6da`.
+
+Counts:141 identities,52 holiday-bearing; LSE184, Amsterdam108, BME106, FX4, metals46, index52, bond50, commodity41, Brent47. Exhaustive file classification:12 data/registration,11 evidence,9 tests/golden, ledger, inventory plan, README and CHANGELOG; no charter change. Proof bundle: `audits/library-pr337-sol-review-2026-10-11/`.
+
+
+Durable review paths: `reviews/oanda-source-completion-2026-10-11/` and `audits/library-pr337-sol-review-2026-10-11/`. Original `/tmp` paths in saved reports refer to those directories by basename. These independently accepted partial calendars retain the unresolved OANDA activation gaps in library #332; no release-ready verdict is asserted.

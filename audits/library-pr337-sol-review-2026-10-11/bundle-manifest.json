@@ -1,0 +1,295 @@
+{
+  "library_head": "3e0e5b9a9a15357cc461b54269ff39e831af0281",
+  "files": [
+    {
+      "path": "STATUS-ready.md",
+      "sha256": "552e2962146031a9a31090d5a2489b5628ae7d733856e68fcca37300ac14c2ef",
+      "bytes": 1711
+    },
+    {
+      "path": "amsterdam/derive_instants.py",
+      "sha256": "b5199185583ee69dfca1a8da407ae6443c8a490f73e291e006af3965764ee23c",
+      "bytes": 1616
+    },
+    {
+      "path": "amsterdam/independent-source-tables.json",
+      "sha256": "2a5696f731cd5cb1bbf95bf6187b66d2e34b66045c728bf2e72ed9278418a39c",
+      "bytes": 1866553
+    },
+    {
+      "path": "amsterdam/parse_sources.py",
+      "sha256": "db4a80fbb93490d5a4a8490112dc36d9dd03d14caa6d79a18c37c4411a33b748",
+      "bytes": 2056
+    },
+    {
+      "path": "amsterdam/retrieve.py",
+      "sha256": "359cfbf17b499a4cc870f7d94c28a5b45127c6bd0e0d6be976c8027b4d8f0e17",
+      "bytes": 1209
+    },
+    {
+      "path": "amsterdam/row-audit.json",
+      "sha256": "bf6242f54fc9439918d49cc26e110960631aa8b4f8da00c0c4ac1cd99c3748ac",
+      "bytes": 20367
+    },
+    {
+      "path": "amsterdam/second-retrieval-retry.json",
+      "sha256": "235f6ceaf31bddaaa8ce43027ee933c8547ff8a24e02aff8264257dffb27b6f0",
+      "bytes": 429
+    },
+    {
+      "path": "amsterdam/second-retrieval.json",
+      "sha256": "edf587acb208fb203a4c849d84be49c9541d44a7ed83cced6b17cc2f914913e2",
+      "bytes": 20310
+    },
+    {
+      "path": "amsterdam/source-manifest.json",
+      "sha256": "9c746adc002f7a8f697790d3784b1a6f80ae1b6c0522a6bcc5fa261e18260cb2",
+      "bytes": 12576
+    },
+    {
+      "path": "amsterdam-mutation.log",
+      "sha256": "c438c22f10445db16e3b15bd0439d76b5acd02522a3587cfbf751561657a9294",
+      "bytes": 1036
+    },
+    {
+      "path": "amsterdam-restored.log",
+      "sha256": "a5258f648d95c0ea66200a76242c22447be483b0c217ece59e7eed7d2f8f1864",
+      "bytes": 577
+    },
+    {
+      "path": "archive-proof.json",
+      "sha256": "ea7ca9fe0ee88b77896f87c9f7cbf4aff8ed0d72a28ea259f1d2b16452e3af16",
+      "bytes": 14722
+    },
+    {
+      "path": "history/corp-news-20120802041322.txt",
+      "sha256": "1fd29b9ee0a842ba6c36b5bcbd9e41ade58eb19f07b1ccc3d07cc1e8294ec199",
+      "bytes": 30590
+    },
+    {
+      "path": "history/corp-weekend-20121019131147.txt",
+      "sha256": "f1e3acd391840c441ecc2259d4a5e3095190aff5a58f4f4201e89cd906d88522",
+      "bytes": 4963
+    },
+    {
+      "path": "history/current-holiday-own-parser.txt",
+      "sha256": "977292f1ce8fd7d0db12f34a2bce34630ceac1faf1b46be0b72ddc987d16fd85",
+      "bytes": 18871
+    },
+    {
+      "path": "history/digest-audit.json",
+      "sha256": "d0c60baaf4d20088992a218017acc19708b0444d3133af0af1ed5e2fe6bd2df9",
+      "bytes": 4435
+    },
+    {
+      "path": "history/oanda-europe-launch-2011-mirror.txt",
+      "sha256": "55297b958199bd4f00b8c7ed6161f2beb020852377eeef4548026dc687298f8c",
+      "bytes": 361601
+    },
+    {
+      "path": "history/oanda-japan-try-change-2025-08-04.txt",
+      "sha256": "a0f8bc0b75cdf3b4f5feb29d2afe16273b1e230561d1e8345749a9b63e99c484",
+      "bytes": 8772
+    },
+    {
+      "path": "history/oanda-oel-execution-policy-2023-10-23.txt",
+      "sha256": "f7cf9925f049264368e55cc71f9e9cf8ab3b2dcac3d549064964f7fe254d53c6",
+      "bytes": 22890
+    },
+    {
+      "path": "history/oanda-press-2010-leverage.txt",
+      "sha256": "6d8b00a7ad65408eca2adac295c2510d701b38924d86173c30ed15deca39eaf4",
+      "bytes": 19814
+    },
+    {
+      "path": "history/oanda-press-2011-crosspairs.txt",
+      "sha256": "d36c78ff9cce649c8d3466281aab72d2ba11a438451ae98f9f84830e5ea87c6b",
+      "bytes": 16586
+    },
+    {
+      "path": "history/oanda-static-hours-402.txt",
+      "sha256": "be240496e6712d29f7508730ac421921966df7f21bbe89b04d0fd73a17b98c73",
+      "bytes": 18802
+    },
+    {
+      "path": "history/oanda-uk-holidays-20250326184653.txt",
+      "sha256": "501ef724f7d5d8951de919d2b0b195e3d45f899457b1d05fd6017c65bc55ed95",
+      "bytes": 16766
+    },
+    {
+      "path": "history/oanda-uk-hours-20211208123011.txt",
+      "sha256": "49a8763e6c91f35b47607c3edbdc64daf61653aeb0d7e51e9e8828396537dc19",
+      "bytes": 11004
+    },
+    {
+      "path": "history/oanda-uk-hours-20230605093523.txt",
+      "sha256": "00ccbac7809eb2d86db83dd7e7001f2a60b049c233ca37a349ffb7412cc6022c",
+      "bytes": 12593
+    },
+    {
+      "path": "history/oanda-us-hours-2026-10-11.txt",
+      "sha256": "9068e0cee18327696579afc89247b7a3b72c407a272f18869dc61d2952d4c668",
+      "bytes": 28574
+    },
+    {
+      "path": "history/oanda-weekend-canada-2012-email-mirror.txt",
+      "sha256": "613b07a18df3b9319cf0e1299171359fa783ca4b75af102b9cf4949991d98897",
+      "bytes": 4398
+    },
+    {
+      "path": "history/own-hours-grid-audit.json",
+      "sha256": "53cd98722323adad7e83984f6445962382750ec22f993557d5de7fc73e9fe75c",
+      "bytes": 2317
+    },
+    {
+      "path": "history/retrieved/OANDA-OEL-EXECUTION-2023",
+      "sha256": "2291d3cc6ea6ad38aa03cd76233e1d295002e43863c4aabad580d7f7ca210d60",
+      "bytes": 206592
+    },
+    {
+      "path": "history/retrieved/OANDA-UK-HOURS-2021-DEC-WAYBACK",
+      "sha256": "63e6d54029b72e0ef1ec32f92b8c3412bd24edf05df9fda9fa2b4dce98cb78fb",
+      "bytes": 89686
+    },
+    {
+      "path": "history/retrieved/OANDA-UK-HOURS-2023-JUN-WAYBACK",
+      "sha256": "98ddc07cf38727b2a861fd1f48c503b1b597054cbec9d1dde4b3dde1801ffb56",
+      "bytes": 89565
+    },
+    {
+      "path": "history/retrieved/OANDA-WEEKEND-2012-ORIGINAL",
+      "sha256": "1e692187c57d512ee1b68f10d32ab3185e121093a8efdd14f9bc25a2919e9b12",
+      "bytes": 16958
+    },
+    {
+      "path": "history/retrieved/manifest.json",
+      "sha256": "3b4e9315720cbf2a19ef5c3ee68d8a080f82e45e30e9df9d57718c5e88fed454",
+      "bytes": 1641
+    },
+    {
+      "path": "history/source-0.txt",
+      "sha256": "be240496e6712d29f7508730ac421921966df7f21bbe89b04d0fd73a17b98c73",
+      "bytes": 18802
+    },
+    {
+      "path": "history/source-1.txt",
+      "sha256": "a0f8bc0b75cdf3b4f5feb29d2afe16273b1e230561d1e8345749a9b63e99c484",
+      "bytes": 8772
+    },
+    {
+      "path": "history/source-2.txt",
+      "sha256": "9068e0cee18327696579afc89247b7a3b72c407a272f18869dc61d2952d4c668",
+      "bytes": 28574
+    },
+    {
+      "path": "history/source-3.txt",
+      "sha256": "f7cf9925f049264368e55cc71f9e9cf8ab3b2dcac3d549064964f7fe254d53c6",
+      "bytes": 22890
+    },
+    {
+      "path": "history/tms-try-2025-june.txt",
+      "sha256": "392709bf4d6a3401d919b203c565a8e94f4ad9c2b30fa0054e1a54c1cb6a4838",
+      "bytes": 448156
+    },
+    {
+      "path": "history/tms-try-2025-october.txt",
+      "sha256": "aa8717e741c05c712c901da0c488038ffbad60335980931ff64e8b97d897e843",
+      "bytes": 429298
+    },
+    {
+      "path": "history/uk-demo-20110621021538.txt",
+      "sha256": "211de789e83626b0364d3b94d2050cac0dd60c396ba907ccb7cd1fbf791022fd",
+      "bytes": 4478
+    },
+    {
+      "path": "history/uk-demo-20120218120340.txt",
+      "sha256": "133e5d32257ff4d494fc2c5ef07c82c25d5f206668dc606fe0fecc03f22088a8",
+      "bytes": 4307
+    },
+    {
+      "path": "history/uk-demo-20120414132512.txt",
+      "sha256": "f536652836c0aff5a8802ff68a037b890127d3ac3eb5b89e96c5954a17acd729",
+      "bytes": 4223
+    },
+    {
+      "path": "history/uk-demo-20120518043612.txt",
+      "sha256": "d20a51fb489012b71a76b32a60dc8ae6f3ec62649e6cb2bd40339a133baea20f",
+      "bytes": 4369
+    },
+    {
+      "path": "history/uk-demo-20120619063323.txt",
+      "sha256": "f04a6f3b0257e1fa884ce43a9c7f4a85213978a21dac9a6006250dc8f7ca09dc",
+      "bytes": 4843
+    },
+    {
+      "path": "history/uk-demo-20120805035159.txt",
+      "sha256": "83de342ffe6922b1591bcab4877ffb50956112ea8319f4a7b1a21c03bfba081b",
+      "bytes": 4793
+    },
+    {
+      "path": "history/uk-live-20110621021554.txt",
+      "sha256": "7f386bf028c5c0db3e49348d8261905f0c344fc9043958208d1e4fe6a1995e0e",
+      "bytes": 4525
+    },
+    {
+      "path": "history/uk-live-20120619063328.txt",
+      "sha256": "0a39385608d3b8644e61fcbf80cd829cb0c5189af0c4a8c3f87dacc3bdc9dac7",
+      "bytes": 5015
+    },
+    {
+      "path": "history/uk-live-20120805032236.txt",
+      "sha256": "a926decb2de89f0119be05c9821a756390c9f25814fde4f3e0e92313dbd5c516",
+      "bytes": 4999
+    },
+    {
+      "path": "history/weekend-2012-mirror.txt",
+      "sha256": "08594c5dc5b0289b15c53e5e7a92accaba734f5c31b110eabb23a980710f48fe",
+      "bytes": 151185
+    },
+    {
+      "path": "integration-proof.json",
+      "sha256": "48ba2eb0d42f3ceed1a4e94fc504cce8fd4c826a51d35e27fa7d5f6d767ada1a",
+      "bytes": 4592
+    },
+    {
+      "path": "lse/parse_rows.py",
+      "sha256": "0670f7689ceb82fbbcdbbefeb6e541fdd797958ac926e09308e860e45b72c776",
+      "bytes": 2952
+    },
+    {
+      "path": "lse/row-audit.json",
+      "sha256": "3d495dae81c5ae98e5d7fe01cfe41f721112a1aacfc6fd399eb328910916a227",
+      "bytes": 53113
+    },
+    {
+      "path": "lse-mutation.log",
+      "sha256": "2d84cbe693f01b4ec42dc45d58250cd15f25d367f113788acfc7a01bcc5f6349",
+      "bytes": 1010
+    },
+    {
+      "path": "lse-restored.log",
+      "sha256": "57a2cddd9f092ae6548d5298899630013c93c59774b324afa990d30636181187",
+      "bytes": 445
+    },
+    {
+      "path": "pr-metadata.json",
+      "sha256": "dd87ea4ba3f90283be725bb0881142eb9686f27b46969492426b2ae66533580c",
+      "bytes": 1772
+    },
+    {
+      "path": "review.md",
+      "sha256": "1b74cd6626a1cc52b27b76c83c13e2b31102e3abf1881749b034e9a248d77cbf",
+      "bytes": 4796
+    },
+    {
+      "path": "source-review.md",
+      "sha256": "5533621d022db1c6c772931f4aeccfeb49721f830ff130b724397c6caa626aa9",
+      "bytes": 11040
+    },
+    {
+      "path": "verification.log",
+      "sha256": "dd5ff36c3de0f1a742f8a0c729d952b07d6a8d1a63dda43a19ca5309af1ccd06",
+      "bytes": 218876
+    }
+  ]
+}
