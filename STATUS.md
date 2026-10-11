@@ -11040,8 +11040,14 @@ Australian CFD selector remains an operator-evidence condition in #332.
 The guide's earlier German and other grids are context, not current rows.
 
 Final candidate `e04163cd8c6993d1c0ddba6dc9d61e742317efb1` adds this source
-qualification without changing runtime data; its complete recheck is in
-progress in PR #334. The original release PR #328 stays draft. Complete
+qualification without changing runtime data. Its final clean-commit recheck
+passed all 1335 integration tests (871.002 seconds), formatting, strict clippy,
+doctest/rustdoc, dependency checks, MSRV 1.95, publish dry-run and package
+inspection; the captured-store fence verified 2970 Documents rows across
+47 files and 838 distinct digests. The isolated consumer snapshot at this
+exact candidate passed 4000 tests (21 existing skips) and strict workspace
+clippy. CI's main-backed digest fence still requires reviewed evidence PR #19
+to merge; its missing new artifact is not a waiver of that fence. The original release PR #328 stays draft. Complete
 instrument coverage is still not certified: the six planned derivatives
 identities are absent, historical normal-week and holiday gaps remain,
 TRY has no audited holiday table, the other book tables stop at 2026-10-30,
