@@ -1,0 +1,61 @@
+[
+  {
+    "name": "uk-holidays",
+    "url": "https://web.archive.org/cdx/search/cdx?url=www.oanda.com%2Fuk-en%2Ftrading%2Fholiday-trading-hours%2A&output=json&filter=statuscode%3A200&collapse=digest&fl=timestamp%2Coriginal%2Cdigest&limit=1000",
+    "returncode": 28,
+    "error": "curl: (28) Operation timed out after 25002 milliseconds with 0 bytes received\n",
+    "body": ""
+  },
+  {
+    "name": "uk-hours",
+    "url": "https://web.archive.org/cdx/search/cdx?url=www.oanda.com%2Fuk-en%2Ftrading%2Fhours-of-operation%2A&output=json&filter=statuscode%3A200&collapse=digest&fl=timestamp%2Coriginal%2Cdigest&limit=1000",
+    "returncode": 0,
+    "rows": 27,
+    "entries": [
+      [
+        "timestamp",
+        "original",
+        "digest"
+      ],
+      [
+        "20210303210448",
+        "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+        "BULCENQNHUNMHALZFZFDPO4KJECZUCMX"
+      ],
+      [
+        "20210508191941",
+        "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+        "O73U5QUCOD4DF27EWPXJ3TOJBGMFO2QI"
+      ],
+      [
+        "20210804085600",
+        "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+        "NZQ66EHMAOIYNJCGON6FVUBOHZMIFS4W"
+      ],
+      [
+        "20210818204239",
+        "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+        "KTUZKJ2P6BY53LGIZRBASZDXKMK7S4QB"
+      ],
+      [
+        "20210818204757",
+        "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+        "5HJXQ7DTKEHNVXLVAIUYF63KL23ZXOS6"
+      ]
+    ]
+  },
+  {
+    "name": "old-market-hours",
+    "url": "https://web.archive.org/cdx/search/cdx?url=www.oanda.com%2F%2Amarket-hours%2A&output=json&filter=statuscode%3A200&collapse=digest&fl=timestamp%2Coriginal%2Cdigest&limit=1000",
+    "returncode": 0,
+    "rows": -1,
+    "entries": []
+  },
+  {
+    "name": "old-hours-guide",
+    "url": "https://web.archive.org/cdx/search/cdx?url=www.oanda.com%2Fassets%2Fdocuments%2F252%2FHours_of_Operation.pdf&output=json&filter=statuscode%3A200&collapse=digest&fl=timestamp%2Coriginal%2Cdigest&limit=1000",
+    "returncode": 28,
+    "error": "curl: (28) Operation timed out after 25006 milliseconds with 0 bytes received\n",
+    "body": ""
+  }
+]

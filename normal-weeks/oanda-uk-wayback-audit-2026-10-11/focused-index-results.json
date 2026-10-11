@@ -1,0 +1,61 @@
+[
+  {
+    "name": "uk-holidays-2025-2026",
+    "url": "https://web.archive.org/cdx/search/cdx?url=www.oanda.com%2Fuk-en%2Ftrading%2Fholiday-trading-hours%2F&output=json&filter=statuscode%3A200&collapse=digest&fl=timestamp%2Coriginal%2Cdigest&limit=1000&from=2025&to=2026",
+    "returncode": 0,
+    "rows": 7,
+    "entries": [
+      [
+        "timestamp",
+        "original",
+        "digest"
+      ],
+      [
+        "20250326184653",
+        "https://www.oanda.com/uk-en/trading/holiday-trading-hours/",
+        "VD755SUGJBKLRMIZYAQIZN6F3UWBGN4Q"
+      ],
+      [
+        "20250719220103",
+        "https://www.oanda.com/uk-en/trading/holiday-trading-hours/",
+        "LAQ6PW5ROAJCSEAE3DJGJAIL7CJE2EBM"
+      ],
+      [
+        "20251118074941",
+        "https://www.oanda.com/uk-en/trading/holiday-trading-hours/",
+        "EKIJ3S4SNNYH6YG4XTFDC4GBJ4LY3CEB"
+      ],
+      [
+        "20251222073046",
+        "https://www.oanda.com/uk-en/trading/holiday-trading-hours/",
+        "STWMEWX3GT24VYGPOGDYE2ZSPZ5L3XCT"
+      ],
+      [
+        "20260208124247",
+        "https://www.oanda.com/uk-en/trading/holiday-trading-hours/",
+        "72NO6QGJ5WEYXXTQ43LWAP64YQOPA4B5"
+      ]
+    ]
+  },
+  {
+    "name": "old-hours-guide-focused",
+    "url": "https://web.archive.org/cdx/search/cdx?url=www.oanda.com%2Fassets%2Fdocuments%2F252%2FHours_of_Operation.pdf&output=json&filter=statuscode%3A200&collapse=digest&fl=timestamp%2Coriginal%2Cdigest&limit=1000",
+    "returncode": 0,
+    "rows": -1,
+    "entries": []
+  },
+  {
+    "name": "legacy-forex-market-hours",
+    "url": "https://web.archive.org/cdx/search/cdx?url=www.oanda.com%2Fforex-trading%2Fmarkets%2Fhours%2A&output=json&filter=statuscode%3A200&collapse=digest&fl=timestamp%2Coriginal%2Cdigest&limit=1000",
+    "returncode": 0,
+    "rows": -1,
+    "entries": []
+  },
+  {
+    "name": "legacy-holiday-hours",
+    "url": "https://web.archive.org/cdx/search/cdx?url=www.oanda.com%2F%2Aholiday-trading-hours%2A&output=json&filter=statuscode%3A200&collapse=digest&fl=timestamp%2Coriginal%2Cdigest&limit=1000",
+    "returncode": 0,
+    "rows": -1,
+    "entries": []
+  }
+]
