@@ -1,0 +1,42 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.05s
+────────────
+ Nextest run ID 12fa6f20-0426-4bbe-abe7-418c3a2ed1df with nextest profile: default
+    Starting 13 tests across 1 binary
+        PASS [   0.014s] ( 1/13) exchange-hours::oanda_publication brent_2025_reopens_at_2000_et_including_friday_early_close
+        PASS [   0.016s] ( 2/13) exchange-hours::oanda_publication bonds_have_their_own_good_friday_and_carter_day_closes
+        PASS [   0.017s] ( 3/13) exchange-hours::oanda_publication split_session_search_selects_the_nearest_reopen_before_a_later_normal_open
+        PASS [   0.018s] ( 4/13) exchange-hours::oanda_publication an_incomplete_memorial_reopen_refuses_the_following_trade_date
+        PASS [   0.019s] ( 5/13) exchange-hours::oanda_publication bonds_do_not_inherit_the_index_only_independence_eve_arrangement
+        PASS [   0.019s] ( 6/13) exchange-hours::oanda_publication mlk_2025_closes_at_the_operators_printed_instant
+        PASS [   0.020s] ( 7/13) exchange-hours::oanda_publication brent_monday_bounds_include_the_sunday_open_in_both_dst_regimes
+        PASS [   0.022s] ( 8/13) exchange-hours::oanda_publication new_year_2025_reopens_at_1804_on_the_following_trade_date
+        FAIL [   0.022s] ( 9/13) exchange-hours::oanda_publication carters_close_and_reopen_follow_the_dated_twenty_four_hour_context
+  stdout ───
+
+    running 1 test
+    test carters_close_and_reopen_follow_the_dated_twenty_four_hour_context ... FAILED
+
+    failures:
+
+    failures:
+        carters_close_and_reopen_follow_the_dated_twenty_four_hour_context
+
+    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 12 filtered out; finished in 0.00s
+
+  stderr ───
+
+    thread 'carters_close_and_reopen_follow_the_dated_twenty_four_hour_context' (6893558) panicked at tests/oanda_publication.rs:216:5:
+    assertion `left == right` failed
+      left: Ok(true)
+     right: Ok(false)
+    note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+  Cancelling due to test failure: 4 tests still running
+        PASS [   0.023s] (10/13) exchange-hours::oanda_publication holy_thursday_2025_replacement_extends_to_the_printed_1700_close
+        PASS [   0.024s] (11/13) exchange-hours::oanda_publication spot_metals_holiday_reopens_use_the_literal_group_and_gold_silver_exception
+        PASS [   0.024s] (12/13) exchange-hours::oanda_publication previous_session_search_uses_the_last_replacement_close_for_gap_state
+        PASS [   0.015s] (13/13) exchange-hours::oanda_publication us_2025_reopens_preserve_the_printed_1800_and_next_day_early_closes
+────────────
+     Summary [   0.029s] 13 tests run: 12 passed, 1 failed, 0 skipped
+        FAIL [   0.022s] ( 9/13) exchange-hours::oanda_publication carters_close_and_reopen_follow_the_dated_twenty_four_hour_context
+error: test run failed

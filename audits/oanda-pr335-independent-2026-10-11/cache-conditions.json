@@ -1,0 +1,13 @@
+{
+  "head": "a0d1479b7d8d5ef391cb918598c94d160d12e41a",
+  "issue": "https://github.com/SharurTrading/exchange-hours-rs/issues/336",
+  "cargo": "1.97.1 (c980f4866 2026-06-30)",
+  "rustc": "1.97.1 (8bab26f4f 2026-07-14)",
+  "reused_mutation_target": "/tmp/oanda-independent-row-mutation-target",
+  "fresh_public_suite_target": "/tmp/oanda-independent-pr335-clean-public-target",
+  "unmutated_full_chain_target": "/tmp/oanda-independent-mutation-target",
+  "mutation_worktree": "/tmp/oanda-independent-pr335-final-mutation",
+  "clean_worktree": "/tmp/oanda-independent-pr335-review-final",
+  "bad_clean_log_provenance": "Recovered verbatim from the tool-output read of the original log at 2026-10-11T22:02:43.720Z before the retry overwrote its original path",
+  "observation": "After a 09:30-to-09:31 mutation and restoration in another worktree, a clean suite reusing the mutation target ran without recompiling the library and retained the mutation behavior (12 pass, 1 fail). Fresh target passed all 13. Exact root cause and upstream fault are not asserted."
+}
