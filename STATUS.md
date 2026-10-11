@@ -10897,3 +10897,66 @@ halt (`18:00 - 16:15; 16:30 - 17:00` New York), and the index CFDs printed excha
 Digests: 2021 `ec5987239f2c79dd29fcfc40abe5a0d58c6e4ed446fa7dea653f1791b186cbed`, 2022
 `8dd71db7accc2a40faeb531f0c5c29db0eb289c9ef45a69bc14b75148257cbea`, 2024
 `aab9b3032c1d53e6155009fce6a5156983c2d21a2f0bd768f1860f465b8b6a63`.
+
+## 2026-10-11 UTC — the wave-2 hunts: ASX 24 SPI, Eurex SMI, Euronext index futures
+
+Three evidence captures for the OANDA programme's wave-2 builds. ASX: the live
+index-derivatives trading-hours page (SPI 200 futures and options, the two-column
+US-DST split — 17:10:00–07:00:00 and 09:50:00–16:30:00 from the second Sunday in
+March to the first Sunday in November, 17:10:00–08:00:00 otherwise — constant in
+every captured state 2010→2026, so the normal week sources to the floor with no
+dated change), the SYCOM 2010 and ASX Trade24 2012 hours PDFs, the pre-open
+footnote ("Pre-open starts 10 minutes prior to trading"), and the ASX 24 Trading
+Calendar captures 2010–2027 (SFE-era 2010 through the live 2026+2027 state) with
+the policy legend and per-date arrangements the SPI holiday table keys on; the
+store's existing equities/asx/ artifacts are all cash-market calendars (zero SPI
+hits), confirming the derivatives family needed its own tree, which lands as
+`holidays/raw/asx24-2010-2027/`. Eurex SMI: the exchange-wide trading-hours page
+(regular day 08:00–22:00 CET with Asian hours for selected products) plus the
+finding that FSMI itself runs the Swiss class 07:50–22:00 CET (TC-2026 PDF, store
+byte-identical to the crate's cited hash) and that both shipped Eurex tables are
+scope-keyed, not exchange-wide — the recurring Swiss-scope closure clause (2026:
+2 Jan, 14 May, 25 May; 2025: 2 Jan, 29 May, 9 Jun, 1 Aug) hits SMI and is absent
+from both, so an SMI table is all-derivatives rows plus the Swiss rows. Euronext:
+CAC 40 and AEX index-futures contract pages print identical Central Order Book
+hours 08:00–22:00 CET/CEST (LIS 07:30–22:00), and the live trading-hours-and-
+holidays page states the cash AND derivatives markets share one per-year calendar
+with per-market columns — the store's euronext_paris cash artifacts (2010–2026
+editions) therefore key the derivatives column too; 2027 unpublished (negative).
+Digests: each directory carries the hunter's SHA256SUMS.txt or the file digests
+as recorded in the wave STATUS of the crate PRs that cite them.
+
+Appendix (same UTC day): the ASX 24 calendars' row-by-row extraction landed as
+`holidays/raw/asx24-2010-2027/asx24-rows-extraction.md` — 354 rows across
+2010–2027 (50 day-closed/night-normal, 96 fully closed, 54 US-policy
+night-to-midnight, 28 product-level early closes on generic Equity Products
+rows, 117 informational normal rows), the 2011 Easter-Monday-substitute
+correction between the two captures resolved to the later, the 2022 December
+revision (night closed on 23 and 30 December, the September National Day of
+Mourning added) keyed to the later capture, 2024 carried by the Dec-2023
+capture (all eight direct 2024 captures are Incapsula blocks), and the
+ANZAC-weekend fallbacks recorded per year including 2026/2027's absent
+25-April rows. The US-midnight policy ends after 2015: US holidays print
+plain normal rows from 2016, and only Day-before-Good-Friday keeps the
+midnight close through 2026.
+
+## 2026-10-11 UTC — the HKEX index-futures hunt
+
+Complete evidence base for the `hkex_index_futures` build. Normal week: the live
+derivatives trading-hours page (Updated 20 Jul 2026) states HSI/HHI/minis at
+9:15–12:00 and 13:00–16:30 with Pre-Market Opening Periods 8:45–9:15 and
+12:30–13:00, and the AHT session 5:00 p.m.–03:00 a.m. (no AHT on the last
+trading day; half-day close 12:30 p.m.) — the product page restates it. Dated
+history: After-Hours Futures Trading launched **Monday 8 April 2013** (circular
+DMD/022/13 of 14 Feb 2013, SFC-approved, T+1 Session 5:00–11:00 p.m., no T+1 on
+HK public holidays / half-day securities days / UK+US bank holidays; the
+post-launch review restates it), the day session ran 9:45–12:30 & 14:30–16:15
+before the operator-dated two-phase extension (Phase 1 effective 7 March 2011 →
+9:15–12:00 & 13:30–16:15; Phase 2 on 5 March 2012 by DMD/004/12 → afternoon
+13:00–16:15, pre-market 12:30–13:00), and the later cutovers (close 16:15→16:30,
+AHT 23:00→23:45→17:15→17:00, end→03:00) are bracketed by product-page snapshots
+2014-09..2026 with their exact circulars uncaptured — a recorded gap. Holidays:
+the `tradcal` wall-calendar PDFs cover 2010–2017 and the derivatives Trading
+Calendar and Holiday Schedule pages cover 2017–2027 (per-year lists verbatim in
+the artifacts), with the no-afternoon-and-after-hours half-day-eve convention
+stated per year. Digests in `normal-weeks/hkex-futures-2026-10-11/SHA256SUMS.txt`.

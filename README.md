@@ -128,6 +128,17 @@ git -C /path/to/exchange-hours-evidence push -u origin watch-<date>
 The weekly watch cadence's additions (LAW-WATCH in the crate's `AGENTS.md`)
 land here the same way.
 
+## Contributor build cache
+
+This repository contains research evidence and has no Rust workspace or Rust CI
+workflow to cache. [.kache.toml](.kache.toml) supplies the local cache policy
+if a contributor uses Kache while running Rust tooling from this checkout.
+Contributors building the consuming crate should follow the
+[exchange-hours Rust build guidance](https://github.com/SharurTrading/exchange-hours-rs#contributor-build-cache).
+See Kache's [quick start](https://ninja.kunobi.com/docs/kache/getting-started/quick-start)
+and [configuration reference](https://ninja.kunobi.com/docs/kache/getting-started/configuration)
+for setup and configuration precedence.
+
 ## License and republishing posture
 
 The repository's own prose, notes and decision log are
