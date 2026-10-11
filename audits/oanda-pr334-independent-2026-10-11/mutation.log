@@ -1,0 +1,89 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.24
+   Compiling serde_core v1.0.229
+   Compiling serde v1.0.229
+   Compiling autocfg v1.5.1
+   Compiling libc v0.2.189
+   Compiling zerocopy v0.8.56
+   Compiling zmij v1.0.23
+   Compiling cfg-if v1.0.4
+   Compiling shlex v2.0.1
+   Compiling find-msvc-tools v0.1.11
+   Compiling typenum v1.20.1
+   Compiling cc v1.4.4
+   Compiling siphasher v1.0.3
+   Compiling serde_json v1.0.151
+   Compiling num-traits v0.2.19
+   Compiling phf_shared v0.12.1
+   Compiling hybrid-array v0.4.15
+   Compiling alloca v0.4.0
+   Compiling chrono-tz v0.10.4
+   Compiling regex-syntax v0.8.11
+   Compiling memchr v2.8.3
+   Compiling ciborium-io v0.2.2
+   Compiling either v1.18.0
+   Compiling itoa v1.0.18
+   Compiling anstyle v1.0.14
+   Compiling clap_lex v1.1.0
+   Compiling regex-automata v0.4.18
+   Compiling chrono v0.4.45
+   Compiling itertools v0.13.0
+   Compiling phf v0.12.1
+   Compiling block-buffer v0.12.1
+   Compiling crypto-common v0.2.2
+   Compiling const-oid v0.10.2
+   Compiling syn v3.0.3
+   Compiling syn v2.0.119
+   Compiling clap_builder v4.6.6
+   Compiling cast v0.3.0
+   Compiling same-file v1.0.6
+   Compiling page_size v0.6.0
+   Compiling digest v0.11.3
+   Compiling regex v1.13.1
+   Compiling cpufeatures v0.3.1
+   Compiling anes v0.1.6
+   Compiling criterion-plot v0.8.2
+   Compiling walkdir v2.5.0
+   Compiling oorandom v11.1.5
+   Compiling serde_derive v1.0.229
+   Compiling clap v4.6.6
+   Compiling zerocopy-derive v0.8.56
+   Compiling sha2 v0.11.0
+   Compiling tinytemplate v1.2.1
+   Compiling serde_test v1.0.177
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-independent-mutation)
+   Compiling half v2.7.1
+   Compiling ciborium-ll v0.2.2
+   Compiling ciborium v0.2.2
+   Compiling criterion v0.8.2
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.47s
+────────────
+ Nextest run ID 8f791a2a-180a-4223-a588-0446bbed6815 with nextest profile: default
+    Starting 1 test across 1 binary (9 tests skipped)
+        FAIL [   0.007s] (1/1) exchange-hours::oanda_publication bonds_have_their_own_good_friday_and_carter_day_closes
+  stdout ───
+
+    running 1 test
+    test bonds_have_their_own_good_friday_and_carter_day_closes ... FAILED
+
+    failures:
+
+    failures:
+        bonds_have_their_own_good_friday_and_carter_day_closes
+
+    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 9 filtered out; finished in 0.00s
+
+  stderr ───
+
+    thread 'bonds_have_their_own_good_friday_and_carter_day_closes' (6610392) panicked at tests/oanda_publication.rs:174:9:
+    assertion `left == right` failed
+      left: Ok(false)
+     right: Ok(true)
+    note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+  Cancelling due to test failure
+────────────
+     Summary [   0.008s] 1 test run: 0 passed, 1 failed, 9 skipped
+        FAIL [   0.007s] (1/1) exchange-hours::oanda_publication bonds_have_their_own_good_friday_and_carter_day_closes
+error: test run failed

@@ -1,0 +1,18 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.04s
+────────────
+ Nextest run ID 8c377d50-7b6a-4cfc-a6d7-2a5745142d30 with nextest profile: default
+    Starting 12 tests across 1 binary
+        PASS [   0.017s] ( 1/12) exchange-hours::oanda_publication spot_metals_holiday_reopens_use_the_literal_group_and_gold_silver_exception
+        PASS [   0.023s] ( 2/12) exchange-hours::oanda_publication bonds_do_not_inherit_the_index_only_independence_eve_arrangement
+        PASS [   0.023s] ( 3/12) exchange-hours::oanda_publication brent_monday_bounds_include_the_sunday_open_in_both_dst_regimes
+        PASS [   0.031s] ( 4/12) exchange-hours::oanda_publication us_2025_reopens_preserve_the_printed_1800_and_next_day_early_closes
+        PASS [   0.031s] ( 5/12) exchange-hours::oanda_publication brent_2025_reopens_at_2000_et_including_friday_early_close
+        PASS [   0.031s] ( 6/12) exchange-hours::oanda_publication bonds_have_their_own_good_friday_and_carter_day_closes
+        PASS [   0.031s] ( 7/12) exchange-hours::oanda_publication previous_session_search_uses_the_last_replacement_close_for_gap_state
+        PASS [   0.033s] ( 8/12) exchange-hours::oanda_publication an_incomplete_memorial_reopen_refuses_the_following_trade_date
+        PASS [   0.033s] ( 9/12) exchange-hours::oanda_publication holy_thursday_2025_replacement_extends_to_the_printed_1700_close
+        PASS [   0.035s] (10/12) exchange-hours::oanda_publication new_year_2025_reopens_at_1804_on_the_following_trade_date
+        PASS [   0.037s] (11/12) exchange-hours::oanda_publication split_session_search_selects_the_nearest_reopen_before_a_later_normal_open
+        PASS [   0.039s] (12/12) exchange-hours::oanda_publication mlk_2025_closes_at_the_operators_printed_instant
+────────────
+     Summary [   0.040s] 12 tests run: 12 passed, 0 skipped

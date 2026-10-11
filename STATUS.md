@@ -11055,3 +11055,85 @@ and the recorded Carter/Brent/reopen uncertainties remain. Closing conditions
 are recorded in #332 and the evidence files; neither passing tests nor a
 future build plan discharges them. This audit is not an independent approval
 of the correction authored in PR #334.
+
+
+## 2026-10-11 UTC — independent review of OANDA correction PR #334
+
+Exact-head source review of `e04163cd8c6993d1c0ddba6dc9d61e742317efb1`:
+**reject pending corrections**. The reviewer did not write the change. Two
+operator source defects remained: the Treasury key inherited an index-only
+2025-07-03 exception and its following 18:00 reopen, and the incomplete UK
+Memorial Day 2026 `18:0` reopen was treated as an exact 18:01 opening. The
+review also found wrong FX gap-state prose, a fabricated Christmas Eve 2025
+18:04 claim, two metals cells quoting Forex rather than Metals, an unsupported
+universal one-minute futures inset, and stale ledger holiday counts (actual
+index/Treasury 29/30 rather than 28/29). All five changed tables contained
+142 rows, independently counted by Python; the PR review's initially repeated
+ledger total was corrected after that count.
+
+The official UK pages were independently fetched again; all 437 normalized
+holiday heading/list events match the cited capture. The undated operator
+static guide was separately retrieved and its digest and explicit Australia
+200 US-DST row reproduced. The review's captures, count/comparison helper,
+mutation logs and exact file/row findings are in
+`audits/oanda-pr334-independent-2026-10-11/`.
+
+The author pushed `e32843fba07d7b9580cd96860d253ccbe3e00315` to address these
+findings: July 3 bonds remain ordinary, July 4 keeps the printed 13:00 close,
+and the following 2026-05-26 index and bond trade date is `Unsourced` until the
+UK operator clarifies its prior-evening reopen (#332). All seven findings
+are addressed on source reread. New table counts reproduce as 30 index,
+30 Treasury, 27 commodity, 32 metals and 24 Brent = 143 rows. Identity counts
+remain 141: 97 exchanges and 44 keys, 36 served and 105 dormant; 65 Partial
+(36 order-entry/29 executable), 50 holiday-bearing.
+
+Fresh-head full verification is running. Twelve public correction tests and
+the evidence fence passed on `e32843f` (2970 rows, 838 digests, 47 files). An
+independent mutation changed the new bond May 26 `Unsourced` row to `Closed`;
+the public typed-gap test failed. The mutation was restored and its isolated
+checkout removed. No final merge approval is asserted before the full checks
+finish. The broader scope/history/selector gaps under #332 remain, and this
+review cannot certify the entire OANDA programme.
+
+
+Current qualification of earlier wave-2 research notes: the HKEX paragraph's
+“Complete evidence base” label must not be read as complete sourced history.
+That same note says later day-close/AHT cutover circulars are uncaptured.
+The MEFF note records searched-negative 2010–2016 interim normal-week states
+and unavailable 2012–2013 holiday grids. The Long Gilt note records missing
+2015–2020 schedule editions and the 2010 full-year notice. Those are actual
+source gaps with closing conditions, not completed calendars. Earlier notes
+are retained as research history; this additive verdict qualifies their broad
+completeness language. Source/build plans for the six absent families do not
+establish complete runtime coverage or the entire OANDA programme (#332).
+
+
+The rejected `e04163c` head completed the independent full Verification chain:
+1335/1335 integration tests passed in 906.897 seconds, plus formatting, strict
+all-target clippy, three doctests, warning-free rustdoc, cargo deny and MSRV
+1.95. Passing checks did not cure that head's source/prose defects. The corrected
+`e32843f` full chain remains in progress; no final merge approval yet.
+
+
+## Corrected-head final verdict — 2026-10-11 UTC
+
+**Pass within the documented dormant/Partial correction scope**, exact pushed
+head `e32843fba07d7b9580cd96860d253ccbe3e00315`. The reviewer did not write
+the change. All seven source/data/prose findings above are corrected on the
+pushed commit and its affected checks were rerun. No outstanding merge-blocking
+defect was found within this PR's stated correction.
+
+The full fresh-head Verification chain completed successfully: formatting,
+strict all-target clippy, all 1337 integration tests in 916.922 seconds (zero
+skipped), three doctests, warning-free rustdoc, cargo deny and MSRV 1.95. Cargo
+deny emitted only unused license-allowance warnings. The 12 affected public
+regressions and full evidence fence also passed; the latter checked 2970
+Documents rows across 47 files and 838 distinct digests. Both isolated mutation
+checks failed the intended public regressions and were restored.
+
+All 143 changed holiday rows and their literal source basis were independently
+reviewed. The independent parser reproduces 30 index, 30 Treasury, 27 commodity,
+32 metals and 24 Brent rows; all 437 normalized operator holiday events match
+the cited capture. The final report is a correction review, not a certificate
+of complete served OANDA history, seasonal selectors, all planned families or
+release readiness. Those remaining obligations are tracked under #332.
