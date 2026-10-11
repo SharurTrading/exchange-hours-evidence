@@ -10960,3 +10960,34 @@ the `tradcal` wall-calendar PDFs cover 2010–2017 and the derivatives Trading
 Calendar and Holiday Schedule pages cover 2017–2027 (per-year lists verbatim in
 the artifacts), with the no-afternoon-and-after-hours half-day-eve convention
 stated per year. Digests in `normal-weeks/hkex-futures-2026-10-11/SHA256SUMS.txt`.
+
+## 2026-10-11 UTC — the MEFF IBEX and ICE Long Gilt hunts
+
+The last two wave-2 evidence bases. MEFF: the live product and Trading-Hours
+pages state the current grid 08:00–22:00 CET with the 7:55–8:00 opening auction
+— the coordinator's 20:00 expectation was outdated — and the comunicados date
+the two cutovers: notice 16/2025 (2 Apr 2025) moves the close to 22:00 on
+**2025-06-23**, and the 2017-01-23 press release starts the 08:00 open era
+("Starting today... 8:00 - 20:00 h"); notice 7/2024's 2024-07-01 date was
+conditional on CNMV valuation and slipped (13/2024), the recorded
+slipped-change pair; Comunicado 49/2025 states the 14:00 Christmas-eve closes
+with the front-month VWAP window moved to 13:54. Holidays: BME yearly press
+releases 2016-2026 live/wayback plus the 2010 calendario PDF and the 2011-2017
+aspx grids confirm the constant closure set {1 Jan, Good Friday, Easter
+Monday, 1 May, 25 Dec, 26 Dec-in-lieu} with 24/31 Dec 14:00 half days (2021
+closed both fully; 2010 closed 31 Dec) and the 2012-2013 grids unreachable
+(negative, closing condition: C-EX-DF circulars or desk). The 2010-2016
+interim hours states (9:00 open era) are searched-negative. ICE Long Gilt:
+circular 26/063 (23 Apr 2026) dates the extension to **2026-07-06** — Long and
+Medium Gilt (and SONIA) to 01:00-21:00 London, Short and Ultra explicitly
+unchanged at 08:00-18:00, settlement windows untouched — with the pre-change
+08:00-18:00 grid witnessed by the May-2026 product-page capture, the IFEU
+Trading Schedule August 2026 edition stating the 2026 closure set (1 Jan, Good
+Friday, Christmas Day) and the gilt bank-holiday row (closed Easter Monday and
+UK bank holidays, open 1 May), the Christmas/New Year 2025 PDF (gilt ceases
+12:15 GMT on 24 Dec 2025), the Excel Trading Schedule T2 workbook whose change
+tracker cites the circulars, and the NYSE Liffe historical-notice zips
+2010-2014 (LON3351/3352, 3526/3530, 3655/3657/3664, 3770: the gilt rows with
+12:15 Christmas half days and the sterling-product closures). 2015-2020
+schedule editions and the 2010 full-year notice are the recorded archive gaps.
+Digests: SHA256SUMS.txt in each normal-weeks directory.
