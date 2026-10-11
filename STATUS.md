@@ -10911,3 +10911,17 @@ with per-market columns — the store's euronext_paris cash artifacts (2010–20
 editions) therefore key the derivatives column too; 2027 unpublished (negative).
 Digests: each directory carries the hunter's SHA256SUMS.txt or the file digests
 as recorded in the wave STATUS of the crate PRs that cite them.
+
+Appendix (same UTC day): the ASX 24 calendars' row-by-row extraction landed as
+`holidays/raw/asx24-2010-2027/asx24-rows-extraction.md` — 354 rows across
+2010–2027 (50 day-closed/night-normal, 96 fully closed, 54 US-policy
+night-to-midnight, 28 product-level early closes on generic Equity Products
+rows, 117 informational normal rows), the 2011 Easter-Monday-substitute
+correction between the two captures resolved to the later, the 2022 December
+revision (night closed on 23 and 30 December, the September National Day of
+Mourning added) keyed to the later capture, 2024 carried by the Dec-2023
+capture (all eight direct 2024 captures are Incapsula blocks), and the
+ANZAC-weekend fallbacks recorded per year including 2026/2027's absent
+25-April rows. The US-midnight policy ends after 2015: US holidays print
+plain normal rows from 2016, and only Day-before-Good-Friday keeps the
+midnight close through 2026.
