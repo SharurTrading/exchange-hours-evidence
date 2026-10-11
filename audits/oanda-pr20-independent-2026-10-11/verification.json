@@ -1,0 +1,30 @@
+{
+  "head": "edb1ae7d1bf1ff356cc98075787fdde834caab6e",
+  "source_counts": {
+    "('hours-captures', True)": 19,
+    "('holiday-captures', True)": 18
+  },
+  "raw_responses": 37,
+  "sidecar_hashes": 64,
+  "exact_gzip_derivatives": [
+    "hours-captures/20220724121442.html",
+    "hours-captures/20230316123546.html",
+    "hours-captures/20230425123413.html",
+    "holiday-captures/20220828120328.html",
+    "holiday-captures/20230316123546.html",
+    "holiday-captures/20251222073046.html",
+    "holiday-captures/20260208124247.html"
+  ],
+  "hours_index_rows": 27,
+  "holiday_index_rows": 18,
+  "missing_hours_responses": [
+    "20250120083642",
+    "20250419172608",
+    "20250506101210",
+    "20250708202954",
+    "20251115023204",
+    "20251213234655",
+    "20260209190304",
+    "20260411231933"
+  ]
+}

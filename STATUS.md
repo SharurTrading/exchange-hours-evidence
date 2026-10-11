@@ -11152,3 +11152,24 @@ Both March 2025 and February 2026 UK replays state Carter's dated section in Eas
 No broker contact occurred. Missing history, exact scope and unresolved statements remain in exchange-hours-rs#332. No guessed cutover, cash-market holiday borrowing or activation is introduced.
 
 Artifacts: `normal-weeks/oanda-uk-wayback-audit-2026-10-11/`.
+
+
+## 2026-10-11 UTC — independent review of archive evidence PR #20
+
+Pass on exact pushed head `edb1ae7d1bf1ff356cc98075787fdde834caab6e`; the
+reviewer did not write the capture bundle. The initial `8ba1b1b` inventory was
+rejected because seven gzip bodies and a valid UK holiday page were marked
+unusable. The corrected inventory preserves all 37 original responses and adds
+seven byte-exact decoded derivatives. Independent parsing reproduces 19 usable
+hours tables and 18 holiday calendars, all 64 artifact hashes and manifest byte
+counts, 27 distinct indexed hours digests and eight indexed hours replays still
+absent. Final README/STATUS/PR counts and concrete UK index/UK10Y/Sugar wording
+are corrected. The blocker was resolved after pushed-head verification.
+
+The source claims about FX/XAU observations, the generic seasonal footnote,
+archived 2024 holidays, ANZAC day/night arrangement, incomplete Memorial reopen
+and contextual Carter 09:30 interpretation were independently read from the
+operator text. Captures remain observations rather than unconditional cutover
+dates. Complete runtime OANDA scope/history/selector coverage remains #332.
+The report, independent checker and exact-head result are recorded in
+`audits/oanda-pr20-independent-2026-10-11/`.
