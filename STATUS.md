@@ -10884,7 +10884,6 @@ PDF `d8a853cd621313feec96eb1ee0f45b81b7674dea2e0e6cb50b175e78347153d7`, hours HT
 `60f6143dd5d678b1a34a9937aa938d2884380a33bf3542a4c72f8f03fa3607b7`, holiday HTML
 `c7137ce3da4cc19d0431955feedc10fb6b9731214ad3cfc7966160e72f8559da`.
 
-<<<<<<< HEAD
 ## 2026-10-11 UTC — the wave-2 hunts: ASX 24 SPI, Eurex SMI, Euronext index futures
 
 Three evidence captures for the OANDA programme's wave-2 builds. ASX: the live
@@ -10926,7 +10925,7 @@ ANZAC-weekend fallbacks recorded per year including 2026/2027's absent
 25-April rows. The US-midnight policy ends after 2015: US holidays print
 plain normal rows from 2016, and only Day-before-Good-Friday keeps the
 midnight close through 2026.
-=======
+
 ## 2026-10-11 UTC — the HKEX index-futures hunt
 
 Complete evidence base for the `hkex_index_futures` build. Normal week: the live
@@ -10947,4 +10946,3 @@ the `tradcal` wall-calendar PDFs cover 2010–2017 and the derivatives Trading
 Calendar and Holiday Schedule pages cover 2017–2027 (per-year lists verbatim in
 the artifacts), with the no-afternoon-and-after-hours half-day-eve convention
 stated per year. Digests in `normal-weeks/hkex-futures-2026-10-11/SHA256SUMS.txt`.
->>>>>>> origin/main
