@@ -10884,6 +10884,49 @@ PDF `d8a853cd621313feec96eb1ee0f45b81b7674dea2e0e6cb50b175e78347153d7`, hours HT
 `60f6143dd5d678b1a34a9937aa938d2884380a33bf3542a4c72f8f03fa3607b7`, holiday HTML
 `c7137ce3da4cc19d0431955feedc10fb6b9731214ad3cfc7966160e72f8559da`.
 
+<<<<<<< HEAD
+## 2026-10-11 UTC — the wave-2 hunts: ASX 24 SPI, Eurex SMI, Euronext index futures
+
+Three evidence captures for the OANDA programme's wave-2 builds. ASX: the live
+index-derivatives trading-hours page (SPI 200 futures and options, the two-column
+US-DST split — 17:10:00–07:00:00 and 09:50:00–16:30:00 from the second Sunday in
+March to the first Sunday in November, 17:10:00–08:00:00 otherwise — constant in
+every captured state 2010→2026, so the normal week sources to the floor with no
+dated change), the SYCOM 2010 and ASX Trade24 2012 hours PDFs, the pre-open
+footnote ("Pre-open starts 10 minutes prior to trading"), and the ASX 24 Trading
+Calendar captures 2010–2027 (SFE-era 2010 through the live 2026+2027 state) with
+the policy legend and per-date arrangements the SPI holiday table keys on; the
+store's existing equities/asx/ artifacts are all cash-market calendars (zero SPI
+hits), confirming the derivatives family needed its own tree, which lands as
+`holidays/raw/asx24-2010-2027/`. Eurex SMI: the exchange-wide trading-hours page
+(regular day 08:00–22:00 CET with Asian hours for selected products) plus the
+finding that FSMI itself runs the Swiss class 07:50–22:00 CET (TC-2026 PDF, store
+byte-identical to the crate's cited hash) and that both shipped Eurex tables are
+scope-keyed, not exchange-wide — the recurring Swiss-scope closure clause (2026:
+2 Jan, 14 May, 25 May; 2025: 2 Jan, 29 May, 9 Jun, 1 Aug) hits SMI and is absent
+from both, so an SMI table is all-derivatives rows plus the Swiss rows. Euronext:
+CAC 40 and AEX index-futures contract pages print identical Central Order Book
+hours 08:00–22:00 CET/CEST (LIS 07:30–22:00), and the live trading-hours-and-
+holidays page states the cash AND derivatives markets share one per-year calendar
+with per-market columns — the store's euronext_paris cash artifacts (2010–2026
+editions) therefore key the derivatives column too; 2027 unpublished (negative).
+Digests: each directory carries the hunter's SHA256SUMS.txt or the file digests
+as recorded in the wave STATUS of the crate PRs that cite them.
+
+Appendix (same UTC day): the ASX 24 calendars' row-by-row extraction landed as
+`holidays/raw/asx24-2010-2027/asx24-rows-extraction.md` — 354 rows across
+2010–2027 (50 day-closed/night-normal, 96 fully closed, 54 US-policy
+night-to-midnight, 28 product-level early closes on generic Equity Products
+rows, 117 informational normal rows), the 2011 Easter-Monday-substitute
+correction between the two captures resolved to the later, the 2022 December
+revision (night closed on 23 and 30 December, the September National Day of
+Mourning added) keyed to the later capture, 2024 carried by the Dec-2023
+capture (all eight direct 2024 captures are Incapsula blocks), and the
+ANZAC-weekend fallbacks recorded per year including 2026/2027's absent
+25-April rows. The US-midnight policy ends after 2015: US holidays print
+plain normal rows from 2016, and only Day-before-Good-Friday keeps the
+midnight close through 2026.
+=======
 ## 2026-10-11 UTC — the HKEX index-futures hunt
 
 Complete evidence base for the `hkex_index_futures` build. Normal week: the live
@@ -10904,3 +10947,4 @@ the `tradcal` wall-calendar PDFs cover 2010–2017 and the derivatives Trading
 Calendar and Holiday Schedule pages cover 2017–2027 (per-year lists verbatim in
 the artifacts), with the no-afternoon-and-after-hours half-day-eve convention
 stated per year. Digests in `normal-weeks/hkex-futures-2026-10-11/SHA256SUMS.txt`.
+>>>>>>> origin/main
