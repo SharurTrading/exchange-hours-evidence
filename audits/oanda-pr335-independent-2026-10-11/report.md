@@ -48,7 +48,7 @@ ledger, evidence and changelog restrict the exact scope to US SPX 500, US Nas
 100, US Russ 2000 and US Wall St 30; Japan requires an operator definition or
 its own exact calendar under #332. A read-only check of the isolated,
 uncommitted consumer snapshot confirms the four-root route and typed Japan
-refusal. The Japan guard and seven OANDA internal cases were independently
+refusal under that earlier policy. The Japan guard and seven OANDA internal cases were independently
 rerun successfully; that is a narrow prose check, not a committed-head consumer
 release review. No proprietary source is reproduced in this public record.
 
@@ -132,3 +132,8 @@ There is no remaining source/data/prose blocker within this correction.
 This pass does not establish complete OANDA history, every product/holiday
 scope, the six unbuilt families, consumer activation or release readiness.
 Those obligations remain #332; the mitigated cache investigation is #336.
+
+The consumer snapshot and Japan guard describe the policy reviewed before the
+operator requested separate holiday inheritance. Subsequent consumer policy
+choices are outside this exact-head source verdict; an adopted assumption is
+not certified here as independently sourced OANDA coverage (#332).

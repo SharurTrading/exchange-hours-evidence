@@ -11205,7 +11205,10 @@ conditions and mitigation are retained for exchange-hours-rs#336; no exact
 root cause or upstream defect is asserted. Historical/product/holiday gaps
 and six absent runtime families remain #332; this is not whole-OANDA or
 release certification. Read-only consumer checks reproduced the Japan refusal
-and seven internal cases on an uncommitted snapshot, not a consumer release verdict.
+and seven internal cases on an uncommitted snapshot under the earlier policy,
+not a consumer release verdict. Subsequent requested holiday inheritance is
+outside this exact-head source verdict; no new assumption is certified as
+independently sourced OANDA coverage (#332).
 
 The additionally retained legacy FIX specification is operator context:
 November 25, 2011 document update, August 2012 archive observation, continuous
