@@ -1,0 +1,17 @@
+{
+  "retrieval": "independent HTTPS GET with curl certificate verification",
+  "sources": {
+    "current-holidays.html": "https://www.oanda.com/uk-en/trading/holiday-trading-hours/",
+    "current-hours.html": "https://www.oanda.com/uk-en/trading/hours-of-operation/"
+  },
+  "library_head": "e04163cd8c6993d1c0ddba6dc9d61e742317efb1",
+  "cited_holiday_sha256": "c7137ce3da4cc19d0431955feedc10fb6b9731214ad3cfc7966160e72f8559da",
+  "semantic_holiday_comparison": "All 437 normalized h2/h3/h4/li events match the cited capture, including the UK scope and incomplete 18:0 reopen.",
+  "mutation": "Good Friday 2026 bond close 11:14 -> 11:13; public test failed. Mutation restored and temporary mutation worktree removed.",
+  "retrieved_at_utc_by_file": {
+    "current-holidays.html": "2026-10-11T21:15:05.375059+00:00",
+    "current-hours.html": "2026-10-11T21:15:05.546412+00:00"
+  },
+  "corrected_library_head": "e32843fba07d7b9580cd96860d253ccbe3e00315",
+  "corrected_mutation": "2026-05-26 bond Unsourced -> Closed; public typed-gap test failed. Mutation restored and isolated checkout removed."
+}

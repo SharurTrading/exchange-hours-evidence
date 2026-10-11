@@ -1,0 +1,26 @@
+{
+  "head": "e32843fba07d7b9580cd96860d253ccbe3e00315",
+  "ledger_total": 141,
+  "basis": {
+    "Synthetic": 2,
+    "Primary": 74,
+    "Partial / order-entry": 36,
+    "Partial / executable": 29
+  },
+  "service": {
+    "dormant": 105,
+    "served": 36
+  },
+  "holiday_rows": 50,
+  "changed_oanda_table_counts": {
+    "oanda_us_index_cfd": 30,
+    "oanda_us_bond_cfd": 30,
+    "oanda_us_commodity_cfd": 27,
+    "oanda_metals": 32,
+    "oanda_brent": 24
+  },
+  "changed_rows_total": 143,
+  "holiday_events_compared": 437,
+  "cited_holiday_digest": "c7137ce3da4cc19d0431955feedc10fb6b9731214ad3cfc7966160e72f8559da",
+  "fresh_holiday_digest": "7f7de43addfad5098e174ce3f366229d2f0027f1ce1a502216f8548dde853fb8"
+}

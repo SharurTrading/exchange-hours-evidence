@@ -1,0 +1,28 @@
+{
+  "head": "e32843fba07d7b9580cd96860d253ccbe3e00315",
+  "verdict": "pass within documented dormant/Partial correction scope; #332 remains",
+  "chain_exit_code": 0,
+  "integration_tests": {
+    "passed": 1337,
+    "skipped": 0,
+    "elapsed_seconds": 916.922
+  },
+  "doctests_passed": 3,
+  "checks": [
+    "cargo fmt --all --check",
+    "cargo clippy --all-targets -- -D warnings",
+    "cargo nextest run --all-targets",
+    "cargo test --doc",
+    "RUSTDOCFLAGS=\"-D warnings\" cargo doc --no-deps",
+    "cargo deny check",
+    "cargo +1.95 check --all-targets"
+  ],
+  "affected_public_tests_passed": 12,
+  "evidence_fence": {
+    "documents_rows": 2970,
+    "files": 47,
+    "distinct_digests": 838
+  },
+  "mutation_tests_failed_as_expected": 2,
+  "own_code_changes": false
+}
