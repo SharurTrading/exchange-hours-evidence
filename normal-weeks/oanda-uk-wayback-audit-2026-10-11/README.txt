@@ -1,6 +1,6 @@
 OANDA UK Wayback source audit — 2026-10-11 UTC
 
-All 37 raw replay responses contain usable operator schedule/holiday statements: nineteen hours tables and eighteen holiday calendars. Seven raw bodies are gzip encoded; their byte-identical responses remain saved, and decoded HTML derivatives and encoding metadata make them inspectable. The August 2022 holiday capture states only UK-market arrangements, which are still usable operator evidence. HTTP success alone was not used to certify a calendar. Index/retrieval results retain unavailable replays and errors. SHA256SUMS.txt fences every artifact here.
+All 37 raw replay responses contain usable operator schedule/holiday statements: nineteen hours tables and eighteen holiday calendars. Seven raw bodies are gzip encoded; their byte-identical responses remain saved, and decoded HTML derivatives and encoding metadata make them inspectable. The August 2022 holiday capture states UK index/UK10Y closures and a Sugar late opening, which are usable operator evidence. HTTP success alone was not used to certify a calendar. Index/retrieval results retain unavailable replays and errors. SHA256SUMS.txt fences every artifact here.
 
 UK hours index: 27 changed digests, first capture 2021-03-03; nineteen responses retrieved, all with usable product tables; eight unavailable after bounded retrieval. UK holiday index: eighteen digests in 2022–2026; all retrieved, all with usable holiday statements.
 
