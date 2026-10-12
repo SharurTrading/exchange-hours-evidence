@@ -40,10 +40,6 @@
     "sha256": "2ab9ec235244260413de2cd21a3ae5b19e1fffff37b84d1d833988852670fc9e"
   },
   {
-    "file": "independent-inventory-probe",
-    "sha256": "632259531f6432e2c814207b3da1146f596ac2215453d0d7bb201bd3c2203b19"
-  },
-  {
     "file": "independent-inventory-probe.log",
     "sha256": "c3bc635f57892e1d6d17a323dba9aa3f6008470cd9c0016e87a6cf50a6644413"
   },
@@ -82,6 +78,38 @@
   {
     "file": "nordic-market-model-fetch.log",
     "sha256": "7db222c16dc45f91190e17e50723d1cb4f5768066442f185706842c1ebc0ad74"
+  },
+  {
+    "file": "oanda-final-package-byte-proof.json",
+    "sha256": "fec3490adf6d26e1593ab1babcf6b431787b8ecd9a9f2573711fe72f55b5ea8e"
+  },
+  {
+    "file": "oanda-final-release-digests.log",
+    "sha256": "a2a118007f6eedeb7cd1cee0320c9a3da966649442259d375c6a34c0d835ab09"
+  },
+  {
+    "file": "oanda-final-release-exact-quality.log",
+    "sha256": "7282818ccea53847ba7f637660bb5662c1796ef78a0ad8121834252b504756c7"
+  },
+  {
+    "file": "oanda-final-release-package-list.txt",
+    "sha256": "8ce0fb0b5397be975382710edadd831b65eca204378e07812f3a0997c134652d"
+  },
+  {
+    "file": "oanda-final-release-package.log",
+    "sha256": "a2909d1be516a8092ab44294609d9524d4347ffef59aac74448aae2af5533fec"
+  },
+  {
+    "file": "oanda-scope-root-review-report.md",
+    "sha256": "e4ab533d3309f58b9bdf4457a7513aa748de4167efdc6f0e1b5fb9990519bb0a"
+  },
+  {
+    "file": "oanda-scope-service-mutation.log",
+    "sha256": "aa45187fd0ea28b98a76d47b10c337223a0210bf343072cb4d3dcc8171ecc57f"
+  },
+  {
+    "file": "oanda-scope-service-restored.log",
+    "sha256": "14f7b188c7fbd20f80a967b8fbdae1ca20a42cf12e129f0bb595a677f8a74127"
   },
   {
     "file": "package-list-071def4.txt",
