@@ -1,0 +1,26 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-try-current-library-review)
+    Finished `test` profile [optimized + debuginfo] target(s) in 3.69s
+     Running tests/oanda_current_scope.rs (target/debug/deps/oanda_current_scope-7971b00963ab1cce)
+
+running 3 tests
+test current_try_coverage_does_not_certify_history_or_unpublished_future ... ok
+test current_try_next_open_answers_without_turning_its_overnight_gap_into_maintenance ... ok
+test current_try_queries_answer_the_daily_grid_across_the_european_clock_change ... FAILED
+
+failures:
+
+---- current_try_queries_answer_the_daily_grid_across_the_european_clock_change stdout ----
+
+thread 'current_try_queries_answer_the_daily_grid_across_the_european_clock_change' (8291174) panicked at tests/oanda_current_scope.rs:27:9:
+assertion `left == right` failed
+  left: Err(OutsideCoveredRange { source: MarketHoursKey(OandaTryFx), date: 2026-10-30 })
+ right: Ok(true)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    current_try_queries_answer_the_daily_grid_across_the_european_clock_change
+
+test result: FAILED. 2 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--test oanda_current_scope`

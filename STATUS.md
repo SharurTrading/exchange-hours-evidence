@@ -11320,3 +11320,19 @@ context. These bytes complete that retrieval inventory. SGX last-trading and
 first-settlement dates do not source holidays; Euronext year-end half-day
 instants remain unannounced and its future-dated PDF header is not adopted
 as a historical effective date. Source interpretation stays in library evidence.
+
+
+## Independent current OANDA/Nordic source reviews — 2026-10-12 UTC
+
+Independent TRY review accepts library PR #339 at
+`0628b004d33f766a984bc4402cc60b287e6625af`: fresh Forex category evidence,
+source digests, full quality/MSRV (1355 tests, zero skips, three doctests),
+publication-boundary mutation and restored tests pass.
+Independent Nordic review accepts library PR #340 at
+`cc1ca9cdf3c9a3299425f62e3f54c584785eef99`: fresh operator retrieval and an
+independent parser reproduce all67 equity arrangements; full quality/MSRV
+(1354 tests, zero skips, three doctests) and half-day mutation/restoration pass.
+Reports and proof bundles are under `reviews/oanda-try-current-2026-10-12/`
+and `reviews/oanda-nordic-current-2026-10-12/`. Neither review certifies
+unsupported history or whole-release integration; #332 remains the single
+historical gap tracker.
