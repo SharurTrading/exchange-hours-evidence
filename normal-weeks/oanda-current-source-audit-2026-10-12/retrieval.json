@@ -1,0 +1,29 @@
+[
+  {
+    "name": "uk-hours",
+    "url": "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+    "retrieved_utc": "2026-10-12T00:39:55.742904+00:00",
+    "exit": 0,
+    "error": "",
+    "path": "/tmp/oanda-current-source-audit-2026-10-12/uk-hours.html",
+    "sha256": "1c986aee21fdd7b76d04cabc2a8846fe00e08bb28257a27cfada828291c7e063"
+  },
+  {
+    "name": "uk-holidays",
+    "url": "https://www.oanda.com/uk-en/trading/holiday-trading-hours/",
+    "retrieved_utc": "2026-10-12T00:39:55.726174+00:00",
+    "exit": 0,
+    "error": "",
+    "path": "/tmp/oanda-current-source-audit-2026-10-12/uk-holidays.html",
+    "sha256": "ce7cd4c3d4db0e32ec629715ee321bdd4d48455845894bee1eb8df768d066eff"
+  },
+  {
+    "name": "help-uk-hours",
+    "url": "https://help.oanda.com/uk/en/faqs/hours-of-operation.htm",
+    "retrieved_utc": "2026-10-12T00:39:55.833741+00:00",
+    "exit": 0,
+    "error": "",
+    "path": "/tmp/oanda-current-source-audit-2026-10-12/help-uk-hours.html",
+    "sha256": "3a42f46d4a4c3f6f165c3815fe122cc0e47faed305b293c93a8c0eca9a985332"
+  }
+]

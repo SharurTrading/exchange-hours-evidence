@@ -1,0 +1,90 @@
+[
+  {
+    "file": "nasdaq-europe-trading-hours.html",
+    "url": "https://www.nasdaq.com/european-market-activity/trading-hours",
+    "retrieved_utc": "2026-10-12T00:42:21.514869+00:00",
+    "exit": 92,
+    "sha256": null,
+    "bytes": 0,
+    "stderr": "curl: (92) HTTP/2 stream 1 was not closed cleanly: INTERNAL_ERROR (err 2)\n"
+  },
+  {
+    "file": "euronext-hours-holidays.html",
+    "url": "https://www.euronext.com/en/trading/trading-hours-holidays",
+    "retrieved_utc": "2026-10-12T00:42:22.884833+00:00",
+    "exit": 0,
+    "sha256": "f4f3d2ee85e88557db2aa6a29bf9ec23d1d2d82eaaa1a8cca2d91175c94fc831",
+    "bytes": 543258,
+    "stderr": ""
+  },
+  {
+    "file": "euronext-2026-2028-calendar.pdf",
+    "url": "https://live.euronext.com/en/media/1901/download",
+    "retrieved_utc": "2026-10-12T00:42:23.408469+00:00",
+    "exit": 0,
+    "sha256": "f2b109c41d6668dca8d8d080c1dd230adc9efefb0c7e55c19a8bf0674f0dc2c2",
+    "bytes": 87042,
+    "stderr": ""
+  },
+  {
+    "file": "sgx-derivatives-trading.html",
+    "url": "https://www.sgx.com/derivatives/trading",
+    "retrieved_utc": "2026-10-12T00:42:21.950389+00:00",
+    "exit": 0,
+    "sha256": "5dcf7b193d4dbb10cfddb34f618d9fbcb29c93884b37b46741d9e60c9e3e2cd1",
+    "bytes": 15330,
+    "stderr": ""
+  },
+  {
+    "file": "nasdaq-europe-trading-hours-http1.html",
+    "url": "https://www.nasdaq.com/european-market-activity/trading-hours",
+    "retrieved_utc": "2026-10-12T00:44:33.515055+00:00",
+    "exit": 28,
+    "sha256": null,
+    "bytes": 0,
+    "stderr": "curl: (28) Operation timed out after 30005 milliseconds with 0 bytes received\n"
+  },
+  {
+    "file": "euronext-cash-calendar-2026.pdf",
+    "url": "https://connect2.euronext.com/sites/default/files/2025-11/IF251107CADE%202026%20Holiday%20Calendar%20for%20Euronexts%20Cash%20and%20Derivatives%20markets_1.pdf?VersionId=3ehe2.c9cMxv1K36.i6o4tz.5CAJmuw2",
+    "retrieved_utc": "2026-10-12T00:44:04.943186+00:00",
+    "exit": 0,
+    "sha256": "617bc559510ef3a3d86d4a8b804422d0ba4c4dae43782a0a728d57a23fc4b1c5",
+    "bytes": 243065,
+    "stderr": ""
+  },
+  {
+    "file": "nasdaq-market-model-2026-03.pdf",
+    "url": "https://www.nasdaq.com/docs/2026/06/17/Nasdaq_Nordic_Market_Model_2026_03_Clean.pdf",
+    "retrieved_utc": "2026-10-12T00:44:33.515887+00:00",
+    "exit": 28,
+    "sha256": null,
+    "bytes": 0,
+    "stderr": "curl: (28) Operation timed out after 30004 milliseconds with 0 bytes received\n"
+  },
+  {
+    "file": "nasdaq-derivatives-calendar-2026-2028.pdf",
+    "url": "https://www.nasdaq.com/docs/2026/04/15/ems-mousepads-trading-calendar-9-2026-2028.pdf",
+    "retrieved_utc": "2026-10-12T00:44:33.517765+00:00",
+    "exit": 28,
+    "sha256": null,
+    "bytes": 0,
+    "stderr": "curl: (28) Operation timed out after 30005 milliseconds with 0 bytes received\n"
+  },
+  {
+    "file": "nasdaq-trading-hours.web-extract.txt",
+    "url": "https://www.nasdaq.com/european-market-activity/trading-hours",
+    "retrieved_utc": "2026-10-12T00:49:43.425811+00:00",
+    "sha256": "9f8fe49d65db294d48e7bd94e7b4b6b098dac44f102ad74dd71c89b5aa9bff4c",
+    "bytes": 19902,
+    "format": "web-tool extracted operator representation; not original HTML"
+  },
+  {
+    "file": "sgx-calendar-2026.pdf",
+    "url": "https://api2.sgx.com/sites/default/files/2026-01/SGX%20Calendar%202026_2.pdf",
+    "retrieved_utc": "2026-10-12T00:45:04.355434+00:00",
+    "sha256": "178e06c2be1165d3c60debeb24637705d723c6406fc91ca9defb23d5c330aa14",
+    "bytes": 4280233,
+    "format": "original operator PDF"
+  }
+]
