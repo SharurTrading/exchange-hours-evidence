@@ -1,0 +1,81 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-scope-root-review)
+    Finished `test` profile [optimized + debuginfo] target(s) in 0.36s
+────────────
+ Nextest run ID 19f1f4e7-16ce-4f0b-91bd-e825dd2b5c9b with nextest profile: default
+    Starting 74 tests across 1 binary
+        PASS [   0.014s] ( 1/74) exchange-hours::schedule_documentation suite::conditional_future_revisions_remain_unencoded_pending_confirmation
+        PASS [   0.017s] ( 2/74) exchange-hours::schedule_documentation suite::coverage_inventory::the_iceus_findings_paragraphs_derive_their_counts_from_the_shipped_tables
+        PASS [   0.018s] ( 3/74) exchange-hours::schedule_documentation suite::coverage_inventory::the_declared_phase_level_gaps_match_the_inventory
+        PASS [   0.019s] ( 4/74) exchange-hours::schedule_documentation suite::coverage_inventory::inventory_membership_is_exactly_the_served_ledger_rows
+        PASS [   0.019s] ( 5/74) exchange-hours::schedule_documentation suite::coverage_inventory::inventory_sample_date_is_inside_every_scopes_audit
+        PASS [   0.019s] ( 6/74) exchange-hours::schedule_documentation suite::coverage_inventory::a_row_recording_a_tracked_gap_does_not_claim_completeness
+        PASS [   0.022s] ( 7/74) exchange-hours::schedule_documentation suite::coverage_inventory::the_ice_us_module_shape_prose_derives_from_the_shipped_tables
+        PASS [   0.022s] ( 8/74) exchange-hours::schedule_documentation suite::assurance_prose_restates_exchange_counts_from_the_ledger
+        PASS [   0.022s] ( 9/74) exchange-hours::schedule_documentation suite::coverage_inventory::inventory_windows_and_date_counts_match_the_shipped_tables
+        PASS [   0.022s] (10/74) exchange-hours::schedule_documentation suite::coverage_inventory::inventory_completeness_verdicts_match_the_metadata
+        PASS [   0.024s] (11/74) exchange-hours::schedule_documentation suite::coverage_inventory::the_knowledge_bound_row_still_bounds_the_served_quarter_hour
+        PASS [   0.010s] (12/74) exchange-hours::schedule_documentation suite::databento::supplied_venue_inventory_has_expected_family_counts_and_unique_identities
+        PASS [   0.015s] (13/74) exchange-hours::schedule_documentation suite::coverage_inventory::the_sunday_quarter_hour_intersection_is_served_where_the_residual_is_disclosed
+        PASS [   0.013s] (14/74) exchange-hours::schedule_documentation suite::date_exception_contract_distinguishes_boundaries_coverage_and_finality
+        PASS [   0.015s] (15/74) exchange-hours::schedule_documentation suite::every_exchange_owner_link_resolves
+        PASS [   0.018s] (16/74) exchange-hours::schedule_documentation suite::databento::supplied_venue_inventory_maps_every_distinct_label_to_a_real_exchange
+        PASS [   0.016s] (17/74) exchange-hours::schedule_documentation suite::every_market_hours_key_owner_and_source_link_resolves
+        PASS [   0.016s] (18/74) exchange-hours::schedule_documentation suite::evidence_files::a_parenthesised_comment_parses_to_the_same_rows_as_none
+        PASS [   0.022s] (19/74) exchange-hours::schedule_documentation suite::every_ledger_source_link_has_a_registry_anchor
+        PASS [   0.051s] (20/74) exchange-hours::schedule_documentation suite::evidence_files::a_venue_saturday_session_row_cites_the_window_that_prints_its_sunday_legs
+        PASS [   0.035s] (21/74) exchange-hours::schedule_documentation suite::evidence_files::every_evidence_file_has_the_required_sections
+        PASS [   0.040s] (22/74) exchange-hours::schedule_documentation suite::evidence_files::every_documents_row_digest_is_a_sha256_digest
+        PASS [   0.046s] (23/74) exchange-hours::schedule_documentation suite::evidence_files::every_document_id_resolves_to_one_artifact_repository_wide
+        PASS [   0.059s] (24/74) exchange-hours::schedule_documentation suite::evidence_files::every_artifact_carries_one_document_id
+        PASS [   0.046s] (25/74) exchange-hours::schedule_documentation suite::evidence_files::every_documents_row_pairs_one_label_url_and_capture
+        PASS [   0.056s] (26/74) exchange-hours::schedule_documentation suite::evidence_files::every_dated_constant_day_appears_in_its_evidence_file
+        PASS [   0.087s] (27/74) exchange-hours::schedule_documentation suite::coverage_inventory::inventory_revisions_cells_match_the_shipped_tables
+        PASS [   0.056s] (28/74) exchange-hours::schedule_documentation suite::evidence_files::every_declared_dated_boundary_day_appears_in_its_evidence_file
+        PASS [   0.018s] (29/74) exchange-hours::schedule_documentation suite::evidence_files::every_evidence_file_names_its_ledger_row
+        PASS [   0.023s] (30/74) exchange-hours::schedule_documentation suite::evidence_files::every_evidence_file_is_linked_by_exactly_one_row
+        PASS [   0.027s] (31/74) exchange-hours::schedule_documentation suite::evidence_files::every_evidence_holiday_line_is_well_formed
+        PASS [   0.015s] (32/74) exchange-hours::schedule_documentation suite::evidence_files::every_ledger_row_links_an_existing_evidence_file
+        PASS [   0.028s] (33/74) exchange-hours::schedule_documentation suite::evidence_files::every_handwritten_cutover_date_appears_in_its_evidence_file
+        PASS [   0.049s] (34/74) exchange-hours::schedule_documentation suite::evidence_files::every_evidence_revision_line_exists_in_source
+        PASS [   0.023s] (35/74) exchange-hours::schedule_documentation suite::evidence_files::modules_carry_no_narrative
+        PASS [   0.111s] (36/74) exchange-hours::schedule_documentation suite::evidence_files::every_cited_document_id_is_resolved_exactly_once
+        PASS [   0.035s] (37/74) exchange-hours::schedule_documentation suite::evidence_files::every_revisions_block_declares_its_evidence_files
+        PASS [   0.040s] (38/74) exchange-hours::schedule_documentation suite::evidence_files::every_revision_row_day_appears_in_its_evidence_file
+        PASS [   0.064s] (39/74) exchange-hours::schedule_documentation suite::evidence_files::every_holiday_module_header_names_its_declared_windows
+        PASS [   0.070s] (40/74) exchange-hours::schedule_documentation suite::evidence_files::every_holiday_table_states_its_coverage_window
+        PASS [   0.012s] (41/74) exchange-hours::schedule_documentation suite::evidence_files::the_documents_stamp_parsers_read_every_shipped_grammar
+        PASS [   0.025s] (42/74) exchange-hours::schedule_documentation suite::evidence_files::the_dated_boundary_fence_reads_every_shipped_instant_constant
+        PASS [   0.024s] (43/74) exchange-hours::schedule_documentation suite::evidence_files::the_dated_constant_fence_reads_every_shipped_constant
+        PASS [   0.017s] (44/74) exchange-hours::schedule_documentation suite::exchange_rows_have_complete_review_metadata
+        PASS [   0.017s] (45/74) exchange-hours::schedule_documentation suite::family_aggregates::the_2025_2027_rows_block_derives_from_the_shipped_tables
+        PASS [   0.013s] (46/74) exchange-hours::schedule_documentation suite::family_aggregates::the_documents_intro_counts_derive_from_the_documents_tables
+        PASS [   0.013s] (47/74) exchange-hours::schedule_documentation suite::family_aggregates::the_nikkei_aggregate_sentences_derive_from_the_shipped_tables
+        PASS [   0.042s] (48/74) exchange-hours::schedule_documentation suite::evidence_files::revision_rows_and_evidence_bullets_match_as_multisets
+        PASS [   0.011s] (49/74) exchange-hours::schedule_documentation suite::horizons::exchange_horizons_match_the_declared_sourcing
+        PASS [   0.019s] (50/74) exchange-hours::schedule_documentation suite::family_aggregates::the_wave_paragraphs_derive_from_the_shipped_tables
+        PASS [   0.020s] (51/74) exchange-hours::schedule_documentation suite::family_aggregates::the_whole_table_sentences_derive_from_the_shipped_tables
+        PASS [   0.013s] (52/74) exchange-hours::schedule_documentation suite::horizons::the_coverage_inventory_repeats_the_ledger_horizons
+        PASS [   0.017s] (53/74) exchange-hours::schedule_documentation suite::horizons::market_hours_key_horizons_match_the_declared_sourcing
+        PASS [   0.012s] (54/74) exchange-hours::schedule_documentation suite::market_hours_key_rows_have_complete_review_metadata
+        PASS [   0.011s] (55/74) exchange-hours::schedule_documentation suite::market_hours_key_selection_contract_is_explicit
+        PASS [   0.012s] (56/74) exchange-hours::schedule_documentation suite::readme_and_review_dates_match_the_repository_cutoff
+        PASS [   0.016s] (57/74) exchange-hours::schedule_documentation suite::readme_and_audit_quantify_assurance_from_the_ledger
+        PASS [   0.119s] (58/74) exchange-hours::schedule_documentation suite::evidence_files::every_evidence_holiday_line_exists_in_its_module
+        PASS [   0.011s] (59/74) exchange-hours::schedule_documentation suite::source_registry::every_source_set_is_referenced_by_a_ledger_row
+        PASS [   0.013s] (60/74) exchange-hours::schedule_documentation suite::readme_states_the_holiday_coverage_count_from_the_ledger
+        PASS [   0.015s] (61/74) exchange-hours::schedule_documentation suite::readme_states_the_service_tier_split_from_the_ledger
+        PASS [   0.014s] (62/74) exchange-hours::schedule_documentation suite::source_registry::every_real_source_set_has_two_clickable_monitoring_channels
+        PASS [   0.016s] (63/74) exchange-hours::schedule_documentation suite::readme_test_inventory_counts_match_the_ledger
+        PASS [   0.013s] (64/74) exchange-hours::schedule_documentation suite::the_gap_kind_split_is_quoted_consistently_everywhere
+        PASS [   0.013s] (65/74) exchange-hours::schedule_documentation suite::trade_type_keys::cme_source_set_prose_counts_match_the_ledger
+        PASS [   0.010s] (66/74) exchange-hours::schedule_documentation suite::trade_type_keys::ledger_covers_every_market_hours_key_variant
+        PASS [   0.011s] (67/74) exchange-hours::schedule_documentation suite::verification_ledger_has_every_exchange_once_and_in_order
+        PASS [   0.012s] (68/74) exchange-hours::schedule_documentation suite::verification_ledger_has_every_market_hours_key_once_and_in_order
+        PASS [   0.015s] (69/74) exchange-hours::schedule_documentation suite::trade_type_keys::every_executable_gap_row_is_named_in_the_prose
+        PASS [   0.015s] (70/74) exchange-hours::schedule_documentation suite::trade_type_keys::golden_header_identity_counts_match_the_ledger
+        PASS [   0.146s] (71/74) exchange-hours::schedule_documentation suite::evidence_files::every_holiday_row_appears_in_its_evidence_file
+        PASS [   0.372s] (72/74) exchange-hours::schedule_documentation suite::evidence_files::a_replacement_rows_printed_instants_are_the_block_bounds_it_ships
+        PASS [   0.477s] (73/74) exchange-hours::schedule_documentation suite::evidence_files::every_instant_a_venue_summary_cites_is_one_its_families_state
+        PASS [   2.243s] (74/74) exchange-hours::schedule_documentation suite::evidence_files::every_documents_digest_is_the_research_store_bytes
+────────────
+     Summary [   2.279s] 74 tests run: 74 passed, 0 skipped

@@ -1,0 +1,24 @@
+{
+  "head": "8f2a9830260e4f9c30c4ee322a9baa1a685650f9",
+  "ledger_rows": 143,
+  "basis": {
+    "Synthetic": 2,
+    "Primary": 74,
+    "Partial / order-entry": 36,
+    "Partial / executable": 31
+  },
+  "service": {
+    "dormant": 107,
+    "served": 36
+  },
+  "namespaces": {
+    "## Exchanges": 97,
+    "## `MarketHoursKey` profiles": 46
+  },
+  "archive_2024_digest": "aab9b3032c1d53e6155009fce6a5156983c2d21a2f0bd768f1860f465b8b6a63",
+  "holiday_bearing": 54,
+  "independent_source_weekly_seconds": {
+    "oanda_china50_cfd": 345300,
+    "oanda_singapore30_cfd": 363300
+  }
+}
