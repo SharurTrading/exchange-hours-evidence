@@ -11268,3 +11268,23 @@ SHA256 inventories are retained. The independent ICE lookup also exposed the
 Brent evidence file's erroneous ordinary 19:00 London comparison; the actual
 product page prints 01:00–23:00 London, separately from settlement calculations.
 That prose correction is prepared in exchange-hours-rs, with no runtime change.
+
+
+## OANDA Brent comparison correction — 2026-10-12 UTC
+
+Independent review PASS for exchange-hours-rs PR #338, exact head
+`ffe066acbbbbb68394545fc9e635aa934b1a96ad`: no actionable findings.
+Fresh primary bytes reproduce the ICE digest, all seven shared OANDA
+Documents rows retain their canonical values, 1352 tests and three doctests
+pass with the full quality/MSRV chain, and a deliberately corrupted citation
+fails before restoration passes. Public-safe report and logs:
+`reviews/oanda-brent-doc-2026-10-12/`. No runtime data or coverage changed.
+The original underlying report now identifies the erroneous comparison as a
+finding at base `85ed22b`, corrected by the reviewed PR, and its inventory
+has been recomputed. The 26 proposals retain their explicit policy status
+and the single native-coverage tracker remains exchange-hours-rs#332.
+
+A separate cross-review of the 17 Brent policy proposals passed: exact gap
+set, 32 executable blocks, 64 IANA-converted boundary instants and source
+digests reproduced independently. Its report retains the original artifact
+hashes; the noted stale prose description is corrected above.
