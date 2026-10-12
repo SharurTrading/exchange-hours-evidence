@@ -1,0 +1,33 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-brussels-root-review)
+    Finished `test` profile [optimized + debuginfo] target(s) in 0.47s
+────────────
+ Nextest run ID e6da2e75-4cd4-41cc-b9cc-b911cd904b1b with nextest profile: default
+    Starting 3 tests across 1 binary
+        PASS [   0.016s] (1/3) exchange-hours::euronext_brussels_current_holidays brussels_unpublished_half_days_and_other_years_remain_typed
+        PASS [   0.024s] (2/3) exchange-hours::euronext_brussels_current_holidays brussels_normal_phases_and_dst_remain_the_named_profile
+        FAIL [   0.029s] (3/3) exchange-hours::euronext_brussels_current_holidays brussels_2026_closures_remove_the_executable_day
+  stdout ───
+
+    running 1 test
+    test brussels_2026_closures_remove_the_executable_day ... FAILED
+
+    failures:
+
+    failures:
+        brussels_2026_closures_remove_the_executable_day
+
+    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 2 filtered out; finished in 0.00s
+
+  stderr ───
+
+    thread 'brussels_2026_closures_remove_the_executable_day' (8518007) panicked at tests/euronext_brussels_current_holidays.rs:32:9:
+    assertion `left == right` failed
+      left: Some(Unsourced)
+     right: Some(Closed)
+    note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+  Cancelling due to test failure
+────────────
+     Summary [   0.035s] 3 tests run: 2 passed, 1 failed, 0 skipped
+        FAIL [   0.029s] (3/3) exchange-hours::euronext_brussels_current_holidays brussels_2026_closures_remove_the_executable_day
+error: test run failed

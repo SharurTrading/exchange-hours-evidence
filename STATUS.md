@@ -11336,3 +11336,16 @@ Reports and proof bundles are under `reviews/oanda-try-current-2026-10-12/`
 and `reviews/oanda-nordic-current-2026-10-12/`. Neither review certifies
 unsupported history or whole-release integration; #332 remains the single
 historical gap tracker.
+
+
+## Independent Euronext current cash reviews — 2026-10-12 UTC
+
+GPT-6 (Codex) independently accepts Brussels PR #342 at
+`e86790331327f4d5e7bde547ada6c0dd319dc289` and Lisbon PR #343 at
+`ab66c88a51f8031b8058e6fca793a04d5430ac14`. Fresh operator bytes and
+an independent named-column parser verify all fourteen rows. Each exact-head
+full chain passes 1,355 tests, three doctests, strict Clippy and MSRV 1.95.
+Both deliberately corrupted closure rows fail, and restored bytes pass.
+The two year-end half-day hours remain unpublished and typed as gaps per scope.
+No invented historical effective date was taken from the PDF's future header.
+Reports, retrieval and mutation logs: `reviews/oanda-euronext-current-2026-10-12/`.
