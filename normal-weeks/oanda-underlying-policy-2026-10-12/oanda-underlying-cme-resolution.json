@@ -1,0 +1,403 @@
+{
+  "reviewed_utc": "2026-10-12T00:12:48.042535+00:00",
+  "library_context_head": "3e0e5b9a9a15357cc461b54269ff39e831af0281",
+  "scope": "Nine index/Treasury pairs only; read-only public primary-source research, no code or external posts.",
+  "sources": {
+    "new-years-day-2024.pdf @2026-08-11T16:57:16Z": {
+      "id": "new-years-day-2024.pdf @2026-08-11T16:57:16Z",
+      "url": "https://web.archive.org/web/20260811165716id_/https://www.cmegroup.com/trading-hours/files/new-years-day-2024.pdf",
+      "saved_path": "/tmp/oanda-underlying-cme-evidence/new-years-day-2024.pdf",
+      "existing_source": "/tmp/oanda-public-final-review/holidays/raw/cme-2022-2024/new-years-day-2024.pdf",
+      "sha256": "34e60f8c97623df30e00f0ad8e4eeda20b99001b6c35d64f735828fecec5b9b8",
+      "source_table_sha256": "34e60f8c97623df30e00f0ad8e4eeda20b99001b6c35d64f735828fecec5b9b8",
+      "copied_utc": "2026-10-12T00:10:52.557932+00:00",
+      "fresh_retrieval_error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)>",
+      "curl_retrieval_utc": "2026-10-12T00:11:02.147938+00:00",
+      "curl_exit": 0,
+      "fresh_path": "/tmp/oanda-underlying-cme-evidence/fresh-new-years-day-2024.pdf",
+      "fresh_sha256": "34e60f8c97623df30e00f0ad8e4eeda20b99001b6c35d64f735828fecec5b9b8",
+      "fresh_byte_identical": true,
+      "decoded_byte_identical": true
+    },
+    "CME-SVC-2024-01-14": {
+      "id": "CME-SVC-2024-01-14",
+      "url": "https://web.archive.org/web/20240708161439id_/https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-01-14&toEventDate=2024-01-16&isProtected&_t=1720455278663",
+      "saved_path": "/tmp/oanda-underlying-cme-evidence/api_2024-01-14.json",
+      "existing_source": "/tmp/oanda-public-final-review/holidays/raw/cme-2022-2024-fix/api_2024-01-14.json",
+      "sha256": "a8fe0f3eed4c67939d3add5fa656173bc4119c3765174b084c0622a1934e0d22",
+      "source_table_sha256": "a8fe0f3eed4c67939d3add5fa656173bc4119c3765174b084c0622a1934e0d22",
+      "copied_utc": "2026-10-12T00:10:52.557829+00:00",
+      "fresh_retrieval_error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)>",
+      "curl_retrieval_utc": "2026-10-12T00:11:01.584635+00:00",
+      "curl_exit": 0,
+      "fresh_path": "/tmp/oanda-underlying-cme-evidence/fresh-api_2024-01-14.json",
+      "fresh_sha256": "e7c5cee8b81efb4ec34a66e9295bb977cc6cd876007689b55a18be0485134fff",
+      "fresh_byte_identical": false,
+      "decoded_byte_identical": true
+    },
+    "CME-SVC-2024-02-18": {
+      "id": "CME-SVC-2024-02-18",
+      "url": "https://web.archive.org/web/20240708161439id_/https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-02-18&toEventDate=2024-02-20&isProtected&_t=1720455278669",
+      "saved_path": "/tmp/oanda-underlying-cme-evidence/api_2024-02-18.json",
+      "existing_source": "/tmp/oanda-public-final-review/holidays/raw/cme-2022-2024-fix/api_2024-02-18.json",
+      "sha256": "af5ddb57cfa8bd6d377a0784fcdd33589e2055ede0a09b7fe4ae3e41d0d20f9a",
+      "source_table_sha256": "af5ddb57cfa8bd6d377a0784fcdd33589e2055ede0a09b7fe4ae3e41d0d20f9a",
+      "copied_utc": "2026-10-12T00:10:52.557891+00:00",
+      "fresh_retrieval_error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)>",
+      "curl_retrieval_utc": "2026-10-12T00:11:01.577473+00:00",
+      "curl_exit": 0,
+      "fresh_path": "/tmp/oanda-underlying-cme-evidence/fresh-api_2024-02-18.json",
+      "fresh_sha256": "07613c57b79dac5dc38a06c88cdaf01eb8182d3b88af8b9c7aa386a0e32b81d9",
+      "fresh_byte_identical": false,
+      "decoded_byte_identical": true
+    },
+    "CME-SVC-2024-12-24": {
+      "id": "CME-SVC-2024-12-24",
+      "url": "https://web.archive.org/web/20241220155340id_/https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-12-24&toEventDate=2024-12-26&isProtected&_t=1734710019537",
+      "saved_path": "/tmp/oanda-underlying-cme-evidence/api_2024-12-24.json",
+      "existing_source": "/tmp/oanda-public-final-review/holidays/raw/cme-2022-2024/api_2024-12-24.json",
+      "sha256": "183c85160e31d53fde30c422048b8e778937d8866f3ea1c45e2dd570ea9db1c8",
+      "source_table_sha256": "183c85160e31d53fde30c422048b8e778937d8866f3ea1c45e2dd570ea9db1c8",
+      "copied_utc": "2026-10-12T00:10:52.557283+00:00",
+      "fresh_retrieval_error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)>",
+      "decompressed_sha256": "a25989ffac544e531fbc33ade07ce5d17b9d445f3923d6bf4258293f005144d2",
+      "curl_retrieval_utc": "2026-10-12T00:11:01.493794+00:00",
+      "curl_exit": 0,
+      "fresh_path": "/tmp/oanda-underlying-cme-evidence/fresh-api_2024-12-24.json",
+      "fresh_sha256": "183c85160e31d53fde30c422048b8e778937d8866f3ea1c45e2dd570ea9db1c8",
+      "fresh_byte_identical": true,
+      "decoded_byte_identical": true
+    },
+    "CME-SVC-2026-05-24": {
+      "id": "CME-SVC-2026-05-24",
+      "url": "https://web.archive.org/web/20260619114105id_/https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2026-05-24&toEventDate=2026-05-26",
+      "saved_path": "/tmp/oanda-underlying-cme-evidence/thbp_2026-05-24_2026-05-26_20260619114105.json",
+      "existing_source": "/tmp/oanda-public-final-review/holidays/raw/cme-2025-2027/arc/thbp_2026-05-24_2026-05-26_20260619114105.json",
+      "sha256": "f7e30d204ce2cbe08e5f486ded6518f623369159f3a36161288a4708288314da",
+      "source_table_sha256": "f7e30d204ce2cbe08e5f486ded6518f623369159f3a36161288a4708288314da",
+      "copied_utc": "2026-10-12T00:10:52.558006+00:00",
+      "fresh_retrieval_error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1077)>",
+      "curl_retrieval_utc": "2026-10-12T00:11:01.398292+00:00",
+      "curl_exit": 56,
+      "curl_error": "curl: (56) The requested URL returned error: 404\n"
+    },
+    "20211214174356": {
+      "saved_path": "/tmp/oanda-underlying-cme-evidence/20211214174356.html",
+      "sha256": "2bb00b45f21e14a5c3250cd374e5e2204d7ea7a7d4833fe3824c1effa7f452e7",
+      "url": "https://web.archive.org/web/20211214174356id_/https://www.oanda.com/uk-en/trading/hours-of-operation/",
+      "archive_capture": "20211214174356",
+      "copied_utc": "2026-10-12T00:12:48.040390+00:00"
+    },
+    "20230605093523": {
+      "saved_path": "/tmp/oanda-underlying-cme-evidence/20230605093523.html",
+      "sha256": "98ddc07cf38727b2a861fd1f48c503b1b597054cbec9d1dde4b3dde1801ffb56",
+      "url": "https://web.archive.org/web/20230605093523id_/https://www.oanda.com/uk-en/trading/hours-of-operation/",
+      "archive_capture": "20230605093523",
+      "copied_utc": "2026-10-12T00:12:48.040796+00:00"
+    },
+    "20240221005503": {
+      "saved_path": "/tmp/oanda-underlying-cme-evidence/20240221005503.html",
+      "sha256": "aab9b3032c1d53e6155009fce6a5156983c2d21a2f0bd768f1860f465b8b6a63",
+      "url": "https://web.archive.org/web/20240221005503id_/https://www.oanda.com/uk-en/trading/hours-of-operation/",
+      "archive_capture": "20240221005503",
+      "copied_utc": "2026-10-12T00:12:48.040997+00:00"
+    },
+    "carter-2025.html": {
+      "file": "carter-2025.html",
+      "url": "https://web.archive.org/web/20250326184653id_/https://www.oanda.com/uk-en/trading/holiday-trading-hours/",
+      "retrieved_utc": "2026-10-11T23:29:07.047673+00:00",
+      "status": "200",
+      "sha256": "467313685d4d64a4b95e5112a58d0fa04583f0abe988b1478d41fddf8b04cf1c",
+      "error": "",
+      "saved_path": "/tmp/oanda-underlying-cme-evidence/carter-2025.html"
+    },
+    "holiday-current.html": {
+      "file": "holiday-current.html",
+      "url": "https://www.oanda.com/uk-en/trading/holiday-trading-hours",
+      "retrieved_utc": "2026-10-11T23:29:03.285176+00:00",
+      "status": "200",
+      "sha256": "2071a9230d8e1cfec23ba7ccc809a1f1aa975b82c6879c2797b3928d454814b6",
+      "error": "",
+      "saved_path": "/tmp/oanda-underlying-cme-evidence/holiday-current.html"
+    },
+    "hours-current.html": {
+      "file": "hours-current.html",
+      "url": "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+      "retrieved_utc": "2026-10-11T23:29:04.374517+00:00",
+      "status": "200",
+      "sha256": "991afbcc0a92ad2996e68e23dc96099ef1dbda57f871c3144edcb2d2ddaa1d6b",
+      "error": "",
+      "saved_path": "/tmp/oanda-underlying-cme-evidence/hours-current.html"
+    },
+    "OANDA-STATIC-HOURS-252": {
+      "saved_path": "/tmp/oanda-underlying-cme-evidence/oanda-static-hours-252.pdf",
+      "sha256": "778ea39e0f71005015a111963061cd86f8d7fce7b589af0279316992239244ba",
+      "url": "https://www.oanda.com/assets/documents/252/Hours_of_Operation.pdf",
+      "note": "Named operator venue lineage; undated older Russell ICE US row cannot establish later RTY migration day."
+    }
+  },
+  "rows": [
+    {
+      "book": "oanda_us_index_cfd",
+      "date": "2024-01-02",
+      "direct_oanda_verified_complete": false,
+      "underlying_representative": "ES",
+      "source_id": "new-years-day-2024.pdf @2026-08-11T16:57:16Z",
+      "source_url": "https://web.archive.org/web/20260811165716id_/https://www.cmegroup.com/trading-hours/files/new-years-day-2024.pdf",
+      "underlying_trade_date": "2024-01-02",
+      "underlying_final_leg": {
+        "open_local_date": "2024-01-01",
+        "open_CT": "17:00",
+        "open_ET": "18:00",
+        "open_UTC": "2024-01-01T23:00:00Z",
+        "close_CT": "16:00",
+        "close_ET": "17:00",
+        "close_UTC": "2024-01-02T22:00:00Z"
+      },
+      "confirmed_oanda_and_gap": "OANDA preceding evening18:00ET reopen explicit; final close absent. June2023close17:00ET and Feb21 2024close16:59ET conflict across undated change.",
+      "policy_proposal": {
+        "open_local_date": "2024-01-01",
+        "open_ET": "18:00",
+        "open_UTC": "2024-01-01T23:00:00Z",
+        "close_ET": "17:00",
+        "close_UTC": "2024-01-02T22:00:00Z",
+        "provenance": "User-authorized underlying inheritance; direct broker fields take precedence. Clip only when normal grid has independent coverage. Pre-Feb2024 donor close supplied by policy, not sourced broker close."
+      },
+      "alternative_or_counterexample": "16:59ET=21:59Z requires explicit conservative intersection-close policy or retrospective one-minute inset; it is not an exact OANDA final-close fact.",
+      "confidence": "High underlying-family event evidence; deterministic selected policy; unverified exact OANDA arrangement."
+    },
+    {
+      "book": "oanda_us_index_cfd",
+      "date": "2024-01-16",
+      "direct_oanda_verified_complete": false,
+      "underlying_representative": "ES",
+      "source_id": "CME-SVC-2024-01-14",
+      "source_url": "https://web.archive.org/web/20240708161439id_/https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-01-14&toEventDate=2024-01-16&isProtected&_t=1720455278663",
+      "underlying_trade_date": "2024-01-16",
+      "underlying_final_leg": {
+        "open_local_date": "2024-01-15",
+        "open_CT": "17:00",
+        "open_ET": "18:00",
+        "open_UTC": "2024-01-15T23:00:00Z",
+        "close_CT": "16:00",
+        "close_ET": "17:00",
+        "close_UTC": "2024-01-16T22:00:00Z"
+      },
+      "confirmed_oanda_and_gap": "OANDA preceding evening18:00ET reopen explicit; final close absent. June2023close17:00ET and Feb21 2024close16:59ET conflict across undated change.",
+      "policy_proposal": {
+        "open_local_date": "2024-01-15",
+        "open_ET": "18:00",
+        "open_UTC": "2024-01-15T23:00:00Z",
+        "close_ET": "17:00",
+        "close_UTC": "2024-01-16T22:00:00Z",
+        "provenance": "User-authorized underlying inheritance; direct broker fields take precedence. Clip only when normal grid has independent coverage. Pre-Feb2024 donor close supplied by policy, not sourced broker close."
+      },
+      "alternative_or_counterexample": "16:59ET=21:59Z requires explicit conservative intersection-close policy or retrospective one-minute inset; it is not an exact OANDA final-close fact.",
+      "confidence": "High underlying-family event evidence; deterministic selected policy; unverified exact OANDA arrangement."
+    },
+    {
+      "book": "oanda_us_index_cfd",
+      "date": "2024-02-20",
+      "direct_oanda_verified_complete": false,
+      "underlying_representative": "ES",
+      "source_id": "CME-SVC-2024-02-18",
+      "source_url": "https://web.archive.org/web/20240708161439id_/https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-02-18&toEventDate=2024-02-20&isProtected&_t=1720455278669",
+      "underlying_trade_date": "2024-02-20",
+      "underlying_final_leg": {
+        "open_local_date": "2024-02-19",
+        "open_CT": "17:00",
+        "open_ET": "18:00",
+        "open_UTC": "2024-02-19T23:00:00Z",
+        "close_CT": "16:00",
+        "close_ET": "17:00",
+        "close_UTC": "2024-02-20T22:00:00Z"
+      },
+      "confirmed_oanda_and_gap": "OANDA preceding evening18:00ET reopen explicit; final close absent. June2023close17:00ET and Feb21 2024close16:59ET conflict across undated change.",
+      "policy_proposal": {
+        "open_local_date": "2024-02-19",
+        "open_ET": "18:00",
+        "open_UTC": "2024-02-19T23:00:00Z",
+        "close_ET": "17:00",
+        "close_UTC": "2024-02-20T22:00:00Z",
+        "provenance": "User-authorized underlying inheritance; direct broker fields take precedence. Clip only when normal grid has independent coverage. Pre-Feb2024 donor close supplied by policy, not sourced broker close."
+      },
+      "alternative_or_counterexample": "16:59ET=21:59Z requires explicit conservative intersection-close policy or retrospective one-minute inset; it is not an exact OANDA final-close fact.",
+      "confidence": "High underlying-family event evidence; deterministic selected policy; unverified exact OANDA arrangement."
+    },
+    {
+      "book": "oanda_us_index_cfd",
+      "date": "2026-05-26",
+      "direct_oanda_verified_complete": false,
+      "underlying_representative": "ES",
+      "source_id": "CME-SVC-2026-05-24",
+      "source_url": "https://web.archive.org/web/20260619114105id_/https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2026-05-24&toEventDate=2026-05-26",
+      "underlying_trade_date": "2026-05-26",
+      "underlying_final_leg": {
+        "open_local_date": "2026-05-25",
+        "open_CT": "17:00",
+        "open_ET": "18:00",
+        "open_UTC": "2026-05-25T22:00:00Z",
+        "close_CT": "16:00",
+        "close_ET": "17:00",
+        "close_UTC": "2026-05-26T21:00:00Z"
+      },
+      "confirmed_oanda_and_gap": "OANDA May25earlyclose12:59ET; reopen text18:0 is incomplete; currentnormal18:01\u201316:59ET independently witnessed.",
+      "policy_proposal": {
+        "open_local_date": "2026-05-25",
+        "open_ET": "18:01",
+        "open_UTC": "2026-05-25T22:01:00Z",
+        "close_ET": "16:59",
+        "close_UTC": "2026-05-26T20:59:00Z",
+        "provenance": "User-authorized underlying inheritance; direct broker fields take precedence. Clip only when normal grid has independent coverage. Pre-Feb2024 donor close supplied by policy, not sourced broker close."
+      },
+      "alternative_or_counterexample": "18:00ET=22:00Z is another literal18:0 completion, but normal-grid clipping forbids the first minute; no claim of typo correction.",
+      "confidence": "High underlying-family event evidence; deterministic selected policy; unverified exact OANDA arrangement."
+    },
+    {
+      "book": "oanda_us_bond_cfd",
+      "date": "2024-01-02",
+      "direct_oanda_verified_complete": false,
+      "underlying_representative": "ZN",
+      "source_id": "new-years-day-2024.pdf @2026-08-11T16:57:16Z",
+      "source_url": "https://web.archive.org/web/20260811165716id_/https://www.cmegroup.com/trading-hours/files/new-years-day-2024.pdf",
+      "underlying_trade_date": "2024-01-02",
+      "underlying_final_leg": {
+        "open_local_date": "2024-01-01",
+        "open_CT": "17:00",
+        "open_ET": "18:00",
+        "open_UTC": "2024-01-01T23:00:00Z",
+        "close_CT": "16:00",
+        "close_ET": "17:00",
+        "close_UTC": "2024-01-02T22:00:00Z"
+      },
+      "confirmed_oanda_and_gap": "OANDA preceding evening18:00ET reopen explicit; final close absent. June2023close17:00ET and Feb21 2024close16:59ET conflict across undated change.",
+      "policy_proposal": {
+        "open_local_date": "2024-01-01",
+        "open_ET": "18:00",
+        "open_UTC": "2024-01-01T23:00:00Z",
+        "close_ET": "17:00",
+        "close_UTC": "2024-01-02T22:00:00Z",
+        "provenance": "User-authorized underlying inheritance; direct broker fields take precedence. Clip only when normal grid has independent coverage. Pre-Feb2024 donor close supplied by policy, not sourced broker close."
+      },
+      "alternative_or_counterexample": "16:59ET=21:59Z requires explicit conservative intersection-close policy or retrospective one-minute inset; it is not an exact OANDA final-close fact.",
+      "confidence": "High underlying-family event evidence; deterministic selected policy; unverified exact OANDA arrangement."
+    },
+    {
+      "book": "oanda_us_bond_cfd",
+      "date": "2024-01-16",
+      "direct_oanda_verified_complete": false,
+      "underlying_representative": "ZN",
+      "source_id": "CME-SVC-2024-01-14",
+      "source_url": "https://web.archive.org/web/20240708161439id_/https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-01-14&toEventDate=2024-01-16&isProtected&_t=1720455278663",
+      "underlying_trade_date": "2024-01-16",
+      "underlying_final_leg": {
+        "open_local_date": "2024-01-15",
+        "open_CT": "17:00",
+        "open_ET": "18:00",
+        "open_UTC": "2024-01-15T23:00:00Z",
+        "close_CT": "16:00",
+        "close_ET": "17:00",
+        "close_UTC": "2024-01-16T22:00:00Z"
+      },
+      "confirmed_oanda_and_gap": "OANDA preceding evening18:00ET reopen explicit; final close absent. June2023close17:00ET and Feb21 2024close16:59ET conflict across undated change.",
+      "policy_proposal": {
+        "open_local_date": "2024-01-15",
+        "open_ET": "18:00",
+        "open_UTC": "2024-01-15T23:00:00Z",
+        "close_ET": "17:00",
+        "close_UTC": "2024-01-16T22:00:00Z",
+        "provenance": "User-authorized underlying inheritance; direct broker fields take precedence. Clip only when normal grid has independent coverage. Pre-Feb2024 donor close supplied by policy, not sourced broker close."
+      },
+      "alternative_or_counterexample": "16:59ET=21:59Z requires explicit conservative intersection-close policy or retrospective one-minute inset; it is not an exact OANDA final-close fact.",
+      "confidence": "High underlying-family event evidence; deterministic selected policy; unverified exact OANDA arrangement."
+    },
+    {
+      "book": "oanda_us_bond_cfd",
+      "date": "2024-02-20",
+      "direct_oanda_verified_complete": false,
+      "underlying_representative": "ZN",
+      "source_id": "CME-SVC-2024-02-18",
+      "source_url": "https://web.archive.org/web/20240708161439id_/https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-02-18&toEventDate=2024-02-20&isProtected&_t=1720455278669",
+      "underlying_trade_date": "2024-02-20",
+      "underlying_final_leg": {
+        "open_local_date": "2024-02-19",
+        "open_CT": "17:00",
+        "open_ET": "18:00",
+        "open_UTC": "2024-02-19T23:00:00Z",
+        "close_CT": "16:00",
+        "close_ET": "17:00",
+        "close_UTC": "2024-02-20T22:00:00Z"
+      },
+      "confirmed_oanda_and_gap": "OANDA preceding evening18:00ET reopen explicit; final close absent. June2023close17:00ET and Feb21 2024close16:59ET conflict across undated change.",
+      "policy_proposal": {
+        "open_local_date": "2024-02-19",
+        "open_ET": "18:00",
+        "open_UTC": "2024-02-19T23:00:00Z",
+        "close_ET": "17:00",
+        "close_UTC": "2024-02-20T22:00:00Z",
+        "provenance": "User-authorized underlying inheritance; direct broker fields take precedence. Clip only when normal grid has independent coverage. Pre-Feb2024 donor close supplied by policy, not sourced broker close."
+      },
+      "alternative_or_counterexample": "16:59ET=21:59Z requires explicit conservative intersection-close policy or retrospective one-minute inset; it is not an exact OANDA final-close fact.",
+      "confidence": "High underlying-family event evidence; deterministic selected policy; unverified exact OANDA arrangement."
+    },
+    {
+      "book": "oanda_us_bond_cfd",
+      "date": "2024-12-24",
+      "direct_oanda_verified_complete": false,
+      "underlying_representative": "ZN",
+      "source_id": "CME-SVC-2024-12-24",
+      "source_url": "https://web.archive.org/web/20241220155340id_/https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2024-12-24&toEventDate=2024-12-26&isProtected&_t=1734710019537",
+      "underlying_trade_date": "2024-12-24",
+      "underlying_final_leg": {
+        "open_local_date": "2024-12-23",
+        "open_CT": "17:00",
+        "open_ET": "18:00",
+        "open_UTC": "2024-12-23T23:00:00Z",
+        "close_CT": "12:15",
+        "close_ET": "13:15",
+        "close_UTC": "2024-12-24T18:15:00Z"
+      },
+      "confirmed_oanda_and_gap": "OANDA bond arrangement absent; index close13:14ET and UK10YB07:14ET do not prove US Treasury CFD close.",
+      "policy_proposal": {
+        "open_local_date": "2024-12-23",
+        "open_ET": "18:01",
+        "open_UTC": "2024-12-23T23:01:00Z",
+        "close_ET": "13:15",
+        "close_UTC": "2024-12-24T18:15:00Z",
+        "provenance": "User-authorized underlying inheritance; direct broker fields take precedence. Clip only when normal grid has independent coverage. Pre-Feb2024 donor close supplied by policy, not sourced broker close."
+      },
+      "alternative_or_counterexample": "13:14ET=18:14Z if a separate minus-one-minute holiday policy is explicitly chosen; plausible from same-day index, not entailed by clipping.",
+      "confidence": "High underlying-family event evidence; deterministic selected policy; unverified exact OANDA arrangement."
+    },
+    {
+      "book": "oanda_us_bond_cfd",
+      "date": "2026-05-26",
+      "direct_oanda_verified_complete": false,
+      "underlying_representative": "ZN",
+      "source_id": "CME-SVC-2026-05-24",
+      "source_url": "https://web.archive.org/web/20260619114105id_/https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2026-05-24&toEventDate=2026-05-26",
+      "underlying_trade_date": "2026-05-26",
+      "underlying_final_leg": {
+        "open_local_date": "2026-05-25",
+        "open_CT": "17:00",
+        "open_ET": "18:00",
+        "open_UTC": "2026-05-25T22:00:00Z",
+        "close_CT": "16:00",
+        "close_ET": "17:00",
+        "close_UTC": "2026-05-26T21:00:00Z"
+      },
+      "confirmed_oanda_and_gap": "OANDA May25earlyclose12:59ET; reopen text18:0 is incomplete; currentnormal18:01\u201316:59ET independently witnessed.",
+      "policy_proposal": {
+        "open_local_date": "2026-05-25",
+        "open_ET": "18:01",
+        "open_UTC": "2026-05-25T22:01:00Z",
+        "close_ET": "16:59",
+        "close_UTC": "2026-05-26T20:59:00Z",
+        "provenance": "User-authorized underlying inheritance; direct broker fields take precedence. Clip only when normal grid has independent coverage. Pre-Feb2024 donor close supplied by policy, not sourced broker close."
+      },
+      "alternative_or_counterexample": "18:00ET=22:00Z is another literal18:0 completion, but normal-grid clipping forbids the first minute; no claim of typo correction.",
+      "confidence": "High underlying-family event evidence; deterministic selected policy; unverified exact OANDA arrangement."
+    }
+  ],
+  "parsed_events_path": "/tmp/oanda-underlying-cme-evidence/parsed-es-zn-events.json"
+}

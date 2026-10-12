@@ -11245,3 +11245,26 @@ Counts:141 identities,52 holiday-bearing; LSE184, Amsterdam108, BME106, FX4, met
 
 
 Durable review paths: `reviews/oanda-source-completion-2026-10-11/` and `audits/library-pr337-sol-review-2026-10-11/`. Original `/tmp` paths in saved reports refer to those directories by basename. These independently accepted partial calendars retain the unresolved OANDA activation gaps in library #332; no release-ready verdict is asserted.
+
+
+## OANDA underlying-contract resolution — 2026-10-12 UTC
+
+Issue exchange-hours-rs#332 retains one tracker for all 26 unresolved native
+book/date arrangements. The new `normal-weeks/oanda-underlying-policy-2026-10-12/`
+bundle compares every pair with named ICE Brent or CME equity-index/Treasury
+contracts and IANA clocks. Thirteen Brent dates are underlying ordinary days;
+four Brent dates have selected 01:00 London post-holiday reopens. Six early 2024
+index/bond closes can select donor 17:00 ET, one Treasury Christmas Eve can select
+donor 13:15 ET, and the two Memorial 2026 dates can select current-grid-clipped
+18:01–16:59 ET. These are disclosed inheritance-policy proposals, not newly
+operator-verified OANDA rows. Direct broker statements take precedence.
+
+The earlier 2021/June 2023 broker 17:00 ET close differs from February 2024's 16:59 ET
+close; no unconditional cutover was recovered. A universal one-minute adjustment
+is contradicted by dated broker statements. The runtime withholdings and
+publication gate are unchanged. Raw source captures, existing-artifact digest
+comparisons, parsers, complete 26-row policy proposals, UTC conversions and
+SHA256 inventories are retained. The independent ICE lookup also exposed the
+Brent evidence file's erroneous ordinary 19:00 London comparison; the actual
+product page prints 01:00–23:00 London, separately from settlement calculations.
+That prose correction is prepared in exchange-hours-rs, with no runtime change.
