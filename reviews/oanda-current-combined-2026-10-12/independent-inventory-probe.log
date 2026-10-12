@@ -1,0 +1,53 @@
+nasdaq: complete
+nyse: complete
+cme: complete
+cbot: complete
+comex: complete
+nymex: complete
+cfe: complete
+coinbase_derivatives: complete
+eurex: complete
+iceus: incomplete 42dates
+asx: complete
+nzx: complete
+tse: complete
+nse_india: incomplete 1dates
+hkex: complete
+sgx_securities: complete
+sse: complete
+lse: complete
+xetra: complete
+six: complete
+euronext_paris: incomplete 2dates
+euronext_amsterdam: incomplete 2dates
+euronext_brussels: no2025coverage
+euronext_lisbon: no2025coverage
+bme: incomplete 2dates
+nasdaq_stockholm: no2025coverage
+nasdaq_helsinki: no2025coverage
+nasdaq_copenhagen: no2025coverage
+borsa_istanbul: complete
+tsx: complete
+tadawul: complete
+b3: complete
+globex_equity_index: complete
+globex_energy: complete
+globex_grains: complete
+globex_fx: complete
+globex_interest_rates: complete
+globex_livestock: complete
+globex_cryptocurrency: complete
+eurex: complete
+ice_us_sugar: complete
+globex_nikkei_225_dollar: complete
+eurex_fixed_income: complete
+oanda_fx: complete
+oanda_try_fx: no2025coverage
+oanda_metals: complete
+oanda_us_index_cfd: incomplete 1dates
+oanda_us_bond_cfd: incomplete 1dates
+oanda_us_commodity_cfd: complete
+oanda_brent: incomplete 10dates
+oanda_china50_cfd: no2025coverage
+oanda_singapore30_cfd: no2025coverage
+COUNTS complete=36 incomplete=8 no2025coverage=8

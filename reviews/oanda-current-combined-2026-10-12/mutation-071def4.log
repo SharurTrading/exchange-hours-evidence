@@ -1,0 +1,31 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-combined-current-071-independent-review)
+    Finished `test` profile [optimized + debuginfo] target(s) in 8.98s
+────────────
+ Nextest run ID 79015300-827a-450a-a14e-1d4ae48d3397 with nextest profile: default
+    Starting 1 test across 1 binary (3 tests skipped)
+        FAIL [   0.013s] (1/1) exchange-hours::oanda_asia_current broker_day_night_boundaries_and_friday_wrap_are_exact
+  stdout ───
+
+    running 1 test
+    test broker_day_night_boundaries_and_friday_wrap_are_exact ... FAILED
+
+    failures:
+
+    failures:
+        broker_day_night_boundaries_and_friday_wrap_are_exact
+
+    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3 filtered out; finished in 0.00s
+
+  stderr ───
+
+    thread 'broker_day_night_boundaries_and_friday_wrap_are_exact' (8758786) panicked at tests/oanda_asia_current.rs:54:13:
+    assertion `left == right` failed
+      left: Ok(false)
+     right: Ok(true)
+    note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+  Cancelling due to test failure
+────────────
+     Summary [   0.019s] 1 test run: 0 passed, 1 failed, 3 skipped
+        FAIL [   0.013s] (1/1) exchange-hours::oanda_asia_current broker_day_night_boundaries_and_friday_wrap_are_exact
+error: test run failed

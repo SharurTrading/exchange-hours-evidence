@@ -1,0 +1,36 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-combined-current-071-independent-review)
+    Finished `test` profile [optimized + debuginfo] target(s) in 0.36s
+────────────
+ Nextest run ID db06c9c5-77e1-4767-b4ae-796feff5e1e3 with nextest profile: default
+    Starting 29 tests across 4 binaries
+        PASS [   0.031s] ( 1/29) exchange-hours::oanda_publication archived_2024_brent_preserves_explicit_thanksgiving_and_missing_reopens
+        PASS [   0.040s] ( 2/29) exchange-hours::oanda_asia_current only_the_witnessed_current_publication_window_claims_coverage
+        PASS [   0.043s] ( 3/29) exchange-hours::oanda_asia_current last_audited_friday_returns_complete_bounds_but_saturday_queries_refuse
+        PASS [   0.062s] ( 4/29) exchange-hours::oanda_current_scope current_try_next_open_answers_without_turning_its_overnight_gap_into_maintenance
+        PASS [   0.058s] ( 5/29) exchange-hours::oanda_asia_current night_and_next_day_have_closing_civil_trade_date_but_separate_bounds
+        PASS [   0.058s] ( 6/29) exchange-hours::oanda_current_scope current_try_queries_answer_the_daily_grid_across_the_european_clock_change
+        PASS [   0.058s] ( 7/29) exchange-hours::oanda_current_scope current_try_coverage_does_not_certify_history_or_unpublished_future
+        PASS [   0.059s] ( 8/29) exchange-hours::oanda_publication archived_2024_christmas_keeps_1804_reopens_and_the_missing_bond_close_explicit
+        PASS [   0.063s] ( 9/29) exchange-hours::nasdaq_nordic_current_holidays stockholm_half_days_end_their_own_phases_at_operator_boundaries
+        PASS [   0.067s] (10/29) exchange-hours::nasdaq_nordic_current_holidays cash_calendars_keep_their_own_closures_and_publication_horizon
+        PASS [   0.037s] (11/29) exchange-hours::oanda_publication archived_2024_independence_eve_names_indices_without_changing_bonds
+        PASS [   0.025s] (12/29) exchange-hours::oanda_publication archived_2024_us_commodities_keep_their_own_opening_and_literal_holidays
+        PASS [   0.072s] (13/29) exchange-hours::oanda_publication an_incomplete_memorial_reopen_refuses_the_following_trade_date
+        PASS [   0.041s] (14/29) exchange-hours::oanda_publication archived_2024_pre_witness_reopens_do_not_invent_final_closes
+        PASS [   0.104s] (15/29) exchange-hours::oanda_asia_current broker_day_night_boundaries_and_friday_wrap_are_exact
+        PASS [   0.039s] (16/29) exchange-hours::oanda_publication bonds_have_their_own_good_friday_and_carter_day_closes
+        PASS [   0.036s] (17/29) exchange-hours::oanda_publication mlk_2025_closes_at_the_operators_printed_instant
+        PASS [   0.040s] (18/29) exchange-hours::oanda_publication brent_monday_bounds_include_the_sunday_open_in_both_dst_regimes
+        PASS [   0.045s] (19/29) exchange-hours::oanda_publication brent_2025_reopens_at_2000_et_including_friday_early_close
+        PASS [   0.047s] (20/29) exchange-hours::oanda_publication archived_2024_us_holidays_preserve_literal_reopens_and_friday_close
+        PASS [   0.044s] (21/29) exchange-hours::oanda_publication brent_uk_holiday_silence_preserves_typed_refusals_in_each_year
+        PASS [   0.044s] (22/29) exchange-hours::oanda_publication carters_close_and_reopen_follow_the_dated_twenty_four_hour_context
+        PASS [   0.047s] (23/29) exchange-hours::oanda_publication bonds_do_not_inherit_the_index_only_independence_eve_arrangement
+        PASS [   0.050s] (24/29) exchange-hours::oanda_publication holy_thursday_2025_replacement_extends_to_the_printed_1700_close
+        PASS [   0.017s] (25/29) exchange-hours::oanda_publication spot_metals_holiday_reopens_use_the_literal_group_and_gold_silver_exception
+        PASS [   0.040s] (26/29) exchange-hours::oanda_publication new_year_2025_reopens_at_1804_on_the_following_trade_date
+        PASS [   0.042s] (27/29) exchange-hours::oanda_publication previous_session_search_uses_the_last_replacement_close_for_gap_state
+        PASS [   0.021s] (28/29) exchange-hours::oanda_publication us_2025_reopens_preserve_the_printed_1800_and_next_day_early_closes
+        PASS [   0.025s] (29/29) exchange-hours::oanda_publication split_session_search_selects_the_nearest_reopen_before_a_later_normal_open
+────────────
+     Summary [   0.135s] 29 tests run: 29 passed, 0 skipped

@@ -1,0 +1,29 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-scope-root-review)
+    Finished `test` profile [optimized + debuginfo] target(s) in 0.33s
+────────────
+ Nextest run ID 3aab3ca0-51c8-43df-b5fe-7aceea5f0755 with nextest profile: default
+    Starting 1 test across 1 binary (73 tests skipped)
+        FAIL [   0.015s] (1/1) exchange-hours::schedule_documentation suite::readme_states_the_service_tier_split_from_the_ledger
+  stdout ───
+
+    running 1 test
+    test suite::readme_states_the_service_tier_split_from_the_ledger ... FAILED
+
+    failures:
+
+    failures:
+        suite::readme_states_the_service_tier_split_from_the_ledger
+
+    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 73 filtered out; finished in 0.00s
+
+  stderr ───
+
+    thread 'suite::readme_states_the_service_tier_split_from_the_ledger' (8707512) panicked at tests/schedule_documentation/mod.rs:763:9:
+    README service-tier split drifted from the ledger: expected "51 of the 143 rows are `served`"
+    note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+  Cancelling due to test failure
+────────────
+     Summary [   0.016s] 1 test run: 0 passed, 1 failed, 73 skipped
+        FAIL [   0.015s] (1/1) exchange-hours::schedule_documentation suite::readme_states_the_service_tier_split_from_the_ledger
+error: test run failed

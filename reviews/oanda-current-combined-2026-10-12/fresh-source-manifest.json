@@ -1,0 +1,39 @@
+[
+  {
+    "file": "nasdaq-fresh-web.txt",
+    "url": "https://www.nasdaq.com/european-market-activity/trading-hours",
+    "retrieval_utc_date": "2026-10-12",
+    "mode": "fresh operator web-tool text representation",
+    "sha256": "0b58c172fef4563d3a5ff80fe53d671cf8520eb5242762fc9fd530bcdeaac157"
+  },
+  {
+    "file": "nordic-manual-phase-web-extract.txt",
+    "url": "https://www.globenewswire.com/en/Attachment/DownloadAttachment?articleid=153059&fileId=93908&filename=market+model+version+1_1+januar+21+2010.pdf&filetype=3&islogo=0",
+    "retrieval_utc_date": "2026-10-12",
+    "mode": "fresh operator attachment web-tool PDF text representation",
+    "sha256": "04944bb51cfd221cd9dc3a0d305f31d084ca063b85d4fdfd28802ce97e2d6d20"
+  },
+  {
+    "file": "uk-hours-fresh.html",
+    "url": "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+    "retrieval_utc_date": "2026-10-12",
+    "mode": "fresh HTTP HTML",
+    "sha256": "a4d4809e4e5d1019da4abfe45015856c15343567a84cfcfa4c4c4982bab4e3b2"
+  },
+  {
+    "file": "uk-holidays-fresh.html",
+    "url": "https://www.oanda.com/uk-en/trading/holiday-trading-hours/",
+    "retrieval_utc_date": "2026-10-12",
+    "mode": "fresh HTTP HTML",
+    "sha256": "f0eb8835756f948db1347a7ec086f28ddb18f4fef70276f982321f2fc9884f06"
+  },
+  {
+    "file": null,
+    "url": "https://www.globenewswire.com/en/Attachment/DownloadAttachment?articleid=153059&fileId=93908&filename=market+model+version+1_1+januar+21+2010.pdf&filetype=3&islogo=0",
+    "retrieval_utc_date": "2026-10-12",
+    "mode": "direct curl PDF request",
+    "outcome": "HTTP403; no downloaded PDF bytes",
+    "sha256": null,
+    "log": "nordic-market-model-fetch.log"
+  }
+]

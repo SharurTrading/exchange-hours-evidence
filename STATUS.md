@@ -11349,3 +11349,35 @@ Both deliberately corrupted closure rows fail, and restored bytes pass.
 The two year-end half-day hours remain unpublished and typed as gaps per scope.
 No invented historical effective date was taken from the PDF's future header.
 Reports, retrieval and mutation logs: `reviews/oanda-euronext-current-2026-10-12/`.
+
+
+## Independent final current OANDA integration — 2026-10-12 UTC
+
+Independent gpt-6.1-sol review accepts public integration PR #344 at
+`071def42ededf8c4b7c375db3a20900c973beaf2`; the root GPT-6 scope
+partition accepts the other agent's activation, while the Sol reviewer covers
+root-authored resolutions and release prose. Authored Euronext data is
+excluded from the Sol nonwriter verdict and covered by the retained root
+Euronext reviews above. Full verification passes 1,367 tests, zero skips,
+three doctests, strict Clippy, rustdoc, dependency checks and MSRV 1.95.
+The exact-head digest replay verifies 3,075 Documents rows across 57 files
+and 893 distinct digests. Source-derived boundaries and a red/restored
+Asian close mutation pass independently. A separate served/dormant ledger
+mutation fails its public count fence and the restored 74 checks pass.
+The dry-run package has 486 members; 483 tracked source/documentation/test
+files are byte-identical. Cargo normalizes its manifest and removes only the
+unpublished xtask workspace member from the packaged lock.
+
+The charter and release procedure explicitly record the maintainer's current/
+future priority without improving historical evidence, moving the 2010 floor,
+or changing actual windows. The ledger records 143 rows, 52 served and
+91 dormant; the unchanged 2025 sample has 34 complete, ten incomplete and
+eight without 2025 holiday coverage. Single historical tracker #332 remains
+open after release. Current native publication ends 2026-10-30; Friday night
+bounds are preserved while unaudited Saturday queries refuse.
+
+Reports, fresh source representations, parser proofs, mutation logs and
+package inspection: `reviews/oanda-current-combined-2026-10-12/`. Additional
+independent Asian retrieval bytes are in `reviews/oanda-asian-current-2026-10-12/`;
+their individual branch full-chain verdict is still pending and is not claimed
+here. This record covers the independently accepted combined integration.
