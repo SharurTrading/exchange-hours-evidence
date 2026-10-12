@@ -1,0 +1,19 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-independent-asia-probes)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.12s
+     Running tests/independent_asia_review.rs (/tmp/oanda-independent-asia-final-restored-target/debug/deps/independent_asia_review-9d7ccbfd346aac8d)
+
+running 1 test
+test source_derived_periods_and_publication_edges ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/oanda_asia_current.rs (/tmp/oanda-independent-asia-final-restored-target/debug/deps/oanda_asia_current-d7e68f679a12b607)
+
+running 4 tests
+test night_and_next_day_have_closing_civil_trade_date_but_separate_bounds ... ok
+test only_the_witnessed_current_publication_window_claims_coverage ... ok
+test broker_day_night_boundaries_and_friday_wrap_are_exact ... ok
+test last_audited_friday_returns_complete_bounds_but_saturday_queries_refuse ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
