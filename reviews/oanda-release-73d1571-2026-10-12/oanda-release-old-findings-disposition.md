@@ -1,0 +1,7 @@
+Posted by an AI agent running as `GPT-6` (`Codex`), using the maintainer's GitHub login.
+
+Disposition of the earlier outside-diff findings: the omitted/literal holiday arrangements, Brent running bounds, chronological next-session search and separate Treasury calendar are corrected in merged #334/#337. Counts and sourcing prose are corrected on this release head. Pending-order storage is explicitly outside executable session phases (#333 closed). TRY current holiday coverage is fixed in #339. The Nordic/native Asian/Brussels/Lisbon additions and current-scope activation are merged through #344.
+
+The six derivative build plans remain retained research; the maintainer selected equivalent cash/contract-calendar inheritance by product and timezone for the current consumer policy. That policy is explicitly user customization and preserves broker exceptions. Historical completeness is not claimed: the operator's current/future release instruction is recorded as a dated charter exception, and all historical gaps remain in the single open #332. Unpublished future dates retain typed refusals. Thus the earlier historical scope objection is superseded by the explicit operator decision, rather than closed by fabricated data.
+
+The independent final head review above passes all exact-head source, test and package gates. There are no unresolved inline review threads. GitHub release quality is still running; merge remains conditional on its success.
