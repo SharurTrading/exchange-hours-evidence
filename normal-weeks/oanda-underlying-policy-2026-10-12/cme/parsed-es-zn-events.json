@@ -1,0 +1,440 @@
+{
+  "CME-SVC-2024-01-14": {
+    "ZN": [
+      {
+        "groupCode": "ZN",
+        "eventDate": "2024-01-14",
+        "events": [
+          {
+            "tradingDate": "2024-01-16",
+            "eventTime": "16:00",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2024-01-16",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      },
+      {
+        "groupCode": "ZN",
+        "eventDate": "2024-01-15",
+        "events": [
+          {
+            "tradingDate": "2024-01-16",
+            "eventTime": "12:00",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2024-01-16",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      },
+      {
+        "groupCode": "ZN",
+        "eventDate": "2024-01-16",
+        "events": [
+          {
+            "tradingDate": "2024-01-16",
+            "eventTime": "16:00",
+            "marketEventType": "closed"
+          },
+          {
+            "tradingDate": "2024-01-17",
+            "eventTime": "16:45",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2024-01-17",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      }
+    ],
+    "ES": [
+      {
+        "groupCode": "ES",
+        "eventDate": "2024-01-14",
+        "events": [
+          {
+            "tradingDate": "2024-01-16",
+            "eventTime": "16:00",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2024-01-16",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      },
+      {
+        "groupCode": "ES",
+        "eventDate": "2024-01-15",
+        "events": [
+          {
+            "tradingDate": "2024-01-16",
+            "eventTime": "12:00",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2024-01-16",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      },
+      {
+        "groupCode": "ES",
+        "eventDate": "2024-01-16",
+        "events": [
+          {
+            "tradingDate": "2024-01-16",
+            "eventTime": "16:00",
+            "marketEventType": "closed"
+          },
+          {
+            "tradingDate": "2024-01-17",
+            "eventTime": "16:45",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2024-01-17",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      }
+    ]
+  },
+  "CME-SVC-2024-02-18": {
+    "ZN": [
+      {
+        "groupCode": "ZN",
+        "eventDate": "2024-02-18",
+        "events": [
+          {
+            "tradingDate": "2024-02-20",
+            "eventTime": "16:00",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2024-02-20",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      },
+      {
+        "groupCode": "ZN",
+        "eventDate": "2024-02-19",
+        "events": [
+          {
+            "tradingDate": "2024-02-20",
+            "eventTime": "12:00",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2024-02-20",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      },
+      {
+        "groupCode": "ZN",
+        "eventDate": "2024-02-20",
+        "events": [
+          {
+            "tradingDate": "2024-02-20",
+            "eventTime": "16:00",
+            "marketEventType": "closed"
+          },
+          {
+            "tradingDate": "2024-02-21",
+            "eventTime": "16:45",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2024-02-21",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      }
+    ],
+    "ES": [
+      {
+        "groupCode": "ES",
+        "eventDate": "2024-02-18",
+        "events": [
+          {
+            "tradingDate": "2024-02-20",
+            "eventTime": "16:00",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2024-02-20",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      },
+      {
+        "groupCode": "ES",
+        "eventDate": "2024-02-19",
+        "events": [
+          {
+            "tradingDate": "2024-02-20",
+            "eventTime": "12:00",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2024-02-20",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      },
+      {
+        "groupCode": "ES",
+        "eventDate": "2024-02-20",
+        "events": [
+          {
+            "tradingDate": "2024-02-20",
+            "eventTime": "16:00",
+            "marketEventType": "closed"
+          },
+          {
+            "tradingDate": "2024-02-21",
+            "eventTime": "16:45",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2024-02-21",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      }
+    ]
+  },
+  "CME-SVC-2024-12-24": {
+    "ZN": [
+      {
+        "groupCode": "ZN",
+        "eventDate": "2024-12-24",
+        "events": [
+          {
+            "tradingDate": "2024-12-24",
+            "eventTime": "12:15",
+            "marketEventType": "closed"
+          }
+        ]
+      },
+      {
+        "groupCode": "ZN",
+        "eventDate": "2024-12-25",
+        "events": [
+          {
+            "tradingDate": "2024-12-26",
+            "eventTime": "16:00",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2024-12-26",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      },
+      {
+        "groupCode": "ZN",
+        "eventDate": "2024-12-26",
+        "events": [
+          {
+            "tradingDate": "2024-12-26",
+            "eventTime": "16:00",
+            "marketEventType": "closed"
+          },
+          {
+            "tradingDate": "2024-12-27",
+            "eventTime": "16:45",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2024-12-27",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      }
+    ],
+    "ES": [
+      {
+        "groupCode": "ES",
+        "eventDate": "2024-12-24",
+        "events": [
+          {
+            "tradingDate": "2024-12-24",
+            "eventTime": "12:15",
+            "marketEventType": "closed"
+          }
+        ]
+      },
+      {
+        "groupCode": "ES",
+        "eventDate": "2024-12-25",
+        "events": [
+          {
+            "tradingDate": "2024-12-26",
+            "eventTime": "16:00",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2024-12-26",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      },
+      {
+        "groupCode": "ES",
+        "eventDate": "2024-12-26",
+        "events": [
+          {
+            "tradingDate": "2024-12-26",
+            "eventTime": "16:00",
+            "marketEventType": "closed"
+          },
+          {
+            "tradingDate": "2024-12-27",
+            "eventTime": "16:45",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2024-12-27",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      }
+    ]
+  },
+  "CME-SVC-2026-05-24": {
+    "ZN": [
+      {
+        "groupCode": "ZN",
+        "eventDate": "2026-05-24",
+        "events": [
+          {
+            "tradingDate": "2026-05-26",
+            "eventTime": "16:00",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2026-05-26",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      },
+      {
+        "groupCode": "ZN",
+        "eventDate": "2026-05-25",
+        "events": [
+          {
+            "tradingDate": "2026-05-26",
+            "eventTime": "12:00",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2026-05-26",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      },
+      {
+        "groupCode": "ZN",
+        "eventDate": "2026-05-26",
+        "events": [
+          {
+            "tradingDate": "2026-05-26",
+            "eventTime": "16:00",
+            "marketEventType": "closed"
+          },
+          {
+            "tradingDate": "2026-05-27",
+            "eventTime": "16:45",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2026-05-27",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      }
+    ],
+    "ES": [
+      {
+        "groupCode": "ES",
+        "eventDate": "2026-05-24",
+        "events": [
+          {
+            "tradingDate": "2026-05-26",
+            "eventTime": "16:00",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2026-05-26",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      },
+      {
+        "groupCode": "ES",
+        "eventDate": "2026-05-25",
+        "events": [
+          {
+            "tradingDate": "2026-05-26",
+            "eventTime": "12:00",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2026-05-26",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      },
+      {
+        "groupCode": "ES",
+        "eventDate": "2026-05-26",
+        "events": [
+          {
+            "tradingDate": "2026-05-26",
+            "eventTime": "16:00",
+            "marketEventType": "closed"
+          },
+          {
+            "tradingDate": "2026-05-27",
+            "eventTime": "16:45",
+            "marketEventType": "preopen"
+          },
+          {
+            "tradingDate": "2026-05-27",
+            "eventTime": "17:00",
+            "marketEventType": "open"
+          }
+        ]
+      }
+    ]
+  }
+}
