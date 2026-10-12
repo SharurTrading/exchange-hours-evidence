@@ -1,0 +1,9 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-nordic-root-review)
+    Finished `test` profile [optimized + debuginfo] target(s) in 0.10s
+────────────
+ Nextest run ID 9bf09b56-61f6-4e88-909d-78c7dd30ecc0 with nextest profile: default
+    Starting 2 tests across 1 binary
+        PASS [   0.009s] (1/2) exchange-hours::nasdaq_nordic_current_holidays cash_calendars_keep_their_own_closures_and_publication_horizon
+        PASS [   0.010s] (2/2) exchange-hours::nasdaq_nordic_current_holidays stockholm_half_days_end_their_own_phases_at_operator_boundaries
+────────────
+     Summary [   0.011s] 2 tests run: 2 passed, 0 skipped

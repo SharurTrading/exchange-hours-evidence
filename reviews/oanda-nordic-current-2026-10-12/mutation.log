@@ -1,0 +1,32 @@
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-nordic-root-review)
+    Finished `test` profile [optimized + debuginfo] target(s) in 4.36s
+────────────
+ Nextest run ID 6ab6dab3-80ec-4006-85c5-fe80a311892b with nextest profile: default
+    Starting 2 tests across 1 binary
+        FAIL [   0.008s] (1/2) exchange-hours::nasdaq_nordic_current_holidays stockholm_half_days_end_their_own_phases_at_operator_boundaries
+  stdout ───
+
+    running 1 test
+    test stockholm_half_days_end_their_own_phases_at_operator_boundaries ... FAILED
+
+    failures:
+
+    failures:
+        stockholm_half_days_end_their_own_phases_at_operator_boundaries
+
+    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.00s
+
+  stderr ───
+
+    thread 'stockholm_half_days_end_their_own_phases_at_operator_boundaries' (8324117) panicked at tests/nasdaq_nordic_current_holidays.rs:93:9:
+    assertion `left == right` failed
+      left: Ok(false)
+     right: Ok(true)
+    note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+  Cancelling due to test failure: 1 test still running
+        PASS [   0.008s] (2/2) exchange-hours::nasdaq_nordic_current_holidays cash_calendars_keep_their_own_closures_and_publication_horizon
+────────────
+     Summary [   0.009s] 2 tests run: 1 passed, 1 failed, 0 skipped
+        FAIL [   0.008s] (1/2) exchange-hours::nasdaq_nordic_current_holidays stockholm_half_days_end_their_own_phases_at_operator_boundaries
+error: test run failed

@@ -1,0 +1,15 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-try-current-library-review)
+    Finished `test` profile [optimized + debuginfo] target(s) in 0.31s
+     Running tests/oanda_current_scope.rs (target/debug/deps/oanda_current_scope-7971b00963ab1cce)
+
+running 3 tests
+test current_try_next_open_answers_without_turning_its_overnight_gap_into_maintenance ... ok
+test current_try_queries_answer_the_daily_grid_across_the_european_clock_change ... ok
+test current_try_coverage_does_not_certify_history_or_unpublished_future ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
