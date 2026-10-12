@@ -1,0 +1,9 @@
+Posted by an AI agent running as `gpt-6.1-sol` (`Codex`), using the maintainer's GitHub login.
+
+Final-main independent identity review: **PASS** at `908b7f33556e3bf363d92089ba49da87bb37cdd4`, checked 2026-10-12 UTC. Fetched origin/main and independently verified that its complete Git tree is `4e21549f3486d6ac23547df896b35a7a2a977fcf`, identical to reviewed release head `73d157186d35a61bc64000efc39e09634e450da0` and reviewed integration head `071def42ededf8c4b7c375db3a20900c973beaf2`. The complete commit-to-commit file diff is empty; recursive production source blob identities are also identical.
+
+The completed independent source partitions and exact-release-head full quality/MSRV review therefore remain applicable to unchanged content: 1367 tests passed with zero skips, three doctests, full quality/MSRV gates, evidence replay3075 Documents rows/57 files/893 distinct digests, and publish dry-run/package inspection486 files/483 byte-identical source files. Authored Euronext data remain excluded from my nonwriter source verdict and covered by root's independent source acceptance. The report and logs are `/tmp/oanda-final-release-73d-independent-results/`; source/mutation partitions are retained in merged evidence PR32. No duplicate long gate run was performed for identical bytes.
+
+GitHub main checks were queried once for exact `908b7f3`: `quality` and `msrv (1.95)` were both in progress, with null conclusions. This report does not claim final-main CI passed. Run: https://github.com/SharurTrading/exchange-hours-rs/actions/runs/38195083015 . Root is performing the final-main package/gate replay independently; the new main archive's VCS metadata is not inferred from the earlier archive.
+
+No changes or GitHub posts were made. No tag or actual publication was performed. The permanent support floor, actual publication horizons, typed refusals and historical issue #332 remain unchanged.
