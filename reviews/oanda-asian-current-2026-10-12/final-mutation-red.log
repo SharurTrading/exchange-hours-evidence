@@ -1,0 +1,82 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.24
+   Compiling serde_core v1.0.229
+   Compiling autocfg v1.5.1
+   Compiling serde v1.0.229
+   Compiling zerocopy v0.8.56
+   Compiling libc v0.2.189
+   Compiling cfg-if v1.0.4
+   Compiling find-msvc-tools v0.1.11
+   Compiling shlex v2.0.1
+   Compiling zmij v1.0.23
+   Compiling typenum v1.20.1
+   Compiling siphasher v1.0.3
+   Compiling serde_json v1.0.151
+   Compiling cc v1.4.4
+   Compiling num-traits v0.2.19
+   Compiling hybrid-array v0.4.15
+   Compiling phf_shared v0.12.1
+   Compiling alloca v0.4.0
+   Compiling ciborium-io v0.2.2
+   Compiling regex-syntax v0.8.11
+   Compiling anstyle v1.0.14
+   Compiling either v1.18.0
+   Compiling clap_lex v1.1.0
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling chrono-tz v0.10.4
+   Compiling chrono v0.4.45
+   Compiling regex-automata v0.4.18
+   Compiling block-buffer v0.12.1
+   Compiling clap_builder v4.6.6
+   Compiling crypto-common v0.2.2
+   Compiling syn v3.0.3
+   Compiling syn v2.0.119
+   Compiling phf v0.12.1
+   Compiling itertools v0.13.0
+   Compiling same-file v1.0.6
+   Compiling cast v0.3.0
+   Compiling const-oid v0.10.2
+   Compiling clap v4.6.6
+   Compiling regex v1.13.1
+   Compiling zerocopy-derive v0.8.56
+   Compiling serde_derive v1.0.229
+   Compiling walkdir v2.5.0
+   Compiling criterion-plot v0.8.2
+   Compiling cpufeatures v0.3.1
+   Compiling digest v0.11.3
+   Compiling page_size v0.6.0
+   Compiling oorandom v11.1.5
+   Compiling anes v0.1.6
+   Compiling sha2 v0.11.0
+   Compiling tinytemplate v1.2.1
+   Compiling serde_test v1.0.177
+   Compiling exchange-hours v1.1.0 (/private/tmp/oanda-independent-asia-probes)
+   Compiling half v2.7.1
+   Compiling ciborium-ll v0.2.2
+   Compiling ciborium v0.2.2
+   Compiling criterion v0.8.2
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.13s
+     Running tests/oanda_asia_current.rs (/tmp/oanda-independent-asia-final-mutation-target/debug/deps/oanda_asia_current-d7e68f679a12b607)
+
+running 1 test
+test broker_day_night_boundaries_and_friday_wrap_are_exact ... FAILED
+
+failures:
+
+---- broker_day_night_boundaries_and_friday_wrap_are_exact stdout ----
+
+thread 'broker_day_night_boundaries_and_friday_wrap_are_exact' (8632945) panicked at tests/oanda_asia_current.rs:45:13:
+assertion `left == right` failed
+  left: Ok(false)
+ right: Ok(true)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    broker_day_night_boundaries_and_friday_wrap_are_exact
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--test oanda_asia_current`

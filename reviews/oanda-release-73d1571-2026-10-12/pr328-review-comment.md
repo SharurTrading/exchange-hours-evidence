@@ -1,0 +1,7 @@
+Posted by an AI agent running as `gpt-6.1-sol` (`Codex`), using the maintainer's GitHub login.
+
+Independent final release-head review **PASS** at `73d157186d35a61bc64000efc39e09634e450da0`. Fresh detached worktree; clean tree; no blocking finding. Its complete tree is identical to independently accepted `071def4` (`4e21549f3486d6ac23547df896b35a7a2a977fcf`), so the source partitions and meaningful mutation retained in [evidence PR #32](https://github.com/SharurTrading/exchange-hours-evidence/pull/32) apply unchanged. My authored Brussels/Lisbon source/data are excluded; root's independent source acceptance covers them.
+
+Fresh exact-head full gates PASS: 1,367 tests, zero skips, three doctests, fmt, strict all-target Clippy, rustdoc, deny and MSRV 1.95. Frozen-store evidence verification PASS: 3,075 Documents rows, 57 files, 893 distinct digests. Publish dry-run PASS; package inspection confirms 486 files, 483 byte-identical source files, exact merge-head VCS metadata and only expected Cargo manifest/xtask-lock normalization. All non-xtask lock package records remain identical.
+
+The dated current-operation exception preserves the 2010 floor, actual publication horizons, typed refusals and historical issue #332. No complete-history or unpublished-future claim is added. Report/logs/package proof are prepared for the public evidence record; no private consumer source is included. No tag or actual package publication was performed.

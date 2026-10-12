@@ -11381,3 +11381,30 @@ package inspection: `reviews/oanda-current-combined-2026-10-12/`. Additional
 independent Asian retrieval bytes are in `reviews/oanda-asian-current-2026-10-12/`;
 their individual branch full-chain verdict is still pending and is not claimed
 here. This record covers the independently accepted combined integration.
+
+
+## Independent final release-head replay — 2026-10-12 UTC
+
+Independent gpt-6.1-sol review accepts PR #328 at release head
+`73d157186d35a61bc64000efc39e09634e450da0`. The complete tree
+`4e21549f3486d6ac23547df896b35a7a2a977fcf` is byte-identical to
+accepted integration `071def4`, so the source partitions and meaningful
+mutations retained above apply unchanged. Fresh exact-head full gates pass
+1,367 tests with zero skips, three doctests, fmt, strict Clippy, rustdoc,
+dependency checks and MSRV 1.95. Digest replay passes 3,075 rows across
+57 files and 893 hashes. The publish dry-run package has 486 members,
+483 exact tracked-file byte matches, the correct merge-head VCS metadata
+and only Cargo's expected manifest/xtask-lock normalization. The root
+independently repeats the same full chain and package check.
+
+The old individual Asian branch run is explicitly superseded, not a full
+PASS: 1,355 tests passed and the duplicated exhaustive holiday walk was
+interrupted by request (exit 130). Its independent source, publication-edge
+probes and mutation pass; the final combined nonwriter full verification
+above is the release gate. No individual-chain follow-up remains. That
+source disposition is now retained alongside its retrieval bytes.
+
+The public integration and consumer implementation are merged; release-head
+GitHub quality is still running. No tag or package publication is claimed.
+Historical issue #332 remains open. Reports and logs are under
+`reviews/oanda-release-73d1571-2026-10-12/`.
