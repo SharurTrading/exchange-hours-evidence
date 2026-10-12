@@ -11310,3 +11310,13 @@ Two direct HTTP retrieval attempts failed and were not retried through that
 channel. No holiday date or phase is inferred from a futures expiry calendar.
 The corresponding library changes require their own exact-head independent
 reviews; this source capture alone is not a release verdict.
+
+
+## Current donor artifact inventory completion — 2026-10-12 UTC
+
+Retain the remaining original public operator artifacts named by the Nasdaq
+capture manifest: Euronext cash/calendar pages and SGX derivative/calendar
+context. These bytes complete that retrieval inventory. SGX last-trading and
+first-settlement dates do not source holidays; Euronext year-end half-day
+instants remain unannounced and its future-dated PDF header is not adopted
+as a historical effective date. Source interpretation stays in library evidence.
