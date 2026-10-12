@@ -11288,3 +11288,25 @@ A separate cross-review of the 17 Brent policy proposals passed: exact gap
 set, 32 executable blocks, 64 IANA-converted boundary instants and source
 digests reproduced independently. Its report retains the original artifact
 hashes; the noted stale prose description is corrected above.
+
+
+## Current OANDA scope and Nordic cash source capture — 2026-10-12 UTC
+
+The maintainer selected verified current/future OANDA operation for release,
+with historical gaps retained as explicit refusals and disclosed in the single
+exchange-hours-rs issue #332. This decision does not certify missing history or
+change the 2010 support floor. Fresh UK operator captures are retained under
+`normal-weeks/oanda-current-source-audit-2026-10-12/`: Forex category membership
+includes the restricted TRY grid; the remaining published arrangements name
+Hong Kong index CFDs on October 19 and Swedish share CFDs on October 30. The
+current broker publication horizon remains October 30. Broker-specific stated
+arrangements take precedence over inherited underlying calendars.
+
+`captures/nasdaq-current-2026-10-12/` retains the complete tool-extracted
+representation of Nasdaq's own trading-hours page, its retrieval manifest and a
+reproducible parser for 67 Copenhagen, Helsinki and Stockholm arrangements in
+2026–2027. The text is an operator-page extraction, not original HTML bytes.
+Two direct HTTP retrieval attempts failed and were not retried through that
+channel. No holiday date or phase is inferred from a futures expiry calendar.
+The corresponding library changes require their own exact-head independent
+reviews; this source capture alone is not a release verdict.
