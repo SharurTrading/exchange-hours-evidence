@@ -11444,3 +11444,48 @@ passes 1373 tests, zero skips, three doctests, strict Clippy, rustdoc,
 dependency checks and MSRV 1.95, and its FX-intersection and US-legacy
 mutations each fail their era tests before restoration. No effective date is asserted anywhere: every era
 bound keys an operator observation.
+
+## OANDA #332 withheld-row sweep — 2026-10-13 UTC
+
+A capture census and retrieval wave against the 26 withheld OANDA
+book/trade-date pairs, the UK TRY history question and the Brent
+normal-week span 2023-06-05..2024-02-21. Inputs and verdicts are in
+`normal-weeks/oanda-withheld-holidays-2026-10-13/withheld-rows-extraction.md`;
+`SHA256SUMS.txt` and `retrieval-results.json` fence 30 saved artifacts.
+
+- The 8 twice-refused UK hours-page replays (2025-01-20, 2025-04-19,
+  2025-05-06, 2025-07-08, 2025-11-15, 2025-12-13, 2026-02-09, 2026-04-11)
+  retrieved byte-exact against their CDX sha1 digests; three are gzip bodies
+  stored raw with `.decoded.html` derivatives. They also yield the first UK
+  hours-page TRY prints: `All FX products (except TRY Pairs) ... Sun-Fri:
+  17:05 - 16:59*` plus `TRY Pairs | Central Europe | Mon-Fri: 08:00 - 17:00`
+  in the four captures from 2025-11-15, against no TRY carve-out in the four
+  from 2025-01-20..2025-07-08 — an undated changeover, recorded as two dated
+  observations, never a cutover. The same captures show the Brent row moving
+  `Mon - Fri 01:01 - 22:59` to `Sun - Fri 23:01 - 21:59` with the dagger
+  footnote gaining the 22:59-01:01 two-hours break, between 2025-07-08 and
+  2025-11-15, also undated.
+- A fifth UK page the prior audit's wildcard query could not match —
+  `oanda.com/uk-en/trading/holiday-hours-maintenance-times/` (five captures,
+  2020-10-25..2022-05-27) — retrieved in full. It prints per-product dated
+  holiday rows at exact ET times for BCO/USD, indices, grains, sugar and
+  metals, with no TRY and no US Treasury row, and predates every target date.
+- Two help-centre captures new to the store (20251028024437, 20260520231206)
+  are MadCap shells with no archived schedule bytes; the help-centre channel
+  stays negative.
+- Locale variants (`oanda.com/uk/`, `oanda.com/en-uk/`) hold zero captures,
+  and a full census of `oanda.com/uk-en/*` hours/holiday URLs confirms the
+  three known paths are the whole archive. No capture exists after 2026-06-08
+  (holiday page) or 2026-04-11 (hours page), so the 2026-08-31 row has no
+  post-date artifact at all yet.
+- Per-target verdicts: all 26 pairs remain NOT FOUND on UK-scoped operator
+  bytes. The sweep verified each row's nearest post-date witness verbatim,
+  including the operator's own truncated `reopen at 18:0` Memorial 2026 print
+  (byte-verified: no digit follows), the Agricultural-only Thanksgiving-eve
+  2025 row with Brent stated only for the 27th, and the absent December 2024
+  headings in every capture (Christmas Eve 2024 was never printed by any UK
+  capture). The only in-bracket artifact for the Brent span is holiday prose
+  (UK-HOL@20230929043012), not a normal-week grid.
+- No effective date is asserted anywhere; every statement keys its capture.
+  The named closers per row are listed in the extraction note's closing
+  conditions.
