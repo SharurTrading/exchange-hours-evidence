@@ -11444,3 +11444,35 @@ passes 1373 tests, zero skips, three doctests, strict Clippy, rustdoc,
 dependency checks and MSRV 1.95, and its FX-intersection and US-legacy
 mutations each fail their era tests before restoration. No effective date is asserted anywhere: every era
 bound keys an operator observation.
+
+## CME forward monitoring — 2026-10-13 UTC
+
+Wave `cme-forward-2026-10-13/`: the 2027 CME Group holiday calendar is
+published (operator calendar page Holiday Notes for every 2027 holiday plus
+the T2 service windows) and the crate at 1.1.0 already holds all of it — all
+fourteen re-pulled `trading-hours-by-product` windows (remaining 2026 + every
+2027 holiday) reproduce the 2026-09-12 captures byte-identically, so **zero
+2026 errata and zero 2027 changes**. First retrieval of cmegroup.com made
+directly from this machine through a real browser session (curl still 403s;
+Akamai is IP/fingerprint-level), which discharges the sources.md
+"re-verify from a direct retrieval when one becomes possible" caveats.
+
+Diffs found, reported in `cme-forward-2026-10-13/diff-report.md`:
+
+- **2026-10-31 one-day extension of the 24/7 markets' Saturday maintenance
+  window to 05:00 CT** (Globex notice 20261005, verbatim saved) is unmodelled:
+  the crate ships the Aug/Sep and Oct 3/Oct 24 extensions in
+  `globex_cryptocurrency` and `globex_silver_100oz` but nothing ships Oct 31,
+  and dormant `globex_event_contracts_btc` additionally lacks the Oct 3/24
+  rows from notice 20260921. Forward-dated row candidate per the crate's own
+  20260921 pattern.
+- **First 2028 witness captured**: service window 2027-12-31..2028-01-02
+  (normal grid — Fri 12-31 regular close, Sat 1-1 no session, Sun 1-2 normal
+  reopen) plus the page's 2028 New Year's Day Notes. Recorded, not encoded.
+- **Bloomberg Commodity Index hours amendment** effective Sunday 2026-10-11
+  (SER-9808, notices 20260928/20261005) — unserved product set, watch item.
+
+Artifacts: the operator calendar page (388 KB HTML), fifteen T2 service JSONs
+(each with the crate-hash comparison in `INDEX.md`), three Globex notice
+pages (20260914/20260928/20261005) and three notice-index pages covering
+every CME notice published 2026-09-01..2026-10-13.
