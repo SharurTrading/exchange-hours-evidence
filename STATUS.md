@@ -11408,3 +11408,39 @@ The public integration and consumer implementation are merged; release-head
 GitHub quality is still running. No tag or package publication is claimed.
 Historical issue #332 remains open. Reports and logs are under
 `reviews/oanda-release-73d1571-2026-10-12/`.
+
+## OANDA witnessed normal-week eras — 2026-10-12 UTC
+
+The 2026-10-11 historical audit's open closing condition — the undated
+changeovers between the UK hours page's earlier grids and the current grids —
+is closed for the seven single-zone OANDA books under the charter's
+2026-10-04 sourced-intersection rule. This wave records the derivation inputs
+and the closing negative-hunt artifacts:
+
+- `normal-weeks/oanda-intersection-eras-2026-10-12/help-centre/`: the two
+  previously unretrieved Wayback replays of
+  `help.oanda.com/uk/en/faqs/hours-of-operation.htm` (captures 20240619014415
+  and 20241107102830) and the live page, retrieved 2026-10-12 UTC. All three
+  print no session grid — boilerplate only. This was the last indexed
+  operator channel the audit had not retrieved; its closure completes the
+  negative hunt.
+- `normal-weeks/oanda-intersection-eras-2026-10-12/era-states-extraction.md`:
+  the per-capture grid matrix read from the audit's saved replays, the
+  derived per-book intersections, and the opening-day bounds (New York books
+  key 2023-06-05/2024-02-20; Singapore books key 2023-06-06/2024-02-21).
+  The uncollapsed Wayback CDX query of 2026-10-12 returns zero hours-page
+  captures between 2023-06-06 and 2024-02-20; the audit's eight twice-refused
+  replays all postdate the 2024-02-21 current-grid witness.
+- `oanda_brent` is deliberately excluded: its New York-anchored legacy grid
+  and London dagger grid are not nested (DST-disagreement weeks move the
+  London-equivalent boundaries by an hour), so no single static grid holds
+  under both witnessed states; its span stays the recorded #332 gap with a
+  per-era cross-zone selector build as the named closer.
+
+The crate change (era tables, moved horizons, typed one-flank holiday
+refusals on the witnessed spans) is exchange-hours-rs PR #345 at head
+9b44e9e (branch `oanda-witnessed-intersection-eras`); its verification chain
+passes 1373 tests, zero skips, three doctests, strict Clippy, rustdoc,
+dependency checks and MSRV 1.95, and its FX-intersection and US-legacy
+mutations each fail their era tests before restoration. No effective date is asserted anywhere: every era
+bound keys an operator observation.
