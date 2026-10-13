@@ -11444,3 +11444,36 @@ passes 1373 tests, zero skips, three doctests, strict Clippy, rustdoc,
 dependency checks and MSRV 1.95, and its FX-intersection and US-legacy
 mutations each fail their era tests before restoration. No effective date is asserted anywhere: every era
 bound keys an operator observation.
+
+## APAC / broker-book / crypto / CFE forward watch — 2026-10-13 UTC
+
+Monthly forward-publication re-pull of six operators' live schedule channels,
+each diffed against the store's banked captures. **Every result is a clean
+negative — no operator published anything new for late 2026 or 2027** — and
+the fresh live bytes that make each negative auditable are
+`holidays/raw/apac-broker-forward-2026-10-13/` (13 artifacts + INDEX +
+findings note):
+
+- **HKEX** — live Trading Calendar page still the `Updated 31 Jul 2026`
+  edition; all 27 rows naming 2026/2027 identical to the 2026-10-02 capture;
+  no 2028 edition (zero `2028` mentions).
+- **ASX / ASX 24** — live cash-market sheet states exactly the crate's
+  shipped `ASX-CAL-LIVE` rows for 2026/2027; the ASX 24 page's 32 dated rows
+  and ONO footnote dates are content-identical to the 2026-10-11 capture.
+- **SGX** — T2 content-API holiday content unchanged; the eve/half-day
+  statement still scopes itself to `2025 & 2026`, so the recorded 2027 gap
+  (no operator statement naming 2027 half-day treatment) stays open; MOM tabs
+  2025/2026/2027 identical, no 2026 errata.
+- **OANDA UK** — holiday page identical to the 2026-10-10 capture (104/104
+  dated sections); newest section remains `Friday, 30 Oct 2026 – All Saint
+  Day (SE)`; **no post-2026-10-30 arrangement published yet**; hours-of-
+  operation grids unchanged. Next re-pull should land early-to-mid November
+  2026 per the 2025 page pattern.
+- **CDE** — notices listing stops at 26-37 (already recorded listed-only
+  2026-09-26); nothing above it except rule filing R2026-56; Wayback CDX over
+  the assets bucket shows no new notice PDF; **no Thanksgiving 2026,
+  Christmas 2026 or 2027 holiday notice yet** (2025 pattern: 25-42 posted
+  2025-11-25).
+- **CFE** — holiday CSV regenerated 2026-10-13 with byte-identical 2026-only
+  rows (no errata); Hours & Holidays page has only the 2026 schedule; no 2027
+  holiday circular (latest remains CFERG26-004).
