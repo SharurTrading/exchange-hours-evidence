@@ -1,0 +1,280 @@
+{
+ "retrieval_date_utc": "2026-10-13",
+ "method": "curl -sL --max-time 90 with a browser User-Agent against https://web.archive.org/web/<ts>id_/<url>. The eight hours-of-operation replays verify byte-exact against their Wayback CDX sha1 digests (base32). A first python-urllib pass failed on sandbox SSL and retrieved nothing; curl succeeded on all fifteen.",
+ "note": "gzip raw bodies are stored byte-identical with .decoded.html derivatives; digests hash the saved file at each path.",
+ "artifacts": [
+  {
+   "path": "cdx/cdx-enuk-locale-holiday.json",
+   "source_url": "http://web.archive.org/cdx/search/cdx",
+   "bytes": 3,
+   "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+   "retrieval_date_utc": "2026-10-13",
+   "kind": "cdx-index"
+  },
+  {
+   "path": "cdx/cdx-enuk-locale-hours.json",
+   "source_url": "http://web.archive.org/cdx/search/cdx",
+   "bytes": 3,
+   "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+   "retrieval_date_utc": "2026-10-13",
+   "kind": "cdx-index"
+  },
+  {
+   "path": "cdx/cdx-help-uk-faq-all-captures.json",
+   "source_url": "http://web.archive.org/cdx/search/cdx",
+   "bytes": 529,
+   "sha256": "0659bc79026bfea9175bfa01f1d052c2337a6dd85a6b4ffdd3910cbc1133b6ea",
+   "retrieval_date_utc": "2026-10-13",
+   "kind": "cdx-index"
+  },
+  {
+   "path": "cdx/cdx-help-uk-hours-urls.txt",
+   "source_url": "http://web.archive.org/cdx/search/cdx",
+   "bytes": 76,
+   "sha256": "c42cae6dc44a313027b85043fb7ea60f405e00fc594b62d13881c838e46a0294",
+   "retrieval_date_utc": "2026-10-13",
+   "kind": "cdx-index"
+  },
+  {
+   "path": "cdx/cdx-holiday-after-20260608.json",
+   "source_url": "http://web.archive.org/cdx/search/cdx",
+   "bytes": 3,
+   "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+   "retrieval_date_utc": "2026-10-13",
+   "kind": "cdx-index"
+  },
+  {
+   "path": "cdx/cdx-holiday-prefix-any.json",
+   "source_url": "http://web.archive.org/cdx/search/cdx",
+   "bytes": 2905,
+   "sha256": "6d3d07fad13f0c61b98a89021dfb5f6a62e17afef8791f35f924cdc339e9a4f2",
+   "retrieval_date_utc": "2026-10-13",
+   "kind": "cdx-index"
+  },
+  {
+   "path": "cdx/cdx-holiday-prefix-encoded.json",
+   "source_url": "http://web.archive.org/cdx/search/cdx",
+   "bytes": 2245,
+   "sha256": "d99642d5da63502499744094fa16cea52bb8be142d5d6236043141d09837b3f7",
+   "retrieval_date_utc": "2026-10-13",
+   "kind": "cdx-index"
+  },
+  {
+   "path": "cdx/cdx-holiday-prefix-literal-star.json",
+   "source_url": "http://web.archive.org/cdx/search/cdx",
+   "bytes": 2245,
+   "sha256": "d99642d5da63502499744094fa16cea52bb8be142d5d6236043141d09837b3f7",
+   "retrieval_date_utc": "2026-10-13",
+   "kind": "cdx-index"
+  },
+  {
+   "path": "cdx/cdx-holiday-trading-hours-exact.json",
+   "source_url": "http://web.archive.org/cdx/search/cdx",
+   "bytes": 2245,
+   "sha256": "d99642d5da63502499744094fa16cea52bb8be142d5d6236043141d09837b3f7",
+   "retrieval_date_utc": "2026-10-13",
+   "kind": "cdx-index"
+  },
+  {
+   "path": "cdx/cdx-hours-after-20260411.json",
+   "source_url": "http://web.archive.org/cdx/search/cdx",
+   "bytes": 3,
+   "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+   "retrieval_date_utc": "2026-10-13",
+   "kind": "cdx-index"
+  },
+  {
+   "path": "cdx/cdx-hours-of-operation-prefix.json",
+   "source_url": "http://web.archive.org/cdx/search/cdx",
+   "bytes": 3578,
+   "sha256": "de8b2e737c171ae9399fd4fed873d4f06470c8ab143f6ead9311b833c00ef15e",
+   "retrieval_date_utc": "2026-10-13",
+   "kind": "cdx-index"
+  },
+  {
+   "path": "cdx/cdx-uk-locale-holiday.json",
+   "source_url": "http://web.archive.org/cdx/search/cdx",
+   "bytes": 3,
+   "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+   "retrieval_date_utc": "2026-10-13",
+   "kind": "cdx-index"
+  },
+  {
+   "path": "cdx/cdx-uk-locale-hours.json",
+   "source_url": "http://web.archive.org/cdx/search/cdx",
+   "bytes": 3,
+   "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+   "retrieval_date_utc": "2026-10-13",
+   "kind": "cdx-index"
+  },
+  {
+   "path": "cdx/cdx-uken-any-hours-urls.txt",
+   "source_url": "http://web.archive.org/cdx/search/cdx",
+   "bytes": 632,
+   "sha256": "4aba6ca3f7c05cac1dd1a5b7d31c1ad95d1e24a7598dbec92577725cf76fa5dd",
+   "retrieval_date_utc": "2026-10-13",
+   "kind": "cdx-index"
+  },
+  {
+   "path": "cdx/cdx-uken-trading-tree.json",
+   "source_url": "http://web.archive.org/cdx/search/cdx",
+   "bytes": 680372,
+   "sha256": "7a83684dc8da65ce87a2b606f78a20c79c7e2837d1af6023f940fccc029f5459",
+   "retrieval_date_utc": "2026-10-13",
+   "kind": "cdx-index"
+  },
+  {
+   "path": "help-centre-new/20251028024437.html",
+   "timestamp_utc": "2025-10-28T02:44:37Z",
+   "source_url": "https://help.oanda.com/uk/en/faqs/hours-of-operation.htm",
+   "replay_url": "https://web.archive.org/web/20251028024437id_/https://help.oanda.com/uk/en/faqs/hours-of-operation.htm",
+   "bytes": 38009,
+   "sha256": "25030f7fa4e4b59b3419bbacee571c790f855f3ea50cb216e69d82c3881aa742",
+   "retrieval_date_utc": "2026-10-13",
+   "encoding": "utf-8-html"
+  },
+  {
+   "path": "help-centre-new/20260520231206.html",
+   "timestamp_utc": "2026-05-20T23:12:06Z",
+   "source_url": "https://help.oanda.com/uk/en/faqs/hours-of-operation.htm",
+   "replay_url": "https://web.archive.org/web/20260520231206id_/https://help.oanda.com/uk/en/faqs/hours-of-operation.htm",
+   "bytes": 38945,
+   "sha256": "7cdbb3b0d1e50fd543fec937cb70c7a34f3fbdb5a2bbd09b849165dca2bb0fe8",
+   "retrieval_date_utc": "2026-10-13",
+   "encoding": "utf-8-html"
+  },
+  {
+   "path": "holiday-maintenance-times/20201025232017.html",
+   "timestamp_utc": "2020-10-25T23:20:17Z",
+   "source_url": "https://www.oanda.com/uk-en/trading/holiday-hours-maintenance-times/",
+   "replay_url": "https://web.archive.org/web/20201025232017id_/https://www.oanda.com/uk-en/trading/holiday-hours-maintenance-times/",
+   "bytes": 62612,
+   "sha256": "04adcc74a8cfde53540e70dde890da56ab0bd37c87249e39ae989aa5cb52be19",
+   "retrieval_date_utc": "2026-10-13",
+   "encoding": "utf-8-html"
+  },
+  {
+   "path": "holiday-maintenance-times/20210518181748.html",
+   "timestamp_utc": "2021-05-18T18:17:48Z",
+   "source_url": "https://www.oanda.com/uk-en/trading/holiday-hours-maintenance-times/",
+   "replay_url": "https://web.archive.org/web/20210518181748id_/https://www.oanda.com/uk-en/trading/holiday-hours-maintenance-times/",
+   "bytes": 88122,
+   "sha256": "ca35e76bbd8ca4c58a06d11d29502d94cc060f83cb978b376ee4a400768c7c45",
+   "retrieval_date_utc": "2026-10-13",
+   "encoding": "utf-8-html"
+  },
+  {
+   "path": "holiday-maintenance-times/20210803090333.html",
+   "timestamp_utc": "2021-08-03T09:03:33Z",
+   "source_url": "https://www.oanda.com/uk-en/trading/holiday-hours-maintenance-times/",
+   "replay_url": "https://web.archive.org/web/20210803090333id_/https://www.oanda.com/uk-en/trading/holiday-hours-maintenance-times/",
+   "bytes": 96080,
+   "sha256": "3faef29a23591b2b3f81d105b89d4d9f54765f0d78778ba0e85eb162bdc7b1d0",
+   "retrieval_date_utc": "2026-10-13",
+   "encoding": "utf-8-html"
+  },
+  {
+   "path": "holiday-maintenance-times/20211021031403.html",
+   "timestamp_utc": "2021-10-21T03:14:03Z",
+   "source_url": "https://www.oanda.com/uk-en/trading/holiday-hours-maintenance-times/",
+   "replay_url": "https://web.archive.org/web/20211021031403id_/https://www.oanda.com/uk-en/trading/holiday-hours-maintenance-times/",
+   "bytes": 103587,
+   "sha256": "a29d9e0e0e618643aa6e11e1bc538e9a44485be89b7481e69df1fb56e50ae25f",
+   "retrieval_date_utc": "2026-10-13",
+   "encoding": "utf-8-html"
+  },
+  {
+   "path": "holiday-maintenance-times/20220527133436.html",
+   "timestamp_utc": "2022-05-27T13:34:36Z",
+   "source_url": "https://www.oanda.com/uk-en/trading/holiday-hours-maintenance-times/",
+   "replay_url": "https://web.archive.org/web/20220527133436id_/https://www.oanda.com/uk-en/trading/holiday-hours-maintenance-times/",
+   "bytes": 81222,
+   "sha256": "48ff55118cffd01f918d8967012562b61009344a0dc22f070adacc0e0c1875b9",
+   "retrieval_date_utc": "2026-10-13",
+   "encoding": "utf-8-html"
+  },
+  {
+   "path": "hours-retries/20250120083642.html",
+   "timestamp_utc": "2025-01-20T08:36:42Z",
+   "source_url": "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+   "replay_url": "https://web.archive.org/web/20250120083642id_/https://www.oanda.com/uk-en/trading/hours-of-operation/",
+   "bytes": 337383,
+   "sha256": "b0393438aad448142a716607e7a081638682d370f9fdd121c2c0532e9619f16c",
+   "retrieval_date_utc": "2026-10-13",
+   "encoding": "utf-8-html"
+  },
+  {
+   "path": "hours-retries/20250419172608.html",
+   "timestamp_utc": "2025-04-19T17:26:08Z",
+   "source_url": "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+   "replay_url": "https://web.archive.org/web/20250419172608id_/https://www.oanda.com/uk-en/trading/hours-of-operation/",
+   "bytes": 224152,
+   "sha256": "a2389363f33ec6a62be62b3d311ab9cb65c1d492e04d8f921acc5e533b005e16",
+   "retrieval_date_utc": "2026-10-13",
+   "encoding": "utf-8-html"
+  },
+  {
+   "path": "hours-retries/20250506101210.html",
+   "timestamp_utc": "2025-05-06T10:12:10Z",
+   "source_url": "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+   "replay_url": "https://web.archive.org/web/20250506101210id_/https://www.oanda.com/uk-en/trading/hours-of-operation/",
+   "bytes": 18112,
+   "sha256": "8943405ecf6585be25b6f14132d5639585ef02a36397155131a570d227a8f774",
+   "retrieval_date_utc": "2026-10-13",
+   "encoding": "utf-8-html",
+   "decoded_path": "hours-retries/20250506101210.decoded.html"
+  },
+  {
+   "path": "hours-retries/20250708202954.html",
+   "timestamp_utc": "2025-07-08T20:29:54Z",
+   "source_url": "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+   "replay_url": "https://web.archive.org/web/20250708202954id_/https://www.oanda.com/uk-en/trading/hours-of-operation/",
+   "bytes": 231872,
+   "sha256": "12ace0b5ae89d132e82242e6fe697f5bce745e5699906028fcf67a0819a432c6",
+   "retrieval_date_utc": "2026-10-13",
+   "encoding": "utf-8-html"
+  },
+  {
+   "path": "hours-retries/20251115023204.html",
+   "timestamp_utc": "2025-11-15T02:32:04Z",
+   "source_url": "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+   "replay_url": "https://web.archive.org/web/20251115023204id_/https://www.oanda.com/uk-en/trading/hours-of-operation/",
+   "bytes": 246303,
+   "sha256": "d5e3a4a9ef4309e2365866135957593eab1e007b86a9e2e8ca052aa65723d1b7",
+   "retrieval_date_utc": "2026-10-13",
+   "encoding": "utf-8-html"
+  },
+  {
+   "path": "hours-retries/20251213234655.html",
+   "timestamp_utc": "2025-12-13T23:46:55Z",
+   "source_url": "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+   "replay_url": "https://web.archive.org/web/20251213234655id_/https://www.oanda.com/uk-en/trading/hours-of-operation/",
+   "bytes": 19517,
+   "sha256": "ccc90896b61f46552fb3f93e90e8f5021b28d441d2efc215ff2244f08112475a",
+   "retrieval_date_utc": "2026-10-13",
+   "encoding": "utf-8-html",
+   "decoded_path": "hours-retries/20251213234655.decoded.html"
+  },
+  {
+   "path": "hours-retries/20260209190304.html",
+   "timestamp_utc": "2026-02-09T19:03:04Z",
+   "source_url": "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+   "replay_url": "https://web.archive.org/web/20260209190304id_/https://www.oanda.com/uk-en/trading/hours-of-operation/",
+   "bytes": 21306,
+   "sha256": "4166cda4a13fa6acd7c3040ee51f027b39dfc7f50da1bb565d922ebf7b4b8d5b",
+   "retrieval_date_utc": "2026-10-13",
+   "encoding": "utf-8-html",
+   "decoded_path": "hours-retries/20260209190304.decoded.html"
+  },
+  {
+   "path": "hours-retries/20260411231933.html",
+   "timestamp_utc": "2026-04-11T23:19:33Z",
+   "source_url": "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+   "replay_url": "https://web.archive.org/web/20260411231933id_/https://www.oanda.com/uk-en/trading/hours-of-operation/",
+   "bytes": 283845,
+   "sha256": "27bf3ed23f951e0db8fd1defe8781923f508166e518232bf28a107965a26c002",
+   "retrieval_date_utc": "2026-10-13",
+   "encoding": "utf-8-html"
+  }
+ ]
+}
