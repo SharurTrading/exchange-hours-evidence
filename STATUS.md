@@ -11544,3 +11544,66 @@ underscore path does not exist in the archive; `productguide/ContractSpecs.shtml
 theice.com pages at all; the 2009–2011 `publicdocs` PDF enumeration query failed twice (timed out,
 inconclusive, superseded by the name-level sweeps); liffe.com/nyse.com/nyx.com domain-wide
 Trading-Schedule sweeps 504'd (superseded by the theice.com/ice.com successes).
+
+## The Euronext gap wave: Amsterdam derivatives floor, 2026 year-end instants, 2027 calendars — 2026-10-13/14 UTC
+
+The three Euronext evidence gaps of issue #332 were hunted against the
+operator's own archived and live channels; artifacts and extraction notes in
+`normal-weeks/euronext-gaps-2026-10-13/` (all T1):
+
+- **Amsterdam derivatives floor — partial FOUND.** New pre-floor-era operator
+  statements: the NYSE Liffe news release of Monday 3 August 2009
+  (euronext.com files PDF, Wayback capture 20181107205935, plus the live
+  press-release page's own mirror, capture 20220813094213) extends "trading
+  hours in its AEX index futures contract from the current close of 11.15hrs
+  until 15.00hrs Chicago time, with immediate effect" — the store's first
+  Amsterdam-derivatives document dated inside the pre-floor era, unconditional
+  and day-level, Chicago-anchored (no local instants printed or derived).
+  The NYSE Liffe "Calendars & Hours" pages (globalderivatives.nyx.com, nl
+  locale capture 20111126202420 — the only 200-status capture — and en locale
+  20110710100224) witness the 2011 derivatives holiday list and print the
+  2011 eves as a full trading day for Continental index products; the parent
+  site's Holidays & Hours children (nyx.com, captures 20120411150803/2349,
+  the earliest of each path) witness the 2012 derivatives list, the 2012
+  eves' "closing of its derivatives contracts from midday GMT (13.00 hours
+  CET)", the legacy cash grid's 09:00-17:30/TAL 17:35-17:40 phases (2012,
+  corroboration only — it does not meet `euronext_amsterdam`'s in-or-before
+  January-2010 closing condition, and its 07:15 row is the TCS reporting
+  tool, not a trading phase). **The floor-era derivatives normal-week grid
+  stays open**: the operator's own grid PDFs named by those pages
+  (`507371_1.pdf`, `liffeconnect_tradinghours211111.pdf`, the 2009
+  trading-manuals appendix `509415_0.pdf`, London Notices 3351/3526) have
+  zero Wayback captures (checked per URL and by a domain-wide PDF sweep of
+  globalderivatives.nyx.com); the old domains nyseeuronext.com and
+  euronext.nl are redirect stubs, liffe.com serves data-file specs only, and
+  the old trader portal is quote pages. Named closers: member-firm archives
+  or an operator request for those five documents; a Wayback rescan; the
+  never-captured quicktabs tab content.
+- **2026 year-end instants.** Euronext: the live trading-hours-holidays page
+  (retrieved 2026-10-13T23:45Z) carries a "2026 end of year Trading hours"
+  callout printing **"To be announced"** — the EOY appendix to Instructions
+  4-01/4-03 has not published; this extends the crate's 2026-10-09 negative
+  and names the channel. The page's "Derivatives markets trading hours"
+  link (`media/295/download`) is a stale URL now serving a JPEG — recorded
+  so nobody cites it. BME cash: FOUND in the already-banked 2026 trading
+  calendar release (bolsasymercados.es, dated 2025-11-20): "open until 2:00
+  pm" on Thursday 24 and Thursday 31 December. MEFF: the operator's live
+  Trading Calendar prints "On 24 and 31 December the BME markets will trade
+  until 14:00 hrs CET" (retrieved 2026-10-14T00:05Z); the MEFF-specific EOY
+  comunicado is not yet on the Market Notices page (complete 2026 list
+  through 24/09/2026 banked) and is expected ~early November per the banked
+  MEFF 49/2025 edition (2025-11-07).
+- **2027 calendars — NOT PUBLISHED** (fresh negatives): zero "2027"
+  occurrences on the live Euronext trading-hours-holidays page and the MEFF
+  calendar. Expected channels and timing recorded: the Euronext INFO-FLASH
+  CADE series (operator's own file naming dates the series mid-October to
+  early November: if171020cade, if181018cade, IF251107CADE) and the BME
+  "Spanish Financial Market's 2027 Trading Calendar" press release ~20
+  November (the 2026 edition's date).
+
+Retrieval record: CDX sweeps across euronext.com (files store fully paginated,
+13,465 urlkeys; /trading, /trader, /landing, /derivatives, /liffe prefixes),
+nyseeuronext.com, euronext.nl, liffe.com, globalderivatives.nyx.com, nyx.com;
+the search record with every closed channel is in the wave's
+EXTRACTION-NOTES.md. Every quoted string in the notes and index was
+re-verified against the saved artifact bytes after write-up.
