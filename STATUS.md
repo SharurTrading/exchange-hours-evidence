@@ -11444,3 +11444,270 @@ passes 1373 tests, zero skips, three doctests, strict Clippy, rustdoc,
 dependency checks and MSRV 1.95, and its FX-intersection and US-legacy
 mutations each fail their era tests before restoration. No effective date is asserted anywhere: every era
 bound keys an operator observation.
+
+## OANDA #332 withheld-row sweep — 2026-10-13 UTC
+
+A capture census and retrieval wave against the 26 withheld OANDA
+book/trade-date pairs, the UK TRY history question and the Brent
+normal-week span 2023-06-05..2024-02-21. Inputs and verdicts are in
+`normal-weeks/oanda-withheld-holidays-2026-10-13/withheld-rows-extraction.md`;
+`SHA256SUMS.txt` and `retrieval-results.json` fence 30 saved artifacts.
+
+- The 8 twice-refused UK hours-page replays (2025-01-20, 2025-04-19,
+  2025-05-06, 2025-07-08, 2025-11-15, 2025-12-13, 2026-02-09, 2026-04-11)
+  retrieved byte-exact against their CDX sha1 digests; three are gzip bodies
+  stored raw with `.decoded.html` derivatives. They also yield the first UK
+  hours-page TRY prints: `All FX products (except TRY Pairs) ... Sun-Fri:
+  17:05 - 16:59*` plus `TRY Pairs | Central Europe | Mon-Fri: 08:00 - 17:00`
+  in the four captures from 2025-11-15, against no TRY carve-out in the four
+  from 2025-01-20..2025-07-08 — an undated changeover, recorded as two dated
+  observations, never a cutover. The same captures show the Brent row moving
+  `Mon - Fri 01:01 - 22:59` to `Sun - Fri 23:01 - 21:59` with the dagger
+  footnote gaining the 22:59-01:01 two-hours break, between 2025-07-08 and
+  2025-11-15, also undated.
+- A fifth UK page the prior audit's wildcard query could not match —
+  `oanda.com/uk-en/trading/holiday-hours-maintenance-times/` (five captures,
+  2020-10-25..2022-05-27) — retrieved in full. It prints per-product dated
+  holiday rows at exact ET times for BCO/USD, indices, grains, sugar and
+  metals, with no TRY and no US Treasury row, and predates every target date.
+- Two help-centre captures new to the store (20251028024437, 20260520231206)
+  are MadCap shells with no archived schedule bytes; the help-centre channel
+  stays negative.
+- Locale variants (`oanda.com/uk/`, `oanda.com/en-uk/`) hold zero captures,
+  and a full census of `oanda.com/uk-en/*` hours/holiday URLs confirms the
+  three known paths are the whole archive. No capture exists after 2026-06-08
+  (holiday page) or 2026-04-11 (hours page), so the 2026-08-31 row has no
+  post-date artifact at all yet.
+- Per-target verdicts: all 26 pairs remain NOT FOUND on UK-scoped operator
+  bytes. The sweep verified each row's nearest post-date witness verbatim,
+  including the operator's own truncated `reopen at 18:0` Memorial 2026 print
+  (byte-verified: no digit follows), the Agricultural-only Thanksgiving-eve
+  2025 row with Brent stated only for the 27th, and the absent December 2024
+  headings in every capture (Christmas Eve 2024 was never printed by any UK
+  capture). The only in-bracket artifact for the Brent span is holiday prose
+  (UK-HOL@20230929043012), not a normal-week grid.
+- No effective date is asserted anywhere; every statement keys its capture.
+  The named closers per row are listed in the extraction note's closing
+  conditions.
+
+## 2026-10-13 UTC — the ICE history wave: the 2009 (and 2008) Liffe notice zips, the IFEU Trading Schedule editions 2015–2020, and the first in-gap sugar witness
+
+Three #332 targets hunted in one pass (`holidays/raw/ice-history-2026-10-13/`, branch
+`evidence/ice-history-2026-10-13`; 71 task artifacts + 2 zips, fence `SHA256SUMS.txt`):
+
+- **2009 LON zip — CLOSED as data.** The live operator host serves the historical-notice archive
+  beyond the linked years: `https://www.ice.com/publicdocs/nyse_liffe/historical_notices/2009.zip`
+  (and 2006/2007/2008; 2015+ 404) answer 200 even though the notices page links only 2010–2014 and
+  no zip is archived anywhere (CDX empty). Channel control: the live `2010.zip` is byte-identical to
+  the store's `nyse_liffe_2010.zip`. `nyse_liffe_2009.zip` (LON3111–LON3238, 127 notices, continuous
+  with the 2010 zip's LON3239 start) carries **LON3203** — issue 13 October 2009, EFFECTIVE DATE
+  1 January 2010, "TRADING DAYS IN 2010": the 2010 London closures (1 Jan, Good Friday, Easter
+  Monday), the sterling/UK-commodity bank-holiday unavailability days (3 May, 31 May, 30 Aug,
+  27 Dec, 28 Dec) and the midday-GMT closing convention for 24 and 31 December 2010 — the exact
+  "2010 full-year notice" the store recorded as the archive gap. **LON3220** (13 November 2009)
+  carries the Christmas/New-Year 2009-10 hours tables (24/31 Dec 13:00 GMT half days, 25 Dec and
+  1 Jan closed, gilt attachment rows); **LON3226** points at `www.nyx.com/liffeholidays` for the
+  precise 2010 hours. `nyse_liffe_2008.zip` (with LON3073, the 2009 trading-days notice) adds the
+  pre-floor context. Both zips placed beside their siblings in
+  `holidays/raw/ice-europe-gilts-2010-2027/`.
+- **IFEU Trading Schedule 2015–2020 — witnessed for 2015, 2016, 2017, 2019, 2020; 2018 bracketed
+  only.** The operator's self-dated annual "20XX Trading Schedule" survives at
+  `theice.com/publicdocs/Trading_Schedule.pdf` under fifteen archived editions 2013–2023 and the
+  "Trading Schedule — Migrated Liffe Contracts" (the ex-Liffe fixed income/equity holiday rows)
+  under six more 2015–2017; twenty-one editions fetched as `id_` replays, each header-printed
+  ("Last Update: …"), tiling every gap year except **2018** — no capture of any Trading-Schedule
+  URL exists between 2017-07-07 and 2019-01-03, and the Common Crawl 2018 indexes answered 502/504
+  for all nine (recorded inconclusive, not negative). Best next channel: re-query CC-MAIN-2018-* for
+  `theice.com/publicdocs/Trading_Schedule.pdf` when the service recovers, then a desk ask for the
+  2018 edition PDF.
+- **Sugar No. 11 pre-Aug-2011 — the carried grid now has an in-gap operator witness; the gap is
+  re-scoped, not closed.** A name-level archive sweep (every sugar-named theice.com artifact
+  2008–2012: 13 rows, all fetched or assessed) surfaced the operator's own "Sugar No. 11 / No. 16"
+  brochure, PDF-created **22 March 2010**, printing the Sugar No. 11 spec row `HOURS  0330 EST TO
+  1400EST` — session language, the exact carried baseline, dated inside the carried span (archive
+  capture 2011-11-21, the only capture of that generation). A second operator document (the
+  Chinese-language Sugar No. 11 introduction printed 12 December 2011) re-witnesses 03:30–14:00 ET
+  electronic (plus the 08:00–13:30 floor session) at the end of the span, and the 14 May 2012
+  brochure generation corroborates the 2012-01-30 move to 01:30 from a second T1 source. The wave
+  also adds **ExNot 041111** (April 11, 2011): a dated, unconditional in-gap late-open — Sugar
+  No. 11 (with Coffee "C" and Cocoa) opened 07:30 NY on 2011-05-02 for the UK bank holiday — new
+  holiday-layer data before the family's audited window. The vendor "Monthly Softs Fast Facts"
+  (J. Ganes Consulting, compliments of ICE Futures U.S.) is kept as T3/T4 residual-risk context and
+  keys nothing. What remains unwitnessed for sugar: January–March 2010, the holiday/phase layer
+  across the span, and a document that states the January-2010 close as of that day. The crate's
+  `docs/evidence/ice_us_sugar.md` "terminal answer" paragraph (no in-gap document can exist) is
+  superseded by B1 and needs a normal schedule-change update citing the new artifacts.
+
+Negative and inconclusive probes recorded in `cdx/cdx_sweeps_2026-10-13.txt`: the `product_guide`
+underscore path does not exist in the archive; `productguide/ContractSpecs.shtml` has no captures;
+`theice.com/futures_us*` surfaces only from 2011-10-16; the early Common Crawl corpora hold no
+theice.com pages at all; the 2009–2011 `publicdocs` PDF enumeration query failed twice (timed out,
+inconclusive, superseded by the name-level sweeps); liffe.com/nyse.com/nyx.com domain-wide
+Trading-Schedule sweeps 504'd (superseded by the theice.com/ice.com successes).
+
+## The Euronext gap wave: Amsterdam derivatives floor, 2026 year-end instants, 2027 calendars — 2026-10-13/14 UTC
+
+The three Euronext evidence gaps of issue #332 were hunted against the
+operator's own archived and live channels; artifacts and extraction notes in
+`normal-weeks/euronext-gaps-2026-10-13/` (all T1):
+
+- **Amsterdam derivatives floor — partial FOUND.** New pre-floor-era operator
+  statements: the NYSE Liffe news release of Monday 3 August 2009
+  (euronext.com files PDF, Wayback capture 20181107205935, plus the live
+  press-release page's own mirror, capture 20220813094213) extends "trading
+  hours in its AEX index futures contract from the current close of 11.15hrs
+  until 15.00hrs Chicago time, with immediate effect" — the store's first
+  Amsterdam-derivatives document dated inside the pre-floor era, unconditional
+  and day-level, Chicago-anchored (no local instants printed or derived).
+  The NYSE Liffe "Calendars & Hours" pages (globalderivatives.nyx.com, nl
+  locale capture 20111126202420 — the only 200-status capture — and en locale
+  20110710100224) witness the 2011 derivatives holiday list and print the
+  2011 eves as a full trading day for Continental index products; the parent
+  site's Holidays & Hours children (nyx.com, captures 20120411150803/2349,
+  the earliest of each path) witness the 2012 derivatives list, the 2012
+  eves' "closing of its derivatives contracts from midday GMT (13.00 hours
+  CET)", the legacy cash grid's 09:00-17:30/TAL 17:35-17:40 phases (2012,
+  corroboration only — it does not meet `euronext_amsterdam`'s in-or-before
+  January-2010 closing condition, and its 07:15 row is the TCS reporting
+  tool, not a trading phase). **The floor-era derivatives normal-week grid
+  stays open**: the operator's own grid PDFs named by those pages
+  (`507371_1.pdf`, `liffeconnect_tradinghours211111.pdf`, the 2009
+  trading-manuals appendix `509415_0.pdf`, London Notices 3351/3526) have
+  zero Wayback captures (checked per URL and by a domain-wide PDF sweep of
+  globalderivatives.nyx.com); the old domains nyseeuronext.com and
+  euronext.nl are redirect stubs, liffe.com serves data-file specs only, and
+  the old trader portal is quote pages. Named closers: member-firm archives
+  or an operator request for those five documents; a Wayback rescan; the
+  never-captured quicktabs tab content.
+- **2026 year-end instants.** Euronext: the live trading-hours-holidays page
+  (retrieved 2026-10-13T23:45Z) carries a "2026 end of year Trading hours"
+  callout printing **"To be announced"** — the EOY appendix to Instructions
+  4-01/4-03 has not published; this extends the crate's 2026-10-09 negative
+  and names the channel. The page's "Derivatives markets trading hours"
+  link (`media/295/download`) is a stale URL now serving a JPEG — recorded
+  so nobody cites it. BME cash: FOUND in the already-banked 2026 trading
+  calendar release (bolsasymercados.es, dated 2025-11-20): "open until 2:00
+  pm" on Thursday 24 and Thursday 31 December. MEFF: the operator's live
+  Trading Calendar prints "On 24 and 31 December the BME markets will trade
+  until 14:00 hrs CET" (retrieved 2026-10-14T00:05Z); the MEFF-specific EOY
+  comunicado is not yet on the Market Notices page (complete 2026 list
+  through 24/09/2026 banked) and is expected ~early November per the banked
+  MEFF 49/2025 edition (2025-11-07).
+- **2027 calendars — NOT PUBLISHED** (fresh negatives): zero "2027"
+  occurrences on the live Euronext trading-hours-holidays page and the MEFF
+  calendar. Expected channels and timing recorded: the Euronext INFO-FLASH
+  CADE series (operator's own file naming dates the series mid-October to
+  early November: if171020cade, if181018cade, IF251107CADE) and the BME
+  "Spanish Financial Market's 2027 Trading Calendar" press release ~20
+  November (the 2026 edition's date).
+
+Retrieval record: CDX sweeps across euronext.com (files store fully paginated,
+13,465 urlkeys; /trading, /trader, /landing, /derivatives, /liffe prefixes),
+nyseeuronext.com, euronext.nl, liffe.com, globalderivatives.nyx.com, nyx.com;
+the search record with every closed channel is in the wave's
+EXTRACTION-NOTES.md. Every quoted string in the notes and index was
+re-verified against the saved artifact bytes after write-up.
+
+## CME forward monitoring — 2026-10-13 UTC
+
+Wave `cme-forward-2026-10-13/`: the 2027 CME Group holiday calendar is
+published (operator calendar page Holiday Notes for every 2027 holiday plus
+the T2 service windows) and the crate at 1.1.0 already holds all of it — all
+fourteen re-pulled `trading-hours-by-product` windows (remaining 2026 + every
+2027 holiday) reproduce the 2026-09-12 captures byte-identically, so **zero
+2026 errata and zero 2027 changes**. First retrieval of cmegroup.com made
+directly from this machine through a real browser session (curl still 403s;
+Akamai is IP/fingerprint-level), which discharges the sources.md
+"re-verify from a direct retrieval when one becomes possible" caveats.
+
+Diffs found, reported in `cme-forward-2026-10-13/diff-report.md`:
+
+- **2026-10-31 one-day extension of the 24/7 markets' Saturday maintenance
+  window to 05:00 CT** (Globex notice 20261005, verbatim saved) is unmodelled:
+  the crate ships the Aug/Sep and Oct 3/Oct 24 extensions in
+  `globex_cryptocurrency` and `globex_silver_100oz` but nothing ships Oct 31,
+  and dormant `globex_event_contracts_btc` additionally lacks the Oct 3/24
+  rows from notice 20260921. Forward-dated row candidate per the crate's own
+  20260921 pattern.
+- **First 2028 witness captured**: service window 2027-12-31..2028-01-02
+  (normal grid — Fri 12-31 regular close, Sat 1-1 no session, Sun 1-2 normal
+  reopen) plus the page's 2028 New Year's Day Notes. Recorded, not encoded.
+- **Bloomberg Commodity Index hours amendment** effective Sunday 2026-10-11
+  (SER-9808, notices 20260928/20261005) — unserved product set, watch item.
+
+Artifacts: the operator calendar page (388 KB HTML), fifteen T2 service JSONs
+(each with the crate-hash comparison in `INDEX.md`), three Globex notice
+pages (20260914/20260928/20261005) and three notice-index pages covering
+every CME notice published 2026-09-01..2026-10-13.
+
+## 2026-10-13 UTC — the Europe forward-publication wave: LSE 2028 rows are live; everything else negative
+
+Fourth forward sweep over the European operators, one pass each, all eight
+channels read live 2026-10-13 23:27–23:35 UTC; artifacts, digests and the
+per-operator INDEX under `holidays/raw/europe-forward-2026-10-13/`. The one
+positive: **the LSE business-days API now prints 2028** — its 27-row rolling
+table runs 2026-08-31 through 2029-01-01, every 2026 and 2027 cell matches the
+shipped `LSE-BUSDAYS-2025-12-18` rows byte for byte, and ten new 2028 rows plus
+2029-01-01 print in the same session language (`NON-trading day.`, the 12:30
+London half-day sentence): 2028-01-03 (substitute New Year), 04-14, 04-17,
+05-01, 05-29, 08-28, 12-22 half day, 12-25, 12-26 (its EUI *service* cell reads
+"To be confirmed"; the trading arrangement prints NON-trading day), 12-29 half
+day, and 2029-01-01. The shipped window ends 2027-12-31, so encoding these
+extends it — a normal schedule fix, zero 2026/2027 diffs. Negatives, all
+re-verified against the crate's recorded closing conditions: Nasdaq still
+2026-only (trader channel Incapsula stub byte-identical to 2026-10-03's;
+nasdaq.com's server-rendered table matches all twelve shipped 2026 cells, zero
+2027 strings); IFUS notices service answers 123 notices for 2026 (newest
+2026-10-13, listing/margin items only) and zero for 2027 — the Christmas
+2026 hours notice still hasn't issued, `IFUS-CAL-2027` stands, nothing
+supersedes it; ICE Futures Europe's two schedule PDFs are still the July and
+August editions (created 2026-07-14 / 2026-08-13, nothing newer), while the
+Excel schedule (workbook 2026-07-08) carries 2027 cells the operator's own
+Information sheet labels preliminary, and its Change Tracker tail records
+2026 hours changes (extended Utilities hours 26006, Gilt/SONIA extended hours
+26063, TONA close 22:00 London) none of which touch the Brent scope;
+Eurex's archive page still contains `2027` zero times with the 2026 blob its
+newest linkage, the Holiday-regulations 2027 column stays uncaveated against
+the indicative page's preliminary label (conflict unchanged), and the TC 2026
+PDF re-downloads byte-identical (`b0796b42…`) so the Swiss-scope lines carry
+no errata; Euronext still publishes only the 2026 calendar (24 `2027` strings,
+all Innovate-for-Growth strategy material) and still links the 2025 end-of-year
+appendix, so the two Unsourced 2026 eves keep their closer; BME's Renta
+Variable index holds no 2026 horarios-24-y-31 timetable and zero 2027 paths
+(the newest calendar instruction is still 65/2025), and MEFF's own calendar
+page is 2026-only; SIX's withdrawn `trading-guides/` 2026/2027 PDF URLs are
+serving again byte-identically (`70d1b87d…`, `cd2fdca6…`) with no 2028
+edition — a watch-channel restoration, not a data change.
+
+## APAC / broker-book / crypto / CFE forward watch — 2026-10-13 UTC
+
+Monthly forward-publication re-pull of six operators' live schedule channels,
+each diffed against the store's banked captures. **Every result is a clean
+negative — no operator published anything new for late 2026 or 2027** — and
+the fresh live bytes that make each negative auditable are
+`holidays/raw/apac-broker-forward-2026-10-13/` (13 artifacts + INDEX +
+findings note):
+
+- **HKEX** — live Trading Calendar page still the `Updated 31 Jul 2026`
+  edition; all 27 rows naming 2026/2027 identical to the 2026-10-02 capture;
+  no 2028 edition (zero `2028` mentions).
+- **ASX / ASX 24** — live cash-market sheet states exactly the crate's
+  shipped `ASX-CAL-LIVE` rows for 2026/2027; the ASX 24 page's 32 dated rows
+  and ONO footnote dates are content-identical to the 2026-10-11 capture.
+- **SGX** — T2 content-API holiday content unchanged; the eve/half-day
+  statement still scopes itself to `2025 & 2026`, so the recorded 2027 gap
+  (no operator statement naming 2027 half-day treatment) stays open; MOM tabs
+  2025/2026/2027 identical, no 2026 errata.
+- **OANDA UK** — holiday page identical to the 2026-10-10 capture (104/104
+  dated sections); newest section remains `Friday, 30 Oct 2026 – All Saint
+  Day (SE)`; **no post-2026-10-30 arrangement published yet**; hours-of-
+  operation grids unchanged. Next re-pull should land early-to-mid November
+  2026 per the 2025 page pattern.
+- **CDE** — notices listing stops at 26-37 (already recorded listed-only
+  2026-09-26); nothing above it except rule filing R2026-56; Wayback CDX over
+  the assets bucket shows no new notice PDF; **no Thanksgiving 2026,
+  Christmas 2026 or 2027 holiday notice yet** (2025 pattern: 25-42 posted
+  2025-11-25).
+- **CFE** — holiday CSV regenerated 2026-10-13 with byte-identical 2026-only
+  rows (no errata); Hours & Holidays page has only the 2026 schedule; no 2027
+  holiday circular (latest remains CFERG26-004).
