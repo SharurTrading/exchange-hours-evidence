@@ -1,0 +1,37 @@
+# CDX channel records — 2026-10-13 UTC (LAW-UTC-DATES)
+# Every query run this session against web.archive.org CDX (url collapsed unless noted).
+
+## Target 2 — IFEU Trading Schedule editions
+# 1. ice.com/publicdocs/futures/Trading_Schedule* (prefix, collapse=urlkey): [] (empty)
+# 2. www.ice.com/publicdocs/futures/Trading_Schedule.pdf (exact): no captures
+# 3. www.ice.com/publicdocs/futures/Trading_Schedule_Migrated_Liffe_Contracts.pdf (exact):
+20211022182425 200 application/pdf C545PQ5AEBQTXEUMUSGJNY6GSRXZFUWJ
+20240130022105 200 ... (store already holds 2021+; see INDEX)
+# 4. www.theice.com/publicdocs/Trading_Schedule.pdf (exact): 15 distinct 200-digests 2013-2023 — SEE INDEX section A
+# 5. www.theice.com/publicdocs/futures/Trading_Schedule_Migrated_Liffe_Contracts.pdf (exact): 6 distinct 200-digests 2015-2017
+# 6. host-wide Trading_Schedule filter, ice.com 2015-2022: only 2021-10-22+ captures of the store-known URLs
+#    plus IFAD/IFSG/IST/Endex variants (out of IFEU scope)
+# 7. domain sweeps theice.com/liffe.com/nyse.com/nyx.com Trading_Schedule 2008-2021:
+#    theice.com listed above; liffe.com/nyse.com/nyx.com CDX returned 504 Gateway Time-out (query failed, inconclusive)
+# 8. Common Crawl CC-MAIN-2018-{05,13,22,30,34,39,43,47,51} for theice.com/publicdocs/Trading_Schedule.pdf:
+#    ALL returned 502/504 Gateway Time-out (service outage at 2026-10-13 ~23:5x UTC) — INCONCLUSIVE, not negative.
+#    2018 remains the only gap year (2017-07-07 edition -> 2019-01-03 edition, no capture between).
+
+## Target 1 — ICE US sugar pre-Aug-2011
+# 9. www.theice.com host, filter=original:.*[Ss]ugar.*, 2008-2012, collapse=urlkey: 13 rows — saved cdx_theice_sugar_urls_2008-2012.txt
+# 10. theice.com/product_guide* (underscore variant, any year): [] (empty) — channel does not exist
+# 11. theice.com/productguide/ContractSpecs.shtml (prefix, any year): [] (empty)
+# 12. theice.com/futures_us* prefix 2008-2012: only futures_us.jhtml (302s; one 200 at 20111016104600, post-Aug-2011)
+# 13. www.theice.com host filter=original:.*(Brochure|Product_Guide|product_guide|Softs|_spec|Specification).* 2008-2012:
+#     brochure family (Cocoa/Coffee/Cotton/FCOJ/Gasoil/NatGas/Russell/Sugar/Barley/Canola/Clear US/eConfirm),
+#     ICE_Monthly_Softs_Fast_Facts(.2012_Chinese), ExNot{041111,081211,041912,051112}SoftsOpen — all fetched or assessed
+# 14. theice.com/publicdocs* prefix + mimetype:application/pdf, 2009-2011: query returned empty twice (timeout) — FAILED QUERY, inconclusive;
+#     superseded for sugar by query 9 (name sweep) and by the 2026-10-06 domain-lineage sweep
+# 15. Common Crawl CC-MAIN-2008-2009 / 2009-2010 / 2012, theice.com/* sugar filter: "No Captures found" — the early crawls hold no theice.com pages
+
+## Target 3 — 2009 LON notice zip
+# 16. LIVE https://www.ice.com/publicdocs/nyse_liffe/historical_notices/{year}.zip probes, 2026-10-13 23:2x UTC:
+#     2006=200 2007=200 2008=200 2009=200 2015=404 2016=404 (2010-2014 already in store)
+# 17. web.archive.org CDX ice.com/publicdocs/nyse_liffe/historical_notices*: [] (empty — the live zips were never archived)
+# 18. Channel control: live 2010.zip sha256 31a87b7d07e69a40fbf89e7f13ca730286c48c2d349ec04e20a56a27d953271b
+#     == stored nyse_liffe_2010.zip — byte-identical, validates the live channel

@@ -11444,3 +11444,58 @@ passes 1373 tests, zero skips, three doctests, strict Clippy, rustdoc,
 dependency checks and MSRV 1.95, and its FX-intersection and US-legacy
 mutations each fail their era tests before restoration. No effective date is asserted anywhere: every era
 bound keys an operator observation.
+
+## 2026-10-13 UTC — the ICE history wave: the 2009 (and 2008) Liffe notice zips, the IFEU Trading Schedule editions 2015–2020, and the first in-gap sugar witness
+
+Three #332 targets hunted in one pass (`holidays/raw/ice-history-2026-10-13/`, branch
+`evidence/ice-history-2026-10-13`; 71 task artifacts + 2 zips, fence `SHA256SUMS.txt`):
+
+- **2009 LON zip — CLOSED as data.** The live operator host serves the historical-notice archive
+  beyond the linked years: `https://www.ice.com/publicdocs/nyse_liffe/historical_notices/2009.zip`
+  (and 2006/2007/2008; 2015+ 404) answer 200 even though the notices page links only 2010–2014 and
+  no zip is archived anywhere (CDX empty). Channel control: the live `2010.zip` is byte-identical to
+  the store's `nyse_liffe_2010.zip`. `nyse_liffe_2009.zip` (LON3111–LON3238, 127 notices, continuous
+  with the 2010 zip's LON3239 start) carries **LON3203** — issue 13 October 2009, EFFECTIVE DATE
+  1 January 2010, "TRADING DAYS IN 2010": the 2010 London closures (1 Jan, Good Friday, Easter
+  Monday), the sterling/UK-commodity bank-holiday unavailability days (3 May, 31 May, 30 Aug,
+  27 Dec, 28 Dec) and the midday-GMT closing convention for 24 and 31 December 2010 — the exact
+  "2010 full-year notice" the store recorded as the archive gap. **LON3220** (13 November 2009)
+  carries the Christmas/New-Year 2009-10 hours tables (24/31 Dec 13:00 GMT half days, 25 Dec and
+  1 Jan closed, gilt attachment rows); **LON3226** points at `www.nyx.com/liffeholidays` for the
+  precise 2010 hours. `nyse_liffe_2008.zip` (with LON3073, the 2009 trading-days notice) adds the
+  pre-floor context. Both zips placed beside their siblings in
+  `holidays/raw/ice-europe-gilts-2010-2027/`.
+- **IFEU Trading Schedule 2015–2020 — witnessed for 2015, 2016, 2017, 2019, 2020; 2018 bracketed
+  only.** The operator's self-dated annual "20XX Trading Schedule" survives at
+  `theice.com/publicdocs/Trading_Schedule.pdf` under fifteen archived editions 2013–2023 and the
+  "Trading Schedule — Migrated Liffe Contracts" (the ex-Liffe fixed income/equity holiday rows)
+  under six more 2015–2017; twenty-one editions fetched as `id_` replays, each header-printed
+  ("Last Update: …"), tiling every gap year except **2018** — no capture of any Trading-Schedule
+  URL exists between 2017-07-07 and 2019-01-03, and the Common Crawl 2018 indexes answered 502/504
+  for all nine (recorded inconclusive, not negative). Best next channel: re-query CC-MAIN-2018-* for
+  `theice.com/publicdocs/Trading_Schedule.pdf` when the service recovers, then a desk ask for the
+  2018 edition PDF.
+- **Sugar No. 11 pre-Aug-2011 — the carried grid now has an in-gap operator witness; the gap is
+  re-scoped, not closed.** A name-level archive sweep (every sugar-named theice.com artifact
+  2008–2012: 13 rows, all fetched or assessed) surfaced the operator's own "Sugar No. 11 / No. 16"
+  brochure, PDF-created **22 March 2010**, printing the Sugar No. 11 spec row `HOURS  0330 EST TO
+  1400EST` — session language, the exact carried baseline, dated inside the carried span (archive
+  capture 2011-11-21, the only capture of that generation). A second operator document (the
+  Chinese-language Sugar No. 11 introduction printed 12 December 2011) re-witnesses 03:30–14:00 ET
+  electronic (plus the 08:00–13:30 floor session) at the end of the span, and the 14 May 2012
+  brochure generation corroborates the 2012-01-30 move to 01:30 from a second T1 source. The wave
+  also adds **ExNot 041111** (April 11, 2011): a dated, unconditional in-gap late-open — Sugar
+  No. 11 (with Coffee "C" and Cocoa) opened 07:30 NY on 2011-05-02 for the UK bank holiday — new
+  holiday-layer data before the family's audited window. The vendor "Monthly Softs Fast Facts"
+  (J. Ganes Consulting, compliments of ICE Futures U.S.) is kept as T3/T4 residual-risk context and
+  keys nothing. What remains unwitnessed for sugar: January–March 2010, the holiday/phase layer
+  across the span, and a document that states the January-2010 close as of that day. The crate's
+  `docs/evidence/ice_us_sugar.md` "terminal answer" paragraph (no in-gap document can exist) is
+  superseded by B1 and needs a normal schedule-change update citing the new artifacts.
+
+Negative and inconclusive probes recorded in `cdx/cdx_sweeps_2026-10-13.txt`: the `product_guide`
+underscore path does not exist in the archive; `productguide/ContractSpecs.shtml` has no captures;
+`theice.com/futures_us*` surfaces only from 2011-10-16; the early Common Crawl corpora hold no
+theice.com pages at all; the 2009–2011 `publicdocs` PDF enumeration query failed twice (timed out,
+inconclusive, superseded by the name-level sweeps); liffe.com/nyse.com/nyx.com domain-wide
+Trading-Schedule sweeps 504'd (superseded by the theice.com/ice.com successes).
