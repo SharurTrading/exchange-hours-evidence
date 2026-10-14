@@ -11639,3 +11639,75 @@ Artifacts: the operator calendar page (388 KB HTML), fifteen T2 service JSONs
 (each with the crate-hash comparison in `INDEX.md`), three Globex notice
 pages (20260914/20260928/20261005) and three notice-index pages covering
 every CME notice published 2026-09-01..2026-10-13.
+
+## 2026-10-13 UTC — the Europe forward-publication wave: LSE 2028 rows are live; everything else negative
+
+Fourth forward sweep over the European operators, one pass each, all eight
+channels read live 2026-10-13 23:27–23:35 UTC; artifacts, digests and the
+per-operator INDEX under `holidays/raw/europe-forward-2026-10-13/`. The one
+positive: **the LSE business-days API now prints 2028** — its 27-row rolling
+table runs 2026-08-31 through 2029-01-01, every 2026 and 2027 cell matches the
+shipped `LSE-BUSDAYS-2025-12-18` rows byte for byte, and ten new 2028 rows plus
+2029-01-01 print in the same session language (`NON-trading day.`, the 12:30
+London half-day sentence): 2028-01-03 (substitute New Year), 04-14, 04-17,
+05-01, 05-29, 08-28, 12-22 half day, 12-25, 12-26 (its EUI *service* cell reads
+"To be confirmed"; the trading arrangement prints NON-trading day), 12-29 half
+day, and 2029-01-01. The shipped window ends 2027-12-31, so encoding these
+extends it — a normal schedule fix, zero 2026/2027 diffs. Negatives, all
+re-verified against the crate's recorded closing conditions: Nasdaq still
+2026-only (trader channel Incapsula stub byte-identical to 2026-10-03's;
+nasdaq.com's server-rendered table matches all twelve shipped 2026 cells, zero
+2027 strings); IFUS notices service answers 123 notices for 2026 (newest
+2026-10-13, listing/margin items only) and zero for 2027 — the Christmas
+2026 hours notice still hasn't issued, `IFUS-CAL-2027` stands, nothing
+supersedes it; ICE Futures Europe's two schedule PDFs are still the July and
+August editions (created 2026-07-14 / 2026-08-13, nothing newer), while the
+Excel schedule (workbook 2026-07-08) carries 2027 cells the operator's own
+Information sheet labels preliminary, and its Change Tracker tail records
+2026 hours changes (extended Utilities hours 26006, Gilt/SONIA extended hours
+26063, TONA close 22:00 London) none of which touch the Brent scope;
+Eurex's archive page still contains `2027` zero times with the 2026 blob its
+newest linkage, the Holiday-regulations 2027 column stays uncaveated against
+the indicative page's preliminary label (conflict unchanged), and the TC 2026
+PDF re-downloads byte-identical (`b0796b42…`) so the Swiss-scope lines carry
+no errata; Euronext still publishes only the 2026 calendar (24 `2027` strings,
+all Innovate-for-Growth strategy material) and still links the 2025 end-of-year
+appendix, so the two Unsourced 2026 eves keep their closer; BME's Renta
+Variable index holds no 2026 horarios-24-y-31 timetable and zero 2027 paths
+(the newest calendar instruction is still 65/2025), and MEFF's own calendar
+page is 2026-only; SIX's withdrawn `trading-guides/` 2026/2027 PDF URLs are
+serving again byte-identically (`70d1b87d…`, `cd2fdca6…`) with no 2028
+edition — a watch-channel restoration, not a data change.
+
+## APAC / broker-book / crypto / CFE forward watch — 2026-10-13 UTC
+
+Monthly forward-publication re-pull of six operators' live schedule channels,
+each diffed against the store's banked captures. **Every result is a clean
+negative — no operator published anything new for late 2026 or 2027** — and
+the fresh live bytes that make each negative auditable are
+`holidays/raw/apac-broker-forward-2026-10-13/` (13 artifacts + INDEX +
+findings note):
+
+- **HKEX** — live Trading Calendar page still the `Updated 31 Jul 2026`
+  edition; all 27 rows naming 2026/2027 identical to the 2026-10-02 capture;
+  no 2028 edition (zero `2028` mentions).
+- **ASX / ASX 24** — live cash-market sheet states exactly the crate's
+  shipped `ASX-CAL-LIVE` rows for 2026/2027; the ASX 24 page's 32 dated rows
+  and ONO footnote dates are content-identical to the 2026-10-11 capture.
+- **SGX** — T2 content-API holiday content unchanged; the eve/half-day
+  statement still scopes itself to `2025 & 2026`, so the recorded 2027 gap
+  (no operator statement naming 2027 half-day treatment) stays open; MOM tabs
+  2025/2026/2027 identical, no 2026 errata.
+- **OANDA UK** — holiday page identical to the 2026-10-10 capture (104/104
+  dated sections); newest section remains `Friday, 30 Oct 2026 – All Saint
+  Day (SE)`; **no post-2026-10-30 arrangement published yet**; hours-of-
+  operation grids unchanged. Next re-pull should land early-to-mid November
+  2026 per the 2025 page pattern.
+- **CDE** — notices listing stops at 26-37 (already recorded listed-only
+  2026-09-26); nothing above it except rule filing R2026-56; Wayback CDX over
+  the assets bucket shows no new notice PDF; **no Thanksgiving 2026,
+  Christmas 2026 or 2027 holiday notice yet** (2025 pattern: 25-42 posted
+  2025-11-25).
+- **CFE** — holiday CSV regenerated 2026-10-13 with byte-identical 2026-only
+  rows (no errata); Hours & Holidays page has only the 2026 schedule; no 2027
+  holiday circular (latest remains CFERG26-004).
