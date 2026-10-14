@@ -1,0 +1,34 @@
+London Stock Exchange — live business-days API table extraction
+Artifact: lse_business_days_api.live-20261013T232722Z.html
+URL: https://api.londonstockexchange.com/api/v1/pages?path=equities-trading/business-days&parameters=
+Retrieved 2026-10-13 23:27 UTC. sha256 4f9f6f3aef9ab02874112c05c0c07ac4529e6c38e7ad74d0aa41735853a87a7f
+Table rows: 27 (rolling window opens 2026-08-31, ends 2029-01-01).
+Columns: date :: arrangement :: note :: On-Exchange/OTC service availability (not a trading column).
+
+ ::  :: On Exchange Trading Services :: OTC/SI Off-book trade reporting only
+Monday 31 August 2026 :: Summer Bank Holiday :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Available as normal
+Thursday 24 December 2026 :: Christmas Holiday half day :: Markets closing process commences from 12:30 London time. Standard settlement day. :: Available as normal
+Friday 25 December 2026 :: Christmas Day :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Not available
+Monday 28 December 2026 :: Boxing Day (substitute) :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Available as normal
+Thursday 31 December 2026 :: New Year's Holiday half day :: Markets closing process commences from 12:30 London time. Standard settlement day. :: Available as normal
+Friday 1 January 2027 :: New Year's Day :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Not available
+Friday 26 March 2027 :: Good Friday :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Not available
+Monday 29 March 2027 :: Easter Monday :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Not available
+Monday 3 May 2027 :: Early May Bank Holiday :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Available as normal
+Monday 31 May 2027 :: Spring Bank Holiday :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Available as normal
+Monday 30 August 2027 :: Summer Bank Holiday :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Available as normal
+Friday 24 December 2027 :: Christmas Holiday half day :: Markets closing process commences from 12:30 London time. Standard settlement day. :: Available as normal
+Monday 27 December 2027 :: Christmas Day (substitute) :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Not available
+Tuesday 28 December 2027 :: Boxing Day (substitute) :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Available as normal
+Friday 31 December 2027 :: New Year's Holiday half day :: Markets closing process commences from 12:30 London time. Standard settlement day. :: Available as normal
+Monday 3 January 2028 :: New Year's Day (substitute) :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Not available
+Friday 14 April 2028 :: Good Friday :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Not available
+Monday 17 April 2028 :: Easter Monday :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Not available
+Monday 1 May 2028 :: Early May Bank Holiday :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Not available
+Monday 29 May 2028 :: Spring Bank Holiday :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Available as normal
+Monday 28 August 2028 :: Summer Bank Holiday :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Available as normal
+Friday 22 December 2028 :: Christmas Holiday half day :: Markets closing process commences from 12:30 London time. Standard settlement day. :: Available as normal
+Monday 25 December 2028 :: Christmas Day :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Not available
+Tuesday 26 December 2028 :: Boxing Day :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: To be confirmed
+Friday 29 December 2028 :: New Year's Holiday half day :: Markets closing process commences from 12:30 London time. Standard settlement day. :: Available as normal
+Monday 1 January 2029 :: New Year's Day :: NON-trading day. | \r\n\t\t\tAlso GBX/ GBP NON-settlement day in EUI :: Not available
