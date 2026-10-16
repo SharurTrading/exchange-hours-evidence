@@ -1,0 +1,44 @@
+# INDEX — `cme-2023-mlk-resweep-2026-10-15` (the directory-enumeration re-sweep, 2026-10-15 UTC)
+
+Retrieval session: **2026-10-15 02:45–03:20 UTC** (`date -u`). All times UTC
+(LAW-UTC-DATES). The maintainer asked for a fresh online hunt for the CME
+2023-01-16 (MLK) marker ("domains move etc."), so this wave re-swept every
+operator channel by enumerating whole Wayback directories over the CDX API
+rather than guessing filenames, fetched every MLK-2023 operator artifact the
+enumerations exposed, and read the operator's January 2023 weekly Globex
+advisories. **Everything closed negative; the marker stands.**
+
+Method note: `collapse=urlkey` CDX listings of a directory are complete over
+every URL ever captured under it, so a name absent from the listing was never
+archived under any timestamp — this replaces the prior sweeps' name-guessing
+with coverage proofs.
+
+| file | sha256 | bytes | source url | capture (UTC) | what it is |
+|---|---|---|---|---|---|
+| `cdx-trading-hours-files.txt` | `81fc778dfe3d398bf4294423bd1e1e7720a5a5da599dbc63ffcc07da9b81cb3e` | 3252 | CDX `cmegroup.com/trading-hours/files/*`, collapse=urlkey, limit=800 (36 rows) | live fetch 2026-10-15 | **Complete** listing of the 2023-era one-pager directory: the series holds `4th-of-july-2023`, `christmas-day-2023`, `juneteenth-2023`, `labor-day-2023`, `memorial-day-2023`, `thanksgiving-day-2023` (200s) and `new-years-day-2024` (200); every MLK name tried is a 404 and no other MLK name was ever captured. No Globex-hours MLK-2023 sheet exists under any filename. |
+| `cdx-files-unsuffixed.txt` | `58dad29727b735331608860a8f57437f8586f184735b3b66911a4b082ae0eb42` | 20616 | CDX `cmegroup.com/files/*`, collapse=urlkey, limit=2000 (227 rows) | live fetch 2026-10-15 | **Complete** listing of the unsuffixed summary-sheet directory: in the holiday series only `good-friday.pdf` and `presidents-day.pdf` returned 200; `martin-luther-king-day.pdf`, `mlk-day.pdf` and `mlk.pdf` are archived 404s and `martin-luther-king.pdf` was never captured at all. |
+| `cdx-holiday-calendar-files-2022-05_2024-03.txt` | `70a37e697f5dc0ef9ce6873922f3759a089f61e4a53a8cbf6c6557ef3c9d6a08` | 15569 | CDX `cmegroup.com/tools-information/holiday-calendar/files/*`, collapse=urlkey, 2022-05..2024-03, limit=3000 (126 rows) | live fetch 2026-10-15 | **Complete** listing of the old workbook directory across the MLK-2023 window. For MLK 2023 the operator published exactly four artifacts — `2023-mlk-day-advisory.pdf` (already held at `cbot-2023-advisories/`), `2023-mlk-day-otc-advisory.pdf`, `mlk-day-holiday-settlement-times-2023.pdf` and `2023-mlk-day-holiday-schedule-compact-mgex-dme.xls` — all fetched and read below. No Globex-hours document exists in the directory. |
+| `2023-mlk-day-otc-advisory.pdf` | `b880e935752f64aa6e4fb3ed56ff63e5ba63a40f5008335182ced6e472c69584` | 176623 | <https://web.archive.org/web/20230203080414id_/https://www.cmegroup.com/tools-information/holiday-calendar/files/2023-mlk-day-otc-advisory.pdf> | archive capture 2023-02-03T08:04:14Z | CME Clearing OTC holiday advisory: trade submission, variation-margin and PAA tables for OTC products. States no Globex session hours. |
+| `mlk-day-holiday-settlement-times-2023.pdf` | `051f2a2136e27daecf8ed717983787fc8aacd62b83418cbecca1a44937e9e4cb` | 44299 | <https://web.archive.org/web/20230203073653id_/https://www.cmegroup.com/tools-information/holiday-calendar/files/mlk-day-holiday-settlement-times-2023.pdf> | archive capture 2023-02-03T07:36:53Z | CME settlement-times notice: Eurodollar final settlements at 05:00 CT and "CME Group will not derive or disseminate settlement prices" on the day. Settlements, not sessions (LAW-SESSION-NOT-EXPIRY); states no session hours. |
+| `2023-mlk-day-holiday-schedule-compact-mgex-dme.xls` | `895304a765a7000c53d81ae991b8e2b5855bb1730a6c2ee3ff1ace38a793d259` | 38400 | <https://web.archive.org/web/20230313181421id_/https://www.cmegroup.com/tools-information/holiday-calendar/files/2023-mlk-day-holiday-schedule-compact-mgex-dme.xls> | archive capture 2023-03-13T18:14:21Z | "CME Group Globex Martin Luther King Day Holiday Schedule: January 13, 2023 - January 17, 2023", compact series: rows cover the MGEX Indices & Wheat, MGEX SPIKES Volatility Future/TAS and DME lines only; no core-family row states a halt time. Its general notes state `January 13 TAM, TAM (Platts) & TAS: Regular close per each product schedule` and **`Tuesday, January 17: Regular CME Group Globex close for all products`** — the first artifact read bearing on the 2023-01-17 prior-evening-leg gap (it states the Tuesday close was regular; it does not state the Monday 17:00 CT re-open that leg opens from). |
+| `globex-notice-20230109.html` | `4b6b10327fb1b2bc06902c9c326900843c79cef01cf6b6b9837225ec6233425d` | 199691 | <https://web.archive.org/web/20260210150235id_/https://www.cmegroup.com/notices/electronic-trading/2023/01/20230109.html> | archive capture 2026-02-10T15:02:35Z | CME Globex weekly electronic-trading advisory, week of the holiday: CME CF cryptocurrency reference-rate additions and the E-mini S&P 500 Quarterly PM options migration/delisting (Feb 10/13). No holiday schedule. |
+| `globex-notice-20230116.html` | `a9a91d8ee08f0f8061e75359d08286eb1f82f616244f4fe50e0ad5277e4e28e2` | 132163 | <https://web.archive.org/web/20230119142304id_/https://www.cmegroup.com/notices/electronic-trading/2023/01/20230116.html> | archive capture 2023-01-19T14:23:04Z | The advisory issued on MLK day itself: CME CF cryptocurrency reference-rate additions only. No holiday schedule. |
+| `globex-notice-20230123.html` | `d5b6eaee927d5c5d280ff820f92f58b2e1a092a545eced1848bc2d65d865b0a1` | 198142 | <https://web.archive.org/web/20260209052425id_/https://www.cmegroup.com/notices/electronic-trading/2023/01/20230123.html> | archive capture 2026-02-09T05:24:25Z | The Tuesday-after advisory: the same E-mini PM-options delisting items. No holiday schedule. This closes the electronic-trading notice channel — the channel the 2026-10-31 Saturday-extension work later used — for 2023-01-16. |
+| `holiday-calendar-2022-11-23.html` | `d1d9f9df5dd49bf3f52217aff354464646f1e8b62d0f284f4d0330294c5d9103` | 140256 | <https://web.archive.org/web/20221123183200id_/https://www.cmegroup.com/tools-information/holiday-calendar.html> | archive capture 2022-11-23T18:32:00Z | The holiday-calendar page at its **last content capture before the 2023-01-16 transition-day capture** (the archive's only capture between, 2022-12-17, is a 301 with no surviving content). The page still prints the 2022 Globex table alone, under the operator's note "Trading hours are usually finalized approximately two weeks prior to the holiday", so the 2023 MLK hours were never printed on the HTML page in any captured state. |
+| `cdx-holiday-calendar-page-captures.txt` | `8ccfad48be99b3a5b83994db69ee79aae2a5f36b07dd039684bd6426285dbf08` | 107 | CDX `cmegroup.com/tools-information/holiday-calendar.html`, 2022-06..2023-03, all timestamps (11 rows) | live fetch 2026-10-15 | The capture list proving the 2022-11-23 / 2023-01-16 gap above: eight 200 captures 2022-06-27..2022-11-23, one 301 (2022-12-17), then the two January 2023 captures the prior sweeps already read. |
+| `cdx-electronic-trading-2023-01.txt` | `cd310c58ee3c3d0962bda716caea587d710591a221c5c001651537d97cb97a36` | 1325 | CDX `cmegroup.com/notices/electronic-trading/2023/01/*`, collapse=urlkey, limit=500 (12 rows) | live fetch 2026-10-15 | Complete listing of the month's advisories: `20230102`, `20230109`, `20230116`, `20230123`, `20230130`. The three that bracket the holiday were read in full. |
+| `cdx-notices-prefix-2022-12_2023-02.txt` | `3253361bfbd7ecda347dba476853f300cd11887b53873d3f4900e16970ee945f` | 7605 | CDX `cmegroup.com/notices/` matchType=prefix, 2022-12-15..2023-02-15, collapse=urlkey, limit=2000 (70 rows) | live fetch 2026-10-15 | Every other notice path captured in the window: old clearing advisories (2016–2019, `Chadv22-480`), disciplinary actions, `20230102`/`20230130` replays. No untried January 2023 holiday notice exists. |
+
+Not saved (negative by observation): `archive.ph/newest/` for the
+holiday-calendar page resolves to snapshot `20240702234712` (post-transition)
+and then rate-limits HTTP 429, the same block the 2012 bracket hunt hit; the
+archive.today snapshot list for `holiday-calendar.html` /
+`trading-hours.html` still needs a human fetch and stays an open lead. T3
+member-firm holiday notices (AMP Futures, NinjaTrader, EdgeClear, reached via
+web search 2026-10-15) uniformly state the expected shape — halt 12:00 CT on
+Monday 2023-01-16, ordinary 17:00 CT re-open for Tuesday — which corroborates
+and keys nothing (LAW-PRIMARY-SOURCES; T3 never keys a row).
+
+Closing condition (unchanged): a CME holiday schedule for 2023 covering
+2023-01-16 at T1, a T2 window that carries its events, or a written desk
+answer in session language.

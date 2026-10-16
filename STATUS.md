@@ -11712,6 +11712,55 @@ findings note):
   rows (no errata); Hours & Holidays page has only the 2026 schedule; no 2027
   holiday circular (latest remains CFERG26-004).
 
+## CME MLK-2023 enumeration re-sweep — 2026-10-15 UTC
+
+Maintainer-directed fresh online hunt for the CME 2023-01-16 (MLK) marker that
+all eight served Globex families ship `Unsourced`. Method change from the
+2026-09-29/10-09 sweeps: **whole-directory CDX enumerations instead of
+guessed filenames**, which turns "this name 404s" into "no such URL was ever
+archived under any timestamp". Artifacts and the full record:
+`holidays/raw/cme-2023-mlk-resweep-2026-10-15/`.
+
+- **`cmegroup.com/trading-hours/files/*`** (36 URLs, complete): the 2023
+  one-pager series starts at `memorial-day-2023.pdf`; no MLK sheet under any
+  name was ever captured or answered 200.
+- **`cmegroup.com/files/*`** (227, complete): only `good-friday.pdf` and
+  `presidents-day.pdf` exist in the unsuffixed 2023 series; `mlk.pdf`,
+  `mlk-day.pdf`, `martin-luther-king-day.pdf` are archived 404s and
+  `martin-luther-king.pdf` was never captured.
+- **`tools-information/holiday-calendar/files/*`** 2022-05..2024-03 (126,
+  complete): for MLK 2023 the operator published exactly four artifacts, and
+  this wave fetched and read all four — Clearing advisory (already held),
+  **OTC advisory** (OTC clearing timelines only), **settlement-times PDF**
+  (settlements not derived on the day; no session hours) and the **compact
+  MGEX/DME workbook** (MGEX/DME lines only). None states a session hour.
+- **Globex electronic-trading weekly advisories, January 2023** (20230109,
+  20230116, 20230123 — the channel the 20261005 Saturday-extension notice
+  lives on): read in full; crypto reference-rate additions and E-mini PM
+  options delistings, **no holiday schedules**. Channel closed for this date.
+- **Pre-transition holiday-calendar.html**: eight content captures
+  2022-06..2022-11-23, one 301 (2022-12-17, no content), then nothing until
+  the 2023-01-16 capture the prior sweeps read. The 2022-11-23 page still
+  prints the 2022 table under the operator's "finalized approximately two
+  weeks prior" note — the 2023 MLK hours were never on the HTML page.
+- **T3 member-firm notices** (web search): uniformly print halt 12:00 CT /
+  re-open 17:00 CT on 2023-01-16 — corroboration, keys nothing
+  (LAW-PRIMARY-SOURCES).
+
+**Result: the marker stands, terminal as of this sweep.** One new lead
+recorded: the compact workbook's general note "Tuesday, January 17: Regular
+CME Group Globex close for all products" is the first artifact read bearing on
+the 2023-01-17 prior-evening-leg gap — it states Tuesday's close was regular
+but does not state the Monday-evening re-open, so the gap stands with a
+narrower remainder. Open thread: archive.today rate-limits (429) after
+pointing at a post-transition 2024-07-02 snapshot; its snapshot list needs a
+human fetch (same class as the SGX archive.today lead).
+
+**(Update 2026-10-16 UTC:** the 2023-01-16 marker itself has since closed — encoded in
+crate PR #355 on the retained private market-data confirmation, and the convention then
+extended across the remaining Globex withholdings in crate PR #356; this wave's negatives
+stand as the control record for that encoding**.)**
+
 ## October-2026 Saturday-extension confirmations — 2026-10-16 UTC
 
 Targeted release-month follow-up (`holidays/raw/cme-globex/release-inspection-20261016/`): the
