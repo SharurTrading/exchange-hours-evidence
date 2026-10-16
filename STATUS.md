@@ -11711,3 +11711,14 @@ findings note):
 - **CFE** — holiday CSV regenerated 2026-10-13 with byte-identical 2026-only
   rows (no errata); Hours & Holidays page has only the 2026 schedule; no 2027
   holiday circular (latest remains CFERG26-004).
+
+## October-2026 Saturday-extension confirmations — 2026-10-16 UTC
+
+Targeted release-month follow-up (`holidays/raw/cme-globex/release-inspection-20261016/`): the
+operator's own trading-hours service, read through the public reader, answers the 2026-10-03..05
+window with **Bitcoin Futures reopening at 05:00 CT** on event date 2026-10-03 (02:00 closed,
+04:45 preopen, 05:00 open, all trade date 2026-10-05) — the 2026-10-03 forward-dated Saturday
+maintenance-window extension (notice 20260921) is **confirmed effective** for `globex_cryptocurrency`
+and `globex_silver_100oz`, discharging that row's confirm-by obligation exactly as the September
+capture discharged the 2026-09-19 row. The 2026-10-24 and 2026-10-31 rows remain forward-dated with
+their confirm-by days ahead. The reader itself is the only channel used; no other new material.
