@@ -11755,3 +11755,19 @@ but does not state the Monday-evening re-open, so the gap stands with a
 narrower remainder. Open thread: archive.today rate-limits (429) after
 pointing at a post-transition 2024-07-02 snapshot; its snapshot list needs a
 human fetch (same class as the SGX archive.today lead).
+
+**(Update 2026-10-16 UTC:** the 2023-01-16 marker itself has since closed — encoded in
+crate PR #355 on the retained private market-data confirmation, and the convention then
+extended across the remaining Globex withholdings in crate PR #356; this wave's negatives
+stand as the control record for that encoding**.)**
+
+## October-2026 Saturday-extension confirmations — 2026-10-16 UTC
+
+Targeted release-month follow-up (`holidays/raw/cme-globex/release-inspection-20261016/`): the
+operator's own trading-hours service, read through the public reader, answers the 2026-10-03..05
+window with **Bitcoin Futures reopening at 05:00 CT** on event date 2026-10-03 (02:00 closed,
+04:45 preopen, 05:00 open, all trade date 2026-10-05) — the 2026-10-03 forward-dated Saturday
+maintenance-window extension (notice 20260921) is **confirmed effective** for `globex_cryptocurrency`
+and `globex_silver_100oz`, discharging that row's confirm-by obligation exactly as the September
+capture discharged the 2026-09-19 row. The 2026-10-24 and 2026-10-31 rows remain forward-dated with
+their confirm-by days ahead. The reader itself is the only channel used; no other new material.
