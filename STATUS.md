@@ -12128,3 +12128,56 @@ Its tree is identical to the tested `5adabf6` tree. Local crate main was
 fast-forwarded and is clean. The PR branch and temporary author/review/base/
 mutation worktrees were removed; audit source/results are retained. No
 release or tag was created. Existing evidence-store changes were preserved.
+
+## 2026-10-23 UTC — future-horizon sweep across every served scope (LAW-WATCH)
+
+Retrieval session 2026-10-23 21:00–23:30 UTC (delegate web sweeps ran 2026-10-23/24; all
+dates in this entry are UTC). Fourteen operator groups covering all 56 served ledger rows
+were checked against live operator channels for holiday/session evidence beyond each row's
+audited window and for future-hours notices dated after its last review.
+
+**New evidence captured in this wave:**
+
+- `holidays/raw/cfe-eurex-ice-cde-smfe-2026-2027/ICE_Futures_US_2026_Christmas_Holiday_20261022.pdf`
+  — the 2026 ICE Futures U.S. Christmas notice (issued 2026-10-22, sha256
+  `a7658155…`), closing the 2026-12-24 / 2026-12-28 gaps the ICE US evidence files
+  recorded. The crate PR encodes its rows. Beside it the T2 listing refresh
+  `iceus_listing_2026-10-23.json` (126 notices, the Christmas notice newest).
+- `…/CDE_Market_Notice_26-37_…` and `…/CDE_Market_Notice_26-25_…` — Coinbase Derivatives
+  notices 26-37 (2026-09-24, Q4 maintenance + FIA DR on Sat 2026-10-24, 24x7-scoped) and
+  26-25 (Friday-window removal, 24x7-scoped, with the 2026-12..2027-06 Saturday windows).
+  Neither touches the venue's 23x5 grid or its holiday layer; captured for the record
+  because both postdate the 2026-09-11 review.
+- `holidays/raw/equities/nse_india/2025-2027/wayback_20260226045622_…` and
+  `wayback_20261011203940_…` — the operator's `holiday-master?type=trading` machine
+  channel (T2), CM segment, whose 2026 list carries `15-Jan-2026 Municipal Corporation
+  Election - Maharashtra`, a closure the 2025-12-18 banner omits; all four 2026 captures
+  agree. The crate PR keys NSE's 2026-01-15 row to the 2026-02-26 capture.
+
+**Sweep findings (no data owed):** NYSE, CFE, all four Eurex keys, ICE Europe gilts
+(T1-wise; four held artifacts re-fetched byte-identical), ASX/ASX 24, NZX (rolling table
+ends exactly at the held 2027-01-04), TSE, HKEX ×2, SGX Securities (operator statement
+still scoped 2025–2026), SSE (2027 notice expected December), LSE (rolling table still
+ends 2029-01-01), Xetra, SIX (2028 PDF still 404), Euronext ×5 (2027 INFO-FLASH expected
+~November), BME ×2, Nasdaq Nordic ×3, Borsa İstanbul, TSX, B3 and Tadawul (live page
+403; the 2026-10-02 replay shows no change) all publish exactly through the crate's held
+windows — no beyond-window evidence exists to encode. Nasdaq US still prints the 2026
+schedule only; the 2027 sheet is the November/December watch item. CME's October
+Saturday extensions (2026-10-03, 10-24, 10-31) are already encoded in the crate from
+notices 20260921/20261005; notice 20261019 restates them; the genuinely new CME items —
+2028 holiday events appearing on the T2 trading-hours service ahead of the human page,
+the BCOM channel-340 near-24/5 move effective 2026-10-11, and the widened 24/7 channel
+set (333, 328, FSPI 335 launching 2026-11-01) — are recorded in the crate's sources.md
+by the same PR. OANDA's holiday page still ends at the held 2026-10-30 (its newest row
+is the SE-shares 30 Oct early close); the Christmas/New Year rows are unpublished, so
+all nine books refuse holiday classification beyond 2026-10-30 by design until the
+operator publishes — re-check at day-level cadence through early November. Coinbase
+Derivatives publishes nothing holiday-bearing beyond 2026-09-07 yet (per-holiday notices
+issue ~weeks ahead; the Thanksgiving notice is expected imminently).
+
+**Channel notes:** the NSE captures are gzip-wrapped as replayed (digests are of the
+decompressed JSON). CME's direct channel remains IP-blocked from this machine; nothing
+in this wave cites a proxied CME read. The NYSE notifications API's documented
+`pageSize=500` form currently returns a stale snapshot (newest item 2026-04-23); current
+items only appear at small page sizes — recorded in the crate's sources.md by the same
+PR.
