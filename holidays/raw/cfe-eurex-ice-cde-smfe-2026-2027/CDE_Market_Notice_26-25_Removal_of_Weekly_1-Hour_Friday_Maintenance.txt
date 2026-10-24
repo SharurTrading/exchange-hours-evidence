@@ -1,0 +1,67 @@
+                                                  Market Notice
+
+
+To:​     ​         Coinbase Derivatives Participants
+
+From:​ ​           Derivatives Command Center
+
+Notice:​           26-25
+
+Date:​ ​           05/20/2026
+
+Subject:​           Removal of Weekly 1-Hour Friday Maintenance Window
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+Summary
+Effective July 24, 2026 at 17:00 CT, Coinbase Derivatives, LLC (“CDE” or “Exchange”) will
+remove the weekly 1-hour Friday maintenance window currently observed from Friday 16:00
+CT to Friday 17:00 CT for 24x7 enabled products. The final Friday maintenance will occur July
+24, 2026 from 16:00 to 17:00 CT.
+
+After this date, CDE deployments/releases will occur during market hours (“Open” trading state)
+and will be announced via https://status.cde.coinbase.com/. Please reference related notices
+26-13 Gateway Maintenance During Market Hours and 26-22 Mandatory Sequence Number
+Reset on Logon for guidance.
+
+
+Customer Impact
+    ●​ The weekly 1-hour Friday trading close will no longer occur after July 24, 2026.
+    ●​ 24x7 enabled products previously affected by the Friday 16:00 - 17:00 CT break will now
+       trade continuously throughout the week, subject only to the scheduled maintenance
+       windows listed below.
+    ●​ The trade date will roll Friday at 16:00 CT, and all trades executed after the roll will clear
+       on the next trading date.
+    ●​ Customers should ensure that internal systems, trading applications, and connectivity
+       processes are updated to reflect the new schedule.
+    ●​ Products that are not 24x7 enabled are unaffected by this change and will continue to
+       observe their existing trading schedules.
+    ●​ See https://www.coinbase.com/derivatives/exchange-products for a complete list of
+       products and their respective trading hours.
+
+
+
+
+Any questions please contact Derivatives Command Center at derivatives@coinbase.com or +1 (312) 469-0985
+New Maintenance Window Schedule
+To support the transition away from the weekly 1-hour Friday maintenance window, CDE will
+introduce additional weekend maintenance windows. The schedule below reflects the planned
+maintenance dates for the next year, during which all CDE products will be unavailable.
+
+Each maintenance window will be three (3) hours in duration, with one (1) extended
+maintenance window annually to accommodate the FIA Disaster Recovery (DR) exercise.
+Additional start times will be communicated closer to the event.
+
+    ●​   July 25, 2026 @ 9:00AM CT — Standard Weekend Maintenance
+    ●​   September 12, 2026 — Standard Weekend Maintenance
+    ●​   October 24, 2026 — Standard Weekend Maintenance & FIA DR
+    ●​   December 12, 2026 — Standard Weekend Maintenance
+    ●​   February 13, 2027 — Standard Weekend Maintenance
+    ●​   April 10, 2027 — Standard Weekend Maintenance
+    ●​   June 12, 2027 — Standard Weekend Maintenance
+
+
+
+
+Any questions please contact Derivatives Command Center at derivatives@coinbase.com or +1 (312) 469-0985
+
