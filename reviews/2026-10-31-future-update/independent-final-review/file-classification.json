@@ -1,0 +1,39 @@
+{
+  "changelog": [
+    "CHANGELOG.md"
+  ],
+  "evidence": [
+    "docs/evidence/globex_cryptocurrency.md",
+    "docs/evidence/ice_us.md",
+    "docs/evidence/ice_us_cocoa.md",
+    "docs/evidence/ice_us_coffee.md",
+    "docs/evidence/ice_us_cotton.md",
+    "docs/evidence/ice_us_dollar_index.md",
+    "docs/evidence/ice_us_orange_juice.md",
+    "docs/evidence/ice_us_sugar.md",
+    "docs/evidence/iceus.md",
+    "docs/evidence/nse_india.md",
+    "docs/evidence/xetra.md"
+  ],
+  "schedule documentation": [
+    "docs/schedules/coverage-2025.md",
+    "docs/schedules/sources.md",
+    "docs/schedules/updating.md",
+    "docs/schedules/verification.md"
+  ],
+  "data": [
+    "src/calendar/schedules/futures/us/cryptocurrency.rs",
+    "src/calendar/schedules/holidays/globex_cryptocurrency.rs",
+    "src/calendar/schedules/holidays/ice_us.rs",
+    "src/calendar/schedules/holidays/nse_india.rs",
+    "src/calendar/schedules/holidays/xetra.rs"
+  ],
+  "tests": [
+    "tests/equities_holidays/xetra.rs",
+    "tests/futures_family_boundaries/holidays_globex_cryptocurrency.rs",
+    "tests/futures_family_boundaries/holidays_ice_us.rs",
+    "tests/schedule_documentation/coverage_inventory.rs",
+    "tests/venue_sessions/cme_families.rs",
+    "tests/venue_sessions/holidays_tse_sse_nse.rs"
+  ]
+}

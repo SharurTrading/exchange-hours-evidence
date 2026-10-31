@@ -1,0 +1,51 @@
+   Compiling exchange-hours v1.2.3 (/workspace/exchange-hours-review-20261031)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.38s
+────────────
+ Nextest run ID bf8da69f-27fb-4254-9b19-61661759d1eb with nextest profile: default
+    Starting 1 test across 1 binary (353 tests skipped)
+        FAIL [   0.004s] (1/1) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::nse_muhurat_2026_preserves_published_phases_and_weekend_trade_date
+  stdout ───
+
+    running 1 test
+    test suite::holidays_tse_sse_nse::nse_muhurat_2026_preserves_published_phases_and_weekend_trade_date ... FAILED
+
+    failures:
+
+    failures:
+        suite::holidays_tse_sse_nse::nse_muhurat_2026_preserves_published_phases_and_weekend_trade_date
+
+    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 353 filtered out; finished in 0.00s
+
+  stderr ───
+
+    thread 'suite::holidays_tse_sse_nse::nse_muhurat_2026_preserves_published_phases_and_weekend_trade_date' (33380) panicked at tests/venue_sessions/holidays_tse_sse_nse.rs:1696:9:
+    assertion `left == right` failed: 2026 Muhurat phase at (14, 12, 59) IST
+      left: (false, false, false)
+     right: (false, false, true)
+    note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+  Cancelling due to test failure
+────────────
+     Summary [   0.005s] 1 test run: 0 passed, 1 failed, 353 skipped
+        FAIL [   0.004s] (1/1) exchange-hours::venue_sessions suite::holidays_tse_sse_nse::nse_muhurat_2026_preserves_published_phases_and_weekend_trade_date
+  stdout ───
+
+    running 1 test
+    test suite::holidays_tse_sse_nse::nse_muhurat_2026_preserves_published_phases_and_weekend_trade_date ... FAILED
+
+    failures:
+
+    failures:
+        suite::holidays_tse_sse_nse::nse_muhurat_2026_preserves_published_phases_and_weekend_trade_date
+
+    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 353 filtered out; finished in 0.00s
+
+  stderr ───
+
+    thread 'suite::holidays_tse_sse_nse::nse_muhurat_2026_preserves_published_phases_and_weekend_trade_date' (33380) panicked at tests/venue_sessions/holidays_tse_sse_nse.rs:1696:9:
+    assertion `left == right` failed: 2026 Muhurat phase at (14, 12, 59) IST
+      left: (false, false, false)
+     right: (false, false, true)
+    note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+error: test run failed

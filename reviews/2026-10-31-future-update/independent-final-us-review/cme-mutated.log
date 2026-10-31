@@ -1,0 +1,24 @@
+   Compiling exchange-hours v1.2.3 (/workspace/exchange-hours-review-us-20261031)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.32s
+     Running tests/futures_family_boundaries.rs (target/debug/deps/futures_family_boundaries-7265ce99ae1881eb)
+
+running 1 test
+test suite::holidays_globex_cryptocurrency::october_maintenance_rows_preserve_the_weekend_and_exact_queues ... FAILED
+
+failures:
+
+---- suite::holidays_globex_cryptocurrency::october_maintenance_rows_preserve_the_weekend_and_exact_queues stdout ----
+
+thread 'suite::holidays_globex_cryptocurrency::october_maintenance_rows_preserve_the_weekend_and_exact_queues' (30650) panicked at tests/futures_family_boundaries/holidays_globex_cryptocurrency.rs:2309:9:
+assertion `left == right` failed
+  left: Ok(false)
+ right: Ok(true)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    suite::holidays_globex_cryptocurrency::october_maintenance_rows_preserve_the_weekend_and_exact_queues
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 471 filtered out; finished in 0.03s
+
+error: test failed, to rerun pass `--test futures_family_boundaries`

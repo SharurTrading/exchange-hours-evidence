@@ -1,0 +1,24 @@
+[
+  {
+    "name": "cme",
+    "file": "src/calendar/schedules/holidays/globex_cryptocurrency.rs",
+    "old": "ExceptionBlock::order_entry(-2, 15 * 3_600 + 15 * 60, 15 * 3_600 + 30 * 60)",
+    "new": "ExceptionBlock::order_entry(-2, 15 * 3_600 + 16 * 60, 15 * 3_600 + 30 * 60)",
+    "test": "october_maintenance_rows_preserve_the_weekend_and_exact_queues",
+    "scope": "holidays_globex_cryptocurrency::",
+    "baseline_exit": 0,
+    "mutated_exit": 101,
+    "restored_exit": 0
+  },
+  {
+    "name": "ice",
+    "file": "src/calendar/schedules/holidays/ice_us.rs",
+    "old": "ExceptionBlock::order_entry(-4, 13 * 3_600 + 30 * 60, 15 * 3_600 + 30 * 60)",
+    "new": "ExceptionBlock::order_entry(-4, 13 * 3_600 + 30 * 60, 15 * 3_600 + 31 * 60)",
+    "test": "the_2026_christmas_notice_shortens_queues_and_states_the_monday_reopen",
+    "scope": "holidays_ice_us::",
+    "baseline_exit": 0,
+    "mutated_exit": 101,
+    "restored_exit": 0
+  }
+]

@@ -12181,3 +12181,47 @@ in this wave cites a proxied CME read. The NYSE notifications API's documented
 `pageSize=500` form currently returns a stale snapshot (newest item 2026-04-23); current
 items only appear at small page sizes — recorded in the crate's sources.md by the same
 PR.
+
+
+## 2026-10-31 UTC — independent final review of calendar source refresh, PR #375
+
+**PASS — no blocking defects remain**, exact implementation head
+`72dff410dbab364ba9ab90c934af4abd7de8d7c4`, compared with base
+`02a3c89495c4f7f9b51fab833fd04d2bc815f456`.
+
+The detached worktree `/workspace/exchange-hours-review-20261031` ran the full
+required gate: formatting, Clippy with warnings denied, **1407 nextest tests
+passed** (34 binaries; 625.186 seconds), **3 doctests passed**, rustdoc with
+warnings denied, cargo-deny, **MSRV 1.95**, and **175 Markdown files with zero
+lint issues**. All seven new/used document-digest checks passed. The exhaustive
+coverage-control test completed successfully; it was not skipped or timed out.
+The parent task's final `cargo xtask verify-evidence --all` on the same exact
+head also passed: **3248 Documents rows across 63 evidence files, 1002 distinct
+digests**, all resolved to held bytes. Its successful log was reviewed and is
+preserved as `independent-final-review/evidence-all.log` beside the report.
+
+Fresh independent NSE and Xetra PDFs reproduce their cited SHA-256 digests;
+NSE has **232 rows = 217 Closed + 9 replacement + 6 Unsourced**, preserving
+main's January 15 election closure. Xetra has **128 rows = 124 Closed + 3 early
+closes + 1 replacement**, zero Unsourced, with unchanged windows. The separate
+independent CME/ICE source review verifies all 21 CME blocks, all 98 preserved
+upstream CME rows, the six ICE replacement arrangements, Cotton's following
+day and FCOJ's unchanged eight withheld dates. Shared family counts agree with
+the inventories and documentation.
+
+Four meaningful mutations were detected and restored across the independent
+reviews: NSE's pre-open order-entry end, Xetra's post-trading end, CME's October
+24 queue start and Sugar's Christmas-eve post-close queue end. Every restored
+targeted test passed, and both review worktrees are clean after restoration.
+
+One initial finding on `5dff8b6` was resolved: renaming the MRX pending-update
+heading broke its pinned documentation fence. The final commit preserves the
+required marker and places the Q1 2027 target in the body; the formerly failing
+fence and full gate now pass. There are no unresolved findings. No charter or
+plan files changed. Forward confirmations remain tracked in issue #374.
+
+Detailed report and logs:
+`reviews/2026-10-31-future-update/independent-final-review/REPORT.md` and
+`reviews/2026-10-31-future-update/independent-final-us-review/REPORT.md`.
+Implementation: https://github.com/SharurTrading/exchange-hours-rs/pull/375.
+Evidence dependency: https://github.com/SharurTrading/exchange-hours-evidence/pull/40.
