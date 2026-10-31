@@ -1,0 +1,73 @@
+[
+  {
+    "file": "cme_globex_20261026.html",
+    "url": "https://www.cmegroup.com/notices/electronic-trading/2026/10/20261026.html",
+    "final_url": "https://www.cmegroup.com/notices/electronic-trading/2026/10/20261026.html",
+    "retrieved_utc": "2026-10-31T22:23:23.194700+00:00",
+    "status": 200,
+    "bytes": 177727,
+    "sha256": "5d1343aa8dc53848c73052726b16150b420c04a76cd7708b652fbe69d56ed0f2",
+    "matches_author_capture": false,
+    "author_sha256": "4437b14e5287982fcb50d272399e2bffd99469b61aea2d8fd411224479f483a7"
+  },
+  {
+    "file": "cme_service_oct3.json",
+    "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=8478&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2026-10-02&toEventDate=2026-10-06",
+    "final_url": "https://www.cmegroup.com/services/trading-hours-by-product?id=8478&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2026-10-02&toEventDate=2026-10-06",
+    "retrieved_utc": "2026-10-31T22:23:23.195342+00:00",
+    "status": 200,
+    "bytes": 1506,
+    "sha256": "784668d4ebd69ad6051a29c1a72d4b76781b31d712ca3fd1b245617efc7ed473",
+    "matches_author_capture": true,
+    "author_sha256": "784668d4ebd69ad6051a29c1a72d4b76781b31d712ca3fd1b245617efc7ed473"
+  },
+  {
+    "file": "cme_service_oct24.json",
+    "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=8478&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2026-10-23&toEventDate=2026-10-27",
+    "final_url": "https://www.cmegroup.com/services/trading-hours-by-product?id=8478&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2026-10-23&toEventDate=2026-10-27",
+    "retrieved_utc": "2026-10-31T22:23:23.198620+00:00",
+    "status": 200,
+    "bytes": 1506,
+    "sha256": "9381985ebf35e61364d7dc43980ae8afd6bea5bba61dab82b74de2ea8cafd786",
+    "matches_author_capture": true,
+    "author_sha256": "9381985ebf35e61364d7dc43980ae8afd6bea5bba61dab82b74de2ea8cafd786"
+  },
+  {
+    "file": "cme_service_oct31.json",
+    "url": "https://www.cmegroup.com/services/trading-hours-by-product?id=8478&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2026-10-30&toEventDate=2026-11-03",
+    "final_url": "https://www.cmegroup.com/services/trading-hours-by-product?id=8478&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2026-10-30&toEventDate=2026-11-03",
+    "retrieved_utc": "2026-10-31T22:23:23.208131+00:00",
+    "status": 200,
+    "bytes": 1506,
+    "sha256": "302d9c48d836ab6930af17be73fb215a06d3cdd5bf8cd034f861df9214d3861d",
+    "matches_author_capture": true,
+    "author_sha256": "302d9c48d836ab6930af17be73fb215a06d3cdd5bf8cd034f861df9214d3861d"
+  },
+  {
+    "file": "ICE_Christmas_2026.pdf",
+    "url": "https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_2026_Christmas_Holiday_20261022.pdf",
+    "final_url": "https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_2026_Christmas_Holiday_20261022.pdf",
+    "retrieved_utc": "2026-10-31T22:23:23.214543+00:00",
+    "status": 200,
+    "bytes": 132381,
+    "sha256": "a7658155b57c51085cd3b36abc9ff6b91f3ca353cda88365a06459ebb40f0801",
+    "matches_author_capture": true,
+    "author_sha256": "a7658155b57c51085cd3b36abc9ff6b91f3ca353cda88365a06459ebb40f0801"
+  },
+  {
+    "file": "ICE_Regular_Hours.pdf",
+    "url": "https://www.ice.com/publicdocs/futures_us/ICE_Futures_US_Regular_Trading_Hours.pdf",
+    "retrieved_utc": "2026-10-31T22:23:50.199096+00:00",
+    "status": 200,
+    "bytes": 107908,
+    "sha256": "381c04fcb4d5b4093f72463246652ac8e24c3ca7b89283dfe86f736497c13ed2"
+  },
+  {
+    "file": "ICE_PCPO_2018.pdf",
+    "url": "https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_PCPO_Session_20180920.pdf",
+    "retrieved_utc": "2026-10-31T22:23:50.494144+00:00",
+    "status": 200,
+    "bytes": 313125,
+    "sha256": "42a4e0ec45f59fae316924a8421bbdd779a3ee6e8b47aea08ad5944caa27b21d"
+  }
+]

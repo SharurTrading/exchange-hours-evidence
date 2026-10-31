@@ -1,0 +1,32 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.01s
+     Running tests/futures_family_boundaries.rs (target/debug/deps/futures_family_boundaries-7265ce99ae1881eb)
+
+running 25 tests
+test suite::holidays_ice_us::an_unsourced_row_is_reported_and_changes_no_answer ... ok
+test suite::holidays_ice_us::detaching_the_table_restores_the_normal_week ... ok
+test suite::holidays_ice_us::a_shortened_index_day_keeps_its_trade_date ... ok
+test suite::holidays_ice_us::fcoj_and_cotton_are_not_part_of_the_easter_monday_late_open ... ok
+test suite::holidays_ice_us::every_ice_table_covers_the_2025_floor_through_the_2027_calendars_last_entry ... ok
+test suite::holidays_ice_us::memorial_day_removes_the_whole_softs_trading_day ... ok
+test suite::holidays_ice_us::easter_monday_moves_the_sugar_coffee_and_cocoa_open_to_0730_new_york ... ok
+test suite::holidays_ice_us::the_2025_index_early_closes_take_their_own_instants ... ok
+test suite::holidays_ice_us::good_friday_gives_the_index_families_a_late_open_and_an_early_close ... ok
+test suite::holidays_ice_us::the_2025_ordinary_week_around_the_rows_still_trades ... ok
+test suite::holidays_ice_us::the_2025_london_bank_holidays_delay_the_three_softs_opens ... ok
+test suite::holidays_ice_us::the_2025_mourning_notice_closes_fang_at_0930_and_the_venue_withholds_the_date ... ok
+test suite::holidays_ice_us::the_2025_thanksgiving_friday_states_each_softs_family_separately ... ok
+test suite::holidays_ice_us::the_2025_softs_closures_remove_the_whole_trading_day ... ok
+test suite::holidays_ice_us::the_2026_mlk_and_presidents_notices_give_fang_the_index_close ... ok
+test suite::holidays_ice_us::the_2026_thanksgiving_notice_states_each_familys_instants ... ok
+test suite::holidays_ice_us::the_index_families_take_their_own_early_close_instants ... ok
+test suite::holidays_ice_us::the_2026_dst_end_week_opens_the_softs_late_at_three_instants ... ok
+test suite::holidays_ice_us::the_new_years_closure_removes_the_prior_evening_for_the_index_families ... ok
+test suite::holidays_ice_us::the_retrieved_2026_christmas_notice_states_the_eve_and_boxing_day ... ok
+test suite::holidays_ice_us::the_retrieved_2025_notices_state_the_eve_instants ... ok
+test suite::holidays_ice_us::the_venue_ships_only_the_dates_every_family_agrees_on ... ok
+test suite::holidays_ice_us::the_venue_table_is_the_intersection_of_the_five_tables_its_keys_select ... ok
+test suite::holidays_ice_us::cotton_carries_its_own_monday_late_open_row ... ok
+test suite::holidays_ice_us::the_2026_christmas_notice_shortens_queues_and_states_the_monday_reopen ... ok
+
+test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 447 filtered out; finished in 0.02s
+

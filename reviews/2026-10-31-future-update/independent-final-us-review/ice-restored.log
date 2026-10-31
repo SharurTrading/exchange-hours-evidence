@@ -1,0 +1,9 @@
+   Compiling exchange-hours v1.2.3 (/workspace/exchange-hours-review-us-20261031)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.23s
+     Running tests/futures_family_boundaries.rs (target/debug/deps/futures_family_boundaries-7265ce99ae1881eb)
+
+running 1 test
+test suite::holidays_ice_us::the_2026_christmas_notice_shortens_queues_and_states_the_monday_reopen ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 471 filtered out; finished in 0.00s
+

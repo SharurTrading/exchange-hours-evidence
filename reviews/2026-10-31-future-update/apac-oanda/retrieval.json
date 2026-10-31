@@ -1,0 +1,200 @@
+[
+  {
+    "name": "oanda-uk-holidays",
+    "url": "https://www.oanda.com/uk-en/trading/holiday-trading-hours/",
+    "retrieved_utc": "2026-10-31T22:05:32.143128+00:00",
+    "status": 200,
+    "final_url": "https://www.oanda.com/uk-en/trading/holiday-trading-hours/",
+    "content_type": "text/html; charset=utf-8",
+    "file": "oanda-uk-holidays.html",
+    "sha256": "b2cc1701b65def003900c3451cf91bd831b382b30108d2c9850493f26e70fd22",
+    "bytes": 240305
+  },
+  {
+    "name": "oanda-uk-hours",
+    "url": "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+    "retrieved_utc": "2026-10-31T22:05:32.143770+00:00",
+    "status": 200,
+    "final_url": "https://www.oanda.com/uk-en/trading/hours-of-operation/",
+    "content_type": "text/html; charset=utf-8",
+    "file": "oanda-uk-hours.html",
+    "sha256": "13f68aa269b824ae7dd4051747084dfb1379544b8455612fec99ab44c71869a0",
+    "bytes": 471367
+  },
+  {
+    "name": "oanda-tms-us-time-change-excluded",
+    "url": "https://www.oanda.com/eu-en/news/time-change-in-usa-4",
+    "retrieved_utc": "2026-10-31T22:05:32.144159+00:00",
+    "status": 200,
+    "final_url": "https://www.oanda.com/eu-en/news/time-change-in-usa-4",
+    "content_type": "text/html; charset=UTF-8",
+    "file": "oanda-tms-us-time-change-excluded.html",
+    "sha256": "1a3236f977b1f105c316cc8314df70b646d41b6f77be4b3625725a04c6c3491f",
+    "bytes": 133586
+  },
+  {
+    "name": "asx-cash-calendar",
+    "url": "https://www.asx.com.au/markets/market-resources/trading-hours-calendar/cash-market-trading-hours/trading-calendar",
+    "retrieved_utc": "2026-10-31T22:05:32.146377+00:00",
+    "status": 200,
+    "final_url": "https://www.asx.com.au/markets/market-resources/trading-hours-calendar/cash-market-trading-hours/trading-calendar",
+    "content_type": "text/html;charset=utf-8",
+    "file": "asx-cash-calendar.html",
+    "sha256": "9a8513fd815e966b6d66f418d5fe81b147752da16a57ab236241adf5d86923e0",
+    "bytes": 147311
+  },
+  {
+    "name": "asx-cash-hours",
+    "url": "https://www.asx.com.au/markets/market-resources/trading-hours-calendar/cash-market-trading-hours",
+    "retrieved_utc": "2026-10-31T22:05:32.147112+00:00",
+    "status": 200,
+    "final_url": "https://www.asx.com.au/markets/market-resources/trading-hours-calendar/cash-market-trading-hours",
+    "content_type": "text/html;charset=utf-8",
+    "file": "asx-cash-hours.html",
+    "sha256": "6653f7b5605f4427922f65d47ab5358750da69537a1ef1f28b21355aec4f1658",
+    "bytes": 146280
+  },
+  {
+    "name": "nzx-hours",
+    "url": "https://www.nzx.com/learning/help-reference/trading-hours",
+    "retrieved_utc": "2026-10-31T22:05:32.150551+00:00",
+    "status": 200,
+    "final_url": "https://www.nzx.com/learning/help-reference/trading-hours",
+    "content_type": "text/html; charset=utf-8",
+    "file": "nzx-hours.html",
+    "sha256": "47113f1d997ef7dcb119d6804d8e5f2a19fde55704ea6af061b2c277969c6866",
+    "bytes": 114190
+  },
+  {
+    "name": "nzx-anatomy",
+    "url": "https://www.nzx.com/learning/issuer-participant-resources/nzx-trading/anatomy-of-a-trading-day",
+    "retrieved_utc": "2026-10-31T22:05:32.164449+00:00",
+    "status": 200,
+    "final_url": "https://www.nzx.com/learning/issuer-participant-resources/nzx-trading/anatomy-of-a-trading-day",
+    "content_type": "text/html; charset=utf-8",
+    "file": "nzx-anatomy.html",
+    "sha256": "84244f4299cde7dcfb2a9f6377807c0305546976ee93a88671180cacdb1c03b7",
+    "bytes": 129698
+  },
+  {
+    "name": "jpx-holidays",
+    "url": "https://www.jpx.co.jp/english/corporate/about-jpx/calendar/",
+    "retrieved_utc": "2026-10-31T22:05:32.165282+00:00",
+    "status": 200,
+    "final_url": "https://www.jpx.co.jp/english/corporate/about-jpx/calendar/",
+    "content_type": "text/html",
+    "file": "jpx-holidays.html",
+    "sha256": "b4badc0361257c07b326f9fc9f5da3f13d883140813e528fdadc745320fbd4f1",
+    "bytes": 32993
+  },
+  {
+    "name": "tse-domestic-hours",
+    "url": "https://www.jpx.co.jp/english/equities/trading/domestic/01.html",
+    "retrieved_utc": "2026-10-31T22:05:32.419506+00:00",
+    "status": 200,
+    "final_url": "https://www.jpx.co.jp/english/equities/trading/domestic/01.html",
+    "content_type": "text/html",
+    "file": "tse-domestic-hours.html",
+    "sha256": "3be14d97a68aae19b0c4dccce569278989ec47e2a26493adba33328422a5bc35",
+    "bytes": 28806
+  },
+  {
+    "name": "tse-tostnet-hours",
+    "url": "https://www.jpx.co.jp/english/equities/trading/tostnet/02.html",
+    "retrieved_utc": "2026-10-31T22:05:32.506428+00:00",
+    "status": 200,
+    "final_url": "https://www.jpx.co.jp/english/equities/trading/tostnet/02.html",
+    "content_type": "text/html",
+    "file": "tse-tostnet-hours.html",
+    "sha256": "22fd4e48497cf81156c5ae9449bd1f6a7ba4142d221fe2c2a8c2edc9a38f318f",
+    "bytes": 33869
+  },
+  {
+    "name": "hkex-holidays",
+    "url": "https://www.hkex.com.hk/Services/Trading/Derivatives/Overview/Trading-Calendar-and-Holiday-Schedule?sc_lang=en",
+    "retrieved_utc": "2026-10-31T22:05:33.493184+00:00",
+    "status": 200,
+    "final_url": "https://www.hkex.com.hk/Services/Trading/Derivatives/Overview/Trading-Calendar-and-Holiday-Schedule?sc_lang=en",
+    "content_type": "text/html; charset=utf-8",
+    "file": "hkex-holidays.html",
+    "sha256": "5af6af7ae701ad8b3d32a667f97bdeaf23da73a291b86c40a2d10e5a494a47de",
+    "bytes": 386916
+  },
+  {
+    "name": "hkex-securities-hours",
+    "url": "https://www.hkex.com.hk/Services/Trading-hours-and-Severe-Weather-Arrangements/Trading-Hours/Securities-Market?sc_lang=en",
+    "retrieved_utc": "2026-10-31T22:05:33.843625+00:00",
+    "status": 200,
+    "final_url": "https://www.hkex.com.hk/Services/Trading-hours-and-Severe-Weather-Arrangements/Trading-Hours/Securities-Market?sc_lang=en",
+    "content_type": "text/html; charset=utf-8",
+    "file": "hkex-securities-hours.html",
+    "sha256": "767ae7cab1011f0dc852fdcc7246d11f36509094a1c670b43e0cb9ea2d54b26f",
+    "bytes": 244047
+  },
+  {
+    "name": "sgx-trading-content",
+    "url": "https://api2.sgx.com/content-api?queryId=dd24dd8e5b3ef52e535a662e01b58d76471f335e%3Apage&variables=%7B%22path%22%3A%22%2Fstock-exchange%2Ftrading%22%2C%22lang%22%3A%22EN%22%7D",
+    "retrieved_utc": "2026-10-31T22:05:34.275563+00:00",
+    "status": 200,
+    "final_url": "https://api2.sgx.com/content-api?queryId=dd24dd8e5b3ef52e535a662e01b58d76471f335e%3Apage&variables=%7B%22path%22%3A%22%2Fstock-exchange%2Ftrading%22%2C%22lang%22%3A%22EN%22%7D",
+    "content_type": "application/json",
+    "file": "sgx-trading-content.json",
+    "sha256": "debd651570b4932ef6ac8bed871d535cb3b2fc8260f69668359fbcf8a32d77ac",
+    "bytes": 142201
+  },
+  {
+    "name": "sgx-trading-rulebook",
+    "url": "https://rulebook.sgx.com/rulebook/regulatory-notice-821-trading-hours-market-phases-application-market-phases-and-principles",
+    "retrieved_utc": "2026-10-31T22:05:34.400609+00:00",
+    "status": 200,
+    "final_url": "https://rulebook.sgx.com/rulebook/regulatory-notice-821-trading-hours-market-phases-application-market-phases-and-principles",
+    "content_type": "text/html; charset=utf-8",
+    "file": "sgx-trading-rulebook.html",
+    "sha256": "e799e5b63db3f332e180a4598d396ffa6c5b410f9881cc188bb839a378286355",
+    "bytes": 612651
+  },
+  {
+    "name": "sse-holidays-list",
+    "url": "https://www.sse.com.cn/disclosure/dealinstruc/closed/list/",
+    "retrieved_utc": "2026-10-31T22:05:34.506612+00:00",
+    "status": 200,
+    "final_url": "https://www.sse.com.cn/disclosure/dealinstruc/closed/list/",
+    "content_type": "text/html",
+    "file": "sse-holidays-list.html",
+    "sha256": "16627969581acab0f595232c25c5bacd465210d97f5f5d7b2cba3db1fd689cd5",
+    "bytes": 31684
+  },
+  {
+    "name": "sse-current-rule",
+    "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/stocks/exchange/c/c_20260424_10816482.shtml",
+    "retrieved_utc": "2026-10-31T22:05:34.593527+00:00",
+    "status": 200,
+    "final_url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/stocks/exchange/c/c_20260424_10816482.shtml",
+    "content_type": "text/html",
+    "file": "sse-current-rule.html",
+    "sha256": "107c92519e0db914e827ccff8946dd03acb65db409eeb50cf307f6d4d1034b08",
+    "bytes": 33591
+  },
+  {
+    "name": "tse-random-closing-plan",
+    "url": "https://www.jpx.co.jp/english/equities/trading/strengthening/",
+    "retrieved_utc": "2026-10-31T22:07:23.572942+00:00",
+    "status": 200,
+    "final_url": "https://www.jpx.co.jp/english/equities/trading/strengthening/",
+    "content_type": "text/html",
+    "file": "tse-random-closing-plan.html",
+    "sha256": "0bba08504c7413cce3035fbb397ed4b77c2a90a582755a24adf7dc79f5a5cebc",
+    "bytes": 39509
+  },
+  {
+    "name": "tse-random-closing-outline",
+    "url": "https://www.jpx.co.jp/english/rules-participants/public-comment/detail/d2/vk0khi000001dfu3-att/vk0khi000001dfwb.pdf",
+    "retrieved_utc": "2026-10-31T22:07:25.858020+00:00",
+    "status": 200,
+    "final_url": "https://www.jpx.co.jp/english/rules-participants/public-comment/detail/d2/vk0khi000001dfu3-att/vk0khi000001dfwb.pdf",
+    "content_type": "application/pdf",
+    "file": "tse-random-closing-outline.pdf",
+    "sha256": "710c942d34549cbd4ddcc7fd0f5107b729b3a872e4f41886c7413e76ee372c9b",
+    "bytes": 837791
+  }
+]

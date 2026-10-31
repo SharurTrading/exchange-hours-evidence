@@ -1,0 +1,68 @@
+    Checking exchange-hours v1.2.3 (/workspace/exchange-hours-review-20261031)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.25s
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.03s
+────────────
+ Nextest run ID 56c3c20d-7b66-4e4b-a817-495d406048a2 with nextest profile: default
+    Starting 1407 tests across 34 binaries
+────────────
+     Summary [ 625.186s] 1407 tests run: 1407 passed (2 slow), 0 skipped
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.01s
+   Doc-tests exchange_hours
+
+running 3 tests
+test src/calendar/exceptions/static_table.rs - calendar::exceptions::static_table::StaticSessionExceptions (line 104) ... ok
+test src/calendar/policy/static_policy.rs - calendar::policy::static_policy::StaticDayPolicy (line 145) ... ok
+test src/lib.rs - (line 18) ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+all doctests ran in 0.15s; merged doctests compilation took 0.15s
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling num-traits v0.2.19
+   Compiling serde_core v1.0.229
+   Compiling serde v1.0.229
+    Checking chrono v0.4.45
+   Compiling syn v3.0.3
+    Checking chrono-tz v0.10.4
+   Compiling serde_derive v1.0.229
+ Documenting exchange-hours v1.2.3 (/workspace/exchange-hours-review-20261031)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.72s
+   Generated /workspace/exchange-hours-rs/target/doc/exchange_hours/index.html
+warning[license-not-encountered]: license was not encountered
+   ┌─ /workspace/exchange-hours-review-20261031/deny.toml:12:6
+   │
+12 │     "Apache-2.0 WITH LLVM-exception",
+   │      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ unmatched license allowance
+
+warning[license-not-encountered]: license was not encountered
+   ┌─ /workspace/exchange-hours-review-20261031/deny.toml:13:6
+   │
+13 │     "BSD-2-Clause",
+   │      ━━━━━━━━━━━━ unmatched license allowance
+
+warning[license-not-encountered]: license was not encountered
+   ┌─ /workspace/exchange-hours-review-20261031/deny.toml:14:6
+   │
+14 │     "BSD-3-Clause",
+   │      ━━━━━━━━━━━━ unmatched license allowance
+
+warning[license-not-encountered]: license was not encountered
+   ┌─ /workspace/exchange-hours-review-20261031/deny.toml:18:6
+   │
+18 │     "CC0-1.0",
+   │      ━━━━━━━ unmatched license allowance
+
+warning[license-not-encountered]: license was not encountered
+   ┌─ /workspace/exchange-hours-review-20261031/deny.toml:15:6
+   │
+15 │     "ISC",
+   │      ━━━ unmatched license allowance
+
+warning[license-not-encountered]: license was not encountered
+   ┌─ /workspace/exchange-hours-review-20261031/deny.toml:16:6
+   │
+16 │     "Zlib",
+   │      ━━━━ unmatched license allowance
+
+advisories ok, bans ok, licenses ok, sources ok

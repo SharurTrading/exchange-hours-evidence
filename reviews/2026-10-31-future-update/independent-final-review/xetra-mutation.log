@@ -1,0 +1,51 @@
+   Compiling exchange-hours v1.2.3 (/workspace/exchange-hours-review-20261031)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.80s
+────────────
+ Nextest run ID 9ac8581b-b5fa-4c73-bc25-d7013d3bacb8 with nextest profile: default
+    Starting 1 test across 1 binary (45 tests skipped)
+        FAIL [   0.013s] (1/1) exchange-hours::equities_holidays suite::xetra::the_2026_final_session_replaces_retail_late_with_shortened_post_trading
+  stdout ───
+
+    running 1 test
+    test suite::xetra::the_2026_final_session_replaces_retail_late_with_shortened_post_trading ... FAILED
+
+    failures:
+
+    failures:
+        suite::xetra::the_2026_final_session_replaces_retail_late_with_shortened_post_trading
+
+    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 45 filtered out; finished in 0.01s
+
+  stderr ───
+
+    thread 'suite::xetra::the_2026_final_session_replaces_retail_late_with_shortened_post_trading' (34269) panicked at tests/equities_holidays/xetra.rs:311:9:
+    assertion `left == right` failed: pre-trading and post-trading remain order entry at (14, 59, 59)
+      left: false
+     right: true
+    note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+  Cancelling due to test failure
+────────────
+     Summary [   0.013s] 1 test run: 0 passed, 1 failed, 45 skipped
+        FAIL [   0.013s] (1/1) exchange-hours::equities_holidays suite::xetra::the_2026_final_session_replaces_retail_late_with_shortened_post_trading
+  stdout ───
+
+    running 1 test
+    test suite::xetra::the_2026_final_session_replaces_retail_late_with_shortened_post_trading ... FAILED
+
+    failures:
+
+    failures:
+        suite::xetra::the_2026_final_session_replaces_retail_late_with_shortened_post_trading
+
+    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 45 filtered out; finished in 0.01s
+
+  stderr ───
+
+    thread 'suite::xetra::the_2026_final_session_replaces_retail_late_with_shortened_post_trading' (34269) panicked at tests/equities_holidays/xetra.rs:311:9:
+    assertion `left == right` failed: pre-trading and post-trading remain order entry at (14, 59, 59)
+      left: false
+     right: true
+    note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+error: test run failed

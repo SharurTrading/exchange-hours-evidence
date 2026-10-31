@@ -1,0 +1,26 @@
+[
+  {
+    "case": "nse",
+    "file": "src/calendar/schedules/holidays/nse_india.rs",
+    "original_sha256": "4d6951fefb207fd44df8bbe3f1c7f72d4dc6fa8149778cb1391bc5052a06557a",
+    "mutation": {
+      "from": "ExceptionBlock::order_entry(0, 14 * 3_600 + 5 * 60, 14 * 3_600 + 13 * 60)",
+      "to": "ExceptionBlock::order_entry(0, 14 * 3_600 + 5 * 60, 14 * 3_600 + 12 * 60)"
+    },
+    "mutant_exit": 100,
+    "restored_exit": 0,
+    "restored_exact_bytes": true
+  },
+  {
+    "case": "xetra",
+    "file": "src/calendar/schedules/holidays/xetra.rs",
+    "original_sha256": "e9c693f106fd707c4ff5de079ec23906f51fb8a2bad6bfa2f496d117fce1c25c",
+    "mutation": {
+      "from": "ExceptionBlock::order_entry(0, 14 * 3_600 + 10 * 60, 15 * 3_600)",
+      "to": "ExceptionBlock::order_entry(0, 14 * 3_600 + 10 * 60, 14 * 3_600 + 59 * 60)"
+    },
+    "mutant_exit": 100,
+    "restored_exit": 0,
+    "restored_exact_bytes": true
+  }
+]

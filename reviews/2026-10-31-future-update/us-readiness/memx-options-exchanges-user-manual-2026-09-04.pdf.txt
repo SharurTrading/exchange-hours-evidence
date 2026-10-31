@@ -1,0 +1,396 @@
+MEMX OPTIONS EXCHANGES
+USER MANUAL
+
+Version 1.0
+
+Updated: September 4, 2026
+Table of Contents
+Introduction ............................................................................................................................ 3
+Trading System ....................................................................................................................... 3
+Data Centers and Co-Location ................................................................................................. 4
+Connectivity and Access .......................................................................................................... 4
+Risk Controls ........................................................................................................................... 5
+Hours of Trading and Market Session ...................................................................................... 6
+Order Types and Modifiers ...................................................................................................... 6
+Bulk Messages ........................................................................................................................ 7
+Order Handling ....................................................................................................................... 7
+Priority of Orders .................................................................................................................... 8
+Routing to Away Markets ..................................................................................................... 10
+Data Products ....................................................................................................................... 10
+Contact MEMX ...................................................................................................................... 10
+
+
+
+
+MEMX OPTIONS                                                                                                                 Page 2 of 12
+Introduction
+
+This document provides information about the options trading platforms operated by MEMX LLC,
+MEMX Options and MX2 Options (the “MEMX Options Exchanges,” the “Systems,” or the
+“Exchanges”) and MEMX Execution Services LLC (“MEMX Execution Services”), which is the
+outbound routing broker for the Exchanges. The Exchanges and MEMX Execution Services are
+both subsidiaries of MEMX Holdings LLC.
+
+The MEMX Options Exchanges User Manual summarizes various operations and rules of the
+Exchanges. The complete and official Rulebooks for MEMX Options and MX2 Options are
+available at https://info.memxtrading.com/memx-rules/. In the event of a conflict between the User
+Manual and the information set forth in the official Rulebooks, the Rulebooks shall prevail.
+Information contained in this document is subject to change at any time.
+
+Trading System
+
+Each Exchange is a fully automated electronic limit order book for orders to buy and sell options
+with a continuous matching function. The Exchanges also offer routing functionality through
+MEMX Execution Services with connectivity to all venues displaying Protected Quotations, as
+described in Exchange Rule 21.9. Members of the Exchanges and their Sponsored Participants
+(collectively, “Users”) connect to the System via FIX and/or binary order entry protocols to
+electronically send orders to buy and sell securities traded on the Exchanges. Users may also send
+orders through a Service Bureau.
+
+Each Exchange was built with a focus on performance, reliability, and security. The Systems are
+distributed across a network of servers to maximize throughput and determinism, minimize latency
+and bottlenecks, provide high availability and fault tolerance, and allow for simplified scalability.
+Additional servers can be added to easily expand system functionality and capacity as required in
+accordance with the MEMX Capacity Management Plan. Further, security has been architected
+and designed into each System as a primary concern to effectively manage access, authorization,
+and authentication to Exchange services.
+
+At the core of each System is the matching engine complex, which compares the limit price of an
+incoming order with the price of resting (i.e., booked) Limit orders on the MEMX or MX2 Options
+Book and the price of other markets’ displayed quotes. If the order is immediately marketable
+against the MEMX or MX2 Options Book, and there is interest available on the MEMX or MX2
+Options Book at a price equal to or better than the consolidated quote, an immediate match is made
+and communicated back to Users. If another market is displaying a better quote, the order will be
+handled depending on the User’s instructions (e.g., forwarded to the other market to attempt to fill
+the order, posted to the MEMX or MX2 Options Book, canceled). The priority of how orders are
+ranked on each Exchange is discussed in more detail below and described in Rule 21.8 of the
+applicable Exchange Rulebook.
+
+Users or their clearing firms can create and provision FIX Drop Copy sessions on the MEMX User
+Portal. Sessions can be configured to filter information by OCC Clearing numbers, Executing Firm
+ID(s) (“EFID(s)”), and/or Account(s) and include trade information.
+
+
+MEMX OPTIONS                                                                               Page 3 of 12
+Data Centers and Co-Location
+
+The Exchanges' primary trading platform is located in a third-party data center facility in New
+Jersey. It is accessible to Members, Sponsored Participants, Service Bureaus, Data Recipients
+(collectively “Participants”) and Extranet Providers.
+
+The Exchanges' secondary data center is located in a third-party data center facility in Chicago,
+IL. Connectivity to the secondary data center, while not a mandatory requirement for all
+Participants, is recommended to minimize service disruption in the event of an issue at the primary
+trading platform data center.
+
+The MEMX Options Exchanges offer co-location services in both the primary and secondary data
+centers. This provides participants with the fairest and fastest access to Exchange services, reduced
+network complexity, and flexible power and connectivity options. Connectivity to each Exchange
+in the primary data center for both order entry and market data dissemination is equalized for all
+co-located participants in the New Jersey location. Participants will be able to connect to order
+entry systems and receive market data in both the primary and secondary data centers.
+
+The MEMX Options Exchanges provide redundant physical network connectivity in both the
+primary and secondary data centers. This diverse set of network connections, the “A” and “B”
+feeds, provide high availability and fault tolerance to all co-located participants. To achieve this
+resiliency, MEMX requires participants to connect to both the “A” and “B” feeds. To further
+increase reliability, the network configuration used for the “A” and “B” feeds are diverse resulting
+in the “A” feed being produced, on average, before the “B” feed.
+
+All data centers the Exchanges use are, at a minimum, Tier 3 compliant and provide a high level
+of security and availability through redundant and reliable environmental control systems
+(redundant power supplies, on-site backup generators, cooling systems, etc.). Data center
+personnel are available 24/7 to maintain and service the System.
+
+Connectivity and Access
+
+The MEMX Options Exchanges support the following connectivity methods in both its primary
+and secondary data centers:
+
+   •   Co-Location Cross-Connect: Participants may request a cross-connect from the
+       Participant’s point-of-presence to each of the Exchanges.
+   •   Extranet Providers: Participants may connect to each of the Exchanges via an approved
+       Extranet Provider. A list of available providers can be found on the MEMX Options User
+       Portal.
+   •   Private-Line Ethernet: Participants may connect via telecommunications carriers
+       providing a circuit extension from a location outside the Exchanges' primary or secondary
+       data center.
+
+Participants are responsible for choosing and implementing connectivity to the primary and
+secondary data center.
+
+
+MEMX OPTIONS                                                                               Page 4 of 12
+For more detailed information and instructions on how to connect to MEMX, please refer to the
+MEMX Connectivity Specification.
+
+Users are permitted to electronically access the order entry facility of the Exchanges, MEMO
+(MEMbers Orders) for Options, using the Classic ASCII FIX protocol and/or the native binary
+protocol. A common data schema is used for both protocols to allow for easier transition between
+the two. Message framing and encoding is also standardized and unified across protocols.
+MEMO for Options SBE, the native binary protocol for order entry, is an application layer message
+standard used to facilitate the electronic communication of information between each Exchange
+and its participants. MEMO for Options allows participants to submit, modify, and cancel orders,
+receive acknowledgements and execution reports, and be notified of exchange trading status. Refer
+to the MEMO for Options SBE Protocol Specification for more details. The Exchange also
+supports order entry via the FIX (tag/value) protocol. Please refer to the MEMO for Options FIX
+Protocol Specification for more details. Note, MEMX Options supports bulk quote entry, as
+described further below, via the MEMO for Options SBE protocol. Bulk quote entry is not
+supported by the MEMO for Options FIX protocol.
+
+Risk Controls
+
+Both the MEMO for Options FIX and MEMO for Options SBE order entry protocols contain an
+integrated pre-trade risk management service that processes all incoming order information against
+a mandatory set of risk controls designed to help prevent erroneous orders from passing through
+to the matching engine for execution. These controls are dynamically configurable by Exchange
+participants and can be assigned to an individual application session, i.e., a single FIX or MEMO
+session, or an aggregated set of application sessions using user defined risk control identifiers.
+Further, risk controls can be established for a single underlying for a single EFID, across all
+underlyings for a single EFID, and/or across a custom group of orders designated by a custom
+identifier. The time period(s) applicable to risk control settings is also configurable by Exchange
+participants, including the ability to set risk control parameters applicable to the entire trading day.
+Refer to the MEMX Risk Control for US Options Specification for a list of risk controls and
+detailed information on how to configure and apply these controls.
+
+In addition, the MEMX Options Exchanges provide the ability for a Participant to configure an
+Active Risk Control to manage the number of executed contracts. Each Exchange manages an
+Active Risk Counter, which is incremented by the number of contracts executed and tracked
+against a Participant defined threshold. The counter is decremented upon a positive electronic
+confirmation from the Participant via the Options Risk Control protocol. Refer to the MEMX Risk
+Control for US Options Specification for detailed information on how to configure this control.
+
+MEMO for Options SBE supports the canceling of an order via any active Participant session
+regardless of the session that the original order was transmitted on. Additionally, this flexibility
+allows each Exchange to offer a batch cancel function, via any active session, which can be used
+by a Participant to cancel all or a subset of its orders in one or more symbols with a single command
+to the applicable Exchange. Participants can also specify a “lock out” command on their mass
+cancels which will prevent further orders from being accepted until the participant sends a message
+to lift the lock out.
+
+
+MEMX OPTIONS                                                                                 Page 5 of 12
+Hours of Trading and Market Session
+
+Orders may be entered into the System during the Market Session (from 9:30 a.m. until 4:00 p.m.
+Eastern Time except for options on Fund Shares, options on exchange-traded notes including
+Index-Linked Securities, and Index Options, which will be open until 4:15 p.m Eastern Time).
+The Exchanges will not accept orders prior to the Market Session.
+
+    Session                                    Start and End Time (all times are Eastern Time)
+    Market Session                             9:30 a.m. to 4:001 p.m.
+
+Order Types and Modifiers
+
+As summarized in the table below, the MEMX Options Exchanges accept Market orders and Limit
+orders during the Market Session. Orders will be accepted with a size of at least one (1) contract
+up to a maximum of 999,999 contracts.
+
+The following Time-in-Force (TIF) instructions are available that determine the period(s) of time
+during which an order is available for potential execution:
+
+      •   Immediate-Or-Cancel (IOC): An order with this Time-In-Force instruction will be
+          executed in whole or in part upon entry, otherwise the order will be canceled.
+      •   Day: An order with this Time-In-Force instruction is eligible for execution during the
+          Market Session. Day orders remaining on the MEMX Options or MX2 Options Book at
+          the end of the Market Session will be canceled.
+
+Order types may be designated with a variety of modifiers such as Intermarket Sweep Orders
+(ISOs), Post Only, Book Only, and Price Adjust. Additional details on these modifiers are set forth
+below and in the applicable Exchange Rulebook.
+
+      •   Intermarket Sweep Orders (ISO): An order that allows MEMX/MX2 Options to execute at
+          its BBO regardless of prices at other options market centers without violating the Options
+          Order Protection Plan. It is the responsibility of the User entering the order to comply with
+          the requirements of the Options Order Protection Plan relating to ISOs.
+      •   Post Only: Designates that the order is to be posted on the MEMX/MX2 Options Book to
+          add liquidity only and cannot be routed to another trading venue.
+      •   Book Only: Designates that the order is to be executed only on the MEMX/MX2 Options
+          Book and cannot be routed to another trading venue.
+      •   Price Adjust: Designates that an order that would otherwise violate the order protection and
+          trade through restrictions of the Options Order Protection and Locked/Crossed Market Plan
+          will be ranked and priced to one Minimum Price Variation above/below the current
+          NBB/NBO.
+
+
+1
+          Each MEMX Options Exchange will be open until 4:00 p.m. except for options on Fund Shares, options on
+          exchange-traded notes including Index-Linked Securities, and Index Options, which will be open until 4:15
+          p.m.
+
+
+MEMX OPTIONS                                                                                            Page 6 of 12
+  Order        Trading      Time-       Size       Routing/ Posting         ISO          Price
+  Type          Hours        In-                                                         Adjust
+                            Force
+ Market       9:30 a.m.     IOC,    1 to 999,999   Route, Book Only   N/A             N/A
+               through      Day     contracts
+            4:153 p.m. ET
+
+ Limit        9:30 a.m.     IOC,    1 to 999,999   Route, Book        ISO (not        Entry, Single,
+               through      Day     contracts      Only, Post Only    allowed on      Continuous
+            4:153 p.m. ET                                             bulk
+                                                                      messages)
+
+
+
+Refer to Chapter 21 of each Exchange Rulebook for detailed information regarding order types,
+modifiers and TIF instructions.
+
+Bulk Messages
+
+Each MEMX Options Exchange supports bulk quote entry via MEMO for Options SBE. Bulk
+messages allow a User to enter, modify, or cancel several bids and offers in a single message for
+a given underlying. Only participants qualified as Market Makers shall be allowed to submit bulk
+messages. Bulk messages can have a Time-in-Force of Day or IOC and are not eligible for routing.
+A Market Maker with an appointment in a specified options class must designate a bulk message
+for that class as Post Only or Book Only and a non-appointed Market Maker must designate a bulk
+message for that class as Post Only. For more information regarding bulk messaging, see the
+MEMO for Options Protocol Specification.
+
+Order Handling
+
+During operating hours, the Exchanges will accept incoming Market orders when a valid NBBO
+is available and cancel such orders otherwise. Limit orders will be accepted with or without a valid
+NBBO. The following sections describe the order handling behavior for the different order types,
+instructions, and modifiers.
+
+Market Orders
+
+
+
+
+MEMX OPTIONS                                                                                Page 7 of 12
+Limit Orders
+
+
+
+
+   (1) These modifiers are mutually exclusive.
+
+Priority of Orders
+
+MEMX Options
+
+Orders are ranked and maintained in the MEMX Options Book based on the Price/Time priority
+as follows:
+
+   •   Price. The highest-priced order to buy (lowest-priced order to sell) has priority over all
+       other orders to buy (sell) in all cases.
+   •   Time. Equally priced trading interest shall be ranked in the order it was received.
+
+Any modification to an order other than a decrease in size shall result in a loss of priority and a
+new timestamp being applied by MEMX Options. If an order is executed against an incoming
+order for less than its full size, the remaining size shall retain its original price time priority.
+
+
+
+MEMX OPTIONS                                                                              Page 8 of 12
+MX2 Options
+
+MX2 Options supports a pro rata execution model, whereby resting orders are prioritized
+according to price. If there are two or more quotes or orders at the best price then the contracts are
+allocated proportionally according to size in a pro-rata fashion. The executable quantity is
+allocated to the nearest whole number, with fractions 1/2 or greater rounded up and fractions less
+than 1/2 rounded down.
+
+MX2 Options may also apply, on a class-by-class basis, certain priority overlays, as follows:
+
+   •   Priority Customer. When this priority overlay is in effect, the highest bid and lowest offer
+       shall have priority except that Priority Customer Orders shall have priority over all non-
+       Customer orders at the same price, and if there are two or more Priority Customer orders
+       at the same price, they will be filled in time priority.
+   •   Preferred Market Maker ("PMM") - May only be in effect if the Priority Customer overlay
+       is in effect as well. An Options Member may direct Priority Customer orders ("Preferred
+       Orders") to a designated PMM, who must be registered with the Exchange as a Market
+       Maker in the relevant option class at the time of receipt of the Preferred Order to receive
+       the PMM participant entitlement. The PMM participation entitlement shall only apply to
+       any remaining balance after Priority Customers have been satisfied. The PMM
+       participation entitlements are as follows:
+                •        For each incoming Preferred Order to the PMM, if the PMM is quoting at
+                the NBBO, it will be allocated the greater of: (i) the proportion of the total size at
+                the NBBO represented by the size of its quote, or (ii) sixty percent (60%) of the
+                contracts to be allocated if there is only one (1) other Market Maker quote or non-
+                Customer order at the NBBO, or forty percent (40%) if there are two (2) or more
+                other Market Maker quotes and/or non-Customer orders at the NBBO.
+   •   Lead Market Maker ("LMM") - May only be in effect if the Priority Customer overlay is
+       also in effect. An LMM may be appointed by the Exchange in options classes in accordance
+       with Rule 22.2. The LMM participant entitlements shall only apply to any remaining
+       balance after Priority Customer orders have been satisfied. The LMM participation
+       entitlements are as follows:
+                •        If the LMM is quoting at the NBBO, it will be allocated the greater of: (i)
+                the proportion of the total size at the NBBO represented by the size of its quote, or
+                (ii) sixty percent (60%) of the contracts to be allocated if there is only one (1) other
+                Market Maker quote or non-Customer order at the NBBO, or forty percent (40%)
+                if there are two (2) or more other Market Maker quotes and/or non-Customer orders
+                at the NBBO.
+                •        LMM Small Order Entitlement. If the LMM is quoting at the NBBO, small
+                size orders (5 contracts or less) will be allocated in full to the LMM.
+
+If there are both PMM and LMM quotes at the NBBO and an incoming order is preferred to the
+PMM, the PMM's participation entitlement will supersede the LMM's participation and small order
+entitlement.
+
+
+
+MEMX OPTIONS                                                                                 Page 9 of 12
+Routing to Away Markets
+
+Users have the option to use the Exchanges' affiliated broker-dealer, MEMX Execution Services
+LLC, to route orders to markets other than the Exchange. ISO, Book Only and Post Only orders
+are not routed to other markets. A proprietary process is used to determine the System routing
+table, which determines the order in which the System routes orders to specific trading venues.
+MEMX Execution Services performs a variety of automated risk checks, including erroneous and
+duplicate orders checks, before routing to other markets, in compliance with Rule 15c3-5. The
+Exchange uses OPRA data for the handling, execution, and routing of orders.
+
+Data Products
+
+As described in the each MEMX Options Exchanges' Rules, the Exchanges offer several MEMOIR
+(MEMber Order Information Record) for Options data products:
+
+   •   MEMOIR Options Depth/MX2 MEMOIR Options Depth (Depth of Book Quote and Last
+       Sale)
+   •   MEMOIR Options Top/MEMOIR MX2 Options Top (Top of Book Quote and Last Sale)
+   •   MEMOIR Historical Data (Prior day versions of MEMOIR Depth and MEMOIR Top)
+
+MEMOIR Options Depth is the MEMX Options/MX2 Options integral data product. The
+Exchanges use the MEMOIR Options Depth data product to derive the MEMOIR Options Top
+data product.
+
+The Exchanges also offer a DROP feed that contains information regarding an individual
+Exchange participant’s activity on the Exchange for clearing, risk management and other purposes.
+The DROP feed is only available to the Exchange participant to whom such activity relates, and
+any other recipient authorized by that Exchange participant (e.g., the Clearing Member that clears
+for such participant).
+
+The Exchange’s real-time market data is electronically available directly from MEMX via APIs
+defined in the Exchange’s specifications or via a range of market data vendors. Additional
+information about data products, agreements and specifications are available on the Exchange’s
+website, www.memxtrading.com
+
+Contact MEMX
+
+Website                                     www.memx.com
+Main Telephone Number                       201.331.7900
+Member Experience (Sales & Support)         833.415.MEMX and memberx@memx.com
+Market Operations/Connectivity Requests 833.415.MOPS and mops@memx.com
+Regulation/                                 regulation@memx.com
+Compliance                                  membership@memx.com
+
+
+MEMX OPTIONS                                                                           Page 10 of 12
+MEMX OPTIONS   Page 11 of 12
+REVISION HISTORY
+
+Version        Date             Change
+
+1.0            May 16, 2023     Initial Document
+
+2.0            September 4, 2026 Added MX2 Options
+
+
+
+
+MEMX OPTIONS                                         Page 12 of 12
+

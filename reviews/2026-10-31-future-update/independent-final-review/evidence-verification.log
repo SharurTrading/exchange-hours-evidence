@@ -1,0 +1,79 @@
+nse_india.md:410: | `NSE-CIRC-2026-149` | 2026-11-08 | <https://nsearchives.nseindia.com/content/circulars/CMTR76941.pdf> (circular 149/2026 dated 2026-10-19) | retrieved live 2026-10-31 22:06 UTC | T1 | `ce94ee1c54d98eccdf3c30fa0673ae2b6a49ea4ed4a72fb83d826f4359f71d58` |
+  document: NSE-CIRC-2026-149
+  window:   2026-11-08
+  url:      https://nsearchives.nseindia.com/content/circulars/CMTR76941.pdf> (circular 149/2026 dated 2026-10-19)
+  capture:  retrieved live 2026-10-31 22:06 UTC
+  tier:     T1
+  sha256:   ce94ee1c54d98eccdf3c30fa0673ae2b6a49ea4ed4a72fb83d826f4359f71d58
+  bytes:    /workspace/exchange-hours-evidence/reviews/2026-10-31-future-update/independent-final-review/nse-cmtr76941.pdf
+  bytes:    /workspace/exchange-hours-evidence/reviews/2026-10-31-future-update/independent-nse-review/CMTR76941-second-retrieval.pdf
+  bytes:    /workspace/exchange-hours-evidence/reviews/2026-10-31-future-update/nse/CMTR76941.pdf
+  quote:    none of the evidence text's quoted excerpts matched the artifact's bytes (best effort)
+
+xetra.md:343: | `DB-FINAL-SESSION-2026` | 2026-12-30 | <https://www.cashmarket.deutsche-boerse.com/resource/blob/5673886/22764993c4b1617c5f465186066344e6/data/Final%20trading%20session%202026.pdf> | retrieved 2026-10-31 22:06:59 UTC | T1 | `d3618ef9738a3cae92909d11d4eaf820ab7b71d1e723c1fa04a21062e9738115` |
+  document: DB-FINAL-SESSION-2026
+  window:   2026-12-30
+  url:      https://www.cashmarket.deutsche-boerse.com/resource/blob/5673886/22764993c4b1617c5f465186066344e6/data/Final%20trading%20session%202026.pdf
+  capture:  retrieved 2026-10-31 22:06:59 UTC
+  tier:     T1
+  sha256:   d3618ef9738a3cae92909d11d4eaf820ab7b71d1e723c1fa04a21062e9738115
+  bytes:    /workspace/exchange-hours-evidence/reviews/2026-10-31-future-update/independent-final-review/xetra-final-session-2026.pdf
+  bytes:    /workspace/exchange-hours-evidence/reviews/2026-10-31-future-update/europe/xetra-final-session-2026.pdf
+  quote:    none of the evidence text's quoted excerpts matched the artifact's bytes (best effort)
+
+xetra.md:344: | `DB-TC-PDF-2027` | 2027-01-01 .. 2027-12-31 | <https://www.cashmarket.deutsche-boerse.com/resource/blob/5674438/fb6e22c77930acea97641cf7d65ef78a/data/deutsche-boerse-trading-calendar-2027.pdf> | retrieved 2026-10-31 22:05:35 UTC | T1 | `5c62bf0a78afb8f6123638d6e7b9a30c864799e2c2210b73b13bcdb6e9a64cf2` |
+  document: DB-TC-PDF-2027
+  window:   2027-01-01 .. 2027-12-31
+  url:      https://www.cashmarket.deutsche-boerse.com/resource/blob/5674438/fb6e22c77930acea97641cf7d65ef78a/data/deutsche-boerse-trading-calendar-2027.pdf
+  capture:  retrieved 2026-10-31 22:05:35 UTC
+  tier:     T1
+  sha256:   5c62bf0a78afb8f6123638d6e7b9a30c864799e2c2210b73b13bcdb6e9a64cf2
+  bytes:    /workspace/exchange-hours-evidence/reviews/2026-10-31-future-update/independent-final-review/xetra-trading-calendar-2027.pdf
+  bytes:    /workspace/exchange-hours-evidence/reviews/2026-10-31-future-update/europe/xetra-2027.pdf
+  quote:    none of the evidence text's quoted excerpts matched the artifact's bytes (best effort)
+
+globex_cryptocurrency.md:703: | `CME-SVC-2026-10-02` | 2026-10-02 .. 2026-10-06 | <https://www.cmegroup.com/services/trading-hours-by-product?id=8478&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2026-10-02&toEventDate=2026-10-06> | retrieved 2026-10-31T22:05:33Z | T2 | `784668d4ebd69ad6051a29c1a72d4b76781b31d712ca3fd1b245617efc7ed473` |
+  document: CME-SVC-2026-10-02
+  window:   2026-10-02 .. 2026-10-06
+  url:      https://www.cmegroup.com/services/trading-hours-by-product?id=8478&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2026-10-02&toEventDate=2026-10-06
+  capture:  retrieved 2026-10-31T22:05:33Z
+  tier:     T2
+  sha256:   784668d4ebd69ad6051a29c1a72d4b76781b31d712ca3fd1b245617efc7ed473
+  bytes:    /workspace/exchange-hours-evidence/reviews/2026-10-31-future-update/independent-final-us-review/cme_service_oct3.json
+  bytes:    /workspace/exchange-hours-evidence/reviews/2026-10-31-future-update/cme-coinbase/cme_service_oct3.json
+  quote:    none of the evidence text's quoted excerpts matched the artifact's bytes (best effort)
+
+globex_cryptocurrency.md:704: | `CME-SVC-2026-10-23` | 2026-10-23 .. 2026-10-27 | <https://www.cmegroup.com/services/trading-hours-by-product?id=8478&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2026-10-23&toEventDate=2026-10-27> | retrieved 2026-10-31T22:05:33Z | T2 | `9381985ebf35e61364d7dc43980ae8afd6bea5bba61dab82b74de2ea8cafd786` |
+  document: CME-SVC-2026-10-23
+  window:   2026-10-23 .. 2026-10-27
+  url:      https://www.cmegroup.com/services/trading-hours-by-product?id=8478&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2026-10-23&toEventDate=2026-10-27
+  capture:  retrieved 2026-10-31T22:05:33Z
+  tier:     T2
+  sha256:   9381985ebf35e61364d7dc43980ae8afd6bea5bba61dab82b74de2ea8cafd786
+  bytes:    /workspace/exchange-hours-evidence/reviews/2026-10-31-future-update/independent-final-us-review/cme_service_oct24.json
+  bytes:    /workspace/exchange-hours-evidence/reviews/2026-10-31-future-update/cme-coinbase/cme_service_oct24.json
+  quote:    none of the evidence text's quoted excerpts matched the artifact's bytes (best effort)
+
+globex_cryptocurrency.md:705: | `CME-SVC-2026-10-30` | 2026-10-30 .. 2026-11-03 | <https://www.cmegroup.com/services/trading-hours-by-product?id=8478&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2026-10-30&toEventDate=2026-11-03> | retrieved 2026-10-31T22:05:33Z | T2 | `302d9c48d836ab6930af17be73fb215a06d3cdd5bf8cd034f861df9214d3861d` |
+  document: CME-SVC-2026-10-30
+  window:   2026-10-30 .. 2026-11-03
+  url:      https://www.cmegroup.com/services/trading-hours-by-product?id=8478&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2026-10-30&toEventDate=2026-11-03
+  capture:  retrieved 2026-10-31T22:05:33Z
+  tier:     T2
+  sha256:   302d9c48d836ab6930af17be73fb215a06d3cdd5bf8cd034f861df9214d3861d
+  bytes:    /workspace/exchange-hours-evidence/reviews/2026-10-31-future-update/independent-final-us-review/cme_service_oct31.json
+  bytes:    /workspace/exchange-hours-evidence/reviews/2026-10-31-future-update/cme-coinbase/cme_service_oct31.json
+  quote:    none of the evidence text's quoted excerpts matched the artifact's bytes (best effort)
+
+ice_us.md:58: | `IFUS-NOTICE-2026-CHRISTMAS` | trade dates 2026-12-24 .. 2026-12-28 | <https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_2026_Christmas_Holiday_20261022.pdf> | retrieved live from the operator, 2026-10-23 23:21 UTC | T1 | `a7658155b57c51085cd3b36abc9ff6b91f3ca353cda88365a06459ebb40f0801` |
+  document: IFUS-NOTICE-2026-CHRISTMAS
+  window:   trade dates 2026-12-24 .. 2026-12-28
+  url:      https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_2026_Christmas_Holiday_20261022.pdf
+  capture:  retrieved live from the operator, 2026-10-23 23:21 UTC
+  tier:     T1
+  sha256:   a7658155b57c51085cd3b36abc9ff6b91f3ca353cda88365a06459ebb40f0801
+  bytes:    /workspace/exchange-hours-evidence/holidays/raw/cfe-eurex-ice-cde-smfe-2026-2027/ICE_Futures_US_2026_Christmas_Holiday_20261022.pdf
+  bytes:    /workspace/exchange-hours-evidence/reviews/2026-10-31-future-update/independent-final-us-review/ICE_Christmas_2026.pdf
+  bytes:    /workspace/exchange-hours-evidence/reviews/2026-10-31-future-update/ice-americas/ICE_Futures_US_2026_Christmas_Holiday_20261022.pdf
+  quote:    none of the evidence text's quoted excerpts matched the artifact's bytes (best effort)
+

@@ -1,0 +1,343 @@
+Overnight Trading FAQs | U.S. Market Update | 24X Equities
+New York
+--:--:--
+New York
+London
+--:--:--
+London
+Hong Kong
+--:--:--
+Hong Kong
+Seoul
+--:--:--
+Seoul
+Tokyo
+--:--:--
+Tokyo
+Search
+Systems Online
+Products
+24X
+Exchange
+Technical Resources
+Regulation
+Announcements
+Overnight Trading FAQs
+Market Intelligence
+Systems Online
+Products
+24X
+Exchange
+Technical Resources
+Regulation
+Announcements
+Overnight Trading FAQs
+Market Intelligence
+New York
+--:--
+New York
+London
+--:--
+London
+Hong Kong
+--:--
+Hong Kong
+Seoul
+--:--
+Seoul
+Tokyo
+--:--
+Tokyo
+NY
+--:--
+New York
+LON
+--:--
+London
+HK
+--:--
+Hong Kong
+SEL
+--:--
+Seoul
+TYO
+--:--
+Tokyo
+24X National Exchange (G)
+·
+As of —
+·
+CBOE
+—
+Total
+—
+Tape A
+—
+Tape B
+—
+Tape C
+—
+Today
+—
+5-day
+—
+Tape A
+—
+Tape B
+—
+Tape C
+—
+Total
+—
+Today
+—
+5-day
+Top symbols
+·
+15m delayed
+Loading…
+On this page
+Extended Hours FAQs
+24/7 Switch
+Overnight Trading FAQs
+Save or print the full FAQ in your preferred language.
+English
+한국어
+Korean
+日本語
+Japanese
+Extended Hours FAQs
+Language
+English
+Korean
+Japanese
+Does 24X National Exchange LLC ("24X" or "Exchange") expect to enrich new tags raised by NSCC such as FIX tags 336 (Trading Session Identifier) and 715 (Business Clearing Date) on orders and/or executions?
+24X will support NSCC FIX Tags 336, TradingSessionID, and 715, ClearingBusinessDate, for executions reported to NSCC.
+In the 24x5 model, what actions or technical controls will be applied during the pause period from 8:00 PM to 9:00 PM ET? Can orders be queued in advance?
+From 24X perspective, orders will not be accepted during the 8:00 PM to 9:00 PM ET pause period.
+During this window, the system is in a controlled transition/reset state and order entry is not available.
+Is there any expected behavior change over the calendar time movement (23:59 to 00:00)? Will sequence numbers change or reset?
+There is no session transition at midnight, and trading continues uninterrupted during the extended session.
+Sequence numbers do not reset at 00:00; resets occur during the 8:00 PM to 9:00 PM ET pause period.
+What is your pre-go-live plan and testing approach? When will non-production environments be available for overnight testing?
+24X plans to provide a meaningful testing window before production launch.
+Test environments will be available in advance with the extended-session configuration so members can validate connectivity, session handling, order logic, market data behavior, and session transitions including the 8:00 PM to 9:00 PM ET pause.
+In conjunction with the Securities Information Processors, the Exchange will conduct six tests ahead of the December 6 Production launch. Tests will begin at 11:00 PM on Friday and conclude at 12:00 PM on Saturday. The scheduled industry test dates are:
+October 2 | October 16 | October 30 | November 6 | November 20 | December 4
+24X does not plan to make test symbols available in production for the overnight session outside of the scheduled industry testing sessions prior to the December 6, 2026 launch.
+What actions will the Exchange take to mitigate risks at go-live?
+Price controls will be enabled, with final details to be communicated.
+Will members be able to configure and set up in advance of cutover?
+Yes. Members will be able to configure and prepare well in advance of cutover.
+Technical specifications, session identifiers, hours of operation, and required configuration changes will be published ahead of time so firms can test, certify, and complete internal approvals without last-minute changes.
+What are the expectations for market data in evening sessions? Will direct feeds be available or will members rely on SIP?
+During the extended session, 24X will disseminate market data consistent with direct MEMOIR proprietary feeds.
+This includes top-of-book, depth-of-book, and last-sale products in line with other trading sessions.
+Will the failover/backup scenario for the Exchange be in place during evening hours?
+Yes. The failover and backup model will remain in place during extended hours, consistent with current operations.
+When there is an early close, how long will post-market run? Will there be differences once the Exchange goes live with 23x5?
+This is still to be determined, and the Exchange will communicate details in advance.
+Once SIP extends to 23x5 (expected December 06, 2026), should members expect Exchange go-live at the same time or shortly after?
+24X expects to be fully ready contemporaneously with SIP 23x5 availability and does not currently anticipate delay.
+Assuming SIP is live and stable, the Exchange intends to launch contemporaneously and expects to be among the first exchanges operating in the extended session.
+Does the Exchange expect to have a separate dedicated port for the overnight session?
+No separate dedicated overnight port is required.
+Firms are expected to use existing production connectivity and session configurations, with session eligibility governed by trading hours and system configuration.
+What changes are being made to trading hours?
+Pending SEC approval, 24X will introduce a new fourth trading session, the 24X Market Session, which will begin at 9:00 PM and end at 4:00 AM the following day. The existing Pre-Market Session will open as it currently does at 4:00 A.M.
+What will the 24X National Exchange trading schedule look like going forward?
+Subject to SEC approval 24X will operate nearly around the clock offering trading 23 hours per day five days a week. The one-hour break is intended to ensure proper trade clearing system maintenance, operational processing and transition to the next trading day.
+When will the new extended trading hours be implemented?
+The target implementation date is Sunday December 06, 2026. Additional details will be shared via Information Circulars in the coming months.
+Who will be able to trade on 24X during the new extended trading session?
+Only US broker dealers that are 24X members will be able to trade during the Overnight Trading Session. Some 24X members may require additional approval from their clearing firms in order to participate. All other firms must establish a relationship with a 24X member to participate.
+Will there be testing opportunities prior to implementation?
+Testing details will be announced via Trader Updates closer to the implementation date.
+In conjunction with the Securities Information Processors, the Exchange will conduct six tests ahead of the December 6 Production launch. Tests will begin at 11:00 PM on Friday and conclude at 12:00 PM on Saturday. The scheduled industry test dates are:
+October 2 | October 16 | October 30 | November 6 | November 20 | December 4
+24X does not plan to make test symbols available in production for the overnight session outside of the scheduled industry testing sessions prior to the December 6, 2026 launch.
+Testing details will be announced via Information Circulars and Trader Updates.
+How will 24X National Exchange trading sessions change?
+Subject to SEC approval 24X National Exchange will continue to operate three trading sessions. The Overnight Trading Session will run from Sunday at 9:00 p.m. through Friday evening. The Core Session and After Market hours will remain unchanged. Please refer to the tables below for current and future session times.
+Current Trading Sessions
+• Pre Market 4:00 a.m. to 9:30 a.m.
+• Core Session 9:30 a.m. to 4:00 p.m.
+• After Market 4:00 p.m. to 8:00 p.m.
+Future Trading Sessions
+Note: All session times are listed in U.S. Eastern Time (ET).
+• Overnight Trading Session 9:00 p.m. to 4:00 a.m.
+• Pre Market 4:00 a.m. to 9:30 a.m.
+• Core Session 9:30 a.m. to 4:00 p.m.
+• After Market 4:00 p.m. to 8:00 p.m.
+What trade date is assigned to trades executed during the Overnight Trading Session?
+• Trades executed between 9:00 p.m. and 11:59 p.m. will be assigned the next trade date
+• Trades executed between 12:00 a.m. and 9:30 a.m. will be assigned the same trade date
+When are trades cleared and settled?
+Trades executed between 9:00 p.m. and 11:59 p.m. are assigned a next day clearing date and submitted to the DTCC with settlement occurring on the following business day.
+DTCC/NSCC will report 24x5 trade clearing records real-time on the UTC FIX output messages.
+Trade clearing records transmitted at the start of the Overnight session will be reported at 8:30 AM on cycle 1 in the UTC MRO Trade Capture Data File: AutoRoute 02081673 / PSE 02981673 of the UTC Intraday MRO file. DTCC/ NSCC has plans to expand intraday MRO generation in a later phase of their UTC modernization.
+Example:
+Session | Trade Time | Calendar Date | Trade Date | Clearing Date | Regular-Way Settlement Date
+Late | 4:00 PM - 8:00 PM | 11/23/2026 | 11/23/2026 | 11/23/2026 | 11/24/2026
+Overnight | 9:00 PM - 11:59 PM | 11/23/2026 | 11/24/2026 | 11/24/2026 | 11/25/2026
+Overnight | 12:00 AM - 4:00 AM | 11/24/2026 | 11/24/2026 | 11/24/2026 | 11/25/2026
+Do extended trading hours apply on holidays?
+If a US exchange holiday falls between Monday and Friday, 24X will conclude its Late Session trading (abbreviated in some cases) the evening before the holiday and the next Overnight Session will begin at 9:00 PM the evening of the holiday.
+Standard Late Session: New Year's Day falling on a Thursday - Late Session operates through 8:00 PM on Wednesday, December 31 and trading resumes when the Overnight Session starts at 9:00 PM on Thursday, January 1.
+Abbreviated Late Session: July 4th falling on a Thursday - Late Session operates through 5:00 PM on Wednesday and trading resumes when the Overnight Session starts at 9:00 PM on Thursday, July 4th.
+Are any additional steps required for firms to access the Overnight Trading Session?
+No. Firms will continue to access 24X via the existing connectivity only the available trading hours will change.
+Will trading support be available during the Overnight Trading Session?
+24X Market Operations real-time hotline and email support will be available from Sunday 9:00 p.m. through Friday 8:00 p.m. Existing contact details remain unchanged.
+Will 24X continue routing orders to other markets during the Overnight Trading Session?
+Yes. 24X will continue routing to other markets that are operating during the Overnight Trading Session.
+What order validations are applied during the Overnight Trading Session?
+The 24X order entry facilities contain an integrated pre trade risk management service that processes all incoming order information against a mandatory set of risk controls designed to help prevent erroneous orders from passing through to the matching engine for execution. These controls are dynamically configurable by Clearing Firms and other Members, Sponsored Participants and Service Bureaus and can be assigned to an individual session.
+Do Clearly Erroneous Execution rules apply during the Overnight Trading Session?
+Absent further changes the current CEE rules applicable to off-hours trading will also apply to the Overnight Trading Session. Discussions are ongoing between market participants and exchanges regarding potential investor protection enhancements and related rule modifications.
+Can orders entered during the Overnight Trading Session remain live into the Core Session?
+An order with this TIF instruction is eligible for execution during the Pre-Market Session and the Core Market Session. Day orders remaining on the 24X Book at the end of the Core Market Session will be cancelled.
+Good 'til Time GTT An instruction the User may attach to an order specifying the time of day at which the order expires. Any unexecuted portion of an order with a TIF instruction of GTT will be cancelled at the expiration of the Users specified time which can be no later than the close of the Post Market Session. If no time is specified the order expires at 8:00 p.m. ET.
+Will firms be able to apply different risk settings for the Overnight Trading Session?
+No. Risk controls will be applied consistently across trading sessions. Firms will not configure separate risk settings specifically for the Overnight Trading Session. Any future enhancements or changes to risk configuration will be communicated by 24X in advance.
+How are risk breaches handled during overnight hours?
+Risk breaches are handled in real time consistent with current procedures. Market Operations coverage will be available throughout the Overnight Trading Session to monitor activity and coordinate responses as needed.
+Will surveillance operate during the Overnight Trading Session?
+Yes. Market surveillance and monitoring will operate continuously during all trading sessions including the Overnight Trading Session.
+Will trade confirmations and drop copy reflect the Overnight Trading Session?
+Yes. Executions will be clearly identified by session and trade date using existing fields and indicators in trade confirmations and drop copy feeds.
+Which order types will 24X accept for extended hours?
+Pre Market Session. Unless otherwise specified all orders and modifiers that are designated for the Pre Market Session except for market orders are eligible to participate in the Pre Market Session.
+Overnight Trading Session
+Eligible Order Types – 24X Market Session
+All order types and Time-in-Force instructions supported by 24X are eligible for execution during the 24X Market Session, with the exception of Market Orders, Pegged Orders, and Midpoint Peg which are not eligible.
+Rule 11.16(b) Except as set forth below in this paragraph (b), each of the Order types and modifiers set forth in Rule 11.7 are eligible for execution during the 24X Market Session. The following Order types are not eligible for execution by the System during the 24X Market Session: (1) Market Order. (2) Pegged Order.
+* Pending a rule filing with the SEC, Pegged Orders will be eligible for execution during the 24X Market Session (Overnight Trading Session).
+Do Limit Up Limit Down price bands apply during the Overnight Trading Session?
+Currently LULD applies only during the Core Session. However, market participants and exchanges are discussing the potential expansion of LULD like volatility controls to additional trading sessions including the Overnight Trading Session.
+What trade conditions apply during the Overnight Trading Session?
+Trades executed during the Overnight Trading Session and After Market sessions will carry the T trade condition and will not be eligible as Last Sale.
+Are extended hours trades included in consolidated volume?
+Yes.
+Corporate Actions and Regulatory Halts
+The primary listing markets have agreed on harmonized rules for mandatory Regulatory Halts affecting securities subject to certain corporate actions. These rules will provide exchanges and market participants adequate time to process complex corporate actions and make adjustments to systems, orders, quotes, and reference data.
+Q1: What is changing with Corporate Actions and Halt rules for the Overnight Trading Session?
+Subject to regulatory approval, the primary markets have agreed upon harmonized rules for mandatory regulatory halts for securities subject to certain corporate actions. These rules ensure that both the Exchange and market participants have adequate time to process complex corporate actions and make the necessary adjustments to systems, orders, quotes and reference data.
+Q2: Why are these changes necessary?
+Under 23/5 Trading, the one-hour pause between 8:00 PM and 9:00 PM may be insufficient for the processing of complex corporate actions across Exchange and market-participant systems. A regulatory halt will allow market participants to ingest the details of the corporate actions and alleviate investor confusion, price dislocations, erroneous executions, and broader operational risk and promote fair and orderly markets.
+Q3: Which securities are subject to these halt rules?
+The Corporate Action Halt rules apply to all NMS securities, regardless of whether the securities’ primary listing markets support extended hours trading.
+Q4: When do these rules become effective?
+The Corporate Action Halt rules will become operative at the commencement of 23/5 Trading.
+Q5: Which corporate actions trigger a mandatory halt under the new rules?
+The proposed rules establish nine categories of corporate actions that are subject to a mandatory Corporate Action Halt.
+1.) Trading Symbol Change - Any change in the issuer’s trading symbol (ticker).
+2.) CUSIP Change - Any change in the issuer’s Committee on Uniform Securities Identification Procedures (CUSIP) number.
+3.) Large Dividend - Stock dividends (payable in cash, stock, or another security) where the Exchange determines the aggregate value per share equals at least 25% of the Official Closing Price on the day immediately preceding the ex-date. Excludes stock splits covered under Category 4.
+4.) Forward / Reverse Stock Split - Any stock split or similar adjustment affecting outstanding share count or relative equity ownership, including subdivisions, reclassifications, combinations, or share consolidations, whether at a fixed or variable ratio and whether standalone or combined with another corporate action.
+5.) De-SPAC Transaction - Any De-SPAC transaction as defined in Item 1601(a) of Regulation S-K.
+6.) Spin-Off - Any transaction distributing, on a pro rata basis, equity securities of a subsidiary or other separated business, or a different class of securities, to the issuer’s security holders.
+7.) Security-Type Change - Any change in the form, type, class, or designation of a listed security, including ADR/ADS-to-ordinary-share conversions (and vice versa), conversions between ordinary shares and common stock, and similar transactions.
+8.) Merger / Mandatory Exchange - Any merger, consolidation, statutory share exchange, or similar business combination resulting in the affected security being mandatorily exchanged, converted, redeemed, or cancelled for cash, securities, or other consideration. Does not include transactions that solely change the issuer’s name without a mandatory exchange.
+9.) Other Corporate Action or Issuer-Related Event - Any corporate action or issuer-related event not enumerated in categories 1–8 for which the Exchange determines, based on the totality of the circumstances, that a Regulatory Halt is necessary or appropriate for the maintenance of fair and orderly markets, the protection of investors, or otherwise in the public interest.
+Q6: Is anything changing with the handling of a new security?
+No, newly issued securities will continue to be halted until the security opens on the primary market.
+Q7: When would the Exchange issue a Corporate Action Halt under the Category 9 provision?
+Category 9 is intended to allow exchanges to address issuer-related corporate actions or events that are not captured in Categories 1–8 but still raise operational or market-integrity concerns. If an Exchange halts a security under Category 9, it will issue announcements via Trader Update, the Security Information Processors (SIPs), and proprietary data feeds.
+Q8: How and when will listing exchanges publish the Corporate Action Halt?
+The listing exchanges will disseminate the Corporate Action Halt via the SIP’s CTA Symbol File, which will be published twice (at 8:15 PM and 8:40 PM), and via the Symbol Reference Data message using “Security Status Message” = 4 and “Halt Condition” = N, which will be published at approximately 8:55 PM. Additionally, halted securities will be displayed on the NYSE Trading Halts page where firms may subscribe to an email distribution of NYSE Group regulatory halts.
+Q9: When will trading resume after a Corporate Action Halt?
+Securities in a Corporate Action Halt will not trade during the Overnight Trading Session. NYSE American, NYSE Arca, and NYSE Texas-listed securities will resume trading at 8:00 AM with a Trading Halt Auction and NYSE-listed securities will resume after 9:30 AM with a Trading Halt Auction.
+Q10: Will timing of Reverse Stock Split Halts change?
+Yes, Reverse Stock Split Halts (which are currently halted at 7:50 PM and resume at 9:00 AM) will follow the same timelines as all other Corporate Action Halts as detailed in Q8 and Q9 above.
+How are firms notified of corporate actions prior to the start of the Overnight Trading Session?
+Corporate actions and adjusted closing prices are disseminated via the SIPs through symbol reference data messages CQS, CTS, UTP, outputs and the CTA, UTP symbol file at the start of the trading day.
+Trader Updates:
+Market participants may sign up to receive Trader Updates by submitting a request through the 24X website. Once registered, subscribers will receive Trader Updates via electronic distribution.
+https://equities.24exchange.com/contact
+Rule 3.21. Customer Disclosures
+No Member may accept an order from a customer for execution during Extended Hours Trading without disclosing to such customer that Extended Hours Trading involves material trading risks, including the possibility of lower liquidity, high volatility, changing prices, unlinked markets, an exaggerated effect from news announcements, wider spreads and any other relevant risk, including additional risks related to the 24X Market Session.
+Rule 3.21(i) in our rulebook.
+24X Rulebook
+Where can I find additional information on extended trading hours?
+Please visit
+https://equities.24exchange.com/
+24X National Exchange User Manual
+24X User Manual
+FAQ Disclaimer
+The information presented in these Frequently Asked Questions is provided for general information purposes only. While we endeavor to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, or reliability of this information. The content is only current as of March 1, 2026 and should not be relied upon as legal, financial, or professional advice. 24X National Exchange LLC assumes no responsibility for any consequences arising from the use of this information.
+24/7 Switch
+What is the 24/7 Switch, and how does it differ from 24X National Exchange?
+The 24/7 Switch is a planned routing capability of 24X National Exchange designed to provide Members with access to participating ATSs, SDPs, and other available trading venues.
+Who is eligible to connect to the 24/7 Switch?
+Members of 24X National Exchange will be eligible to access the 24/7 Switch, subject to completing the required connectivity, onboarding, and testing procedures.
+What are the operating hours of the 24/7 Switch?
+The 24/7 Switch is initially planned to operate Sunday through Friday from 8:00 p.m. to 9:00 p.m. ET, with future expansion to weekend trading hours. The Switch will provide Members with access to participating ATSs, SDPs, and other available trading venues during their respective operating hours, subject to regulatory approvals and venue availability.
+From 9:00 p.m. to 4:00 a.m. ET, the Switch will remain available for order entry and market data.
+Does the 24/7 Switch operate as a securities exchange or as an order routing service?
+The 24/7 Switch operates as part of 24X National Exchange. During periods when the Securities Information Processors (SIPs) are not operational, the Exchange will not match orders internally. Instead, orders will be routed to participating ATSs, SDPs, and other available trading venues for potential execution.
+Will a separate port be required to access the 24/7 Switch?
+Yes. Members will be required to establish a separate port connection to the 24/7 Switch, independent of their existing connectivity to 24X National Exchange.
+What connectivity options are available for the 24/7 Switch?
+Members may connect to the 24/7 Switch through a direct circuit or through one of our five supported extranet providers.
+What market data will be available through the 24/7 Switch?
+The 24/7 Switch will provide market data from participating ATSs, including Blue Ocean ATS, Bruce ATS, and MOON ATS, during their respective operating hours.
+Will the 24/7 Switch provide access to consolidated SIP market data?
+No. Consolidated SIP market data from the UTP and CT/CQ Plans will not be available through the 24/7 Switch market data service.
+What order types will be supported by the 24/7 Switch?
+All order types eligible for trading on 24X National Exchange will be supported by the 24/7 Switch, with the exception of Market Orders.
+Will Members be able to designate specific routing destinations?
+Directed orders will not be supported at the initial launch of the 24/7 Switch. Orders will be routed to participating venues based on the Exchange's routing logic.
+Will Members receive execution reports identifying the venue where an order was executed?
+Yes. Execution reports will identify the executing venue through FIX Tag 30 (LastMkt), which will contain the Market Identifier Code (MIC) of the venue where the order was executed.
+Will orders entered during the 8:00 p.m. to 9:00 p.m. session remain active after 9:00 p.m.?
+Yes. Orders entered during the 8:00 p.m. to 9:00 p.m. ET session will remain active after 9:00 p.m. ET, subject to their applicable time-in-force instructions.
+How will trades executed through the 24/7 Switch be cleared and settled?
+Trades executed through the 24/7 Switch will be submitted to the National Securities Clearing Corporation (NSCC) as locked-in trades for clearing and settlement, in accordance with applicable NSCC rules and settlement schedules.
+When will the 24/7 Switch be available for User Acceptance Testing (UAT)?
+The 24/7 Switch is scheduled to be available for User Acceptance Testing (UAT) beginning December 2, 2026, allowing Members to test connectivity, order entry, routing functionality, and execution reporting ahead of the planned production launch.
+What is the anticipated production launch date for the 24/7 Switch?
+The 24/7 Switch is targeted for production launch on January 8, 2027, subject to SEC approval and operational readiness.
+Will existing 24X FIX specifications support the Switch, or will separate specifications be provided?
+The 24/7 Switch will utilize the existing 24X National Exchange Memo and Memoir specifications. Separate FIX specifications will not be required.
+https://equities.24exchange.com/technical-resources
+Who should Members contact for connectivity, testing, and onboarding assistance?
+Members should contact 24X Market Operations for assistance with connectivity, testing, and onboarding for the 24/7 Switch.
+Explore
+Exchange
+Technical Resources
+Regulation
+Announcements
+Overnight Trading FAQs
+Market Intelligence
+Media
+Company
+Leadership
+FAQ's
+Connect
+Contact Us
+203-208-6423
+One Landmark Square
+Suite 1815
+Stamford, CT 06901
+Explore
+Exchange
+Technical Resources
+Regulation
+Announcements
+Overnight Trading FAQs
+Market Intelligence
+Media
+Company
+Leadership
+FAQ's
+Connect
+Contact Us
+203-208-6423
+One Landmark Square
+Suite 1815
+Stamford, CT 06901
+©
+2026
+24X Equities. All rights reserved.
+Privacy Policy
