@@ -1,0 +1,264 @@
+{
+  "checked_utc": "2026-10-31T23:20:35.313136+00:00",
+  "crate_head": "d3f6b21db8f4f7523f0c79b786c16c6852c4678c",
+  "source": "src/calendar/schedules/holidays/ice_us.rs",
+  "source_sha256": "037315b8085792517720ede3c6db71fced7a3d9a1bb7d8ba7b105fc1295a5a70",
+  "all_match": true,
+  "checks": [
+    {
+      "scope": "SUGAR_CHRISTMAS_REOPEN_BLOCKS",
+      "expected": [
+        [
+          "order_entry",
+          -4,
+          "13:30",
+          "15:30"
+        ],
+        [
+          "regular",
+          0,
+          "08:00",
+          "13:00"
+        ]
+      ],
+      "actual": [
+        [
+          "order_entry",
+          -4,
+          "13:30",
+          "15:30"
+        ],
+        [
+          "regular",
+          0,
+          "08:00",
+          "13:00"
+        ]
+      ],
+      "matches": true
+    },
+    {
+      "scope": "COFFEE_COCOA_CHRISTMAS_REOPEN_BLOCKS",
+      "expected": [
+        [
+          "order_entry",
+          -4,
+          "13:35",
+          "15:30"
+        ],
+        [
+          "regular",
+          0,
+          "08:00",
+          "13:30"
+        ]
+      ],
+      "actual": [
+        [
+          "order_entry",
+          -4,
+          "13:35",
+          "15:30"
+        ],
+        [
+          "regular",
+          0,
+          "08:00",
+          "13:30"
+        ]
+      ],
+      "matches": true
+    },
+    {
+      "scope": "COTTON_CHRISTMAS_REOPEN_BLOCKS",
+      "expected": [
+        [
+          "order_entry",
+          -4,
+          "13:35",
+          "15:30"
+        ],
+        [
+          "regular",
+          0,
+          "08:00",
+          "14:20"
+        ]
+      ],
+      "actual": [
+        [
+          "order_entry",
+          -4,
+          "13:35",
+          "15:30"
+        ],
+        [
+          "regular",
+          0,
+          "08:00",
+          "14:20"
+        ]
+      ],
+      "matches": true
+    },
+    {
+      "scope": "FCOJ_CHRISTMAS_REOPEN_BLOCKS",
+      "expected": [
+        [
+          "order_entry",
+          -4,
+          "13:35",
+          "15:30"
+        ],
+        [
+          "regular",
+          0,
+          "08:00",
+          "14:00"
+        ]
+      ],
+      "actual": [
+        [
+          "order_entry",
+          -4,
+          "13:35",
+          "15:30"
+        ],
+        [
+          "regular",
+          0,
+          "08:00",
+          "14:00"
+        ]
+      ],
+      "matches": true
+    },
+    {
+      "scope": "COTTON_AFTER_CHRISTMAS_REOPEN_BLOCKS",
+      "expected": [
+        [
+          "order_entry",
+          -1,
+          "14:50",
+          "18:00"
+        ],
+        [
+          "order_entry",
+          -1,
+          "19:30",
+          "21:00"
+        ],
+        [
+          "regular",
+          -1,
+          "21:00",
+          "14:20"
+        ]
+      ],
+      "actual": [
+        [
+          "order_entry",
+          -1,
+          "14:50",
+          "18:00"
+        ],
+        [
+          "order_entry",
+          -1,
+          "19:30",
+          "21:00"
+        ],
+        [
+          "regular",
+          -1,
+          "21:00",
+          "14:20"
+        ]
+      ],
+      "matches": true
+    },
+    {
+      "scope": "SUGAR",
+      "date": "2026-12-28",
+      "matches": true,
+      "row": "(2026, 12, 28, ReplacementBlocks(&SUGAR_CHRISTMAS_REOPEN_BLOCKS), T1, \"IFUS-NOTICE-2026-CHRISTMAS\")"
+    },
+    {
+      "scope": "COFFEE",
+      "date": "2026-12-28",
+      "matches": true,
+      "row": "(2026, 12, 28, ReplacementBlocks(&COFFEE_COCOA_CHRISTMAS_REOPEN_BLOCKS), T1, \"IFUS-NOTICE-2026-CHRISTMAS\")"
+    },
+    {
+      "scope": "COCOA",
+      "date": "2026-12-28",
+      "matches": true,
+      "row": "(2026, 12, 28, ReplacementBlocks(&COFFEE_COCOA_CHRISTMAS_REOPEN_BLOCKS), T1, \"IFUS-NOTICE-2026-CHRISTMAS\")"
+    },
+    {
+      "scope": "COTTON",
+      "date": "2026-12-28",
+      "matches": true,
+      "row": "(2026, 12, 28, ReplacementBlocks(&COTTON_CHRISTMAS_REOPEN_BLOCKS), T1, \"IFUS-NOTICE-2026-CHRISTMAS\")"
+    },
+    {
+      "scope": "ORANGE_JUICE",
+      "date": "2026-12-28",
+      "matches": true,
+      "row": "(2026, 12, 28, ReplacementBlocks(&FCOJ_CHRISTMAS_REOPEN_BLOCKS), T1, \"IFUS-NOTICE-2026-CHRISTMAS\")"
+    },
+    {
+      "scope": "COFFEE",
+      "date": "2026-12-24",
+      "close_ny": "13:05",
+      "matches": true
+    },
+    {
+      "scope": "COCOA",
+      "date": "2026-12-24",
+      "close_ny": "13:05",
+      "matches": true
+    },
+    {
+      "scope": "COTTON",
+      "date": "2026-12-24",
+      "close_ny": "13:05",
+      "matches": true
+    },
+    {
+      "scope": "ORANGE_JUICE",
+      "date": "2026-12-24",
+      "close_ny": "13:05",
+      "matches": true
+    },
+    {
+      "scope": "FANG",
+      "date": "2026-12-24",
+      "close_ny": "13:15",
+      "matches": true
+    },
+    {
+      "scope": "DOLLAR_INDEX",
+      "date": "2026-12-24",
+      "close_ny": "13:15",
+      "matches": true
+    },
+    {
+      "scope": "all eight tables",
+      "date": "2026-12-25",
+      "kind": "Closed",
+      "matches": true
+    },
+    {
+      "scope": "broad venue",
+      "dates": [
+        "2026-12-24",
+        "2026-12-28",
+        "2026-12-29"
+      ],
+      "kind": "Unsourced",
+      "matches": true
+    }
+  ],
+  "limitation": "Checks compare published future arrangements and unchanged ordinary boundaries; they do not witness future production trading."
+}

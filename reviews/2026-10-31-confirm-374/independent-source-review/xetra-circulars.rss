@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Deutsche Börse circulars &amp; mailings</title>
+    <link>https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars</link>
+    <description />
+    <item>
+      <title>Final trading session 2026</title>
+      <link>https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/Final-trading-session-2026-5668164</link>
+      <description>1. Introduction
+
+This year, the final trading session will take place on Wednesday, 30 December 2026.
+
+2. Required action
+
+Trading Participants should consider that trading on this year's last trading day will close earlier than usual, as in previous years. 
+
+3. Details
+
+For details and further information regarding trading and settlement on the last trading day of this year, please refer to the Official Announcement of the Management Board of Frankfurt Stock Exchange, which can be found on the Deutsche Börse Cash Market website under this link:
+
+Trade &gt; Trading Calendar
+
+
+
+Further information 
+
+Recipients:  All Trading Participants of Frankfurt Stock Exchange (Frankfurter Wertpapierbörse, FWB®) and Vendors 
+
+Target groups:  
+
+Traders, Technical Contacts, Security Administrators, System Administrators, Nominated Persons, General 
+
+Contact:  
+
+Cash Markets Operations, tel. +49-69-211-1 14 00 
+
+Web:  www.deutsche-boerse-cash-market.com 
+
+Authorized by:  
+
+On behalf of the Management Board: Kathrin Haferkorn, David Unden</description>
+      <pubDate>Thu, 29 Oct 2026 23:15:00 GMT</pubDate>
+      <guid isPermaLink="false" />
+      <dc:date>2026-10-29T23:15:00Z</dc:date>
+    </item>
+    <item>
+      <title>Final trading session 2026</title>
+      <link>https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/Final-trading-session-2026-5668166</link>
+      <description>1.  Introduction
+
+This year, the final trading session will take place on Wednesday, 30 December 2026.
+
+2.  Required action
+
+Trading Participants should consider that trading on this year's last trading day will close earlier than usual, as in previous years. 
+
+3.  Details 
+
+For details and further information regarding trading and settlement on the last trading day of this year, please refer to the Official Announcement of Deutsche Börse AG, which can be found on the Deutsche Börse Cash Market website under this link:
+
+Trade &gt; Trading Calendar
+ 
+
+
+Further information 
+
+Recipients: All Trading Participants of Frankfurt Stock Exchange (Frankfurter Wertpapierbörse, FWB®) and Vendors 
+
+Target groups: 
+
+Traders, Technical Contacts, Security Administrators, System Administrators, Nominated Persons, General 
+
+Contact: 
+
+Cash Markets Operations, tel. +49-69-211-1 14 00 
+
+Web: www.cashmarket.deutsche-boerse.com 
+
+Authorized by: 
+
+Kathrin Haferkorn, David Unden</description>
+      <pubDate>Thu, 29 Oct 2026 23:00:00 GMT</pubDate>
+      <guid isPermaLink="false" />
+      <dc:date>2026-10-29T23:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Deutsche Börse Readiness Newsflash | MiFID II/MiFIR order flagging requirements: Final reminder of Algo ID solution and CUE pre-validation tool - Changed requirements with T7 Release 15.0</title>
+      <link>https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/Deutsche-B-rse-Readiness-Newsflash-MiFID-II-MiFIR-order-flagging-requirements-Final-reminder-of-Algo-ID-solution-and-CUE-pre-validation-tool-Changed-requirements-with-T7-Release-15.0-5665664</link>
+      <description>As announced with Deutsche Börse Circular 027/26 from 16 June 2026, we kindly remind you of the changes to the Algo ID solution, the Common Upload Engine (CUE) validations for Short Code ID and Algo ID uploads, and an enhancement of the Short Code ID and Algo ID error reports, which will be introduced with T7 Release 15.0 on 9 November 2026.
+
+Production start: 9 November 2026
+
+Please be reminded that Trading Participants are required to familiarize themselves with the new requirements for the Algo ID solution, including the submission of information on substantial updates to their trading algorithms and the annual submission of test documentation explaining the means of testing. This information is also required for new trading algorithms. 
+
+In addition, the CUE pre-validation tool for Short Code ID and Algo ID upload files will be decommissioned, and upload validations will be limited to checks of file type, file structure, and naming convention. For intraday uploads, comprehensive validation results of the file content are provided to Trading Participants via intraday reports TR160 - TR163 at 10:00 CET, 14:00 CET, and 18:00 CET, in addition to the end-of-day reports.
+
+Furthermore, the existing field “processingTime” in Short Code ID and Algo ID reports TR160, TR162, TR169 will be enhanced for error 1 “ShortCodeID registration / AlgoID registration is missing”. The timestamp of the Short Code ID or Algo ID missing identification will be added. Therefore, the format of the field changes and Trading Participants shall adhere to the new field format.
+
+For further regulatory and functional information, please refer to the Deutsche Börse Circular published on 16 June 2026, the new “sample upload file Algo ID”, the dedicated “Reporting handbook for audit trail and other regulatory reporting under the MiFID II / MiFIR regime”, the “Mini Reporting handbook Short Code and AlgoIDs”, the “CUE validation and file specification Short Code ID and Algo ID” and the “User guide GUI Short Code ID and Algo ID Upload” under the following path: MiFID II &gt; Reference data reporting.
+
+For further technical information, please refer to the T7 final release notes published on 2 October 2026 under the following path: T7 Release 15.0.
+
+If you have any questions or comments, please send an e-mail to: mifid.reporting@deutsche-boerse.com.
+
+Kind regards,
+Your Client Services Team
+
+
+
+
+Further information    
+
+Recipients:   All Trading Participants of Frankfurt Stock Exchange (Frankfurter Wertpapierbörse, FWB®) and Vendors  
+
+Target groups:   
+
+Traders, Technical Contacts, Security Administration, System Administration, Nominated Persons, General 
+
+Related circular:  
+
+Deutsche Börse Circular 027/26 
+
+Related newsflash:  
+
+Cash Market Readiness Newsflash from 24 August 2026 
+
+Contact:   
+
+mifid.reporting@deutsche-boerse.com  
+
+Web:   MiFID II &gt; Reference data reporting</description>
+      <pubDate>Wed, 28 Oct 2026 02:00:00 GMT</pubDate>
+      <guid isPermaLink="false" />
+      <dc:date>2026-10-28T02:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Introduction of tk accelis Group AG &amp; Co. KGaA in Deutsche Börse Xetra trading on 28 October 2026</title>
+      <link>https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/Introduction-of-tk-accelis-Group-AG-Co.-KGaA-in-Deutsche-B-rse-Xetra-trading-on-28-October-2026-5660818</link>
+      <description>1. Introduction 
+
+As part of the spin-off of tk accelis Group AG &amp; Co. KGaA from thyssenkrupp AG, subject to the issuer's admission to the Regulated Market (Prime Standard), we hereby inform you about the procedure for the first price determination on trading venue Deutsche Börse Xetra (MIC: XETR) for shares of tk accelis Group AG &amp; Co. KGaA on 28 October 2026.
+
+First trading day: 28 October 2026
+
+2. Required action
+
+Trading Participants have to make sure that the Product Assignment Group of the new instrument is assigned to their trader groups.
+
+3. Details of the first price determination 
+
+The following trading parameters will apply:
+
+Trading model: Continuous Trading
+  
+
+Instrument name 
+
+Short code 
+
+ISIN 
+
+Product Assignment Group 
+
+tk accelis Group AG &amp; Co. KGaA 
+
+TKCC 
+
+DE000TKCC1S8 
+
+MDX1
+
+
+Effective 29 October 2026, tk accelis Group AG &amp; Co. KGaA shares will be assigned to the Product Assignment Group GER0.
+
+Please note that the market opening for the tk accelis Group AG &amp; Co. KGaA share will take place in parallel to the thyssenkrupp AG share. For details, please refer to the paragraph below or the table with the schedule for the first price determination.
+
+Pre-trading on the first trading day will start from 07:00 CE(S)T. The call phase for the first auction (Opening Auction - Opening Auction Call; display in Deutsche Börse Xetra: “OpnA”) will start at 08:55 CE(S)T and will last at least five minutes. Consequently, the first price determination in Deutsche Börse Xetra trading will take place not earlier than 09:00 CE(S)T.
+
+The following will apply to the Opening Auction:
+
+During the Opening Auction Call Phase, if the order book is crossed, the indicative auction price, auction volume and auction surplus (volume and side) will be displayed. In addition, the first ten price levels will be displayed via GUI, EMDI and MDI and the full market depth via EOBI.
+
+Once the Opening Auction concludes, Continuous Trading will commence.
+
+Please note the following special procedures:
+
+Orders entered with trading restriction “OAO” (Opening Auction only) will only be considered in the first auction of the exchange trading day, i.e. in the first price determination for the shares. Orders entered with trading restriction “AOO” (Auction only) will be considered in the opening auction, the intraday auction and the closing auction.
+The usual safeguards in Deutsche Börse Xetra (MIC: XETR) will also be applied in the Opening Auction. Therefore, a volatility interruption may occur following the Auction Call Phase.
+The intraday auction starts at 13:00 CE(S)T and takes at least two minutes.
+If an exceptional number of orders is executed in any one auction, it may lead to delays in processing confirmations.
+Moreover, the "Continuous trading with auctions" market model applies.
+
+Treatment regarding the MDAX® index:
+
+Following the spin-off of tk accelis Group AG &amp; Co. KGaA from thyssenkrupp AG, an adjustment to the index is required. On 28 October 2026, tk accelis Group AG &amp; Co. KGaA will be included in the MDAX® index for one day. This adjustment ensures the trackability of the index for investors.
+
+On 28 October 2026, after close of trading, the tk accelis Group AG &amp; Co. KGaA share will be removed from the MDAX® index and the weighting of the thyssenkrupp AG share will be adjusted accordingly.
+
+Schedule for the first price determination for shares of tk accelis Group AG &amp; Co. KGaA on 28 October 2026 on trading venue Deutsche Börse Xetra (MIC: XETR):
+
+
+ 
+
+Time (CE(S)T)* 
+
+Description 
+
+Comments 
+
+As of 07:00 
+
+Start of pre-trading phase (Phase „Book“)  
+
+Order entry, modification and deletion are possible. 
+
+As of 08:55 
+
+Start of auction call phase with a minimum duration of 5 minutes (phase "OpnA”)  
+
+Order entry, modification and deletion are possible. Information about the indicative auction price, auction volume and auction surplus is displayed. In addition, the 10 first price levels are displayed via GUI, EMDI and MDI and the full market depth via EOBI. 
+
+09:00 earliest 
+
+ First price determination 
+
+The first price and the volume will be displayed in the T7 trading system and disseminated to vendors etc. via CEF®. 
+
+Subsequently 
+
+Continuous Trading (Phase „Cont“)  
+
+
+
+
+Further information 
+
+Recipients:  
+
+All Trading Participants of Frankfurt Stock Exchange (Frankfurter Wertpapierbörse, FWB®) and Vendors 
+
+Target groups:  
+
+Traders, Security Administrators, System Administrators  
+
+Contact:  
+
+Cash Markets Operations Helpline, tel. +49-69-211-1 14 00 
+
+Web:  
+
+www.cashmarket.deutsche-boerse.com 
+
+Authorized by:  
+
+On behalf of the Management Board: Christopher Turba, Karmen Margaryan</description>
+      <pubDate>Sun, 25 Oct 2026 23:00:00 GMT</pubDate>
+      <guid isPermaLink="false" />
+      <dc:date>2026-10-25T23:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>T7 Release 15.0: Important information for production start</title>
+      <link>https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/T7-Release-15.0-Important-information-for-production-start-5650620</link>
+      <description>1. Introduction 
+
+Deutsche Börse Group will launch Release 15.0 of the T7 trading system on Monday, 9 November 2026. 
+
+The support window for T7 Release 15.0 will take place on Saturday, 7 November 2026 between 15:00 and 18:00 CET. Connectivity testing during the support window is strongly recommended for all participants and Multi-Member Service Providers. 
+
+This circular outlines the key topics relevant for the production launch of T7 Release 15.0 and provides details regarding the connection test.  
+
+Connection test: 7 November 2026 
+Production start: 9 November 2026 
+
+2. Required action
+
+Participants are requested  
+
+to complete and return the production readiness statement (see section 3.H.) and  
+to register a Technical Contact for the support window (see section 3.G.)  
+
+no later than Friday, 30 October 2026. 
+
+3. Details of the initiative 
+
+Deutsche Börse Group will launch Release 15.0 of the T7 trading system on Monday, 9 November 2026. Please refer to the dedicated document “T7 Release 15.0 - Functional Technical Release Notes Deutsche Börse Xetra and Deutsche Börse Frankfurt, Version 2” for a full overview of both the new and changed functional scope.
+
+The document is available on the Deutsche Börse Cash Market website www.cashmarket.deutsche-boerse.com via the following path: T7 Release 15.0 &gt; Overview and Functionality. 
+
+A. Backward compatibility
+
+T7 Release 15.0 will not provide backward compatibility with the T7 Release 14.1 interface versions of T7 ETI, FIX LF and EDCI. Participants must use the new interface versions and will no longer be able to connect to T7 using the T7 Release 14.1 interface layouts following the production launch of T7 Release 15.0. 
+
+The public market and reference data interfaces, including EOBI, EMDI, MDI and RDI/RDF, as well as reports and data files, will also not provide backward compatibility. 
+
+B. Decommissioning of deprecated ETI Requests
+
+The following deprecated ETI requests will be permanently decommissioned with the production introduction of T7 Release 15.0 and will no longer be available: 
+
+New Order Single 
+New Order Single (short layout) 
+Replace Order Single 
+Replace Order Single (short layout) 
+
+Participants must ensure that they have completed the migration to the replacement ETI requests prior to the production launch. 
+
+For a detailed overview of the new ETI order entry requests to be implemented, please refer to the Cash Market Deutsche Börse Readiness Newsflash from 4 September 2026: Mandatory Implementation of New ETI Order Entry Requests with T7 Release 15.0. 
+
+C. Decommissioning of T7 Java Admin GUI 
+
+The T7 Java Admin GUI will be decommissioned with the production launch of T7 Release 15.0, as is already the case for the T7 Release 15.0 Simulation.  
+
+Participants must ensure that their migration to the T7 Web Admin GUI is completed before the production launch on 9 November 2026. Following the deployment of T7 Release 15.0, access to the T7 Java Admin GUI will no longer be supported.  
+
+The new T7 Web Admin GUI is fully operational and available to all T7 users via Internet and N7 leased-line access.
+
+For further information, please refer to: New T7 Web GUIs  
+
+D. Preparations for Friday, 6 November 2026 and Saturday, 7 November 2026 
+
+On Friday, 6 November 2026, T7 Release 14.1 will be in production for the last time. Reports for the business day 6 November 2026 can be expected at the usual time.  
+
+On Saturday, 7 November 2026, Deutsche Börse will convert the T7 production systems to Release 15.0 and initial reference data for business day 9 November 2026 will be available via RDI and RDF following the start of the system in preparation for the support window. 
+
+E. Support Window and Important Information for T7 Release 15.0 
+
+This section details the upcoming support window and essential information for the T7 Release 15.0 production launch on Monday, 9 November 2026. 
+
+Support Window on Saturday, 7 November 2026 (15:00 – 18:00 CET) 
+
+Connectivity testing during the support window is strongly recommended for all participants and Multi-Member Service Providers to ensure connectivity at the start of trading on Monday, 9 November 2026. Please ensure that a staff member is available to log on to the T7 production system (e.g., via the T7 Java Trader GUI, T7 Web Admin GUI and/or third-party applications). 
+
+At this time, the T7 production system will be available for connectivity testing on the ETI, FIX LF, FAGSE Gateways, RDI, MDI, EMDI, EOBI and EDCI interfaces and via the T7 Web Admin GUI, the T7 Web Clearer GUI and the T7 Java Trader GUI. No order and quote entries will be possible. 
+
+Start of Day: during the support window, at approximately 15:30 CET, all products in the T7 production systems will be set to “Start of Day” providing participants the opportunity to perform their regular start of day activities:   Area Availability/special processes 
+
+Market data: 
+
+After the start of day, product and instrument state change information messages will be sent out. Thereafter, snapshots are sent out periodically (MDI, EMDI, EOBI) in addition to functional beacons or heartbeats via the incremental stream in EMDI and EOBI respectively.
+Traders will not have access to the order book.
+Please refer to the document "T7 Release 15.0 Market and Reference Data Interfaces Manual" (Section 9.11.1) for further details. 
+
+ETI and FIX LF Gateways: 
+
+During the production introduction weekend, the T7 ETI, FIX LF, and FAGSE Production Gateways will be available for participant connectivity.
+In general, session and user logons will be possible.
+ETI: It will be possible to send retransmission requests.
+FIX LF and FAGSE Gateways: It will be possible to send resend requests.
+Orderbook management will not be possible.
+Order book restatement messages will be sent during start of day switch.
+Please refer to the documents "T7 Release 15.0 Enhanced Trading Interface Manual" (Section 4.7.11) and "T7 Release 15.0 FIX LF Manual" (Section 3.8.11) for further details. 
+
+Connection Test Message: 
+
+During the support window a message “Connection Test Deutsche Börse Xetra. &lt;hh:mm:ss&gt;”, “Connection Test Deutsche Börse Frankfurt &lt;hh:mm:ss&gt;” will appear with an increasing sequence number in the market news view (news board) of the T7 Java Trader GUI and the T7 Web Admin GUI. 
+
+FIX LF MsgSeqNum's: 
+
+Please note that after the connection test, the inbound and outbound MsgSeqNum's will not be reset upon the next start of day or restart of the FIX Gateway. This is documented in Section 5.10.2, “Outage on T7 FIX LF Side”, of the “T7 Release 15.0 FIX LF Manual”.
+
+Support Window Updates: Deutsche Börse will inform participants about the general progress of the connection test via implementation news on the Cash Market website available under the path: Implementation News
+
+Following the end of the support window, the T7 15.0 production system will shut down on Saturday, 7 November 2026 at 18:00 CET and will remain unavailable until Sunday evening. 
+
+F. Monday, 9 November 2026 – Production Start 
+
+The first trading day with T7 Release 15.0 will start as usual. 
+
+Please note: As the system will be restarted on Sunday evening after the connection test on Saturday, the initial reference data file for the business day on 9 November 2026 will be regenerated. 
+
+As the reference data that will be provided on 7 November 2026 via RDI and RDF prior to the support window may potentially contain some changes, participants are required to use the initial reference data provided following the system start for 9 November 2026. 
+
+Persistent orders entered until the end of trading on 6 November 2026 but not executed will remain available on 9 November 2026, unless other validity restrictions apply. 
+
+A list of any items relevant prior to the production start of T7 Release 15.0 will be provided as of 6 November 2026. This “Known Limitations” list will be available on the Cash Market website under the following path: T7 Release 15.0 &gt; Production
+
+G. Technical Contact for the Support Window 
+
+Please enter details of the contact person who will be available during the support window in the Member Section of Deutsche Börse Group not later than Friday, 30 October 2026. The path is:  
+
+Member Section &gt; Company Contacts &gt; [+] Create Contact &gt; Contact Types &gt; Release
+
+Please choose the category “Connection Test Responsible” and make sure to check the box “Cash Market T7”. This will ensure that Deutsche Börse will be able to reach you in any emergency between Saturday, 7 November 2026 and production start on Monday, 9 November 2026. 
+
+H. Provision of the Readiness Statement 
+
+We kindly ask all Trading Participants, ISVs and TPIPs to submit the Readiness Statement for T7 Release 15.0 by Friday, 30 October 2026 at the latest. Please note that the provision of the Readiness Statement is mandatory.  
+
+The online Readiness Statement for T7 Release 15.0 is available here: Readiness Statement. 
+
+Please enter your dedicated Trading PIN in the online questionnaire. It is available for Central Coordinators and their Deputies in the Member Section under: My Profile &gt; PIN.
+
+
+
+
+Further information 
+
+Recipients:  
+
+All Trading Participants of Frankfurt Stock Exchange (Frankfurter Wertpapierbörse, FWB®) and Vendors 
+
+Target groups:  
+
+Traders, Security Administrators, System Administrators  
+
+Related newsflash: 
+
+Deutsche Börse Readiness Newsflash from 4 September 2026 
+
+Related circular: 
+
+Deutsche Börse Circular 018/26  
+
+Contact:  Technical Key Account Manager via your VIP number or cts@deutsche-boerse.com 
+
+Web:  T7 Release 15.0 
+
+Authorized by:  
+
+Oliver Grohmann, Holger Patt</description>
+      <pubDate>Thu, 22 Oct 2026 22:00:00 GMT</pubDate>
+      <guid isPermaLink="false" />
+      <dc:date>2026-10-22T22:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Changes in the composition of Product Assignment Groups in Deutsche Börse Xetra due to extraordinary modification of share indices</title>
+      <link>https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/Changes-in-the-composition-of-Product-Assignment-Groups-in-Deutsche-B-rse-Xetra-due-to-extraordinary-modification-of-share-indices-5625330</link>
+      <description>1. Introduction 
+
+STOXX Ltd. has announced the new composition of the DAX® Blue Chip Indices. Consequently, the changes communicated in this circular will come into effect in Deutsche Börse Xetra trading (MIC: XETR) on 14 October 2026.
+
+Production start: 14 October 2026
+
+2. Required action
+
+Please note: As a result of the changes listed under no. 3., the multicast addresses and/or partitionIDs for the affected instruments might also change. In that case, please kindly take the new multicast addresses/partitionIDs into consideration.
+
+Open orders in the instruments affected by the changes listed under no. 3. will not be deleted.
+
+3. Details of the initiative 
+
+For the following instruments, the Product Assignment Group in Deutsche Börse Xetra (MIC: XETR) will change with effect from 14 October 2026: 
+  
+
+Instrument name 
+
+Short code 
+
+ISIN 
+
+Product Assignment Group old 
+
+Product Assignment Group new 
+
+ProCredit Holding AG 
+
+PCZ 
+
+DE0006223407 
+
+GER0
+(partitionID 55) 
+
+SDX1
+(partitionID 55) 
+
+Nagarro SE 
+
+NA9 
+
+DE000A3H2200 
+
+SDX1
+(partitionID 55) 
+
+GER0
+(partitionID 55) 
+
+Nagarro SE z. Verkauf 
+
+NA9A 
+
+DE000A41YFS0 
+
+SDX1
+(partitionID 55) 
+
+GER0
+(partitionID 55)
+
+
+
+
+Further information 
+
+Recipients:  
+
+All Trading Participants of Frankfurt Stock Exchange (Frankfurter Wertpapierbörse, FWB®) and Vendors 
+
+Target groups:  
+
+Traders, Security Administrators, System Administrators  
+
+Contact:  
+
+Cash Markets Operations Helpline, tel. +49-69-211-1 14 00 
+
+Web:  
+
+www.cashmarket.deutsche-boerse.com 
+
+Authorized by:  
+
+On behalf of the Management Board: Christopher Turba, Van Tri Tran</description>
+      <pubDate>Mon, 12 Oct 2026 22:00:00 GMT</pubDate>
+      <guid isPermaLink="false" />
+      <dc:date>2026-10-12T22:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Deutsche Börse Readiness Newsflash | Introduction of Member Section Release October 2026</title>
+      <link>https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/Deutsche-B-rse-Readiness-Newsflash-Introduction-of-Member-Section-Release-October-2026-5615542</link>
+      <description>With this Newsflash, we announce the introduction of the next Member Section enhancement with Member Section Release October 2026, which will be available as of Wednesday, 7 October 2026.
+
+A new regional jurisdiction field has been added to the Trading Location form. This enhancement ensures full alignment with local regulatory parameters while streamlining the registration and verification process.
+ 
+
+New regional jurisdiction field in Trading Location form for local regulatory alignment
+
+To reflect distinct regional regulatory frameworks across various jurisdictions, a new mandatory field has been introduced in the application form for the registration of a new Trading Location.
+
+What is changing?
+
+When submitting an application from an applicable country subject to regional regulatory oversight, applicants will now be required to select their specific region from a dedicated dropdown menu.
+The dropdown list presents regions that meet the regulatory prerequisites for the respective application.
+If your specific region is not listed in the available options, please select the indicated option. Once you proceed with the application, you will be asked to contact your Key Account Manager, who will assist you in reviewing the regulatory requirements for your jurisdiction.
+
+If you have any questions or require assistance with an ongoing application, please contact your dedicated Key Account Manager or client.services@deutsche-boerse.com.
+
+Kind regards, 
+Your Client Services Team 
+ 
+
+Further information    
+
+Recipients:   All Trading Participants of Frankfurt Stock Exchange (Frankfurter Wertpapierbörse, FWB®) and Vendors  
+
+Target group:   
+
+All users of the Member Section 
+
+Contact:   
+
+Your Key Account Manager or client.services@deutsche-boerse.com; member.section@deutsche-boerse.com 
+
+Web:   Member Section homepage; Member Section Support</description>
+      <pubDate>Wed, 07 Oct 2026 22:00:00 GMT</pubDate>
+      <guid isPermaLink="false" />
+      <dc:date>2026-10-07T22:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Changes in the composition of Product Assignment Groups in Deutsche Börse Xetra due to extraordinary modification of share indices</title>
+      <link>https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/Changes-in-the-composition-of-Product-Assignment-Groups-in-Deutsche-B-rse-Xetra-due-to-extraordinary-modification-of-share-indices-5611258</link>
+      <description>1. Introduction 
+
+STOXX Ltd. has announced the new composition of the DAX® Blue Chip Indices. Consequently, the changes communicated in this circular will come into effect in Deutsche Börse Xetra trading (MIC: XETR) on 6 October 2026.
+
+Production start: 6 October 2026
+
+2. Required action
+
+Please note: As a result of the changes listed under no. 3., the multicast addresses and/or partitionIDs for the affected instruments might also change. In that case, please kindly take the new multicast addresses/partitionIDs into consideration.
+
+Open orders in the instruments affected by the changes listed under no. 3. will not be deleted.
+
+3. Details of the initiative 
+
+For the following instruments, the Product Assignment Group in Deutsche Börse Xetra (MIC: XETR) will change with effect from 6 October 2026: 
+  
+
+Instrument name 
+
+Short code 
+
+ISIN 
+
+Product Assignment Group old 
+
+Product Assignment Group new 
+
+SGL Carbon SE 
+
+SGL DE0007235301 
+
+GER0
+(partitionID 55) 
+
+SDX1
+(partitionID 55) 
+
+Wüstenrot&amp;Württembergische AG 
+
+WUW 
+
+DE0008051004 
+
+SDX1
+(partitionID 55) 
+
+GER0
+(partitionID 55)
+
+
+
+
+Further information 
+
+Recipients:  
+
+All Trading Participants of Frankfurt Stock Exchange (Frankfurter Wertpapierbörse, FWB®) and Vendors 
+
+Target groups:  
+
+Traders, Technical Contacts, Security Administrators, System Administrators  
+
+Contact:  
+
+Cash Markets Operations Helpline, tel. +49-69-211-1 14 00 
+
+Web:  
+
+www.cashmarket.deutsche-boerse.com 
+
+Authorized by:  
+
+On behalf of the Management Board: Kathrin Haferkorn, Van Tri Tran</description>
+      <pubDate>Sun, 04 Oct 2026 22:00:00 GMT</pubDate>
+      <guid isPermaLink="false" />
+      <dc:date>2026-10-04T22:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Introduction of tender rights on Brockhaus Technologies AG on 30 September 2026 at Frankfurter Wertpapierbörse</title>
+      <link>https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/Introduction-of-tender-rights-on-Brockhaus-Technologies-AG-on-30-September-2026-at-Frankfurter-Wertpapierb-rse-5599120</link>
+      <description>1. Introduction 
+
+Subject to the inclusion, trading in tender rights on Brockhaus Technologies AG will take place as of 30 September 2026 at Frankfurter Wertpapierbörse (Frankfurt Stock Exchange, FWB®).
+
+Start of trading: 30 September 2026
+End of trading: 6 October 2026
+
+2. Required action 
+
+Trading Participants have to make sure that the Product Assignment Group of the new instrument is assigned to their trader groups.
+
+3. Details of the first price determination
+
+Trading model: Continuous Trading
+
+
+ 
+
+Instrument name 
+
+ISIN 
+
+Product Assignment Group 
+
+CCP-eligible 
+
+First Trading Day 
+
+Last Trading Day 
+
+Brockhaus Technologies AG Andienungsrecht 
+
+DE000A41YGE8 
+
+GER0 
+
+yes 
+
+30.09.2026 
+
+06.10.2026
+
+
+
+
+Trading parameters for Deutsche Börse Xetra (MIC: XETR):
+
+
+ Minimum order size Trading model Characteristics 
+
+1 
+
+Continuous Trading 
+
+At the end of the penultimate trading day of the tender right, all open orders will be deleted.
+
+
+
+
+On the last trading day, trading will end with a closing auction. It will start at 12:45 CE(S)T at the earliest with a duration of at least five minutes. On this day, no intraday auction will take place.
+
+
+Trading parameters for Deutsche Börse Frankfurt (MIC: XFRA): Minimum order size Trading model Characteristics 
+
+1 
+
+Continuous Auction with Special Auction 
+
+From the first until the penultimate trading day, a Special Auction will take place not before 13:00 CE(S)T.
+
+
+
+
+At the end of the penultimate trading day of the tender right, all open orders will be deleted.
+
+
+
+
+On the last trading day, trading will end with a Special Auction. Taking into consideration the market and orderbook situation, the Management Board can determine that several Special Auctions may be carried out on the last trading day. However, these do not start before 13:00 CE(S)T. If the Management Board decides that one or more additional Special Auctions are to be held, this will be announced via the Newsboard after the regular Special Auction has been held.
+
+
+
+
+In general, these Special Auctions take place independent from the last price determination on Deutsche Börse Xetra (MIC: XETR).
+
+
+
+
+Schedule for trading on Deutsche Börse Xetra (MIC: XETR) on the last trading day
+  Time (CE(S)T) Description 
+
+07:00 
+
+Start Pre-Trading Phase (Phase “Book“) 
+
+08:00 
+
+Start Xetra Retail Early (Phase “RPreCall“) 
+
+08:55 
+
+Earliest possible start of the call phase for the opening auction with a minimum duration of seven minutes (Phase “OpnA“) 
+
+09:02 
+
+Earliest possible start of the Xetra price determination, followed by Continuous Xetra Trading (Phase “Cont“) 
+
+12:45 
+
+Earliest possible start of the call phase for the closing auction with a minimum duration of five minutes (Phase “CIsA“) 
+
+12:50 
+
+Earliest possible start of the Xetra price determination, followed by Post-Trading (Phase “Book“)
+
+
+
+
+Further information 
+
+Recipients:  
+
+All Trading Participants of Frankfurt Stock Exchange (Frankfurter Wertpapierbörse, FWB®) and Vendors 
+
+Target groups:  
+
+Traders, Technical Contacts, Security Administrators, System Administrators  
+
+Contact:  
+
+Cash Markets Operations Helpline, tel. +49-69-211-1 14 00 
+
+Web:  
+
+www.cashmarket.deutsche-boerse.com 
+
+Authorized by:  
+
+On behalf of the Management Board: Kathrin Haferkorn, Christopher Turba</description>
+      <pubDate>Mon, 28 Sep 2026 22:00:00 GMT</pubDate>
+      <guid isPermaLink="false" />
+      <dc:date>2026-09-28T22:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Deutsche Börse Readiness Newsflash | T7 Release 15.0: Readiness Statement is available</title>
+      <link>https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/Deutsche-B-rse-Readiness-Newsflash-T7-Release-15.0-Readiness-Statement-is-available-5599592</link>
+      <description>With this Newsflash we would like to inform you about the publication of the Readiness Statement for T7 Release 15.0. All Trading Participants, Registered Independent Software Vendors (ISVs) and Third Party Information Providers (TPIPs) are requested to submit the Readiness Statement by Friday, 30 October 2026 at the latest.
+
+The Readiness Statement can be found here Readiness Statement​.
+ 
+For the submission, the dedicated Trading PIN is required. The PIN is available via the Member Section, accessible to Central Coordinators and their Deputies only, under the following path: 
+
+Member Section &gt; My Profile &gt; PIN. 
+ 
+We kindly remind you to participate in the simulation environment and the connection test to ensure a smooth transition. Your participation is crucial for a successful implementation. 
+
+All information about T7 Release 15.0 can be found on the Deutsche Börse website www.cashmarket.deutsche-boerse.com under the following link: T7 Release 15.0.
+
+If you have any further questions or comments, please do not hesitate to send an e-mail to: client.services@deutsche-boerse.com.
+
+Kind regards, 
+Your Client Services Team
+ 
+
+Further information
+  
+
+Recipients:   
+
+All Trading Participants of Frankfurt Stock Exchange (Frankfurter Wertpapierbörse, FWB®) and Vendors  
+
+Target groups:   
+
+Central Coordinators, Traders, Technical Contacts, Security Administrators, System Administrators, Nominated Persons, General 
+
+Related circular:   
+
+Deutsche Börse Circular 018/26 
+
+Contact:   
+
+client.services@deutsche-boerse.com 
+
+Web:   
+
+T7 Release 15.0</description>
+      <pubDate>Mon, 28 Sep 2026 22:00:00 GMT</pubDate>
+      <guid isPermaLink="false" />
+      <dc:date>2026-09-28T22:00:00Z</dc:date>
+    </item>
+  </channel>
+</rss>

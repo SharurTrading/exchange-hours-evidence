@@ -1,0 +1,430 @@
+{
+  "base": "d3f6b21db8f4f7523f0c79b786c16c6852c4678c",
+  "head": "6078da48c15a2dc602961a7ea0759ef0cfcaa17c",
+  "changed_files": [
+    "docs/evidence/ice_us.md",
+    "docs/evidence/ice_us_cocoa.md",
+    "docs/evidence/ice_us_coffee.md",
+    "docs/evidence/ice_us_cotton.md",
+    "docs/evidence/ice_us_dollar_index.md",
+    "docs/evidence/ice_us_orange_juice.md",
+    "docs/evidence/ice_us_sugar.md",
+    "docs/evidence/iceus.md",
+    "docs/evidence/nse_india.md",
+    "docs/evidence/xetra.md",
+    "docs/schedules/sources.md"
+  ],
+  "files_classified": {
+    "evidence": 10,
+    "source_registry": 1
+  },
+  "arrays": [
+    {
+      "array": "MUHURAT_2026_BLOCKS",
+      "source": "nse_india.rs",
+      "independently_expected": [
+        [
+          "extended",
+          0,
+          49800,
+          50700
+        ],
+        [
+          "order_entry",
+          0,
+          50700,
+          51180
+        ],
+        [
+          "extended",
+          0,
+          51180,
+          51600
+        ],
+        [
+          "regular",
+          0,
+          51600,
+          55800
+        ],
+        [
+          "extended",
+          0,
+          55800,
+          56100
+        ],
+        [
+          "extended",
+          0,
+          57000,
+          57600
+        ]
+      ],
+      "actual": [
+        [
+          "extended",
+          0,
+          49800,
+          50700
+        ],
+        [
+          "order_entry",
+          0,
+          50700,
+          51180
+        ],
+        [
+          "extended",
+          0,
+          51180,
+          51600
+        ],
+        [
+          "regular",
+          0,
+          51600,
+          55800
+        ],
+        [
+          "extended",
+          0,
+          55800,
+          56100
+        ],
+        [
+          "extended",
+          0,
+          57000,
+          57600
+        ]
+      ],
+      "match": true
+    },
+    {
+      "array": "FINAL_SESSION_2026",
+      "source": "xetra.rs",
+      "independently_expected": [
+        [
+          "order_entry",
+          0,
+          25200,
+          28800
+        ],
+        [
+          "extended",
+          0,
+          28800,
+          32430
+        ],
+        [
+          "regular",
+          0,
+          32430,
+          46800
+        ],
+        [
+          "extended",
+          0,
+          46800,
+          46950
+        ],
+        [
+          "regular",
+          0,
+          46950,
+          50400
+        ],
+        [
+          "extended",
+          0,
+          50400,
+          51000
+        ],
+        [
+          "order_entry",
+          0,
+          51000,
+          54000
+        ]
+      ],
+      "actual": [
+        [
+          "order_entry",
+          0,
+          25200,
+          28800
+        ],
+        [
+          "extended",
+          0,
+          28800,
+          32430
+        ],
+        [
+          "regular",
+          0,
+          32430,
+          46800
+        ],
+        [
+          "extended",
+          0,
+          46800,
+          46950
+        ],
+        [
+          "regular",
+          0,
+          46950,
+          50400
+        ],
+        [
+          "extended",
+          0,
+          50400,
+          51000
+        ],
+        [
+          "order_entry",
+          0,
+          51000,
+          54000
+        ]
+      ],
+      "match": true
+    },
+    {
+      "array": "SUGAR_CHRISTMAS_REOPEN_BLOCKS",
+      "source": "ice_us.rs",
+      "independently_expected": [
+        [
+          "order_entry",
+          -4,
+          48600,
+          55800
+        ],
+        [
+          "regular",
+          0,
+          28800,
+          46800
+        ]
+      ],
+      "actual": [
+        [
+          "order_entry",
+          -4,
+          48600,
+          55800
+        ],
+        [
+          "regular",
+          0,
+          28800,
+          46800
+        ]
+      ],
+      "match": true
+    },
+    {
+      "array": "COFFEE_COCOA_CHRISTMAS_REOPEN_BLOCKS",
+      "source": "ice_us.rs",
+      "independently_expected": [
+        [
+          "order_entry",
+          -4,
+          48900,
+          55800
+        ],
+        [
+          "regular",
+          0,
+          28800,
+          48600
+        ]
+      ],
+      "actual": [
+        [
+          "order_entry",
+          -4,
+          48900,
+          55800
+        ],
+        [
+          "regular",
+          0,
+          28800,
+          48600
+        ]
+      ],
+      "match": true
+    },
+    {
+      "array": "COTTON_CHRISTMAS_REOPEN_BLOCKS",
+      "source": "ice_us.rs",
+      "independently_expected": [
+        [
+          "order_entry",
+          -4,
+          48900,
+          55800
+        ],
+        [
+          "regular",
+          0,
+          28800,
+          51600
+        ]
+      ],
+      "actual": [
+        [
+          "order_entry",
+          -4,
+          48900,
+          55800
+        ],
+        [
+          "regular",
+          0,
+          28800,
+          51600
+        ]
+      ],
+      "match": true
+    },
+    {
+      "array": "FCOJ_CHRISTMAS_REOPEN_BLOCKS",
+      "source": "ice_us.rs",
+      "independently_expected": [
+        [
+          "order_entry",
+          -4,
+          48900,
+          55800
+        ],
+        [
+          "regular",
+          0,
+          28800,
+          50400
+        ]
+      ],
+      "actual": [
+        [
+          "order_entry",
+          -4,
+          48900,
+          55800
+        ],
+        [
+          "regular",
+          0,
+          28800,
+          50400
+        ]
+      ],
+      "match": true
+    },
+    {
+      "array": "COTTON_AFTER_CHRISTMAS_REOPEN_BLOCKS",
+      "source": "ice_us.rs",
+      "independently_expected": [
+        [
+          "order_entry",
+          -1,
+          53400,
+          64800
+        ],
+        [
+          "order_entry",
+          -1,
+          70200,
+          75600
+        ],
+        [
+          "regular",
+          -1,
+          75600,
+          51600
+        ]
+      ],
+      "actual": [
+        [
+          "order_entry",
+          -1,
+          53400,
+          64800
+        ],
+        [
+          "order_entry",
+          -1,
+          70200,
+          75600
+        ],
+        [
+          "regular",
+          -1,
+          75600,
+          51600
+        ]
+      ],
+      "match": true
+    }
+  ],
+  "documents_tables": [
+    {
+      "file": "docs/evidence/ice_us.md",
+      "documents_table_unchanged": true
+    },
+    {
+      "file": "docs/evidence/ice_us_cocoa.md",
+      "documents_table_unchanged": true
+    },
+    {
+      "file": "docs/evidence/ice_us_coffee.md",
+      "documents_table_unchanged": true
+    },
+    {
+      "file": "docs/evidence/ice_us_cotton.md",
+      "documents_table_unchanged": true
+    },
+    {
+      "file": "docs/evidence/ice_us_dollar_index.md",
+      "documents_table_unchanged": true
+    },
+    {
+      "file": "docs/evidence/ice_us_orange_juice.md",
+      "documents_table_unchanged": true
+    },
+    {
+      "file": "docs/evidence/ice_us_sugar.md",
+      "documents_table_unchanged": true
+    },
+    {
+      "file": "docs/evidence/iceus.md",
+      "documents_table_unchanged": true
+    },
+    {
+      "file": "docs/evidence/nse_india.md",
+      "documents_table_unchanged": true
+    },
+    {
+      "file": "docs/evidence/xetra.md",
+      "documents_table_unchanged": true
+    }
+  ],
+  "normal_ice_support": [
+    {
+      "prior_independent_capture": "/workspace/exchange-hours-evidence/reviews/2026-10-31-future-update/independent-final-us-review/ICE_Regular_Hours.pdf",
+      "fresh_author_capture": "ICE_Futures_US_Regular_Trading_Hours.pdf",
+      "sha256": "381c04fcb4d5b4093f72463246652ac8e24c3ca7b89283dfe86f736497c13ed2",
+      "identical": true
+    },
+    {
+      "prior_independent_capture": "/workspace/exchange-hours-evidence/reviews/2026-10-31-future-update/independent-final-us-review/ICE_PCPO_2018.pdf",
+      "fresh_author_capture": "ICE_Futures_US_PCPO_Session_20180920.pdf",
+      "sha256": "42a4e0ec45f59fae316924a8421bbdd779a3ee6e8b47aea08ad5944caa27b21d",
+      "identical": true
+    }
+  ]
+}

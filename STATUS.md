@@ -12225,3 +12225,30 @@ Detailed report and logs:
 `reviews/2026-10-31-future-update/independent-final-us-review/REPORT.md`.
 Implementation: https://github.com/SharurTrading/exchange-hours-rs/pull/375.
 Evidence dependency: https://github.com/SharurTrading/exchange-hours-evidence/pull/40.
+
+## 2026-10-31 UTC — issue #374 special-session publication confirmations
+
+**Independent source review PASS**, exact documentation head
+`6078da48c15a2dc602961a7ea0759ef0cfcaa17c`, compared with merged PR #375 at
+`d3f6b21db8f4f7523f0c79b786c16c6852c4678c`.
+
+Fresh NSE, ICE Futures U.S. and Xetra primary PDFs reproduce all three existing
+citations byte for byte. Separate independent retrievals reproduce the same
+digests. The checked current operator channels contain no superseding
+timetable for the served scopes. The reports record the exact UTC retrieval
+times, bounded amendment searches, phase comparisons and preserved original
+capture metadata. The confirmations precede the original 2026-11-07,
+2026-12-23 and 2026-12-29 deadlines in issue #374.
+
+The crate diff contains ten evidence files and the source registry. Runtime
+schedules, tests, publication horizons and all original Documents tables are
+unchanged. The source reviewer reproduced all 23 author-manifest captures
+and independently compared seven block arrays containing 24 entries. There
+are no blocking or advisory findings. Complete repository verification is
+recorded separately when its exact-head run completes.
+
+Source reports, byte copies, manifests and checksums:
+`reviews/2026-10-31-confirm-374/INDEX.md` and
+`reviews/2026-10-31-confirm-374/independent-source-review/REPORT.md`.
+Implementation: https://github.com/SharurTrading/exchange-hours-rs/pull/376.
+Follow-up: https://github.com/SharurTrading/exchange-hours-rs/issues/374.

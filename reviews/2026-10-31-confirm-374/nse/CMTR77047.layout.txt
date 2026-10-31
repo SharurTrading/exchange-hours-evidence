@@ -1,0 +1,222 @@
+National Stock Exchange of India Limited
+
+Circular
+ Department: CAPITAL MARKET SEGMENT
+
+Download Ref No: NSE/CMTR/77047                               Date: October 22, 2026
+
+Circular Ref. No: 150/2026                           Sss
+
+    All Members,
+
+    Mock trading on Saturday, October 24, 2026 - No new version release
+
+    Exchange shall be conducting a mock trading session in the Capital Market segment on Saturday, October
+    24, 2026 as per following:
+
+
+
+                                    Mock Date: October 24, 2026
+     Particulars                                                               Time in Hrs
+     Trading Session-1 from Primary Site
+     Morning Block Deal Window Session-1 open time                                10:45
+     Morning Block Deal Window Session-1 close time                               11:00
+     Pre-Open open time                                                           11:00
+     Pre-Open Market order restriction start time                                 11:05
+     Pre-Open* close time
+                                                                                  11:10
+     * Random closure in last two minute
+
+     Special Preopen Session open time (For IPO & Relisted security)              11:00
+
+     Special Preopen Session** close time (For IPO & Relisted security)
+                                                                                  11:45
+     ** Random closure in last ten minute
+
+     Normal Market open time                                                      11:15
+     T+0 Market Open time                                                         11:15
+
+     Call Auction Illiquid session open time (2 sessions of 15 mins each)*
+                                                                                  11:30
+     * Random closure in last one minute
+
+     T+0 Market Close time                                                        12:00
+     T+0 Market Trade modification end time                                       12:10
+     Normal market open time for stocks in special preopen session                12:00
+     Auction Market Open Time                                                     11:30
+National Stock Exchange of India Limited
+    Auction Market Close Time                                                      12:15
+    Block Deal Window Session – 2 Open time                                        12:00
+    Block Deal Window Session – 2 Close time                                       12:15
+    Normal Market close time                                                       12:30
+    Trading Session-2 from DR Site
+    Pre-Open open time                                                             13:15
+    Pre-Open Market order restriction start time                                   13:20
+    Pre-Open* close time
+                                                                                   13:25
+    * Random closure in last two minute
+    Normal Market open time                                                        13:30
+    Call Auction Illiquid session open time (2 sessions of 15 mins each)*
+                                                                                   13:30
+    * Random closure in last one minute
+    Normal Market close time for CAS securities.                                   14:15
+    CAS Open time                                                                  14:20
+    CAS Market order restriction start time                                        14:25
+    CAS close time *                                                               14:30
+    * Random closure in last two minutes
+    Normal Market close time                                                       14:30
+    Closing Session open time                                                      14:50
+    Closing Session close time                                                     15:00
+    Trade Modification end time                                                    15:10
+    Re-login Timings
+    Live Re-login start time                                                       16:00
+    Live Re-login close time                                                       16:30
+
+      1) NEAT+ version details:
+
+          Version              Download path on NSE Extranet path
+          NEAT+ 7.9.0          /cmftp/common/NEATPlus790
+
+
+
+      2) Members using NNF are requested to refer circular (NSE/MSD/76883) regarding discontinuation of
+           the exiting encryption mechanism with old interactive port (i.e. 10827) from December 07, 2026.
+           Accordingly, NNF members are advised to migrate to either ‘new encryption mechanism with MD5
+           checksum removal’ or ‘new encryption mechanism & immediate acknowledgement of order related
+           messages’ :
+
+                                   Gateway Router              Gateway IPs Subnet ranges
+                 Segment                       New
+                                IP Address                Network           Mask           Port
+                                               Port
+                    CM         172.19.12.85   10831*    172.19.12.0    255.255.255.128     10810
+
+
+                                                                                                    Page 2 of 5
+National Stock Exchange of India Limited
+                                             10833**
+   *Port – This port will support new encryption messages with MD5 checksum removal.
+   **Port - This port will support new encryption messages with MD5 checksum removal and new immediate
+   Ack request for order related messages.
+
+
+
+
+   For other important instructions regarding the mock trading, kindly refer to the following Annexures:
+   Annexure 1: Important instructions regarding mock trading session.
+   Annexure 2: Pre-requisites / General guidelines for participating in the Mock environment.
+   Annexure 3: Important guidelines in case of switchover of trading system to Disaster Recovery (DR) Site.
+
+   For and on behalf of
+   National Stock Exchange of India Limited
+
+   Aarti Surve
+   Chief Manager
+
+    Toll Free No                                  Email id
+    1800-266-0050 (Option 1)                      msm@nse.co.in
+
+
+
+
+                                                  Annexure – 1
+
+                               Important instructions regarding mock trading session
+    Particulars                    Details
+    Connectivity Parameters:       Refer to circular NSE/MSD/73993 dated April 30, 2026 &
+                                   NSE/MSD/74511 dated June 02, 2026 for interactive connectivity
+                                   details.
+    Installation Guide:            Available on NSE Extranet at /common/InstallationProcedure.
+
+    Software Version:              NEAT+ 7.9.0
+    Order Purge:                   All outstanding orders will be cleared before each session. Members
+                                   using NNF software must manually clear orders in their systems.
+
+    Software Testing:              Refer to circular NSE/MSD/46441 and SEBI
+                                   circular SEBI/HO/MRD1/DSAP/CIR/P/2020/234. Members may use
+                                   either Mock Trading or Simulated Environment to meet regulatory
+                                   requirements.
+    No Financial Obligation:       Trades during mock sessions will not result in any fund pay-in or pay-
+                                   out.
+
+
+
+
+                                                                                                      Page 3 of 5
+National Stock Exchange of India Limited
+    UCC/PAN Validity:             Only valid and compliant UCC/PAN uploaded and approved before
+                                  cutoff will be allowed. For queries, contact uci@nse.co.in.
+                                   UCC Validation will be skipped during contingency time for order entry.
+    NOTIS Availability:           The NOTIS application will be accessible during the mock trading
+                                  Session.
+                                  Connect2NSE and Extranet facility shall not be available from 19:00
+    Extranet / Member portal
+                                  hours to 22:00 hours.
+    availability
+                                  Extranet API shall not be available from 19:00 to 22:00 hours.
+    Participation:                Members should participate using all trading software and re-login into
+                                  live environment to ensure smooth connectivity for Monday, October
+                                  26, 2026.
+    Live Updates:                 Visit www.nseindia.com for any session-related updates.
+    Support:                      For queries, call Toll-Free: 1800 266 0050 (Option 1).
+
+
+
+
+                                                  Annexure – 2
+
+                Pre-requisites / General guidelines for participating in the Mock environment
+
+    Pre-requisites / General            Details
+    guidelines Heads
+    Eligibility                         All members enabled for trading in the Capital Market (CM)
+                                        segment in the live market are automatically eligible for mock
+                                        trading.
+                                        Participation is enabled using existing User IDs, IPs, and Box ID
+                                        mappings from the live environment.
+    Telnet Connectivity                 Ensure you can successfully telnet the Exchange host from the IP
+                                        address you intend to use.
+    Box ID Setup                        Confirm that the Box ID is created on the IP with appropriate
+                                        messages for the segment you wish to trade in.
+    NNF Application Users               If using Non-NEAT Frontend (NNF):
+                                        a) User ID must be of dealer type.
+                                        b) It must be converted for NNF.
+                                        C) It must be mapped with the IP.
+    Branch/User Limits                  Set appropriate branch and user limits from the Corporate
+                                        Manager Terminal before placing orders in the mock session.
+
+
+
+
+                                                                                                     Page 4 of 5
+National Stock Exchange of India Limited
+    Exchange Requests for Mock            Send email requests for the following actions with User ID and
+    Participation                         segment details:
+
+                                          a) Pro Enablement
+                                          b) CTCL Conversion (only dealer IDs)
+                                          c) Password Reset for Corporate Manager User ID
+                                          d) Unlocking of Corporate Manager User ID
+                                          e) Change of Trading Rights (e.g., PRO to CLI, PRO+CLI)
+    Password Management                   Corporate Manager User ID: Exchange will assist with
+                                          reset/unlock via email.
+                                          Other User IDs: Members must reset/unlock these themselves
+                                          using the Corporate Manager Terminal.
+
+                                                   Annexure – 3
+
+   Important guidelines in case of switchover of trading system to Disaster Recovery (DR) Site
+
+      1. Kindly note below points after switch over to DR site:
+              a.   Trades of primary site will be available in Previous Trades window.
+              b. Trades can be modified/cancelled using Multiple Trade Modification and Cancellation window
+                 respectively.
+              c. Messages of primary site will be available in TWS Message Area.
+      2. If user renames or deletes the User folder and re-login the NEAT+ terminal, then data of primary site
+         shall not be available in the functional window as mentioned above point.
+
+
+
+
+                                                                                                      Page 5 of 5
+
