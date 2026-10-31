@@ -1,0 +1,1169 @@
+[
+  [
+    "Opening Routine",
+    "Pre-Open: 08:30am – 08:58am/08:59am* Non-Cancel: 08:58am/08:59am* – 09:00am"
+  ],
+  [
+    "Trading",
+    "Open: 09:00am - 12:00pm"
+  ],
+  [
+    "Mid-Day Break",
+    "Pre-Open: 12:00pm – 12:58pm/12:59pm* Non-Cancel: 12:58pm/12:59pm* – 01:00pm"
+  ],
+  [
+    "Trading",
+    "Open: 01:00pm - 05:00pm"
+  ],
+  [
+    "Closing Routine",
+    "Pre-Close: 05:00pm – 05:04pm/05:05pm* Non-Cancel: 05:04pm/05:05pm* – 05:06pm"
+  ],
+  [
+    "Trade at Close",
+    "05:06pm – 05:16pm"
+  ],
+  [
+    "Close",
+    "05:16pm"
+  ],
+  [
+    "Opening Routine",
+    "Pre-Open: 01:30pm – 01:58pm/01:59pm* Non-Cancel: 01:58pm/01:59pm* – 02:00pm"
+  ],
+  [
+    "Trading",
+    "Open: 02:00pm - 05:00pm"
+  ],
+  [
+    "Closing Routine",
+    "Pre-Close: 05:00pm – 05:04pm/05:05pm* Non-Cancel: 05:04pm/05:05pm* – 05:06pm"
+  ],
+  [
+    "Trade at Close",
+    "05:06pm – 05:16pm"
+  ],
+  [
+    "Close",
+    "05:16pm"
+  ],
+  [
+    "Opening Routine",
+    "Pre-Open: 08:30am – 08:58am/08:59am* Non-Cancel: – 08:58am/08:59am* – 09:00am"
+  ],
+  [
+    "Trading",
+    "Open: 09:00am - 12:00pm"
+  ],
+  [
+    "Closing Routine",
+    "Pre-Close: 12:00pm – 12:04pm/12:05pm* Non-Cancel: 12:04pm/12:05pm* – 12:06pm"
+  ],
+  [
+    "Trade at Close",
+    "12:06pm – 12:16pm"
+  ],
+  [
+    "Close",
+    "12:16pm"
+  ],
+  [
+    "Date",
+    "Day",
+    "Holiday"
+  ],
+  [
+    "28 Jan 2025",
+    "Tuesday",
+    "Eve of Chinese New Year"
+  ],
+  [
+    "24 Dec 2025",
+    "Wednesday",
+    "Eve of Christmas"
+  ],
+  [
+    "31 Dec 2025",
+    "Wednesday",
+    "Eve of New Year"
+  ],
+  [
+    "16 Feb 2026",
+    "Monday",
+    "Eve of Chinese New Year"
+  ],
+  [
+    "24 Dec 2026",
+    "Thursday",
+    "Eve of Christmas"
+  ],
+  [
+    "31 Dec 2026",
+    "Thursday",
+    "Eve of New Year"
+  ],
+  [
+    "Traded price*",
+    "Board lot size"
+  ],
+  [
+    "Up to and including S$10 (or equivalent traded currency threshold)",
+    "Existing board lot size"
+  ],
+  [
+    "Greater than S$10 and up to S$100",
+    "10 units"
+  ],
+  [
+    "Greater than S$100",
+    "1 unit"
+  ],
+  [
+    "Security",
+    "Stock code",
+    "Traded currency"
+  ],
+  [
+    "DBS Group Holdings Ltd",
+    "D05",
+    "SGD"
+  ],
+  [
+    "Great Eastern Holdings Ltd",
+    "G07",
+    "SGD"
+  ],
+  [
+    "Haw Par Corporation Ltd",
+    "H02",
+    "SGD"
+  ],
+  [
+    "Jardine Cycle & Carriage Ltd",
+    "C07",
+    "SGD"
+  ],
+  [
+    "Jardine Matheson Holdings Ltd",
+    "J36",
+    "USD"
+  ],
+  [
+    "Keppel Ltd",
+    "BN4",
+    "SGD"
+  ],
+  [
+    "Oversea-Chinese Banking Corporation Ltd",
+    "O39",
+    "SGD"
+  ],
+  [
+    "Prudential PLC",
+    "K6S",
+    "USD"
+  ],
+  [
+    "Singapore Exchange Limited",
+    "S68",
+    "SGD"
+  ],
+  [
+    "United Overseas Bank Limited",
+    "U11",
+    "SGD"
+  ],
+  [
+    "Venture Corporation Limited",
+    "V03",
+    "SGD"
+  ],
+  [
+    "Products",
+    "Board lot size"
+  ],
+  [
+    "Special Purpose Acquisition Companies Warrants (SPAC Warrants)",
+    "1"
+  ],
+  [
+    "Exchange Traded Funds (ETFs)",
+    "1"
+  ],
+  [
+    "Daily Leverage Certificates (DLCs), Structured Warrants and Structured Certificates",
+    "100"
+  ],
+  [
+    "Singapore Depository Receipts (SDRs)",
+    "10, 100"
+  ],
+  [
+    "Fixed income instruments",
+    "10, 100 or 1,000"
+  ],
+  [
+    "Price Range ($)",
+    "Minimum Bid Size ($)",
+    "Forced Order Range"
+  ],
+  [
+    "Below 0.20",
+    "0.001",
+    "+/- 30 bids"
+  ],
+  [
+    "0.20 – 0.995",
+    "0.005"
+  ],
+  [
+    "1.00 and above",
+    "0.01"
+  ],
+  [
+    "Price Range ($)",
+    "Minimum Bid Size ($)",
+    "Forced Order Range"
+  ],
+  [
+    "Below 0.20",
+    "0.001",
+    "+/- 30 bids"
+  ],
+  [
+    "0.20 – 1.995",
+    "0.005"
+  ],
+  [
+    "2.00 and above",
+    "0.01"
+  ],
+  [
+    "Price Range ($)",
+    "Minimum Bid Size ($)",
+    "Forced Order Range"
+  ],
+  [
+    "0.001 – 0.005",
+    "0.001",
+    "+/- 300%"
+  ],
+  [
+    "0.006 – 0.199",
+    "0.001",
+    "+/- 50%"
+  ],
+  [
+    "0.20 – 1.995",
+    "0.005",
+    "+/- 50%"
+  ],
+  [
+    "2.00 and above",
+    "0.01",
+    "+/- 50%"
+  ],
+  [
+    "Price Range ($)",
+    "Minimum Bid Size ($)",
+    "Forced Order Range"
+  ],
+  [
+    "All",
+    "0.01 or 0.001 as SGX-ST determines",
+    "+/- 10%"
+  ],
+  [
+    "Price Convention",
+    "Price Range ($)",
+    "Minimum Bid Size ($)",
+    "Forced Order Range"
+  ],
+  [
+    "$1",
+    "All",
+    "0.001",
+    "+/- 30 bids"
+  ],
+  [
+    "$100",
+    "All",
+    "0.001",
+    "+/- 1,000 bids"
+  ],
+  [
+    "Price Range (HK$)",
+    "Minimum Bid Size (HK$)"
+  ],
+  [
+    "Below 0.25",
+    "0.001"
+  ],
+  [
+    "0.25 - 0.495",
+    "0.005"
+  ],
+  [
+    "0.50 - 9.99",
+    "0.01"
+  ],
+  [
+    "10.00 - 19.98",
+    "0.02"
+  ],
+  [
+    "20.00 - 99.95",
+    "0.05"
+  ],
+  [
+    "100 - 199.90",
+    "0.1"
+  ],
+  [
+    "200 - 499.80",
+    "0.2"
+  ],
+  [
+    "500 and above",
+    "0.5"
+  ],
+  [
+    "Price Range (¥)",
+    "Minimum Bid Size (¥)"
+  ],
+  [
+    "Below 2,000",
+    "1"
+  ],
+  [
+    "2,000 - 2,995",
+    "5"
+  ],
+  [
+    "3,000 - 29,990",
+    "10"
+  ],
+  [
+    "30,000 - 49,950",
+    "50"
+  ],
+  [
+    "50,000 - 99,900",
+    "100"
+  ],
+  [
+    "100,000 and above",
+    "1000"
+  ],
+  [
+    "",
+    "No-cancellation price range",
+    "Error Trade Review Fee",
+    "Review by SGX on an error trade"
+  ],
+  [
+    "All securities (except bonds)",
+    "(i) +/- 20 minimum bid sizes or (ii) +/-5% from the reference price whichever is wider",
+    "$1,000",
+    "Any error trade that falls outside the no-cancellation price range is eligible for review"
+  ],
+  [
+    "Structured Warrants",
+    "(i) +/- 20 minimum bid sizes or (ii) +/-25% from the reference price whichever is wider",
+    "$1,000",
+    "Any error trade that falls outside the no-cancellation price range is eligible for review"
+  ],
+  [
+    "Bonds",
+    "Not applied",
+    "$1,000",
+    "Any error trade is eligible for review"
+  ],
+  [
+    "Trade Review",
+    "Trade Review Outcome"
+  ],
+  [
+    "SGX has been alerted to potential error trades involving 4,000 units in N525100T 300401 traded at S$90.00 on 21 May 2026.",
+    "SGX has been alerted to potential error trades involving 4,000 units in N525100T 300401 traded at S$90.00 on 21 May 2026. We have reviewed and ruled the trades invalid."
+  ],
+  [
+    "",
+    ""
+  ],
+  [
+    "Trading Fee*^",
+    "0.0075% of traded value"
+  ],
+  [
+    "Clearing Fee*",
+    "0.0325% of traded value"
+  ],
+  [
+    "Goods and Services Tax",
+    "Prevailing GST rate"
+  ],
+  [
+    "",
+    "Market Maker",
+    "Active Trader"
+  ],
+  [
+    "Role",
+    "To provide competitive bid-ask quotes.",
+    "To participate actively."
+  ],
+  [
+    "Incentive & Obligation",
+    "Clearing fee rebate based on the quotation performance of the market maker and characteristics of the specific stock. GEMS-MM: Additional funding subject to meeting quoting obligations.",
+    "Clearing fee rebate based on the daily average value traded by the active trader and characteristics of the specific stock."
+  ],
+  [
+    "Scope of Securities",
+    "Cash equity securities which account for >90% of traded value on SGX (subject to periodic reviews). GEMS-MM: IPOs for the first 6 months, and cash equities that meet certain criteria including minimum liquidity and poorer market quality than index stocks.",
+    "Cash equity securities which account for >90% of traded value on SGX (subject to periodic reviews)."
+  ],
+  [
+    "",
+    "",
+    "Pre-Open",
+    "Open",
+    "Pre-Close",
+    "Trade-at-Close"
+  ],
+  [
+    "Limit Orders",
+    "Fill and Kill",
+    "✔",
+    "✔",
+    "✔",
+    "✔"
+  ],
+  [
+    "Fill or Kill",
+    "",
+    "✔",
+    "",
+    "✔"
+  ],
+  [
+    "Day",
+    "✔",
+    "✔",
+    "✔",
+    "✔"
+  ],
+  [
+    "Long Dated",
+    "✔",
+    "✔",
+    "✔",
+    "✔"
+  ],
+  [
+    "Market Orders",
+    "Fill and Kill",
+    "✔",
+    "✔",
+    "✔",
+    ""
+  ],
+  [
+    "Fill or Kill",
+    "",
+    "✔",
+    "",
+    ""
+  ],
+  [
+    "Day",
+    "",
+    "",
+    "",
+    ""
+  ],
+  [
+    "Long Dated",
+    "",
+    "",
+    "",
+    ""
+  ],
+  [
+    "Market-to-Limit Orders",
+    "Fill and Kill",
+    "✔",
+    "✔",
+    "✔",
+    ""
+  ],
+  [
+    "Fill or Kill",
+    "",
+    "✔",
+    "",
+    ""
+  ],
+  [
+    "Day",
+    "✔",
+    "✔",
+    "✔",
+    ""
+  ],
+  [
+    "Long Dated",
+    "✔",
+    "✔",
+    "✔",
+    ""
+  ],
+  [
+    "Stop Orders",
+    "",
+    "",
+    "✔",
+    "",
+    "✔*"
+  ],
+  [
+    "If-Touched Orders",
+    "",
+    "",
+    "✔",
+    "",
+    "✔*"
+  ],
+  [
+    "Session State Orders",
+    "",
+    "",
+    "✔",
+    "✔",
+    ""
+  ],
+  [
+    "Company/ Listed Product",
+    "Security Type",
+    "Currency denomination available for trading",
+    "Counter Name",
+    "Stock Code",
+    "Traded Currency"
+  ],
+  [
+    "Hutchison Port Holdings Trust",
+    "Business Trust",
+    "Primary Currency Counter",
+    "HPH Trust USD",
+    "NS8U",
+    "USD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "HPH Trust SGD",
+    "P7VU",
+    "SGD"
+  ],
+  [
+    "PRINCIPAL FTSE ASEAN40",
+    "ETF",
+    "Primary Currency Counter",
+    "PRINCIPAL ASEAN40 US$",
+    "M62",
+    "USD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "PRINCIPAL ASEAN40 S$D",
+    "QS0",
+    "SGD"
+  ],
+  [
+    "PRINCIPAL S&P APAC DIVIDEND",
+    "ETF",
+    "Primary Currency Counter",
+    "PRINCIPAL S&P AP DIV US$",
+    "P5P",
+    "USD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "PRINCIPAL S&P AP DIV S$D",
+    "QR9",
+    "SGD"
+  ],
+  [
+    "ISHARES USD ASIA HY BOND ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "IS ASIA HYG US$",
+    "O9P",
+    "USD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "IS ASIA HYG S$D",
+    "QL3",
+    "SGD"
+  ],
+  [
+    "ISHARES USD ASIA BOND ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "IS ASIA BND US$",
+    "N6M",
+    "USD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "IS ASIA BND S$D",
+    "QL2",
+    "SGD"
+  ],
+  [
+    "iShares MSCI India Index ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "IS MSCI INDIA 100US$",
+    "I98",
+    "USD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "IS MS INDIA 100S$D",
+    "QK9",
+    "SGD"
+  ],
+  [
+    "Yangzijiang Shipbldg Hldgs Ltd",
+    "Security",
+    "Primary Currency Counter",
+    "YZJ Shipbldg SGD",
+    "BS6",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "YZJ Shipbldg CNY",
+    "SO7",
+    "RMB"
+  ],
+  [
+    "Phillip SGX APAC Dividend Leaders REIT ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "PHLP AP DIV REIT US$",
+    "BYI",
+    "USD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "PHLP AP DIV REIT S$D",
+    "BYJ",
+    "SGD"
+  ],
+  [
+    "NikkoAM-StraitsTrading Asia ex Japan REIT ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "NikkoAM-STC Asia REIT",
+    "CFA",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "NikkoAM-STC A_REIT US$",
+    "COI",
+    "USD"
+  ],
+  [
+    "STONEWEG EUROPE STAPLED TRUST",
+    "Stapled Security",
+    "Primary Currency Counter",
+    "Stoneweg EUTrust EUR",
+    "SET",
+    "EUR"
+  ],
+  [
+    "Secondary Currency Counter",
+    "Stoneweg EUTrust SGD",
+    "SEB",
+    "SGD"
+  ],
+  [
+    "Xtrackers MSCI China UCITS ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "XT MSCHINA US$",
+    "LG9",
+    "USD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "XT MSCHINA S$",
+    "TID",
+    "SGD"
+  ],
+  [
+    "ICBC CSOP FTSE Chinese Government Bond Index ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "ICBC CSOP CGB ETF S$",
+    "CYC",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "ICBC CSOP CGB ETF US$D",
+    "CYB",
+    "USD"
+  ],
+  [
+    "Phillip SGD Money Market ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "PHILLIP MM S$",
+    "MMS",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "PHILLIP MM US$D",
+    "MMT",
+    "USD"
+  ],
+  [
+    "NikkoAM-ICBCSG China Bond ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "NIKKOAM-ICBCSG CNB CNY",
+    "ZHY",
+    "RMB"
+  ],
+  [
+    "Secondary Currency Counter",
+    "NIKKOAM-ICBCSG CNB US$",
+    "ZHD",
+    "USD"
+  ],
+  [
+    "Lion-OCBC Securities Hang Seng TECH ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "Lion-OCBC Sec HSTECH S$",
+    "HST",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "Lion-OCBC Sec HSTECH US$",
+    "HSS",
+    "USD"
+  ],
+  [
+    "SPDR® GOLD SHARES",
+    "ETF",
+    "Primary Currency Counter",
+    "GLD US$",
+    "O87",
+    "USD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "GLD SG$",
+    "GSD",
+    "SGD"
+  ],
+  [
+    "Lion-OCBC Securities China Leaders ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "Lion-OSPL China L S$",
+    "YYY",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "Lion-OSPL China L CNY",
+    "YYR",
+    "RMB"
+  ],
+  [
+    "IREIT Global",
+    "REIT",
+    "Primary Currency Counter",
+    "IREIT Global SGD",
+    "UD1U",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "IREIT Global EUR",
+    "8U7U",
+    "EUR"
+  ],
+  [
+    "CSOP iEdge S-REITs Leaders ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "CSOP iEdge SREIT ETF S$",
+    "SRT",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "CSOP iEdge SREIT ETF US$",
+    "SRU",
+    "USD"
+  ],
+  [
+    "UOB APAC Green REIT ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "UOB AP GRN REIT S$",
+    "GRN",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "UOB AP GRN REIT US$",
+    "GRE",
+    "USD"
+  ],
+  [
+    "Phillip MSCI Singapore Daily 2X Leveraged Product",
+    "L&I Product",
+    "Primary Currency Counter",
+    "PHIL Long SiMSCI2X S$",
+    "LSS",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "PHIL Long SiMSCI2X US$",
+    "LSU",
+    "USD"
+  ],
+  [
+    "Phillip MSCI Singapore Daily -1X Inverse Product",
+    "L&I Product",
+    "Primary Currency Counter",
+    "PHIL Short SiMSCI-1X S$",
+    "SSS",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "PHIL Short SiMSCI-1X US$",
+    "SSU",
+    "USD"
+  ],
+  [
+    "AEM HOLDINGS LTD",
+    "Security",
+    "Primary Currency Counter",
+    "AEM SGD",
+    "AWX",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "AEM USD",
+    "XWA",
+    "USD"
+  ],
+  [
+    "NIKKOAM-STC CHINA EV ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "NikkoAM-STC CN EV S$",
+    "EVS",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "NikkoAM-STC CN EV US$",
+    "EVD",
+    "USD"
+  ],
+  [
+    "LION-OCBC SEC SG LOW CARBON",
+    "ETF",
+    "Primary Currency Counter",
+    "Lion-OSPL Low Carbon S$",
+    "ESG",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "Lion-OSPL Low Carbon US$",
+    "ESU",
+    "USD"
+  ],
+  [
+    "CSOP CGS-CIMB FTSE Asia Pacific Low Carbon Index ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "CSOP LOW CARBON US$",
+    "LCU",
+    "USD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "CSOP LOW CARBON S$",
+    "LCS",
+    "SGD"
+  ],
+  [
+    "UOBAM PING AN CHINEXT ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "UOBAM PINGAN CHINEXT S$",
+    "CXS",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "UOBAM PINGAN CHINEXT US$",
+    "CXU",
+    "USD"
+  ],
+  [
+    "CSOP iEdge Southeast Asia+ TECH Index ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "CSOP SEA TECH ETF US$",
+    "SQU",
+    "USD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "CSOP SEA TECH ETF S$",
+    "SQQ",
+    "SGD"
+  ],
+  [
+    "CGS Fullgoal Vietnam 30 Sector Cap ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "CF VN 30 SC ETF US$",
+    "VND",
+    "USD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "CF VN 30 SC ETF SG$",
+    "VNM",
+    "SGD"
+  ],
+  [
+    "iShares MSCI Asia Ex Japan Climate Action ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "ISHARES AXJCLIMATE US$",
+    "ICU",
+    "USD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "ISHARES AXJCLIMATE S$",
+    "ICM",
+    "SGD"
+  ],
+  [
+    "CGS Fullgoal CSI1000 ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "CGS FG CSI 1000 S$",
+    "GRO",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "CGS FG CSI1000 US$",
+    "GRU",
+    "USD"
+  ],
+  [
+    "Lion-Nomura Japan Active ETF (Powered by AI)",
+    "ETF",
+    "Primary Currency Counter",
+    "A LION-NOMURA JAPAN S$",
+    "JJJ",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "A LION-NOMURA JAPAN US$",
+    "JUS",
+    "USD"
+  ],
+  [
+    "Phillip-China Universal MSCI China A 50 Connect ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "PHIL-CU MS CHINA A50 S$",
+    "MCN",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "PHIL-CU MS CHINA A50 US$",
+    "MCS",
+    "USD"
+  ],
+  [
+    "Lion-OCBC Securities APAC Financials Dividend Plus ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "Lion-OSPL APAC Fin S$",
+    "YLD",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "Lion-OSPL APAC Fin US$",
+    "YLU",
+    "USD"
+  ],
+  [
+    "UOBAM FTSE China A50 Index ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "UOBAM FTSE CN A50 S$",
+    "JK8",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "UOBAM FTSE CN A50 US$",
+    "VK8",
+    "USD"
+  ],
+  [
+    "Lion-China Merchants EM Asia Select Index ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "Lion-CM EM Asia S$",
+    "EAA",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "Lion-CM EM Asia US$",
+    "EAU",
+    "USD"
+  ],
+  [
+    "Lion-China Merchants CSI Dividend Index ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "Lion-CM CSI Div S$",
+    "INC",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "Lion-CM CSI Div CNY",
+    "ICH",
+    "CNH"
+  ],
+  [
+    "Amova MSCI AC Asia Ex Japan Ex CHina Index ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "Amova Asia exJC S$",
+    "A93",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "Amova Asia exJC US$",
+    "A94",
+    "USD"
+  ],
+  [
+    "Amova E Fund ChiNext Index ETF – RMB Class",
+    "ETF",
+    "Primary Currency Counter",
+    "AmovaEFund ChiNext CNY",
+    "CXN",
+    "RMB"
+  ],
+  [
+    "Secondary Currency Counter",
+    "AmovaEFund ChiNext US$",
+    "CXO",
+    "USD"
+  ],
+  [
+    "LionGlobal Short Duration Bond Fund (Active ETF SGD Class)",
+    "ETF",
+    "Primary Currency Counter",
+    "A Lion Short Bond S$",
+    "SBO",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "A Lion Short Bond US$",
+    "SBV",
+    "USD"
+  ],
+  [
+    "EliteUK REIT",
+    "REIT",
+    "Primary Currency Counter",
+    "EliteUKREIT GBP",
+    "MXNU",
+    "GBP"
+  ],
+  [
+    "Secondary Currency Counter",
+    "EliteUKREIT SGD",
+    "MENU",
+    "SGD"
+  ],
+  [
+    "UOBAM Ping An FTSE ASEAN Dividend Index ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "UOBAM PA FT ASEAN DV S$",
+    "UPD",
+    "SGD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "UOBAM FTSE CN A50 S$",
+    "UPU",
+    "USD"
+  ],
+  [
+    "LionGlobal Singapore Physical Gold ETF",
+    "ETF",
+    "Primary Currency Counter",
+    "Lion SG Phy Gold US$",
+    "GLU",
+    "USD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "Lion SG Phy Gold S$",
+    "GLS",
+    "SGD"
+  ],
+  [
+    "Ultragreen.ai",
+    "Security",
+    "Primary Currency Counter",
+    "ULTRAGREEN AI USD",
+    "ULG",
+    "USD"
+  ],
+  [
+    "Secondary Currency Counter",
+    "ULTRAGREEN AI SGD",
+    "UGS",
+    "SGD"
+  ]
+]

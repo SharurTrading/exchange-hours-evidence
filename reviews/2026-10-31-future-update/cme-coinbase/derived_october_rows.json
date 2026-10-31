@@ -1,0 +1,149 @@
+[
+  {
+    "trade_date": "2026-10-05",
+    "source": "cme_service_oct3.json",
+    "rust_table": "SATURDAY_TO_0500_BLOCKS",
+    "blocks": [
+      [
+        "order_entry",
+        -3,
+        57660,
+        57720
+      ],
+      [
+        "extended",
+        -3,
+        57720,
+        86400
+      ],
+      [
+        "extended",
+        -2,
+        0,
+        7200
+      ],
+      [
+        "order_entry",
+        -2,
+        17100,
+        18000
+      ],
+      [
+        "extended",
+        -2,
+        18000,
+        86400
+      ],
+      [
+        "extended",
+        -1,
+        0,
+        86400
+      ],
+      [
+        "extended",
+        0,
+        0,
+        57600
+      ]
+    ]
+  },
+  {
+    "trade_date": "2026-10-26",
+    "source": "cme_service_oct24.json",
+    "rust_table": "SATURDAY_TO_1530_BLOCKS",
+    "blocks": [
+      [
+        "order_entry",
+        -3,
+        57660,
+        57720
+      ],
+      [
+        "extended",
+        -3,
+        57720,
+        86400
+      ],
+      [
+        "extended",
+        -2,
+        0,
+        7200
+      ],
+      [
+        "order_entry",
+        -2,
+        54900,
+        55800
+      ],
+      [
+        "extended",
+        -2,
+        55800,
+        86400
+      ],
+      [
+        "extended",
+        -1,
+        0,
+        86400
+      ],
+      [
+        "extended",
+        0,
+        0,
+        57600
+      ]
+    ]
+  },
+  {
+    "trade_date": "2026-11-02",
+    "source": "cme_service_oct31.json",
+    "rust_table": "SATURDAY_TO_0500_BLOCKS",
+    "blocks": [
+      [
+        "order_entry",
+        -3,
+        57660,
+        57720
+      ],
+      [
+        "extended",
+        -3,
+        57720,
+        86400
+      ],
+      [
+        "extended",
+        -2,
+        0,
+        7200
+      ],
+      [
+        "order_entry",
+        -2,
+        17100,
+        18000
+      ],
+      [
+        "extended",
+        -2,
+        18000,
+        86400
+      ],
+      [
+        "extended",
+        -1,
+        0,
+        86400
+      ],
+      [
+        "extended",
+        0,
+        0,
+        57600
+      ]
+    ]
+  }
+]

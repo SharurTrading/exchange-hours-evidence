@@ -1,0 +1,518 @@
+US Options FAQ – MEMX Exchanges
+Skip to the content
+Search
+MEMX Exchanges
+Menu
+Alerts and Notices
+Trader Alerts
+Regulatory Notices
+Product Notices
+US Options
+Production Facility
+MODE Test Facility
+FAQ
+User Manual
+Instrument Directory
+Forms and Documents
+ID Codes
+Transaction Fee Schedule
+Connectivity Fee Schedule
+Options Penny Program
+Market Hours and Holidays
+Contacts
+Test Scripts
+US Equities
+Production Facility
+MDE Test Facility
+FAQ
+User Manual
+Instrument Directory
+Forms and Documents
+Displayed Liquidity Incentive
+ID Codes
+Transaction Fee Schedule
+Connectivity Fee Schedule
+Market Hours and Holidays
+Contacts
+Test Scripts
+US Equities 23×5 FAQ
+Regulation
+Rulebook
+Rules and Filings
+Effective Rule Filings
+Pending Rule Filings
+Membership Fee Schedule
+Rule 605 Reports
+Governance Documents
+FINRA Rules by Reference
+Disciplinary Actions
+Search
+Search for:
+Close search
+Close Menu
+Alerts and Notices
+Show sub menu
+Trader Alerts
+Regulatory Notices
+Product Notices
+US Options
+Show sub menu
+Production Facility
+MODE Test Facility
+FAQ
+User Manual
+Instrument Directory
+Forms and Documents
+ID Codes
+Transaction Fee Schedule
+Connectivity Fee Schedule
+Options Penny Program
+Market Hours and Holidays
+Contacts
+Test Scripts
+US Equities
+Show sub menu
+Production Facility
+MDE Test Facility
+FAQ
+User Manual
+Instrument Directory
+Forms and Documents
+Displayed Liquidity Incentive
+ID Codes
+Transaction Fee Schedule
+Connectivity Fee Schedule
+Market Hours and Holidays
+Contacts
+Test Scripts
+US Equities 23×5 FAQ
+Regulation
+Show sub menu
+Rulebook
+Rules and Filings
+Show sub menu
+Effective Rule Filings
+Pending Rule Filings
+Membership Fee Schedule
+Rule 605 Reports
+Governance Documents
+FINRA Rules by Reference
+Disciplinary Actions
+Contact Us
+@memxtrading
+LinkedIn
+US Options FAQ
+Document Version
+2.0
+Document Date
+July 15, 2026
+Getting Started Trading
+What are the general steps required to become a Member?
+What is the on-boarding process for Extranet Providers?
+Can one become a market data subscriber without becoming a Member?
+Membership Application
+What are the application steps for a new trading member?
+What are the minimum document requirements to become a member?
+What additional services are available that require further documentation?
+What is required to become a market data subscriber only?
+Connectivity
+Which data centers host the MEMX Options exchange?
+What connectivity methods are available?
+What types of physical connectivity are offered?
+Can I use existing MEMX Equities connectivity to reach MEMX Options?
+What are the steps to begin network connectivity testing?
+Trading on MEMX
+What technical specifications are available?
+What market data protocols are supported?
+Reference Data and Drop Copy
+Where can I get information of the series available for trading on MEMX?
+What types of Drop Copy are available?
+Market Data
+What data feeds are offered?
+Is there a “fastest” data feed?
+Why does the Trade Conditions bitset only have 1 value?
+Order Entry
+What order entry protocols are supported?
+Why did you choose FIX 5.0, and why don’t you support FIX 4.2?
+What is the Parties Group section?
+How does MEMX Options support Bulk Messaging?
+What is an EFID?
+Does MEMX Options support mass cancels?
+Which order types and modifiers will be supported?
+How does Price Adjust work?
+Does MEMX route to away markets?
+Does MEMX provide directed routing to other markets?
+How can I submit Post Trade Allocation changes (CMTA, Open/Close, etc.)?
+What if both firms submit Post Trade Allocation requests?
+Risk Controls
+Does MEMX provide pre-trade risk controls on incoming orders?
+What pre-trade controls does MEMX offer to its Members?
+Does MEMX provide post-trade risk controls?
+How does the Active Risk control function?
+Can my Active Risk limits ever be exceeded?
+How does the Passive Risk control function?
+Can I enable both Active and Passive risk controls?
+Protocol Details
+MEMO (MEMbers Order)
+What is the difference between Replay and Stream modes?
+Is it possible to have both Replay/Stream behaviors for the same session?
+What is the opening process?
+Please explain exchange matching engine failover and how it affects my session connectivity.
+What if my MEMO Port fails?
+Can I start a session with an old identifier?
+How many sessions does a MEMO port support?
+Is disconnecting the TCP session equivalent to a graceful logout?
+Should I expect heartbeat messages at regular intervals regardless of other messages on the connection?
+Can we opt out of some server messages e.g. PendingCancel?
+What is the max message rate supported for SBE TCP?
+The heartbeat interval is configurable, any guidance regarding the interval range?
+What is Party ID and how it is used?
+MEMOIR Protocol Details
+What is expected heartbeat interval to maintain Gap fill and Snapshot TCP connections throughout the day?
+Are there limitations on number of packets per retransmission request, the timeliness of retrains requests, or the number of retransmission requests per day?
+Can you tell me more about the “ReplayRequest”, “ReplayBegin”, “ReplayComplete”, “ReplayAllRequest” messages?
+Contacting MEMX
+Who do I call if I have questions?
+Getting Started Trading
+What are the general steps required to become a Member?
+Establish network connectivity
+Complete the MEMX Member Application & Submit Documentation
+Initialize and Setup the MEMX Operations Portal
+Platform/Dev Environment Testing
+Formal Certification
+What is the on-boarding process for Extranet Providers?
+MEMX partners with approved network providers that operate financial extranets that aggregate multiple customers. They typically provide low cost, value-added services including connectivity for the MEMX exchange, order entry facilitation, and receipt of multicast market data. Approved Extranet Providers will be listed on our User Portal, including provider contact information and a link to the firm’s website. In order to be approved as and maintain status as a MEMX Extranet Provider, the provider is required to meet and maintain certain requirements, including monthly reporting obligations.
+Can one become a market data subscriber without becoming a Member?
+Yes, market data can be consumed by entities other than exchange members, or prior to exchange membership.
+Membership Application
+What are the application steps for a new trading member?
+Contact MEMX Member Experience.
+Email
+memberx@memx.com
+to begin the process
+Collect information.
+Review and complete documentation as described on the
+Membership, Connectivity, and Market Data Documents Page
+Submit Documentation.
+Email documentation to
+membership@memx.com
+What are the minimum document requirements to become a member?
+Member Application
+User Agreement
+Clearing Letter
+What additional services are available that require further documentation?
+NMS Order Routing / Routing Agreement
+Market Maker Application
+Service Bureau Application and Agreements
+Give Up Agreement
+Connectivity Services Agreement
+Market Data User Agreement
+What is required to become a market data subscriber only?
+Complete a Market Data User Agreement and request connectivity for distribution of the data.
+Connectivity
+Which data centers host the MEMX Options exchange?
+MEMX has a data center presence in Secaucus NY4 and Chicago. The primary trading platform is in the NY4 Secaucus data center and secondary data center is in Chicago. MEMX equalizes latency for order entry and market data dissemination to all participants in the NY4 location (note: MEMX does not equalize latency to/from other data centers in the Equinix Secaucus campus).
+What connectivity methods are available?
+Users may choose any of the following access methods:
+Direct Colocation Connection (DCC)
+Telco Provider
+Extranet Provider
+Further details on connectivity are available in the xNET Connectivity Specification available at
+http://memxtrading.com/connect
+What types of physical connectivity are offered?
+All user DCC network connections must be single mode optical fiber. The xNET supports 10G, 40G, and 100G Ethernet interface types. 40G may only be provisioned as a 4 X 10G Ethernet port-channel. 100G may be provisioned as a 4 X 25G Ethernet port-channel or a 1 X 100G Ethernet interface. The connection termination will be dictated by the choice of Ethernet interface selected.
+For resiliency, MEMX requires participants to connect through redundant “A” and “B” feeds and DCC connections are provisioned in A/B pairs. Each A/B connection pair terminates at different network devices at the xNET. A/B path diversity for multicast data distribution is required and maintained regardless of user interface configuration or preference. It is recommended that users advertise their source networks on both interfaces for maximum redundancy.
+Both order entry and market data will be available over a single connection. Everyone will have the fastest path to our markets. We will offer a level playing field for everyone and never charge a higher fee for faster access to our markets.
+Can I use existing MEMX Equities connectivity to reach MEMX Options?
+Yes, physical equity connections can be used to reach the options markets. Access over existing connections is made available upon request.
+What are the steps to begin network connectivity testing?
+Download the MEMX xNET Connectivity Specification –
+http://memxtrading.com/connect
+Register for Connectivity via MEMX site –
+https://memxtrading.com/connect/request/login
+Sign Connectivity Services Agreement & Receive Letter of Authorization
+Trading on MEMX
+What technical specifications are available?
+Technical specifications are available at
+https://memxtrading.com/specs
+under the US Options link on the right side.
+Protocol
+Description
+MEMX-TCP
+A Session Level TCP-based transport protocol for reliable delivery of business messages.
+MEMX-UDP
+A Session Level UDP-based transport protocol for best-effort delivery of business messages.
+MEMO SBE
+The binary protocol used for order submission on MEMX Options.
+MEMO FIX
+The Classic FIX (ASCII Tag/Value) protocol used for the exchange of information related to securities transactions on MEMX Options.
+MEMOIR Common
+Document that describes Instrument Definition, messages, and bitfields common to both the MEMOIR Depth and MEMOIR Top feeds.
+MEMOIR Depth
+A real-time full depth-of-book feed, including symbol directory and trading status information, offered directly from MEMX Options.
+MEMOIR Top
+A real-time top-of-book feed offered directly from MEMX Options that provides symbol directory, trading status, trades, and the best bid and best offer information,
+Risk Control SBE
+The binary protocol used to interface with MEMX Options Risk Control.
+Drop Copy
+A Drop Copy in Classic FIX protocol providing information related to trades executed and order activity on MEMX Options.
+What market data protocols are supported?
+MEMX data products include Depth and Top of Book. Participants will be able to consume MEMOIR (MEMber’s Order Information Record) data products via a streaming multicast protocol. Technical specifications are available at
+https://memxtrading.com/specs
+.
+Reference Data and Drop Copy
+Where can I get information of the series available for trading on MEMX?
+Clients may get daily symbol information from the MEMOIR feeds or via a file download.  At startup MEMX will provide Instrument Directory messages that map OSI symbol details to the MEMX Options and MX2 Options Security ID. The Options Security ID is the value that will be disseminated via the market data feeds and can also be used for order entry.  The Options Security ID will be the same on both platforms.  The file download is available after 6:00 AM ET.
+What types of Drop Copy are available?
+MEMX Options offers both Execution Only and Full Order Drop Copy sessions.  All Drop Copy messages are FIX formatted.  Execution Only Drop Copy sessions can aggregate trades across multiple firms.  Full Order Drop Copy sessions will only provide Drop Copy information for the individual trading firm.  Clients can opt to receive symbology in either the OSI Symbology format or as sent on the order entry port.
+Market Data
+What data feeds are offered?
+MEMX provides both a depth and top data feed, MEMOIR Depth and MEMOIR Top respectively.  Both the depth and top data feeds are provided using redundant “A/B” multicast data feeds to provide reliability of market data delivery. Market data consumers may choose to arbitrate these redundant feeds to further increase reliability in reading market data as the A and B feeds will be identical at the protocol level (however not at the UDP packet level). In addition, the ability to replay any missed data is provided using a separate mechanism described in the technical specifications.
+Is there a “fastest” data feed?
+Yes, the MEMOIR Depth A feed will generally be the most performant data feed. The MEMOIR Top feeds are built of the corresponding Depth feed.
+Why does the Trade Conditions bitset only have 1 value?
+This field intends to provide similar Trade Conditions as those sent on the OPRA feed. MEMX Options is an all electronic exchange. MEMOIR has distinct messaging for trade busts and corrections. At launch MEMX Options will not offer complex orders, auctions, or functionality that would create a need for identifiers other than ISO. If functionality is added in the future, bit fields will be added.
+Order
+Entry
+What order entry protocols are supported?
+Participants will electronically access the exchange using Classic FIX (ASCII Tag/Value) and/or a native binary protocol called MEMO (MEMbers Orders). A common message standard and data schema is used for both. These protocols will allow members to submit, modify, and cancel orders, receive acknowledgments and execution reports, and be notified of exchange trading status. Technical specifications are available at
+https://memxtrading.com/specs
+.
+Why did you choose FIX 5.0, and why don’t you support FIX 4.2?
+We chose FIX 5.0 SP2 for two main reasons. First, in keeping with our desire to move the industry forward, we wanted to use the latest version of the FIX standard which originally came out in 2006 (it was updated with service pack 2 in 2009). While FIX 4 is in wide use, it is nearing the two-decade old mark and has material architectural shortcomings as well as significant accidental complexities common for something that old. Secondly is the architectural change in FIX 5.0 that addressed what we believed to be the main issue in FIX4 with the introduction of the Transport Independent Framework. This construct, called FIXT, decouples the FIX Session and Application layers, allowing application messages to be sent over any viable transport technology, one of which is the FIX Session Protocol. Said another way, the classic FIX Tag/Value formatted messages need not be sent using the FIX Session protocol. One can also send these messages over a simple TCP connection for example, something that we do with external (e.g., NSCC) integrations.
+FIX 5.0 also allows us specify a common data schema for our MEMO order entry protocol and use that schema for both the SBE and FIX versions of MEMO. This eases the migration from FIX to binary if firms desire. If your platform currently adheres to the FIX 4.2 standard, you can use our schemas, refactor your application logic and then bolt on the FIX 5 engine of your choice for transport. “FIXT” is the label used to identify the separate session layer specification and to identify the FIX Session version being used. Note: use of FIXT supports transmission of prior Application layer version (e.g., FIX 4.2) messages over the same FIX Session, further easing adoption.
+What is the Parties Group section?
+The Parties Group section is where clearing information for an order is specified and where clearing and contra information for a trade is provided.
+For each new order, clients must specify the Executing Firm ID (value 1) and may optionally provide a Give Up, CMTA, Market Maker Sub Account, Actionable Identifier, and Optional OCC Data using corresponding values.
+For trades, in addition to the fields used for orders, the following contra information may be provided: Contra EFID, Contra Give Up, Contra CMTA, and/or Contra MM Sub Account.
+Parties Group information can be updated using Post Trade Allocations. When an allocation occurs both sides of the trade are notified using Allocation messages.
+How
+does MEMX Options support Bulk Messaging?
+Participants that are registered market makers can submit bulk quotes using MEMO SBE. Market makers submitting bulk messages in a registered class may send Post Only or Book Only modifiers. Market makers submitting bulk messages in an unregistered class may only send the Post Only modifier. Bulk messages sent with the same EFID natively replace previous quotes sent in the same series and side, for a market maker to quote more than one level of depth they would use an additional EFIDs. The protocol supports a maximum of 20 individual quotes in a single bulk quote message.
+What is an EFID?
+EFID is the acronym for Executing Firm ID. EFIDs are a way to associate a clearing number with an alpha code unique to a trading firm. In addition to being a way to provide clearing information it can be used for mass cancels and/or risk control settings.
+Does MEMX Options support mass cancels?
+Yes, mass cancel functionality is defined in the MEMO specification and is accessible via MEMO SBE. A mass cancel instruction supports canceling of any active orders regardless of the session that the original order was sent on based on the dimensions on the mass cancel request. Clients can also specify that a mass cancel only apply to the session over which it is sent.
+A mass cancel message may be sent with a lockout instruction, which in addition to canceling resting orders will prevent the acceptance of new orders, based on the dimensions specified, until a message is sent to clear the lockout.
+A dimensionless mass cancel will cancel all orders for the firm.
+Which order types and modifiers will be supported?
+MEMX accepts two order types (market, limit), four modifiers (ISO, Post Only, Book Only, Price Adjust) and two time-in-force instructions (IOC, Day). Review the
+MEMX Rule Book
+for more details on order type functionality.
+How does Price Adjust work?
+Price Adjust compares the limit price on an incoming order to the contra side NBBO. If MEMX Options isn’t at the inside and the order can’t be routed, a price adjust order will book and display one minimum tick increment away from the locking price. If an order was sent without Price Adjust in the same set a circumstances the order would be cancelled back.
+Does MEMX route to away markets?
+MEMX Execution Services LLC, a registered broker-dealer pending regulatory approval, will route to away markets displaying protected quotations to comply with the Options Order Protection Plan. The OPRA data feed will be used for the decisions regarding when and where to route orders.
+Does MEMX provide directed routing to other markets?
+No, MEMX will route as described above but does not have order types or routing strategies for directed routing to away markets.
+How can I submit Post Trade Allocation changes (CMTA, Open/Close, etc.)?
+MEMX Options supports Post Trade Allocations through distinct messaging on order entry and/or manual updates via the User Portal. Firms will be able to change field(s) and split trades through either method.
+Editable Fields: Capacity, Open or Close, Actionable Identifier, Give Up, Optional OCC Data, and CMTA
+What if both firms submit Post Trade Allocation requests?
+MEMX Options supports both firms splitting and allocating a single trade. The client submitting the first instruction will cause Allocation Reports to be sent to both parties with the new details. Any subsequent modification from either party will need to reference the corresponding Allocation Report(s). In a situation where both parties want to split the trade it would be handled as such.
+ex.
+Original Trade 100 contracts
+Buyer submits an Allocation Instruction splitting the trade 80/20 and CMTAs the 20 contracts to a different number.
+Both buyer and seller receive new Allocation Reports with the details.
+Seller wants to split the trade 50/50 and Give Up a different clearing number on each.
+Seller submits an Allocation Instruction referencing the 80 contract Allocation Report, splits the trade 50/30 and sends the appropriate Give Up on the instruction.
+Both buyer and seller receive the next set of Allocation Reports.
+Risk
+Controls
+Does MEMX provide pre-trade risk controls on incoming orders?
+Yes, MEMX Options provides an integrated pre-trade risk management system to help participants monitor and control their interactions with the exchange. All incoming orders are processed against a set of risk filters designed to help prevent erroneous orders. These controls are defined by a Risk Group and can be dynamically configurable by members. The risk checks are applied in a consistent manner to all participant orders in order to mitigate risk without incurring latency disadvantage.
+What pre-trade controls does MEMX offer to its Members?
+Order size
+Maximum notional value per order
+Maximum shares per order
+Restrict trading
+Block ISO
+Only allow trading in test symbols
+Overall rate of orders
+Duplicative order checks
+Credit controls measuring both gross and net exposure that warn when approached and, when breached, prevent submission of either all new orders or Market Orders only.
+Functionality that permits Users to block new orders submitted and cancel all open orders. Furthermore, the Exchange offers risk functionality that automatically cancels a User’s orders to the extent the User loses its connection to the Exchange.
+Match trade prevention
+Does MEMX provide post-trade risk controls?
+MEMX Options offers an Active and Passive risk control system. Risk Control ports are ordered and configured in either a passive or active mode and the messaging and behavior between them are distinct.
+How does the Active Risk control function?
+The Active Risk control system is defined for an EFID/underlier pair and allows participants to specify a volume they are willing to execute in an underlier. When a trade occurs the active risk user is notified of the quantity of contracts executed and the quantity they have remaining available for further executions. Users can release the executed volume back to their amount available for execution. If the available volume decrements to zero a risk breach occurs and the orders are cancelled in that underlier and the user would send a message to release the risk breach in order to submit more orders.
+Can my Active Risk limits ever be exceeded?
+If a firm is close to their risk limit and has enough resting volume on the book in a single series to exceed an active check, a single contra order could fill against the resting volume in an atomic operation resulting in an immediate risk breach.
+How does the Passive Risk control function?
+The Passive Risk control system operates on a best-efforts basis aggregating trades done on a grouping level and checking those against pre-configured settings. Passive checks are configured for a period of time, upon the expiration of a time window the counter resets.
+MEMX Options offers passive checks on Contract Volume, Notional Volume, Number of Trades, Number of Total Breaches, and Percent of Quoted Contracts Executed. The time windows can be set between 0.1 seconds and 6.75 hours for all settings except the Percent Quote Executed which has a maximum time window of 10 seconds.
+Can I enable both Active and Passive risk controls?
+Yes, both active and passive risk controls can be configured for a trading firm. A single rule type can only be active or passive so it is not possible to set an active and passive risk control for contract volume, but you can combine an active contract volume check with any/all of the other passive controls.
+Protocol Details
+MEMO (MEMbers Order)
+What is the difference between Replay and Stream modes?
+The mode is defined by the configuration of the port and is advertised to the client after login. The current protocol specification provides more detail in the “Request Modes” section.
+Is it possible to have both Replay/Stream behaviors for the same session?
+No, a server (i.e., a session) operates in one mode only per the current specification. Depending on the service being recovered, the server will be in either streaming or replay mode. e.g., MEMO will always be conducted over “streaming” mode, while MEMOIR multicast feeds will offer a gap recovery “replay” mode server.
+What is the opening process?
+MEMX Options will start accepting orders after the opening print and receipt of LULD bands on the underlying.
+Please explain exchange matching engine failover and how it affects my session connectivity.
+Order entry sessions do not connect directly to a matching engine, as such a matching engine failure should not affect a customer’s order entry or market data connections. Should a matching engine fail, any orders sent during the failure will be rejected via MEMO. Market data feeds will also continue to operate.
+What if my MEMO Port fails?
+Should a MEMO Port fail (e.g., hardware failure), the MEMX team will take appropriate action to recover the port.  Customer’s will reconnect on the same IP address/port to the recovered MEMO port. Any messages missed can be replayed allowing customers to continue from the point of failure. The same holds true for market data feeds.
+Can I start a session with an old identifier?
+Each day the start of session message will send a new and unique session identifier. While the specification does allow a previous session identifier to be sent in the streaming or replay request, MEMX does not currently plan to support the replay of previous sessions. Should the replay of a different/previous session identifier be requested a “Stream Rejected”/”Replay Rejected” message with error code “P” will be transmitted in response.
+How many sessions does a MEMO port support?
+Most MEMX-TCP servers will accept only one concurrent connection from a client.
+Is disconnecting the TCP session equivalent to a graceful logout?
+Yes, disconnecting from the TCP server is the accepted procedure for logging out as stated in the current specification: “Once the client no longer wishes to receive messages, the client should initiate a TCP disconnection.”
+Should I expect heartbeat messages at regular intervals regardless of other messages on the connection?
+No. You should treat the receipt of any message from the server as a heartbeat for the purposes of keeping the connection alive, and the server will not send heartbeats unless no messages have been sent within the heartbeat interval. Per the specification: “Any message counts as a heartbeat for the purposes of keeping a session alive.”
+Can we opt out of some server messages e.g. PendingCancel?
+No.
+What is the max message rate supported for SBE TCP?
+There is no fixed maximum messaging rate at the MEMO port (i.e., throttle). In the event that MEMO messages are sent faster than the system can process them, TCP flow control will be used to indicate this to clients.
+The heartbeat interval is configurable, any guidance regarding the interval range?
+Unless clients request otherwise, MEMX will emit heartbeats at 1 second intervals, and time out clients after 5 seconds of inactivity. Many clients find this sufficient.
+What is Party ID and how it is used?
+Party ID (SBE Tag 448) is used for clearing purposes. Several Party IDs and several corresponding PartyRoles can be defined within an order.
+MEMOIR Protocol Details
+What is expected heartbeat interval to maintain Gap fill and Snapshot TCP connections throughout the day?
+Sending heartbeats at a 1 second interval is sufficient, but configurable if necessary.
+Are there limitations on number of packets per retransmission request, the timeliness of retrains requests, or the number of retransmission requests per day?
+MEMX has not defined any such limits and currently has no plans to define them.
+Can you tell me more about the “ReplayRequest”, “ReplayBegin”, “ReplayComplete”, “ReplayAllRequest” messages?
+These are MEMX-TCP Session/Framing layer messages and are used as elements in the network stack for most MEMX protocols (i.e. MEMO, MEMOIR). They are covered in the MEMX-TCP document available with the protocol specifications.
+Contacting MEMX
+Who do I call if I have questions?
+Who
+What
+Phone
+Email
+Member Experience
+Sales and onboarding questions and inquiries
+1-833-415-MEMX (1-833-415-6369)
+memberx@memx.com
+Network Operations
+Connectivity provisioning and xNET questions
+1-833-415-MOPS (1-833-415-6677)
+connect@memx.com
+Market Operations
+Market operations and service entitlement
+1-833-415-MOPS (1-833-415-6677)
+mops@
+memx.com
+EFID list available upon request. Please request via email to
+membership@memx.com
+.
+Contact Us
+@memxtrading
+LinkedIn
+Archives
+October 2026
+September 2026
+August 2026
+July 2026
+June 2026
+May 2026
+April 2026
+March 2026
+February 2026
+January 2026
+December 2025
+November 2025
+September 2025
+August 2025
+July 2025
+June 2025
+May 2025
+April 2025
+March 2025
+February 2025
+January 2025
+December 2024
+November 2024
+October 2024
+September 2024
+August 2024
+July 2024
+June 2024
+May 2024
+April 2024
+March 2024
+February 2024
+January 2024
+December 2023
+November 2023
+October 2023
+September 2023
+August 2023
+July 2023
+June 2023
+May 2023
+April 2023
+March 2023
+February 2023
+January 2023
+December 2022
+November 2022
+October 2022
+September 2022
+August 2022
+July 2022
+June 2022
+May 2022
+April 2022
+March 2022
+February 2022
+January 2022
+December 2021
+November 2021
+October 2021
+September 2021
+August 2021
+July 2021
+June 2021
+May 2021
+April 2021
+March 2021
+February 2021
+January 2021
+December 2020
+November 2020
+October 2020
+September 2020
+August 2020
+July 2020
+June 2020
+Sign up for MEMX Trading Alerts
+Email Address
+*
+First Name*
+*
+Job Title*
+Last Name*
+*
+Organization*
+* = required field
+MEMX (all exchanges)
+MEMX News & Insights
+MEMX Equities
+Trader Alerts
+Spec Update Alerts
+Regulatory Notices
+Product Notices
+Rule Filings
+MEMX Options
+Trader Alerts
+Spec Update Alerts
+Regulatory Notices
+Product Notices
+Rule Filings
+Listing Updates
+Alternative Email:
+©
+							2026
+MEMX Exchanges
+MEMX Privacy Policy
+Powered by WordPress
+To the top
+↑
+Up
+↑

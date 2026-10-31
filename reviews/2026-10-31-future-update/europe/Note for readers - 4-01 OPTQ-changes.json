@@ -1,0 +1,4997 @@
+[
+  [
+    "B440",
+    "Less than or equal to 0.003",
+    "Less than or equal to 0.0003"
+  ],
+  [
+    "B441",
+    "0.0003 \u2264 b < 0.001",
+    "0.0004 \u2264 b < 0.001"
+  ],
+  [
+    "B442",
+    "0.001 \u2264 b < 0.003",
+    "0.0011 \u2264 b < 0.003"
+  ],
+  [
+    "B443",
+    "0.003 \u2264 b < 0.03",
+    "0.0031 \u2264 b < 0.03"
+  ],
+  [
+    "B444",
+    "0.03 \u2264 b < 0.1",
+    "0.0301 \u2264 b < 0.1"
+  ],
+  [
+    "B445",
+    "0.1 \u2264 b < 0.2",
+    "0.1001 \u2264 b < 0.2"
+  ],
+  [
+    "B446",
+    "0.2 \u2264 b < 0.3",
+    "0.2001 \u2264 b < 0.3"
+  ],
+  [
+    "B447",
+    "0.3 \u2264 b < 0.75",
+    "0.3001 \u2264 b < 0.75"
+  ],
+  [
+    "B448",
+    "0.75 \u2264 b < 1.5",
+    "0.7501 \u2264 b < 1.5"
+  ],
+  [
+    "B449",
+    "1.5 \u2264 b < 3",
+    "1.5001 \u2264 b < 3.0"
+  ],
+  [
+    "B450",
+    "3 \u2264 b < 5",
+    "3.0001 \u2264 b < 5.0"
+  ],
+  [
+    "B451",
+    "5 \u2264 b < 10",
+    "5.0001 \u2264 b < 10.0"
+  ],
+  [
+    "B452",
+    "10 \u2264 b < 30",
+    "10.0001 \u2264 b < 30.0"
+  ],
+  [
+    "B453",
+    "30 \u2264 b < 70",
+    "30.0001 \u2264 b < 70.0"
+  ],
+  [
+    "B454",
+    "70 \u2264 b < 90",
+    "70.0001 \u2264 b < 90.0"
+  ],
+  [
+    "B455",
+    "90 \u2264 b < 110",
+    "90.0001 \u2264 b < 110.0"
+  ],
+  [
+    "B456",
+    "110 \u2264 b < 200",
+    "110.0001 \u2264 b < 200.0"
+  ],
+  [
+    "B457",
+    "200 \u2264 b < 300",
+    "200.0001 \u2264 b < 300.0"
+  ],
+  [
+    "B458",
+    "300 \u2264 b < 500",
+    "300.0001 \u2264 b < 500.0"
+  ],
+  [
+    "B459",
+    "500 \u2264 b < 750",
+    "500.0001 \u2264 b < 750.0"
+  ],
+  [
+    "B460",
+    "750 \u2264 b < 1000",
+    "750.0001 \u2264 b < 1000.0"
+  ],
+  [
+    "B461",
+    "1000 \u2264 b < 5000",
+    "1000.0001 \u2264 b < 5000.0"
+  ],
+  [
+    "B462",
+    "5000 \u2264 b < 10000",
+    "5000.0001 \u2264 b < 10000.0"
+  ],
+  [
+    "B463",
+    "10000 \u2264 b < 25000",
+    "10000.0001 \u2264 b < 25000.0"
+  ],
+  [
+    "B464",
+    "25000 \u2264 b < 50000",
+    "25000.0001 \u2264 b < 50000.0"
+  ],
+  [
+    "B465",
+    "50000 \u2264 b < 80000",
+    "50000.0001 \u2264 b < 80000.0"
+  ],
+  [
+    "B466",
+    "80000 \u2264 b < 100000",
+    "80000.0001 \u2264 b < 100000.0"
+  ],
+  [
+    "B467",
+    "b \u2265 100000",
+    "100000.0001 \u2264 b < 500000.0"
+  ],
+  [
+    "A468",
+    "Trading group",
+    "None"
+  ],
+  [
+    "B468",
+    "Minimum Price",
+    "500000.0001 \u2264 b < 1000000"
+  ],
+  [
+    "D468",
+    "Z parameter\u00a0/ Dynamic",
+    "10000"
+  ],
+  [
+    "B469",
+    "Less than or equal to 0.003",
+    "b \u2265 1000000.0001"
+  ],
+  [
+    "D469",
+    "0.0005",
+    "20000"
+  ],
+  [
+    "A470",
+    "ETLX groups",
+    "Trading group"
+  ],
+  [
+    "B470",
+    "0.0003 \u2264 b < 0.001",
+    "Minimum Price"
+  ],
+  [
+    "D470",
+    "0.002",
+    "Z parameter\u00a0/ Dynamic"
+  ],
+  [
+    "B471",
+    "0.001 \u2264 b < 0.003",
+    "Less than or equal to 0.0003"
+  ],
+  [
+    "D471",
+    "0.005",
+    "0.0005"
+  ],
+  [
+    "A472",
+    "NA - NB - NC - ND - NE",
+    "ETLX groups"
+  ],
+  [
+    "B472",
+    "0.003 \u2264 b < 0.03",
+    "0.0004 \u2264 b < 0.001"
+  ],
+  [
+    "D472",
+    "0.015",
+    "0.002"
+  ],
+  [
+    "B473",
+    "0.03 \u2264 b < 0.1",
+    "0.0011 \u2264 b < 0.003"
+  ],
+  [
+    "D473",
+    "0.04",
+    "0.005"
+  ],
+  [
+    "A474",
+    "NF - NG - NH - NI - NJ",
+    "NA - NB - NC - ND - NE"
+  ],
+  [
+    "B474",
+    "0.1 \u2264 b < 0.2",
+    "0.0031 \u2264 b < 0.03"
+  ],
+  [
+    "D474",
+    "0.05",
+    "0.015"
+  ],
+  [
+    "B475",
+    "0.2 \u2264 b < 0.3",
+    "0.0301 \u2264 b < 0.1"
+  ],
+  [
+    "D475",
+    "0.07",
+    "0.04"
+  ],
+  [
+    "A476",
+    "NK - NL - NM - NN",
+    "NF - NG - NH - NI - NJ"
+  ],
+  [
+    "B476",
+    "0.3 \u2264 b < 0.75",
+    "0.1001 \u2264 b < 0.2"
+  ],
+  [
+    "D476",
+    "0.1",
+    "0.05"
+  ],
+  [
+    "B477",
+    "0.75 \u2264 b < 1.5",
+    "0.2001 \u2264 b < 0.3"
+  ],
+  [
+    "D477",
+    "0.2",
+    "0.07"
+  ],
+  [
+    "A478",
+    "None",
+    "NK - NL - NM - NN"
+  ],
+  [
+    "B478",
+    "1.5 \u2264 b < 3",
+    "0.3001 \u2264 b < 0.75"
+  ],
+  [
+    "D478",
+    "0.3",
+    "0.1"
+  ],
+  [
+    "B479",
+    "3 \u2264 b < 5",
+    "0.7501 \u2264 b < 1.5"
+  ],
+  [
+    "D479",
+    "0.5",
+    "0.2"
+  ],
+  [
+    "B480",
+    "5 \u2264 b < 10",
+    "1.5001 \u2264 b < 3.0"
+  ],
+  [
+    "D480",
+    "0.8",
+    "0.3"
+  ],
+  [
+    "B481",
+    "10 \u2264 b < 30",
+    "3.0001 \u2264 b < 5.0"
+  ],
+  [
+    "D481",
+    "1.5",
+    "0.5"
+  ],
+  [
+    "B482",
+    "30 \u2264 b < 70",
+    "5.0001 \u2264 b < 10.0"
+  ],
+  [
+    "D482",
+    "4",
+    "0.8"
+  ],
+  [
+    "B483",
+    "70 \u2264 b < 90",
+    "10.0001 \u2264 b < 30.0"
+  ],
+  [
+    "D483",
+    "7",
+    "1.5"
+  ],
+  [
+    "B484",
+    "90 \u2264 b < 110",
+    "30.0001 \u2264 b < 70.0"
+  ],
+  [
+    "D484",
+    "9",
+    "4"
+  ],
+  [
+    "B485",
+    "110 \u2264 b < 200",
+    "70.0001 \u2264 b < 90.0"
+  ],
+  [
+    "D485",
+    "12.5",
+    "7"
+  ],
+  [
+    "B486",
+    "200 \u2264 b < 300",
+    "90.0001 \u2264 b < 110.0"
+  ],
+  [
+    "D486",
+    "20",
+    "9"
+  ],
+  [
+    "B487",
+    "300 \u2264 b < 500",
+    "110.0001 \u2264 b < 200.0"
+  ],
+  [
+    "D487",
+    "30",
+    "12.5"
+  ],
+  [
+    "B488",
+    "500 \u2264 b < 750",
+    "200.0001 \u2264 b < 300.0"
+  ],
+  [
+    "D488",
+    "50",
+    "20"
+  ],
+  [
+    "B489",
+    "750 \u2264 b < 1000",
+    "300.0001 \u2264 b < 500.0"
+  ],
+  [
+    "D489",
+    "75",
+    "30"
+  ],
+  [
+    "B490",
+    "1000 \u2264 b < 5000",
+    "500.0001 \u2264 b < 750.0"
+  ],
+  [
+    "D490",
+    "90",
+    "50"
+  ],
+  [
+    "B491",
+    "5000 \u2264 b < 10000",
+    "750.0001 \u2264 b < 1000.0"
+  ],
+  [
+    "D491",
+    "150",
+    "75"
+  ],
+  [
+    "B492",
+    "10000 \u2264 b < 25000",
+    "1000.0001 \u2264 b < 5000.0"
+  ],
+  [
+    "D492",
+    "200",
+    "90"
+  ],
+  [
+    "B493",
+    "25000 \u2264 b < 50000",
+    "5000.0001 \u2264 b < 10000.0"
+  ],
+  [
+    "D493",
+    "500",
+    "150"
+  ],
+  [
+    "B494",
+    "50000 \u2264 b < 80000",
+    "10000.0001 \u2264 b < 25000.0"
+  ],
+  [
+    "D494",
+    "1000",
+    "200"
+  ],
+  [
+    "B495",
+    "80000 \u2264 b < 100000",
+    "25000.0001 \u2264 b < 50000.0"
+  ],
+  [
+    "D495",
+    "1600",
+    "500"
+  ],
+  [
+    "B496",
+    "b \u2265 100000",
+    "50000.0001 \u2264 b < 80000.0"
+  ],
+  [
+    "D496",
+    "2000",
+    "1000"
+  ],
+  [
+    "B497",
+    "None",
+    "80000.0001 \u2264 b < 100000.0"
+  ],
+  [
+    "D497",
+    "None",
+    "1600"
+  ],
+  [
+    "A498",
+    "Static Collars Fixed Income Segment - Amsterdam, Brussels, Lisbon, Paris",
+    "None"
+  ],
+  [
+    "B498",
+    "None",
+    "100000.0001 \u2264 b < 500000.0"
+  ],
+  [
+    "D498",
+    "None",
+    "2000"
+  ],
+  [
+    "A499",
+    "Class of residual life (days)",
+    "None"
+  ],
+  [
+    "B499",
+    "Y parameter\u00a0/ Static",
+    "500000.0001 \u2264 b < 1000000"
+  ],
+  [
+    "C499",
+    "Trading group Amsterdam",
+    "None"
+  ],
+  [
+    "D499",
+    "Trading group Brussels",
+    "10000"
+  ],
+  [
+    "E499",
+    "Trading group Paris",
+    "None"
+  ],
+  [
+    "F499",
+    "Trading group Lisbon",
+    "None"
+  ],
+  [
+    "A500",
+    "0 \u2013 180\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (6 months)",
+    "None"
+  ],
+  [
+    "B500",
+    "\u00b1 1,0%",
+    "b \u2265 1000000.0001"
+  ],
+  [
+    "C500",
+    "LB / L0",
+    "None"
+  ],
+  [
+    "D500",
+    "C4 / CA",
+    "20000"
+  ],
+  [
+    "E500",
+    "4E / 4R",
+    "None"
+  ],
+  [
+    "F500",
+    "V9 / R1",
+    "None"
+  ],
+  [
+    "A501",
+    "181\u00a0 - 365\u00a0\u00a0\u00a0\u00a0\u00a0 (1 year)",
+    "None"
+  ],
+  [
+    "B501",
+    "\u00b1 1.25%",
+    "None"
+  ],
+  [
+    "A502",
+    "366 \u2013 730\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (2 years)",
+    "Static Collars Fixed Income Segment - Amsterdam, Brussels, Lisbon, Paris"
+  ],
+  [
+    "B502",
+    "\u00b1 1.50%",
+    "None"
+  ],
+  [
+    "A503",
+    "731 \u2013 1095 \u00a0\u00a0\u00a0\u00a0(3 years)",
+    "Class of residual life (days)"
+  ],
+  [
+    "B503",
+    "\u00b1 2.00%",
+    "Y parameter\u00a0/ Static"
+  ],
+  [
+    "C503",
+    "None",
+    "Trading group Amsterdam"
+  ],
+  [
+    "D503",
+    "None",
+    "Trading group Brussels"
+  ],
+  [
+    "E503",
+    "None",
+    "Trading group Paris"
+  ],
+  [
+    "F503",
+    "None",
+    "Trading group Lisbon"
+  ],
+  [
+    "A504",
+    "1096 \u2013 1825\u00a0\u00a0 (5 years)",
+    "0 \u2013 180\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (6 months)"
+  ],
+  [
+    "B504",
+    "\u00b1 2.50%",
+    "\u00b1 1,0%"
+  ],
+  [
+    "C504",
+    "None",
+    "LB / L0"
+  ],
+  [
+    "D504",
+    "None",
+    "C4 / CA"
+  ],
+  [
+    "E504",
+    "None",
+    "4E / 4R"
+  ],
+  [
+    "F504",
+    "None",
+    "V9 / R1"
+  ],
+  [
+    "A505",
+    "1826 \u2013 2556\u00a0\u00a0 (7 years)",
+    "181\u00a0 - 365\u00a0\u00a0\u00a0\u00a0\u00a0 (1 year)"
+  ],
+  [
+    "B505",
+    "\u00b1 3.00%",
+    "\u00b1 1.25%"
+  ],
+  [
+    "A506",
+    "2557 \u2013 3650 (10 years)",
+    "366 \u2013 730\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (2 years)"
+  ],
+  [
+    "B506",
+    "\u00b1 3.00%",
+    "\u00b1 1.50%"
+  ],
+  [
+    "A507",
+    "3651 \u2013 5475\u00a0 (15 years)",
+    "731 \u2013 1095 \u00a0\u00a0\u00a0\u00a0(3 years)"
+  ],
+  [
+    "B507",
+    "\u00b1 3.50%",
+    "\u00b1 2.00%"
+  ],
+  [
+    "A508",
+    "5476 and more",
+    "1096 \u2013 1825\u00a0\u00a0 (5 years)"
+  ],
+  [
+    "B508",
+    "\u00b1 4.00%",
+    "\u00b1 2.50%"
+  ],
+  [
+    "A509",
+    "0 \u2013 180\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (6 months)",
+    "1826 \u2013 2556\u00a0\u00a0 (7 years)"
+  ],
+  [
+    "B509",
+    "\u00b1 1.50%",
+    "\u00b1 3.00%"
+  ],
+  [
+    "C509",
+    "LJ / LZ / L1 / L2",
+    "None"
+  ],
+  [
+    "D509",
+    "C1 / CC",
+    "None"
+  ],
+  [
+    "E509",
+    "4C / 4M / 41 / 8P",
+    "None"
+  ],
+  [
+    "F509",
+    "S7 / V7",
+    "None"
+  ],
+  [
+    "A510",
+    "181\u00a0 - 365\u00a0\u00a0\u00a0\u00a0\u00a0 (1 year)",
+    "2557 \u2013 3650 (10 years)"
+  ],
+  [
+    "B510",
+    "\u00b1 1.75%",
+    "\u00b1 3.00%"
+  ],
+  [
+    "A511",
+    "366 \u2013 730\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (2 years)",
+    "3651 \u2013 5475\u00a0 (15 years)"
+  ],
+  [
+    "B511",
+    "\u00b1 2.50%",
+    "\u00b1 3.50%"
+  ],
+  [
+    "A512",
+    "731 \u2013 1095 \u00a0\u00a0\u00a0\u00a0(3 years)",
+    "5476 and more"
+  ],
+  [
+    "B512",
+    "\u00b1 2.50%",
+    "\u00b1 4.00%"
+  ],
+  [
+    "A513",
+    "1096 \u2013 1825\u00a0\u00a0 (5 years)",
+    "0 \u2013 180\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (6 months)"
+  ],
+  [
+    "B513",
+    "\u00b1 3.50%",
+    "\u00b1 1.50%"
+  ],
+  [
+    "C513",
+    "None",
+    "LJ / LZ / L1 / L2"
+  ],
+  [
+    "D513",
+    "None",
+    "C1 / CC"
+  ],
+  [
+    "E513",
+    "None",
+    "4C / 4M / 41 / 8P"
+  ],
+  [
+    "F513",
+    "None",
+    "S7 / V7"
+  ],
+  [
+    "A514",
+    "1826 \u2013 2556\u00a0\u00a0 (7 years)",
+    "181\u00a0 - 365\u00a0\u00a0\u00a0\u00a0\u00a0 (1 year)"
+  ],
+  [
+    "B514",
+    "\u00b1 3.50%",
+    "\u00b1 1.75%"
+  ],
+  [
+    "A515",
+    "2557 \u2013 3650 (10 years)",
+    "366 \u2013 730\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (2 years)"
+  ],
+  [
+    "B515",
+    "\u00b1 4.00%",
+    "\u00b1 2.50%"
+  ],
+  [
+    "A516",
+    "3651 \u2013 5475\u00a0 (15 years)",
+    "731 \u2013 1095 \u00a0\u00a0\u00a0\u00a0(3 years)"
+  ],
+  [
+    "B516",
+    "\u00b1 4.50%",
+    "\u00b1 2.50%"
+  ],
+  [
+    "A517",
+    "5476 and more",
+    "1096 \u2013 1825\u00a0\u00a0 (5 years)"
+  ],
+  [
+    "B517",
+    "\u00b1 6.50%",
+    "\u00b1 3.50%"
+  ],
+  [
+    "A518",
+    "0 \u2013 180\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (6 months)",
+    "1826 \u2013 2556\u00a0\u00a0 (7 years)"
+  ],
+  [
+    "B518",
+    "\u00b1 2.00%",
+    "\u00b1 3.50%"
+  ],
+  [
+    "C518",
+    "L3 / L5 / L6 / L7 / L8 / L9 / LA / LC / LK / LP / LQ / LR / LW",
+    "None"
+  ],
+  [
+    "D518",
+    "C2 / C3 / C5 / C6 / C7 / CG / CO / CQ / ER / ET / EX / EY",
+    "None"
+  ],
+  [
+    "E518",
+    "35 / 37 / 40 / 43 / 44 / 45 / 55 / 56 / 58 / 4A / 4B / 4D / 4F / 4G\n4H / 4J / 4K / 4N / 4Q / 4S / 4T / 8H / 8I / 8M / 8N / 8O\n8Q / 8R / EH / EL / ES / EU / EV",
+    "None"
+  ],
+  [
+    "F518",
+    "R2 / R3 / R6 / S3 / EZ / V1 / V2 / V3 / V4 / V5 / V6 / V8",
+    "None"
+  ],
+  [
+    "A519",
+    "181\u00a0 - 365\u00a0\u00a0\u00a0\u00a0\u00a0 (1 year)",
+    "2557 \u2013 3650 (10 years)"
+  ],
+  [
+    "B519",
+    "\u00b1 2.00%",
+    "\u00b1 4.00%"
+  ],
+  [
+    "A520",
+    "366 \u2013 730\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (2 years)",
+    "3651 \u2013 5475\u00a0 (15 years)"
+  ],
+  [
+    "B520",
+    "\u00b1 3.00%",
+    "\u00b1 4.50%"
+  ],
+  [
+    "A521",
+    "731 \u2013 1095 \u00a0\u00a0\u00a0\u00a0(3 years)",
+    "5476 and more"
+  ],
+  [
+    "B521",
+    "\u00b1 3.00%",
+    "\u00b1 6.50%"
+  ],
+  [
+    "A522",
+    "1096 \u2013 1825\u00a0\u00a0 (5 years)",
+    "0 \u2013 180\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (6 months)"
+  ],
+  [
+    "B522",
+    "\u00b1 4.00%",
+    "\u00b1 2.00%"
+  ],
+  [
+    "C522",
+    "None",
+    "L3 / L5 / L6 / L7 / L8 / L9 / LA / LC / LK / LP / LQ / LR / LW"
+  ],
+  [
+    "D522",
+    "None",
+    "C2 / C3 / C5 / C6 / C7 / CG / CO / CQ / ER / ET / EX / EY"
+  ],
+  [
+    "E522",
+    "None",
+    "35 / 37 / 40 / 43 / 44 / 45 / 55 / 56 / 58 / 4A / 4B / 4D / 4F / 4G\n4H / 4J / 4K / 4N / 4Q / 4S / 4T / 8H / 8I / 8M / 8N / 8O\n8Q / 8R / EH / EL / ES / EU / EV"
+  ],
+  [
+    "F522",
+    "None",
+    "R2 / R3 / R6 / S3 / EZ / V1 / V2 / V3 / V4 / V5 / V6 / V8"
+  ],
+  [
+    "A523",
+    "1826 \u2013 2556\u00a0\u00a0 (7 years)",
+    "181\u00a0 - 365\u00a0\u00a0\u00a0\u00a0\u00a0 (1 year)"
+  ],
+  [
+    "B523",
+    "\u00b1 5.00%",
+    "\u00b1 2.00%"
+  ],
+  [
+    "A524",
+    "2557 \u2013 3650 (10 years)",
+    "366 \u2013 730\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (2 years)"
+  ],
+  [
+    "B524",
+    "\u00b1 5.00%",
+    "\u00b1 3.00%"
+  ],
+  [
+    "A525",
+    "3651 \u2013 5475\u00a0 (15 years)",
+    "731 \u2013 1095 \u00a0\u00a0\u00a0\u00a0(3 years)"
+  ],
+  [
+    "B525",
+    "\u00b1 5.50%",
+    "\u00b1 3.00%"
+  ],
+  [
+    "A526",
+    "5476 and more",
+    "1096 \u2013 1825\u00a0\u00a0 (5 years)"
+  ],
+  [
+    "B526",
+    "\u00b1 7,00%",
+    "\u00b1 4.00%"
+  ],
+  [
+    "A527",
+    "0",
+    "1826 \u2013 2556\u00a0\u00a0 (7 years)"
+  ],
+  [
+    "C527",
+    "L4 / LD / LE / LI / LS / LU / LY",
+    "None"
+  ],
+  [
+    "D527",
+    "CB / CI / CJ / CP",
+    "None"
+  ],
+  [
+    "E527",
+    " 42 / 68 / 4L / 4O / 4U\n4V / 8J / 8K / 8L / 8R",
+    "None"
+  ],
+  [
+    "F527",
+    "R4 / R9 / S2 / S4 / V0",
+    "None"
+  ],
+  [
+    "A528",
+    "None",
+    "2557 \u2013 3650 (10 years)"
+  ],
+  [
+    "B528",
+    "None",
+    "\u00b1 5.00%"
+  ],
+  [
+    "A529",
+    "Trading groups withtout static Collars",
+    "3651 \u2013 5475\u00a0 (15 years)"
+  ],
+  [
+    "B529",
+    "None",
+    "\u00b1 5.50%"
+  ],
+  [
+    "C529",
+    "Trading group Amsterdam",
+    "None"
+  ],
+  [
+    "D529",
+    "Trading group Brussels",
+    "None"
+  ],
+  [
+    "E529",
+    "Trading group Paris",
+    "None"
+  ],
+  [
+    "F529",
+    "Trading group Lisbon",
+    "None"
+  ],
+  [
+    "A530",
+    "None",
+    "5476 and more"
+  ],
+  [
+    "B530",
+    "None",
+    "\u00b1 7,00%"
+  ],
+  [
+    "A531",
+    "None",
+    "0"
+  ],
+  [
+    "B531",
+    "None",
+    "\u00b1 5.00%"
+  ],
+  [
+    "C531",
+    "None",
+    "L4 / LD / LE / LI / LS / LU / LY"
+  ],
+  [
+    "D531",
+    "None",
+    "CB / CI / CJ / CP"
+  ],
+  [
+    "E531",
+    "None",
+    " 42 / 68 / 4L / 4O / 4U\n4V / 8J / 8K / 8L / 8R"
+  ],
+  [
+    "F531",
+    "None",
+    "R4 / R9 / S2 / S4 / V0"
+  ],
+  [
+    "A533",
+    "None",
+    "Trading groups withtout static Collars"
+  ],
+  [
+    "C533",
+    "None",
+    "Trading group Amsterdam"
+  ],
+  [
+    "D533",
+    "None",
+    "Trading group Brussels"
+  ],
+  [
+    "E533",
+    "None",
+    "Trading group Paris"
+  ],
+  [
+    "F533",
+    "None",
+    "Trading group Lisbon"
+  ],
+  [
+    "A534",
+    "Dynamic Collars Fixed Income Segment - Amsterdam, Brussels, Lisbon, Paris",
+    "None"
+  ],
+  [
+    "A535",
+    "Class of residual life (days)",
+    "None"
+  ],
+  [
+    "B535",
+    "Z parameter\u00a0/ Dynamic",
+    "None"
+  ],
+  [
+    "C535",
+    "Trading group Amsterdam",
+    "None"
+  ],
+  [
+    "D535",
+    "Trading group Brussels",
+    "None"
+  ],
+  [
+    "E535",
+    "Trading group Paris",
+    "None"
+  ],
+  [
+    "F535",
+    "Trading group Lisbon",
+    "None"
+  ],
+  [
+    "A536",
+    "0 \u2013 180\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (6 months)",
+    "None"
+  ],
+  [
+    "B536",
+    "\u00b1 1,0%",
+    "None"
+  ],
+  [
+    "C536",
+    "L0 / LB",
+    "None"
+  ],
+  [
+    "D536",
+    "C4 / CA",
+    "None"
+  ],
+  [
+    "E536",
+    "4E / 4R",
+    "None"
+  ],
+  [
+    "F536",
+    "R1 / V9",
+    "None"
+  ],
+  [
+    "A537",
+    "181\u00a0 - 365\u00a0\u00a0\u00a0\u00a0\u00a0 (1 year)",
+    "None"
+  ],
+  [
+    "B537",
+    "\u00b1 1,0%",
+    "None"
+  ],
+  [
+    "A538",
+    "366 \u2013 730\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (2 years)",
+    "Dynamic Collars Fixed Income Segment - Amsterdam, Brussels, Lisbon, Paris"
+  ],
+  [
+    "B538",
+    "\u00b1 1,0%",
+    "None"
+  ],
+  [
+    "A539",
+    "731 \u2013 1095 \u00a0\u00a0\u00a0\u00a0(3 years)",
+    "Class of residual life (days)"
+  ],
+  [
+    "B539",
+    "\u00b1 1.50%",
+    "Z parameter\u00a0/ Dynamic"
+  ],
+  [
+    "C539",
+    "None",
+    "Trading group Amsterdam"
+  ],
+  [
+    "D539",
+    "None",
+    "Trading group Brussels"
+  ],
+  [
+    "E539",
+    "None",
+    "Trading group Paris"
+  ],
+  [
+    "F539",
+    "None",
+    "Trading group Lisbon"
+  ],
+  [
+    "A540",
+    "1096 \u2013 1825\u00a0\u00a0 (5 years)",
+    "0 \u2013 180\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (6 months)"
+  ],
+  [
+    "B540",
+    "\u00b1 1.50%",
+    "\u00b1 1,0%"
+  ],
+  [
+    "C540",
+    "None",
+    "L0 / LB"
+  ],
+  [
+    "D540",
+    "None",
+    "C4 / CA"
+  ],
+  [
+    "E540",
+    "None",
+    "4E / 4R"
+  ],
+  [
+    "F540",
+    "None",
+    "R1 / V9"
+  ],
+  [
+    "A541",
+    "1826 \u2013 2556\u00a0\u00a0 (7 years)",
+    "181\u00a0 - 365\u00a0\u00a0\u00a0\u00a0\u00a0 (1 year)"
+  ],
+  [
+    "B541",
+    "\u00b1 1.50%",
+    "\u00b1 1,0%"
+  ],
+  [
+    "A542",
+    "2557 \u2013 3650 (10 years)",
+    "366 \u2013 730\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (2 years)"
+  ],
+  [
+    "B542",
+    "\u00b1 2.00%",
+    "\u00b1 1,0%"
+  ],
+  [
+    "A543",
+    "3651 \u2013 5475\u00a0 (15 years)",
+    "731 \u2013 1095 \u00a0\u00a0\u00a0\u00a0(3 years)"
+  ],
+  [
+    "B543",
+    "\u00b1 2.00%",
+    "\u00b1 1.50%"
+  ],
+  [
+    "A544",
+    "5476 and more",
+    "1096 \u2013 1825\u00a0\u00a0 (5 years)"
+  ],
+  [
+    "B544",
+    "\u00b1 2.50%",
+    "\u00b1 1.50%"
+  ],
+  [
+    "A545",
+    "0 \u2013 180\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (6 months)",
+    "1826 \u2013 2556\u00a0\u00a0 (7 years)"
+  ],
+  [
+    "B545",
+    "\u00b1 1.25%",
+    "\u00b1 1.50%"
+  ],
+  [
+    "C545",
+    "L1 / L2 / LJ / LZ",
+    "None"
+  ],
+  [
+    "D545",
+    "C1 / CC",
+    "None"
+  ],
+  [
+    "E545",
+    "41 / 4C / 4M / 8P",
+    "None"
+  ],
+  [
+    "F545",
+    "S7 / V7",
+    "None"
+  ],
+  [
+    "A546",
+    "181\u00a0 - 365\u00a0\u00a0\u00a0\u00a0\u00a0 (1 year)",
+    "2557 \u2013 3650 (10 years)"
+  ],
+  [
+    "B546",
+    "\u00b1 1.50%",
+    "\u00b1 2.00%"
+  ],
+  [
+    "A547",
+    "366 \u2013 730\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (2 years)",
+    "3651 \u2013 5475\u00a0 (15 years)"
+  ],
+  [
+    "A548",
+    "731 \u2013 1095 \u00a0\u00a0\u00a0\u00a0(3 years)",
+    "5476 and more"
+  ],
+  [
+    "A549",
+    "1096 \u2013 1825\u00a0\u00a0 (5 years)",
+    "0 \u2013 180\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (6 months)"
+  ],
+  [
+    "B549",
+    "\u00b1 2.50%",
+    "\u00b1 1.25%"
+  ],
+  [
+    "C549",
+    "None",
+    "L1 / L2 / LJ / LZ"
+  ],
+  [
+    "D549",
+    "None",
+    "C1 / CC"
+  ],
+  [
+    "E549",
+    "None",
+    "41 / 4C / 4M / 8P"
+  ],
+  [
+    "F549",
+    "None",
+    "S7 / V7"
+  ],
+  [
+    "A550",
+    "1826 \u2013 2556\u00a0\u00a0 (7 years)",
+    "181\u00a0 - 365\u00a0\u00a0\u00a0\u00a0\u00a0 (1 year)"
+  ],
+  [
+    "B550",
+    "\u00b1 2.75%",
+    "\u00b1 1.50%"
+  ],
+  [
+    "A551",
+    "2557 \u2013 3650 (10 years)",
+    "366 \u2013 730\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (2 years)"
+  ],
+  [
+    "B551",
+    "\u00b1 3.00%",
+    "\u00b1 2.00%"
+  ],
+  [
+    "A552",
+    "3651 \u2013 5475\u00a0 (15 years)",
+    "731 \u2013 1095 \u00a0\u00a0\u00a0\u00a0(3 years)"
+  ],
+  [
+    "B552",
+    "\u00b1 3.50%",
+    "\u00b1 2.50%"
+  ],
+  [
+    "A553",
+    "5476 and more",
+    "1096 \u2013 1825\u00a0\u00a0 (5 years)"
+  ],
+  [
+    "B553",
+    "\u00b1 4.00%",
+    "\u00b1 2.50%"
+  ],
+  [
+    "A554",
+    "0 \u2013 180\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (6 months)",
+    "1826 \u2013 2556\u00a0\u00a0 (7 years)"
+  ],
+  [
+    "B554",
+    "\u00b1 1.50%",
+    "\u00b1 2.75%"
+  ],
+  [
+    "C554",
+    "L3 / L5 / L6 / L7 / L8 / L9 / LA / LC / LK /LP / LQ / LR / LW",
+    "None"
+  ],
+  [
+    "D554",
+    "C2 / C3 / C5 / C6 / C7 / CG / CO / CQ / ER / ET / EX / EY",
+    "None"
+  ],
+  [
+    "E554",
+    "35 / 37 / 40 / 43 / 44 / 45 / 55 / 56 / 58 / 4A / 4B / 4D / 4F / 4G / 4H / 4J / 4K / 4N / 4Q / 4S / 4T / 8H / 8I / 8M / 8N / 8O / 8Q / EH / EL / ES / EU / EV",
+    "None"
+  ],
+  [
+    "F554",
+    "EZ / R2 / R3 / R6 / S3 / V1 / V2 / V3 / V4 / V5 / V6 / V8",
+    "None"
+  ],
+  [
+    "A555",
+    "181\u00a0 - 365\u00a0\u00a0\u00a0\u00a0\u00a0 (1 year)",
+    "2557 \u2013 3650 (10 years)"
+  ],
+  [
+    "B555",
+    "\u00b1 1.50%",
+    "\u00b1 3.00%"
+  ],
+  [
+    "A556",
+    "366 \u2013 730\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (2 years)",
+    "3651 \u2013 5475\u00a0 (15 years)"
+  ],
+  [
+    "B556",
+    "\u00b1 2.50%",
+    "\u00b1 3.50%"
+  ],
+  [
+    "A557",
+    "731 \u2013 1095 \u00a0\u00a0\u00a0\u00a0(3 years)",
+    "5476 and more"
+  ],
+  [
+    "B557",
+    "\u00b1 2.50%",
+    "\u00b1 4.00%"
+  ],
+  [
+    "A558",
+    "1096 \u2013 1825\u00a0\u00a0 (5 years)",
+    "0 \u2013 180\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (6 months)"
+  ],
+  [
+    "B558",
+    "\u00b1 3.00%",
+    "\u00b1 1.50%"
+  ],
+  [
+    "C558",
+    "None",
+    "L3 / L5 / L6 / L7 / L8 / L9 / LA / LC / LK /LP / LQ / LR / LW"
+  ],
+  [
+    "D558",
+    "None",
+    "C2 / C3 / C5 / C6 / C7 / CG / CO / CQ / ER / ET / EX / EY"
+  ],
+  [
+    "E558",
+    "None",
+    "35 / 37 / 40 / 43 / 44 / 45 / 55 / 56 / 58 / 4A / 4B / 4D / 4F / 4G / 4H / 4J / 4K / 4N / 4Q / 4S / 4T / 8H / 8I / 8M / 8N / 8O / 8Q / EH / EL / ES / EU / EV"
+  ],
+  [
+    "F558",
+    "None",
+    "EZ / R2 / R3 / R6 / S3 / V1 / V2 / V3 / V4 / V5 / V6 / V8"
+  ],
+  [
+    "A559",
+    "1826 \u2013 2556\u00a0\u00a0 (7 years)",
+    "181\u00a0 - 365\u00a0\u00a0\u00a0\u00a0\u00a0 (1 year)"
+  ],
+  [
+    "B559",
+    "\u00b1 4.00%",
+    "\u00b1 1.50%"
+  ],
+  [
+    "A560",
+    "2557 \u2013 3650 (10 years)",
+    "366 \u2013 730\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 (2 years)"
+  ],
+  [
+    "B560",
+    "\u00b1 4.00%",
+    "\u00b1 2.50%"
+  ],
+  [
+    "A561",
+    "3651 \u2013 5475\u00a0 (15 years)",
+    "731 \u2013 1095 \u00a0\u00a0\u00a0\u00a0(3 years)"
+  ],
+  [
+    "B561",
+    "\u00b1 4.50%",
+    "\u00b1 2.50%"
+  ],
+  [
+    "A562",
+    "5476 and more",
+    "1096 \u2013 1825\u00a0\u00a0 (5 years)"
+  ],
+  [
+    "B562",
+    "\u00b1 5.00%",
+    "\u00b1 3.00%"
+  ],
+  [
+    "A563",
+    "0",
+    "1826 \u2013 2556\u00a0\u00a0 (7 years)"
+  ],
+  [
+    "B563",
+    "\u00b1 2.50%",
+    "\u00b1 4.00%"
+  ],
+  [
+    "C563",
+    "L4 / LD / LE / LI / LS / LU / LY",
+    "None"
+  ],
+  [
+    "D563",
+    "CI / CJ / CP",
+    "None"
+  ],
+  [
+    "E563",
+    "42 / 68 / 4L / 4O / 4U / 4V / 8J / 8K / 8L / 8R",
+    "None"
+  ],
+  [
+    "F563",
+    "R4 / R9 / S2 / S4 / V0",
+    "None"
+  ],
+  [
+    "A564",
+    "None",
+    "2557 \u2013 3650 (10 years)"
+  ],
+  [
+    "B564",
+    "None",
+    "\u00b1 4.00%"
+  ],
+  [
+    "A565",
+    "None",
+    "3651 \u2013 5475\u00a0 (15 years)"
+  ],
+  [
+    "B565",
+    "None",
+    "\u00b1 4.50%"
+  ],
+  [
+    "A566",
+    "Size Limit validation on Italian Trading groups",
+    "5476 and more"
+  ],
+  [
+    "B566",
+    "None",
+    "\u00b1 5.00%"
+  ],
+  [
+    "A567",
+    "Please note that, on Italian trading groups, the quantity limits will be determined and periodically updated according to the maximum turnover limit of the proposals and the price of each financial instrument. ",
+    "0"
+  ],
+  [
+    "B567",
+    "None",
+    "\u00b1 2.50%"
+  ],
+  [
+    "C567",
+    "None",
+    "L4 / LD / LE / LI / LS / LU / LY"
+  ],
+  [
+    "D567",
+    "None",
+    "CI / CJ / CP"
+  ],
+  [
+    "E567",
+    "None",
+    "42 / 68 / 4L / 4O / 4U / 4V / 8J / 8K / 8L / 8R"
+  ],
+  [
+    "F567",
+    "None",
+    "R4 / R9 / S2 / S4 / V0"
+  ],
+  [
+    "A568",
+    "The quantity limits thus determined will be disseminated through the Standing Data files.",
+    "None"
+  ],
+  [
+    "A570",
+    "None",
+    "Size Limit validation on Italian Trading groups"
+  ],
+  [
+    "A571",
+    "Nature - Trading Group",
+    "Please note that, on Italian trading groups, the quantity limits will be determined and periodically updated according to the maximum turnover limit of the proposals and the price of each financial instrument. "
+  ],
+  [
+    "B571",
+    "Details",
+    "None"
+  ],
+  [
+    "A572",
+    "All - Tests",
+    "The quantity limits thus determined will be disseminated through the Standing Data files."
+  ],
+  [
+    "B572",
+    "Indicates Trading Groups containing with instruments dedicated to testing",
+    "None"
+  ],
+  [
+    "A573",
+    "Bonds",
+    "None"
+  ],
+  [
+    "B573",
+    "Indicates Trading Groups containing bonds and/or bonds-like instruments",
+    "None"
+  ],
+  [
+    "A574",
+    "Equities",
+    "None"
+  ],
+  [
+    "B574",
+    "Indicates Trading Groups containing equities and/or equities-like instruments",
+    "None"
+  ],
+  [
+    "A575",
+    "ETPs",
+    "Nature - Trading Group"
+  ],
+  [
+    "B575",
+    "Indicates Trading Groups containing Exchange Traded Products instruments",
+    "Details"
+  ],
+  [
+    "A576",
+    "Funds",
+    "All - Tests"
+  ],
+  [
+    "B576",
+    "Indicates Trading Groups containing Funds and/or Funds-like instruments",
+    "Indicates Trading Groups containing with instruments dedicated to testing"
+  ],
+  [
+    "A577",
+    "Lending / Borrowing",
+    "Bonds"
+  ],
+  [
+    "B577",
+    "Indicates Trading Groups containing with instruments dedicated to Lending & Borrowing",
+    "Indicates Trading Groups containing bonds and/or bonds-like instruments"
+  ],
+  [
+    "A578",
+    "S.P.s",
+    "Equities"
+  ],
+  [
+    "B578",
+    "Indicates Trading Groups containing Structured Products and related instruments",
+    "Indicates Trading Groups containing equities and/or equities-like instruments"
+  ],
+  [
+    "A579",
+    "TCS - Bonds",
+    "ETPs"
+  ],
+  [
+    "B579",
+    "Indicates Trading Groups containing bonds and/or bonds-like instruments trading on TCS",
+    "Indicates Trading Groups containing Exchange Traded Products instruments"
+  ],
+  [
+    "A580",
+    "TCS - Equities",
+    "Funds"
+  ],
+  [
+    "B580",
+    "Indicates Trading Groups containing equities and/or equities-like instruments trading on TCS",
+    "Indicates Trading Groups containing Funds and/or Funds-like instruments"
+  ],
+  [
+    "A581",
+    "None",
+    "Lending / Borrowing"
+  ],
+  [
+    "B581",
+    "None",
+    "Indicates Trading Groups containing with instruments dedicated to Lending & Borrowing"
+  ],
+  [
+    "A582",
+    "None",
+    "S.P.s"
+  ],
+  [
+    "B582",
+    "None",
+    "Indicates Trading Groups containing Structured Products and related instruments"
+  ],
+  [
+    "A583",
+    "None",
+    "TCS - Bonds"
+  ],
+  [
+    "B583",
+    "None",
+    "Indicates Trading Groups containing bonds and/or bonds-like instruments trading on TCS"
+  ],
+  [
+    "A584",
+    "Comments ",
+    "TCS - Equities"
+  ],
+  [
+    "B584",
+    "None",
+    "Indicates Trading Groups containing equities and/or equities-like instruments trading on TCS"
+  ],
+  [
+    "A585",
+    "Commentaires / Toevoegingen / Coment\u00e1rios/Commenti",
+    "None"
+  ],
+  [
+    "A588",
+    "a) Internal Matching Facility:",
+    "Comments "
+  ],
+  [
+    "A589",
+    "Service d'Appariement Interne",
+    "Commentaires / Toevoegingen / Coment\u00e1rios/Commenti"
+  ],
+  [
+    "A591",
+    "\u2192Equities and equities-linked instruments (i.e.: ETFs, Subscriptions Rights) traded continuously:",
+    "None"
+  ],
+  [
+    "A592",
+    "Actions n\u00e9goci\u00e9es en continu / Doorlopend verhandelbare aandelen / Ac\u00e7\u00f5es negociadas em continuo / Strumenti azionari e simili (Es. ETFS e diritti di sottoscrizione) negoziate in continua",
+    "a) Internal Matching Facility:"
+  ],
+  [
+    "A593",
+    "None",
+    "Service d'Appariement Interne"
+  ],
+  [
+    "A594",
+    "Markets\nMarch\u00e9s / Markten / Mercado",
+    "None"
+  ],
+  [
+    "B594",
+    "Trading groups\nGroupes de n\u00e9gociation / Handelsgroepen / Grupo de negocia\u00e7\u00e3o",
+    "None"
+  ],
+  [
+    "A595",
+    "None",
+    "\u2192Equities and equities-linked instruments (i.e.: ETFs, Subscriptions Rights) traded continuously:"
+  ],
+  [
+    "A596",
+    "Belgian market\nMarch\u00e9 belge / Belgische markten / Mercado Belga",
+    "Actions n\u00e9goci\u00e9es en continu / Doorlopend verhandelbare aandelen / Ac\u00e7\u00f5es negociadas em continuo / Strumenti azionari e simili (Es. ETFS e diritti di sottoscrizione) negoziate in continua"
+  ],
+  [
+    "B596",
+    "A0, A1, A3, A4, A6, AB, AE, AG, AM, AN, B2, B6, BC, BD, BE, BF, BJ, CD, ED",
+    "None"
+  ],
+  [
+    "A598",
+    "Dutch market\nMarch\u00e9 n\u00e9erlandais / Nederlandse markten / Mercado Holand\u00eas",
+    "Markets\nMarch\u00e9s / Markten / Mercado"
+  ],
+  [
+    "B598",
+    "8C, AI, AJ, E6, EB, J0, J1, J2, J4, J7, J9, JA, JC, JE, JG, JI, JJ, JK, JP, JT,JX, JY, JZ, K2, K3, KC, KD, KF, KG, KH, KJ, KL, JV",
+    "Trading groups\nGroupes de n\u00e9gociation / Handelsgroepen / Grupo de negocia\u00e7\u00e3o"
+  ],
+  [
+    "A600",
+    "French market\nMarch\u00e9 fran\u00e7ais / Franse markten / Mercado Franc\u00eas",
+    "Belgian market\nMarch\u00e9 belge / Belgische markten / Mercado Belga"
+  ],
+  [
+    "B600",
+    "08, 11, 12, 14, 16, 17, 18, 21, 22, 47, 50, 59, 05, 2A, 2H, 2I, 2M, E2, E5, E6, EB, EI, F1, F2, F3, FA, FB, FC, FD, FF, FV, FY, FZ, G0, G5, G6, G9, F5, F6, T6, T9, TS, TU, TW",
+    "A0, A1, A3, A4, A6, AB, AE, AG, AM, AN, B2, B6, BC, BD, BE, BF, BJ, CD, ED"
+  ],
+  [
+    "A602",
+    "Italian market\nMarch\u00e9 italien / Mercato italiano / Italiaanse market / Mercado italiano",
+    "Dutch market\nMarch\u00e9 n\u00e9erlandais / Nederlandse markten / Mercado Holand\u00eas"
+  ],
+  [
+    "B602",
+    "3A, 3B, 3C, 3E, 3F, 3G, 3H, 3N, 3O, 3W, 3X, 3Y",
+    "8C, AI, AJ, E6, EB, J0, J1, J2, J4, J7, J9, JA, JC, JE, JG, JI, JJ, JK, JP, JT,JX, JY, JZ, K2, K3, KC, KD, KF, KG, KH, KJ, KL, JV"
+  ],
+  [
+    "A604",
+    "Irish market\nMarch\u00e9 Irlandais / Ireland markten / Mercado Irland\u00eas",
+    "French market\nMarch\u00e9 fran\u00e7ais / Franse markten / Mercado Franc\u00eas"
+  ],
+  [
+    "B604",
+    "9A, 9B, 9C, 9D, 9E, 9F, 9G, 9J, 9O, 9P",
+    "08, 11, 12, 14, 16, 17, 18, 21, 22, 47, 50, 59, 05, 2A, 2H, 2I, 2M, E2, E5, E6, EB, EI, F1, F2, F3, FA, FB, FC, FD, FF, FV, FY, FZ, G0, G5, G6, G9, F5, F6, T6, T9, TS, TU, TW"
+  ],
+  [
+    "A606",
+    "Norwegian market\nMarch\u00e9 norv\u00e9gien / Noorse markten / Mercado Noruegu\u00eas / Norske markeder",
+    "Italian market\nMarch\u00e9 italien / Mercato italiano / Italiaanse market / Mercado italiano"
+  ],
+  [
+    "B606",
+    "OA, OB, OC, OD, OE, OF, OG, OH, OI, O9",
+    "3A, 3B, 3C, 3E, 3F, 3G, 3H, 3N, 3O, 3W, 3X, 3Y"
+  ],
+  [
+    "A607",
+    "Portuguese market\nMarch\u00e9 portugais / Portugese markten / Mercado Portugu\u00eas",
+    "None"
+  ],
+  [
+    "B607",
+    "EN, EP, P0, P1, P5, P8, PA, PB, PC, PH, PI",
+    "None"
+  ],
+  [
+    "A608",
+    "None",
+    "Irish market\nMarch\u00e9 Irlandais / Ireland markten / Mercado Irland\u00eas"
+  ],
+  [
+    "B608",
+    "None",
+    "9A, 9B, 9C, 9D, 9E, 9F, 9G, 9J, 9O, 9P"
+  ],
+  [
+    "A609",
+    "\u2192All equities and equities-linked instruments (i.e.: ETFs, Subscriptions Rights) by Uncrossing:",
+    "None"
+  ],
+  [
+    "A610",
+    "L\u2019ensemble des actions n\u00e9goci\u00e9es par fixing / Alle aandelen via fixing verhandelbaar / Todas as ac\u00e7\u00f5es negociadas em chamada/ Strumenti azionari e simili (Es. ETFS e diritti di sottoscrizione) negoziate in asta",
+    "Norwegian market\nMarch\u00e9 norv\u00e9gien / Noorse markten / Mercado Noruegu\u00eas / Norske markeder"
+  ],
+  [
+    "B610",
+    "None",
+    "OA, OB, OC, OD, OE, OF, OG, OH, OI, O9"
+  ],
+  [
+    "A611",
+    "None",
+    "Portuguese market\nMarch\u00e9 portugais / Portugese markten / Mercado Portugu\u00eas"
+  ],
+  [
+    "B611",
+    "None",
+    "EN, EP, P0, P1, P5, P8, PA, PB, PC, PH, PI"
+  ],
+  [
+    "A613",
+    "None",
+    "\u2192All equities and equities-linked instruments (i.e.: ETFs, Subscriptions Rights) by Uncrossing:"
+  ],
+  [
+    "A614",
+    "None",
+    "L\u2019ensemble des actions n\u00e9goci\u00e9es par fixing / Alle aandelen via fixing verhandelbaar / Todas as ac\u00e7\u00f5es negociadas em chamada/ Strumenti azionari e simili (Es. ETFS e diritti di sottoscrizione) negoziate in asta"
+  ],
+  [
+    "A615",
+    "\u2192Bonds traded continuously:",
+    "None"
+  ],
+  [
+    "A616",
+    "Obligations n\u00e9goci\u00e9es en continu / Obligatie verhandelbare doorlopend / Obriga\u00e7\u00f5es negociadas em continuo / Obbligazioni negoziate in continua",
+    "None"
+  ],
+  [
+    "A618",
+    "Markets\nMarch\u00e9s / Markten / Mercado / Mercati",
+    "None"
+  ],
+  [
+    "B618",
+    "Trading groups\nGroupes de n\u00e9gociation / Handelsgroepen / Grupo de negocia\u00e7\u00e3o/Gruppi di negoziazione",
+    "None"
+  ],
+  [
+    "A619",
+    "None",
+    "\u2192Bonds traded continuously:"
+  ],
+  [
+    "A620",
+    "Belgian market\nMarch\u00e9 belge / Belgische markten / Mercado Belga",
+    "Obligations n\u00e9goci\u00e9es en continu / Obligatie verhandelbare doorlopend / Obriga\u00e7\u00f5es negociadas em continuo / Obbligazioni negoziate in continua"
+  ],
+  [
+    "B620",
+    "C1, C2, C3, C4, C5, C6, C7, CA, CB, CC, CG, CI, CJ, CO, CP, CQ, ER, ET, EX, EY",
+    "None"
+  ],
+  [
+    "A622",
+    "Dutch market\nMarch\u00e9 n\u00e9erlandais / Nederlandse markten / Mercado Holand\u00eas",
+    "Markets\nMarch\u00e9s / Markten / Mercado / Mercati"
+  ],
+  [
+    "B622",
+    "L0, L1, L2, L3, L4, L5, L6, L7, L8, L9, LA, LB, LC, LD, LE, LI, LJ, LK, LP, LQ, LR, LS, LU, LW, LY, LZ",
+    "Trading groups\nGroupes de n\u00e9gociation / Handelsgroepen / Grupo de negocia\u00e7\u00e3o/Gruppi di negoziazione"
+  ],
+  [
+    "A624",
+    "French market\nMarch\u00e9 fran\u00e7ais / Franse markten / Mercado Franc\u00eas",
+    "Belgian market\nMarch\u00e9 belge / Belgische markten / Mercado Belga"
+  ],
+  [
+    "B624",
+    "35, 37, 40, 41, 42, 43, 45, 55, 56, 58, 68, 4A, 4B, 4C, 4E, 4F, 4G, 4H, 4J, 4K, 4L, 4M, 4N, 4O, 4Q, 4R, 4S, 4T, 4U, 4V, 8I, 8J, 8K, 8L, 8M, 8N, 8P, 8Q, 8R ,EH ,EL , ES, EU, EV",
+    "C1, C2, C3, C4, C5, C6, C7, CA, CB, CC, CG, CI, CJ, CO, CP, CQ, ER, ET, EX, EY"
+  ],
+  [
+    "A626",
+    "Italian market\nMarch\u00e9 italien / Mercato italiano / Italiaanse market / Mercado italiano",
+    "Dutch market\nMarch\u00e9 n\u00e9erlandais / Nederlandse markten / Mercado Holand\u00eas"
+  ],
+  [
+    "B626",
+    " 70, 71 ,72, 73, 74, 75, 76, 77, 78, 79, 7A,7B, 7C, 7D, 7E, 7F, 7G, 7H, 7I, 7J, 7K, 7L, 7M",
+    "L0, L1, L2, L3, L4, L5, L6, L7, L8, L9, LA, LB, LC, LD, LE, LI, LJ, LK, LP, LQ, LR, LS, LU, LW, LY, LZ"
+  ],
+  [
+    "A628",
+    "Norwegian market\nMarch\u00e9 norv\u00e9gien / Noorse markten / Mercado Noruegu\u00eas",
+    "French market\nMarch\u00e9 fran\u00e7ais / Franse markten / Mercado Franc\u00eas"
+  ],
+  [
+    "B628",
+    " OJ",
+    "35, 37, 40, 41, 42, 43, 45, 55, 56, 58, 68, 4A, 4B, 4C, 4E, 4F, 4G, 4H, 4J, 4K, 4L, 4M, 4N, 4O, 4Q, 4R, 4S, 4T, 4U, 4V, 8I, 8J, 8K, 8L, 8M, 8N, 8P, 8Q, 8R ,EH ,EL , ES, EU, EV"
+  ],
+  [
+    "A630",
+    "Portuguese market\nMarch\u00e9 portugais / Portugese markten / Mercado Portugu\u00eas",
+    "Italian market\nMarch\u00e9 italien / Mercato italiano / Italiaanse market / Mercado italiano"
+  ],
+  [
+    "B630",
+    "EZ, R1, R2, R3, R4, R6, R9, S2, S3, S4, S7, S9, V0, V1, V2, V3, V4, V5, V6, V7, V8, V9",
+    " 70, 71 ,72, 73, 74, 75, 76, 77, 78, 79, 7A,7B, 7C, 7D, 7E, 7F, 7G, 7H, 7I, 7J, 7K, 7L, 7M"
+  ],
+  [
+    "A632",
+    "None",
+    "Norwegian market\nMarch\u00e9 norv\u00e9gien / Noorse markten / Mercado Noruegu\u00eas"
+  ],
+  [
+    "B632",
+    "None",
+    " OJ"
+  ],
+  [
+    "A634",
+    "\u2192Bonds traded on a Double Uncrossing basis:",
+    "Portuguese market\nMarch\u00e9 portugais / Portugese markten / Mercado Portugu\u00eas"
+  ],
+  [
+    "B634",
+    "None",
+    "EZ, R1, R2, R3, R4, R6, R9, S2, S3, S4, S7, S9, V0, V1, V2, V3, V4, V5, V6, V7, V8, V9"
+  ],
+  [
+    "A635",
+    "Obligations n\u00e9goci\u00e9es en double ench\u00e8re / Obligatie verhandelbare dubbele veiling / Obriga\u00e7\u00f5es negociadas em duplo leil\u00e3o / Obbligazioni negoziate in doppia fase d'asta",
+    "None"
+  ],
+  [
+    "A637",
+    "Markets\nMarch\u00e9s / Markten / Mercado",
+    "None"
+  ],
+  [
+    "B637",
+    "Trading groups\nGroupes de n\u00e9gociation / Handelsgroepen / Grupo de negocia\u00e7\u00e3o",
+    "None"
+  ],
+  [
+    "A638",
+    "None",
+    "\u2192Bonds traded on a Double Uncrossing basis:"
+  ],
+  [
+    "A639",
+    "Belgian market\nMarch\u00e9 belge / Belgische markten / Mercado Belga",
+    "Obligations n\u00e9goci\u00e9es en double ench\u00e8re / Obligatie verhandelbare dubbele veiling / Obriga\u00e7\u00f5es negociadas em duplo leil\u00e3o / Obbligazioni negoziate in doppia fase d'asta"
+  ],
+  [
+    "A641",
+    "Dutch market\nMarch\u00e9 n\u00e9erlandais / Nederlandse markten / Mercado Holand\u00eas",
+    "Markets\nMarch\u00e9s / Markten / Mercado"
+  ],
+  [
+    "B641",
+    "None",
+    "Trading groups\nGroupes de n\u00e9gociation / Handelsgroepen / Grupo de negocia\u00e7\u00e3o"
+  ],
+  [
+    "A643",
+    "French market\nMarch\u00e9 fran\u00e7ais / Franse markten / Mercado Franc\u00eas",
+    "Belgian market\nMarch\u00e9 belge / Belgische markten / Mercado Belga"
+  ],
+  [
+    "B643",
+    "44, 4D, 8H, 8O",
+    "None"
+  ],
+  [
+    "A645",
+    "Norwegian market\nMarch\u00e9 norv\u00e9gien / Noorse markten / Mercado Noruegu\u00eas",
+    "Dutch market\nMarch\u00e9 n\u00e9erlandais / Nederlandse markten / Mercado Holand\u00eas"
+  ],
+  [
+    "B645",
+    "OL",
+    "None"
+  ],
+  [
+    "A647",
+    "Portuguese market\nMarch\u00e9 portugais / Portugese markten / Mercado Portugu\u00eas",
+    "French market\nMarch\u00e9 fran\u00e7ais / Franse markten / Mercado Franc\u00eas"
+  ],
+  [
+    "B647",
+    "None",
+    "44, 4D, 8H, 8O"
+  ],
+  [
+    "A649",
+    "None",
+    "Norwegian market\nMarch\u00e9 norv\u00e9gien / Noorse markten / Mercado Noruegu\u00eas"
+  ],
+  [
+    "B649",
+    "None",
+    "OL"
+  ],
+  [
+    "A651",
+    "\u2192Bonds traded on a Single Uncrossing basis:",
+    "Portuguese market\nMarch\u00e9 portugais / Portugese markten / Mercado Portugu\u00eas"
+  ],
+  [
+    "A652",
+    "Obligations n\u00e9goci\u00e9es en ench\u00e8re / Obligatie verhandelbare veiling / Obriga\u00e7\u00f5es negociadas em leil\u00e3o / Obbligazioni negoziate in singola fase d'asta",
+    "None"
+  ],
+  [
+    "A654",
+    "Markets\nMarch\u00e9s / Markten / Mercado",
+    "None"
+  ],
+  [
+    "B654",
+    "Trading groups\nGroupes de n\u00e9gociation / Handelsgroepen / Grupo de negocia\u00e7\u00e3o",
+    "None"
+  ],
+  [
+    "A655",
+    "None",
+    "\u2192Bonds traded on a Single Uncrossing basis:"
+  ],
+  [
+    "A656",
+    "Belgian market\nMarch\u00e9 belge / Belgische markten / Mercado Belga",
+    "Obligations n\u00e9goci\u00e9es en ench\u00e8re / Obligatie verhandelbare veiling / Obriga\u00e7\u00f5es negociadas em leil\u00e3o / Obbligazioni negoziate in singola fase d'asta"
+  ],
+  [
+    "B656",
+    "C8, C9",
+    "None"
+  ],
+  [
+    "A658",
+    "Dutch market\nMarch\u00e9 n\u00e9erlandais / Nederlandse markten / Mercado Holand\u00eas",
+    "Markets\nMarch\u00e9s / Markten / Mercado"
+  ],
+  [
+    "B658",
+    "-",
+    "Trading groups\nGroupes de n\u00e9gociation / Handelsgroepen / Grupo de negocia\u00e7\u00e3o"
+  ],
+  [
+    "A660",
+    "French market\nMarch\u00e9 fran\u00e7ais / Franse markten / Mercado Franc\u00eas",
+    "Belgian market\nMarch\u00e9 belge / Belgische markten / Mercado Belga"
+  ],
+  [
+    "B660",
+    "None",
+    "C8, C9"
+  ],
+  [
+    "A662",
+    "Portuguese market\nMarch\u00e9 portugais / Portugese markten / Mercado Portugu\u00eas",
+    "Dutch market\nMarch\u00e9 n\u00e9erlandais / Nederlandse markten / Mercado Holand\u00eas"
+  ],
+  [
+    "A664",
+    "None",
+    "French market\nMarch\u00e9 fran\u00e7ais / Franse markten / Mercado Franc\u00eas"
+  ],
+  [
+    "A666",
+    "None",
+    "Portuguese market\nMarch\u00e9 portugais / Portugese markten / Mercado Portugu\u00eas"
+  ],
+  [
+    "B666",
+    "None",
+    "-"
+  ],
+  [
+    "A667",
+    "b) Tick Sizes:\nEchelons de cotation",
+    "None"
+  ],
+  [
+    "A669",
+    "Products\nProduits / Produkten / Produtos / Prodotti",
+    "None"
+  ],
+  [
+    "B669",
+    "Tick sizes\nEchelons de cotation",
+    "None"
+  ],
+  [
+    "A670",
+    "For bonds traded in percentage\nPour les obligations cot\u00e9es en pourcentage / Obligaties verhandelbaar in procenten / Obriga\u00e7\u00f5es negociadas em percentagem / Obbligazioni negoziate in percentuale",
+    "None"
+  ],
+  [
+    "B670",
+    "0.01%",
+    "None"
+  ],
+  [
+    "A671",
+    "For Oslo bonds traded in percentage\nPour les obligations cot\u00e9es en pourcentage / Obligaties verhandelbaar in procenten / Obriga\u00e7\u00f5es negociadas em percentagem / Per le Obbligazioni di Oslo negoziate in percentuale",
+    "b) Tick Sizes:\nEchelons de cotation"
+  ],
+  [
+    "B671",
+    "0.01% - 0,0001%",
+    "None"
+  ],
+  [
+    "A672",
+    "For the Lending / Borrowing\nPour le march\u00e9 de Pr\u00eat / Emprunt\nVoor de Lending / Borrowing\nPara Empr\u00e9stimo / Prestito Obbligazionario",
+    "None"
+  ],
+  [
+    "B672",
+    "0.001",
+    "None"
+  ],
+  [
+    "A673",
+    "For other Securities\nPour les autres titres / Andere financi\u00eble instrumenten / Outros valores mobili\u00e1rios / Per altre tipologie",
+    "Products\nProduits / Produkten / Produtos / Prodotti"
+  ],
+  [
+    "B673",
+    "\u20ac0.01",
+    "Tick sizes\nEchelons de cotation"
+  ],
+  [
+    "A674",
+    "For Warrants and Certificates in group D7",
+    "For bonds traded in percentage\nPour les obligations cot\u00e9es en pourcentage / Obligaties verhandelbaar in procenten / Obriga\u00e7\u00f5es negociadas em percentagem / Obbligazioni negoziate in percentuale"
+  ],
+  [
+    "B674",
+    "10",
+    "0.01%"
+  ],
+  [
+    "A675",
+    "For Warrants and Certificates in group HN",
+    "For Oslo bonds traded in percentage\nPour les obligations cot\u00e9es en pourcentage / Obligaties verhandelbaar in procenten / Obriga\u00e7\u00f5es negociadas em percentagem / Per le Obbligazioni di Oslo negoziate in percentuale"
+  ],
+  [
+    "B675",
+    "\u20ac 0.001",
+    "0.01% - 0,0001%"
+  ],
+  [
+    "A676",
+    "None",
+    "For the Lending / Borrowing\nPour le march\u00e9 de Pr\u00eat / Emprunt\nVoor de Lending / Borrowing\nPara Empr\u00e9stimo / Prestito Obbligazionario"
+  ],
+  [
+    "B676",
+    "None",
+    "0.001"
+  ],
+  [
+    "A677",
+    "For ETC on Italian markets",
+    "For other Securities\nPour les autres titres / Andere financi\u00eble instrumenten / Outros valores mobili\u00e1rios / Per altre tipologie"
+  ],
+  [
+    "B677",
+    "Minimum Price",
+    "\u20ac0.01"
+  ],
+  [
+    "C677",
+    "Tick Size",
+    "None"
+  ],
+  [
+    "A678",
+    "None",
+    "For Warrants and Certificates in group D7"
+  ],
+  [
+    "B678",
+    "0",
+    "10"
+  ],
+  [
+    "C678",
+    ".0001",
+    "None"
+  ],
+  [
+    "A679",
+    "None",
+    "For Warrants and Certificates in group HN"
+  ],
+  [
+    "B679",
+    ".1",
+    "\u20ac 0.001"
+  ],
+  [
+    "C679",
+    ".0001",
+    "None"
+  ],
+  [
+    "B680",
+    ".2",
+    "None"
+  ],
+  [
+    "C680",
+    ".0001",
+    "None"
+  ],
+  [
+    "A681",
+    "None",
+    "For ETC on Italian markets"
+  ],
+  [
+    "B681",
+    ".5",
+    "Minimum Price"
+  ],
+  [
+    "C681",
+    ".0001",
+    "Tick Size"
+  ],
+  [
+    "B682",
+    "1",
+    "0"
+  ],
+  [
+    "C682",
+    ".0002",
+    ".0001"
+  ],
+  [
+    "B683",
+    "2",
+    ".1"
+  ],
+  [
+    "C683",
+    ".0005",
+    ".0001"
+  ],
+  [
+    "B684",
+    "5",
+    ".2"
+  ],
+  [
+    "C684",
+    ".001",
+    ".0001"
+  ],
+  [
+    "B685",
+    "10",
+    ".5"
+  ],
+  [
+    "C685",
+    ".002",
+    ".0001"
+  ],
+  [
+    "B686",
+    "20",
+    "1"
+  ],
+  [
+    "C686",
+    ".005",
+    ".0002"
+  ],
+  [
+    "B687",
+    "50",
+    "2"
+  ],
+  [
+    "C687",
+    ".01",
+    ".0005"
+  ],
+  [
+    "B688",
+    "100",
+    "5"
+  ],
+  [
+    "C688",
+    ".01",
+    ".001"
+  ],
+  [
+    "B689",
+    "200",
+    "10"
+  ],
+  [
+    "C689",
+    ".01",
+    ".002"
+  ],
+  [
+    "B690",
+    "500",
+    "20"
+  ],
+  [
+    "C690",
+    ".01",
+    ".005"
+  ],
+  [
+    "B691",
+    "1000",
+    "50"
+  ],
+  [
+    "B692",
+    "2000",
+    "100"
+  ],
+  [
+    "B693",
+    "5000",
+    "200"
+  ],
+  [
+    "B694",
+    "10000",
+    "500"
+  ],
+  [
+    "B695",
+    "20000",
+    "1000"
+  ],
+  [
+    "B696",
+    "50000",
+    "2000"
+  ],
+  [
+    "B697",
+    "None",
+    "5000"
+  ],
+  [
+    "C697",
+    "None",
+    ".01"
+  ],
+  [
+    "B698",
+    "None",
+    "10000"
+  ],
+  [
+    "C698",
+    "None",
+    ".01"
+  ],
+  [
+    "A699",
+    "For equities the below tick size regime will apply based on the ADT per instrument as published by ESMA. For instruments for which ESMA has not communicated an ADT, the most granular tick size regime will be applied.",
+    "None"
+  ],
+  [
+    "B699",
+    "None",
+    "20000"
+  ],
+  [
+    "C699",
+    "None",
+    ".01"
+  ],
+  [
+    "A700",
+    "Unless the issuer has requested a specific tick size regime for its ETFS, by default for PAN EUROPEAN ETFs the tick size table with the header \"9000 \u2264 Average daily number of transactions\" will apply.",
+    "None"
+  ],
+  [
+    "B700",
+    "None",
+    "50000"
+  ],
+  [
+    "C700",
+    "None",
+    ".01"
+  ],
+  [
+    "A701",
+    "LIQUIDITY BANDS",
+    "None"
+  ],
+  [
+    "B702",
+    "0 \u2264 Average daily number of transactions < 10",
+    "None"
+  ],
+  [
+    "C702",
+    "10 \u2264 Average daily number of transactions < 80",
+    "None"
+  ],
+  [
+    "D702",
+    "80 \u2264 Average daily number of transactions < 600",
+    "None"
+  ],
+  [
+    "E702",
+    "600 \u2264 Average daily number of transactions < 2000",
+    "None"
+  ],
+  [
+    "F702",
+    "2000 \u2264 Average daily number of transactions < 9000",
+    "None"
+  ],
+  [
+    "G702",
+    "9000 \u2264 Average daily number of transactions",
+    "None"
+  ],
+  [
+    "A703",
+    "None",
+    "For equities the below tick size regime will apply based on the ADT per instrument as published by ESMA. For instruments for which ESMA has not communicated an ADT, the most granular tick size regime will be applied."
+  ],
+  [
+    "A704",
+    "Price ranges",
+    "Unless the issuer has requested a specific tick size regime for its ETFS, by default for PAN EUROPEAN ETFs the tick size table with the header \"9000 \u2264 Average daily number of transactions\" will apply."
+  ],
+  [
+    "A705",
+    "0 \u2264 price < 0.1",
+    "LIQUIDITY BANDS"
+  ],
+  [
+    "B705",
+    "0.0005",
+    "None"
+  ],
+  [
+    "C705",
+    "0.0002",
+    "None"
+  ],
+  [
+    "D705",
+    "0.0001",
+    "None"
+  ],
+  [
+    "E705",
+    "0.0001",
+    "None"
+  ],
+  [
+    "F705",
+    "0.0001",
+    "None"
+  ],
+  [
+    "G705",
+    "0.0001",
+    "None"
+  ],
+  [
+    "A706",
+    "0.1 \u2264 price < 0.2",
+    "None"
+  ],
+  [
+    "B706",
+    "0.001",
+    "0 \u2264 Average daily number of transactions < 10"
+  ],
+  [
+    "C706",
+    "0.0005",
+    "10 \u2264 Average daily number of transactions < 80"
+  ],
+  [
+    "D706",
+    "0.0002",
+    "80 \u2264 Average daily number of transactions < 600"
+  ],
+  [
+    "E706",
+    "0.0001",
+    "600 \u2264 Average daily number of transactions < 2000"
+  ],
+  [
+    "F706",
+    "0.0001",
+    "2000 \u2264 Average daily number of transactions < 9000"
+  ],
+  [
+    "G706",
+    "0.0001",
+    "9000 \u2264 Average daily number of transactions"
+  ],
+  [
+    "A707",
+    "0.2 \u2264 price < 0.5",
+    "None"
+  ],
+  [
+    "B707",
+    "0.002",
+    "None"
+  ],
+  [
+    "C707",
+    "0.001",
+    "None"
+  ],
+  [
+    "D707",
+    "0.0005",
+    "None"
+  ],
+  [
+    "E707",
+    "0.0002",
+    "None"
+  ],
+  [
+    "F707",
+    "0.0001",
+    "None"
+  ],
+  [
+    "G707",
+    "0.0001",
+    "None"
+  ],
+  [
+    "A708",
+    "0.5 \u2264 price < 1",
+    "Price ranges"
+  ],
+  [
+    "B708",
+    "0.005",
+    "None"
+  ],
+  [
+    "C708",
+    "0.002",
+    "None"
+  ],
+  [
+    "D708",
+    "0.001",
+    "None"
+  ],
+  [
+    "E708",
+    "0.0005",
+    "None"
+  ],
+  [
+    "F708",
+    "0.0002",
+    "None"
+  ],
+  [
+    "G708",
+    "0.0001",
+    "None"
+  ],
+  [
+    "A709",
+    "1 \u2264 price < 2",
+    "0 \u2264 price < 0.1"
+  ],
+  [
+    "B709",
+    "0.01",
+    "0.0005"
+  ],
+  [
+    "C709",
+    "0.005",
+    "0.0002"
+  ],
+  [
+    "D709",
+    "0.002",
+    "0.0001"
+  ],
+  [
+    "E709",
+    "0.001",
+    "0.0001"
+  ],
+  [
+    "F709",
+    "0.0005",
+    "0.0001"
+  ],
+  [
+    "G709",
+    "0.0002",
+    "0.0001"
+  ],
+  [
+    "A710",
+    "2 \u2264 price < 5",
+    "0.1 \u2264 price < 0.2"
+  ],
+  [
+    "B710",
+    "0.02",
+    "0.001"
+  ],
+  [
+    "C710",
+    "0.01",
+    "0.0005"
+  ],
+  [
+    "D710",
+    "0.005",
+    "0.0002"
+  ],
+  [
+    "E710",
+    "0.002",
+    "0.0001"
+  ],
+  [
+    "F710",
+    "0.001",
+    "0.0001"
+  ],
+  [
+    "G710",
+    "0.0005",
+    "0.0001"
+  ],
+  [
+    "A711",
+    "5 \u2264 price < 10",
+    "0.2 \u2264 price < 0.5"
+  ],
+  [
+    "B711",
+    "0.05",
+    "0.002"
+  ],
+  [
+    "C711",
+    "0.02",
+    "0.001"
+  ],
+  [
+    "D711",
+    "0.01",
+    "0.0005"
+  ],
+  [
+    "E711",
+    "0.005",
+    "0.0002"
+  ],
+  [
+    "F711",
+    "0.002",
+    "0.0001"
+  ],
+  [
+    "G711",
+    "0.001",
+    "0.0001"
+  ],
+  [
+    "A712",
+    "10 \u2264 price < 20",
+    "0.5 \u2264 price < 1"
+  ],
+  [
+    "B712",
+    "0.1",
+    "0.005"
+  ],
+  [
+    "C712",
+    "0.05",
+    "0.002"
+  ],
+  [
+    "D712",
+    "0.02",
+    "0.001"
+  ],
+  [
+    "E712",
+    "0.01",
+    "0.0005"
+  ],
+  [
+    "F712",
+    "0.005",
+    "0.0002"
+  ],
+  [
+    "G712",
+    "0.002",
+    "0.0001"
+  ],
+  [
+    "A713",
+    "20 \u2264 price < 50",
+    "1 \u2264 price < 2"
+  ],
+  [
+    "B713",
+    "0.2",
+    "0.01"
+  ],
+  [
+    "C713",
+    "0.1",
+    "0.005"
+  ],
+  [
+    "D713",
+    "0.05",
+    "0.002"
+  ],
+  [
+    "E713",
+    "0.02",
+    "0.001"
+  ],
+  [
+    "F713",
+    "0.01",
+    "0.0005"
+  ],
+  [
+    "G713",
+    "0.005",
+    "0.0002"
+  ],
+  [
+    "A714",
+    "50 \u2264 price < 100",
+    "2 \u2264 price < 5"
+  ],
+  [
+    "B714",
+    "0.5",
+    "0.02"
+  ],
+  [
+    "C714",
+    "0.2",
+    "0.01"
+  ],
+  [
+    "D714",
+    "0.1",
+    "0.005"
+  ],
+  [
+    "E714",
+    "0.05",
+    "0.002"
+  ],
+  [
+    "F714",
+    "0.02",
+    "0.001"
+  ],
+  [
+    "G714",
+    "0.01",
+    "0.0005"
+  ],
+  [
+    "A715",
+    "100 \u2264 price < 200",
+    "5 \u2264 price < 10"
+  ],
+  [
+    "B715",
+    "1",
+    "0.05"
+  ],
+  [
+    "C715",
+    "0.5",
+    "0.02"
+  ],
+  [
+    "D715",
+    "0.2",
+    "0.01"
+  ],
+  [
+    "E715",
+    "0.1",
+    "0.005"
+  ],
+  [
+    "F715",
+    "0.05",
+    "0.002"
+  ],
+  [
+    "G715",
+    "0.02",
+    "0.001"
+  ],
+  [
+    "A716",
+    "200 \u2264 price < 500",
+    "10 \u2264 price < 20"
+  ],
+  [
+    "B716",
+    "2",
+    "0.1"
+  ],
+  [
+    "C716",
+    "1",
+    "0.05"
+  ],
+  [
+    "D716",
+    "0.5",
+    "0.02"
+  ],
+  [
+    "E716",
+    "0.2",
+    "0.01"
+  ],
+  [
+    "F716",
+    "0.1",
+    "0.005"
+  ],
+  [
+    "G716",
+    "0.05",
+    "0.002"
+  ],
+  [
+    "A717",
+    "500 \u2264 price < 1000",
+    "20 \u2264 price < 50"
+  ],
+  [
+    "B717",
+    "5",
+    "0.2"
+  ],
+  [
+    "C717",
+    "2",
+    "0.1"
+  ],
+  [
+    "D717",
+    "1",
+    "0.05"
+  ],
+  [
+    "E717",
+    "0.5",
+    "0.02"
+  ],
+  [
+    "F717",
+    "0.2",
+    "0.01"
+  ],
+  [
+    "G717",
+    "0.1",
+    "0.005"
+  ],
+  [
+    "A718",
+    "1000 \u2264 price < 2000",
+    "50 \u2264 price < 100"
+  ],
+  [
+    "B718",
+    "10",
+    "0.5"
+  ],
+  [
+    "C718",
+    "5",
+    "0.2"
+  ],
+  [
+    "D718",
+    "2",
+    "0.1"
+  ],
+  [
+    "E718",
+    "1",
+    "0.05"
+  ],
+  [
+    "F718",
+    "0.5",
+    "0.02"
+  ],
+  [
+    "G718",
+    "0.2",
+    "0.01"
+  ],
+  [
+    "A719",
+    "2000 \u2264 price < 5000",
+    "100 \u2264 price < 200"
+  ],
+  [
+    "B719",
+    "20",
+    "1"
+  ],
+  [
+    "C719",
+    "10",
+    "0.5"
+  ],
+  [
+    "D719",
+    "5",
+    "0.2"
+  ],
+  [
+    "E719",
+    "2",
+    "0.1"
+  ],
+  [
+    "F719",
+    "1",
+    "0.05"
+  ],
+  [
+    "G719",
+    "0.5",
+    "0.02"
+  ],
+  [
+    "A720",
+    "5000 \u2264 price < 10000",
+    "200 \u2264 price < 500"
+  ],
+  [
+    "B720",
+    "50",
+    "2"
+  ],
+  [
+    "C720",
+    "20",
+    "1"
+  ],
+  [
+    "D720",
+    "10",
+    "0.5"
+  ],
+  [
+    "E720",
+    "5",
+    "0.2"
+  ],
+  [
+    "F720",
+    "2",
+    "0.1"
+  ],
+  [
+    "G720",
+    "1",
+    "0.05"
+  ],
+  [
+    "A721",
+    "10000 \u2264 price < 20000",
+    "500 \u2264 price < 1000"
+  ],
+  [
+    "B721",
+    "100",
+    "5"
+  ],
+  [
+    "C721",
+    "50",
+    "2"
+  ],
+  [
+    "D721",
+    "20",
+    "1"
+  ],
+  [
+    "E721",
+    "10",
+    "0.5"
+  ],
+  [
+    "F721",
+    "5",
+    "0.2"
+  ],
+  [
+    "G721",
+    "2",
+    "0.1"
+  ],
+  [
+    "A722",
+    "20000 \u2264 price < 50000",
+    "1000 \u2264 price < 2000"
+  ],
+  [
+    "B722",
+    "200",
+    "10"
+  ],
+  [
+    "C722",
+    "100",
+    "5"
+  ],
+  [
+    "D722",
+    "50",
+    "2"
+  ],
+  [
+    "E722",
+    "20",
+    "1"
+  ],
+  [
+    "F722",
+    "10",
+    "0.5"
+  ],
+  [
+    "G722",
+    "5",
+    "0.2"
+  ],
+  [
+    "A723",
+    "50000 \u2264 price",
+    "2000 \u2264 price < 5000"
+  ],
+  [
+    "B723",
+    "500",
+    "20"
+  ],
+  [
+    "C723",
+    "200",
+    "10"
+  ],
+  [
+    "D723",
+    "100",
+    "5"
+  ],
+  [
+    "E723",
+    "50",
+    "2"
+  ],
+  [
+    "F723",
+    "20",
+    "1"
+  ],
+  [
+    "G723",
+    "10",
+    "0.5"
+  ],
+  [
+    "A724",
+    "None",
+    "5000 \u2264 price < 10000"
+  ],
+  [
+    "B724",
+    "None",
+    "50"
+  ],
+  [
+    "C724",
+    "None",
+    "20"
+  ],
+  [
+    "D724",
+    "None",
+    "10"
+  ],
+  [
+    "E724",
+    "None",
+    "5"
+  ],
+  [
+    "F724",
+    "None",
+    "2"
+  ],
+  [
+    "G724",
+    "None",
+    "1"
+  ],
+  [
+    "A725",
+    "None",
+    "10000 \u2264 price < 20000"
+  ],
+  [
+    "B725",
+    "None",
+    "100"
+  ],
+  [
+    "C725",
+    "None",
+    "50"
+  ],
+  [
+    "D725",
+    "None",
+    "20"
+  ],
+  [
+    "E725",
+    "None",
+    "10"
+  ],
+  [
+    "F725",
+    "None",
+    "5"
+  ],
+  [
+    "G725",
+    "None",
+    "2"
+  ],
+  [
+    "A726",
+    "None",
+    "20000 \u2264 price < 50000"
+  ],
+  [
+    "B726",
+    "None",
+    "200"
+  ],
+  [
+    "C726",
+    "None",
+    "100"
+  ],
+  [
+    "D726",
+    "None",
+    "50"
+  ],
+  [
+    "E726",
+    "None",
+    "20"
+  ],
+  [
+    "F726",
+    "None",
+    "10"
+  ],
+  [
+    "G726",
+    "None",
+    "5"
+  ],
+  [
+    "A727",
+    "None",
+    "50000 \u2264 price"
+  ],
+  [
+    "B727",
+    "None",
+    "500"
+  ],
+  [
+    "C727",
+    "None",
+    "200"
+  ],
+  [
+    "D727",
+    "None",
+    "100"
+  ],
+  [
+    "E727",
+    "None",
+    "50"
+  ],
+  [
+    "F727",
+    "None",
+    "20"
+  ],
+  [
+    "G727",
+    "None",
+    "10"
+  ],
+  [
+    "A729",
+    "c) Specific static collars for penny stocks:",
+    "None"
+  ],
+  [
+    "A731",
+    "Seuils statiques sp\u00e9cifiques pour les penny stocks",
+    "None"
+  ],
+  [
+    "A732",
+    "Specifieke statische collars voor penny stocks ",
+    "None"
+  ],
+  [
+    "A733",
+    "Limites est\u00e1ticos espec\u00edficos para penny stocks",
+    "c) Specific static collars for penny stocks:"
+  ],
+  [
+    "A735",
+    "None",
+    "Seuils statiques sp\u00e9cifiques pour les penny stocks"
+  ],
+  [
+    "A736",
+    "Static reference price (p)",
+    "Specifieke statische collars voor penny stocks "
+  ],
+  [
+    "B736",
+    "Static price range",
+    "None"
+  ],
+  [
+    "A737",
+    "Prix de r\u00e9f\u00e9rence statique / Statische referentie prijs / pre\u00e7o de refer\u00eancia est\u00e1tico / Prezzo di riferimento Statico",
+    "Limites est\u00e1ticos espec\u00edficos para penny stocks"
+  ],
+  [
+    "B737",
+    "Seuils de prix statiques / band breedte statische prijs / Limites de varia\u00e7\u00e3o est\u00e1ticos / Banda di prezzo statico",
+    "None"
+  ],
+  [
+    "A738",
+    "p < 0.20",
+    "None"
+  ],
+  [
+    "B738",
+    "0.02",
+    "None"
+  ],
+  [
+    "A740",
+    "Oslo (NOK) Static reference price (p)",
+    "Static reference price (p)"
+  ],
+  [
+    "B740",
+    "Oslo (NOK) Static price range",
+    "Static price range"
+  ],
+  [
+    "A741",
+    "Prix de r\u00e9f\u00e9rence statique / Statische referentie prijs / pre\u00e7o de refer\u00eancia est\u00e1tico / Oslo prezzo di riferimento statico",
+    "Prix de r\u00e9f\u00e9rence statique / Statische referentie prijs / pre\u00e7o de refer\u00eancia est\u00e1tico / Prezzo di riferimento Statico"
+  ],
+  [
+    "B741",
+    "Seuils de prix statiques / band breedte statische prijs / Limites de varia\u00e7\u00e3o est\u00e1ticos / Oslo banda di prezzo statico",
+    "Seuils de prix statiques / band breedte statische prijs / Limites de varia\u00e7\u00e3o est\u00e1ticos / Banda di prezzo statico"
+  ],
+  [
+    "A742",
+    "p < 0.40",
+    "p < 0.20"
+  ],
+  [
+    "B742",
+    "0.10",
+    "0.02"
+  ],
+  [
+    "A743",
+    "0.40 < p < 3",
+    "None"
+  ],
+  [
+    "B743",
+    "0.30",
+    "None"
+  ],
+  [
+    "A744",
+    "None",
+    "Oslo (NOK) Static reference price (p)"
+  ],
+  [
+    "B744",
+    "None",
+    "Oslo (NOK) Static price range"
+  ],
+  [
+    "A745",
+    "Please be aware that this specific static price range is not applicable to bonds and ETF trading groups.",
+    "Prix de r\u00e9f\u00e9rence statique / Statische referentie prijs / pre\u00e7o de refer\u00eancia est\u00e1tico / Oslo prezzo di riferimento statico"
+  ],
+  [
+    "B745",
+    "None",
+    "Seuils de prix statiques / band breedte statische prijs / Limites de varia\u00e7\u00e3o est\u00e1ticos / Oslo banda di prezzo statico"
+  ],
+  [
+    "A746",
+    "Ces seuils sp\u00e9cifiques de r\u00e9servation statiques ne sont pas applicables aux groupes de cotation d'ETFs et d'obligations. ",
+    "p < 0.40"
+  ],
+  [
+    "B746",
+    "None",
+    "0.10"
+  ],
+  [
+    "A747",
+    "De specifieke statische bandbreedte is niet van toepassing op handelsgroepen voor obligaties en ETF\u2019s.",
+    "0.40 < p < 3"
+  ],
+  [
+    "B747",
+    "None",
+    "0.30"
+  ],
+  [
+    "A748",
+    "Estes tipos de limites de reserva n\u00e3o s\u00e3o aplic\u00e1veis aos grupos de negocia\u00e7\u00e3o das obriga\u00e7\u00f5es e dos ETFs",
+    "None"
+  ],
+  [
+    "A749",
+    "Si informa che questo specifica banda di prezzo statico non \u00e8 applicabile ai Gruppi di negoziazione di Obbligazioni ed ETFs",
+    "Please be aware that this specific static price range is not applicable to bonds and ETF trading groups."
+  ],
+  [
+    "A750",
+    "None",
+    "Ces seuils sp\u00e9cifiques de r\u00e9servation statiques ne sont pas applicables aux groupes de cotation d'ETFs et d'obligations. "
+  ],
+  [
+    "A751",
+    "None",
+    "De specifieke statische bandbreedte is niet van toepassing op handelsgroepen voor obligaties en ETF\u2019s."
+  ],
+  [
+    "A752",
+    "None",
+    "Estes tipos de limites de reserva n\u00e3o s\u00e3o aplic\u00e1veis aos grupos de negocia\u00e7\u00e3o das obriga\u00e7\u00f5es e dos ETFs"
+  ],
+  [
+    "A753",
+    "None",
+    "Si informa che questo specifica banda di prezzo statico non \u00e8 applicabile ai Gruppi di negoziazione di Obbligazioni ed ETFs"
+  ],
+  [
+    "A754",
+    "d) For covered warrants and certificates, the static price range depends on the premium (p):",
+    "None"
+  ],
+  [
+    "A756",
+    "Concernant les warrants, les seuils de prix statiques d\u00e9pendent de la prime (p):",
+    "None"
+  ],
+  [
+    "A757",
+    "Ten aanzien van covered warrants, geldt dat de static price range afhangt van de referentie prijs (p):",
+    "None"
+  ],
+  [
+    "A758",
+    "Nos covered warrants, os limites de varia\u00e7\u00e3o est\u00e1ticos dependem do pr\u00e9mio (p):",
+    "d) For covered warrants and certificates, the static price range depends on the premium (p):"
+  ],
+  [
+    "A759",
+    "Per quanto riguarda i warrants, la banda di prezzo statico dipende dal premio (p)",
+    "None"
+  ],
+  [
+    "A760",
+    "None",
+    "Concernant les warrants, les seuils de prix statiques d\u00e9pendent de la prime (p):"
+  ],
+  [
+    "A761",
+    "Premium (p)",
+    "Ten aanzien van covered warrants, geldt dat de static price range afhangt van de referentie prijs (p):"
+  ],
+  [
+    "B761",
+    "Static price ranges",
+    "None"
+  ],
+  [
+    "A762",
+    "Prime (p) / prijs (p) / pr\u00e9mio (p) / Premio (p)",
+    "Nos covered warrants, os limites de varia\u00e7\u00e3o est\u00e1ticos dependem do pr\u00e9mio (p):"
+  ],
+  [
+    "B762",
+    "Seuils de prix statiques / Static price ranges / Limites de varia\u00e7\u00e3o est\u00e1ticos / Banda di prezzo statico",
+    "None"
+  ],
+  [
+    "A763",
+    "p = 0.01",
+    "Per quanto riguarda i warrants, la banda di prezzo statico dipende dal premio (p)"
+  ],
+  [
+    "B763",
+    "1",
+    "None"
+  ],
+  [
+    "A764",
+    "p in [0.02 ; 0.04]",
+    "None"
+  ],
+  [
+    "B764",
+    "0.95",
+    "None"
+  ],
+  [
+    "A765",
+    "p in [0.05 ; 0.09]",
+    "Premium (p)"
+  ],
+  [
+    "B765",
+    "0.5",
+    "Static price ranges"
+  ],
+  [
+    "A766",
+    "p in [0.10 ; 0.24]",
+    "Prime (p) / prijs (p) / pr\u00e9mio (p) / Premio (p)"
+  ],
+  [
+    "B766",
+    "0.4",
+    "Seuils de prix statiques / Static price ranges / Limites de varia\u00e7\u00e3o est\u00e1ticos / Banda di prezzo statico"
+  ],
+  [
+    "A767",
+    "p in[0.25 ; 0.74]",
+    "p = 0.01"
+  ],
+  [
+    "B767",
+    "0.35",
+    "1"
+  ],
+  [
+    "A768",
+    "p in [0.75 ; 0.99]",
+    "p in [0.02 ; 0.04]"
+  ],
+  [
+    "B768",
+    "0.25",
+    "0.95"
+  ],
+  [
+    "A769",
+    "p in [1.00 ; 49.99]",
+    "p in [0.05 ; 0.09]"
+  ],
+  [
+    "B769",
+    "0.1",
+    "0.5"
+  ],
+  [
+    "A770",
+    "p >= 50.00",
+    "p in [0.10 ; 0.24]"
+  ],
+  [
+    "B770",
+    "2.5%, 5% or 10%\n(depending on the issuer \u2013 See table)\n(en fonction de l\u2019\u00e9metteur \u2013 voir table)\n(afhankelijk van de issuer \u2013 zie overzicht)\n(depende do emitente \u2013 ver tabela)",
+    "0.4"
+  ],
+  [
+    "A771",
+    "None",
+    "p in[0.25 ; 0.74]"
+  ],
+  [
+    "B771",
+    "None",
+    "0.35"
+  ],
+  [
+    "A772",
+    "None",
+    "p in [0.75 ; 0.99]"
+  ],
+  [
+    "B772",
+    "None",
+    "0.25"
+  ],
+  [
+    "A773",
+    "e) Specific collars for subscription rights:",
+    "p in [1.00 ; 49.99]"
+  ],
+  [
+    "B773",
+    "None",
+    "0.1"
+  ],
+  [
+    "A774",
+    "None",
+    "p >= 50.00"
+  ],
+  [
+    "B774",
+    "None",
+    "2.5%, 5% or 10%\n(depending on the issuer \u2013 See table)\n(en fonction de l\u2019\u00e9metteur \u2013 voir table)\n(afhankelijk van de issuer \u2013 zie overzicht)\n(depende do emitente \u2013 ver tabela)"
+  ],
+  [
+    "A775",
+    "Seuils sp\u00e9cifiques pour les droits de souscription",
+    "None"
+  ],
+  [
+    "A776",
+    "Specifieke collars voor subscription rights ",
+    "None"
+  ],
+  [
+    "A777",
+    "Limites espec\u00edficos para subscription rights",
+    "e) Specific collars for subscription rights:"
+  ],
+  [
+    "A778",
+    "Limiti specifici per i diritti di sottoscrizione",
+    "None"
+  ],
+  [
+    "A779",
+    "None",
+    "Seuils sp\u00e9cifiques pour les droits de souscription"
+  ],
+  [
+    "A780",
+    "Markets\nMarch\u00e9s / Markten / Mercado / Mercati",
+    "Specifieke collars voor subscription rights "
+  ],
+  [
+    "B780",
+    "Trading groups\nGroupes de n\u00e9gociation / Handelsgroepen / Grupo de negocia\u00e7\u00e3o / Gruppi di negoziazione",
+    "None"
+  ],
+  [
+    "D780",
+    "Trading thresholds",
+    "None"
+  ],
+  [
+    "A781",
+    "None",
+    "Limites espec\u00edficos para subscription rights"
+  ],
+  [
+    "A782",
+    "Belgian market\nMarch\u00e9 belge / Belgische markten / Mercado Belga",
+    "Limiti specifici per i diritti di sottoscrizione"
+  ],
+  [
+    "B782",
+    "B7, B8, BA, EF, EG",
+    "None"
+  ],
+  [
+    "D782",
+    "0.2",
+    "None"
+  ],
+  [
+    "A783",
+    "French market\nMarch\u00e9 fran\u00e7ais / Franse markten / Mercado Franc\u00eas",
+    "None"
+  ],
+  [
+    "B783",
+    "30, 31, 33, F8, FL, FS, FT, FU, E3, E4",
+    "None"
+  ],
+  [
+    "D783",
+    "0.2",
+    "None"
+  ],
+  [
+    "A784",
+    "None",
+    "Markets\nMarch\u00e9s / Markten / Mercado / Mercati"
+  ],
+  [
+    "B784",
+    "None",
+    "Trading groups\nGroupes de n\u00e9gociation / Handelsgroepen / Grupo de negocia\u00e7\u00e3o / Gruppi di negoziazione"
+  ],
+  [
+    "D784",
+    "None",
+    "Trading thresholds"
+  ],
+  [
+    "A785",
+    "Dutch market\nMarch\u00e9 n\u00e9erlandais / Nederlandse markten / Mercado Holand\u00eas",
+    "None"
+  ],
+  [
+    "B785",
+    "JL, K0, K1",
+    "None"
+  ],
+  [
+    "D785",
+    "0.2",
+    "None"
+  ],
+  [
+    "A786",
+    "Irish market\nMarch\u00e9 irlandais / Ierse markt / Mercado irland\u00eas",
+    "Belgian market\nMarch\u00e9 belge / Belgische markten / Mercado Belga"
+  ],
+  [
+    "B786",
+    "9F, 9G",
+    "B7, B8, BA, EF, EG"
+  ],
+  [
+    "A787",
+    "Portuguese market\nMarch\u00e9 portugais / Portugese markten / Mercado Portugu\u00eas",
+    "French market\nMarch\u00e9 fran\u00e7ais / Franse markten / Mercado Franc\u00eas"
+  ],
+  [
+    "B787",
+    "EW, Q1, Q2, Q3, Q4",
+    "30, 31, 33, F8, FL, FS, FT, FU, E3, E4"
+  ],
+  [
+    "A788",
+    "Norwegian market\nMarch\u00e9 norv\u00e9gien / Noorse markten / Mercado Noruegu\u00eas",
+    "None"
+  ],
+  [
+    "B788",
+    "OO, OW, OX, OY",
+    "None"
+  ],
+  [
+    "D788",
+    "0.2",
+    "None"
+  ],
+  [
+    "A789",
+    "None",
+    "Dutch market\nMarch\u00e9 n\u00e9erlandais / Nederlandse markten / Mercado Holand\u00eas"
+  ],
+  [
+    "B789",
+    "None",
+    "JL, K0, K1"
+  ],
+  [
+    "D789",
+    "None",
+    "0.2"
+  ],
+  [
+    "A790",
+    "Ces seuils sp\u00e9cifiques de r\u00e9servation sont applicables \u00e0 tout droit de souscription list\u00e9 sur Euronext, Euronext Growth et Euronext Access.",
+    "Irish market\nMarch\u00e9 irlandais / Ierse markt / Mercado irland\u00eas"
+  ],
+  [
+    "B790",
+    "None",
+    "9F, 9G"
+  ],
+  [
+    "D790",
+    "None",
+    "0.2"
+  ],
+  [
+    "A791",
+    "De specifieke bandbreedte is van toepassing op Euronext, Euronext Growth and Euronext Access handelsgroepen voor subscription rights.",
+    "Portuguese market\nMarch\u00e9 portugais / Portugese markten / Mercado Portugu\u00eas"
+  ],
+  [
+    "B791",
+    "None",
+    "EW, Q1, Q2, Q3, Q4"
+  ],
+  [
+    "D791",
+    "None",
+    "0.2"
+  ],
+  [
+    "A792",
+    "Estes tipos de limites de reserva s\u00e3o aplic\u00e1veis aos direitos de subscri\u00e7\u00e3o nos grupos de negocia\u00e7\u00e3o Euronext, Euronext Growth and Euronext Access grupos de negocia\u00e7\u00e3o das subscription rights.",
+    "Norwegian market\nMarch\u00e9 norv\u00e9gien / Noorse markten / Mercado Noruegu\u00eas"
+  ],
+  [
+    "B792",
+    "None",
+    "OO, OW, OX, OY"
+  ],
+  [
+    "D792",
+    "None",
+    "0.2"
+  ],
+  [
+    "A793",
+    "Si informa che lo specifico intervallo di prezzo del 20% \u00e8 applicabile a tutti i diritti di sottoscrizione negoziati  Euronext, Euronext Growth et Euronext Access.",
+    "None"
+  ],
+  [
+    "A794",
+    "None",
+    "Ces seuils sp\u00e9cifiques de r\u00e9servation sont applicables \u00e0 tout droit de souscription list\u00e9 sur Euronext, Euronext Growth et Euronext Access."
+  ],
+  [
+    "A795",
+    "None",
+    "De specifieke bandbreedte is van toepassing op Euronext, Euronext Growth and Euronext Access handelsgroepen voor subscription rights."
+  ],
+  [
+    "A796",
+    "None",
+    "Estes tipos de limites de reserva s\u00e3o aplic\u00e1veis aos direitos de subscri\u00e7\u00e3o nos grupos de negocia\u00e7\u00e3o Euronext, Euronext Growth and Euronext Access grupos de negocia\u00e7\u00e3o das subscription rights."
+  ],
+  [
+    "A797",
+    "f) Liquidity Provider Requirements for ETFs, ETVs, ETNs & Investment Funds:",
+    "Si informa che lo specifico intervallo di prezzo del 20% \u00e8 applicabile a tutti i diritti di sottoscrizione negoziati  Euronext, Euronext Growth et Euronext Access."
+  ],
+  [
+    "A799",
+    "Engagements des Apporteurs de Liquidit\u00e9 d\u2019ETFs, ETVs, ETNs & Fonds d\u2019Investissement / Verplichtingen voor Liquiditeitsverschaffers in ETFs, ETVs, ETNs & Beleggingsfondsen / Obriga\u00e7\u00f5es de Criador de Mercado nos ETFs, ETVs, ETNs & Fundos de Investimentos",
+    "None"
+  ],
+  [
+    "A801",
+    "The LP commits to maintain a spread of firm bid and offer prices from the opening uncrossing, during continuous trading and at the closing uncrossing.",
+    "f) Liquidity Provider Requirements for ETFs, ETVs, ETNs & Investment Funds:"
+  ],
+  [
+    "A803",
+    "L\u2019Apporteur de Liquidit\u00e9 est tenu de positionner des fourchettes d'achat et de vente \u00e0 partir du fixing d\u2019ouverture, puis tout au long de la journ\u00e9e de n\u00e9gociation, ainsi que lors du fixing de cl\u00f4ture.",
+    "Engagements des Apporteurs de Liquidit\u00e9 d\u2019ETFs, ETVs, ETNs & Fonds d\u2019Investissement / Verplichtingen voor Liquiditeitsverschaffers in ETFs, ETVs, ETNs & Beleggingsfondsen / Obriga\u00e7\u00f5es de Criador de Mercado nos ETFs, ETVs, ETNs & Fundos de Investimentos"
+  ],
+  [
+    "A804",
+    "De liquiditeitsverschaffer wordt geacht gedurende de gehele handelsdag, dus vanaf de openingsveiling, gedurende de doorlopende handel, tot en met de sluitingsveiling, een spread van vaste bied- en laatkoersen te onderhouden.",
+    "None"
+  ],
+  [
+    "A805",
+    "O Criador de Mercado compromete-se a manter um spread de pre\u00e7os de compra e venda firmes a partir do leil\u00e3o de abertura, durante a negocia\u00e7\u00e3o em cont\u00ednuo e no leil\u00e3o de fecho.",
+    "The LP commits to maintain a spread of firm bid and offer prices from the opening uncrossing, during continuous trading and at the closing uncrossing."
+  ],
+  [
+    "A806",
+    "Il LP si impegna a mantenere uno spread di prezzo denaro e lettera fisso dall'asta di apertura, durante la fase in continua e fino all'asta di chiusura",
+    "None"
+  ],
+  [
+    "A807",
+    "None",
+    "L\u2019Apporteur de Liquidit\u00e9 est tenu de positionner des fourchettes d'achat et de vente \u00e0 partir du fixing d\u2019ouverture, puis tout au long de la journ\u00e9e de n\u00e9gociation, ainsi que lors du fixing de cl\u00f4ture."
+  ],
+  [
+    "A808",
+    "None",
+    "De liquiditeitsverschaffer wordt geacht gedurende de gehele handelsdag, dus vanaf de openingsveiling, gedurende de doorlopende handel, tot en met de sluitingsveiling, een spread van vaste bied- en laatkoersen te onderhouden."
+  ],
+  [
+    "A809",
+    "None",
+    "O Criador de Mercado compromete-se a manter um spread de pre\u00e7os de compra e venda firmes a partir do leil\u00e3o de abertura, durante a negocia\u00e7\u00e3o em cont\u00ednuo e no leil\u00e3o de fecho."
+  ],
+  [
+    "A810",
+    "None",
+    "Il LP si impegna a mantenere uno spread di prezzo denaro e lettera fisso dall'asta di apertura, durante la fase in continua e fino all'asta di chiusura"
+  ],
+  [
+    "A811",
+    "ETFs",
+    "None"
+  ],
+  [
+    "A814",
+    "Underlying Category\nCat\u00e9gorie Sous-jacente / Onderliggende Categorie / Categoria Activo Subjacente / categoria del sottostante",
+    "None"
+  ],
+  [
+    "B814",
+    "Maximum Spread\nFourchette Maximum / Maximale Spread / Spread M\u00e1ximo / Spread massimo",
+    "None"
+  ],
+  [
+    "C814",
+    "Minimum Size\nTaille Minimum / Minimumgrootte / Volume M\u00ednimo / Dimensione minima",
+    "None"
+  ],
+  [
+    "A815",
+    "Standard Exposure * European Equity Index\nExposition Standard * Indiced'Action europ\u00e9en\nStandard exposure * Europese Aandelenindex\nExposi\u00e7\u00e3o Standard * \u00cdndice Europeu Ac\u00e7\u00f5es\nEsposizione Standard * Indice azionario europeo",
+    "ETFs"
+  ],
+  [
+    "B815",
+    "2.00%",
+    "None"
+  ],
+  [
+    "C815",
+    "100",
+    "None"
+  ],
+  [
+    "A816",
+    "Standard Exposure * Government Fixed Income Index\nExposition Standard * Indice sur titres \u00e0 revenu fixe du gouvernement\nStandard Exposure * overheidseffecten met vaste inkomsten\nExposi\u00e7\u00e3o Standard * \u00cdndice Renda Fixa\nEsposizione Standard * indice titolo di stato a reddito fisso",
+    "None"
+  ],
+  [
+    "B816",
+    "2.00%",
+    "None"
+  ],
+  [
+    "C816",
+    "100",
+    "None"
+  ],
+  [
+    "A817",
+    "All Other\nAutres / Anderen / Outros / Altri",
+    "None"
+  ],
+  [
+    "B817",
+    "3.00%",
+    "None"
+  ],
+  [
+    "C817",
+    "100",
+    "None"
+  ],
+  [
+    "A818",
+    "None",
+    "Underlying Category\nCat\u00e9gorie Sous-jacente / Onderliggende Categorie / Categoria Activo Subjacente / categoria del sottostante"
+  ],
+  [
+    "B818",
+    "None",
+    "Maximum Spread\nFourchette Maximum / Maximale Spread / Spread M\u00e1ximo / Spread massimo"
+  ],
+  [
+    "C818",
+    "None",
+    "Minimum Size\nTaille Minimum / Minimumgrootte / Volume M\u00ednimo / Dimensione minima"
+  ],
+  [
+    "A819",
+    "* Standard exposure refers to indices that do not offer any multiple, inverse, or inverse multiple of the underlying assets measured by the index.",
+    "Standard Exposure * European Equity Index\nExposition Standard * Indiced'Action europ\u00e9en\nStandard exposure * Europese Aandelenindex\nExposi\u00e7\u00e3o Standard * \u00cdndice Europeu Ac\u00e7\u00f5es\nEsposizione Standard * Indice azionario europeo"
+  ],
+  [
+    "B819",
+    "None",
+    "2.00%"
+  ],
+  [
+    "C819",
+    "None",
+    "100"
+  ],
+  [
+    "A820",
+    "* Exposition standard fait r\u00e9f\u00e9rence \u00e0 des indices qui ne proposent pas de multiple, inverse ou multiple inverse des actifs sous-jacents mesur\u00e9s par l'indice.",
+    "Standard Exposure * Government Fixed Income Index\nExposition Standard * Indice sur titres \u00e0 revenu fixe du gouvernement\nStandard Exposure * overheidseffecten met vaste inkomsten\nExposi\u00e7\u00e3o Standard * \u00cdndice Renda Fixa\nEsposizione Standard * indice titolo di stato a reddito fisso"
+  ],
+  [
+    "B820",
+    "None",
+    "2.00%"
+  ],
+  [
+    "C820",
+    "None",
+    "100"
+  ],
+  [
+    "A821",
+    "* Standard exposure verwijst naar indexen die geen veelvoud, inverse, of inverse veelvoud bieden van de onderliggende activa gemeten door de index.",
+    "All Other\nAutres / Anderen / Outros / Altri"
+  ],
+  [
+    "B821",
+    "None",
+    "3.00%"
+  ],
+  [
+    "C821",
+    "None",
+    "100"
+  ],
+  [
+    "A822",
+    "* Exposi\u00e7\u00e3o Standard faz refer\u00eancia aos \u00edndices que n\u00e3o oferecem qualquer m\u00faltiplo, inverso, ou m\u00faltiplo inverso dos activos subjacentes medidos pelo \u00edndice.",
+    "None"
+  ],
+  [
+    "A823",
+    "L'esposiazione standard si riferisce a indici che non offrono alcuno multiplo, inverso  o multiplo inverso degli asset sottostanti misurate dall'indice ",
+    "* Standard exposure refers to indices that do not offer any multiple, inverse, or inverse multiple of the underlying assets measured by the index."
+  ],
+  [
+    "A824",
+    "None",
+    "* Exposition standard fait r\u00e9f\u00e9rence \u00e0 des indices qui ne proposent pas de multiple, inverse ou multiple inverse des actifs sous-jacents mesur\u00e9s par l'indice."
+  ],
+  [
+    "A825",
+    "Note regarding Collars",
+    "* Standard exposure verwijst naar indexen die geen veelvoud, inverse, of inverse veelvoud bieden van de onderliggende activa gemeten door de index."
+  ],
+  [
+    "A826",
+    "None",
+    "* Exposi\u00e7\u00e3o Standard faz refer\u00eancia aos \u00edndices que n\u00e3o oferecem qualquer m\u00faltiplo, inverso, ou m\u00faltiplo inverso dos activos subjacentes medidos pelo \u00edndice."
+  ],
+  [
+    "A827",
+    "Default collars for this trading group at the time of admission to listing / trading of an ETF. However, an Issuer can request to amend the collars of their ETF to the following values : 0.25%, 0.50%, 0.75%, 1.00%, 1.25%, 1.50%, 3.00% and 0.10% only for money market ETFs.\u00a0The applicable threshold value is carried out in the ETF Masterfile disseminated on a daily basis\u201d",
+    "L'esposiazione standard si riferisce a indici che non offrono alcuno multiplo, inverso  o multiplo inverso degli asset sottostanti misurate dall'indice "
+  ],
+  [
+    "A829",
+    "Les seuils par d\u00e9faut pour les diff\u00e9rents groupes au moment de l\u2019admission aux n\u00e9gociations d\u2019un ETF. Cependant, un \u00e9metteur peut par la suite demander des seuils ajust\u00e9s en s\u00e9lectionnant l\u2019une des valeurs suivantes\u00a0: 0.25%, 0.50%, 0.75%, 1.00%, 1.25%, 1.50%, 3.00% et 0.10%, cette derni\u00e8re valeur \u00e9tant seulement accept\u00e9e pour les ETFs investis sur le march\u00e9 mon\u00e9taire. Le seuil en vigueur fait partie des donn\u00e9es diffus\u00e9es dans notre r\u00e9f\u00e9rentiel quotidien (\u00ab\u00a0ETF Masterfile\u00a0\u00bb)",
+    "Note regarding Collars"
+  ],
+  [
+    "A831",
+    "Limites predefinidos para os grupos no momento da admiss\u00e3o \u00e0 negocia\u00e7\u00e3o de um ETF. Contudo, um emitente pode pedir posteriormente que os limites sejam ajustados seleccionando um dos seguintes valores: 0,25%, 0,50%, 0,75%, 1,00%, 1,25%, 1,50%, 3,00% e 0,10%, este \u00faltimo valor aceite somente para os ETFs investidos no mercado monet\u00e1rio. O limite aplic\u00e1vel faz parte dos dados referenciais difundidos diariamente (\u00ab ETF Masterfile \u00bb).",
+    "Default collars for this trading group at the time of admission to listing / trading of an ETF. However, an Issuer can request to amend the collars of their ETF to the following values : 0.25%, 0.50%, 0.75%, 1.00%, 1.25%, 1.50%, 3.00% and 0.10% only for money market ETFs.\u00a0The applicable threshold value is carried out in the ETF Masterfile disseminated on a daily basis\u201d"
+  ],
+  [
+    "A833",
+    "De standaardwaarde drempel voor deze handel groep op het tijd van de notering / handel voor een ETF. \u00a0Toch, een issuer kunt vragen voor het wijzigen van zijn ETF standaardwaarde volgens: 0.25%, 0.50%, 0.75%, 1.00%, 1.25%, 1.50%, 3.00% en 0.10% alleen maar voor money market ETFs. De toepasbaar standaardwaarde uitgevoerd door de ETF Masterfile bericht dagelijks.",
+    "Les seuils par d\u00e9faut pour les diff\u00e9rents groupes au moment de l\u2019admission aux n\u00e9gociations d\u2019un ETF. Cependant, un \u00e9metteur peut par la suite demander des seuils ajust\u00e9s en s\u00e9lectionnant l\u2019une des valeurs suivantes\u00a0: 0.25%, 0.50%, 0.75%, 1.00%, 1.25%, 1.50%, 3.00% et 0.10%, cette derni\u00e8re valeur \u00e9tant seulement accept\u00e9e pour les ETFs investis sur le march\u00e9 mon\u00e9taire. Le seuil en vigueur fait partie des donn\u00e9es diffus\u00e9es dans notre r\u00e9f\u00e9rentiel quotidien (\u00ab\u00a0ETF Masterfile\u00a0\u00bb)"
+  ],
+  [
+    "A834",
+    "Collars di default per questo gruppo di negoziazione al momento della fase di listing o di negoziazione di un ETF. Tuttavia, un emittente pu\u00f2 richiedere di modificare il valore dei collars applicati all'ETFai seguenti valori: 0.25%, 0.50%, 0.75%, 1.00%, 1.25%, 1.50%, 3.00% and 0.10% solo per i ETFs money markets. Il valore della soglia applicabile nel  ETF Masterfile viene diffuso giornalmente",
+    "None"
+  ],
+  [
+    "A835",
+    "None",
+    "Limites predefinidos para os grupos no momento da admiss\u00e3o \u00e0 negocia\u00e7\u00e3o de um ETF. Contudo, um emitente pode pedir posteriormente que os limites sejam ajustados seleccionando um dos seguintes valores: 0,25%, 0,50%, 0,75%, 1,00%, 1,25%, 1,50%, 3,00% e 0,10%, este \u00faltimo valor aceite somente para os ETFs investidos no mercado monet\u00e1rio. O limite aplic\u00e1vel faz parte dos dados referenciais difundidos diariamente (\u00ab ETF Masterfile \u00bb)."
+  ],
+  [
+    "A837",
+    "None",
+    "De standaardwaarde drempel voor deze handel groep op het tijd van de notering / handel voor een ETF. \u00a0Toch, een issuer kunt vragen voor het wijzigen van zijn ETF standaardwaarde volgens: 0.25%, 0.50%, 0.75%, 1.00%, 1.25%, 1.50%, 3.00% en 0.10% alleen maar voor money market ETFs. De toepasbaar standaardwaarde uitgevoerd door de ETF Masterfile bericht dagelijks."
+  ],
+  [
+    "A838",
+    "ETVs, ETNs & Investment Funds",
+    "Collars di default per questo gruppo di negoziazione al momento della fase di listing o di negoziazione di un ETF. Tuttavia, un emittente pu\u00f2 richiedere di modificare il valore dei collars applicati all'ETFai seguenti valori: 0.25%, 0.50%, 0.75%, 1.00%, 1.25%, 1.50%, 3.00% and 0.10% solo per i ETFs money markets. Il valore della soglia applicabile nel  ETF Masterfile viene diffuso giornalmente"
+  ],
+  [
+    "A839",
+    "\u00a0\u00a0",
+    "None"
+  ],
+  [
+    "A841",
+    "Financial Instrument\nInstrument Financier / Financieel Instrument / Instrumento Financeiro / Strumento Finanziario",
+    "None"
+  ],
+  [
+    "B841",
+    "Maximum Spread\nFourchette Maximum / Maximale Spread / Spread M\u00e1ximo / Spred massimo",
+    "None"
+  ],
+  [
+    "C841",
+    "Minimum Size\nTaille Minimum / Minimumgrootte / Volume M\u00ednimo / Dimensione minima",
+    "None"
+  ],
+  [
+    "A842",
+    "ETV & ETN",
+    "ETVs, ETNs & Investment Funds"
+  ],
+  [
+    "B842",
+    "3.00%",
+    "None"
+  ],
+  [
+    "C842",
+    "100",
+    "None"
+  ],
+  [
+    "A843",
+    "Investment Fund**",
+    "\u00a0\u00a0"
+  ],
+  [
+    "B843",
+    "4.00%",
+    "None"
+  ],
+  [
+    "C843",
+    "10",
+    "None"
+  ],
+  [
+    "A844",
+    "Traded Continuously",
+    "None"
+  ],
+  [
+    "A845",
+    "Fonds d'Investissement** trait\u00e9 en continu / Doorlopend verhandeld beleggingsfonds** / Fundo de Investimento**/Fondo di investimento",
+    "Financial Instrument\nInstrument Financier / Financieel Instrument / Instrumento Financeiro / Strumento Finanziario"
+  ],
+  [
+    "B845",
+    "None",
+    "Maximum Spread\nFourchette Maximum / Maximale Spread / Spread M\u00e1ximo / Spred massimo"
+  ],
+  [
+    "C845",
+    "None",
+    "Minimum Size\nTaille Minimum / Minimumgrootte / Volume M\u00ednimo / Dimensione minima"
+  ],
+  [
+    "A846",
+    "Negocia\u00e7\u00e3o Continuo\nNegoziazione in continua",
+    "ETV & ETN"
+  ],
+  [
+    "B846",
+    "None",
+    "3.00%"
+  ],
+  [
+    "C846",
+    "None",
+    "100"
+  ],
+  [
+    "C847",
+    "5",
+    "10"
+  ],
+  [
+    "A848",
+    "Traded by Uncrossing",
+    "Traded Continuously"
+  ],
+  [
+    "A849",
+    "Fonds d'Investissement trait\u00e9 au fixing /",
+    "Fonds d'Investissement** trait\u00e9 en continu / Doorlopend verhandeld beleggingsfonds** / Fundo de Investimento**/Fondo di investimento"
+  ],
+  [
+    "A850",
+    "Beleggingsfonds**verhandeld per veiling / Fondo di investimento negoziato in asta",
+    "Negocia\u00e7\u00e3o Continuo\nNegoziazione in continua"
+  ],
+  [
+    "A851",
+    "Fundo de Investimento**",
+    "Investment Fund**"
+  ],
+  [
+    "B851",
+    "None",
+    "4.00%"
+  ],
+  [
+    "C851",
+    "None",
+    "5"
+  ],
+  [
+    "A852",
+    "Negocia\u00e7\u00e3o Chamada",
+    "Traded by Uncrossing"
+  ],
+  [
+    "A853",
+    "None",
+    "Fonds d'Investissement trait\u00e9 au fixing /"
+  ],
+  [
+    "A854",
+    "None",
+    "Beleggingsfonds**verhandeld per veiling / Fondo di investimento negoziato in asta"
+  ],
+  [
+    "A855",
+    "None",
+    "Fundo de Investimento**"
+  ],
+  [
+    "A856",
+    "** Investment fund refers to any investment fund other than ETFs and other than open and investment funds traded via the Euronext Fund Service (EFS).",
+    "Negocia\u00e7\u00e3o Chamada"
+  ],
+  [
+    "A857",
+    "The latter are not part of the Euronext Central Order Book and do not benefit from any LP scheme.",
+    "None"
+  ],
+  [
+    "A858",
+    "** Fonds d'Investissement correspond \u00e0 un fonds d'investissement autre que les ETFs et autre que les fonds d'investissement ouverts n\u00e9goci\u00e9s sur Euronext Fund Service (EFS). Ces derniers ne font pas parties du Carnet d'Ordres Central et ne b\u00e9n\u00e9ficient d'aucun r\u00e9gime d'Apporteur de Liquidit\u00e9.",
+    "None"
+  ],
+  [
+    "A859",
+    "** Beleggingsfonds verwijst naar beleggingsfondsen die geen ETF's en geen open-einde beleggingsfondsen verhandelbaar via de Euronext Fund Service (EFS) zijn. Deze laatsten maken geen uit van het Centrale Orderboek en hebben geen liquiditeitsverschaffersregeling.",
+    "None"
+  ],
+  [
+    "A860",
+    "** Fundo de Investimento corresponde a todos os fundos de investimento que n\u00e3o s\u00e3o negociados atrav\u00e9s do Livro de Ofertas Central e, como tal, n\u00e3o beneficiam de qualquer regime de Cria\u00e7\u00e3o de Mercado.",
+    "** Investment fund refers to any investment fund other than ETFs and other than open and investment funds traded via the Euronext Fund Service (EFS)."
+  ],
+  [
+    "A861",
+    "Per fondo di investimento si intende qualsiasi fondo di investimento diverso dagli ETFs e fondi aperti e di investimento negoziati via il servizio Euronext Fund(EFS)",
+    "The latter are not part of the Euronext Central Order Book and do not benefit from any LP scheme."
+  ],
+  [
+    "A862",
+    "None",
+    "** Fonds d'Investissement correspond \u00e0 un fonds d'investissement autre que les ETFs et autre que les fonds d'investissement ouverts n\u00e9goci\u00e9s sur Euronext Fund Service (EFS). Ces derniers ne font pas parties du Carnet d'Ordres Central et ne b\u00e9n\u00e9ficient d'aucun r\u00e9gime d'Apporteur de Liquidit\u00e9."
+  ],
+  [
+    "A863",
+    "These Liquidity Provider (LP) requirements are applicable to specific and separate LP Agreements entered into with each LP. The purpose of the Agreement is to define the conditions under which the LP is responsible to Euronext for performing its services through the Central Order Book in one or more Financial Instruments. Euronext shall use reasonable best efforts to ensure compliance with these requirements. No third party shall avail itself of any provision of such Agreement, which is between Euronext and each LP.",
+    "** Beleggingsfonds verwijst naar beleggingsfondsen die geen ETF's en geen open-einde beleggingsfondsen verhandelbaar via de Euronext Fund Service (EFS) zijn. Deze laatsten maken geen uit van het Centrale Orderboek en hebben geen liquiditeitsverschaffersregeling."
+  ],
+  [
+    "A864",
+    "None",
+    "** Fundo de Investimento corresponde a todos os fundos de investimento que n\u00e3o s\u00e3o negociados atrav\u00e9s do Livro de Ofertas Central e, como tal, n\u00e3o beneficiam de qualquer regime de Cria\u00e7\u00e3o de Mercado."
+  ],
+  [
+    "A865",
+    "Ces engagements d\u2019Apporteur de Liquidit\u00e9 sont applicables aux Contrats d\u2019Apporteur de Liquidit\u00e9 sign\u00e9s par chaque Apporteur de Liquidit\u00e9. Le Contrat a pour objet de d\u00e9finir les conditions pour lesquelles l\u2019Apporteur de Liquidit\u00e9 ex\u00e9cute ses services et est tenu d\u2019intervenir dans le Carnet d\u2019Ordres Central sur un ou plusieurs Instruments Financiers. Euronext mettra en \u0153uvre tous les moyens raisonnables pour assurer la conformit\u00e9 \u00e0 ces engagements. Aucun tiers ne pourra se pr\u00e9valoir d\u2019une quelconque des clauses du Contrat sign\u00e9 entre Euronext et l\u2019Apporteur de Liquidit\u00e9.",
+    "Per fondo di investimento si intende qualsiasi fondo di investimento diverso dagli ETFs e fondi aperti e di investimento negoziati via il servizio Euronext Fund(EFS)"
+  ],
+  [
+    "A867",
+    "Deze verplichtingen voor liquiditeitsverschaffers zijn van toepassing op specifieke en afzonderlijke overeenkomsten met elke liquiditeitsverschaffer. De overeenkomst bepaalt onder welke voorwaarden de LP verantwoordelijk is voor het uitvoeren van zijn diensten via het Centrale Orderboek op \u00e9\u00e9n of meer financi\u00eble instrumenten. Euronext zal redelijke inspanningen ondernemen om de naleving van deze verplichtingen te waarborgen. Geen enkele derde partij is gerechtigd een beroep te doen op welke clausule dan ook van een dergelijke overeenkomst tussen Euronext en de liquiditeitsverschaffer.",
+    "These Liquidity Provider (LP) requirements are applicable to specific and separate LP Agreements entered into with each LP. The purpose of the Agreement is to define the conditions under which the LP is responsible to Euronext for performing its services through the Central Order Book in one or more Financial Instruments. Euronext shall use reasonable best efforts to ensure compliance with these requirements. No third party shall avail itself of any provision of such Agreement, which is between Euronext and each LP."
+  ],
+  [
+    "A869",
+    "Estas obriga\u00e7\u00f5es do Criador de Mercado s\u00e3o aplic\u00e1veis aos contratos espec\u00edficos de Cria\u00e7\u00e3o de Mercado e assinados separadamente com cada Criador de Mercado. O Contrato tem por objectivo definir as condi\u00e7\u00f5es em que o Criador de Mercado \u00e9 respons\u00e1vel perante a Euronext pela presta\u00e7\u00e3o dos seus servi\u00e7os atrav\u00e9s do Livro de Ofertas Central em um ou mais Instrumentos Financeiros. A Euronext envidar\u00e1 todos os esfor\u00e7os razo\u00e1veis para assegurar o cumprimento dessas obriga\u00e7\u00f5es. Terceiros n\u00e3o podem recorrer a qualquer disposi\u00e7\u00e3o do contrato assinado entre a Euronext e o Criador de Mercado.",
+    "Ces engagements d\u2019Apporteur de Liquidit\u00e9 sont applicables aux Contrats d\u2019Apporteur de Liquidit\u00e9 sign\u00e9s par chaque Apporteur de Liquidit\u00e9. Le Contrat a pour objet de d\u00e9finir les conditions pour lesquelles l\u2019Apporteur de Liquidit\u00e9 ex\u00e9cute ses services et est tenu d\u2019intervenir dans le Carnet d\u2019Ordres Central sur un ou plusieurs Instruments Financiers. Euronext mettra en \u0153uvre tous les moyens raisonnables pour assurer la conformit\u00e9 \u00e0 ces engagements. Aucun tiers ne pourra se pr\u00e9valoir d\u2019une quelconque des clauses du Contrat sign\u00e9 entre Euronext et l\u2019Apporteur de Liquidit\u00e9."
+  ],
+  [
+    "A871",
+    "Questi requisiti del Liquid Provider (LP) sono applicabili a specifici e separati contratti di LP stipulati con ciascun LP- Lo scopo dell'accrdo \u00e8 di definire le condizioni in base alle quali il LP \u00e8 responsabile nei confronti di Euronext per l'esecuzione dei propri servizi attraverso il Central Order Book in uno o pi\u00f9 strumenti finanziari. Euronext far\u00e0 quanto di ragionevole possibile per garantire il rispetto di tali requisiti. Nessuna terza parte si avvarr\u00e0 di alcuna disposizione di tale accordo che \u00e8 tra Euronext e ciascun LP",
+    "Deze verplichtingen voor liquiditeitsverschaffers zijn van toepassing op specifieke en afzonderlijke overeenkomsten met elke liquiditeitsverschaffer. De overeenkomst bepaalt onder welke voorwaarden de LP verantwoordelijk is voor het uitvoeren van zijn diensten via het Centrale Orderboek op \u00e9\u00e9n of meer financi\u00eble instrumenten. Euronext zal redelijke inspanningen ondernemen om de naleving van deze verplichtingen te waarborgen. Geen enkele derde partij is gerechtigd een beroep te doen op welke clausule dan ook van een dergelijke overeenkomst tussen Euronext en de liquiditeitsverschaffer."
+  ],
+  [
+    "A873",
+    "None",
+    "Estas obriga\u00e7\u00f5es do Criador de Mercado s\u00e3o aplic\u00e1veis aos contratos espec\u00edficos de Cria\u00e7\u00e3o de Mercado e assinados separadamente com cada Criador de Mercado. O Contrato tem por objectivo definir as condi\u00e7\u00f5es em que o Criador de Mercado \u00e9 respons\u00e1vel perante a Euronext pela presta\u00e7\u00e3o dos seus servi\u00e7os atrav\u00e9s do Livro de Ofertas Central em um ou mais Instrumentos Financeiros. A Euronext envidar\u00e1 todos os esfor\u00e7os razo\u00e1veis para assegurar o cumprimento dessas obriga\u00e7\u00f5es. Terceiros n\u00e3o podem recorrer a qualquer disposi\u00e7\u00e3o do contrato assinado entre a Euronext e o Criador de Mercado."
+  ],
+  [
+    "A874",
+    "g) Liquidity Provider Requirements for Warrants, Certificates & Structured Notes:",
+    "None"
+  ],
+  [
+    "A875",
+    "None",
+    "Questi requisiti del Liquid Provider (LP) sono applicabili a specifici e separati contratti di LP stipulati con ciascun LP- Lo scopo dell'accrdo \u00e8 di definire le condizioni in base alle quali il LP \u00e8 responsabile nei confronti di Euronext per l'esecuzione dei propri servizi attraverso il Central Order Book in uno o pi\u00f9 strumenti finanziari. Euronext far\u00e0 quanto di ragionevole possibile per garantire il rispetto di tali requisiti. Nessuna terza parte si avvarr\u00e0 di alcuna disposizione di tale accordo che \u00e8 tra Euronext e ciascun LP"
+  ],
+  [
+    "A876",
+    "Engagements des Apporteurs de Liquidit\u00e9 de Warrants, Certificats & Obligations Structur\u00e9es / Verplichtingen voor Liquiditeitsverschaffers in Warranten, Certificaten & Gestructureerde Obligaties / Obriga\u00e7\u00f5es de Criador de Mercado nos Warrants, Certificados & Obriga\u00e7\u00f5es Estruturadas/Obblighi del Liquidity Provider per Warrant, certificati e obbligazioni strutturate",
+    "None"
+  ],
+  [
+    "A877",
+    "The Permanent Liquidity Provider commits to maintain a spread of firm bid and offer prices from 5 minutes before the market opening, and then throughout the Trading Day (including the order-accumulation periods preceding pre-scheduled or other Uncrossings during a Trading Day).",
+    "None"
+  ],
+  [
+    "A878",
+    "None",
+    "g) Liquidity Provider Requirements for Warrants, Certificates & Structured Notes:"
+  ],
+  [
+    "A879",
+    "L\u2019Apporteur de Liquidit\u00e9 permanent est tenu de positionner des fourchettes achat / vente durant les 5 minutes pr\u00e9c\u00e9dant l\u2019ouverture du march\u00e9, puis tout au long de la Journ\u00e9e de N\u00e9gociation, y compris les phases d\u2019accumulation d\u2019ordres pr\u00e9c\u00e9dant les fixings de la Journ\u00e9e de N\u00e9gociation, programm\u00e9s \u00e0 heures fixes ou non.",
+    "None"
+  ],
+  [
+    "A880",
+    "De permanente liquiditeitsverschaffer wordt geacht een spread van vaste bied- en laatkoersen te onderhouden vanaf 5 minuten voor de opening van de markt en daarna gedurende de gehele handelsdag, met inbegrip van orderaccumulatieperiodes voorafgaand aan geplande of andere veilingen.",
+    "Engagements des Apporteurs de Liquidit\u00e9 de Warrants, Certificats & Obligations Structur\u00e9es / Verplichtingen voor Liquiditeitsverschaffers in Warranten, Certificaten & Gestructureerde Obligaties / Obriga\u00e7\u00f5es de Criador de Mercado nos Warrants, Certificados & Obriga\u00e7\u00f5es Estruturadas/Obblighi del Liquidity Provider per Warrant, certificati e obbligazioni strutturate"
+  ],
+  [
+    "A881",
+    "O Criador de Mercado compromete-se a manter um spread de pre\u00e7os de compra e venda firmes nos 5 minutos que antecedem a abertura do mercado e durante todo o dia de negocia\u00e7\u00e3o, incluindo os per\u00edodos de acumula\u00e7\u00e3o de ofertas que precedem os leil\u00f5es que se encontrem, ou n\u00e3o, agendados.",
+    "The Permanent Liquidity Provider commits to maintain a spread of firm bid and offer prices from 5 minutes before the market opening, and then throughout the Trading Day (including the order-accumulation periods preceding pre-scheduled or other Uncrossings during a Trading Day)."
+  ],
+  [
+    "A882",
+    "Il Liquidity Provider si impegna a mantenere uno spread di prezzo denaro e lettera fermo nei 5 minuti precedenti l'apertura del mercato e per tutta la giornata di negoziazione successiva (compresi i periodi di accumulo degli ordini prima delle aste programmate o di altro tipo)",
+    "None"
+  ],
+  [
+    "A883",
+    "None",
+    "L\u2019Apporteur de Liquidit\u00e9 permanent est tenu de positionner des fourchettes achat / vente durant les 5 minutes pr\u00e9c\u00e9dant l\u2019ouverture du march\u00e9, puis tout au long de la Journ\u00e9e de N\u00e9gociation, y compris les phases d\u2019accumulation d\u2019ordres pr\u00e9c\u00e9dant les fixings de la Journ\u00e9e de N\u00e9gociation, programm\u00e9s \u00e0 heures fixes ou non."
+  ],
+  [
+    "A884",
+    "None",
+    "De permanente liquiditeitsverschaffer wordt geacht een spread van vaste bied- en laatkoersen te onderhouden vanaf 5 minuten voor de opening van de markt en daarna gedurende de gehele handelsdag, met inbegrip van orderaccumulatieperiodes voorafgaand aan geplande of andere veilingen."
+  ],
+  [
+    "A885",
+    "None",
+    "O Criador de Mercado compromete-se a manter um spread de pre\u00e7os de compra e venda firmes nos 5 minutos que antecedem a abertura do mercado e durante todo o dia de negocia\u00e7\u00e3o, incluindo os per\u00edodos de acumula\u00e7\u00e3o de ofertas que precedem os leil\u00f5es que se encontrem, ou n\u00e3o, agendados."
+  ],
+  [
+    "A886",
+    "\u00a0\u00a0",
+    "Il Liquidity Provider si impegna a mantenere uno spread di prezzo denaro e lettera fermo nei 5 minuti precedenti l'apertura del mercato e per tutta la giornata di negoziazione successiva (compresi i periodi di accumulo degli ordini prima delle aste programmate o di altro tipo)"
+  ],
+  [
+    "A887",
+    "Warrants / Warrants / Warranten / Warrants/Warrant",
+    "None"
+  ],
+  [
+    "A888",
+    "\u00a0\u00a0",
+    "None"
+  ],
+  [
+    "A890",
+    "Underlying\nSous-jacent / Onderliggende / Subjacente / Sottostante",
+    "\u00a0\u00a0"
+  ],
+  [
+    "B890",
+    "Maximum Spread\nFourchette Maximum / Maximale Spread / Spread M\u00e1ximo / Spred massimo",
+    "None"
+  ],
+  [
+    "C890",
+    "Minimum Size\nTaille Minimum / Minimumgrootte / Volume M\u00ednimo/ Volume M\u00ednimo / Dimensione minima ",
+    "None"
+  ],
+  [
+    "A891",
+    "CAC 40\u00ae, BEL 20\u00ae, AEX25\u00ae, PSI 20\u00ae, DJ EURO STOXX 50SM, Dow Jones Industrial AverageSM, Nikkei 225, Nasdaq 100\u00ae, FTSEurofirst 80\u00ae, S&P 500, DAX\u00ae\nindex / indice / index / \u00edndice / indice",
+    "Warrants / Warrants / Warranten / Warrants/Warrant"
+  ],
+  [
+    "B891",
+    "Max (\u20ac0.03, 3%)",
+    "None"
+  ],
+  [
+    "C891",
+    "Min (50,000 wts, \u20ac10,000)",
+    "None"
+  ],
+  [
+    "A892",
+    "Other indices / Autres indices / Andere indexen / Outros \u00edndices / Altri indici",
+    "\u00a0\u00a0"
+  ],
+  [
+    "B892",
+    "Max (\u20ac0.05, 5%)",
+    "None"
+  ],
+  [
+    "C892",
+    "Min (50,000 wts, \u20ac10,000)",
+    "None"
+  ],
+  [
+    "A893",
+    "Basket of equities / Panier d\u2019actions / Aandelenmandje / Cabaz de ac\u00e7\u00f5es / Paniere di azioni",
+    "None"
+  ],
+  [
+    "B893",
+    "Max (\u20ac0.05, 5%)",
+    "None"
+  ],
+  [
+    "C893",
+    "Min (50,000 wts, \u20ac10,000)",
+    "None"
+  ],
+  [
+    "A894",
+    "Equities / Actions / Aandelen / Ac\u00e7\u00f5es / Azioni",
+    "Underlying\nSous-jacent / Onderliggende / Subjacente / Sottostante"
+  ],
+  [
+    "B894",
+    "Max (\u20ac0.07, 5%)",
+    "Maximum Spread\nFourchette Maximum / Maximale Spread / Spread M\u00e1ximo / Spred massimo"
+  ],
+  [
+    "C894",
+    "Min (50,000 wts, \u20ac10,000)",
+    "Minimum Size\nTaille Minimum / Minimumgrootte / Volume M\u00ednimo/ Volume M\u00ednimo / Dimensione minima "
+  ],
+  [
+    "A895",
+    "Rates / Taux d\u2019Int\u00e9r\u00eats / Rentevoeten / Taxas de juro / Tassi",
+    "CAC 40\u00ae, BEL 20\u00ae, AEX25\u00ae, PSI 20\u00ae, DJ EURO STOXX 50SM, Dow Jones Industrial AverageSM, Nikkei 225, Nasdaq 100\u00ae, FTSEurofirst 80\u00ae, S&P 500, DAX\u00ae\nindex / indice / index / \u00edndice / indice"
+  ],
+  [
+    "B895",
+    "Max (\u20ac0.10, 5%)",
+    "Max (\u20ac0.03, 3%)"
+  ],
+  [
+    "A896",
+    "Currencies / Devises / Valuta / Moeda / Valute",
+    "Other indices / Autres indices / Andere indexen / Outros \u00edndices / Altri indici"
+  ],
+  [
+    "B896",
+    "Max (\u20ac0.15, 5%)",
+    "Max (\u20ac0.05, 5%)"
+  ],
+  [
+    "A897",
+    "Commodities / Mati\u00e8res premi\u00e8res / Grondstoffen / Mat\u00e9rias-primas / Materie prime",
+    "Basket of equities / Panier d\u2019actions / Aandelenmandje / Cabaz de ac\u00e7\u00f5es / Paniere di azioni"
+  ],
+  [
+    "B897",
+    "Max (\u20ac0.15, 5%)",
+    "Max (\u20ac0.05, 5%)"
+  ],
+  [
+    "A898",
+    "All Other / Autres / Anderen / Outros",
+    "Equities / Actions / Aandelen / Ac\u00e7\u00f5es / Azioni"
+  ],
+  [
+    "B898",
+    "Max (\u20ac0.15, 5%)",
+    "Max (\u20ac0.07, 5%)"
+  ],
+  [
+    "A899",
+    "\u00a0\u00a0",
+    "Rates / Taux d\u2019Int\u00e9r\u00eats / Rentevoeten / Taxas de juro / Tassi"
+  ],
+  [
+    "B899",
+    "None",
+    "Max (\u20ac0.10, 5%)"
+  ],
+  [
+    "C899",
+    "None",
+    "Min (50,000 wts, \u20ac10,000)"
+  ],
+  [
+    "A900",
+    "None",
+    "Currencies / Devises / Valuta / Moeda / Valute"
+  ],
+  [
+    "B900",
+    "None",
+    "Max (\u20ac0.15, 5%)"
+  ],
+  [
+    "C900",
+    "None",
+    "Min (50,000 wts, \u20ac10,000)"
+  ],
+  [
+    "A901",
+    "None",
+    "Commodities / Mati\u00e8res premi\u00e8res / Grondstoffen / Mat\u00e9rias-primas / Materie prime"
+  ],
+  [
+    "B901",
+    "None",
+    "Max (\u20ac0.15, 5%)"
+  ],
+  [
+    "C901",
+    "None",
+    "Min (50,000 wts, \u20ac10,000)"
+  ],
+  [
+    "A902",
+    "None",
+    "All Other / Autres / Anderen / Outros"
+  ],
+  [
+    "B902",
+    "None",
+    "Max (\u20ac0.15, 5%)"
+  ],
+  [
+    "C902",
+    "None",
+    "Min (50,000 wts, \u20ac10,000)"
+  ],
+  [
+    "A903",
+    "None",
+    "\u00a0\u00a0"
+  ],
+  [
+    "A904",
+    "Knock-out products / Produits \u00e0 barri\u00e8re d\u00e9sactivante / Stop-loss producten / Produtos com barreira desactivante / Prodotti con barriera disattivante",
+    "None"
+  ],
+  [
+    "A905",
+    "\u00a0\u00a0",
+    "None"
+  ],
+  [
+    "A907",
+    "Underlying\nSous-jacent / Onderliggende / Subjacente / Sottostante",
+    "None"
+  ],
+  [
+    "B907",
+    "Maximum Spread\nFourchette Maximum / Maximale Spread / Spread M\u00e1ximo / Spred massimo",
+    "None"
+  ],
+  [
+    "C907",
+    "Minimum Size\nTaille Minimum / Minimumgrootte / Volume M\u00ednimo / Volume M\u00ednimo / Dimensione minima ",
+    "None"
+  ],
+  [
+    "A908",
+    "CAC 40\u00ae, BEL 20\u00ae, AEX25\u00ae, PSI 20\u00ae, DJ EURO STOXX 50SM, Dow Jones Industrial AverageSM, Nikkei 225, Nasdaq 100\u00ae, FTSEurofirst 80\u00ae, S&P 500, DAX\u00ae\nindex / indice / index / \u00edndice / Indice",
+    "Knock-out products / Produits \u00e0 barri\u00e8re d\u00e9sactivante / Stop-loss producten / Produtos com barreira desactivante / Prodotti con barriera disattivante"
+  ],
+  [
+    "B908",
+    "Max (\u20ac0.20, 10%)",
+    "None"
+  ],
+  [
+    "C908",
+    "Min (50,000 prd, \u20ac10,000)",
+    "None"
+  ],
+  [
+    "A909",
+    "Other indices / Autres indices / Andere indexen / Outros \u00edndices",
+    "\u00a0\u00a0"
+  ],
+  [
+    "B909",
+    "Max (\u20ac0.25, 15%)",
+    "None"
+  ],
+  [
+    "C909",
+    "Min (50,000 prd, \u20ac10,000)",
+    "None"
+  ],
+  [
+    "A910",
+    "Equities / Actions / Aandelen / Ac\u00e7\u00f5es / Azioni",
+    "None"
+  ],
+  [
+    "B910",
+    "Max (\u20ac0.25, 15%)",
+    "None"
+  ],
+  [
+    "C910",
+    "Min (50,000 prd, \u20ac10,000)",
+    "None"
+  ],
+  [
+    "A911",
+    "Currencies / Devises / Valuta / Moeda / Valute",
+    "Underlying\nSous-jacent / Onderliggende / Subjacente / Sottostante"
+  ],
+  [
+    "B911",
+    "Max (\u20ac0.30, 15%)",
+    "Maximum Spread\nFourchette Maximum / Maximale Spread / Spread M\u00e1ximo / Spred massimo"
+  ],
+  [
+    "C911",
+    "Min (50,000 prd, \u20ac10,000)",
+    "Minimum Size\nTaille Minimum / Minimumgrootte / Volume M\u00ednimo / Volume M\u00ednimo / Dimensione minima "
+  ],
+  [
+    "A912",
+    "Commodities / Mati\u00e8res premi\u00e8res / Grondstoffen / Mat\u00e9rias-primas / Materie prime",
+    "CAC 40\u00ae, BEL 20\u00ae, AEX25\u00ae, PSI 20\u00ae, DJ EURO STOXX 50SM, Dow Jones Industrial AverageSM, Nikkei 225, Nasdaq 100\u00ae, FTSEurofirst 80\u00ae, S&P 500, DAX\u00ae\nindex / indice / index / \u00edndice / Indice"
+  ],
+  [
+    "B912",
+    "Max (\u20ac0.30, 15%)",
+    "Max (\u20ac0.20, 10%)"
+  ],
+  [
+    "A913",
+    "All Other / Autres / Anderen / Outros",
+    "Other indices / Autres indices / Andere indexen / Outros \u00edndices"
+  ],
+  [
+    "B913",
+    "Max (\u20ac0.15, 5%)",
+    "Max (\u20ac0.25, 15%)"
+  ],
+  [
+    "A914",
+    "None",
+    "Equities / Actions / Aandelen / Ac\u00e7\u00f5es / Azioni"
+  ],
+  [
+    "B914",
+    "None",
+    "Max (\u20ac0.25, 15%)"
+  ],
+  [
+    "C914",
+    "None",
+    "Min (50,000 prd, \u20ac10,000)"
+  ],
+  [
+    "A915",
+    "None",
+    "Currencies / Devises / Valuta / Moeda / Valute"
+  ],
+  [
+    "B915",
+    "None",
+    "Max (\u20ac0.30, 15%)"
+  ],
+  [
+    "C915",
+    "None",
+    "Min (50,000 prd, \u20ac10,000)"
+  ],
+  [
+    "A916",
+    "If needed, the Liquidity Provider is authorized to reduce the minimum amount quoted on these products to Min (15 000 products (prd), \u20ac3 000) when they approach their knock-out barrier.",
+    "Commodities / Mati\u00e8res premi\u00e8res / Grondstoffen / Mat\u00e9rias-primas / Materie prime"
+  ],
+  [
+    "B916",
+    "None",
+    "Max (\u20ac0.30, 15%)"
+  ],
+  [
+    "C916",
+    "None",
+    "Min (50,000 prd, \u20ac10,000)"
+  ],
+  [
+    "A917",
+    "None",
+    "All Other / Autres / Anderen / Outros"
+  ],
+  [
+    "B917",
+    "None",
+    "Max (\u20ac0.15, 5%)"
+  ],
+  [
+    "C917",
+    "None",
+    "Min (50,000 prd, \u20ac10,000)"
+  ],
+  [
+    "A918",
+    "Si n\u00e9cessaire, l\u2019Apporteur de Liquidit\u00e9 est autoris\u00e9 \u00e0 r\u00e9duire \u00e0 Min (15 000 produits (prd), \u20ac3 000) la taille minimum de cotation sur ces produits quand ces derniers approchent leur barri\u00e8re d\u00e9sactivante.",
+    "None"
+  ],
+  [
+    "A919",
+    "Indien nodig wordt de Liquidity Provider gemachtigd tot het verlagen van de minimum verplichting op deze producten tot 15000 producten of \u20ac 3,000 wanneer zij hun stop-loss barri\u00e8re benaderen.",
+    "None"
+  ],
+  [
+    "A920",
+    "Se necess\u00e1rio, e caso este tipo de produtos se aproxime da sua barreira desactivante,o Criador de Mercado est\u00e1 autorizado a reduzir o numero m\u00ednimo de titulos ou o montante m\u00ednimo para 15,000 produtos ou \u20ac 3,000, respectivamente.",
+    "If needed, the Liquidity Provider is authorized to reduce the minimum amount quoted on these products to Min (15 000 products (prd), \u20ac3 000) when they approach their knock-out barrier."
+  ],
+  [
+    "A921",
+    "Se necessario il Liquidity Provider \u00e8 autorizato a ridurre l'impegno minimo su questi prodotti a15,000 o \u20ac 3,000 quando si avvicinano alla barriera di stop loss",
+    "None"
+  ],
+  [
+    "A922",
+    "None",
+    "Si n\u00e9cessaire, l\u2019Apporteur de Liquidit\u00e9 est autoris\u00e9 \u00e0 r\u00e9duire \u00e0 Min (15 000 produits (prd), \u20ac3 000) la taille minimum de cotation sur ces produits quand ces derniers approchent leur barri\u00e8re d\u00e9sactivante."
+  ],
+  [
+    "A923",
+    "None",
+    "Indien nodig wordt de Liquidity Provider gemachtigd tot het verlagen van de minimum verplichting op deze producten tot 15000 producten of \u20ac 3,000 wanneer zij hun stop-loss barri\u00e8re benaderen."
+  ],
+  [
+    "A924",
+    "None",
+    "Se necess\u00e1rio, e caso este tipo de produtos se aproxime da sua barreira desactivante,o Criador de Mercado est\u00e1 autorizado a reduzir o numero m\u00ednimo de titulos ou o montante m\u00ednimo para 15,000 produtos ou \u20ac 3,000, respectivamente."
+  ],
+  [
+    "A925",
+    "None",
+    "Se necessario il Liquidity Provider \u00e8 autorizato a ridurre l'impegno minimo su questi prodotti a15,000 o \u20ac 3,000 quando si avvicinano alla barriera di stop loss"
+  ],
+  [
+    "A926",
+    "Certificates & Exotic certificates / Certificats & Certificats exotiques / Certificaten & Exotische certificaten / Certificados & Certificados ex\u00f3ticos / Certificati e Certificati esotici",
+    "None"
+  ],
+  [
+    "A929",
+    "Financial Instrument\nInstrument Financier / Financieel Instrument / Instrumento Financeiro/Strumento finanziario",
+    "None"
+  ],
+  [
+    "B929",
+    "Maximum Spread\nFourchette Maximum / Maximale Spread / Spread M\u00e1ximo / Spread M\u00e1ximo/Spred massimo",
+    "None"
+  ],
+  [
+    "C929",
+    "Minimum Size\nTaille Minimum / Minimumgrootte / Volume M\u00ednimo /Dimensione minima ",
+    "None"
+  ],
+  [
+    "A930",
+    "Certificates / Certificats / Certificaten / Certificados",
+    "Certificates & Exotic certificates / Certificats & Certificats exotiques / Certificaten & Exotische certificaten / Certificados & Certificados ex\u00f3ticos / Certificati e Certificati esotici"
+  ],
+  [
+    "B930",
+    "Max(\u20ac3, 5%)",
+    "None"
+  ],
+  [
+    "C930",
+    "10000",
+    "None"
+  ],
+  [
+    "A932",
+    "During a certificate\u2019s last week of trading, the Liquidity Provider is authorized to widen the maximum spread to \u20ac20 or 20%.",
+    "None"
+  ],
+  [
+    "A933",
+    "None",
+    "Financial Instrument\nInstrument Financier / Financieel Instrument / Instrumento Financeiro/Strumento finanziario"
+  ],
+  [
+    "B933",
+    "None",
+    "Maximum Spread\nFourchette Maximum / Maximale Spread / Spread M\u00e1ximo / Spread M\u00e1ximo/Spred massimo"
+  ],
+  [
+    "C933",
+    "None",
+    "Minimum Size\nTaille Minimum / Minimumgrootte / Volume M\u00ednimo /Dimensione minima "
+  ],
+  [
+    "A934",
+    "Lors de la derni\u00e8re semaine de cotation du Certificat, l\u2019Apporteur de Liquidit\u00e9 est autoris\u00e9 \u00e0 \u00e9largir sa fourchette au-del\u00e0 des \u00e9carts mentionn\u00e9s ci-dessus sans toutefois pouvoir d\u00e9passer un \u00e9cart maximum de \u20ac20 ou 20%.",
+    "Certificates / Certificats / Certificaten / Certificados"
+  ],
+  [
+    "B934",
+    "None",
+    "Max(\u20ac3, 5%)"
+  ],
+  [
+    "C934",
+    "None",
+    "10000"
+  ],
+  [
+    "A935",
+    "Tijdens de laatste week van notering van het certificaat, is de Liquidity Provider gemachtigd om zijn maximale spread te vergroten tot \u20ac20 of 20%.",
+    "None"
+  ],
+  [
+    "A936",
+    "Durante a \u00faltima semana de cota\u00e7\u00e3o do certificado, o Criador de Mercado est\u00e1 autorizado a ampliar o spread m\u00e1ximo para \u20ac20 ou 20%.",
+    "During a certificate\u2019s last week of trading, the Liquidity Provider is authorized to widen the maximum spread to \u20ac20 or 20%."
+  ],
+  [
+    "A937",
+    "Durante l'ultima settimana di quotazione del cerificato, il liquidity provider \u00e8 autorizzato ad aumentare il suo spread massimo a \u20ac20 0 20%",
+    "None"
+  ],
+  [
+    "A938",
+    "None",
+    "Lors de la derni\u00e8re semaine de cotation du Certificat, l\u2019Apporteur de Liquidit\u00e9 est autoris\u00e9 \u00e0 \u00e9largir sa fourchette au-del\u00e0 des \u00e9carts mentionn\u00e9s ci-dessus sans toutefois pouvoir d\u00e9passer un \u00e9cart maximum de \u20ac20 ou 20%."
+  ],
+  [
+    "A939",
+    "None",
+    "Tijdens de laatste week van notering van het certificaat, is de Liquidity Provider gemachtigd om zijn maximale spread te vergroten tot \u20ac20 of 20%."
+  ],
+  [
+    "A940",
+    "None",
+    "Durante a \u00faltima semana de cota\u00e7\u00e3o do certificado, o Criador de Mercado est\u00e1 autorizado a ampliar o spread m\u00e1ximo para \u20ac20 ou 20%."
+  ],
+  [
+    "A941",
+    "None",
+    "Durante l'ultima settimana di quotazione del cerificato, il liquidity provider \u00e8 autorizzato ad aumentare il suo spread massimo a \u20ac20 0 20%"
+  ],
+  [
+    "A942",
+    "Structured Notes / Obligations structur\u00e9es / Gestructureerde obligaties / Obriga\u00e7\u00f5es estruturadas / Obbligazioni strutturate",
+    "None"
+  ],
+  [
+    "A945",
+    "Financial Instrument\nInstrument Financier / Financieel Instrument / Instrumento Financeiro / Strumento finanziario",
+    "None"
+  ],
+  [
+    "B945",
+    "Maximum Spread\nFourchette Maximum / Maximale Spread / Spread M\u00e1ximo / Spread M\u00e1ximo / Spred massimo",
+    "None"
+  ],
+  [
+    "C945",
+    "Minimum Size\nTaille Minimum / Minimumgrootte / Volume M\u00ednimo / Dimensione minima ",
+    "None"
+  ],
+  [
+    "A946",
+    "Structured notes / Obligations structur\u00e9es / Gestructureerde obligaties / Obriga\u00e7\u00f5es estruturadas",
+    "Structured Notes / Obligations structur\u00e9es / Gestructureerde obligaties / Obriga\u00e7\u00f5es estruturadas / Obbligazioni strutturate"
+  ],
+  [
+    "B946",
+    "0.04",
+    "None"
+  ],
+  [
+    "C946",
+    "10000",
+    "None"
+  ],
+  [
+    "A949",
+    "None",
+    "Financial Instrument\nInstrument Financier / Financieel Instrument / Instrumento Financeiro / Strumento finanziario"
+  ],
+  [
+    "B949",
+    "None",
+    "Maximum Spread\nFourchette Maximum / Maximale Spread / Spread M\u00e1ximo / Spread M\u00e1ximo / Spred massimo"
+  ],
+  [
+    "C949",
+    "None",
+    "Minimum Size\nTaille Minimum / Minimumgrootte / Volume M\u00ednimo / Dimensione minima "
+  ],
+  [
+    "A950",
+    "None",
+    "Structured notes / Obligations structur\u00e9es / Gestructureerde obligaties / Obriga\u00e7\u00f5es estruturadas"
+  ],
+  [
+    "B950",
+    "None",
+    "0.04"
+  ],
+  [
+    "C950",
+    "None",
+    "10000"
+  ],
+  [
+    "A954",
+    "These Liquidity Provider (LP) requirements are applicable to specific and separate LP Agreements entered into with each LP. The purpose of the Agreement is to define the conditions under which the LP is responsible to Euronext for performing its services through the Central Order Book in one or more Financial Instruments. Euronext shall use reasonable best efforts to ensure compliance with these requirements. No third party shall avail itself of any provision of such Agreement, which is between Euronext and each LP.",
+    "None"
+  ],
+  [
+    "A956",
+    "Ces engagements d\u2019Apporteur de Liquidit\u00e9 sont applicables aux Contrats d\u2019Apporteur de Liquidit\u00e9 sign\u00e9s par chaque Apporteur de Liquidit\u00e9. Le Contrat a pour objet de d\u00e9finir les conditions dans lesquelles l\u2019Apporteur de Liquidit\u00e9 ex\u00e9cute ses services et est tenu d\u2019intervenir dans le Carnet d\u2019Ordres Central sur un ou plusieurs Instruments Financiers. Euronext mettra en \u0153uvre tous les moyens raisonnables pour assurer la conformit\u00e9 \u00e0 ces engagements. Aucun tiers ne pourra se pr\u00e9valoir d\u2019une quelconque des clauses du Contrat sign\u00e9 entre Euronext et l\u2019Apporteur de Liquidit\u00e9.",
+    "None"
+  ],
+  [
+    "A958",
+    "Deze verplichtingen voor liquiditeitsverschaffers zijn van toepassing op specifieke en afzonderlijke overeenkomsten met elke liquiditeitsverschaffer. De overeenkomst bepaalt onder welke voorwaarden de LP verantwoordelijk is voor het uitvoeren van zijn diensten via het Centrale Orderboek op \u00e9\u00e9n of meer financi\u00eble instrumenten. Euronext zal redelijke inspanningen ondernemen om de naleving van deze verplichtingen te waarborgen. Geen enkele derde partij is gerechtigd een beroep te doen op welke clausule dan ook van een dergelijke overeenkomst tussen Euronext en de liquiditeitsverschaffer.",
+    "These Liquidity Provider (LP) requirements are applicable to specific and separate LP Agreements entered into with each LP. The purpose of the Agreement is to define the conditions under which the LP is responsible to Euronext for performing its services through the Central Order Book in one or more Financial Instruments. Euronext shall use reasonable best efforts to ensure compliance with these requirements. No third party shall avail itself of any provision of such Agreement, which is between Euronext and each LP."
+  ],
+  [
+    "A960",
+    "Estas obriga\u00e7\u00f5es do Criador de Mercado s\u00e3o aplic\u00e1veis aos contratos espec\u00edficos de Cria\u00e7\u00e3o de Mercado e assinados separadamente com cada Criador de Mercado. O Contrato tem por objectivo definir as condi\u00e7\u00f5es em que o Criador de Mercado \u00e9 respons\u00e1vel perante a Euronext pela presta\u00e7\u00e3o dos seus servi\u00e7os atrav\u00e9s do Livro de Ofertas Central em um ou mais Instrumentos Financeiros. A Euronext envidar\u00e1 todos os esfor\u00e7os razo\u00e1veis para assegurar o cumprimento dessas obriga\u00e7\u00f5es. Terceiros n\u00e3o podem recorrer a qualquer disposi\u00e7\u00e3o do contrato de Criador de Mercado assinado entre a Euronext e o Criador de Mercado.",
+    "Ces engagements d\u2019Apporteur de Liquidit\u00e9 sont applicables aux Contrats d\u2019Apporteur de Liquidit\u00e9 sign\u00e9s par chaque Apporteur de Liquidit\u00e9. Le Contrat a pour objet de d\u00e9finir les conditions dans lesquelles l\u2019Apporteur de Liquidit\u00e9 ex\u00e9cute ses services et est tenu d\u2019intervenir dans le Carnet d\u2019Ordres Central sur un ou plusieurs Instruments Financiers. Euronext mettra en \u0153uvre tous les moyens raisonnables pour assurer la conformit\u00e9 \u00e0 ces engagements. Aucun tiers ne pourra se pr\u00e9valoir d\u2019une quelconque des clauses du Contrat sign\u00e9 entre Euronext et l\u2019Apporteur de Liquidit\u00e9."
+  ],
+  [
+    "A962",
+    "Questi obblighi di Liquidity Provider si applicano a contratti specifici di LP firmati separatamente con ciascun LP. Lo scopo dell'Accordo \u00e8 quello di definire le condizioni alle quali il LP \u00e8 responsabile nei confronti di Euronext per la prestazione dei propri servizi attraverso il Central Order Book su uno o pi\u00f9 Strumenti Finanziari. Euronext far\u00e0 ogni ragionevole sforzo per garantire il rispetto di tali obblighi. I terzi non possono far valere alcuna disposizione del contratto di LP stipulato tra Euronext e il LP.",
+    "Deze verplichtingen voor liquiditeitsverschaffers zijn van toepassing op specifieke en afzonderlijke overeenkomsten met elke liquiditeitsverschaffer. De overeenkomst bepaalt onder welke voorwaarden de LP verantwoordelijk is voor het uitvoeren van zijn diensten via het Centrale Orderboek op \u00e9\u00e9n of meer financi\u00eble instrumenten. Euronext zal redelijke inspanningen ondernemen om de naleving van deze verplichtingen te waarborgen. Geen enkele derde partij is gerechtigd een beroep te doen op welke clausule dan ook van een dergelijke overeenkomst tussen Euronext en de liquiditeitsverschaffer."
+  ],
+  [
+    "A964",
+    "None",
+    "Estas obriga\u00e7\u00f5es do Criador de Mercado s\u00e3o aplic\u00e1veis aos contratos espec\u00edficos de Cria\u00e7\u00e3o de Mercado e assinados separadamente com cada Criador de Mercado. O Contrato tem por objectivo definir as condi\u00e7\u00f5es em que o Criador de Mercado \u00e9 respons\u00e1vel perante a Euronext pela presta\u00e7\u00e3o dos seus servi\u00e7os atrav\u00e9s do Livro de Ofertas Central em um ou mais Instrumentos Financeiros. A Euronext envidar\u00e1 todos os esfor\u00e7os razo\u00e1veis para assegurar o cumprimento dessas obriga\u00e7\u00f5es. Terceiros n\u00e3o podem recorrer a qualquer disposi\u00e7\u00e3o do contrato de Criador de Mercado assinado entre a Euronext e o Criador de Mercado."
+  ],
+  [
+    "A966",
+    "None",
+    "Questi obblighi di Liquidity Provider si applicano a contratti specifici di LP firmati separatamente con ciascun LP. Lo scopo dell'Accordo \u00e8 quello di definire le condizioni alle quali il LP \u00e8 responsabile nei confronti di Euronext per la prestazione dei propri servizi attraverso il Central Order Book su uno o pi\u00f9 Strumenti Finanziari. Euronext far\u00e0 ogni ragionevole sforzo per garantire il rispetto di tali obblighi. I terzi non possono far valere alcuna disposizione del contratto di LP stipulato tra Euronext e il LP."
+  ]
+]

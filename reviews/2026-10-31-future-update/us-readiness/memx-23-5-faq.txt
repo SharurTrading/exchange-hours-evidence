@@ -1,0 +1,310 @@
+US Equities 23×5 FAQ – MEMX Exchanges
+Skip to the content
+Search
+MEMX Exchanges
+Menu
+Alerts and Notices
+Trader Alerts
+Regulatory Notices
+Product Notices
+US Options
+Production Facility
+MODE Test Facility
+FAQ
+User Manual
+Instrument Directory
+Forms and Documents
+ID Codes
+Transaction Fee Schedule
+Connectivity Fee Schedule
+Options Penny Program
+Market Hours and Holidays
+Contacts
+Test Scripts
+US Equities
+Production Facility
+MDE Test Facility
+FAQ
+User Manual
+Instrument Directory
+Forms and Documents
+Displayed Liquidity Incentive
+ID Codes
+Transaction Fee Schedule
+Connectivity Fee Schedule
+Market Hours and Holidays
+Contacts
+Test Scripts
+US Equities 23×5 FAQ
+Regulation
+Rulebook
+Rules and Filings
+Effective Rule Filings
+Pending Rule Filings
+Membership Fee Schedule
+Rule 605 Reports
+Governance Documents
+FINRA Rules by Reference
+Disciplinary Actions
+Search
+Search for:
+Close search
+Close Menu
+Alerts and Notices
+Show sub menu
+Trader Alerts
+Regulatory Notices
+Product Notices
+US Options
+Show sub menu
+Production Facility
+MODE Test Facility
+FAQ
+User Manual
+Instrument Directory
+Forms and Documents
+ID Codes
+Transaction Fee Schedule
+Connectivity Fee Schedule
+Options Penny Program
+Market Hours and Holidays
+Contacts
+Test Scripts
+US Equities
+Show sub menu
+Production Facility
+MDE Test Facility
+FAQ
+User Manual
+Instrument Directory
+Forms and Documents
+Displayed Liquidity Incentive
+ID Codes
+Transaction Fee Schedule
+Connectivity Fee Schedule
+Market Hours and Holidays
+Contacts
+Test Scripts
+US Equities 23×5 FAQ
+Regulation
+Show sub menu
+Rulebook
+Rules and Filings
+Show sub menu
+Effective Rule Filings
+Pending Rule Filings
+Membership Fee Schedule
+Rule 605 Reports
+Governance Documents
+FINRA Rules by Reference
+Disciplinary Actions
+Contact Us
+@memxtrading
+LinkedIn
+US Equities
+23×5 FAQ
+The following information is current as of 08/21/26 and will be updated on a best-efforts basis. For the most current information, please contact your MemberX representative. All times outlined in this document are ET.
+Q: What are MEMX’s plans for 23×5 trading?
+A: Pending filing with the SEC, MEMX will operate nearly continuously, offering trading 23 hours a day from 9:00 PM through 8:00 PM, five days a week. Trading will begin at 9:00 PM on Sunday with a daily one-hour break occurring Monday through Thursday evenings between 8:00 PM and 9:00 PM.
+Q: How will MEMX support 23×5 trading?
+A: MEMX will add a new Trading Session to cover the 9:00 PM to 4:00 AM time period.
+Session
+Trading Window
+(1) Overnight
+9:00 PM – 4:00 AM
+(2) Pre-Market
+4:00 AM – 9:30 AM
+(3) Regular Market
+9:30 AM – 4:00 PM
+(4) Post Market
+4:00 PM – 8:00 PM
+Q: When will MEMX support 23×5 trading?
+A: Subject to SEC approvals,
+MEMX Equities is targeting December 6, 2026,
+provided the following conditions are met.
+MEMX has received SEC approval for its Overnight Trading Session;
+DTCC can receive and process trades on a real-time basis throughout the entire Overnight Trading Session;
+The SIPs can receive and disseminate all exchange quotes and trades on a real-time basis;
+The primary listing markets can produce corporate action information prior to 9:00 p.m. which will be provided to the industry by the SIPs.
+MEMX Equities does not plan on making test symbols available in production for the overnight session prior to go live on December 6, 2026.
+Q: Who is eligible to participate in 23×5 Trading?
+A: All registered MEMX members may participate in any trading session, including the Overnight session.
+Q: Are there additional membership documents needed to participate in 23×5 trading?
+A: No. MEMX will not require additional Membership documents to participate in the Overnight session.
+Q: Will I need new physical connections or MEMO ports to participate in 23×5 trading?
+A: No. All connections and MEMO ports may be used in the Overnight trading session.
+Q: How will MEMX’s protocols change to support 23×5 trading?
+Order Entry: There are no protocol changes required to participate in the Overnight trading session. MEMX will require a limit price on pegged orders in the Pre, Post, and Overnight sessions.
+Market Data:
+A new ‘Overnight’ value will be added to the TradingSessionType field.
+Although MEMX Equities recently announced new version, 2.0, of MEMO order entry and MEMOIR market data specifications, upgrade to the new version is not required to participate in overnight trading. Current MEMO and MEMOIR versions will continue to be supported. For further details on v2.0 can be found
+here
+.
+Q: When will MEMX start accepting orders for the extended hours?
+A: MEMX will begin accepting orders for the overnight session starting at 9:00 PM.
+Q: What order types are supported?
+A: All orders that are currently accepted in the Pre-Market session will be accepted in the overnight session.
+Q: How will the system restart be impacted in a 23×5 trading environment?
+A: The targeted time for the system shutdown will be communicated in a subsequent update. Once initiated members will lose connectivity to all order entry and market data systems.  MEMX will perform all necessary daily maintenance activities and communicate the system restart time in a subsequent update, at which point members may reconnect.  During the daily maintenance window, Market Data and Order Entry sequence numbers will be reset.  MEMX may need to delay the restart time without notice, and members should be prepared to handle variable restart times.
+Q: How will the Risk Settings be supported in 23×5 trading?
+A: All existing risk settings will be applied to the Overnight trading session.  Additionally, MEMX will introduce a new setting allowing clients to prevent orders in the Overnight session.
+Q: Will orders automatically be cancelled after the Overnight session ends at 4:00 AM?
+A: No, any open orders that are outstanding in the system at 4:00 AM will remain on the MEMX book eligible for execution.
+Q: Will MEMX support routing during MEMX’s during the Overnight session?
+A: Yes, MEMX will support routing for Overnight trading to eligible NMS exchanges, applying the same execution logic as it does during non-Overnight trading hours.
+Q: What sale conditions apply to trades executed in the Overnight session?
+A: Trades executed outside the Regular Market session will be assigned the ‘T’ sale condition.  These trades count toward the Consolidated Volume and are not Last Sale eligible.
+Q: How will MEMX support LULD bands in the Overnight session?
+A: Subject to SEC approval, Static LULD Price Bands will be in effect overnight from 9:00 PM to 4:00 AM. They will be fixed values provided by listing exchanges and remain constant throughout the Overnight session.
+Q: How will MEMX handle corporate actions before and during the Overnight session?
+A: MEMX will apply symbol changes and corporate actions from the information received from the listing exchanges and/or the SIP.
+Q: How will trades executed in the Overnight session clear and settle?
+A: Trades in the Overnight Session after 9:00 PM and before 12:00 AM (midnight) will be sent to DTCC with a Clearing Date of the next calendar date, for settlement one day thereafter.
+Session
+Trade Time
+Calendar Date
+Trade Date
+Clearing Date
+Settlement Date
+Post Market
+4:00 PM – 8:00 PM
+12/9/2026
+12/9/2026
+12/9/2026
+12/10/2026
+Overnight
+9:00 PM – 11:59 PM
+12/9/2026
+12/10/2026
+12/10/2026
+12/11/2026
+Overnight
+12:00 AM – 4:00 AM
+12/10/2026
+12/10/2026
+12/10/2026
+12/11/2026
+Q: Will additional paperwork be required for clearing in the overnight session?
+The MEMX Equities Clearing Letter of Guarantee is applicable to the overnight session. Clearing firms that do not plan to participate in clearing in the overnight session may submit a
+MEMX Equities Overnight Trading Session Opt-Out Notice
+.
+Q: How will trades in the Overnight Session on the last day of the month be counted for trading tiers?
+A: Trades will be counted on the trade date in which they occur. Trades in the Overnight Session on the last calendar day of the month will be included in the following month’s trading tiers, based on the trade date.
+Q: Will MEMX be available for trading on US exchange holidays?
+A: Yes, if a holiday falls between Monday and Thursday, trading will commence at 9:00 PM on the holiday evening. For example, if Monday is a US exchange holiday, trading will begin at 9:00 PM on Monday and continue until 8:00 PM on Tuesday.
+When there is an Early Close, the Regular Market session ends at 1:00 PM and the Post Market session ends at 5:00 PM, the market will be closed with no Overnight session for that calendar day.
+Contact Us
+@memxtrading
+LinkedIn
+Archives
+October 2026
+September 2026
+August 2026
+July 2026
+June 2026
+May 2026
+April 2026
+March 2026
+February 2026
+January 2026
+December 2025
+November 2025
+September 2025
+August 2025
+July 2025
+June 2025
+May 2025
+April 2025
+March 2025
+February 2025
+January 2025
+December 2024
+November 2024
+October 2024
+September 2024
+August 2024
+July 2024
+June 2024
+May 2024
+April 2024
+March 2024
+February 2024
+January 2024
+December 2023
+November 2023
+October 2023
+September 2023
+August 2023
+July 2023
+June 2023
+May 2023
+April 2023
+March 2023
+February 2023
+January 2023
+December 2022
+November 2022
+October 2022
+September 2022
+August 2022
+July 2022
+June 2022
+May 2022
+April 2022
+March 2022
+February 2022
+January 2022
+December 2021
+November 2021
+October 2021
+September 2021
+August 2021
+July 2021
+June 2021
+May 2021
+April 2021
+March 2021
+February 2021
+January 2021
+December 2020
+November 2020
+October 2020
+September 2020
+August 2020
+July 2020
+June 2020
+Sign up for MEMX Trading Alerts
+Email Address
+*
+First Name*
+*
+Job Title*
+Last Name*
+*
+Organization*
+* = required field
+MEMX (all exchanges)
+MEMX News & Insights
+MEMX Equities
+Trader Alerts
+Spec Update Alerts
+Regulatory Notices
+Product Notices
+Rule Filings
+MEMX Options
+Trader Alerts
+Spec Update Alerts
+Regulatory Notices
+Product Notices
+Rule Filings
+Listing Updates
+Alternative Email:
+©
+							2026
+MEMX Exchanges
+MEMX Privacy Policy
+Powered by WordPress
+To the top
+↑
+Up
+↑

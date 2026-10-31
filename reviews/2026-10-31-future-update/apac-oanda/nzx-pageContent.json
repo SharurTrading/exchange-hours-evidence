@@ -1,0 +1,2973 @@
+{
+  "fields": {
+    "content": {
+      "data": {},
+      "content": [
+        {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "marks": [],
+              "value": "NZX Market Holidays & Trading Hours",
+              "nodeType": "text"
+            }
+          ],
+          "nodeType": "heading-1"
+        },
+        {
+          "data": {
+            "target": {
+              "metadata": {
+                "tags": [],
+                "concepts": []
+              },
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "m5mydry9e35f"
+                  }
+                },
+                "id": "2AIywCNFqgDSlAkaU8bx72",
+                "type": "Entry",
+                "createdAt": "2023-09-21T21:56:10.011Z",
+                "updatedAt": "2025-02-16T19:52:08.146Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "publishedVersion": 28,
+                "revision": 8,
+                "contentType": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "ContentType",
+                    "id": "accordion"
+                  }
+                },
+                "locale": "en-US"
+              },
+              "fields": {
+                "title": "NZX Trading Hours",
+                "elements": [
+                  {
+                    "metadata": {
+                      "tags": [
+                        {
+                          "sys": {
+                            "type": "Link",
+                            "linkType": "Tag",
+                            "id": "accordionNzxTradingHours"
+                          }
+                        }
+                      ],
+                      "concepts": []
+                    },
+                    "sys": {
+                      "space": {
+                        "sys": {
+                          "type": "Link",
+                          "linkType": "Space",
+                          "id": "m5mydry9e35f"
+                        }
+                      },
+                      "id": "5srC17qtSLlTI0T08djfdB",
+                      "type": "Entry",
+                      "createdAt": "2023-09-21T21:55:44.690Z",
+                      "updatedAt": "2026-05-20T22:17:11.046Z",
+                      "environment": {
+                        "sys": {
+                          "id": "master",
+                          "type": "Link",
+                          "linkType": "Environment"
+                        }
+                      },
+                      "publishedVersion": 182,
+                      "revision": 11,
+                      "contentType": {
+                        "sys": {
+                          "type": "Link",
+                          "linkType": "ContentType",
+                          "id": "accordionItem"
+                        }
+                      },
+                      "locale": "en-US"
+                    },
+                    "fields": {
+                      "title": "NZX Market Holidays",
+                      "content": {
+                        "nodeType": "document",
+                        "data": {},
+                        "content": [
+                          {
+                            "nodeType": "paragraph",
+                            "data": {},
+                            "content": [
+                              {
+                                "nodeType": "text",
+                                "value": "Where applicable, public holidays will be \"mondayised\".",
+                                "marks": [],
+                                "data": {}
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "table",
+                            "data": {},
+                            "content": [
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Event",
+                                            "marks": [
+                                              {
+                                                "type": "bold"
+                                              }
+                                            ],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Date",
+                                            "marks": [
+                                              {
+                                                "type": "bold"
+                                              }
+                                            ],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Market Status",
+                                            "marks": [
+                                              {
+                                                "type": "bold"
+                                              }
+                                            ],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Waitangi Day",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Friday, 6 February 2026",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Closed",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Good Friday",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Friday, 3 April 2026 ",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Closed",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Easter Monday",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Monday, 6 April 2026 ",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Closed",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "ANZAC Day",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Monday, 27 April 2026",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Closed",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "King’s Birthday",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Monday, 1 June 2026",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Closed",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Matariki",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Friday, 10 July 2026",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Closed",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Labour Day",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Monday, 26 October 2026",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Closed",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Business Day Prior to Christmas Day",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Thursday, 24 December 2026",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Abbreviated Trading*",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Christmas Day",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Friday, 25 December 2026 ",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Closed",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Boxing Day",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Monday, 28 December 2026",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Closed",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Business Day Prior to New Year’s Day",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Thursday, 31 December 2026",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Abbreviated Trading*",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "New Year’s Day",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Friday, 1 January 2027",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Closed",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Day after New Year’s Day",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Monday, 4 January 2027",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Closed",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "paragraph",
+                            "data": {},
+                            "content": [
+                              {
+                                "nodeType": "text",
+                                "value": "*Note not applicable to SGX-NZX Dairy Derivatives market. To view trading hours and market holidays visit SGX.com ",
+                                "marks": [],
+                                "data": {}
+                              },
+                              {
+                                "nodeType": "hyperlink",
+                                "data": {
+                                  "uri": "https://www.sgx.com/derivatives/trading"
+                                },
+                                "content": [
+                                  {
+                                    "nodeType": "text",
+                                    "value": "here.",
+                                    "marks": [],
+                                    "data": {}
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "text",
+                                "value": " ",
+                                "marks": [],
+                                "data": {}
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "metadata": {
+                      "tags": [
+                        {
+                          "sys": {
+                            "type": "Link",
+                            "linkType": "Tag",
+                            "id": "accordionNzxTradingHours"
+                          }
+                        }
+                      ],
+                      "concepts": []
+                    },
+                    "sys": {
+                      "space": {
+                        "sys": {
+                          "type": "Link",
+                          "linkType": "Space",
+                          "id": "m5mydry9e35f"
+                        }
+                      },
+                      "id": "1DWXaXJMjnFYRYxi4NchJC",
+                      "type": "Entry",
+                      "createdAt": "2023-05-17T01:03:48.187Z",
+                      "updatedAt": "2024-03-26T02:09:58.385Z",
+                      "environment": {
+                        "sys": {
+                          "id": "master",
+                          "type": "Link",
+                          "linkType": "Environment"
+                        }
+                      },
+                      "publishedVersion": 40,
+                      "revision": 8,
+                      "contentType": {
+                        "sys": {
+                          "type": "Link",
+                          "linkType": "ContentType",
+                          "id": "accordionItem"
+                        }
+                      },
+                      "locale": "en-US"
+                    },
+                    "fields": {
+                      "title": " NZX Main Board Trading Hours",
+                      "content": {
+                        "nodeType": "document",
+                        "data": {},
+                        "content": [
+                          {
+                            "nodeType": "paragraph",
+                            "data": {},
+                            "content": [
+                              {
+                                "nodeType": "text",
+                                "value": "The NZX Main Board is the premier market for listed equities and funds in New Zealand and is home to some of New Zealand and Asia Pacific's most successful and dynamic companies.\nYou can find out more about the instruments listed on the NZX Main Board ",
+                                "marks": [],
+                                "data": {}
+                              },
+                              {
+                                "nodeType": "hyperlink",
+                                "data": {
+                                  "uri": "/markets/NZSX"
+                                },
+                                "content": [
+                                  {
+                                    "nodeType": "text",
+                                    "value": "here",
+                                    "marks": [],
+                                    "data": {}
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "text",
+                                "value": ".\n",
+                                "marks": [],
+                                "data": {}
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "table",
+                            "data": {},
+                            "content": [
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-header-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Period",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-header-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Normal Trading",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-header-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Abbreviated Trading",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Enquiry",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "8:00am - 8:30am",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "8:00am - 8:30am",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Pre-open",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "8:30am - 10:00am",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "8:30am - 10:00am",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Normal Trading",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "10:00am - 4:45pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "10:00am - 12:45pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Pre-Close",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "4:45pm - 5:00pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "12:45pm - 1:00pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Adjust",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "5:00pm - 5:30pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "1:00pm  - 1:30pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Enquiry",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "5:30pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "1:30pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "paragraph",
+                            "data": {},
+                            "content": [
+                              {
+                                "nodeType": "text",
+                                "value": "",
+                                "marks": [],
+                                "data": {}
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "metadata": {
+                      "tags": [],
+                      "concepts": []
+                    },
+                    "sys": {
+                      "space": {
+                        "sys": {
+                          "type": "Link",
+                          "linkType": "Space",
+                          "id": "m5mydry9e35f"
+                        }
+                      },
+                      "id": "4bxvomPbZ0vQT8VtTdu6cJ",
+                      "type": "Entry",
+                      "createdAt": "2023-09-22T03:05:49.655Z",
+                      "updatedAt": "2024-10-24T22:16:08.182Z",
+                      "environment": {
+                        "sys": {
+                          "id": "master",
+                          "type": "Link",
+                          "linkType": "Environment"
+                        }
+                      },
+                      "publishedVersion": 21,
+                      "revision": 3,
+                      "contentType": {
+                        "sys": {
+                          "type": "Link",
+                          "linkType": "ContentType",
+                          "id": "accordionItem"
+                        }
+                      },
+                      "locale": "en-US"
+                    },
+                    "fields": {
+                      "title": "NZX Debt Market Trading Hours",
+                      "content": {
+                        "nodeType": "document",
+                        "data": {},
+                        "content": [
+                          {
+                            "nodeType": "paragraph",
+                            "data": {},
+                            "content": [
+                              {
+                                "nodeType": "text",
+                                "value": "The NZX Debt Market is New Zealand's flagship market for listed debt securities, providing access to a diverse range of New Zealand and Asia-Pacific corporate and government debt.",
+                                "marks": [],
+                                "data": {}
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "paragraph",
+                            "data": {},
+                            "content": [
+                              {
+                                "nodeType": "text",
+                                "value": "You can find out more about the instruments listed on the NZX Debt Market ",
+                                "marks": [],
+                                "data": {}
+                              },
+                              {
+                                "nodeType": "hyperlink",
+                                "data": {
+                                  "uri": "/markets/NZDX"
+                                },
+                                "content": [
+                                  {
+                                    "nodeType": "text",
+                                    "value": "here",
+                                    "marks": [],
+                                    "data": {}
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "text",
+                                "value": ".",
+                                "marks": [],
+                                "data": {}
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "table",
+                            "data": {},
+                            "content": [
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-header-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Period",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-header-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Normal Trading ",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-header-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Abbreviated Trading",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Enquiry",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "8:00am - 8:30am",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "8:00am - 8:30am",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Pre-open",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "8:30am - 9:00am",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "8:00am - 9:00am",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Normal Trading ",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "9:00am - 4:45pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "9:00am - 12:45pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Pre-close",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "4:45pm - 5:00pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "12:45pm - 1:00pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Adjust",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "5:00pm - 5:30pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "1:00pm - 1:30pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Enquiry",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "5:30pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "1:30pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "paragraph",
+                            "data": {},
+                            "content": [
+                              {
+                                "nodeType": "text",
+                                "value": "",
+                                "marks": [],
+                                "data": {}
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "metadata": {
+                      "tags": [],
+                      "concepts": []
+                    },
+                    "sys": {
+                      "space": {
+                        "sys": {
+                          "type": "Link",
+                          "linkType": "Space",
+                          "id": "m5mydry9e35f"
+                        }
+                      },
+                      "id": "36CFCWkt1SLD0uEH1lgyfd",
+                      "type": "Entry",
+                      "createdAt": "2023-09-22T03:08:04.062Z",
+                      "updatedAt": "2026-05-20T22:17:11.550Z",
+                      "environment": {
+                        "sys": {
+                          "id": "master",
+                          "type": "Link",
+                          "linkType": "Environment"
+                        }
+                      },
+                      "publishedVersion": 74,
+                      "revision": 10,
+                      "contentType": {
+                        "sys": {
+                          "type": "Link",
+                          "linkType": "ContentType",
+                          "id": "accordionItem"
+                        }
+                      },
+                      "locale": "en-US"
+                    },
+                    "fields": {
+                      "title": "NZX Equity Derivatives Trading Hours",
+                      "content": {
+                        "nodeType": "document",
+                        "data": {},
+                        "content": [
+                          {
+                            "nodeType": "paragraph",
+                            "data": {},
+                            "content": [
+                              {
+                                "nodeType": "text",
+                                "value": "You can learn more about NZX Equity Derivatives ",
+                                "marks": [],
+                                "data": {}
+                              },
+                              {
+                                "nodeType": "hyperlink",
+                                "data": {
+                                  "uri": "/markets/NZCX"
+                                },
+                                "content": [
+                                  {
+                                    "nodeType": "text",
+                                    "value": "here",
+                                    "marks": [],
+                                    "data": {}
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "text",
+                                "value": ".",
+                                "marks": [],
+                                "data": {}
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "table",
+                            "data": {},
+                            "content": [
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-header-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-header-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Index Futures",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-header-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-header-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Equity Options",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-header-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Period",
+                                            "marks": [
+                                              {
+                                                "type": "bold"
+                                              }
+                                            ],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Normal",
+                                            "marks": [
+                                              {
+                                                "type": "bold"
+                                              }
+                                            ],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Abbreviated",
+                                            "marks": [
+                                              {
+                                                "type": "bold"
+                                              }
+                                            ],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Normal",
+                                            "marks": [
+                                              {
+                                                "type": "bold"
+                                              }
+                                            ],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Abbreviated",
+                                            "marks": [
+                                              {
+                                                "type": "bold"
+                                              }
+                                            ],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Enquiry",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "1:30am - 9:00am",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "1:30am - 9:00am",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "1:30am - 9:00am",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "1:30am - 9:00am",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Pre-Open",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "9:00am - 9:45am",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "9:00am - 9:45am",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "9:00am - 10:00am",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "9:00am - 10:00am",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Normal Trading",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "9:45am - 5:13pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "9:45am - 1:13pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "10:00am - 5:08pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "10:00am - 1:08pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Pre-Close",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "5:13pm - 5:15pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "1:13pm - 1:15pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "5:08pm - 5:10pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "1:08pm - 1:10pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Close",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "5:15pm - 5:30pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "1:15pm - 1:30pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "5:10pm - 5:30pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "1:10pm - 1:30pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "nodeType": "table-row",
+                                "data": {},
+                                "content": [
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "Enquiry",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "5:30 pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "1:30 pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "5:30 pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "nodeType": "table-cell",
+                                    "data": {},
+                                    "content": [
+                                      {
+                                        "nodeType": "paragraph",
+                                        "data": {},
+                                        "content": [
+                                          {
+                                            "nodeType": "text",
+                                            "value": "1:30 pm",
+                                            "marks": [],
+                                            "data": {}
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "paragraph",
+                            "data": {},
+                            "content": [
+                              {
+                                "nodeType": "text",
+                                "value": "",
+                                "marks": [],
+                                "data": {}
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "content": [],
+          "nodeType": "embedded-entry-block"
+        },
+        {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "marks": [],
+              "value": "",
+              "nodeType": "text"
+            }
+          ],
+          "nodeType": "paragraph"
+        }
+      ],
+      "nodeType": "document"
+    }
+  },
+  "sys": {
+    "id": "2uptT0",
+    "type": "Entry"
+  }
+}

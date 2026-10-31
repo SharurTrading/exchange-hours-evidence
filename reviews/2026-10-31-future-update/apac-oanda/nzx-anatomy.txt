@@ -1,0 +1,129 @@
+Anatomy of a Trading Day ⬩ NZX, New Zealand’s ExchangeIndicesS&P/NZX IndicesNZSXNZSXNZSXMarket Open: TradingMarketsmarketsServicesservicesLearning CentrelearningRegulationregulationEducation & OnboardingInvesting Overview
+How to Access the Dairy Derivatives Market
+How to Access the Equity Derivatives Market
+Equity Derivatives Market Education
+Dairy Hedging Academy
+Farmer Education
+Issuer & Participant ResourcesIssuer Training Modules
+Exchange Traded Funds (ETFs)
+Listing on NZX
+NZX Participants
+NZX Trading
+Help & ReferenceWhat's New?
+Complaints
+Investor FAQs
+Regulation FAQS
+Clearing FAQ
+Glossary
+Education Resource Centre
+Trading Hours
+About Our OrganisationAbout Our Organisation
+S&P/NZX Charity Golf Classic
+Locations & Contacts
+NZX Group
+Login NZX GrouplearningNZX TradingSessions StatesActions Enquiry Pre-Open Normal Trading Pre-Close Adjust Suspension Halt New Listing
+Place Order
+N
+Y
+Y
+Y
+N
+N
+Y
+Y
+Amend Orders
+N
+Y
+Y
+Y
+Y
+N
+Y
+Y
+Trade
+N
+N
+Y
+N
+N
+N
+N
+N
+Withdraw Order
+N
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+Off Market Trade
+N
+Y
+Y
+N
+Y
+N
+N
+N
+Cash Market (Equity and Debt)Between the hours of 5:30pm and 8:30am (NZT), the Cash Markets are in their Enquiry state. This simply means that markets are "read-only" – orders can't be entered, deleted, or amended in any way.
+At 8:30am, the market enters its Pre-Open Session. In Pre-Open, you can do anything except trade – you can place, delete and amend orders, as well as report trades that have been negotiated outside of trading hours.
+This Pre-Open session is the prelude to the opening auction (described below). During this session, you will often see overlapping bids and offers – ie, buy prices which are higher than sell prices. This cannot happen during the regular trading session, as, as soon as a buyer places a buy order at, or above, a price level at which a seller is already offering, a trade occurs. Prices cannot overlap. However, as no trades occur during the Pre-Open session until the opening auction it is common to see bid-offer overlap during this session. In fact, if there is no price overlap in a stock, there will be no trades in the opening auction.
+The Opening Auction occurs at a random time 30 seconds either side of 10:00am (ie, at a random time between 09:59:30 and 10:00:30). The opening auction is a single price print which becomes the official opening price of the day. If there are no trades in a stock in the opening auction, the first sale during the regular session (see below) becomes the official opening price for the day.
+The opening auction algorithm calculates the opening price by surveying all the overlapping bids and offers in the stock at the time of the auction, and calculating the single price point at which the most volume will trade.
+A simple example will illustrate.
+Stock ABC
+Buyers size Buyers will pay Sellers will sell at Sellers size
+5,000
+$2.00
+$1.60
+10,000
+5,000
+$1.90
+$1.70
+2,000
+5,000
+$1.80
+$1.80
+20,000
+10,000
+$1.70
+$1.90
+6,000
+The algorithm will ‘say to itself’:
+“There is a buyer prepared to buy 5,000 shares at $2.00, and there are multiple sellers prepared to sell a total of 38,000 shares at this $2.00 price or lower, hence, if I opened the stock at $2.00, a total of 5,000 shares would trade”.
+“There are two buyers prepared to buy a total of 10,000 shares at $1.90 or above, and there are multiple sellers prepared to sell at total of 38,000 shares at this $1.90 price or lower, hence, if I opened the stock at $1.90, a total of 10,000 shares would trade.”
+It would them perform this same exercise at $1.80, $1.70, and $1.60, and work out at which price it could clear the most volume, thus:
+"If I opened the stock at..."
+$2.00, 5,000 would trade.
+$1.90, 10,000 would trade.
+$1.80, 15,000 would trade.
+$1.70, 12,000 would trade.
+$1.60, 10,000 would trade.
+Hence, in this situation, the opening auction print would be 15,000 shares at $1.80, as this is the price at which the maximum volume would trade. This price would be the official opening price on the day.
+Once the opening auction has completed, the market goes in to its Continuous or Regular Trading Session. This is the session that most people recognize as the market trading session. Bids and Offers can be placed, amended and deleted, on-market trades can occur (if a bid price and an offer price “meet”), and off-market trades can be reported to market. This session is continuous – with no breaks – from 10:00am until 4:45pm every trading day, and is the session in which most trading occurs.
+At 4:45pm, the market enters its Pre-Close Session. The Pre-Close session is virtually the same as the Pre-Open session – it just occurs at a different time of the day. In Pre-Close, you can place, delete and amend orders, but you cannot report off-market trades. Any off-market orders negotiated during this time must be reported during the Adjust session (see below).
+The Closing Auction occurs at a random time 30 seconds either side of 5:00pm (ie, at any time between 16:59:30 and 17:00:30). Like the opening auction, the closing auction is a single price print which becomes the official close of the stock on the day. If there are no trades in a stock in the closing auction, the last sale during the regular session becomes the official closing price for the day.
+The Closing Auction algorithm is exactly the same as that used in the Opening Auction. It will compute the price at which it can clear the greatest amount of stock, and all bids and offers at, and overlapping, this level will execute at this, single, closing print price.
+After the Closing Auction print, the market enters its Adjust Session. In this session, orders can be amended, but not improved (ie bid prices can be reduced and offer prices moved higher, but not the converse, and order sizes can be reduced but not increased). Existing orders can be cancelled, but new orders cannot be placed into the market. Off-market trades can be reported.
+At 5:30pm, the market re-enters its Enquiry State, and the whole cycle starts again.
+Derivatives Market (Dairy Derivatives, Equity Options, and Index Futures)Hours for the Derivatives market are somewhat different, and are detailed here.
+There are some subtle differences between the Cash Markets (as detailed above) and the Derivatives Markets, and their various session states.
+The Enquiry and Pre-Open Sessions are the same as the Cash Markets, with the same restrictions. The Derivatives markets also open with an Opening Auction, in the same way as the Cash Markets, with the only difference being that the auction time is not randomised as it is in the Cash Markets.
+The Regular or Continuous Trading Session is also the same as that of the Cash Markets.
+The Pre-Close Session in the Derivatives Markets only lasts for 2 minutes, and is simply a continuation of the Continuous Trading Session, unlike the cash markets which stop trading in the Pre-Close. This session is simply used as a warning that the market is about to close.
+The Derivatives Markets do not close with an auction - they simply stop trading at the closing time, with the last trade before the close recorded as the official closing price for the day.
+After the Pre-Close, the market enters the Close Session, which has the same restrictions as the Adjust Session in the Cash Markets. Off-market transactions can be negotiated or reported for a further 10 minutes.
+After the Close Session, the Derivatives markets re-enter their Enquiry states, and the whole cycle starts again.
+Feedback Farmer Education
+Issuer Training Modules
+Education Resource Centre
+Listing on NZX
+Become a Participant
+Contact NZX
+Education & Onboarding
+Investing OverviewHow to Access the Dairy Derivatives Market How to Access the Equity Derivatives MarketEquity Derivatives Market Education Dairy Hedging Academy Farmer Education Issuer & Participant Resources
+Issuer Training ModulesExchange Traded Funds (ETFs)Listing on NZXNZX ParticipantsNZX TradingHelp & Reference
+What's New?ComplaintsInvestor FAQsRegulation FAQSClearing FAQGlossaryEducation Resource Centre Trading HoursAbout Our Organisation
+About Our Organisation S&P/NZX Charity Golf Classic Locations & ContactsNote: Market data delayed by 20 minutes, and page information may be cached and is current per the timestamp provided© Copyright 2021–2026 NZX LimitedWebsite Terms of Use Privacy Policy Feedback v1.208.0 · 3a1965f5

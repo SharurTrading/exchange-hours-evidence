@@ -1,0 +1,44 @@
+{
+  "nse_india": {
+    "rows": 232,
+    "kinds": {
+      "Closed": 217,
+      "ReplacementBlocks": 9,
+      "Unsourced": 6
+    },
+    "changed_rows": {
+      "(2026, 11, 8)": {
+        "old": [
+          "Unsourced",
+          "T1",
+          "NSE-HOL-2026"
+        ],
+        "new": [
+          "ReplacementBlocks(&MUHURAT_2026_BLOCKS)",
+          "T1",
+          "NSE-CIRC-2026-149"
+        ]
+      }
+    },
+    "module_sha256": "4d6951fefb207fd44df8bbe3f1c7f72d4dc6fa8149778cb1391bc5052a06557a"
+  },
+  "xetra": {
+    "rows": 128,
+    "kinds": {
+      "Closed": 124,
+      "EarlyClose": 3,
+      "ReplacementBlocks": 1
+    },
+    "changed_rows": {
+      "(2026, 12, 30)": {
+        "old": null,
+        "new": [
+          "ReplacementBlocks(&FINAL_SESSION_2026)",
+          "T1",
+          "DB-FINAL-SESSION-2026"
+        ]
+      }
+    },
+    "module_sha256": "e9c693f106fd707c4ff5de079ec23906f51fb8a2bad6bfa2f496d117fce1c25c"
+  }
+}

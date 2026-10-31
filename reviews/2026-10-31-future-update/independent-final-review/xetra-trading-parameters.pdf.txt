@@ -1,0 +1,69 @@
+Trading Parameter "Deutsche Börse Xetra" MIC: XETR as of December 1st, 2025                                                                                                                                                                        Exchange Traded Funds (ETFs)
+                                                                                                            DAX            MDAX              SDAX         Other German Shares          Other Foreign Shares                                     Exchange Traded Commodities (ETCs)
+                                                                                                                                                                                                                                                   Exchange Traded Notes (ETNs)
+Trading Model                                                                                                                            Continuous Trading2) / Retail Auction                                                   One Auction                          Continuous Trading2) / Retail Auction
+                 1)
+Trading Times                   Pre-Trading
+                                                                                                                                                                                                            07:00
+                                (Book)
+                                Retail Early Trading
+                                                                                                                                                         08:00                                                                         /                                               08:00
+                                (Retail Pre-Call/Retail-Call)
+                                Preopening Aucion Call Phase
+                                                                                                                                                         08:55                                                                         /                                               08:55
+                                (OpnA)
+                                Opening Auction Price                                                                       09:00                                  09:02                        09:04                                  /                                               09:04
+                                Intraday Auction Call Phase
+                                                                                                                            13:00                                  13:15                        13:15                                13:25                                             13:10
+                                (IntA)
+                                                                                                                                   3)
+                                Intraday Auction Price                                                                     13:02                                   13:17                        13:17                                13:30                                             13:12
+                                Closing Auction Call Phase
+                                                                                                                            17:30                                  17:30                        17:30                                  /                                               17:30
+                                (ClsA)
+                                Closing Auction Price                                                                       17:35                                  17:35                        17:35                                  /                                               17:35
+                                End Trade-at-Close4)                                                                        17:40                                    /                            /                                    /                                                 /
+                                Retail Late Trading
+                                                                                                                                                                   17:35                        17:35                                  /                                               17:35
+                                (Retail Pre-Call/Retail-Call)                                                               17:40
+                                Post Trading
+                                                                                                                            22:00                                  22:00                        22:00                                  /                                               22:00
+                                (Book)
+
+                                End Post Trading Time                                                                                                                                                       22:05
+
+                                Minimum Duration Volatility Interruption (minutes)                                                                       02:00                                                                       05:00                                             02:00
+Off-Book                        T7 Entry Service (TES)5) & Xetra Enlight6)                                              08:55 - 17:40                                        08:55 - 17:35                                                                   08:55 - 17:35
+MktImbInd                       Market Imbalance Indicator                                                                                                                                         Yes for all instruments
+OBB                             Orderbook Balancing (seconds)                                                                                                                                                 No
+Lots                            Round Lot / Odd Lot                                                                                                                                                             1
+Iceberg                         Minimum Peak Size value (respective currency)                                                                           0,01                                                                                                     0,01
+                                Minimum Overall Value                                                                                               10.000 Euro                                                                            10.000 Euro (or according to trading currency)
+                                Condition                                                                                  The Peak Size Value has to be at least 5 % of the Overall Value.                                         The Peak Size Value has to be at least 5 % of the Overall Value.
+Ticks                           Tick Size                                                                                                     Equities, DRs, Subscription Rights and MiFID-ETFs with origin EU or Switzerland: tick size according to ESMA (liquidity band 1-6)
+                                                                                                                                                                                         ETPs (incl. Non-MiFID ETFs): Liquidity Band 6 -10
+                                                                                                                                                                                     All other equities with origin Non-EU: liquidity band 1 -6
+                                                                                                                                    The information per ISIN is available in the "All tradeable instruments" on our website and in the Reference Data File via the Common Report Engine
+                                                                                                                                                            Midpoint Sweep orders follow the corresponding tick size rules, pure Midpoint orders are exempted
+
+Order to Trade Ratio            Number based Floor                                                                                           1                                                     1                                                                1
+(OTR Parameters)                Number based Non-Market Maker (max. ratio)                                                                100.000                                              500.000                                                          500.000
+see §26a BörsG, §75 FWB         Number based Market Maker (max. ratio)                                                                   1.000.000                                            5.000.000                                                        5.000.000
+Exchange Rules                  Volume based Floor                                                                                         1.000                                                10.000                                                           10.000
+                                Volume based Non-Market Maker (max. ratio)                                                                200.000                                             2.000.000                                                        2.000.000
+                                Volume based Market Maker (max. ratio)                                                                   2.000.000                                            20.000.000                                                      50.000.000
+1)
+     All times are an approximation. Timestamps are meant as the earliest timestamp for the explicit trading phase change. Relevant are the trading phase changes in the trading system.
+2)
+     Continuous Trading phase takes place in between the regular scheduled auctions and also includes Midpoint Trading for selected ISINs.
+3)
+     On Eurex Settlement Days, Intraday Auction Call Phase will last a minimum of 5 minutes for DAX instruments including preferred shares, Market Order Interruption (Minutes) will be extended to 5 minutes for DAX instruments excluding preferred shares.
+4)
+     Potential (continuous) trading phase following a closing auction with positive turnover. Matching is possible only at the fixed closing auction price with time priority. Limit and market orders which are explicitly flagged can participate.
+5)
+     TES LIS Parameter: Price Validation Parameter = max. +/- 20% of Last Price on market Deutsche Börse Xetra (MIC: XETR). Quantity Validation Parameter = Minimum order volume for off-book trading.
+6)
+  Xetra EnLight Parameter:
+a) Price Validation Parameter: For ETF´s in segment XTF = max. +/- 1 % of Last Price on market Xetra (MIC: XETR) / for ETC´s, ETN´s, equities and other securities = max. +/- 5 % of Last Price on market Xetra (MIC: XETR).
+b) Max. duration for EnLight offers: For ETF´s, ETC´s, ETN´s, for liquid equities (according to MiFIR) and for other securities = 180 sec / for illiquid equities (according to MiFIR) = 900 sec
+

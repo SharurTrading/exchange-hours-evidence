@@ -1,0 +1,737 @@
+Home
+Stock Exchange
+Trading
+Trading Hours & Opening/Closing Routine
+Trading Schedules
+Full-day Trading
+* The Pre-Open/Close phase ends randomly at any time within this one minute window and the Non-Cancel phase begins immediately after.Opening RoutinePre-Open: 08:30am – 08:58am/08:59am*
+Non-Cancel: 08:58am/08:59am* – 09:00am
+TradingOpen: 09:00am - 12:00pm
+Mid-Day BreakPre-Open: 12:00pm – 12:58pm/12:59pm*
+Non-Cancel: 12:58pm/12:59pm* – 01:00pm
+TradingOpen: 01:00pm - 05:00pm
+Closing RoutinePre-Close: 05:00pm – 05:04pm/05:05pm*
+Non-Cancel: 05:04pm/05:05pm* – 05:06pm
+Trade at Close05:06pm – 05:16pm
+Close05:16pm
+New listings may start trading at 2pm on the first day of trading. The trading schedule for the first day will thus be as follows:
+* The Pre-Open/Close phase ends randomly at any time within this one minute window and the Non-Cancel phase begins immediately after.Opening RoutinePre-Open: 01:30pm – 01:58pm/01:59pm*
+Non-Cancel: 01:58pm/01:59pm* – 02:00pm
+TradingOpen: 02:00pm - 05:00pm
+Closing RoutinePre-Close: 05:00pm – 05:04pm/05:05pm*
+Non-Cancel: 05:04pm/05:05pm* – 05:06pm
+Trade at Close05:06pm – 05:16pm
+Close05:16pm
+Half-day Trading
+* The Pre-Open/Close phase ends randomly at any time within this one minute window and the Non-Cancel phase begins immediately after.
+Opening Routine
+Pre-Open: 08:30am – 08:58am/08:59am*
+Non-Cancel: – 08:58am/08:59am* – 09:00am
+Trading
+Open: 09:00am - 12:00pm
+Closing Routine
+Pre-Close: 12:00pm – 12:04pm/12:05pm*
+Non-Cancel: 12:04pm/12:05pm* – 12:06pm
+Trade at Close
+12:06pm – 12:16pm
+Close
+12:16pm
+Singapore Public Holidays
+SGX follows the Singapore holiday calendar available on the Ministry of Manpower website.
+The Eve of Chinese New Year, Eve of Christmas and Eve of New Year in 2025 & 2026 fall on business days. As such, there will be half-day trading in 2025 & 2026.
+Half-day trading will take place on the following dates in 2025 & 2026.
+DateDayHoliday
+28 Jan 2025TuesdayEve of Chinese New Year
+24 Dec 2025WednesdayEve of Christmas
+31 Dec 2025WednesdayEve of New Year
+16 Feb 2026MondayEve of Chinese New Year
+24 Dec 2026ThursdayEve of Christmas
+31 Dec 2026ThursdayEve of New Year
+Opening & Closing Routine
+Process Overview
+Pre-open phase (Opening Routine and Mid-day Break)
+The Pre-open phase of the Opening Routine starts at 08:30am and ends randomly within a one-minute window between 08:58am – 08:59am.
+The Pre-open phase of the Mid-day Break starts at 12:00pm and ends randomly within a one-minute window between 12:58pm – 12:59pm.
+Investors can submit new orders and cancel or modify existing orders during the Pre-open phase, but there will not be order matching.
+Orders queued in the order book prior to the start of the Mid-day Break will continue to rest in the order book.
+SGX will publish the Indicative Equilibrium Price (IEP) to give investors an indication of the market level.
+Pre-close phase (Closing Routine)
+The Pre-close phase starts at 05:00pm and ends randomly within a one-minute window between 05:04pm – 05:05pm for full-day trading.
+It starts at 12:00pm and ends randomly within a one-minute window between 12:04pm – 12:05pm for half-day trading.
+Non-cancel Phase (Opening Routine, Mid-Day Break and Closing Routine)
+The Non-cancel phase follows immediately after the Pre-open or Pre-close phase ends.
+Investors will no longer be able to enter, modify or cancel orders.
+The trading system computes a price based on an algorithm, which is also used to calculate the IEP, set by SGX-ST. All orders that can be matched are matched at the computed price (“auction matching”).
+Unmatched orders will be carried forward to the next trading phase.
+Close
+Market closes at 05:16pm (full-day trading) or 12:16pm (half-day trading).
+Indicative Equilibrium Prices
+The indicative equilibrium price (IEP) is the price at which orders would be executed if auction matching were to occur at that point.
+The IEP helps market participants assess the market and adjust their orders accordingly by providing an indication of the eventual opening or closing price.
+SGX publishes the IEP on a real-time basis and masks all bid/ask prices which are better than the IEP(total volume at better prices is aggregated at the IEP level) as a safeguard against manipulation of the eventual equilibrium price. The publication of the IEP is intended to provide more market transparency.
+For more information, please refer to SGX-ST Regulatory Notice 8.2.1 – Trading Hours, Market Phases, Application of Market Phases and Principles and Rules for Trade Matching.
+Random Closings
+The Opening and Closing Routines employ “auction matching” and are designed to facilitate orderly price discovery during market opening and closing.
+The timing of the end of Pre-open and Pre-close phases of trading is random, meaning that they will occur at any time within the last minute of the timeframe currently allotted for the phase.
+The randomised ending enhances safeguards against attempts to manipulate the opening and closing prices. This protects the integrity of the opening and closing prices against sudden entry and withdrawal of large orders. The random ending will be synchronised across all counters, and the Non-cancel phase will follow accordingly.
+A time view example of a random closing in REACH ST for a normal trading day where matching happens 30 seconds into the random period of time is shown below. Non-cancel session then starts at 17:04:30.
+Trade at Close
+Trade at Close (TAC) is a ten minutes trading phase commencing immediately after the closing routine. Orders are matched continuously only at the fixed equilibrium price established from the preceding closing auction.
+TAC is available for a security on a trading day only if the closing auction for that security on that day resulted in a closing auction price; correspondingly, TAC will not be available for a security if there is no closing auction price on that day.
+Unmatched limit orders from the closing routine will be carried forward to the TAC phase. Participants may only enter new limit orders or modify the price of an existing order with respect to the closing auction price. Market orders, together with new limit orders at other prices or price modification of existing orders to other prices, will be rejected. Participants may also perform other order amendments including order withdrawal during the TAC phase.
+Unmatched orders (with the exception of the long-dated orders) at the end of the TAC phase will lapse.
+Standard Board Lot
+A board lot is the minimum number of securities that can be bought or sold in a single trade on SGX. The standard board lot applies to Ordinary Shares, REITs, Business Trusts, Stapled Securities, Company Warrants, Depositary Receipts ("Specified Instruments").
+The current standard board lot is 100 units.
+From 5 October 2026, the standard board lot size will be revised to improve adaptability and accessibility for investors by enabling higher-priced securities to be traded in smaller minimum quantities. The revised standard board lot is as follows:
+Traded price*Board lot size
+Up to and including S$10 (or equivalent traded currency threshold)Existing board lot size
+Greater than S$10 and up to S$10010 units
+Greater than S$1001 unit
+* For securities traded in foreign currencies, the corresponding traded currency threshold applies. For securities with more than one traded currency, the primary traded currency counter will determine the standard board lot applied.
+5 October 2026: Initial batch of securities with reduced board lot
+On 5 October 2026, the first batch of 11 securities will begin trading with reduced board lot of 10 shares.
+SecurityStock codeTraded currency
+DBS Group Holdings LtdD05SGD
+Great Eastern Holdings LtdG07SGD
+Haw Par Corporation LtdH02SGD
+Jardine Cycle & Carriage LtdC07SGD
+Jardine Matheson Holdings LtdJ36USD
+Keppel LtdBN4SGD
+Oversea-Chinese Banking Corporation LtdO39SGD
+Prudential PLCK6SUSD
+Singapore Exchange LimitedS68SGD
+United Overseas Bank LimitedU11SGD
+Venture Corporation LimitedV03SGD
+Quarterly review process
+A review will be conducted every calendar quarter to determine if the board lot sizes of the specified instruments traded on SGX-ST should be reduced. In determining an instrument’s price range and thus whether its board lot size should be reduced, SGX will consider whether the instrument’s last traded price or closing price has been continuously in the price range for the previous six months or is likely to do so in the future.
+SGX will announce any board lot size reduction within the first five trading days after the quarter, with implementation within the first five trading days of the second month after the quarter.
+To facilitate a smooth transition on the first day that an instrument trades with its new board lot size, SGX will purge all resting orders for the specified instruments at the close of business on the last trading day before the implementation of the new board lot size.
+How to view board lot sizes
+You can view the board lot size for a security on the SGX Stock Exchange - Prices page:
+Go to https://www.sgx.com/stock-exchange/securities-prices.
+Under Customise, select Board Lot.
+The board lot size for each security will be displayed.
+Board Lot of Other Securities and Products
+Certain products such as Special Purpose Acquisition Companies Warrants (SPAC Warrants), Exchange Traded Funds (ETFs), Daily Leverage Certificates (DLCs), Structured Warrants, Structured Certificates, Singapore Depository Receipts (SDRs) and fixed income instruments may trade in other board lot sizes.
+ProductsBoard lot size
+Special Purpose Acquisition Companies Warrants (SPAC Warrants)1
+Exchange Traded Funds (ETFs)1
+Daily Leverage Certificates (DLCs), Structured Warrants and Structured Certificates100
+Singapore Depository Receipts (SDRs)10, 100
+Fixed income instruments10, 100 or 1,000
+SGX also has a Unit Share Market to facilitate the trading of odd lots in any quantity less than one board lot of the underlying securities in the Ready Market.
+Standard Board Lot - FAQs
+1. What do these changes mean for investors?
+Lower Minimum Capital Required
+Example:If a stock is priced at S$32Before: 100 units: S$3,200After: 10 units: S$320
+If a stock is priced at S$118Before: 100 units: S$11,800After: 1 unit: S$118
+Up to 90% lower upfront capital required for trades with reduced board lot sizes.
+More Flexible Investing
+Investors can invest in established companies with a smaller capital outlay, allowing them to build positions gradually and diversify across more counters with the same capital.
+2. Is this a one-off reduction?
+It’s not a once-off reduction. After the initial 5 Oct 2026 implementation for the initial batch of securities, the board lot sizes will be reviewed every calendar quarter review to determine which securities qualify for a reduction in board lot size​. The next implementation will be announced in January 2027 and implementation in February 2027.
+3. What do investors need to do if the stock they are invested in changes its board lot structure? Will the number of shares I own change after a board lot change?
+No action is required on the investor’s part. The change is only applicable when new trades (buy or sell) are made, when there is the option to trade in smaller sizes. No, a board lot change does not affect the number of shares you own.
+4. Will there be a new stock code added?
+No new stock codes will be created. The existing stock code will be retained and from the effective date will trade in multiples of the new board lot.​
+5. Will board lot size revert if the share price falls?
+Board lot sizes will not revert. Once reduced, the board lot will remain unchanged, even if the price subsequently falls.
+6. How do I transfer my shares bought under this initiative?
+No different from existing process. Share transfer does not utilise board lots, rather shares are transferred in 1 share minimum.
+7. What is the currency used for the price threshold?
+The security’s traded currency is used for the price threshold. For securities traded in SGD, S$10 is used as the price threshold. For securities traded in USD, US$10 is used as the price threshold.
+8. What are some other important things to note?
+For dual‑currency counters, the primary traded currency determines the board lot size. The primary traded currency can be identified at sgx.com/trading.
+New listings priced above the threshold will be assigned the reduced board lot from the first day of listing.
+SGX Board Lot Infographic
+SGX Board Lot Infographic
+Minimum Bid Size, Forced Order Range & Error Trade Policy
+The minimum bid size (MBS) is also known as tick size and represents the smallest price increment that the price of a security can change.
+Applicable minimum bid size on SGX ST
+Stocks, REITs, business trusts, company warrants
+Note: Includes any other class of securities or Futures Contracts not specified below. Additionally, specific counters may deviate - e.g. Ambiq Micro (AMQ) will have minimum bid size of $0.10 and Force Order Range of +/-300 bids from price of $100.Price Range ($)Minimum Bid Size ($)Forced Order Range
+Below 0.200.001+/- 30 bids
+0.20 – 0.9950.005
+1.00 and above0.01
+Structured warrants and structured certificates
+Price Range ($)
+Minimum Bid Size ($)
+Forced Order Range
+Below 0.20
+0.001
++/- 30 bids
+0.20 – 1.995
+0.005
+2.00 and above
+0.01
+Daily leverage certificates
+Price Range ($)Minimum Bid Size ($)Forced Order Range
+0.001 – 0.0050.001+/- 300%
+0.006 – 0.199 0.001+/- 50%
+0.20 – 1.9950.005+/- 50%
+2.00 and above0.01+/- 50%
+Exchange traded funds and exchange traded notes
+Price Range ($)
+Minimum Bid Size ($)
+Forced Order Range
+All
+0.01 or 0.001 as SGX-ST determines
++/- 10%
+Debentures, bonds, loan stocks & preference shares
+Price Convention
+Price Range ($)
+Minimum Bid Size ($)
+Forced Order Range
+$1
+All
+0.001
++/- 30 bids
+$100
+All
+0.001
++/- 1,000 bids
+Securities denominated in Hong Kong Dollar
+Price Range (HK$)
+Minimum Bid Size (HK$)
+Below 0.25
+0.001
+0.25 - 0.495
+0.005
+0.50 - 9.99
+0.01
+10.00 - 19.98
+0.02
+20.00 - 99.95
+0.05
+100 - 199.90
+0.1
+200 - 499.80
+0.2
+500 and above
+0.5
+Securities denominated in Japanese Yen
+Price Range (¥)
+Minimum Bid Size (¥)
+Below 2,000
+1
+2,000 - 2,995
+5
+3,000 - 29,990
+10
+30,000 - 49,950
+50
+50,000 - 99,900
+100
+100,000 and above
+1000
+Forced Order Range
+The forced order key provides an alert when the price of an order is beyond the forced order range. It is a pre-execution mechanism which require market participants to ‘force’ an order through if the price lies outside the forced order range. Without the force key, orders with prices beyond the forced order range will be rejected.
+Error Trade Policy
+An error trade is a transaction that results from an error in the entry of the volume of an order, the price of an order, or the name of the security. It may also be when SGX deems a transaction to be an error trade.
+Investors are reminded to exercise due care when entering orders in the trading system to avoid error trades.
+Under the current Error Trade Policy (table below), trades in all securities (excluding structured warrants and bonds) are eligible for review by SGX if the transacted price falls outside the non-cancellation price range of 20 minimum bid sizes or 5% from the reference price, whichever is wider. For structured warrants, the price range for structured warrants is at 20 minimum bid sizes, or 25%, from the last valid price, also known as the reference price. For bonds, there will not be a price range and any error trade will be eligible for review.
+No-cancellation price
+range
+Error Trade Review
+Fee
+Review by SGX on an
+error trade
+All securities (except bonds)
+(i) +/- 20 minimum bid sizes or (ii) +/-5% from the reference price whichever is wider
+$1,000
+Any error trade that falls outside the no-cancellation price range is eligible for review
+Structured Warrants
+(i) +/- 20 minimum bid sizes or (ii) +/-25% from the reference price whichever is wider
+$1,000
+Any error trade that falls outside the no-cancellation price range is eligible for review
+Bonds
+Not applied
+$1,000
+Any error trade is eligible for review
+Please note that SGX retains the discretion to cancel trades, including trades transacted within the price-range, to protect the financial integrity, reputation or interest of the market.
+There is no trade loss threshold before a trade is eligible for review and the trade review fee is S$1,000. Investors can continue to mutually cancel their error trades, if their counterparties agree.
+What to do when an error trade is made
+If you have executed an error trade and wish to have it cancelled, you should report the error trade to SGX via your broker or remisier and brokerage firm. You can also seek advice from your broker on what to do, including any actions to minimise any potential market impact caused by the error trade.
+Your broker/brokerage firm will, for and on your behalf, liaise with SGX and the counterparty to seek to mutually cancel the error trade. If the counterparty to the error trade does not agree to cancel the trade, you may inform your broker to refer the error trade to SGX for its review. There is a $1,000 trade review fee for each error trade referred to SGX for review, regardless of the outcome. SGX will inform your brokerage firm, or your broker, of the outcome of the error trade review. The firm or broker will then inform you of the outcome. The outcome of SGX’s review is final.
+Your broker will inform you if you are the counterparty to an error trade to seek agreement to cancel the error trade. You will also be notified if the error trade has been referred to SGX for review, and the outcome of the review.
+Investors should refer to SGX-ST Trading Rule 11.2 to 11.5 for more information on the error trade policy.
+When to report an error trade
+Your error trade must be reported to SGX within 30 minutes from the time the error trade occurred. Accordingly, you should inform your broker as soon as you become aware of the error trade.
+In the event the counterparty to the error trade does not agree to cancel the trade, your error trade may be referred to SGX within 60 minutes from the time the error trade occurred for review.
+For prompt resolution of error trades, it is important that investors and their brokers adhere strictly to the stipulated timeline for reporting error trades and referring them for SGX’s review.
+Outcomes an investor who has executed an error trade can expect
+If counterparty to the error trade agrees to cancel the trade, there are no settlement obligations for the investor.
+If the counterparty to the error trade does not agree to cancel the trade, the investor may request his broker to refer the error trade to SGX for review. Investors should note the deadline for doing so and carefully consider the trade review fee involved.
+SGX will not cancel any error trades which are within the relevant no-cancellation price range. The no-cancellation price range does not apply to bonds.
+However, SGX may in exceptional cases exercise its discretion to cancel a trade, including trades executed within the no-cancellation price range, if in SGX’s opinion, it is desirable to do so to protect the financial integrity, reputation or interest of the market.
+SGX will inform your brokerage firm, or your broker, of the outcome of the error trade review. The firm or broker will then inform you of the outcome. The outcome of SGX’s review is final.
+Reported potential error trades
+The Reported Potential Error Trade is shown below. Please contact your broker/ brokerage firm for more information.
+Trade ReviewTrade Review Outcome
+SGX has been alerted to potential error trades involving 4,000 units in N525100T 300401 traded at S$90.00 on 21 May 2026. SGX has been alerted to potential error trades involving 4,000 units in N525100T 300401 traded at S$90.00 on 21 May 2026. We have reviewed and ruled the trades invalid.
+Exchange Fees & MM/AT Program
+Exchange Fees
+The following fees are payable by SGX-ST members for trading on SGX.
+Trading Fee*^
+0.0075% of traded value
+Clearing Fee*
+0.0325% of traded value
+Goods and Services Tax
+Prevailing GST rate
+Notes:
+* i. Trading Fees for structured warrants and daily leverage certificates are 0.001% of traded value . Clearing Fees for structured warrants and daily leverage certificates are 0.004% of traded value.
+ii. Trading Fees for money market exchange traded funds are 0.0001% of traded value . Clearing Fees for money market exchange traded funds are 0.0001% of traded value.
+^ Trading Fees do not apply for direct business trades.
+Market Makers & Active Traders
+The aim of the Market Maker and Active Trader Programmes (MMAT) is to improve market quality and liquidity and facilitate trading at competitive bid and offer price. Under the programmes, incentives, such as rebates or waivers on clearing fees, will be offered based on the performance of the market maker or active trader.
+From Oct’2026, the Grant for Equity Markets Singapore – Market Making Scheme (GEMS-MM) will be launched. The GEMS-MM programme will support IPOs for the first 6 months; and support the development of a more investible next-tier small- and mid-cap universe. Market makers that meet more competitive two-way bid and ask quoting obligations on a per stock basis receive GEMS-MM funding and rebates on clearing fees, subject to terms and conditions.
+Market Maker Active Trader
+RoleTo provide competitive bid-ask quotes.To participate actively.
+Incentive & Obligation
+Clearing fee rebate based on the quotation performance of the market maker and characteristics of the specific stock.
+GEMS-MM: Additional funding subject to meeting quoting obligations.
+Clearing fee rebate based on the daily average value traded by the active trader and characteristics of the specific stock.
+Scope of Securities
+Cash equity securities which account for >90% of traded value on SGX (subject to periodic reviews).
+GEMS-MM: IPOs for the first 6 months, and cash equities that meet certain criteria including minimum liquidity and poorer market quality than index stocks.
+Cash equity securities which account for >90% of traded value on SGX (subject to periodic reviews).
+Eligible ParticipantsOpen to all market participants who trade as a principal using proprietary capital, and who meet the applicable eligibility criteria. Interested participants may enquire at asksgx@sgx.com.Eligible Securities Applicable for cash equity securities. This includes shares, real estate investment trusts (REITs), and business trusts. Issuers who would like to be considered as an eligible security should approach SGX for more information.
+Exchange traded funds (ETFs), daily leverages certificates, structured warrants and Singapore Depositary Receipts have their separate liquidity-enhancing frameworks and are excluded from these schemes.
+Circuit Breakers
+SGX’s dynamic circuit breaker in the securities market guards against disorderly situations in the face of rapid and unchecked market movements. It gives investors time to assimilate incoming information and make informed choices during periods of high market volatility.
+The circuit breaker covers:
+Straits Times Index component stocks/units
+MSCI Singapore Index component stocks/units
+The following products with a first reference price at or exceeding $0.50
+Stocks/units
+Stapled securities
+Funds
+Exchange traded funds
+Exchange traded notes
+How it works
+The circuit breaker is activated when an incoming order could potentially match an existing order in the order book at a price outside the circuit breaker price bands.
+When this occurs, a five-minute cooling-off period is triggered, the incoming order is rejected and will not be matched at a price outside the price band. During the cooling-off period, trading can still take place within the price bands. All existing orders will not be affected and new orders can continue to be placed in the order book as long as they do not result in the potential matching of trades outside the price band. If there are no trades done during the cooling-off period, the first trade after the cooling-off period will not be subject to the circuit breaker.
+The price band comprises of an upper and lower price limit based on a deviation of 10% from the applicable reference price. Trades at or within the limits will not activate the circuit breaker.
+The dynamic reference price during continuous trading is the last traded price as of five minutes prior to each potential trade. If no trades were executed in the trading day’s continuous matching phase, the dynamic reference price will be the trading day’s first reference price. If the circuit breaker is triggered and no trades are done during the cooling-off period, the price of the first trade will serve as the reference price for the five minutes following the trade.
+In operation during the continuous trading phase to allow for efficient and accurate price discovery, the circuit breaker is not applicable during the following sessions:
+Opening routine
+Mid-day break
+Closing routine
+First trading day of newly listed instruments
+For more information, please refer to SGX-ST Regulatory Notice 8.14.1 – Circuit Breaker.
+Order Types
+Overview
+With the numerous order types supported by SGX, investors will be able to trade with precision while limiting potential losses. Retail investors should note that the order types available to them may be limited to what their brokers are offering.
+Order Types in SGX Reach
+Limit Orders
+A limit order is an order which is entered into the order book with both the price, maximum buy price or minimum sell price, and quantity that a buyer or seller is willing to trade at.
+How a limit order works
+Fill-or-kill limit order (FOK)
+The whole order quantity which is entered into the order book must be matched in full or the order will be cancelled. The order does not sit in the order book. E.g., a limit order to buy 10 lots of ABC shares at $3 will only be matched if there are at least 10 lots of ABC shares with best available ask of up to $3. If there are fewer than 10 lots available, the buy order will be cancelled with no part being matched.
+Fill-and-kill limit order (FAK)
+Any portion of the order that can immediately be matched is traded as soon as the order is entered into the order book. The rest of the unfilled order will be cancelled. The order does not sit in the order book. E.g. a limit order to buy 10 lots of ABC shares at $3 will have a partial match of 5 lots if there are only 5 lots of ABC shares with best available ask of up to $3 in the order book. The remaining 5 lots will be cancelled.
+Day limit order
+Any portion of the order that can immediately be matched is traded as soon as the order is entered. The rest of the unfilled order sits in the order book until it is matched or it will be removed from the order book at the end of the trading day.
+Long dated limit order
+Any portion of the order that can immediately be matched is traded as soon as the order is entered. The rest of the unfilled order sits in the order book until it is fully filled, specifically cancelled, or the instrument is de-listed or expired. A long dated order on SGX has a validity of up to 30 days. For example, for a limit order to buy 10 lots of ABC shares at $3:
+If it is entered with Good-Till-Date Validity, the order will come with an expiry date, subject to an expiry date that is within 30 days from the day the order is placed. For instance, if the day the order is placed is 6 March 2017 and the investor wants to keep the order in the order book for 3 days, the order can rest in the order book till the end of trading day on 8 Match 2017 or be filled before that.
+If it is entered with Good-Till-Maximum Validity, the order will sit in the order book for 30 days or until it is filled before that date.
+Advantages of using limit orders
+Investors who want to minimise slippages can choose limit orders as such orders are used to buy at or below the prevailing market price or to sell at or above the prevailing market price. If the price moves beyond the specified price, the order will not be executed.
+Risks associated with using limit orders
+Investors using limit orders have no guarantee that the order will be filled.
+Market Orders
+A market order is an order which is entered into the order book with a specified quantity but without a price.
+It is purely volume-based and has no target price. It is an instruction to trade at the best price currently available in the market.
+How a market order works
+A market order prioritises execution over all other factors. It will trade through the order book to match the specified quantity. This means one market order can match with opposite orders of different price levels of the order book until the entire market order is matched.
+If a market order is entered into the order book during continuous trading from 09:00am – 05:00pm, the market order will be matched at the best possible price.
+If a market order is entered into the order book outside of continuous trading, the market order will take the indicative equilibrium price, if available.
+A market order will have priority over priced orders (e.g. limit orders) as the user of a market order is indicating a willingness to accept any price in return for execution.
+A market order must be entered with Fill-or-Kill and Fill-and-Kill time validities or it will be rejected.
+Advantages of using market orders
+The main advantage of a market order is that the transaction is completed immediately. If an investor sees a good price, the best way to secure a trade is to place a market order as it has priority over limit orders. This allows investors to take advantage of price swings as they happen.
+Risks associated with using market orders
+There is no guarantee that an order will be filled at a target price. That is, a buy order could be filled at a much higher price than intended, or a sell order can be filled at a much lower price than intended.
+Using market orders during a volatile market is not recommended as there is a higher probability that the prices will change quickly. Hence, the incidence of ‘slippage’ is higher in fast-moving markets or for illiquid securities with thin order book and wide bid-ask spread.
+The order may be split across multiple investors on the other side of the transaction, resulting in different prices for the order.
+Market-to-Limit (MTL) orders
+A market-to-limit order is an order which is entered into the order book with a quantity but without a price. It will only match at the current best bid or ask price and not trade through the order book.
+If the order is only partially filled after matching at the current best price, the unfilled portion is submitted as a limit order at the same price that the earlier match occurred.
+How a market-to-limit order works
+If it is entered during a continuous matching session state, the MTL order will be matched at the best possible price, and the unfilled quantity of the order will be submitted into the order book as a limit order at the executed price.
+When the MTL order is entered during a state when the orders are not matched continuously, the MTL order is stored in the order book like a market order. When transiting from non-matching to an auction session or continuous matching session, the MTL orders are matched at the indicative equilibrium price.
+A MTL can be entered with a Fill-or-Kill, Fill-and-Kill, day or long dated time validity.
+A Fill-or-Kill market-to-limit buy order will only be matched in its entirety at the best available ask, or be cancelled otherwise.
+Advantages of using market-to-limit orders
+Investors can consider market-to-limit orders instead of market order as such orders benefit them by ensuring execution for at least a portion of the order at one price while avoiding the risk of the rest of the order getting filled at too high a price.
+Session State Orders (SSO)
+A session state order is an instruction to place an order into an order book at a specific session state of a trading day.
+An SSO is not visible to the rest of the market before it is being triggered. Session state orders that are not activated by the end of the trading day will be automatically deleted from the system.
+SSOs can be placed in most of the sessions, but it can only be triggered in the Open and Pre-Close session states.
+Advantages of using SSOs
+SSOs allow investors to prepare their orders ahead of session state changes. Investors can specify the session in which to trigger their orders.
+SSOs improve order management as investors are able to prepare their orders at Pre-Open to set it to trigger at Open. This will ensure that their orders are entered on time for Market Open.
+Placing a session state order at any time during continuous trading to be triggered at the closing routine allows investors to ensure that their orders will be inserted into the closing auction.
+Price Triggered Orders
+Price Triggered Orders (“PTOs”) allow market participants to buy or sell an instrument when the trigger price condition is reached.
+How a price triggered order works
+PTOs can only be entered, modified, cancelled and triggered during Open phase. They cannot be entered, modified, cancelled and triggered during a trading halt.
+It is not visible to the market before it is converted to the specific order. Once the price meets the condition that was set up, the Price Triggered Order will be converted to an active tradable order.
+PTOs can be entered with any order type and validity for the to-be-triggered order. However, validation of the allowable order type and validity for the to-be-triggered order will be done upon activation of the order.
+PTOs not activated by end of the trading day will be automatically deleted from the system. This means there are no long dated PTOs. Reach ST offers 2 types of Price Triggered Orders (PTOs), namely, Stop Orders and If-Touched Orders.
+Interactions with circuit breakers
+PTOs with trigger prices outside of the circuit breaker price band will be accepted into the order book.
+Resting PTOs with trigger prices outside of the circuit breaker price band will not be affected as long as the trigger price condition of the PTO is not reached during the cooling-off period. If the trigger price condition of the PTO is reached and the order is activated, it will be rejected/deleted.
+It is possible for incoming PTOs to trigger circuit breakers if the price trigger condition is met and the order is activated. PTOs which are triggered and entered into the order book as market orders may be partially filled if the order is rejected due to the circuit breakers.
+Interactions with SGX error trade policy
+Investors must note that if they are using PTOs such as stop orders to cut losses, they may end up cutting losses at inopportune times if their orders are triggered wrongly by an error trade.
+When a PTO is triggered due to an error trade and it results in a trade, this trade may be considered as an error trade too.
+The prevailing procedures for reviewing and cancelling these error trades will apply, i.e. if parties cannot agree to mutual cancellation, either party to the triggered trade may refer it to the SGX for review within the stipulated timelines.
+SGX will only review error trades referred to it for review and only error trades outside of No-Cancellation Range. In its review, SGX will consider the factors set out in its new error trade policy (i.e. SGX-ST Rule 8.6.12) in determining if the triggered trade should be cancelled.
+Stop Orders
+A stop order is an instruction containing a target price and volume that will be converted into an actual order in the order book once the target price is met.
+How a stop order works
+A stop order can either be a stop limit order or a stop market order, which will determine the nature of the actual order created once the trigger condition is met.
+Once activated, the stop market order will be treated the same as a regular market order and the stop limit order will be treated as a regular limit order.
+A stop limit order will be traded at a specified price or better after a given stop price has been reached. Once the stop price is reached, the stop limit order becomes a limit order to buy or sell at the limit price or better.
+Advantages of using stop orders
+Stop orders are used when an investor wants to execute an order at a specific price, but the market is not currently trading at that price. They are useful for breakout trades where an investor wants his order executed only if the market trades past a particular price.
+Stop orders can be used to:
+Minimise a loss or protect a profit on an existing long or short position.
+Initiate a new long or short position.
+Risks associated with using stop orders
+The stop price may be activated by a short-term fluctuation in a stock's price.
+For stop market orders, once the stop price is reached, the stop order becomes a market order and the transacted price may be quite different from the stop price, especially in a fast-moving market or in a cascading price scenario where stock prices can change rapidly.
+It is possible to avoid the risk of a stop market order not guaranteeing a specific price by placing a stop-limit order.
+If-touched orders
+An if-touched order is an instruction containing a target price and volume that will be converted into an actual order in the order book once the target price is met.
+How an if-touched order works
+An if-touched order can either be a limit-if-touched order or a market-if-touched order, which will determine the nature of the actual order created once the trigger condition is met.
+Advantages of using if-touched orders
+Market-if-touched order benefits investors by providing the flexibility to buy and sell at specific price levels without investors having to constantly monitor market movements. It is particularly of use in fast-moving markets, when investors may not be able to react in time to take advantage of buying or selling opportunities.
+The difference between a stop order and an if-touched order is that a stop order is typically used as a loss-limiting mechanism in respect of open positions, while an if-touched order is used to create new positions in anticipation of a particular reversing trend.
+In a falling market, an investor may want to enter the market at a favourable price should the market rebound. Similarly, in a rising market, an investor may want to enter into a short position should the price begin to fall.
+Risks associated with using if-touched orders
+The trigger price may be activated by a short-term fluctuation in a stock's price.
+For if-touched market orders, once the trigger price is reached, the order becomes a market order and the transacted price may be quite different from the intended price, especially in a fast-moving market or in a cascading price scenario where stock prices can change rapidly.
+It is possible to avoid the risk of an if-touched market order not guaranteeing a specific price by placing an if-touched limit order. However, with limit order the rest of the unfilled order may not be executed if the price moves beyond the limit price.
+Investors must take note that once the market-if-touched order is triggered, the order will be injected into the order book as a market order which comes with the associated risk of a market order. The use of a limit-if-touched order may reduce the risk of being filled at a too unfavourable price when the order is triggered.
+Execution Conditions and Validities
+Execution conditions
+Fill-or-Kill (FOK)
+The order is matched in entire quantity or completely cancelled. There is no partial fill. The order is not stored in the order book.
+Fill-and-Kill (FAK)
+The order is matched with as much quantity as possible and the unmatched quantity is cancelled. The order is not stored in the order book.
+Time-in-force validities
+Day order
+A day order is valid only on the day the order is entered into the order book. If it is not matched, it will be removed from the order book at the end of the trading day. Thus, an investor who wants to trade only at specific price has to re-enter the order again each day.
+Long dated order
+A long dated order is valid in the order book for a specific period of time. It stays in the order book until it is fully filled, specifically cancelled, or the instrument is de-listed or expired. Long dated orders on SGX are valid for up to a maximum of 30 days and include:
+Good-Till-Date (GTD)
+A Good-Till-Date order will come with a date the order will expire, subject to a date that is within 30 days from the day the order is placed.
+Good-Till-Maximum (GTM)
+GTM orders will sit in the order book for 30 days.
+Risks associated with using long dated orders
+Investors who intend to use long dated orders should note the following:
+As the order is left in the order book for a period of time, market conditions could change and the order may become unfavourable.
+The order may incur more transaction cost if the order is partially filled each day and commissions are charged on each day that an execution occurs.
+Long dated orders will be purged when there are corporate actions in the stocks/units or when the validity of the order expires.
+Order Type Availability Information
+The table below shows the availability of the different order types at different points of the trading session.
+Pre-Open
+Open
+Pre-Close
+Trade-at-Close
+Limit Orders
+Fill and Kill
+✔
+✔
+✔
+✔
+Fill or Kill
+✔
+✔
+Day
+✔
+✔
+✔
+✔
+Long Dated
+✔
+✔
+✔
+✔
+Market Orders
+Fill and Kill
+✔
+✔
+✔
+Fill or Kill
+✔
+Day
+Long Dated
+Market-to-Limit Orders
+Fill and Kill
+✔
+✔
+✔
+Fill or Kill
+✔
+Day
+✔
+✔
+✔
+Long Dated
+✔
+✔
+✔
+Stop Orders
+✔
+✔*
+If-Touched Orders
+✔
+✔*
+Session State Orders
+✔
+✔
+*Price triggered orders resulting in market orders or limit orders that are outside the closing auction price will be rejected
+Dual Currency Trading
+Dual currency trading is available for selected securities counters, offering investors an option to trade in two different currencies (e.g. USD and SGD), for a listed security. There is no new offer of shares. Currently, SGX offers dual currency trading in SGD, USD, EUR, HKD, AUD and CNY. The investor can use the existing securities account to trade the dual currency counters.
+As the shares/units holdings are custodised in a consolidated pool at the depository, the investor can buy one currency counter and sell in the other currency counter. However, contra trade between the two currency counters is not possible as they are listed as separate trading counters.
+In the CDP statement, the market value of the listed security with dual currency trading functionality will be computed based on the last done price of the Primary Currency counter and the total number of unit holdings of the listed security.
+Advantages
+Price transparency
+Investors will know the exact traded price in the respective currency when they trade the dual counter directly.
+Risks Involved
+In certain cases, the price relationship and difference between two counters of a listed security might not necessarily be the foreign exchange rate between both counters due to market forces.
+Corporate Actions
+Corporate actions such as dividend distribution will usually be given in the Primary Currency of the listed security, although the issuer of the security may elect another currency or offer currency election to its shareholders. The Primary Currency is usually the currency in which the security is issued in unless otherwise stated by the Company.
+Securities with Dual Currency Trading
+Company/ Listed ProductSecurity TypeCurrency denomination available for tradingCounter NameStock CodeTraded Currency
+Hutchison Port Holdings TrustBusiness TrustPrimary Currency CounterHPH Trust USDNS8UUSD
+Secondary Currency CounterHPH Trust SGDP7VUSGD
+PRINCIPAL FTSE ASEAN40ETFPrimary Currency CounterPRINCIPAL ASEAN40 US$M62USD
+Secondary Currency CounterPRINCIPAL ASEAN40 S$DQS0SGD
+PRINCIPAL S&P APAC DIVIDENDETFPrimary Currency CounterPRINCIPAL S&P AP DIV US$P5PUSD
+Secondary Currency CounterPRINCIPAL S&P AP DIV S$DQR9SGD
+ISHARES USD ASIA HY BOND ETFETFPrimary Currency CounterIS ASIA HYG US$O9PUSD
+Secondary Currency CounterIS ASIA HYG S$DQL3SGD
+ISHARES USD ASIA BOND ETFETFPrimary Currency CounterIS ASIA BND US$N6MUSD
+Secondary Currency CounterIS ASIA BND S$DQL2SGD
+iShares MSCI India Index ETFETFPrimary Currency CounterIS MSCI INDIA 100US$I98USD
+Secondary Currency CounterIS MS INDIA 100S$DQK9SGD
+Yangzijiang Shipbldg Hldgs LtdSecurityPrimary Currency CounterYZJ Shipbldg SGDBS6SGD
+Secondary Currency CounterYZJ Shipbldg CNYSO7RMB
+Phillip SGX APAC Dividend Leaders REIT ETFETFPrimary Currency CounterPHLP AP DIV REIT US$BYIUSD
+Secondary Currency CounterPHLP AP DIV REIT S$DBYJSGD
+NikkoAM-StraitsTrading Asia ex Japan REIT ETFETFPrimary Currency CounterNikkoAM-STC Asia REITCFASGD
+Secondary Currency CounterNikkoAM-STC A_REIT US$COIUSD
+STONEWEG EUROPE STAPLED TRUSTStapled SecurityPrimary Currency CounterStoneweg EUTrust EURSETEUR
+Secondary Currency CounterStoneweg EUTrust SGDSEBSGD
+Xtrackers MSCI China UCITS ETFETFPrimary Currency CounterXT MSCHINA US$LG9USD
+Secondary Currency CounterXT MSCHINA S$TIDSGD
+ICBC CSOP FTSE Chinese Government Bond Index ETFETFPrimary Currency CounterICBC CSOP CGB ETF S$CYCSGD
+Secondary Currency CounterICBC CSOP CGB ETF US$DCYBUSD
+Phillip SGD Money Market ETFETFPrimary Currency CounterPHILLIP MM S$MMSSGD
+Secondary Currency CounterPHILLIP MM US$DMMTUSD
+NikkoAM-ICBCSG China Bond ETFETFPrimary Currency CounterNIKKOAM-ICBCSG CNB CNYZHYRMB
+Secondary Currency CounterNIKKOAM-ICBCSG CNB US$ZHDUSD
+Lion-OCBC Securities Hang Seng TECH ETFETFPrimary Currency CounterLion-OCBC Sec HSTECH S$HSTSGD
+Secondary Currency CounterLion-OCBC Sec HSTECH US$HSSUSD
+SPDR® GOLD SHARESETFPrimary Currency CounterGLD US$O87USD
+Secondary Currency CounterGLD SG$GSDSGD
+Lion-OCBC Securities China Leaders ETFETFPrimary Currency CounterLion-OSPL China L S$YYYSGD
+Secondary Currency CounterLion-OSPL China L CNYYYRRMB
+IREIT GlobalREITPrimary Currency CounterIREIT Global SGDUD1USGD
+Secondary Currency CounterIREIT Global EUR8U7UEUR
+CSOP iEdge S-REITs Leaders ETFETFPrimary Currency CounterCSOP iEdge SREIT ETF S$SRTSGD
+Secondary Currency CounterCSOP iEdge SREIT ETF US$SRUUSD
+UOB APAC Green REIT ETFETFPrimary Currency CounterUOB AP GRN REIT S$GRNSGD
+Secondary Currency CounterUOB AP GRN REIT US$GREUSD
+Phillip MSCI Singapore Daily 2X Leveraged ProductL&I ProductPrimary Currency CounterPHIL Long SiMSCI2X S$LSSSGD
+Secondary Currency CounterPHIL Long SiMSCI2X US$LSUUSD
+Phillip MSCI Singapore Daily -1X Inverse ProductL&I ProductPrimary Currency CounterPHIL Short SiMSCI-1X S$SSSSGD
+Secondary Currency CounterPHIL Short SiMSCI-1X US$SSUUSD
+AEM HOLDINGS LTDSecurityPrimary Currency CounterAEM SGDAWXSGD
+Secondary Currency CounterAEM USDXWAUSD
+NIKKOAM-STC CHINA EV ETFETFPrimary Currency CounterNikkoAM-STC CN EV S$EVSSGD
+Secondary Currency CounterNikkoAM-STC CN EV US$EVDUSD
+LION-OCBC SEC SG LOW CARBONETFPrimary Currency CounterLion-OSPL Low Carbon S$ESGSGD
+Secondary Currency CounterLion-OSPL Low Carbon US$ESUUSD
+CSOP CGS-CIMB FTSE Asia Pacific Low Carbon Index ETFETFPrimary Currency CounterCSOP LOW CARBON US$LCUUSD
+Secondary Currency CounterCSOP LOW CARBON S$LCSSGD
+UOBAM PING AN CHINEXT ETFETFPrimary Currency CounterUOBAM PINGAN CHINEXT S$CXSSGD
+Secondary Currency CounterUOBAM PINGAN CHINEXT US$CXUUSD
+CSOP iEdge Southeast Asia+ TECH Index ETFETFPrimary Currency CounterCSOP SEA TECH ETF US$SQUUSD
+Secondary Currency CounterCSOP SEA TECH ETF S$SQQSGD
+CGS Fullgoal Vietnam 30 Sector Cap ETFETFPrimary Currency CounterCF VN 30 SC ETF US$VNDUSD
+Secondary Currency CounterCF VN 30 SC ETF SG$VNMSGD
+iShares MSCI Asia Ex Japan Climate Action ETFETFPrimary Currency CounterISHARES AXJCLIMATE US$ICUUSD
+Secondary Currency CounterISHARES AXJCLIMATE S$ICMSGD
+CGS Fullgoal CSI1000 ETFETFPrimary Currency CounterCGS FG CSI 1000 S$GROSGD
+Secondary Currency CounterCGS FG CSI1000 US$GRUUSD
+Lion-Nomura Japan Active ETF (Powered by AI)ETFPrimary Currency CounterA LION-NOMURA JAPAN S$JJJSGD
+Secondary Currency CounterA LION-NOMURA JAPAN US$JUSUSD
+Phillip-China Universal MSCI China A 50 Connect ETFETFPrimary Currency CounterPHIL-CU MS CHINA A50 S$MCNSGD
+Secondary Currency CounterPHIL-CU MS CHINA A50 US$MCSUSD
+Lion-OCBC Securities APAC Financials Dividend Plus ETFETFPrimary Currency CounterLion-OSPL APAC Fin S$YLDSGD
+Secondary Currency CounterLion-OSPL APAC Fin US$YLUUSD
+UOBAM FTSE China A50 Index ETFETFPrimary Currency CounterUOBAM FTSE CN A50 S$JK8SGD
+Secondary Currency CounterUOBAM FTSE CN A50 US$VK8USD
+Lion-China Merchants EM Asia Select Index ETFETFPrimary Currency CounterLion-CM EM Asia S$EAASGD
+Secondary Currency CounterLion-CM EM Asia US$EAUUSD
+Lion-China Merchants CSI Dividend Index ETFETFPrimary Currency CounterLion-CM CSI Div S$INCSGD
+Secondary Currency CounterLion-CM CSI Div CNYICHCNH
+Amova MSCI AC Asia Ex Japan Ex CHina Index ETFETFPrimary Currency CounterAmova Asia exJC S$A93SGD
+Secondary Currency CounterAmova Asia exJC US$A94USD
+Amova E Fund ChiNext Index ETF – RMB ClassETFPrimary Currency CounterAmovaEFund ChiNext CNYCXNRMB
+Secondary Currency CounterAmovaEFund ChiNext US$CXOUSD
+LionGlobal Short Duration Bond Fund
+(Active ETF SGD Class)
+ETFPrimary Currency CounterA Lion Short Bond S$SBOSGD
+Secondary Currency CounterA Lion Short Bond US$SBVUSD
+EliteUK REITREITPrimary Currency CounterEliteUKREIT GBPMXNUGBP
+Secondary Currency CounterEliteUKREIT SGDMENUSGD
+UOBAM Ping An FTSE ASEAN Dividend Index ETFETFPrimary Currency CounterUOBAM PA FT ASEAN DV S$UPDSGD
+Secondary Currency CounterUOBAM FTSE CN A50 S$UPUUSD
+LionGlobal Singapore Physical Gold ETFETFPrimary Currency CounterLion SG Phy Gold US$GLUUSD
+Secondary Currency CounterLion SG Phy Gold S$GLSSGD
+Ultragreen.ai SecurityPrimary Currency CounterULTRAGREEN AI USDULGUSD
+Secondary Currency CounterULTRAGREEN AI SGDUGSSGD
+Dual Class Shares
+Companies with a dual class share (“DCS”) structure offer two classes of shares. Shares in one class carry one vote (“OV shares”) while shares in another class carry multiple votes (“MV shares”). Only the OV shares are listed and available for trading via SGX.
+Each OV share in a DCS company will have proportionately lower voting rights than each MV share. It is therefore important that these OV shares are clearly identified to market participants. OV shares of companies listed on SGX with a DCS structure will therefore carry a “DC” indicator at the instrument level.
+These OV shares will trade in the same manner as ordinary shares of any company listed and traded on SGX. Market data on these shares will be disseminated to the usual participants including your broker.
+The MV shares of DCS companies are not tradeable on SGX. They will not have any market data which means SGX won’t display any price or other data on these MV shares. If you require more information on MV shares if a DCS company, kindly consult the company’s IPO prospectus, annual report, or Investor Relations officer.
+Short Selling Requirements
+Currently, all brokers are required under Chapter 8A of the SGX-ST Rules to provide a system for investors making a short sell order to mark their orders as a short sell order. Investors making a short sell order are expected to indicate this to their broker.
+On 1 October 2018, the Monetary Authority of Singapore (“MAS”) formalised short selling requirements in law through changes to the Securities and Futures Act and the introduction of the Securities and Futures (Short Selling) Regulations 2018.
+These requirements apply to all persons trading on SGX-ST and to the following securities listed on SGX-ST: (i) shares of a corporation (regardless of whether they are primary- or secondary-listed on SGX-ST), (ii) business trusts and (iii) real estate investment trusts.
+For more information, please refer to the Guidelines on Short Selling Disclosure issued by MAS or Frequently-Asked Questions.
+Requirements
+Requirement 1: Disclosure of Short Sell Orders to SGX
+An investor who intends to make or is making a short sell order is required to disclose to SGX or, if he is making his order through a broker, to his broker, the intention to make or the making of the short sell order.
+SGX will publish on this webpage daily and weekly reports on short sell volumes and values.
+The daily report sets out the aggregate value and volume of short sell orders matched and executed for the preceding Market Day, based on information provided to SGX-ST the preceding Market Day, and is in respect of each security for which short sell disclosure is required. SGX publishes the daily report before the start of each Market Day.
+The weekly report aggregates the daily short selling statistics from the preceding week and takes into account corrections for erroneous disclosures in the preceding week. SGX publishes the weekly report every second Market Day of the week.
+Market participants should exercise care when interpreting information on short selling. For instance, information on short sale volume or value may not reflect the outstanding short positions in those securities. Volume or value of short sells may include trades that have since been squared off by offsetting buy trades.
+This webpage and any information and material hosted on it shall be accessed and used in accordance with the Terms of Service of the SGX website.
+Requirement 2: Reporting of Short Positions to MAS
+From 1 October 2018, under the Securities and Futures Act, investors need to report their short positions to MAS should those short positions be equivalent to or exceed specified thresholds set out in the Securities and Futures (Short Selling) Regulations 2018. Investors can find details on this reporting requirement in, and report their short positions through, MAS’ Short Position Reporting System found here.
+Click here to find the short sell reports.
+FAQ
+What is short selling?
+Short selling in respect of securities is the sale of securities that the seller does not own at the time of the sale. Short selling may either be “covered” or “uncovered”. In “covered” short selling, the seller has, at the time of the sale, borrowed the securities or otherwise made arrangements to fulfil his obligation to deliver the securities. In “uncovered” (also referred to as “naked” short selling), the seller, at the time of the sale, is not in possession of securities or has not otherwise made arrangements to meet his delivery obligation.
+Is short-selling allowed on SGX?
+Yes. SGX recognises that short selling generally plays an important role in markets as it allows for more efficient pricing of securities and facilitates hedging activities.
+However, SGX reminds investors that when they intend to make a short sale, they should have arrangements in place to avoid settlement failures. SGX will levy penalties for settlement failures under the CDP Clearing Rules.
+Further, abusive short-selling, such as selling accompanied by false rumours designed to encourage others to sell, may be construed as intent to deceive or manipulate the market and is an offence under the Securities and Futures Act. Participants found guilty of such conduct shall be liable on conviction to a fine not exceeding $50,000 or to imprisonment for a term not exceeding 2 years or to both.
+What are the short selling requirements imposed on investors?
+There are two main requirements imposed on investors: (i) the requirement to disclose short sell orders, and (ii) the requirement to report short positions.
+Disclosure of short sell orders: Under the Securities and Futures Act, an investor who intends to make or is making a short sell order on SGX must, before or at the time of the order, disclose to SGX the intention to make or the making of the short sell order. He must also specify the quantity, volume or value of the order. If the order is placed through a broker, the investor must make the disclosure to his broker instead, and the broker must, before or at the time of the short sell order, make the disclosure to SGX. Under the SGX-ST Rules, brokers may not enter a sell order if the investor has not informed them whether an order is a short sell order (whether covered or uncovered) or a normal sell order. Further, brokers must put in place systems and procedures to collect such sell order information from investors.
+Reporting of short positions: Under the Securities and Futures Act, an investor must also report his short positions to MAS should those short positions be equivalent to or exceed specified thresholds set out in the Securities and Futures (Short Selling) Regulations 2018. Investors can find details on the reporting requirements in and report their short positions through MAS’ Short Position Reporting System found here.
+SGX will publish aggregate short sales volume and value for each counter on its website at the start of each trading day. The information will be based on orders disclosed as short sell orders executed the previous trading day. Investors can access the report here.
+Which instruments listed on SGX are subject to the requirement for disclosing sell orders?
+The requirement to disclose short sell orders will apply to the following securities listed on SGX-ST: (i) shares of a corporation (regardless of whether they are primary- or secondary-listed), (ii) business trusts and (iii) real estate investment trusts.
+Who is subject to the requirement for disclosing short sell orders?
+Save for a limited exemption provided for market-makers, all market participants, including investors and SGX-ST Trading Members, are subject to the requirement.
+Exemption for Market-Makers
+The exemption for market-makers is set out in the Securities and Futures (Short Selling) Regulations 2018. Pursuant to the exemption, market-makers, which include Designated Market-makers and such other entities appointed by SGX to carry out a market-making function, are not required to disclose short sell orders for those securities for which they are obliged to market-make. This is because they may submit short sell orders as part of their market-making function.
+The exemption does not extend to Trading Members with facilitation desks that provide liquidity to their clients.
+From when will the short selling requirements be effective?
+The requirements are effective from 1 October 2018.
+Will the short selling information published by SGX reveal the names or positions of individual short sellers?
+No. The published information will contain only aggregated short sales volume and value for each counter.
+Where can I find the short sales reports published by SGX?
+SGX will publish on its website, by the start of each trading day, daily reports on the total value and volume of short sales for each counter, based on short sale data collected on the previous trading day. Investors can access SGX’s daily report here.
+How accurate are the short sales reports published by SGX?
+Market participants entering in short trades are expected to disclose accurately the nature of sell orders, i.e. whether they are short sell orders or normal sell orders, as well as the short quantity to be sold. SGX’s short sell reports are based on such disclosures.
+Market participants should exercise care when interpreting information on short selling. For instance, information on short sale volume may not reflect the outstanding short positions in those securities. Volume of short sales may include trades that have since been squared off by offsetting buy trades.
+Where can I find the short position data published by MAS?
+MAS will publish short position data on its Short Position Reporting System which can be found here.
+What are the benefits of the short selling measures?
+Information on short selling activities may be relevant to the trading decisions of market participants. For example, information that those securities are under sustained heavy short selling may indicate strong negative price pressure on those securities.
+As such, disclosure of short selling activities in Singapore is a step towards enhancing the information available for traders and investors to make informed trading decisions.
+Information on short sale transactions also helps to deter market abuse by alerting authorities to activities that may potentially disrupt the orderly functioning of markets, and aids in investigation and enforcement.
+Market participants should exercise care when interpreting information on short selling. For instance, information on short sale volume may not reflect the outstanding short positions in those securities. Volume of short sales may include trades that have since been squared off by offsetting buy trades.
+How do the short selling measures affect me as an investor?
+Under the SFA, an investor who intends to make or is making a short sell order on SGX must, before or at the time of the order, disclose to SGX the intention to make or the making of the short sell order. He must also specify the quantity, volume or value of the order. If the order is placed through a broker, the investor must make the disclosure to his broker instead, and the broker must, before or at the time of the short sell order, make the disclosure to SGX.
+Brokers may not enter a sell order if the investor has not informed them whether the order is a short sell order (covered or uncovered) or a normal sell order. SGX’s Trading Members must put in place systems and procedures to collect such sell order data from investors.
+If you call your broker to place a sell order, your broker will ask you whether your sell order is a short sell order or a normal sell order. If you trade through the internet, you will be required to indicate whether your sell order is a short sell order or a normal sell order.
+You should approach your broker for assistance with the procedures for disclosing short sell orders.
+Investors are also required to report their short positions to MAS should those short positions be equivalent to or exceed specified thresholds set out in the Securities and Futures (Short Selling) Regulations 2018. Such reporting should be made through MAS’ Short Position Reporting System.
+How do I determine whether my sell order is a short sell order or a normal sell order?
+Section 137ZH(1) of the Securities and Futures Act defines a “short sell order” as ”an order to sell any specified capital markets products where the person who makes the order does not, at the time of the order, have an interest in the specified capital markets products”.
+You are deemed to have an interest in the specified capital markets products if:
+you are the legal owner of the specified capital markets products;
+you are the beneficial owner of the specified capital markets products;
+you have authority (whether formal or informal, or expressed or implied) to dispose of the specified capital markets products;
+you—
+have purchased or entered into an unconditional agreement or arrangement to purchase the specified capital markets products, but have not received delivery of the specified capital markets products;
+have tendered the specific capital markets products for conversion or exchange, or have issued irrevocable instructions to convert or exchange capital markets products into the specific capital markets products, but have not received delivery of the specific capital markets products;
+have exercised an option to subscribe for the specific capital markets products, but have not received delivery of the specific capital markets products; or
+have exercised a right under a warrant to subscribe for the specific capital markets products, but have not received delivery of the specific capital markets products,
+and under the agreement, arrangement, conversion, exchange, option or right (referred to in (a) to (d) above), you are to receive delivery of the specified capital markets products before the time that you are to deliver the specified capital markets products;
+you—
+are the lender in a securities lending arrangement;
+have transferred title to the specified capital markets products to the borrower in the securities lending arrangement; and
+are to receive title from the borrower in the securities lending arrangement to the specified capital markets products before the time that you are to deliver the specified capital markets products; or
+you are a party to an agreement or arrangement that is, or that belongs to a class of agreements or arrangements that is, prescribed by regulations made under section 137ZM of the Securities and Futures Act for the purposes of this definition.
+You should approach your broker for assistance if you are uncertain whether your order is a short sell order.
+I have made arrangements to borrow securities for delivery on settlement day. How should I mark my sell order?
+If you have borrowed securities for delivery, you should still mark your sell order as a short sell order. An investor is not deemed to have an interest in a security solely as a result of his having borrowed the security for delivery on settlement day.
+I own a partial quantity of the sell order that I intend to submit. How should I mark my sell order?
+You should only mark a sell order as a short sell order if you do not own the full quantity of the sell order. Conversely, you should only regard a sell order as a normal sell order if you have the full quantity of the shares to be sold.
+In a situation where you intend to sell more shares than you own, you should enter two separate sell orders—one order (normal sell order) for the portion that you own in full, and one order (short sell order) for the portion that you do not own.
+For example, if you own 2,000 shares and want to enter an order to sell 5,000 shares, you should enter two orders: one normal sell order to sell 2,000 shares, and one short sell order to sell 3,000 shares.
+For Direct Business trades, must I also disclose my sell order as a short sell order?
+Yes. The requirement to mark short sell orders also applies to Direct Business trades. You must indicate whether your sell order is a short sell order when reporting the trade to the exchange.
+I have a buy order that is unfilled. I want to enter a sell order. What should I disclose my sell order as?
+The disclosure of short sell orders should be based on what the investor knows about his positions at the time of order entry.
+For example, you hold 5,000 shares of Stock A. You put in an additional buy order for 3,000 shares of Stock A that is unfilled. If you wish to sell 8,000 shares of Stock A, you should enter two orders: one normal sell order to sell 5,000 shares, and another short sell order to sell 3,000 shares. This is because at the point of your sell order entry, the buy order for 3,000 is unfilled.
+I do not know the quantity of securities that I own. How should I disclose my sell orders?
+You must disclose your sell orders accurately. You should keep track if your holdings on an ongoing basis so that you are able to do so.
+For shares that you have bought using cash, you can check your holdings through CDP Internet Access or CDP Phone Service. Please note that outstanding transactions that are due for settlement are not reflected in the holdings. To access CDP Internet Access or CDP Phone Service, you will need an Internet PIN or Telephone PIN. To apply for one, please download the application form from the SGX website at www.sgx.com/cdp and post it to CDP. Upon successful verification, we will send the PIN to your mailing address registered with CDP. You may contact CDP at 6535 7511 or cdp@sgx.com if you require any assistance.
+For shares bought with CPF monies, please contact your CPF Investment Bank.
+I have made a wrong disclosure in respect of a sell order that I have already submitted. May I modify my disclosure?
+No. However, you may correct your order by withdrawing the order and entering a new order.
+Will my broker confirm that I have accurately disclosed my sell orders?
+No. You have the responsibility for accurately disclosing the nature of your sell orders. Your broker is unable to confirm that you have accurately marked your sell orders as he does not have full knowledge of your holdings.
+Must I inform my broker or SGX if I made a wrong disclosure after the order has been executed?
+Yes, you need to approach your broker to inform SGX of the wrong disclosure. Your broker should submit amendments to the erroneous disclosure to SGX on your behalf before 5.45pm on the next trading day. You must inform your broker in advance so that he has sufficient time to prepare the amendments for submission to SGX. For errors in quantity, you are expected to accurately correct the quantity of the sell order.
+The accurate disclosure of sell orders is a requirement under section 137ZJ of the Securities and Futures Act. Failure to disclose or to make an inaccurate disclosure is an offence and will render you liable on conviction to a fine not exceeding $25,000.
+In addition, section 330(1) of the Securities and Futures Act states that any person who, with intent to deceive, makes or furnishes, or knowingly and wilfully authorises or permits the making or furnishing of, any false or misleading statement or report to any approved exchange, approved clearing house or any officers thereof relating to dealing in securities shall be guilty of an offence and shall be liable on conviction to a fine not exceeding $50,000 or to imprisonment for a term not exceeding 2 years or both. If it is found that in failing to, or to accurately, disclose a short sell order, you or your broker had intended to deceive, you or your broker may be convicted of an offence under section 330(1) of the Securities and Futures Act.
+The accurate disclosure of sell order is necessary for factual information to be provided to market participants regarding short selling. As the information may be taken into account by investors when making trading decisions, it is important that you do not present false or misleading information.
+Specified Investment Products
+Online Education Programme - Specified Investment Products
+Online Education Programme - Specified Investment Products
+Since January 2012, as part of the Monetary Authority of Singapore’s initiatives to provide trading safeguards to retail investors, brokers have to assess if investors have the relevant knowledge and experience before they can invest using Specified Investment Products (SIPs).
+SIPs have structures, features and risks that may be more complex and require more knowledge to understand. Check with your broker to find out whether a product is an SIP.
+The current list of SIPs includes:
+Exchange Traded Funds (ETFs)
+Leveraged and Inverse Products (L&I)
+Exchange Traded Notes (ETNs)
+Structured Warrants (SWs)
+Daily Leverage Certificates (DLCs)
+Futures and Options listed on SGX derivatives market
+More of such products may be introduced to the market in future.
+Please click here to access Moneysense website and find out more on the Customer Account Review and a guide on investing in Specified Investment Products.
+Click here to log in to or register for SGX’s Online Education Programme (no costs).
+Securities Support Services
+SGX Market Control supports trading-related requests from registered authorized contacts.
+Members’ registered authorized contacts, as designated via Appointment of Authorized Coordinators and Designated Officer Form, which is in accordance with SGX-ST Rules on Contingency Order Withdrawal and CDP Clearing Rules on Procedures to Suspend Qualification of a Trading Member.
+Contingency Order Withdrawal Services
+In situations (e.g. technical fault) where members are unable to withdraw orders on their own, SGX Securities Market Control will assist on a best-efforts basis in accordance with SGX Securities Trading Rules upon request.
+Callers should note that SGX Securities Market Control Procedures require confirmation of security information and caller authentication prior to SGX Securities Market Control processing any order status queries or cancellation requests. This service is only provided to members that cannot perform order withdrawal due to their system issues.
+Please refer to the following documents:
+Trading-Related Enquiries
+Members may contact SGX Securities Market Control for trading-related enquiries like the last trading day, order status and trade status.
+Suspension or Resumption Qualification of a Trading Member
+Members’ Designated Officers may contact SGX Securities Market Control to request for the suspension or resumption qualification of a Trading Member according to CDP Clearing Rules.
+Callers should note that SGX Securities Market Control will require confirmation of security information and caller authentication before any suspension/resumption request. SGX Securities Market Control shall only act upon the request if the identity of the Designated Officer has been authenticated.
+Membership
+The membership structure at SGX gives market participants greater flexibility in structuring their businesses and choosing the business models that best suit their operational needs.
+Market participants can become a Trading Member if they want to offer specialist equities execution-only services.
+Learn more about becoming a Trading Member here.

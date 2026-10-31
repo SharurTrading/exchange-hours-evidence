@@ -1,0 +1,109 @@
+{
+  "review_date_utc": "2026-10-31",
+  "actionable_source": {
+    "document_id": "IFUS-NOTICE-2026-CHRISTMAS",
+    "file": "ICE_Futures_US_2026_Christmas_Holiday_20261022.pdf",
+    "published": "2026-10-22",
+    "unconditional": true,
+    "sha256": "a7658155b57c51085cd3b36abc9ff6b91f3ca353cda88365a06459ebb40f0801"
+  },
+  "implemented": {
+    "source": "src/calendar/schedules/holidays/ice_us.rs",
+    "matching_dates": [
+      "2026-12-24",
+      "2026-12-28"
+    ],
+    "queue_date": "2026-12-24",
+    "cotton_derived_following_trade_date": "2026-12-29",
+    "windows": "2025-01-01..2028-01-03 unchanged",
+    "tables": {
+      "SUGAR": {
+        "rows": 41,
+        "replacements": 1,
+        "unsourced": 0
+      },
+      "COFFEE": {
+        "rows": 43,
+        "replacements": 1,
+        "unsourced": 0
+      },
+      "COCOA": {
+        "rows": 43,
+        "replacements": 1,
+        "unsourced": 0
+      },
+      "ORANGE_JUICE": {
+        "rows": 35,
+        "replacements": 1,
+        "unsourced": 0
+      },
+      "COTTON": {
+        "rows": 39,
+        "replacements": 2,
+        "unsourced": 0
+      },
+      "FANG": {
+        "rows": 37,
+        "replacements": 0,
+        "unsourced": 9
+      },
+      "DOLLAR_INDEX": {
+        "rows": 27,
+        "replacements": 0,
+        "unsourced": 9
+      },
+      "VENUE": {
+        "rows": 51,
+        "replacements": 0,
+        "unsourced": 44
+      }
+    }
+  },
+  "negative_checks": [
+    {
+      "scope": "CFE",
+      "sources": [
+        "cfe-holidays.csv",
+        "cfe-hours.html",
+        "cfe-notices.html"
+      ],
+      "result": "Only 2026 holiday rows; future 2026 Thanksgiving/Christmas clocks match existing table; no 2027 schedule."
+    },
+    {
+      "scope": "TSX",
+      "sources": [
+        "tsx-calendar.html",
+        "tsx-hours.html"
+      ],
+      "result": "Only 2025 and 2026 holiday sections, no 2027 calendar. Current session envelope unchanged."
+    },
+    {
+      "scope": "B3 cash equities",
+      "sources": [
+        "b3-nov-hours.html",
+        "b3-holidays.html"
+      ],
+      "result": "Nov3 10:00-17:55 continuous plus closing call17:55-18:00 matches current seasonal selector. No 2027 holiday section."
+    },
+    {
+      "scope": "ICE Futures Europe/Abu Dhabi",
+      "sources": [
+        "ice-holiday-hours.html"
+      ],
+      "result": "Registry hub still links Christmas/New Year2025 separately; no new definite primary change located in bounded search. Existing2026/2027 schedule publications already known."
+    },
+    {
+      "scope": "ICE new livestock listings",
+      "sources": [
+        "iceus-notices-2026.json"
+      ],
+      "result": "Dec7 listings are outside existing modelled ICE family identities; no family expansion added."
+    }
+  ],
+  "verification": [
+    "cargo test --test futures_family_boundaries holidays_ice_us:25 passed",
+    "cargo fmt --all --check:passed",
+    "cargo xtask verify-evidence IFUS-NOTICE-2026-CHRISTMAS:digest artifact resolved,exit0;best-effort quoted excerpt matcher found none"
+  ],
+  "confirmation_issue": "https://github.com/SharurTrading/exchange-hours-rs/issues/374"
+}

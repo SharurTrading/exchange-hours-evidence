@@ -1,0 +1,101 @@
+[
+  {
+    "file": "iceus-notices-2026.json",
+    "url": "https://www.ice.com/api/sitesearchservice/v1/search/websitenotices?searchCollections=futures_us_exchange_notice&year=2026",
+    "method": "POST",
+    "retrieved_utc": "2026-10-31T22:04:49.910921+00:00",
+    "status": 200,
+    "final_url": "https://www.ice.com/api/sitesearchservice/v1/search/websitenotices?searchCollections=futures_us_exchange_notice&year=2026",
+    "bytes": 2709,
+    "sha256": "8b8e279bb921eafa7c7777b2f0d3f54d204682a98ea3321f148c4da1f08a74fd",
+    "preview": "ate\" : \"Oct 26 2026\",\n    \"rules\" : [ ],\n    \"title\" : \"New Live Cattle, Feeder Cattle, And Lean Hog Option Contracts To Be Listed For Trading On Monday, December 7, 2026\",\n    \"url\" : \"https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_Exchange_Notice_Livestock_Options_2026_20261026.pdf\"\n  }, {\n    \"pubDate\" : \"Oct 22 2026\",\n    \"rules\" : [ ],\n    \"title\" : \"2026 Christmas Holiday Trading Schedule\",\n    \"url\" : \"https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_2026_Christmas_Holiday_20261022.pdf\"\n  }, {\n    \"pubDate\" : \"Oct 21 2026\",\n    \"rules\" : [ ],\n    \"title\" : \"Listing of New Options Contract\",\n    \"url\" : \"https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_NewProducts_20261021.pdf\"\n  }, {\n    \"pubDate\" : \"Oct 16 2026\",\n    \"rules\" : [ ],\n    \"title\" : \"Canola Futures Contract Regular Daily Price Limit Of $60.00 Per Tonne To Be Effective Starting November 2, 2026\",\n    \"url\" : \"https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_Notice_CanolaDPLChange20261016.pdf\"\n  }, {\n    \"pubDate\" : \"Oct 13 2026\",\n    \"rules\" : [ ],\n    \"title\" : \"New Live Cattle, Feeder Cattle, And Lean Hog Futures Contracts To Be Listed For Trading On Monday, December 7, 2026\",\n    \"url\" : \"https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_Exchange_Notice_Livestock_2026_20261013.pdf\"\n  }, {\n    \"pubDate\" : \"Oct 5 2026\",\n    \"rules\" : [ ],\n    \"title\" : \"Delayed Listing of New Options Contract\",\n    \"url\" : \"https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_NewProductsDelay_20261005.pdf\"\n  }, {\n    \"pubDate\" : \"Oct 5 2026\",\n    \"rules\" : [ ],\n    \"title\" : \"Margin Rates Update for ICE Futures U.S. Products\",\n    \"url\" : \"https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_NewMarginRequirements20261005.pdf\"\n  }, {\n    \"pubDate\" : \"Oct 2 2026\",\n    \"rules\" : [ ],\n    \"title\" : \"Reminder: Spot Month Position Limit Dates for Agricultural, Digital Asset and Energy Contracts\",\n    \"url\" : \"https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_November2026SpotReminder_20261002.pdf\"\n  } ],\n  \"totalCount\" : 129\n}"
+  },
+  {
+    "file": "ice-holiday-hours.html",
+    "url": "https://www.ice.com/holiday-hours",
+    "method": "GET",
+    "retrieved_utc": "2026-10-31T22:04:49.911416+00:00",
+    "status": 200,
+    "final_url": "https://www.ice.com/holiday-hours",
+    "bytes": 96654,
+    "sha256": "d56f23fb41ede3aa93bcf35a0da25559a8c4b126dc06af78a0948cc33dfbb069",
+    "preview": "The tables below provide a list of holiday trading hours across all ICE markets, administrators and clearing houses. For some markets, holiday trading hours for specific contracts or benchmarks are announced close to the holiday itself. When those announcements are made, a notification is posted to the Notices/Circulars page for each respective market or the ICE Benchmark Administration holiday page.\nRegular trading hours\nTrading hours holiday calendar\nHoliday trading hours for specific contracts are published in advance of the holiday in the\nTrading schedule - Temporary trading hours for DST\nChristmas and New Year trading hours 2025\nTrading hours holiday calendar\nTrading hours holiday calendar - Equities\n2026 trading hours holiday calendar\n2026"
+  },
+  {
+    "file": "cfe-holidays.csv",
+    "url": "https://www.cboe.com/us/futures/holidays/csv/",
+    "method": "GET",
+    "retrieved_utc": "2026-10-31T22:04:49.911685+00:00",
+    "status": 200,
+    "final_url": "https://www.cboe.com/us/futures/holidays/csv/",
+    "bytes": 1165,
+    "sha256": "9622893f4af05e0ad49941a331f141c4aaa25191f51d9cca9519735247e9b3e7",
+    "preview": "# Generated: 2026:10:31 16:50:19\nHoliday Name,Date,Regular Trading Hours,Extended Trading Hours\nNew Year's Day,2026-01-01,None,5:00 PM (Thu) to 8:30 AM (Fri)\nMartin Luther King Jr. Day,2026-01-19,None,5:00 PM (Sun) to 10:30 AM (Mon) and 5:00 PM (Mon) to 8:30 AM (Tue)\nPresidents' Day,2026-02-16,None,5:00 PM (Sun) to 10:30 AM (Mon) and 5:00 PM (Mon) to 8:30 AM (Tue)\nGood Friday,2026-04-03,None,5:00 PM (Thu) to 8:30 AM (Fri)\nMemorial Day,2026-05-25,None,5:00 PM (Sun) to 10:30 AM (Mon) and 5:00 PM (Mon) to 8:30 AM (Tue)\nJuneteenth Holiday,2026-06-19,None,5:00 PM (Thu) to 10:30 AM (Fri)\nIndependence Day Observed,2026-07-03,None,5:00 PM (Thu) to 10:30 AM (Fri)\nLabor Day,2026-09-07,None,5:00 PM (Sun) to 10:30 AM (Mon) and 5:00 PM (Mon) to 8:30 AM (Tue)\nThanksgiving Day,2026-11-26,None,5:00 PM (Wed) to 10:30 AM (Thu) and 5:00 PM (Thu) to 8:30 AM (Fri)\nThanksgiving Early Close,2026-11-27,08:30:00 - 12:15:00,5:00 PM (Wed) to 10:30 AM (Thu) and 5:00 PM (Thu) to 8:30 AM (Fri)\nChristmas Early Close,2026-12-24,08:30:00 - 12:15:00,5:00 PM (Wed) to 8:30 AM (Thu)\nChristmas Day,2026-12-25,None,None"
+  },
+  {
+    "file": "cfe-hours.html",
+    "url": "https://www.cboe.com/about/hours/us-futures",
+    "method": "GET",
+    "retrieved_utc": "2026-10-31T22:04:49.912150+00:00",
+    "status": 200,
+    "final_url": "https://www.cboe.com/about/hours/us-futures",
+    "bytes": 505141,
+    "sha256": "23ab97477b2451b9d9b500df450f7f79391f9fe7c7bcb77d0dde258c32584121",
+    "preview": "Global Trading Hours\n2026 Futures Settlement Calendar\nCFE Trading Hours\n4:00 p.m.\n4:45 p.m.\n5:00 p.m.\n5:00 p.m.\n3:00 p.m.\n3:00 p.m.\n4:00 p.m.\n4:00 p.m.\n8:00 a.m. on expiration Wed\n8:30 a.m. \u2013 3:00 p.m.\n8:30 a.m. \u2013 3:00 p.m.\n5:00 p.m.\n3:00 p.m. and 5:00 p.m.\n3:00 p.m.\n8:30 a.m. and 4:00 p.m.\n8:30 a.m. and 4:00 p.m.\n4:00 p.m.\n4:45 p.m.\n5:00 p.m.\n5:00 p.m.\n3:00 p.m.\n3:00 p.m.\n3:00 p.m. on Tue prior to expiration Wed\n5:00 p.m.\n5:00 p.m. on prior calendar day\n5:00 p.m. on prior calendar day\n8:30 a.m.\n8:30 a.m.\n3:15 p.m.\n3:15 p.m.\n3:15 p.m. on day prior to final settlement date\n4:00 p.m.\n4:45 p.m.\n5:00 p.m.\n5:00 p.m.\n3:00 p.m.\n3:00 p.m.\n4:00 p.m.\n4:00 p.m.\n3:00 p.m. on final settlement date\n5:00 p.m.\n3:00 p.m. and 5:00 p.m.\n3:00 p.m.\n8:30 a.m. and 4:00 p.m.\n8:30 a.m. and 4:00 p.m.\n4:00 p.m.\n4:45 p.m.\n5:00 p.m.\n5:00 p.m.\n3:00 p.m.\n3:00 p.m.\n4:00 p.m.\n4:00 p.m.\n3:00 p.m. on final settlement date\n5:00 p.m.\n3:00 p.m. and 5:00 p.m.\n3:00 p.m.\n8:30 a.m. and 4:00 p.m.\n8:30 a.m. and 4:00 p.m.\n4:00 p.m.\n4:45 p.m.\n5:00 p.m.\n5:00 p.m.\n3:00 p.m.\n3:00 p.m.\n4:00 p.m.\n4:00 p.m.\n3:00 p.m. on final settlement date\n5:00 p.m.\n3:00 p.m. and 5:00 p.m.\n3:00 p.m.\n8:30 a.m. and 4:00 p.m.\n8:30 a.m. and 4:00 p.m.\n5:00 p.m.\n5:00 p.m. on prior calendar day\n5:00 p.m. on prior calendar day\n8:30 a.m.\n8:30 a.m.\n3:00 p.m.\n3:00 p.m.\n3:00 p.m.\n3:00 p.m.\n8:30 a.m.\n8:30 a.m.\n3:00 p.m.\n3:00 p.m.\n4:00 p.m.\n4:45 p.m.\n5:00 p.m.\n5:00 p.m.\n3:00 p.m.\n3:00 p.m.\n4:00 p.m.\n4:00 p.m.\n10:00 a.m. on expiration Friday\n8:30 a.m. - 3:00 p.m.\n8:30 a.m. - 3:00 p.m.\n5:00 p.m.\n3:00 p.m. and 5:00 p.m.\n3:00 p.m.\n4:00 p.m.\n4:00 p.m.\n4:00 p.m.\n4:45 p.m.\n5:00 p.m.\n5:00 a.m.\n4:00 p.m.\n4:00 p.m.\n10:00 a.m. on expiration Friday\n8:30 a.m. - 3:00 p.m.\n8:30 a.m. - 3:00 p.m.\n5:00 p.m.\n3:00 p.m. and 5:00 p.m.\n3:00 p.m.\n4:00 p.m.\n4:00 p.m.\n4:00 p.m.\n4:45 p.m.\n5:00 p.m.\n5:00 p.m.\n8:30 a.m.\n3:00 p.m.\n3:00 p.m.\n4:00 p.m.\n4:00 p.m.\n8:25 a.m.\n5:00 p.m.\n3:00 p.m. and 5:00 p.m.\n3:00 p.m.\n8:30 a.m. and 4:00 p.m.\n8:30 a.m. and 4:00 p.m.\n5:00 p.m.\n5:00 p.m.\n8:30 a.m.\n8:30 a.m.\n3:00 p.m.\n3:00 p.m.\n5:00 p.m.\n5:00 p.m.\n8:30 a.m.\n8:30 a.m.\n3:00 p.m.\n3:00 p.m.\n2026\nRegular Trading Hours\nExtended Trading Hours\n5:00 PM (Thu) to 8:30 AM (Fri)\n5:00 PM (Sun) to 10:30 AM (Mon) and 5:00 PM (Mon) to 8:30 AM (Tue)\n5:00 PM (Sun) to 10:30 AM (Mon) and 5:00 PM (Mon) to 8:30 AM (Tue)\n5:00 PM (Thu) to 8:30 AM (Fri)\n5:00 PM (Sun) to 10:30 AM (Mon) and 5:00 PM (Mon) to 8:30 AM (Tue)\n5:00 PM (Thu) to 10:30 AM (Fri)\n5:00 PM (Thu) to 10:30 AM (Fri)\n5:00 PM (Sun) to 10:30 AM (Mon) and 5:00 PM (Mon) to 8:30 AM (Tue)\nThanksgiving Day\n5:00 PM (Wed) to 10:30 AM (Thu) and 5:00 PM (Thu) to 8:30 AM (Fri)\nThanksgiving Early Close\n08:30:00 - 12:15:00\n5:00 PM (Wed) to 10:30 AM (Thu) and 5:00 PM (Thu) to 8:30 AM (Fri)\nChristmas Early Close\n08:30:00 - 12:15:00\n5:00 PM (Wed) to 8:30 AM (Thu)\nChristmas Day\n2026"
+  },
+  {
+    "file": "cfe-notices.html",
+    "url": "https://www.cboe.com/markets/us/futures/notices/schedule-update/",
+    "method": "GET",
+    "retrieved_utc": "2026-10-31T22:04:49.912410+00:00",
+    "status": 200,
+    "final_url": "https://www.cboe.com/markets/us/futures/notices/schedule-update/",
+    "bytes": 377256,
+    "sha256": "5065b02c0023dec40bb318f7e5f8542631d718be3a45987119c87333428b4523",
+    "preview": "Global Trading Hours\n2026"
+  },
+  {
+    "file": "tsx-calendar.html",
+    "url": "https://www.tsx.com/en/trading/calendars-and-trading-hours/calendar",
+    "method": "GET",
+    "retrieved_utc": "2026-10-31T22:04:49.912699+00:00",
+    "status": 200,
+    "final_url": "https://www.tsx.com/en/trading/calendars-and-trading-hours/calendar",
+    "bytes": 65216,
+    "sha256": "a7dffaf3afc316dde026eff80bc7028eb727a4bcee916f3f36ff0fa9646f51c9",
+    "preview": "Calendars & Trading Hours\nCalendars & Trading Hours\nCalendars & Trading Hours\nTrading Hours\nCalendars & Trading Hours\nTrading Hours\nCalendars & Trading Hours\n2026 Stock Market Holidays - Stock Markets Closed\nNew Year's Day - Thursday, January 1, 2026\nFamily Day - Monday, February 16, 2026\nGood Friday - Friday, April 3, 2026\nVictoria Day - Monday, May 18, 2026\nCanada Day - Wednesday, July 1, 2026\nCivic Holiday - Monday, August 3, 2026\nLabour Day - Monday, September 7, 2026\nThanksgiving Day - Monday, October 12, 2026\nChristmas Eve - Thursday, December 24, 2026*\nChristmas Day -\u00a0Friday, December 25, 2026\nIn Lieu of Boxing Day - Monday, December 28, 2026\n* Closing at 1:00 PM (TSX/TSXV) and 1:30 (ALPHA/ALPHA X/DRK)\nMartin Luther King, Jr. Day - Monday, January 19, 2026\nMemorial Day - Monday, May 25, 2026\nJuneteenth National Independence Day - Friday, June 19, 2026\nIn Lieu of Independence Day - Friday, July 3, 2026\nU.S. Thanksgiving Day - Thursday, November 26, 2026\nThanksgiving Day - Monday, October 13, 2025\nChristmas Eve - Wednesday, December 24, 2025*\nChristmas Day - Thursday, December 25, 2025\n* Closing at 1:00 PM (TSX/TSXV) and 1:30 (ALPHA/ALPHA X/DRK)\nU.S. Thanksgiving Day - Thursday, November 27, 2025\nSettlement Schedule for 2026 Holidays\nOctober 29, 2026\nOctober 29, 2026\nTMX Group Limited Reports Results for the Third Quarter of 2026\nOctober 19, 2026\nTMX Global Insights CEO Peter Conroy to Present at the TD Cowen 2026 Financials & Fintech Conference\nCopyright \u00a9 2026 TSX Inc. All rights reserved."
+  },
+  {
+    "file": "tsx-hours.html",
+    "url": "https://www.tsx.com/en/trading/calendars-and-trading-hours/trading-hours",
+    "method": "GET",
+    "retrieved_utc": "2026-10-31T22:04:49.913348+00:00",
+    "status": 200,
+    "final_url": "https://www.tsx.com/en/trading/calendars-and-trading-hours/trading-hours",
+    "bytes": 66420,
+    "sha256": "aa9bd9bc26f3a50bc2386f85378185912779720b10a83400974a2737c29c99d8",
+    "preview": "TMX TSX | TSXV | Trading Hours\nCalendars & Trading Hours\nCalendars & Trading Hours\nCalendars & Trading Hours\nTrading Hours\nCalendars & Trading Hours\nTrading Hours\nCalendars & Trading Hours\nTrading Hours\nTrading Hours\n7:00\u00a0AM\u00a0-\u00a09:30\u00a0AM\n9:30 AM\n9:30 AM - 4:00 PM\n3:50 PM - 4:00 PM\n3:50 pm Imbalance Period\n3:56 pm Freeze Period\n- The Freeze Period begins simultaneously across all symbols at a random point between 3:56 pm and 3:57 pm. Allow entry of Limit on Close orders on either side and with any volume, with no cancels or amends. Limit on Close orders entered are treated as \"Pegged LOC orders\", which means that if the price is more aggressive than the MOC Reference Price, then it is repriced to the MOC Reference Price. Imbalance messages are published every 10 seconds during this time.\nTrades publish at 4:00 unless a Price Movement Extension is required\n4:00 PM - 4:10 PM\n- The PME period is designed to solicit further liquidity to offset a remaining imbalance. If the calculated closing price (\"CCP\") exceeds the PME range and requires a Price Movement Extension, a new MOC imbalance is calculated and published after which LOC orders opposite to the imbalance are accepted subject to a new price collar. If the new CCP does not exceed the CPA parameters, trades publish at 4:10 pm. During this time, open orders may be cancelled by the dealer for symbols that are not in a \"closing delayed\" stock state.\n4:10 PM - 4:15 PM\n4:15 PM - 5:00 PM\n7:00\u00a0AM\u00a0-\u00a08:00\u00a0AM\n8:00 AM - 5:00 PM\n- At 8:00 am continuous trading commences. All regular order types are accepted.\n5:00 PM - 5:30 PM\nOctober 29, 2026\nOctober 29, 2026\nTMX Group Limited Reports Results for the Third Quarter of 2026\nOctober 19, 2026\nTMX Global Insights CEO Peter Conroy to Present at the TD Cowen 2026 Financials & Fintech Conference\nCopyright \u00a9 2026 TSX Inc. All rights reserved."
+  },
+  {
+    "file": "b3-nov-hours.html",
+    "url": "https://www.b3.com.br/pt_br/noticias/b3-ajusta-horarios-de-negociacao-de-acoes-e-derivativos-acompanhando-fim-do-horario-de-verao-nos-eua.htm",
+    "method": "GET",
+    "retrieved_utc": "2026-10-31T22:04:49.914284+00:00",
+    "status": 200,
+    "final_url": "https://www.b3.com.br/pt_br/noticias/b3-ajusta-horarios-de-negociacao-de-acoes-e-derivativos-acompanhando-fim-do-horario-de-verao-nos-eua.htm",
+    "bytes": 51084,
+    "sha256": "8ee29cc8d15de5c788b044b2983a3c8382ceeb0c6db43c646f64dd20e74a39ab",
+    "preview": "28/10/2026\nS\u00e3o Paulo, 28 de outubro de 2026\nOf\u00edcio Circular 050/2026-VNC"
+  },
+  {
+    "file": "b3-holidays.html",
+    "url": "https://www.b3.com.br/pt_br/solucoes/plataformas/puma-trading-system/para-participantes-e-traders/calendario-de-negociacao/feriados/",
+    "method": "GET",
+    "retrieved_utc": "2026-10-31T22:04:50.028535+00:00",
+    "status": 200,
+    "final_url": "https://www.b3.com.br/pt_br/solucoes/plataformas/puma-trading-system/para-participantes-e-traders/calendario-de-negociacao/feriados/",
+    "bytes": 343525,
+    "sha256": "fe1deb415bda36ace6f729e15a693a7587a70af5efbfe6db854a15e9b432891e",
+    "preview": "ndo n\u00e3o impactar a liquida\u00e7\u00e3o do d\u00f3lar a vista para D+2, a negocia\u00e7\u00e3o de opera\u00e7\u00f5es estruturadas de casado de d\u00f3lar (CSD2) ser\u00e1 suspensa dois dias \u00fateis antes dos feriados em Nova York. Sendo assim, para o feriado de Thanksgiving Day de 27/11/2025, a suspens\u00e3o de negocia\u00e7\u00e3o do CSD2 ser\u00e1 em 25/11/2025.\nChristmas Day\nVisando n\u00e3o impactar a liquida\u00e7\u00e3o do d\u00f3lar a vista para D+2, a negocia\u00e7\u00e3o de opera\u00e7\u00f5es estruturadas de casado de d\u00f3lar (CSD2) ser\u00e1 suspensa dois dias \u00fateis antes dos feriados em Nova York. Sendo assim, para o feriado de Christmas Day de 25/12/2025, a suspens\u00e3o de negocia\u00e7\u00e3o do CSD2 ser\u00e1 em 23/12/2025.\nCalend\u00e1rio do mercado 2026\nCalend\u00e1rio do mercado 2026\nO calend\u00e1rio de 2026\u00a0cont\u00e9m as informa\u00e7\u00f5es relativas \u00e0s atividades de negocia\u00e7\u00e3o, registro, compensa\u00e7\u00e3o, liquida\u00e7\u00e3o e dep\u00f3sito centralizado, em todos os segmentos da B3, durante o referido ano.\nVisando n\u00e3o impactar a liquida\u00e7\u00e3o do d\u00f3lar a vista para D+2, a negocia\u00e7\u00e3o de opera\u00e7\u00f5es estruturadas de casado de d\u00f3lar (CSD2) ser\u00e1 suspensa dois dias \u00fateis antes dos feriados em Nova York. Sendo assim, para o feriado de Birthday of Martin Luther King, Jr. de 19/01/2026, a suspens\u00e3o de negocia\u00e7\u00e3o do CSD2 ser\u00e1 em 15/01/2026.\nVisando n\u00e3o impactar a liquida\u00e7\u00e3o do d\u00f3lar a vista para D+2, a negocia\u00e7\u00e3o de opera\u00e7\u00f5es estruturadas de casado de d\u00f3lar (CSD2) ser\u00e1 suspensa dois dias \u00fateis antes dos feriados em Nova York. Sendo assim, para o feriado de Washington's Birthday (President's Day) de 16/02/2026, a suspens\u00e3o de negocia\u00e7\u00e3o do CSD2 ser\u00e1 em 12/02/2026.\nA confirma\u00e7\u00e3o dos investimentos inclu\u00eddos em 13/02/2026\u00a0dever\u00e1 ser feita normalmente at\u00e9 as 11h de 18/02/2026.\nVisando n\u00e3o impactar a liquida\u00e7\u00e3o do d\u00f3lar a vista para D+2, a negocia\u00e7\u00e3o de opera\u00e7\u00f5es estruturadas de casado de d\u00f3lar (CSD2) ser\u00e1 suspensa dois dias \u00fateis antes dos feriados em Nova York. Sendo assim, para o feriado de Memorial Day de 25/05/2026, a suspens\u00e3o de negocia\u00e7\u00e3o do CSD2 ser\u00e1 em 21/05/2026.\nVisando n\u00e3o impactar a liquida\u00e7\u00e3o do d\u00f3lar a vista para D+2, a negocia\u00e7\u00e3o de opera\u00e7\u00f5es estruturadas de casado de d\u00f3lar (CSD2) ser\u00e1 suspensa dois dias \u00fateis antes dos feriados em Nova York. Sendo assim, para o feriado de Juneteenth National Independence Day de 19/06/2026, a suspens\u00e3o de negocia\u00e7\u00e3o do CSD2 ser\u00e1 em 17/06/2026.\nVisando n\u00e3o impactar a liquida\u00e7\u00e3o do d\u00f3lar a vista para D+2, a negocia\u00e7\u00e3o de opera\u00e7\u00f5es estruturadas de casado de d\u00f3lar (CSD2) ser\u00e1 suspensa dois dias \u00fateis antes dos feriados em Nova York. Sendo assim, para o feriado de Labor Day\u00a0 de 07/09/2026, a suspens\u00e3o de negocia\u00e7\u00e3o do CSD2 ser\u00e1 em 03/09/2026.\nVisando n\u00e3o impactar a liquida\u00e7\u00e3o do d\u00f3lar a vista para D+2, a negocia\u00e7\u00e3o de opera\u00e7\u00f5es estruturadas de casado de d\u00f3lar (CSD2) ser\u00e1 suspensa dois dias \u00fateis antes dos feriados em Nova York. Sendo assim, para o feriado de Columbus Day de 12/10/2026, a suspens\u00e3o de negocia\u00e7\u00e3o do CSD2 ser\u00e1 em 08/10/2026.\nVisando n\u00e3o impactar a liquida\u00e7\u00e3o do d\u00f3lar a vista para D+2, a negocia\u00e7\u00e3o de opera\u00e7\u00f5es estruturadas de casado de d\u00f3lar (CSD2) ser\u00e1 suspensa dois dias \u00fateis antes dos feriados em Nova York. Sendo assim, para o feriado de Veterans Day de 11/11/2026, a suspens\u00e3o de negocia\u00e7\u00e3o do CSD2 ser\u00e1 em 09/11/2026.\nThanksgiving Day\nVisando n\u00e3o impactar a liquida\u00e7\u00e3o do d\u00f3lar a vista para D+2, a negocia\u00e7\u00e3o de opera\u00e7\u00f5es estruturadas de casado de d\u00f3lar (CSD2) ser\u00e1 suspensa dois dias \u00fateis antes dos feriados em Nova York. Sendo assim, para o feriado de Thanksgiving Day de 26/11/2026, a suspens\u00e3o de negocia\u00e7\u00e3o do CSD2 ser\u00e1 em 24/11/2026.\nChristmas Day"
+  }
+]
