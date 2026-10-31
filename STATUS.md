@@ -12252,3 +12252,23 @@ Source reports, byte copies, manifests and checksums:
 `reviews/2026-10-31-confirm-374/independent-source-review/REPORT.md`.
 Implementation: https://github.com/SharurTrading/exchange-hours-rs/pull/376.
 Follow-up: https://github.com/SharurTrading/exchange-hours-rs/issues/374.
+
+### Exact-head repository verification — completed 2026-10-31 23:37:08 UTC
+
+**PASS**, the same `6078da48c15a2dc602961a7ea0759ef0cfcaa17c` head, in detached
+worktree `/workspace/exchange-hours-review-374`. Formatting, Clippy with
+warnings denied, all **1407 nextest tests** (zero skipped; 618.125 seconds),
+**3 doctests**, strict rustdoc, cargo-deny, **MSRV 1.95**, and pinned Markdown
+lint all passed. Markdown lint checked **175 files with zero issues**. The
+exhaustive all-row coverage test completed successfully in 586.372 seconds.
+
+`cargo xtask verify-evidence --all` independently passed **3248 Documents rows
+across 63 evidence files, 1002 distinct digests**, all resolving to held bytes.
+The reviewer used this detached worktree's own build directory, preserving
+correct embedded workspace paths. Source, tests, dependencies, toolchain and
+workflow trees reproduce the merged baseline byte for byte. No new mutation
+or test was needed for the confirmation-only prose change.
+
+The complete commands, exit codes, UTC start/finish instants, log digests and
+final-head report are retained in
+`reviews/2026-10-31-confirm-374/independent-verification/`.

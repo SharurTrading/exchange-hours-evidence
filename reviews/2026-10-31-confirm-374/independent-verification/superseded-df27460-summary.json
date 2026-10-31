@@ -1,0 +1,73 @@
+{
+  "head": "df27460c8f1bc0b27ae6d35fc147407141e589c3",
+  "base": "d3f6b21db8f4f7523f0c79b786c16c6852c4678c",
+  "worktree": "/workspace/exchange-hours-review-374",
+  "target_dir": "/workspace/exchange-hours-review-374/target",
+  "evidence_store": "/workspace/exchange-hours-evidence",
+  "changed_files": [
+    "docs/evidence/ice_us.md",
+    "docs/evidence/ice_us_cocoa.md",
+    "docs/evidence/ice_us_coffee.md",
+    "docs/evidence/ice_us_cotton.md",
+    "docs/evidence/ice_us_dollar_index.md",
+    "docs/evidence/ice_us_orange_juice.md",
+    "docs/evidence/ice_us_sugar.md",
+    "docs/evidence/iceus.md",
+    "docs/evidence/nse_india.md",
+    "docs/evidence/xetra.md",
+    "docs/schedules/sources.md"
+  ],
+  "unchanged_trees": {
+    "src": {
+      "base": "d7ec6729482ddd71d751022e37a1ba9846edd5ad",
+      "head": "d7ec6729482ddd71d751022e37a1ba9846edd5ad"
+    },
+    "tests": {
+      "base": "d89823a7f08dab837ec15d9d5fd61e22d0f6f2a9",
+      "head": "d89823a7f08dab837ec15d9d5fd61e22d0f6f2a9"
+    },
+    "Cargo.toml": {
+      "base": "6b8dea06debc7c110234e1b24dcf49a61e303907",
+      "head": "6b8dea06debc7c110234e1b24dcf49a61e303907"
+    },
+    "Cargo.lock": {
+      "base": "fa79e1b6d867610afd8777d30f608b7530975061",
+      "head": "fa79e1b6d867610afd8777d30f608b7530975061"
+    },
+    "rust-toolchain.toml": {
+      "base": "d077de42abd8396f96158893f13a15e23f31a445",
+      "head": "d077de42abd8396f96158893f13a15e23f31a445"
+    },
+    ".github": {
+      "base": "6b830e3c16b3914fbe26c73d207d164ba161bc4c",
+      "head": "6b830e3c16b3914fbe26c73d207d164ba161bc4c"
+    }
+  },
+  "started_utc": "2026-10-31T23:23:51.569914+00:00",
+  "gates": [
+    {
+      "gate": "fmt",
+      "command": "cargo fmt --all --check",
+      "exit_code": 0,
+      "started_utc": "2026-10-31T23:23:51.576133+00:00",
+      "finished_utc": "2026-10-31T23:23:52.174740+00:00",
+      "elapsed_seconds": 0.598,
+      "log": "/workspace/exchange-hours-evidence/reviews/2026-10-31-confirm-374/independent-verification/fmt.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "gate": "clippy",
+      "command": "cargo clippy --all-targets -- -D warnings",
+      "exit_code": 0,
+      "started_utc": "2026-10-31T23:23:52.175062+00:00",
+      "finished_utc": "2026-10-31T23:24:01.386784+00:00",
+      "elapsed_seconds": 9.212,
+      "log": "/workspace/exchange-hours-evidence/reviews/2026-10-31-confirm-374/independent-verification/clippy.log",
+      "log_sha256": "a682e235f55572159db02d64f968a390efb0402d4e3cade58f4d8f4c98babda8"
+    }
+  ],
+  "mutation": "Not applicable: confirmation prose only; runtime and tests unchanged.",
+  "superseded_by": "6078da48c15a2dc602961a7ea0759ef0cfcaa17c",
+  "stopped_utc": "2026-10-31T23:25:43.600424+00:00",
+  "complete": false
+}
