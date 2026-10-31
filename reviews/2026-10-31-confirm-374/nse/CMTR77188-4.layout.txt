@@ -1,0 +1,371 @@
+          Annexure II: Features of bidding platform , Bulk Upload File Formats and
+                                           rejection codes
+
+Features of bidding platform
+
+      ▪    The web based bidding platform can be accessed from the below URL:
+           https://bidcollection.nseindia.com/login.
+
+      ▪    The bidding platform has the following features
+           ✓   Manual order entry/modification/cancellation
+           ✓   Bulk entry/modification/cancellation through file upload.
+           ✓   Bulk upload files format would as provided below in Annexure (IIA).
+           ✓   API mode is also available for order entry/modification/cancellation
+           ✓   Orders can be entered for demat as well as physical shares.
+           ✓   Custodial participant orders shall be sent to respective custodian for
+               confirmation by clearing corporation
+           ✓   Online RTA verification status, for physical orders.
+           ✓   RTA verification rejection report along with rejection reason as provided by
+               RTA.
+           ✓   Facility to modify physical orders rejected by RTA.
+           ✓   Facility to modify orders rejected by Custodian.
+           ✓   Transaction Registration Slip download.
+           ✓   Download facility of orders and order history.
+           ✓   Allotment and rejection details (if applicable) shall be displayed
+           ✓   Special withdrawal window in case if Counter Offer is triggered post tender offer
+               Delisting issue.
+                 • Separate window for Counter offer mechanism for delisting.
+                 • File formats for bulk order entry of Counter offer shall be the same format
+                     used for bulk upload of tender offer. Separate symbol shall be provided to
+                     identify between counter delisting and withdrawal (existing symbol of
+                     tender offer delisting)
+                 • All valid & active of bids of delisting offer shall be available for
+                     withdrawal
+                 • Withdrawal shall be at bid level, partial withdrawal shall not be allowed
+                 • Modification/Cancellation facility not available for withdrawn bids
+                 • Bids once withdrawn cannot be reversed
+                 • Custodian approval not required for withdrawal of CP bids
+                 • Early pay-in details shall be updated post withdrawal
+
+
+
+
+                                          Non-Confidential
+                                      Annexure II (A)
+
+1.1 Bulk upload – input format
+                                                            Mandatory (M)/
+ Sr.                                  Character Alpha
+         Field Name                                         Non-Mandatory    Remarks
+ No                                   / Numeric
+                                                            (NM)
+  1      Symbol                       Char 12                     M
+  2      Series                       AlphaNumeric 2              M
+  3      Application No.              Char 20                    NM
+                                                                             Value = FI/FII/IC/MF/OTH/
+  4      Category                     AlphaNumeric 5              M
+                                                                             /CO/IND/NOH
+  5      Bid Quantity                 Numeric 15                  M
+  6      Rate / Price                 Numeric 6.2                 M
+  7      Client code.                 AlphaNumeric 10             M
+  8      Client Name                  Char 50                    NM
+                                                                             Mandatory for demat. Optional
+  9      PAN No                       AlphaNumeric 10             M
+                                                                             for Physical
+                                                                             P for Physical
+  10     Physical/Demat Flag          Char 1                      M
+                                                                             D- for Demat
+  11     Custodial Participant Code   AlphaNumeric 12            NM
+  12     Depository Name              Char 4                      M          NSDL or CDSL
+                                                                             In case of NSDL 8 digit
+  13     DP ID                        AlphaNumeric 8              M
+                                                                             For CDSL blank
+                                                                             If CDSL then 16 digit
+  14     Client ID / Beneficiary ID   AlphaNumeric 16             M
+                                                                             If NSDL then 8 digit
+                                                                             For physical only
+  15     Folio Number                 AlphaNumeric 16             M
+                                                                             Blank in case of Demat
+                                                                             For physical only
+  16     Certificate Number 1         AlphaNumeric 16             M
+                                                                             Blank in case of Demat
+
+                                                                             For physical only
+  17     Distinctive Nos From 1       AlphaNumeric 16             M
+                                                                             Blank in case of Demat
+
+                                                                             For physical only
+  18     Distinctive Nos To1          AlphaNumeric 16             M
+                                                                             Blank in case of Demat
+
+                                                                             For physical only
+  19     Certificate Number 2         AlphaNumeric 16            NM
+                                                                             Blank in case of Demat
+
+                                                                             For physical only
+  20     Distinctive Nos From 2       AlphaNumeric 16            NM
+                                                                             Blank in case of Demat
+
+                                                                             For physical only
+  21     Distinctive Nos To 2         AlphaNumeric 16            NM
+                                                                             Blank in case of Demat
+
+                                                                             For physical only
+  22     Certificate Number 3         AlphaNumeric 16            NM
+                                                                             Blank in case of Demat
+
+                                                                             For physical only
+  23     Distinctive Nos From 3       AlphaNumeric 16            NM
+                                                                             Blank in case of Demat
+
+
+
+
+                                         Non-Confidential
+                                                                             For physical only
+  24     Distinctive Nos To 3         AlphaNumeric 16            NM
+                                                                             Blank in case of Demat
+
+  25     Reference Number             AlphaNumeric 16            NM
+
+                                                                             Put 0 or blank for New order (
+                                                                             will be replaced by order
+                                      Numeric
+  26     Order Number                                                        number in response file)
+                                      16
+                                                                             For Modification/deletion
+                                                                             input order number
+         Activity Type
+                                                                             N-New entry
+         (N-new order
+  27                                  Char 1                      M          M-Modification
+         M - Order modification
+                                                                             D-Deletion
+         D- Deletion)
+
+
+1.2 Success response file format
+                                                            Mandatory (M)/
+  Sr.                                 Character Alpha
+         Field Name                                         Non-Mandatory    Remarks
+  No                                  / Numeric
+                                                                (NM)
+  1      Symbol                       Char 12                     M
+  2      Series                       AlphaNumeric 2              M
+                                                                             Value = FI/FII/IC/MF/OTH/
+  3      Application No.              Char 20                    NM
+                                                                             /CO/IND/NOH
+  4      Category                     AlphaNumeric 5              M
+  5      Bid Quantity                 Numeric 15                  M
+  6      Rate / Price                 Numeric 6.2                 M
+  7      Client code.                 AlphaNumeric 10             M
+  8      Client Name                  Char 50                    NM
+                                                                             Mandatory for demat. Optional
+  9      PAN No                       AlphaNumeric 10             M
+                                                                             for Physical
+                                                                             P for Physical
+  10     Physical/Demat Flag          Char 1                      M
+                                                                             D- for Demat
+  11     Custodial Participant Code   AlphaNumeric 12            NM
+  12     Depository Name              Char 4                      M          NSDL or CDSL
+                                                                             In case of NSDL 8 digit
+  13     DP ID                        AlphaNumeric 8              M
+                                                                             For CDSL blank
+                                                                             If CDSL then 16 digit
+  14     Client ID / Beneficiary ID   AlphaNumeric 16             M
+                                                                             If NSDL then 8 digit
+                                                                             For physical only
+  15     Folio Number                 AlphaNumeric 16             M
+                                                                             Blank in case of Demat
+                                                                             For physical only
+  16     Certificate Number 1         AlphaNumeric 16             M
+                                                                             Blank in case of Demat
+
+                                                                             For physical only
+  17     Distinctive Nos From 1       AlphaNumeric 16             M
+                                                                             Blank in case of Demat
+
+                                                                             For physical only
+  18     Distinctive Nos To1          AlphaNumeric 16             M
+                                                                             Blank in case of Demat
+
+
+
+
+                                         Non-Confidential
+                                                                          For physical only
+  19      Certificate Number 2     AlphaNumeric 16            NM
+                                                                          Blank in case of Demat
+
+                                                                          For physical only
+  20      Distinctive Nos From 2   AlphaNumeric 16            NM
+                                                                          Blank in case of Demat
+
+                                                                          For physical only
+  21      Distinctive Nos To 2     AlphaNumeric 16            NM
+                                                                          Blank in case of Demat
+
+                                                                          For physical only
+  22      Certificate Number 3     AlphaNumeric 16            NM
+                                                                          Blank in case of Demat
+
+                                                                          For physical only
+  23      Distinctive Nos From 3   AlphaNumeric 16            NM
+                                                                          Blank in case of Demat
+
+                                                                          For physical only
+  24      Distinctive Nos To 3     AlphaNumeric 16            NM
+                                                                          Blank in case of Demat
+
+  25      Reference Number         AlphaNumeric 16            NM
+
+                                                                          Eg YYYYMMDDNNNNNNN
+                                                                          where ‘NNNNNNN’ is a
+                                   Numeric
+  26      Order Number                                                    running number starting from
+                                   16
+                                                                          0000001
+                                                                          Eg 201509240000001
+          Activity Type
+                                                                          N-New entry
+          (N-new order
+  27                               Char 1                      M          M-Modification
+          M - Order modification
+                                                                          D-Deletion
+          D- Deletion)
+  28      User                     Char 30                     M          Will be the login id
+
+
+1.3 Error response file format
+                                                         Mandatory (M)/
+                                   Character Alpha
+ Sr. No    Field Name                                    Non-Mandatory    Remarks
+                                   / Numeric
+                                                         (NM)
+  1        Symbol                  Char 12                     M
+  2        Series                  AlphaNumeric 2              M
+  3        Application No.         Char 20                    NM
+                                                                          Value = FI/FII/IC/MF/OTH/
+  4        Category                AlphaNumeric 5              M
+                                                                          /CO/IND/NOH
+  5        Bid Quantity            Numeric 15                  M
+  6        Rate / Price            Numeric 6.2                 M
+  7        Client code.            AlphaNumeric 10             M
+  8        Client Name             Char 50                    NM
+                                                                          Mandatory for demat. Optional
+  9        PAN No                  AlphaNumeric 10             M
+                                                                          for Physical
+                                                                          P for Physical
+  10       Physical/Demat Flag     Char 1                      M
+                                                                          D- for Demat
+           Custodial Participant
+  11                               AlphaNumeric 12            NM
+           Code
+
+
+
+                                      Non-Confidential
+12   Depository Name           Char 4                M    NSDL or CDSL
+                                                          In case of NSDL 8 digit
+13   DP ID                     AlphaNumeric 8        M
+                                                          For CDSL blank
+     Client ID / Beneficiary                              If CDSL then 16 digit
+14                             AlphaNumeric 16       M
+     ID                                                   If NSDL then 8 digit
+                                                          For physical only
+15   Folio Number              AlphaNumeric 16       M
+                                                          Blank in case of Demat
+                                                          For physical only
+16   Certificate Number 1      AlphaNumeric 16       M
+                                                          Blank in case of Demat
+
+                                                          For physical only
+17   Distinctive Nos From 1    AlphaNumeric 16       M
+                                                          Blank in case of Demat
+
+                                                          For physical only
+18   Distinctive Nos To1       AlphaNumeric 16       M
+                                                          Blank in case of Demat
+
+                                                          For physical only
+19   Certificate Number 2      AlphaNumeric 16       NM
+                                                          Blank in case of Demat
+
+                                                          For physical only
+20   Distinctive Nos From 2    AlphaNumeric 16       NM
+                                                          Blank in case of Demat
+
+                                                          For physical only
+21   Distinctive Nos To 2      AlphaNumeric 16       NM
+                                                          Blank in case of Demat
+
+                                                          For physical only
+22   Certificate Number 3      AlphaNumeric 16       NM
+                                                          Blank in case of Demat
+
+                                                          For physical only
+23   Distinctive Nos From 3    AlphaNumeric 16       NM
+                                                          Blank in case of Demat
+
+                                                          For physical only
+24   Distinctive Nos To 3      AlphaNumeric 16       NM
+                                                          Blank in case of Demat
+
+25   Reference Number          AlphaNumeric 16       NM
+
+                                                          Eg YYYYMMDDNNNNNNN
+                                                          where ‘NNNNNNN’ is a
+                               Numeric
+26   Order Number                                         running number starting from
+                               16
+                                                          0000001
+                                                          Eg 201509240000001
+     Activity Type
+                                                          N-New entry
+     (N-new order
+27                             Char 1                M    M-Modification
+     M - Order modification
+                                                          D-Deletion
+     D- Deletion)
+28   User                      Char 30                M   Will be the login id
+29   Error message             Char 100              NM
+
+
+
+
+                                  Non-Confidential
+Rejection codes
+
+Exchange shall display the below rejection code as received from RTA in the allotment file.
+
+ Rejection code     Reason                                                           Applicability
+       01           JOINT HOLDER NOT SIGNED ON TRANSFER DEED                         ALL OFFERs
+       02           OTHER COMPANY CERTIFICATE                                        ALL OFFERs
+       03           SIGNATURE DIFFER SOLE / FIRST HOLDER                             ALL OFFERs
+       04           SIGNATURE DIFFER JOINT HOLDER /S                                 ALL OFFERs
+       05           TRANSMISSION NOT COMPLETED                                       ALL OFFERs
+       06           TRANSFER DEED NOT RECEIVED                                       ALL OFFERs
+       07           INVALID TRANSFER DEED                                            ALL OFFERs
+       08           MARKET PURCHASE WITHOUTVALID BROKER NOTE                         ALL OFFERs
+       09           ORIGINAL SHARE CERTIFICATE NOT RECEIVED                          ALL OFFERs
+       10           DEATH CERTIFICATE NOT RECEIVED                                   ALL OFFERs
+       11           DEATH CERTIFICATE NOT ATTESTED                                   ALL OFFERs
+       12           POA NOT REGISTERED WITH REGISTRAR                                ALL OFFERs
+       13           STOP TRANSFER                                                    ALL OFFERs
+       14           OLD SHARE CERTIFICATE                                            ALL OFFERs
+                                                                                     ALL OFFERs EXCEPT
+        15          ALLOTMENT ON PROPORTIONATE BASIS
+                                                                                     DELISTING
+        16          SHARES NOT ELIGIBLE AS ON RECORD DATE                            BUY BACK OFFER
+        17          DEMAT A/C & NAME MISMATCH                                        BUY BACK OFFER
+        18          EXCESS SHARES TENDER THAN ELIGIBILITY                            BUY BACK OFFER
+        19          BIDDED ABOVE EXIT PRICE                                          DELISTING OFFER
+        20          DUPLICATE BID                                                    ALL OFFERs
+                    BIDDED QUANTITY MORE THAN PHYSICAL
+        21                                                                           ALL OFFERs
+                    QUANTITY RECEIVED
+                    PHYSICAL SHARES BIDDED BUT CERTIFICATE NOT
+        22                                                                           ALL OFFERs
+                    RECEIVED
+                    PHYSICAL SHARES RECEIVED AFTER CLOSE OF BID
+        23                                                                           ALL OFFERs
+                    WINDOW
+        24          FORM NOT RECEIVED                                                ALL OFFERs
+        25          PAN MISMATCH                                                     ALL OFFERs
+        26          MISCELLANEOUS                                                    ALL OFFERs
+
+
+
+
+                                            Non-Confidential
+

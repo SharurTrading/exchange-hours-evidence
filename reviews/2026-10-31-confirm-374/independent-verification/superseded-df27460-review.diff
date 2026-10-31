@@ -1,0 +1,338 @@
+diff --git a/docs/evidence/ice_us.md b/docs/evidence/ice_us.md
+index 28c4f35..c2bdbcf 100644
+--- a/docs/evidence/ice_us.md
++++ b/docs/evidence/ice_us.md
+@@ -169,6 +169,19 @@ above are:
+ > [`ice_us.rs`](../../src/calendar/schedules/futures/us/ice_us.rs)
+ > lives in [`iceus`](iceus.md#module-narrative-moved-from-srccalendarschedulesfuturesusice_usrs-on-2026-09-12-utc).
+ 
+-**Forward confirmation:** reconfirm the already-published 2026 Christmas
+-arrangements by 2026-12-23 UTC under LAW-WATCH; tracked in
+-[#374](https://github.com/SharurTrading/exchange-hours-rs/issues/374).
++**Forward confirmation completed — 2026-10-31 23:21:52 UTC:** The publication check
++tracked in [#374](https://github.com/SharurTrading/exchange-hours-rs/issues/374)
++was completed before its 2026-12-23 confirm-by date. A fresh live retrieval of
++`IFUS-NOTICE-2026-CHRISTMAS` at 2026-10-31 23:19:44 UTC has SHA-256
++`a7658155b57c51085cd3b36abc9ff6b91f3ca353cda88365a06459ebb40f0801`,
++identical to the original Documents-table artifact. Original retrieval history
++is retained. FANG+ retains the NYSE Stock Index group interpretation: 13:15 NY close on 24 December, Closed on 25 December and regular matching on 28 December.
++
++The current ICE notices listing was also retrieved at 2026-10-31 23:19:44 UTC;
++no superseding Christmas-hours notice was identified among its latest ten
++entries, dated 2–29 October. Exact URLs, retrieval instants, the PDF and
++supporting ordinary-hours/PCPO documents, and the checks against merged data
++are retained in `reviews/2026-10-31-confirm-374/ice/` in the research store
++(`MANIFEST.json`, `REPORT.md` and `MERGED_DATA_CHECK.json`). This confirms the
++published arrangements as checked; it does not witness future production
++trading or establish that later notices cannot change them.
+diff --git a/docs/evidence/ice_us_cocoa.md b/docs/evidence/ice_us_cocoa.md
+index bfbc210..9a4bd23 100644
+--- a/docs/evidence/ice_us_cocoa.md
++++ b/docs/evidence/ice_us_cocoa.md
+@@ -275,7 +275,19 @@ The two new exception dates are forward publications confirmed against the
+ operator on 2026-10-31 UTC. The source is sufficiently specified for the
+ blocks above; the published 2027 `open1` dates remain withheld.
+ 
+-**Forward confirmation:** re-confirm the published 2026-12-24 and
+-2026-12-28 arrangements, plus Cotton's derived 2026-12-29 replacement,
+-against the operator by 2026-12-23 UTC under LAW-WATCH; tracked in
+-[#374](https://github.com/SharurTrading/exchange-hours-rs/issues/374).
++**Forward confirmation completed — 2026-10-31 23:21:52 UTC:** The publication check
++tracked in [#374](https://github.com/SharurTrading/exchange-hours-rs/issues/374)
++was completed before its 2026-12-23 confirm-by date. A fresh live retrieval of
++`IFUS-NOTICE-2026-CHRISTMAS` at 2026-10-31 23:19:44 UTC has SHA-256
++`a7658155b57c51085cd3b36abc9ff6b91f3ca353cda88365a06459ebb40f0801`,
++identical to the original Documents-table artifact. Original retrieval history
++is retained. Cocoa keeps the 13:05 NY Christmas-eve close; its 13:35–15:30 queue feeds the 28 December 08:00–13:30 session.
++
++The current ICE notices listing was also retrieved at 2026-10-31 23:19:44 UTC;
++no superseding Christmas-hours notice was identified among its latest ten
++entries, dated 2–29 October. Exact URLs, retrieval instants, the PDF and
++supporting ordinary-hours/PCPO documents, and the checks against merged data
++are retained in `reviews/2026-10-31-confirm-374/ice/` in the research store
++(`MANIFEST.json`, `REPORT.md` and `MERGED_DATA_CHECK.json`). This confirms the
++published arrangements as checked; it does not witness future production
++trading or establish that later notices cannot change them.
+diff --git a/docs/evidence/ice_us_coffee.md b/docs/evidence/ice_us_coffee.md
+index ba30556..2195174 100644
+--- a/docs/evidence/ice_us_coffee.md
++++ b/docs/evidence/ice_us_coffee.md
+@@ -279,7 +279,19 @@ The two new exception dates are forward publications confirmed against the
+ operator on 2026-10-31 UTC. The source is sufficiently specified for the
+ blocks above; the published 2027 `open1` dates remain withheld.
+ 
+-**Forward confirmation:** re-confirm the published 2026-12-24 and
+-2026-12-28 arrangements, plus Cotton's derived 2026-12-29 replacement,
+-against the operator by 2026-12-23 UTC under LAW-WATCH; tracked in
+-[#374](https://github.com/SharurTrading/exchange-hours-rs/issues/374).
++**Forward confirmation completed — 2026-10-31 23:21:52 UTC:** The publication check
++tracked in [#374](https://github.com/SharurTrading/exchange-hours-rs/issues/374)
++was completed before its 2026-12-23 confirm-by date. A fresh live retrieval of
++`IFUS-NOTICE-2026-CHRISTMAS` at 2026-10-31 23:19:44 UTC has SHA-256
++`a7658155b57c51085cd3b36abc9ff6b91f3ca353cda88365a06459ebb40f0801`,
++identical to the original Documents-table artifact. Original retrieval history
++is retained. Coffee keeps the 13:05 NY Christmas-eve close; its 13:35–15:30 queue feeds the 28 December 08:00–13:30 session.
++
++The current ICE notices listing was also retrieved at 2026-10-31 23:19:44 UTC;
++no superseding Christmas-hours notice was identified among its latest ten
++entries, dated 2–29 October. Exact URLs, retrieval instants, the PDF and
++supporting ordinary-hours/PCPO documents, and the checks against merged data
++are retained in `reviews/2026-10-31-confirm-374/ice/` in the research store
++(`MANIFEST.json`, `REPORT.md` and `MERGED_DATA_CHECK.json`). This confirms the
++published arrangements as checked; it does not witness future production
++trading or establish that later notices cannot change them.
+diff --git a/docs/evidence/ice_us_cotton.md b/docs/evidence/ice_us_cotton.md
+index f8a2096..3207f8f 100644
+--- a/docs/evidence/ice_us_cotton.md
++++ b/docs/evidence/ice_us_cotton.md
+@@ -341,7 +341,19 @@ sourced in the Normal week record above. The replacement removes the raw
+ 2026-12-25 Friday queue that otherwise survives the closed Christmas Day.
+ It adds no new Tuesday clock and preserves Monday's own queue and wrap.
+ 
+-**Forward confirmation:** re-confirm the published 2026-12-24 and
+-2026-12-28 arrangements, plus Cotton's derived 2026-12-29 replacement,
+-against the operator by 2026-12-23 UTC under LAW-WATCH; tracked in
+-[#374](https://github.com/SharurTrading/exchange-hours-rs/issues/374).
++**Forward confirmation completed — 2026-10-31 23:21:52 UTC:** The publication check
++tracked in [#374](https://github.com/SharurTrading/exchange-hours-rs/issues/374)
++was completed before its 2026-12-23 confirm-by date. A fresh live retrieval of
++`IFUS-NOTICE-2026-CHRISTMAS` at 2026-10-31 23:19:44 UTC has SHA-256
++`a7658155b57c51085cd3b36abc9ff6b91f3ca353cda88365a06459ebb40f0801`,
++identical to the original Documents-table artifact. Original retrieval history
++is retained. Cotton keeps the 13:05 NY Christmas-eve close; its 13:35–15:30 queue feeds the 28 December 08:00–14:20 session. The dependent 29 December replacement restates the unchanged Monday queues and overnight matching day.
++
++The current ICE notices listing was also retrieved at 2026-10-31 23:19:44 UTC;
++no superseding Christmas-hours notice was identified among its latest ten
++entries, dated 2–29 October. Exact URLs, retrieval instants, the PDF and
++supporting ordinary-hours/PCPO documents, and the checks against merged data
++are retained in `reviews/2026-10-31-confirm-374/ice/` in the research store
++(`MANIFEST.json`, `REPORT.md` and `MERGED_DATA_CHECK.json`). This confirms the
++published arrangements as checked; it does not witness future production
++trading or establish that later notices cannot change them.
+diff --git a/docs/evidence/ice_us_dollar_index.md b/docs/evidence/ice_us_dollar_index.md
+index 1dd032a..4e8c6b6 100644
+--- a/docs/evidence/ice_us_dollar_index.md
++++ b/docs/evidence/ice_us_dollar_index.md
+@@ -260,6 +260,19 @@ https://www.ice.com/publicdocs/futures_us/ICE_Dollar_Index_FAQ.pdf
+   https://web.archive.org/web/20110222135802/https://www.theice.com/publicdocs/futures_us/exchange_notices/ExNot020311DXhours.pdf
+ Evidence: docs/evidence/ice_us_dollar_index.md
+ 
+-**Forward confirmation:** reconfirm the already-published 2026 Christmas
+-arrangements by 2026-12-23 UTC under LAW-WATCH; tracked in
+-[#374](https://github.com/SharurTrading/exchange-hours-rs/issues/374).
++**Forward confirmation completed — 2026-10-31 23:21:52 UTC:** The publication check
++tracked in [#374](https://github.com/SharurTrading/exchange-hours-rs/issues/374)
++was completed before its 2026-12-23 confirm-by date. A fresh live retrieval of
++`IFUS-NOTICE-2026-CHRISTMAS` at 2026-10-31 23:19:44 UTC has SHA-256
++`a7658155b57c51085cd3b36abc9ff6b91f3ca353cda88365a06459ebb40f0801`,
++identical to the original Documents-table artifact. Original retrieval history
++is retained. USDX keeps the 13:15 NY Christmas-eve close, Closed on 25 December and regular matching on 28 December.
++
++The current ICE notices listing was also retrieved at 2026-10-31 23:19:44 UTC;
++no superseding Christmas-hours notice was identified among its latest ten
++entries, dated 2–29 October. Exact URLs, retrieval instants, the PDF and
++supporting ordinary-hours/PCPO documents, and the checks against merged data
++are retained in `reviews/2026-10-31-confirm-374/ice/` in the research store
++(`MANIFEST.json`, `REPORT.md` and `MERGED_DATA_CHECK.json`). This confirms the
++published arrangements as checked; it does not witness future production
++trading or establish that later notices cannot change them.
+diff --git a/docs/evidence/ice_us_orange_juice.md b/docs/evidence/ice_us_orange_juice.md
+index 2e9fdb7..deed656 100644
+--- a/docs/evidence/ice_us_orange_juice.md
++++ b/docs/evidence/ice_us_orange_juice.md
+@@ -281,7 +281,19 @@ The two new exception dates are forward publications confirmed against the
+ operator on 2026-10-31 UTC. The source is sufficiently specified for the
+ blocks above; the published 2027 `open1` dates remain withheld.
+ 
+-**Forward confirmation:** re-confirm the published 2026-12-24 and
+-2026-12-28 arrangements, plus Cotton's derived 2026-12-29 replacement,
+-against the operator by 2026-12-23 UTC under LAW-WATCH; tracked in
+-[#374](https://github.com/SharurTrading/exchange-hours-rs/issues/374).
++**Forward confirmation completed — 2026-10-31 23:21:52 UTC:** The publication check
++tracked in [#374](https://github.com/SharurTrading/exchange-hours-rs/issues/374)
++was completed before its 2026-12-23 confirm-by date. A fresh live retrieval of
++`IFUS-NOTICE-2026-CHRISTMAS` at 2026-10-31 23:19:44 UTC has SHA-256
++`a7658155b57c51085cd3b36abc9ff6b91f3ca353cda88365a06459ebb40f0801`,
++identical to the original Documents-table artifact. Original retrieval history
++is retained. FCOJ keeps the 13:05 NY Christmas-eve close; its 13:35–15:30 queue feeds the regular 28 December 08:00–14:00 session.
++
++The current ICE notices listing was also retrieved at 2026-10-31 23:19:44 UTC;
++no superseding Christmas-hours notice was identified among its latest ten
++entries, dated 2–29 October. Exact URLs, retrieval instants, the PDF and
++supporting ordinary-hours/PCPO documents, and the checks against merged data
++are retained in `reviews/2026-10-31-confirm-374/ice/` in the research store
++(`MANIFEST.json`, `REPORT.md` and `MERGED_DATA_CHECK.json`). This confirms the
++published arrangements as checked; it does not witness future production
++trading or establish that later notices cannot change them.
+diff --git a/docs/evidence/ice_us_sugar.md b/docs/evidence/ice_us_sugar.md
+index cbf54fe..36a3286 100644
+--- a/docs/evidence/ice_us_sugar.md
++++ b/docs/evidence/ice_us_sugar.md
+@@ -314,7 +314,19 @@ The two new exception dates are forward publications confirmed against the
+ operator on 2026-10-31 UTC. The source is sufficiently specified for the
+ blocks above; the published 2027 `open1` dates remain withheld.
+ 
+-**Forward confirmation:** re-confirm the published 2026-12-24 and
+-2026-12-28 arrangements, plus Cotton's derived 2026-12-29 replacement,
+-against the operator by 2026-12-23 UTC under LAW-WATCH; tracked in
+-[#374](https://github.com/SharurTrading/exchange-hours-rs/issues/374).
++**Forward confirmation completed — 2026-10-31 23:21:52 UTC:** The publication check
++tracked in [#374](https://github.com/SharurTrading/exchange-hours-rs/issues/374)
++was completed before its 2026-12-23 confirm-by date. A fresh live retrieval of
++`IFUS-NOTICE-2026-CHRISTMAS` at 2026-10-31 23:19:44 UTC has SHA-256
++`a7658155b57c51085cd3b36abc9ff6b91f3ca353cda88365a06459ebb40f0801`,
++identical to the original Documents-table artifact. Original retrieval history
++is retained. Sugar No.11 keeps the 13:00 NY Christmas-eve close; its 13:30–15:30 queue feeds the 28 December 08:00–13:00 session.
++
++The current ICE notices listing was also retrieved at 2026-10-31 23:19:44 UTC;
++no superseding Christmas-hours notice was identified among its latest ten
++entries, dated 2–29 October. Exact URLs, retrieval instants, the PDF and
++supporting ordinary-hours/PCPO documents, and the checks against merged data
++are retained in `reviews/2026-10-31-confirm-374/ice/` in the research store
++(`MANIFEST.json`, `REPORT.md` and `MERGED_DATA_CHECK.json`). This confirms the
++published arrangements as checked; it does not witness future production
++trading or establish that later notices cannot change them.
+diff --git a/docs/evidence/iceus.md b/docs/evidence/iceus.md
+index c5f8c4f..4d75885 100644
+--- a/docs/evidence/iceus.md
++++ b/docs/evidence/iceus.md
+@@ -259,7 +259,19 @@ otherwise assign to Tuesday; other families do not carry that replacement.
+ Its matching boundaries are ordinary, but the family table's complete
+ order-entry arrangement differs, so the broad venue withholds that trade date.
+ 
+-**Forward confirmation:** re-confirm the published 2026-12-24 and
+-2026-12-28 arrangements, plus Cotton's derived 2026-12-29 replacement,
+-against the operator by 2026-12-23 UTC under LAW-WATCH; tracked in
+-[#374](https://github.com/SharurTrading/exchange-hours-rs/issues/374).
++**Forward confirmation completed — 2026-10-31 23:21:52 UTC:** The publication check
++tracked in [#374](https://github.com/SharurTrading/exchange-hours-rs/issues/374)
++was completed before its 2026-12-23 confirm-by date. A fresh live retrieval of
++`IFUS-NOTICE-2026-CHRISTMAS` at 2026-10-31 23:19:44 UTC has SHA-256
++`a7658155b57c51085cd3b36abc9ff6b91f3ca353cda88365a06459ebb40f0801`,
++identical to the original Documents-table artifact. Original retrieval history
++is retained. The broad venue still withholds 24, 28 and 29 December because the exact family exception arrangements differ; no family-specific answer is substituted for that intersection.
++
++The current ICE notices listing was also retrieved at 2026-10-31 23:19:44 UTC;
++no superseding Christmas-hours notice was identified among its latest ten
++entries, dated 2–29 October. Exact URLs, retrieval instants, the PDF and
++supporting ordinary-hours/PCPO documents, and the checks against merged data
++are retained in `reviews/2026-10-31-confirm-374/ice/` in the research store
++(`MANIFEST.json`, `REPORT.md` and `MERGED_DATA_CHECK.json`). This confirms the
++published arrangements as checked; it does not witness future production
++trading or establish that later notices cannot change them.
+diff --git a/docs/evidence/nse_india.md b/docs/evidence/nse_india.md
+index 6962f25..61151e8 100644
+--- a/docs/evidence/nse_india.md
++++ b/docs/evidence/nse_india.md
+@@ -368,9 +368,24 @@ modification until 16:15 accepts no new trade and extends no session.
+ 
+ The six replacement blocks retain each executable, order-entry and closed
+ phase. Their trade date is the Sunday itself. The source is unconditional and
+-fully specified; confirm it against the operator by 2026-11-07 under LAW-WATCH
+-(#374). Raw PDF and its retrieval/digest manifest live at
+-`reviews/2026-10-31-future-update/nse/` in the evidence checkout.
++fully specified. **Confirmed 2026-10-31 UTC under LAW-WATCH (#374), before the
++2026-11-07 deadline:** the live PDF was retrieved again at
++2026-10-31T23:19:09.653909Z and reproduces SHA-256
++`ce94ee1c54d98eccdf3c30fa0673ae2b6a49ea4ed4a72fb83d826f4359f71d58`.
++All six merged blocks agree with its published phases and the venue-envelope
++derivations above. The operator's live circular API, queried for
++2026-10-19..2026-10-31 at 23:19:15.913908 UTC, returned 275 records: the
++original and six distinct later CMTR circulars were checked, and none amends
++this session. The later investor-services circular ISC77098 explicitly
++references CMTR76941 and reiterates November 8; the checked clearing notices
++CMPT77037 and CMPL77195 concern administration rather than trading hours.
++This confirms the published future arrangement as of these retrievals, not
++that the session has occurred or that a later notice cannot change it.
++
++The original PDF and retrieval/digest manifest remain at
++`reviews/2026-10-31-future-update/nse/`. Fresh bytes, exact URLs and UTC
++retrieval times, the circular-channel response, amendment-search scope and
++checksums are at `reviews/2026-10-31-confirm-374/nse/` in the evidence checkout.
+ 
+ ### Documents
+ 
+diff --git a/docs/evidence/xetra.md b/docs/evidence/xetra.md
+index ce23a35..f0d3036 100644
+--- a/docs/evidence/xetra.md
++++ b/docs/evidence/xetra.md
+@@ -306,11 +306,33 @@ the final-session timetable. A scalar early close would incorrectly preserve
+ regular trading through the new closing auction and remove the sourced
+ post-trading period, so `ReplacementBlocks` is required.
+ 
+-The row was encoded on 2026-10-31 UTC before its effective day. **Confirm by
+-2026-12-29 UTC**, before the 2026-12-30 venue-local session, under LAW-WATCH;
+-tracking: #374. The captured notice and linked 2027 calendar
+-are under `reviews/2026-10-31-future-update/europe/` in the research store,
+-with URLs, retrieval instants, byte counts and sha256s in `captures.json`.
++The row was encoded on 2026-10-31 UTC before its effective day. Its original
++LAW-WATCH confirmation deadline was 2026-12-29 UTC, tracked in #374.
++**Confirmed against the operator on 2026-10-31 UTC**, satisfying that deadline:
++the live notice was retrieved again at 23:19:02.444473 UTC
++(`DB-FINAL-SESSION-2026-CONFIRM-374`) and its 158,845 bytes reproduce the
++original SHA-256 `d3618ef9738a3cae92909d11d4eaf820ab7b71d1e723c1fa04a21062e9738115`.
++Its XETR phase times match the merged seven-block replacement; the 09:00:30
++and 13:02:30 conservative uncross boundaries retain their normal-profile
++basis rather than becoming new literals of this special-session notice.
++
++The current calendar still links that PDF. The current circulars first page
++(ten rendered entries), its ten-entry RSS feed, and its five-result search for
++`final trading session 2026` were retrieved through 23:19:27.707498 UTC.
++The two latest entries are circulars 049/2026 and 050/2026, both displayed as
++30 October 2026; both reaffirm the session date and refer readers to the
++calendar announcement. No superseding or amending timetable was located in
++those checked channels. This confirms the publication available at that UTC
++check, before the session; it makes no claim about later notices or the
++session's eventual execution. The independent 2027-hours watch remains #200.
++
++The confirmation PDF, current calendar, circulars, RSS and query results are
++under `reviews/2026-10-31-confirm-374/xetra/` in the research store. Its
++`captures.json`, `SHA256SUMS.txt`, `channel-checks.json`,
++`runtime-comparison.json` and `REPORT.md` record the retrievals and comparison.
++The original notice capture and linked 2027 calendar remain preserved under
++`reviews/2026-10-31-future-update/europe/`; their original retrieval information
++in the Documents table is unchanged.
+ 
+ ### Documents
+ 
+@@ -341,6 +363,9 @@ The 2010-2024 artifacts were retrieved on 2026-09-29 UTC and saved under `holida
+ | `DB-TC-PDF-2026` | 2026-01-01 .. 2026-12-31 | <https://www.cashmarket.deutsche-boerse.com/resource/blob/4481276/1b643791fcb4d60bdd7f25efad3f4626/data/deutsche-boerse-trading-calendar-2026.pdf> ("Trading calendar 2026") | retrieved 2026-09-28 01:28 UTC | T1 | `1edfc7b737ae1f5fe93179bfa9af59223b3c9d11cc8deddd127b386fb87e44b6` |
+ | `DB-TC-PAGE` | 2025-01-01 .. 2027-12-31 | <https://www.cashmarket.deutsche-boerse.com/cash-en/trading/trading-calendar-and-trading-hours> | retrieved 2026-09-28 01:28 UTC | T1 | `d70a8f5d54cb529103bf674ea8382702a3510800dac8b48965a43aa08ae4bca4` |
+ | `DB-FINAL-SESSION-2026` | 2026-12-30 | <https://www.cashmarket.deutsche-boerse.com/resource/blob/5673886/22764993c4b1617c5f465186066344e6/data/Final%20trading%20session%202026.pdf> | retrieved 2026-10-31 22:06:59 UTC | T1 | `d3618ef9738a3cae92909d11d4eaf820ab7b71d1e723c1fa04a21062e9738115` |
++| `DB-FINAL-SESSION-2026-CONFIRM-374` | 2026-12-30 | <https://www.cashmarket.deutsche-boerse.com/resource/blob/5673886/22764993c4b1617c5f465186066344e6/data/Final%20trading%20session%202026.pdf> | retrieved 2026-10-31 23:19:02.444473 UTC | T1 | `d3618ef9738a3cae92909d11d4eaf820ab7b71d1e723c1fa04a21062e9738115` |
++| `DB-CIRC-049-2026` | 2026-12-30 confirmation | <https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/Final-trading-session-2026-5668166> | retrieved 2026-10-31 23:19:27.707498 UTC | T1 | `f5f0728a7d7a9b5da5e3dd4637f1bd90f496c8136fd80909c6d2fad0651a698f` |
++| `DB-CIRC-050-2026` | 2026-12-30 confirmation | <https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/Final-trading-session-2026-5668164> | retrieved 2026-10-31 23:19:27.068423 UTC | T1 | `f0c8fde1e818fe33fe2395a2f7aebb9fc4735685b2534599b97163a93d7a73d4` |
+ | `DB-TC-PDF-2027` | 2027-01-01 .. 2027-12-31 | <https://www.cashmarket.deutsche-boerse.com/resource/blob/5674438/fb6e22c77930acea97641cf7d65ef78a/data/deutsche-boerse-trading-calendar-2027.pdf> | retrieved 2026-10-31 22:05:35 UTC | T1 | `5c62bf0a78afb8f6123638d6e7b9a30c864799e2c2210b73b13bcdb6e9a64cf2` |
+ 
+ ## Sources
+diff --git a/docs/schedules/sources.md b/docs/schedules/sources.md
+index ed433ba..a2ebd90 100644
+--- a/docs/schedules/sources.md
++++ b/docs/schedules/sources.md
+@@ -235,7 +235,7 @@ per-record review before any exception can drive runtime.
+ 
+ ### `ICE-DERIVATIVES`
+ 
+-- **Christmas 2026 (retrieved 2026-10-31 UTC):** the [ICE Futures U.S. Christmas notice](https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_2026_Christmas_Holiday_20261022.pdf) specifies December 24/28 family matching and shortened post-close queues; derived queue trade dates include December 29. Reconfirm by 2026-12-23 under #374.
++- **Christmas 2026 (reconfirmed 2026-10-31 UTC):** the [ICE Futures U.S. Christmas notice](https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_2026_Christmas_Holiday_20261022.pdf) specifies December 24/28 family matching and shortened post-close queues; derived queue trade dates include December 29. The fresh operator retrieval meets the 2026-12-23 confirmation deadline in #374; the [family evidence](../evidence/ice_us_cotton.md) records the confirmation and its scope.
+ 
+ - **Official current/rulebook:** [ICE holiday hours](https://www.ice.com/holiday-hours) — the current-schedule monitoring entry point; the former `ice.com/trading-hours` page moved here (verified live 2026-10-10 UTC, when `ice.com/trading-hours` 404s and the section navigation names `/holiday-hours`) — and the [notices listing service](https://www.ice.com/api/sitesearchservice/v1/search/websitenotices?searchCollections=futures_us_exchange_notice&year=2026) behind the client-side [notices page](https://www.ice.com/futures-us/notices) (POST `…/search/websitenotices?searchCollections=futures_us_exchange_notice&year=<YYYY>` reaches the whole back catalogue, T2), the [ICE product directory](https://www.ice.com/products), [NYSE FANG+ Index Futures](https://www.ice.com/products/66380320/NYSE-FANG-Index-Future), [Brent Crude Futures](https://www.ice.com/products/219/Brent-Crude-Futures), [FTSE 100 Index Futures](https://www.ice.com/products/38716764/FTSE-100-INDEX-), and [Murban Crude Oil Futures](https://www.ice.com/products/75443578/Murban-Crude-Oil-Futures/).
+ - **Notices/evidence:** monitor [ICE holiday hours](https://www.ice.com/holiday-hours) and exchange-specific circular channels. Retain the [FANG+ launch notice](https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_FANG%2BFuture_20170926.pdf), [2010 Brent DST circular](https://www.ice.com/publicdocs/circulars/10070.pdf), FTSE circulars [14/146](https://www.ice.com/publicdocs/circulars/14146.pdf), [15/016](https://www.ice.com/publicdocs/circulars/15016.pdf), and [15/169](https://www.ice.com/publicdocs/circulars/15169.pdf), and IFAD's [Murban launch](https://www.ice.com/publicdocs/abu_dhabi/circulars/IFAD%20Circular%20-%2021003%20-%20Trading%20information%20publication.pdf) and [2026 DST](https://www.ice.com/publicdocs/abu_dhabi/circulars/2026.03_-_IFAD_Trading_Hours_Change_Final.pdf) circulars.
+@@ -329,7 +329,7 @@ per-record review before any exception can drive runtime.
+ 
+ ### `APAC-INDIA-CASH`
+ 
+-- **Published special sessions (2026-10-31 UTC):** [NSE circular 149/2026](https://nsearchives.nseindia.com/content/circulars/CMTR76941.pdf) supplies the complete 2026-11-08 Muhurat capital-market session; reconfirm by 2026-11-07 under #374.
++- **Published special sessions (reconfirmed 2026-10-31 UTC):** [NSE circular 149/2026](https://nsearchives.nseindia.com/content/circulars/CMTR76941.pdf) supplies the complete 2026-11-08 Muhurat capital-market session. The fresh operator retrieval meets the 2026-11-07 confirmation deadline in #374; the [Muhurat evidence](../evidence/nse_india.md#muhurat-2026-interpretation--2026-10-31-utc) records the confirmation and its scope.
+ 
+ - **Official current/rulebook:** [NSE closing-auction session](https://www.nseindia.com/static/products-services/closing-auction-session), the [SEBI CAS circular](https://www.sebi.gov.in/legal/circulars/jan-2026/introduction-of-closing-auction-session-cas-in-the-equity-cash-segment-and-certain-modifications-in-the-pre-open-auction-session_99122.html), and BSE's [notices and circulars portal](https://www.bseindia.com/markets/MarketInfo/NoticesCirculars.aspx).
+ - **Notices/evidence:** search the official [NSE exchange circulars](https://www.nseindia.com/resources/exchange-communication-circulars?PageSpeed=noscript) and [BSE notices and circulars](https://www.bseindia.com/markets/MarketInfo/NoticesCirculars.aspx); retain each exact annual report, release, and day-level notice beside `nse.rs` or `bse.rs`.
+@@ -448,7 +448,7 @@ per-record review before any exception can drive runtime.
+ 
+ ### `EU-XETRA`
+ 
+-- **Final annual sessions (2026-10-31 UTC):** the [2026 final-session notice](https://www.cashmarket.deutsche-boerse.com/resource/blob/5673886/22764993c4b1617c5f465186066344e6/data/Final%20trading%20session%202026.pdf) states the 2026-12-30 replacement phases; reconfirm by 2026-12-29 under #374. The [2027 calendar](https://www.cashmarket.deutsche-boerse.com/resource/blob/5674438/fb6e22c77930acea97641cf7d65ef78a/data/deutsche-boerse-trading-calendar-2027.pdf) corroborates closures without specifying final trading-holiday hours.
++- **Final annual sessions (reconfirmed 2026-10-31 UTC):** the [2026 final-session notice](https://www.cashmarket.deutsche-boerse.com/resource/blob/5673886/22764993c4b1617c5f465186066344e6/data/Final%20trading%20session%202026.pdf) states the 2026-12-30 replacement phases. The fresh operator retrieval meets the 2026-12-29 confirmation deadline in #374; the [final-session evidence](../evidence/xetra.md#final-trading-session-2026-12-30) records the confirmation and its scope. The [2027 calendar](https://www.cashmarket.deutsche-boerse.com/resource/blob/5674438/fb6e22c77930acea97641cf7d65ef78a/data/deutsche-boerse-trading-calendar-2027.pdf) corroborates closures without specifying final trading-holiday hours.
+ 
+ - **Official current/rulebook:** [Xetra calendar and hours](https://www.cashmarket.deutsche-boerse.com/cash-en/trading/trading-calendar-and-trading-hours), [continuous trading with auctions](https://www.cashmarket.deutsche-boerse.com/cash-en/trading/Xetra/continuous-trading-with-auctions), and [FWB rules](https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/rules-and-regulations-for-the-fwb).
+ - **Holiday calendar (watch list entry, added 2026-09-28 UTC):** the same page's `Non-trading days at Frankfurter Wertpapierbörse` table and the per-year `Trading calendar` PDF it links (2026: [deutsche-boerse-trading-calendar-2026.pdf](https://www.cashmarket.deutsche-boerse.com/resource/blob/4481276/1b643791fcb4d60bdd7f25efad3f4626/data/deutsche-boerse-trading-calendar-2026.pdf)); each year's edition names that year's trading holidays and their 20:00 CET shares close. Re-checked monthly per LAW-WATCH.

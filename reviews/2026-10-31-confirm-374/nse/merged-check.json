@@ -1,0 +1,132 @@
+{
+  "checked_at_utc": "2026-10-31T23:20:56.635167+00:00",
+  "merged_crate_head": "d3f6b21db8f4f7523f0c79b786c16c6852c4678c",
+  "source_pdf_sha256": "ce94ee1c54d98eccdf3c30fa0673ae2b6a49ea4ed4a72fb83d826f4359f71d58",
+  "merged_module_sha256": "4d6951fefb207fd44df8bbe3f1c7f72d4dc6fa8149778cb1391bc5052a06557a",
+  "source_times_in_printed_order": [
+    "14:05",
+    "14:10",
+    "14:10",
+    "14:15",
+    "14:15",
+    "14:17",
+    "14:17",
+    "14:20",
+    "14:20",
+    "15:15",
+    "15:15",
+    "15:20",
+    "15:20",
+    "15:25",
+    "15:25",
+    "15:30",
+    "15:30",
+    "15:35",
+    "15:35",
+    "15:50",
+    "15:50",
+    "16:00",
+    "15:30",
+    "13:50",
+    "14:05",
+    "14:05",
+    "14:50",
+    "15:05",
+    "15:30",
+    "14:25",
+    "15:10",
+    "14:20",
+    "16:15"
+  ],
+  "block_fields": [
+    "kind",
+    "day_offset",
+    "open_seconds_IST",
+    "close_seconds_IST"
+  ],
+  "derived_blocks": [
+    [
+      "extended",
+      0,
+      49800,
+      50700
+    ],
+    [
+      "order_entry",
+      0,
+      50700,
+      51180
+    ],
+    [
+      "extended",
+      0,
+      51180,
+      51600
+    ],
+    [
+      "regular",
+      0,
+      51600,
+      55800
+    ],
+    [
+      "extended",
+      0,
+      55800,
+      56100
+    ],
+    [
+      "extended",
+      0,
+      57000,
+      57600
+    ]
+  ],
+  "merged_blocks": [
+    [
+      "extended",
+      0,
+      49800,
+      50700
+    ],
+    [
+      "order_entry",
+      0,
+      50700,
+      51180
+    ],
+    [
+      "extended",
+      0,
+      51180,
+      51600
+    ],
+    [
+      "regular",
+      0,
+      51600,
+      55800
+    ],
+    [
+      "extended",
+      0,
+      55800,
+      56100
+    ],
+    [
+      "extended",
+      0,
+      57000,
+      57600
+    ]
+  ],
+  "phase_derivation": {
+    "fixed_preopen_order_entry_end": "14:15 minus the printed last-two-minute random closure = 14:13",
+    "preopen_envelope": "14:13 through continuous open 14:20; printed matching 14:15-14:17 and buffer 14:17-14:20 retained",
+    "regular_union": "continuous starts 14:20; CAS leaves at 15:15, non-CAS remains continuous to 15:30",
+    "cas_tail": "matching continues from non-CAS close 15:30 to CAS matching end 15:35",
+    "closed_transition": "15:35-15:50, then post-close 15:50-16:00",
+    "trade_date": "2026-11-08 Sunday, day offsets zero"
+  },
+  "result": "PASS: all six merged blocks and Sunday replacement row match"
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "file": "nse-current-circulars.json",
+    "url": "https://www.nseindia.com/api/circulars?index=CM&fromDate=19-10-2026&toDate=31-10-2026",
+    "method": "GET",
+    "final_url": "https://www.nseindia.com/api/circulars?index=CM&fromDate=19-10-2026&toDate=31-10-2026",
+    "retrieved_at": "2026-10-31T23:20:13.248771+00:00",
+    "status": 200,
+    "bytes": 122282,
+    "sha256": "2fca4df6da8070501675e43a44aa09761fdbae450d0fe82e762e59951b567076"
+  },
+  {
+    "file": "ice-notices-2026.json",
+    "url": "https://www.ice.com/api/sitesearchservice/v1/search/websitenotices?searchCollections=futures_us_exchange_notice&year=2026",
+    "method": "POST",
+    "final_url": "https://www.ice.com/api/sitesearchservice/v1/search/websitenotices?searchCollections=futures_us_exchange_notice&year=2026",
+    "retrieved_at": "2026-10-31T23:20:13.249492+00:00",
+    "status": 200,
+    "bytes": 2709,
+    "sha256": "8b8e279bb921eafa7c7777b2f0d3f54d204682a98ea3321f148c4da1f08a74fd"
+  },
+  {
+    "file": "xetra-circulars.html",
+    "url": "https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters",
+    "method": "GET",
+    "final_url": "https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters",
+    "retrieved_at": "2026-10-31T23:20:13.249831+00:00",
+    "status": 200,
+    "bytes": 131166,
+    "sha256": "0326db2b1707e7235ce46a4d9ab6756f8d09a39084a5803ddf225253b43afdb0"
+  },
+  {
+    "file": "xetra-final-049.html",
+    "url": "https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/Final-trading-session-2026-5668166",
+    "method": "GET",
+    "final_url": "https://www.cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/Final-trading-session-2026-5668166",
+    "retrieved_at": "2026-10-31T23:20:13.250150+00:00",
+    "status": 200,
+    "bytes": 115938,
+    "sha256": "80800e3a89d2a4966464ab8594d87b60ce64711b965ba9fe6e3bb52c6e00b40e"
+  },
+  {
+    "file": "xetra-final-050.html",
+    "url": "https://cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/Final-trading-session-2026-5668164",
+    "method": "GET",
+    "final_url": "https://cashmarket.deutsche-boerse.com/cash-en/Stay-Informed/circulars-newsletters/deutsche-boerse-circulars/Final-trading-session-2026-5668164",
+    "retrieved_at": "2026-10-31T23:20:13.775973+00:00",
+    "status": 200,
+    "bytes": 116075,
+    "sha256": "cfb96f18781e0255a4a4fff2aae354ac53528ffa57644bf6263b182c6ae67334"
+  },
+  {
+    "file": "ice-notices-new.html",
+    "url": "https://www.ice.com/futures-us/notices-new",
+    "method": "GET",
+    "final_url": "https://www.ice.com/futures-us/notices-new",
+    "retrieved_at": "2026-10-31T23:20:14.729182+00:00",
+    "status": 200,
+    "bytes": 83443,
+    "sha256": "613ada1130864d0b282c59a08b85e60355b89ccbfef547cce13fcd5c41a51029"
+  }
+]
