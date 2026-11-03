@@ -12225,3 +12225,80 @@ Detailed report and logs:
 `reviews/2026-10-31-future-update/independent-final-us-review/REPORT.md`.
 Implementation: https://github.com/SharurTrading/exchange-hours-rs/pull/375.
 Evidence dependency: https://github.com/SharurTrading/exchange-hours-evidence/pull/40.
+
+## 2026-11-03 — future-horizon sweep: TSX + CFE 2027 encoded
+
+Live T1 captures above (`holidays/raw/equities/tsx/forward-2027/INDEX-2026-11-03.md`,
+`holidays/raw/cfe/forward-2027/INDEX-2026-11-03.md`) extend TSX and CFE audited
+windows to 2027-12-31. Full 58-row sweep otherwise NO-CHANGE except: CME T2
+prints sampled 2028 windows (not a complete audited year; direct channel 403 —
+full evidence-repo T2 pull is the closing condition, no 2028 rows encoded),
+Coinbase Derivatives names 2026 Thanksgiving/Christmas with no hours (gap
+stands), ASX T24 2028 PDF admissibility unruled (gap stands), Nasdaq Nordic
+Market Model 2026:05 hours diff and Borsa Istanbul 2027 publication remain
+open checks. OANDA holiday page still ends 2026-10-30; typed refusal stands.
+
+## 2026-11-03 — CME Globex 2028 first windows encoded
+
+`cme-forward-2026-11-03/` holds the T2 service windows (2028 MLK,
+Presidents' Day, Good Friday + Dec 2027 and May 2028 controls). Rows encoded
+in the eight Globex families and four venue mirrors; coverage to 2028-04-14.
+Wonder-agent review confirmed every row shape against raw service bytes;
+Nikkei TACO recorded as variant (no key), FSPI as dormant record.
+
+## 2026-11-03 — independent review of exchange-hours-rs PR #387
+
+Verdict: **request changes** at crate head
+`28a2041731b0381e14858cb8ba2d00f136bb7429` (crate PR #387, "Encode TSX and
+CFE 2027 holiday calendars"), reviewed against this branch
+(`claude/future-horizon-2026-11-03`, `c11d17d`) as the evidence store. Full
+local Verification chain green; the head's CI is red only on the
+Documents-digest fence because the workflows check out this store's default
+branch — merge the evidence PR first, then re-run the crate checks.
+
+The encoded rows themselves verify: TSX 2027 (11/11), CFE 2027 (11/11) and
+the 37 CME 2028 family rows plus 21 venue-mirror rows re-derive event-for-event
+from the captured bytes; all new documents' sha256 reproduce; cbot/cme/comex/
+nymex mirrors are verbatim; row totals arithmetic is right; no pre-existing
+data row was removed. The blocking findings are evidence-scope and prose:
+
+- **The contiguous 2028 coverage window is not supported by these captures.**
+  All eight Globex families and four venue mirrors declare
+  `2028-01-01..2028-04-14` as one window, but `cme-forward-2026-11-03/INDEX.md`
+  states "inside split coverage windows. No contiguous Jan–May 2028
+  audited-normal claim: spans between the captured windows are unaudited."
+  Only 2028-01-15..19, 02-18..23 and 04-12..18 are captured, so 97 dates in
+  the declared window would answer as audited normal with no evidence.
+- **"Coverage runs contiguously ... dates after 2028-04-14 are unpublished"**
+  (12 evidence files, PR body, CHANGELOG): both claims false — the 04-12
+  capture publishes trade dates 2028-04-17/18 and the 05-01 control publishes
+  trade dates through 2028-05-05.
+- **Fences were edited to match the wrong window** (`tests/coverage_metadata.rs`
+  complete span 2028-01-03..04-13 and `coverage_on(2028-01-01) == Covered`,
+  family `coverage.last() == 2028-04-14`, the two exemplar-edge commits).
+- **Stale published-status prose** for TSX (`tsx.md:73-81` "2027 is not
+  published") and CFE (`cfe.md:408`, `cfe_vix.md:386` "no 2027 schedule yet"),
+  plus `coverage-2025.md:462`/"horizon document" cells, `tsx.md:34`, `tsx.rs`
+  and `cfe.rs` source-range/Good-Friday lists.
+- **Stale counts/windows**: venue module doc totals 246/228/220 (actual
+  252/233/225) and "six audited eras"; six-window/`lists the 6` statements;
+  energy era list "35" vs 32; crypto "seven holiday windows" (5) and "101 rows
+  over four windows" (106/5); nikkei "seventeen merged trade dates" (19);
+  "1,094 of the 1,095 days" walk claims; CFE test doc comment 140 vs 151 rows;
+  stale TABLE doc comments in all eight family modules; stale "2028-01-01
+  outside coverage" bullets in the same evidence files; stale inventory
+  verdict cells.
+- **TACO/FSPI records are not re-verifiable**: `globex_nikkei_225_dollar.md:1314`
+  cites SER-9832RR/NKQ/NIQ with no artifact (none exists in this store), and
+  `globex_event_contracts.md:294` says "Market Segment 90" while the store maps
+  segment 90 to Event Contracts II / 333.
+- **LAW-FOLLOW-UPS-ARE-ISSUES**: the PR body names five closing conditions
+  without issue numbers; only #385/#386 exist and are not cited.
+- Advisory: 2028 rows are largely unfenced (mutation of FX 2028-01-18 and
+  Nikkei 2028-01-17 instants is not caught by any test; energy caught only by
+  the mirror fence); section placement; TSX footnote "1:30" vs "1:30 PM"
+  quote drift; CFE basis misattribution.
+
+Review posted on PR #387 with 11 inline comments. Fix acceptance requires a
+pushed head and a re-run of the affected checks; this review applies to the
+head hash above.
