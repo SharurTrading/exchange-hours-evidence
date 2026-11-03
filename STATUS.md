@@ -12225,3 +12225,15 @@ Detailed report and logs:
 `reviews/2026-10-31-future-update/independent-final-us-review/REPORT.md`.
 Implementation: https://github.com/SharurTrading/exchange-hours-rs/pull/375.
 Evidence dependency: https://github.com/SharurTrading/exchange-hours-evidence/pull/40.
+
+## 2026-11-03 — future-horizon sweep: TSX + CFE 2027 encoded
+
+Live T1 captures above (`holidays/raw/equities/tsx/forward-2027/INDEX-2026-11-03.md`,
+`holidays/raw/cfe/forward-2027/INDEX-2026-11-03.md`) extend TSX and CFE audited
+windows to 2027-12-31. Full 58-row sweep otherwise NO-CHANGE except: CME T2
+prints sampled 2028 windows (not a complete audited year; direct channel 403 —
+full evidence-repo T2 pull is the closing condition, no 2028 rows encoded),
+Coinbase Derivatives names 2026 Thanksgiving/Christmas with no hours (gap
+stands), ASX T24 2028 PDF admissibility unruled (gap stands), Nasdaq Nordic
+Market Model 2026:05 hours diff and Borsa Istanbul 2027 publication remain
+open checks. OANDA holiday page still ends 2026-10-30; typed refusal stands.
