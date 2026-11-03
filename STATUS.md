@@ -12237,3 +12237,11 @@ Coinbase Derivatives names 2026 Thanksgiving/Christmas with no hours (gap
 stands), ASX T24 2028 PDF admissibility unruled (gap stands), Nasdaq Nordic
 Market Model 2026:05 hours diff and Borsa Istanbul 2027 publication remain
 open checks. OANDA holiday page still ends 2026-10-30; typed refusal stands.
+
+## 2026-11-03 — CME Globex 2028 first windows encoded
+
+`cme-forward-2026-11-03/` holds the T2 service windows (2028 MLK,
+Presidents' Day, Good Friday + Dec 2027 and May 2028 controls). Rows encoded
+in the eight Globex families and four venue mirrors; coverage to 2028-04-14.
+Wonder-agent review confirmed every row shape against raw service bytes;
+Nikkei TACO recorded as variant (no key), FSPI as dormant record.
