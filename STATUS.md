@@ -12317,8 +12317,10 @@ re-verifies them from fresh bytes (all retrieved 2026-11-14 07:12 UTC):
   them. The crate encodes these rows; the Eurex 2027 grid column is NOT
   re-litigated — the recorded 2026-09-26 conflict ruling (unconditional
   holiday-regulations column vs the expressly-preliminary indicative-calendars
-  page, LAW-NO-FABRICATED-DATES) stands, and no 2027 Trading Calendar edition
-  exists yet.
+  page, LAW-NO-FABRICATED-DATES) stands, and the archive check re-run on
+  2026-11-14 still lists no Trading Calendar edition beyond 2026 (banked as
+  `eurex_trading_calendar_archive.live-20261114.html` under
+  `holidays/raw/eurex-2025-2027/`).
 - **Nasdaq Global Trading Hours (`normal-weeks/nasdaq-night-session-2026-11-14/`).**
   ETA2026-64 states the production system-hours extension ("9:00 p.m. ET Sunday
   through 8:00 p.m. ET Friday, with a daily one-hour pause from 8:00 p.m. to
