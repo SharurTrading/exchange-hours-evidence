@@ -10749,15 +10749,1559 @@ verified at the exact merge commit dba5ea4:
   docs/). Branch release/1.0.0 deleted (local+remote) post-merge.
 READY: the maintainer tags v1.0.0 on dba5ea4 and runs cargo publish.
 
-## 2026-10-08T05:3xZ UTC — evidence mirror at release parity (PR #4, b21859c)
+## 2026-10-09 UTC — the globex clock-rule wave: crate #315, store #5
 
-The maintainer's pre-release ask ("make sure evidence repo is up to date"):
-fresh-checkout diff of the working store against the mirror's origin/main
-found exactly two files behind — STATUS.md and the final walk's
-gate-probe-2026-10-08-4f31101.tsv. Ingested via the PR-gated path (#4,
-squash b21859c) and re-verified: zero-file delta store↔mirror. The mirror
-is byte-identical to the working store at the moment of the 1.0.0 tag.
+The maintainer's sourcing directive ("handle all unsourced holidays if
+possible, globex futures first") shipped in one crate PR and one store PR.
+Crate #315 (branch `globex-holidays-clock-rule`, head 975fa76; squash
+e30b13f): the four CME venue holiday tables became the verbatim mirrors of
+their profile clocks under the same-day charter amendment completing
+#153/#242 — cbot<-globex_grains, cme<-globex_equity_index,
+comex/nymex<-globex_energy — retiring the ~390 cross-family dispute rows;
+the eight globex families' Juneteenth markers (2019/2020/2021-06-19)
+deleted as audited normal on the operator's own consolidated annual
+bundles, deliberately overturning the #224 upholding; 2023-02-20 and
+2023-04-07 worked up at T1 from the operator's own summary sheets
+`files/presidents-day.pdf` and `files/good-friday.pdf`; each CME venue now
+withholds exactly one date (2023-01-16, inherited from its clock) and the
+nikkei markers stand with a new zero-capture THBP-B CDX negative. Full
+gates green (1,297 tests), digest fence green. Store #5 (branch
+`ifus-live-probe-2026-10-09`, head f2ae4fe; squash 05d1b9b): the
+`holidays/raw/iceus-2025-2027/cdx/live_probe_2026-10-09.txt` artifact —
+150 live-HEAD filename probes, 0 hits, resolving the 33 429-inconclusive
+Christmas candidates — recorded in the directory INDEX. Merged: crate
+e30b13f, store 05d1b9b; main CI green on both.
 
+## 2026-10-09 UTC — the follow-up negatives: crate #316, LSE/IFUS records in #315's second commit
+
+#316 (head 67c70e4-precursor on `unsourced-followups-2`; squash 60bfefe):
+the Euronext end-of-year appendix re-check — the live holiday page still
+links only the 2025 edition, so the 2026-12-24 / 2026-12-31 markers stand
+until the operator publishes the 2026 appendix. #315's second commit
+(975fa76) recorded the same-day LSE business-days API single-capture
+re-check (one 2025 capture) and the IFUS live-channel negative. Merged:
+60bfefe; main CI green.
+
+## 2026-10-09 UTC — the Nasdaq four close as data; the NSE Muhurat re-check closes negative: crate #317, store #6
+
+Crate #317 (branch `unsourced-followups-3`, post-rebase head 67c70e4;
+squash f756036) and store #6 (branch
+`nasdaq-alerts-nse-recheck-2026-10-09`, head dcd7d48; squash e6a5064).
+Recovered: all four Nasdaq markers, keyed to the operator's own Equity
+Trader Alerts at T1 — ETA2010-73 and ETA2011-54 (the post-Thanksgiving
+early closes, 2025-11-26/2011-11-25 at 13:00 ET per the alerts' Early
+Closing Schedules), ETA2012-45 (Hurricane Sandy closure 2012-10-30; zero
+Wayback captures — the reason four prior attempts closed negative; read
+live), ETA2025-1 (the 2025-01-09 National Day of Mourning closure, Wayback
+replay 20250122151135). Nasdaq reads complete to 2026-12-31. GOTCHA: the
+trader-news `id=ETA2024-86` URL serves alert 2024-85's bytes — cite
+ETA2025-1, never the id-addressed 2024-86 capture. Closed negative: the
+seven NSE Muhurat markers — the 2026-10-06 pass's two apex-host CDX files
+were error pages and its sweep never completed; the completed sweep holds
+no CMTR/19187 and none of the Diwali-window stragglers, and the operator's
+own live circulars listing (414 CM circulars 2026-09-22..10-09) shows the
+2026-11-08 Muhurat notification has not issued. Full gates green (1,298
+tests), digest fence green against store main after the merge-order fix
+(merge the store PR first — the crate's documents-digest CI job checks out
+the store's main). Merged: crate f756036, store e6a5064; main CI green on
+all three crate heads. Watch items that self-close on publication: the
+Euronext 2026 end-of-year appendix, the NSE 2026-11-08 Muhurat
+notification, the ICE 2026 Boxing Day notice, and the 2027 IFUS notices.
+
+## 2026-10-10 UTC — the notices listing service answers: the four IFUS notices close as data; CFEIC17-022 closes the 2017 CFE marker; two channels close negative: crate `unsourced-followups-4`, store `ifus-notices-service-2026-10-09`
+
+Channel A: the ICE notices page's backing service is
+`POST /api/sitesearchservice/v1/search/websitenotices?searchCollections=futures_us_exchange_notice&year=<YYYY>`
+(read out of the page's JS bundle; plain curl with a browser UA answers) — the whole back catalogue,
+188 exchange notices for 2025, including the four the archive-only sweeps could never reach. The
+2025 Independence Day notice (May 8, 2025: FANG+ 13:15 on Jul 3 / 13:00 on Jul 4; Dollar Index
+regular then 13:00; Cotton late open 8:00 am Jul 7), the 2025 Christmas notice (Oct 31, 2025: softs
+13:05 / FANG+ 13:15 / Dollar Index 13:45 on Dec 24; softs late open 7:30 am and index families
+regular on Dec 26), and the 2026 MLK (Dec 3, 2025) and Presidents Day (Dec 23, 2025) notices — the
+latter two falsifying the earlier no-notice-exists records — were retrieved live; the 2026-12-28
+marker stays (no 2026 Christmas notice issued as of the listing's Oct 5 latest). Channel C:
+`cfecirculars.com` is dead (NXDOMAIN, zero archive captures), but the operator's own circulars
+index survives in the Wayback Machine and names **CFEIC17-022 "Modified Trading Hours for
+Independence Day Holiday" (June 16, 2017)**, whose bytes came from Common Crawl CC-MAIN-2017-34
+(crawl 2017-08-18; origin Last-Modified Jun 16) and state "Trading in all CFE products will close
+at 12:15 p.m. on Monday, July 3, 2017" — the cfe.rs marker closes. Closed negative: Channel B (the
+2023-01-16 CME marker — cmegroup.cn has no holiday page anywhere in the archive, cmegroup.fr is
+parked EuroDNS, education/advisories paths empty, the one further archived service capture querying
+a January 2023 window answers HTTP 500) and Channel D (the LSE business-days page's two 2024-2025
+captures are client-side shells stating no dates). Channel E: the ICE monitoring entry point moved
+to `ice.com/holiday-hours` (its IFUS calendar re-fetched byte-identical). Store branch head 3055629
+(five commits incl. the four artifact directories); crate branch `unsourced-followups-4`.
+
+## 2026-10-10 UTC — the notices-service wave: crate #319, store #9
+
+The maintainer's pushback ("there would be evidence online") was right. The
+ICE notices listing's backing service — `POST websitenotices?searchCollections
+=futures_us_exchange_notice&year=<YYYY>`, T2 — names every notice the
+archive-only sweeps missed, and its back catalogue (188 notices for 2025)
+yielded the 2025 Independence Day and Christmas notices and the 2026 MLK and
+Presidents Day notices at T1: sixteen family dates closed (FANG+ 13:15/13:00
+and Dollar Index regular/13:00 across the 2025 July Fourth days, the
+Christmas Eve triple 13:05/13:15/13:45 CT-equivalents in NY, the 2025-12-26
+softs late open, FANG+ 13:00 on the 2026 MLK and Presidents days) plus
+Cotton's 2025-07-07 late open as new rows; `iceus` moves to 49 rows with 42
+withheld and issue #168 closes. CFE's 2017 marker closed positive from
+CFEIC17-022 (June 16, 2017) recovered out of Common Crawl CC-MAIN-2017-34 —
+`cfe` now withholds nothing. Closed negative with records: cmegroup.cn (no
+holiday page in the archive), the lseg.com old-site business-days page
+(2024-2025 captures are client-side shells). The ICE monitoring entry point
+moved to `ice.com/holiday-hours`; sources.md updated. Crate #319 (branch
+`unsourced-followups-4`, post-rebase head f40cd22; squash bf93f9f); store #9
+(branch `ifus-notices-service-2026-10-09`, head 108507a; squash e6a5064's
+successor — merged first, the documents-digest job checks out store main).
+Full gates green (1,299 tests), digest fence 2,949 Documents rows. Remaining
+markers: 2023-01-16 (every CME family and venue — cmegroup.cn channel now
+also negative), the ICE 2026-12-28 Boxing Day notice (unissued at the Oct 5
+listing), the 2027 IFUS notices (publication horizon), NSE Muhurat (archive
+and CC exhausted; 2026-11-08 unissued), LSE 2025 five dates (both archives
+negative), Euronext 2026-12-24/31 (appendix unpublished).
+
+## 2026-10-10 UTC — the OANDA book wave 1 capture
+
+The maintainer's OANDA-listed market coverage programme opens: SharurPlatform#1046 (the
+consumer-side instrument→identity map) and oanda-rs#30 (venue identity) are its follow-ups. This
+capture holds the operator's own statement of its UK book: the hours-of-operation page
+(OANDA Europe Limited, FCA 542574) as both the maintainer-saved PDF rendering and the raw HTML,
+plus the holiday-trading-hours page whose dated sections run 2025-01-01..2026-10-30 (all times
+ET). The programme's mapping rule, settled with the maintainer: OANDA's own book — FX ex-TRY
+(Sun 17:05–Fri 16:59 ET, 6-minute 16:59–17:05 break, NZD pairs +06:59–07:05 Auckland), TRY
+(Mon 08:00–Fri 17:00 CET), XAU/XAG (18:05–16:59 ET), and the fourteen US-anchored continuous
+listings (17:01–15:59 CT ≡ 18:01–16:59 ET, no daily maintenance) — gets `oanda_*` book keys,
+because those books trade straight through the daily halts of the futures clocks they hedge on;
+the break-matching listings (grains, sugar, the European/APAC index CFDs) map to their
+exchange/futures clocks in later waves. The `***` rows are anchor evidence, not served values:
+Australia 200's close (06:59 Sydney) is pinned to the US close in UTC, and the Frankfurt-printed
+opens (01:16) are pinned at fixed UTC, printed at the standard offset. The holiday page's FX
+rows are three trade-date closures — 2025-01-01, 2025-12-25, 2026-01-01 ("open at 17:05" on the
+holiday, i.e. the holiday trade date's session does not trade and the reopen lands at the next
+session's normal open; 2025-12-31's "close at 16:59" states the no-reopen) — and its TRY silence
+ships as no table with the interpretation question recorded in the crate evidence file. Digests:
+PDF `d8a853cd621313feec96eb1ee0f45b81b7674dea2e0e6cb50b175e78347153d7`, hours HTML
+`60f6143dd5d678b1a34a9937aa938d2884380a33bf3542a4c72f8f03fa3607b7`, holiday HTML
+`c7137ce3da4cc19d0431955feedc10fb6b9731214ad3cfc7966160e72f8559da`.
+
+Wayback appendix (same UTC day): the uk-en hours page survives in the Wayback Machine from
+2021-03-03. The 2021 capture is server-rendered and carries the Metals and Index CFD tables but
+no Forex table; the 2022-05-18 capture prints the FX grid at `Sun-Fri: 17:03 - 16:58` with the
+16:58-17:03 five-minute break and the NZD 06:58 Auckland break; the 2024-02-21 capture prints
+the current `17:05 - 16:59` grid with the six-minute break — so the FX book's changeover is
+undated and the crate's `oanda_fx` horizon sits at the 2024-02-21 witness with the 2022 grid
+recorded as the activation obligation. The 2021 capture also fixes three later-wave facts: the
+metals book ran `18:00 - 17:00` then (not today's 18:05 - 16:59), Japan 225 observed the CME
+halt (`18:00 - 16:15; 16:30 - 17:00` New York), and the index CFDs printed exchange-exact times
+(Australia 200 `09:50 - 16:30; 17:10 - 07:00*`) before the page moved to one-minute insets.
+Digests: 2021 `ec5987239f2c79dd29fcfc40abe5a0d58c6e4ed446fa7dea653f1791b186cbed`, 2022
+`8dd71db7accc2a40faeb531f0c5c29db0eb289c9ef45a69bc14b75148257cbea`, 2024
+`aab9b3032c1d53e6155009fce6a5156983c2d21a2f0bd768f1860f465b8b6a63`.
+
+## 2026-10-11 UTC — the wave-2 hunts: ASX 24 SPI, Eurex SMI, Euronext index futures
+
+Three evidence captures for the OANDA programme's wave-2 builds. ASX: the live
+index-derivatives trading-hours page (SPI 200 futures and options, the two-column
+US-DST split — 17:10:00–07:00:00 and 09:50:00–16:30:00 from the second Sunday in
+March to the first Sunday in November, 17:10:00–08:00:00 otherwise — constant in
+every captured state 2010→2026, so the normal week sources to the floor with no
+dated change), the SYCOM 2010 and ASX Trade24 2012 hours PDFs, the pre-open
+footnote ("Pre-open starts 10 minutes prior to trading"), and the ASX 24 Trading
+Calendar captures 2010–2027 (SFE-era 2010 through the live 2026+2027 state) with
+the policy legend and per-date arrangements the SPI holiday table keys on; the
+store's existing equities/asx/ artifacts are all cash-market calendars (zero SPI
+hits), confirming the derivatives family needed its own tree, which lands as
+`holidays/raw/asx24-2010-2027/`. Eurex SMI: the exchange-wide trading-hours page
+(regular day 08:00–22:00 CET with Asian hours for selected products) plus the
+finding that FSMI itself runs the Swiss class 07:50–22:00 CET (TC-2026 PDF, store
+byte-identical to the crate's cited hash) and that both shipped Eurex tables are
+scope-keyed, not exchange-wide — the recurring Swiss-scope closure clause (2026:
+2 Jan, 14 May, 25 May; 2025: 2 Jan, 29 May, 9 Jun, 1 Aug) hits SMI and is absent
+from both, so an SMI table is all-derivatives rows plus the Swiss rows. Euronext:
+CAC 40 and AEX index-futures contract pages print identical Central Order Book
+hours 08:00–22:00 CET/CEST (LIS 07:30–22:00), and the live trading-hours-and-
+holidays page states the cash AND derivatives markets share one per-year calendar
+with per-market columns — the store's euronext_paris cash artifacts (2010–2026
+editions) therefore key the derivatives column too; 2027 unpublished (negative).
+Digests: each directory carries the hunter's SHA256SUMS.txt or the file digests
+as recorded in the wave STATUS of the crate PRs that cite them.
+
+Appendix (same UTC day): the ASX 24 calendars' row-by-row extraction landed as
+`holidays/raw/asx24-2010-2027/asx24-rows-extraction.md` — 354 rows across
+2010–2027 (50 day-closed/night-normal, 96 fully closed, 54 US-policy
+night-to-midnight, 28 product-level early closes on generic Equity Products
+rows, 117 informational normal rows), the 2011 Easter-Monday-substitute
+correction between the two captures resolved to the later, the 2022 December
+revision (night closed on 23 and 30 December, the September National Day of
+Mourning added) keyed to the later capture, 2024 carried by the Dec-2023
+capture (all eight direct 2024 captures are Incapsula blocks), and the
+ANZAC-weekend fallbacks recorded per year including 2026/2027's absent
+25-April rows. The US-midnight policy ends after 2015: US holidays print
+plain normal rows from 2016, and only Day-before-Good-Friday keeps the
+midnight close through 2026.
+
+## 2026-10-11 UTC — the HKEX index-futures hunt
+
+Complete evidence base for the `hkex_index_futures` build. Normal week: the live
+derivatives trading-hours page (Updated 20 Jul 2026) states HSI/HHI/minis at
+9:15–12:00 and 13:00–16:30 with Pre-Market Opening Periods 8:45–9:15 and
+12:30–13:00, and the AHT session 5:00 p.m.–03:00 a.m. (no AHT on the last
+trading day; half-day close 12:30 p.m.) — the product page restates it. Dated
+history: After-Hours Futures Trading launched **Monday 8 April 2013** (circular
+DMD/022/13 of 14 Feb 2013, SFC-approved, T+1 Session 5:00–11:00 p.m., no T+1 on
+HK public holidays / half-day securities days / UK+US bank holidays; the
+post-launch review restates it), the day session ran 9:45–12:30 & 14:30–16:15
+before the operator-dated two-phase extension (Phase 1 effective 7 March 2011 →
+9:15–12:00 & 13:30–16:15; Phase 2 on 5 March 2012 by DMD/004/12 → afternoon
+13:00–16:15, pre-market 12:30–13:00), and the later cutovers (close 16:15→16:30,
+AHT 23:00→23:45→17:15→17:00, end→03:00) are bracketed by product-page snapshots
+2014-09..2026 with their exact circulars uncaptured — a recorded gap. Holidays:
+the `tradcal` wall-calendar PDFs cover 2010–2017 and the derivatives Trading
+Calendar and Holiday Schedule pages cover 2017–2027 (per-year lists verbatim in
+the artifacts), with the no-afternoon-and-after-hours half-day-eve convention
+stated per year. Digests in `normal-weeks/hkex-futures-2026-10-11/SHA256SUMS.txt`.
+
+## 2026-10-11 UTC — the MEFF IBEX and ICE Long Gilt hunts
+
+The last two wave-2 evidence bases. MEFF: the live product and Trading-Hours
+pages state the current grid 08:00–22:00 CET with the 7:55–8:00 opening auction
+— the coordinator's 20:00 expectation was outdated — and the comunicados date
+the two cutovers: notice 16/2025 (2 Apr 2025) moves the close to 22:00 on
+**2025-06-23**, and the 2017-01-23 press release starts the 08:00 open era
+("Starting today... 8:00 - 20:00 h"); notice 7/2024's 2024-07-01 date was
+conditional on CNMV valuation and slipped (13/2024), the recorded
+slipped-change pair; Comunicado 49/2025 states the 14:00 Christmas-eve closes
+with the front-month VWAP window moved to 13:54. Holidays: BME yearly press
+releases 2016-2026 live/wayback plus the 2010 calendario PDF and the 2011-2017
+aspx grids confirm the constant closure set {1 Jan, Good Friday, Easter
+Monday, 1 May, 25 Dec, 26 Dec-in-lieu} with 24/31 Dec 14:00 half days (2021
+closed both fully; 2010 closed 31 Dec) and the 2012-2013 grids unreachable
+(negative, closing condition: C-EX-DF circulars or desk). The 2010-2016
+interim hours states (9:00 open era) are searched-negative. ICE Long Gilt:
+circular 26/063 (23 Apr 2026) dates the extension to **2026-07-06** — Long and
+Medium Gilt (and SONIA) to 01:00-21:00 London, Short and Ultra explicitly
+unchanged at 08:00-18:00, settlement windows untouched — with the pre-change
+08:00-18:00 grid witnessed by the May-2026 product-page capture, the IFEU
+Trading Schedule August 2026 edition stating the 2026 closure set (1 Jan, Good
+Friday, Christmas Day) and the gilt bank-holiday row (closed Easter Monday and
+UK bank holidays, open 1 May), the Christmas/New Year 2025 PDF (gilt ceases
+12:15 GMT on 24 Dec 2025), the Excel Trading Schedule T2 workbook whose change
+tracker cites the circulars, and the NYSE Liffe historical-notice zips
+2010-2014 (LON3351/3352, 3526/3530, 3655/3657/3664, 3770: the gilt rows with
+12:15 Christmas half days and the sterling-product closures). 2015-2020
+schedule editions and the 2010 full-year notice are the recorded archive gaps.
+Digests: SHA256SUMS.txt in each normal-weeks directory.
+
+## 2026-10-11 UTC — OANDA pre-publication audit and starred-selector qualification
+
+Source audit of release head `e17d5b88963548e7d1b747abb1773a4f4a712483`
+(library identical to main `5c156277`): **reject the claim of an entire completed
+OANDA implementation**. The supplied UK hours PDF reproduces
+`d8a853cd621313feec96eb1ee0f45b81b7674dea2e0e6cb50b175e78347153d7`;
+the holiday capture reproduces
+`c7137ce3da4cc19d0431955feedc10fb6b9731214ad3cfc7966160e72f8559da`.
+
+The source defects and correction are tracked in exchange-hours-rs#329,
+#330, #331, #332 and #333, with corrective PR #334. Missing MLK 2025 closes,
+rounded holiday reopens, the clipped Holy Thursday 17:00 close, Brent's lost
+Sunday opening in Monday bounds, and non-chronological replacement searches
+are corrected in the candidate. US Treasury CFDs gain their own key because
+Good Friday 2026 closes bonds at 11:14 ET and indices at 09:14; Carter's bond
+close is 13:15 ET. The US-anchored listing count is **fifteen**, not fourteen:
+six index listings (both Japan 225 currencies), four Treasury listings and
+five commodity listings. The current candidate has seven OANDA keys; the
+original release head contained six. Pending-order storage while markets are
+closed is explicitly scoped as a broker facility, not a timed session queue.
+The PDF does not authorize additional hedge-futures maintenance halts.
+
+Validation at correction head `d5f2d0742e4249069e61c01cf84af87627aaf89f`:
+1335 integration tests passed, plus the required formatting, strict clippy,
+doctest/rustdoc, dependency, MSRV and publish-dry-run checks. The inspected
+package contains 466 files and 141 evidence documents. The original six book
+normal-week grids also passed 4140 independently generated Python zoneinfo
+UTC-boundary probes over 20 selected 2025/2026 weeks. A one-minute mutation
+of the new bond close is caught by its public regression. The informational
+benchmark and old-engine comparison showed no material session-state regression.
+An isolated private consumer snapshot passed 4000 workspace tests (21 existing
+skips) and strict workspace clippy after NZD replacement-holiday and Treasury
+routing corrections; the active checkout was preserved (SharurMinus#331).
+
+The additional operator artifact captured here is the **undated** static
+product guide at <https://www.oanda.com/assets/documents/252/Hours_of_Operation.pdf>,
+retrieved 2026-10-11 UTC, SHA256
+`778ea39e0f71005015a111963061cd86f8d7fce7b589af0279316992239244ba`, saved as
+`normal-weeks/oanda-star-selector-audit-2026-10-11/oanda-static-hours-252.pdf`.
+Its Australia 200 row explicitly uses **US DST**: the earlier Sydney night
+ends at 07:00 during US DST and 08:00 otherwise. No operator effective day or
+current selector cutover is stated. The current generic `***` clause alone
+therefore does not prove a universal fixed-UTC clock or a Sydney-only selector.
+This qualifies the earlier capture note's fixed-UTC assertion; the current
+Australian CFD selector remains an operator-evidence condition in #332.
+The guide's earlier German and other grids are context, not current rows.
+
+Final candidate `e04163cd8c6993d1c0ddba6dc9d61e742317efb1` adds this source
+qualification without changing runtime data. Its final clean-commit recheck
+passed all 1335 integration tests (871.002 seconds), formatting, strict clippy,
+doctest/rustdoc, dependency checks, MSRV 1.95, publish dry-run and package
+inspection; the captured-store fence verified 2970 Documents rows across
+47 files and 838 distinct digests. The isolated consumer snapshot at this
+exact candidate passed 4000 tests (21 existing skips) and strict workspace
+clippy. CI's main-backed digest fence still requires reviewed evidence PR #19
+to merge; its missing new artifact is not a waiver of that fence. The original release PR #328 stays draft. Complete
+instrument coverage is still not certified: the six planned derivatives
+identities are absent, historical normal-week and holiday gaps remain,
+TRY has no audited holiday table, the other book tables stop at 2026-10-30,
+and the recorded Carter/Brent/reopen uncertainties remain. Closing conditions
+are recorded in #332 and the evidence files; neither passing tests nor a
+future build plan discharges them. This audit is not an independent approval
+of the correction authored in PR #334.
+
+
+## 2026-10-11 UTC — independent review of OANDA correction PR #334
+
+Exact-head source review of `e04163cd8c6993d1c0ddba6dc9d61e742317efb1`:
+**reject pending corrections**. The reviewer did not write the change. Two
+operator source defects remained: the Treasury key inherited an index-only
+2025-07-03 exception and its following 18:00 reopen, and the incomplete UK
+Memorial Day 2026 `18:0` reopen was treated as an exact 18:01 opening. The
+review also found wrong FX gap-state prose, a fabricated Christmas Eve 2025
+18:04 claim, two metals cells quoting Forex rather than Metals, an unsupported
+universal one-minute futures inset, and stale ledger holiday counts (actual
+index/Treasury 29/30 rather than 28/29). All five changed tables contained
+142 rows, independently counted by Python; the PR review's initially repeated
+ledger total was corrected after that count.
+
+The official UK pages were independently fetched again; all 437 normalized
+holiday heading/list events match the cited capture. The undated operator
+static guide was separately retrieved and its digest and explicit Australia
+200 US-DST row reproduced. The review's captures, count/comparison helper,
+mutation logs and exact file/row findings are in
+`audits/oanda-pr334-independent-2026-10-11/`.
+
+The author pushed `e32843fba07d7b9580cd96860d253ccbe3e00315` to address these
+findings: July 3 bonds remain ordinary, July 4 keeps the printed 13:00 close,
+and the following 2026-05-26 index and bond trade date is `Unsourced` until the
+UK operator clarifies its prior-evening reopen (#332). All seven findings
+are addressed on source reread. New table counts reproduce as 30 index,
+30 Treasury, 27 commodity, 32 metals and 24 Brent = 143 rows. Identity counts
+remain 141: 97 exchanges and 44 keys, 36 served and 105 dormant; 65 Partial
+(36 order-entry/29 executable), 50 holiday-bearing.
+
+Fresh-head full verification is running. Twelve public correction tests and
+the evidence fence passed on `e32843f` (2970 rows, 838 digests, 47 files). An
+independent mutation changed the new bond May 26 `Unsourced` row to `Closed`;
+the public typed-gap test failed. The mutation was restored and its isolated
+checkout removed. No final merge approval is asserted before the full checks
+finish. The broader scope/history/selector gaps under #332 remain, and this
+review cannot certify the entire OANDA programme.
+
+
+Current qualification of earlier wave-2 research notes: the HKEX paragraph's
+“Complete evidence base” label must not be read as complete sourced history.
+That same note says later day-close/AHT cutover circulars are uncaptured.
+The MEFF note records searched-negative 2010–2016 interim normal-week states
+and unavailable 2012–2013 holiday grids. The Long Gilt note records missing
+2015–2020 schedule editions and the 2010 full-year notice. Those are actual
+source gaps with closing conditions, not completed calendars. Earlier notes
+are retained as research history; this additive verdict qualifies their broad
+completeness language. Source/build plans for the six absent families do not
+establish complete runtime coverage or the entire OANDA programme (#332).
+
+
+The rejected `e04163c` head completed the independent full Verification chain:
+1335/1335 integration tests passed in 906.897 seconds, plus formatting, strict
+all-target clippy, three doctests, warning-free rustdoc, cargo deny and MSRV
+1.95. Passing checks did not cure that head's source/prose defects. The corrected
+`e32843f` full chain remains in progress; no final merge approval yet.
+
+
+## Corrected-head final verdict — 2026-10-11 UTC
+
+**Pass within the documented dormant/Partial correction scope**, exact pushed
+head `e32843fba07d7b9580cd96860d253ccbe3e00315`. The reviewer did not write
+the change. All seven source/data/prose findings above are corrected on the
+pushed commit and its affected checks were rerun. No outstanding merge-blocking
+defect was found within this PR's stated correction.
+
+The full fresh-head Verification chain completed successfully: formatting,
+strict all-target clippy, all 1337 integration tests in 916.922 seconds (zero
+skipped), three doctests, warning-free rustdoc, cargo deny and MSRV 1.95. Cargo
+deny emitted only unused license-allowance warnings. The 12 affected public
+regressions and full evidence fence also passed; the latter checked 2970
+Documents rows across 47 files and 838 distinct digests. Both isolated mutation
+checks failed the intended public regressions and were restored.
+
+All 143 changed holiday rows and their literal source basis were independently
+reviewed. The independent parser reproduces 30 index, 30 Treasury, 27 commodity,
+32 metals and 24 Brent rows; all 437 normalized operator holiday events match
+the cited capture. The final report is a correction review, not a certificate
+of complete served OANDA history, seasonal selectors, all planned families or
+release readiness. Those remaining obligations are tracked under #332.
+## 2026-10-11 UTC — extended OANDA UK Wayback retrieval
+
+All 37 raw replay responses contain usable operator schedule/holiday statements: nineteen hours tables and eighteen holiday calendars. Seven raw bodies are gzip encoded; their byte-identical responses remain saved, and decoded HTML derivatives and encoding metadata make them inspectable. The August 2022 holiday capture states UK index/UK10Y closures and a Sugar late opening, which are usable operator evidence. HTTP success alone was not used to certify a calendar. Index/retrieval results retain unavailable replays and errors. SHA256SUMS.txt fences every artifact here.
+
+UK hours index: 27 changed digests, first capture 2021-03-03; nineteen responses retrieved, all with usable product tables; eight unavailable after bounded retrieval. UK holiday index: eighteen digests in 2022–2026; all retrieved, all with usable holiday statements.
+
+The 2023-06-05 UK table still prints FX 17:03–16:58 and XAU/USD 18:03–16:58. The 2024-02-21 table prints 17:05–16:59 and 18:05–16:59. These observations narrow the change bracket; neither capture is an effective day. Australian/German starred rows retain the generic DST footnote, without naming the Australian selector's jurisdiction.
+
+The March 2025 UK holiday replay retains 2024 arrangements dropped from the current page. The February 2026 replay retains a 2025 ANZAC Australia 200 day/night arrangement absent from the current capture. These are inputs for dated table work, not a completed runtime calendar. The June 2026 UK replay repeats Memorial's incomplete index/bond reopen 18:0.
+
+Both March 2025 and February 2026 UK replays state Carter's dated section in Eastern Time: index close early at 9:30 and reopen at 18:00, adjacent to bond/commodity 13:15 closes and 18:00/20:00 reopens. The local 24-hour context and ordered close/reopen sequence support 09:30 ET; the source does not literally print 09:30 or AM. A separate reviewed correction must also retain the following trade date's 18:00 reopen.
+
+No broker contact occurred. Missing history, exact scope and unresolved statements remain in exchange-hours-rs#332. No guessed cutover, cash-market holiday borrowing or activation is introduced.
+
+Artifacts: `normal-weeks/oanda-uk-wayback-audit-2026-10-11/`.
+
+
+## 2026-10-11 UTC — independent review of archive evidence PR #20
+
+Pass on exact pushed head `edb1ae7d1bf1ff356cc98075787fdde834caab6e`; the
+reviewer did not write the capture bundle. The initial `8ba1b1b` inventory was
+rejected because seven gzip bodies and a valid UK holiday page were marked
+unusable. The corrected inventory preserves all 37 original responses and adds
+seven byte-exact decoded derivatives. Independent parsing reproduces 19 usable
+hours tables and 18 holiday calendars, all 64 artifact hashes and manifest byte
+counts, 27 distinct indexed hours digests and eight indexed hours replays still
+absent. Final README/STATUS/PR counts and concrete UK index/UK10Y/Sugar wording
+are corrected. The blocker was resolved after pushed-head verification.
+
+The source claims about FX/XAU observations, the generic seasonal footnote,
+archived 2024 holidays, ANZAC day/night arrangement, incomplete Memorial reopen
+and contextual Carter 09:30 interpretation were independently read from the
+operator text. Captures remain observations rather than unconditional cutover
+dates. Complete runtime OANDA scope/history/selector coverage remains #332.
+The report, independent checker and exact-head result are recorded in
+`audits/oanda-pr20-independent-2026-10-11/`.
+
+
+## 2026-10-11 UTC — independent review of library PR #335
+
+Pass within the documented dormant/Partial correction scope at exact head
+`a0d1479b7d8d5ef391cb918598c94d160d12e41a`. All 31 index rows and the Carter
+contextual 09:30 close/January 10 literal 18:00 reopening agree with the UK
+operator bytes. The current PDF's named local exchange columns establish
+Sydney/Frankfurt selectors for *** marked endpoints; the older guide's US-season
+Australian rule belongs to its different grid. Earlier selector uncertainty
+notes remain historical records, not current-selector withholding. The
+old/current effective day remains unsourced. Exact index scope is now four US
+indices; Japan 225's clock equality and selected matching holidays do not
+prove its general holiday scope (#332). Stale Good Friday/source/Treasury
+cross-references are corrected on pushed heads.
+
+Independent counts reproduce 144 rows across five CFD/metals books (31 index,
+30 Treasury, 27 commodity, 32 metals, 24 Brent), 141 ledger identities and
+437 matching normalized current operator holiday events. The final clean-head
+full charter chain and MSRV pass: 1,337 integration tests in 987.508 seconds,
+zero skipped, three doctests. Thirteen public regressions pass; 2,972 Documents
+rows across 47 files and 840 digests verify. The one-minute Carter mutation
+fails its public regression and was restored.
+
+A clean suite initially reused a mutation target and retained stale mutation
+behavior; a fresh target passes 13/13, and the full chain compiled the exact
+clean head in a separate target that never received this Carter mutation.
+The reused full target is not claimed globally fresh. The bad/fresh logs,
+conditions and mitigation are retained for exchange-hours-rs#336; no exact
+root cause or upstream defect is asserted. Historical/product/holiday gaps
+and six absent runtime families remain #332; this is not whole-OANDA or
+release certification. Read-only consumer checks reproduced the Japan refusal
+and seven internal cases on an uncommitted snapshot under the earlier policy,
+not a consumer release verdict. Subsequent requested holiday inheritance is
+outside this exact-head source verdict; no new assumption is certified as
+independently sourced OANDA coverage (#332).
+
+The additionally retained legacy FIX specification is operator context:
+November 25, 2011 document update, August 2012 archive observation, continuous
+trading-week currencies and typical Friday 17:00 Eastern maintenance. DAY-order
+expiry is distinct. It proves no complete UK 2010 baseline or effective cutover.
+Original bytes, four exact CDX results, retrieval metadata and nine hashes are
+under `normal-weeks/oanda-legacy-fix-context-2026-10-11/`. No broker contact
+occurred. Review artifacts are under `audits/oanda-pr335-independent-2026-10-11/`.
+
+
+## Independent OANDA four-book and BME review — 2026-10-11 UTC
+
+Posted by an AI agent running as `gpt-6.1-sol` (`Codex`), using the maintainer's GitHub login.
+
+Source review accepted for exact library head `3e0e5b9a9a15357cc461b54269ff39e831af0281`, PR337. Independent OANDA scope: index52 +bond50 +UScommodity41 +Brent47 =190 fully reviewed rows. FX/metals authored by this reviewer are excluded. Fresh primary Carter/normal-hours captures reproduce cited digests; live holiday sections match the cited capture. Six Brent silence withholdings and sourcing/count prose findings are fixed. Public mutation fails as expected; restored20 publication tests and golden check pass on finalhead;74 documentation/digest fences and affected strict clippy passed on source-identical5a4609. Full combined quality/MSRV belongs to the separate integrator gate.
+
+BME source/evidence/test files remain byte-identical to accepted author `3dc4df688adc7a59ed5bb085723e6ffd7f70d120`; golden-only author `b026e527e7fb35fcb45cba53d9427c129ddaa92f` matches the independently sourced156000 executable weekly seconds. The earlier integrated README count finding is resolved.
+
+Detailed report, independent source parser/per-row proof, retrieval manifest, exact hashes and logs: `/tmp/oanda-four-book-report/`. Earlier full BME source review and27 independent PDF downloads: `/tmp/bme-independent-review/`.
+
+All scoped file hashes are byte-identical to preceding5a4609. Only four unrelated coverage-inventory prose counts changed; independent source parser and public mutation/restoration were repeated on final3e0e5b9. Final combined quality/MSRV remains the other reviewer gate.
+
+
+
+## 2026-10-11 UTC — Sol independent review of library PR #337
+
+Posted by an AI agent running as `gpt-6.1-sol` (`Codex`), using the maintainer's GitHub login.
+
+PASS at `3e0e5b9a9a15357cc461b54269ff39e831af0281` for independently reviewed LSE/Amsterdam, FX/metals/TRY history, combined integration/counts and full exact-head gates. Own index/bond/commodity/Brent writer data is excluded from this agent's independent source verdict; separate reviewers cover it. BME source review is independently owned by the history reviewer. The corrected Amsterdam subject/scope prose, BME executable golden union and four inventory count cells reproduce their sources/tables. Remaining genuine source gaps are preserved under #332; no whole-OANDA/release-completeness verdict is claimed.
+
+Fresh detached worktree, explicit `CARGO_PROFILE_TEST_OPT_LEVEL=1`: full Verification chain passes all1352 nextest tests and3 doctests; default-profile MSRV1.95 passes. Actual `EXCHANGE_HOURS_RESEARCH` is `/tmp/oanda-evidence-recovery`; all3048 Documents rows/49 files/888 distinct digests reproduce. Publish dry-run and470-file package listing pass;327 source/evidence/user-record members match the head. LSE/Amsterdam exact-head mutations fail intended assertions and restored tests pass. All worktrees are clean. Archive SHA256: `859f3a483924812d90cbe129d9a6c6948536bac8f834e6c6f69339b2b6adc6da`.
+
+Counts:141 identities,52 holiday-bearing; LSE184, Amsterdam108, BME106, FX4, metals46, index52, bond50, commodity41, Brent47. Exhaustive file classification:12 data/registration,11 evidence,9 tests/golden, ledger, inventory plan, README and CHANGELOG; no charter change. Proof bundle: `audits/library-pr337-sol-review-2026-10-11/`.
+
+
+Durable review paths: `reviews/oanda-source-completion-2026-10-11/` and `audits/library-pr337-sol-review-2026-10-11/`. Original `/tmp` paths in saved reports refer to those directories by basename. These independently accepted partial calendars retain the unresolved OANDA activation gaps in library #332; no release-ready verdict is asserted.
+
+
+## OANDA underlying-contract resolution — 2026-10-12 UTC
+
+Issue exchange-hours-rs#332 retains one tracker for all 26 unresolved native
+book/date arrangements. The new `normal-weeks/oanda-underlying-policy-2026-10-12/`
+bundle compares every pair with named ICE Brent or CME equity-index/Treasury
+contracts and IANA clocks. Thirteen Brent dates are underlying ordinary days;
+four Brent dates have selected 01:00 London post-holiday reopens. Six early 2024
+index/bond closes can select donor 17:00 ET, one Treasury Christmas Eve can select
+donor 13:15 ET, and the two Memorial 2026 dates can select current-grid-clipped
+18:01–16:59 ET. These are disclosed inheritance-policy proposals, not newly
+operator-verified OANDA rows. Direct broker statements take precedence.
+
+The earlier 2021/June 2023 broker 17:00 ET close differs from February 2024's 16:59 ET
+close; no unconditional cutover was recovered. A universal one-minute adjustment
+is contradicted by dated broker statements. The runtime withholdings and
+publication gate are unchanged. Raw source captures, existing-artifact digest
+comparisons, parsers, complete 26-row policy proposals, UTC conversions and
+SHA256 inventories are retained. The independent ICE lookup also exposed the
+Brent evidence file's erroneous ordinary 19:00 London comparison; the actual
+product page prints 01:00–23:00 London, separately from settlement calculations.
+That prose correction is prepared in exchange-hours-rs, with no runtime change.
+
+
+## OANDA Brent comparison correction — 2026-10-12 UTC
+
+Independent review PASS for exchange-hours-rs PR #338, exact head
+`ffe066acbbbbb68394545fc9e635aa934b1a96ad`: no actionable findings.
+Fresh primary bytes reproduce the ICE digest, all seven shared OANDA
+Documents rows retain their canonical values, 1352 tests and three doctests
+pass with the full quality/MSRV chain, and a deliberately corrupted citation
+fails before restoration passes. Public-safe report and logs:
+`reviews/oanda-brent-doc-2026-10-12/`. No runtime data or coverage changed.
+The original underlying report now identifies the erroneous comparison as a
+finding at base `85ed22b`, corrected by the reviewed PR, and its inventory
+has been recomputed. The 26 proposals retain their explicit policy status
+and the single native-coverage tracker remains exchange-hours-rs#332.
+
+A separate cross-review of the 17 Brent policy proposals passed: exact gap
+set, 32 executable blocks, 64 IANA-converted boundary instants and source
+digests reproduced independently. Its report retains the original artifact
+hashes; the noted stale prose description is corrected above.
+
+
+## Current OANDA scope and Nordic cash source capture — 2026-10-12 UTC
+
+The maintainer selected verified current/future OANDA operation for release,
+with historical gaps retained as explicit refusals and disclosed in the single
+exchange-hours-rs issue #332. This decision does not certify missing history or
+change the 2010 support floor. Fresh UK operator captures are retained under
+`normal-weeks/oanda-current-source-audit-2026-10-12/`: Forex category membership
+includes the restricted TRY grid; the remaining published arrangements name
+Hong Kong index CFDs on October 19 and Swedish share CFDs on October 30. The
+current broker publication horizon remains October 30. Broker-specific stated
+arrangements take precedence over inherited underlying calendars.
+
+`captures/nasdaq-current-2026-10-12/` retains the complete tool-extracted
+representation of Nasdaq's own trading-hours page, its retrieval manifest and a
+reproducible parser for 67 Copenhagen, Helsinki and Stockholm arrangements in
+2026–2027. The text is an operator-page extraction, not original HTML bytes.
+Two direct HTTP retrieval attempts failed and were not retried through that
+channel. No holiday date or phase is inferred from a futures expiry calendar.
+The corresponding library changes require their own exact-head independent
+reviews; this source capture alone is not a release verdict.
+
+
+## Current donor artifact inventory completion — 2026-10-12 UTC
+
+Retain the remaining original public operator artifacts named by the Nasdaq
+capture manifest: Euronext cash/calendar pages and SGX derivative/calendar
+context. These bytes complete that retrieval inventory. SGX last-trading and
+first-settlement dates do not source holidays; Euronext year-end half-day
+instants remain unannounced and its future-dated PDF header is not adopted
+as a historical effective date. Source interpretation stays in library evidence.
+
+
+## Independent current OANDA/Nordic source reviews — 2026-10-12 UTC
+
+Independent TRY review accepts library PR #339 at
+`0628b004d33f766a984bc4402cc60b287e6625af`: fresh Forex category evidence,
+source digests, full quality/MSRV (1355 tests, zero skips, three doctests),
+publication-boundary mutation and restored tests pass.
+Independent Nordic review accepts library PR #340 at
+`cc1ca9cdf3c9a3299425f62e3f54c584785eef99`: fresh operator retrieval and an
+independent parser reproduce all67 equity arrangements; full quality/MSRV
+(1354 tests, zero skips, three doctests) and half-day mutation/restoration pass.
+Reports and proof bundles are under `reviews/oanda-try-current-2026-10-12/`
+and `reviews/oanda-nordic-current-2026-10-12/`. Neither review certifies
+unsupported history or whole-release integration; #332 remains the single
+historical gap tracker.
+
+
+## Independent Euronext current cash reviews — 2026-10-12 UTC
+
+GPT-6 (Codex) independently accepts Brussels PR #342 at
+`e86790331327f4d5e7bde547ada6c0dd319dc289` and Lisbon PR #343 at
+`ab66c88a51f8031b8058e6fca793a04d5430ac14`. Fresh operator bytes and
+an independent named-column parser verify all fourteen rows. Each exact-head
+full chain passes 1,355 tests, three doctests, strict Clippy and MSRV 1.95.
+Both deliberately corrupted closure rows fail, and restored bytes pass.
+The two year-end half-day hours remain unpublished and typed as gaps per scope.
+No invented historical effective date was taken from the PDF's future header.
+Reports, retrieval and mutation logs: `reviews/oanda-euronext-current-2026-10-12/`.
+
+
+## Independent final current OANDA integration — 2026-10-12 UTC
+
+Independent gpt-6.1-sol review accepts public integration PR #344 at
+`071def42ededf8c4b7c375db3a20900c973beaf2`; the root GPT-6 scope
+partition accepts the other agent's activation, while the Sol reviewer covers
+root-authored resolutions and release prose. Authored Euronext data is
+excluded from the Sol nonwriter verdict and covered by the retained root
+Euronext reviews above. Full verification passes 1,367 tests, zero skips,
+three doctests, strict Clippy, rustdoc, dependency checks and MSRV 1.95.
+The exact-head digest replay verifies 3,075 Documents rows across 57 files
+and 893 distinct digests. Source-derived boundaries and a red/restored
+Asian close mutation pass independently. A separate served/dormant ledger
+mutation fails its public count fence and the restored 74 checks pass.
+The dry-run package has 486 members; 483 tracked source/documentation/test
+files are byte-identical. Cargo normalizes its manifest and removes only the
+unpublished xtask workspace member from the packaged lock.
+
+The charter and release procedure explicitly record the maintainer's current/
+future priority without improving historical evidence, moving the 2010 floor,
+or changing actual windows. The ledger records 143 rows, 52 served and
+91 dormant; the unchanged 2025 sample has 34 complete, ten incomplete and
+eight without 2025 holiday coverage. Single historical tracker #332 remains
+open after release. Current native publication ends 2026-10-30; Friday night
+bounds are preserved while unaudited Saturday queries refuse.
+
+Reports, fresh source representations, parser proofs, mutation logs and
+package inspection: `reviews/oanda-current-combined-2026-10-12/`. Additional
+independent Asian retrieval bytes are in `reviews/oanda-asian-current-2026-10-12/`;
+their individual branch full-chain verdict is still pending and is not claimed
+here. This record covers the independently accepted combined integration.
+
+
+## Independent final release-head replay — 2026-10-12 UTC
+
+Independent gpt-6.1-sol review accepts PR #328 at release head
+`73d157186d35a61bc64000efc39e09634e450da0`. The complete tree
+`4e21549f3486d6ac23547df896b35a7a2a977fcf` is byte-identical to
+accepted integration `071def4`, so the source partitions and meaningful
+mutations retained above apply unchanged. Fresh exact-head full gates pass
+1,367 tests with zero skips, three doctests, fmt, strict Clippy, rustdoc,
+dependency checks and MSRV 1.95. Digest replay passes 3,075 rows across
+57 files and 893 hashes. The publish dry-run package has 486 members,
+483 exact tracked-file byte matches, the correct merge-head VCS metadata
+and only Cargo's expected manifest/xtask-lock normalization. The root
+independently repeats the same full chain and package check.
+
+The old individual Asian branch run is explicitly superseded, not a full
+PASS: 1,355 tests passed and the duplicated exhaustive holiday walk was
+interrupted by request (exit 130). Its independent source, publication-edge
+probes and mutation pass; the final combined nonwriter full verification
+above is the release gate. No individual-chain follow-up remains. That
+source disposition is now retained alongside its retrieval bytes.
+
+The public integration and consumer implementation are merged; release-head
+GitHub quality is still running. No tag or package publication is claimed.
+Historical issue #332 remains open. Reports and logs are under
+`reviews/oanda-release-73d1571-2026-10-12/`.
+
+## OANDA witnessed normal-week eras — 2026-10-12 UTC
+
+The 2026-10-11 historical audit's open closing condition — the undated
+changeovers between the UK hours page's earlier grids and the current grids —
+is closed for the seven single-zone OANDA books under the charter's
+2026-10-04 sourced-intersection rule. This wave records the derivation inputs
+and the closing negative-hunt artifacts:
+
+- `normal-weeks/oanda-intersection-eras-2026-10-12/help-centre/`: the two
+  previously unretrieved Wayback replays of
+  `help.oanda.com/uk/en/faqs/hours-of-operation.htm` (captures 20240619014415
+  and 20241107102830) and the live page, retrieved 2026-10-12 UTC. All three
+  print no session grid — boilerplate only. This was the last indexed
+  operator channel the audit had not retrieved; its closure completes the
+  negative hunt.
+- `normal-weeks/oanda-intersection-eras-2026-10-12/era-states-extraction.md`:
+  the per-capture grid matrix read from the audit's saved replays, the
+  derived per-book intersections, and the opening-day bounds (New York books
+  key 2023-06-05/2024-02-20; Singapore books key 2023-06-06/2024-02-21).
+  The uncollapsed Wayback CDX query of 2026-10-12 returns zero hours-page
+  captures between 2023-06-06 and 2024-02-20; the audit's eight twice-refused
+  replays all postdate the 2024-02-21 current-grid witness.
+- `oanda_brent` is deliberately excluded: its New York-anchored legacy grid
+  and London dagger grid are not nested (DST-disagreement weeks move the
+  London-equivalent boundaries by an hour), so no single static grid holds
+  under both witnessed states; its span stays the recorded #332 gap with a
+  per-era cross-zone selector build as the named closer.
+
+The crate change (era tables, moved horizons, typed one-flank holiday
+refusals on the witnessed spans) is exchange-hours-rs PR #345 at head
+9b44e9e (branch `oanda-witnessed-intersection-eras`); its verification chain
+passes 1373 tests, zero skips, three doctests, strict Clippy, rustdoc,
+dependency checks and MSRV 1.95, and its FX-intersection and US-legacy
+mutations each fail their era tests before restoration. No effective date is asserted anywhere: every era
+bound keys an operator observation.
+
+## OANDA #332 withheld-row sweep — 2026-10-13 UTC
+
+A capture census and retrieval wave against the 26 withheld OANDA
+book/trade-date pairs, the UK TRY history question and the Brent
+normal-week span 2023-06-05..2024-02-21. Inputs and verdicts are in
+`normal-weeks/oanda-withheld-holidays-2026-10-13/withheld-rows-extraction.md`;
+`SHA256SUMS.txt` and `retrieval-results.json` fence 30 saved artifacts.
+
+- The 8 twice-refused UK hours-page replays (2025-01-20, 2025-04-19,
+  2025-05-06, 2025-07-08, 2025-11-15, 2025-12-13, 2026-02-09, 2026-04-11)
+  retrieved byte-exact against their CDX sha1 digests; three are gzip bodies
+  stored raw with `.decoded.html` derivatives. They also yield the first UK
+  hours-page TRY prints: `All FX products (except TRY Pairs) ... Sun-Fri:
+  17:05 - 16:59*` plus `TRY Pairs | Central Europe | Mon-Fri: 08:00 - 17:00`
+  in the four captures from 2025-11-15, against no TRY carve-out in the four
+  from 2025-01-20..2025-07-08 — an undated changeover, recorded as two dated
+  observations, never a cutover. The same captures show the Brent row moving
+  `Mon - Fri 01:01 - 22:59` to `Sun - Fri 23:01 - 21:59` with the dagger
+  footnote gaining the 22:59-01:01 two-hours break, between 2025-07-08 and
+  2025-11-15, also undated.
+- A fifth UK page the prior audit's wildcard query could not match —
+  `oanda.com/uk-en/trading/holiday-hours-maintenance-times/` (five captures,
+  2020-10-25..2022-05-27) — retrieved in full. It prints per-product dated
+  holiday rows at exact ET times for BCO/USD, indices, grains, sugar and
+  metals, with no TRY and no US Treasury row, and predates every target date.
+- Two help-centre captures new to the store (20251028024437, 20260520231206)
+  are MadCap shells with no archived schedule bytes; the help-centre channel
+  stays negative.
+- Locale variants (`oanda.com/uk/`, `oanda.com/en-uk/`) hold zero captures,
+  and a full census of `oanda.com/uk-en/*` hours/holiday URLs confirms the
+  three known paths are the whole archive. No capture exists after 2026-06-08
+  (holiday page) or 2026-04-11 (hours page), so the 2026-08-31 row has no
+  post-date artifact at all yet.
+- Per-target verdicts: all 26 pairs remain NOT FOUND on UK-scoped operator
+  bytes. The sweep verified each row's nearest post-date witness verbatim,
+  including the operator's own truncated `reopen at 18:0` Memorial 2026 print
+  (byte-verified: no digit follows), the Agricultural-only Thanksgiving-eve
+  2025 row with Brent stated only for the 27th, and the absent December 2024
+  headings in every capture (Christmas Eve 2024 was never printed by any UK
+  capture). The only in-bracket artifact for the Brent span is holiday prose
+  (UK-HOL@20230929043012), not a normal-week grid.
+- No effective date is asserted anywhere; every statement keys its capture.
+  The named closers per row are listed in the extraction note's closing
+  conditions.
+
+## 2026-10-13 UTC — the ICE history wave: the 2009 (and 2008) Liffe notice zips, the IFEU Trading Schedule editions 2015–2020, and the first in-gap sugar witness
+
+Three #332 targets hunted in one pass (`holidays/raw/ice-history-2026-10-13/`, branch
+`evidence/ice-history-2026-10-13`; 71 task artifacts + 2 zips, fence `SHA256SUMS.txt`):
+
+- **2009 LON zip — CLOSED as data.** The live operator host serves the historical-notice archive
+  beyond the linked years: `https://www.ice.com/publicdocs/nyse_liffe/historical_notices/2009.zip`
+  (and 2006/2007/2008; 2015+ 404) answer 200 even though the notices page links only 2010–2014 and
+  no zip is archived anywhere (CDX empty). Channel control: the live `2010.zip` is byte-identical to
+  the store's `nyse_liffe_2010.zip`. `nyse_liffe_2009.zip` (LON3111–LON3238, 127 notices, continuous
+  with the 2010 zip's LON3239 start) carries **LON3203** — issue 13 October 2009, EFFECTIVE DATE
+  1 January 2010, "TRADING DAYS IN 2010": the 2010 London closures (1 Jan, Good Friday, Easter
+  Monday), the sterling/UK-commodity bank-holiday unavailability days (3 May, 31 May, 30 Aug,
+  27 Dec, 28 Dec) and the midday-GMT closing convention for 24 and 31 December 2010 — the exact
+  "2010 full-year notice" the store recorded as the archive gap. **LON3220** (13 November 2009)
+  carries the Christmas/New-Year 2009-10 hours tables (24/31 Dec 13:00 GMT half days, 25 Dec and
+  1 Jan closed, gilt attachment rows); **LON3226** points at `www.nyx.com/liffeholidays` for the
+  precise 2010 hours. `nyse_liffe_2008.zip` (with LON3073, the 2009 trading-days notice) adds the
+  pre-floor context. Both zips placed beside their siblings in
+  `holidays/raw/ice-europe-gilts-2010-2027/`.
+- **IFEU Trading Schedule 2015–2020 — witnessed for 2015, 2016, 2017, 2019, 2020; 2018 bracketed
+  only.** The operator's self-dated annual "20XX Trading Schedule" survives at
+  `theice.com/publicdocs/Trading_Schedule.pdf` under fifteen archived editions 2013–2023 and the
+  "Trading Schedule — Migrated Liffe Contracts" (the ex-Liffe fixed income/equity holiday rows)
+  under six more 2015–2017; twenty-one editions fetched as `id_` replays, each header-printed
+  ("Last Update: …"), tiling every gap year except **2018** — no capture of any Trading-Schedule
+  URL exists between 2017-07-07 and 2019-01-03, and the Common Crawl 2018 indexes answered 502/504
+  for all nine (recorded inconclusive, not negative). Best next channel: re-query CC-MAIN-2018-* for
+  `theice.com/publicdocs/Trading_Schedule.pdf` when the service recovers, then a desk ask for the
+  2018 edition PDF.
+- **Sugar No. 11 pre-Aug-2011 — the carried grid now has an in-gap operator witness; the gap is
+  re-scoped, not closed.** A name-level archive sweep (every sugar-named theice.com artifact
+  2008–2012: 13 rows, all fetched or assessed) surfaced the operator's own "Sugar No. 11 / No. 16"
+  brochure, PDF-created **22 March 2010**, printing the Sugar No. 11 spec row `HOURS  0330 EST TO
+  1400EST` — session language, the exact carried baseline, dated inside the carried span (archive
+  capture 2011-11-21, the only capture of that generation). A second operator document (the
+  Chinese-language Sugar No. 11 introduction printed 12 December 2011) re-witnesses 03:30–14:00 ET
+  electronic (plus the 08:00–13:30 floor session) at the end of the span, and the 14 May 2012
+  brochure generation corroborates the 2012-01-30 move to 01:30 from a second T1 source. The wave
+  also adds **ExNot 041111** (April 11, 2011): a dated, unconditional in-gap late-open — Sugar
+  No. 11 (with Coffee "C" and Cocoa) opened 07:30 NY on 2011-05-02 for the UK bank holiday — new
+  holiday-layer data before the family's audited window. The vendor "Monthly Softs Fast Facts"
+  (J. Ganes Consulting, compliments of ICE Futures U.S.) is kept as T3/T4 residual-risk context and
+  keys nothing. What remains unwitnessed for sugar: January–March 2010, the holiday/phase layer
+  across the span, and a document that states the January-2010 close as of that day. The crate's
+  `docs/evidence/ice_us_sugar.md` "terminal answer" paragraph (no in-gap document can exist) is
+  superseded by B1 and needs a normal schedule-change update citing the new artifacts.
+
+Negative and inconclusive probes recorded in `cdx/cdx_sweeps_2026-10-13.txt`: the `product_guide`
+underscore path does not exist in the archive; `productguide/ContractSpecs.shtml` has no captures;
+`theice.com/futures_us*` surfaces only from 2011-10-16; the early Common Crawl corpora hold no
+theice.com pages at all; the 2009–2011 `publicdocs` PDF enumeration query failed twice (timed out,
+inconclusive, superseded by the name-level sweeps); liffe.com/nyse.com/nyx.com domain-wide
+Trading-Schedule sweeps 504'd (superseded by the theice.com/ice.com successes).
+
+## The Euronext gap wave: Amsterdam derivatives floor, 2026 year-end instants, 2027 calendars — 2026-10-13/14 UTC
+
+The three Euronext evidence gaps of issue #332 were hunted against the
+operator's own archived and live channels; artifacts and extraction notes in
+`normal-weeks/euronext-gaps-2026-10-13/` (all T1):
+
+- **Amsterdam derivatives floor — partial FOUND.** New pre-floor-era operator
+  statements: the NYSE Liffe news release of Monday 3 August 2009
+  (euronext.com files PDF, Wayback capture 20181107205935, plus the live
+  press-release page's own mirror, capture 20220813094213) extends "trading
+  hours in its AEX index futures contract from the current close of 11.15hrs
+  until 15.00hrs Chicago time, with immediate effect" — the store's first
+  Amsterdam-derivatives document dated inside the pre-floor era, unconditional
+  and day-level, Chicago-anchored (no local instants printed or derived).
+  The NYSE Liffe "Calendars & Hours" pages (globalderivatives.nyx.com, nl
+  locale capture 20111126202420 — the only 200-status capture — and en locale
+  20110710100224) witness the 2011 derivatives holiday list and print the
+  2011 eves as a full trading day for Continental index products; the parent
+  site's Holidays & Hours children (nyx.com, captures 20120411150803/2349,
+  the earliest of each path) witness the 2012 derivatives list, the 2012
+  eves' "closing of its derivatives contracts from midday GMT (13.00 hours
+  CET)", the legacy cash grid's 09:00-17:30/TAL 17:35-17:40 phases (2012,
+  corroboration only — it does not meet `euronext_amsterdam`'s in-or-before
+  January-2010 closing condition, and its 07:15 row is the TCS reporting
+  tool, not a trading phase). **The floor-era derivatives normal-week grid
+  stays open**: the operator's own grid PDFs named by those pages
+  (`507371_1.pdf`, `liffeconnect_tradinghours211111.pdf`, the 2009
+  trading-manuals appendix `509415_0.pdf`, London Notices 3351/3526) have
+  zero Wayback captures (checked per URL and by a domain-wide PDF sweep of
+  globalderivatives.nyx.com); the old domains nyseeuronext.com and
+  euronext.nl are redirect stubs, liffe.com serves data-file specs only, and
+  the old trader portal is quote pages. Named closers: member-firm archives
+  or an operator request for those five documents; a Wayback rescan; the
+  never-captured quicktabs tab content.
+- **2026 year-end instants.** Euronext: the live trading-hours-holidays page
+  (retrieved 2026-10-13T23:45Z) carries a "2026 end of year Trading hours"
+  callout printing **"To be announced"** — the EOY appendix to Instructions
+  4-01/4-03 has not published; this extends the crate's 2026-10-09 negative
+  and names the channel. The page's "Derivatives markets trading hours"
+  link (`media/295/download`) is a stale URL now serving a JPEG — recorded
+  so nobody cites it. BME cash: FOUND in the already-banked 2026 trading
+  calendar release (bolsasymercados.es, dated 2025-11-20): "open until 2:00
+  pm" on Thursday 24 and Thursday 31 December. MEFF: the operator's live
+  Trading Calendar prints "On 24 and 31 December the BME markets will trade
+  until 14:00 hrs CET" (retrieved 2026-10-14T00:05Z); the MEFF-specific EOY
+  comunicado is not yet on the Market Notices page (complete 2026 list
+  through 24/09/2026 banked) and is expected ~early November per the banked
+  MEFF 49/2025 edition (2025-11-07).
+- **2027 calendars — NOT PUBLISHED** (fresh negatives): zero "2027"
+  occurrences on the live Euronext trading-hours-holidays page and the MEFF
+  calendar. Expected channels and timing recorded: the Euronext INFO-FLASH
+  CADE series (operator's own file naming dates the series mid-October to
+  early November: if171020cade, if181018cade, IF251107CADE) and the BME
+  "Spanish Financial Market's 2027 Trading Calendar" press release ~20
+  November (the 2026 edition's date).
+
+Retrieval record: CDX sweeps across euronext.com (files store fully paginated,
+13,465 urlkeys; /trading, /trader, /landing, /derivatives, /liffe prefixes),
+nyseeuronext.com, euronext.nl, liffe.com, globalderivatives.nyx.com, nyx.com;
+the search record with every closed channel is in the wave's
+EXTRACTION-NOTES.md. Every quoted string in the notes and index was
+re-verified against the saved artifact bytes after write-up.
+
+## CME forward monitoring — 2026-10-13 UTC
+
+Wave `cme-forward-2026-10-13/`: the 2027 CME Group holiday calendar is
+published (operator calendar page Holiday Notes for every 2027 holiday plus
+the T2 service windows) and the crate at 1.1.0 already holds all of it — all
+fourteen re-pulled `trading-hours-by-product` windows (remaining 2026 + every
+2027 holiday) reproduce the 2026-09-12 captures byte-identically, so **zero
+2026 errata and zero 2027 changes**. First retrieval of cmegroup.com made
+directly from this machine through a real browser session (curl still 403s;
+Akamai is IP/fingerprint-level), which discharges the sources.md
+"re-verify from a direct retrieval when one becomes possible" caveats.
+
+Diffs found, reported in `cme-forward-2026-10-13/diff-report.md`:
+
+- **2026-10-31 one-day extension of the 24/7 markets' Saturday maintenance
+  window to 05:00 CT** (Globex notice 20261005, verbatim saved) is unmodelled:
+  the crate ships the Aug/Sep and Oct 3/Oct 24 extensions in
+  `globex_cryptocurrency` and `globex_silver_100oz` but nothing ships Oct 31,
+  and dormant `globex_event_contracts_btc` additionally lacks the Oct 3/24
+  rows from notice 20260921. Forward-dated row candidate per the crate's own
+  20260921 pattern.
+- **First 2028 witness captured**: service window 2027-12-31..2028-01-02
+  (normal grid — Fri 12-31 regular close, Sat 1-1 no session, Sun 1-2 normal
+  reopen) plus the page's 2028 New Year's Day Notes. Recorded, not encoded.
+- **Bloomberg Commodity Index hours amendment** effective Sunday 2026-10-11
+  (SER-9808, notices 20260928/20261005) — unserved product set, watch item.
+
+Artifacts: the operator calendar page (388 KB HTML), fifteen T2 service JSONs
+(each with the crate-hash comparison in `INDEX.md`), three Globex notice
+pages (20260914/20260928/20261005) and three notice-index pages covering
+every CME notice published 2026-09-01..2026-10-13.
+
+## 2026-10-13 UTC — the Europe forward-publication wave: LSE 2028 rows are live; everything else negative
+
+Fourth forward sweep over the European operators, one pass each, all eight
+channels read live 2026-10-13 23:27–23:35 UTC; artifacts, digests and the
+per-operator INDEX under `holidays/raw/europe-forward-2026-10-13/`. The one
+positive: **the LSE business-days API now prints 2028** — its 27-row rolling
+table runs 2026-08-31 through 2029-01-01, every 2026 and 2027 cell matches the
+shipped `LSE-BUSDAYS-2025-12-18` rows byte for byte, and ten new 2028 rows plus
+2029-01-01 print in the same session language (`NON-trading day.`, the 12:30
+London half-day sentence): 2028-01-03 (substitute New Year), 04-14, 04-17,
+05-01, 05-29, 08-28, 12-22 half day, 12-25, 12-26 (its EUI *service* cell reads
+"To be confirmed"; the trading arrangement prints NON-trading day), 12-29 half
+day, and 2029-01-01. The shipped window ends 2027-12-31, so encoding these
+extends it — a normal schedule fix, zero 2026/2027 diffs. Negatives, all
+re-verified against the crate's recorded closing conditions: Nasdaq still
+2026-only (trader channel Incapsula stub byte-identical to 2026-10-03's;
+nasdaq.com's server-rendered table matches all twelve shipped 2026 cells, zero
+2027 strings); IFUS notices service answers 123 notices for 2026 (newest
+2026-10-13, listing/margin items only) and zero for 2027 — the Christmas
+2026 hours notice still hasn't issued, `IFUS-CAL-2027` stands, nothing
+supersedes it; ICE Futures Europe's two schedule PDFs are still the July and
+August editions (created 2026-07-14 / 2026-08-13, nothing newer), while the
+Excel schedule (workbook 2026-07-08) carries 2027 cells the operator's own
+Information sheet labels preliminary, and its Change Tracker tail records
+2026 hours changes (extended Utilities hours 26006, Gilt/SONIA extended hours
+26063, TONA close 22:00 London) none of which touch the Brent scope;
+Eurex's archive page still contains `2027` zero times with the 2026 blob its
+newest linkage, the Holiday-regulations 2027 column stays uncaveated against
+the indicative page's preliminary label (conflict unchanged), and the TC 2026
+PDF re-downloads byte-identical (`b0796b42…`) so the Swiss-scope lines carry
+no errata; Euronext still publishes only the 2026 calendar (24 `2027` strings,
+all Innovate-for-Growth strategy material) and still links the 2025 end-of-year
+appendix, so the two Unsourced 2026 eves keep their closer; BME's Renta
+Variable index holds no 2026 horarios-24-y-31 timetable and zero 2027 paths
+(the newest calendar instruction is still 65/2025), and MEFF's own calendar
+page is 2026-only; SIX's withdrawn `trading-guides/` 2026/2027 PDF URLs are
+serving again byte-identically (`70d1b87d…`, `cd2fdca6…`) with no 2028
+edition — a watch-channel restoration, not a data change.
+
+## APAC / broker-book / crypto / CFE forward watch — 2026-10-13 UTC
+
+Monthly forward-publication re-pull of six operators' live schedule channels,
+each diffed against the store's banked captures. **Every result is a clean
+negative — no operator published anything new for late 2026 or 2027** — and
+the fresh live bytes that make each negative auditable are
+`holidays/raw/apac-broker-forward-2026-10-13/` (13 artifacts + INDEX +
+findings note):
+
+- **HKEX** — live Trading Calendar page still the `Updated 31 Jul 2026`
+  edition; all 27 rows naming 2026/2027 identical to the 2026-10-02 capture;
+  no 2028 edition (zero `2028` mentions).
+- **ASX / ASX 24** — live cash-market sheet states exactly the crate's
+  shipped `ASX-CAL-LIVE` rows for 2026/2027; the ASX 24 page's 32 dated rows
+  and ONO footnote dates are content-identical to the 2026-10-11 capture.
+- **SGX** — T2 content-API holiday content unchanged; the eve/half-day
+  statement still scopes itself to `2025 & 2026`, so the recorded 2027 gap
+  (no operator statement naming 2027 half-day treatment) stays open; MOM tabs
+  2025/2026/2027 identical, no 2026 errata.
+- **OANDA UK** — holiday page identical to the 2026-10-10 capture (104/104
+  dated sections); newest section remains `Friday, 30 Oct 2026 – All Saint
+  Day (SE)`; **no post-2026-10-30 arrangement published yet**; hours-of-
+  operation grids unchanged. Next re-pull should land early-to-mid November
+  2026 per the 2025 page pattern.
+- **CDE** — notices listing stops at 26-37 (already recorded listed-only
+  2026-09-26); nothing above it except rule filing R2026-56; Wayback CDX over
+  the assets bucket shows no new notice PDF; **no Thanksgiving 2026,
+  Christmas 2026 or 2027 holiday notice yet** (2025 pattern: 25-42 posted
+  2025-11-25).
+- **CFE** — holiday CSV regenerated 2026-10-13 with byte-identical 2026-only
+  rows (no errata); Hours & Holidays page has only the 2026 schedule; no 2027
+  holiday circular (latest remains CFERG26-004).
+
+## CME MLK-2023 enumeration re-sweep — 2026-10-15 UTC
+
+Maintainer-directed fresh online hunt for the CME 2023-01-16 (MLK) marker that
+all eight served Globex families ship `Unsourced`. Method change from the
+2026-09-29/10-09 sweeps: **whole-directory CDX enumerations instead of
+guessed filenames**, which turns "this name 404s" into "no such URL was ever
+archived under any timestamp". Artifacts and the full record:
+`holidays/raw/cme-2023-mlk-resweep-2026-10-15/`.
+
+- **`cmegroup.com/trading-hours/files/*`** (36 URLs, complete): the 2023
+  one-pager series starts at `memorial-day-2023.pdf`; no MLK sheet under any
+  name was ever captured or answered 200.
+- **`cmegroup.com/files/*`** (227, complete): only `good-friday.pdf` and
+  `presidents-day.pdf` exist in the unsuffixed 2023 series; `mlk.pdf`,
+  `mlk-day.pdf`, `martin-luther-king-day.pdf` are archived 404s and
+  `martin-luther-king.pdf` was never captured.
+- **`tools-information/holiday-calendar/files/*`** 2022-05..2024-03 (126,
+  complete): for MLK 2023 the operator published exactly four artifacts, and
+  this wave fetched and read all four — Clearing advisory (already held),
+  **OTC advisory** (OTC clearing timelines only), **settlement-times PDF**
+  (settlements not derived on the day; no session hours) and the **compact
+  MGEX/DME workbook** (MGEX/DME lines only). None states a session hour.
+- **Globex electronic-trading weekly advisories, January 2023** (20230109,
+  20230116, 20230123 — the channel the 20261005 Saturday-extension notice
+  lives on): read in full; crypto reference-rate additions and E-mini PM
+  options delistings, **no holiday schedules**. Channel closed for this date.
+- **Pre-transition holiday-calendar.html**: eight content captures
+  2022-06..2022-11-23, one 301 (2022-12-17, no content), then nothing until
+  the 2023-01-16 capture the prior sweeps read. The 2022-11-23 page still
+  prints the 2022 table under the operator's "finalized approximately two
+  weeks prior" note — the 2023 MLK hours were never on the HTML page.
+- **T3 member-firm notices** (web search): uniformly print halt 12:00 CT /
+  re-open 17:00 CT on 2023-01-16 — corroboration, keys nothing
+  (LAW-PRIMARY-SOURCES).
+
+**Result: the marker stands, terminal as of this sweep.** One new lead
+recorded: the compact workbook's general note "Tuesday, January 17: Regular
+CME Group Globex close for all products" is the first artifact read bearing on
+the 2023-01-17 prior-evening-leg gap — it states Tuesday's close was regular
+but does not state the Monday-evening re-open, so the gap stands with a
+narrower remainder. Open thread: archive.today rate-limits (429) after
+pointing at a post-transition 2024-07-02 snapshot; its snapshot list needs a
+human fetch (same class as the SGX archive.today lead).
+
+**(Update 2026-10-16 UTC:** the 2023-01-16 marker itself has since closed — encoded in
+crate PR #355 on the retained private market-data confirmation, and the convention then
+extended across the remaining Globex withholdings in crate PR #356; this wave's negatives
+stand as the control record for that encoding**.)**
+
+## October-2026 Saturday-extension confirmations — 2026-10-16 UTC
+
+Targeted release-month follow-up (`holidays/raw/cme-globex/release-inspection-20261016/`): the
+operator's own trading-hours service, read through the public reader, answers the 2026-10-03..05
+window with **Bitcoin Futures reopening at 05:00 CT** on event date 2026-10-03 (02:00 closed,
+04:45 preopen, 05:00 open, all trade date 2026-10-05) — the 2026-10-03 forward-dated Saturday
+maintenance-window extension (notice 20260921) is **confirmed effective** for `globex_cryptocurrency`
+and `globex_silver_100oz`, discharging that row's confirm-by obligation exactly as the September
+capture discharged the 2026-09-19 row. The 2026-10-24 and 2026-10-31 rows remain forward-dated with
+their confirm-by days ahead. The reader itself is the only channel used; no other new material.
+
+
+## 2026-10-17 UTC — independent review of exchange-hours-rs PR #359
+
+Head: `8dcfb6cf8aaeedc03404c32acfa589f33cf038fa` (`oanda-markedata-changeovers`).
+Verdict: **BLOCK**, one P1 and two P2 findings. Review posted at
+https://github.com/SharurTrading/exchange-hours-rs/pull/359#pullrequestreview-5555316607
+with three inline comments. Existing review discussion was empty when inspected.
+
+Changed-file classification: 17 files — 3 schedule/sourcing modules, 8 evidence
+files, 4 test files, verification ledger and CHANGELOG. No charter or plan edits.
+Review ran in the detached head worktree
+`/Users/agedvagabond/.codex/worktrees/b70a/exchange-hours-rs`; no crate changes.
+
+Independent Python hashlib/HTML-text/regex/date parsing resolved all 64 Documents
+rows and their 30 distinct digests in the eight changed evidence files against
+this checkout. Re-read the 2023 and 2024 grid rows from the matching HTML bytes:
+`normal-weeks/oanda-underlying-policy-2026-10-12/cme/20230605093523.html`
+(sha256 `98ddc07cf38727b2a861fd1f48c503b1b597054cbec9d1dde4b3dde1801ffb56`)
+and `20240221005503.html`
+(`aab9b3032c1d53e6155009fce6a5156983c2d21a2f0bd768f1860f465b8b6a63`).
+The public-document digest result is not a replay of private candle responses:
+`cargo xtask verify-evidence MARKET-DATA` returns no matching Documents row,
+consistent with the existing explicit private-evidence exemption. The private
+OANDA candle responses were unavailable to this review. The review accepts that
+storage convention and does not assert that the responses were independently
+retrieved. OANDA's published candle schema was read independently at
+https://developer.oanda.com/rest-live-v20/instrument-df/#Candlestick .
+
+Recounts: unchanged native holiday rows FX 4, metals 46, indices 52, bonds 50,
+commodities 41, Brent 47 = 240; Unsourced 0/0/4/5/0/17 = 26; China50 and
+Singapore30 have zero exception rows. The stated sweep is 259 inclusive calendar
+days, so eight books require 2,072 per-day requests. Seven Sun–Thu opening days
+lie from 2024-02-11 through 2024-02-19 (11/12/13/14/15/18/19). The ledger table
+has 149 served/dormant rows (58 served, 91 dormant) at both base and head; the
+older activation-note census is unchanged by this PR and was not attributed to
+this change. Audited holiday windows, service labels, tiers and cadences do
+not move.
+
+Findings:
+
+- P1, `src/calendar/schedules/futures/international/oanda_asia.rs:20`:
+  exact February 12 cutover is not distinguished by the described CN50
+  17:00:55 reopen bucket and 16:29:00-or-silent close. Both observations fit the
+  legacy 17:00 reopen and 16:30 day close too. Price-bucket silence is not a session
+  event or an operator trade date; the same overlap affects the NY :55-open
+  argument. Preserve the sourced intersection until a distinguishing per-book
+  witness or admissible dated operator statement dates the changeover.
+  https://github.com/SharurTrading/exchange-hours-rs/pull/359#discussion_r4300688331
+- P2, `docs/evidence/oanda_fx.md:282`:
+  the FX close proof reverses the grid ordering. Verified legacy close 16:58,
+  current close 16:59; the cited 16:58:40 bucket is inside the current grid and
+  at least 40 seconds outside legacy, contradicting the claimed <=5-second
+  residual envelope. A temporary public integration probe confirms
+  `OandaFx.is_open(2024-02-08T21:58:40Z) == Ok(false)` and the last legacy
+  session closes 2024-02-09T21:58:00Z under this head. The per-book inference
+  and any affected bounds need recomputation from the responses.
+  https://github.com/SharurTrading/exchange-hours-rs/pull/359#discussion_r4300688341
+- P2, `docs/evidence/oanda_us_index_cfd.md:189-190`:
+  183 legacy + 76 quiet accounts for every sweep day and explicitly claims
+  zero current days, contradicting its own February 11 current witness and
+  the new selector. Preliminary M1 ambiguity must not be called positive
+  legacy evidence; reconcile the census using the stated S5 analysis.
+  https://github.com/SharurTrading/exchange-hours-rs/pull/359#discussion_r4300688351
+
+Mutation: in a separate temporary head worktree, shifted NY February 11 -> 12
+and Singapore February 12 -> 13. NY mutation failed three existing era tests;
+Singapore mutation failed its existing era test. Restored both constants and
+all four tests passed. Temporary worktree removed. Probe source and mutation,
+restoration and digest logs retained at
+`/tmp/exchange-hours-pr359-review-2026-10-17/`.
+
+Verification so far: fmt, clippy -D warnings, markdownlint 0.23.3, MSRV
+1.95 and verify-evidence --all passed (3,229 Documents rows, 63 files,
+990 digests). Nextest has passed 1,396/1,397; the exhaustive holiday-coverage
+test remains active. Doctests/rustdoc/cargo-deny follow in the same chain.
+Final verification for this review is recorded in the completion entry below.
+
+
+
+### PR #359 review — verification completed 2026-10-17 01:30 UTC
+
+Head remains `8dcfb6cf8aaeedc03404c32acfa589f33cf038fa`; verdict **BLOCK**
+and the three inline findings above stand. Final verification posted at
+https://github.com/SharurTrading/exchange-hours-rs/pull/359#issuecomment-6227979921 .
+
+Full required chain completed successfully in the head worktree: fmt, clippy
+all-targets with -D warnings, nextest all-targets **1,397/1,397 passed, zero
+skips** (1,104.306 s total; exhaustive holiday-coverage test 1,101.630 s),
+**3/3 doctests**, rustdoc with -D warnings, cargo-deny (only unused allowance
+warnings), markdownlint-cli2 0.23.3 (zero issues), and MSRV 1.95 all-targets.
+Explicit-store verify-evidence --all passed: **3,229 Documents rows, 63 files,
+990 distinct digests**. The crate worktree is clean. Private candle responses
+were not available for replay, and the green checks do not repair the three
+sourcing/prose defects. No source code was changed or merged.
+
+
+### PR #359 re-review — 2026-10-17 05:19 UTC
+
+Head `c25d3c177af7ce57bf2fb22b686d0a36a062cbfc`; verdict **BLOCK**.
+Posted four inline findings and outside-diff review at
+https://github.com/SharurTrading/exchange-hours-rs/pull/359#pullrequestreview-5556389967 .
+
+- P1, `oanda.rs:25`: the alleged February 12 16:58:15–16:59 NY witness
+  belongs to the session opened February 11. The selector instead keeps
+  that session at intersection bounds closing 16:58, and both public
+  calendars report closed at February 12 21:58:30Z.
+- P2, `verification.md:576`: retracted US/Singapore cutovers survive in the
+  ledger; FX/metals/venue rows disagree with the pushed constant. Both
+  Singapore evidence files retain February 12 current-era bullets despite
+  the restored February 21 selector; the commodity residual still claims
+  resolution. The PR body retains retracted inference/change-set prose.
+- P2, `oanda_singapore30_cfd.md:130`: the whole current grid is not nested;
+  the current night close is 05:14 versus legacy 04:45, so the claimed
+  impossibility of positive candle evidence is false outside the sampled
+  day window. Both values were checked against archived HTML bytes.
+- P2, `oanda_fx.md:303`: the designated private capture set lacks the new
+  decisive S5 windows. Its 32 responses and M1-only transcript reproduce
+  176 FX / 175 metals reopen positives but do not reproduce the new S5
+  proof; transcript has 1,813 records for seven books, not 2,072 for eight.
+  Exact new response paths/digests remain unidentified in that set.
+
+Recomputed with independent Python: all 64 Documents rows / 30 distinct
+hashes in the eight changed evidence files, archived 2023/2024 grids,
+259-day candle census and timezone conversion, six holiday tables' 240
+rows (4/46/52/50/41/47), and current ledger census 149 / 58 served / 91
+dormant (the older 143/52/91 activation count already exists on main).
+Changed files: 2 schedule/sourcing modules, 8 evidence, 3 tests, ledger,
+CHANGELOG; no charter/plan. Previous three review threads were resolved;
+replies were assessed before posting these new findings.
+
+All verification passed: fmt, Clippy -D warnings, 1,397 nextest tests,
+3 doctests, rustdoc -D warnings, cargo-deny (unused license allowances
+only), Markdown lint 0.23.3, MSRV 1.95, verify-evidence --all (3,229 rows /
+63 evidence files / 990 digests). Initial unoptimized nextest run was
+interrupted during the long exhaustive test; full successful rerun used
+CARGO_PROFILE_TEST_OPT_LEVEL=1 (124.157 s, zero skipped).
+Mutation February 12 -> 13 failed both era tests; restoration passed both.
+Public probe and mutation/verification logs: `/tmp/pr359-review-current/`.
+No fixes, commit or merge. Crate review worktree remained clean.
+
+
+## 2026-10-17 UTC — CME Globex baseline review at d5116b2
+
+Reviewed crate head `d5116b2cd5c631cca95ef75f9cb9743a5292cb36` in detached
+worktree `/tmp/exchange-hours-globex-review-d5116b2`. Verdict: changes required.
+Scope: 20 Globex keys, four CME venue routes, normal-week profiles, holiday
+routing, coverage and query behavior. No PR supplied; no charter or plan edits,
+no implementation fixes, no GitHub posts, and no crate changes retained.
+
+- P2: `cryptocurrency.rs:217` drops source-backed Saturday queues: the retained
+  service prints 07:45 Pre-Open on 2026-09-19 and 04:45 on 2026-10-03, but the
+  public identity queries answer no order entry. The evidence prose contradicts
+  its own quoted events.
+- P2: `bitcoin_event_contracts.rs:241-248` has no October maintenance rows;
+  snapshot reports open at 2026-10-24 10:00 CT inside notice 20260921's
+  02:00-15:30 CT window for all 24/7 markets. October 3 and 31 also omitted.
+- P2: `bitcoin_event_contracts.rs:153-157` aliases the historical ECBTC grid to
+  a 16:00 CT close despite SER-9092's own Friday 15:00 CT Trading Hours cell;
+  snapshot reports open Friday 2024-06-14 at 15:30 CT. The two ECBTC findings
+  concern public snapshots; the dormant key's default calendar refuses.
+- P2: `futures_profile/profiles.rs:271-295` keeps the three COMEX TAS current
+  queues at Sunday 16:15 while the dated profiles now state Sunday 16:00.
+- P3: venue holiday modules' line-16 counts are stale: 208/230/203/203 claimed,
+  228/246/220/220 enumerated for CME/CBOT/COMEX/NYMEX.
+
+Independent public-API enumeration compared kind, block data, tier, document
+and coverage for all 6,574 dates in 2010-2027 for each venue against its clock
+family: every mirror agrees. Independent Python tuple counts across eight
+Globex family tables: 228/220/246/209/262/208/98/227 (equity/energy/grains/FX/
+rates/livestock/crypto/Nikkei). Generated operator-event probes from 17 retained
+artifacts: 791 in-scope probes, 789 agree and two expose the crypto queues;
+15 events beyond the claimed horizon excluded. Three additional regression
+assertions fail for the ECBTC and TAS defects. Historical source rereads were
+sampled, not a certification of every row. Private MARKET-DATA artifacts were
+unavailable; the TAS finding is independently observable API inconsistency.
+
+Verification passed: fmt, Clippy -D warnings, all 1,397 nextest tests (optimized
+test build, 126.924 s, zero skipped), 3 doctests, rustdoc -D warnings,
+cargo-deny (unused allowance warnings only), Markdown lint 0.23.3, MSRV 1.95,
+and verify-evidence --all (3,229 Documents rows / 63 files / 990 digests).
+The first unoptimized nextest run was interrupted after 1,396 passes during
+its final long exhaustive test; the complete optimized rerun passed all tests.
+Mutation CME RTH close 15:15 -> 15:16 failed the existing close-boundary test;
+restoring the original bytes passed it. Detailed report and source paths:
+`/tmp/globex-review-report.txt`; reproductions `/tmp/globex_review_probe.rs`
+and `/tmp/globex_review_regressions.rs`; logs `/tmp/globex-review-*.log`.
+
+All five CME Globex baseline-review findings above are consolidated in
+[exchange-hours-rs #360](https://github.com/SharurTrading/exchange-hours-rs/issues/360),
+opened on 2026-10-17 UTC at the maintainer's request.
+
+
+## 2026-10-17 UTC — #360 implementation and validation
+
+[Crate PR #361](https://github.com/SharurTrading/exchange-hours-rs/pull/361)
+implements all five findings at `af5211696bba659cda7c6788a200db53f4af7db5`.
+The historical ECBTC close and current TAS queue were checked with market data,
+retained privately. Tradable event contracts and non-trading references were
+resolved separately; reference closes were not used as executable boundaries.
+The later 24/7 close residual remains disclosed because the reviewed market
+data predates that change. The two cryptocurrency replacement queues are backed
+by retained operator service bytes, newly registered in Documents. No holiday
+coverage window, service tier or typed refusal was widened.
+
+The four venue totals are 228/246/220/220; current module/evidence totals and
+six era subtotals are fenced against public enumeration. All 791 in-scope
+independent operator-event probes pass. Every one of the five corrections was
+mutated separately; each mutation failed its regression, and restoration
+passed. Trading-bar tests keep order-entry queues outside matching windows.
+Original inspected market-data files still match their original sizes and
+checksums; processing was read-only, with no bulk decoded files retained.
+
+The full verification chain passed on the commit above: formatting, strict
+Clippy, 1,400 nextest tests (166.392 seconds; zero skipped), three doctests,
+strict rustdoc, cargo-deny (unused allowance warnings only), Markdown lint
+0.23.3, MSRV 1.95, and all 3,231 Documents rows / 63 evidence files /
+992 distinct digests. PR #361 is open for independent review; no merge or
+release has been performed. Crate main and the implementation worktree are
+clean. Validation logs remain private.
+
+
+## PR #359 re-review — 2026-10-17 UTC — ed1eae87e409
+
+**Verdict: BLOCK** at `ed1eae87e4092b853507e9d456a38237dd6f6dc2` (PR #359, third review).
+
+Three P2 findings are attached inline:
+1. Singapore 30 still advertises the retracted February 12 current-grid boundary, while the selector and corrected residual retain February 21.
+2. The changelog, several sourcing comments/evidence sentences and the PR body retain superseded dates, intersection counts or resolved-status claims.
+3. The newly claimed Singapore 30 night-session census has no identifiable retained responses in the designated private capture set.
+
+The FX/metals runtime boundary is now February 11, matching the retained deep-close timestamps in the Sunday-opened session. Independent public-API probes return `Ok(true)` for both keys at February 12 16:58:30 New York, and `Ok(false)` for Singapore 30 at February 14 05:00 Singapore (its intersection still closes at 04:45). Moving the shared FX/metals boundary February 11 -> 12 fails both existing era tests; restoring the original bytes passes both.
+
+Reviewed all 15 changed files: two schedule/sourcing modules, eight evidence files, three test files, the verification ledger and CHANGELOG. No charter or plan change. Assessed all seven earlier review threads and the author's replies; they are marked resolved, but the incomplete reconciliations above survive on this head.
+
+Independent Python (`hashlib`, JSON, HTML text extraction, `datetime`/`zoneinfo`, regex) reproduced all 47 private checksum entries and enumerated 46 retained timestamp JSON files plus the 1,813-record transcript (259 daily records for each of seven books). Recomputed 176 FX / 175 metals early-reopen positives through February 8; the metals thin Sunday and the two holiday Sundays remain quiet. Reread the retained February 8 FX S5 early-reopen and February 12-15/19 deep-close windows. These timestamp records support the corrected offset-grid distinction; they do not validate the absent Singapore night census.
+
+Independently hash-checked and reread the 2023/2024 operator page grids at `normal-weeks/oanda-underlying-policy-2026-10-12/cme/20230605093523.html` (`98ddc07c...`) and `20240221005503.html` (`aab9b303...`). The changed evidence files contain 64 Documents rows / 30 distinct digests. The six unchanged native holiday tables retain 240 rows (4 FX / 46 metals / 52 indices / 50 bonds / 41 commodities / 47 Brent); the two Singapore tables have no exception rows. Ledger windows/tiers/cadences are unchanged; the ledger has 149 identity rows, 58 served / 91 dormant. The existing private MARKET-DATA convention is accepted. Public-document digest verification cannot certify an absent private capture.
+
+Verification at this head: fmt, Clippy with `-D warnings`, all **1,397 nextest tests / zero skipped** (optimized test profile, 127.302 s), **3 doctests**, rustdoc with `-D warnings`, cargo-deny, Markdown lint 0.23.3 (zero issues), MSRV 1.95 all-targets, and explicit-store `cargo xtask verify-evidence --all` pass. The latter verifies **3,229 Documents rows / 63 files / 990 distinct digests**. Cargo-deny reports unused license allowances only. The initial unoptimized test run was interrupted after 1,395 passes during the exhaustive tests; the complete optimized rerun passed. Mutation/probe logs are retained at `/private/tmp/pr359-mutation.log`, `/private/tmp/pr359-restored.log` and `/private/tmp/pr359-probe.log`; the head checkout is clean.
+
+No fixes or merge performed. Findings apply to this hash; a later pushed head requires renewed verification.
+
+
+## PR #359 correction validation — 2026-10-17 UTC — eb5c07e605f3
+
+Verdict: PASS within the declared native OANDA scope at
+`eb5c07e605f334820a5fe226f1c7ddab4d557220`, incorporating base
+`f84e1d1586c1e73b405128082cbcabdaf8ac57d6`. These are the correction
+author's rechecks after the independent blocking review above; no separate
+human approval is claimed. All ten review threads are assessed and resolved.
+The final report is [on PR #359](https://github.com/SharurTrading/exchange-hours-rs/pull/359#pullrequestreview-5556677460).
+
+Fixed the Singapore February 12/February 21 prose mismatch, the remaining
+release/sourcing/resolved-status claims, absent night-census inputs, sparse
+quotes described as continuous, and obsolete normal-week/holiday-gap
+explanations. FX/metals retain the February 11 opening-day boundary; nested
+books and Singapore retain their observation bounds. No holiday row,
+audited window, service tier or typed refusal was widened. No charter or
+plan change; all 15 changed files classified and checked.
+
+Independent scripts reproduce all 214 determinate rows among 240 native
+holiday rows, preserve 26 Unsourced, and return zero incorrect values in
+6,705 checks (41 conservative neighbor-date refusals). Historical/refusal
+probes give 206 matching values, 10 typed historical errors, and 27/27
+expected coverage errors. The venue/FX mirror agrees on 6,574 dates and
+32,870 instants. The eleven-morning Singapore census has nine nonempty
+responses and two empty, with actual counts/last stamps retained. Decimal
+OHLC/update-count reconstruction agrees on 65/65 start-aligned aggregates
+and 0/61 comparable end-aligned ones, corroborating the operator's explicit
+start-time definition. Exact-open stamps alone do not refute close-time
+semantics because observed current FX quotes can precede the stated open.
+
+Full local verification passes: fmt, strict Clippy, all 1,400 nextest tests
+(zero skipped, optimized test profile, 135.280 s), three doctests, strict
+rustdoc, cargo-deny (unused allowance warnings only), Markdown lint 0.23.3,
+MSRV 1.95, and 3,231 Documents rows / 63 files / 992 distinct digests.
+The shared FX/metals boundary mutation February 11 -> 12 fails both era
+tests; original bytes restored and both pass. The exact-head worktree is
+clean. The private capture manifest now verifies 125 entries, including
+`VALIDATION-PR359-FINAL-2026-10-17.txt` and durable final logs/scripts;
+original capture bytes are preserved. Remaining historical and live-host
+confirmation work is recorded in #332, and the native holiday publication
+horizon remains 2026-10-30. Required GitHub quality is pending at this
+record; merge and release are not claimed.
+
+
+PR #359 merge confirmation — 2026-10-17 07:00:51 UTC: all four GitHub
+checks passed at the head above; quality run
+[39010613079](https://github.com/SharurTrading/exchange-hours-rs/actions/runs/39010613079)
+succeeded. The PR merged as `ff6869fe77222935ee345dfc1b5a1f3829317a33`.
+Its tree is identical to the tested `eb5c07e` tree. Clean local crate main
+was fast-forwarded to the merge. The final private report and completed CI
+log/check snapshot are retained with 127 verified checksum entries. No
+release or tag was created.
+
+
+## PR #364 review — 2026-10-22 UTC — 5adabf6c139c
+
+Verdict: PASS for the source review and complete local verification at
+`5adabf6c139c9b19c6db511b89953f5764f18fcc`, against base
+`096a633b1fd4d85a41c6d692118263dd3c944218`. GitHub's required quality
+check is pending at this record. The independent review and correction
+confirmation are recorded on PR #364 (reviews 5609277833 and 5609304869).
+The extraction is a refactor: no runtime, schedule, holiday data, test or
+public API change was identified. No changelog entry is required under the
+maintainer's instruction. The charter change updates the table's source
+location; the documentation changes correct source references and stale
+holiday metadata/replacement-block claims.
+
+An independent syn/quote AST audit parsed all tracked Rust files at the base
+and final head. After excluding documentation, imports, module wrappers,
+impl splitting, signature trailing commas and the necessary scoped fixture
+and holiday_table visibility adjustments, all 4,751 executable items and
+implementation members match. All 25 tracked mod.rs files are
+declarations-only. Independent integration-test name multisets contain the
+same 1,338 #[test] functions. Compiler-generated rustdoc JSON, normalized for
+item IDs/private definition paths and inherent impl splitting, reproduces
+70 root public exports and 508 named public records with zero differences
+in signatures, attributes, variants, public fields or trait implementations.
+
+The three inline findings are fixed in the final head and all review
+threads are resolved: the new QueryContext link, the copied holiday-table
+inventory/coverage prose, and the obsolete replacement-block rollout claim.
+The pre-existing raw date-window representation concern is tracked in #365;
+current macro construction validates all endpoints during constant evaluation,
+so no invalid shipped table or reachable consumer failure is claimed. The
+additional private-item documentation check reproduces 15 existing diagnostics
+outside the changed files (16 on the base); their correction is tracked in #366.
+
+Complete local verification passes at the final head: fmt, strict all-target
+Clippy, all 1,400 nextest tests with zero skipped (test optimization level 2,
+99.413 s), three doctests, strict public rustdoc, cargo-deny, Markdown lint
+0.23.3 (175 files, zero issues), and the 1.95 all-target MSRV check. Cargo-deny
+reports unused license allowances only. Explicit-store evidence verification
+reproduces 3,231 Documents rows across 63 files and 992 distinct digests.
+The initial unoptimized run was interrupted at 1,399 passes after the
+documentation correction; the complete final-head run above passed.
+
+In a separate worktree, changing the 2025-12-25 globex_equity_index closure
+from Closed to an early close at 12:00 CT fails the existing public integration
+assertion with EarlyClose versus Closed. Restoring the exact source bytes
+passes the same test. The tested final-head worktree and restored mutation
+worktree are clean. Audit helpers/results are retained under
+/private/tmp/pr364-ast, /private/tmp/pr364-compare-api.py and
+/private/tmp/pr364-{base,head,final}-*. No source artifact bytes or Documents
+digests changed.
+
+
+PR #364 merge confirmation — 2026-10-22 UTC: GitHub quality, MSRV 1.95
+and Markdown lint all passed at the reviewed head; CI run
+[39722954989](https://github.com/SharurTrading/exchange-hours-rs/actions/runs/39722954989)
+succeeded. The PR merged as `fd06ee8c127f2667507985c00ec2367a0df2b911`.
+Its tree is identical to the tested `5adabf6` tree. Local crate main was
+fast-forwarded and is clean. The PR branch and temporary author/review/base/
+mutation worktrees were removed; audit source/results are retained. No
+release or tag was created. Existing evidence-store changes were preserved.
+
+## 2026-10-23 UTC — future-horizon sweep across every served scope (LAW-WATCH)
+
+Retrieval session 2026-10-23 21:00–23:30 UTC (delegate web sweeps ran 2026-10-23/24; all
+dates in this entry are UTC). Fourteen operator groups covering all 56 served ledger rows
+were checked against live operator channels for holiday/session evidence beyond each row's
+audited window and for future-hours notices dated after its last review.
+
+**New evidence captured in this wave:**
+
+- `holidays/raw/cfe-eurex-ice-cde-smfe-2026-2027/ICE_Futures_US_2026_Christmas_Holiday_20261022.pdf`
+  — the 2026 ICE Futures U.S. Christmas notice (issued 2026-10-22, sha256
+  `a7658155…`), closing the 2026-12-24 / 2026-12-28 gaps the ICE US evidence files
+  recorded. The crate PR encodes its rows. Beside it the T2 listing refresh
+  `iceus_listing_2026-10-23.json` (126 notices, the Christmas notice newest).
+- `…/CDE_Market_Notice_26-37_…` and `…/CDE_Market_Notice_26-25_…` — Coinbase Derivatives
+  notices 26-37 (2026-09-24, Q4 maintenance + FIA DR on Sat 2026-10-24, 24x7-scoped) and
+  26-25 (Friday-window removal, 24x7-scoped, with the 2026-12..2027-06 Saturday windows).
+  Neither touches the venue's 23x5 grid or its holiday layer; captured for the record
+  because both postdate the 2026-09-11 review.
+- `holidays/raw/equities/nse_india/2025-2027/wayback_20260226045622_…` and
+  `wayback_20261011203940_…` — the operator's `holiday-master?type=trading` machine
+  channel (T2), CM segment, whose 2026 list carries `15-Jan-2026 Municipal Corporation
+  Election - Maharashtra`, a closure the 2025-12-18 banner omits; all four 2026 captures
+  agree. The crate PR keys NSE's 2026-01-15 row to the 2026-02-26 capture.
+
+**Sweep findings (no data owed):** NYSE, CFE, all four Eurex keys, ICE Europe gilts
+(T1-wise; four held artifacts re-fetched byte-identical), ASX/ASX 24, NZX (rolling table
+ends exactly at the held 2027-01-04), TSE, HKEX ×2, SGX Securities (operator statement
+still scoped 2025–2026), SSE (2027 notice expected December), LSE (rolling table still
+ends 2029-01-01), Xetra, SIX (2028 PDF still 404), Euronext ×5 (2027 INFO-FLASH expected
+~November), BME ×2, Nasdaq Nordic ×3, Borsa İstanbul, TSX, B3 and Tadawul (live page
+403; the 2026-10-02 replay shows no change) all publish exactly through the crate's held
+windows — no beyond-window evidence exists to encode. Nasdaq US still prints the 2026
+schedule only; the 2027 sheet is the November/December watch item. CME's October
+Saturday extensions (2026-10-03, 10-24, 10-31) are already encoded in the crate from
+notices 20260921/20261005; notice 20261019 restates them; the genuinely new CME items —
+2028 holiday events appearing on the T2 trading-hours service ahead of the human page,
+the BCOM channel-340 near-24/5 move effective 2026-10-11, and the widened 24/7 channel
+set (333, 328, FSPI 335 launching 2026-11-01) — are recorded in the crate's sources.md
+by the same PR. OANDA's holiday page still ends at the held 2026-10-30 (its newest row
+is the SE-shares 30 Oct early close); the Christmas/New Year rows are unpublished, so
+all nine books refuse holiday classification beyond 2026-10-30 by design until the
+operator publishes — re-check at day-level cadence through early November. Coinbase
+Derivatives publishes nothing holiday-bearing beyond 2026-09-07 yet (per-holiday notices
+issue ~weeks ahead; the Thanksgiving notice is expected imminently).
+
+**Channel notes:** the NSE captures are gzip-wrapped as replayed (digests are of the
+decompressed JSON). CME's direct channel remains IP-blocked from this machine; nothing
+in this wave cites a proxied CME read. The NYSE notifications API's documented
+`pageSize=500` form currently returns a stale snapshot (newest item 2026-04-23); current
+items only appear at small page sizes — recorded in the crate's sources.md by the same
+PR.
+
+
+## 2026-10-31 UTC — independent final review of calendar source refresh, PR #375
+
+**PASS — no blocking defects remain**, exact implementation head
+`72dff410dbab364ba9ab90c934af4abd7de8d7c4`, compared with base
+`02a3c89495c4f7f9b51fab833fd04d2bc815f456`.
+
+The detached worktree `/workspace/exchange-hours-review-20261031` ran the full
+required gate: formatting, Clippy with warnings denied, **1407 nextest tests
+passed** (34 binaries; 625.186 seconds), **3 doctests passed**, rustdoc with
+warnings denied, cargo-deny, **MSRV 1.95**, and **175 Markdown files with zero
+lint issues**. All seven new/used document-digest checks passed. The exhaustive
+coverage-control test completed successfully; it was not skipped or timed out.
+The parent task's final `cargo xtask verify-evidence --all` on the same exact
+head also passed: **3248 Documents rows across 63 evidence files, 1002 distinct
+digests**, all resolved to held bytes. Its successful log was reviewed and is
+preserved as `independent-final-review/evidence-all.log` beside the report.
+
+Fresh independent NSE and Xetra PDFs reproduce their cited SHA-256 digests;
+NSE has **232 rows = 217 Closed + 9 replacement + 6 Unsourced**, preserving
+main's January 15 election closure. Xetra has **128 rows = 124 Closed + 3 early
+closes + 1 replacement**, zero Unsourced, with unchanged windows. The separate
+independent CME/ICE source review verifies all 21 CME blocks, all 98 preserved
+upstream CME rows, the six ICE replacement arrangements, Cotton's following
+day and FCOJ's unchanged eight withheld dates. Shared family counts agree with
+the inventories and documentation.
+
+Four meaningful mutations were detected and restored across the independent
+reviews: NSE's pre-open order-entry end, Xetra's post-trading end, CME's October
+24 queue start and Sugar's Christmas-eve post-close queue end. Every restored
+targeted test passed, and both review worktrees are clean after restoration.
+
+One initial finding on `5dff8b6` was resolved: renaming the MRX pending-update
+heading broke its pinned documentation fence. The final commit preserves the
+required marker and places the Q1 2027 target in the body; the formerly failing
+fence and full gate now pass. There are no unresolved findings. No charter or
+plan files changed. Forward confirmations remain tracked in issue #374.
+
+Detailed report and logs:
+`reviews/2026-10-31-future-update/independent-final-review/REPORT.md` and
+`reviews/2026-10-31-future-update/independent-final-us-review/REPORT.md`.
+Implementation: https://github.com/SharurTrading/exchange-hours-rs/pull/375.
+Evidence dependency: https://github.com/SharurTrading/exchange-hours-evidence/pull/40.
+
+## 2026-11-03 — future-horizon sweep: TSX + CFE 2027 encoded
+
+Live T1 captures above (`holidays/raw/equities/tsx/forward-2027/INDEX-2026-11-03.md`,
+`holidays/raw/cfe/forward-2027/INDEX-2026-11-03.md`) extend TSX and CFE audited
+windows to 2027-12-31. Full 58-row sweep otherwise NO-CHANGE except: CME T2
+prints sampled 2028 windows (not a complete audited year; direct channel 403 —
+full evidence-repo T2 pull is the closing condition, no 2028 rows encoded),
+Coinbase Derivatives names 2026 Thanksgiving/Christmas with no hours (gap
+stands), ASX T24 2028 PDF admissibility unruled (gap stands), Nasdaq Nordic
+Market Model 2026:05 hours diff and Borsa Istanbul 2027 publication remain
+open checks. OANDA holiday page still ends 2026-10-30; typed refusal stands.
+
+## 2026-11-03 — CME Globex 2028 first windows encoded
+
+`cme-forward-2026-11-03/` holds the T2 service windows (2028 MLK,
+Presidents' Day, Good Friday + Dec 2027 and May 2028 controls). Rows encoded
+in the eight Globex families and four venue mirrors; coverage to 2028-04-14.
+Wonder-agent review confirmed every row shape against raw service bytes;
+Nikkei TACO recorded as variant (no key), FSPI as dormant record.
+
+## 2026-11-03 — independent review of exchange-hours-rs PR #387
+
+Verdict: **request changes** at crate head
+`28a2041731b0381e14858cb8ba2d00f136bb7429` (crate PR #387, "Encode TSX and
+CFE 2027 holiday calendars"), reviewed against this branch
+(`claude/future-horizon-2026-11-03`, `c11d17d`) as the evidence store. Full
+local Verification chain green; the head's CI is red only on the
+Documents-digest fence because the workflows check out this store's default
+branch — merge the evidence PR first, then re-run the crate checks.
+
+The encoded rows themselves verify: TSX 2027 (11/11), CFE 2027 (11/11) and
+the 37 CME 2028 family rows plus 21 venue-mirror rows re-derive event-for-event
+from the captured bytes; all new documents' sha256 reproduce; cbot/cme/comex/
+nymex mirrors are verbatim; row totals arithmetic is right; no pre-existing
+data row was removed. The blocking findings are evidence-scope and prose:
+
+- **The contiguous 2028 coverage window is not supported by these captures.**
+  All eight Globex families and four venue mirrors declare
+  `2028-01-01..2028-04-14` as one window, but `cme-forward-2026-11-03/INDEX.md`
+  states "inside split coverage windows. No contiguous Jan–May 2028
+  audited-normal claim: spans between the captured windows are unaudited."
+  Only 2028-01-15..19, 02-18..23 and 04-12..18 are captured, so 97 dates in
+  the declared window would answer as audited normal with no evidence.
+- **"Coverage runs contiguously ... dates after 2028-04-14 are unpublished"**
+  (12 evidence files, PR body, CHANGELOG): both claims false — the 04-12
+  capture publishes trade dates 2028-04-17/18 and the 05-01 control publishes
+  trade dates through 2028-05-05.
+- **Fences were edited to match the wrong window** (`tests/coverage_metadata.rs`
+  complete span 2028-01-03..04-13 and `coverage_on(2028-01-01) == Covered`,
+  family `coverage.last() == 2028-04-14`, the two exemplar-edge commits).
+- **Stale published-status prose** for TSX (`tsx.md:73-81` "2027 is not
+  published") and CFE (`cfe.md:408`, `cfe_vix.md:386` "no 2027 schedule yet"),
+  plus `coverage-2025.md:462`/"horizon document" cells, `tsx.md:34`, `tsx.rs`
+  and `cfe.rs` source-range/Good-Friday lists.
+- **Stale counts/windows**: venue module doc totals 246/228/220 (actual
+  252/233/225) and "six audited eras"; six-window/`lists the 6` statements;
+  energy era list "35" vs 32; crypto "seven holiday windows" (5) and "101 rows
+  over four windows" (106/5); nikkei "seventeen merged trade dates" (19);
+  "1,094 of the 1,095 days" walk claims; CFE test doc comment 140 vs 151 rows;
+  stale TABLE doc comments in all eight family modules; stale "2028-01-01
+  outside coverage" bullets in the same evidence files; stale inventory
+  verdict cells.
+- **TACO/FSPI records are not re-verifiable**: `globex_nikkei_225_dollar.md:1314`
+  cites SER-9832RR/NKQ/NIQ with no artifact (none exists in this store), and
+  `globex_event_contracts.md:294` says "Market Segment 90" while the store maps
+  segment 90 to Event Contracts II / 333.
+- **LAW-FOLLOW-UPS-ARE-ISSUES**: the PR body names five closing conditions
+  without issue numbers; only #385/#386 exist and are not cited.
+- Advisory: 2028 rows are largely unfenced (mutation of FX 2028-01-18 and
+  Nikkei 2028-01-17 instants is not caught by any test; energy caught only by
+  the mirror fence); section placement; TSX footnote "1:30" vs "1:30 PM"
+  quote drift; CFE basis misattribution.
+
+Review posted on PR #387 with 11 inline comments. Fix acceptance requires a
+pushed head and a re-run of the affected checks; this review applies to the
+head hash above.
 ## 2026-11-14 — future-horizon sweep: Euronext 2027 calendar, Nasdaq Global Trading Hours alerts, dormant-identity recordings
 
 Captures the operator publications the 2026-11-12 LAW-WATCH sweep found and
