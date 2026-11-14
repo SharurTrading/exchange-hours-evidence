@@ -12344,3 +12344,42 @@ re-verifies them from fresh bytes (all retrieved 2026-11-14 07:12 UTC):
 Tadawul 2028-2029 Eid windows: already witnessed verbatim in the banked
 `TADAWUL-HOLCAL-2026-09-28` artifact (holidays/raw/equities/tadawul/2025-2027/);
 no new artifact — the crate's rows cite the existing digest.
+
+## 2026-11-15 — adversarial review of crate PR #397 and store PR #44 (fixes pushed)
+
+Three independent adversarial reviews (GLM-5.3 max-reasoning reviewer agents,
+2026-11-14–15 UTC) of crate PR #397 at `a318c939` and this store's PR #44 at
+`b74a52ea`, per the crate's review protocol.
+
+- **Data rows: APPROVE.** Every shipped 2027/2028-2029 row re-derived from the
+  banked bytes (Euronext notice cell-by-cell against the PDF and both HTML
+  renders; Tadawul's four Eid entries verbatim; all 59 weekday claims computed;
+  12 digests recomputed). Six advisory findings, all wording-level.
+- **Records and laws: REQUEST CHANGES.** Two blocking findings: a stale
+  shared-rows count in `docs/evidence/euronext_index_futures.md` (sixteen →
+  seventeen, this change's own addition), and — the serious one — the store
+  commit `b74a52ea` had overwritten STATUS.md with the working store's copy,
+  which sat behind main, deleting the 2026-10-09..2026-11-03 decision-log
+  entries. Fixed: crate `68bc023` (count + every advisory wording, artifact
+  quotes made byte-contiguous, amsterdam banks its second corroboration row);
+  store `6b82cb1`+`dc1cc8f` (STATUS restored from origin/main, +40/−0; the
+  ETA2026-39 and NYSE observation wordings corrected against the bytes; the
+  "no 2027 Trading Calendar edition" claim replaced by a fresh dated negative —
+  archive re-checked 2026-11-14, capture banked in `holidays/raw/eurex-2025-2027/`).
+  The working store at `../exchange-hours-research` is synced so no future
+  rsync re-trims the log.
+- **Fences and verification.** The chain ran green at `a318c939` (full
+  nextest, digest fence included). Six mutations of shipped rows all fenced:
+  the tadawul leap-day duplicate dies at compile time in the `holidays!`
+  macro's strictly-ascending const assertion; the lisbon row deletion and the
+  amsterdam eve kind flip are caught by the coverage-inventory count fences;
+  the tadawul window end by the coverage-endpoint and resume-day tests; the
+  paris eve kind flip by the half-day and census fences; the tadawul
+  2029-02-18 flip by two closure fences. Advisory: the brussels/lisbon/
+  amsterdam 2027 rows are fenced through the inventory counts rather than
+  per-date in their per-identity suites — a follow-up candidate for the next
+  change that touches those tables.
+
+Review posted on crate PR #397. Fix acceptance re-ran on the pushed heads
+(`68bc023` crate, `dc1cc8f` store): fmt, clippy, the affected suites,
+markdownlint and `verify-evidence --all` (3308 rows) all green.
