@@ -12302,3 +12302,84 @@ data row was removed. The blocking findings are evidence-scope and prose:
 Review posted on PR #387 with 11 inline comments. Fix acceptance requires a
 pushed head and a re-run of the affected checks; this review applies to the
 head hash above.
+## 2026-11-14 — future-horizon sweep: Euronext 2027 calendar, Nasdaq Global Trading Hours alerts, dormant-identity recordings
+
+Captures the operator publications the 2026-11-12 LAW-WATCH sweep found and
+re-verifies them from fresh bytes (all retrieved 2026-11-14 07:12 UTC):
+
+- **Euronext 2027 (`holidays/raw/equities/euronext_paris/forward-2027/`).** The
+  operator's "2027 Holiday Calendar for Euronext's Cash and Derivatives markets"
+  notice (dated 06 November 2026, `media/16439`) plus both hours pages rendering
+  the 2027 table. Amsterdam/Brussels/Lisbon/Paris: Closed 2027-01-01, 03-26,
+  03-29; `*Half Trading Day` 12-24 and 12-31 with the instants deferred to the
+  end-of-year appendix (announced but unstated — the same shape the 2026 eves
+  shipped as `Unsourced`). The 2026-09-29 negative-witness capture stays beside
+  them. The crate encodes these rows; the Eurex 2027 grid column is NOT
+  re-litigated — the recorded 2026-09-26 conflict ruling (unconditional
+  holiday-regulations column vs the expressly-preliminary indicative-calendars
+  page, LAW-NO-FABRICATED-DATES) stands, and the archive check re-run on
+  2026-11-14 still lists no Trading Calendar edition beyond 2026 (banked as
+  `eurex_trading_calendar_archive.live-20261114.html` under
+  `holidays/raw/eurex-2025-2027/`).
+- **Nasdaq Global Trading Hours (`normal-weeks/nasdaq-night-session-2026-11-14/`).**
+  ETA2026-64 states the production system-hours extension ("9:00 p.m. ET Sunday
+  through 8:00 p.m. ET Friday, with a daily one-hour pause from 8:00 p.m. to
+  9:00 p.m. ET Monday through Thursday (excluding holidays), effective December
+  6, 2026"); ETA2026-66 witnesses pre-production; UTP2026-33 the SIP schedule;
+  ETA2026-39 the TRF/WorkX alignment. Captured for the encoding work-up, which
+  is deliberately not taken in this wave — the session topology (overnight
+  matching vs order entry, the unstated production overnight end, the holiday
+  interaction, the Sunday-evening trade-date assignment) needs its own change.
+- **NYSE American Options ETH (`normal-weeks/nyse-american-options-eth-2026-11-14/`).**
+  The operator's fact sheet v1.3 (October 2026) states the added 7:30–9:25 a.m.
+  Early and 4:00–4:15 p.m. Late sessions and "Production Symbols: Monday,
+  October 19, 2026"; the banked notification-feed page carries the 2026-09-18
+  ETH alert. Dormant identity: evidence-file recording, no runtime change.
+- **Dormant citation refreshes.** `normal-weeks/eex-timetable-2026-11-14/` —
+  the EEX derivatives timetable is now the 2026-09-04 edition (the cited
+  2025-07-01 URL 404s; bar-level comparison still outstanding). 
+  `normal-weeks/idx-hours-2026-11-14/` — the IDX page's citing decree advanced
+  to `II-A Kep-00158/BEI/10-2026` with identical printed times.
+
+Tadawul 2028-2029 Eid windows: already witnessed verbatim in the banked
+`TADAWUL-HOLCAL-2026-09-28` artifact (holidays/raw/equities/tadawul/2025-2027/);
+no new artifact — the crate's rows cite the existing digest.
+
+## 2026-11-15 — adversarial review of crate PR #397 and store PR #44 (fixes pushed)
+
+Three independent adversarial reviews (GLM-5.3 max-reasoning reviewer agents,
+2026-11-14–15 UTC) of crate PR #397 at `a318c939` and this store's PR #44 at
+`b74a52ea`, per the crate's review protocol.
+
+- **Data rows: APPROVE.** Every shipped 2027/2028-2029 row re-derived from the
+  banked bytes (Euronext notice cell-by-cell against the PDF and both HTML
+  renders; Tadawul's four Eid entries verbatim; all 59 weekday claims computed;
+  12 digests recomputed). Six advisory findings, all wording-level.
+- **Records and laws: REQUEST CHANGES.** Two blocking findings: a stale
+  shared-rows count in `docs/evidence/euronext_index_futures.md` (sixteen →
+  seventeen, this change's own addition), and — the serious one — the store
+  commit `b74a52ea` had overwritten STATUS.md with the working store's copy,
+  which sat behind main, deleting the 2026-10-09..2026-11-03 decision-log
+  entries. Fixed: crate `68bc023` (count + every advisory wording, artifact
+  quotes made byte-contiguous, amsterdam banks its second corroboration row);
+  store `6b82cb1`+`dc1cc8f` (STATUS restored from origin/main, +40/−0; the
+  ETA2026-39 and NYSE observation wordings corrected against the bytes; the
+  "no 2027 Trading Calendar edition" claim replaced by a fresh dated negative —
+  archive re-checked 2026-11-14, capture banked in `holidays/raw/eurex-2025-2027/`).
+  The working store at `../exchange-hours-research` is synced so no future
+  rsync re-trims the log.
+- **Fences and verification.** The chain ran green at `a318c939` (full
+  nextest, digest fence included). Six mutations of shipped rows all fenced:
+  the tadawul leap-day duplicate dies at compile time in the `holidays!`
+  macro's strictly-ascending const assertion; the lisbon row deletion and the
+  amsterdam eve kind flip are caught by the coverage-inventory count fences;
+  the tadawul window end by the coverage-endpoint and resume-day tests; the
+  paris eve kind flip by the half-day and census fences; the tadawul
+  2029-02-18 flip by two closure fences. Advisory: the brussels/lisbon/
+  amsterdam 2027 rows are fenced through the inventory counts rather than
+  per-date in their per-identity suites — a follow-up candidate for the next
+  change that touches those tables.
+
+Review posted on crate PR #397. Fix acceptance re-ran on the pushed heads
+(`68bc023` crate, `dc1cc8f` store): fmt, clippy, the affected suites,
+markdownlint and `verify-evidence --all` (3308 rows) all green.
