@@ -12383,3 +12383,30 @@ Three independent adversarial reviews (GLM-5.3 max-reasoning reviewer agents,
 Review posted on crate PR #397. Fix acceptance re-ran on the pushed heads
 (`68bc023` crate, `dc1cc8f` store): fmt, clippy, the affected suites,
 markdownlint and `verify-evidence --all` (3308 rows) all green.
+
+## 2026-11-15 — adversarial review of crate PR #398 (issue #395 housekeeping)
+
+Two independent adversarial reviews (GLM-5.3 max-reasoning reviewer agents) of
+branch `fix/395-round2-residues` at `b47b0ec`, plus fixes amended to head
+`00d8531` (crate PR #398).
+
+- **Fence integrity: APPROVE.** Diff purity proven mechanically — comment-
+  stripped token streams identical across all twelve touched holiday modules;
+  every test hunk classified comment/message-only; no `coverage:` array, row
+  tuple or asserted value changed. Full chain green in the review worktree;
+  mutation checks still fenced (compile-time window assertion, inventory
+  count fence, the 151-row CFE census).
+- **Prose as data: REJECT → fixed.** Blocking: cfe.md claimed the per-holiday
+  notices key every 2018-2025 row — false for the rules-page-keyed 2018 New
+  Year pair; restored. Should-fixes: the CFE Documents table's landing date
+  (2026-09-26, its 2027 row 2026-11-03), the crypto era count (four contiguous
+  through 2027), the #385 clause extended to the three cells whose 2028 rows
+  key the same sweep artifacts (all twelve now), the Nikkei/fx merged-date
+  seventeen→nineteen residues the fence reviewer found (test doc, evidence
+  bullets, fx.rs), and the venue era-share sentences disambiguated as
+  snapshot history. Every digest the new prose quotes was recomputed against
+  this store and reproduces.
+
+Fix acceptance re-ran on the pushed head: fmt, clippy, full nextest 1457/1457,
+doctests, rustdoc, deny, markdownlint, `verify-evidence --all` (3308 rows).
+Review posted on crate PR #398.
