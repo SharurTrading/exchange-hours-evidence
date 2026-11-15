@@ -12383,3 +12383,36 @@ Three independent adversarial reviews (GLM-5.3 max-reasoning reviewer agents,
 Review posted on crate PR #397. Fix acceptance re-ran on the pushed heads
 (`68bc023` crate, `dc1cc8f` store): fmt, clippy, the affected suites,
 markdownlint and `verify-evidence --all` (3308 rows) all green.
+
+## 2026-11-15 — Nasdaq Night Session work-up evidence (crate issue #396): the commencement gate named, and not yet discharged
+
+Three parallel passes (rule text, operator channel, press) banked under
+`normal-weeks/nasdaq-night-session-2026-11-15/` (INDEX.md carries the full
+determination and digest table).
+
+- **The gate is a named instrument.** Nasdaq Equity 1 §1(a)(19) requires a
+  filed-and-effective "Night Session Proposed Rule Change" under Section 19(b)
+  before the Night Session commences; the SEC approval order (34-105199,
+  2026-04-10) states the gate in one sentence. This replaces the crate's vaguer
+  "readiness filing" phrasing as the watch condition.
+- **Not discharged as of retrieval.** The FR API search for the phrase returns
+  only the original notice, the Amendments-2/3 order and seven ancillary
+  recitals; Nasdaq's own filing list (through SR-NASDAQ-2026-098) carries no
+  confirming change, and SR-NASDAQ-2026-064 calls the 23/5 rules "previously
+  approved but not yet operative". Release 34-106061 (2026-08-07) records the
+  Equity Data Plans as not yet ready, "by December 6, 2026, or a later date
+  soon thereafter". **2026-12-06 therefore stays conditional; nothing encodes
+  until the confirming filing is witnessed (FR / listingcenter), with the
+  18-month deadline at 2027-10-10.**
+- **Topology settled for the work-up** (matching session 21:00–04:00 Sun–Thu
+  on a distinct instance; System Hours Sun 21:00 → Fri 20:00 with the 20:00–
+  21:00 Mon–Thu pause cancelling orders; 9 p.m.–midnight executions carry the
+  next calendar day's trade date, so the Sunday open belongs to Monday's trade
+  date; holiday closures effective from 20:00 the prior day with a 21:00
+  holiday-evening reopen unless Friday). The maintainer's "tradable overnight"
+  reading is confirmed at T1 — every restriction found is an order-type or
+  access restriction, none demotes the session to order entry.
+- New operator captures: ETA2026-68/69, UTP2026-34, DN2026-3/8, the GTH hub
+  and its three FAQ PDFs, the sys-hours PDF re-check (unchanged, 0439-26), the
+  RSS snapshot. Press set (~18 articles, T3/T4) corroborates; its errors are
+  flagged in the INDEX.
