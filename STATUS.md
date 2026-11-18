@@ -12443,3 +12443,30 @@ determination and digest table).
   and its three FAQ PDFs, the sys-hours PDF re-check (unchanged, 0439-26), the
   RSS snapshot. Press set (~18 articles, T3/T4) corroborates; its errors are
   flagged in the INDEX.
+
+## 2026-11-18 — adversarial review of crate PR #404 and store PR #47 (fix pushed)
+
+Two-round adversarial review (GLM-5.3 max-reasoning reviewer agent, 2026-11-18
+UTC) of crate PR #404 — the future-horizon sweep extension (Coinbase 26-41,
+Eurex 2027-2030, Xetra 2028-2032, ICE gilts Christmas 2026 + 2027-01-01, the
+CME New Year 2028 non-event, SGX/SSE STOP outcomes) — per the crate's review
+protocol, against this store's `future-horizon-2026-11-18` checkout (PR #47).
+
+- **Round 1 at `e8c8d28`: REJECT.** One blocking prose defect: all 15
+  movable-feast parentheticals in the new `docs/evidence/xetra.md` Gaps
+  paragraphs were wrong (Easter+39/+50/+60 re-derived for 2028-2032; three of
+  the printed values fell on impossible weekdays). One should-fix: the PR
+  body's deny note missed RUSTSEC-2026-0543 (`chrono`) beside 0555
+  (`chrono-tz`), both pre-existing on main `dcb7a39` — both folded into issue
+  #403. Everything else clean: every new row re-derived from the banked bytes
+  (Coinbase intersection early close 12:00 CT — "12:00"×3, "12:15"×0; Eurex
+  26-row weekday sets per identity with weekend entries keyed no row; Xetra 34
+  rows; gilts 12:15 GMT eves and the 2027-01-01 closure), `cargo xtask
+  verify-evidence` Success for CDE-MN-26-41 / EUREX-HOLREG-2027-2030 /
+  DB-TC-PAGE-2028-2032 / IFEU-XMAS-2026 plus pre-existing spot-checks, all
+  counts recomputed (60/142/134/191/162/142+22-Unsourced), five mutation flips
+  each failing tests, full chain green at head.
+- **Round 2 at `8fbe9f4` (the five-line prose fix): APPROVE.** The diff is
+  exactly the five corrected lines; the 15 dates and 15 weekdays re-derived
+  with two independent Easter algorithms; markdownlint 0 issues and the
+  schedule_documentation fences 74/74 re-run green at the new head.
