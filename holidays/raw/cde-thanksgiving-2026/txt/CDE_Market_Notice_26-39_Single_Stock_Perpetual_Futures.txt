@@ -1,0 +1,186 @@
+                                                  Market Notice
+
+To:​      ​        Coinbase Derivatives Participants
+
+From:​ ​           Derivatives Command Center
+
+Notice:​           26-39
+
+Date:​ ​           11/9/2026
+
+Subject:​           Single Stock Perpetual Futures for Trade Date December 14, 2026
+------------------------------------------------------------------------------------------------------------------------------
+
+On Sunday, December 13, 2026 at 18:50 CT, Coinbase Derivatives, LLC (CDE) will launch fifty
+seven (57) Single Stock Perpetual Futures (listed below) for Trade Date December 14, 20261.
+All products are perpetual futures on individual equities listed in the United States, settled in
+cash and denominated in USD, eligible for trading from Sunday 19:00 CT to Friday 16:00 CT.
+
+Single Stock Perpetual Futures will be available for testing in CDE's integration environment
+ahead of launch, and AAPL and QQQ are available now. CDE will add all remaining products on
+November 23rd, 2026.
+
+For access to the Integration environment, please contact derivatives@coinbase.com.
+
+Product highlights
+
+      1.​ Trading hours. Single Stock Perpetual Futures trade continuously from Sunday 19:00
+          CT through Friday 16:00 CT each week.
+      2.​ No expiration. Each contract is assigned a reference expiration set far in the future,
+          which exists for systems that require a date. No final settlement is scheduled against it,
+          and the reference date will be adjusted as required.
+      3.​ Hourly funding. A funding rate is calculated each hour, smoothed against the prior
+          hour's rate and capped at plus or minus 10 basis points per hour. Accrued funding is
+          applied through a clearing cash adjustment at the exchange's regular margin runs, which
+          occur midday and at the end of the day. No funding rate is published for any hour the
+          market is closed, paused, or halted.
+      4.​ Corporate actions. Depending on the event, CDE will either adjust the affected position
+          and reference price, or let the market price in the economic impact before the event
+          takes effect. CDE may halt trading in an affected contract to complete the required
+          adjustment, and certain events may result in early cash settlement followed by a new
+          listing. CDE will publish a market notice ahead of each event.
+
+
+1
+    Subject to applicable CFTC and SEC review and approval.
+
+
+Any questions please contact Derivatives Command Center at derivatives@coinbase.com or +1 (312) 469-0985
+    5.​ Regulatory halts. A Single Stock Perp halts whenever its underlying is subject to a
+        regulatory halt, including circuit breakers that halt the whole market, Limit Up Limit Down
+        pauses, and news or regulatory halts. Trading resumes when the underlying resumes.
+    6.​ Position limits. Each Single Stock Perp has its own position limit, expressed in shares
+        equivalent of the underlying, and published on the CDE website in accordance with the
+        CDE Rulebook.
+    7.​ Fees. Configurable per contracts, with precision beyond two decimal places.
+
+Corporate action handling
+
+CDE will either adjust the affected position and reference price, or allow the market to price in
+the economic impact before the event takes effect. CDE may halt trading in an affected contract
+to complete the required adjustment. Treatment by event type is below.
+
+ Corporate Action                                             Handling
+
+ Stock split (forward, reverse, or fractional)                The Clearing House adjusts the number of
+                                                              contracts held and reference price by the split
+                                                              ratio. If, after the adjustment, the number of
+                                                              contracts is not a whole number, it is rounded
+                                                              down to the nearest whole number. Such
+                                                              adjustments are intended solely to preserve,
+                                                              as nearly as practicable, the holder's existing
+                                                              economic exposure and constitute a
+                                                              continuation of the holder's existing position
+                                                              rather than the establishment of a new
+                                                              position, liquidation of an existing position, or
+                                                              replacement of a contract. Same treatment
+                                                              for forward, reverse, and fractional splits, only
+                                                              the ratio differs.
+
+ Stock dividend                                               Handled like a stock split, using the stock
+                                                              dividend ratio. The adjustment is intended
+                                                              solely to preserve the holder’s pre-event
+                                                              economic exposure.
+
+ Cash dividend (ordinary)                                     No adjustment to positions or prices.
+
+ Special dividend                                             Positions are adjusted by the special dividend
+                                                              amount such that their price is the pre-special
+                                                              dividend price ex-special dividend.
+
+ Spin off                                                     For a spin-off, positions are early-settled at
+                                                              the blended value of the closing stock prices
+
+
+
+Any questions please contact Derivatives Command Center at derivatives@coinbase.com or +1 (312) 469-0985
+ Corporate Action                                             Handling
+
+                                                              of Parent and Child securities. The Parent is
+                                                              then re-listed.
+
+ Rights offering                                              Contract count and reference price are
+                                                              adjusted using the standard theoretical
+                                                              ex-rights price.
+
+ Merger or acquisition                                        For a merger / acquisition (cash, stock, or a
+                                                              mix), the product’s current instrument will
+                                                              expire, and the next instrument in the product
+                                                              will be listed.
+
+ Ticker or name change                                        The market will halt, propagate symbol
+                                                              change through market data and API, and
+                                                              reopen. No economic adjustment.
+
+ Delisting or trading suspension                              Trading halts, open positions are settled at a
+                                                              publicly published fair value, and the contract
+                                                              is delisted.
+
+Products
+
+    ●​   Sandisk Corp
+    ●​   Eli Lilly & Co
+    ●​   Micron Technology Inc
+    ●​   Costco Wholesale Corp
+    ●​   Caterpillar Inc
+    ●​   SPDR S&P 500 ETF Trust
+    ●​   Invesco QQQ Trust, Series 1
+    ●​   Meta Platforms Inc, Class A
+    ●​   Advanced Micro Devices
+    ●​   Mastercard Inc, Class A
+    ●​   Applied Materials Inc
+    ●​   Microsoft Corp
+    ●​   Lockheed Martin Corp
+    ●​   Berkshire Hathaway Inc, Class B
+    ●​   Amgen Inc
+    ●​   Palo Alto Networks Inc
+    ●​   Tesla Inc
+    ●​   UnitedHealth Group Inc
+    ●​   Visa Inc, Class A Shares
+    ●​   Broadcom Inc
+
+
+Any questions please contact Derivatives Command Center at derivatives@coinbase.com or +1 (312) 469-0985
+    ●​   Alphabet Inc, Class A
+    ●​   Apple Inc
+    ●​   JPMorgan Chase & Co
+    ●​   Texas Instruments Inc
+    ●​   Home Depot Inc
+    ●​   AbbVie Inc
+    ●​   Johnson & Johnson
+    ●​   Amazon.com Inc
+    ●​   Salesforce Inc
+    ●​   NVIDIA Corp
+    ●​   McDonald's Corp
+    ●​   Intl Business Machines Corp
+    ●​   Chevron Corp
+    ●​   Boeing Co/The
+    ●​   Palantir Technologies Inc, Class A
+    ●​   Qualcomm Inc
+    ●​   Exxon Mobil Corp
+    ●​   Booking Holdings Inc
+    ●​   Space Exploration Technologies Corp
+    ●​   Procter & Gamble Co/The
+    ●​   Oracle Corp
+    ●​   Merck & Co. Inc.
+    ●​   Prologis Inc
+    ●​   PepsiCo Inc
+    ●​   ConocoPhillips
+    ●​   Intel Corp
+    ●​   Newmont Corp
+    ●​   Cisco Systems Inc
+    ●​   Walmart Inc
+    ●​   Walt Disney Co/The
+    ●​   Starbucks Corp
+    ●​   Coca Cola Co/The
+    ●​   Netflix Inc
+    ●​   Bank of America Corp
+    ●​   Verizon Communications Inc
+    ●​   Pfizer Inc
+    ●​   Marvell Technology Inc
+
+
+
+
+Any questions please contact Derivatives Command Center at derivatives@coinbase.com or +1 (312) 469-0985
+
