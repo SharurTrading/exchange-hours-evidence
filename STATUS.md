@@ -12470,3 +12470,11 @@ protocol, against this store's `future-horizon-2026-11-18` checkout (PR #47).
   exactly the five corrected lines; the 15 dates and 15 weekdays re-derived
   with two independent Easter algorithms; markdownlint 0 issues and the
   schedule_documentation fences 74/74 re-run green at the new head.
+
+- **Round 3 at `dc78660` (deny-gate hunk): APPROVE (extends).** The merge
+  added one non-data hunk — the two reason-cited advisory ignores
+  (RUSTSEC-2026-0543/0555) in `deny.toml` per #403 — verified as the only
+  diff; `cargo deny check` green at that head. Crate PR #404 merged as
+  `7d5e610` (2026-11-18T12:11:11Z); store PR #47 merged at 11:35:43Z.
+  CI at `dc78660`: quality, msrv 1.95, markdown-lint and the digest fence +
+  verify-evidence --all all green.
