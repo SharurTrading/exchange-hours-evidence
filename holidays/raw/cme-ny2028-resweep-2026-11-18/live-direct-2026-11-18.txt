@@ -1,0 +1,21 @@
+Direct cmegroup.com reachability probes, 2026-11-18 UTC (curl 8.x, macOS):
+the operator's edge never returns an HTTP status to this machine. The TLS
+handshake completes against the genuine CME Group certificate, then the HTTP
+exchange fails at the transport layer:
+
+1. HTTP/2 attempt, A-set New Year window
+   https://www.cmegroup.com/services/trading-hours-by-product?id=316,133,425,300,58,437,22,8478,5201,10191&pageNumber=1&pageSize=999&sortAsc=true&fromEventDate=2027-12-31&toEventDate=2028-01-02
+   -> curl (92) "HTTP/2 stream 1 was not closed cleanly: INTERNAL_ERROR (err 2)";
+      HTTP_STATUS=000, no body.
+
+2. HTTP/1.1 retry, same URL
+   -> TLSv1.3 handshake ok, server certificate
+      "C=US; ST=Illinois; L=Chicago; O=CME Group Inc.; CN=cmegroup.com"
+      (DigiCert Global G3 TLS ECC SHA384 2020 CA1, valid 2026-07-17..2027-01-31),
+      ALPN http/1.1 accepted, then curl (56) "Recv failure: Operation timed out";
+      no response bytes, no body.
+
+The 2026-09-12 sweep recorded an HTTP 403 body ("This IP address is blocked due
+to suspected web scraping activity") for the same host; on 2026-11-18 the block
+manifests earlier, as a transport-level refusal. Wayback `id_` replays are the
+readable channel for this sweep, as for the 2026-11-03 sweep.
