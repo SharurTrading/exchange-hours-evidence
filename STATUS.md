@@ -12525,3 +12525,39 @@ protocol, against this store's `future-horizon-2026-11-18` checkout (PR #47).
   `7d5e610` (2026-11-18T12:11:11Z); store PR #47 merged at 11:35:43Z.
   CI at `dc78660`: quality, msrv 1.95, markdown-lint and the digest fence +
   verify-evidence --all all green.
+
+## 2026-11-27 UTC — exchange-hours-rs PR #417 independent review
+
+Reviewed head `3fc07c4310ac0109f1beec65ffe1869bed5af632` against evidence
+`cdf4a6352282684e27fac4b6655d4f3c52d8455b`. No blocking findings remain.
+
+- CME direct HAR extraction reproduced all ten saved HTTP 200 JSON bodies.
+  Python reassembled the relay bytes from the direct product objects. Five
+  pairs were already byte-identical and five needed only product reordering.
+  The comparison counted 80 product-window entries, 496 product-day records,
+  and 1,334 session events. All 38 changed document references matched the
+  direct endpoint, UTC capture date, and SHA-256.
+- SSE gained a T1 statutory closure on 2027-01-01 under trading rule 2.4.1
+  and State Council Order 795. The audited window ends 2027-01-03 after the
+  normal weekend. Python independently reproduced all 285 runtime tuples
+  using the saved notices and the statutory derivation.
+- SGX Securities gained a T2 closure on 2027-01-01 from the operator's
+  standing MOM designation and MOM's gazetted 2027 calendar. The audited
+  window ends that day. Python independently reproduced all 96 tuples
+  using five archived SGX pages, the SGX CMS, and the saved MOM tables.
+  The 96 include 83 full closures and 13 replacement sessions. Both venues
+  return a typed coverage error for 2027-01-04.
+- Two prose findings from the initial head were corrected and independently
+  rechecked. The SSE count now identifies 14 annual notices from 2011
+  through 2024 among 19 historical artifacts, and the SGX row separately
+  quotes the operator statement and each gazetted field.
+- Both January 1 closure tests failed with their row changed to
+  `Unsourced` and passed after restoration. The evidence audit verified
+  3,387 citations across 63 files and 1,094 distinct digests.
+- Formatting, IANA tzdb freshness and the signed live updater,
+  no-default-features check, Clippy, doctests, rustdoc, cargo-deny,
+  Markdown lint, and Rust 1.95 MSRV passed locally. The exact-head GitHub
+  evidence, Markdown, and MSRV checks passed. The full exact-head local
+  nextest and GitHub quality job were pending when the review was posted.
+
+[Review on PR #417](https://github.com/SharurTrading/exchange-hours-rs/pull/417#pullrequestreview-6083800371).
