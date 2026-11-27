@@ -12583,3 +12583,42 @@ All 14 focused integration tests and 74 schedule documentation tests passed on t
 The release worktree passed 1,514 selected tests in release mode,
 the signed IANA startup test, and the calendar publish dry run. The
 evidence verifier checked 3,398 citations against 1,104 distinct digests.
+
+## 2026-11-27 UTC — served forward calendar review
+
+The independent reviews compared the operator materials with the runtime
+changes in exchange-hours-rs PR #423 at
+`8e52b2238d70edb8106cbd6d2cb36b931d8a17c6`. The two final commits
+affected test documentation and the dated NSE parity fixture. The
+schedule data reviewed at `f8c705b268a767625f5ef6f0b6ddd5003488b3a3`
+is identical at the final head.
+
+- The Nasdaq 2027 calendar identifies ten full closures and one abbreviated
+  trading day. The dated 2026 Nasdaq alert gives 13:00 regular and 17:00
+  extended closes. CME's direct December response gives the December 12
+  02:00–08:00 CT maintenance and 07:45 pre-open on the December 14 trade date.
+- CFE Rule 1202 and the original annual CSV establish the Friday
+  Thanksgiving assignment and all six other 2027 abbreviated holiday
+  assignments. A detached mutation extending the Juneteenth matching leg
+  from 10:30 to 10:31 caused its targeted public-query test to fail at
+  10:30. The restored test passed.
+- Fresh direct BME and MEFF downloads reproduced the digests of their
+  operator PDFs. The BME 2026 timetable supports Trading-at-Last through
+  14:10 and defers the 2027 half-day operating details. MEFF's 2027 document
+  confirms the IBEX half-day 14:00 closes.
+- The ASX instructions and phase definitions support the order-entry,
+  randomized matching and buffering edges on both 2026 cash half days,
+  and the day-only SPI 200 reopening on January 4. The NSE FAQ and SEBI
+  circular agree on the December 7 closing-auction change.
+- LSE Trading Cycles worksheet rows 18–27 and the Business Days calendar
+  support all six SETS half-day replacements. N15/20 supplies the
+  September 21, 2020 ordinary noon auction withdrawal.
+
+Source captures were merged in [#63](https://github.com/SharurTrading/exchange-hours-evidence/pull/63),
+[#64](https://github.com/SharurTrading/exchange-hours-evidence/pull/64) and
+[#65](https://github.com/SharurTrading/exchange-hours-evidence/pull/65).
+The evidence verifier checked 3,423 Documents rows across 63 files
+and 1,127 distinct digests.
+The final detached seasonal parity test and NSE cutover test both passed.
+The full workspace nextest run on the same head passed all 1,522 selected
+tests. The GitHub quality job was in progress when this review was filed.
