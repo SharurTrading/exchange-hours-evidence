@@ -1,6 +1,6 @@
 # ASX cash and ASX 24 holiday notices
 
-Retrieved 2026-11-27 UTC from the operator's public pages. All seven artifacts are T1.
+Retrieved 2026-11-27 UTC from the operator's public pages. All artifacts are T1.
 The latest live annual HTML schedule rows compare cell-for-cell with the
 repository's saved 2026-09-28 cash and 2026-10-11 ASX 24 editions.
 The T24 2028 PDF has the same SHA-256 as the admitted 2026-11-03 capture.
@@ -14,3 +14,5 @@ The T24 2028 PDF has the same SHA-256 as the admitted 2026-11-03 capture.
 | `asx-24-calendar.html` | <https://www.asx.com.au/markets/market-resources/asx-24-trading-calendar> | `443c5729193d8eebd3533a4343b8481eafec39ba908275e842ec602c2d51aad9` |
 | `asx-cash-calendar.html` | <https://www.asx.com.au/markets/market-resources/trading-hours-calendar/cash-market-trading-hours/trading-calendar> | `0f874a9caeb9c907e76ed5f5a677d31765ac2cd92101ab4c9459e533dc8fc3d5` |
 | `T24-trading-calendar2028.pdf` | <https://www.asx.com.au/content/dam/asx/markets/market-resources/t24-trading-calendars/T24-trading-calendar2028.pdf> | `e21cdd745476dac2ee2b947ad07ae734ef9160b21bd3c6b4d85c6b26e547cd3a` |
+| `asx-cash-market-phases.html` | <https://www.asx.com.au/markets/market-resources/trading-hours-calendar/cash-market-trading-hours> | `d2e1df64a9afa85f04d873475f4be233e6f423ae8d37cf9cbed4dab4ae020a29` |
+| `asx-sr15-operating-rule-procedure-amendments.pdf` | <https://www.asxonline.com/content/dam/asxonline/public/notices/2025/april/asx-sr15asx-operating-rule-procedure-amendments.pdf> | `ca64bde4a20d1684d6feb522653e256470becee94f4da8bbe71d33cb9a810f01` |
