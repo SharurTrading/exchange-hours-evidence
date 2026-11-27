@@ -1,0 +1,269 @@
+Post Trade 23/5 Hours
+Frequently Asked Questions on the FINRA/Nasdaq TRFs
+
+General:
+1. What is changing with FINRA/Nasdaq TRF hours?
+Starting on December 6, 2026, the FINRA/Nasdaq TRFs will operate from 9 p.m. on Sundays to 8 p.m. on Fridays, excluding
+holidays, with a 1-hour pause from 8 p.m. to 9 p.m. on Monday through Thursday to allow for processing and the transition to the
+next trade date (all times in this FAQ are represented in Eastern Time). This will allow for near-continuous trade reporting of NMS
+stocks 23 hours a day, 5 days a week.
+
+
+2. Will firms need to change/update TRF connectivity to report 23/5?
+Both FINRA/Nasdaq TRFs (Carteret and Chicago) will operate as a single production session from 9 p.m. to 8 p.m. on business
+days. Firms will use their existing connections, only the hours of availability will change.
+
+
+3. Who is required to send trade reports during the new hours?
+TRF Participants trading in overnight hours will be required to report to the FINRA TRFs in accordance with FINRA rules.
+
+Generally, FINRA TRF Participants must submit trade reports of transactions in NMS stocks as soon as practicable, but no later
+than 10 seconds after execution during the hours that the TRFs are open for reporting. Generally, trades executed during hours
+when the TRFs are not open for reporting must be submitted within 15 minutes after the TRFs open for reporting. See FINRA Rules
+6380A and 6380B.
+
+
+4. When will the new 23/5 trade reporting be available?
+The implementation date is December 6, 2026, subject to readiness of the Securities Information Processors (SIPs). For more
+information, please refer to the FINRA Technical Notice, Rule Filing 2026-015, and ETA #2026-39.
+
+
+5. How will trade reporting and clearing be processed and disseminated to the Depository Trust
+   and Clearing Corporation (DTCC) and the SIPs?
+Dissemination to the SIPs and DTCC will occur in real-time from 9 p.m. to 8 p.m. on business days effective December 6, 2026.
+Note: DTCC began operating 24 hours a day starting June 28, 2026, prior to the TRFs operating with 23/5 system hours. For more
+information, please refer to DTCC's NSCC Now Live with Clearing Hours Extended to 24x5 Model Dated June 29, 2026.
+
+Effective December 6, 2026, the SIPs will operate from 9 p.m. to 8 p.m. For more information, please refer to SIP Operating
+Committee News Release Dated July 7, 2026.
+
+
+
+
+nasdaq.com                                                                                                                            1
+6. Will there be testing opportunities before 23/5 trading begins?
+Standard industry testing opportunities will be available on the following dates:
+
+թ   October 2, 2026
+թ   October 16, 2026
+թ   October 30, 2026
+թ   November 6, 2026
+թ   November 20, 2026
+թ   December 4, 2026
+
+Testing information specifically related to the FINRA/Nasdaq TRFs will be announced via Nasdaq ETAs closer to the
+implementation date. To sign up for Nasdaq ETA announcements, please visit here.
+
+
+
+Trade Reporting System Hours and Client Reporting Changes
+1. What are the definitions for calendar day and trade date for 23/5 trading?
+Under FINRA rules effective December 6, 2026, “Calendar Day” would be defined to mean each full 24-hour period starting at
+midnight Eastern Time and ending the following midnight Eastern Time (i.e., the common understanding of a calendar day, meaning
+Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday).
+
+“Trade Date” would be defined to mean the Calendar Day attributed to a transaction as its Trade Date based on its time of
+execution, with a Trade Date considered to start at 8:00 p.m. on a Calendar Day and end at 8:00 p.m. the following Calendar Day.
+Thus, transactions executed between midnight and 8:00 p.m. on a Calendar Day will be designated with a Trade Date of that same
+Calendar Day, and transactions executed after 8:00 p.m. on a Calendar Day will be considered to have a Trade Date of the next
+Calendar Day, regardless of whether the Calendar Day is a Business Day or a holiday or weekend.
+
+
+2. How will the values in the Trade Date and Report Date fields change for 23/5 trading?
+                        Current Definition                                           New Definition
+ Term
+                        (pre-December 6, 2026)                                       (effective December 6, 2026)
+                                                                                     A client submitted field that represents the business date
+                                                                                     of the trade execution.
+                        A client submitted field that represents the calendar date
+Trade Date                                                                           Firms must report the trade date for executions between
+                        of the trade execution.
+                                                                                     8:00 p.m. and midnight as executed on the next Calendar
+                                                                                     Day. Please review the TRF FIX Specifications and FINRA
+                                                                                     Rule Filing 2026-015 for more details.
+
+                        A TRF-generated field that represents the calendar date      A TRF-generated field that represents the business date
+Report Date
+                        when the TRF processes the trade report.                     when the TRF processes the trade report.
+
+
+
+3. Can I find the calendar date for the trade execution in the trade report?
+Effective December 6, 2026, the calendar date of the trade execution will no longer be supported since clients are reporting Trade
+Date with the revised definition.
+
+
+
+
+nasdaq.com                                                                                                                                        2
+4. How are business and non-business days defined for 23/5 trading?
+Under FINRA rules effective December 6, 2026, “Business Day” would be defined to mean any Calendar Day other than a Saturday,
+Sunday, or a holiday where U.S. markets are closed. A non-business day would be any Calendar Day that is not a Business Day.
+Holidays are listed in the Stock Market Holiday Calendar.
+
+
+5. How will FINRA/Nasdaq TRFs operate on holidays in the 23/5 context?
+Under FINRA rules effective December 6, 2026, the FINRA/Nasdaq TRFs will cease operating at 8 p.m. the last Business Day before
+the holiday. If a holiday falls between Monday and Thursday, the FINRA/Nasdaq TRFs will commence operating at 9 p.m. on the
+evening of the holiday. If a holiday falls on Friday, the FINRA/Nasdaq TRF will commence operating at 9 p.m. on Sunday.
+
+Examples:
+
+Standard Holiday: E.g., New Year’s Day (1/1/2027) falling on a Friday, TRFs operate until 8:00 p.m. on Thursday, December 31 and
+resume when TRF systems open at 9:00 p.m. on Sunday, January 3.
+
+Early Market Close: E.g., On Friday 11/26/2027, the day after Thanksgiving (11/25/2027), TRF shutdown is at 5:00 p.m. (no change),
+and resumes when TRF systems open at 9:00 p.m. on Sunday, November 28.
+
+
+6. Will the TRFs continue to support trade actions from 8:00 p.m. - 8:20 p.m. with the revised
+   extended system hours?
+No, the TRFs will no longer support any trade reporting from 8:00-9:00 p.m. ET. When the trade date ends at 8:00 p.m. ET, any
+unmatched trades (open trades) will be carried over and remain available for trade matching during the next trade date that the
+TRFs are open.
+
+ Event                                        Time                                        Unmatched Trade Status
+Trade Date Ends                               8:00:00 PM ET                               Unmatched trades (open trades) carried over
+Pause Period                                  8:00:00 PM-9:00:00 PM ET                    Open trades maintained in system
+System Reopens                                9:00:00 PM ET                               Open trades available for matching
+
+
+
+7. Will trade reports require an identifier or new reporting field, if sent during overnight hours?
+No, clients do not need to report with new TRF FIX fields or identifiers.
+
+
+
+Clearing Facilitation on the FINRA/Nasdaq TRFs
+1. When will trades clear and settle?
+Beginning at 9:00 p.m., the FINRA/Nasdaq TRFs will transmit all client-reported clearing-eligible trades on a real-time basis to
+DTCC for clearing, effective December 6, 2026.
+
+թ   9:00 p.m. to Midnight: Trades will be reported with the next calendar day’s trade date (Tag 75, Trade Date) and follow
+    settlement instructions, settlement Type based on reported Trade Modifier 1 and Settlement Days based on # of Days if
+    Seller's Option reported.
+թ   Midnight to 8:00 p.m.: Trades will be reported with the current day’s trade date (Tag 75, Trade Date) and follow settlement
+    instructions, settlement Type based on reported Trade Modifier 1 and Settlement Days based on # of Days if Seller's Option
+    reported.
+
+
+
+
+nasdaq.com                                                                                                                              3
+Example:
+
+ Trade Time               Calendar Date            Trade Date                Clearing Date            Regular-Way Settlement Date
+ 4:00 p.m.-8:00 p.m.      12/7/2026                12/7/2026                 12/7/2026                12/8/2026
+ 8:00 p.m.- 8:59 p.m.     12/7/2026                12/8/2026                 12/8/2026                12/9/2026
+ 9:00 p.m.-11:59 p.m.     12/7/2026                12/8/2026                 12/8/2026                12/9/2026
+ 12:00 a.m.-9:30 a.m.     12/8/2026                12/8/2026                 12/8/2026                12/9/2026
+
+
+
+2. What new fields are required for clearing trades (e.g. Trading Session ID submitted for QSR
+   trades) on the FINRA/Nasdaq TRFs?
+Requirements for tag 336 (TradingSessionID) were published in January 2026 by an NSCC Notice. Nasdaq will calculate the value
+for this tag and report it to NSCC based on tag 60 (TransactTime). This tag will be used to identify overnight trades for the purpose
+of verifying trading relationships and validating high value thresholds. For more information, please refer to the NSCC notice.
+
+
+3. What reporting changes are required for AGU clearing at DTCC in Overnight hours?
+For the TRF extended system hours change, Nasdaq will process and send AGU clearing instructions to DTCC. Clients do not need
+to report with new TRF FIX fields for overnight AGU clearing.
+
+
+4. How will AGU / QSR paperwork change when TRFs operate with Overnight Hours? Where can I
+   access my current AGU/ QSR agreements?
+Firms may report in both day/overnight hours with their existing AGU agreements.
+
+However, the NSCC has developed new 24x5 requirements as announced in a January NSCC Notice and as recently published
+in a FINRA Technical Notice. One of the new NSCC requirements for overnight trade reporting requires clearing firms to establish
+separate 9A/9B trading relationships for clearing trade reports. For Correspondent Clearing (CORR) and Qualified Special
+Representative (QSR) relationships, members wishing to participate in overnight trading must establish and maintain separate
+relationships for overnight sessions. These relationships can be established through DTCC's Automated Special Representative
+Facility. Nasdaq recommends that firms paper these new agreements by October 1st, 2026 to signify readiness for this transition
+and reduce the possibility of rejected trades.
+
+
+5. How will I be notified if my clearing trades process successfully on the TRF and break at DTCC
+   for an invalid QSR overnight relationship?
+Similar to the current process, Nasdaq will reach out to clients to notify them if we are notified about clearing rejects for invalid
+relationship.
+
+
+
+
+nasdaq.com                                                                                                                              4
+Nasdaq Product Availability
+1. What Nasdaq services will be available in real-time during extended hours trading upon
+   December 6, 2026, go-live?
+ Product                                                 Current (pre-Dec 6, 2026)                 Effective Dec 6, 2026
+
+ FINRA/Nasdaq TRFs (Carteret and Chicago)               4:00 a.m.-8:00 p.m.                       9:00 p.m.-8:00 p.m.
+ թ Native TRF FIX
+
+ WorkX                                                  4:00 a.m.-8:00 p.m.                       9:00 p.m.-8:00 p.m.
+ թ Trade Report
+ թ Reference Data
+ թ PRO Monitor
+ թ Real-Time Stats
+
+ Equity Risk Checks                                     4:00 a.m.-8:00 p.m.                       9:00 p.m.-8:00 p.m.
+
+ Post-Trade Risk                                        4:00 a.m.-8:00 p.m.                       9:00 p.m.-8:00 p.m.
+
+ Compliance Dashboard                                   4:00 a.m.-8:00 p.m.                       4:00 a.m.- 8:00 p.m.
+ թ Trade Throughs
+ թ Short Sale Monitor
+ թ LULD Monitor
+
+
+
+The FINRA/Nasdaq TRFs, WorkX, EQRC, and Post-Trade Risk services will be available in real time from 9:00 p.m. – 8:00 p.m. on
+business days starting December 6th, 2026.
+
+Compliance Dashboard will not support any overnight trades with execution timestamps after 8:00 p.m. and before 4:00 a.m.
+
+
+2. How will Post-Trade Risk services be affected by this change in operating hours?
+Starting December 6th, Post-Trade risk monitoring and controls will operate from 9 p.m. – 8 p.m. EST.
+
+Under current system hours (4 a.m. - 8 p.m.), firms have a 20-minute window after the close (until 8:20 p.m.) to action held trades.
+Under the new hours, this grace period will be removed. At the system close, Post-Trade Risk will enact the default action set by
+the clearing firms (allow/inhibit). Firms should note that if they report a trade after 7:45 p.m., clearing firms will have less time than
+the standard 15-minute period to action the trade before the system closes. The default action will apply to all held trades at 8:00
+p.m.
+
+
+
+FINRA/Nasdaq TRF and Nasdaq Pricing Changes
+1. Will TRF Fees and Transaction Credits change for TRF Extended Hours?
+FINRA/Nasdaq TRF fees and transaction credits will be unchanged for extended TRF system hours.
+
+
+2. Nasdaq Product Pricing
+WorkX and TRF FIX port pricing will be unchanged for extended TRF system hours.
+
+
+
+
+nasdaq.com                                                                                                                                   5
+Trade Support
+1. Will Nasdaq trade support hours be available during 23/5 trading?
+Nasdaq Market Operations’ live hotline at +1 212 231 5180 and email support will be available from 9:00 p.m. Sunday to 8:00 p.m.
+Friday. For product access questions, please contact Nasdaq Trading Services. For testing questions, please contact TRF Ops.
+
+
+2. Will FINRA support be available during 23/5 trading?
+FINRA Operations’ live hotline at 301-590-6500 will be available from 8:00 p.m. Sunday to 8:00 p.m. Friday.
+
+
+
+
+© Copyright 2026. All rights reserved. Nasdaq is a registered trademark of Nasdaq, Inc. 1670-26
+
+
+
+
+nasdaq.com                                                                                                                         6
+

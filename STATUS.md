@@ -12272,3 +12272,256 @@ or test was needed for the confirmation-only prose change.
 The complete commands, exit codes, UTC start/finish instants, log digests and
 final-head report are retained in
 `reviews/2026-10-31-confirm-374/independent-verification/`.
+
+## 2026-11-03 — future-horizon sweep: TSX + CFE 2027 encoded
+
+Live T1 captures above (`holidays/raw/equities/tsx/forward-2027/INDEX-2026-11-03.md`,
+`holidays/raw/cfe/forward-2027/INDEX-2026-11-03.md`) extend TSX and CFE audited
+windows to 2027-12-31. Full 58-row sweep otherwise NO-CHANGE except: CME T2
+prints sampled 2028 windows (not a complete audited year; direct channel 403 —
+full evidence-repo T2 pull is the closing condition, no 2028 rows encoded),
+Coinbase Derivatives names 2026 Thanksgiving/Christmas with no hours (gap
+stands), ASX T24 2028 PDF admissibility unruled (gap stands), Nasdaq Nordic
+Market Model 2026:05 hours diff and Borsa Istanbul 2027 publication remain
+open checks. OANDA holiday page still ends 2026-10-30; typed refusal stands.
+
+## 2026-11-03 — CME Globex 2028 first windows encoded
+
+`cme-forward-2026-11-03/` holds the T2 service windows (2028 MLK,
+Presidents' Day, Good Friday + Dec 2027 and May 2028 controls). Rows encoded
+in the eight Globex families and four venue mirrors; coverage to 2028-04-14.
+Wonder-agent review confirmed every row shape against raw service bytes;
+Nikkei TACO recorded as variant (no key), FSPI as dormant record.
+
+## 2026-11-03 — independent review of exchange-hours-rs PR #387
+
+Verdict: **request changes** at crate head
+`28a2041731b0381e14858cb8ba2d00f136bb7429` (crate PR #387, "Encode TSX and
+CFE 2027 holiday calendars"), reviewed against this branch
+(`claude/future-horizon-2026-11-03`, `c11d17d`) as the evidence store. Full
+local Verification chain green; the head's CI is red only on the
+Documents-digest fence because the workflows check out this store's default
+branch — merge the evidence PR first, then re-run the crate checks.
+
+The encoded rows themselves verify: TSX 2027 (11/11), CFE 2027 (11/11) and
+the 37 CME 2028 family rows plus 21 venue-mirror rows re-derive event-for-event
+from the captured bytes; all new documents' sha256 reproduce; cbot/cme/comex/
+nymex mirrors are verbatim; row totals arithmetic is right; no pre-existing
+data row was removed. The blocking findings are evidence-scope and prose:
+
+- **The contiguous 2028 coverage window is not supported by these captures.**
+  All eight Globex families and four venue mirrors declare
+  `2028-01-01..2028-04-14` as one window, but `cme-forward-2026-11-03/INDEX.md`
+  states "inside split coverage windows. No contiguous Jan–May 2028
+  audited-normal claim: spans between the captured windows are unaudited."
+  Only 2028-01-15..19, 02-18..23 and 04-12..18 are captured, so 97 dates in
+  the declared window would answer as audited normal with no evidence.
+- **"Coverage runs contiguously ... dates after 2028-04-14 are unpublished"**
+  (12 evidence files, PR body, CHANGELOG): both claims false — the 04-12
+  capture publishes trade dates 2028-04-17/18 and the 05-01 control publishes
+  trade dates through 2028-05-05.
+- **Fences were edited to match the wrong window** (`tests/coverage_metadata.rs`
+  complete span 2028-01-03..04-13 and `coverage_on(2028-01-01) == Covered`,
+  family `coverage.last() == 2028-04-14`, the two exemplar-edge commits).
+- **Stale published-status prose** for TSX (`tsx.md:73-81` "2027 is not
+  published") and CFE (`cfe.md:408`, `cfe_vix.md:386` "no 2027 schedule yet"),
+  plus `coverage-2025.md:462`/"horizon document" cells, `tsx.md:34`, `tsx.rs`
+  and `cfe.rs` source-range/Good-Friday lists.
+- **Stale counts/windows**: venue module doc totals 246/228/220 (actual
+  252/233/225) and "six audited eras"; six-window/`lists the 6` statements;
+  energy era list "35" vs 32; crypto "seven holiday windows" (5) and "101 rows
+  over four windows" (106/5); nikkei "seventeen merged trade dates" (19);
+  "1,094 of the 1,095 days" walk claims; CFE test doc comment 140 vs 151 rows;
+  stale TABLE doc comments in all eight family modules; stale "2028-01-01
+  outside coverage" bullets in the same evidence files; stale inventory
+  verdict cells.
+- **TACO/FSPI records are not re-verifiable**: `globex_nikkei_225_dollar.md:1314`
+  cites SER-9832RR/NKQ/NIQ with no artifact (none exists in this store), and
+  `globex_event_contracts.md:294` says "Market Segment 90" while the store maps
+  segment 90 to Event Contracts II / 333.
+- **LAW-FOLLOW-UPS-ARE-ISSUES**: the PR body names five closing conditions
+  without issue numbers; only #385/#386 exist and are not cited.
+- Advisory: 2028 rows are largely unfenced (mutation of FX 2028-01-18 and
+  Nikkei 2028-01-17 instants is not caught by any test; energy caught only by
+  the mirror fence); section placement; TSX footnote "1:30" vs "1:30 PM"
+  quote drift; CFE basis misattribution.
+
+Review posted on PR #387 with 11 inline comments. Fix acceptance requires a
+pushed head and a re-run of the affected checks; this review applies to the
+head hash above.
+## 2026-11-14 — future-horizon sweep: Euronext 2027 calendar, Nasdaq Global Trading Hours alerts, dormant-identity recordings
+
+Captures the operator publications the 2026-11-12 LAW-WATCH sweep found and
+re-verifies them from fresh bytes (all retrieved 2026-11-14 07:12 UTC):
+
+- **Euronext 2027 (`holidays/raw/equities/euronext_paris/forward-2027/`).** The
+  operator's "2027 Holiday Calendar for Euronext's Cash and Derivatives markets"
+  notice (dated 06 November 2026, `media/16439`) plus both hours pages rendering
+  the 2027 table. Amsterdam/Brussels/Lisbon/Paris: Closed 2027-01-01, 03-26,
+  03-29; `*Half Trading Day` 12-24 and 12-31 with the instants deferred to the
+  end-of-year appendix (announced but unstated — the same shape the 2026 eves
+  shipped as `Unsourced`). The 2026-09-29 negative-witness capture stays beside
+  them. The crate encodes these rows; the Eurex 2027 grid column is NOT
+  re-litigated — the recorded 2026-09-26 conflict ruling (unconditional
+  holiday-regulations column vs the expressly-preliminary indicative-calendars
+  page, LAW-NO-FABRICATED-DATES) stands, and the archive check re-run on
+  2026-11-14 still lists no Trading Calendar edition beyond 2026 (banked as
+  `eurex_trading_calendar_archive.live-20261114.html` under
+  `holidays/raw/eurex-2025-2027/`).
+- **Nasdaq Global Trading Hours (`normal-weeks/nasdaq-night-session-2026-11-14/`).**
+  ETA2026-64 states the production system-hours extension ("9:00 p.m. ET Sunday
+  through 8:00 p.m. ET Friday, with a daily one-hour pause from 8:00 p.m. to
+  9:00 p.m. ET Monday through Thursday (excluding holidays), effective December
+  6, 2026"); ETA2026-66 witnesses pre-production; UTP2026-33 the SIP schedule;
+  ETA2026-39 the TRF/WorkX alignment. Captured for the encoding work-up, which
+  is deliberately not taken in this wave — the session topology (overnight
+  matching vs order entry, the unstated production overnight end, the holiday
+  interaction, the Sunday-evening trade-date assignment) needs its own change.
+- **NYSE American Options ETH (`normal-weeks/nyse-american-options-eth-2026-11-14/`).**
+  The operator's fact sheet v1.3 (October 2026) states the added 7:30–9:25 a.m.
+  Early and 4:00–4:15 p.m. Late sessions and "Production Symbols: Monday,
+  October 19, 2026"; the banked notification-feed page carries the 2026-09-18
+  ETH alert. Dormant identity: evidence-file recording, no runtime change.
+- **Dormant citation refreshes.** `normal-weeks/eex-timetable-2026-11-14/` —
+  the EEX derivatives timetable is now the 2026-09-04 edition (the cited
+  2025-07-01 URL 404s; bar-level comparison still outstanding). 
+  `normal-weeks/idx-hours-2026-11-14/` — the IDX page's citing decree advanced
+  to `II-A Kep-00158/BEI/10-2026` with identical printed times.
+
+Tadawul 2028-2029 Eid windows: already witnessed verbatim in the banked
+`TADAWUL-HOLCAL-2026-09-28` artifact (holidays/raw/equities/tadawul/2025-2027/);
+no new artifact — the crate's rows cite the existing digest.
+
+## 2026-11-15 — adversarial review of crate PR #397 and store PR #44 (fixes pushed)
+
+Three independent adversarial reviews (GLM-5.3 max-reasoning reviewer agents,
+2026-11-14–15 UTC) of crate PR #397 at `a318c939` and this store's PR #44 at
+`b74a52ea`, per the crate's review protocol.
+
+- **Data rows: APPROVE.** Every shipped 2027/2028-2029 row re-derived from the
+  banked bytes (Euronext notice cell-by-cell against the PDF and both HTML
+  renders; Tadawul's four Eid entries verbatim; all 59 weekday claims computed;
+  12 digests recomputed). Six advisory findings, all wording-level.
+- **Records and laws: REQUEST CHANGES.** Two blocking findings: a stale
+  shared-rows count in `docs/evidence/euronext_index_futures.md` (sixteen →
+  seventeen, this change's own addition), and — the serious one — the store
+  commit `b74a52ea` had overwritten STATUS.md with the working store's copy,
+  which sat behind main, deleting the 2026-10-09..2026-11-03 decision-log
+  entries. Fixed: crate `68bc023` (count + every advisory wording, artifact
+  quotes made byte-contiguous, amsterdam banks its second corroboration row);
+  store `6b82cb1`+`dc1cc8f` (STATUS restored from origin/main, +40/−0; the
+  ETA2026-39 and NYSE observation wordings corrected against the bytes; the
+  "no 2027 Trading Calendar edition" claim replaced by a fresh dated negative —
+  archive re-checked 2026-11-14, capture banked in `holidays/raw/eurex-2025-2027/`).
+  The working store at `../exchange-hours-research` is synced so no future
+  rsync re-trims the log.
+- **Fences and verification.** The chain ran green at `a318c939` (full
+  nextest, digest fence included). Six mutations of shipped rows all fenced:
+  the tadawul leap-day duplicate dies at compile time in the `holidays!`
+  macro's strictly-ascending const assertion; the lisbon row deletion and the
+  amsterdam eve kind flip are caught by the coverage-inventory count fences;
+  the tadawul window end by the coverage-endpoint and resume-day tests; the
+  paris eve kind flip by the half-day and census fences; the tadawul
+  2029-02-18 flip by two closure fences. Advisory: the brussels/lisbon/
+  amsterdam 2027 rows are fenced through the inventory counts rather than
+  per-date in their per-identity suites — a follow-up candidate for the next
+  change that touches those tables.
+
+Review posted on crate PR #397. Fix acceptance re-ran on the pushed heads
+(`68bc023` crate, `dc1cc8f` store): fmt, clippy, the affected suites,
+markdownlint and `verify-evidence --all` (3308 rows) all green.
+
+## 2026-11-15 — adversarial review of crate PR #398 (issue #395 housekeeping)
+
+Two independent adversarial reviews (GLM-5.3 max-reasoning reviewer agents) of
+branch `fix/395-round2-residues` at `b47b0ec`, plus fixes amended to head
+`00d8531` (crate PR #398).
+
+- **Fence integrity: APPROVE.** Diff purity proven mechanically — comment-
+  stripped token streams identical across all twelve touched holiday modules;
+  every test hunk classified comment/message-only; no `coverage:` array, row
+  tuple or asserted value changed. Full chain green in the review worktree;
+  mutation checks still fenced (compile-time window assertion, inventory
+  count fence, the 151-row CFE census).
+- **Prose as data: REJECT → fixed.** Blocking: cfe.md claimed the per-holiday
+  notices key every 2018-2025 row — false for the rules-page-keyed 2018 New
+  Year pair; restored. Should-fixes: the CFE Documents table's landing date
+  (2026-09-26, its 2027 row 2026-11-03), the crypto era count (four contiguous
+  through 2027), the #385 clause extended to the three cells whose 2028 rows
+  key the same sweep artifacts (all twelve now), the Nikkei/fx merged-date
+  seventeen→nineteen residues the fence reviewer found (test doc, evidence
+  bullets, fx.rs), and the venue era-share sentences disambiguated as
+  snapshot history. Every digest the new prose quotes was recomputed against
+  this store and reproduces.
+
+Fix acceptance re-ran on the pushed head: fmt, clippy, full nextest 1457/1457,
+doctests, rustdoc, deny, markdownlint, `verify-evidence --all` (3308 rows).
+Review posted on crate PR #398.
+
+## 2026-11-15 — Nasdaq Night Session work-up evidence (crate issue #396): the commencement gate named, and not yet discharged
+
+Three parallel passes (rule text, operator channel, press) banked under
+`normal-weeks/nasdaq-night-session-2026-11-15/` (INDEX.md carries the full
+determination and digest table).
+
+- **The gate is a named instrument.** Nasdaq Equity 1 §1(a)(19) requires a
+  filed-and-effective "Night Session Proposed Rule Change" under Section 19(b)
+  before the Night Session commences; the SEC approval order (34-105199,
+  2026-04-10) states the gate in one sentence. This replaces the crate's vaguer
+  "readiness filing" phrasing as the watch condition.
+- **Not discharged as of retrieval.** The FR API search for the phrase returns
+  only the original notice, the Amendments-2/3 order and seven ancillary
+  recitals; Nasdaq's own filing list (through SR-NASDAQ-2026-098) carries no
+  confirming change, and SR-NASDAQ-2026-064 calls the 23/5 rules "previously
+  approved but not yet operative". Release 34-106061 (2026-08-07) records the
+  Equity Data Plans as not yet ready, "by December 6, 2026, or a later date
+  soon thereafter". **2026-12-06 therefore stays conditional; nothing encodes
+  until the confirming filing is witnessed (FR / listingcenter), with the
+  18-month deadline at 2027-10-10.**
+- **Topology settled for the work-up** (matching session 21:00–04:00 Sun–Thu
+  on a distinct instance; System Hours Sun 21:00 → Fri 20:00 with the 20:00–
+  21:00 Mon–Thu pause cancelling orders; 9 p.m.–midnight executions carry the
+  next calendar day's trade date, so the Sunday open belongs to Monday's trade
+  date; holiday closures effective from 20:00 the prior day with a 21:00
+  holiday-evening reopen unless Friday). The maintainer's "tradable overnight"
+  reading is confirmed at T1 — every restriction found is an order-type or
+  access restriction, none demotes the session to order entry.
+- New operator captures: ETA2026-68/69, UTP2026-34, DN2026-3/8, the GTH hub
+  and its three FAQ PDFs, the sys-hours PDF re-check (unchanged, 0439-26), the
+  RSS snapshot. Press set (~18 articles, T3/T4) corroborates; its errors are
+  flagged in the INDEX.
+
+## 2026-11-18 — adversarial review of crate PR #404 and store PR #47 (fix pushed)
+
+Two-round adversarial review (GLM-5.3 max-reasoning reviewer agent, 2026-11-18
+UTC) of crate PR #404 — the future-horizon sweep extension (Coinbase 26-41,
+Eurex 2027-2030, Xetra 2028-2032, ICE gilts Christmas 2026 + 2027-01-01, the
+CME New Year 2028 non-event, SGX/SSE STOP outcomes) — per the crate's review
+protocol, against this store's `future-horizon-2026-11-18` checkout (PR #47).
+
+- **Round 1 at `e8c8d28`: REJECT.** One blocking prose defect: all 15
+  movable-feast parentheticals in the new `docs/evidence/xetra.md` Gaps
+  paragraphs were wrong (Easter+39/+50/+60 re-derived for 2028-2032; three of
+  the printed values fell on impossible weekdays). One should-fix: the PR
+  body's deny note missed RUSTSEC-2026-0543 (`chrono`) beside 0555
+  (`chrono-tz`), both pre-existing on main `dcb7a39` — both folded into issue
+  #403. Everything else clean: every new row re-derived from the banked bytes
+  (Coinbase intersection early close 12:00 CT — "12:00"×3, "12:15"×0; Eurex
+  26-row weekday sets per identity with weekend entries keyed no row; Xetra 34
+  rows; gilts 12:15 GMT eves and the 2027-01-01 closure), `cargo xtask
+  verify-evidence` Success for CDE-MN-26-41 / EUREX-HOLREG-2027-2030 /
+  DB-TC-PAGE-2028-2032 / IFEU-XMAS-2026 plus pre-existing spot-checks, all
+  counts recomputed (60/142/134/191/162/142+22-Unsourced), five mutation flips
+  each failing tests, full chain green at head.
+- **Round 2 at `8fbe9f4` (the five-line prose fix): APPROVE.** The diff is
+  exactly the five corrected lines; the 15 dates and 15 weekdays re-derived
+  with two independent Easter algorithms; markdownlint 0 issues and the
+  schedule_documentation fences 74/74 re-run green at the new head.
+
+- **Round 3 at `dc78660` (deny-gate hunk): APPROVE (extends).** The merge
+  added one non-data hunk — the two reason-cited advisory ignores
+  (RUSTSEC-2026-0543/0555) in `deny.toml` per #403 — verified as the only
+  diff; `cargo deny check` green at that head. Crate PR #404 merged as
+  `7d5e610` (2026-11-18T12:11:11Z); store PR #47 merged at 11:35:43Z.
+  CI at `dc78660`: quality, msrv 1.95, markdown-lint and the digest fence +
+  verify-evidence --all all green.
