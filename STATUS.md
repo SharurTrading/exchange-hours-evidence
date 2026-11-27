@@ -12561,3 +12561,13 @@ Reviewed head `3fc07c4310ac0109f1beec65ffe1869bed5af632` against evidence
   nextest and GitHub quality job were pending when the review was posted.
 
 [Review on PR #417](https://github.com/SharurTrading/exchange-hours-rs/pull/417#pullrequestreview-6083800371).
+
+## 2026-11-27 UTC — four futures admission candidates reviewed
+
+The [admission review](reviews/2026-11-27-admission-candidates/INDEX.md)
+records the current consumer routing evidence and operator sources for
+FSPI, Nikkei TACO, BCOM and ICE Municipal AAA 10-Year Futures. The latter's
+operator specification and certification are archived. Reassess each
+candidate when an exact consumer route is added or the market is named in
+the product plan. The review resolves the admission question in
+[exchange-hours-rs #386](https://github.com/SharurTrading/exchange-hours-rs/issues/386).
