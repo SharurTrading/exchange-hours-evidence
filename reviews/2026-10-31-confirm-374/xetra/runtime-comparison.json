@@ -1,0 +1,64 @@
+{
+  "checked_utc": "2026-10-31T23:26:15.319454+00:00",
+  "crate_head": "6078da48c15a2dc602961a7ea0759ef0cfcaa17c",
+  "module": "src/calendar/schedules/holidays/xetra.rs",
+  "module_sha256": "e9c693f106fd707c4ff5de079ec23906f51fb8a2bad6bfa2f496d117fce1c25c",
+  "runtime_module_unchanged_from_merged_baseline": true,
+  "documents_table_unchanged_from_merged_baseline": true,
+  "confirmation_metadata_location": "captures.json and channel-checks.json; no new Documents rows",
+  "source_pdf_sha256": "d3618ef9738a3cae92909d11d4eaf820ab7b71d1e723c1fa04a21062e9738115",
+  "source_bytes_identical_to_merged_document": true,
+  "trade_date": "2026-12-30",
+  "timezone": "Europe/Berlin",
+  "same_day_blocks": [
+    {
+      "kind": "order_entry",
+      "day_offset": 0,
+      "start_ssm": 25200,
+      "end_ssm": 28800
+    },
+    {
+      "kind": "extended",
+      "day_offset": 0,
+      "start_ssm": 28800,
+      "end_ssm": 32430
+    },
+    {
+      "kind": "regular",
+      "day_offset": 0,
+      "start_ssm": 32430,
+      "end_ssm": 46800
+    },
+    {
+      "kind": "extended",
+      "day_offset": 0,
+      "start_ssm": 46800,
+      "end_ssm": 46950
+    },
+    {
+      "kind": "regular",
+      "day_offset": 0,
+      "start_ssm": 46950,
+      "end_ssm": 50400
+    },
+    {
+      "kind": "extended",
+      "day_offset": 0,
+      "start_ssm": 50400,
+      "end_ssm": 51000
+    },
+    {
+      "kind": "order_entry",
+      "day_offset": 0,
+      "start_ssm": 51000,
+      "end_ssm": 54000
+    }
+  ],
+  "source_literal_checks": 8,
+  "comparison": "matches merged 7-block replacement; no runtime discrepancy",
+  "interpretation_limits": [
+    "The final-session notice fixes the special-date phase starts, closing auction earliest price time, DAX/MDAX/SDAX Trade-at-Close end, and post-trading end.",
+    "The 09:00:30 opening and 13:02:30 intraday conservative uncross boundaries are retained normal-profile conventions, not new literal final-notice times.",
+    "Pre-trading and post-trading classification and the combined extended auction/TAC block preserve the existing documented XETR DAX-share scope."
+  ]
+}

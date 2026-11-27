@@ -1,0 +1,173 @@
+{
+  "head": "6078da48c15a2dc602961a7ea0759ef0cfcaa17c",
+  "base": "d3f6b21db8f4f7523f0c79b786c16c6852c4678c",
+  "worktree": "/workspace/exchange-hours-review-374",
+  "target_dir": "/workspace/exchange-hours-review-374/target",
+  "cache_scope": "This detached review worktree only; no binaries from other workspaces reused.",
+  "evidence_store": "/workspace/exchange-hours-evidence",
+  "changed_files": [
+    "docs/evidence/ice_us.md",
+    "docs/evidence/ice_us_cocoa.md",
+    "docs/evidence/ice_us_coffee.md",
+    "docs/evidence/ice_us_cotton.md",
+    "docs/evidence/ice_us_dollar_index.md",
+    "docs/evidence/ice_us_orange_juice.md",
+    "docs/evidence/ice_us_sugar.md",
+    "docs/evidence/iceus.md",
+    "docs/evidence/nse_india.md",
+    "docs/evidence/xetra.md",
+    "docs/schedules/sources.md"
+  ],
+  "unchanged_trees": {
+    "src": {
+      "base": "d7ec6729482ddd71d751022e37a1ba9846edd5ad",
+      "head": "d7ec6729482ddd71d751022e37a1ba9846edd5ad"
+    },
+    "tests": {
+      "base": "d89823a7f08dab837ec15d9d5fd61e22d0f6f2a9",
+      "head": "d89823a7f08dab837ec15d9d5fd61e22d0f6f2a9"
+    },
+    "Cargo.toml": {
+      "base": "6b8dea06debc7c110234e1b24dcf49a61e303907",
+      "head": "6b8dea06debc7c110234e1b24dcf49a61e303907"
+    },
+    "Cargo.lock": {
+      "base": "fa79e1b6d867610afd8777d30f608b7530975061",
+      "head": "fa79e1b6d867610afd8777d30f608b7530975061"
+    },
+    "rust-toolchain.toml": {
+      "base": "d077de42abd8396f96158893f13a15e23f31a445",
+      "head": "d077de42abd8396f96158893f13a15e23f31a445"
+    },
+    ".github": {
+      "base": "6b830e3c16b3914fbe26c73d207d164ba161bc4c",
+      "head": "6b830e3c16b3914fbe26c73d207d164ba161bc4c"
+    }
+  },
+  "started_utc": "2026-10-31T23:26:11.456223+00:00",
+  "gates": [
+    {
+      "gate": "fmt",
+      "command": "cargo fmt --all --check",
+      "exit_code": 0,
+      "started_utc": "2026-10-31T23:26:11.462725+00:00",
+      "finished_utc": "2026-10-31T23:26:12.185180+00:00",
+      "elapsed_seconds": 0.722,
+      "log": "/workspace/exchange-hours-evidence/reviews/2026-10-31-confirm-374/independent-verification/fmt.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "gate": "clippy",
+      "command": "cargo clippy --all-targets -- -D warnings",
+      "exit_code": 0,
+      "started_utc": "2026-10-31T23:26:12.185476+00:00",
+      "finished_utc": "2026-10-31T23:26:12.284095+00:00",
+      "elapsed_seconds": 0.099,
+      "log": "/workspace/exchange-hours-evidence/reviews/2026-10-31-confirm-374/independent-verification/clippy.log",
+      "log_sha256": "ee1d3fffa2022e962e63e0dbe4d35c9c198450a20c29fc09030f635dbb38bfcd"
+    },
+    {
+      "gate": "nextest",
+      "command": "cargo nextest run --all-targets --no-fail-fast",
+      "exit_code": 0,
+      "started_utc": "2026-10-31T23:26:12.284338+00:00",
+      "finished_utc": "2026-10-31T23:36:30.609102+00:00",
+      "elapsed_seconds": 618.322,
+      "log": "/workspace/exchange-hours-evidence/reviews/2026-10-31-confirm-374/independent-verification/nextest.log",
+      "log_sha256": "f942e8087107f0354d4fe360d91f79185f3fd0f01f41c1abbb70fd681aaafe1a",
+      "summary_lines": [
+        "     Summary [ 618.125s] 1407 tests run: 1407 passed (1 slow), 0 skipped"
+      ],
+      "skipped_counts": [
+        0
+      ],
+      "zero_skipped": true
+    },
+    {
+      "gate": "doctests",
+      "command": "cargo test --doc",
+      "exit_code": 0,
+      "started_utc": "2026-10-31T23:36:30.614965+00:00",
+      "finished_utc": "2026-10-31T23:36:31.403739+00:00",
+      "elapsed_seconds": 0.789,
+      "log": "/workspace/exchange-hours-evidence/reviews/2026-10-31-confirm-374/independent-verification/doctests.log",
+      "log_sha256": "0ff47f048966322e4b698d74507f31901db4ab090f7b611ce2e1b7883bf91b63",
+      "summary_lines": [
+        "test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+      ]
+    },
+    {
+      "gate": "strict-docs",
+      "command": "RUSTDOCFLAGS=\"-D warnings\" cargo doc --no-deps",
+      "exit_code": 0,
+      "started_utc": "2026-10-31T23:36:31.404157+00:00",
+      "finished_utc": "2026-10-31T23:36:35.176691+00:00",
+      "elapsed_seconds": 3.772,
+      "log": "/workspace/exchange-hours-evidence/reviews/2026-10-31-confirm-374/independent-verification/strict-docs.log",
+      "log_sha256": "e1e42b0335b0bdfbd9381011ac1a1a0e9b8de80e5dba935393d86324bb4cc865"
+    },
+    {
+      "gate": "deny",
+      "command": "cargo deny check",
+      "exit_code": 0,
+      "started_utc": "2026-10-31T23:36:35.177063+00:00",
+      "finished_utc": "2026-10-31T23:36:37.304436+00:00",
+      "elapsed_seconds": 2.127,
+      "log": "/workspace/exchange-hours-evidence/reviews/2026-10-31-confirm-374/independent-verification/deny.log",
+      "log_sha256": "72cbfd72e7ecfc28aaaf5366ee69f00ab7d820bfcaa9dacf6ddd2eac1f7f3cea"
+    },
+    {
+      "gate": "markdownlint",
+      "command": "npx -y markdownlint-cli2@0.23.3",
+      "exit_code": 0,
+      "started_utc": "2026-10-31T23:36:37.304753+00:00",
+      "finished_utc": "2026-10-31T23:36:41.984248+00:00",
+      "elapsed_seconds": 4.679,
+      "log": "/workspace/exchange-hours-evidence/reviews/2026-10-31-confirm-374/independent-verification/markdownlint.log",
+      "log_sha256": "f0b65e7baa6699aebd6049d500553cbcb623522f3ae1518949ec8f5da1c98f27",
+      "summary_lines": [
+        "markdownlint-cli2 v0.23.3 (markdownlint v0.41.1)",
+        "Finding: **/*.md",
+        "Linting: 175 files",
+        "Summary: 0 issues in 0 files"
+      ]
+    },
+    {
+      "gate": "msrv",
+      "command": "cargo +1.95 check --all-targets",
+      "exit_code": 0,
+      "started_utc": "2026-10-31T23:36:41.984674+00:00",
+      "finished_utc": "2026-10-31T23:36:52.832273+00:00",
+      "elapsed_seconds": 10.847,
+      "log": "/workspace/exchange-hours-evidence/reviews/2026-10-31-confirm-374/independent-verification/msrv.log",
+      "log_sha256": "40d2ac94a59d41427e414d1520cbd341c09fae47c266a1811476513a972b3435"
+    },
+    {
+      "gate": "verify-evidence",
+      "command": "cargo xtask verify-evidence --all",
+      "exit_code": 0,
+      "started_utc": "2026-10-31T23:36:52.832689+00:00",
+      "finished_utc": "2026-10-31T23:37:08.153893+00:00",
+      "elapsed_seconds": 15.321,
+      "log": "/workspace/exchange-hours-evidence/reviews/2026-10-31-confirm-374/independent-verification/verify-evidence.log",
+      "log_sha256": "1c2dd6504dc39f117e8a6ead4d7bfbd9b9ac480ffddd4031a2f41d42f25861d6",
+      "summary_lines": [
+        "verified 3248 Documents rows across 63 evidence files (1002 distinct digests) against the evidence store at /workspace/exchange-hours-evidence: every digest is bytes the store holds"
+      ]
+    }
+  ],
+  "mutation": "Not applicable: confirmation prose only; runtime and tests unchanged.",
+  "finished_utc": "2026-10-31T23:37:08.154259+00:00",
+  "worktree_clean": true,
+  "head_unchanged": true,
+  "passed": true,
+  "versions": {
+    "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+    "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+    "msrv_rustc": "rustc 1.95.0 (59807616e 2026-04-14)",
+    "nextest": "cargo-nextest 0.9.150 (d225b1daf 2026-10-26)\nrelease: 0.9.150\ncommit-hash: d225b1daf362c1ca8e5e048132618c1a81c57a28\ncommit-date: 2026-10-26\nhost: x86_64-unknown-linux-gnu",
+    "deny": "cargo-deny 0.20.2",
+    "node": "v24.19.0"
+  },
+  "total_elapsed_seconds": 656.698
+}

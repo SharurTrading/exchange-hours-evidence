@@ -1,0 +1,53 @@
+National Stock Exchange of India Limited
+
+Circular
+Department: CAPITAL MARKET SEGMENT
+
+Download Ref No: NSE/CMTR/77217                                Date: October 30, 2026
+
+Circular Ref. No: 155/2026
+
+
+    All Members,
+
+
+    Pre-Trade risk controls - Pre-emptive order cancellation on account of NNF ID-Algo ID validations
+    - Update
+
+    This is in partial modification to item no. 3.6 C regarding Pre-emptive order cancellation on account of
+    NNF ID-Algo ID validations, of Exchange consolidated circular NSE/CMTR/73927 dated April 28,
+    2026.
+
+    Members are requested to note below additional validations between NNF Id and Algo Id and in case
+    of mismatch, Exchange shall reject such orders:
+        1. If 13th digit in the NNF ID field contains values as “0, 2, 4 or 5” and first 12 digits of NNF ID
+           are 111111111111, in an order message, then the order will be rejected and the order
+           rejection message will be sent to the NNF user.
+        2. If 13th digit in the NNF ID field contains values as “0, 2, 4 or 5” and first 12 digits of NNF ID
+           are 333333333333, in an order message, then the order will be rejected and the order
+           rejection message will be sent to the NNF user.
+        3. If 13th digit in the NNF ID field contains values as “1, 3, 5, 6, 7 or 8” and first 12 digits of NNF
+           ID are 444444444444, in an order message, then the order will be rejected and the order
+           rejection message will be sent to the NNF user.
+        4. If first 12 digits of the NNF ID have value other than 444444444444 and Algo ID field contains
+           value as ‘99999’ in an order message, then the order will be rejected and the order rejection
+           message will be sent to the NNF user.
+
+    The identification of 12 digits and 13th digit of NNF ID are explained in Exchange circular
+    NSE/INVG/73992 dated April 30, 2026.
+
+    Members are requested to refer NNF API protocol (CM version 6.7) for the details of the NNF error
+    code and error message. (website link: https://www.nseindia.com/trade/platform-services-
+    neat-trading-system-protocols )
+
+    The circular shall be effective from November 23, 2026.
+
+    For and on behalf of
+    National Stock Exchange of India Limited
+National Stock Exchange of India Limited
+   Khushal Shah
+   Associate Vice President
+
+    Toll Free No               Email id
+    1800-266-0050 (Option 1)   msm@nse.co.in
+

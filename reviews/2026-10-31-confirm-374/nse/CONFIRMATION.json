@@ -1,0 +1,52 @@
+{
+  "confirmation_completed_at_utc": "2026-10-31T23:22:45.776049+00:00",
+  "issue": 374,
+  "confirmation": "PASS as of recorded retrievals; no runtime discrepancy",
+  "confirm_by": "2026-11-07",
+  "future_session_trade_date": "2026-11-08",
+  "merged_crate_head": "d3f6b21db8f4f7523f0c79b786c16c6852c4678c",
+  "primary": {
+    "path": "CMTR76941.pdf",
+    "url": "https://nsearchives.nseindia.com/content/circulars/CMTR76941.pdf",
+    "resolved_url": "https://nsearchives.nseindia.com/content/circulars/CMTR76941.pdf",
+    "retrieval_started_at_utc": "2026-10-31T23:19:05.203443+00:00",
+    "retrieved_at_utc": "2026-10-31T23:19:09.653909+00:00",
+    "status": 200,
+    "sha256": "ce94ee1c54d98eccdf3c30fa0673ae2b6a49ea4ed4a72fb83d826f4359f71d58",
+    "bytes": 161272,
+    "content_type": "application/pdf",
+    "response_date": "Sat, 31 Oct 2026 23:19:08 GMT",
+    "last_modified": "Mon, 19 Oct 2026 10:27:08 GMT"
+  },
+  "circular_channel": {
+    "path": "circulars-CM-20261019-20261031.json",
+    "url": "https://www.nseindia.com/api/circulars?index=CM&fromDate=19-10-2026&toDate=31-10-2026",
+    "resolved_url": "https://www.nseindia.com/api/circulars?index=CM&fromDate=19-10-2026&toDate=31-10-2026",
+    "retrieval_started_at_utc": "2026-10-31T23:19:12.791846+00:00",
+    "retrieved_at_utc": "2026-10-31T23:19:15.913908+00:00",
+    "status": 200,
+    "sha256": "2fca4df6da8070501675e43a44aa09761fdbae450d0fe82e762e59951b567076",
+    "bytes": 122282,
+    "content_type": "application/json; charset=utf-8",
+    "response_date": "Sat, 31 Oct 2026 23:19:15 GMT",
+    "last_modified": null
+  },
+  "api_rows": 275,
+  "api_distinct_artifacts": 235,
+  "cmtr_distinct_artifacts": 7,
+  "later_cmtr_artifacts_checked": 6,
+  "later_administrative_artifacts_read": [
+    "ISC77098",
+    "CMPT77037",
+    "CMPL77195"
+  ],
+  "verification": {
+    "source_block_comparison": "PASS all six",
+    "document_digest": "PASS",
+    "focused_public_boundary_test": "PASS 1 test; 353 excluded by filter",
+    "markdownlint": "PASS 175 files, zero issues",
+    "historical_documents_row_preserved": true,
+    "runtime_edits": false
+  },
+  "limitations": "Checked sources as of their recorded retrieval times; no claim session has occurred, complete coverage of every operator channel, or immunity to later amendment."
+}

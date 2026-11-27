@@ -1,0 +1,207 @@
+National Stock Exchange of India Limited
+
+Circular
+ Department: CAPITAL MARKET SEGMENT
+
+Download Ref No: NSE/CMTR/77196                               Date: October 30, 2026
+
+Circular Ref. No: 153/2026
+
+
+    All Members,
+
+    Mock trading from BCP/DR site on Saturday, October 31, 2026
+
+    Exchange shall be conducting a mock trading session on Saturday, October 31, 2026 from Primary and BCP
+    site. The mock will be followed by a re-login session from Primary site in order to avoid login problems on
+    Monday, November 02, 2026. The schedule of the mock trading is as follows:
+
+                                    Mock Date: October 31, 2026
+     Particulars                                                                 Time in Hrs
+     Trading Session-1 from Primary Site
+     Morning Block Deal Window Session-1 open time                                  08:45
+     Morning Block Deal Window Session-1 close time                                 09:00
+     Pre-Open open time                                                             09:00
+     Pre-Open Market order restriction start time                                   09:05
+     Pre-Open* close time
+                                                                                    09:10
+     *Random closure in last two minute
+     Special Preopen Session open time (For IPO & Relisted security)                09:00
+     Special Preopen Session** close time (For IPO & Relisted security)
+                                                                                    09:45
+     ** Random closure in last ten minute
+     Normal Market open time                                                        09:15
+     T+0 Market Open time                                                           09:15
+     Call Auction Illiquid session open time (2 sessions of 1 hour each)*
+                                                                                    09:30
+     * Random closure in last one minute
+     Normal market open time for stocks in special preopen session                  10:00
+     Normal Market close time                                                       12:00
+     Trading Session-2 from DR Site
+     Pre-Open open time                                                             12:45
+     Pre-Open Market order restriction start time                                   12:50
+     Pre-Open* close time                                                           12:55
+National Stock Exchange of India Limited
+    * Random closure in last two minute
+    Normal Market open time                                                         13:00
+    T+0 Market Close time                                                           13:30
+    Call Auction Illiquid session open time (2 sessions of 1 hour each)*
+                                                                                    13:30
+    * Random closure in last one minute
+    T+0 Market Trade modification end time                                          13:45
+    Auction Market Open Time                                                        14:30
+    Auction Market Close Time                                                       15:15
+    Normal Market close time for CAS securities.                                    15:15
+    CAS Open time                                                                   15:20
+    CAS Market order restriction start time                                         15:25
+    CAS close time *
+                                                                                    15:30
+    * Random closure in last two minutes
+    Normal Market close time                                                        15:30
+    Closing Session open time                                                       15:40
+    Closing Session close time                                                      16:00
+    Trade Modification end time                                                     16:15
+    Re-login Timings
+    Live Re-login start time                                                        18:30
+    Live Re-login close time                                                        19:00
+
+   Members are required to perform the following:
+
+   • For connecting to Primary/DR site, no changes in NEAT Adapter settings are required. Settings of live
+     session as of Friday, October 30, 2026 in NEAT Adapter shall be retained to connect to all the above
+     sessions of Primary/DR site.
+
+   • Members are requested to note that Exchange shall shift its operation from primary site to DR site during
+     the mock session and it shall be a non-graceful shutdown from the primary site. In case of such event
+     necessary action should be taken at member's end as stated in circular NSE/MSD/48662 dated June 18,
+     2021 to bring their systems into a consistent state.
+
+   • All the outstanding orders shall be purged before the start of trading from BCP site. Members using NNF
+     software should clear the outstanding orders of session 1 in their systems before trading from BCP site.
+
+   • Members should note that for Multicast TBT, sequence number will start from ‘1’ once trading starts from
+     BCP site.
+
+   • Latencies experienced by Colo Participants will be different on Disaster Recovery/BCP day as compared to
+     a normal trading day.
+
+   For other important instructions members may refer to the following:
+
+
+                                                                                                     Page 2 of 5
+National Stock Exchange of India Limited
+   Annexure 1: Operational instructions for BCP mock trading session.
+   Annexure 2: Pre-requisites / General guidelines for participating in the Mock environment.
+   Annexure 3: Important guidelines in case of switchover of trading system to Disaster Recovery (DR) Site.
+
+   For and on behalf of
+   National Stock Exchange of India Limited
+
+   Khushal Shah
+   Associate Vice President
+
+    Toll Free No                                          Email id
+    1800-266-0050 (Option 1)                              msm@nse.co.in
+
+
+
+
+                                                  Annexure – 1
+
+                               Important instructions regarding mock trading session
+    Particulars                    Details
+    Connectivity Parameters:       Refer to circular NSE/MSD/74511 dated June 02, 2026 for interactive
+                                   connectivity details.
+    Installation Guide:            Available on NSE Extranet at /common/InstallationProcedure.
+
+    Software Version:              NEAT+ 7.9.0
+    Neat Adapter Version:          1.0.29
+    Order Purge:                   All outstanding orders will be cleared before each session. Members
+                                   using NNF software must manually clear orders in their systems.
+
+    Software Testing:              Refer to circular NSE/MSD/46441 and SEBI
+                                   circular SEBI/HO/MRD1/DSAP/CIR/P/2020/234. Members may use
+                                   either Mock Trading or Simulated Environment to meet regulatory
+                                   requirements.
+    No Financial Obligation:       Trades during mock sessions will not result in any fund pay-in or pay-
+                                   out.
+    UCC/PAN Validity:              Only valid and compliant UCC/PAN uploaded and approved before
+                                   cutoff will be allowed. For queries, contact uci@nse.co.in.
+                                   UCC Validation will be skipped during contingency time for order entry.
+    NOTIS Availability:            The NOTIS application will be accessible during the mock session.
+    Extranet / Member portal       Connect2NSE and Extranet facility shall not be available from 11:15 am
+    availability                   to 12:30 pm and 06:00 pm to 08:00 pm.
+
+
+
+
+                                                                                                      Page 3 of 5
+National Stock Exchange of India Limited
+    Participation:                Members should participate using all trading software and re-login into
+                                  live environment to ensure smooth connectivity for Monday November
+                                  02, 2026.
+    Live Updates:                 Visit www.nseindia.com for any session-related updates.
+
+    Support:                      For queries, call Toll-Free: 1800 266 0050 (Option 1).
+
+
+
+
+                                                  Annexure – 2
+
+                Pre-requisites / General guidelines for participating in the Mock environment
+
+    Pre-requisites / General            Details
+    guidelines Heads
+    Eligibility                         All members enabled for trading in the Capital Market (CM)
+                                        segment in the live market are automatically eligible for mock
+                                        trading.
+                                        Participation is enabled using existing User IDs, IPs, and Box ID
+                                        mappings from the live environment.
+    Telnet Connectivity                 Ensure you can successfully telnet the Exchange host from the IP
+                                        address you intend to use.
+    Box ID Setup                        Confirm that the Box ID is created on the IP with appropriate
+                                        messages for the segment you wish to trade in.
+
+    NNF Application Users               If using Non-NEAT Frontend (NNF):
+                                        a) User ID must be of dealer type.
+                                        b) It must be converted for NNF.
+                                        C) It must be mapped with the IP.
+    Branch/User Limits                  Set appropriate branch and user limits from the Corporate
+                                        Manager Terminal before placing orders in the mock session.
+
+    Exchange Requests for Mock          Send email requests for the following actions with User ID and
+    Participation                       segment details:
+
+                                        a) Pro Enablement
+                                        b) CTCL Conversion (only dealer IDs)
+                                        c) Password Reset for Corporate Manager User ID
+                                        d) Unlocking of Corporate Manager User ID
+                                        e) Change of Trading Rights (e.g., PRO to CLI, PRO+CLI)
+    Password Management                 Corporate Manager User ID: Exchange will assist with
+                                        reset/unlock via email.
+                                        Other User IDs: Members must reset/unlock these themselves
+                                        using the Corporate Manager Terminal.
+
+
+
+                                                                                                     Page 4 of 5
+National Stock Exchange of India Limited
+
+                                                   Annexure – 3
+
+   Important guidelines in case of switchover of trading system to Disaster Recovery (DR) Site
+
+      1. Kindly note below points after switch over to DR site:
+              a.   Trades of primary site will be available in Previous Trades window.
+              b. Trades can be modified/cancelled using Multiple Trade Modification and Cancellation window
+                 respectively.
+              c. Messages of primary site will be available in TWS Message Area.
+        2. If user renames or deletes the User folder and re-login the NEAT+ terminal, then data of primary
+                     site shall not be available in the functional window as mentioned above point.
+
+
+
+
+                                                                                                    Page 5 of 5
+

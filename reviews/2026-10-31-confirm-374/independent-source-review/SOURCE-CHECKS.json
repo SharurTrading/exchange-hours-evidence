@@ -1,0 +1,109 @@
+{
+  "merged_base": "d3f6b21db8f4f7523f0c79b786c16c6852c4678c",
+  "data_files": {
+    "src/calendar/schedules/holidays/nse_india.rs": {
+      "merged_sha256": "4d6951fefb207fd44df8bbe3f1c7f72d4dc6fa8149778cb1391bc5052a06557a",
+      "working_sha256": "4d6951fefb207fd44df8bbe3f1c7f72d4dc6fa8149778cb1391bc5052a06557a",
+      "working_identical": true
+    },
+    "src/calendar/schedules/holidays/xetra.rs": {
+      "merged_sha256": "e9c693f106fd707c4ff5de079ec23906f51fb8a2bad6bfa2f496d117fce1c25c",
+      "working_sha256": "e9c693f106fd707c4ff5de079ec23906f51fb8a2bad6bfa2f496d117fce1c25c",
+      "working_identical": true
+    },
+    "src/calendar/schedules/holidays/ice_us.rs": {
+      "merged_sha256": "037315b8085792517720ede3c6db71fced7a3d9a1bb7d8ba7b105fc1295a5a70",
+      "working_sha256": "037315b8085792517720ede3c6db71fced7a3d9a1bb7d8ba7b105fc1295a5a70",
+      "working_identical": true
+    },
+    "src/calendar/schedules/futures/us/ice_cotton.rs": {
+      "merged_sha256": "0f6c37ad5950010adffa2ed791c585b0183108613beafb444c72a976aa4ed58e",
+      "working_sha256": "0f6c37ad5950010adffa2ed791c585b0183108613beafb444c72a976aa4ed58e",
+      "working_identical": true
+    }
+  },
+  "pdf_matches": [
+    {
+      "file": "NSE_CMTR76941.pdf",
+      "url": "https://nsearchives.nseindia.com/content/circulars/CMTR76941.pdf",
+      "final_url": "https://nsearchives.nseindia.com/content/circulars/CMTR76941.pdf",
+      "retrieved_at": "2026-10-31T23:19:53.936922+00:00",
+      "status": 200,
+      "bytes": 161272,
+      "sha256": "ce94ee1c54d98eccdf3c30fa0673ae2b6a49ea4ed4a72fb83d826f4359f71d58",
+      "merged_citation_sha256": "ce94ee1c54d98eccdf3c30fa0673ae2b6a49ea4ed4a72fb83d826f4359f71d58",
+      "matches_merged_citation": true
+    },
+    {
+      "file": "XETRA_Final_trading_session_2026.pdf",
+      "url": "https://www.cashmarket.deutsche-boerse.com/resource/blob/5673886/22764993c4b1617c5f465186066344e6/data/Final%20trading%20session%202026.pdf",
+      "final_url": "https://www.cashmarket.deutsche-boerse.com/resource/blob/5673886/22764993c4b1617c5f465186066344e6/data/Final%20trading%20session%202026.pdf",
+      "retrieved_at": "2026-10-31T23:19:53.937392+00:00",
+      "status": 200,
+      "bytes": 158845,
+      "sha256": "d3618ef9738a3cae92909d11d4eaf820ab7b71d1e723c1fa04a21062e9738115",
+      "merged_citation_sha256": "d3618ef9738a3cae92909d11d4eaf820ab7b71d1e723c1fa04a21062e9738115",
+      "matches_merged_citation": true
+    },
+    {
+      "file": "ICE_Christmas_2026.pdf",
+      "url": "https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_2026_Christmas_Holiday_20261022.pdf",
+      "final_url": "https://www.ice.com/publicdocs/futures_us/exchange_notices/ICE_Futures_US_2026_Christmas_Holiday_20261022.pdf",
+      "retrieved_at": "2026-10-31T23:19:53.937858+00:00",
+      "status": 200,
+      "bytes": 132381,
+      "sha256": "a7658155b57c51085cd3b36abc9ff6b91f3ca353cda88365a06459ebb40f0801",
+      "merged_citation_sha256": "a7658155b57c51085cd3b36abc9ff6b91f3ca353cda88365a06459ebb40f0801",
+      "matches_merged_citation": true
+    }
+  ],
+  "source_truth": {
+    "NSE": {
+      "trade_date": "2026-11-08",
+      "block_deal": "13:50-14:05 IST",
+      "preopen_collection_nominal": "14:05-14:15 with closure in last2minutes",
+      "conservative_collection_end": "14:13 IST",
+      "continuous_open": "14:20 IST",
+      "CAS_continuous_close": "15:15 IST",
+      "nonCAS_close": "15:30 IST",
+      "CAS_match_end": "15:35 IST",
+      "post_close": "15:50-16:00 IST",
+      "modification_cutoff_not_session": "16:15 IST"
+    },
+    "XETRA": {
+      "trade_date": "2026-12-30",
+      "pretrading": "07:00 CET",
+      "retail_early": "08:00 CET",
+      "opening_call": "08:55 CET",
+      "intraday_call": "13:00 CET",
+      "closing_call": "14:00 CET",
+      "closing_uncross_not_before": "14:05 CET",
+      "DAX_MDAX_SDAX_TAL_end": "14:10 CET",
+      "posttrading_end": "15:00 CET",
+      "ordinary_uncross_boundaries_not_stated_here": [
+        "09:00:30",
+        "13:02:30"
+      ]
+    },
+    "ICE": {
+      "Thursday": "2026-12-24",
+      "Sugar_matching_close": "13:00 NY (regular)",
+      "Coffee_Cocoa_Cotton_FCOJ_matching_close": "13:05 NY",
+      "PCPO_start": "30 minutes after each contract close",
+      "PCPO_end": "15:30 NY",
+      "Christmas": "2026-12-25 closed",
+      "Monday": "2026-12-28",
+      "Sugar_Coffee_Cocoa_Cotton_open": "08:00 NY",
+      "FCOJ_open": "08:00 NY (regular)",
+      "Monday_close": "regular close for each family",
+      "Cotton_Tuesday": "2026-12-29 ordinary profile restated to suppress closed-Friday queue; no new Tuesday clock"
+    }
+  },
+  "negative_search_scope": {
+    "NSE": "275 official circular records returned for Oct19-31; six distinct later CMTR notices; original76941 listed twice; no superseding cash-market Muhurat notice located in bounded set",
+    "ICE": "latest10 official2026notices span Oct29 toOct2; no later holiday notice after Oct22 Christmas notice in returned set",
+    "Xetra": "current circular index and latest two final-session circulars049/050datedOct30; both point to unchanged official timetable"
+  },
+  "runtime_mutation_required": false,
+  "reason": "Documentation-only confirmation; the shipped rows and their source interpretation were independently reviewed with successful mutations in PR375."
+}

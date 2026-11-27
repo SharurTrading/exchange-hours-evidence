@@ -1,0 +1,11 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.02s
+   Doc-tests exchange_hours
+
+running 3 tests
+test src/calendar/policy/static_policy.rs - calendar::policy::static_policy::StaticDayPolicy (line 145) ... ok
+test src/calendar/exceptions/static_table.rs - calendar::exceptions::static_table::StaticSessionExceptions (line 104) ... ok
+test src/lib.rs - (line 18) ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+all doctests ran in 0.18s; merged doctests compilation took 0.18s
