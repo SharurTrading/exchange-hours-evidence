@@ -16,3 +16,4 @@ The exchange’s circulars identify ordinary holiday closures and special evenin
 | `CMTR42483.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR42483.pdf> | 2026-11-27T03:09:42Z | `933768f41a67a216b04531374751afeb79af0f53b025685328b166dd6c33ef23` | 133242 | 2019 revised Muhurat timings |
 | `CMTR46623.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR46623.pdf> | 2026-11-27T03:09:41Z | `3c922e234ad2cbe8320cc34507e281477e0ce273ba9ee39d73da2a49d5629add` | 75512 | 2021 annual cash trading holidays |
 | `CMTR50050.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR50050.pdf> | 2026-11-27T03:09:41Z | `5ac9d2034e5dc3bb22632fd1b0e46a2acfae49f71e1126897e7e13bcd52d6803` | 69086 | 2021 Muhurat session |
+| `CMTR27792.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR27792.pdf> | 2026-11-27T03:11:12Z | `1e5e2964d919b72fc3728d2e4d2ba785f77aebb162188c260b8f3d6479590282` | 141174 | 2014-10-15 Maharashtra election closure |
