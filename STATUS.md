@@ -12571,3 +12571,15 @@ operator specification and certification are archived. Reassess each
 candidate when an exact consumer route is added or the market is named in
 the product plan. The review resolves the admission question in
 [exchange-hours-rs #386](https://github.com/SharurTrading/exchange-hours-rs/issues/386).
+
+## 2026-11-27 UTC — exchange-hours 2.0.0 independent review
+
+The detached review of release PR #416 at `13c061920224da71d74bdceaa7f914572d2d8240` against base `fd3c60d5c0bac70776980a12c14be8dc9727c910` found no release blockers in the two additional coverage changes. The Borsa İstanbul FAQ and Law 2429 support the January 1 closure, January 2–3 use the ordinary weekend grid, and January 4 refuses. The inventory and table agree on 178 holiday rows. The five evidence captures match their document digests and were added in evidence PR #61. The annual schedule remains tracked in exchange-hours-rs #391.
+
+The archived UK hours and the UK Forex holiday statements support OANDA TRY from November 17, 2025 through October 30, 2026. The 17:05 ET reopens on December 25 and January 1 follow the end of the regular Central European session and produce the only two closures in the audit. The cited archive and holiday-page digests reproduce. Earlier UK sessions remain tracked in exchange-hours-rs #332.
+
+All 14 focused integration tests and 74 schedule documentation tests passed on the unchanged release head, including the research-store digest fence. Removing either January 1 closure in an isolated worktree triggered the intended integration failure. The changelog retained its existing contents, and Cargo metadata gave `exchange-hours` version 2.0.0. [Independent review](https://github.com/SharurTrading/exchange-hours-rs/pull/416#pullrequestreview-6084149158)
+
+The release worktree passed 1,514 selected tests in release mode,
+the signed IANA startup test, and the calendar publish dry run. The
+evidence verifier checked 3,398 citations against 1,104 distinct digests.
