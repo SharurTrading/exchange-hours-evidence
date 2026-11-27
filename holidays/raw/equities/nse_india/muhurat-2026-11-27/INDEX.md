@@ -1,0 +1,26 @@
+# NSE Capital Market holiday and Muhurat circulars
+
+The exchange’s circulars identify ordinary holiday closures and special evening sessions in the Capital Market segment. Revised circulars govern the 2012 and 2019 timings. The original circulars preserve the lineage.
+
+| File | NSE source | Retrieval (UTC) | SHA-256 | Bytes | Scope |
+| --- | --- | --- | --- | ---: | --- |
+| `CMTR19187.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR19187.pdf> | 2026-11-27T03:09:39Z | `b5639b0f3af5c7597f78bfe29546cc4c7ff56b2962dcd79eb54f4cd4e11904d5` | 125360 | 2011 Muhurat session |
+| `CMTR22027.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR22027.pdf> | 2026-11-27T03:09:41Z | `cecbadc1bb0904efe41025d5fe573115d1b8ccf495de0206a67828f35efeb050` | 188299 | 2012 original Muhurat session |
+| `CMTR22083.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR22083.pdf> | 2026-11-27T03:09:39Z | `95269060c61f754433a15f73801deea73fdb0eae8aa7c980c27dca1356a27c0e` | 99473 | 2012 revised Muhurat timings |
+| `CMTR24773.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR24773.pdf> | 2026-11-27T03:09:41Z | `6292ce71f08cff22b7478de7917fe49de4422adba3a09e89f78b38c7d20afaf3` | 187901 | 2013 Muhurat session |
+| `CMTR27779.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR27779.pdf> | 2026-11-27T03:09:40Z | `1e77a9a4e2730c78c22ca5e1a8698d0e4fb46d6412749df86b90ce4eb9123430` | 187344 | 2014 Muhurat session |
+| `CMTR35993.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR35993.pdf> | 2026-11-27T03:09:41Z | `1419ab5d8070a2cd9896859d7ad8bebee69fedc2bb0200b1260a0eb41db5804c` | 110485 | 2017 Muhurat session |
+| `CMTR36475.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR36475.pdf> | 2026-11-27T03:09:40Z | `d80ac64d32806f9ada629bc96ba91c6d85546dfde405f4468bbfcb194fdb22fb` | 183198 | 2018 annual cash trading holidays |
+| `CMTR39216.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR39216.pdf> | 2026-11-27T03:09:41Z | `d68c2e0d4c6160c5ed75533dceb48a4084ecd8d2dea71b6dadee73a07ccb6438` | 132439 | 2018 Muhurat session |
+| `CMTR42403.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR42403.pdf> | 2026-11-27T03:09:41Z | `9a4e8e80a4342560d52491e889fdae4d8384fa8e19f910fa59395269aabe4097` | 240400 | 2019 original Muhurat session |
+| `CMTR42483.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR42483.pdf> | 2026-11-27T03:09:42Z | `933768f41a67a216b04531374751afeb79af0f53b025685328b166dd6c33ef23` | 133242 | 2019 revised Muhurat timings |
+| `CMTR46623.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR46623.pdf> | 2026-11-27T03:09:41Z | `3c922e234ad2cbe8320cc34507e281477e0ce273ba9ee39d73da2a49d5629add` | 75512 | 2021 annual cash trading holidays |
+| `CMTR50050.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR50050.pdf> | 2026-11-27T03:09:41Z | `5ac9d2034e5dc3bb22632fd1b0e46a2acfae49f71e1126897e7e13bcd52d6803` | 69086 | 2021 Muhurat session |
+| `CMTR27792.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR27792.pdf> | 2026-11-27T03:11:12Z | `1e5e2964d919b72fc3728d2e4d2ba785f77aebb162188c260b8f3d6479590282` | 141174 | 2014-10-15 Maharashtra election closure |
+| `CMTR37495.pdf` | <https://archives.nseindia.com/content/circulars/CMTR37495.pdf> | 2026-11-27T03:13:21Z | `69adf6cca05f63031720b4e85270c64600d11f8d69315447cb87f203a919f75f` | 693030 | 2018 session limited to Gold ETFs and Sovereign Gold Bonds |
+| `CMTR39215.pdf` | <https://archives.nseindia.com/content/circulars/CMTR39215.pdf> | 2026-11-27T03:13:21Z | `f86bddc55b3054895cec6151464e6aba17a08bd07f78c0b2d7a46e42d5161b37` | 195824 | 2018 session limited to Gold ETFs and Sovereign Gold Bonds |
+| `nse-index-2018-q1.json` | <https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY%2050&from=01-01-2018&to=31-03-2018> | 2026-11-27T03:11:02.910413+00:00 | `d1deb920289c8edcc074d6720a377622e5227b941ec27713641d14db2cb3f51a` | 16280 | NIFTY 50 daily index observations (60 dates). Corroborates trading dates. |
+| `nse-index-2018-q2.json` | <https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY%2050&from=01-04-2018&to=30-06-2018> | 2026-11-27T03:11:02.748940+00:00 | `fbafffbcd4d4a7d6c200d1e1ff78ce365dbef13c149820e76d810651592e7ada` | 17398 | NIFTY 50 daily index observations (64 dates). Corroborates trading dates. |
+| `nse-index-2018-q3.json` | <https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY%2050&from=01-07-2018&to=30-09-2018> | 2026-11-27T03:11:03.313010+00:00 | `f19d75c8715a6938da6de197d5b6c213b444137ec7f933cab9306fed1cda9747` | 16567 | NIFTY 50 daily index observations (61 dates). Corroborates trading dates. |
+| `nse-index-2018-q4.json` | <https://www.nseindia.com/api/historicalOR/indicesHistory?indexType=NIFTY%2050&from=01-10-2018&to=31-12-2018> | 2026-11-27T03:11:02.662134+00:00 | `a670bbb432c7347ed1a054a1064e9b9e199ba473232338278a986c5d1cb2658b` | 16568 | NIFTY 50 daily index observations (61 dates). Corroborates trading dates. |
+| `CMTR26360.pdf` | <https://nsearchives.nseindia.com/content/circulars/CMTR26360.pdf> | 2026-11-27T03:14:12Z | `dcc7ba7d2b626494189065569732fc27f5a13945c707d5a9be62474ddb0331a5` | 107003 | 2014-04-24 Parliamentary election closure in Mumbai |
